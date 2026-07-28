@@ -702,7 +702,7 @@ Test Run에서 실행한 후 워크플로우의 실행 과정을 볼 수 있습�
 
 이번에는 로컬 코드 편집 도구인 [Trae](https://www.trae.cn/)를 사용하여 이 과정을 완료하겠습니다.
 
-IDE가 무엇인지 아직 익숙하지 않다면, 문서 [Extra Knowledge 4 - What is AI IDE and Trae](https://github.com/datawhalechina/easy-vibe/blob/main/docs/extra/extra4/extra4-what-is-ai-ide-and-trae.md)를 먼저 읽어보시기 바랍니다.
+IDE가 무엇인지 아직 익숙하지 않다면, 문서 [Extra Knowledge 4 - What is AI IDE and Trae](/ko-kr/stage-1/introduction-to-ai-ide/)를 먼저 읽어보시기 바랍니다.
 
 로컬 개발 환경이 아직 완전히 설정되지 않았더라도 걱정하지 마세요. 자신의 코드 어시스턴트([z.ai](http://z.ai) 또는 Trae 모두 가능)를 신뢰하기만 하면 됩니다. 이해가 안 되는 부분이나 오류가 발생하면 문제를 그대로 전달하면 되며, 코드 어시스턴트가 설명에 따라 상세한 해결 방안을 제시해 줄 것입니다.
 

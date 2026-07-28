@@ -702,7 +702,7 @@ Dify هي منصة مفتوحة المصدر لتطوير تطبيقات LLM. ت
 
 هذه المرة، سنستخدم أداة تحرير الأكواد المحلية [Trae](https://www.trae.cn/) لإتمام هذه العملية.
 
-إذا لم تكن على دراية بما هو IDE، يمكنك قراءة المستند أولاً [Extra Knowledge 4 - What is AI IDE and Trae](https://github.com/datawhalechina/easy-vibe/blob/main/docs/extra/extra4/extra4-what-is-ai-ide-and-trae.md).
+إذا لم تكن على دراية بما هو IDE، يمكنك قراءة المستند أولاً [Extra Knowledge 4 - What is AI IDE and Trae](/ar-sa/stage-1/introduction-to-ai-ide/).
 
 إذا لم تكن بيئة التطوير المحلية لديك مُعدَّة بالكامل، فلا تقلق. طالما أنك تثق بمساعد البرمجة الخاص بك (سواء كان [z.ai](http://z.ai) أو Trae)، يمكنك عند مواجهة أي شيء غير مفهوم أو أي خطأ أن تطرح المشكلة عليه مباشرة، وسيقدم لك حلاً تفصيليًا بناءً على وصفك.
 

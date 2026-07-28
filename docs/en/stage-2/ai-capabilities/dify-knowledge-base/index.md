@@ -725,7 +725,7 @@ Recall how to call model APIs: prepare key + request/response examples from docu
 This time we use local code editor [Trae](https://www.trae.cn/).
 
 If you are not familiar with IDE concepts, read:
-[Extra Knowledge 4 - What is AI IDE and Trae](https://github.com/datawhalechina/easy-vibe/blob/main/docs/extra/extra4/extra4-what-is-ai-ide-and-trae.md)
+[Extra Knowledge 4 - What is AI IDE and Trae](/en/stage-1/introduction-to-ai-ide/)
 
 If your local environment is not fully configured, do not worry. If you trust your coding assistant (whether [z.ai](https://z.ai) or Trae), you can directly send any issue/errors and it will provide resolution guidance.
 

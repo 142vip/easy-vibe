@@ -702,7 +702,7 @@ Dify 中提供了多种节点，你可以先了解每个节点的基本功能。
 
 这一次，我们会使用本地的代码编辑工具 [Trae](https://www.trae.cn/) 来完成这个过程。
 
-如果你还不熟悉什么是 IDE，可以先阅读文档 [Extra Knowledge 4 - What is AI IDE and Trae](https://github.com/datawhalechina/easy-vibe/blob/main/docs/extra/extra4/extra4-what-is-ai-ide-and-trae.md)。
+如果你还不熟悉什么是 IDE，可以先阅读文档 [Extra Knowledge 4 - What is AI IDE and Trae](/zh-cn/stage-1/introduction-to-ai-ide/)。
 
 如果你的本地开发环境还没有完整配置好，也不用担心。只要你信任自己的代码助手（不管是 [z.ai](http://z.ai) 还是 Trae），遇到任何不懂的地方或报错，都可以直接把问题抛给它，它会根据你的描述给出详细的解决方案。
 

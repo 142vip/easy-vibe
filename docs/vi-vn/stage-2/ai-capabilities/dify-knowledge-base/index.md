@@ -702,7 +702,7 @@ Còn nhớ đã nói về cách gọi mô hình thông qua API không? Chúng ta
 
 Lần này, chúng ta sẽ sử dụng công cụ chỉnh sửa code cục bộ [Trae](https://www.trae.cn/) để hoàn thành quá trình này.
 
-Nếu bạn chưa quen biết IDE là gì, có thể đọc tài liệu [Kiến thức bổ sung 4 - AI IDE và Trae là gì](https://github.com/datawhalechina/easy-vibe/blob/main/docs/extra/extra4/extra4-what-is-ai-ide-and-trae.md).
+Nếu bạn chưa quen biết IDE là gì, có thể đọc tài liệu [Kiến thức bổ sung 4 - AI IDE và Trae là gì](/vi-vn/stage-1/introduction-to-ai-ide/).
 
 Nếu môi trường phát triển cục bộ của bạn chưa được cấu hình hoàn chỉnh, cũng không cần lo lắng. Chỉ cần bạn tin tưởng trợ lý code của mình (dù là [z.ai](http://z.ai) hay Trae), khi gặp bất kỳ điều gì không hiểu hoặc lỗi, đều có thể trực tiếp gửi vấn đề cho nó, nó sẽ đưa ra giải pháp chi tiết dựa trên mô tả của bạn.
 

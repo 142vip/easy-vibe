@@ -702,7 +702,7 @@ API を使ってモデルを呼び出す方法を以前学びましたね。鍵�
 
 今回は、ローカルのコード編集ツール [Trae](https://www.trae.cn/) を使ってこのプロセスを完了します。
 
-IDE についてまだ馴染みがない場合は、まずドキュメント [Extra Knowledge 4 - What is AI IDE and Trae](https://github.com/datawhalechina/easy-vibe/blob/main/docs/extra/extra4/extra4-what-is-ai-ide-and-trae.md) をお読みください。
+IDE についてまだ馴染みがない場合は、まずドキュメント [Extra Knowledge 4 - What is AI IDE and Trae](/ja-jp/stage-1/introduction-to-ai-ide/) をお読みください。
 
 ローカルの開発環境がまだ完全に設定されていなくても心配はいりません。自分のコードアシスタント（[z.ai](http://z.ai) でも Trae でも）を信頼していれば、分からないことやエラーに遭遇した際は、そのまま問題を投げかけることで、詳細な解決策を提示してくれます。
 

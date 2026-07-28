@@ -702,7 +702,7 @@ Erinnerst du dich, wie man ein Modell über eine API aufruft? Wir benötigen ein
 
 Dieses Mal werden wir das lokale Code-Bearbeitungswerkzeug [Trae](https://www.trae.cn/) für diesen Prozess verwenden.
 
-Wenn du noch nicht mit dem Konzept einer IDE vertraut bist, kannst du zunächst die Dokumentation lesen: [Extra Knowledge 4 - What is AI IDE and Trae](https://github.com/datawhalechina/easy-vibe/blob/main/docs/extra/extra4/extra4-what-is-ai-ide-and-trae.md).
+Wenn du noch nicht mit dem Konzept einer IDE vertraut bist, kannst du zunächst die Dokumentation lesen: [Extra Knowledge 4 - What is AI IDE and Trae](/de-de/stage-1/introduction-to-ai-ide/).
 
 Wenn deine lokale Entwicklungsumgebung noch nicht vollständig eingerichtet ist, mach dir keine Sorgen. Solange du deinem Code-Assistenten vertraust (egal ob [z.ai](http://z.ai) oder Trae), kannst du bei Fragen oder Fehlermeldungen diese einfach an ihn weiterleiten. Er wird dir basierend auf deiner Beschreibung eine detaillierte Lösung anbieten.
 
@@ -1347,7 +1347,7 @@ Erinnerst du dich, wie wir früher Modelle über APIs aufgerufen haben? Wir müs
 
 Dieses Mal werden wir das lokale Code-Bearbeitungswerkzeug [Trae](https://www.trae.cn/) verwenden, um diesen Prozess abzuschließen.
 
-Wenn du noch nicht vertraut mit dem Begriff IDE bist, kannst du zuerst die Dokumentation [Extra Knowledge 4 - What is AI IDE and Trae](https://github.com/datawhalechina/easy-vibe/blob/main/docs/de-de/extra/extra4/extra4-what-is-ai-ide-and-trae.md) lesen.
+Wenn du noch nicht vertraut mit dem Begriff IDE bist, kannst du zuerst die Dokumentation [Extra Knowledge 4 - What is AI IDE and Trae](/de-de/stage-1/introduction-to-ai-ide/) lesen.
 
 Wenn deine lokale Entwicklungsumgebung noch nicht vollständig eingerichtet ist, mach dir keine Sorgen. Solange du deinem Code-Assistenten vertraust (egal ob [z.ai](http://z.ai) oder Trae), kannst du bei allem, was du nicht verstehst, oder bei Fehlern einfach das Problem an ihn weitergeben. Er wird dir basierend auf deiner Beschreibung eine detaillierte Lösung anbieten.
 

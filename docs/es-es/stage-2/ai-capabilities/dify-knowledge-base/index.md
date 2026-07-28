@@ -702,7 +702,7 @@ A continuación, intentaremos llamar a través de API al agente de base de conoc
 
 Esta vez, usaremos la herramienta de edición de código local [Trae](https://www.trae.cn/) para completar este proceso.
 
-Si aún no estás familiarizado con qué es un IDE, puedes leer primero el documento [Extra Knowledge 4 - What is AI IDE and Trae](https://github.com/datawhalechina/easy-vibe/blob/main/docs/es-es/extra/extra4/extra4-what-is-ai-ide-and-trae.md).
+Si aún no estás familiarizado con qué es un IDE, puedes leer primero el documento [Extra Knowledge 4 - What is AI IDE and Trae](/es-es/stage-1/introduction-to-ai-ide/).
 
 Si tu entorno de desarrollo local aún no está completamente configurado, no te preocupes. Siempre que confíes en tu asistente de código (ya sea [z.ai](http://z.ai) o Trae), ante cualquier duda o error que encuentres, puedes simplemente pasarle el problema y te dará una solución detallada basada en tu descripción.
 
