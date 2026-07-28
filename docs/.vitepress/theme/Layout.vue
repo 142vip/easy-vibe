@@ -27,7 +27,7 @@ const localeDirs = [
 const openWelcomeFromWordmark = () => {
   const currentPath = window.location.pathname
   window.location.href = withBase(
-    `/welcome/?next=${encodeURIComponent(currentPath)}`
+    `/welcome?next=${encodeURIComponent(currentPath)}`
   )
 }
 
@@ -274,6 +274,7 @@ const handleViewportResize = () => {
 
 const isHomePage = computed(() => frontmatter.value.layout === 'home')
 const isWelcomePage = computed(() =>
+  route.path === '/welcome' ||
   route.path === '/welcome/' ||
   route.path.endsWith('/welcome/') ||
   route.path.endsWith('/welcome.html')

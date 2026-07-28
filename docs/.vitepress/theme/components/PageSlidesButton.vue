@@ -31,7 +31,7 @@ const MIN_OVERSIZED_BLOCK_SCALE = 0.35
 
 const isDocPage = computed(() => {
   const layout = frontmatter.value.layout
-  return layout !== 'home' && route.path !== '/welcome/' && !route.path.endsWith('/welcome/')
+  return layout !== 'home' && route.path !== '/welcome' && route.path !== '/welcome/' && !route.path.endsWith('/welcome/')
 })
 
 const getDocContent = () => {

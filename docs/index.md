@@ -56,7 +56,7 @@ onMounted(() => {
 
   if (!hasSeenWelcome) {
     window.location.replace(
-      withBase(`/welcome/?next=${encodeURIComponent(targetPath)}`)
+      withBase(`/welcome?next=${encodeURIComponent(targetPath)}`)
     )
     return
   }

@@ -537,7 +537,7 @@ Skills 和 MCP 不是竞争关系，而是互补关系：
 
 | 仓库 | 说明 |
 |------|------|
-| [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) | Boris Cherny（Claude Code 负责人）维护，包含 Skills、Agents、Hooks 等 |
+| [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) | 社区维护的资源集合，包含 Skills、Agents、Hooks 等 |
 | [affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 综合工具包，包含预配置 Skills |
 | [JackyST0/awesome-agent-skills](https://github.com/JackyST0/awesome-agent-skills) | 精选 Skills 资源列表 |
 | [jeffallan/claude-skills](https://github.com/jeffallan/claude-skills) | 66 个专业技能，300+ 参考文档 |
@@ -994,7 +994,7 @@ description: 审查 Pull Request 的代码。当用户提到 PR、review、代�
 ### GitHub 社区项目
 
 - [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) - Vercel Labs 官方 Agent Skills 集合（含 find-skills）
-- [claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) - Boris Cherny 维护的官方最佳实践
+- [claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) - 社区维护的最佳实践资源集合
 - [everything-claude-code](https://github.com/affaan-m/everything-claude-code) - 综合工具包，包含预配置 Skills
 - [awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) - 精选 Skills 资源列表
 - [superpowers](https://github.com/obra/superpowers) - 软件开发自动化工作流 Skills 集合

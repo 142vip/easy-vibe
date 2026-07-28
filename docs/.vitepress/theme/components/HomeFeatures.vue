@@ -306,7 +306,7 @@ onMounted(() => {
     const hasSeenWelcome = window.localStorage.getItem(WELCOME_SEEN_KEY) === '1'
     if (!hasSeenWelcome) {
       window.location.assign(
-        withBase(`/welcome/?next=${encodeURIComponent(currentPath)}`)
+        withBase(`/welcome?next=${encodeURIComponent(currentPath)}`)
       )
       return
     }
