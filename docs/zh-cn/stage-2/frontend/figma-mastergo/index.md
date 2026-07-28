@@ -222,9 +222,7 @@ const relatedArticles = relatedArticlesMap['zh-cn/stage-2/frontend/figma-masterg
 
 ![](images/image32.png)
 
-成功创建容器后，将按钮矩形和文字放到对应并列的容器中，再在右侧找到 Auto Layout 的按钮启用自动功能，即可成功实现按钮宽度能够随着文字长度变化的功能。
-
-![](images/image33.png)
+成功创建容器后，将按钮文字移动到容器中，并使用容器自身的填充色、圆角和内边距来呈现按钮背景，不需要再保留原来的矩形图层。接着选中容器，在右侧启用 **Auto Layout**，将宽度设置为适应内容。这样修改文字时，按钮宽度就会随文字长度自动变化。
 
 ![](images/image34.png)
 
