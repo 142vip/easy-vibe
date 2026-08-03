@@ -15,14 +15,14 @@
     description="从零开始，利用Nanobanana和Lovart批量生成高质量的设计素材，并动手构建一个能意图识别的绘图Agent"
   />
   <NavCard
+    href="/zh-cn/stage-2/frontend/ui-design/"
+    title="构建第一个现代应用程序 - UI 设计（AI 设计入门）"
+    description="借助 AI 设计能力，从 Logo、App 图标到完整网页 UI，掌握提示词工程与一致性技巧"
+  />
+  <NavCard
     href="/zh-cn/stage-2/frontend/figma-mastergo/"
     title="Figma 与 MasterGo 入门"
     description="掌握专业 UI 设计工具的基础操作，从设计稿到代码的协作流程"
-  />
-  <NavCard
-    href="/zh-cn/stage-2/frontend/ui-design/"
-    title="构建第一个现代应用程序 - UI 设计"
-    description="学习现代应用程序的 UI 设计基础"
   />
   <NavCard
     href="/zh-cn/stage-2/frontend/multi-product-ui/"

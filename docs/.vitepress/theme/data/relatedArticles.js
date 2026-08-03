@@ -141,8 +141,8 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-2/frontend/ui-design/',
       title: '2.2 构建第一个现代应用程序 - UI 设计',
-      description: '在统一视觉规范下，完成页面层级、组件和布局设计。',
-      icon: '🧱'
+      description: '借助 AI 设计能力完成 Logo、图标与完整网页 UI，掌握提示词工程与一致性技巧。',
+      icon: '✨'
     },
     {
       href: '/zh-cn/stage-2/frontend/design-to-code/',
@@ -157,12 +157,38 @@ const rawRelatedArticlesMap = {
       icon: '🧩'
     }
   ],
+  'zh-cn/stage-2/frontend/ui-design': [
+    {
+      href: '/zh-cn/stage-2/frontend/lovart-assets/',
+      title: 'NanoBanana 素材生产',
+      description: '用文生图/图生图批量生成设计素材，并搭建可复用的生产流程。',
+      icon: '🖼️'
+    },
+    {
+      href: '/zh-cn/stage-2/frontend/llm-skills-beautiful/',
+      title: '用 LLM 和 Skills 让界面变好看',
+      description: '把设计系统封装成 Skill，让 AI 自动加载你的品牌规范。',
+      icon: '🎨'
+    },
+    {
+      href: '/zh-cn/stage-2/frontend/figma-mastergo/',
+      title: 'Figma 与 MasterGo 入门',
+      description: '把 AI 生成的素材组织进设计稿，完成从视觉到布局的落地。',
+      icon: '📐'
+    },
+    {
+      href: '/zh-cn/stage-2/frontend/design-to-code/',
+      title: '从设计原型到项目代码',
+      description: '把设计稿准确转成可维护的前端代码与组件结构。',
+      icon: '💻'
+    }
+  ],
   'zh-cn/stage-2/frontend/figma-mastergo': [
     {
       href: '/zh-cn/stage-2/frontend/ui-design/',
       title: '2.2 构建第一个现代应用程序 - UI 设计',
-      description: '继续完善界面结构、视觉层级与交互细节。',
-      icon: '🧱'
+      description: '借助 AI 设计完成 Logo、图标与完整网页 UI，作为设计稿的素材来源。',
+      icon: '✨'
     },
     {
       href: '/zh-cn/stage-2/frontend/design-to-code/',

@@ -660,6 +660,10 @@ const stage2SidebarEn = [
         link: '/en/stage-2/frontend/lovart-assets/'
       },
       {
+        text: 'AI Design Basics',
+        link: '/en/stage-2/frontend/ui-design/'
+      },
+      {
         text: 'Figma & MasterGo Basics',
         link: '/en/stage-2/frontend/figma-mastergo/'
       },
@@ -773,6 +777,10 @@ const zhCnStage2Sidebar = [
       {
         text: 'NanoBanana 素材生产',
         link: '/zh-cn/stage-2/frontend/lovart-assets/'
+      },
+      {
+        text: 'AI 设计入门',
+        link: '/zh-cn/stage-2/frontend/ui-design/'
       },
       {
         text: 'Figma 与 MasterGo 入门',
