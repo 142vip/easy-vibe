@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 tools/*
+!tools/translation/
+!tools/translation/**
 docs/.vitepress/dist
 docs/.vitepress/dist-locales/
 docs/.vitepress/cache
