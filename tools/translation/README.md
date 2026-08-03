@@ -34,14 +34,16 @@ the locale directory, for example `ko-kr/glossary.md` and
 `ko-kr/style-guide.md`.
 
 The source-text residue check currently targets Chinese source text, which is
-the source language used by this repository.
+the source language used by this repository. Chinese text explicitly required
+in the target locale glossary's standard or first-appearance column is allowed.
 
 ## Fixtures
 
 The fixtures include one passing document pair and focused failures for each
 check: frontmatter, Markdown structure, links, images, fenced code blocks,
-inline code, source-locale links, and untranslated Chinese text. Run them with
-the built-in Node test runner:
+inline code, source-locale links, and untranslated Chinese text. A separate
+passing fixture covers a source-language annotation required by the glossary.
+Run them with the built-in Node test runner:
 
 ```bash
 node --test tools/translation/check-localization.test.mjs

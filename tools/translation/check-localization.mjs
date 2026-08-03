@@ -3,6 +3,7 @@
 import { existsSync, readFileSync } from 'node:fs'
 import { dirname, extname, relative, resolve } from 'node:path'
 import process from 'node:process'
+import { fileURLToPath } from 'node:url'
 
 const [sourceArg, localizedArg, ...extraArgs] = process.argv.slice(2)
 
@@ -14,8 +15,10 @@ if (!sourceArg || !localizedArg || extraArgs.length) {
 }
 
 const root = process.cwd()
+const toolDir = dirname(fileURLToPath(import.meta.url))
 const sourcePath = resolve(root, sourceArg)
 const localizedPath = resolve(root, localizedArg)
+const sourceLanguagePattern = /[\u3400-\u4DBF\u4E00-\u9FFF]{2,}/g
 
 for (const [label, file] of [
   ['Source', sourcePath],
@@ -154,6 +157,23 @@ function docsLocale(file) {
   return docsIndex === -1 ? null : parts[docsIndex + 1]
 }
 
+function glossarySourceLanguageRuns(locale) {
+  if (!locale) return new Set()
+
+  const glossaryPath = resolve(toolDir, locale, 'glossary.md')
+  if (!existsSync(glossaryPath)) return new Set()
+
+  const runs = readFileSync(glossaryPath, 'utf8')
+    .split(/\r?\n/)
+    .flatMap((line) => {
+      const row = line.match(/^\s*\|(.*)\|\s*$/)
+      const localizedTerm = row?.[1].split('|')[1]?.trim()
+      return localizedTerm?.match(sourceLanguagePattern) ?? []
+    })
+
+  return new Set(runs)
+}
+
 const sourceFences = analyzeFences(source)
 const localizedFences = analyzeFences(localized)
 
@@ -236,14 +256,17 @@ if (
 }
 
 const localizedProse = localizedFences.outside.replace(/`[^`\n]+`/g, '')
-const sourceLanguageRuns =
-  localizedProse.match(/[\u3400-\u4DBF\u4E00-\u9FFF]{2,}/g) ?? []
-if (sourceLanguageRuns.length) {
+const sourceLanguageRuns = localizedProse.match(sourceLanguagePattern) ?? []
+const allowedSourceLanguageRuns = glossarySourceLanguageRuns(localizedLocale)
+const unexpectedSourceLanguageRuns = sourceLanguageRuns.filter(
+  (run) => !allowedSourceLanguageRuns.has(run)
+)
+if (unexpectedSourceLanguageRuns.length) {
   fail(
-    `possible untranslated Chinese text remains: ${sourceLanguageRuns.slice(0, 5).join(', ')}`
+    `possible untranslated Chinese text remains: ${unexpectedSourceLanguageRuns.slice(0, 5).join(', ')}`
   )
 } else {
-  pass('no untranslated Chinese text was detected')
+  pass('no unexpected untranslated Chinese text was detected')
 }
 
 console.log([...passes, ...failures].join('\n'))

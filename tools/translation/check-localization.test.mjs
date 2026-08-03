@@ -28,6 +28,15 @@ test('accepts a structurally preserved localization', () => {
   assert.equal(result.status, 0, result.stdout + result.stderr)
 })
 
+test('accepts a source-language annotation required by the glossary', () => {
+  const fixture = resolve(fixtures, 'pass-glossary-annotation', 'docs')
+  const result = runFiles(
+    resolve(fixture, 'zh-cn', 'source.md'),
+    resolve(fixture, 'ko-kr', 'localized.md')
+  )
+  assert.equal(result.status, 0, result.stdout + result.stderr)
+})
+
 for (const [fixture, expectedFailure] of [
   ['fail-frontmatter', /FAIL frontmatter keys/],
   ['fail-structure', /FAIL heading levels/],
