@@ -1,18 +1,12 @@
-# Comment déployer une application web
+# Mettez votre site en ligne (facile) : déploiement PaaS en un clic
 
-Dans ce tutoriel, nous allons présenter comment déployer votre application web sur Internet pour que d'autres personnes puissent y accéder. Nous présenterons trois plateformes de déploiement courantes : **Tencent CloudBase**, **Vercel** et **Zeabur**, pour vous aider à réaliser rapidement le processus complet, du « code écrit » au « site accessible sur Internet par tous ».
+> 💡 **Que signifie « mettre un site en ligne » ?** On parle aussi de « mise en production » ou de « déploiement/publication ». Un site web construit sur votre propre ordinateur ne peut être ouvert que par vous. **Mettre un site en ligne signifie le placer sur un serveur qui fonctionne 24h/24, afin que n'importe qui puisse saisir une URL dans son navigateur et le visiter** — un peu comme un document Word que vous seul pouvez lire devient visible par tous une fois publié sur un blog ; la différence, c'est que cette fois vous publiez un site web complet.
 
-# Qu'est-ce que le « déploiement » ?
+Dans ce tutoriel, nous allons voir **la façon la plus simple de mettre un site en ligne — pas de serveur à acheter, pas de DevOps à apprendre**. Connectez simplement votre dépôt GitHub, cliquez sur quelques boutons, et votre site est en ligne. Nous présentons quatre plateformes populaires : **Tencent Cloud CloudBase**, **Vercel**, **Netlify** et **Zeabur**.
 
-Avant de commencer, clarifions ce que signifie « déploiement (Deployment) ». Pour qu'un site web soit accessible par des utilisateurs externes, il doit disposer d'une adresse réseau publiquement accessible (cette adresse peut être une adresse IP, comme 123.45.67.89, ou un nom de domaine, comme [google.com](https://google.com/)). Mais une adresse seule ne suffit pas — votre code de page web (fichiers HTML, CSS, JavaScript, ou projets utilisant des frameworks comme React, Vue, etc.), ainsi que les ressources associées (images, vidéos), doivent être « placés » sur un serveur en ligne 24h/24, qui répondra aux requêtes réseau. Ainsi, le navigateur de n'importe qui pourra accéder à ces ressources et les télécharger.
+# Pourquoi utiliser une plateforme PaaS plutôt que monter son propre serveur ?
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image1.png)
-
-Source de l'image : https://www.hostinger.com/tutorials/what-is-cloud-hosting
-
-L'ensemble du processus — téléchargement des ressources, configuration de l'environnement et mise en route du service — est appelé **déploiement (Deployment)**.
-
-En termes simples : les pages web que vous avez écrites sur votre ordinateur ne sont accessibles que via une adresse locale dans votre propre navigateur, car ce code n'existe que sur votre disque dur. Le « déploiement » consiste à transférer votre code et vos ressources vers un serveur professionnel connecté au réseau public, et à le configurer pour qu'il sache « comment répondre lorsqu'on m'accède » — par exemple : quand quelqu'un saisit votre nom de domaine dans son navigateur, le serveur trouve immédiatement les fichiers correspondants et renvoie le contenu à l'appareil de l'utilisateur, qui peut alors voir votre page.
+Vous vous demandez peut-être : si tout finit « sur un serveur », pourquoi ne pas acheter votre propre serveur et y déployer ? La réponse : **les plateformes gèrent tous les aspects pénibles à votre place**.
 
 Un déploiement manuel nécessite souvent plusieurs étapes, chacune pouvant comporter des pièges. Les étapes clés courantes incluent :
 

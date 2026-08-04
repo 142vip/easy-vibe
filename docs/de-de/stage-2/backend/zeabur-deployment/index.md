@@ -1,18 +1,42 @@
-# Web-Anwendungen bereitstellen
+# Webseite online bringen (Einfach): One-Click-PaaS-Deployment
 
-In diesem Tutorial stellen wir vor, wie du deine Web-Anwendung im Internet veroeffentlicht, damit andere darauf zugreifen koennen. Wir stellen drei haeufig genutzte Bereitstellungsplattformen vor: **Tencent Cloud CloudBase**, **Vercel** und **Zeabur**.
+> 💡 **Was bedeutet "Webseite online bringen"?** Auch "Go-Live" oder "Deployment/Veröffentlichung" genannt. Eine Webseite, die du auf deinem eigenen Computer gebaut hast, kann nur von dir geoeffnet werden. **Online zu bringen bedeutet, sie auf einem Server abzulegen, der 24/7 laeuft, sodass jeder eine URL in seinen Browser eingeben und sie besuchen kann** — genau wie ein Word-Dokument, das nur du lesen kannst, fuer alle sichtbar wird, sobald du es in einem Blog veroeffentlichst; der Unterschied ist, dass du diesmal eine komplette Webseite veroeffentlichst.
 
-# Was ist "Bereitstellung"?
+In diesem Tutorial zeigen wir dir den **einfachsten Weg, eine Webseite online zu bringen — keinen Server kaufen, kein DevOps lernen**. Verbinde einfach dein GitHub-Repository, klicke ein paar Buttons, und deine Seite ist live. Wir stellen vier beliebte Plattformen vor: **Tencent Cloud CloudBase**, **Vercel**, **Netlify** und **Zeabur**.
 
-Bevor wir beginnen, klaeren wir, was "Bereitstellung (Deployment)" eigentlich bedeutet. Jede Website, die von externen Benutzern erreicht werden soll, benoetigt eine oeffentlich zugaengliche Netzwerkadresse. Aber die Adresse allein reicht nicht aus - dein geschriebener Webseiten-Code (HTML-, CSS-, JavaScript-Dateien oder Projekte mit React, Vue usw.) sowie zugehoerige Bild-/Videoressourcen muessen auf einem durchgehend online Server "abgelegt" werden, der Netzwerkanfragen beantwortet.
+# Warum eine PaaS-Plattform statt eines eigenen Servers?
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image1.png)
+Du fragst dich vielleicht: Wenn am Ende alles "auf einem Server" landet, warum nicht einfach einen eigenen Server kaufen und dort deployen? Die Antwort: **Die Plattformen uebernehmen den ganzen muehsamen Teil fuer dich**.
 
-Bildquelle: https://www.hostinger.com/tutorials/what-is-cloud-hosting
+Wenn du alles manuell deployst, umfasst ein Projekt normalerweise viele Schritte:
 
-Den gesamten Prozess des Hochladens von Ressourcen, der Konfiguration der Umgebung und des Startens des Dienstes bezeichnet man als **Bereitstellung (Deployment)**.
+1. **Einen Server vorbereiten**
+   Zuerst musst du einen Cloud-Server bei einem Anbieter wie Alibaba Cloud, Tencent Cloud oder AWS EC2 kaufen oder mieten. Dann waehlst du Region, CPU, Arbeitsspeicher und Speicher und lernst, wie du dich remote mit ihm verbindest, oft per SSH.
+   ![](/zh-cn/stage-2/backend/zeabur-deployment/images/image2.png)
 
-Plattformen wie CloudBase, Vercel, Netlify und Zeabur wurden entwickelt, um genau diese Komplexitaet zu loesen. Sie automatisieren die Schritte "Server kaufen, Umgebung konfigurieren, Code hochladen, Dienst starten und Betrieb ueberwachen". Du musst lediglich dein Code-Repository (z. B. GitHub oder GitLab) mit der Plattform verbinden oder den Code direkt hochladen.
+2. **Die Laufzeitumgebung konfigurieren**
+   Web-Apps laufen nur unter der richtigen Umgebung. Ein Node.js-Projekt braucht installiertes Node. Ein Python-Projekt braucht Python und seine Abhaengigkeiten. Stimmen die Versionen nicht ueberein, kann die App beim Start scheitern.
+
+3. **Deine Dateien hochladen**
+   Du musst deinen lokalen Code und deine Assets auf den Server bringen, oft per Git oder Dateiuebertragungs-Tools. Bei grossen Projekten kann dieser Schritt frustrierend sein, wenn Uploads mittendrin abbrechen.
+
+![](/zh-cn/stage-2/backend/zeabur-deployment/images/image3.png)
+
+4. **Den Dienst starten und testen**
+   Nach dem Upload musst du die App starten und pruefen, ob die zugewiesene Adresse funktioniert. Wenn nicht, kann das Problem ein von der Firewall blockierter Port oder ein Anwendungsfehler sein. In dem Fall musst du Logs pruefen.
+
+5. **Warten und aktualisieren**
+   Jedes Code-Update bedeutet meist einen weiteren Upload und Neustart. Stuerzt der Server ab, musst du Dienste moeglicherweise manuell neu starten oder einen Prozessmanager konfigurieren, der sie am Leben haelt.
+
+Plattformen wie CloudBase, Vercel, Netlify und Zeabur existieren, um genau diese Komplexitaet zu beseitigen. Sie automatisieren die langweiligen Teile:
+
+- Server kaufen und bereitstellen
+- Laufzeitumgebungen konfigurieren
+- Code ziehen
+- Dienste starten
+- Verfuegbarkeit ueberwachen
+
+In vielen Faellen verbindest du einfach ein GitHub-Repository oder laedst deinen Code hoch, und die Plattform erledigt den Rest.
 
 ![](/zh-cn/stage-2/backend/zeabur-deployment/images/image4.png)
 

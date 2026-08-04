@@ -1,18 +1,12 @@
-# Cómo desplegar aplicaciones web
+# Publica tu sitio web (fácil): despliegue PaaS con un clic
 
-En este tutorial, aprenderás a desplegar tu aplicación web en Internet para que otras personas puedan acceder a ella. Presentaremos tres plataformas de despliegue populares: **Tencent CloudBase**, **Vercel** y **Zeabur**, ayudándote a completar todo el proceso, desde "escribir el código" hasta "poner tu sitio web al alcance de cualquier persona en Internet".
+> 💡 **¿Qué significa "publicar un sitio web en Internet"?** También se llama "salir a producción" o "desplegar/publicar". Un sitio web que construiste en tu propio ordenador solo puede abrirlo tú. **Publicarlo en Internet significa colocarlo en un servidor que funciona las 24 horas, para que cualquier persona pueda escribir una URL en su navegador y visitarlo** — igual que un documento de Word que solo tú puedes leer se vuelve visible para todos cuando lo publicas en un blog; la diferencia es que esta vez estás publicando un sitio web completo.
 
-# ¿Qué es el "despliegue"?
+En este tutorial, veremos la **forma más fácil de poner un sitio en línea — sin comprar un servidor, sin aprender DevOps**. Solo conecta tu repositorio de GitHub, haz clic en unos pocos botones y tu sitio estará en línea. Cubrimos cuatro plataformas populares: **Tencent Cloud CloudBase**, **Vercel**, **Netlify** y **Zeabur**.
 
-Antes de empezar, aclaremos qué significa exactamente "despliegue (Deployment)". Para que cualquier sitio web pueda ser visitado por usuarios externos, necesita una dirección de red accesible públicamente (esta dirección puede ser una dirección IP, como 123.45.67.89, o un nombre de dominio, como [google.com](https://google.com/)). Pero la dirección por sí sola no basta: el código de tu página web (por ejemplo, archivos HTML, CSS, JavaScript, o proyectos escritos con frameworks como React o Vue), junto con los recursos de imágenes y vídeos asociados, deben estar "alojados" en un servidor que esté conectado las 24 horas del día, para que pueda responder a las solicitudes de red y permitir que cualquier navegador acceda y descargue estos recursos.
+# ¿Por qué usar una plataforma PaaS en lugar de montar tu propio servidor?
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image1.png)
-
-Fuente de la imagen: https://www.hostinger.com/tutorials/what-is-cloud-hosting
-
-El proceso completo de subir los recursos, configurar el entorno y poner el servicio en marcha se conoce como **despliegue (Deployment)**.
-
-En términos sencillos: la página web que escribes en tu ordenador, si solo inicias el programa localmente, solo podrás acceder a ella desde tu propio navegador a través de una dirección local, porque ese código solo existe en tu disco duro. El "despliegue" consiste en transferir tu código y recursos a un servidor profesional conectado a la red pública, y configurarlo para que sepa "cómo responder cuando alguien accede"; por ejemplo, cuando alguien escribe tu dominio en el navegador, el servidor encuentra inmediatamente los archivos de la página web correspondientes y envía el contenido al dispositivo del usuario, permitiéndole ver tu página.
+Quizás te preguntes: si al final todo acaba "en un servidor", ¿por qué no comprar tu propio servidor y desplegar allí? La respuesta: **las plataformas se encargan de todas las partes complicadas por ti**.
 
 Si realizas el despliegue manualmente, un proyecto suele requerir varios pasos, y cada uno puede tener sus complicaciones. Los pasos clave más comunes son:
 

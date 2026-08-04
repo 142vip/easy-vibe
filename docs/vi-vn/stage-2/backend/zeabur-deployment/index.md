@@ -1,18 +1,12 @@
-# Cách triển khai ứng dụng Web
+# Đưa website lên mạng (dễ dàng): triển khai PaaS một cú nhấp chuột
 
-Trong hướng dẫn này, chúng tôi sẽ giới thiệu cách triển khai ứng dụng Web của bạn lên Internet để người khác có thể truy cập. Chúng tôi sẽ giới thiệu ba nền tảng triển khai phổ biến: **Tencent CloudBase**, **Vercel** và **Zeabur**, giúp bạn nhanh chóng hoàn thành quy trình hoàn chỉnh từ "viết xong code" đến "để người khác có thể truy cập trang web của bạn trên Internet".
+> 💡 **"Đưa website lên mạng" nghĩa là gì?** Còn được gọi là "going live" hay "triển khai/xuất bản". Một trang web bạn tự xây trên máy tính của mình chỉ có mình bạn mở được. **Đưa lên mạng nghĩa là đặt nó trên một máy chủ chạy 24/7, để bất kỳ ai cũng có thể gõ một URL trong trình duyệt và truy cập** — giống như một tài liệu Word chỉ mình bạn đọc được, sau khi bạn đăng lên blog thì ai cũng xem được; khác biệt là lần này bạn đang xuất bản một trang web hoàn chỉnh.
 
-# "Triển khai" là gì?
+Trong hướng dẫn này, chúng ta sẽ cùng tìm hiểu **cách dễ nhất để đưa một trang web lên mạng — không cần mua máy chủ, không cần học DevOps**. Chỉ cần kết nối kho GitHub của bạn, bấm vài nút, trang web của bạn sẽ hoạt động. Chúng tôi sẽ giới thiệu bốn nền tảng phổ biến: **Tencent Cloud CloudBase**, **Vercel**, **Netlify** và **Zeabur**.
 
-Trước khi bắt đầu, chúng ta hãy tìm hiểu "Triển khai (Deployment)" thực chất có nghĩa là gì. Bất kỳ trang web nào muốn được người dùng bên ngoài truy cập đều phải có một địa chỉ mạng có thể truy cập công khai (địa chỉ này có thể là địa chỉ IP, ví dụ 123.45.67.89, hoặc một tên miền, ví dụ [google.com](https://google.com/)). Nhưng chỉ có địa chỉ là chưa đủ -- mã trang web bạn đã viết (ví dụ tệp HTML, CSS, JavaScript, hoặc dự án sử dụng React, Vue và các framework khác), cùng với các tài nguyên hình ảnh / video liên quan, đều phải được "đặt" trên một máy chủ trực tuyến 24 giờ, máy chủ này sẽ phản hồi các yêu cầu mạng, để trình duyệt của bất kỳ ai mới có thể truy cập và tải xuống các tài nguyên này.
+# Tại sao dùng nền tảng PaaS thay vì tự lập máy chủ?
 
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image1.png)
-
-Nguồn hình ảnh: https://www.hostinger.com/tutorials/what-is-cloud-hosting
-
-Toàn bộ quá trình tải tài nguyên lên, cấu hình môi trường và làm cho dịch vụ "chạy được" được gọi là **Triển khai (Deployment)**.
-
-Nói một cách đơn giản: trang web bạn viết trên máy tính của mình, miễn là bạn chỉ khởi động chương trình cục bộ, thì bạn chỉ có thể truy cập qua địa chỉ cục bộ trên trình duyệt của mình, vì mã này chỉ tồn tại trên ổ cứng của bạn. "Triển khai" là việc chuyển mã và tài nguyên của bạn sang một máy chủ chuyên nghiệp được kết nối với mạng công cộng, và cấu hình sao cho máy chủ này biết "khi người khác truy cập, tôi cần phản hồi như thế nào" -- ví dụ: khi ai đó nhập tên miền của bạn trong trình duyệt, máy chủ sẽ ngay lập tức tìm tệp trang web tương ứng, truyền nội dung về thiết bị của họ, từ đó người dùng có thể nhìn thấy trang của bạn.
+Bạn có thể thắc mắc: nếu mọi thứ cuối cùng đều nằm "trên một máy chủ", tại sao không tự mua máy chủ và triển khai ở đó? Câu trả lời: **các nền tảng sẽ xử lý hết những phần rắc rối cho bạn**.
 
 Nếu triển khai thủ công, một dự án thường cần nhiều bước, mỗi bước đều có thể gặp vấn đề. Các bước chính thường bao gồm:
 
