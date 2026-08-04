@@ -2218,6 +2218,22 @@
     <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/ai-interface-code/"/>
   </url>
   <url>
+    <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/stage-2/backend/cloud-server-deployment/</loc>
+    <lastmod>2026-08-04T04:55:57.269Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/stage-2/backend/cloud-server-deployment/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://datawhalechina.github.io/easy-vibe/en/stage-2/backend/cloud-server-deployment/"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://datawhalechina.github.io/easy-vibe/zh-tw/stage-2/backend/cloud-server-deployment/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://datawhalechina.github.io/easy-vibe/ja-jp/stage-2/backend/cloud-server-deployment/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://datawhalechina.github.io/easy-vibe/ko-kr/stage-2/backend/cloud-server-deployment/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://datawhalechina.github.io/easy-vibe/es-es/stage-2/backend/cloud-server-deployment/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://datawhalechina.github.io/easy-vibe/fr-fr/stage-2/backend/cloud-server-deployment/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://datawhalechina.github.io/easy-vibe/de-de/stage-2/backend/cloud-server-deployment/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://datawhalechina.github.io/easy-vibe/ar-sa/stage-2/backend/cloud-server-deployment/"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/stage-2/backend/cloud-server-deployment/"/>
+  </url>
+  <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/stage-2/backend/database-supabase/</loc>
     <lastmod>2026-05-27T12:32:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -2411,7 +2427,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/stage-2/frontend/ui-design/</loc>
-    <lastmod>2026-08-04T00:37:34+08:00</lastmod>
+    <lastmod>2026-08-04T11:05:21+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/stage-2/frontend/ui-design/"/>

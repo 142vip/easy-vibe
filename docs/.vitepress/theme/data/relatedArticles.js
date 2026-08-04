@@ -202,6 +202,32 @@ const rawRelatedArticlesMap = {
       description: '用组件库统一 UI 规范并提升页面开发效率。',
       icon: '🧩'
     }
+  ],
+  'zh-cn/stage-2/backend/cloud-server-deployment': [
+    {
+      href: '/zh-cn/stage-2/backend/zeabur-deployment/',
+      title: '网页应用部署全面指南',
+      description: '先用 PaaS 平台快速上线，建立对部署流程的直觉。',
+      icon: '🚀'
+    },
+    {
+      href: '/zh-cn/stage-2/backend/modern-cli/',
+      title: 'CLI Coding Agent 编程助手',
+      description: '用命令行 AI Agent 直接在服务器上执行部署与运维操作。',
+      icon: '⌨️'
+    },
+    {
+      href: '/zh-cn/stage-2/backend/git-workflow/',
+      title: 'Git 与 GitHub 入门指南',
+      description: '代码版本管理是自动化部署的基础。',
+      icon: '📚'
+    },
+    {
+      href: '/zh-cn/stage-2/backend/database-supabase/',
+      title: '数据库与 Supabase 入门',
+      description: '服务器上跑项目离不开数据库，先了解数据层怎么部署。',
+      icon: '🗄️'
+    }
   ]
 }
 
@@ -308,6 +334,11 @@ const localizedArticleText = {
       title: '2.7 Upgrade UI with Modern Component Libraries',
       description:
         'Use component libraries to improve consistency and development speed.'
+    },
+    'cloud-server-deployment': {
+      title: 'Cloud VPS Deployment',
+      description:
+        'Deploy local projects to a cloud server with AI assistance (Nginx, PM2/Docker, HTTPS).'
     }
   },
   'zh-tw': {

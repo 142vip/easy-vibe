@@ -706,6 +706,10 @@ const stage2SidebarEn = [
         link: '/en/stage-2/backend/zeabur-deployment/'
       },
       {
+        text: 'Cloud VPS Deployment',
+        link: '/en/stage-2/backend/cloud-server-deployment/'
+      },
+      {
         text: 'Modern CLI Dev Tools',
         link: '/en/stage-2/backend/modern-cli/'
       },
@@ -823,6 +827,10 @@ const zhCnStage2Sidebar = [
       {
         text: '网页应用部署全面指南',
         link: '/zh-cn/stage-2/backend/zeabur-deployment/'
+      },
+      {
+        text: '云服务器部署：把本地项目发布到公网',
+        link: '/zh-cn/stage-2/backend/cloud-server-deployment/'
       },
       {
         text: 'CLI Coding Agent 编程助手',
