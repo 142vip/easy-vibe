@@ -661,11 +661,351 @@ sudo certbot renew --dry-run  # 测试自动续期
 
 ---
 
-# 6. AI Agent 专用部署平台
+# 6. 云厂商常见服务功能全解析（不只是服务器！）
+
+买了云服务器之后，你会发现云厂商控制台里有上百种产品，名字听起来都很专业（ECS、OSS、CDN、RDS、SLB…），新手往往不知道是干嘛的、什么时候该用。这一节我们把最常见的服务逐个讲清楚，**国内以阿里云/腾讯云为例，海外以 AWS 为例**，帮你建立云服务的「地图感」。
+
+## 6.1 一张表搞懂：云服务全家福
+
+先看全景。一个完整的 Web 应用在云上通常长这样：
+
+```
+用户 ──→ CDN（静态资源加速）──→ 负载均衡 SLB/ALB ──→ 云服务器 ECS/EC2（你的应用）
+                │                        │                │
+                │                        │                ├── 对象存储 OSS/S3（图片/文件）
+                │                        │                ├── 云数据库 RDS/RDS（MySQL/Postgres）
+                │                        │                └── 缓存 Redis/ElastiCache
+                │                        │
+                │                        └── 容器服务 ACK/EKS（Kubernetes，进阶）
+                │
+                └── 域名解析 DNS/DNS（把域名指向你的服务）
+                     + SSL 证书（HTTPS 加密）
+```
+
+下面逐个解释每个服务是什么、什么时候用、怎么操作。
+
+## 6.2 计算类：跑你代码的地方
+
+### 云服务器 ECS / CVM / EC2
+
+这就是我们前面一直在说的「VPS」「云服务器」。
+
+| 厂商 | 产品名 | 说明 |
+|------|--------|------|
+| 阿里云 | ECS（弹性计算服务） | 最通用的云服务器，可以自由选配置、装系统 |
+| 腾讯云 | CVM（云服务器）/ Lighthouse（轻量应用服务器） | CVM 更灵活，Lighthouse 更简单适合新手 |
+| 华为云 | ECS / HECS（云耀） | HECS 类似轻量服务器 |
+| AWS | EC2（Elastic Compute Cloud） | AWS 的虚拟服务器，类型极多（通用/计算优化/内存优化/GPU） |
+
+**什么时候用：** 需要自己掌控运行环境、跑自定义服务、24小时在线的进程。
+
+**怎么操作（以腾讯云轻量为例）：**
+1. 进入「轻量应用服务器」控制台
+2. 点「新建」选镜像（推荐 Ubuntu 22.04）、套餐、地域
+3. 购买后在实例列表里看到公网 IP
+4. 点「重置密码」设置 root 密码
+5. 点「防火墙」添加端口规则（22/80/443）
+6. SSH 连接上去开始部署
+
+### Serverless 函数计算 / Lambda
+
+不用买服务器，上传代码，按调用次数和运行时间付费。请求来了才运行，没请求不花钱。
+
+| 厂商 | 产品名 |
+|------|--------|
+| 阿里云 | 函数计算 FC |
+| 腾讯云 | 云函数 SCF |
+| AWS | Lambda |
+
+**什么时候用：** 偶尔被触发的任务（比如 Webhook 处理、图片压缩、定时任务）、流量波动大的 API。不适合需要常驻的服务（比如 WebSocket Bot）。
+
+### 容器服务 / EKS / ACK
+
+如果你的项目用了 Docker，且规模变大需要管理多个容器，用 Kubernetes（K8s）编排。
+
+| 厂商 | 产品名 |
+|------|--------|
+| 阿里云 | ACK（容器服务 Kubernetes 版） |
+| 腾讯云 | TKE |
+| AWS | EKS（Elastic Kubernetes Service）|
+
+**什么时候用：** 多服务微服务架构、需要自动扩缩容、团队有运维能力。个人/小项目用不上，一台 VPS + Docker Compose 就够了。
+
+## 6.3 存储类：放文件和数据的地方
+
+### 对象存储 OSS / COS / S3 ⭐ 最常用
+
+**这是除了服务器之外最常用的服务**，用来存放图片、视频、PDF、前端打包后的静态文件等「大文件」。**不要把用户上传的文件存在服务器本地磁盘上！** 服务器重装/迁移/扩容时很容易丢。
+
+| 厂商 | 产品名 | 免费额度 | 费用 |
+|------|--------|---------|------|
+| 阿里云 | OSS（对象存储服务）| 新用户 5GB 标准存储 6 个月 | 标准存储约 ¥0.12/GB/月 |
+| 腾讯云 | COS（对象存储） | 新用户 50GB 6 个月 | 标准存储约 ¥0.118/GB/月 |
+| AWS | S3（Simple Storage Service）| 5GB（Free Tier，12个月）| 标准存储约 $0.023/GB/月 |
+
+**它能做什么：**
+- 存放用户上传的图片/头像/附件（博客配图、商品图片、用户头像）
+- 托管前端静态网站（把 `dist/` 目录直接传上去，开启「静态网站托管」功能就能访问）
+- 备份数据库导出文件
+- 和 CDN 配合，让全世界用户快速下载你的文件
+- 生成临时链接分享私有文件
+
+**怎么操作（以阿里云 OSS 为例）：**
+1. 进入 OSS 控制台，点「创建 Bucket」
+2. 填写 Bucket 名称（全局唯一，比如 `myapp-images`）
+3. 地域选离你服务器近的
+4. 存储类型选「标准存储」
+5. 读写权限：**初期建议「公共读」**（图片可以直接访问），敏感文件用「私有」
+6. 创建完成后，进入 Bucket →「文件管理」→「上传文件」
+7. 上传后每个文件都有一个 URL，比如 `https://myapp-images.oss-cn-hangzhou.aliyuncs.com/avatar.jpg`
+8. 前端代码里直接用这个 URL 显示图片
+
+**配合 CDN 加速：** 给 OSS Bucket 绑定自定义域名 + CDN，用户访问图片时从最近的 CDN 节点获取，速度快且省 OSS 流量费。
+
+**用代码操作（Node.js 示例，让 AI 帮你写具体逻辑）：**
+
+```javascript
+// 安装 SDK: npm install ali-oss
+const OSS = require('ali-oss');
+const client = new OSS({
+  region: 'oss-cn-hangzhou',
+  accessKeyId: '你的AccessKey',
+  accessKeySecret: '你的AccessKeySecret',
+  bucket: 'myapp-images'
+});
+
+// 上传文件
+async function uploadFile(localPath, ossPath) {
+  const result = await client.put(ossPath, localPath);
+  return result.url; // 返回文件的公网 URL
+}
+```
+
+> ⚠️ **重要安全提醒：** AccessKey 相当于你的 OSS 密码，**绝对不要硬编码在前端代码或提交到 Git**！放在服务端环境变量里。如果不小心泄露了，立即到 RAM 控制台禁用旧 Key 并生成新的。
+
+**AWS S3 操作（同样流程）：**
+1. AWS 控制台搜索 S3 → Create bucket
+2. 填名字、选区域（如 us-east-1）、取消勾选 "Block all public access"（如果需要公开访问）
+3. 上传文件后可以通过 `https://bucket-name.s3.region.amazonaws.com/file.jpg` 访问
+4. SDK 用 `aws-sdk` 或 `@aws-sdk/client-s3`
+
+### 云硬盘 / 云盘 / EBS
+
+挂载在云服务器上的块存储（类似电脑的硬盘）。服务器自带的系统盘通常 40-60GB，不够用时你可以额外买「数据盘」挂载上去。
+
+- 阿里云：云盘（高效云盘/ESSD/SSD）
+- 腾讯云：云硬盘 CBS
+- AWS：EBS（Elastic Block Store）
+
+**什么时候用：** 服务器磁盘不够、需要额外存储空间、需要独立于服务器生命周期保留数据（服务器删了数据盘还在）。
+
+### 文件存储 / NAS / EFS
+
+多台服务器可以同时挂载的共享文件存储。适合多台 Web 服务器共享同一份上传文件。
+
+- 阿里云：NAS（网络附加存储）
+- 腾讯云：CFS
+- AWS：EFS（Elastic File System）
+
+个人小项目一般用不上，单台服务器 + OSS 足够。
+
+## 6.4 数据库类：存结构化数据
+
+### 云数据库 RDS / Cloud Database ⭐ 常用
+
+**不要把数据库装在同一台 VPS 上跑生产环境！** 虽然技术上可以（我们前面的教程就是在 VPS 上装 PostgreSQL），但生产环境用云数据库更省心：自动备份、高可用、监控告警、一键扩容。
+
+| 厂商 | 产品名 | 支持的数据库 | 免费/入门 |
+|------|--------|------------|----------|
+| 阿里云 | RDS | MySQL、PostgreSQL、SQL Server、MariaDB | 新用户免费试用 1-3 个月 |
+| 腾讯云 | TDSQL-C（原CynosDB）/ 云数据库 MySQL | MySQL、PostgreSQL、MariaDB | 新用户 1核1G 约 ¥30/月 |
+| AWS | RDS（Relational Database Service） | MySQL、PostgreSQL、MariaDB、SQL Server、Oracle、Aurora | Free Tier 12 个月（t2.micro/t3.micro） |
+
+**什么时候用：** 生产环境的数据库（特别是有用户数据、不能丢数据的场景）。
+
+**怎么操作（以阿里云 RDS 为例）：**
+1. RDS 控制台 → 创建实例
+2. 选数据库引擎（MySQL 8.0 最常用）、规格（入门选 1核2G）、存储空间
+3. 创建后设置「白名单」把你的服务器 IP 加进去（重要！否则连不上）
+4. 创建数据库账号和密码
+5. 在「数据库管理」里创建数据库名
+6. 拿到连接地址（类似 `rm-xxxxx.mysql.rds.aliyuncs.com:3306`）
+7. 修改你项目的 `.env` 里的 `DATABASE_URL` 指向这个地址
+
+> 💡 **vibecoding 提示：** 告诉 AI「我有一个阿里云 RDS MySQL 实例，连接地址是 xxx，账号是 xxx，帮我写 Node.js/Python 连接代码和数据库初始化迁移脚本」。
+
+### 缓存 Redis / ElastiCache
+
+内存数据库，用来缓存热点数据（减少数据库查询）、存 Session/Token、做消息队列、排行榜等。
+
+- 阿里云：云数据库 Redis 版
+- 腾讯云：云数据库 Redis
+- AWS：ElastiCache for Redis
+
+入门可以直接在 VPS 上 `apt install redis-server`，生产环境/高可用场景用云 Redis。
+
+## 6.5 网络类：让用户访问更快更安全
+
+### CDN（内容分发网络）⭐ 常用
+
+把你的静态资源（图片、CSS、JS、视频）缓存到全球/全国的边缘节点，用户访问时从最近的节点拿，速度飞快。
+
+- 阿里云：CDN / DCDN（全站加速）
+- 腾讯云：CDN / EdgeOne（边缘安全加速）
+- AWS：CloudFront
+
+**什么时候用：**
+- 网站有图片/视频等大文件
+- 用户分布在全国各地/全球各地
+- 想减少服务器带宽压力（CDN 帮你扛流量）
+- 前面提到的 Cloudflare Pages 本质上就是 CDN + 静态托管
+
+**怎么配置（以腾讯云 CDN 为例）：**
+1. CDN 控制台 → 添加域名 → 填入你的域名（比如 `static.yourdomain.com`）
+2. 源站类型选「COS源」或「自有源」（填你的服务器 IP）
+3. 等待配置下发（约 5-10 分钟）
+4. 去域名解析控制台，给 `static.yourdomain.com` 添加 CNAME 记录，指向 CDN 分配给你的 CNAME 地址
+5. 配置完成，访问 `static.yourdomain.com/images/xxx.jpg` 就是 CDN 加速了
+
+### 负载均衡 SLB / CLB / ALB / ELB
+
+当你有多台后端服务器时，负载均衡器把流量均匀分发到各台服务器上，还能自动踢掉挂掉的服务器。
+
+- 阿里云：SLB（服务器负载均衡）/ ALB（应用型）
+- 腾讯云：CLB（负载均衡）
+- AWS：ELB（Elastic Load Balancing：ALB/NLB/Gateway LB）
+
+个人项目只有一台服务器时用不上，用户多了、需要多台服务器时再考虑。
+
+### DNS 域名解析 / Cloud DNS
+
+把域名翻译成 IP 地址的服务。买域名的地方通常自带免费 DNS 解析，但也可以换成更专业的。
+
+- 阿里云：云解析 DNS（万网域名自带）
+- 腾讯云：DNSPod（腾讯云旗下）
+- AWS：Route 53
+- 第三方推荐：Cloudflare DNS（免费、全球最快之一）
+
+**怎么操作：** 在域名控制台添加解析记录：
+
+| 记录类型 | 作用 | 示例 |
+|---------|------|------|
+| **A 记录** | 域名 → IPv4 地址 | `@ → 123.45.67.89` |
+| **AAAA 记录** | 域名 → IPv6 地址 | `@ → 2400:xxxx::` |
+| **CNAME 记录** | 域名 → 另一个域名（常用于 CDN） | `static → static.cdn.com` |
+| **MX 记录** | 邮件服务器（用企业邮箱需要配） | - |
+| **TXT 记录** | 任意文本（验证域名所有权、配置 SPF/DKIM 等） | - |
+
+### SSL 证书服务
+
+HTTPS 需要的 SSL 证书。
+
+- 阿里云/腾讯云：免费 SSL 证书（Let's Encrypt 或云厂商免费证书，有效期 3-12 个月）
+- AWS：ACM（AWS Certificate Manager，免费）
+- 通用免费方案：Certbot + Let's Encrypt（我们前面第 5 章的方法，90 天自动续期）
+
+我们前面用的 `certbot --nginx` 就是最通用的免费方案，不用专门去云厂商买证书。
+
+### VPC（私有网络）/ VPC
+
+在云上划一个隔离的虚拟局域网，你的服务器、数据库都在里面，更安全。新用户创建云产品时一般会默认创建一个 VPC，不用你操心。进阶用法（比如公有子网/私有子网分离、NAT 网关）需要专门学习。
+
+## 6.6 其他常用服务
+
+### 域名注册 / Domain
+
+买域名的地方。
+- 国内：阿里云万网、腾讯云（DNSPod）、华为云
+- 海外：Namecheap、Cloudflare Registrar、GoDaddy、Google Domains（已迁移到 Squarespace）
+- 建议：国内用户用国内注册商（方便备案），海外项目用 Namecheap 或 Cloudflare（便宜、免费隐私保护）
+
+### 邮件服务 / SES
+
+不要在服务器上自己搭邮件服务器（大概率被当成垃圾邮件）。用专业的邮件发送服务：
+- 国内：阿里云邮件推送、腾讯云 SES
+- 海外：AWS SES、SendGrid、Mailgun、Resend
+- 用途：注册验证邮件、通知邮件、营销邮件
+
+### 短信服务 / SMS
+
+发送验证码短信、通知短信：
+- 国内：阿里云短信服务、腾讯云短信
+- 海外：AWS SNS、Twilio
+- 国内发短信需要企业资质/签名备案，个人开发者比较难申请到。个人项目可以用邮件/邮箱验证码代替短信。
+
+### 监控/日志 / CloudWatch
+
+监控服务器的 CPU/内存/磁盘使用率，查看应用日志，设置告警（CPU 太高、服务挂了就通知你）：
+- 阿里云：云监控、SLS（日志服务）
+- 腾讯云：云监控、CLS（日志服务）
+- AWS：CloudWatch
+
+入门阶段：可以用 PM2 自带的监控 + Uptime Kuma（开源监控工具，一个 Docker 就能跑）。
+
+### 对象存储的进阶用法：图片处理/视频转码
+
+云厂商的 OSS/S3 通常还附带媒体处理能力：
+- 阿里云 OSS：图片处理（缩略图/水印/格式转换）、视频转码（需配合 MPS）
+- 腾讯云 COS：数据万象 CI（图片处理/内容审核/人脸识别）
+- AWS S3：配合 Lambda 自动生成缩略图
+
+**示例**：你上传了一张 5MB 的原图 `photo.jpg`，访问时在 URL 后面加参数 `?x-oss-process=image/resize,w_300` 就能直接拿到 300px 宽的缩略图，不用你自己处理。
+
+## 6.7 国内 vs 海外：两套生态对照速查
+
+做项目时经常需要在国内云和海外云之间对照，这个表帮你快速找到对应服务：
+
+| 功能类别 | 阿里云 | 腾讯云 | AWS | 免费/低价替代 |
+|---------|--------|--------|-----|-------------|
+| 云服务器 | ECS | CVM / Lighthouse | EC2 | Vultr / DigitalOcean / Hetzner |
+| 对象存储 | OSS | COS | S3 | Cloudflare R2（免出站流量费）|
+| 关系数据库 | RDS | 云数据库 | RDS | Supabase / Neon / PlanetScale |
+| 缓存 Redis | 云 Redis | 云 Redis | ElastiCache | Upstash（Serverless Redis）|
+| CDN | CDN | CDN / EdgeOne | CloudFront | Cloudflare CDN（免费）|
+| 负载均衡 | SLB/ALB | CLB | ELB | Nginx 自建 / Caddy |
+| Serverless | 函数计算 FC | 云函数 SCF | Lambda | Cloudflare Workers |
+| 容器/K8s | ACK | TKE | EKS | Fly.io / Railway |
+| DNS 解析 | 云解析 | DNSPod | Route 53 | Cloudflare DNS（免费）|
+| SSL 证书 | 免费证书 | 免费证书 | ACM（免费）| Let's Encrypt（免费）|
+| 邮件推送 | 邮件推送 | SES | SES | Resend / SendGrid 免费额度 |
+| 短信服务 | 短信服务 | 短信 | SNS | Twilio |
+| 监控 | 云监控 | 云监控 | CloudWatch | Uptime Kuma（自建开源）|
+| AI 模型/API | 通义千问、百炼 | 混元、TI平台 | Bedrock | OpenAI API / Anthropic API |
+| 域名注册 | 万网 | DNSPod | Route 53 | Namecheap / Cloudflare |
+
+## 6.8 新手常见疑问
+
+**Q：我应该把所有服务都用云厂商的，还是都在 VPS 上自己搭？**
+
+**个人项目/学习阶段：** VPS 自己搭就行（Docker Compose 一把梭），省钱且能学到东西。
+**面向用户的生产项目：** 数据库和对象存储建议用云服务（自动备份、稳定），应用层还是可以跑在 VPS 上。
+**预算充足/团队项目：** 尽量用云托管服务（RDS/Redis/OSS），把精力放在写业务代码上而不是运维上。
+
+**Q：AWS 免费套餐怎么用？**
+
+AWS 给新用户 12 个月的 Free Tier，包含：
+- EC2：t2.micro/t3.micro 每月 750 小时（相当于一台一直跑）
+- S3：5GB 标准存储
+- RDS：750 小时 db.t2.micro/t3.micro + 20GB 存储
+- Lambda：每月 100 万次请求免费
+- CloudFront：50GB 出站流量 + 200万次请求/月
+
+但注意：**AWS Free Tier 到期后自动按标准费率计费**，不用了记得销毁资源，不然月底账单会很惊喜。建议设置账单告警（Billing Dashboard → Budgets）。
+
+**Q：国内云和海外云怎么选？**
+
+- 用户在国内 → 用国内云（阿里云/腾讯云）+ 备案，访问速度快且合规
+- 用户在海外 → 用 AWS/Vultr/Fly.io/Cloudflare 等海外服务
+- 两边都有用户 → 前端用 Cloudflare CDN，国内放阿里云/腾讯云海外节点（香港/新加坡），海外用 AWS，通过 GeoDNS 分流
+- 不想备案但要国内能访问 → Cloudflare Pages（静态站）或香港节点 VPS，但速度不如国内备案服务器
+
+---
+
+# 7. AI Agent 专用部署平台
 
 如果你部署的是 AI Agent（不只是普通 Web 应用），有些平台专门为 AI 工作负载设计：
 
-## 6.1 Modal — Python AI/ML 的 Serverless GPU
+## 7.1 Modal — Python AI/ML 的 Serverless GPU
 
 **官网**：https://modal.com
 
@@ -690,7 +1030,7 @@ def run_agent(prompt: str):
     return result
 ```
 
-## 6.2 Hugging Face Spaces — AI Demo 首选
+## 7.2 Hugging Face Spaces — AI Demo 首选
 
 **官网**：https://huggingface.co/spaces
 
@@ -702,7 +1042,7 @@ def run_agent(prompt: str):
 - 社区活跃，每个 Space 都有公开的代码和讨论区
 - 点一下就能 Fork 别人的 Space 改自己的
 
-## 6.3 Replicate — 把模型变成 API
+## 7.3 Replicate — 把模型变成 API
 
 **官网**：https://replicate.com
 
@@ -710,7 +1050,7 @@ def run_agent(prompt: str):
 
 **特点：** 把你的模型推上去，它自动打包成可调用的 HTTP API，按调用量计费。适合发布自己微调的模型。
 
-## 6.4 国内 GPU 云：AutoDL
+## 7.4 国内 GPU 云：AutoDL
 
 **官网**：https://www.autodl.com
 
@@ -725,11 +1065,11 @@ def run_agent(prompt: str):
 
 ---
 
-# 7. 🎯 Vibecoding 部署实战：让 AI 当你的运维助手
+# 8. 🎯 Vibecoding 部署实战：让 AI 当你的运维助手
 
 这才是 vibecoding 时代最重要的部署心法：**你不需要记住所有命令，AI 就是你的运维助手。**
 
-## 7.1 两种 AI 协作部署方式
+## 8.1 两种 AI 协作部署方式
 
 **方式一：本地生成脚本，手动执行**
 
@@ -761,7 +1101,7 @@ AI 会自动检查环境、安装缺失依赖、拉代码、构建、配置、�
 > - 给 AI 的用户权限最小化（不要给 root，可以给有 sudo 的普通用户）
 > - AI 执行危险命令前先看一眼它要做什么
 
-## 7.2 万能部署 Prompt 模板
+## 8.2 万能部署 Prompt 模板
 
 不管你选哪个平台/服务器，填好这个模板给 AI，它都能给你一份可执行的方案：
 
@@ -793,7 +1133,7 @@ AI 会自动检查环境、安装缺失依赖、拉代码、构建、配置、�
 4. 列出常见坑和排查方法
 ```
 
-## 7.3 AI 辅助排错流程
+## 8.3 AI 辅助排错流程
 
 出问题不要慌：
 
@@ -818,9 +1158,9 @@ AI 会自动检查环境、安装缺失依赖、拉代码、构建、配置、�
 
 ---
 
-# 8. 部署后实用技巧
+# 9. 部署后实用技巧
 
-## 8.1 文件传输
+## 9.1 文件传输
 
 ```bash
 # 本地 → 服务器
@@ -834,7 +1174,7 @@ scp yourname@IP:/home/yourname/file.zip ./
 rsync -avz --exclude=node_modules --exclude=.git ./project/ yourname@IP:/var/www/project/
 ```
 
-## 8.2 一键更新脚本
+## 9.2 一键更新脚本
 
 在服务器上创建 `deploy.sh`：
 
@@ -851,7 +1191,7 @@ echo "✅ 部署完成！"
 
 以后更新只需要 `bash deploy.sh`。再配个 GitHub Actions（让 AI 帮你写），代码 push 后自动部署。
 
-## 8.3 安全加固清单
+## 9.3 安全加固清单
 
 让 AI 帮你生成完整的安全加固脚本，主要包括：
 - 禁用密码登录，只用 SSH 密钥
@@ -863,7 +1203,7 @@ echo "✅ 部署完成！"
 
 ---
 
-# 9. 本章小结
+# 10. 本章小结
 
 **部署选项总结表：**
 
