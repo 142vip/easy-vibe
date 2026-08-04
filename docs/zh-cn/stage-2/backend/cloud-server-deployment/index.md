@@ -3,7 +3,7 @@ import RelatedArticlesSection from '../../../../.vitepress/theme/components/Rela
 import { relatedArticlesMap } from '../../../../.vitepress/theme/data/relatedArticles'
 </script>
 
-# 云服务器部署：把本地项目发布到公网
+# 自己搭服务器：VPS 从购买到上线完整教程
 
 把本地跑通的项目发布到互联网上，让任何人通过一个网址就能访问——这是每个 vibecoding 开发者都要过的一关。很多新手以为部署很难，其实在 2026 年，部署选项比以前丰富得多：从一键连仓库的 PaaS 平台，到几块钱一个月的轻量云服务器，甚至还有完全免费的方案。
 

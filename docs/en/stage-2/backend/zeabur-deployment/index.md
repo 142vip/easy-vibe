@@ -1,6 +1,6 @@
-# How to Deploy Web Applications
+# Quick Launch: One-Click PaaS Deployment
 
-In this tutorial, we will walk through how to deploy your web application to the internet so other people can access it. We will introduce four common deployment platforms: **Tencent Cloud CloudBase**, **Vercel**, **Netlify**, and **Zeabur**. The goal is to help you go from "I finished writing the code" to "other people can visit my site online."
+In this tutorial, we will walk through how to deploy your web application to the internet so other people can access it. We will introduce four common deployment platforms: **Tencent Cloud CloudBase**, **Vercel**, **Netlify**, and **Zeabur**. No server to buy, no DevOps to learn — just connect your GitHub repo and click a few buttons to go live.
 
 # What does "deployment" mean?
 

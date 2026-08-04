@@ -3,7 +3,7 @@ import RelatedArticlesSection from '../../../../.vitepress/theme/components/Rela
 import { relatedArticlesMap } from '../../../../.vitepress/theme/data/relatedArticles'
 </script>
 
-# Cloud VPS Deployment: Publish Your Local Project to the Internet
+# Self-Hosted: VPS from Purchase to Live
 
 Getting a project running locally onto the public internet so anyone can visit it via a URL — this is a skill every vibecoding developer must master. Many beginners think deployment is hard, but in 2026 there are more options than ever: from one-click PaaS platforms to budget VPS servers for a few dollars a month, and even completely free options.
 
