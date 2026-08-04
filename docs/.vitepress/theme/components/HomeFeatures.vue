@@ -777,15 +777,15 @@ a {
 }
 
 .section-band-learning {
-  width: 100vw;
+  width: 100%;
   max-width: none;
-  margin: 0 calc(50% - 50vw) 96px;
+  margin: 0 -40px 96px;
   background: #f5f5f7;
   border-radius: 0;
   padding-top: 64px;
   padding-bottom: 64px;
-  padding-left: max(40px, calc((100vw - 1280px) / 2 + 40px));
-  padding-right: max(40px, calc((100vw - 1280px) / 2 + 40px));
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .section-band-learning .section-container {
@@ -885,6 +885,6 @@ a {
 
 <style>
 .VPHome {
-  padding-top: 84px !important;
+  padding-top: 76px !important;
 }
 </style>

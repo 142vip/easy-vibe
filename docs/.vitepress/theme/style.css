@@ -10,6 +10,12 @@
   --vp-c-brand-soft: rgba(0, 113, 227, 0.14);
 }
 
+/* 防止页面出现横向滚动条 */
+html,
+body {
+  overflow-x: hidden;
+}
+
 .vp-doc {
   font-size: var(--ev-doc-font-size);
   line-height: var(--ev-doc-line-height);
@@ -305,6 +311,17 @@
 
 body:has(.VPHome) .reading-progress {
   display: none !important;
+}
+
+/* 首页隐藏 VitePress 默认导航栏，因为 HomeFeatures 自带了自定义导航栏 */
+.VPHome .VPNav,
+body:has(.VPHome) .VPNav {
+  display: none !important;
+}
+
+/* 确保首页内容不会被隐藏的导航栏影响 */
+.VPHome {
+  padding-top: 0 !important;
 }
 
 .dark .glass {
