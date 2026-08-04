@@ -2105,7 +2105,8 @@ const stage2SidebarLabels = {
         'データベースと Supabase 入門',
         '大規模モデル補助インターフェース開発',
         'Git & GitHub 入門ガイド',
-        'Webアプリケーションデプロイ包括ガイド',
+        'ウェブサイトを公開する（簡単編）：ワンクリック PaaS デプロイ',
+        'ウェブサイトを公開する（上級編）：VPS サーバーを自分で用意して公開',
         'CLI Coding Agent プログラミングアシスタント',
         'Stripe 決済統合'
       ]
@@ -2147,7 +2148,8 @@ const stage2SidebarLabels = {
         '資料庫與 Supabase 入門',
         '大模型輔助介面開發',
         'Git 與 GitHub 入門指南',
-        '網頁應用部署全面指南',
+        '把網站發到網上（簡單方式）：Vercel/Zeabur/CloudBase 一鍵發佈',
+        '把網站發到網上（進階方式）：自己買臺 VPS 伺服器搭建發佈',
         'CLI Coding Agent 程式設計助手',
         'Stripe 支付整合'
       ]
@@ -2189,7 +2191,8 @@ const stage2SidebarLabels = {
         '데이터베이스와 Supabase 입문',
         '대규모 모델 보조 인터페이스 개발',
         'Git & GitHub 입문 가이드',
-        '웹 애플리케이션 배포 종합 가이드',
+        '웹사이트 공개하기 (쉬운 방법): 원클릭 PaaS 배포',
+        '웹사이트 공개하기 (고급): 직접 VPS 서버를 준비해서 배포하기',
         'CLI Coding Agent 프로그래밍 어시스턴트',
         'Stripe 결제 통합'
       ]
@@ -2231,7 +2234,8 @@ const stage2SidebarLabels = {
         'Introducción a bases de datos y Supabase',
         'Desarrollo de interfaces asistido por LLM',
         'Guía de introducción a Git y GitHub',
-        'Guía completa de despliegue de aplicaciones web',
+        'Publica tu sitio web (fácil): despliegue PaaS con un clic',
+        'Publica tu sitio web (avanzado): prepara tu propio VPS y despliega',
         'CLI Coding Agent - Asistente de programación',
         'Integración de pagos con Stripe'
       ]
@@ -2273,7 +2277,8 @@ const stage2SidebarLabels = {
         'Introduction aux bases de données et Supabase',
         "Développement d'interfaces assisté par LLM",
         "Guide d'introduction à Git et GitHub",
-        "Guide complet de déploiement d'applications web",
+        'Mettez votre site en ligne (facile) : déploiement PaaS en un clic',
+        'Mettez votre site en ligne (avancé) : préparez votre propre VPS',
         'CLI Coding Agent - Assistant de programmation',
         'Intégration de paiements avec Stripe'
       ]
@@ -2315,7 +2320,8 @@ const stage2SidebarLabels = {
         'Einführung in Datenbanken und Supabase',
         'LLM-gestützte Schnittstellenentwicklung',
         'Git und GitHub Einführungsleitfaden',
-        'Umfassender Leitfaden zur Webanwendungsbereitstellung',
+        'Webseite online bringen (Einfach): One-Click-PaaS-Deployment',
+        'Webseite online bringen (Fortgeschritten): eigener VPS-Server',
         'CLI Coding Agent Programmierassistent',
         'Stripe-Zahlungsintegration'
       ]
@@ -2357,7 +2363,8 @@ const stage2SidebarLabels = {
         'مقدمة في قواعد البيانات و Supabase',
         'تطوير الواجهات بمساعدة النماذج الكبيرة',
         'دليل مقدمة في Git و GitHub',
-        'دليل شامل لنشر تطبيقات الويب',
+        'انشر موقعك على الإنترنت (سهل): نشر PaaS بنقرة واحدة',
+        'انشر موقعك على الإنترنت (متقدم): جهّز خادم VPS خاصًا بك',
         'مساعد برمجة CLI Coding Agent',
         'تكامل مدفوعات Stripe'
       ]
@@ -2398,8 +2405,9 @@ const stage2SidebarLabels = {
       items: [
         'Giới thiệu cơ sở dữ liệu và Supabase',
         'Phát triển giao diện hỗ trợ bằng mô hình lớn',
-        'Hướng dẫn入门 Git và GitHub',
-        'Hướng dẫn toàn diện triển khai ứng dụng web',
+        'Hướng dẫn nhập môn Git và GitHub',
+        'Đưa website lên mạng (dễ dàng): triển khai PaaS một cú nhấp chuột',
+        'Đưa website lên mạng (nâng cao): tự chuẩn bị VPS để triển khai',
         'Trợ lý lập trình CLI Coding Agent',
         'Tích hợp thanh toán Stripe'
       ]
