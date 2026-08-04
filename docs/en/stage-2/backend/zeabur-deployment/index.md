@@ -4,19 +4,9 @@
 
 In this tutorial, we'll walk through the **easiest way to get a site online — no server to buy, no DevOps to learn**. Just connect your GitHub repo, click a few buttons, and your site is live. We cover four popular platforms: **Tencent Cloud CloudBase**, **Vercel**, **Netlify**, and **Zeabur**.
 
-# What does "deployment" mean?
+# Why use a PaaS platform instead of setting up your own server?
 
-Before we begin, let's clarify what deployment actually is.
-
-For any website to be visited by external users, it must have a publicly reachable network address. That can be an IP address such as `123.45.67.89`, or a domain such as [google.com](https://google.com/). But the address alone is not enough. Your code, such as HTML, CSS, JavaScript, or React/Vue projects, as well as images and video assets, must live on a server that stays online 24/7 and can answer incoming requests.
-
-![](/zh-cn/stage-2/backend/zeabur-deployment/images/image1.png)
-
-Image source: https://www.hostinger.com/tutorials/what-is-cloud-hosting
-
-The full process of uploading resources, configuring the runtime environment, and making the service run is called **deployment**.
-
-In simple terms: if your website runs only on your own computer, then only you can visit it locally because the files only exist on your hard drive. Deployment means moving your code and assets to a public-facing server, configuring that server properly, and making sure it knows how to respond when someone visits your domain.
+You might wonder: if everything ends up "on a server," why not just buy your own server and deploy there? The answer: **platforms handle all the messy parts for you**.
 
 If you deploy everything manually, a project usually involves many steps:
 
