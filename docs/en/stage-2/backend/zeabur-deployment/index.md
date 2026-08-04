@@ -1,6 +1,8 @@
-# Quick Launch: One-Click PaaS Deployment
+# Put Your Website Online (Easy): One-Click PaaS Deployment
 
-In this tutorial, we will walk through how to deploy your web application to the internet so other people can access it. We will introduce four common deployment platforms: **Tencent Cloud CloudBase**, **Vercel**, **Netlify**, and **Zeabur**. No server to buy, no DevOps to learn — just connect your GitHub repo and click a few buttons to go live.
+> 💡 **What does "putting a website online" mean?** Also called "going live" or "deploying/publishing". A website you built on your own computer can only be opened by you. **Putting it online means placing it on a server that runs 24/7, so anyone can type a URL in their browser and visit it** — just like a Word doc only you can read becomes visible to everyone once you post it to a blog; the difference is that this time you're publishing a full website.
+
+In this tutorial, we'll walk through the **easiest way to get a site online — no server to buy, no DevOps to learn**. Just connect your GitHub repo, click a few buttons, and your site is live. We cover four popular platforms: **Tencent Cloud CloudBase**, **Vercel**, **Netlify**, and **Zeabur**.
 
 # What does "deployment" mean?
 

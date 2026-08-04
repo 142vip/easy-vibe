@@ -206,8 +206,8 @@ const rawRelatedArticlesMap = {
   'zh-cn/stage-2/backend/cloud-server-deployment': [
     {
       href: '/zh-cn/stage-2/backend/zeabur-deployment/',
-      title: '快速上线：Vercel/Zeabur/CloudBase 一键部署',
-      description: '先用 PaaS 平台快速上线，建立对部署流程的直觉。',
+      title: '把网站发到网上（简单方式）：Vercel/Zeabur/CloudBase 一键发布',
+      description: '最简单的发站方式，连仓库即上线，不用买服务器也不用懂运维。',
       icon: '🚀'
     },
     {
@@ -335,11 +335,16 @@ const localizedArticleText = {
       description:
         'Use component libraries to improve consistency and development speed.'
     },
-    'cloud-server-deployment': {
-      title: 'Self-Hosted: VPS from Purchase to Live',
+    'zeabur-deployment': {
+      title: 'Put Your Website Online (Easy): One-Click PaaS',
       description:
-        'Deploy projects to cloud VPS with AI help — Nginx, Docker, HTTPS, AWS/Chinese cloud services covered.'
-    }
+        'The easiest way to publish a site — connect your repo, click to deploy, no server needed.'
+    },
+    'cloud-server-deployment': {
+      title: 'Put Your Website Online (Advanced): Set Up Your Own VPS',
+      description:
+        'Buy a VPS, set up Nginx/Docker/HTTPS from scratch — full control over your services.'
+    },
   },
   'zh-tw': {
     'ai-capabilities-through-games': {

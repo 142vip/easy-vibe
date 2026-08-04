@@ -3,11 +3,11 @@ import RelatedArticlesSection from '../../../../.vitepress/theme/components/Rela
 import { relatedArticlesMap } from '../../../../.vitepress/theme/data/relatedArticles'
 </script>
 
-# Self-Hosted: VPS from Purchase to Live
+# Put Your Website Online (Advanced): Set Up Your Own VPS
 
-Getting a project running locally onto the public internet so anyone can visit it via a URL — this is a skill every vibecoding developer must master. Many beginners think deployment is hard, but in 2026 there are more options than ever: from one-click PaaS platforms to budget VPS servers for a few dollars a month, and even completely free options.
+> 💡 **What does "putting a website online" mean?** Also called "going live" or "deploying/publishing". A website you built on your own computer can only be opened by you. **Putting it online means placing it on a server that runs 24/7, so anyone can type a URL in their browser and visit it** — just like a Word doc only you can read becomes visible to everyone once you post it to a blog; the difference is that this time you're publishing a full website.
 
-This chapter aims to help you **choose the right deployment method and get your project online with AI assistance**. You don't need to memorize every command — just understand the core workflow and let AI handle the specifics.
+In the previous chapter we learned the easiest way to publish — using one-click PaaS platforms like Vercel or Zeabur. This chapter covers the more flexible, do-it-yourself approach: **buy your own cloud server, set everything up from scratch, and publish your site yourself**. You'll learn how to pick a server, connect to it, install the environment, configure Nginx, attach a domain, and enable HTTPS. Once you understand this, no platform can limit you — run whatever services you want.
 
 ---
 

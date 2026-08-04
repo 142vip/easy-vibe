@@ -702,11 +702,11 @@ const stage2SidebarEn = [
         link: '/en/stage-2/backend/git-workflow/'
       },
       {
-        text: 'Quick Launch: One-Click PaaS (Vercel/Zeabur)',
+        text: 'Put Your Website Online (Easy): One-Click PaaS (Vercel/Zeabur)',
         link: '/en/stage-2/backend/zeabur-deployment/'
       },
       {
-        text: 'Self-Hosted: VPS from Purchase to Live',
+        text: 'Put Your Website Online (Advanced): Set Up Your Own VPS',
         link: '/en/stage-2/backend/cloud-server-deployment/'
       },
       {
@@ -825,11 +825,11 @@ const zhCnStage2Sidebar = [
         link: '/zh-cn/stage-2/backend/git-workflow/'
       },
       {
-        text: '快速上线：Vercel/Zeabur/CloudBase 一键部署',
+        text: '把网站发到网上（简单方式）：Vercel/Zeabur/CloudBase 一键发布',
         link: '/zh-cn/stage-2/backend/zeabur-deployment/'
       },
       {
-        text: '自己搭服务器：VPS 从购买到上线完整教程',
+        text: '把网站发到网上（进阶方式）：自己买台 VPS 服务器搭建发布',
         link: '/zh-cn/stage-2/backend/cloud-server-deployment/'
       },
       {
