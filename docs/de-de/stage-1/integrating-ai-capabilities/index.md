@@ -178,11 +178,11 @@ Neben DeepSeek können Sie auch andere große Sprachmodelle ausprobieren. Da die
 
 **Hauptmerkmale der MiniMax-Serie:**
 
-- **Ultra-langer Kontext**: M3 unterstützt ein Kontextfenster von bis zu 512K Tokens (M2.7 unterstützt 204.800 Tokens), ideal für lange Dokumente und Multi-Runden-Dialoge
+- **Ultra-langer Kontext**: M3 unterstützt ein Kontextfenster von bis zu 1,000,000 Tokens (M2.7 unterstützt 204.800 Tokens), ideal für lange Dokumente und Multi-Runden-Dialoge
 - **Hervorragendes Preis-Leistungs-Verhältnis**: Sehr wettbewerbsfähige Preise
 - **OpenAI-kompatible Schnittstelle**: Direkt mit OpenAI SDK aufrufbar, ohne neues API-Format lernen zu müssen
 - **Verfügbare Modelle**:
-  - `MiniMax-M3`: Neuestes Flaggschiff-Modell mit 512K Kontext, bis zu 128K Ausgabe und Bild-Input
+  - `MiniMax-M3`: Neuestes Flaggschiff-Modell mit 1,000,000-Token-Kontext, bis zu 128K Ausgabe und Text-, Bild- und Video-Input
   - `MiniMax-M2.7`: Vorheriges Flaggschiff-Modell, weiterhin verfügbar
   - `MiniMax-M2.7-highspeed`: Hochgeschwindigkeitsversion mit gleicher Leistung aber schneller
 :::

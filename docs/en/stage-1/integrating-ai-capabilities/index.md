@@ -177,11 +177,11 @@ In addition to DeepSeek, you can also try other large language models. Since mos
 
 **Key Features of the MiniMax Series:**
 
-- **Ultra-long context**: M3 supports up to a 512K-token context window (M2.7 supports 204,800 tokens), suitable for processing long documents and multi-turn conversations
+- **Ultra-long context**: M3 supports up to a 1,000,000-token context window (M2.7 supports 204,800 tokens), suitable for processing long documents and multi-turn conversations
 - **Cost-effective**: Extremely competitive pricing
 - **OpenAI-compatible API**: Can be called directly using the OpenAI SDK, no need to learn a new API format
 - **Available models**:
-  - `MiniMax-M3`: Latest flagship model with 512K context, 128K max output, and image input support
+  - `MiniMax-M3`: Latest flagship model with a 1,000,000-token context, 128K max output, and text/image/video input support
   - `MiniMax-M2.7`: Previous flagship model, still available
   - `MiniMax-M2.7-highspeed`: High-speed version with same performance but faster response
 :::
