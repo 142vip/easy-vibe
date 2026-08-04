@@ -177,11 +177,11 @@ En plus de DeepSeek, vous pouvez aussi essayer d'autres grands modèles de langa
 
 **Principales caractéristiques de la série MiniMax :**
 
-- **Contexte ultra-long** : M3 prend en charge une fenêtre de contexte allant jusqu'à 512K tokens (M2.7 en gère 204 800), adaptée au traitement de documents longs et de dialogues multi-tours
+- **Contexte ultra-long** : M3 prend en charge une fenêtre de contexte allant jusqu'à 1,000,000 tokens (M2.7 en gère 204 800), adaptée au traitement de documents longs et de dialogues multi-tours
 - **Rapport qualité-prix élevé** : prix très compétitif
 - **Interface compatible OpenAI** : peut être appelée directement avec le SDK OpenAI, sans apprentissage supplémentaire
 - **Modèles disponibles** :
-  - `MiniMax-M3` : nouveau modèle phare, contexte de 512K, sortie maximale de 128K, prend en charge l'entrée d'image
+  - `MiniMax-M3` : nouveau modèle phare, contexte de 1,000,000 tokens, sortie maximale de 128K, prend en charge l'entrée de texte, d'images et de vidéos
   - `MiniMax-M2.7` : modèle phare précédent, toujours disponible
   - `MiniMax-M2.7-highspeed` : version haute vitesse, mêmes performances mais plus rapide
 :::

@@ -177,11 +177,11 @@ Ngoài DeepSeek, bạn cũng có thể thử các mô hình ngôn ngữ lớn kh
 
 **Đặc điểm chính của dòng MiniMax:**
 
-- **Ngữ cảnh siêu dài**: M3 hỗ trợ cửa sổ ngữ cảnh lên tới 512K tokens (M2.7 là 204,800 tokens), phù hợp xử lý tài liệu dài và hội thoại nhiều lượt
+- **Ngữ cảnh siêu dài**: M3 hỗ trợ cửa sổ ngữ cảnh lên tới 1,000,000 tokens (M2.7 là 204,800 tokens), phù hợp xử lý tài liệu dài và hội thoại nhiều lượt
 - **Hiệu năng/chi phí cao**: giá rất cạnh tranh
 - **Giao diện tương thích OpenAI**: có thể gọi trực tiếp bằng OpenAI SDK, không cần học thêm định dạng API mới
 - **Các mô hình khả dụng**:
-  - `MiniMax-M3`: mô hình flagship mới nhất, ngữ cảnh 512K, đầu ra tối đa 128K và hỗ trợ đầu vào hình ảnh
+  - `MiniMax-M3`: mô hình flagship mới nhất, ngữ cảnh 1,000,000 tokens, đầu ra tối đa 128K và hỗ trợ đầu vào văn bản, hình ảnh và video
   - `MiniMax-M2.7`: mô hình flagship thế hệ trước, vẫn khả dụng
   - `MiniMax-M2.7-highspeed`: phiên bản tốc độ cao, giữ cùng hiệu năng nhưng nhanh hơn
 :::
