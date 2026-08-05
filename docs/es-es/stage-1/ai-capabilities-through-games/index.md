@@ -553,95 +553,27 @@ No necesitas escribir codigo, pero comprender los conceptos basicos te ayuda a d
 
 ### El trio del frontend
 
-El navegador usa tres tipos de "codigo" para construir paginas:
+Piensa en una pagina web como una casa. Tres tipos de "codigo" se encargan cada uno de una cosa:
 
-<el-tabs type="border-card" style="margin: 20px 0;">
-  <el-tab-pane label="🏗️ HTML - Esqueleto">
-    <div style="padding: 10px;">
-      <p><strong>Proposito:</strong> define <strong>que elementos</strong> hay en la pagina</p>
-      <p><strong>Analogia:</strong> el plano estructural de una casa (donde van las paredes, puertas y ventanas)</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>&lt;button&gt;Haz clic&lt;/button&gt;
-&lt;h1&gt;Titulo&lt;/h1&gt;
-&lt;img src="foto.png"&gt;</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-  <el-tab-pane label="🎨 CSS - Estilo">
-    <div style="padding: 10px;">
-      <p><strong>Proposito:</strong> controla <strong>como se ven</strong> los elementos</p>
-      <p><strong>Analogia:</strong> la decoracion interior de una casa (colores, materiales, distribucion)</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>button {
-  background: blue;
-  color: white;
-  border-radius: 8px;
-}</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-  <el-tab-pane label="⚡ JavaScript - Comportamiento">
-    <div style="padding: 10px;">
-      <p><strong>Proposito:</strong> hace que la pagina sea <strong>interactiva</strong></p>
-      <p><strong>Analogia:</strong> los interruptores electricos de una casa (la respuesta despues de hacer clic)</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>button.onclick = () => {
-  alert('Me hiciste clic!')
-}</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-</el-tabs>
+- **HTML**: decide **que hay** en la pagina — como dibujar el plano de la casa primero
+- **CSS**: decide **como se ve** — como pintar las paredes y colocar los muebles
+- **JavaScript**: decide **como reacciona** — como un interruptor de luz: lo pulsas y se enciende
 
 ### Como se convierte el codigo en una pagina?
 
-Cuando abres una pagina web, el navegador procesa en orden los tres tipos de codigo:
+El navegador **arma la estructura con HTML, decora con CSS y enciende la corriente con JavaScript** — tres pasos y ahi tienes la pagina.
 
-**1. HTML: define la estructura de la pagina**
-El navegador primero analiza el HTML para saber que elementos hay en la pagina (titulos, parrafos, imagenes, botones, etc.) y sus relaciones jerarquicas.
+### Entonces, que son React y Vue?
 
-**2. CSS: aplica los estilos**
-Luego el navegador aplica las reglas CSS para dar estilo a estos elementos: colores, tamanos, posiciones, espaciados, etc., haciendo que la pagina se vea bonita.
-
-**3. JavaScript: anade interactividad**
-Finalmente se ejecuta el codigo JavaScript para que la pagina "cobre vida": responder a clics, enviar formularios, reproducir animaciones, etc.
-
-**4. Renderizado de la pagina**
-El resultado combinado de los tres es la pagina web que finalmente ves.
-
-### Frameworks modernos de frontend: de HTML a React/Vue
-
-El HTML, CSS y JavaScript presentados anteriormente son el "trio" del desarrollo frontend: son la base de todas las paginas web. Pero cuando las paginas se vuelven complejas, desarrollarlas directamente con este trio presenta desafios: el codigo es dificil de mantener, hay mucho trabajo repetitivo y la sincronizacion de datos es complicada.
-
-**Los frameworks modernos de frontend** (como React, Vue, Angular) se construyen sobre HTML/CSS/JS para que el desarrollo sea mas eficiente:
-
-**1. HTML/CSS/JS (etapa basica)**
-Manipula directamente los elementos de la pagina, adecuado para paginas simples. Pero cuando el codigo crece, toda la logica se mezcla y se vuelve dificil de mantener.
-
-**2. jQuery (etapa de transicion)**
-Simplifica las operaciones DOM, haciendo el codigo mas conciso. Pero aun hay que gestionar manualmente el estado de la pagina: cuando los datos cambian, hay que encontrar y actualizar los elementos correspondientes.
-
-**3. React/Vue (etapa moderna)**
-Adopta un diseno basado en componentes y controlado por estado:
-- **Basado en componentes**: divide la pagina en modulos independientes y reutilizables (como botones, tarjetas, barras de navegacion)
-- **Controlado por estado**: cuando los datos cambian, el framework actualiza automaticamente la interfaz correspondiente, sin manipulacion manual
-
-::: tip 💡 Entendimiento simple
-- **HTML/CSS/JS** = materiales basicos (ladrillos, cemento, acero)
-- **React/Vue** = marco de construccion (proporciona normas y herramientas para construir edificios)
-
-En la era de la programacion asistida por IA, no necesitas dominar en profundidad todos los detalles de los frameworks. Basta con entender sus conceptos basicos para describir requisitos en lenguaje natural y dejar que la IA genere el codigo por ti.
-:::
+Son **"herramientas prefabricadas" para construir paginas complejas** — mas rapido y mas fiable. No necesitas aprenderlas, solo saber que son ayudantes.
 
 ### En Vibe Coding
 
-**Punto central: no necesitas escribir codigo, solo necesitas saber describir.**
+**Sin escribir codigo, solo describir.** Habla con la IA con normalidad, por ejemplo:
 
-Despues de entender los conceptos de frontend, puedes describir requisitos a la IA asi:
+> "Usa React para hacer una pagina de clasificaciones, con una lista de puntuaciones a la derecha. Al hacer clic en una fila, muestra los detalles del jugador debajo. Estilo limpio y moderno."
 
-> "Usa React para hacer una pagina de clasificaciones, con una lista de puntuaciones a la derecha. Al hacer clic en una fila, muestra los detalles del jugador debajo. El estilo debe ser limpio y moderno."
-
-Si quieres profundizar en los fundamentos del frontend como HTML, CSS y JavaScript, consulta el [Apendice de fundamentos web](/es-es/appendix/3-browser-and-frontend/javascript-deep-dive). Para conocer la evolucion de la tecnologia frontend, consulta el [Apendice de evolucion del frontend](/es-es/appendix/3-browser-and-frontend/frontend-frameworks).
+Para saber mas: [Apendice de fundamentos web](/es-es/appendix/3-browser-and-frontend/javascript-deep-dive) y [Apendice de evolucion del frontend](/es-es/appendix/3-browser-and-frontend/frontend-frameworks).
 
 ## <span id="appendix-2">[Apendice 2: Que es exactamente Vibe Coding?](#appendix-nav)</span>
 

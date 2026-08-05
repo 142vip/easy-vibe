@@ -578,95 +578,27 @@ Bạn không cần biết viết code, nhưng hiểu các khái niệm cơ bản
 
 ### Bộ ba frontend
 
-Trình duyệt dùng ba loại "code" để dựng trang:
+Cứ coi trang web như một ngôi nhà. Ba loại "code" mỗi loại lo một việc:
 
-<el-tabs type="border-card" style="margin: 20px 0;">
-  <el-tab-pane label="🏗️ HTML - Bộ xương">
-    <div style="padding: 10px;">
-      <p><strong>Tác dụng:</strong> định nghĩa trang có <strong>những phần tử gì</strong></p>
-      <p><strong>Ví von:</strong> bản phác thảo kết cấu ngôi nhà (tường, cửa, cửa sổ ở đâu)</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>&lt;button&gt;Bấm tôi&lt;/button&gt;
-&lt;h1&gt;Tiêu đề&lt;/h1&gt;
-&lt;img src="photo.png"&gt;</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-  <el-tab-pane label="🎨 CSS - Kiểu dáng">
-    <div style="padding: 10px;">
-      <p><strong>Tác dụng:</strong> kiểm soát phần tử <strong>trông như thế nào</strong></p>
-      <p><strong>Ví von:</strong> trang trí nội thất ngôi nhà (màu sắc, chất liệu, bố cục)</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>button {
-  background: blue;
-  color: white;
-  border-radius: 8px;
-}</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-  <el-tab-pane label="⚡ JavaScript - Hành vi">
-    <div style="padding: 10px;">
-      <p><strong>Tác dụng:</strong> làm cho trang <strong>chuyển động</strong></p>
-      <p><strong>Ví von:</strong> công tắc điện của ngôi nhà (phản hồi sau khi bấm)</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>button.onclick = () => {
-  alert('Bạn đã bấm tôi!')
-}</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-</el-tabs>
+- **HTML**: quyết định trang có **những gì** — như vẽ bản thiết kế nhà trước
+- **CSS**: quyết định **trông như thế nào** — như sơn tường, xếp đồ đạc
+- **JavaScript**: quyết định **phản ứng ra sao** — như công tắc đèn: bấm là sáng
 
-### Code biến thành trang web như thế nào?
+### Code thành trang web thế nào?
 
-Khi bạn mở một trang web, trình duyệt xử lý ba loại code theo thứ tự:
+Trình duyệt **dựng khung bằng HTML, trang trí bằng CSS, đấu điện bằng JavaScript** — ba bước là xong trang web.
 
-**1. HTML — định nghĩa cấu trúc trang**
-Trình duyệt trước tiên phân tích HTML, hiểu trang có những phần tử gì (tiêu đề, đoạn văn, hình ảnh, nút bấm...) và quan hệ phân cấp giữa chúng.
+### Vậy React, Vue là gì?
 
-**2. CSS — áp dụng kiểu dáng**
-Rồi trình duyệt theo quy tắc CSS thêm kiểu dáng cho các phần tử: màu sắc, kích thước, vị trí, khoảng cách..., khiến trang trông đẹp mắt.
-
-**3. JavaScript — thêm tương tác**
-Cuối cùng thực thi code JavaScript để trang "chuyển động": phản hồi cú bấm, gửi form, phát hoạt ảnh...
-
-**4. Hiển thị trang**
-Kết quả phối hợp của cả ba chính là trang web cuối cùng bạn nhìn thấy.
-
-### Framework frontend hiện đại: từ HTML đến React/Vue
-
-HTML, CSS, JavaScript giới thiệu ở trên là "bộ ba" của phát triển frontend, là nền tảng của mọi trang web. Nhưng khi trang trở nên phức tạp, dùng trực tiếp bộ ba này gặp thử thách: code khó bảo trì, làm lặp lại nhiều, đồng bộ dữ liệu phiền phức.
-
-**Framework frontend hiện đại** (như React, Vue, Angular) được xây dựng trên HTML/CSS/JS để phát triển hiệu quả hơn:
-
-**1. HTML/CSS/JS (giai đoạn cơ bản)**
-Thao tác trực tiếp các phần tử trang, phù hợp trang đơn giản. Nhưng khi lượng code tăng lên, mọi logic trộn chung vào nhau, khó bảo trì.
-
-**2. jQuery (giai đoạn chuyển tiếp)**
-Đơn giản hóa thao tác DOM, code gọn hơn. Nhưng vẫn phải tự quản lý trạng thái trang: dữ liệu đổi thì phải tự tìm phần tử tương ứng và cập nhật.
-
-**3. React/Vue (giai đoạn hiện đại)**
-Áp dụng thiết kế theo component và điều khiển bằng trạng thái:
-- **Component hóa**: tách trang thành các module độc lập tái dùng được (như nút bấm, thẻ, thanh điều hướng)
-- **Điều khiển bằng trạng thái**: dữ liệu thay đổi là framework tự động cập nhật giao diện tương ứng, không cần thao tác tay
-
-::: tip 💡 Hiểu đơn giản
-- **HTML/CSS/JS** = vật liệu cơ bản (gạch, xi măng, sắt thép)
-- **React/Vue** = khung xây dựng (cung cấp chuẩn và công cụ để dựng nhà)
-
-Trong thời đại lập trình có AI hỗ trợ, bạn không cần nắm sâu mọi chi tiết của framework, chỉ cần hiểu khái niệm cơ bản là có thể dùng ngôn ngữ tự nhiên mô tả để AI sinh code cho bạn.
-:::
+Chúng là **"công cụ lắp ghép sẵn" để dựng trang phức tạp** — nhanh hơn, ổn định hơn. Bạn không cần học, chỉ cần biết chúng là người trợ giúp.
 
 ### Trong Vibe Coding
 
-**Điểm mấu chốt: bạn không cần viết code, chỉ cần biết mô tả.**
+**Không viết code, chỉ cần mô tả.** Cứ nói bằng ngôn ngữ bình thường, ví dụ:
 
-Hiểu khái niệm frontend rồi, bạn có thể mô tả yêu cầu cho AI như thế này:
+> "Dùng React làm trang bảng xếp hạng, bên phải danh sách điểm số, bấm một dòng thì phía dưới hiện chi tiết người chơi, phong cách gọn gàng hiện đại."
 
-> "Dùng React làm một trang bảng xếp hạng, bên phải hiển thị danh sách điểm số, bấm vào một dòng thì phía dưới hiện chi tiết người chơi, phong cách gọn gàng hiện đại."
-
-Nếu muốn tìm hiểu sâu kiến thức frontend cơ bản như HTML, CSS, JavaScript, bạn có thể xem [Phụ lục Web cơ bản](/vi-vn/appendix/3-browser-and-frontend/javascript-deep-dive). Muốn hiểu lịch sử phát triển công nghệ frontend, xem [Phụ lục Lịch sử tiến hóa frontend](/vi-vn/appendix/3-browser-and-frontend/frontend-frameworks).
+Xem thêm: [Phụ lục Web cơ bản](/vi-vn/appendix/3-browser-and-frontend/javascript-deep-dive) và [Phụ lục Lịch sử tiến hóa frontend](/vi-vn/appendix/3-browser-and-frontend/frontend-frameworks).
 
 ## <span id="appendix-2">[Phụ lục 2: Vibe Coding rốt cuộc là gì](#appendix-nav)</span>
 

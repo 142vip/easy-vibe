@@ -536,95 +536,27 @@ You don't need to write code, but understanding the basic concepts helps you des
 
 ### The Frontend Trio
 
-Browsers use three types of "code" to build pages:
+Think of a webpage as a house. Three types of "code" each handle one thing:
 
-<el-tabs type="border-card" style="margin: 20px 0;">
-  <el-tab-pane label="🏗️ HTML - Skeleton">
-    <div style="padding: 10px;">
-      <p><strong>Purpose:</strong> Defines <strong>what elements</strong> are on the page</p>
-      <p><strong>Analogy:</strong> The structural blueprint of a house (where walls, doors, and windows go)</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>&lt;button&gt;Click me&lt;/button&gt;
-&lt;h1&gt;Title&lt;/h1&gt;
-&lt;img src="photo.png"&gt;</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-  <el-tab-pane label="🎨 CSS - Style">
-    <div style="padding: 10px;">
-      <p><strong>Purpose:</strong> Controls <strong>how elements look</strong></p>
-      <p><strong>Analogy:</strong> The interior decoration of a house (colors, materials, layout)</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>button {
-  background: blue;
-  color: white;
-  border-radius: 8px;
-}</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-  <el-tab-pane label="⚡ JavaScript - Behavior">
-    <div style="padding: 10px;">
-      <p><strong>Purpose:</strong> Makes the page <strong>interactive</strong></p>
-      <p><strong>Analogy:</strong> The electrical switches of a house (responses after clicking)</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>button.onclick = () => {
-  alert('You clicked me!')
-}</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-</el-tabs>
+- **HTML**: decides **what's on** the page — like drawing the house blueprint first
+- **CSS**: decides **how it looks** — like painting walls and arranging furniture
+- **JavaScript**: decides **how it reacts** — like a light switch: press it and the light turns on
 
 ### How Does Code Become a Page?
 
-When you open a webpage, the browser processes three types of code in order:
+The browser **builds the frame with HTML, decorates with CSS, and switches on the power with JavaScript** — three steps, and there's your webpage.
 
-**1. HTML — Defines the page structure**
-The browser first parses HTML to understand what elements are on the page (headings, paragraphs, images, buttons, etc.) and their hierarchical relationships.
+### So What Are React and Vue?
 
-**2. CSS — Applies styles**
-Then the browser applies CSS rules to add styles to these elements: colors, sizes, positions, spacing, etc., making the page look beautiful.
-
-**3. JavaScript — Adds interactivity**
-Finally, JavaScript code is executed to make the page "come alive": responding to clicks, submitting forms, playing animations, etc.
-
-**4. Page rendering**
-The combined result of all three is the webpage you ultimately see.
-
-### Modern Frontend Frameworks: From HTML to React/Vue
-
-The HTML, CSS, and JavaScript introduced above are the "three essentials" of frontend development—they are the foundation of all webpages. But when pages become complex, developing directly with these three can be challenging: code becomes hard to maintain, there's lots of repetitive work, and data synchronization is troublesome.
-
-**Modern frontend frameworks** (like React, Vue, Angular) are built on top of HTML/CSS/JS to make development more efficient:
-
-**1. HTML/CSS/JS (Basic stage)**
-Directly manipulating page elements, suitable for simple pages. But as code grows, all logic gets mixed together and becomes hard to maintain.
-
-**2. jQuery (Transitional stage)**
-Simplified DOM operations, making code more concise. But you still need to manually manage page state and find corresponding elements to update when data changes.
-
-**3. React/Vue (Modern stage)**
-Adopts component-based and state-driven design:
-- **Component-based**: Break the page into independent, reusable modules (like buttons, cards, navigation bars)
-- **State-driven**: When data changes, the framework automatically updates the corresponding UI without manual manipulation
-
-::: tip 💡 Simple Understanding
-- **HTML/CSS/JS** = Basic materials (bricks, cement, steel)
-- **React/Vue** = Building framework (provides standards and tools for constructing buildings)
-
-In the AI-assisted programming era, you don't need to deeply master every detail of frameworks. You just need to understand their basic concepts, and you can describe requirements in natural language to have AI generate code for you.
-:::
+They're **"prefab tools" for building complex pages** — faster and more reliable. You don't need to learn them; just know they're helpers.
 
 ### In Vibe Coding
 
-**Core point: You don't need to write code, you just need to know how to describe.**
+**No code writing, just describing.** Talk to AI in plain language, for example:
 
-After understanding frontend concepts, you can describe requirements to AI like this:
+> "Use React to make a leaderboard page, with a score list on the right. Clicking a row shows player details below. Clean, modern style."
 
-> "Use React to make a leaderboard page, with a score list on the right side. Clicking a row shows player details below. The style should be clean and modern."
-
-If you want to dive deeper into frontend fundamentals like HTML, CSS, and JavaScript, check out the [Web Basics Appendix](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive). To learn about the evolution of frontend technology, check out the [Frontend Evolution Appendix](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks).
+To learn more, check out the [Web Basics Appendix](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive) and the [Frontend Evolution Appendix](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks).
 
 ## <span id="appendix-2">[Appendix 2: What Exactly is Vibe Coding](#appendix-nav)</span>
 

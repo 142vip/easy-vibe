@@ -547,95 +547,27 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 ### 프론트엔드 3종 세트
 
-브라우저는 세 가지 “코드”를 통해 페이지를 구성합니다.
+웹페이지를 집이라고 생각하세요. 세 가지 "코드"가 각각 한 가지씩 담당합니다:
 
-<el-tabs type="border-card" style="margin: 20px 0;">
-  <el-tab-pane label="🏗️ HTML - 뼈대">
-    <div style="padding: 10px;">
-      <p><strong>역할:</strong> 페이지 위에 <strong>어떤</strong> 요소가 있는지 정의합니다</p>
-      <p><strong>비유:</strong> 집의 구조 도면(벽, 문, 창문이 어디에 있는지)</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>&lt;button&gt;나를 클릭&lt;/button&gt;
-&lt;h1&gt;제목&lt;/h1&gt;
-&lt;img src="photo.png"&gt;</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-  <el-tab-pane label="🎨 CSS - 스타일">
-    <div style="padding: 10px;">
-      <p><strong>역할:</strong> 요소가 <strong>어떻게 생겼는지</strong> 제어합니다</p>
-      <p><strong>비유:</strong> 집의 인테리어(색상, 재질, 배치)</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>button {
-  background: blue;
-  color: white;
-  border-radius: 8px;
-}</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-  <el-tab-pane label="⚡ JavaScript - 동작">
-    <div style="padding: 10px;">
-      <p><strong>역할:</strong> 페이지를 <strong>움직이게</strong> 합니다</p>
-      <p><strong>비유:</strong> 집의 전기 스위치(클릭 후의 반응)</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>button.onclick = () => {
-  alert('클릭했습니다!')
-}</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-</el-tabs>
+- **HTML**: 페이지에 **무엇이 있는지** — 집을 짓기 전에 도면을 그리는 것
+- **CSS**: **어떻게 보이는지** — 벽을 칠하고 가구를 배치하는 것
+- **JavaScript**: **어떻게 반응하는지** — 전등 스위치처럼, 누르면 불이 켜짐
 
 ### 코드는 어떻게 페이지가 될까?
 
-웹페이지를 열면 브라우저는 세 가지 코드를 순서대로 처리합니다.
+브라우저가 **HTML로 뼈대를 세우고, CSS로 꾸미고, JS로 전기를 연결합니다.** 세 단계면 바로 웹페이지입니다.
 
-**1. HTML - 페이지 구조 정의**
-브라우저는 먼저 HTML을 해석하여 페이지 위에 어떤 요소(제목, 문단, 이미지, 버튼 등)가 있는지, 그리고 그들의 계층 관계가 어떤지 이해합니다.
+### React, Vue는 뭐야?
 
-**2. CSS - 스타일 적용**
-그다음 브라우저는 CSS 규칙에 따라 이 요소들에 스타일을 추가합니다. 색상, 크기, 위치, 간격 등을 적용해 페이지를 보기 좋게 만듭니다.
-
-**3. JavaScript - 상호작용 추가**
-마지막으로 JavaScript 코드를 실행해 페이지를 “움직이게” 합니다. 클릭 응답, 폼 제출, 애니메이션 재생 등을 처리합니다.
-
-**4. 페이지 표시**
-세 가지가 함께 작동한 결과가 최종적으로 보이는 웹페이지입니다.
-
-### 현대 프론트엔드 프레임워크: HTML에서 React/Vue까지
-
-앞서 소개한 HTML, CSS, JavaScript는 프론트엔드 개발의 “3종 세트”이며, 모든 웹페이지의 기초입니다. 하지만 페이지가 복잡해지면 이 3종 세트만으로 직접 개발할 때 어려움이 생깁니다. 코드 유지보수가 어렵고, 반복 작업이 많으며, 데이터 동기화가 번거롭습니다.
-
-**현대 프론트엔드 프레임워크**(예: React, Vue, Angular)는 HTML/CSS/JS 위에 구축되어 개발을 더 효율적으로 만듭니다.
-
-**1. HTML/CSS/JS(기초 단계)**
-페이지 요소를 직접 조작하며 간단한 페이지에 적합합니다. 하지만 코드량이 많아지면 모든 로직이 뒤섞여 유지보수가 어려워집니다.
-
-**2. jQuery(과도기 단계)**
-DOM 조작을 단순화해 코드를 더 간결하게 만들었습니다. 하지만 여전히 페이지 상태를 수동으로 관리해야 하며, 데이터가 변할 때 직접 해당 요소를 찾아 업데이트해야 합니다.
-
-**3. React/Vue(현대 단계)**
-컴포넌트화와 상태 주도 설계를 채택합니다.
-- **컴포넌트화**: 페이지를 독립적이고 재사용 가능한 모듈로 나눕니다. 예: 버튼, 카드, 내비게이션 바.
-- **상태 주도**: 데이터가 변하면 프레임워크가 해당 인터페이스를 자동으로 업데이트합니다. 수동 조작이 필요 없습니다.
-
-::: tip 💡 간단한 이해
-- **HTML/CSS/JS** = 기초 재료(벽돌, 시멘트, 철근)
-- **React/Vue** = 건축 프레임워크(집을 짓기 위한 규범과 도구 제공)
-
-AI 보조 프로그래밍 시대에는 프레임워크의 모든 세부 사항을 깊게 익힐 필요는 없습니다. 기본 개념만 이해하면 자연어 설명을 통해 AI가 코드를 생성하게 할 수 있습니다.
-:::
+복잡한 페이지를 지을 때 쓰는 **"조립식 도구"**입니다 — 더 빠르고 안정적이에요. 직접 배울 필요 없이, 도우미 역할이라는 것만 알면 됩니다.
 
 ### Vibe Coding에서는
 
-**핵심 요점: 코드를 쓸 필요는 없고, 설명할 줄 알면 됩니다.**
+**코드를 쓰지 말고, 묘사만 하세요.** AI에게 그냥 말로 하면 됩니다. 예를 들어:
 
-프론트엔드 개념을 이해한 뒤에는 AI에게 이렇게 요구사항을 설명할 수 있습니다.
+> "React로 순위표 페이지를 만들어줘. 오른쪽에 점수 목록, 행을 클릭하면 아래에 상세 정보. 간결하고 모던한 스타일로."
 
-> "React로 순위표 페이지를 만들어줘. 오른쪽에는 점수 목록을 표시하고, 어떤 행을 클릭하면 아래에 플레이어 상세 정보를 보여 줘. 스타일은 간결하고 모던하게 해줘."
-
-HTML, CSS, JavaScript 같은 프론트엔드 기초 지식을 더 깊이 이해하고 싶다면 [Web 기초 부록](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive)을 확인하세요. 프론트엔드 기술의 발전 역사를 알고 싶다면 [프론트엔드 진화사 부록](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks)을 확인하세요.
+더 자세히: [Web 기초 부록](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive) 과 [프론트엔드 진화사 부록](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks).
 
 ## <span id="appendix-2">[부록 2: Vibe Coding은 대체 무엇인가](#appendix-nav)</span>
 

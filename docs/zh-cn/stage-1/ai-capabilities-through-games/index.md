@@ -552,95 +552,27 @@ z.ai 的回复将会是这样的：
 
 ### 前端三件套
 
-浏览器通过三种"代码"来构建页面：
+把网页想成一间房子，三种"代码"各管一件事：
 
-<el-tabs type="border-card" style="margin: 20px 0;">
-  <el-tab-pane label="🏗️ HTML - 骨架">
-    <div style="padding: 10px;">
-      <p><strong>作用：</strong>定义页面上<strong>有什么</strong>元素</p>
-      <p><strong>类比：</strong>房子的结构草图（墙、门、窗在哪里）</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>&lt;button&gt;点我&lt;/button&gt;
-&lt;h1&gt;标题&lt;/h1&gt;
-&lt;img src="photo.png"&gt;</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-  <el-tab-pane label="🎨 CSS - 样式">
-    <div style="padding: 10px;">
-      <p><strong>作用：</strong>控制元素<strong>长什么样</strong></p>
-      <p><strong>类比：</strong>房子的装修（颜色、材质、布局）</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>button {
-  background: blue;
-  color: white;
-  border-radius: 8px;
-}</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-  <el-tab-pane label="⚡ JavaScript - 行为">
-    <div style="padding: 10px;">
-      <p><strong>作用：</strong>让页面<strong>动起来</strong></p>
-      <p><strong>类比：</strong>房子的电路开关（点击后的响应）</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>button.onclick = () => {
-  alert('你点了我！')
-}</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-</el-tabs>
+- **HTML**：管页面上**有什么**——好比盖房先画图纸
+- **CSS**：管**长什么样**——好比刷墙、摆家具
+- **JavaScript**：管**怎么动**——好比电灯开关，一按就亮
 
-### 代码如何变成页面？
+### 代码怎么变成页面？
 
-当你打开一个网页时，浏览器会按顺序处理三种代码：
+浏览器**先搭骨架（HTML）、再装修（CSS）、最后通电（JS）**，三步做完，就是网页。
 
-**1. HTML —— 定义页面结构**
-浏览器首先解析 HTML，了解页面上有哪些元素（标题、段落、图片、按钮等），以及它们的层级关系。
+### React / Vue 是啥？
 
-**2. CSS —— 应用样式**
-然后浏览器根据 CSS 规则，给这些元素添加样式：颜色、大小、位置、间距等，让页面变得美观。
-
-**3. JavaScript —— 添加交互**
-最后执行 JavaScript 代码，让页面"动起来"：响应点击、提交表单、播放动画等。
-
-**4. 页面呈现**
-三者的配合结果就是你最终看到的网页。
-
-### 现代前端框架：从 HTML 到 React/Vue
-
-前面介绍的 HTML、CSS、JavaScript 是前端开发的"三件套"，它们是所有网页的基础。但当页面变得复杂时，直接用这三件套开发会遇到挑战：代码难以维护、重复劳动多、数据同步麻烦。
-
-**现代前端框架**（如 React、Vue、Angular）建立在 HTML/CSS/JS 之上，让开发更高效：
-
-**1. HTML/CSS/JS（基础阶段）**
-直接操作页面元素，适合简单页面。但当代码量增大时，所有逻辑混在一起，难以维护。
-
-**2. jQuery（过渡阶段）**
-简化了 DOM 操作，让代码更简洁。但仍需手动管理页面状态，数据变化时要自己找到对应的元素并更新。
-
-**3. React/Vue（现代阶段）**
-采用组件化和状态驱动的设计：
-- **组件化**：把页面拆成独立的可复用模块（如按钮、卡片、导航栏）
-- **状态驱动**：数据变化时，框架自动更新对应的界面，无需手动操作
-
-::: tip 💡 简单理解
-- **HTML/CSS/JS** = 基础材料（砖块、水泥、钢筋）
-- **React/Vue** = 建筑框架（提供了搭建房屋的规范和工具）
-
-在 AI 辅助编程时代，你不需要深入掌握框架的所有细节，只需要理解它们的基本概念，就能通过自然语言描述让 AI 帮你生成代码。
-:::
+它们是**盖复杂网页的"预制板工具"**——更快、更稳。你不需要会，知道是帮手就行。
 
 ### 在 Vibe Coding 中
 
-**核心要点：你不需要写代码，只需要会描述。**
+**不写代码，只描述。** 跟 AI 说人话就行，比如：
 
-了解前端概念后，你可以这样跟 AI 描述需求：
+> "用 React 做个排行榜：右侧分数列表，点一行下方显示玩家详情，风格简洁现代。"
 
-> "用 React 做一个排行榜页面，右侧显示分数列表，点击某行在下方展示玩家详情，风格简洁现代。"
-
-如果你想深入理解 HTML、CSS、JavaScript 等前端基础知识，可以查看[Web 基础附录](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive)。想了解前端技术的发展历程，可以查看[前端进化史附录](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks)。
+想深入看看 [Web 基础附录](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive) 和 [前端进化史附录](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks)。
 
 ## <span id="appendix-2">[附录 2：到底什么是 Vibe Coding](#appendix-nav)</span>
 

@@ -547,95 +547,27 @@ z.ai の回答は次のようになります：
 
 ### フロントエンドの三種の神器
 
-ブラウザは三つの「コード」を使ってページを構築します：
+Web ページを一軒の家だと思ってください。三つの「コード」がそれぞれ一つずつ担当します：
 
-<el-tabs type="border-card" style="margin: 20px 0;">
-  <el-tab-pane label="🏗️ HTML - 骨格">
-    <div style="padding: 10px;">
-      <p><strong>役割：</strong>ページ上に<strong>何があるか</strong>を定義する</p>
-      <p><strong>例え：</strong>家の構造スケッチ（壁、ドア、窓の場所）</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>&lt;button&gt;クリック&lt;/button&gt;
-&lt;h1&gt;タイトル&lt;/h1&gt;
-&lt;img src="photo.png"&gt;</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-  <el-tab-pane label="🎨 CSS - スタイル">
-    <div style="padding: 10px;">
-      <p><strong>役割：</strong>要素の<strong>見た目</strong>を制御する</p>
-      <p><strong>例え：</strong>家の内装（色、素材、レイアウト）</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>button {
-  background: blue;
-  color: white;
-  border-radius: 8px;
-}</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-  <el-tab-pane label="⚡ JavaScript - 挙動">
-    <div style="padding: 10px;">
-      <p><strong>役割：</strong>ページを<strong>動かす</strong></p>
-      <p><strong>例え：</strong>家の電気回路スイッチ（クリック後の応答）</p>
-      <el-card style="background: #f5f7fa; margin-top: 12px;">
-        <pre style="margin: 0;"><code>button.onclick = () => {
-  alert('クリックされました！')
-}</code></pre>
-      </el-card>
-    </div>
-  </el-tab-pane>
-</el-tabs>
+- **HTML**：ページに**何があるか**——家の図面を先に引くようなもの
+- **CSS**：**見た目**——壁を塗り、家具を並べるようなもの
+- **JavaScript**：**動き**——電灯スイッチのようなもの。押せば電気がつく
 
-### コードがページになる仕組み
+### コードはどうやってページになるの？
 
-Web ページを開くと、ブラウザは三つのコードを順番に処理します：
+ブラウザは**HTML で骨組みを組み、CSS で装飾し、JS で電気を通す**。この三ステップでページになります。
 
-**1. HTML —— ページ構造の定義**
-ブラウザはまず HTML を解析し、ページ上にどの要素（タイトル、段落、画像、ボタンなど）があるか、そしてそれらの階層関係を理解します。
+### React / Vue って何？
 
-**2. CSS —— スタイルの適用**
-次にブラウザは CSS ルールに従って、これらの要素にスタイルを追加します：色、サイズ、位置、間隔など、ページを見やすくします。
-
-**3. JavaScript —— インタラクションの追加**
-最後に JavaScript コードを実行し、ページを「動かします」：クリックへの応答、フォームの送信、アニメーションの再生など。
-
-**4. ページの表示**
-三つの連携結果が、あなたが最終的に見る Web ページです。
-
-### モダンフロントエンドフレームワーク：HTML から React/Vue へ
-
-前述の HTML、CSS、JavaScript はフロントエンド開発の「三種の神器」であり、すべての Web ページの基礎です。ただし、ページが複雑になると、これらだけでは課題に直面します：コードの保守が困難、反復作業が多い、データ同期が面倒など。
-
-**モダンフロントエンドフレームワーク**（React、Vue、Angular など）は HTML/CSS/JS の上に構築され、開発をより効率的にします：
-
-**1. HTML/CSS/JS（基礎段階）**
-ページ要素を直接操作し、シンプルなページに適しています。しかし、コード量が増えると、すべてのロジックが混ざり合い、保守が困難になります。
-
-**2. jQuery（過渡期）**
-DOM 操作を簡素化し、コードをより簡潔にします。ただし、ページの状態を手動で管理する必要があり、データ変更時に対応する要素を自分で見つけて更新する必要があります。
-
-**3. React/Vue（モダン期）**
-コンポーネント化と状態駆動の設計を採用：
-- **コンポーネント化**：ページを独立した再利用可能なモジュール（ボタン、カード、ナビゲーションバーなど）に分割
-- **状態駆動**：データが変更されると、フレームワークが対応する UI を自動的に更新し、手動操作が不要
-
-::: tip 💡 簡単に理解すると
-- **HTML/CSS/JS** = 基礎材料（レンガ、セメント、鉄筋）
-- **React/Vue** = 建築フレームワーク（家を建てるための規範とツールを提供）
-
-AI 補助プログラミング時代では、フレームワークのすべての詳細を深く理解する必要はありません。基本概念を理解するだけで、自然言語の説明で AI にコード生成を依頼できます。
-:::
+複雑なページを**「プレハブ工具」で建てる**ためのものです——速くて安定。自分で学ぶ必要はありません。手伝ってくれる存在だと知っておくだけで十分です。
 
 ### Vibe Coding において
 
-**核となるポイント：コードを書く必要はなく、説明できれば十分です。**
+**コードを書かず、説明するだけ。** AI に普通の言葉で話しかければいいのです。例えば：
 
-フロントエンドの概念を理解した後、次のように AI に要件を説明できます：
+> "React でリーダーボードページを作って。右側にスコアリスト、行をクリックすると下に詳細表示。シンプルでモダンなスタイルに。"
 
-> "React でリーダーボードページを作って。右側にスコアリストを表示し、行をクリックすると下にプレイヤー詳細を表示する。シンプルでモダンなスタイルに。"
-
-HTML、CSS、JavaScript などのフロントエンド基礎知識をさらに深く理解したい場合は、[Web 基礎付録](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive)を参照してください。フロントエンド技術の発展の歴史を知りたい場合は、[フロントエンド進化史付録](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks)を参照してください。
+詳しくは [Web 基礎付録](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive) と [フロントエンド進化史付録](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks) をどうぞ。
 
 ## <span id="appendix-2">[付録 2：Vibe Coding とは何か](#appendix-nav)</span>
 
