@@ -1,4 +1,4 @@
-# Qualite du code et refactoring
+# Introduction : Qualité du code et refactoring
 
 ::: tip Avant-propos
 **Le code qui fonctionne, est-ce suffisant ?** Vous avez probablement deja ecrit ce genre de code : la fonctionnalite est implementee, mais apres deux semaines, vous ne le comprenez plus vous-meme. Ou un collegue a quitte l'entreprise et laisse un code que « seul Dieu et lui pouvaient comprendre ».
@@ -39,7 +39,7 @@ Martin Fowler a dit dans son livre « Refactoring » : **« N'importe quel idiot
 
 ## 1. Code smells : Identifier les problemes courants
 
-### 1.1 Qu'est-ce qu'un code smell ?
+### 1.1 Qu'est-ce qu'un code smell
 
 Le concept de « code smell » a ete propose par Kent Beck. Il designe des caracteristiques dans le code qui **ne sont pas des bugs, mais qui suggerent des problemes de conception plus profonds**. C'est comme une odeur etrange dans une piece — elle ne vous rend pas immediatement malade, mais elle indique qu'un nettoyage s'impose quelque part.
 
@@ -66,7 +66,7 @@ Les code smells ne sont pas des « erreurs », mais des « signaux ». Ils vous 
 
 ## 2. Techniques de refactoring : Ameliorer le code en toute securite
 
-### 2.1 Qu'est-ce que le refactoring ?
+### 2.1 Qu'est-ce que le refactoring
 
 La definition du refactoring est tres precise : **ameliorer la structure interne du code sans changer son comportement externe.**
 
@@ -150,7 +150,7 @@ Le plus grand risque du refactoring est de « introduire des bugs en modifiant �
 
 ## 3. Revue de code : Assurance qualite en travail d'equipe
 
-### 3.1 Pourquoi la revue de code est-elle necessaire ?
+### 3.1 Pourquoi la revue de code est-elle necessaire
 
 La revue de code (Code Review) est l'un des moyens d'assurance qualite les plus efficaces dans une equipe. Sa valeur ne se limite pas a trouver des bugs :
 
@@ -159,7 +159,7 @@ La revue de code (Code Review) est l'un des moyens d'assurance qualite les plus 
 - **Detection precoce des problemes de conception** : Plus difficiles a corriger que les bugs sont les mauvaises decisions architecturales
 - **Apprentissage mutuel** : Lire le code des autres est un raccourci pour ameliorer ses competences de programmation
 
-### 3.2 Que reverifier ?
+### 3.2 Que reverifier
 
 | Dimension | Focus |
 |------|--------|

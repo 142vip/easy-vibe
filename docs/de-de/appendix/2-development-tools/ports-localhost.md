@@ -1,15 +1,15 @@
-# Ports und localhost
+# Ports und Localhost: Netzwerkgrundlagen
 
 > 💡 **Lernleitfaden**: Wenn du `npm run dev` ausführst und im Terminal `http://localhost:5173` erscheint, hast du dich dann schon einmal gefragt: Was ist `localhost`? Wofür steht `5173`? Warum meldet es manchmal den Fehler `EADDRINUSE`? Dieses Kapitel erklärt dir diese Konzepte, die dir in der täglichen Entwicklung ständig begegnen, aber über die du selten tiefer nachdenkst, ein für alle Mal.
 
 Bevor du beginnst, empfehle ich dir, diese zwei „Grundbausteine" nachzuholen:
 
 - **Netzwerkgrundlagen**: Wenn du mit IP-Adressen und HTTP noch nicht vertraut bist, lies zuerst [Computergrundlagen – Netzwerkkommunikation](../1-computer-fundamentals/network-fundamentals.md).
-- **Terminalgrundlagen**: Wenn du mit der Kommandozeile noch nicht vertraut bist, lies zuerst [Kommandozeile und Shell-Skripte](./command-line-shell.md).
+- **Terminalgrundlagen**: Wenn du mit der Kommandozeile noch nicht vertraut bist, lies zuerst [Kommandozeile und Shell: Grundlagen](./command-line-shell.md).
 
 ---
 
-## 0. Einleitung: Was genau ist das alltägliche `localhost:5173`?
+## 0. Einleitung: Überblick über genau ist das alltägliche `localhost:5173`
 
 <DevServerFlowDemo />
 
@@ -113,7 +113,7 @@ npm run dev -- --host 0.0.0.0
 
 ## 3. Portkonflikte: Das häufigste Problem in der Entwicklungsumgebung
 
-### 3.1 Warum kommt es zu Konflikten?
+### 3.1 Warum kommt es zu Konflikten
 
 **Ein einzelner Port kann zur gleichen Zeit nur von einem Programm belauscht werden.** Genau wie ein Zimmer nur von einer Familie bewohnt werden kann.
 
@@ -163,7 +163,7 @@ taskkill /PID <PID> /F
 
 ## 4. Die „Same-Origin Policy" und Cross-Origin in der Entwicklung
 
-### 4.1 Was ist ein „Origin"?
+### 4.1 Was ist ein „Origin"
 
 Browser haben einen Sicherheitsmechanismus namens **Same-Origin Policy**: Nur wenn **Protokoll, Domain und Port** alle drei vollständig identisch sind, gilt es als „same origin".
 
@@ -173,7 +173,7 @@ Browser haben einen Sicherheitsmechanismus namens **Same-Origin Policy**: Nur we
 | `http://localhost:5173` | `http://localhost:3000` | ❌ Cross-Origin | **Port unterschiedlich** (5173 vs. 3000) |
 | `http://localhost:5173` | `https://localhost:5173` | ❌ Cross-Origin | **Protokoll unterschiedlich** (http vs. https) |
 
-### 4.2 Warum stößt die Trennung von Frontend und Backend zwangsläufig auf Cross-Origin?
+### 4.2 Warum stößt die Trennung von Frontend und Backend zwangsläufig auf Cross-Origin
 
 Wenn deine Projektarchitektur so aussieht:
 

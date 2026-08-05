@@ -4,7 +4,7 @@
 Chương này sẽ giúp bạn hiểu sâu về công cụ năng suất cốt lõi của lập trình viên — **Môi trường Phát triển Tích hợp (IDE)**. Chúng ta sẽ bắt đầu từ triết lý thiết kế IDE, phân tích từng thành phần cốt lõi, và thông qua IDE ảo để minh họa cách hoạt động.
 :::
 
-## Gặp gì không hiểu thì làm sao? (How to solve problems)
+## Gặp gì không hiểu thì làm sao (How to solve problems)
 
 Trong quá trình học và dùng IDE, bạn có thể gặp nhiều nút bấm, menu hoặc lỗi code không hiểu. Khi đó, **đừng hoảng, dùng AI assistant là cách giải quyết hiệu quả nhất**.
 
@@ -20,7 +20,7 @@ AI hiện nay (như ChatGPT, Claude, DeepSeek, v.v.) đều có khả năng nh�
 
 ---
 
-## 0. Mở đầu: Tại sao cần IDE?
+## 0. Mở đầu: Động lực của cần IDE
 
 Trong phát triển phần mềm, lập trình viên thường xuyên thực hiện các thao tác: viết code, quản lý file, biên dịch chạy, debug lỗi. Nếu tất cả đều phải dùng phần mềm riêng biệt (ví dụ dùng Notepad viết code, dùng dòng lệnh biên dịch, dùng folder quản lý file), hiệu suất sẽ rất thấp và dễ sai sót.
 
@@ -74,7 +74,7 @@ Trăm nghe không bằng một thấy. Để bạn thực sự cảm nhận sự
 
 ---
 
-## 3. Cơ chế cốt lõi: Tại sao VS Code vô sở bất năng?
+## 3. Cơ chế cốt lõi: Động lực của VS Code vô sở bất năng
 
 Bạn có thể thắc mắc: Tại sao cùng một phần mềm, vừa viết Python được, vừa viết C++ được, còn làm web development nữa? Nó làm thế nào?
 Thực ra, triết lý thiết kế của VS Code tóm gọn trong một câu: **"Core tối giản, capability pluggable".**

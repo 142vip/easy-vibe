@@ -1,4 +1,4 @@
-# Serialización: la "traducción" de datos
+# Principios de serialización: la traducción de datos
 
 ::: tip 🎯 Pregunta clave
 **¿Cómo se transmiten los datos por la red?** Es como preguntar: ¿cómo hacer que lo que dice una persona lo entienda otra? La serialización resuelve el problema de la "traducción de datos": convertir los objetos en memoria a un formato que pueda transmitirse.
@@ -55,13 +55,13 @@ La redundancia del formato JSON hace que el paquete de datos sea demasiado grand
 
 ---
 
-## 1. ¿Qué es la serialización/deserialización?
+## 1. Introducción a serialización/deserialización
 
 **Serialización** (Serialization) es el proceso de convertir un objeto a un formato transmisible.
 
 **Deserialización** (Deserialization) es el proceso de restaurar el formato transmitido de vuelta a un objeto.
 
-### 1.1 Analogía con enviar un paquete
+### 1.1 Analogía con enviar un artefacto de compilación
 
 | Enviar un paquete | Serialización | Descripción |
 | :--- | :--- | :--- |
@@ -69,7 +69,7 @@ La redundancia del formato JSON hace que el paquete de datos sea demasiado grand
 | Transporte | Transmisión por red | El camión de mensajería lo lleva al destino |
 | Desempaquetar | Deserialización | El destinatario abre la caja y saca el artículo |
 
-### 1.2 ¿Por qué necesitamos serialización?
+### 1.2 Motivación de serialización
 
 | Motivo | Descripción | Ejemplo |
 | :--- | :--- | :--- |

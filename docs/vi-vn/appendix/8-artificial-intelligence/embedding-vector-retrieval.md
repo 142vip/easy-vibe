@@ -63,7 +63,7 @@ Hãy tưởng tượng một hệ tọa độ hai chiều. Chúng ta đặt "mè
 
 ---
 
-## 2. Tính toán độ tương đồng: Các vector "gần" nhau đến mức nào?
+## 2. Tính toán độ tương đồng: Các vector "gần" nhau đến mức nào
 
 Khi đã có biểu diễn vector, câu hỏi tiếp theo tự nhiên là: **làm thế nào để đo lường mức độ tương đồng giữa hai vector?** Điều này giống như đo xem hai thành phố gần nhau đến mức nào trên bản đồ — bạn có thể đo khoảng cách đường thẳng, hoặc xem hướng của chúng có nhất quán không.
 
@@ -83,7 +83,7 @@ Khi đã có biểu diễn vector, câu hỏi tiếp theo tự nhiên là: **là
 
 ---
 
-## 3. Chỉ mục vector: Làm thế nào để truy xuất trong mili giây trên hàng triệu vector?
+## 3. Chỉ mục vector: Cách để truy xuất trong mili giây trên hàng triệu vector
 
 Giả sử bạn có 1 triệu tài liệu, mỗi tài liệu đã được chuyển thành vector 1536 chiều. Người dùng đặt một câu hỏi, bạn cần tìm 10 tài liệu tương đồng nhất. Cách trực tiếp nhất là lần lượt tính độ tương đồng — nhưng điều đó có nghĩa là phải thực hiện 1 triệu phép toán vector 1536 chiều, quá chậm.
 

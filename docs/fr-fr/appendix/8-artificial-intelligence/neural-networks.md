@@ -1,4 +1,4 @@
-# Réseaux de neurones et apprentissage profond
+# Fondamentaux : Réseaux de neurones et apprentissage profond
 
 ::: tip Préface
 **Les réseaux de neurones sont le moteur de la révolution de l'IA.** De la compréhension du langage de ChatGPT à la reconnaissance d'images de la conduite autonome, ce sont les réseaux de neurones qui travaillent en coulisses. Ce n'est pas de la magie, mais un cadre mathématique élégant — qui « apprend » la relation de correspondance entre l'entrée et la sortie à travers de grandes quantités de données. Comprendre ses principes fondamentaux vous aidera à mieux utiliser et déboguer les outils d'IA.
@@ -40,7 +40,7 @@ Expression mathématique : **y = f(w₁x₁ + w₂x₂ + w₃x₃ + b)**
 
 <NeuronDemo />
 
-### Fonction d'activation : pourquoi la non-linéarité est-elle nécessaire ?
+### Fonction d'activation : pourquoi la non-linéarité est-elle nécessaire
 
 Sans fonction d'activation, quel que soit le nombre de couches de neurones empilées, le résultat final est équivalent à une transformation linéaire (multiplication matricielle). La fonction d'activation introduit la **non-linéarité**, permettant au réseau d'apprendre des motifs complexes.
 
@@ -77,7 +77,7 @@ L'apprentissage automatique traditionnel n'a généralement que 1 à 2 couches. 
 
 ---
 
-## 2. Comment le réseau apprend
+## 2. Approche et mise en œuvre : le réseau apprend
 
 L'« apprentissage » d'un réseau de neurones est essentiellement un **problème d'optimisation** : trouver un ensemble de poids (w) et de biais (b) tel que les prédictions du réseau soient aussi proches que possible des réponses réelles.
 

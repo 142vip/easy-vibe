@@ -1,11 +1,11 @@
-# Backend Language Comparison
+# An Introduction to Backend Languages
 ::: tip 🎯 Core Question
 **"What language should we use for our backend?"** This is like asking: "What tool should I buy?" The answer is never "the best," but rather "the best fit for you." This chapter will give you a comprehensive overview of mainstream backend programming languages — their characteristics, use cases, and selection strategies — to help you make an informed decision.
 :::
 
 ---
 
-## 1. Why Understand Backend Languages?
+## 1. Motivation for Understanding Backend Languages
 
 ### 1.1 From Monolithic to Diverse: The Evolution of Backend Languages
 
@@ -38,7 +38,7 @@ But modern backend development has completely changed. We now face choices like 
 
 <BackendLanguagesDemo />
 
-### 1.2 A Real Horror Story: Why Choosing the Right Language Matters
+### 1.2 Case: Choosing the Right Language Matters
 
 You might say: "Python can write anything, why stress about it?" Let me tell you a real story that will make you understand why language selection is so important.
 
@@ -152,7 +152,7 @@ Modern technology has blurred these boundaries: Java is both compiled (to byteco
 
 :::
 
-### 2.3 Concurrency Models: How Many Requests Can You Handle at Once?
+### 2.3 Concurrency Models: Method for Manying Requests Can You Handle at Once
 
 Concurrency is one of the most critical concepts in backend development. It determines how many requests a system can handle simultaneously. Different languages have vastly different concurrency models, which is often the decisive factor in language selection.
 
@@ -191,7 +191,7 @@ On a single-core CPU, you can only achieve concurrency; on a multi-core CPU, you
 
 :::
 
-### 2.4 Memory Management: Who's Responsible for Taking Out the Trash?
+### 2.4 Memory Management: Who's Responsible for Taking Out the Trash
 
 Memory management is a key factor affecting both performance and development experience. Different languages adopt different strategies, each with its own trade-offs.
 
@@ -645,7 +645,7 @@ They rewrote the core part of the storage engine (Block Server) in Rust. The res
 
 ### 4.1 The Four-Step Decision Method
 
-### Step 1: Identify Your Scenario Type
+### Identify Your Scenario Type
 
 | Scenario Type | Characteristics | Recommended Language | Not Recommended |
 | :--- | :--- | :--- | :--- |
@@ -669,7 +669,7 @@ They rewrote the core part of the storage engine (Block Server) in Rust. The res
 **AI/ML → Python is a must**: This isn't a choice — it's a necessity. The entire AI/ML ecosystem is Python.
 :::
 
-### Step 2: Assess Your Team's Background
+### Assess Your Team's Background
 
 **Decision priority: Team familiarity > Technical optimality**
 
@@ -681,7 +681,7 @@ They rewrote the core part of the storage engine (Block Server) in Rust. The res
 | **C/C++ background** | Rust / Go | Rust to replace C++, Go for rapid business development |
 | **Brand-new team** | Go / Python | Go cultivates engineering mindset, Python for rapid output |
 
-### Step 3: Weigh Performance vs. Development Efficiency
+### Weigh Performance vs. Development Efficiency
 
 **Decision matrix**:
 
@@ -692,7 +692,7 @@ They rewrote the core part of the storage engine (Block Server) in Rust. The res
 | Medium (typical web) | Short | Node.js / Python | Monolithic application, rapid iteration |
 | Low (internal tools) | Very short | Python / Ruby | Scripting, automation-first |
 
-### Step 4: Consider Long-Term Maintenance Costs
+### Consider Long-Term Maintenance Costs
 
 **Hidden items in maintenance costs**:
 

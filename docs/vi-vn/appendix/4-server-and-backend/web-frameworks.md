@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Tại sao cần hiểu về sự tiến hóa kiến trúc?
+## 1. Động lực của cần hiểu về sự tiến hóa kiến trúc
 
 Hãy tưởng tượng bạn đang lên kế hoạch cho một chuyến du lịch dài. Bạn có thể chọn đi xe đạp, lái ô tô riêng, đi tàu cao tốc hoặc đi máy bay. Mỗi phương thức đều có tình huống phù hợp: xe đạp phù hợp cho quãng đường ngắn và muốn rèn luyện sức khỏe, máy bay phù hợp cho chuyến đi xuyên lục địa.
 
@@ -45,7 +45,7 @@ Hãy cùng đọc từng dòng của bảng này:
 
 ## 2. Thời đại máy chủ vật lý (1990s)
 
-### 2.1 Máy chủ vật lý là gì?
+### 2.1 Máy chủ vật lý: Tổng quan
 
 Khi internet mới bắt đầu, backend chỉ là một **máy chủ vật lý** (một chiếc máy tính thật) đặt trong phòng máy.
 
@@ -115,7 +115,7 @@ Khi internet mới bắt đầu, backend chỉ là một **máy chủ vật lý*
 
 ## 3. Thời đại Monolithic (2000s)
 
-### 3.1 Monolithic là gì?
+### 3.1 Monolithic: Tổng quan
 
 Cùng với sự xuất hiện của các framework (Rails / Django / Spring), mọi người nhồi nhét tất cả chức năng vào một ứng dụng.
 
@@ -200,7 +200,7 @@ Nếu bạn đang học phát triển backend, **rất khuyến khích bắt đ�
 
 ## 4. Container hóa và Microservices (2010s)
 
-### 4.1 Tại sao cần Microservices?
+### 4.1 Động lực của cần Microservices
 
 Những điểm đau của Monolithic bùng nổ tập trung vào thập niên 2010:
 
@@ -318,7 +318,7 @@ Chức năng chỉ có 100 dòng code cũng tách thành một dịch vụ độ
 
 ## 5. Thời đại Serverless và Cloud Native (2020s+)
 
-### 5.1 Tại sao cần Serverless?
+### 5.1 Động lực của cần Serverless
 
 Microservices tuy tốt, nhưng duy trì hàng chục nhà bếp nhỏ vẫn rất mệt mỏi. Bạn cần lo lắng:
 
@@ -345,7 +345,7 @@ Microservices tuy tốt, nhưng duy trì hàng chục nhà bếp nhỏ vẫn r�
 **Giống như gọi đồ ăn**: Bạn không cần nhà bếp, chỉ cần thiết kế thực đơn, có người nấu cho bạn.
 :::
 
-### 5.2 Serverless là gì?
+### 5.2 Serverless: Tổng quan
 
 **Serverless = FaaS + BaaS**
 

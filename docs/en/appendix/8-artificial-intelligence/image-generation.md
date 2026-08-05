@@ -1,4 +1,4 @@
-# Image Generation Principles
+# Principles of Image Generation
 > 💡 **Learning Guide**: This chapter systematically explores the working mechanisms of generative visual large models. Starting from the "GPU-intensive" challenge of high-dimensional pixel space, we'll deconstruct the rigorous mathematical principles behind Variational Autoencoders (VAE), Diffusion Models, and Cross-Attention. Meanwhile, clever and vivid interactive components will ensure that you — even with zero AI background — can quickly grasp these cutting-edge technologies!
 
 <ImageGenQuickStartDemo />

@@ -1,11 +1,11 @@
-# Automatisation CI / CD
+# Introduction : Automatisation CI/CD
 ::: tip 🎯 Question centrale
 **Le code fonctionne parfaitement en local, mais comment le rendre accessible au monde entier ?**
 :::
 
 ---
 
-## 1. Pourquoi faut-il « mettre en ligne un service » ?
+## 1. Motivation et justification : faut-il « mettre en ligne un service »
 
 Imaginez que vous avez préparé un festin chez vous, absolument délicieux. Le problème, c'est que seule votre famille peut en profiter. Les voisins, les passants, les inconnus n'y ont pas accès.
 
@@ -19,9 +19,9 @@ Je vais décomposer l'ensemble du processus pour vous. Chaque étape sera expliq
 
 ---
 
-## 2. Construction : transformer le code en un « colis transportable »
+## 2. Construction : transformer le code en un « artefact de build transportable »
 
-### 2.1 Pourquoi construire ?
+### 2.1 Pourquoi construire
 
 Les débutants demandent souvent : le code est écrit, pourquoi ne pas le mettre directement sur le serveur pour que les utilisateurs y accèdent ?
 
@@ -31,7 +31,7 @@ Par exemple, lorsque vous écrivez du code Vue, vous utilisez des balises comme 
 
 Il faut donc faire quelque chose d'essentiel avant de mettre le code sur le serveur : **le traduire dans un langage que le navigateur peut comprendre**. Ce processus de traduction s'appelle la « construction » (Build).
 
-### 2.2 Que fait concrètement la construction ?
+### 2.2 Que fait concrètement la construction
 
 La construction ne se limite pas à la traduction. Elle effectue également de nombreuses optimisations pour que le site soit plus rapide et plus économe en ressources. Voici en détail ce qu'elle fait :
 
@@ -59,7 +59,7 @@ Le hash a un rôle clé : lorsque le code est modifié, la valeur du hash change
 
 <DeploymentBuildDemo />
 
-### 2.3 Comment exécuter la construction ?
+### 2.3 Comment exécuter la construction
 
 La plupart des projets front-end modernes ont déjà un outil de construction configuré. Il suffit de retenir une commande :
 
@@ -76,7 +76,7 @@ pnpm build
 
 Après l'exécution, cherchez un dossier nommé `dist` à la racine du projet (parfois appelé `build` ou `.output`). Il contient tous les fichiers construits. Ce sont les fichiers qu'il faut envoyer sur le serveur. Ils ne nécessitent aucune modification supplémentaire — il suffit de les copier sur le serveur.
 
-### 2.4 Que contient le résultat de la construction ?
+### 2.4 Que contient le résultat de la construction
 
 En ouvrant le dossier dist, vous trouverez principalement trois types de fichiers :
 
@@ -90,7 +90,7 @@ Pour les projets backend plus complexes (comme Node.js), le résultat de la cons
 
 ## 3. Serveur : trouver une « maison » qui ne ferme jamais
 
-### 3.1 Qu'est-ce qu'un serveur exactement ?
+### 3.1 Qu'est-ce qu'un serveur exactement
 
 Beaucoup de gens entendent le mot « serveur » et imaginent un équipement mystérieux et sophistiqué. En réalité, ce n'est pas si compliqué. **Un serveur est un ordinateur**. Un ordinateur qui ne s'éteint jamais et qui est toujours connecté à Internet.
 
@@ -106,7 +106,7 @@ Troisièmement, votre ordinateur n'a pas d'« adresse IP publique ». Qu'est-ce 
 
 <DeploymentServerDemo />
 
-### 3.2 Comment choisir un serveur ?
+### 3.2 Comment choisir un serveur
 
 Le choix d'un serveur dépend principalement de trois critères : **le nombre de cœurs CPU**, **la quantité de mémoire RAM** et **l'espace disque**. Plus ces valeurs sont élevées, plus le serveur est performant — et plus cher.
 
@@ -118,7 +118,7 @@ Pour les débutants, il n'est pas nécessaire d'investir dans une configuration 
 
 Un autre facteur à prendre en compte : **la localisation géographique**. Si vos utilisateurs sont principalement en Chine, choisissez des serveurs en Chine (Alibaba Cloud, Tencent Cloud) pour de meilleures performances. Si vos utilisateurs sont principalement à l'étranger, choisissez des serveurs internationaux (AWS, Google Cloud, DigitalOcean) ou à Hong Kong. La vitesse est bonne et aucune enregistrement ICP n'est nécessaire.
 
-### 3.3 Chine ou étranger ?
+### 3.3 Chine ou étranger
 
 C'est une question importante que beaucoup de gens ne se posent pas au début, mais qui peut causer des problèmes par la suite.
 
@@ -140,7 +140,7 @@ Notre recommandation : pour les projets personnels et les sites de démonstratio
 
 Pour les débutants, nous recommandons les offres étudiantes / nouveaux utilisateurs d'**Alibaba Cloud** ou **Tencent Cloud**. Souvent, l'année ne coûte que quelques dizaines de yuans — un excellent rapport qualité-prix. Pour les projets purement front-end, vous pouvez aussi utiliser directement **Vercel** ou **Netlify**. Pas besoin de louer un serveur : il suffit de pousser le code et le déploiement se fait automatiquement.
 
-### 3.5 Que faire après avoir reçu votre serveur ?
+### 3.5 Que faire après avoir reçu votre serveur
 
 Après l'achat du serveur, vous recevrez un e-mail contenant plusieurs informations importantes :
 
@@ -163,7 +163,7 @@ Une fois connecté, vous accédez à l'interface en ligne de commande du serveur
 
 ## 4. Déploiement : installer le code dans la « maison »
 
-### 4.1 Qu'est-ce que le déploiement ?
+### 4.1 Qu'est-ce que le déploiement
 
 Le déploiement, c'est une fois que vous avez loué un serveur (la maison), y installer votre code (les meubles et effets personnels), puis ouvrir les portes pour commencer l'activité.
 
@@ -178,7 +178,7 @@ Ces quatre étapes peuvent sembler complexes, mais elles ne sont pas si difficil
 
 <DeploymentServerDemo />
 
-### 4.2 Comment téléverser le code sur le serveur ?
+### 4.2 Comment téléverser le code sur le serveur
 
 **Méthode 1 : Téléversement FTP/SFTP**
 
@@ -308,7 +308,7 @@ Maintenant, en visitant `http://example.com` (n'oubliez pas de configurer la ré
 
 ## 5. Nom de domaine et DNS : donner un bon nom au site
 
-### 5.1 Pourquoi acheter un nom de domaine ?
+### 5.1 Pourquoi acheter un nom de domaine
 
 Avec l'adresse IP du serveur, pourquoi acheter un nom de domaine ?
 
@@ -318,7 +318,7 @@ Le nom de domaine est le nom du site. Facile à retenir, professionnel. Il renfo
 
 <DeploymentDnsDemo />
 
-### 5.2 Qu'est-ce que le DNS ?
+### 5.2 Qu'est-ce que le DNS
 
 Très bien. Vous avez acheté un nom de domaine, disons `my-awesome-website.com`. Mais voici le problème : les ordinateurs ne comprennent que les adresses IP. Ils ne comprennent pas « my-awesome-website.com ».
 
@@ -332,7 +332,7 @@ Lorsque vous saisissez `my-awesome-website.com` dans votre navigateur et appuyez
 
 Tout ce processus ne prend généralement que quelques dizaines de millisecondes. L'utilisateur ne perçoit aucun délai.
 
-### 5.3 Comment configurer le DNS ?
+### 5.3 Comment configurer le DNS
 
 La configuration DNS se fait généralement à deux endroits :
 
@@ -348,7 +348,7 @@ Configurez les enregistrements DNS là où vous avez acheté le nom de domaine. 
 
 De nombreux professionnels n'utilisent pas le DNS fourni par le registraire. Ils préfèrent des services DNS spécialisés comme Cloudflare, Alibaba Cloud DNSPod ou Tencent Cloud DNS. Ces services sont généralement plus stables, plus rapides en résolution, et offrent des fonctionnalités supplémentaires comme le CDN et la protection DDoS.
 
-### 5.4 Combien de temps la propagation DNS prend-elle ?
+### 5.4 Combien de temps la propagation DNS prend-elle
 
 C'est une question fréquente. La réponse est : **cela dépend. Généralement de quelques minutes à 24 heures**.
 
@@ -380,7 +380,7 @@ Vous l'avez peut-être remarqué. Certaines adresses de sites commencent par `ht
 
 <DeploymentHttpsDemo />
 
-### 6.2 Pourquoi utiliser HTTPS ?
+### 6.2 Pourquoi utiliser HTTPS
 
 Première raison : **la sécurité**. Sans HTTPS, les mots de passe que les utilisateurs saisissent sur le site sont transmis en clair. Toute personne avec un minimum de compétences techniques peut les intercepter. De nos jours, qui oserait utiliser un site sans HTTPS ?
 
@@ -388,7 +388,7 @@ Deuxième raison : **l'avertissement du navigateur**. Les navigateurs modernes c
 
 Troisième raison : **le SEO**. Les moteurs de recherche comme Google et Baidu donnent la priorité aux sites HTTPS dans leurs résultats. Le référencement naturel est meilleur.
 
-### 6.3 Comment obtenir un certificat HTTPS ?
+### 6.3 Comment obtenir un certificat HTTPS
 
 Autrefois, les certificats HTTPS étaient chers — plusieurs centaines, voire milliers de yuans par an. Aujourd'hui, une organisation appelée **Let's Encrypt** propose des certificats SSL/TLS entièrement gratuits. Et la communauté propose de nombreux outils automatisés pour l'installation et le renouvellement.
 
@@ -412,7 +412,7 @@ Le certificat est valable 90 jours. Mais Certbot configure une tâche planifiée
 
 Si vous utilisez le service DNS de Cloudflare, vous n'avez même pas besoin de configurer le certificat HTTPS vous-même. Cloudflare fournit automatiquement le support HTTPS pour votre domaine. Il gère même le problème du renouvellement tous les 90 jours.
 
-### 6.4 Quels changements après la configuration HTTPS ?
+### 6.4 Quels changements après la configuration HTTPS
 
 Une fois HTTPS configuré, l'accès passe de `http://example.com` à `https://example.com`. Ce changement apporte plusieurs garanties de sécurité :
 
@@ -424,7 +424,7 @@ Une fois HTTPS configuré, l'accès passe de `http://example.com` à `https://ex
 
 ## 7. CI/CD : laisser les robots travailler pour vous
 
-### 7.1 Qu'est-ce que CI/CD ?
+### 7.1 Qu'est-ce que CI/CD
 
 CI/CD est l'abréviation de deux termes : **C**ontinuous **I**ntegration (Intégration Continue) et **C**ontinuous **D**eployment (Déploiement Continu). On peut le voir comme un système de robots qui travaillent automatiquement pour vous.
 
@@ -485,7 +485,7 @@ Une fois tous les tests réussis, le système CI :
 
 Tout le processus peut ne prendre que quelques minutes. Entièrement automatique.
 
-### 7.3 Comment configurer GitHub Actions ?
+### 7.3 Comment configurer GitHub Actions
 
 GitHub Actions est la fonctionnalité CI/CD intégrée de GitHub. Elle est gratuite (le quota gratuit est suffisant pour les projets personnels) et se configure très simplement.
 
@@ -553,7 +553,7 @@ Une fois configuré, chaque `git push origin main` déclenchera automatiquement 
 
 ## 8. Surveillance et journaux : être le « veilleur de nuit » du site
 
-### 8.1 Pourquoi surveiller ?
+### 8.1 Pourquoi surveiller
 
 Une fois le site en ligne, il devrait théoriquement fonctionner 24h/24 et 7j/7 sans interruption. Mais dans le monde réel, rien n'est parfait. Le serveur peut tomber en panne. Le réseau peut subir des perturbations. Le code peut contenir des bugs. Dans un environnement de production réel, toutes sortes d'incidents peuvent survenir.
 
@@ -567,7 +567,7 @@ Avec la surveillance, vous pouvez :
 
 <DeploymentMonitorDemo />
 
-### 8.2 Quels métriques surveiller ?
+### 8.2 Quels métriques surveiller
 
 Les métriques les plus importantes sont les suivantes :
 
@@ -580,7 +580,7 @@ Les métriques les plus importantes sont les suivantes :
 | Temps de réponse | < 2 secondes | Optimiser les requêtes de base de données ou ajouter un cache |
 | Taux d'erreur | < 1 % | Consulter les journaux d'erreurs pour identifier le problème |
 
-### 8.3 Comment configurer la surveillance ?
+### 8.3 Comment configurer la surveillance
 
 **Solution la plus simple : Uptime Robot**
 
@@ -594,7 +594,7 @@ Si votre serveur est chez Alibaba Cloud ou Tencent Cloud, la surveillance est in
 
 Ce sont les « couteaux suisses » de la surveillance. Très puissants, ils peuvent surveiller pratiquement n'importe quel métrique et créer de magnifiques tableaux de bord visuels. Cependant, la configuration est relativement complexe et convient aux développeurs expérimentés.
 
-### 8.4 Journaux : comment investiguer en cas de problème ?
+### 8.4 Journaux : comment investiguer en cas de problème
 
 La surveillance vous dit « il y a un problème sur le site ». Mais pour comprendre quel est le problème exact et pourquoi il est survenu, il faut consulter les **journaux** (logs).
 
@@ -627,7 +627,7 @@ Pour les projets complexes, nous recommandons des outils professionnels de colle
 - **ELK (Elasticsearch + Logstash + Kibana)** : très puissant mais complexe à configurer.
 - **Sentry** : outil spécialisé dans la collecte des erreurs d'application. Capture automatiquement les rapports d'erreurs.
 
-### 8.5 Alertes : comment être informé immédiatement en cas de problème ?
+### 8.5 Alertes : comment être informé immédiatement en cas de problème
 
 La surveillance vous informe qu'il y a un problème. Mais si vous ne regardez pas le tableau de bord en permanence, que faire ? C'est là qu'interviennent les **alertes**.
 

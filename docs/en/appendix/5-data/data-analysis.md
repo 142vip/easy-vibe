@@ -1,4 +1,4 @@
-# Data Analysis: Core Concepts, Logic, and Deep Insights
+# Principles of Data Analysis
 
 ::: tip Core Question
 **How do you extract "certainty" from scattered data that can guide business decisions?**
@@ -60,7 +60,7 @@ Individual behavior is often random, but group behavior follows statistical patt
 2. **Apply**: Execute aggregation functions within each group, such as `COUNT()`, `SUM()`, `AVG()`.
 3. **Combine**: Compare results across different groups to identify differences.
 
-### 2.2 Why is Grouping (Group By) Essential?
+### 2.2 Motivation for Groupinging (Group By) Essential
 Aggregated data often hides problems. For example, overall conversion rates may be rising, but after splitting, you find that a surge in "Shanghai" is pulling up the overall average while all other regions are declining. Through aggregation analysis, we can precisely pinpoint the best or worst-performing segments from the "blended average."
 
 ---

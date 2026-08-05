@@ -1,4 +1,4 @@
-# Méthodologie de conception de systèmes
+# Méthodologie : Conception de systèmes
 
 ::: tip Avant-propos
 **La conception de systèmes ne consiste pas à dessiner des architectures au doigt mouillé, c'est une méthodologie structurée.** Que ce soit pour un exercice de conception de systèmes en entretien ou pour la conception architecturale en conditions réelles, on suit un cadre de réflexion similaire : d'abord bien comprendre le problème, puis estimer les dimensions, ensuite concevoir la solution, et enfin approfondir les optimisations.

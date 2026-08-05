@@ -1,4 +1,4 @@
-# Conteneurisation avec Docker
+# Introduction : Conteneurisation avec Docker
 
 ::: tip Avant-propos
 **« Ça marche sur ma machine » est l'excuse la plus classique des développeurs. Docker fait disparaître cette excuse pour de bon.** La technologie de conteneurisation empaquette une application et toutes ses dépendances dans une unité standardisée, garantissant un fonctionnement cohérent dans tout environnement. C'est la pierre angulaire de la livraison logicielle moderne.
@@ -24,13 +24,13 @@
 
 ---
 
-## 1. Pourquoi les conteneurs ?
+## 1. Motivation et justification : les conteneurs
 
 Avant l'apparition des conteneurs, déployer une application nécessitait d'installer manuellement l'environnement d'exécution sur le serveur, de configurer les variables d'environnement et de gérer les conflits de dépendances. Les différences entre environnements (développement, test, production) étaient un terreau fertile pour les bugs.
 
 <DockerArchitectureDemo />
 
-### Quels problèmes les conteneurs résolvent-ils ?
+### Présentation : problèmes les conteneurs résolvent-ils
 
 | Problème | Approche traditionnelle | Approche conteneurisée |
 |------|---------|---------|

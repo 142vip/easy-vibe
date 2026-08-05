@@ -1,4 +1,4 @@
-# Frontend-Projektarchitektur-Design
+# Frontend-Projektarchitektur: Grundlagen
 
 ::: tip 🎯 Kernfrage
 **Von einfachen HTML-Seiten bis hin zu komplexen Enterprise-Anwendungen: Wie waehlt man die richtige Architektur fuer unterschiedliche Projektgroessen?** Das ist wie die Frage: Vom Single-Apartment bis zum grossen Einkaufszentrum — wie entwirft man unterschiedliche Raumlayouts nach Bedarf? Eine gute Architektur sollte mit dem Projekt wachsen und nicht von Anfang an ueberdimensioniert sein.
@@ -513,7 +513,7 @@ Phase 3: Funktionsmodularisierung (nach Feature organisiert)
 Phase 4: Micro-Frontend-Architektur (Monorepo)
 ```
 
-### 6.2 Wann sollte die Architektur aktualisiert werden?
+### 6.2 Wann sollte die Architektur aktualisiert werden
 
 | Signal | Beschreibung | Empfehlung |
 |--------|-------------|------------|

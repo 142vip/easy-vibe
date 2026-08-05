@@ -1,4 +1,4 @@
-# Les défis des systèmes distribués
+# Principes : Systèmes distribués et leurs défis
 
 ::: tip Avant-propos
 **Ce n'est que lorsqu'une machine ne suffit plus que les vrais problèmes commencent.** Les systèmes distribués sont la pierre angulaire de l'Internet moderne — des messages WeChat aux commandes sur Taobao, ce sont des centaines, voire des milliers de machines qui travaillent de concert en coulisses. Mais « distribué » n'est pas un repas gratuit : il apporte une série de défis que les systèmes monopostes n'ont jamais rencontrés.
@@ -25,7 +25,7 @@
 
 ---
 
-## 0. Vue d'ensemble : pourquoi les systèmes distribués ?
+## 0. Vue d'ensemble : pourquoi les systèmes distribués
 
 Les systèmes monopostes sont simples et fiables, mais ils se heurtent à trois goulets d'étranglement insurmontables :
 
@@ -63,7 +63,7 @@ En 2000, Eric Brewer a formulé la conjecture CAP (démontrée ensuite comme th�
 
 <CAPTheoremDemo />
 
-### Pourquoi ne peut-on en choisir que deux ?
+### Motivation et justification : ne peut-on en choisir que deux
 
 Dans un environnement distribué, les partitions réseau (P) sont inévitables — les fibres optiques sont coupées, les commutateurs tombent en panne, les centres de données perdent leur connexion. P est donc obligatoire, le choix réel se fait entre C et A :
 

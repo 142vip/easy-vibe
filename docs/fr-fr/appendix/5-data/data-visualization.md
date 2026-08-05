@@ -1,4 +1,4 @@
-# Visualisation de données et tableaux de bord
+# Principes : Visualisation de données
 
 ::: tip Avant-propos
 **Un bon graphique vaut mieux que mille lignes de données.** La visualisation de données consiste à transformer des chiffres abstraits en expressions visuelles intuitives, permettant de comprendre l'histoire derrière les données en quelques secondes. Des graphiques Excel aux écrans de supervision Grafana, la visualisation est omniprésente.
@@ -24,7 +24,7 @@
 
 ---
 
-## 0. Vue d'ensemble : Pourquoi la visualisation ?
+## 0. Vue d'ensemble : Pourquoi la visualisation
 
 Le cerveau humain traite l'information visuelle beaucoup plus rapidement que le texte. Un graphique en courbes vous permet de voir rapidement que « les ventes du mois dernier ont baissé », alors que la même information présentée dans un tableau nécessiterait une comparaison ligne par ligne pour tirer cette conclusion.
 
@@ -65,7 +65,7 @@ La première étape pour choisir un graphique n'est pas « quel graphime j'aime 
 
 ---
 
-## 2. Principes de conception visuelle : laisser les données parler
+## 2. Principes de conception visuelle : laisser les données communication
 
 Une bonne visualisation n'est pas « belle », mais « compréhensible ». Plusieurs principes classiques formulés par Edward Tufte dans *The Visual Display of Quantitative Information* restent une référence importante en conception de visualisation.
 

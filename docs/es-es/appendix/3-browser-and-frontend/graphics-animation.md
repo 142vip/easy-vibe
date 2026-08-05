@@ -1,4 +1,4 @@
-# Gráficos y Animación (Canvas y sus amigos)
+# Fundamentos de gráficos y animación: Canvas y sus compañeros
 
 ::: tip 🎯 Pregunta central
 
@@ -10,7 +10,7 @@ Esta guía te llevará desde dibujar la primera línea, subiendo de nivel derrot
 
 ---
 
-## 1. ¿Qué es Canvas?
+## 1. Introducción a Canvas
 
 Si las páginas web antiguas se ensamblaban con **bloques de construcción Lego** (etiquetas HTML), entonces la etiqueta `<canvas>` de HTML5 te lanza una **enorme hoja digital en blanco**, te entrega un **pincel** controlado por código, y el resto depende de tu creatividad.
 
@@ -35,7 +35,7 @@ En el mundo del dibujo frontend, Canvas tiene un rival natural llamado **SVG**. 
 
 ## 2. Primer trazo: comprendiendo el sistema de coordenadas contraintuitivo
 
-### 2.1 ¿Por qué esta hoja tiene arriba y abajo invertidos?
+### 2.1 Motivación de la inversión de coordenadas
 
 Cuando te dispones a dibujar, primero debes entender que la regla de Canvas está al revés. En el sistema de coordenadas tradicional de la clase de matemáticas, el punto de origen cero está en el centro, y cuanto más arriba, mayor es el valor. Pero en el campo de la visualización en pantalla de computadora, en casi todos los dispositivos el "punto de origen (0, 0)" se fija en la **esquina superior izquierda** de la pantalla. Hacia la derecha el eje X aumenta sin problema, pero **hacia abajo, el eje Y aumenta.**
 
@@ -83,7 +83,7 @@ Como el ojo humano tiene "persistencia de visión", en las 60 veces por segundo 
 
 ---
 
-## 4. El ciego tocando al elefante: ¿cómo hacer interacción con clics en Canvas?
+## 4. El ciego tocando al elefante: Enfoque de interacción con clics en Canvas
 
 Porque el lienzo de Canvas es para el navegador solo una "tela de pintura" sin estructura alguna. Supongamos que dibujas un monstruo con `arc()` en el lienzo; cuando quieres implementar "hacer clic en el monstruo para quitarle vida", **no puedes en absoluto** usar el tradicional `document.getElementById` para obtener este monstruo. Porque en la estructura HTML, solo existe la rígida etiqueta `<canvas>` de 600 píxeles de ancho.
 
@@ -118,7 +118,7 @@ Tu navegador puede convertirse en un instante en una fábrica de fuegos artifici
 
 ---
 
-## 6. Proteger la gloria de los FPS: ¿cómo enfrentar la fiebre de la CPU?
+## 6. Proteger la gloria de los FPS: Enfoque de enfrentar la fiebre de la CPU
 
 Hacer que miles de objetos se calculen y redibujen 60 veces en un segundo consume mucho rendimiento. Si lo haces sin método, el ventilador de tu computadora pronto despegará.
 

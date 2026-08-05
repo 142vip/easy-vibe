@@ -1,4 +1,4 @@
-# Panorama des modèles de données (Document / Graphe / Série temporelle / Vecteur)
+# Panorama : Modèles de données : Document, Graphe, Série temporelle, Vecteur
 
 ::: tip 🎯 Question centrale
 **Pourquoi ne peut-on pas tout mettre dans les tables MySQL ?** Quand vos données sont des réseaux sociaux, des flux de capteurs à un million d'événements par seconde ou des vecteurs sémantiques que l'IA doit comprendre, les tables relationnelles atteignent leurs limites. Différentes formes de données nécessitent différentes approches de modélisation.
@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Au-delà du relationnel : Pourquoi d'autres modèles de données ?
+## 1. Au-delà du relationnel : Pourquoi d'autres modèles de données
 
 Les bases de données relationnelles (MySQL, PostgreSQL) organisent les données en « table + ligne + colonne » et conviennent aux données métier structurées au schéma fixe et aux relations claires. Mais les données du monde réel sont bien plus diverses :
 
@@ -25,7 +25,7 @@ Il ne s'agit pas de « remplacer » le relationnel, mais de le « compléter ».
 
 ## 2. Modèle document (Document)
 
-### 2.1 Qu'est-ce que le modèle document ?
+### 2.1 Qu'est-ce que le modèle document
 
 Le modèle document stocke les données sous forme de **documents JSON/BSON**. Chaque enregistrement est un document autonome qui peut avoir une structure de champs différente.
 
@@ -71,7 +71,7 @@ Le modèle document stocke les données sous forme de **documents JSON/BSON**. C
 
 ## 3. Modèle graphe (Graph)
 
-### 3.1 Qu'est-ce que le modèle graphe ?
+### 3.1 Qu'est-ce que le modèle graphe
 
 Le modèle graphe exprime les entités et leurs relations via des **nœuds (Nodes)** et des **arêtes (Edges)**. Chaque nœud est une entité, chaque arête est une relation ; nœuds et arêtes peuvent tous deux porter des propriétés.
 
@@ -114,7 +114,7 @@ Dans le modèle relationnel, chaque saut supplémentaire ajoute un JOIN et la pe
 
 ## 4. Modèle série temporelle (Time-Series)
 
-### 4.1 Qu'est-ce que le modèle série temporelle ?
+### 4.1 Qu'est-ce que le modèle série temporelle
 
 Le modèle série temporelle utilise le **timestamp** comme axe principal et est optimisé pour les scénarios « écriture chronologique, requête par plage temporelle ».
 
@@ -125,7 +125,7 @@ timestamp            device      cpu_usage   memory
 2024-01-15 10:00:03  server-01   92%         14.1GB
 ```
 
-### 4.2 Pourquoi ne pas utiliser MySQL pour les données de séries temporelles ?
+### 4.2 Pourquoi ne pas utiliser MySQL pour les données de séries temporelles
 
 | Problème | MySQL | Base de données série temporelle (InfluxDB) |
 |------|-------|----------------------|
@@ -145,7 +145,7 @@ timestamp            device      cpu_usage   memory
 
 ## 5. Modèle vecteur (Vector)
 
-### 5.1 Qu'est-ce que le modèle vecteur ?
+### 5.1 Qu'est-ce que le modèle vecteur
 
 Le modèle vecteur transforme les données non structurées (texte, images, audio) en vecteurs numériques de haute dimension via des **modèles d'embedding**, puis mesure la similarité sémantique en calculant les distances entre vecteurs.
 
@@ -180,7 +180,7 @@ Le modèle vecteur transforme les données non structurées (texte, images, audi
 
 ---
 
-## 6. Décision de choix : Comment choisir le modèle de données ?
+## 6. Décision de choix : Comment choisir le modèle de données
 
 | À quoi ressemblent vos données ? | Modèle recommandé | Produits représentatifs |
 |-------------------|---------|---------|

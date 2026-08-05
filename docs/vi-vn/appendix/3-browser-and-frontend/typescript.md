@@ -1,4 +1,4 @@
-# Hướng dẫn chuyên sâu TypeScript
+# TypeScript: Nguyên tắc kiểu và hệ thống kiểu
 
 ::: tip Lời nói đầu
 Bạn đã biết viết JavaScript, nhưng có thể đã gặp những vấn đề này:
@@ -22,7 +22,7 @@ TypeScript là công cụ giúp bạn phát hiện những vấn đề này trư
 
 ---
 
-## 1. TypeScript là gì
+## 1. TypeScript: Tổng quan
 
 ::: tip 🤔 Câu hỏi cốt lõi
 **JavaScript đã đủ dùng rồi, tại sao còn cần TypeScript?** Học thêm một cú pháp mới có đáng không?
@@ -62,7 +62,7 @@ TypeScript là công cụ giúp bạn phát hiện những vấn đề này trư
 | **JavaScript** | Vật liệu thô | Code có thể chạy trực tiếp |
 | **TypeScript** | Bản thiết kế + Kiểm tra chất lượng | Thêm kiểm tra kiểu cho JavaScript, cuối cùng biên dịch thành JavaScript |
 
-### 1.2 Tại sao vibecoding cũng cần TypeScript?
+### 1.2 Động lực của TypeScript trong vibecoding
 
 ::: warning AI viết code cũng có thể sai
 Một lập trình viên đã dùng AI để tạo ra chức năng quản lý người dùng. Code JavaScript do AI viết chạy được, nhưng có một vấn đề: tuổi người dùng lẽ ra phải là số, nhưng đôi khi bị gán sai thành chuỗi.
@@ -83,14 +83,14 @@ TypeScript không phải là một ngôn ngữ hoàn toàn mới, nó chỉ là 
 const name = "Trương Tam"
 const age = 25
 function greet(user) {
-  return `Hello ${user}`
+ return `Hello ${user}`
 }
 
 // Đây là type annotation đặc trưng của TypeScript
 const name2: string = "Lý Tứ"
 const age2: number = 30
 function greet2(user: string): string {
-  return `Hello ${user}`
+ return `Hello ${user}`
 }
 ```
 
@@ -131,20 +131,20 @@ TypeScript có thể tự động suy luận kiểu dựa trên giá trị gán:
 
 ```typescript
 // Những trường hợp này không cần type annotation, TypeScript có thể tự suy luận
-const name = "Trương Tam"      // suy luận là string
-const age = 25          // suy luận là number
-const isActive = true   // suy luận là boolean
+const name = "Trương Tam" // suy luận là string
+const age = 25 // suy luận là number
+const isActive = true // suy luận là boolean
 
 // Những trường hợp này cần chú thích tường minh
-let data  // ❌ Lỗi: không thể suy luận kiểu
-let data: any  // ✅ Được, nhưng mất đi lợi ích của kiểm tra kiểu
+let data // ❌ Lỗi: không thể suy luận kiểu
+let data: any // ✅ Được, nhưng mất đi lợi ích của kiểm tra kiểu
 
-function add(a, b) {  // ❌ Kiểu tham số không rõ ràng
-  return a + b
+function add(a, b) { // ❌ Kiểu tham số không rõ ràng
+ return a + b
 }
 
-function add2(a: number, b: number): number {  // ✅ Kiểu rõ ràng
-  return a + b
+function add2(a: number, b: number): number { // ✅ Kiểu rõ ràng
+ return a + b
 }
 ```
 :::
@@ -180,22 +180,22 @@ const names2: Array<string> = ["Trương Tam", "Lý Tứ", "Vương Ngũ"]
 // any: kiểu bất kỳ (dùng cẩn thận, tương đương với tắt kiểm tra kiểu)
 let data: any = 42
 data = "bây giờ có thể là chuỗi"
-data = { name: "Trương Tam" }  // cũng có thể là object
+data = { name: "Trương Tam" } // cũng có thể là object
 
 // unknown: any an toàn về kiểu
 let value: unknown = 42
 // if (typeof value === "number") {
-//   console.log(value + 10)  // cần kiểm tra kiểu trước mới dùng được
+// console.log(value + 10) // cần kiểm tra kiểu trước mới dùng được
 // }
 
 // void: không có giá trị trả về
 function log(message: string): void {
-  console.log(message)
+ console.log(message)
 }
 
 // never: không bao giờ trả về
 function error(message: string): never {
-  throw new Error(message)
+ throw new Error(message)
 }
 ```
 
@@ -220,25 +220,25 @@ Interface là cách chính để định nghĩa kiểu object trong TypeScript:
 ```typescript
 // Định nghĩa một interface User
 interface User {
-  id: number
-  name: string
-  email: string
-  age?: number  // thuộc tính tùy chọn
+ id: number
+ name: string
+ email: string
+ age?: number // thuộc tính tùy chọn
 }
 
 // Sử dụng interface
 const user: User = {
-  id: 1,
-  name: "Trương Tam",
-  email: "zhangsan@example.com",
-  age: 25
+ id: 1,
+ name: "Trương Tam",
+ email: "zhangsan@example.com",
+ age: 25
 }
 
 // age là tùy chọn, có thể không cung cấp
 const user2: User = {
-  id: 2,
-  name: "Lý Tứ",
-  email: "lisi@example.com"
+ id: 2,
+ name: "Lý Tứ",
+ email: "lisi@example.com"
 }
 ```
 
@@ -250,38 +250,38 @@ const user2: User = {
 ```typescript
 // Thuộc tính chỉ đọc
 interface User {
-  readonly id: number  // id không thể sửa sau khi tạo
-  name: string
+ readonly id: number // id không thể sửa sau khi tạo
+ name: string
 }
 
 const user: User = {
-  id: 1,
-  name: "Trương Tam"
+ id: 1,
+ name: "Trương Tam"
 }
 
-user.id = 2  // ❌ Lỗi: không thể sửa thuộc tính chỉ đọc
-user.name = "Lý Tứ"  // ✅ Có thể sửa
+user.id = 2 // ❌ Lỗi: không thể sửa thuộc tính chỉ đọc
+user.name = "Lý Tứ" // ✅ Có thể sửa
 
 // Kiểu hàm
 interface User {
-  name: string
-  greet: () => string  // greet là một hàm, trả về string
+ name: string
+ greet: () => string // greet là một hàm, trả về string
 }
 
 const user: User = {
-  name: "Trương Tam",
-  greet: () => "Hello"
+ name: "Trương Tam",
+ greet: () => "Hello"
 }
 
 // Kế thừa interface
 interface Admin extends User {
-  permissions: string[]
+ permissions: string[]
 }
 
 const admin: Admin = {
-  name: "Quản trị viên",
-  greet: () => "Hello Admin",
-  permissions: ["read", "write", "delete"]
+ name: "Quản trị viên",
+ greet: () => "Hello Admin",
+ permissions: ["read", "write", "delete"]
 }
 ```
 :::
@@ -293,35 +293,35 @@ Ngoài interface, còn có thể dùng `type` để định nghĩa type alias:
 ```typescript
 // Type alias
 type User = {
-  id: number
-  name: string
-  email: string
+ id: number
+ name: string
+ email: string
 }
 
 // Kiểu hợp nhất (union type)
 type Status = "pending" | "success" | "error"
 
-const status: Status = "success"  // ✅
-// const status2: Status = "failed"  // ❌ Lỗi: không nằm trong union type
+const status: Status = "success" // ✅
+// const status2: Status = "failed" // ❌ Lỗi: không nằm trong union type
 
 // Kiểu giao nhau (intersection type - hợp nhất nhiều kiểu)
 type User = {
-  id: number
-  name: string
+ id: number
+ name: string
 }
 
 type Timestamp = {
-  createdAt: Date
-  updatedAt: Date
+ createdAt: Date
+ updatedAt: Date
 }
 
 type UserWithTimestamp = User & Timestamp
 
 const user: UserWithTimestamp = {
-  id: 1,
-  name: "Trương Tam",
-  createdAt: new Date(),
-  updatedAt: new Date()
+ id: 1,
+ name: "Trương Tam",
+ createdAt: new Date(),
+ updatedAt: new Date()
 }
 ```
 
@@ -353,23 +353,23 @@ const user: UserWithTimestamp = {
 ```typescript
 // Type annotation đầy đủ cho hàm
 function add(a: number, b: number): number {
-  return a + b
+ return a + b
 }
 
 // Arrow function
 const multiply = (a: number, b: number): number => {
-  return a * b
+ return a * b
 }
 
 // Không có giá trị trả về
 function log(message: string): void {
-  console.log(message)
+ console.log(message)
 }
 
 // Trả về nhiều kiểu (union type)
 function parseInput(input: string): number | string {
-  const num = parseFloat(input)
-  return isNaN(num) ? input : num
+ const num = parseFloat(input)
+ return isNaN(num) ? input : num
 }
 ```
 
@@ -378,19 +378,19 @@ function parseInput(input: string): number | string {
 ```typescript
 // Tham số tùy chọn (đánh dấu bằng ?)
 function greet(name: string, title?: string): string {
-  return title ? `${title} ${name}` : name
+ return title ? `${title} ${name}` : name
 }
 
-greet("Trương Tam")  // "Trương Tam"
-greet("Trương Tam", "Ông")  // "Ông Trương Tam"
+greet("Trương Tam") // "Trương Tam"
+greet("Trương Tam", "Ông") // "Ông Trương Tam"
 
 // Tham số mặc định
 function greet2(name: string, title: string = "bạn"): string {
-  return `${title} ${name}`
+ return `${title} ${name}`
 }
 
-greet2("Lý Tứ")  // "bạn Lý Tứ"
-greet2("Lý Tứ", "Tiến sĩ")  // "Tiến sĩ Lý Tứ"
+greet2("Lý Tứ") // "bạn Lý Tứ"
+greet2("Lý Tứ", "Tiến sĩ") // "Tiến sĩ Lý Tứ"
 ```
 
 ### 4.3 Kiểu hàm làm tham số
@@ -398,25 +398,25 @@ greet2("Lý Tứ", "Tiến sĩ")  // "Tiến sĩ Lý Tứ"
 ```typescript
 // Nhận hàm làm tham số
 function calculate(
-  a: number,
-  b: number,
-  operation: (x: number, y: number) => number
+ a: number,
+ b: number,
+ operation: (x: number, y: number) => number
 ): number {
-  return operation(a, b)
+ return operation(a, b)
 }
 
-calculate(10, 5, (x, y) => x + y)  // 15
-calculate(10, 5, (x, y) => x * y)  // 50
+calculate(10, 5, (x, y) => x + y) // 15
+calculate(10, 5, (x, y) => x * y) // 50
 
 // Cách viết rõ ràng hơn: định nghĩa kiểu hàm trước
 type Operation = (x: number, y: number) => number
 
 function calculate2(
-  a: number,
-  b: number,
-  operation: Operation
+ a: number,
+ b: number,
+ operation: Operation
 ): number {
-  return operation(a, b)
+ return operation(a, b)
 }
 ```
 
@@ -441,16 +441,16 @@ Generic cho phép bạn không chỉ định kiểu cụ thể khi định nghĩ
 ```typescript
 // Hàm generic: T là biến kiểu
 function identity<T>(arg: T): T {
-  return arg
+ return arg
 }
 
 // Chỉ định kiểu rõ ràng khi sử dụng
-const num1 = identity<number>(42)  // kiểu là number
-const str1 = identity<string>("hello")  // kiểu là string
+const num1 = identity<number>(42) // kiểu là number
+const str1 = identity<string>("hello") // kiểu là string
 
 // Type inference: TypeScript có thể tự suy luận
-const num2 = identity(42)  // suy luận là number
-const str2 = identity("hello")  // suy luận là string
+const num2 = identity(42) // suy luận là number
+const str2 = identity("hello") // suy luận là string
 ```
 
 👇 **Thử thực hành**: Dùng generic để xử lý các kiểu dữ liệu khác nhau
@@ -464,16 +464,16 @@ Giới hạn generic phải thỏa mãn một số điều kiện:
 ```typescript
 // Ràng buộc T phải có thuộc tính length
 interface HasLength {
-  length: number
+ length: number
 }
 
 function logLength<T extends HasLength>(arg: T): void {
-  console.log(arg.length)
+ console.log(arg.length)
 }
 
-logLength("hello")  // ✅ string có length
-logLength([1, 2, 3])  // ✅ mảng có length
-// logLength(42)  // ❌ number không có thuộc tính length
+logLength("hello") // ✅ string có length
+logLength([1, 2, 3]) // ✅ mảng có length
+// logLength(42) // ❌ number không có thuộc tính length
 ```
 
 ### 5.3 Generic Interface và Class
@@ -481,41 +481,41 @@ logLength([1, 2, 3])  // ✅ mảng có length
 ```typescript
 // Generic interface
 interface Box<T> {
-  value: T
-  getValue(): T
+ value: T
+ getValue(): T
 }
 
 const numberBox: Box<number> = {
-  value: 42,
-  getValue: () => 42
+ value: 42,
+ getValue: () => 42
 }
 
 const stringBox: Box<string> = {
-  value: "hello",
-  getValue: () => "hello"
+ value: "hello",
+ getValue: () => "hello"
 }
 
 // Generic class
 class Storage<T> {
-  private items: T[] = []
+ private items: T[] = []
 
-  add(item: T): void {
-    this.items.push(item)
-  }
+ add(item: T): void {
+ this.items.push(item)
+ }
 
-  get(index: number): T {
-    return this.items[index]
-  }
+ get(index: number): T {
+ return this.items[index]
+ }
 }
 
 const numberStorage = new Storage<number>()
 numberStorage.add(1)
 numberStorage.add(2)
-// numberStorage.add("string")  // ❌ Lỗi
+// numberStorage.add("string") // ❌ Lỗi
 
 const stringStorage = new Storage<string>()
 stringStorage.add("hello")
-// stringStorage.add(1)  // ❌ Lỗi
+// stringStorage.add(1) // ❌ Lỗi
 ```
 
 ::: info 💡 Mẹo nhận biết
@@ -538,17 +538,17 @@ TypeScript có thể tự động suy luận kiểu dựa trên ngữ cảnh:
 
 ```typescript
 // Suy luận khi khởi tạo biến
-const name = "Trương Tam"  // suy luận là string
-const age = 25  // suy luận là number
-const isActive = true  // suy luận là boolean
+const name = "Trương Tam" // suy luận là string
+const age = 25 // suy luận là number
+const isActive = true // suy luận là boolean
 
 // Suy luận mảng
-const numbers = [1, 2, 3]  // suy luận là number[]
-const mixed = [1, "hello", true]  // suy luận là (number | string | boolean)[]
+const numbers = [1, 2, 3] // suy luận là number[]
+const mixed = [1, "hello", true] // suy luận là (number | string | boolean)[]
 
 // Suy luận giá trị trả về của hàm
 function add(a: number, b: number) {
-  return a + b  // suy luận giá trị trả về là number
+ return a + b // suy luận giá trị trả về là number
 }
 ```
 
@@ -567,7 +567,7 @@ const isActive = true
 
 // ✅ Khuyến nghị: giá trị trả về của hàm có thể suy luận
 function getUserId(user: User) {
-  return user.id  // suy luận là number
+ return user.id // suy luận là number
 }
 ```
 :::
@@ -576,29 +576,29 @@ function getUserId(user: User) {
 ```typescript
 // ✅ Khuyến nghị: tham số hàm (bắt buộc)
 function add(a: number, b: number) {
-  return a + b
+ return a + b
 }
 
 // ✅ Khuyến nghị: kiểu thuộc tính object không rõ ràng
 const user: {
-  id: number
-  name: string
-  metadata: Record<string, any>
+ id: number
+ name: string
+ metadata: Record<string, any>
 } = {
-  id: 1,
-  name: "Trương Tam",
-  metadata: {}  // có thể suy luận là {}, cần chỉ định rõ ràng
+ id: 1,
+ name: "Trương Tam",
+ metadata: {} // có thể suy luận là {}, cần chỉ định rõ ràng
 }
 
 // ✅ Khuyến nghị: kiểu trả về của hàm phức tạp
 function getUser(): User | null {
-  // ...
-  return null
+ // ...
+ return null
 }
 
 // ✅ Khuyến nghị: API công khai
 export function calculateTotal(prices: number[]): number {
-  return prices.reduce((sum, price) => sum + price, 0)
+ return prices.reduce((sum, price) => sum + price, 0)
 }
 ```
 :::
@@ -610,56 +610,56 @@ Kiểm tra kiểu khi chạy:
 ```typescript
 // Type guard với typeof
 function processValue(value: string | number) {
-  if (typeof value === "string") {
-    // Ở đây TypeScript biết value là string
-    console.log(value.toUpperCase())
-  } else {
-    // Ở đây TypeScript biết value là number
-    console.log(value * 2)
-  }
+ if (typeof value === "string") {
+ // Ở đây TypeScript biết value là string
+ console.log(value.toUpperCase())
+ } else {
+ // Ở đây TypeScript biết value là number
+ console.log(value * 2)
+ }
 }
 
 // Type guard với instanceof
 class Dog {
-  bark() {
-    console.log("Gâu gâu")
-  }
+ bark() {
+ console.log("Gâu gâu")
+ }
 }
 
 class Cat {
-  meow() {
-    console.log("Meo meo")
-  }
+ meow() {
+ console.log("Meo meo")
+ }
 }
 
 function makeSound(animal: Dog | Cat) {
-  if (animal instanceof Dog) {
-    animal.bark()  // TypeScript biết đây là Dog
-  } else {
-    animal.meow()  // TypeScript biết đây là Cat
-  }
+ if (animal instanceof Dog) {
+ animal.bark() // TypeScript biết đây là Dog
+ } else {
+ animal.meow() // TypeScript biết đây là Cat
+ }
 }
 
 // Type guard tùy chỉnh
 interface User {
-  name: string
-  email: string
+ name: string
+ email: string
 }
 
 function isUser(value: any): value is User {
-  return (
-    typeof value === "object" &&
-    value !== null &&
-    typeof value.name === "string" &&
-    typeof value.email === "string"
-  )
+ return (
+ typeof value === "object" &&
+ value !== null &&
+ typeof value.name === "string" &&
+ typeof value.email === "string"
+ )
 }
 
 function processValue(value: unknown) {
-  if (isUser(value)) {
-    // Ở đây value là User
-    console.log(value.name)
-  }
+ if (isUser(value)) {
+ // Ở đây value là User
+ console.log(value.name)
+ }
 }
 ```
 
@@ -670,9 +670,9 @@ TypeScript cung cấp một số utility type có sẵn:
 ```typescript
 // Partial: biến tất cả thuộc tính thành tùy chọn
 interface User {
-  id: number
-  name: string
-  email: string
+ id: number
+ name: string
+ email: string
 }
 
 type PartialUser = Partial<User>
@@ -716,10 +716,10 @@ Giúp tôi viết một chức năng quản lý người dùng, sử dụng Type
 
 Định nghĩa cấu trúc dữ liệu như sau:
 interface User {
-  id: number
-  name: string
-  email: string
-  age: number
+ id: number
+ name: string
+ email: string
+ age: number
 }
 
 Cần triển khai:
@@ -747,49 +747,49 @@ Hãy đảm bảo tất cả các hàm đều có type annotation đầy đủ.
 Nếu bạn có một dự án JavaScript, có thể chuyển đổi dần sang TypeScript:
 
 1. **Bước 1: Đổi tên file thành `.ts`**
-   ```bash
-   # Từ utils.js đổi thành utils.ts
-   mv utils.js utils.ts
-   ```
+ ```bash
+ # Từ utils.js đổi thành utils.ts
+ mv utils.js utils.ts
+ ```
 
 2. **Bước 2: Sửa các lỗi kiểu rõ ràng**
-   ```typescript
-   // Nếu báo lỗi: Parameter 'a' implicitly has an 'any' type
-   // Thêm type annotation
-   function add(a: number, b: number) {
-     return a + b
-   }
-   ```
+ ```typescript
+ // Nếu báo lỗi: Parameter 'a' implicitly has an 'any' type
+ // Thêm type annotation
+ function add(a: number, b: number) {
+ return a + b
+ }
+ ```
 
 3. **Bước 3: Thêm dần định nghĩa kiểu**
-   ```typescript
-   // Dùng any trước để sửa nhanh
-   function processUser(user: any) {
-     // ...
-   }
+ ```typescript
+ // Dùng any trước để sửa nhanh
+ function processUser(user: any) {
+ // ...
+ }
 
-   // Sau đó hoàn thiện kiểu
-   interface User {
-     id: number
-     name: string
-   }
+ // Sau đó hoàn thiện kiểu
+ interface User {
+ id: number
+ name: string
+ }
 
-   function processUser(user: User) {
-     // ...
-   }
-   ```
+ function processUser(user: User) {
+ // ...
+ }
+ ```
 
 4. **Bước 4: Bật kiểm tra kiểu nghiêm ngặt hơn**
-   ```json
-   // tsconfig.json
-   {
-     "compilerOptions": {
-       "strict": true,  // Bật chế độ strict
-       "noImplicitAny": true,  // Cấm any ngầm định
-       "strictNullChecks": true  // Kiểm tra null nghiêm ngặt
-     }
-   }
-   ```
+ ```json
+ // tsconfig.json
+ {
+ "compilerOptions": {
+ "strict": true, // Bật chế độ strict
+ "noImplicitAny": true, // Cấm any ngầm định
+ "strictNullChecks": true // Kiểm tra null nghiêm ngặt
+ }
+ }
+ ```
 
 ---
 

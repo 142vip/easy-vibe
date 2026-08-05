@@ -28,7 +28,7 @@ Bài viết này sẽ đưa bạn đi sâu vào môi trường runtime của Jav
 **"Runtime" là gì?** JavaScript chỉ là một ngôn ngữ, tại sao cùng một đoạn code lại có hành vi khác nhau trong các môi trường khác nhau?
 :::
 
-### 1.1 Runtime là gì
+### 1.1 Runtime: Tổng quan
 
 **Runtime = JavaScript Engine + API do môi trường cung cấp**
 
@@ -254,7 +254,7 @@ export { myFunction }
 **JavaScript là đơn luồng, tại sao lại có thể "không chặn"?**
 :::
 
-### 4.1 Event loop là gì
+### 4.1 Event loop: Tổng quan
 
 **Event loop = "Trung tâm điều phối tác vụ" của JavaScript**
 

@@ -1,4 +1,4 @@
-# Serialization: The "Translation" of Data
+# Principles of Serialization: Data Translation
 
 ::: tip Core Question
 **How does data travel across a network?** It's like asking: how does one person's speech become understandable to another? Serialization solves the problem of "data translation" — converting in-memory objects into a transmittable format.
@@ -55,7 +55,7 @@ JSON format redundancy causes the data packet to be too large, seriously impacti
 
 ---
 
-## 1. What Are Serialization and Deserialization?
+## 1. Overview of Serialization and Deserialization
 
 **Serialization** is the process of converting objects into a transmittable format.
 
@@ -69,7 +69,7 @@ JSON format redundancy causes the data packet to be too large, seriously impacti
 | Transport | Network transmission | Delivery truck transports to destination |
 | Unpack and retrieve | Deserialize | Recipient opens the box, takes out items |
 
-### 1.2 Why Do We Need Serialization?
+### 1.2 Motivation for needing Serialization
 
 | Reason | Description | Example |
 | :--- | :--- | :--- |

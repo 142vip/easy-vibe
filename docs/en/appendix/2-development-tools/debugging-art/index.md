@@ -1,10 +1,10 @@
-# Browser DevTools Guide
+# Fundamentals of Browser DevTools
 
 ::: tip 💡 Core Purpose
 Browser Developer Tools (DevTools) are the "X-ray machine" and "operating table" of frontend development. They let you see through a webpage's skeleton (HTML), skin (CSS), and nervous system (JavaScript), and allow you to modify and debug them in real time.
 :::
 
-## 1. What Are DevTools?
+## 1. Overview of DevTools
 
 **DevTools** is a set of web development and debugging tools built into modern browsers (Chrome, Edge, Firefox, Safari, etc.). For developers, it's closer to the "truth" than a code editor because **it shows what the code actually looks like when running in the browser**.
 

@@ -1,4 +1,4 @@
-# Concurrencia, asincronía y multihilo
+# Principios de concurrencia, asincronía y multihilo
 > 💡 **Guía de estudio**: La programación concurrente es el "talón de Aquiles" de muchos ingenieros de backend: tropiezan en entrevistas, generan bugs en producción y no saben por dónde empezar a optimizar el rendimiento. Este capítulo gira en torno a una pregunta central: **cuando 100 000 usuarios solicitan tu servicio al mismo tiempo, ¿tu código colapsará?**
 
 Antes de empezar, te recomendamos repasar dos "bloques fundamentales":
@@ -8,7 +8,7 @@ Antes de empezar, te recomendamos repasar dos "bloques fundamentales":
 
 ---
 
-## 0. Introducción: ¿por qué tu servicio se "congela" en horas pico?
+## 0. Introducción: Motivación de tu servicio se "congela" en horas pico
 
 <ProcessThreadCoroutineDemo />
 
@@ -29,7 +29,7 @@ Ante estos desafíos, limitarse a "añadir más máquinas" ya no es suficiente. 
 
 ---
 
-## 1. Conceptos clave: ¿qué diferencia hay entre proceso, hilo y corrutina?
+## 1. Conceptos clave: qué diferencia hay entre proceso, hilo y corrutina
 
 ### 1.1 La metáfora del restaurante
 

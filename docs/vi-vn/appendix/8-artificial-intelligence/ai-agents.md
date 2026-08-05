@@ -16,7 +16,7 @@ ChatGPT: Tôi không thể lấy thông tin thời tiết theo thời gian thự
 
 ChatGPT giống như một **người khôn ngoan nhưng khó di chuyển** — biết nhiều thứ nhưng không thể giúp bạn thực hiện bất kỳ thao tác thực tế nào.
 
-### 0.1 Thách thức cốt lõi: Làm thế nào để AI chuyển từ "trò chuyện" sang "hành động"?
+### 0.1 Thách thức cốt lõi: Cách để AI chuyển từ "trò chuyện" sang "hành động"
 
 Để đạt được mục tiêu này, chúng ta cần giải quyết ba thách thức cốt lõi:
 
@@ -34,7 +34,7 @@ Máy tính có thể làm nhiều việc: tìm kiếm web, chạy mã, thao tác
 
 Nhưng bản thân LLM **không có** những khả năng này. Khả năng cốt lõi của nó chỉ có một: **tạo văn bản**.
 
-### 1.1 Tại sao LLM không thể trực tiếp thực hiện thao tác?
+### 1.1 Động lực của LLM không thể trực tiếp thực hiện thao tác
 
 LLM là một **bộ xử lý văn bản thuần túy**:
 
@@ -75,7 +75,7 @@ LLM tạo câu trả lời cuối cùng: "Hôm nay thời tiết Hà Nội nắn
 
 ---
 
-## 2. Thách thức cốt lõi: Làm thế nào để hoàn thành tác vụ phức tạp?
+## 2. Thách thức cốt lõi: Cách để hoàn thành tác vụ phức tạp
 
 Gọi công cụ giúp LLM có khả năng "hành động", nhưng các tác vụ thực tế thường rất phức tạp:
 
@@ -90,7 +90,7 @@ Tác vụ này bao gồm nhiều bước:
 4.  Phân tích và tổng hợp
 5.  Viết báo cáo
 
-### 2.1 Tại sao cần lập kế hoạch?
+### 2.1 Động lực của cần lập kế hoạch
 
 Nếu để LLM tạo báo cáo "một lần", kết quả thường là:
 
@@ -121,7 +121,7 @@ Con người có thể nhớ những chuyện từ rất lâu, nhưng "bộ nh�
 -   **Cách ly phiên**: Mỗi cuộc trò chuyện là một bắt đầu hoàn toàn mới
 -   **Không lưu trữ**: Đóng trang là "mất trí nhớ"
 
-### 3.1 Tại sao cần bộ nhớ?
+### 3.1 Động lực của cần bộ nhớ
 
 Hãy tưởng tượng tình huống này:
 

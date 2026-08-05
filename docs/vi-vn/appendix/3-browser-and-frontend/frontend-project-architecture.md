@@ -1,4 +1,4 @@
-# Thiết Kế Kiến Trúc Dự Án Frontend
+# Kiến trúc dự án Frontend: Nguyên tắc thiết kế
 
 ::: tip 🎯 Câu Hỏi Cốt Lõi
 **Từ trang HTML đơn giản đến ứng dụng doanh nghiệp phức tạp, làm sao để chọn kiến trúc phù hợp cho dự án ở các quy mô khác nhau?** Điều này giống như hỏi: từ căn hộ studio đến trung tâm thương mại lớn, làm sao thiết kế bố cục không gian khác nhau theo nhu cầu? Kiến trúc tốt nên tiến hóa cùng với sự phát triển của dự án, chứ không phải thiết kế quá mức ngay từ đầu.
@@ -513,7 +513,7 @@ Giai đoạn 3: Module hóa chức năng (tổ chức theo chức năng)
 Giai đoạn 4: Kiến trúc micro-frontend (Monorepo)
 ```
 
-### 6.2 Khi Nào Nên Nâng Cấp Kiến Trúc?
+### 6.2 Khi Nào Tiêu chí nâng cấp kiến trúc
 
 | Tín Hiệu | Mô Tả | Khuyến Nghị |
 |------|------|------|

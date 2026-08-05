@@ -1,11 +1,11 @@
-# Fundamentos de bases de datos (Índices / Transacciones / Optimización de consultas)
+# Principios de bases de datos: índices/transacciones/optimización de consultas
 ::: tip 🎯 Pregunta central
 **¿Por qué tu consulta en Excel tarda 10 segundos mientras que una búsqueda en Taobao solo necesita 0,01 segundos?** Cuando los datos pasan de "unos pocos miles" a "mil millones", y de "uso individual" a "millones de accesos simultáneos", Excel ya no es suficiente. Las bases de datos nacieron precisamente para resolver este problema: son un "súper Excel" especializado en manejar datos masivos y accesos de alta concurrencia. Este capítulo te guiará desde cero para entender los principios fundamentales de las bases de datos.
 :::
 
 ---
 
-## 1. ¿Por qué "base de datos"?
+## 1. Motivación de "base de datos"
 
 ### 1.1 De una pequeña librería a Taobao: La evolución de la escala de datos
 
@@ -46,7 +46,7 @@ En ese momento, el cuaderno es más que suficiente. Pero cuando tu librería se 
 
 **Este es el problema que las "bases de datos" deben resolver: ¿cómo almacenar, consultar y gestionar datos masivos de forma eficiente y segura?**
 
-### 1.2 Una historia real: Por qué no puedes usar Excel para datos de usuarios
+### 1.2 Una historia real:Motivación: usar Excel para datos de usuarios
 
 Podrías decir: "Mi proyecto tiene apenas unas decenas de miles de usuarios, ¿no basta con Excel?" Déjame contarte una historia real.
 
@@ -121,7 +121,7 @@ Imagina que entras en una biblioteca: su organización es sorprendentemente simi
 - **Filas**: cada fila es un usuario (por ejemplo, "张三, 25 años, 北京")
 - **Clave primaria**: `user_id` (1001, 1002, 1003, nunca se repiten)
 
-### 2.2 Clave primaria (Primary Key): El "DNI" de los datos
+### 2.2 Clave primaria (Primary Key): El "identificador único" de los datos
 
 ::: tip 📖 ¿Qué es una clave primaria?
 La **clave primaria** es el identificador único de cada fila en una tabla, como el número de DNI.
@@ -194,7 +194,7 @@ Veamos un ejemplo real:
 
 ---
 
-## 3. ¿Cómo hablar con una base de datos? Introducción a SQL y práctica
+## 3. Enfoque de comunicación con una base de datos Introducción a SQL y práctica
 
 No puedes usar directamente el ratón para "hacer clic" en una base de datos (aunque existen herramientas gráficas, en esencia también generan comandos). Necesitas un lenguaje especial para dar instrucciones a la base de datos.
 
@@ -388,7 +388,7 @@ WHERE u.name = '张三';
 
 ---
 
-## 4. ¿Por qué las bases de datos son tan rápidas? Los secretos de los índices
+## 4. Motivación de bases de datos son tan rápidas Los secretos de los índices
 
 Esta es la parte más fascinante de las bases de datos y una de las preguntas favoritas en las entrevistas.
 
@@ -483,7 +483,7 @@ Este es el secreto de la velocidad de las bases de datos.
 
 ---
 
-## 5. Transacciones: ¿Cómo garantizar que los datos no se pierdan ni se corrompan?
+## 5. Transacciones: Enfoque de garantizar que los datos no se pierdan ni se corrompan
 
 Imagina la escena de la compra de billetes de tren durante el Año Nuevo chino:
 
@@ -494,7 +494,7 @@ Imagina la escena de la compra de billetes de tren durante el Año Nuevo chino:
 
 Este es el problema clásico de **conflicto de concurrencia**.
 
-### 5.1 ¿Qué es una transacción (Transaction)?
+### 5.1 Introducción a transacción (Transaction)
 
 Una **transacción** es un conjunto de operaciones de la base de datos que **o se completan todas con éxito o fallan todas**, sin que haya un estado intermedio de "mitad hecha".
 

@@ -1,4 +1,4 @@
-# Conception d'architecture de projet backend
+# Introduction : Structure de projet backend
 
 ::: tip 🎯 Question centrale
 **Du simple script au système distribué à grande échelle, comment choisir la bonne architecture pour des projets backend de différentes tailles et langages ?** C'est comme demander : d'un atelier artisanal à une grande usine, comment concevoir différentes lignes de production en fonction du volume et des processus ? Une bonne architecture backend doit évoluer avec la croissance de l'activité tout en tirant pleinement parti des caractéristiques du langage.
@@ -899,7 +899,7 @@ Phase 3 : Modularisation/microservices (entreprise)
 Phase 4 : Architecture cloud native (plateforme)
 ```
 
-### 6.2 Quand faire évoluer l'architecture ?
+### 6.2 Quand faire évoluer l'architecture
 
 | Signal | Niveau actuel | Mise à niveau suggérée |
 |------|----------|----------|

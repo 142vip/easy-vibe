@@ -1,8 +1,8 @@
-# Thử nghiệm A/B: Đưa ra quyết định bằng dữ liệu
+# Thử nghiệm A/B: Nguyên tắc dữ liệu cho quyết định
 
 ::: tip 🎯 Vấn đề cốt lõi
 **Làm thế nào để kiểm chứng một cách khoa học hiệu quả của các thay đổi sản phẩm?**
-Bạn có thể đã trải qua tình huống này: đội ngũ dành một tháng để phát triển tính năng mới, sau khi ra mắt, dữ liệu tăng vọt! Mọi người hò reo ăn mừng, nhưng ba tuần sau dữ liệu lại bí ẩn giảm về mức ban đầu. Rốt cuộc là vì tính năng mới thực sự tốt, hay vì trùng vào mùa lễ hội có lượng truy cập lớn? Thử nghiệm A/B giải quyết chính là vấn đề làm sao để loại bỏ tiếng ồn nhiễu từ môi trường bên ngoài, để dữ liệu nói lên sự thật.
+Bạn có thể đã trải qua tình huống này: đội ngũ dành một tháng để phát triển tính năng mới, sau khi ra mắt, dữ liệu tăng vọt! Mọi người hò reo ăn mừng, nhưng ba tuần sau dữ liệu lại bí ẩn giảm về mức ban đầu. Rốt cuộc là vì tính năng mới thực sự tốt, hay vì trùng vào mùa lễ hội có lượng truy cập lớn? Thử nghiệm A/B giải quyết chính là vấn đề làm sao để loại bỏ tiếng ồn nhiễu từ môi trường bên ngoài, nguyên tắc mã hóa trực quan lên sự thật.
 :::
 
 ---
@@ -39,7 +39,7 @@ Bạn có thể quan sát trực quan cách hệ thống phân chia lưu lượn
 
 <ABTestingDemo tab="traffic" />
 
-### 1.1 Tại sao phân bổ ngẫu nhiên lại quan trọng như vậy?
+### 1.1 Tầm quan trọng của phân bổ ngẫu nhiên
 
 Chỉ có "ngẫu nhiên" 100% mới có thể xóa bỏ tối đa sự khác biệt do mọi đặc điểm khác mang lại. Nếu thực hiện phân chia ngẫu nhiên hoàn hảo với kích thước mẫu đủ lớn, thì tỷ lệ người dùng trẻ, mức thu nhập và phân bố địa lý của nhóm A và nhóm B về nguyên tắc sẽ giống nhau một cách đáng kinh ngạc.
 

@@ -1,4 +1,4 @@
-# Concurrency, Async, and Multithreading
+# Principles of Concurrency, Asynchrony, and Multithreading
 > 💡 **Learning Guide**: Concurrent programming is the "Achilles' heel" for many backend engineers — you get stumped in interviews, hit bugs in production, and have no clue where to start with performance tuning. This chapter revolves around one core question: **When 100,000 users hit your service simultaneously, will your code collapse?**
 
 Before diving in, make sure you have these two foundational pieces:
@@ -8,7 +8,7 @@ Before diving in, make sure you have these two foundational pieces:
 
 ---
 
-## 0. Introduction: Why Does Your Service "Freeze" During Peak Traffic?
+## 0. Introduction: Motivation for Your Service "Freeze" During Peak Traffic
 
 <ProcessThreadCoroutineDemo />
 
@@ -29,7 +29,7 @@ Faced with these challenges, simply "adding more machines" is no longer enough. 
 
 ---
 
-## 1. Core Concepts: Processes, Threads, and Coroutines — What's the Difference?
+## 1. Core Concepts: Processes, Threads, and Coroutines — What's the Difference
 
 ### 1.1 A Restaurant Analogy
 
@@ -394,7 +394,7 @@ class EventLoop:
                 callback()
 ```
 
-### 3.5 Concurrency vs. Parallelism: Not the Same Thing
+### 3.5 Concurrency vs. Parallelism: Not
 
 <ConcurrentVsParallelDemo />
 

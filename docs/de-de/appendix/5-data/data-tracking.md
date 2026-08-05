@@ -1,4 +1,4 @@
-# Event Tracking: Aufzeichnen, was Nutzer in der App tun
+# Data Tracking: Datenerfassung
 
 ::: tip 🎯 In diesem Kapitel behandeltes Problem
 **Woher wissen wir, was Nutzer in unserer Anwendung tun?**
@@ -19,7 +19,7 @@ Dieses Kapitel erklärt den Prozess in vier Schritten:
 
 ---
 
-## Schritt 1: Erfassungsmethode wählen — Wo platziert man die Recorder?
+## 1. Erfassungsmethode wählen — Wo platziert man die Recorder
 
 **Ziel**: Festlegen, mit welcher Methode die Nutzeraktionen aufgezeichnet werden sollen.
 
@@ -68,7 +68,7 @@ Als Vergleich: Das ist, als würde man in jeder Ecke des Cafés Kameras installi
 
 ---
 
-## Schritt 2: Datenformat entwerfen — Was sollte jeder Datensatz enthalten?
+## 2. Datenformat entwerfen — Was sollte jeder Datensatz enthalten
 
 **Voraussetzung**: Wir haben die Tracking-Methode gewählt (z. B. Code-Tracking) und die App kann Nutzeraktionen erfassen.
 
@@ -119,7 +119,7 @@ Dieser Teil zeichnet die spezifischen Geschäftsdetails der Aktion auf und wird 
 
 ---
 
-## Schritt 3: Übertragung und Zwischenspeicherung — Wie kommen die Daten sicher zum Server?
+## 3. Übertragung und Zwischenspeicherung — Wie kommen die Daten sicher zum Server
 
 **Voraussetzung**: Jede Nutzeraktion wurde als JSON-Datensatz mit einheitlichem Format aufgezeichnet.
 
@@ -157,7 +157,7 @@ Die Lösung ist ein „Puffer" dazwischen, technisch als **Message Queue** bezei
 
 ---
 
-## Schritt 4: Bereinigung und Laden — Daten ordnen und „schmutzige Daten" entfernen
+## 4. Bereinigung und Laden — Daten ordnen und „schmutzige Daten" entfernen
 
 **Voraussetzung**: Die Daten sind über die Übertragungspipeline sicher auf dem Server angekommen.
 

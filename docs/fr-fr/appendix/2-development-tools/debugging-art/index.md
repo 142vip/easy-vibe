@@ -1,10 +1,10 @@
-# Guide des outils de developpement du navigateur (DevTools)
+# Principes : Fondamentaux des outils de développement navigateur (DevTools)
 
 ::: tip 💡 Role cle
 Les outils de developpement du navigateur (DevTools) sont le "scanner a rayons X" et la "table d'operation" du developpement frontend. Ils vous permettent de voir a travers l'ossature (HTML), la peau (CSS) et le systeme nerveux (JavaScript) d'une page Web, et de les modifier et deboguer en temps reel.
 :::
 
-## 1. Que sont les DevTools ?
+## 1. Que sont les DevTools
 
 **DevTools** est un ensemble d'outils de developpement et de debogage Web integres aux navigateurs modernes (Chrome, Edge, Firefox, Safari, etc.). Pour les developpeurs, ils sont plus pres de la "verite" que l'editeur de code, car **ils montrent comment le code s'execute reellement dans le navigateur**.
 

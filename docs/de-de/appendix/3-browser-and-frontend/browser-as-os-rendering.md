@@ -1,4 +1,4 @@
-# Browser-Rendering-Pipeline
+# Browser als Betriebssystem: Rendering-Prinzipien
 ::: tip 🎯 Kernfrage
 **Warum sind manche Webseiten flüssig wie Seide, während andere wie eine PowerPoint-Präsentation ruckeln?** Wie verwandelt der Browser einen Haufen HTML-, CSS- und JavaScript-Code in die Webseite, die du vor dir siehst? Dieses Kapitel führt dich tief in die „Werkstatt" des Browsers, damit du seinen Arbeitsablauf verstehst und leistungsfähigere Webseiten schreiben kannst.
 :::
@@ -21,7 +21,7 @@ Jedes Kapitel beginnt mit dem „Verstehen des Prinzips" – du musst keinen Opt
 
 ---
 
-## 1. Warum die „Rendering-Pipeline" verstehen?
+## 1. Warum die „Rendering-Pipeline" verstehen
 
 ### 1.1 Von „es läuft" zu „es läuft schnell": Der Fortschrittspfad der Frontend-Entwicklung
 
@@ -50,7 +50,7 @@ Es ist wie beim Autofahren lernen. Anfänger kümmern sich nur darum, „ob das 
 
 **Die Rendering-Pipeline zu verstehen, ist der entscheidende Schritt von „es läuft" zu „es läuft schnell".**
 
-### 1.2 Eine wahre Geschichte: Warum wurde es nach der „Optimierung" noch langsamer?
+### 1.2 Eine wahre Geschichte: Motivation von wurde es nach der „Optimierung" noch langsamer
 
 ::: warning Zhangs Performance-Falle
 Zhang ist Frontend-Ingenieur bei einem E-Commerce-Unternehmen und für die Optimierung der Produktdetailseite verantwortlich. Die Seite war beim Anzeigen von Produktinformationen extrem langsam, die Nutzer beschwerten sich ständig.
@@ -86,7 +86,7 @@ Wenn du den Arbeitsablauf des Browsers nicht verstehst, könntest du „schlau s
 
 ---
 
-## 2. Kernkonzept: Was ist die „Rendering-Pipeline"?
+## 2. Kernkonzept: Überblick über ist die „Rendering-Pipeline"
 
 ::: tip 🤔 Was ist „Rendering"?
 **Rendering** ist vereinfacht gesagt der Prozess, bei dem der Browser Code in die Webseite „zeichnet", die du siehst.
@@ -134,7 +134,7 @@ Lass uns die Tabelle Zeile für Zeile durchgehen und jede Phase der Rendering-Pi
 
 ## 3. Phase 1: DOM-Baum und CSSOM-Baum aufbauen
 
-### 3.1 Warum „in einen Baum" umwandeln?
+### 3.1 Warum „in einen Baum" umwandeln
 
 ::: tip 🤔 Was ist das DOM?
 **DOM (Document Object Model)** ist eine Baumstruktur, in die der Browser das HTML-Dokument umwandelt, damit JavaScript einfach auf Seitenelemente zugreifen kann.
@@ -230,7 +230,7 @@ StyleSheet
 ```
 :::
 
-### 3.3 Häufige Fallstricke: Warum mein CSS „nicht wirkt"
+### 3.3 Häufige Fallstricke: Motivation von mein CSS „nicht wirkt"
 
 **Falle 1: Konflikte bei der CSS-Selektor-Gewichtung**
 
@@ -271,7 +271,7 @@ Der Browser ist sehr „tolerant" und repariert deine Fehler automatisch. Aber d
 
 ## 4. Phase 2: Render-Baum aufbauen
 
-### 4.1 Warum brauchen wir einen „Render-Baum"?
+### 4.1 Warum brauchen wir einen „Render-Baum"
 
 Du fragst dich vielleicht: **„Wir haben doch schon den DOM-Baum und den CSSOM-Baum – warum noch einen Render-Baum? Können wir nicht direkt das DOM verwenden?"**
 
@@ -322,7 +322,7 @@ Beim Aufbau des Render-Baums folgt der Browser bestimmten Regeln:
 `visibility: hidden` und `opacity: 0` sind zwar „unsichtbar", befinden sich aber weiterhin im Render-Baum. Der Browser muss ihr Layout trotzdem berechnen (sie nehmen Platz ein). Wenn du „verstecken möchtest, ohne das Layout zu beeinflussen" (z.B. für Ein-/Ausblendanimationen), verwende `opacity`; wenn du „vollständig verstecken und keinen Platz beanspruchen" möchtest, verwende `display: none`.
 :::
 
-### 4.3 Häufiger Fallstrick: Warum ruckelt die Seite trotz display:none?
+### 4.3 Häufiger Fallstrick: Motivation von ruckelt die Seite trotz display:none
 
 ::: danger ❌ Häufiges Missverständnis: Zu glauben, dass display:none-Elemente „nicht existieren"
 Viele denken, dass ein Element nach dem Setzen von `display: none` „verschwindet" und keinerlei Performance-Auswirkungen mehr hat. Das ist **falsch**!
@@ -377,7 +377,7 @@ container.appendChild(fragment)
 
 ## 5. Phase 3: Layout und Reflow
 
-### 5.1 Was ist „Layout"?
+### 5.1 Was ist „Layout"
 
 ::: tip 🤔 Was ist Layout?
 **Layout**, auch **Reflow** genannt, ist der Prozess, bei dem der Browser für jedes Element im Render-Baum berechnet, „an welcher Position es sich befindet und wie viel Platz es einnimmt".
@@ -412,7 +412,7 @@ Hier sind die häufigsten Operationen, die Reflow auslösen – **zum Nachschlag
 3. **transform und opacity sind am performantesten**: Sie lösen keinen Reflow aus, sondern nur Compositing
 :::
 
-### 5.3 Häufiger Fallstrick: Warum ruckelt meine Animation wie eine PowerPoint?
+### 5.3 Häufiger Fallstrick: Motivation von ruckelt meine Animation wie eine PowerPoint
 
 **Falle: Animation mit width**
 
@@ -500,7 +500,7 @@ requestAnimationFrame(() => {
 
 ## 6. Phase 4: Paint und Repaint
 
-### 6.1 Was ist „Paint"?
+### 6.1 Was ist „Paint"
 
 ::: tip 🤔 Was ist Paint?
 **Paint** ist der Prozess, bei dem der Browser die „layout-berechneten" Elemente tatsächlich auf den Bildschirm „malt".
@@ -532,7 +532,7 @@ Im Gegensatz zu Reflow betrifft Repaint nur Änderungen des „Aussehens", nicht
 Außerdem: **Schatten und Verläufe sind teurer als Repaint**, weil sie komplexe Pixelberechnungen erfordern. Wenn deine Seite viele `box-shadow` hat, erwäge die Verwendung von Pseudo-Elementen oder Bildern als Ersatz.
 :::
 
-### 6.3 Häufiger Fallstrick: Warum ruckelt mein Hover-Effekt?
+### 6.3 Häufiger Fallstrick: Motivation von ruckelt mein Hover-Effekt
 
 **Falle: Hover-Animation mit box-shadow**
 
@@ -572,7 +572,7 @@ Außerdem: **Schatten und Verläufe sind teurer als Repaint**, weil sie komplexe
 
 ## 7. Phase 5: Compositing und GPU-Beschleunigung
 
-### 7.1 Was ist „Compositing"?
+### 7.1 Was ist „Compositing"
 
 ::: tip 🤔 Was ist Compositing?
 **Compositing** ist die „Magie" moderner Browser. Es teilt verschiedene Teile der Seite in mehrere **Ebenen (Layers)** auf und nutzt dann die **GPU (Grafikprozessor)**, um sie parallel zum endgültigen Bild zusammenzusetzen.
@@ -584,7 +584,7 @@ Du kannst es dir wie **Photoshop-Ebenen** vorstellen:
 **Warum ist Compositing schnell?** Weil die GPU auf parallele Aufgaben wie „Bildkomposition" spezialisiert ist – dutzende Male schneller als die CPU.
 :::
 
-### 7.2 Welche Elemente werden in eine „Composite-Ebene" hochgestuft?
+### 7.2 Welche Elemente werden in eine „Composite-Ebene" hochgestuft
 
 Der Browser stuft bestimmte Elemente automatisch in unabhängige Composite-Ebenen hoch. Hier sind die häufigsten Auslöser:
 
@@ -604,7 +604,7 @@ Der Browser stuft bestimmte Elemente automatisch in unabhängige Composite-Ebene
 Aber Achtung: **Jede Composite-Ebene belegt GPU-Speicher**. Der Missbrauch von `translateZ(0)` führt zu einer Speicherexplosion (siehe Abschnitt 7.4).
 :::
 
-### 7.3 Häufiger Fallstrick: Zu viele Composite-Ebenen machen es noch langsamer?
+### 7.3 Häufiger Fallstrick: Zu viele Composite-Ebenen machen es noch langsamer
 
 ::: danger 💀 Die Falle der Überoptimierung
 Manche hören „GPU-Beschleunigung ist schnell" und fügen allen Elementen `transform: translateZ(0)` hinzu – mit dem Ergebnis, dass die Seite noch langsamer wird.
@@ -682,7 +682,7 @@ Das frühe JavaScript hatte nur eine Aufgabenwarteschlange. Mit zunehmender Komp
 4. Nächste Event-Loop-Runde starten, nächste Macro Task ausführen
 ```
 
-### 8.2 Häufiger Fallstrick: Ist Promise wirklich schneller als setTimeout?
+### 8.2 Häufiger Fallstrick: Ist Promise wirklich schneller als setTimeout
 
 ::: danger ❌ Häufiges Missverständnis: setTimeout(fn, 0) wird „sofort" ausgeführt
 Viele denken, `setTimeout(fn, 0)` bedeutet „sofort nach 0 Millisekunden ausführen". Das ist ein **falsches** Verständnis.

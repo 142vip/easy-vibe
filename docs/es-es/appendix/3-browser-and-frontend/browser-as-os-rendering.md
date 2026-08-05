@@ -1,4 +1,4 @@
-# Tuberia de renderizado del navegador
+# Principios de renderizado del navegador
 ::: tip Pregunta central
 **Por que algunas paginas web son fluidas como la seda y otras se traban como una presentacion de PowerPoint?** Como convierte el navegador un monton de codigo HTML, CSS y JavaScript en la pagina web que ves? Este capitulo te llevara al "taller" del navegador para comprender su flujo de trabajo y asi escribir paginas web con mejor rendimiento.
 :::
@@ -21,7 +21,7 @@ Cada capitulo comienza con "entender los principios", no necesitas saber escribi
 
 ---
 
-## 1. Por que entender la "tuberia de renderizado"?
+## 1. Motivación de entender la "tuberia de renderizado"
 
 ### 1.1 De "que funcione" a "que sea rapido": el camino de evolucion del desarrollo frontend
 
@@ -50,7 +50,7 @@ Es como aprender a conducir. El novato solo se preocupa por "si el auto puede mo
 
 **Entender la tuberia de renderizado es el paso clave de "que funcione" a "que sea rapido".**
 
-### 1.2 Una historia real de errores: por que despues de "optimizar" la pagina era mas lenta?
+### 1.2 Caso: por que despues de "optimizar" la pagina era mas lenta
 
 ::: warning La historia de rendimiento de Xiao Zhang
 Xiao Zhang es un ingeniero frontend en una empresa de comercio electronico, responsable de optimizar la pagina de detalles del producto. Esta pagina se trababa horriblemente al mostrar informacion del producto, y los usuarios se quejaban constantemente.
@@ -86,7 +86,7 @@ Sin entender el flujo de trabajo del navegador, puedes escribir "codigo de optim
 
 ---
 
-## 2. Concepto central: que es la "tuberia de renderizado"?
+## 2. Concepto central: que es la "tuberia de renderizado"
 
 ::: tip Que es "renderizado"?
 **Renderizado (Rendering)**, en terminos simples, es el proceso por el cual el navegador "dibuja" el codigo en la pagina web que ves.
@@ -134,7 +134,7 @@ Analicemos cada fila de la tabla, entendiendo cada etapa de la tuberia de render
 
 ## 3. Primera etapa: Construccion de los arboles DOM y CSSOM
 
-### 3.1 Por que convertir a "arbol"?
+### 3.1 Motivación de convertir a "arbol"
 
 ::: tip Que es el DOM?
 **DOM (Document Object Model, Modelo de Objetos del Documento)**, es una estructura de arbol a la que el navegador convierte el documento HTML, para facilitar que JavaScript manipule los elementos de la pagina.
@@ -230,7 +230,7 @@ StyleSheet
 ```
 :::
 
-### 3.3 Registro de errores: por que mi CSS "no funciona"?
+### 3.3 Caso: por que mi CSS "no funciona"
 
 **Error 1: Conflicto de peso de selectores CSS**
 
@@ -271,7 +271,7 @@ El navegador es muy "tolerante" y reparara automaticamente tus errores. Pero est
 
 ## 4. Segunda etapa: Construccion del arbol de renderizado
 
-### 4.1 Por que necesitamos un "arbol de renderizado"?
+### 4.1 Motivación de un "arbol de renderizado
 
 Puedes preguntarte: **"Ya tenemos el arbol DOM y el arbol CSSOM, por que necesitamos construir otro arbol de renderizado? No podemos usar el DOM directamente?"**
 
@@ -322,7 +322,7 @@ El navegador sigue un conjunto de reglas al construir el arbol de renderizado:
 Mientras que `visibility: hidden` y `opacity: 0`, aunque son "invisibles", siguen en el arbol de renderizado, y el navegador aun necesita calcular su diseno (ocupan espacio). Si necesitas "ocultar sin afectar el diseno" (por ejemplo, para animaciones de desvanecimiento), usa `opacity`; si necesitas "ocultar completamente sin ocupar espacio", usa `display: none`.
 :::
 
-### 4.3 Registro de errores: por que despues de poner display:none, la pagina sigue lenta?
+### 4.3 Caso: por que despues de poner display:none, la pagina sigue lenta
 
 ::: danger Error comun: pensar que los elementos con display:none "no existen"
 Mucha gente piensa que al poner `display: none`, el elemento "desaparece" y que cualquier operacion no afectara el rendimiento. Esto es **falso**!
@@ -377,7 +377,7 @@ container.appendChild(fragment)
 
 ## 5. Tercera etapa: Diseno y reflow
 
-### 5.1 Que es el "diseno"?
+### 5.1 Introducción a el "diseno"
 
 ::: tip Que es el diseno (Layout)?
 **Diseno**, tambien llamado **reflujo (Reflow)**, es el proceso por el cual el navegador calcula "en que posicion y cuanto espacio ocupa" cada elemento en el arbol de renderizado.
@@ -412,7 +412,7 @@ Estas son las operaciones comunes que activan el reflow, **recomendamos guardar 
 3. **transform y opacity son las de mejor rendimiento**: no activan reflow, solo activan composicion
 :::
 
-### 5.3 Registro de errores: por que mi animacion se traba como una presentacion?
+### 5.3 Caso: por que mi animacion se traba como una presentacion
 
 **Error: usar width para animaciones**
 
@@ -500,7 +500,7 @@ requestAnimationFrame(() => {
 
 ## 6. Cuarta etapa: Pintura y repaint
 
-### 6.1 Que es la "pintura"?
+### 6.1 Introducción a la "pintura"
 
 ::: tip Que es la pintura (Paint)?
 **Pintura**, es el proceso por el cual el navegador "dibuja" realmente en la pantalla los elementos cuyo diseno ya ha sido calculado.
@@ -532,7 +532,7 @@ A diferencia del reflow, el repaint solo involucra cambios de "apariencia", no c
 Ademas, **las sombras y gradientes son mas costosos que el repaint**, porque requieren calculos de pixeles complejos. Si tu pagina tiene muchos `box-shadow`, considera usar pseudo-elementos o imagenes en su lugar.
 :::
 
-### 6.3 Registro de errores: por que mi efecto hover se traba?
+### 6.3 Caso: por que mi efecto hover se traba
 
 **Error: usar box-shadow para animacion hover**
 
@@ -572,7 +572,7 @@ Ademas, **las sombras y gradientes son mas costosos que el repaint**, porque req
 
 ## 7. Quinta etapa: Composicion y aceleracion GPU
 
-### 7.1 Que es la "composicion"?
+### 7.1 Introducción a la "composicion"
 
 ::: tip Que es la composicion (Composite)?
 **Composicion**, es la "magia" de los navegadores modernos, que divide diferentes partes de la pagina en multiples **capas (Layer)** y luego usa la **GPU (unidad de procesamiento grafico)** para componer la imagen final en paralelo.
@@ -584,7 +584,7 @@ Puedes imaginarlo como las **capas de Photoshop**:
 **Por que la composicion es rapida?** Porque la GPU es experta en procesar tareas paralelas como la "composicion de imagenes", siendo decenas de veces mas rapida que la CPU.
 :::
 
-### 7.2 Que elementos se elevan a "capa de composicion"?
+### 7.2 elementos se elevan a "capa de composicion"
 
 El navegador eleva automaticamente ciertos elementos a una capa de composicion independiente. Estas son las condiciones de activacion comunes:
 
@@ -604,7 +604,7 @@ El navegador eleva automaticamente ciertos elementos a una capa de composicion i
 Pero ten cuidado: **cada capa de composicion consume memoria GPU**, abusar de `translateZ(0)` puede provocar una explosion de memoria (ver seccion 7.4).
 :::
 
-### 7.3 Registro de errores: demasiadas capas de composicion hacen que la pagina sea mas lenta?
+### 7.3 Caso: demasiadas capas de composicion hacen que la pagina sea mas lenta
 
 ::: danger La trampa de la sobre-optimizacion
 Alguien escucho que "la aceleracion GPU es rapida" y agrego `transform: translateZ(0)` a todos los elementos, resultando en una pagina mas lenta.
@@ -682,7 +682,7 @@ En los primeros tiempos, JavaScript solo tenia una cola de tareas. Pero a medida
 4. Iniciar el siguiente ciclo del Event Loop, ejecutar la siguiente macrotarea
 ```
 
-### 8.2 Registro de errores: Promise es mas rapido que setTimeout?
+### 8.2 Caso: Promise es mas rapido que setTimeout
 
 ::: danger Error comun: setTimeout(fn, 0) se ejecuta "inmediatamente"
 Mucha gente piensa que `setTimeout(fn, 0)` significa "ejecutar inmediatamente despues de 0 milisegundos". Esto es una comprension **incorrecta**.

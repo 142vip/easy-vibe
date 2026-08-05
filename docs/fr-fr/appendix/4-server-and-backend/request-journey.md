@@ -1,4 +1,4 @@
-# Le voyage complet d'une requête
+# Panorama : Trajet complet d'une requête Web
 
 ::: tip Préface
 **Lorsque vous saisissez une adresse web dans votre navigateur et appuyez sur Entrée, que se passe-t-il jusqu'à l'affichage de la page ?** C'est une question classique d'entretien, mais surtout la clé pour comprendre toute l'architecture Web. Comprendre cette chaîne vous permettra de saisir comment le frontend, le backend, le réseau et les bases de données collaborent.
@@ -23,7 +23,7 @@ Après avoir étudié ce chapitre, vous serez en mesure de :
 
 ---
 
-## 0. Vue d'ensemble : que traverse une requête ?
+## 0. Vue d'ensemble : que traverse une requête
 
 Prenons une analogie : vous commandez un livre en ligne. Ce processus est étonnamment similaire à une requête HTTP.
 
@@ -143,7 +143,7 @@ Stratégies de répartition courantes :
 
 ---
 
-## 3. Le traitement côté serveur : que se passe-t-il en cuisine ?
+## 3. Le traitement côté serveur : que se passe-t-il en cuisine
 
 Une fois arrivée au serveur, la requête traverse plusieurs couches de traitement.
 

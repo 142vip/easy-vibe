@@ -1,11 +1,11 @@
-# Nguyên lý cơ sở dữ liệu (Index / Transaction / Tối ưu truy vấn)
+# Cơ sở dữ liệu: Nguyên tắc Index, Transaction và Tối ưu
 ::: tip 🎯 Vấn đề cốt lõi
 **Tại sao truy vấn Excel của bạn mất 10 giây, trong khi tìm kiếm trên Taobao chỉ cần 0,01 giây?** Khi dữ liệu từ "vài nghìn dòng" biến thành "một tỷ dòng", từ "một người dùng" thành "hàng triệu người truy cập cùng lúc", Excel không còn đủ dùng. Cơ sở dữ liệu ra đời chính để giải quyết vấn đề này — nó là "siêu Excel" chuyên xử lý dữ liệu khổng lồ và truy cập đồng thời lớn. Chương này sẽ hướng dẫn bạn từ con số không hiểu được nguyên lý cốt lõi của cơ sở dữ liệu.
 :::
 
 ---
 
-## 1. Tại sao cần "cơ sở dữ liệu"?
+## 1. Động lực của cơ sở dữ liệu
 
 ### 1.1 Từ hiệu sách nhỏ đến Taobao: Sự tiến hóa về quy mô dữ liệu
 
@@ -46,7 +46,7 @@ Lúc này, cuốn sổ hoàn toàn đủ dùng. Nhưng khi hiệu sách của b�
 
 **Đây chính là vấn đề mà "cơ sở dữ liệu" giải quyết: làm sao lưu trữ, truy vấn và quản lý dữ liệu khổng lồ một cách hiệu quả và an toàn?**
 
-### 1.2 Một câu chuyện thực tế: Tại sao không thể dùng Excel lưu dữ liệu người dùng
+### 1.2 Trường hợp: Tại sao không thể dùng Excel lưu dữ liệu người dùng
 
 Bạn có thể nói: "Dự án của tôi mới vài vạn người dùng, Excel không đủ sao?" Hãy để tôi kể một câu chuyện thực tế.
 
@@ -121,15 +121,15 @@ Hãy tưởng tượng bạn bước vào một thư viện, cách tổ chức b
 - **Hàng**: mỗi hàng là một người dùng (như "张三, 25 tuổi, 北京")
 - **Khóa chính**: `user_id` (1001, 1002, 1003, không bao giờ trùng)
 
-### 2.2 Khóa chính (Primary Key): "Số CMND" của dữ liệu
+### 2.2 Khóa chính (Primary Key): "Số định danh duy nhất" của dữ liệu
 
 ::: tip 📖 Khóa chính là gì?
-**Khóa chính** là định danh duy nhất mỗi hàng trong bảng, giống như số CMND.
+**Khóa chính** là định danh duy nhất mỗi hàng trong bảng, giống như số định danh duy nhất.
 
 **Đặc điểm chính**:
-- **Tính duy nhất**: tuyệt đối không trùng (không có hai người cùng số CMND)
-- **Không null**: bắt buộc phải có giá trị (không thể có người "không có số CMND")
-- **Bất biến**:一旦 thiết lập, không thay đổi (số CMND của bạn không đổi)
+- **Tính duy nhất**: tuyệt đối không trùng (không có hai người cùng số định danh duy nhất)
+- **Không null**: bắt buộc phải có giá trị (không thể có người "không có số định danh duy nhất")
+- **Bất biến**:一旦 thiết lập, không thay đổi (số định danh duy nhất của bạn không đổi)
 
 **Cách phổ biến**:
 - Dùng số nguyên tự tăng: 1, 2, 3, 4...
@@ -158,8 +158,8 @@ UPDATE users SET age = 26 WHERE user_id = 1001;
 **Khóa ngoại** là cột trỏ đến khóa chính của bảng khác, dùng để tạo liên kết giữa các bảng.
 
 **Hiểu đơn giản**:
-- Khóa chính = số CMND của tôi
-- Khóa ngoại = số CMND của người khác mà tôi tham chiếu
+- Khóa chính = số định danh duy nhất của tôi
+- Khóa ngoại = số định danh duy nhất của người khác mà tôi tham chiếu
 
 **Ví dụ**: `user_id` trong bảng đơn hàng là khóa ngoại, nó trỏ đến khóa chính của bảng người dùng.
 :::
@@ -194,13 +194,13 @@ Xem một ví dụ thực tế:
 
 ---
 
-## 3. Làm sao giao tiếp với CSDL? Nhập môn SQL và thực chiến
+## 3. Làm sao Cách giao tiếp với CSDL
 
 Bạn không thể dùng chuột "click" trực tiếp vào CSDL (dù có công cụ đồ họa, bản chất vẫn là chuyển thành lệnh), bạn cần dùng một ngôn ngữ đặc biệt để chỉ đạo CSDL hoạt động.
 
 Ngôn ngữ đó chính là **SQL (Structured Query Language, Ngôn ngữ truy vấn có cấu trúc)**.
 
-Tin tốt là: SQL rất gần với tiếng Anh tự nhiên, đọc giống như đang nói chuyện.
+Tin tốt là: SQL rất gần với tiếng Anh tự nhiên, đọc giống như đang giao tiếp.
 
 ### 3.1 Các thao tác cốt lõi của SQL: CRUD
 
@@ -388,7 +388,7 @@ WHERE u.name = '张三';
 
 ---
 
-## 4. Tại sao CSDL nhanh như vậy? Bí mật của Index
+## 4. Nguyên tắc hiệu năng Index
 
 Đây là phần kỳ diệu nhất của CSDL, cũng là câu hỏi được hỏi nhiều nhất trong phỏng vấn.
 
@@ -483,7 +483,7 @@ Nghĩa là: trong 1 tỷ bản ghi, tìm bất kỳ bản ghi nào chỉ cần *
 
 ---
 
-## 5. Transaction: Làm sao đảm bảo dữ liệu không mất, không loạn?
+## 5. Transaction: Làm sao Đảm bảo tính nhất quán dữ liệu
 
 Hãy tưởng tượng cảnh mua vé tàu dịp Tết:
 
@@ -494,7 +494,7 @@ Hãy tưởng tượng cảnh mua vé tàu dịp Tết:
 
 Đây là vấn đề **xung đột đồng thời** điển hình.
 
-### 5.1 Transaction là gì?
+### 5.1 Định nghĩa Transaction
 
 **Transaction** là một nhóm thao tác của CSDL, các thao tác này **hoặc tất cả thành công, hoặc tất cả thất bại**, không xuất hiện tình trạng "làm dở dang".
 

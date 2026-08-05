@@ -1,4 +1,4 @@
-# Docker-Containerisierung
+# Docker und Container: Virtualisierung
 
 ::: tip Vorwort
 **"Es laeuft auf meinem Rechner" ist die klassische Ausrede von Entwicklern - Docker laesst diese Ausrede verschwinden.** Containerisierungstechnologie verpackt eine Anwendung mit all ihren Abhaengigkeiten in eine standardisierte Einheit, die konsistent in jeder Umgebung laeuft. Sie ist das Fundament der modernen Softwarebereitstellung.
@@ -24,13 +24,13 @@ Nach diesem Kapitel wirst du Folgendes koennen:
 
 ---
 
-## 1. Warum Container?
+## 1. Warum Container
 
 Vor der Containerisierung musste man zum Bereitstellen einer Anwendung auf dem Server manuell die Laufzeitumgebung installieren, Umgebungsvariablen konfigurieren und Abhaengigkeitskonflikte loesen. Unterschiede zwischen Umgebungen (Entwicklung, Test, Produktion) waren eine Brutstaette fuer Bugs.
 
 <DockerArchitectureDemo />
 
-### Welche Probleme loesen Container?
+### Welche Probleme loesen Container
 
 | Problem | Traditioneller Ansatz | Container-Ansatz |
 |------|---------|---------|

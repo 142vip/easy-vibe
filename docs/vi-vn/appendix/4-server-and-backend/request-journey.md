@@ -23,7 +23,7 @@ Sau khi học xong chương này, bạn sẽ có được:
 
 ---
 
-## 0. Toàn cảnh: Một request đã trải qua những gì?
+## 0. Toàn cảnh: Một request Tổng hành trình request
 
 Dùng một phép so sánh để hiểu: bạn đặt mua sách trực tuyến, quá trình này giống với HTTP request một cách đáng kinh ngạc.
 

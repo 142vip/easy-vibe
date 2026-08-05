@@ -1,4 +1,4 @@
-# Neural Networks and Deep Learning
+# Fundamentals of Neural Networks and Deep Learning
 
 ::: tip Preface
 **Neural networks are the engine of the AI revolution.** From ChatGPT's language understanding to image recognition in autonomous driving, neural networks are what's working behind the scenes. It's not magic — it's an elegant mathematical framework that "learns" the mapping from input to output through large amounts of data. Understanding the fundamentals will help you use and debug AI tools more effectively.
@@ -312,5 +312,5 @@ You don't need to train neural networks from scratch. Modern AI development is m
 - [3Blue1Brown - Neural Networks Video Series](https://www.3blue1brown.com/topics/neural-networks) — The most intuitive visual explanations
 - [Stanford CS231n](http://cs231n.stanford.edu/) — Classic convolutional neural networks course
 - [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) — Visual guide to the Transformer architecture
-- [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/) — Free online textbook
+- [Fundamentals of Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/) — Free online textbook
 - [Hugging Face Course](https://huggingface.co/learn) — Hands-on practice with Transformers and large models

@@ -1,4 +1,4 @@
-# Strategies de test
+# Introduction : Stratégies et méthodologies de test
 
 ::: tip Avant-propos
 **Votre code est-il vraiment « sans probleme » ?** A chaque modification de code, cliquer manuellement pour verifier que tout fonctionne — cette approche est tolerable pour les petits projets. Mais quand le code atteint des dizaines de milliers de lignes et que l'equipe s'elargit a une douzaine de personnes, les « clics manuels » deviennent un desastre.
@@ -19,7 +19,7 @@ Apres ce chapitre, vous comprendrez comment choisir une strategie de test adapte
 
 ---
 
-## 0. Vue d'ensemble : Pourquoi les tests automatises sont-ils necessaires ?
+## 0. Vue d'ensemble : Pourquoi les tests automatises sont-ils necessaires
 
 Imaginez que vous etes un ingenieur en batiment. A chaque modification des plans, vous ne grimpez pas personnellement tous les etages pour verifier la securite structurelle — vous vous fiez a un **systeme de detection automatise**. Les tests logiciels sont le « systeme de detection structurelle » du monde du code.
 
@@ -42,7 +42,7 @@ Cliquez sur chaque niveau de la pyramide avec le composant interactif ci-dessous
 
 <TestPyramidDemo />
 
-### 1.2 Pourquoi une forme pyramidale ?
+### 1.2 Pourquoi une forme pyramidale
 
 La forme pyramidale reflete un compromis fondamental : **vitesse contre realisme**.
 
@@ -56,7 +56,7 @@ La forme pyramidale reflete un compromis fondamental : **vitesse contre realisme
 
 ## 2. Tests unitaires en pratique
 
-### 2.1 Qu'est-ce qu'un bon test unitaire ?
+### 2.1 Qu'est-ce qu'un bon test unitaire
 
 Un bon test unitaire suit le principe **FIRST** :
 
@@ -86,7 +86,7 @@ test('devrait calculer correctement le prix TTC', () => {
 })
 ```
 
-### 2.3 Que tester ? Que ne pas tester ?
+### 2.3 Que tester Que ne pas tester
 
 **Ce qui devrait etre teste :**
 - La logique metier principale (calcul de prix, verification de permissions, transformation de donnees)

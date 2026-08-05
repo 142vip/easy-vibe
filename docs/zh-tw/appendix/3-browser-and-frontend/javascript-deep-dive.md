@@ -1,4 +1,4 @@
-# JavaScript 深度指南
+# JavaScript 導論
 
 ::: tip 前言
 你已經學會了 HTML 和 CSS，能做出好看的網頁了。但你可能會發現：點擊按鈕沒反應，填了表單提交不了，網頁就像一張「靜態」的圖片。
@@ -67,7 +67,7 @@
 | **CSS** | 皮膚 | 定義網頁的外觀和樣式 |
 | **JavaScript** | 肌肉和神經系統 | 讓網頁能回應、能互動、能思考 |
 
-### 1.2 為什麼 vibecoding 也需要懂 JavaScript？
+### 1.2 vibecoding 也需要懂 JavaScript的動機
 
 ::: warning 剛學 JS 的開發者踩坑記
 一位剛學 JavaScript 的開發者用 AI 做了一個「計數器」應用：點擊按鈕，數字加 1。AI 生成的程式碼能正常工作。

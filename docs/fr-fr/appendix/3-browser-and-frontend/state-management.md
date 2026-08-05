@@ -1,11 +1,11 @@
-# Philosophie de la gestion d'état
+# Principes : Gestion d'état frontend
 ::: tip 🎯 Question centrale
 **Lorsque l'application devient de plus en plus grande, comment partager et synchroniser élégamment les données entre les composants ?** Vous pourriez rencontrer ce dilemme : l'utilisateur ajoute un article au panier sur la page produit, mais le nombre d'articles dans l'en-tête ne se met pas à jour ; deux composants sans relation ont besoin des mêmes données, mais vous ne savez pas comment les transmettre. Ce chapitre vous fera passer du « transfert de données chaotique » à une « gestion d'état claire ».
 :::
 
 ---
 
-## 1. Pourquoi la « composantisation et la gestion d'état » ?
+## 1. Motivation et justification : la « composantisation et la gestion d'état »
 
 ### 1.1 Du petit atelier à l'usine : l'évolution du développement frontend
 
@@ -182,7 +182,7 @@ Cela maintient un flux de données clair et unidirectionnel, évitant le chaos o
 
 <PropsFlowDemo />
 
-### 2.3 Flux de données unidirectionnel : pourquoi ne peut-on pas modifier directement les props ?
+### 2.3 Flux de données unidirectionnel : pourquoi ne peut-on pas modifier directement les props
 
 Beaucoup de débutants font une erreur : modifier directement la valeur des props dans le composant enfant.
 
@@ -727,7 +727,7 @@ function TodoList() {
 
 ---
 
-## 5. Guide pratique : comment concevoir la gestion d'état ?
+## 5. Guide pratique : comment concevoir la gestion d'état
 
 ::: tip 🤔 Quand a-t-on besoin d'une bibliothèque de gestion d'état ?
 Tous les projets n'ont pas besoin d'une bibliothèque de gestion d'état. Avant d'en introduire une, posez-vous ces questions :

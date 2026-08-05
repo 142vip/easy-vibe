@@ -1,11 +1,11 @@
-# Load Balancing und Gateway
+# Load Balancing und Gateway: Verkehrsverteilung
 ::: tip Kernfrage
 **Wenn ein einzelner Server die Last nicht mehr tragen kann, wie verteilt man Traffic "intelligent" auf mehrere Server-Instanzen?** Load Balancing ist der "Verteiler" moderner verteilter Systeme. Dieser Artikel verwendet reale Beispiele (Milchtee-Kassen, Paketsortierung, Verkehrssteuerung), um die Designphilosophie und Engineering-Praxis von Load Balancing zu erklaeren.
 :::
 
 ---
 
-## 1. Warum "Load Balancing"?
+## 1. Warum "Load Balancing"
 
 ### 1.1 Ein reales Beispiel: Die Architektur-Evolution einer Website
 
@@ -66,7 +66,7 @@ Stell dir vor, du betreibst einen trendigen Milchtee-Laden:
 
 ---
 
-## 2. Was ist Load Balancing?
+## 2. Was ist Load Balancing
 
 ### 2.1 Layer-4-Load-Balancing (L4): Nur die Hausnummer betrachten
 
@@ -78,7 +78,7 @@ Stell dir vor, du betreibst einen trendigen Milchtee-Laden:
 - **Anwendungsfaelle**: Datenbankverbindungen, Redis-Cache, Long-Polling-Game-Server
 - **Repraesentative Produkte**: LVS (Linux Virtual Server), AWS NLB, Azure Load Balancer
 
-### 2.2 Layer-7-Load-Balancing (L7): Den Paketinhalt pruefen
+### 2.2 Layer-7-Load-Balancing (L7): Den Build-Artefaktinhalt pruefen
 
 **Arbeitet auf der Anwendungsschicht (HTTP/HTTPS)**, wie ein Paketbote, der nicht nur die Hausnummer prueft, sondern auch **das Paket oeffnet und den Inhalt untersucht**, um basierend auf dem Inhalt zu entscheiden, wie es zugestellt wird.
 
@@ -102,7 +102,7 @@ Stell dir vor, du betreibst einen trendigen Milchtee-Laden:
 
 ---
 
-## 3. Kernproblem 1: Wie verhindert man, dass "kaputte" Server weiter Anfragen bekommen?
+## 3. Kernproblem 1: Ansatz für verhindert man, dass "kaputte" Server weiter Anfragen bekommen
 
 ### 3.1 Health Checks: "Kranke" Server nicht das System belasten lassen
 
@@ -136,9 +136,9 @@ Ein Team hat den Schwellenwert fuer die Antwortzeit beim Health Check auf 100 ms
 
 ---
 
-## 4. Kernproblem 2: Wie gewaehrleistet man, dass "Stammkunden" immer denselben "Kassierer" finden?
+## 4. Kernproblem 2: Ansatz für gewaehrleistet man, dass "Stammkunden" immer denselben "Backend-Instanz" finden
 
-### 4.1 Session-Persistenz: "Stammkunden" immer denselben "Kassierer" bedienen lassen
+### 4.1 Session-Persistenz: "Stammkunden" immer denselben "Backend-Instanz" bedienen lassen
 
 Stell dir vor, du bist Stammkunde in einem Milchtee-Laden und wirst jedes Mal von derselben Bedienung bedient. Sie kennt deine Vorlieben (halber Zucker, kein Eis), der Service ist schnell und persoenlich. Aber wenn du jedes Mal jemand Neues bekommst, musst du deine Wuensche immer wieder wiederholen - ineffizient.
 
@@ -156,7 +156,7 @@ Stell dir vor, du bist Stammkunde in einem Milchtee-Laden und wirst jedes Mal vo
 
 ---
 
-## 5. Kernproblem 3: Wie realisiert man Zero-Downtime-Deployments?
+## 5. Kernproblem 3: Ansatz für realisiert man Zero-Downtime-Deployments
 
 ### 5.1 Blue-Green Deployment: Zero-Downtime-Release durch "Umschalten per Knopfdruck"
 
@@ -187,7 +187,7 @@ Der Name stammt von den historischen "Bergbau-Kanarienvoegeln" - Bergarbeiter na
 
 ---
 
-## 6. Kernproblem 4: Wie bringt man das System dazu, selbst zu "atmen"?
+## 6. Kernproblem 4: Ansatz für bringt man das System dazu, selbst zu "atmen"
 
 ### 6.1 Auto-Scaling: Das System wie ein Restaurant "flexibel besetzen" lassen
 
@@ -239,7 +239,7 @@ Loesung:
 
 ---
 
-## 7. Praxis: Welchen Load Balancer waehlen?
+## 7. Praxis: Welchen Load Balancer waehlen
 
 ### 7.1 Vergleich der wichtigsten Load Balancer
 

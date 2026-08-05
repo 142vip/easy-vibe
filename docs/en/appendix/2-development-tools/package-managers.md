@@ -1,10 +1,10 @@
-# Package Managers
+# An Introduction to Package Managers
 
 > 💡 **Learning Guide**: You don't have to reinvent the wheel when writing code — 99% of the functionality you need has already been written and published online by someone else. A **package manager** is the tool that helps you find, download, and manage these "ready-made parts." This chapter revolves around one core question: **how to make code dependencies reproducible, collaborative, and maintainable?**
 
 ---
 
-## 0. Why Will You Definitely Need a Package Manager?
+## 0. Motivation for Definitelying Need a Package Manager
 
 Imagine you want to write a Node.js program that makes HTTP requests. There are two paths:
 
@@ -28,7 +28,7 @@ Different programming languages and operating systems have their own ecosystem t
 
 <PackageManagerOverviewDemo />
 
-### 1.1 Where Do Packages Come From? — The Registry
+### 1.1 Placement of Packagesing Come From — The Registry
 
 Every ecosystem has a central repository behind it that stores all downloadable packages:
 
@@ -66,7 +66,7 @@ Usage: npm (most universal) > pnpm (recommended for new projects) > yarn (some t
 
 ---
 
-## 2. Installing Packages — What Happens Behind the Scenes?
+## 2. Installing Packages — What Happens Behind the Scenes
 
 After typing `npm install axios`, the command line goes quiet for a few seconds, and then it's done. What exactly happened during those seconds?
 
@@ -129,7 +129,7 @@ winget install Git.Git           # Install software
 winget upgrade --all             # Update all installed software
 ```
 
-### 2.3 What Are npm scripts?
+### 2.3 Overview of npm scripts
 
 The `scripts` field in `package.json` is npm's built-in **task runner**:
 
@@ -220,7 +220,7 @@ What do `^` and `~` mean here?
 
 <DependencyTreeDemo />
 
-### 4.1 Why Not Pin the Version?
+### 4.1 Motivation for Noting Pin the Version
 
 | Approach | Pros | Cons |
 | :--- | :--- | :--- |
@@ -230,7 +230,7 @@ What do `^` and `~` mean here?
 
 **Best practice**: Declare ranges with `^` + pin actual versions with a lockfile — use both together.
 
-### 4.2 What Is Dependency Hell?
+### 4.2 Overview of Dependency Hell
 
 When you depend on 50 packages, and each of those depends on several more, the "dependency tree" can have hundreds of nodes. If two of your dependencies need **incompatible versions of the same library**, you have a "dependency conflict."
 
@@ -244,7 +244,7 @@ How different ecosystems solve this:
 
 ## 5. Lockfiles — The Cornerstone of Team Collaboration
 
-### 5.1 Why Do You Need a Lockfile?
+### 5.1 Motivation for needing a Lockfile
 
 Suppose `package.json` says `"axios": "^1.6.0"`:
 
@@ -260,7 +260,7 @@ Same code, three different results. A **lockfile** records the exact version of 
 | CI / production deploy | `npm ci` | **Strictly** follows lockfile; errors if there's a discrepancy |
 | Active version upgrade | `npm update` | Upgrades within allowed range, updates lockfile |
 
-### 5.2 Should Lockfiles Be Committed to Git?
+### 5.2 Should Lockfiles Be Committed to Git
 
 **Applications must commit; libraries published to npm may not.**
 

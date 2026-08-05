@@ -1,4 +1,4 @@
-# Cloud-Plattformen in der Praxis
+# Cloud-Plattformen: Infrastruktur-Übersicht
 > **Lernleitfaden**: Cloud-Service-Anbieter sind keine "Websites zum Mieten von Servern", sondern eine Infrastruktur, die Rechenleistung wie Wasser oder Strom bereitstellt. Dieses Kapitel dreht sich um eine Kernfrage: **Wie versteht und nutzt man Cloud-Services von Grund auf?** Wir verwenden reale Szenarien, lebendige Analogien und praktische Schritte, um dir eine vollstaendige kognitive Landkarte der Cloud-Services zu erstellen.
 
 Bevor du beginnst, solltest du Folgendes kennen:
@@ -8,7 +8,7 @@ Bevor du beginnst, solltest du Folgendes kennen:
 
 ---
 
-## 0. Einleitung: Warum kaufen immer weniger Unternehmen eigene Server?
+## 0. Einleitung: Motivation von kaufen immer weniger Unternehmen eigene Server
 
 Stell dir folgendes Szenario vor:
 
@@ -28,7 +28,7 @@ Frueher mussten Unternehmen den langwierigen Prozess durchlaufen: Server kaufen,
 
 ---
 
-## 1. Was sind Cloud-Service-Anbieter?
+## 1. Was sind Cloud-Service-Anbieter
 
 ### 1.1 Rechenleistung wie ein Wasserversorger
 
@@ -59,7 +59,7 @@ Klicke auf die Service-Karten unten, um die sechs Kernkategorien von Cloud-Servi
 
 ---
 
-## 2. Welche bekannten Cloud-Service-Anbieter gibt es?
+## 2. Welche bekannten Cloud-Service-Anbieter gibt es
 
 ### 2.1 Die internationalen Grossen Drei: AWS, Azure, Google Cloud
 
@@ -81,7 +81,7 @@ Auf dem chinesischen Cloud-Service-Markt gibt es ebenfalls drei wichtige Anbiete
 
 **Huawei Cloud** wurde 2015 als Cloud-Service-Abteilung von Huawei gegruendet und haelt in China rund 10% Marktanteil. Es hat starke Hardware-Expertise, umfangreiche Regierungs- und Unternehmenskunden, hohe Sicherheit und Compliance sowie innovative KI-Chips (Ascend). Geeignet fuer Regierungsprojekte, grosse staatliche Unternehmen und die Fertigungsindustrie.
 
-### 2.3 Wie waehlt man den richtigen Cloud-Anbieter?
+### 2.3 Wie waehlt man den richtigen Cloud-Anbieter
 
 Die Wahl des Cloud-Anbieters ist wie die Wahl einer Wohnung - Standort, Preis und Ausstattung muessen beruecksichtigt werden.
 
@@ -97,7 +97,7 @@ Praxisempfehlung: Anfaenger oder kleine Projekte waehlen Alibaba Cloud oder Tenc
 
 ---
 
-## 3. Wie nutzt man Cloud-Services in der Praxis?
+## 3. Wie nutzt man Cloud-Services in der Praxis
 
 ### 3.1 Der komplette Prozess von der Registrierung bis zum Going Live
 
@@ -135,7 +135,7 @@ Lerne verschiedene Arten von Cloud-Speicherdiensten und deren Anwendungsbereiche
 
 ---
 
-## 4. Wie kauft man API-Zugriffe und nutzt sie?
+## 4. Wie kauft man API-Zugriffe und nutzt sie
 
 ### 4.1 Abrechnungsmodelle von Cloud-Services
 

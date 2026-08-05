@@ -1,4 +1,4 @@
-# Frontend Project Architecture Design
+# Principles of Frontend Project Architecture
 
 ::: tip 🎯 Core Question
 **How do you choose the right architecture for projects of different sizes, from simple HTML pages to complex enterprise applications?** It's like asking: from a studio apartment to a large shopping mall, how do you design different spatial layouts based on needs? Good architecture should evolve with the project, rather than being over-engineered from the start.
@@ -513,7 +513,7 @@ Stage 3: Feature Modularization (organize by feature)
 Stage 4: Micro-frontend Architecture (Monorepo)
 ```
 
-### 6.2 When Should You Upgrade Your Architecture?
+### 6.2 Criteria for Upgrade Your Architecture
 
 | Signal | Description | Suggestion |
 |------|------|------|

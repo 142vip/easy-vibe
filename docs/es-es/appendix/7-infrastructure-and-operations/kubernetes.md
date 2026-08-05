@@ -1,4 +1,4 @@
-# Orquestación con Kubernetes
+# Principios de orquestación con Kubernetes
 
 ::: tip Prólogo
 **Docker resolvió el problema de "empaquetar", Kubernetes resuelve el problema de "gestionar".** Cuando tienes decenas o cientos de contenedores que desplegar, escalar y recuperar ante fallos, la gestión manual es inviable. Kubernetes (K8s) es el "sistema operativo" de los contenedores: automatiza el despliegue, escalado y operación de aplicaciones contenerizadas.
@@ -24,7 +24,7 @@ Al terminar este capítulo, habrás aprendido:
 
 ---
 
-## 1. ¿Por qué necesitas Kubernetes?
+## 1. Motivación de Kubernetes
 
 Docker facilita el empaquetado y ejecución de contenedores individuales, pero cuando te enfrentas a los siguientes escenarios, la gestión manual resulta insuficiente:
 

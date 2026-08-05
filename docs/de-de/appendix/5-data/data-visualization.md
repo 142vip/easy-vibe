@@ -1,4 +1,4 @@
-# Datenvisualisierung und Dashboards
+# Datenvisualisierung: Designprinzipien
 
 ::: tip Vorwort
 **Ein gutes Diagramm sagt mehr als tausend Datenzeilen.** Datenvisualisierung verwandelt abstrakte Zahlen in intuitive visuelle Darstellungen, die es ermöglichen, die Geschichte hinter den Daten in wenigen Sekunden zu verstehen. Von Excel-Diagrammen bis hin zu Grafana-Überwachungs-Dashboards — Visualisierung ist allgegenwärtig.
@@ -24,7 +24,7 @@ Nach Abschluss dieses Kapitels wirst du Folgendes können:
 
 ---
 
-## 0. Überblick: Warum ist Visualisierung notwendig?
+## 0. Überblick: Notwendigkeit der Visualisierung
 
 Das menschliche Gehirn verarbeitet visuelle Informationen viel schneller als Text. Ein Liniendiagramm lässt dich sofort erkennen, dass „die Verkäufe im letzten Monat zurückgegangen sind", während du bei derselben Information in Tabellenform Zeile für Zeile vergleichen müsstest, um zu demselben Schluss zu kommen.
 
@@ -65,7 +65,7 @@ Der erste Schritt bei der Diagrammauswahl ist nicht „Welches Diagramm mag ich?
 
 ---
 
-## 2. Visualisierungsdesignprinzipien: Die Daten für sich sprechen lassen
+## 2. Visualisierungsdesignprinzipien: Visuelle Kodierungsprinzipien
 
 Eine gute Visualisierung ist nicht „hübsch", sondern „verständlich". Die mehreren klassischen Prinzipien, die Edward Tufte in „The Visual Display of Quantitative Information" vorgestellt hat, sind bis heute eine wichtige Referenz für das Visualisierungsdesign.
 

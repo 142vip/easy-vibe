@@ -1,11 +1,11 @@
-# Hệ thống bố cục HTML / CSS
+# HTML/CSS bố cục: Cơ bản về bố cục và styling
 ::: tip 🎯 Câu hỏi cốt lõi
 **Trang web được tạo ra như thế nào? Tại sao có trang web chỉ có văn bản, trong khi trang khác lại có thể tương tác như một ứng dụng?** Câu hỏi này sẽ dẫn đến ba trụ cột của phát triển Web, giúp bạn hiểu cấu trúc đằng sau mỗi trang web.
 :::
 
 ---
 
-## 1. HTML, CSS, JavaScript là gì?
+## 1. Tổng quan về HTML, CSS, JavaScript
 
 ### 1.1 Từ trang web tĩnh đến ứng dụng động
 
@@ -23,11 +23,11 @@ Nhưng trang web hiện đại thì hoàn toàn khác. Chúng giống như **ứ
 
 ### 1.2 Một phép ẩn dụ: Xây nhà
 
-| Công nghệ       | 🏠 Ẩn dụ xây nhà                | Vai trò thực tế                   | Ví dụ cụ thể                                   |
+| Công nghệ | 🏠 Ẩn dụ xây nhà | Vai trò thực tế | Ví dụ cụ thể |
 | --------------- | ------------------------------- | --------------------------------- | ---------------------------------------------- |
-| **HTML**        | **Kết cấu và vật liệu** của nhà | Định nghĩa nội dung và phân cấp   | Đây là một bức tường, đây là cửa sổ, đây là phòng |
-| **CSS**         | **Trang trí và ngoại thất**     | Kiểm soát kiểu dáng và bố cục     | Tường sơn màu xanh, cửa sổ đặt hướng đông, sàn lát gạch |
-| **JavaScript**  | **Thiết bị điện và hệ thống thông minh** | Làm trang web có tương tác và logic | Nhấn công tắc đèn sáng, mở cửa rèm tự động kéo ra |
+| **HTML** | **Kết cấu và vật liệu** của nhà | Định nghĩa nội dung và phân cấp | Đây là một bức tường, đây là cửa sổ, đây là phòng |
+| **CSS** | **Trang trí và ngoại thất** | Kiểm soát kiểu dáng và bố cục | Tường sơn màu xanh, cửa sổ đặt hướng đông, sàn lát gạch |
+| **JavaScript** | **Thiết bị điện và hệ thống thông minh** | Làm trang web có tương tác và logic | Nhấn công tắc đèn sáng, mở cửa rèm tự động kéo ra |
 
 ::: tip 💡 Mối quan hệ giữa ba thứ
 
@@ -48,7 +48,7 @@ Nhưng trang web hiện đại thì hoàn toàn khác. Chúng giống như **ứ
 
 ## 2. HTML: Bộ xương của trang web
 
-### 2.1 Tại sao cần HTML?
+### 2.1 Động lực của HTML
 
 Trước khi HTML ra đời, nội dung trên Internet chỉ là **văn bản thuần túy**. Giống như đoạn văn bản bạn đang đọc, không có định dạng, không có phân cấp, không có liên kết.
 
@@ -60,7 +60,7 @@ Văn bản thuần túy có vấn đề gì?
 
 **HTML (HyperText Markup Language)** ra đời để giải quyết vấn đề này. Nó dùng "thẻ" (tag) để đánh dấu ý nghĩa của nội dung, giúp trình duyệt biết "đây là cái gì".
 
-### 2.2 Code HTML trông như thế nào?
+### 2.2 Cấu trúc cơ bản của HTML
 
 Đơn vị cơ bản của HTML là "thẻ" (tag). Thẻ được bao bọc bởi dấu ngoặc nhọn `< >`, xuất hiện theo cặp:
 
@@ -79,7 +79,7 @@ Văn bản thuần túy có vấn đề gì?
 | **Thuộc tính (Attribute)** | Thông tin bổ sung trên thẻ | `href="url"`, `class="card"` |
 | **Lồng (Nesting)** | Thẻ bên trong thẻ | `<div><p>Văn bản</p></div>` |
 
-### 2.3 Làm sao để đọc hiểu code HTML?
+### 2.3 Làm sao Cách đọc hiểu HTML
 
 ::: tip 🎯 Người mới bắt đầu phải đọc: Phương pháp đọc code
 
@@ -88,9 +88,9 @@ Nhiều người mới thấy một đống `<xxx>` là choáng. Thực ra đọ
 **Bước 1: Tìm "lớp ngoài cùng"**
 
 ```html
-<div class="card">        ← Đây là container, chứa nội dung bên trong
-  <h2>Tiêu đề</h2>
-  <p>Văn bản mô tả</p>
+<div class="card"> ← Đây là container, chứa nội dung bên trong
+ <h2>Tiêu đề</h2>
+ <p>Văn bản mô tả</p>
 </div>
 ```
 
@@ -120,11 +120,11 @@ Nhiều người mới thấy một đống `<xxx>` là choáng. Thực ra đọ
 
 ```html
 <body>
-  <header>           ← Thụt lề thể hiện header là con của body
-    <nav>            ← nav là con của header
-      <a>Trang chủ</a>    ← a là con của nav
-    </nav>
-  </header>
+ <header> ← Thụt lề thể hiện header là con của body
+ <nav> ← nav là con của header
+ <a>Trang chủ</a> ← a là con của nav
+ </nav>
+ </header>
 </body>
 ```
 :::
@@ -153,9 +153,9 @@ Nhiều người mới thấy một đống `<xxx>` là choáng. Thực ra đọ
 
 ```html
 <form>
-  <input type="text" placeholder="Vui lòng nhập tên người dùng" />
-  <input type="password" placeholder="Vui lòng nhập mật khẩu" />
-  <button type="submit">Đăng nhập</button>
+ <input type="text" placeholder="Vui lòng nhập tên người dùng" />
+ <input type="password" placeholder="Vui lòng nhập mật khẩu" />
+ <button type="submit">Đăng nhập</button>
 </form>
 ```
 
@@ -181,7 +181,7 @@ Nhiều người mới thấy một đống `<xxx>` là choáng. Thực ra đọ
 **Khi nào dùng div?** Khi không có thẻ ngữ nghĩa nào phù hợp. Ví dụ: một container thuần túy để trang trí.
 :::
 
-### 2.5 Làm sao để nhớ hết các thẻ HTML?
+### 2.5 Làm sao Chiến lược ghi nhớ thẻ HTML
 
 ::: tip 🎯 Bối rối của người mới
 
@@ -247,7 +247,7 @@ Nhiều người mới thấy một đống `<xxx>` là choáng. Thực ra đọ
 
 **Phương pháp ghi nhớ**: div = division (phân vùng), span = span (nhịp). div dùng để chia khu vực lớn, span dùng để đánh dấu đoạn văn bản.
 
-#### Gặp thẻ không quen thì làm sao?
+#### Cách tiếp cận thẻ HTML không quen thuộc
 
 **Cách 1: Đoán từ tiếng Anh**
 
@@ -279,7 +279,7 @@ Nhiều thẻ là viết tắt của từ tiếng Anh:
 
 ## 3. CSS: Làn da của trang web
 
-### 3.1 Tại sao cần CSS?
+### 3.1 Động lực của CSS
 
 Hãy tưởng tượng bạn dọn vào một **căn nhà thô**: có tường, có cửa sổ, có cửa ra vào, ở được, nhưng:
 
@@ -295,14 +295,14 @@ CSS (Cascading Style Sheets) chính là "đội trang trí" của trang web. Nó
 - 🖼️ **Treo tranh**: Thêm viền, đổ bóng, bo góc
 - 🪑 **Kê đồ đạc**: Điều chỉnh bố cục, khoảng cách, căn chỉnh
 
-### 3.2 Code CSS trông như thế nào?
+### 3.2 Cấu trúc cơ bản của CSS
 
 Code CSS có định dạng cố định:
 
 ```css
 bộ chọn {
-  tên thuộc tính: giá trị thuộc tính;
-  tên thuộc tính: giá trị thuộc tính;
+ tên thuộc tính: giá trị thuộc tính;
+ tên thuộc tính: giá trị thuộc tính;
 }
 ```
 
@@ -314,14 +314,14 @@ bộ chọn {
 
 <!-- Cách 2: Internal style (viết trong file HTML) -->
 <style>
-  .red-text { color: red; }
+ .red-text { color: red; }
 </style>
 
 <!-- Cách 3: External style (file CSS độc lập, khuyến nghị) -->
 <link rel="stylesheet" href="styles.css" />
 ```
 
-### 3.3 Làm sao để đọc hiểu code CSS?
+### 3.3 Làm sao Cách đọc hiểu CSS
 
 ::: tip 🎯 Người mới bắt đầu phải đọc: Phương pháp đọc CSS
 
@@ -349,10 +349,10 @@ bộ chọn {
 
 ```css
 .card {
-  width: 300px;        /* Độ rộng cố định */
-  padding: 16px;       /* Khoảng cách trong 16 pixel */
-  border-radius: 8px;  /* Bo góc 8 pixel */
-  background: #fff;    /* Nền trắng */
+ width: 300px; /* Độ rộng cố định */
+ padding: 16px; /* Khoảng cách trong 16 pixel */
+ border-radius: 8px; /* Bo góc 8 pixel */
+ background: #fff; /* Nền trắng */
 }
 ```
 
@@ -372,16 +372,16 @@ Nếu một phần tử bị chọn bởi nhiều selector cùng lúc, ai sẽ q
 ```
 
 ```css
-p { color: red; }             /* Độ ưu tiên: 1 */
+p { color: red; } /* Độ ưu tiên: 1 */
 .highlight { color: yellow; } /* Độ ưu tiên: 10 */
-#special { color: blue; }     /* Độ ưu tiên: 100 */
+#special { color: blue; } /* Độ ưu tiên: 100 */
 ```
 
 **Đáp án**: Màu xanh. ID selector có độ ưu tiên cao nhất, class selector thứ hai, tag selector thấp nhất.
 
 **Inline style** (viết trong thuộc tính style) có độ ưu tiên 1000, cao nhất!
 
-### 3.5 Box Model: Tại sao độ rộng không khớp?
+### 3.5 Box Model: Trường hợp: Box Model gây độ rộng sai
 
 ::: tip 🎯 Tình huống thực tế
 
@@ -406,16 +406,16 @@ Mỗi phần tử HTML trong CSS được coi là một "hộp", gồm bốn l�
 
 ```css
 .box {
-  box-sizing: border-box;  /* Cho width bao gồm cả padding và border */
-  width: 200px;
-  padding: 10px;
-  border: 5px;
+ box-sizing: border-box; /* Cho width bao gồm cả padding và border */
+ width: 200px;
+ padding: 10px;
+ border: 5px;
 }
 ```
 
 Như vậy, `width: 200px` chính là độ rộng cuối cùng, padding và border sẽ bị "ép" vào bên trong.
 
-### 3.6 Flexbox: Làm sao để phần tử tự động căn chỉnh?
+### 3.6 Flexbox: Làm sao để Căn chỉnh tự động với Flexbox
 
 Flexbox là cách bố cục được dùng nhiều nhất trong CSS hiện đại. Nó giúp phần tử tự động sắp xếp và căn chỉnh, giống như sách trên kệ tự động thẳng hàng.
 
@@ -447,7 +447,7 @@ Bạn viết một dự án, file CSS dài 2000 dòng. Sau đó muốn đổi m�
 **CSS Preprocessor** ra đời để giải quyết những vấn đề này. Nó giúp CSS cũng có thể "lập trình": có biến, có lồng, có thể tái sử dụng code.
 :::
 
-#### 3.7.1 CSS Preprocessor là gì?
+#### 3.7.1 Tổng quan về CSS Preprocessor
 
 **Giải thích dễ hiểu**: Preprocessor là một loại "CSS thông minh hơn". Bạn dùng cú pháp mạnh mẽ hơn để viết style, sau đó nó giúp bạn **biên dịch** thành CSS thông thường, trình duyệt có thể nhận diện bình thường.
 
@@ -534,13 +534,13 @@ $primary: #3b82f6;
 
 ```scss
 .navbar {
-  .nav-list {
-    .nav-item {
-      .nav-link {
-        &:hover { }  /* & đại diện cho selector cha */
-      }
-    }
-  }
+ .nav-list {
+ .nav-item {
+ .nav-link {
+ &:hover { } /* & đại diện cho selector cha */
+ }
+ }
+ }
 }
 ```
 
@@ -549,13 +549,13 @@ $primary: #3b82f6;
 
 ```less
 .navbar {
-  .nav-list {
-    .nav-item {
-      .nav-link {
-        &:hover { }
-      }
-    }
-  }
+ .nav-list {
+ .nav-item {
+ .nav-link {
+ &:hover { }
+ }
+ }
+ }
 }
 ```
 
@@ -572,14 +572,14 @@ $primary: #3b82f6;
 ```css
 /* Sao chép dán 3 lần */
 .btn-primary {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 .btn-secondary {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 ```
 
@@ -588,9 +588,9 @@ $primary: #3b82f6;
 
 ```scss
 @mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 .btn-primary { @include center; }
@@ -602,9 +602,9 @@ $primary: #3b82f6;
 
 ```less
 .center() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 .btn-primary { .center(); }
@@ -614,7 +614,7 @@ $primary: #3b82f6;
 </TabItem>
 </Tabs>
 
-#### 3.7.4 Làm sao để chọn?
+#### 3.7.4 Chiến lược lựa chọn
 
 | Tình huống | Khuyến nghị |
 |-----------|-------------|
@@ -651,17 +651,17 @@ npm install -D sass
 
 ```
 my-website/
-├── index.html              # Cấu trúc trang
+├── index.html # Cấu trúc trang
 ├── about.html
 ├── css/
-│   ├── reset.css           # Style reset
-│   ├── layout.css          # Style bố cục
-│   ├── components.css      # Style component
-│   └── style.css           # Style chính (có thể lên đến hàng nghìn dòng)
+│ ├── reset.css # Style reset
+│ ├── layout.css # Style bố cục
+│ ├── components.css # Style component
+│ └── style.css # Style chính (có thể lên đến hàng nghìn dòng)
 ├── js/
-│   └── main.js
+│ └── main.js
 └── images/
-    └── logo.png
+ └── logo.png
 ```
 
 **Đặc điểm**:
@@ -674,32 +674,32 @@ my-website/
 
 ```
 src/
-├── components/             # Thư mục component
-│   ├── Button/
-│   │   ├── Button.vue      # Template + Style + Logic
-│   │   └── Button.test.js
-│   ├── Header/
-│   │   └── Header.vue
-│   └── Footer/
-│       └── Footer.vue
-├── views/                  # Thư mục trang
-│   ├── Home.vue
-│   └── About.vue
-├── App.vue                 # Component gốc
-└── main.js                 # File entry
+├── components/ # Thư mục component
+│ ├── Button/
+│ │ ├── Button.vue # Template + Style + Logic
+│ │ └── Button.test.js
+│ ├── Header/
+│ │ └── Header.vue
+│ └── Footer/
+│ └── Footer.vue
+├── views/ # Thư mục trang
+│ ├── Home.vue
+│ └── About.vue
+├── App.vue # Component gốc
+└── main.js # File entry
 ```
 
 **Cấu trúc bên trong Button.vue**:
 ```vue
 <template>
-  <button class="btn">Nhấp</button>
+ <button class="btn">Nhấp</button>
 </template>
 
 <script>
 export default { name: 'Button' }
 </script>
 
-<style scoped>              <!-- Style scoped chỉ ảnh hưởng component hiện tại -->
+<style scoped> <!-- Style scoped chỉ ảnh hưởng component hiện tại -->
 .btn { background: #3b82f6; }
 </style>
 ```
@@ -710,19 +710,19 @@ export default { name: 'Button' }
 ```
 src/
 ├── assets/
-│   └── styles/
-│       ├── _variables.scss     # Biến: màu sắc, khoảng cách, v.v.
-│       ├── _mixins.scss        # Mixin: tái sử dụng khối code
-│       ├── _functions.scss     # Hàm: tính toán màu sắc, v.v.
-│       └── global.scss         # Entry style toàn cục
+│ └── styles/
+│ ├── _variables.scss # Biến: màu sắc, khoảng cách, v.v.
+│ ├── _mixins.scss # Mixin: tái sử dụng khối code
+│ ├── _functions.scss # Hàm: tính toán màu sắc, v.v.
+│ └── global.scss # Entry style toàn cục
 ├── components/
-│   ├── Button/
-│   │   └── Button.vue          # Trong component dùng @import để nhập biến
-│   └── Card/
-│       └── Card.vue
+│ ├── Button/
+│ │ └── Button.vue # Trong component dùng @import để nhập biến
+│ └── Card/
+│ └── Card.vue
 ├── views/
-│   ├── Home.vue
-│   └── About.vue
+│ ├── Home.vue
+│ └── About.vue
 ├── App.vue
 └── main.js
 ```
@@ -741,8 +741,8 @@ $spacing-md: 16px;
 @import '@/assets/styles/variables';
 
 .btn {
-  background: $primary;      // Dùng biến
-  padding: $spacing-md;
+ background: $primary; // Dùng biến
+ padding: $spacing-md;
 }
 </style>
 ```
@@ -753,26 +753,26 @@ $spacing-md: 16px;
 ```
 src/
 ├── components/
-│   ├── Button.vue          # Không cần khối style
-│   ├── Card.vue
-│   └── Header.vue
+│ ├── Button.vue # Không cần khối style
+│ ├── Card.vue
+│ └── Header.vue
 ├── views/
-│   ├── Home.vue
-│   └── About.vue
+│ ├── Home.vue
+│ └── About.vue
 ├── App.vue
 └── main.js
 
 # File cấu hình (thư mục gốc)
-tailwind.config.js          # Cấu hình theme
-tailwind.css                # Entry style cơ bản
+tailwind.config.js # Cấu hình theme
+tailwind.css # Entry style cơ bản
 ```
 
 **Button.vue** (không có khối style):
 ```vue
 <template>
-  <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded">
-    Nhấp
-  </button>
+ <button class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded">
+ Nhấp
+ </button>
 </template>
 ```
 
@@ -793,7 +793,7 @@ tailwind.css                # Entry style cơ bản
 | Vue + SCSS | Trong component + file chung `styles/` | Biến quản lý thống nhất | Mixin tái sử dụng |
 | Vue + Tailwind | Không có (trong tên class) | `tailwind.config.js` | Tổ hợp tên class |
 
-### 3.8 Làm sao để nhớ hết các thuộc tính CSS?
+### 3.8 Làm sao Chiến lược ghi nhớ thuộc tính CSS
 
 ::: tip 🎯 Bối rối của người mới
 
@@ -858,7 +858,7 @@ padding: 10px;
 **Phương pháp ghi nhớ**: `background` là viết tắt, có thể thiết lập nhiều giá trị cùng lúc:
 ```css
 background: #fff url(bg.jpg) no-repeat center/cover;
-/*          màu    ảnh       không lặp   vị trí/kích thước */
+/* màu ảnh không lặp vị trí/kích thước */
 ```
 
 **Bốn, Loại bố cục (quản lý phần tử sắp xếp như thế nào)**
@@ -912,7 +912,7 @@ transition: all 0.3s ease 0s;
 transform: translateX(10px) rotate(45deg) scale(1.1);
 ```
 
-#### Gặp thuộc tính không quen thì làm sao?
+#### Cách tiếp cận thuộc tính không quen thuộc
 
 **Cách 1: Đoán từ tiếng Anh**
 
@@ -973,13 +973,13 @@ Các thuộc tính khác dùng đến đâu tra đến đó, dùng nhiều tự 
 
 ## 4. JavaScript: Bộ não của trang web
 
-### 4.1 Tại sao cần JavaScript?
+### 4.1 Động lực của JavaScript
 
 Trang web chỉ có HTML + CSS, giống như **ma-nơ-canh trong tủ kính cửa hàng**:
 
 - ✅ Trông rất đẹp (CSS)
 - ✅ Cấu trúc rất rõ ràng (HTML)
-- ❌ Nhưng bạn nói chuyện với nó, nó không trả lời
+- ❌ Nhưng bạn giao tiếp với nó, nó không trả lời
 - ❌ Bạn nhấn nút, không có gì xảy ra
 
 **JavaScript** biến trang web từ "ma-nơ-canh" thành "người thật":
@@ -989,7 +989,7 @@ Trang web chỉ có HTML + CSS, giống như **ma-nơ-canh trong tủ kính cử
 - ✅ Cuộn trang, sẽ tải thêm nội dung
 - ✅ Gửi form, sẽ hiển thị "Đang gửi..."
 
-### 4.2 Code JavaScript trông như thế nào?
+### 4.2 Cấu trúc cơ bản của JavaScript
 
 **Khả năng 1: Ghi nhớ dữ liệu** (Biến)
 
@@ -1003,17 +1003,17 @@ let cartCount = 5
 
 ```javascript
 function sayHello(name) {
-  return 'Xin chào, ' + name + '!'
+ return 'Xin chào, ' + name + '!'
 }
 
-console.log(sayHello('Trương Tam'))  // Kết quả: Xin chào, Trương Tam!
+console.log(sayHello('Trương Tam')) // Kết quả: Xin chào, Trương Tam!
 ```
 
 **Khả năng 3: Phản hồi sự kiện** (Event Listener)
 
 ```javascript
 button.addEventListener('click', function() {
-  alert('Nút đã được nhấp!')
+ alert('Nút đã được nhấp!')
 })
 ```
 
@@ -1024,61 +1024,61 @@ document.getElementById('title').textContent = 'Tiêu đề mới'
 document.getElementById('box').style.background = 'red'
 ```
 
-### 4.3 Làm sao để đọc hiểu code JavaScript?
+### 4.3 Làm sao Cách đọc hiểu JavaScript
 
 ::: tip 🎯 Người mới bắt đầu phải đọc: Phương pháp đọc code JS
 
 **Bước 1: Tìm biến — "Đã ghi nhớ cái gì?"**
 
 ```javascript
-const API_URL = 'https://api.example.com'  // Hằng số, không thay đổi
-let count = 0                                // Biến, sẽ thay đổi
+const API_URL = 'https://api.example.com' // Hằng số, không thay đổi
+let count = 0 // Biến, sẽ thay đổi
 const user = { name: 'Trương Tam', age: 25 } // Object, nhiều dữ liệu
-const items = ['Táo', 'Chuối', 'Cam']        // Mảng, dữ liệu danh sách
+const items = ['Táo', 'Chuối', 'Cam'] // Mảng, dữ liệu danh sách
 ```
 
 **Bước 2: Tìm hàm — "Có thể làm gì?"**
 
 ```javascript
 // Tên hàm thường đoán được công dụng
-function handleClick() { }      // Xử lý nhấp
-function fetchData() { }        // Lấy dữ liệu
-function validateForm() { }     // Xác thực form
+function handleClick() { } // Xử lý nhấp
+function fetchData() { } // Lấy dữ liệu
+function validateForm() { } // Xác thực form
 ```
 
 **Bước 3: Tìm sự kiện — "Khi nào kích hoạt?"**
 
 ```javascript
-button.addEventListener('click', handleClick)     // Khi nhấp
-input.addEventListener('input', validateForm)     // Khi nhập
-window.addEventListener('scroll', loadMore)       // Khi cuộn
+button.addEventListener('click', handleClick) // Khi nhấp
+input.addEventListener('input', validateForm) // Khi nhập
+window.addEventListener('scroll', loadMore) // Khi cuộn
 ```
 
 **Bước 4: Tìm thao tác DOM — "Đã sửa cái gì?"**
 
 ```javascript
-element.textContent = 'Nội dung mới'     // Sửa văn bản
-element.classList.add('active')          // Thêm class style
-element.style.display = 'none'           // Ẩn phần tử
-parent.appendChild(child)                // Thêm phần tử
+element.textContent = 'Nội dung mới' // Sửa văn bản
+element.classList.add('active') // Thêm class style
+element.style.display = 'none' // Ẩn phần tử
+parent.appendChild(child) // Thêm phần tử
 ```
 :::
 
-### 4.4 DOM: JavaScript thao tác trang như thế nào?
+### 4.4 DOM: Cách thao tác DOM với JavaScript
 
 Sau khi đọc code HTML, trình duyệt không coi chúng là một đống chuỗi, mà vẽ chúng thành một "cây" trong bộ nhớ:
 
 ```
 Document (Tài liệu)
-    ↓
+ ↓
 <html>
-    ├─<head>
-    │   └─<title>Trang web của tôi</title>
-    └─<body>
-        ├─<h1>Chào mừng</h1>
-        └─<div class="card">
-            ├─<img src="photo.jpg">
-            └─<p>Một đoạn văn bản</p>
+ ├─<head>
+ │ └─<title>Trang web của tôi</title>
+ └─<body>
+ ├─<h1>Chào mừng</h1>
+ └─<div class="card">
+ ├─<img src="photo.jpg">
+ └─<p>Một đoạn văn bản</p>
 ```
 
 Cây này được gọi là **cây DOM**. Mỗi thẻ HTML là một "nút" trên cây này.
@@ -1090,13 +1090,13 @@ Cây này được gọi là **cây DOM**. Mỗi thẻ HTML là một "nút" tr�
 const element = document.getElementById('header')
 
 // Tìm theo selector (dùng nhiều nhất)
-const element = document.querySelector('.card h2')    // Tìm cái đầu tiên
-const elements = document.querySelectorAll('button')  // Tìm tất cả
+const element = document.querySelector('.card h2') // Tìm cái đầu tiên
+const elements = document.querySelectorAll('button') // Tìm tất cả
 
 // Tìm theo quan hệ
-element.parentNode           // Tìm nút cha
-element.children             // Tìm nút con
-element.nextElementSibling   // Tìm anh em kế tiếp
+element.parentNode // Tìm nút cha
+element.children // Tìm nút con
+element.nextElementSibling // Tìm anh em kế tiếp
 ```
 
 **Cảnh báo hiệu năng**: Thao tác DOM rất **đắt**. Mỗi lần sửa DOM, trình duyệt đều phải tính toán lại bố cục, vẽ lại.
@@ -1104,13 +1104,13 @@ element.nextElementSibling   // Tìm anh em kế tiếp
 ```javascript
 // ❌ Kém hiệu quả: Lặp 1000 lần, mỗi lần đều thao tác DOM
 for (let i = 0; i < 1000; i++) {
-  document.body.appendChild(createDiv())
+ document.body.appendChild(createDiv())
 }
 
 // ✅ Hiệu quả: Ghép xong trước, chèn một lần
 const fragment = document.createDocumentFragment()
 for (let i = 0; i < 1000; i++) {
-  fragment.appendChild(createDiv())
+ fragment.appendChild(createDiv())
 }
 document.body.appendChild(fragment)
 ```
@@ -1125,7 +1125,7 @@ document.body.appendChild(fragment)
 
 **ECMAScript** là "sách tiêu chuẩn" của JavaScript. Các nhà sản xuất trình duyệt triển khai JavaScript engine theo tiêu chuẩn này.
 
-#### Tại sao cần có số phiên bản?
+#### Động lực của phiên bản mã nguồn
 
 JavaScript không phải là bất biến. Mỗi năm đều có thêm tính năng mới, sửa lỗi. Số phiên bản cho bạn biết "trình duyệt này hỗ trợ những tính năng nào".
 
@@ -1150,20 +1150,20 @@ JavaScript không phải là bất biến. Mỗi năm đều có thêm tính nă
 // ❌ Cách viết cũ: var có hoisting, dễ gây bug
 var name = 'Trương Tam'
 if (true) {
-  var name = 'Lý Tứ'  // Ghi đè name bên ngoài
+ var name = 'Lý Tứ' // Ghi đè name bên ngoài
 }
-console.log(name)  // 'Lý Tứ', không phải kết quả mong đợi
+console.log(name) // 'Lý Tứ', không phải kết quả mong đợi
 
 // ✅ Cách viết mới: let có block scope
 let name = 'Trương Tam'
 if (true) {
-  let name = 'Lý Tứ'  // Chỉ có hiệu lực trong if này
+ let name = 'Lý Tứ' // Chỉ có hiệu lực trong if này
 }
-console.log(name)  // 'Trương Tam', đúng như mong đợi
+console.log(name) // 'Trương Tam', đúng như mong đợi
 
 // ✅ const: Sau khi khai báo không thể gán lại
 const PI = 3.14159
-PI = 3  // Báo lỗi! Ngăn sửa đổi ngoài ý muốn
+PI = 3 // Báo lỗi! Ngăn sửa đổi ngoài ý muốn
 ```
 
 **2. Arrow function: Cách viết hàm gọn gàng hơn**
@@ -1171,7 +1171,7 @@ PI = 3  // Báo lỗi! Ngăn sửa đổi ngoài ý muốn
 ```javascript
 // ❌ Cách viết cũ
 const add = function(a, b) {
-  return a + b
+ return a + b
 }
 
 // ✅ Cách viết mới
@@ -1179,19 +1179,19 @@ const add = (a, b) => a + b
 
 // This của arrow function ràng buộc với scope ngoài
 const obj = {
-  name: 'Trương Tam',
-  // ❌ Hàm thường: this trỏ đến caller
-  oldWay: function() {
-    setTimeout(function() {
-      console.log(this.name)  // undefined
-    }, 100)
-  },
-  // ✅ Arrow function: this kế thừa từ obj
-  newWay: function() {
-    setTimeout(() => {
-      console.log(this.name)  // 'Trương Tam'
-    }, 100)
-  }
+ name: 'Trương Tam',
+ // ❌ Hàm thường: this trỏ đến caller
+ oldWay: function() {
+ setTimeout(function() {
+ console.log(this.name) // undefined
+ }, 100)
+ },
+ // ✅ Arrow function: this kế thừa từ obj
+ newWay: function() {
+ setTimeout(() => {
+ console.log(this.name) // 'Trương Tam'
+ }, 100)
+ }
 }
 ```
 
@@ -1200,19 +1200,19 @@ const obj = {
 ```javascript
 // Destructuring object
 const user = { name: 'Trương Tam', age: 25, city: 'Bắc Kinh' }
-const { name, age } = user  // Trích xuất trực tiếp
-console.log(name)  // 'Trương Tam'
+const { name, age } = user // Trích xuất trực tiếp
+console.log(name) // 'Trương Tam'
 
 // Destructuring mảng
 const colors = ['red', 'green', 'blue']
 const [first, second] = colors
-console.log(first)  // 'red'
+console.log(first) // 'red'
 
 // Destructuring tham số hàm
 function greet({ name, age }) {
-  console.log(`${name} năm nay ${age} tuổi`)
+ console.log(`${name} năm nay ${age} tuổi`)
 }
-greet(user)  // 'Trương Tam năm nay 25 tuổi'
+greet(user) // 'Trương Tam năm nay 25 tuổi'
 ```
 
 **4. Template string: Nối chuỗi không còn đau khổ**
@@ -1226,10 +1226,10 @@ const msg = `Người dùng ${name} có tuổi là ${age} tuổi`
 
 // Còn hỗ trợ nhiều dòng
 const html = `
-  <div class="card">
-    <h2>${name}</h2>
-    <p>Tuổi: ${age}</p>
-  </div>
+ <div class="card">
+ <h2>${name}</h2>
+ <p>Tuổi: ${age}</p>
+ </div>
 `
 ```
 
@@ -1238,19 +1238,19 @@ const html = `
 ```javascript
 // ❌ Callback hell
 fetchUser(function(user) {
-  fetchOrders(user.id, function(orders) {
-    fetchDetails(orders[0].id, function(details) {
-      console.log(details)
-    })
-  })
+ fetchOrders(user.id, function(orders) {
+ fetchDetails(orders[0].id, function(details) {
+ console.log(details)
+ })
+ })
 })
 
 // ✅ async/await
 async function getUserData() {
-  const user = await fetchUser()
-  const orders = await fetchOrders(user.id)
-  const details = await fetchDetails(orders[0].id)
-  console.log(details)
+ const user = await fetchUser()
+ const orders = await fetchOrders(user.id)
+ const details = await fetchDetails(orders[0].id)
+ console.log(details)
 }
 ```
 
@@ -1258,10 +1258,10 @@ async function getUserData() {
 
 ```javascript
 const user = {
-  name: 'Trương Tam',
-  address: {
-    city: 'Bắc Kinh'
-  }
+ name: 'Trương Tam',
+ address: {
+ city: 'Bắc Kinh'
+ }
 }
 
 // ❌ Cách viết cũ: Kiểm tra từng lớp
@@ -1281,19 +1281,19 @@ const streetName = user?.address?.street ?? 'Không rõ'
 
 ### 4.6 TypeScript: Thêm ràng buộc kiểu cho JavaScript
 
-#### Tại sao cần TypeScript?
+#### Động lực của TypeScript trong Frontend
 
 **Tình huống 1: Kiểu tham số hàm không xác định**
 
 ```javascript
 // JavaScript
 function calculateTotal(price, quantity) {
-  return price * quantity
+ return price * quantity
 }
 
-calculateTotal(100, 5)      // 500 ✅
-calculateTotal('100', 5)    // '1005' ❌ Nối chuỗi, không phải phép nhân
-calculateTotal(100, '5')    // 500 ✅ Nhưng đây là may mắn
+calculateTotal(100, 5) // 500 ✅
+calculateTotal('100', 5) // '1005' ❌ Nối chuỗi, không phải phép nhân
+calculateTotal(100, '5') // 500 ✅ Nhưng đây là may mắn
 ```
 
 JavaScript sẽ không cho bạn biết kiểu tham số sai, đến khi chạy mới phát hiện vấn đề.
@@ -1303,11 +1303,11 @@ JavaScript sẽ không cho bạn biết kiểu tham số sai, đến khi chạy 
 ```javascript
 // JavaScript
 const user = {
-  name: 'Trương Tam',
-  age: 25
+ name: 'Trương Tam',
+ age: 25
 }
 
-console.log(user.nmae)  // undefined, sai chính tả nhưng không báo lỗi
+console.log(user.nmae) // undefined, sai chính tả nhưng không báo lỗi
 ```
 
 **TypeScript giải quyết những vấn đề này**:
@@ -1315,18 +1315,18 @@ console.log(user.nmae)  // undefined, sai chính tả nhưng không báo lỗi
 ```typescript
 // TypeScript
 interface User {
-  name: string
-  age: number
+ name: string
+ age: number
 }
 
 function greet(user: User) {
-  console.log(`Xin chào, ${user.name}`)
-  console.log(user.nmae)  // ❌ Lỗi khi biên dịch: Thuộc tính 'nmae' không tồn tại
+ console.log(`Xin chào, ${user.name}`)
+ console.log(user.nmae) // ❌ Lỗi khi biên dịch: Thuộc tính 'nmae' không tồn tại
 }
 
-greet({ name: 'Trương Tam', age: 25 })        // ✅
-greet({ name: 'Trương Tam', age: '25' })      // ❌ Lỗi khi biên dịch: age phải là number
-greet({ name: 'Trương Tam' })                 // ❌ Lỗi khi biên dịch: Thiếu age
+greet({ name: 'Trương Tam', age: 25 }) // ✅
+greet({ name: 'Trương Tam', age: '25' }) // ❌ Lỗi khi biên dịch: age phải là number
+greet({ name: 'Trương Tam' }) // ❌ Lỗi khi biên dịch: Thiếu age
 ```
 
 #### Khái niệm cốt lõi của TypeScript
@@ -1337,41 +1337,41 @@ greet({ name: 'Trương Tam' })                 // ❌ Lỗi khi biên dịch: T
 let name: string = 'Trương Tam'
 let age: number = 25
 let isActive: boolean = true
-let anyValue: any = 'Có thể là bất kỳ kiểu nào'  // Không khuyến nghị, mất ý nghĩa kiểm tra kiểu
+let anyValue: any = 'Có thể là bất kỳ kiểu nào' // Không khuyến nghị, mất ý nghĩa kiểm tra kiểu
 ```
 
 **2. Interface: Định nghĩa cấu trúc object**
 
 ```typescript
 interface Product {
-  id: number
-  name: string
-  price: number
-  discount?: number  // Thuộc tính tùy chọn
-  readonly createdAt: Date  // Thuộc tính chỉ đọc
+ id: number
+ name: string
+ price: number
+ discount?: number // Thuộc tính tùy chọn
+ readonly createdAt: Date // Thuộc tính chỉ đọc
 }
 
 const product: Product = {
-  id: 1,
-  name: 'iPhone 15',
-  price: 6999,
-  createdAt: new Date()
+ id: 1,
+ name: 'iPhone 15',
+ price: 6999,
+ createdAt: new Date()
 }
 ```
 
 **3. Type Alias**
 
 ```typescript
-type ID = string | number  // Union type
-type Status = 'pending' | 'approved' | 'rejected'  // Literal type
+type ID = string | number // Union type
+type Status = 'pending' | 'approved' | 'rejected' // Literal type
 
 function updateStatus(id: ID, status: Status) {
-  // ...
+ // ...
 }
 
-updateStatus(1, 'approved')      // ✅
-updateStatus('abc', 'pending')   // ✅
-updateStatus(1, 'processing')    // ❌ 'processing' không phải Status hợp lệ
+updateStatus(1, 'approved') // ✅
+updateStatus('abc', 'pending') // ✅
+updateStatus(1, 'processing') // ❌ 'processing' không phải Status hợp lệ
 ```
 
 **4. Generic: Kiểu có thể tái sử dụng**
@@ -1379,19 +1379,19 @@ updateStatus(1, 'processing')    // ❌ 'processing' không phải Status hợp 
 ```typescript
 // Không dùng generic: Mỗi kiểu viết một lần
 function getFirstNumber(arr: number[]): number {
-  return arr[0]
+ return arr[0]
 }
 function getFirstString(arr: string[]): string {
-  return arr[0]
+ return arr[0]
 }
 
 // Dùng generic: Một hàm xử lý tất cả
 function getFirst<T>(arr: T[]): T {
-  return arr[0]
+ return arr[0]
 }
 
-getFirst([1, 2, 3])        // Trả về number
-getFirst(['a', 'b', 'c'])  // Trả về string
+getFirst([1, 2, 3]) // Trả về number
+getFirst(['a', 'b', 'c']) // Trả về string
 ```
 
 #### So sánh TypeScript vs JavaScript
@@ -1409,27 +1409,27 @@ getFirst(['a', 'b', 'c'])  // Trả về string
 ```typescript
 // Định nghĩa kiểu response API
 interface ApiResponse<T> {
-  code: number
-  message: string
-  data: T
+ code: number
+ message: string
+ data: T
 }
 
 interface User {
-  id: number
-  name: string
-  email: string
+ id: number
+ name: string
+ email: string
 }
 
 // API request có kiểu
 async function fetchUser(id: number): Promise<ApiResponse<User>> {
-  const response = await fetch(`/api/users/${id}`)
-  return response.json()
+ const response = await fetch(`/api/users/${id}`)
+ return response.json()
 }
 
 // Khi sử dụng IDE sẽ gợi ý tất cả thuộc tính
 fetchUser(1).then(res => {
-  console.log(res.data.name)   // ✅ IDE tự động hoàn thành
-  console.log(res.data.nmae)   // ❌ Lỗi khi biên dịch
+ console.log(res.data.name) // ✅ IDE tự động hoàn thành
+ console.log(res.data.nmae) // ❌ Lỗi khi biên dịch
 })
 ```
 
@@ -1500,48 +1500,48 @@ npm run build
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    /* CSS: Làm card đẹp */
-    .card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 16px;
-      max-width: 300px;
-    }
-    .card button {
-      background: #3b82f6;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-  </style>
+ <style>
+ /* CSS: Làm card đẹp */
+ .card {
+ border: 1px solid #ddd;
+ border-radius: 8px;
+ padding: 16px;
+ max-width: 300px;
+ }
+ .card button {
+ background: #3b82f6;
+ color: white;
+ border: none;
+ padding: 8px 16px;
+ border-radius: 4px;
+ cursor: pointer;
+ }
+ </style>
 </head>
 <body>
-  <!-- HTML: Định nghĩa cấu trúc card -->
-  <div class="card">
-    <h2 id="title">Nhấp nút</h2>
-    <button id="btn">Nhấp tôi</button>
-  </div>
+ <!-- HTML: Định nghĩa cấu trúc card -->
+ <div class="card">
+ <h2 id="title">Nhấp nút</h2>
+ <button id="btn">Nhấp tôi</button>
+ </div>
 
-  <script>
-    // JavaScript: Làm nút có thể nhấp
-    const btn = document.getElementById('btn')
-    const title = document.getElementById('title')
+ <script>
+ // JavaScript: Làm nút có thể nhấp
+ const btn = document.getElementById('btn')
+ const title = document.getElementById('title')
 
-    btn.addEventListener('click', function() {
-      title.textContent = 'Đã nhấp!'
-      alert('Tiêu đề đã thay đổi')
-    })
-  </script>
+ btn.addEventListener('click', function() {
+ title.textContent = 'Đã nhấp!'
+ alert('Tiêu đề đã thay đổi')
+ })
+ </script>
 </body>
 </html>
 ```
 
 ---
 
-## 6. Gặp code không quen thì làm sao?
+## 6. Cách tiếp cận code không quen
 
 ### 6.1 Hỏi AI
 

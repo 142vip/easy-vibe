@@ -1,4 +1,4 @@
-# Die Kunst des Debuggens
+# Debugging-Prinzipien und Methodik
 
 ::: tip Vorwort
 **Der Code ist fertig, aber beim Ausfählen gibt es einen Fehler — und jetzt?** Viele Anfänger bleiben an diesem Punkt stecken und starren ratlos auf den Bildschirm. Debugging ist eine der wichtigsten Kernkompetenzen in der Programmierung — sogar wichtiger als das Schreiben von Code selbst. Denn das Schreiben von Code macht nur 30 % der Entwicklungszeit aus, die restlichen 70 % entfallen auf das Verstehen von Problemen, das Lokalisieren von Bugs und das Verifizieren von Fixes.
@@ -283,7 +283,7 @@ print(f"Typ: {type(data)}")  # Datentyp prüfen
 
 KI-Tools (ChatGPT, Claude, Cursor usw.) können den Debugging-Prozess erheblich beschleunigen — vorausgesetzt, man weiß, wie man sie einsetzt.
 
-### 4.1 Was kann die KI gut — und was nicht?
+### 4.1 Was kann die KI gut — und was nicht
 
 | KI kann gut | KI kann nicht gut |
 |--------|----------|

@@ -1,4 +1,4 @@
-# Multimodal Models (Vision / Audio / Video)
+# Principles of Multimodal Models: Vision, Audio, and Video
 > 💡 **Learning Guide**: This chapter requires no deep background in computer vision. Through interactive demonstrations, you'll understand how AI gains the ability to "see." We'll uncover the core principles behind models like GPT-4V and Qwen-VL.
 
 <VlmQuickStartDemo />
@@ -124,7 +124,7 @@ A typical VLM entity operates through the coordinated effort of three major comp
 
 ---
 
-## 4. How Does It Learn to See? (Training)
+## 4. Method for learning to See (Training)
 
 Alright, now the body parts are stitched together. But before it can go live, a freshly assembled VLM is actually in a newborn-like state of "blindness and chaos" — because the newly added optic nerve (Projector) is a blank slate filled with meaningless random values.
 

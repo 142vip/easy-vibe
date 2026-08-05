@@ -1,4 +1,4 @@
-# Authentifizierungs- und Autorisierungssystem
+# Authentifizierung und Autorisierung: Prinzipien
 > 💡 **Lernleitfaden**: Dieses Kapitel führt dich tief in das "Zugangskontrollsystem" des Backends ein – Authentifizierung und Autorisierung. Wir beginnen mit der grundlegendsten Frage "Wer bist du?" und arbeiten uns Schritt für Schritt durch moderne Authentifizierungslösungen wie Session, JWT und OAuth 2.0.
 
 <AuthEvolutionDemo />
@@ -16,7 +16,7 @@ Stell dir das Backend-System wie ein großes Gebäude vor:
 - **Authentifizierung (Authentication)**: Bestätigt "Wer bist du?" (Ausweis/Zugangskarte überprüfen).
 - **Autorisierung (Authorization)**: Bestätigt "Wohin darfst du gehen?" (VIPs dürfen in die VIP-Lounge, normale Benutzer nicht).
 
-### 0.1 Warum Authentifizierung?
+### 0.1 Warum Authentifizierung
 
 Es gibt nur einen Grund: **Ressourcen schützen**.
 
@@ -38,7 +38,7 @@ Lass uns anhand einer realistischen Login-Demo verstehen, wie Authentifizierung 
 
 ## 1. Grundkonzepte: Authentifizierung vs. Autorisierung
 
-### 1.1 Authentifizierung (Authentication): Wer bist du?
+### 1.1 Authentifizierung (Authentication): Wer bist du
 
 Bestätigt die Identität des Benutzers.
 
@@ -46,7 +46,7 @@ Bestätigt die Identität des Benutzers.
 - _Ausgabe_: Ein Token, das "dich" repräsentiert.
 - _Englische Abkürzung_: **AuthN**
 
-### 1.2 Autorisierung (Authorization): Was darfst du tun?
+### 1.2 Autorisierung (Authorization): Berechtigungsfestlegung
 
 Bestätigt, welche Berechtigungen ein Benutzer hat.
 

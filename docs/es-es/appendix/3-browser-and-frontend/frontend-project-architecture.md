@@ -1,4 +1,4 @@
-# Diseño de Arquitectura de Proyectos Frontend
+# Principios de arquitectura de proyectos frontend
 
 ::: tip 🎯 Pregunta Central
 **Desde una simple página HTML hasta una aplicación empresarial compleja, ¿cómo elegir la arquitectura adecuada para proyectos de diferentes escalas?** Es como preguntar: desde un estudio hasta un gran centro comercial, ¿cómo diseñar diferentes distribuciones de espacio según las necesidades? Una buena arquitectura debe evolucionar con el crecimiento del proyecto, sin sobrediseñar desde el principio.
@@ -513,7 +513,7 @@ Fase 3: Modularización por funcionalidad (organización por funcionalidad)
 Fase 4: Arquitectura micro-frontend (Monorepo)
 ```
 
-### 6.2 ¿Cuándo actualizar la arquitectura?
+### 6.2 Criterios de actualizar la arquitectura
 
 | Señal | Descripción | Sugerencia |
 |------|------|------|

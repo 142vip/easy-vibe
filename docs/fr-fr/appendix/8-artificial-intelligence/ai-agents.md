@@ -1,9 +1,9 @@
-# Agent IA et appel d'outils
+# Principes : Agents IA et invocation d'outils
 > 💡 **Guide d'apprentissage** : Ce chapitre ne nécessite aucune connaissance en programmation. Grâce à des démonstrations interactives, vous découvrirez en profondeur le fonctionnement des Agents IA (agents intelligents). Nous partirons des bases de l'"appel d'outils" jusqu'à la manière dont un Agent planifie, mémorise et collabore.
 
 <AgentQuickStartDemo />
 
-## 0. Introduction : de "parler" à "agir"
+## 0. Introduction : de "communication" à "agir"
 
 Vous avez certainement déjà utilisé des chatbots comme ChatGPT ou Claude. Ils sont puissants, mais présentent une limitation évidente :
 
@@ -16,7 +16,7 @@ ChatGPT : Je ne peux pas obtenir les données météo en temps réel. Je vous su
 
 ChatGPT est comme un **sage au savoir encyclopédique mais à mobilité réduite** — il sait beaucoup de choses, mais ne peut effectuer aucune action concrète pour vous.
 
-### 0.1 Défi central : comment faire passer l'IA du "chat" à "l'action" ?
+### 0.1 Défi central : comment faire passer l'IA du "chat" à "l'action"
 
 Pour atteindre cet objectif, nous devons résoudre trois défis fondamentaux :
 
@@ -34,7 +34,7 @@ Les ordinateurs peuvent faire beaucoup de choses : rechercher sur le web, exécu
 
 Mais un LLM n'a **pas** ces capacités en soi. Sa seule capacité fondamentale est : **générer du texte**.
 
-### 1.1 Pourquoi un LLM ne peut-il pas exécuter directement des actions ?
+### 1.1 Pourquoi un LLM ne peut-il pas exécuter directement des actions
 
 Un LLM est un **processeur de texte pur** :
 
@@ -75,7 +75,7 @@ Le LLM génère la réponse finale : "Aujourd'hui à Paris, le temps est ensolei
 
 ---
 
-## 2. Problème central : comment accomplir des tâches complexes ?
+## 2. Problème central : comment accomplir des tâches complexes
 
 L'appel d'outils donne au LLM une "capacité d'action", mais les tâches réelles sont souvent complexes :
 
@@ -90,7 +90,7 @@ Cette tâche comprend plusieurs étapes :
 4.  Organiser et analyser
 5.  Rédiger le rapport
 
-### 2.1 Pourquoi la planification est-elle nécessaire ?
+### 2.1 Pourquoi la planification est-elle nécessaire
 
 Si l'on demande au LLM de générer un rapport "en une seule fois", le résultat est souvent :
 
@@ -121,7 +121,7 @@ Les humains peuvent se souvenir de choses lointaines, mais la "mémoire" d'un LL
 -   **Isolation des sessions** : chaque conversation repart de zéro
 -   **Pas de persistance** : "amnésie" dès que la page est fermée
 
-### 3.1 Pourquoi la mémoire est-elle nécessaire ?
+### 3.1 Pourquoi la mémoire est-elle nécessaire
 
 Imaginez ce scénario :
 

@@ -1,4 +1,4 @@
-# Système d'authentification et d'autorisation
+# Principes : Authentification et autorisation
 > 💡 **Guide d'apprentissage** : Ce chapitre vous plonge dans le « système de contrôle d'accès » des systèmes backend — l'authentification et l'autorisation. Nous commencerons par la question fondamentale « Qui es-tu ? » et progresserons pas à pas à travers les solutions modernes comme Session, JWT et OAuth 2.0.
 
 <AuthEvolutionDemo />
@@ -16,7 +16,7 @@ Si l'on compare un système backend à un immeuble :
 - **Authentification (Authentication)** : Confirmer « qui vous êtes » (vérifier une carte d'identité / un badge d'accès).
 - **Autorisation (Authorization)** : Confirmer « où vous pouvez aller » (les VIP peuvent entrer dans le salon VIP, les utilisateurs ordinaires non).
 
-### 0.1 Pourquoi l'authentification est-elle nécessaire ?
+### 0.1 Pourquoi l'authentification est-elle nécessaire
 
 Il n'y a qu'une seule raison : **protéger les ressources**.
 
@@ -38,7 +38,7 @@ Découvrons comment fonctionnent l'authentification et l'autorisation à travers
 
 ## 1. Concepts fondamentaux : Authentification vs Autorisation
 
-### 1.1 Authentification (Authentication) : Qui êtes-vous ?
+### 1.1 Authentification (Authentication) : Qui êtes-vous
 
 Confirmer l'identité de l'utilisateur.
 
@@ -46,7 +46,7 @@ Confirmer l'identité de l'utilisateur.
 - _Résultat_ : Un jeton (Token) qui vous représente.
 - _Abréviation anglaise_ : **AuthN**
 
-### 1.2 Autorisation (Authorization) : Que pouvez-vous faire ?
+### 1.2 Autorisation (Authorization) : Que pouvez-vous faire
 
 Confirmer les permissions de l'utilisateur.
 

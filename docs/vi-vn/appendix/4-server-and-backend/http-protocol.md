@@ -15,7 +15,7 @@
 | Yếu tố hội thoại | Tương ứng trong HTTP | Giải thích |
 | :--- | :--- | :--- |
 | Ngôn ngữ | Giao thức HTTP | Ngôn ngữ mà cả hai bên đều hiểu |
-| Ngữ pháp | Định dạng request/response | Cách "nói chuyện" |
+| Ngữ pháp | Định dạng request/response | Cách "giao tiếp" |
 | Quy trình | Mô hình request-response | Một hỏi một đáp |
 | Kết thúc | Ngắt kết nối | Đóng kết nối TCP |
 

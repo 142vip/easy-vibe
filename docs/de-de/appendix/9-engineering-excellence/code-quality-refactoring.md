@@ -39,7 +39,7 @@ Martin Fowler sagte in seinem Buch „Refactoring": **„Jeder Narr kann Code sc
 
 ## 1. Code-Smells: Häufige Probleme erkennen
 
-### 1.1 Was sind Code-Smells?
+### 1.1 Was sind Code-Smells
 
 Das Konzept der „Code-Smells" wurde von Kent Beck geprägt. Es bezeichnet Merkmale im Code, die **keine Bugs sind, aber auf tieferliegende Designprobleme hinweisen**. Wie ein seltsamer Geruch in einem Raum — er macht Sie nicht sofort krank, zeigt aber, dass irgendwo geputzt werden muss.
 
@@ -66,7 +66,7 @@ Code-Smells sind keine „Fehler", sondern „Signale". Sie sagen Ihnen: Das Des
 
 ## 2. Refactoring-Techniken: Code sicher verbessern
 
-### 2.1 Was ist Refactoring?
+### 2.1 Was ist Refactoring
 
 Die Definition von Refactoring ist sehr präzise: **Die interne Struktur des Codes verbessern, ohne sein externes Verhalten zu ändern.**
 
@@ -150,7 +150,7 @@ Das größte Risiko beim Refactoring ist, „dabei versehentlich Bugs einzubauen
 
 ## 3. Code-Review: Qualitätssicherung in der Teamarbeit
 
-### 3.1 Warum ist Code-Review notwendig?
+### 3.1 Warum ist Code-Review notwendig
 
 Code-Review ist eines der effektivsten Qualitätssicherungsmittel in einem Team. Sein Wert liegt nicht nur im Finden von Bugs:
 
@@ -159,7 +159,7 @@ Code-Review ist eines der effektivsten Qualitätssicherungsmittel in einem Team.
 - **Früherkennung von Designproblemen**: Schwerer zu beheben als Bugs sind schlechte Architekturentscheidungen
 - **Gegenseitiges Lernen**: Den Code anderer zu lesen ist ein Abkürzung zur Verbesserung der Programmierfähigkeiten
 
-### 3.2 Was wird reviewed?
+### 3.2 Was wird reviewed
 
 | Dimension | Fokus |
 |------|--------|

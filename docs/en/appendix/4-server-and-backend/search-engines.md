@@ -1,4 +1,4 @@
-# Search Engine Fundamentals
+# Principles of Search Engines
 
 ::: tip Introduction
 **You search for "red dress" on Taobao and find the most relevant results from billions of products in 0.1 seconds — how is this possible?** Search engines are one of the internet's most critical infrastructure components. From Google to e-commerce site search, the core principles are the same: inverted index + relevance ranking.
@@ -24,7 +24,7 @@ After reading this chapter, you will gain:
 
 ---
 
-## 0. The Big Picture: What Is the Essence of Search?
+## 0. The Big Picture: Overview of the Essence of Search
 
 The essence of search is an **information retrieval** problem: given a query, find the most relevant results from a massive collection of documents and return them sorted by relevance.
 
@@ -81,7 +81,7 @@ Tokenization is just one step in text analysis. The complete pipeline includes:
 
 ---
 
-## 3. Relevance Ranking: Which Result Is Most "Relevant"?
+## 3. Relevance Ranking: Which Result Overview of Most "Relevant"
 
 Finding matching documents is just the first step; more importantly, **ranking** — placing the most relevant results at the top.
 

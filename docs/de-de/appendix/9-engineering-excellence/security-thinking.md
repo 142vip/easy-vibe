@@ -1,4 +1,4 @@
-# Sicherheitsdenken und Grundlagen der Angriffs- und Verteidigung
+# Security-Denken: Sicherheitsprinzipien
 
 ::: tip Vorwort
 **Ist Ihre Website sicher?** Viele Entwickler denken, „Sicherheit ist Sache des Sicherheitsteams", bis das eigene Projekt angegriffen wird und Benutzerdaten geleakt sind. Sicherheit ist keine Option, sondern eine Grundkompetenz jedes Entwicklers.
@@ -19,7 +19,7 @@ Nach diesem Kapitel werden Sie ein grundlegendes Sicherheitsbewusstsein besitzen
 
 ---
 
-## 0. Überblick: Warum müssen Entwickler Sicherheit verstehen?
+## 0. Überblick: Motivation von müssen Entwickler Sicherheit verstehen
 
 Stellen Sie sich vor, Sie haben ein Haus gebaut — voll funktionsfähig und schön eingerichtet, aber Sie haben vergessen, Schlösser einzubauen. Sicherheitslücken sind die „vergessenen Schlösser" in der Code-Welt.
 

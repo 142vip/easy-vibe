@@ -1,4 +1,5 @@
-# リアルタイム通信メカニズム（Polling / SSE / WebSocket）
+# リアルタイム通信：Polling・SSE・WebSocket の比較
+
 
 ::: tip 核心ガイド
 **ブラウザはどのようにデータのリアルタイム更新を実現しているのか？**

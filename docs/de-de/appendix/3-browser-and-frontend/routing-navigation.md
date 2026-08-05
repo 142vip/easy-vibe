@@ -1,11 +1,11 @@
-# Routing & Navigation
+# Routing und Navigation: Seitensteuerung
 ::: tip 🎯 Kernfrage
 **Warum flackern manche Websites beim Seitenwechsel nicht weiß auf, sondern fühlen sich so flüssig an wie eine App?** Das ist die Magie des Frontend-Routings. Dieses Kapitel führt dich von der traditionellen „Umblätter-Navigation" klassischer Websites in die Welt der „Folienwechsel" von Single-Page-Applications und zeigt, wie Frontend-Routing das Nutzererlebnis auf ein neues Level hebt.
 :::
 
 ---
 
-## 1. Warum „Frontend-Routing"?
+## 1. Warum „Frontend-Routing"
 
 ### 1.1 Von traditionellen Websites zu Single-Page-Applications: Der qualitative Sprung im Nutzererlebnis
 
@@ -38,7 +38,7 @@ Die moderne Frontend-Entwicklung hat dieses Modell grundlegend verändert. Mit F
 
 <RouteMatchingDemo />
 
-### 1.2 Eine wahre Stolperstein-Geschichte: Warum du Routing-Modi verstehen musst
+### 1.2 Eine wahre Stolperstein-Geschichte: Motivation von du Routing-Modi verstehen musst
 
 Du könntest sagen: „Ich benutze einfach Vue Router oder React Router, konfiguriere es und es funktioniert – warum muss ich die zugrundeliegenden Prinzipien verstehen?" Lass mich eine wahre Geschichte erzählen, und du wirst verstehen, warum dieses Wissen so wichtig ist.
 
@@ -535,7 +535,7 @@ Der Kern dieser Phase ist „isomorphes Rendering" – das erste Rendering erfol
 
 ---
 
-## 4. Funktionsweise im Detail: Wie funktioniert Routing?
+## 4. Funktionsweise im Detail: Ansatz für funktioniert Routing
 
 Nachdem wir praktische Fälle betrachtet haben, tauchen wir tiefer in die Funktionsweise des Frontend-Routings ein und verstehen, worin sich Hash- und History-Modus tatsächlich unterscheiden.
 

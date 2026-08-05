@@ -1,4 +1,4 @@
-# Architecture en couches du backend
+# Principes : Architecture en couches backend
 
 > **Question centrale**: Le code devient de plus en plus désordonné, comment l'organiser pour qu'il reste clair et compréhensible ?
 
@@ -6,7 +6,7 @@ Lorsqu'un projet passe de quelques dizaines de lignes de code à des dizaines de
 
 ---
 
-## 1. Pourquoi adopter une architecture en couches ?
+## 1. Motivation et justification : adopter une architecture en couches
 
 ### 1.1 Origine du problème
 
@@ -354,7 +354,7 @@ public class User {
 
 ## 3. DTO : le "traducteur" entre les couches
 
-### 3.1 Pourquoi a-t-on besoin des DTO ?
+### 3.1 Pourquoi a-t-on besoin des DTO
 
 **Problème** : si on renvoie directement l'entité de base de données au frontend :
 
@@ -539,11 +539,11 @@ public class OrderController {
 
 ## 6. Questions fréquentes
 
-### 6.1 Le Controller peut-il contenir de la logique métier ?
+### 6.1 Le Controller peut-il contenir de la logique métier
 
 Le Controller ne doit pas contenir de logique métier, il est seulement responsable de recevoir les requêtes et de renvoyer les réponses. La logique métier doit être encapsulée dans la couche Service, l'avantage étant que le code peut être réutilisé, par exemple des tâches planifiées ou des consommateurs de files de messages peuvent appeler directement le Service sans passer par une requête HTTP. De plus, la logique métier concentrée au même endroit est plus facile à tester et à maintenir, évitant les incohérences dues à une logique dispersée.
 
-### 6.2 Qu'est-ce que le modèle anémique et le modèle riche ?
+### 6.2 Qu'est-ce que le modèle anémique et le modèle riche
 
 Le modèle anémique (Anemic Domain Model) désigne des classes d'entités qui contiennent uniquement des attributs et leurs getters/setters, sans aucune logique métier, toutes les règles métier étant implémentées dans la couche Service. Ce modèle est simple à structurer, facile à comprendre, et c'est l'approche adoptée par la plupart des projets.
 
@@ -551,7 +551,7 @@ Le modèle riche (Rich Domain Model) désigne des classes d'entités qui contien
 
 Il est recommandé de choisir le modèle adapté en fonction du contexte technique de l'équipe et de la complexité du projet, mais quel que soit le choix, il faut rester cohérent, et la couche Domain doit au moins contenir des méthodes de comportement métier de base, plutôt que d'être une coquille complètement vide.
 
-### 6.3 Comment gérer les transactions跨多个 Service ?
+### 6.3 Comment gérer les transactions跨多个 Service
 
 Lorsqu'une opération métier doit traverser plusieurs Service, il faut utiliser l'annotation de transaction dans le Service de niveau supérieur, et dans cette méthode appeler séquentiellement les Service de niveau inférieur. Cela garantit que toutes les opérations s'exécutent dans le même contexte transactionnel, soit tout réussit, soit tout échoue, assurant la cohérence des données. Il faut noter que la frontière de transaction doit être aussi petite que possible, ne contenant que les opérations nécessaires, pour éviter de bloquer la base de données trop longtemps et nuire aux performances de concurrence.
 
@@ -762,7 +762,7 @@ Dimensions de choix plus fines :
 - **Clean Architecture** : 《Clean Architecture》de Robert C. Martin — l'ouvrage classique qui propose les règles de dépendance et le modèle à quatre couches concentriques
 - **Modèles d'architecture d'entreprise** : 《Patterns of Enterprise Application Architecture》de Martin Fowler — référence incontournable sur l'architecture en couches et l'organisation de la logique de domaine
 
-### 8.5 Comment choisir ?
+### 8.5 Comment choisir
 
 **Rappelez-vous ce principe** : **l'architecture est au service du métier, ne faites pas de l'architecture pour l'architecture**.
 

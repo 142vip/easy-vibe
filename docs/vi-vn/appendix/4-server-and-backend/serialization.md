@@ -55,7 +55,7 @@ Sự dư thừa của định dạng JSON khiến gói dữ liệu quá lớn, �
 
 ---
 
-## 1. Serialization / Deserialization là gì?
+## 1. Serialization / Deserialization: Tổng quan
 
 **Serialization** (Tuần tự hóa) là quá trình chuyển đổi đối tượng thành định dạng có thể truyền tải.
 
@@ -69,7 +69,7 @@ Sự dư thừa của định dạng JSON khiến gói dữ liệu quá lớn, �
 | Vận chuyển | Truyền qua mạng | Xe chuyển phát đến đích |
 | Mở gói lấy hàng | Deserialization | Người nhận mở thùng, lấy hàng ra |
 
-### 1.2 Tại sao cần Serialization?
+### 1.2 Động lực của cần Serialization
 
 | Lý do | Giải thích | Ví dụ |
 | :--- | :--- | :--- |

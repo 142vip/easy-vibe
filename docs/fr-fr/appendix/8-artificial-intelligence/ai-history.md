@@ -3,7 +3,7 @@ title: 'Une brève histoire de l''IA : de la logique symbolique aux grands modè
 description: 'En 70 ans, l''IA a traversé trois vagues et deux hivers, pour finalement converger vers l''ère des grands modèles d''aujourd''hui.'
 ---
 
-# Une brève histoire de l'IA : de la logique symbolique aux grands modèles à milliards de paramètres
+# Histoire : De la logique symbolique aux grands modèles IA
 
 En 70 ans de développement, l'IA a traversé **trois vagues et deux hivers**, passant du raisonnement logique du symbolisme, aux réseaux de neurones du connexionnisme, puis à l'apprentissage par renforcement du behaviorisme, pour finalement converger vers l'ère des grands modèles d'aujourd'hui. Comprendre l'histoire de l'IA nous aide à saisir la nature de l'« intelligence » des grands modèles actuels.
 

@@ -1,4 +1,4 @@
-# Guía Avanzada de Frameworks Frontend
+# Introducción a los frameworks frontend
 
 ::: tip Prefacio
 Ya has aprendido los fundamentos de HTML, CSS y JavaScript, y puedes crear páginas web sencillas. Pero a medida que las funcionalidades web se vuelven más complejas, probablemente notes que: escribir código con JavaScript nativo se vuelve difícil de mantener, modificar una parte requiere cambios en muchos lugares, y el trabajo en equipo a menudo genera conflictos.
@@ -27,7 +27,7 @@ Cada capítulo comienza con "por qué necesitamos esta tecnología", para que en
 
 ---
 
-## 1. ¿Por qué prestar atención a la historia de la evolución del frontend?
+## 1. Motivación de prestar atención a la historia de la evolución del frontend
 
 ::: tip 🤔 Pregunta clave
 **¿Por qué las páginas web son cada vez más complejas? ¿Por qué la tecnología frontend necesita evolucionar constantemente?** Esta pregunta te guiará a través de la evolución técnica desde páginas web simples hasta aplicaciones web modernas.
@@ -83,7 +83,7 @@ La evolución de la tecnología frontend es como la evolución en la forma de co
 
 <FrontendEvolutionDemo />
 
-### 2.1 ¿Cómo era esta era?
+### 2.1 Enfoque de era esta era
 
 **Método de desarrollo**:
 
@@ -119,7 +119,7 @@ project/
 3. **Código difícil de reutilizar**: Para reutilizar una funcionalidad, solo se podía copiar y pegar
 :::
 
-### 2.2 ¿Qué es el "corte de imágenes"?
+### 2.2 Introducción a "corte de imágenes"
 
 Quizás hayas oído el término "corte de imágenes". Era el trabajo principal del frontend temprano:
 
@@ -154,7 +154,7 @@ La lección de esta fase: **demasiadas peticiones son el mayor enemigo del rendi
 **¿Por qué se necesitaba jQuery? ¿Qué problemas resolvió y qué nuevos problemas trajo?** Entender las limitaciones de jQuery es clave para comprender el valor de Vue/React.
 :::
 
-### 3.1 ¿Por qué se necesitaba jQuery?
+### 3.1 Motivación de jQuery
 
 A medida que las páginas web se volvían más complejas, los problemas de JavaScript nativo se hicieron evidentes:
 
@@ -262,7 +262,7 @@ Imagina que ves la misma foto en diferentes habitaciones:
 **¿Por qué necesitamos Vue/React? ¿Cuál es la diferencia esencial con jQuery?** Entender "declarativo" y "data-driven" es la clave para dominar los frameworks frontend modernos.
 :::
 
-### 4.1 ¿Por qué necesitamos nuevos frameworks?
+### 4.1 Motivación de nuevos frameworks
 
 Los problemas de la era jQuery se acumularon hasta cierto punto:
 
@@ -405,7 +405,7 @@ En la era de **Vue / React** también ocurrió un cambio importante: **de MPA a 
 **¿Por qué el frontend necesita "ingeniería"? ¿Qué hacen exactamente las herramientas de construcción?** Entender la ingeniería es clave para comprender el flujo de trabajo de los proyectos frontend modernos.
 :::
 
-### 6.1 ¿Por qué necesitamos "ingeniería"?
+### 6.1 Motivación de ingeniería
 
 Los proyectos frontend son cada vez más grandes, ya no se puede depender de "incluir scripts manualmente".
 

@@ -1,4 +1,4 @@
-# SSH y autenticación por clave
+# Introducción a SSH y autenticación por clave
 
 > 💡 **Guía de aprendizaje**: ¿Escribes la contraseña cada vez que haces `git push`? ¿Al conectarte por SSH siempre aparece "Permission denied"? Este capítulo te explica en 5 minutos el原理 de la autenticación por clave SSH, y cómo configurar acceso sin contraseña a GitHub y servidores con un solo comando.
 
@@ -14,7 +14,7 @@
 
 ---
 
-## 1. Contraseña vs Clave: ¿Por qué las claves son mejores?
+## 1. Contraseña vs Clave: Motivación de claves son mejores
 
 👇 Pruébalo: Compara la diferencia entre login con contraseña y login con clave
 
@@ -134,5 +134,5 @@ Resultado tras la configuración:
 :::
 
 **Siguiente paso**:
-- [Puertos y localhost](./ports-localhost) - Entender los fundamentos de la conexión en red
-- [Variables de entorno y PATH](./environment-path) - Entender la configuración del sistema
+- [Principios de puertos y localhost](./ports-localhost) - Entender los fundamentos de la conexión en red
+- [Introducción a las variables de entorno y PATH](./environment-path) - Entender la configuración del sistema

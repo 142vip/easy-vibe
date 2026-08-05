@@ -24,13 +24,13 @@ Sau khi học xong chương này, bạn sẽ có được:
 
 ---
 
-## 1. Tại sao cần container?
+## 1. Động lực của cần container
 
 Trước khi container xuất hiện, việc triển khai ứng dụng cần cài đặt thủ công runtime, cấu hình biến môi trường, xử lý xung đột phụ thuộc trên máy chủ. Sự khác biệt giữa các môi trường (phát triển, kiểm thử, sản xuất) là mảnh đất màu mỡ cho bug.
 
 <DockerArchitectureDemo />
 
-### Container giải quyết vấn đề gì?
+### Container giải quyết vấn đề gì
 
 | Vấn đề | Cách truyền thống | Cách dùng container |
 |------|---------|---------|

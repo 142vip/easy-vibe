@@ -1,4 +1,4 @@
-# Teststrategien
+# Teststrategien: Qualitätsicherung
 
 ::: tip Vorwort
 **Ist Ihr Code wirklich „ohne Probleme"?** Nach jeder Codeänderung manuell alles durchklicken — bei kleinen Projekten geht das noch. Aber wenn der Code auf zehntausende Zeilen anwächst und das Team auf über zehn Personen erweitert wird, wird „manuell durchklicken" zur Katastrophe.
@@ -19,7 +19,7 @@ Nach diesem Kapitel werden Sie verstehen, wie Sie die passende Teststrategie fü
 
 ---
 
-## 0. Überblick: Warum sind automatisierte Tests notwendig?
+## 0. Überblick: Notwendigkeit automatisierter Tests
 
 Stellen Sie sich vor, Sie sind Bauingenieur. Nach jeder Planänderung würden Sie nicht selbst alle Stockwerke hochklettern, um die Struktursicherheit zu prüfen — Sie würden sich auf ein **automatisiertes Prüfsystem** verlassen. Softwaretests sind das „Strukturprüfsystem" der Code-Welt.
 
@@ -42,7 +42,7 @@ Klicken Sie mit der folgenden interaktiven Komponente auf jede Ebene der Pyramid
 
 <TestPyramidDemo />
 
-### 1.2 Warum eine Pyramidenform?
+### 1.2 Warum eine Pyramidenform
 
 Die Pyramidenform spiegelt einen Kern-Kompromiss wider: **Geschwindigkeit versus Realitätsnähe**.
 
@@ -56,7 +56,7 @@ Die Pyramidenform spiegelt einen Kern-Kompromiss wider: **Geschwindigkeit versus
 
 ## 2. Unit-Testing in der Praxis
 
-### 2.1 Was ist ein guter Unit-Test?
+### 2.1 Was ist ein guter Unit-Test
 
 Gute Unit-Tests folgen dem **FIRST**-Prinzip:
 
@@ -86,7 +86,7 @@ test('sollte den Preis inklusive Steuer korrekt berechnen', () => {
 })
 ```
 
-### 2.3 Was testen? Was nicht testen?
+### 2.3 Was testen? Was nicht testen
 
 **Was getestet werden sollte:**
 - Kern-Geschäftslogik (Preisberechnung, Berechtigungsprüfung, Datentransformation)

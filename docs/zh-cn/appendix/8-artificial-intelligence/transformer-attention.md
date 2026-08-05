@@ -3,7 +3,7 @@ title: 'Transformer 与注意力机制：大模型的核心引擎'
 description: '深入理解 Transformer 架构和注意力机制，揭秘 GPT、BERT 等大模型的技术基石。'
 ---
 
-# Transformer 与注意力机制：大模型的核心引擎
+# Transformer 与注意力机制原理
 
 2017 年，Google 在论文《Attention Is All You Need》中提出的 Transformer 架构，彻底改变了自然语言处理的游戏规则。它抛弃了传统的循环神经网络（RNN），仅依靠注意力机制就实现了更强的性能和更高的训练效率。今天，几乎所有的大语言模型——GPT、BERT、T5、LLaMA——都建立在 Transformer 的基础之上。
 

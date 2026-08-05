@@ -1,4 +1,4 @@
-# Linux-Grundlagen
+# Linux-Grundlagen: Betriebssystem
 
 ::: tip Vorwort
 **In der Welt der Server ist Linux der absolute Protagonist.** Mehr als 90% aller Server weltweit laufen mit Linux - von dem WeChat, das du taeglich nutzt, bis zur Google-Suche, alles wird von Linux unterstuetzt. Als Entwickler ist Linux-Kenntnis keine Option, sondern Pflicht.

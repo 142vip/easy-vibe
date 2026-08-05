@@ -1,4 +1,4 @@
-# AI Agent und Tool Calling
+# AI-Agenten: Autonome Systeme
 > 💡 **Lernleitfaden**: Dieses Kapitel erfordert keine Programmierkenntnisse. Durch interaktive Demonstrationen lernst du die Funktionsweise von AI Agents (intelligente Agenten) kennen. Wir beginnen mit den Grundlagen des „Tool Calling" und gehen bis hin zur Planung, zum Gedächtnis und zur Zusammenarbeit von Agents.
 
 <AgentQuickStartDemo />
@@ -16,7 +16,7 @@ ChatGPT: Ich kann keine Echtzeit-Wetterdaten abrufen. Bitte schau auf einer Wett
 
 ChatGPT ist wie ein **wissender, aber handlungsunfähiger Gelehrter** – es weiß viel, kann aber keine tatsächlichen Aktionen für dich ausführen.
 
-### 0.1 Die zentrale Herausforderung: Wie bringt man KI vom „Chatten" zum „Handeln"?
+### 0.1 Die zentrale Herausforderung: Ansatz für bringt man KI vom „Chatten" zum „Handeln"
 
 Um dieses Ziel zu erreichen, müssen wir drei Kernherausforderungen lösen:
 
@@ -34,7 +34,7 @@ Computer können vieles: das Web durchsuchen, Code ausführen, Dateien bearbeite
 
 Doch ein LLM selbst hat **keine** dieser Fähigkeiten. Seine Kernfähigkeit ist nur eine einzige: **Text generieren**.
 
-### 1.1 Warum kann ein LLM keine Aktionen direkt ausführen?
+### 1.1 Warum kann ein LLM keine Aktionen direkt ausführen
 
 Ein LLM ist ein **reiner Textprozessor**:
 
@@ -75,7 +75,7 @@ LLM generiert die finale Antwort: "In Peking ist es heute sonnig bei 25 Grad..."
 
 ---
 
-## 2. Kernproblem: Wie bewältigt man komplexe Aufgaben?
+## 2. Kernproblem: Ansatz für bewältigt man komplexe Aufgaben
 
 Tool Calling gibt dem LLM die Fähigkeit zu „handeln", doch reale Aufgaben sind oft komplex:
 
@@ -90,7 +90,7 @@ Diese Aufgabe umfasst mehrere Schritte:
 4.  Ordnen und analysieren
 5.  Bericht verfassen
 
-### 2.1 Warum ist Planung nötig?
+### 2.1 Warum ist Planung nötig
 
 Lässt man das LLM den Bericht „in einem Rutsch" generieren, ist das Ergebnis oft:
 
@@ -121,7 +121,7 @@ Menschen können sich an Dinge von vor langer Zeit erinnern, aber das „Gedäch
 -   **Sitzungsisolation**: Jeder Dialog beginnt komplett neu
 -   **Keine Persistenz**: Schließt man die Seite, ist alles „vergessen"
 
-### 3.1 Warum ist ein Gedächtnis nötig?
+### 3.1 Warum ist ein Gedächtnis nötig
 
 Stell dir folgendes Szenario vor:
 

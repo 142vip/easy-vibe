@@ -1,11 +1,11 @@
-# Medición y optimización del rendimiento web
+# Principios de optimización del rendimiento web
 ::: tip 🎯 Pregunta central
 **¿Por qué tu página web carga lentamente y los usuarios se quejan constantemente de que se traba?** Es como preguntar: ¿por qué la comida tarda en servirse en un restaurante y los clientes se impacientan? Este capítulo te guiará a través de los conceptos fundamentales de optimización del rendimiento frontend para que tu página web "vuele".
 :::
 
 ---
 
-## 1. ¿Por qué "optimizar el rendimiento"?
+## 1. Motivación de "optimizar el rendimiento"
 
 ### 1.1 De funcional a usable: la evolución de la optimización de rendimiento
 
@@ -36,7 +36,7 @@ Pero ahora todo es completamente diferente. La complejidad de las páginas web m
 
 **Este es el problema que la "optimización de rendimiento" busca resolver: reducir el tiempo de espera del usuario y hacer que las operaciones sean más fluidas.**
 
-### 1.2 Una historia real de tropiezos: por qué necesitas entender la optimización de rendimiento
+### 1.2 Una historia real de tropiezos:Motivación: entender la optimización de rendimiento
 
 Podrías decir: "Con las redes tan rápidas y los dispositivos tan potentes de hoy, ¿realmente hace falta optimizar el rendimiento?" Déjame contarte una historia real para que entiendas por qué este conocimiento es tan importante.
 

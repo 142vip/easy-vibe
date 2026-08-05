@@ -1,4 +1,4 @@
-# Domainnamen, DNS und HTTPS
+# DNS und HTTPS: Netzwerkprotokolle
 
 ::: tip Vorwort
 **Wenn du `www.google.com` in den Browser eingibst und Enter draeuckst - was passiert dahinter?** Diese scheinbar einfache Aktion umfasst Domain-Aufloesung, DNS-Abfragen, TLS-Verschluesselungs-Handshake und eine Reihe praezise koordinierter Prozesse. Diese Mechanismen zu verstehen ist Pflicht fuer jeden Entwickler - sie bestimmen direkt, ob deine Website erreichbar ist und ob Daten abgefangen werden koennen.
@@ -110,7 +110,7 @@ Der TLS-Handshake ist der entscheidende Schritt zum Aufbau einer sicheren Verbin
 
 ---
 
-## 4. Zertifikats-Vertrauenskette: Warum sollte man dieser Website vertrauen?
+## 4. Zertifikats-Vertrauenskette: Motivation von sollte man dieser Website vertrauen
 
 Der kritischste Schritt im TLS-Handshake ist die "Zertifikatsverifikation". Woher weiss der Browser, ob das Zertifikat einer Website echt ist und nicht von einem Angreifer gefaelscht wurde? Die Antwort ist die **Zertifikats-Vertrauenskette** - ein mehrstufiges Beglaubigungssystem.
 
@@ -131,7 +131,7 @@ Der kritischste Schritt im TLS-Handshake ist die "Zertifikatsverifikation". Wohe
 
 ---
 
-## 5. HTTP vs HTTPS: Warum Verschluesselung die Mindestanforderung ist
+## 5. HTTP vs HTTPS: Motivation von Verschluesselung die Mindestanforderung ist
 
 2024 wurde mehr als 95% des weltweiten Web-Traffics ueber HTTPS uebertragen. Chrome markiert HTTP-Websites mit der Warnung "Nicht sicher", und Suchmaschinen stufen HTTP-Websites schlechter ein. HTTPS ist keine "Option" mehr, sondern die Mindestanforderung des modernen Webs.
 

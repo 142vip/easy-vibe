@@ -1,4 +1,4 @@
-# Context Engineering
+# An Introduction to Context Engineering
 > 💡 **Study Guide**: Prompt engineering solves "how to say things clearly"; context engineering solves "how to let the model see the right information at the right time." This chapter revolves around one question: **Within a limited context window, how do you make the model understand you without burning through your budget?**
 
 Before diving in, here are two "foundation bricks" to review:
@@ -8,7 +8,7 @@ Before diving in, here are two "foundation bricks" to review:
 
 ---
 
-## 0. Introduction: Why Does It Forget Mid-Conversation — and Why Does It Keep Getting More Expensive?
+## 0. Introduction: Motivation for Forgeting Mid-Conversation — and Why Does It Keep Getting More Expensive
 
 <AgentContextFlow />
 
@@ -27,7 +27,7 @@ Faced with these challenges, relying solely on "writing better prompts" falls sh
 
 ---
 
-## 1. What Is "Context Engineering"? (Definition + Scenarios)
+## 1. Overview of "Context Engineering" (Definition + Scenarios)
 
 Let's start with a concise working definition, then look at a few typical scenarios.
 
@@ -55,7 +55,7 @@ This creates a core contradiction:
 
 After multiple architectural refactors, the Manus team realized one truth: **Context can't just be "written" — it must be "designed."**
 
-### 2.1 What Did Four Refactors Teach Us?
+### 2.1 What Did Four Refactors Teach Us
 
 Manus co-founder Ji Yichao shared their "pitfall history":
 
@@ -68,7 +68,7 @@ Manus co-founder Ji Yichao shared their "pitfall history":
 
 **Core insight**: **It's not about remembering more, but remembering more cleverly.**
 
-### 2.2 What Is AI's "Memory" Really Like?
+### 2.2 Overview of AI's "Memory" Really Like
 
 **Traditional computer memory** = **Hard drive**:
 - Large capacity: can store large amounts of data long-term;
@@ -84,9 +84,9 @@ Manus co-founder Ji Yichao shared their "pitfall history":
 
 ---
 
-## 3. Step 1: Know the Cost — Where Does Every Penny Go?
+## 3. Step 1: Know the Cost — Placement of Every Penny Go
 
-### 3.1 Why Start with Cost?
+### 3.1 Motivation for starting with Cost
 
 Let's look at how your money is spent during a typical AI conversation:
 
@@ -99,7 +99,7 @@ Let's look at how your money is spent during a typical AI conversation:
 
 **Surprising finding**: **70% of the money is spent having the AI re-read what you've already said!**
 
-### 3.2 What Is KV Cache? (Prefix Reuse)
+### 3.2 Overview of KV Cache (Prefix Reuse)
 
 Before discussing pricing, we need to understand a core technical concept: **KV Cache (Key-Value Cache)**.
 Don't be intimidated by the jargon — it's essentially the AI's "short-term memory cheat sheet."
@@ -162,7 +162,7 @@ Observe: when the first block becomes "memorized," what happens to the **Time to
 
 As conversations grow longer, the first problem you hit is: **What happens when the window is full?**
 
-### 4.1 Why Does "First In, First Out" Break?
+### 4.1 Motivation for the "First In, First Out" Break
 
 The simplest memory management is the **Sliding Window**: **new stuff comes in, old stuff goes out.**
 It sounds fair, but in real tasks, it's a disaster.
@@ -180,7 +180,7 @@ Conversation log:
 
 **The core problem**: This strategy treats **critical information** (identity, tech stack) and **filler** ("ok", "got it") as equals — kicking them all out together.
 
-### 4.2 "Middle Amnesia" — Why Does AI Always Miss Key Information?
+### 4.2 "Middle Amnesia" — Motivation for AIing Always Miss Key Information
 
 Besides "forgetting fast," AI has another quirk: **it also "overlooks" things.**
 Research shows: **AI is most sensitive to the beginning and end, and most likely to ignore the middle.** This is the famous **Lost in the Middle** phenomenon.
@@ -202,12 +202,12 @@ Memory:   High  →  Low   → High
 
 ---
 
-## 5. Step 3: Selective Retention — How to "Pin" Key Information?
+## 5. Step 3: Selective Retention — Approach to "Pin" Key Information
 
 If "first in, first out" doesn't work, what should we do?
 Manus's answer: **Establish an "information hierarchy."**
 
-### 5.1 Why Rank Information by Importance?
+### 5.1 Motivation for Ranking Information by Importance
 
 Stop treating every piece of information equally — decide what stays and what goes based on importance:
 
@@ -266,12 +266,12 @@ Enter a question in the search box (e.g., "how to reset password") and see how t
 
 ---
 
-## 7. Step 5: Compression — How to Write More Densely on the "Whiteboard"?
+## 7. Step 5: Compression — Approach to writing More Densely on the "Whiteboard"
 
 What if all the information is important, nothing can be deleted, and you don't want to look things up?
 Then you have no choice but to **write smaller** — this is **context compression**.
 
-### 7.1 When Do You Need "Shorthand"?
+### 7.1 Criteria for Need "Shorthand"
 *   Retrieved material is too thick (>2000 characters).
 *   Conversation history is too verbose (occupying >80% of whiteboard space).
 *   You need a fast answer and don't want the AI wading through walls of text.
@@ -310,7 +310,7 @@ Click "Start Building" and see how we construct this palace floor by floor.
 
 <MemoryPalaceDemo />
 
-### 8.2 Why Is This Design So Powerful?
+### 8.2 Motivation for This Design So Powerful
 
 The design philosophy of this palace aims to resolve three contradictions:
 

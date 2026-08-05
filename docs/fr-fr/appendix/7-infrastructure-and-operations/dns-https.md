@@ -1,4 +1,4 @@
-# Noms de domaine, DNS et HTTPS
+# Principes : DNS, noms de domaine et HTTPS
 
 ::: tip Avant-propos
 **Lorsque vous saisissez `www.google.com` dans votre navigateur et appuyez sur Entrée, que se passe-t-il réellement ?** Cette action en apparence simple implique une série de processus complexes : résolution de nom de domaine, requêtes DNS, négociation TLS, etc. Comprendre ces mécanismes est un prérequis indispensable pour tout développeur — cela détermine directement si votre site est accessible et si vos données sont protégées contre les interceptions.
@@ -110,7 +110,7 @@ La négociation TLS est l'étape clé pour établir une connexion sécurisée. A
 
 ---
 
-## 4. Chaîne de confiance des certificats : pourquoi faire confiance à ce site ?
+## 4. Chaîne de confiance des certificats : pourquoi faire confiance à ce site
 
 L'étape la plus critique de la négociation TLS est la « vérification du certificat ». Comment le navigateur détermine-t-il qu'un certificat de site est authentique et non forgé par un attaquant ? La réponse réside dans la **chaîne de confiance des certificats** — un système de confiance reposant sur des niveaux de cautionnement successifs.
 
@@ -131,7 +131,7 @@ L'étape la plus critique de la négociation TLS est la « vérification du cert
 
 ---
 
-## 5. HTTP vs HTTPS : pourquoi le chiffrement est un minimum absolu ?
+## 5. HTTP vs HTTPS : pourquoi le chiffrement est un minimum absolu
 
 En 2024, plus de 95 % du trafic web mondial transitait déjà via HTTPS. Le navigateur Chrome affiche un avertissement « Non sécurisé » pour les sites HTTP, et les moteurs de recherche pénalisent le classement des sites HTTP. HTTPS n'est plus une « option », mais une exigence fondamentale du Web moderne.
 

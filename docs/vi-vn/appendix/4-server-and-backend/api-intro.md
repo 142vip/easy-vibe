@@ -106,7 +106,7 @@ Nhiều người mới bối rối: Function API và HTTP API khác nhau thế n
 
 ---
 
-## 3. HTTP method: bạn đang "hỏi" hay đang "làm"?
+## 3. HTTP method: Phân loại HTTP method
 
 Khi gọi Web API, bạn cần nói cho server biết bạn muốn làm gì. Đây chính là nguồn gốc của HTTP method.
 
@@ -143,7 +143,7 @@ Khi gọi Web API, bạn cần nói cho server biết bạn muốn làm gì. Đ�
 
 ---
 
-## 4. HTTP status code: server đang nói với bạn điều gì?
+## 4. HTTP status code: Ý nghĩa HTTP status code
 
 Khi server trả lời, nó sẽ trả về một status code trước, cho bạn biết request có thành công hay không.
 
@@ -170,7 +170,7 @@ Khi server trả lời, nó sẽ trả về một status code trước, cho bạ
 
 ---
 
-## 5. HTTP vs SDK: tự chạy việc hay để quản gia làm thay?
+## 5. HTTP vs SDK: So sánh HTTP và SDK
 
 ### 5.1 So sánh hai cách gọi
 
@@ -181,7 +181,7 @@ Khi server trả lời, nó sẽ trả về một status code trước, cho bạ
 | **Nhược điểm** | Phải xử lý mọi chi tiết<br>Code dài dễ sai | Cần cài dependency<br>Có thể có vấn đề phiên bản |
 | **Ví dụ code** | `requests.post(url, json=..., headers={...})` | `client.chat.completions.create(...)` |
 
-### 5.2 Chọn thế nào?
+### 5.2 Chọn: Cách tiếp cận
 
 | Tình huống | Khuyến nghị | Lý do |
 | :--- | :--- | :--- |
@@ -196,7 +196,7 @@ Khi server trả lời, nó sẽ trả về một status code trước, cho bạ
 
 ---
 
-## 6. Cách đọc tài liệu API?
+## 6. Hướng dẫn đọc tài liệu API
 
 Tài liệu API giống như sự kết hợp giữa hướng dẫn sử dụng và thực đơn. Bạn không cần đọc từ đầu đến cuối, chỉ cần học cách "tra từ điển".
 

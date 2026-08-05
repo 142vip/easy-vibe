@@ -1,4 +1,4 @@
-# Rate Limiting and Backpressure Control
+# Principles of Rate Limiting and Backpressure
 
 ::: tip Introduction
 **On Double 11 at midnight, hundreds of millions of users flood in simultaneously — can the servers handle it?** Every system has a processing capacity limit. When request volume exceeds what the system can bear, without control, the result is that nobody can use the service. Rate limiting and backpressure are the two lines of defense that protect systems from being "overwhelmed."
@@ -24,7 +24,7 @@ After reading this chapter, you will gain:
 
 ---
 
-## 0. The Big Picture: Why "Reject" Users?
+## 0. The Big Picture: Motivation for the "Reject" Users
 
 This sounds counterintuitive — shouldn't we serve every user well? But the reality is: **if you don't reject some requests, all requests will fail.**
 

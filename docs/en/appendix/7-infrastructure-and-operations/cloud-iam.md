@@ -1,4 +1,4 @@
-# Cloud Identity and Access Management
+# Principles of Cloud Identity and Access Management
 > **Learning Guide**: Prompt engineering solves "how to say things clearly," while cloud account permission management solves "who can do what." This chapter revolves around one question: **In the cloud world, how do you grant access conveniently without handing the keys to the wrong people?**
 
 Before you begin, it's recommended to brush up on two fundamentals:
@@ -8,7 +8,7 @@ Before you begin, it's recommended to brush up on two fundamentals:
 
 ---
 
-## 0. Introduction: Why Do People "Step on Landmines" as Soon as They Get on the Cloud?
+## 0. Introduction: Motivation for Peopling "Step on Landmines" as Soon as They Get on the Cloud
 
 <IamRamComparisonDemo />
 
@@ -29,7 +29,7 @@ Faced with these challenges, relying on "being more careful" is no longer enough
 
 ---
 
-## 1. What Is IAM/RAM? Starting with the "Access Control System"
+## 1. Overview of IAM/RAM Starting with the "Access Control System"
 
 ### 1.1 Analogy: A Company's Smart Access Control
 
@@ -71,7 +71,7 @@ Although the names differ, **the core concepts are the same**:
 
 ---
 
-## 2. Users, Groups, Roles: Which One Should You Use?
+## 2. Users, Groups, Roles: Selection of One Should You Use
 
 ### 2.1 Differences Between the Three "Identities"
 
@@ -251,7 +251,7 @@ The evaluation flow is as follows:
 
 ## 4. Access Keys (AK/SK): A "Key" That Needs Careful Handling
 
-### 4.1 What Are AK/SK?
+### 4.1 Overview of AK/SK
 
 <AccessKeyManagementDemo />
 
@@ -262,7 +262,7 @@ Access Keys are long-term credentials provided by cloud services for programmati
 | **Access Key ID**      | Access Key ID   | Identifies who you are (like a username) | Bank card number   |
 | **Secret Access Key**  | Secret Access Key | Proves you are who you say you are (like a password) | Bank card PIN      |
 
-### 4.2 Why Are AK/SK "High-Risk Items"?
+### 4.2 Motivation for AKing /SK "High-Risk Items"
 
 **Real Case: A Startup's Lesson**
 
@@ -382,7 +382,7 @@ jobs:
 
 ## 5. Multi-Factor Authentication (MFA): Adding a "Lock" to Your Account
 
-### 5.1 What Is MFA?
+### 5.1 Overview of MFA
 
 <MfaSecurityDemo />
 
@@ -394,7 +394,7 @@ MFA (Multi-Factor Authentication), also called 2FA (Two-Factor Authentication), 
 | **Possession Factor** (something you have) | A physical device the user possesses | Phone, hardware key   |
 | **Inherence Factor** (something you are)  | The user's biological characteristics | Fingerprint, facial recognition |
 
-### 5.2 Why Is MFA So Important?
+### 5.2 Motivation for MFAing So Important
 
 **Real Data Tells the Answer**:
 
@@ -429,9 +429,9 @@ MFA (Multi-Factor Authentication), also called 2FA (Two-Factor Authentication), 
 
 ---
 
-## 6. Cross-Account Access: How to "Visit" Safely?
+## 6. Cross-Account Access: Approach to "Visit" Safely
 
-### 6.1 Why Do You Need Cross-Account Access?
+### 6.1 Motivation for needing Cross-Account Access
 
 <CrossAccountAccessDemo />
 

@@ -24,7 +24,7 @@ Sau khi học xong chương này, bạn sẽ có được:
 
 ---
 
-## 1. Tại sao cần Kubernetes?
+## 1. Động lực của cần Kubernetes
 
 Docker giúp việc đóng gói và chạy container đơn lẻ trở nên đơn giản, nhưng khi bạn đối mặt với các tình huống sau, quản lý thủ công trở nên bất lực:
 

@@ -1,4 +1,4 @@
-# Pipeline Kết Xuất Trình Duyệt
+# Kết xuất trình duyệt: Nguyên tắc Pipeline Render
 ::: tip 🎯 Câu Hỏi Cốt Lõi
 **Tại sao một số trang web mượt như lụa, trong khi số khác lại giật như trình chiếu PPT?** Trình duyệt biến đống code HTML, CSS, JavaScript thành trang web bạn nhìn thấy như thế nào? Chương này sẽ đưa bạn vào sâu bên trong "xưởng sản xuất" của trình duyệt, hiểu quy trình làm việc của nó, từ đó viết ra những trang web hiệu năng tốt hơn.
 :::
@@ -21,7 +21,7 @@ Mỗi chương đều bắt đầu từ "hiểu nguyên lý", không cần bạn
 
 ---
 
-## 1. Tại Sao Cần Hiểu "Pipeline Kết Xuất"?
+## 1. Động lực của Pipeline Render
 
 ### 1.1 Từ "Chạy Được" Đến "Chạy Nhanh": Con Đường Tiến Bộ Của Frontend
 
@@ -50,7 +50,7 @@ Khi mới học frontend, chúng ta chỉ quan tâm code "có chạy được kh
 
 **Hiểu pipeline kết xuất, chính là bước then chốt từ "chạy được" đến "chạy nhanh".**
 
-### 1.2 Một Câu Chuyện Thực Tế: Tại Sao "Tối Ưu" Rồi Lại Càng Chậm Hơn?
+### 1.2 Trường hợp: Tại Sao "Tối Ưu" Rồi Lại Càng Chậm Hơn
 
 ::: warning Nhật Ký Vấp Ngã Về Hiệu Năng Của Tiểu Trương
 Tiểu Trương là frontend engineer của một công ty thương mại điện tử, phụ trách tối ưu trang chi tiết sản phẩm. Trang này khi hiển thị thông tin sản phẩm giật kinh khủng, người dùng phàn nàn liên tục.
@@ -62,15 +62,15 @@ Thế là cậu ấy viết code như sau:
 ```javascript
 // Bạn nghĩ đây là "tối ưu"
 const container = document.getElementById('list')
-container.style.display = 'none'  // Ẩn trước, chắc sẽ không kích hoạt kết xuất?
+container.style.display = 'none' // Ẩn trước, chắc sẽ không kích hoạt kết xuất?
 
 for (let i = 0; i < 1000; i++) {
-  const item = document.createElement('div')
-  item.style.width = Math.random() * 100 + 'px'  // Độ rộng ngẫu nhiên
-  container.appendChild(item)
+ const item = document.createElement('div')
+ item.style.width = Math.random() * 100 + 'px' // Độ rộng ngẫu nhiên
+ container.appendChild(item)
 }
 
-container.style.display = 'block'  // Cuối cùng hiển thị, kết xuất một lần
+container.style.display = 'block' // Cuối cùng hiển thị, kết xuất một lần
 ```
 
 Kết quả test phát hiện, trang **càng giật hơn**! Tiểu Trương ngơ ngác: rõ ràng đã "tối ưu" rồi, tại sao lại còn chậm hơn?
@@ -86,7 +86,7 @@ Không hiểu quy trình làm việc của trình duyệt, bạn có thể "tự
 
 ---
 
-## 2. Khái Niệm Cốt Lõi: "Pipeline Kết Xuất" Là Gì?
+## 2. Khái Niệm Cốt Lõi: Định nghĩa Pipeline Render
 
 ::: tip 🤔 "Kết Xuất" Là Gì?
 **Kết xuất (Rendering)**, nói đơn giản là quá trình trình duyệt "vẽ" code thành trang web bạn nhìn thấy.
@@ -108,7 +108,7 @@ Hãy tưởng tượng bạn đang vận hành một tiệm bánh, mỗi ngày p
 | Giai Đoạn | 🥖 So Sánh Tiệm Bánh | Công Việc Thực Tế Của Trình Duyệt | Ví Dụ Cụ Thể |
 |------|-------------|--------------|----------|
 | **1. Chuẩn bị nguyên liệu** | Sắp xếp danh sách nguyên liệu (bột mì, trứng, kem...) | **Xây dựng cây DOM**: phân tích HTML thành cấu trúc cây | Bạn viết `<div><p>Hello</p></div>`, trình duyệt phân tích thành cây `div→p→"Hello"` |
-| **2. Chuẩn bị công thức** | Sắp xếp thẻ công thức (tỉ lệ nguyên liệu mỗi loại bánh) | **Xây dựng cây CSSOM**: phân tích CSS thành cây quy tắc | Bạn viết `.title { color: red }`, trình duyệt ghi nhận "chữ của `.title` là màu đỏ" |
+| **2. Chuẩn bị công thức** | Sắp xếp thẻ công thức (tỉ lệ nguyên liệu mỗi loại bánh) | **Xây dựng cây CSSOM**: phân tích CSS thành cây quy tắc | Bạn viết `.title { color: red }`, trình duyệt thu thập "chữ của `.title` là màu đỏ" |
 | **3. Lập kế hoạch** | Dựa vào nguyên liệu và công thức, quyết định hôm nay làm bánh gì | **Xây dựng cây kết xuất**: hợp nhất DOM và CSSOM, chỉ giữ phần tử hiển thị | Thẻ `<script>` không hiển thị, nên không có trong cây kết xuất |
 | **4. Sắp xếp vị trí** | Bày bánh vào tủ trưng bày, quyết định mỗi bánh đặt ở đâu | **Layout**: tính toán kích thước và vị trí mỗi phần tử | Tính ra "div này rộng 200px, cao 100px, ở vị trí (50, 50) trên màn hình" |
 | **5. Tô màu trang trí** | Quét trứng, rắc mè, bóp kem lên bánh | **Paint**: "vẽ" màu sắc, viền, bóng của phần tử | Thực sự vẽ "chữ màu đỏ" lên màn hình |
@@ -134,7 +134,7 @@ Hãy đọc từng dòng của bảng này, hiểu từng giai đoạn của pip
 
 ## 3. Giai Đoạn 1: Xây Dựng Cây DOM và Cây CSSOM
 
-### 3.1 Tại Sao Cần "Cây Hóa"?
+### 3.1 Động lực của DOM Tree
 
 ::: tip 🤔 DOM Là Gì?
 **DOM (Document Object Model)**, là cấu trúc cây mà trình duyệt chuyển đổi từ tài liệu HTML, thuận tiện cho JavaScript thao tác các phần tử trang.
@@ -153,7 +153,7 @@ Trình duyệt nhận HTML xong, không hiển thị ngay, mà phải "hiểu" n
 
 ```html
 <div class="container">
-  <p>Hello World</p>
+ <p>Hello World</p>
 </div>
 ```
 
@@ -179,10 +179,10 @@ Cuối cùng, trình duyệt dựa vào quan hệ lồng nhau của thẻ, xây 
 ```
 Document (nút gốc tài liệu)
 └── html
-    └── body
-        └── div.class = "container"
-            └── p
-                └── "Hello World"
+ └── body
+ └── div.class = "container"
+ └── p
+ └── "Hello World"
 ```
 
 ### 3.2 Cây CSSOM: "Sổ Tay Quy Tắc" Của Style
@@ -202,17 +202,17 @@ Quá trình xây dựng CSSOM tương tự DOM, nhưng có một khác biệt th
 **CSS gốc:**
 ```css
 body {
-  font-size: 16px;
-  color: #333;
+ font-size: 16px;
+ color: #333;
 }
 
 .container {
-  width: 100%;
-  color: red;  /* sẽ ghi đè color của body */
+ width: 100%;
+ color: red; /* sẽ ghi đè color của body */
 }
 
 .container p {
-  font-weight: bold;
+ font-weight: bold;
 }
 ```
 
@@ -220,25 +220,25 @@ body {
 ```
 StyleSheet
 ├── body
-│   ├── font-size: 16px
-│   └── color: #333
+│ ├── font-size: 16px
+│ └── color: #333
 └── .container
-    ├── width: 100%
-    ├── color: red  (độ ưu tiên cao hơn, ghi đè color của body)
-    └── p
-        └── font-weight: bold
+ ├── width: 100%
+ ├── color: red (độ ưu tiên cao hơn, ghi đè color của body)
+ └── p
+ └── font-weight: bold
 ```
 :::
 
-### 3.3 Nhật Ký Vấp Ngã: Tại Sao CSS Của Tôi "Không Có Hiệu Lực"?
+### 3.3 Trường hợp: Tại Sao CSS Của Tôi "Không Có Hiệu Lực"
 
 **Bẫy 1: Xung đột trọng số CSS selector**
 
 ::: details Xem lỗi phổ biến
 ```css
 /* CSS bạn viết */
-#header { color: red; }      /* id selector, trọng số 100 */
-.title { color: blue; }     /* class selector, trọng số 10 */
+#header { color: red; } /* id selector, trọng số 100 */
+.title { color: blue; } /* class selector, trọng số 10 */
 
 /* HTML */
 <div id="header" class="title">Đoạn chữ này màu gì?</div>
@@ -253,12 +253,12 @@ Bạn nghĩ là màu xanh, kết quả là **màu đỏ**. Vì trọng số củ
 ```html
 <!-- HTML bạn viết -->
 <div>
-  <p>Đây là một đoạn chữ
+ <p>Đây là một đoạn chữ
 </div>
 
 <!-- Sau khi trình duyệt sửa -->
 <div>
-  <p>Đây là một đoạn chữ</p>  <!-- Trình duyệt tự động giúp bạn đóng thẻ -->
+ <p>Đây là một đoạn chữ</p> <!-- Trình duyệt tự động giúp bạn đóng thẻ -->
 </div>
 ```
 
@@ -271,7 +271,7 @@ Trình duyệt rất "khoan dung", sẽ tự động sửa lỗi của bạn. Nh
 
 ## 4. Giai Đoạn 2: Xây Dựng Cây Kết Xuất
 
-### 4.1 Tại Sao Cần "Cây Kết Xuất"?
+### 4.1 Động lực của Render Tree
 
 Bạn có thể hỏi: **"Đã có cây DOM và cây CSSOM, tại sao còn phải xây dựng thêm cây kết xuất? Dùng thẳng DOM không được sao?"**
 
@@ -282,17 +282,17 @@ Ví dụ đoạn HTML sau:
 ```html
 <html>
 <head>
-  <title>Tiêu đề trang</title>
-  <style>/* Code CSS */</style>
-  <script>/* Code JavaScript */</script>
+ <title>Tiêu đề trang</title>
+ <style>/* Code CSS */</style>
+ <script>/* Code JavaScript */</script>
 </head>
 <body>
-  <div class="container">
-    <p>Nội dung hiển thị</p>
-  </div>
-  <div style="display: none">
-    <p>Nội dung ẩn (display:none)</p>
-  </div>
+ <div class="container">
+ <p>Nội dung hiển thị</p>
+ </div>
+ <div style="display: none">
+ <p>Nội dung ẩn (display:none)</p>
+ </div>
 </body>
 </html>
 ```
@@ -322,7 +322,7 @@ Trình duyệt khi xây dựng cây kết xuất, sẽ tuân theo một bộ quy
 Còn `visibility: hidden` và `opacity: 0` tuy "không nhìn thấy", nhưng vẫn trong cây kết xuất, trình duyệt vẫn cần tính toán layout của chúng (chiếm không gian). Nếu bạn cần "ẩn nhưng không ảnh hưởng layout" (như làm animation fade in/out), có thể dùng `opacity`; nếu cần "ẩn hoàn toàn và không chiếm không gian", dùng `display: none`.
 :::
 
-### 4.3 Nhật Ký Vấp Ngã: Tại Sao Đã Set display:none, Trang Vẫn Giật?
+### 4.3 Trường hợp: Tại Sao Đã Set display:none, Trang Vẫn Giật
 
 ::: danger ❌ Hiểu Lầm Phổ Biến: Tưởng Phần Tử display:none "Không Tồn Tại"
 Nhiều người tưởng set `display: none` rồi, phần tử "biến mất", thao tác thế nào cũng không ảnh hưởng hiệu năng. Đây là **sai lầm**!
@@ -342,10 +342,10 @@ container.style.display = 'none'
 
 // Thao tác DOM điên cuồng
 for (let i = 0; i < 1000; i++) {
-  const item = document.createElement('div')
-  item.style.width = Math.random() * 100 + 'px'  // Thay đổi độ rộng!
-  item.textContent = `Item ${i}`
-  container.appendChild(item)
+ const item = document.createElement('div')
+ item.style.width = Math.random() * 100 + 'px' // Thay đổi độ rộng!
+ item.textContent = `Item ${i}`
+ container.appendChild(item)
 }
 
 container.style.display = 'block'
@@ -358,14 +358,14 @@ container.style.display = 'block'
 ```javascript
 // Dùng DocumentFragment thao tác hàng loạt
 const container = document.getElementById('list')
-const fragment = document.createDocumentFragment()  // Container ảo
+const fragment = document.createDocumentFragment() // Container ảo
 
 // Tất cả thao tác đều trên fragment trong bộ nhớ
 for (let i = 0; i < 1000; i++) {
-  const item = document.createElement('div')
-  item.style.width = Math.random() * 100 + 'px'
-  item.textContent = `Item ${i}`
-  fragment.appendChild(item)  // Không ảnh hưởng DOM thật
+ const item = document.createElement('div')
+ item.style.width = Math.random() * 100 + 'px'
+ item.textContent = `Item ${i}`
+ fragment.appendChild(item) // Không ảnh hưởng DOM thật
 }
 
 // Chèn vào DOM thật một lần, chỉ kích hoạt kết xuất một lần
@@ -377,7 +377,7 @@ container.appendChild(fragment)
 
 ## 5. Giai Đoạn 3: Layout và Reflow
 
-### 5.1 "Layout" Là Gì?
+### 5.1 Định nghĩa Layout
 
 ::: tip 🤔 Layout Là Gì?
 **Layout**, còn gọi là **Reflow**, là quá trình trình duyệt tính toán "ở vị trí nào, chiếm không gian bao nhiêu" cho mỗi phần tử trong cây kết xuất.
@@ -412,7 +412,7 @@ Dưới đây là các thao tác phổ biến sẽ kích hoạt reflow, **khuy�
 3. **transform và opacity có hiệu năng tốt nhất**: Chúng không kích hoạt reflow, chỉ kích hoạt composite
 :::
 
-### 5.3 Nhật Ký Vấp Ngã: Tại Sao Animation Của Tôi Giật Như PPT?
+### 5.3 Trường hợp: Tại Sao Animation Của Tôi Giật Như PPT
 
 **Bẫy: Dùng width làm animation**
 
@@ -420,12 +420,12 @@ Dưới đây là các thao tác phổ biến sẽ kích hoạt reflow, **khuy�
 ```css
 /* ❌ Animation xấu: kích hoạt reflow */
 .box {
-  width: 100px;
-  transition: width 0.3s;
+ width: 100px;
+ transition: width 0.3s;
 }
 
 .box:hover {
-  width: 200px;  /* Thay đổi độ rộng kích hoạt reflow! */
+ width: 200px; /* Thay đổi độ rộng kích hoạt reflow! */
 }
 ```
 
@@ -438,13 +438,13 @@ Mỗi frame animation đều kích hoạt reflow, trình duyệt cần:
 ```css
 /* ✅ Animation tốt: chỉ kích hoạt composite */
 .box {
-  width: 100px;
-  transform: scaleX(1);
-  transition: transform 0.3s;
+ width: 100px;
+ transform: scaleX(1);
+ transition: transform 0.3s;
 }
 
 .box:hover {
-  transform: scaleX(2);  /* Scale không kích hoạt reflow! */
+ transform: scaleX(2); /* Scale không kích hoạt reflow! */
 }
 ```
 
@@ -467,9 +467,9 @@ Nếu bạn "đọc ghi xen kẽ", sẽ dẫn đến trình duyệt lặp đi l�
 const elements = document.querySelectorAll('.item')
 
 for (let i = 0; i < elements.length; i++) {
-  const height = elements[i].offsetHeight  // Đọc → ép buộc layout
-  elements[i].style.width = (height * 2) + 'px'  // Ghi → đánh dấu cần reflow
-  // Lần đọc của vòng lặp tiếp theo lại ép buộc layout... vòng luẩn quẩn!
+ const height = elements[i].offsetHeight // Đọc → ép buộc layout
+ elements[i].style.width = (height * 2) + 'px' // Ghi → đánh dấu cần reflow
+ // Lần đọc của vòng lặp tiếp theo lại ép buộc layout... vòng luẩn quẩn!
 }
 
 // Nếu có 100 phần tử, sẽ kích hoạt 100 lần tính toán layout!
@@ -482,14 +482,14 @@ const elements = document.querySelectorAll('.item')
 // Bước 1: Đọc hàng loạt (đọc hết trước)
 const heights = []
 for (let i = 0; i < elements.length; i++) {
-  heights.push(elements[i].offsetHeight)  // Chỉ kích hoạt layout một lần
+ heights.push(elements[i].offsetHeight) // Chỉ kích hoạt layout một lần
 }
 
 // Bước 2: Ghi hàng loạt (ghi hết sau)
 requestAnimationFrame(() => {
-  for (let i = 0; i < elements.length; i++) {
-    elements[i].style.width = (heights[i] * 2) + 'px'  // Chỉ kích hoạt reflow một lần
-  }
+ for (let i = 0; i < elements.length; i++) {
+ elements[i].style.width = (heights[i] * 2) + 'px' // Chỉ kích hoạt reflow một lần
+ }
 })
 ```
 :::
@@ -500,7 +500,7 @@ requestAnimationFrame(() => {
 
 ## 6. Giai Đoạn 4: Paint và Repaint
 
-### 6.1 "Paint" Là Gì?
+### 6.1 Định nghĩa Paint
 
 ::: tip 🤔 Paint Là Gì?
 **Paint**, là quá trình trình duyệt thực sự "vẽ" phần tử đã "tính toán layout xong" lên màn hình.
@@ -532,7 +532,7 @@ Khác với reflow, repaint chỉ liên quan đến thay đổi "ngoại quan", 
 Ngoài ra, **bóng và gradient đắt hơn repaint**, vì chúng cần tính toán pixel phức tạp. Nếu trang của bạn có nhiều `box-shadow`, cân nhắc dùng pseudo-element hoặc ảnh thay thế.
 :::
 
-### 6.3 Nhật Ký Vấp Ngã: Tại Sao Hiệu Ứng Hover Của Tôi Giật?
+### 6.3 Trường hợp: Tại Sao Hiệu Ứng Hover Của Tôi Giật
 
 **Bẫy: Dùng box-shadow làm animation hover**
 
@@ -540,12 +540,12 @@ Ngoài ra, **bóng và gradient đắt hơn repaint**, vì chúng cần tính to
 ```css
 /* ❌ Hiệu ứng hover xấu: animation box-shadow rất chậm */
 .card {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ transition: box-shadow 0.3s;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Bóng rất chậm! */
+ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bóng rất chậm! */
 }
 ```
 
@@ -555,13 +555,13 @@ Ngoài ra, **bóng và gradient đắt hơn repaint**, vì chúng cần tính to
 ```css
 /* ✅ Hiệu ứng hover tốt: dùng transform */
 .card {
-  transform: translateY(0);
-  transition: transform 0.3s, box-shadow 0.3s;
+ transform: translateY(0);
+ transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-4px);  /* Chỉ đổi bóng khi hover, không làm animation */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+ transform: translateY(-4px); /* Chỉ đổi bóng khi hover, không làm animation */
+ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 ```
 :::
@@ -572,7 +572,7 @@ Ngoài ra, **bóng và gradient đắt hơn repaint**, vì chúng cần tính to
 
 ## 7. Giai Đoạn 5: Composite và Tăng Tốc GPU
 
-### 7.1 "Composite" Là Gì?
+### 7.1 Định nghĩa Composite
 
 ::: tip 🤔 Composite Là Gì?
 **Composite**, là "phép màu" của trình duyệt hiện đại, nó chia các phần khác nhau của trang thành nhiều **layer**, sau đó dùng **GPU (bộ xử lý đồ họa)** để song song tổng hợp thành hình ảnh cuối cùng.
@@ -584,7 +584,7 @@ Bạn có thể tưởng tượng nó như **layer trong Photoshop**:
 **Tại sao composite nhanh?** Vì GPU giỏi xử lý các tác vụ song song như "tổng hợp hình ảnh", nhanh hơn CPU hàng chục lần.
 :::
 
-### 7.2 Phần Tử Nào Sẽ Được Nâng Lên "Composite Layer"?
+### 7.2 Phần Tử Nào Sẽ Được Nâng Lên "Composite Layer"
 
 Trình duyệt sẽ tự động nâng một số phần tử lên composite layer độc lập. Dưới đây là các điều kiện kích hoạt phổ biến:
 
@@ -604,7 +604,7 @@ Trình duyệt sẽ tự động nâng một số phần tử lên composite lay
 Nhưng cần lưu ý: **mỗi composite layer đều chiếm bộ nhớ GPU**, lạm dụng `translateZ(0)` sẽ dẫn đến bùng nổ bộ nhớ (xem mục 7.4).
 :::
 
-### 7.3 Nhật Ký Vấp Ngã: Composite Layer Quá Nhiều Lại Giật?
+### 7.3 Trường hợp: Composite Layer Quá Nhiều Lại Giật
 
 ::: danger 💀 Bẫy Của Tối Ưu Quá Mức
 Có người nghe nói "GPU tăng tốc nhanh", liền cho tất cả phần tử thêm `transform: translateZ(0)`, kết quả trang lại càng giật hơn.
@@ -628,21 +628,21 @@ Mỗi composite layer cần lưu một "texture" (bitmap) trong GPU, chiếm b�
 ```css
 /* Chiến lược 1: chỉ bật cho phần tử thực sự cần animation */
 .card {
-  transition: transform 0.3s ease;
+ transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);  /* Tự động tạo composite layer */
+ transform: translateY(-5px); /* Tự động tạo composite layer */
 }
 
 /* Chiến lược 2: dùng will-change gợi ý trình duyệt */
 .card {
-  will-change: transform;  /* Tạo layer trước */
+ will-change: transform; /* Tạo layer trước */
 }
 
 /* Chiến lược 3: gỡ bỏ sau khi animation kết thúc */
 .card:not(:hover) {
-  will-change: auto;  /* Giải phóng bộ nhớ GPU */
+ will-change: auto; /* Giải phóng bộ nhớ GPU */
 }
 ```
 :::
@@ -677,12 +677,12 @@ JavaScript thời kỳ đầu chỉ có một hàng đợi tác vụ. Nhưng khi
 ```
 1. Thực thi macro task hiện tại (ví dụ toàn bộ <script>)
 2. Thực thi tất cả micro task sinh ra trong quá trình thực thi (Promise.then, v.v.)
-   ↳ Micro task có thể sinh ra micro task mới, xóa hết mới tiếp tục
+ ↳ Micro task có thể sinh ra micro task mới, xóa hết mới tiếp tục
 3. Nếu cần, tiến hành UI rendering (reflow/repaint)
 4. Bắt đầu vòng event loop tiếp theo, thực thi macro task tiếp theo
 ```
 
-### 8.2 Nhật Ký Vấp Ngã: Promise Nhanh Hơn setTimeout?
+### 8.2 Trường hợp: Promise Nhanh Hơn setTimeout
 
 ::: danger ❌ Hiểu Lầm Phổ Biến: setTimeout(fn, 0) Sẽ "Thực Thi Ngay"
 Nhiều người tưởng `setTimeout(fn, 0)` là "0 millisecond sau thực thi ngay", đây là cách hiểu **sai lầm**.
@@ -695,11 +695,11 @@ Thực tế, ý nghĩa của `setTimeout(fn, 0)` là: **"ít nhất đợi 0 mil
 console.log('1. Start')
 
 setTimeout(() => {
-  console.log('2. setTimeout callback')
+ console.log('2. setTimeout callback')
 }, 0)
 
 Promise.resolve().then(() => {
-  console.log('3. Promise.then')
+ console.log('3. Promise.then')
 })
 
 console.log('4. End')
@@ -707,45 +707,45 @@ console.log('4. End')
 // Thứ tự output bạn nghĩ:
 // 1. Start
 // 4. End
-// 2. setTimeout callback  ← setTimeout(0) không phải là ngay lập tức sao?
+// 2. setTimeout callback ← setTimeout(0) không phải là ngay lập tức sao?
 // 3. Promise.then
 
 // Thứ tự output thực tế:
 // 1. Start
 // 4. End
-// 3. Promise.then         ← Promise.then thực thi trước setTimeout!
+// 3. Promise.then ← Promise.then thực thi trước setTimeout!
 // 2. setTimeout callback
 ```
 
 **Sơ đồ quy trình thực thi:**
 ```
-Call Stack                     Hàng Đợi Macro Task            Hàng Đợi Micro Task
-                              [setTimeout callback]           [Promise.then callback]
+Call Stack Hàng Đợi Macro Task Hàng Đợi Micro Task
+ [setTimeout callback] [Promise.then callback]
 
 1. console.log('1. Start')
-   → Output: 1. Start
+ → Output: 1. Start
 
 2. setTimeout(fn, 0)
-   → Đưa callback vào hàng đợi macro task  ← [setTimeout callback]
+ → Đưa callback vào hàng đợi macro task ← [setTimeout callback]
 
 3. Promise.resolve().then()
-   → Đưa callback vào hàng đợi micro task                       ← [Promise.then callback]
+ → Đưa callback vào hàng đợi micro task ← [Promise.then callback]
 
 4. console.log('4. End')
-   → Output: 4. End
+ → Output: 4. End
 
 5. Call stack trống, kiểm tra hàng đợi micro task
-   → Phát hiện Promise.then callback
-   → Thực thi: console.log('3. Promise.then')
-   → Output: 3. Promise.then
+ → Phát hiện Promise.then callback
+ → Thực thi: console.log('3. Promise.then')
+ → Output: 3. Promise.then
 
 6. Hàng đợi micro task trống
-   → Có thể cần UI rendering (nếu có thay đổi)
+ → Có thể cần UI rendering (nếu có thay đổi)
 
 7. Kiểm tra hàng đợi macro task
-   → Phát hiện setTimeout callback
-   → Thực thi: console.log('2. setTimeout callback')
-   → Output: 2. setTimeout callback
+ → Phát hiện setTimeout callback
+ → Thực thi: console.log('2. setTimeout callback')
+ → Output: 2. setTimeout callback
 ```
 :::
 
@@ -773,23 +773,23 @@ Hiểu quy trình làm việc của pipeline kết xuất rồi, chúng ta cùng
 ```javascript
 // ❌ Cực xấu: đọc ghi xen kẽ, dẫn đến layout thrashing
 for (let i = 0; i < elements.length; i++) {
-  const height = elements[i].offsetHeight  // Đọc → ép buộc layout
-  elements[i].style.height = (height * 2) + 'px'  // Ghi → đánh dấu cần reflow
-  // Lần đọc của vòng lặp tiếp theo lại ép buộc layout... vòng luẩn quẩn!
+ const height = elements[i].offsetHeight // Đọc → ép buộc layout
+ elements[i].style.height = (height * 2) + 'px' // Ghi → đánh dấu cần reflow
+ // Lần đọc của vòng lặp tiếp theo lại ép buộc layout... vòng luẩn quẩn!
 }
 
 // ✅ Cực tốt: đọc hết trước, ghi hết sau
 // Bước 1: Đọc hàng loạt
 const heights = []
 for (let i = 0; i < elements.length; i++) {
-  heights.push(elements[i].offsetHeight)
+ heights.push(elements[i].offsetHeight)
 }
 
 // Bước 2: Ghi hàng loạt
 requestAnimationFrame(() => {
-  for (let i = 0; i < elements.length; i++) {
-    elements[i].style.height = (heights[i] * 2) + 'px'
-  }
+ for (let i = 0; i < elements.length; i++) {
+ elements[i].style.height = (heights[i] * 2) + 'px'
+ }
 })
 ```
 :::
@@ -802,19 +802,19 @@ requestAnimationFrame(() => {
 ```css
 /* ❌ Animation xấu: kích hoạt reflow */
 .box {
-  transition: width 0.3s, left 0.3s;
+ transition: width 0.3s, left 0.3s;
 }
 .box.moving {
-  width: 200px;
-  left: 100px;
+ width: 200px;
+ left: 100px;
 }
 
 /* ✅ Animation tốt: chỉ kích hoạt composite */
 .box {
-  transition: transform 0.3s;
+ transition: transform 0.3s;
 }
 .box.moving {
-  transform: translateX(100px) scaleX(2);
+ transform: translateX(100px) scaleX(2);
 }
 ```
 :::
@@ -830,51 +830,51 @@ requestAnimationFrame(() => {
 ::: details Xem triển khai virtual scrolling
 ```vue
 <template>
-  <div class="virtual-list" @scroll="handleScroll">
-    <!-- Phần tử placeholder, chống thanh cuộn -->
-    <div class="phantom" :style="{ height: totalHeight + 'px' }"></div>
+ <div class="virtual-list" @scroll="handleScroll">
+ <!-- Phần tử placeholder, chống thanh cuộn -->
+ <div class="phantom" :style="{ height: totalHeight + 'px' }"></div>
 
-    <!-- Các mục danh sách thực sự được kết xuất -->
-    <div class="content" :style="{ transform: `translateY(${offsetY}px)` }">
-      <div
-        v-for="item in visibleItems"
-        :key="item.id"
-        class="item"
-        :style="{ height: itemHeight + 'px' }"
-      >
-        {{ item.name }}
-      </div>
-    </div>
-  </div>
+ <!-- Các mục danh sách thực sự được kết xuất -->
+ <div class="content" :style="{ transform: `translateY(${offsetY}px)` }">
+ <div
+ v-for="item in visibleItems"
+ :key="item.id"
+ class="item"
+ :style="{ height: itemHeight + 'px' }"
+ >
+ {{ item.name }}
+ </div>
+ </div>
+ </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
 
 const props = defineProps({
-  items: Array,
-  itemHeight: { type: Number, default: 50 }
+ items: Array,
+ itemHeight: { type: Number, default: 50 }
 })
 
 const scrollTop = ref(0)
-const buffer = 5  // Số lượng buffer
+const buffer = 5 // Số lượng buffer
 
 // Viewport hiển thị được bao nhiêu mục
 const visibleCount = computed(() => 10)
 
 // Chỉ số bắt đầu
 const startIndex = computed(() =>
-  Math.max(0, Math.floor(scrollTop.value / props.itemHeight) - buffer)
+ Math.max(0, Math.floor(scrollTop.value / props.itemHeight) - buffer)
 )
 
 // Chỉ số kết thúc
 const endIndex = computed(() =>
-  Math.min(props.items.length, startIndex.value + visibleCount.value + buffer * 2)
+ Math.min(props.items.length, startIndex.value + visibleCount.value + buffer * 2)
 )
 
 // Dữ liệu hiện tại hiển thị
 const visibleItems = computed(() =>
-  props.items.slice(startIndex.value, endIndex.value)
+ props.items.slice(startIndex.value, endIndex.value)
 )
 
 // Tổng chiều cao
@@ -884,7 +884,7 @@ const totalHeight = computed(() => props.items.length * props.itemHeight)
 const offsetY = computed(() => startIndex.value * props.itemHeight)
 
 const handleScroll = (e) => {
-  scrollTop.value = e.target.scrollTop
+ scrollTop.value = e.target.scrollTop
 }
 </script>
 ```
@@ -898,23 +898,23 @@ const handleScroll = (e) => {
 ```javascript
 // Debounce: trì hoãn thực thi, nếu trong thời gian trì hoãn lại kích hoạt, thì đếm lại
 function debounce(fn, delay) {
-  let timer = null
-  return function (...args) {
-    clearTimeout(timer)
-    timer = setTimeout(() => fn.apply(this, args), delay)
-  }
+ let timer = null
+ return function (...args) {
+ clearTimeout(timer)
+ timer = setTimeout(() => fn.apply(this, args), delay)
+ }
 }
 
 // Throttle: thực thi theo khoảng thời gian cố định
 function throttle(fn, interval) {
-  let lastTime = 0
-  return function (...args) {
-    const now = Date.now()
-    if (now - lastTime >= interval) {
-      lastTime = now
-      fn.apply(this, args)
-    }
-  }
+ let lastTime = 0
+ return function (...args) {
+ const now = Date.now()
+ if (now - lastTime >= interval) {
+ lastTime = now
+ fn.apply(this, args)
+ }
+ }
 }
 
 // Ví dụ sử dụng
@@ -933,14 +933,14 @@ window.addEventListener('resize', throttle(handleResize, 100))
 const lazyImages = document.querySelectorAll('img[data-src]')
 
 const imageObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const img = entry.target
-      img.src = img.dataset.src  // Tải ảnh thật
-      img.removeAttribute('data-src')
-      observer.unobserve(img)  // Dừng quan sát
-    }
-  })
+ entries.forEach(entry => {
+ if (entry.isIntersecting) {
+ const img = entry.target
+ img.src = img.dataset.src // Tải ảnh thật
+ img.removeAttribute('data-src')
+ observer.unobserve(img) // Dừng quan sát
+ }
+ })
 })
 
 lazyImages.forEach(img => imageObserver.observe(img))

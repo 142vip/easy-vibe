@@ -1,4 +1,4 @@
-# Tests A/B : Prendre des décisions « avec les données »
+# Principes : Tests A/B et décision par les données
 
 ::: tip 🎯 Question centrale
 **Comment vérifier scientifiquement l'effet d'un changement produit ?**
@@ -39,7 +39,7 @@ Vous pouvez observer intuitivement comment le système répartit le trafic grâc
 
 <ABTestingDemo tab="traffic" />
 
-### 1.1 Pourquoi la répartition aléatoire est-elle si importante ?
+### 1.1 Pourquoi la répartition aléatoire est-elle si importante
 
 Ce n'est qu'avec un « aléatoire » à 100 % que l'on peut lisser au maximum les différences apportées par toutes les autres caractéristiques. Avec un échantillon suffisamment grand et une division parfaitement aléatoire, la proportion de jeunes utilisateurs, le niveau de revenus et la répartition géographique des groupes A et B seront en principe remarquablement identiques.
 

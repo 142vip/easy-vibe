@@ -1,11 +1,11 @@
-# Gateway & Reverse Proxy
+# Principles of Gateways and Reverse Proxies
 ::: tip 🎯 Core Question
 **In high-concurrency internet architectures, how do you route traffic to the right service safely and efficiently?** Reverse proxies solve "how to distribute traffic," and API gateways solve "how to process requests." This article uses real-world analogies (reception desk, security system, intelligent routing) to explore the design philosophy and engineering practices of gateways.
 :::
 
 ---
 
-## 1. Why "Gateway"?
+## 1. Motivation for the "Gateway"
 
 ### 1.1 A Real-World Case: The Architecture Evolution of an E-Commerce Platform
 
@@ -66,7 +66,7 @@ Imagine visiting a large company:
 
 ---
 
-## 2. What Is a Reverse Proxy?
+## 2. Overview of a Reverse Proxy
 
 ### 2.1 Forward Proxy vs. Reverse Proxy
 
@@ -136,7 +136,7 @@ HTTPS Client → Nginx (encrypt/decrypt) → HTTP Backend Services
 
 ---
 
-## 3. Nginx: How Does It Handle Millions of Concurrent Connections?
+## 3. Nginx: Method for handling Millions of Concurrent Connections
 
 ### 3.1 Master-Worker Process Model
 
@@ -187,9 +187,9 @@ This is the core secret of Nginx's high performance:
 
 ---
 
-## 4. What Is an API Gateway?
+## 4. Overview of an API Gateway
 
-### 4.1 Why Do You Need an API Gateway?
+### 4.1 Motivation for needing an API Gateway
 
 **Imagine a system without a gateway:**
 
@@ -229,7 +229,7 @@ This is the core secret of Nginx's high performance:
 
 ---
 
-## 5. Gateway in Practice: How to Build a Complete Gateway Architecture?
+## 5. Gateway in Practice: Approach to building a Complete Gateway Architecture
 
 ### 5.1 Full Architecture Diagram
 
@@ -410,7 +410,7 @@ upstream backend_ip_hash {
 
 ---
 
-## 6. Gateway Security: How to Guard the System's Front Door?
+## 6. Gateway Security: Approach to guarding the System's Front Door
 
 ### 6.1 Authentication & Authorization
 
@@ -464,7 +464,7 @@ Like a company reception desk: reception authenticates your identity (ID card), 
 
 ---
 
-## 7. Rate Limiting & Circuit Breaking: How to Prevent the System from Being Overwhelmed by "Traffic Floods"?
+## 7. Rate Limiting & Circuit Breaking: Approach to preventing the System from Being Overwhelmed by "Traffic Floods"
 
 ### 7.1 Rate Limiting Algorithm Comparison
 

@@ -1,4 +1,4 @@
-# Phương pháp luận Thiết kế Hệ thống
+# Thiết kế hệ thống: Toàn cảnh phương pháp luận
 
 ::: tip Lời mở đầu
 **Thiết kế hệ thống không phải là vẽ sơ đồ kiến trúc theo cảm tính, mà là một phương pháp luận có quy tắc rõ ràng.** Cho dù là bài toán thiết kế hệ thống trong phỏng vấn hay thiết kế kiến trúc trong công việc thực tế, đều tuân theo khung tư duy tương tự: trước hết nắm rõ vấn đề, sau đó ước tính quy mô, tiếp đó thiết kế phương án, cuối cùng đi sâu tối ưu.

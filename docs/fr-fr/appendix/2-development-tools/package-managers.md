@@ -1,10 +1,10 @@
-# Gestionnaires de paquets
+# Introduction : Gestionnaires de paquets
 
 > 💡 **Guide d'apprentissage** : Pas besoin de reinventer la roue pour ecrire du code — 99 % des fonctionnalites ont deja ete ecrites et publiees sur Internet par quelqu'un d'autre. Le **gestionnaire de paquets** est l'outil qui vous aide a trouver, telecharger et gerer ces "pieces toutes pretes". Ce chapitre s'articule autour d'une question centrale : **Comment rendre les dependances de code reproductibles, collaboratives et maintenables ?**
 
 ---
 
-## 0. Pourquoi aurez-vous inevitablement besoin d'un gestionnaire de paquets ?
+## 0. Motivation et justification : aurez-vous inevitablement besoin d'un gestionnaire de paquets
 
 Imaginez que vous voulez ecrire un programme Node.js qui envoie des requetes HTTP. Deux methodes :
 
@@ -28,7 +28,7 @@ Different langages de programmation et systemes d'exploitation ont leurs propres
 
 <PackageManagerOverviewDemo />
 
-### 1.1 Ou telecharger les paquets ? — Le Registry
+### 1.1 Ou telecharger les paquets — Le Registry
 
 Derriere chaque ecosysteme se trouve un depot central stockant tous les paquets disponibles :
 
@@ -66,7 +66,7 @@ Usage courant : npm (le plus repandu) > pnpm (recommande pour nouveaux projets) 
 
 ---
 
-## 2. Installation de paquets — Que se passe-t-il en coulisses ?
+## 2. Installation de paquets — Que se passe-t-il en coulisses
 
 Apres avoir saisi `npm install axios`, la ligne de commande reste silencieuse quelques secondes puis c'est termine. Que s'est-il passe pendant ces secondes ?
 
@@ -129,7 +129,7 @@ winget install Git.Git           # Installer un logiciel
 winget upgrade --all             # Mettre a jour tous les logiciels installes
 ```
 
-### 2.3 Que sont les npm scripts ?
+### 2.3 Que sont les npm scripts
 
 Le fichier `package.json` contient un champ `scripts` — c'est le **task runner** integre a npm :
 
@@ -220,7 +220,7 @@ Que signifient `^` et `~` ?
 
 <DependencyTreeDemo />
 
-### 4.1 Pourquoi ne pas fixer completement la version ?
+### 4.1 Pourquoi ne pas fixer completement la version
 
 | Approche | Avantages | Inconvenients |
 | :--- | :--- | :--- |
@@ -230,7 +230,7 @@ Que signifient `^` et `~` ?
 
 **Bonne pratique** : declarer une plage avec `^` + fixer la version reelle avec un lockfile, utiliser les deux ensemble.
 
-### 4.2 Qu'est-ce que l'enfer des dependances ?
+### 4.2 Qu'est-ce que l'enfer des dependances
 
 Quand vous dependez de 50 paquets, chacun dependant de plusieurs autres, l'"arbre de dependances" peut avoir des centaines de noeuds. Si deux paquets dont vous dependez necessitent **des versions incompatibles de la meme bibliotheque**, un "conflit de dependances" apparait.
 
@@ -244,7 +244,7 @@ Solutions par ecosysteme :
 
 ## 5. Lockfile — La pierre angulaire de la collaboration
 
-### 5.1 Pourquoi un lockfile est-il necessaire ?
+### 5.1 Pourquoi un lockfile est-il necessaire
 
 Supposons que `package.json` indique `"axios": "^1.6.0"` :
 
@@ -260,7 +260,7 @@ Meme code, trois resultats differents. Le **lockfile** enregistre la version exa
 | CI / deploiement en production | `npm ci` | Installation **strictement** selon le lockfile, erreur immediate en cas de difference |
 | Mise a jour proactive | `npm update` | Mise a jour dans la plage autorisee, mise a jour du lockfile |
 
-### 5.2 Le lockfile doit-il etre commite dans Git ?
+### 5.2 Le lockfile doit-il etre commite dans Git
 
 **Les applications doivent le commiter, les bibliotheques publiees sur npm peuvent ne pas le faire.**
 

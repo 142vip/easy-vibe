@@ -1,11 +1,11 @@
-# Toàn Cảnh Công Nghiệp Hóa Frontend
+# Công nghiệp hóa Frontend: Toàn cảnh công cụ và quy trình
 ::: tip 🎯 Câu hỏi cốt lõi
 **Làm thế nào để biến code bạn viết thành website mà trình duyệt người dùng có thể chạy?** Điều này giống như hỏi: làm thế nào để biến nguyên liệu thô thành sản phẩm hoàn chỉnh, đồng thời đảm bảo chất lượng và kiểm soát chi phí? Chương này sẽ giúp bạn hiểu sâu về các khái niệm cốt lõi và quy trình build trong công nghiệp hóa frontend.
 :::
 
 ---
 
-## 1. Tại sao cần "công nghiệp hóa"?
+## 1. Động lực của công nghiệp hóa
 
 ### 1.1 Từ đơn giản đến phức tạp: sự tiến hóa của phát triển frontend
 
@@ -38,7 +38,7 @@ Nhưng phát triển frontend hiện đại đã hoàn toàn thay đổi. Hiện
 
 <BuildPipelineDemo />
 
-### 1.2 Một câu chuyện thực tế về vấp ngã: tại sao bạn cần hiểu nguyên lý build
+### 1.2 Trường hợp: tại sao bạn cần hiểu nguyên lý build
 
 Bạn có thể sẽ nói: "Tôi dùng Vite hoặc Create React App, cài đặt xong là dùng ngay, tại sao còn cần hiểu những nguyên lý build này?" Để tôi kể một câu chuyện có thật, bạn sẽ hiểu tại sao những kiến thức này lại quan trọng đến vậy.
 
@@ -106,14 +106,14 @@ const result = data?.items?.map(item => item.name) ?? []
 // Sau khi transpile (phiên bản tương thích ES5)
 var _data$items, _data$items$map
 var result =
-  (_data$items$map =
-    (_data$items = data == null ? void 0 : data.items) == null
-      ? void 0
-      : _data$items.map(function (item) {
-          return item.name
-        })) != null
-    ? _data$items$map
-    : []
+ (_data$items$map =
+ (_data$items = data == null ? void 0 : data.items) == null
+ ? void 0
+ : _data$items.map(function (item) {
+ return item.name
+ })) != null
+ ? _data$items$map
+ : []
 ```
 
 Có thể thấy, một dòng code ngắn gọn đã được chuyển thành nhiều dòng code "dài dòng", nhưng code sau có thể chạy bình thường trên mọi trình duyệt.
@@ -160,7 +160,7 @@ export function subtract(a, b) { return a - b }
 
 // main.js - import module
 import { add, subtract } from './utils.js'
-console.log(add(1, 2))  // 3
+console.log(add(1, 2)) // 3
 ```
 
 **Kiến thức nhỏ về phiên bản ES**: ECMAScript phát hành phiên bản mới hàng năm:
@@ -177,22 +177,22 @@ ES Module chính thức được giới thiệu trong ES6 (2015). Trước đó,
 **Cấu trúc source code trước khi bundle** (nhiều file phân tán):
 ```
 src/
-├── index.js          (file entry, import các module khác)
+├── index.js (file entry, import các module khác)
 ├── utils/
-│   ├── a.js          (Hàm tiện ích A)
-│   ├── b.js          (Hàm tiện ích B)
-│   └── c.js          (Hàm tiện ích C)
+│ ├── a.js (Hàm tiện ích A)
+│ ├── b.js (Hàm tiện ích B)
+│ └── c.js (Hàm tiện ích C)
 └── components/
-    └── Button.vue    (Component nút bấm)
+ └── Button.vue (Component nút bấm)
 ```
 
 **Sản phẩm sau khi bundle** (một vài file sau khi hợp nhất):
 ```
 dist/
-├── index.[hash].js      (Code entry chính)
-├── vendor.[hash].js     (Code thư viện bên thứ ba)
+├── index.[hash].js (Code entry chính)
+├── vendor.[hash].js (Code thư viện bên thứ ba)
 └── assets/
-    └── logo.[hash].png  (Tài nguyên tĩnh)
+ └── logo.[hash].png (Tài nguyên tĩnh)
 ```
 
 Công cụ bundle sẽ phân tích mối quan hệ phụ thuộc giữa các file, hợp nhất chúng theo đúng thứ tự, đồng thời thực hiện nhiều tối ưu hóa khác nhau.
@@ -306,12 +306,12 @@ project/
 ├── index.html
 ├── login.html
 ├── css/
-│   ├── bootstrap.css
-│   └── custom.css
+│ ├── bootstrap.css
+│ └── custom.css
 ├── js/
-│   ├── jquery.js
-│   ├── bootstrap.js
-│   └── app.js
+│ ├── jquery.js
+│ ├── bootstrap.js
+│ └── app.js
 └── images/
 ```
 
@@ -325,17 +325,17 @@ project/
 ```js
 // Dùng IIFE mô phỏng module hóa (IIFE pattern)
 var ModuleA = (function () {
-  var privateVar = 'private'  // Biến private, bên ngoài không truy cập được
+ var privateVar = 'private' // Biến private, bên ngoài không truy cập được
 
-  function privateFn() {
-    console.log(privateVar)
-  }
+ function privateFn() {
+ console.log(privateVar)
+ }
 
-  return {
-    publicMethod: function () {
-      privateFn()  // Phơi bày method public
-    }
-  }
+ return {
+ publicMethod: function () {
+ privateFn() // Phơi bày method public
+ }
+ }
 })()
 
 // Quản lý dependency hoàn toàn dựa vào comment
@@ -367,24 +367,24 @@ Nhưng giai đoạn này cũng có cái giá của nó: chi phí học tập chu
 **Cấu trúc dự án** (thời Webpack + Vue 2):
 ```
 my-project/
-├── build/               # Cấu hình build (giai đoạn này cấu hình rất phức tạp!)
-│   ├── webpack.base.js
-│   ├── webpack.dev.js
-│   └── webpack.prod.js
-├── config/              # Cấu hình môi trường
-│   ├── index.js
-│   ├── dev.env.js
-│   └── prod.env.js
+├── build/ # Cấu hình build (giai đoạn này cấu hình rất phức tạp!)
+│ ├── webpack.base.js
+│ ├── webpack.dev.js
+│ └── webpack.prod.js
+├── config/ # Cấu hình môi trường
+│ ├── index.js
+│ ├── dev.env.js
+│ └── prod.env.js
 ├── src/
-│   ├── components/      # Component
-│   ├── views/           # Trang
-│   ├── router/          # Route
-│   ├── store/           # Quản lý state
-│   ├── App.vue
-│   └── main.js
-├── static/              # Tài nguyên tĩnh
-├── .eslintrc.js         # Cấu hình ESLint
-├── .babelrc             # Cấu hình Babel
+│ ├── components/ # Component
+│ ├── views/ # Trang
+│ ├── router/ # Route
+│ ├── store/ # Quản lý state
+│ ├── App.vue
+│ └── main.js
+├── static/ # Tài nguyên tĩnh
+├── .eslintrc.js # Cấu hình ESLint
+├── .babelrc # Cấu hình Babel
 ├── package.json
 └── index.html
 ```
@@ -396,25 +396,25 @@ const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
-  entry: './src/main.js',
-  output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: '[name].[contenthash].js'
-  },
-  module: {
-    rules: [
-      { test: /\.vue$/, loader: 'vue-loader' },
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-      { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
-      { test: /\.(png|jpg|gif)$/, loader: 'url-loader', options: { limit: 8192 } }
-    ]
-  },
-  plugins: [new VueLoaderPlugin()],
-  resolve: {
-    extensions: ['.js', '.vue', '.json'],
-    alias: { '@': path.resolve(__dirname, '../src') }
-  }
+ entry: './src/main.js',
+ output: {
+ path: path.resolve(__dirname, '../dist'),
+ filename: '[name].[contenthash].js'
+ },
+ module: {
+ rules: [
+ { test: /\.vue$/, loader: 'vue-loader' },
+ { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+ { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+ { test: /\.scss$/, use: ['style-loader', 'css-loader', 'sass-loader'] },
+ { test: /\.(png|jpg|gif)$/, loader: 'url-loader', options: { limit: 8192 } }
+ ]
+ },
+ plugins: [new VueLoaderPlugin()],
+ resolve: {
+ extensions: ['.js', '.vue', '.json'],
+ alias: { '@': path.resolve(__dirname, '../src') }
+ }
 }
 ```
 
@@ -452,15 +452,15 @@ Sau năm 2021, đội ngũ bắt đầu dùng Vite thay thế Webpack, trải ng
 ```
 my-project/
 ├── src/
-│   ├── components/      # Component
-│   ├── views/           # Trang
-│   ├── router/          # Route
-│   ├── stores/          # Quản lý state (Pinia)
-│   ├── assets/          # Tài nguyên tĩnh
-│   ├── App.vue
-│   └── main.js
-├── public/              # Tài nguyên công cộng
-├── vite.config.js       # File cấu hình (gọn gàng!)
+│ ├── components/ # Component
+│ ├── views/ # Trang
+│ ├── router/ # Route
+│ ├── stores/ # Quản lý state (Pinia)
+│ ├── assets/ # Tài nguyên tĩnh
+│ ├── App.vue
+│ └── main.js
+├── public/ # Tài nguyên công cộng
+├── vite.config.js # File cấu hình (gọn gàng!)
 ├── package.json
 └── index.html
 ```
@@ -472,10 +472,10 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
-  plugins: [vue()],
-  resolve: {
-    alias: { '@': '/src' }
-  }
+ plugins: [vue()],
+ resolve: {
+ alias: { '@': '/src' }
+ }
 })
 // So với cấu hình Webpack ở trên, có phải gọn gàng hơn nhiều không?
 ```
@@ -496,7 +496,7 @@ npm run dev
 # Sửa code -> lưu -> đợi 5 giây -> cuối cùng cũng thấy kết quả
 
 # Giai đoạn 3: dùng Vite
-npm create vite@latest my-project  # Một dòng lệnh tạo dự án
+npm create vite@latest my-project # Một dòng lệnh tạo dự án
 cd my-project && npm install
 npm run dev
 # Đợi 300 mili giây... chưa kịp phản ứng đã xong rồi
@@ -530,52 +530,52 @@ Cốt lõi của giai đoạn này là "chuẩn hóa" — không chỉ công c�
 **Cấu trúc dự án** (template nội bộ + TypeScript):
 ```
 my-project/
-├── .husky/              # Git hooks (tự động kiểm tra trước khi commit)
+├── .husky/ # Git hooks (tự động kiểm tra trước khi commit)
 ├── src/
-│   ├── components/      # Component
-│   ├── views/           # Trang
-│   ├── router/          # Route
-│   ├── stores/          # Quản lý state
-│   ├── api/             # API interface
-│   ├── utils/           # Hàm tiện ích
-│   ├── types/           # Định nghĩa kiểu TypeScript
-│   ├── assets/          # Tài nguyên tĩnh
-│   ├── App.vue
-│   └── main.ts          # Chú ý là .ts không phải .js
+│ ├── components/ # Component
+│ ├── views/ # Trang
+│ ├── router/ # Route
+│ ├── stores/ # Quản lý state
+│ ├── api/ # API interface
+│ ├── utils/ # Hàm tiện ích
+│ ├── types/ # Định nghĩa kiểu TypeScript
+│ ├── assets/ # Tài nguyên tĩnh
+│ ├── App.vue
+│ └── main.ts # Chú ý là .ts không phải .js
 ├── public/
-├── .eslintrc.cjs        # Cấu hình ESLint (quy tắc thống nhất của đội)
-├── .prettierrc          # Cấu hình Prettier (định dạng code)
-├── tsconfig.json        # Cấu hình TypeScript
-├── vite.config.ts       # Cấu hình Vite
+├── .eslintrc.cjs # Cấu hình ESLint (quy tắc thống nhất của đội)
+├── .prettierrc # Cấu hình Prettier (định dạng code)
+├── tsconfig.json # Cấu hình TypeScript
+├── vite.config.ts # Cấu hình Vite
 ├── package.json
-└── README.md            # Tài liệu dự án
+└── README.md # Tài liệu dự án
 ```
 
 **Biểu hiện cụ thể của chuẩn hóa đội ngũ**:
 ```js
 // tsconfig.json - Cấu hình TypeScript, an toàn kiểu
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "strict": true,           // Bật strict mode
-    "noImplicitAny": true,    // Cấm any ẩn
-    "baseUrl": ".",
-    "paths": { "@/*": ["src/*"] }
-  }
+ "compilerOptions": {
+ "target": "ES2020",
+ "strict": true, // Bật strict mode
+ "noImplicitAny": true, // Cấm any ẩn
+ "baseUrl": ".",
+ "paths": { "@/*": ["src/*"] }
+ }
 }
 
 // .eslintrc.cjs - Quy chuẩn code thống nhất của đội
 module.exports = {
-  extends: [
-    'plugin:vue/vue3-recommended',
-    '@vue/standard',
-    '@vue/typescript/recommended'
-  ],
-  rules: {
-    'no-console': 'warn',     // Cấm console.log
-    'no-debugger': 'error',   // Cấm debugger
-    'vue/multi-word-component-names': 'error'  // Tên component phải có nhiều từ
-  }
+ extends: [
+ 'plugin:vue/vue3-recommended',
+ '@vue/standard',
+ '@vue/typescript/recommended'
+ ],
+ rules: {
+ 'no-console': 'warn', // Cấm console.log
+ 'no-debugger': 'error', // Cấm debugger
+ 'vue/multi-word-component-names': 'error' // Tên component phải có nhiều từ
+ }
 }
 ```
 
@@ -637,7 +637,7 @@ Trình duyệt sẽ cache tài nguyên tĩnh để tăng tốc độ tải, như
 
 ---
 
-## 4. Nguyên lý sâu: Tại sao Vite nhanh như vậy?
+## 4. Nguyên lý sâu: Nguyên tắc hiệu năng Vite
 
 Sau khi hiểu case study thực tế, hãy đi sâu vào nguyên lý hoạt động của Vite, hiểu tại sao nó có thể nhanh hơn công cụ truyền thống nhiều như vậy.
 
@@ -651,11 +651,11 @@ Cách làm việc của công cụ bundle truyền thống (như Webpack) là "b
 Quy trình làm việc của công cụ bundle truyền thống:
 
 Source code (100+ file)
-    ↓
+ ↓
 [Bundle tất cả khi build] ← Bước này rất tốn thời gian!
-    ↓
+ ↓
 Bundle (một/vài file lớn)
-    ↓
+ ↓
 Trình duyệt request → trả về file đã bundle
 ```
 
@@ -665,15 +665,15 @@ Cách làm việc của Vite hoàn toàn khác, nó áp dụng chiến lược "
 Quy trình làm việc của Vite:
 
 Source code (100+ file)
-    ↓
+ ↓
 [Không bundle! Khởi động thẳng server] ← Gần như hoàn thành ngay lập tức
-    ↓
+ ↓
 Trình duyệt request index.html
-    ↓
+ ↓
 Trình duyệt phát hiện <script type="module">, tiếp tục request file JS
-    ↓
+ ↓
 Vite biên dịch module được request theo thời gian thực → trả về code đã biên dịch
-    ↓
+ ↓
 Trình duyệt tải theo nhu cầu, dùng đến đâu request đến đó
 ```
 
@@ -740,92 +740,92 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
 export default defineConfig(({ mode }) => ({
-  // Cấu hình base path
-  base: './',  // Base path khi triển khai, relative path linh hoạt hơn
+ // Cấu hình base path
+ base: './', // Base path khi triển khai, relative path linh hoạt hơn
 
-  // Path alias, giúp câu lệnh import gọn gàng hơn
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@api': resolve(__dirname, 'src/api')
-    }
-  },
+ // Path alias, giúp câu lệnh import gọn gàng hơn
+ resolve: {
+ alias: {
+ '@': resolve(__dirname, 'src'),
+ '@components': resolve(__dirname, 'src/components'),
+ '@utils': resolve(__dirname, 'src/utils'),
+ '@api': resolve(__dirname, 'src/api')
+ }
+ },
 
-  // Cấu hình CSS
-  css: {
-    preprocessorOptions: {
-      scss: {
-        // Tự động import biến style toàn cục
-        additionalData: `@use "@/styles/vars.scss" as *;`
-      }
-    }
-  },
+ // Cấu hình CSS
+ css: {
+ preprocessorOptions: {
+ scss: {
+ // Tự động import biến style toàn cục
+ additionalData: `@use "@/styles/vars.scss" as *;`
+ }
+ }
+ },
 
-  // Cấu hình dev server
-  server: {
-    port: 3000,           // Cổng
-    open: true,           // Tự động mở trình duyệt
-    cors: true,           // Cho phép cross-origin
-    // Cấu hình proxy API, giải quyết vấn đề cross-origin trong môi trường dev
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8080',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
-  },
+ // Cấu hình dev server
+ server: {
+ port: 3000, // Cổng
+ open: true, // Tự động mở trình duyệt
+ cors: true, // Cho phép cross-origin
+ // Cấu hình proxy API, giải quyết vấn đề cross-origin trong môi trường dev
+ proxy: {
+ '/api': {
+ target: 'http://localhost:8080',
+ changeOrigin: true,
+ rewrite: (path) => path.replace(/^\/api/, '')
+ }
+ }
+ },
 
-  // Cấu hình build
-  build: {
-    outDir: 'dist',
-    sourcemap: mode !== 'production',  // Môi trường production không tạo sourcemap
+ // Cấu hình build
+ build: {
+ outDir: 'dist',
+ sourcemap: mode !== 'production', // Môi trường production không tạo sourcemap
 
-    // Cấu hình Rollup bundle
-    rollupOptions: {
-      output: {
-        // Chiến lược code splitting: bundle các loại dependency khác nhau vào các file khác nhau
-        manualChunks: {
-          'vue-vendor': ['vue', 'vue-router', 'pinia'],
-          'ui-vendor': ['element-plus'],
-          'utils-vendor': ['lodash-es', 'axios', 'dayjs']
-        },
-        // Quy tắc đặt tên file
-        entryFileNames: 'js/[name]-[hash].js',
-        chunkFileNames: 'js/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.')
-          const ext = info[info.length - 1]
-          if (/\.(png|jpe?g|gif|svg|webp|ico)$/i.test(assetInfo.name)) {
-            return 'img/[name]-[hash][extname]'
-          }
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
-            return 'fonts/[name]-[hash][extname]'
-          }
-          return '[ext]/[name]-[hash][extname]'
-        }
-      }
-    },
+ // Cấu hình Rollup bundle
+ rollupOptions: {
+ output: {
+ // Chiến lược code splitting: bundle các loại dependency khác nhau vào các file khác nhau
+ manualChunks: {
+ 'vue-vendor': ['vue', 'vue-router', 'pinia'],
+ 'ui-vendor': ['element-plus'],
+ 'utils-vendor': ['lodash-es', 'axios', 'dayjs']
+ },
+ // Quy tắc đặt tên file
+ entryFileNames: 'js/[name]-[hash].js',
+ chunkFileNames: 'js/[name]-[hash].js',
+ assetFileNames: (assetInfo) => {
+ const info = assetInfo.name.split('.')
+ const ext = info[info.length - 1]
+ if (/\.(png|jpe?g|gif|svg|webp|ico)$/i.test(assetInfo.name)) {
+ return 'img/[name]-[hash][extname]'
+ }
+ if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
+ return 'fonts/[name]-[hash][extname]'
+ }
+ return '[ext]/[name]-[hash][extname]'
+ }
+ }
+ },
 
-    // Cấu hình nén code
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,   // Xóa console
-        drop_debugger: true   // Xóa debugger
-      }
-    },
+ // Cấu hình nén code
+ minify: 'terser',
+ terserOptions: {
+ compress: {
+ drop_console: true, // Xóa console
+ drop_debugger: true // Xóa debugger
+ }
+ },
 
-    // Chunk lớn hơn 500KB sẽ kích hoạt cảnh báo
-    chunkSizeWarningLimit: 500
-  },
+ // Chunk lớn hơn 500KB sẽ kích hoạt cảnh báo
+ chunkSizeWarningLimit: 500
+ },
 
-  // Cấu hình plugin
-  plugins: [
-    vue()  // Hỗ trợ Vue 3
-  ]
+ // Cấu hình plugin
+ plugins: [
+ vue() // Hỗ trợ Vue 3
+ ]
 }))
 ```
 

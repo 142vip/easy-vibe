@@ -1,7 +1,7 @@
-# Kommandozeile und Shell-Skripte
+# Kommandozeile und Shell: Grundlagen
 > 💡 **Lernleitfaden**: Dieses Kapitel bietet Einsteigern ohne Vorkenntnisse einen systematischen Überblick über die Funktionsweise des Terminals. Es sind keine Informatik-Kenntnisse erforderlich. Wir werden durch interaktive Demos schrittweise die Mechanismen des Terminals von grundlegend bis fortgeschritten analysieren.
 
-## 0. Schnellstart: Wie öffnet man das Terminal?
+## 0. Schnellstart: Ansatz für öffnet man das Terminal
 
 Bevor Sie mit dem Lernen beginnen, müssen Sie es zuerst finden. Das Terminal ist bei jedem Betriebssystem "vorinstalliert" — Sie müssen keine zusätzliche Software installieren, um es zu nutzen.
 
@@ -68,7 +68,7 @@ Es geht nicht darum, "geeky" zu wirken, sondern darum, dass in bestimmten Situat
 
 **Zusammenfassung**: GUI eignet sich für **Entdeckung** (Webseiten durchsuchen, Bilder ansehen), CLI für **Produktion** (Entwicklung, Betrieb, Stapelverarbeitung). Als Entwickler nutzen wir das Terminal, weil es **präziser, kontrollierbarer und effizienter** ist.
 
-## 1. Begriffsbestimmung: Was ist ein Terminal? (Definition)
+## 1. Begriffsbestimmung: Überblick über ist ein Terminal? (Definition)
 
 _Auf verschiedenen Betriebssystemen sieht das Terminal unterschiedlich aus und **die Befehle sind auch verschieden**. Klicken Sie unten auf die Schaltflächen, um zu wechseln, und beobachten Sie, wie macOS, Windows und Linux mit verschiedenen Befehlen (z.B. `dir` vs `ls`) dieselbe Aufgabe erledigen:_
 

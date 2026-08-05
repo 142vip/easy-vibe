@@ -1,11 +1,11 @@
-# Frontend-Engineering im Überblick
+# Frontend-Engineering: Einführung
 ::: tip 🎯 Kernfrage
 **Wie verwandelt man den geschriebenen Code in eine Website, die im Browser des Nutzers läuft?** Das ist vergleichbar mit der Frage: Wie verwandelt man Rohmaterialien in ein fertiges Produkt und sichert dabei Qualität und kontrolliert die Kosten? Dieses Kapitel führt dich in die Kernkonzepte und den Build-Prozess der Frontend-Engineering ein.
 :::
 
 ---
 
-## 1. Warum „Engineering"?
+## 1. Warum „Engineering"
 
 ### 1.1 Von einfach zu komplex: Die Evolution der Frontend-Entwicklung
 
@@ -38,7 +38,7 @@ Doch die moderne Frontend-Entwicklung hat sich grundlegend verändert. Wir verwe
 
 <BuildPipelineDemo />
 
-### 1.2 Eine wahre Geschichte: Warum du Build-Prinzipien verstehen musst
+### 1.2 Eine wahre Geschichte: Motivation von du Build-Prinzipien verstehen musst
 
 Du könntest sagen: „Ich benutze Vite oder Create React App, das funktioniert out-of-the-box – warum muss ich diese Build-Prinzipien verstehen?" Lass mich eine wahre Geschichte erzählen, die zeigt, warum dieses Wissen so wichtig ist.
 
@@ -140,7 +140,7 @@ Willst du wissen, was dein Projekt verwendet? Öffne `package.json` und suche na
 **Eigentlich musst du dich darum nicht kümmern** – diese Tools sind für den Entwickler „transparent". Du schreibst einfach Code, und sie arbeiten still im Hintergrund.
 :::
 
-### 2.3 Bündeln (Bundle): Der „Paketierer" der Module
+### 2.3 Bündeln (Bundle): Der „Build-Artefaktierer" der Module
 
 Bündeln bezeichnet den Prozess, mehrere verteilte Moduldateien in eine (oder wenige) Dateien zusammenzuführen. In der frühen Frontend-Entwicklung haben wir den gesamten Code in einer JS-Datei geschrieben, aber mit wachsender Projektgröße wurde das unwartbar. Moderne Frontend-Entwicklung setzt auf modulare Entwicklung – jede Funktion in einer eigenen Datei – aber das Laden vieler kleiner Dateien durch den Browser verursacht Performance-Probleme. Genau hier hilft das Bündelungstool.
 
@@ -637,7 +637,7 @@ Der Browser cached statische Ressourcen für schnellere Ladezeiten. Wenn sich ab
 
 ---
 
-## 4. Prinzipien vertieft: Warum ist Vite so schnell?
+## 4. Prinzipien vertieft: Leistungsoptimierung von Vite
 
 Nachdem wir die Praxisbeispiele kennengelernt haben, schauen wir uns das Funktionsprinzip von Vite genauer an, um zu verstehen, warum es so viel schneller als traditionelle Tools ist.
 

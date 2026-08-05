@@ -1,4 +1,4 @@
-# Tính sẵn sàng cao và Khôi phục sau thảm họa
+# Tính sẵn sàng cao: Nguyên tắc HA và DR
 
 ::: tip Lời mở đầu
 **Hệ thống ngừng 1 phút, có thể đồng nghĩa với thiệt hại hàng trăm nghìn.** Tính sẵn sàng cao (High Availability) là khả năng hệ thống tiếp tục cung cấp dịch vụ khi đối mặt với lỗi phần cứng, lỗi phần mềm, sự cố mạng và các tình huống bất thường khác. Khôi phục sau thảm họa (Disaster Recovery) là khả năng hệ thống phục hồi dịch vụ khi xảy ra thảm họa quy mô lớn hơn.
@@ -24,7 +24,7 @@ Sau khi học xong chương này, bạn sẽ đạt được:
 
 ---
 
-## 1. Đo lường tính sẵn sàng: Mấy số 9 có ý nghĩa gì?
+## 1. Đo lường tính sẵn sàng: Định nghĩa và đo lường tính sẵn sàng
 
 Tính sẵn sàng thường được đo bằng "mấy số 9", công thức tính:
 

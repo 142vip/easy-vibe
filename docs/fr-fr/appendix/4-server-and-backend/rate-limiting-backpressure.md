@@ -1,4 +1,4 @@
-# Limitation de débit et contrôle de contre-pression
+# Principes : Limitation de débit et contre-pression
 
 ::: tip Préface
 **Le jour du Double Onze à minuit, des centaines de millions d'utilisateurs se ruent simultanément — le serveur peut-il résister ?** Tout système a une capacité de traitement maximale. Lorsque le volume de requêtes dépasse la capacité du système, sans contrôle, le résultat est que personne ne peut l'utiliser. La limitation de débit et la contre-pression sont les deux lignes de défense qui protègent le système contre la surcharge.
@@ -24,7 +24,7 @@ Après avoir étudié ce chapitre, vous serez en mesure de :
 
 ---
 
-## 0. Vue d'ensemble : pourquoi « refuser » des utilisateurs ?
+## 0. Vue d'ensemble : pourquoi « refuser » des utilisateurs
 
 Cela semble contre-intuitif — ne devrions-nous pas servir au mieux chaque utilisateur ? Mais la réalité est que **sans refuser certaines requêtes, toutes les requêtes échoueront**.
 

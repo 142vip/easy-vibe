@@ -1,10 +1,10 @@
-# Guía del depurador del navegador (DevTools)
+# Fundamentos del depurador del navegador (DevTools)
 
 ::: tip 💡 Función principal
 Las herramientas de desarrollo del navegador (DevTools) son la "máquina de rayos X" y la "mesa de operaciones" del desarrollo frontend. Te permiten ver a través de la estructura de la página (HTML), su apariencia (CSS) y su sistema nervioso (JavaScript), y te permiten modificarlos y depurarlos en tiempo real.
 :::
 
-## 1. ¿Qué son las DevTools?
+## 1. Introducción a DevTools
 
 **DevTools** es un conjunto de herramientas web integradas en los navegadores modernos (Chrome, Edge, Firefox, Safari, etc.). Para los desarrolladores, está más cerca de la "verdad" que el editor de código, porque **muestra cómo se ejecuta realmente el código en el navegador**.
 

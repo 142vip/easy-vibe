@@ -1,4 +1,4 @@
-# Graphics and Animation (Canvas and Friends)
+# Fundamentals of Graphics and Animation: Canvas and Related Technologies
 
 ::: tip Core Question
 
@@ -10,7 +10,7 @@ This guide will take you from drawing your first line all the way to building a 
 
 ---
 
-## 1. What is Canvas?
+## 1. Overview of Canvas
 
 If early web pages were static models assembled from **LEGO bricks** (HTML tags), then the HTML5 `<canvas>` tag is like handing you a **giant digital canvas**, along with a code-controlled **paintbrush**, and leaving the rest to your creative freedom.
 
@@ -35,7 +35,7 @@ In the frontend drawing world, Canvas has a rival called **SVG**. They represent
 
 ## 2. The First Stroke: Understanding the Counter-Intuitive Coordinate System
 
-### 2.1 Why is This Paper Upside Down?
+### 2.1 Motivation for This Paper Upside Down
 
 When you're ready to start drawing, you first need to understand that the ruler in Canvas is inverted. In a traditional math class coordinate system, the zero point is in the center, and values increase as you go up. But in computer screen displays, almost all devices define the "origin (0, 0)" at the **top-left corner of the screen**. Moving right increases the X-axis — no problem there — but **moving down increases the Y-axis**.
 
@@ -83,7 +83,7 @@ Due to the human eye's "persistence of vision," during 60 per-second cycles of [
 
 ---
 
-## 4. Blind Man's Bluff: How to Handle Click Interactions in Canvas?
+## 4. Blind Man's Bluff: Approach to handling Click Interactions in Canvas
 
 Because the Canvas is seen by the browser as a "pigment cloth" with no structure. Suppose you draw a monster with `arc()` on the canvas, and you want to implement "click monster to deal damage" — you **simply cannot** use traditional `document.getElementById` to get this monster. Because in the HTML structure, there's only that rigid `<canvas>` tag that's 600 pixels wide.
 
@@ -118,7 +118,7 @@ Your browser can instantly become a dream factory producing fireworks, snowstorm
 
 ---
 
-## 6. Guarding FPS Glory: How to Handle an Overheating CPU?
+## 6. Guarding FPS Glory: Approach to handling an Overheating CPU
 
 Making thousands of objects calculate and redraw 60 times per second is extremely performance-intensive. Without proper technique, your computer fan will soon take off.
 

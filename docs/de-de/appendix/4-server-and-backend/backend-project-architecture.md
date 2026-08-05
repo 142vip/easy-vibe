@@ -1,4 +1,4 @@
-# Backend-Projektarchitektur-Design
+# Backend-Projektarchitektur: Grundlagen
 
 ::: tip 🎯 Kernfrage
 **Von einfachen Skripten bis hin zu großen verteilten Systemen – wie wählt man die richtige Architektur für Backend-Projekte unterschiedlicher Größe und Sprache?** Es ist vergleichbar mit der Frage: Wie gestaltet man verschiedene Produktionslinien – von der Familienwerkstatt bis zur großen Fabrik – je nach Produktionsvolumen und Fertigungsprozess? Eine gute Backend-Architektur sollte mit dem Geschäftswachstum evolvieren und gleichzeitig die Sprachmerkmale voll ausschöpfen.
@@ -899,7 +899,7 @@ Phase 3: Modularisierung/Microservices (Enterprise)
 Phase 4: Cloud-native Architektur (Plattform-Ebene)
 ```
 
-### 6.2 Wann die Architektur upgraden?
+### 6.2 Wann die Architektur upgraden
 
 | Signal | Aktuelle Ebene | Empfohlenes Upgrade |
 |------|----------|----------|

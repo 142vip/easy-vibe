@@ -1,11 +1,11 @@
-# Caching Layers and Strategies
+# Principles of Caching: Strategies and Patterns
 ::: tip 🎯 The Core Question
 **Why do some websites load in 50 milliseconds while others take 5 seconds?** It's like asking: why does grabbing a book from your backpack take 1 second, while going to the library to find it takes 10 minutes? The answer is — caching. This chapter will take you deep into the core principles, design patterns, and practical techniques of caching, so you can boost your system performance by 100x.
 :::
 
 ---
 
-## 1. Why Caching?
+## 1. Motivation for Cachinging
 
 ### 1.1 The Evolution from "Query Every Time" to "Remember Frequently Used Data"
 
@@ -38,7 +38,7 @@ This is like a student who runs from the dorm to the library to look up referenc
 
 <CachePerformanceComparisonDemo />
 
-### 1.2 A Real War Story: Why Caching Is a Lifesaver
+### 1.2 Case: Caching Is a Lifesaver
 
 You might be thinking: "My system is fine right now, why design for caching in advance?" Let me tell you a real story so you understand why caching is not "optional" but "mandatory."
 
@@ -58,7 +58,7 @@ The value of caching isn't just "faster" — more importantly, it's "protection.
 
 ---
 
-## 2. Core Concepts: What Is Caching?
+## 2. Core Concepts: Overview of Caching
 
 ::: tip 🤔 What Exactly Is Caching?
 Simply put, **a cache is a storage space for data copies**. It's like sticking a sticky note on your desk with frequently dialed phone numbers, so you don't have to scroll through your phone's contact list every time.
@@ -818,7 +818,7 @@ The demo below compares the scenarios and solutions for cache penetration, break
 
 A cache is, by nature, a copy of data. There's always a window of inconsistency between the copy and the original data (the database). How to control this window is the core challenge of cache design.
 
-### 5.1 Why Do Cache and Database Become Inconsistent?
+### 5.1 Motivation for Caching and Database Become Inconsistent
 
 ::: tip 🤔 The "Sticky Note and Address Book" Analogy for Inconsistency
 Imagine you've written on a sticky note: "Xiao Ming's phone: 123456" — this is a copy of your address book (the database).

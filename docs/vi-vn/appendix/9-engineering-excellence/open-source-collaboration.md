@@ -80,7 +80,7 @@ Thông qua component tương tác dưới đây, so sánh sự khác biệt gi�
 | **GPL** | Tác phẩm phái sinh phải cũng mở nguồn | Linux, WordPress |
 | **BSD** | Tương tự MIT, hơi khác một chút | FreeBSD, Flask |
 
-### 2.2 Chọn như thế nào?
+### 2.2 Chọn: Cách tiếp cận
 
 - **Muốn nhiều người dùng hơn**: Chọn MIT
 - **Muốn bảo vệ sáng chế**: Chọn Apache 2.0

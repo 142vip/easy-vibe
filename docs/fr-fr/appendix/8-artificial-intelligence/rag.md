@@ -1,4 +1,4 @@
-# RAG : Génération augmentée par récupération
+# Principes : RAG : Génération augmentée par récupération
 
 ::: tip Préface
 **Pourquoi ChatGPT raconte-t-il parfois « n'importe quoi avec aplomb » ?** Les connaissances des grands modèles de langage proviennent de leurs données d'entraînement, mais ces données ont une date limite et n'incluent pas les documents internes de votre entreprise. Le RAG (Retrieval-Augmented Generation, génération augmentée par récupération) est la technologie centrale qui résout ce problème — permettre à l'IA de « consulter des documents » avant de répondre.
@@ -24,7 +24,7 @@ Après avoir étudié ce chapitre, vous obtiendrez :
 
 ---
 
-## 0. Vue d'ensemble : pourquoi les grands modèles ont-ils besoin de « consulter des documents » ?
+## 0. Vue d'ensemble : pourquoi les grands modèles ont-ils besoin de « consulter des documents »
 
 Imaginez que vous êtes un professeur érudit, ayant lu d'innombrables livres. Mais si quelqu'un vous demande « Quel était le chiffre d'affaires de l'entreprise hier ? », vous ne pourrez certainement pas répondre — car cette information ne figure pas dans les livres que vous avez lus.
 
@@ -83,7 +83,7 @@ Il n'y a pas de « meilleure » stratégie de découpage, seulement celle qui co
 
 ---
 
-## 3. Techniques de récupération : comment trouver le contenu le plus pertinent ?
+## 3. Techniques de récupération : comment trouver le contenu le plus pertinent
 
 Une fois le découpage terminé, la question clé suivante est : **l'utilisateur pose une question, comment trouver les fragments les plus pertinents parmi des milliers de fragments de document ?**
 
@@ -117,7 +117,7 @@ La technologie RAG a connu trois générations d'évolution en seulement deux an
 
 ---
 
-## 5. RAG vs Fine-tuning : lequel choisir ?
+## 5. RAG vs Fine-tuning : lequel choisir
 
 Lorsque vous voulez qu'un grand modèle maîtrise des connaissances dans un domaine spécifique, il y a généralement deux voies : le RAG et le fine-tuning (ajustement fin). Elles ne sont pas mutuellement exclusives, mais complémentaires.
 

@@ -1,10 +1,10 @@
-# 浏览器调试器 (DevTools) 指南
+# 浏览器调试器（DevTools）基础
 
 ::: tip 💡 核心作用
 浏览器开发者工具（DevTools）是前端开发的“X光机”和“手术台”。它能让你看穿网页的骨架（HTML）、皮肤（CSS）和神经系统（JavaScript），并且允许你实时地修改和调试它们。
 :::
 
-## 1. 什么是 DevTools？
+## 1. DevTools定义
 
 **DevTools** 是现代浏览器（Chrome, Edge, Firefox, Safari 等）内置的一套 Web 开发和调试工具。对于开发者来说，它比代码编辑器更接近“真相”，因为**它展示的是代码在浏览器中实际运行的样子**。
 

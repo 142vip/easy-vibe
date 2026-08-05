@@ -1,4 +1,4 @@
-# Conception d'API : le "protocole de dialogue" entre frontend et backend
+# Principes : Conception d'API et protocole frontend-backend
 
 ::: tip Question centrale
 **Comment le frontend et le backend dialoguent-ils efficacement ?** C'est comme demander : comment concevoir le menu d'un restaurant pour que les clients comprennent du premier coup ? Comment le serveur note les commandes sans se tromper ? Comment servir les plats de manière à satisfaire les clients ? La conception d'API résout le problème des "règles de dialogue".
@@ -6,7 +6,7 @@
 
 ---
 
-## 0. Posez-vous d'abord une question : avez-vous déjà vécu ces cauchemars ?
+## 0. Posez-vous d'abord une question : avez-vous déjà vécu ces cauchemars
 
 **Scénario 1 : noms d'interface au petit bonheur**
 
@@ -57,7 +57,7 @@ Chaque interface a un format de retour différent, le frontend doit traiter chaq
 
 ---
 
-## 1. Qu'est-ce qu'une API ?
+## 1. Présentation et définition : une API
 
 Une **API** (Application Programming Interface, interface de programmation d'application) est un "contrat de dialogue entre programmes".
 
@@ -84,7 +84,7 @@ Avant d'entrer dans le détail du design RESTful, découvrons les quatre styles 
 
 <ApiStyleCompare />
 
-### 2.1 REST vs RESTful : quelle différence ?
+### 2.1 REST vs RESTful : quelle différence
 
 Beaucoup confondent ces deux concepts :
 
@@ -117,7 +117,7 @@ Beaucoup confondent ces deux concepts :
 
 ---
 
-## 3. Conception RESTful : faire parler les URL
+## 3. Conception RESTful : faire communication les URL
 
 **REST** (Representational State Transfer) est un style d'architecture dont l'idée centrale est :
 
@@ -170,7 +170,7 @@ L'utilisation uniforme de minuscules + tirets (-) est la pratique la plus sûre,
 
 ---
 
-## 4. Codes d'état : faire "parler" les erreurs
+## 4. Codes d'état : faire "communication" les erreurs
 
 Les codes d'état HTTP sont le moyen standard par lequel le serveur indique au client "ce qui s'est passé".
 
@@ -237,7 +237,7 @@ Dangereux : cela expose la structure du code et les requêtes SQL, que des attaq
 
 ## 6. Contrôle de version : la "rétrocompatibilité" des API
 
-### 6.1 Pourquoi le contrôle de version ?
+### 6.1 Pourquoi le contrôle de version
 
 Scénario : votre application a 1 million d'utilisateurs, vous devez modifier l'interface de commandes.
 

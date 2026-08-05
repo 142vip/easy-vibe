@@ -1,4 +1,4 @@
-# Conception d'applications natives IA
+# Introduction : Conception d'applications natives IA
 
 ::: tip Préface
 **Pourquoi certains produits IA sont-ils époustouflants alors que d'autres ne sont que des « coquilles autour de ChatGPT » ?** La différence ne réside pas dans la puissance du modèle utilisé, mais dans le fait que le produit soit conçu dès le départ autour des caractéristiques de l'IA. Les applications natives IA ne consistent pas à « ajouter une boîte de dialogue » à une application traditionnelle, mais à repenser l'interaction utilisateur, l'architecture système et la logique produit dans un paradigme entièrement nouveau.

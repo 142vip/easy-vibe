@@ -1,4 +1,4 @@
-# Environment Variables and PATH
+# An Introduction to Environment Variables and PATH
 
 > 💡 **Learning Guide**: Every time you type `git` or `python` in the terminal, the system has to find where that program is located. Every time your code calls a large model API, the program needs to know which key to use. Both of these tasks rely on the same underlying mechanism — **environment variables**.
 
@@ -34,7 +34,7 @@ Select a command and observe how Shell searches through directories step by step
 
 ---
 
-## 2. Why Do You Need to Restart the Terminal After Installing a Tool?
+## 2. Motivation for needing to Restart the Terminal After Installing a Tool
 
 When you install tools like nvm, Homebrew, or conda, the installation script automatically appends a line to `~/.zshrc` to add its directory to PATH:
 
@@ -67,7 +67,7 @@ pipx install aider-chat
 
 ---
 
-## 3. Variable Scope: Who Can See This Variable?
+## 3. Variable Scope: Who Can See ThOverview of Variable
 
 Environment variables are not broadcast to all programs — each process holds **its own copy**, inherited from the parent process. Modifying your own copy does not affect the parent process.
 

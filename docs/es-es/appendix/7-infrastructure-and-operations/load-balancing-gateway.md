@@ -1,11 +1,11 @@
-# Balanceo de Carga y Gateway
+# Principios de balanceo de carga y puerta de enlace
 ::: tip 🎯 Pregunta central
 **Cuando un solo servidor no puede con la carga, ¿cómo distribuimos el tráfico de forma "inteligente" entre múltiples instancias?** El balanceo de carga es el "distribuidor" de los sistemas distribuidos modernos. Este artículo utiliza casos reales (caja de una tienda de té, clasificación de paquetería, control de tráfico) para comprender en profundidad la filosofía de diseño y la práctica de ingeniería del balanceo de carga.
 :::
 
 ---
 
-## 1. ¿Por qué necesitamos "balanceo de carga"?
+## 1. Motivación de balanceo de carga
 
 ### 1.1 Empecemos con un caso real: la evolución de la arquitectura de un sitio web
 
@@ -66,7 +66,7 @@ Imagina que abres una tienda de té de moda:
 
 ---
 
-## 2. ¿Qué es el balanceo de carga?
+## 2. Introducción a balanceo de carga
 
 ### 2.1 Balanceo de carga de capa 4 (L4): Solo mira el número de puerta
 
@@ -90,7 +90,7 @@ Solicitud del cliente → Balanceador L4 → Servidor backend
 
 :::
 
-### 2.2 Balanceo de carga de capa 7 (L7): Inspecciona el contenido del paquete
+### 2.2 Balanceo de carga de capa 7 (L7): Inspecciona el contenido del artefacto de compilación
 
 **Opera en la capa de aplicación (HTTP/HTTPS)**, como un mensajero que no solo mira el número de puerta, sino que también **abre el paquete para inspeccionar el contenido** y decide cómo entregarlo según lo que encuentra.
 
@@ -126,7 +126,7 @@ Solicitud del cliente → Balanceador L7 → Analiza contenido HTTP
 
 ---
 
-## 3. Problema central #1: ¿Cómo evitar que un servidor "estropeado" siga recibiendo tráfico?
+## 3. Problema central #1: Enfoque de evitar que un servidor "estropeado" siga recibiendo tráfico
 
 ### 3.1 Health Check: No dejes que un servidor "enfermo" lastre el sistema
 
@@ -169,9 +169,9 @@ Un equipo configuró el umbral de tiempo de respuesta del health check en 100 ms
 
 ---
 
-## 4. Problema central #2: ¿Cómo asegurar que un "cliente habitual" siempre sea atendido por el mismo "cajero"?
+## 4. Problema central #2: Enfoque de asegurar que un "cliente habitual" siempre sea atendido por el mismo "instancia backend"
 
-### 4.1 Persistencia de sesión: Que el "cliente habitual" siempre vaya al mismo "cajero"
+### 4.1 Persistencia de sesión: Que el "cliente habitual" siempre vaya al mismo "instancia backend"
 
 Imagina que eres un cliente habitual de la tienda de té. Cada vez te atiende el mismo empleado, que ya conoce tus preferencias (mitad de azúcar, sin hielo) y te sirve rápido y con atención. Pero si cada vez te toca alguien nuevo, tienes que repetir las mismas preferencias una y otra vez, y la eficiencia se desploma.
 
@@ -196,7 +196,7 @@ Imagina que eres un cliente habitual de la tienda de té. Cada vez te atiende el
 
 ---
 
-## 5. Problema central #3: ¿Cómo lograr despliegues sin tiempo de inactividad?
+## 5. Problema central #3: Enfoque de lograr despliegues sin tiempo de inactividad
 
 ### 5.1 Despliegue Blue-Green: Publicación sin downtime con "un solo clic"
 
@@ -246,7 +246,7 @@ El nombre "Canary Release" proviene históricamente del "canario en la mina de c
 
 ---
 
-## 6. Problema central #4: ¿Cómo hacer que el sistema "respire" por sí mismo?
+## 6. Problema central #4: Enfoque de sistema "respire" por sí mismo
 
 ### 6.1 Auto Scaling: Que el sistema sea tan flexible como la planificación de turnos de un restaurante
 
@@ -309,7 +309,7 @@ Un equipo configuró scale-in con CPU < 30%. Tras un scale-out, el tráfico aún
 
 ---
 
-## 7. Guía práctica: ¿Cómo elegir un balanceador de carga?
+## 7. Guía práctica: Enfoque de elegir un balanceador de carga
 
 ### 7.1 Comparativa de balanceadores de carga principales
 

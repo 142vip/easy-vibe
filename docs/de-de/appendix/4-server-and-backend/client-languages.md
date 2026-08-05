@@ -1,4 +1,4 @@
-# Client-Sprachen (Swift / Kotlin / Dart)
+# Client-Sprachen: Frontend-Ökosystem
 
 ::: tip Kernfrage
 **"Wie sollte man bei der Spracheauswahl für die mobile App-Entwicklung vorgehen?"** Dieses Kapitel führt in die Grundkonzepte der Client-Entwicklung ein, zeichnet die Entwicklungslinien mobiler Programmiersprachen nach und analysiert die derzeit wichtigsten Client-Entwicklungssprachen und ihre Anwendungsszenarien, um Lesern eine systematische Entscheidungsgrundlage zu bieten.
@@ -17,7 +17,7 @@ Im Kontext des mobilen Internets bezieht sich **"Client-Entwicklung" in der Rege
 
 ---
 
-## 2. Anwendungsszenarien und Grenzen mobiler Sprachen: Wann muss eine bestimmte Sprache verwendet werden?
+## 2. Anwendungsszenarien und Grenzen mobiler Sprachen: Wann muss eine bestimmte Sprache verwendet werden
 
 Bei der Sprachauswahl für die Client-Entwicklung darf man die konkreten geschäftlichen Anforderungen und den Projektkontext nicht außer Acht lassen. Auch wenn moderne Cross-Plattform-Technologien (wie Flutter / Dart) rasant wachsen, bleiben native Sprachen (Swift / Kotlin) in bestimmten Grenzbereichen die einzige unverzichtbare Wahl. Dies erfordert von Architekten eine klare Abgrenzung der Anwendungsbereiche der verschiedenen Sprachen.
 

@@ -1,4 +1,4 @@
-# Protocole HTTP : le "langage de communication" entre frontend et backend
+# Principes : Protocole HTTP et communication Web
 
 ::: tip Question centrale
 **Comment fonctionne HTTP ?** C'est comme demander : comment deux personnes dialoguent-elles ? Il faut convenir d'une langue, d'une syntaxe, de règles de conversation. HTTP est le "protocole de dialogue" entre le frontend et le backend.

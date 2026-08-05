@@ -1,11 +1,11 @@
-# Système de mise en page HTML / CSS
+# Fondamentaux : Système de mise en page HTML/CSS
 ::: tip 🎯 Question centrale
 **Comment les pages web sont-elles créées ? Pourquoi certaines pages ne contiennent-elles que du texte, tandis que d'autres sont interactives comme des applications ?** Cette question vous amènera à découvrir les trois piliers du développement web, vous permettant de comprendre la structure de chaque page web.
 :::
 
 ---
 
-## 1. Que sont HTML, CSS et JavaScript ?
+## 1. Que sont HTML, CSS et JavaScript
 
 ### 1.1 Des pages statiques aux applications dynamiques
 
@@ -48,7 +48,7 @@ Mais les pages web modernes sont complètement différentes. Elles ressemblent �
 
 ## 2. HTML : le squelette de la page web
 
-### 2.1 Pourquoi a-t-on besoin de HTML ?
+### 2.1 Pourquoi a-t-on besoin de HTML
 
 Avant l'apparition de HTML, le contenu sur Internet était uniquement du **texte brut**. Comme le texte que vous lisez actuellement, sans aucun formatage, sans hiérarchie, sans liens.
 
@@ -60,7 +60,7 @@ Quels sont les problèmes du texte brut ?
 
 **HTML (HyperText Markup Language)** est né pour résoudre ce problème. Il utilise des « balises » (tags) pour marquer la signification du contenu, afin que le navigateur sache « ce que c'est ».
 
-### 2.2 À quoi ressemble le code HTML ?
+### 2.2 À quoi ressemble le code HTML
 
 L'unité de base de HTML est la « balise » (tag). Les balises sont entourées de chevrons `< >` et apparaissent par paires :
 
@@ -79,7 +79,7 @@ L'unité de base de HTML est la « balise » (tag). Les balises sont entourées 
 | **Attribut** | Information supplémentaire sur la balise | `href="url"`, `class="card"` |
 | **Imbrication** | Une balise à l'intérieur d'une autre | `<div><p>Texte</p></div>` |
 
-### 2.3 Comment lire du code HTML ?
+### 2.3 Comment lire du code HTML
 
 ::: tip 🎯 Lecture obligatoire pour les débutants : méthode de lecture du code
 
@@ -181,7 +181,7 @@ Beaucoup de débutants sont perdus face à une série de `<xxx>`. En réalité, 
 **Quand utiliser div ?** Quand il n'y a pas de balise sémantique appropriée. Par exemple, un conteneur purement décoratif.
 :::
 
-### 2.5 Comment mémoriser autant de balises HTML ?
+### 2.5 Comment mémoriser autant de balises HTML
 
 ::: tip 🎯 Confusion des débutants
 
@@ -247,7 +247,7 @@ Beaucoup de débutants sont perdus face à une série de `<xxx>`. En réalité, 
 
 **Méthode de mémorisation** : div = division, span = étendue. div sert à diviser de grandes zones, span sert à marquer des fragments de texte.
 
-#### Que faire face à une balise inconnue ?
+#### Que faire face à une balise inconnue
 
 **Méthode 1 : deviner le mot anglais**
 
@@ -279,7 +279,7 @@ De nombreuses balises sont des abréviations de mots anglais :
 
 ## 3. CSS : la peau de la page web
 
-### 3.1 Pourquoi a-t-on besoin de CSS ?
+### 3.1 Pourquoi a-t-on besoin de CSS
 
 Imaginez que vous emménagez dans un **appartement brut** : il y a des murs, des fenêtres, des portes, on peut y vivre, mais :
 
@@ -295,7 +295,7 @@ CSS (Cascading Style Sheets) est « l'équipe de décoration » de la page web. 
 - 🖼️ **Accrocher des tableaux** : ajouter des bordures, des ombres, des coins arrondis
 - 🪑 **Disposer les meubles** : ajuster la mise en page, les espacements, l'alignement
 
-### 3.2 À quoi ressemble le code CSS ?
+### 3.2 À quoi ressemble le code CSS
 
 Le code CSS a un format fixe :
 
@@ -321,7 +321,7 @@ sélecteur {
 <link rel="stylesheet" href="styles.css" />
 ```
 
-### 3.3 Comment lire du code CSS ?
+### 3.3 Comment lire du code CSS
 
 ::: tip 🎯 Lecture obligatoire pour les débutants : méthode de lecture du CSS
 
@@ -381,7 +381,7 @@ p { color: red; }             /* Priorité : 1 */
 
 **Le style en ligne** (écrit dans l'attribut style) a une priorité de 1000, la plus élevée !
 
-### 3.5 Le modèle de boîte : pourquoi la largeur ne correspond pas ?
+### 3.5 Le modèle de boîte : pourquoi la largeur ne correspond pas
 
 ::: tip 🎯 Scénario réel
 
@@ -415,7 +415,7 @@ Chaque élément HTML est considéré en CSS comme une « boîte » composée de
 
 Ainsi, `width: 200px` est la largeur finale, le padding et la bordure sont « compressés » à l'intérieur.
 
-### 3.6 Flexbox : comment aligner automatiquement les éléments ?
+### 3.6 Flexbox : comment aligner automatiquement les éléments
 
 Flexbox est la méthode de mise en page la plus utilisée en CSS moderne. Elle permet aux éléments de s'aligner automatiquement, comme les livres sur une étagère qui s'alignent tout seuls.
 
@@ -447,7 +447,7 @@ Vous avez écrit un projet, le fichier CSS fait 2000 lignes. Plus tard, vous dev
 **Les préprocesseurs CSS** sont là pour résoudre ces problèmes. Ils permettent au CSS de « programmer » : avoir des variables, de l'imbrication, pouvoir réutiliser du code.
 :::
 
-#### 3.7.1 Qu'est-ce qu'un préprocesseur CSS ?
+#### 3.7.1 Qu'est-ce qu'un préprocesseur CSS
 
 **En langage simple** : un préprocesseur est un « CSS plus intelligent ». Vous écrivez des styles avec une syntaxe plus puissante, puis il les **compile** en CSS ordinaire que le navigateur peut reconnaître.
 
@@ -614,7 +614,7 @@ $primary: #3b82f6;
 </TabItem>
 </Tabs>
 
-#### 3.7.4 Comment choisir ?
+#### 3.7.4 Comment choisir
 
 | Situation | Recommandation |
 |------|----------|
@@ -793,7 +793,7 @@ tailwind.css                # Point d'entrée des styles de base
 | Vue + SCSS | Dans les composants + fichiers communs `styles/` | Variables centralisées | Réutilisation par mixins |
 | Vue + Tailwind | Aucun (dans les noms de classe) | `tailwind.config.js` | Combinaison de noms de classe |
 
-### 3.8 Comment mémoriser autant de propriétés CSS ?
+### 3.8 Comment mémoriser autant de propriétés CSS
 
 ::: tip 🎯 Confusion des débutants
 
@@ -912,7 +912,7 @@ transition: all 0.3s ease 0s;
 transform: translateX(10px) rotate(45deg) scale(1.1);
 ```
 
-#### Que faire face à une propriété inconnue ?
+#### Que faire face à une propriété inconnue
 
 **Méthode 1 : deviner le mot anglais**
 
@@ -973,7 +973,7 @@ Pour les autres propriétés, cherchez quand vous en avez besoin, vous les retie
 
 ## 4. JavaScript : le cerveau de la page web
 
-### 4.1 Pourquoi a-t-on besoin de JavaScript ?
+### 4.1 Pourquoi a-t-on besoin de JavaScript
 
 Une page web avec seulement HTML + CSS, c'est comme **un mannequin dans une vitrine de magasin** :
 
@@ -989,7 +989,7 @@ Une page web avec seulement HTML + CSS, c'est comme **un mannequin dans une vitr
 - ✅ Défiler la page charge plus de contenu
 - ✅ Soumettre un formulaire affiche « Envoi en cours... »
 
-### 4.2 À quoi ressemble le code JavaScript ?
+### 4.2 À quoi ressemble le code JavaScript
 
 **Capacité 1 : mémoriser des données** (variables)
 
@@ -1024,7 +1024,7 @@ document.getElementById('title').textContent = 'Nouveau titre'
 document.getElementById('box').style.background = 'red'
 ```
 
-### 4.3 Comment lire du code JavaScript ?
+### 4.3 Comment lire du code JavaScript
 
 ::: tip 🎯 Lecture obligatoire pour les débutants : méthode de lecture du code JS
 
@@ -1064,7 +1064,7 @@ parent.appendChild(child)                   // Ajouter un élément
 ```
 :::
 
-### 4.4 DOM : comment JavaScript manipule-t-il la page ?
+### 4.4 DOM : comment JavaScript manipule-t-il la page
 
 Après avoir lu le code HTML, le navigateur ne le traite pas comme un ensemble de chaînes de caractères, mais le dessine en mémoire sous forme d'un « arbre » :
 
@@ -1125,7 +1125,7 @@ C'est précisément pourquoi les frameworks modernes comme **Vue / React** sont 
 
 **ECMAScript** est le « cahier des charges standard » de JavaScript. Les fabricants de navigateurs implémentent le moteur JavaScript selon ce standard.
 
-#### Pourquoi des numéros de version ?
+#### Motivation : des numéros de version
 
 JavaScript n'est pas figé. Chaque année, de nouvelles fonctionnalités sont ajoutées, des problèmes sont corrigés. Le numéro de version vous indique « quelles fonctionnalités ce navigateur prend en charge ».
 
@@ -1281,7 +1281,7 @@ const streetName = user?.address?.street ?? 'Inconnu'
 
 ### 4.6 TypeScript : ajouter des contraintes de type à JavaScript
 
-#### Pourquoi a-t-on besoin de TypeScript ?
+#### Motivation : a-t-on besoin de TypeScript
 
 **Scénario 1 : type des paramètres de fonction incertain**
 
@@ -1541,7 +1541,7 @@ npm run build
 
 ---
 
-## 6. Que faire face à du code inconnu ?
+## 6. Que faire face à du code inconnu
 
 ### 6.1 Demander à l'IA
 

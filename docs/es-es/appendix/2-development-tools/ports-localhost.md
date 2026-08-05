@@ -1,15 +1,15 @@
-# Puertos y localhost
+# Principios de puertos y localhost
 
 > 💡 **Guía de aprendizaje**: Cuando ejecutas `npm run dev` y aparece `http://localhost:5173` en la terminal, ¿te has preguntado qué es `localhost`? ¿Y `5173`? ¿Por qué a veces aparece un error `EADDRINUSE`? Este capítulo explica de una vez estos conceptos que ves todos los días en desarrollo pero que rara vez se profundizan.
 
 Antes de empezar, te recomendamos repasar dos conceptos básicos:
 
 - **Redes**: Si no tienes claros los conceptos de IP y HTTP, puedes consultar [Fundamentos de informática - Comunicación de red](../1-computer-fundamentals/network-fundamentals.md).
-- **Terminal**: Si no estás familiarizado con la línea de comandos, consulta [Línea de comandos y scripts de Shell](./command-line-shell.md).
+- **Terminal**: Si no estás familiarizado con la línea de comandos, consulta [Introducción a la línea de comandos y scripts de Shell](./command-line-shell.md).
 
 ---
 
-## 0. Introducción: ¿Qué es realmente ese `localhost:5173` que ves todos los días?
+## 0. Introducción: Introducción a realmente ese `localhost:5173` que ves todos los días
 
 <DevServerFlowDemo />
 
@@ -29,7 +29,7 @@ Entender estas tres cosas te permitirá comprender el 90% de los problemas de re
 
 ---
 
-## 1. ¿Qué es un puerto? (IP es el edificio, el puerto es el número de habitación)
+## 1. Introducción a puerto (IP es el edificio, el puerto es el número de habitación)
 
 ### 1.1 Una analogía intuitiva
 
@@ -66,7 +66,7 @@ Introduce un número de puerto o nombre de servicio para buscar; haz clic en cua
 
 ---
 
-## 2. ¿Qué es localhost? (Encontrarse a uno mismo)
+## 2. Introducción a localhost (Encontrarse a uno mismo)
 
 ### 2.1 El concepto central de "loopback"
 
@@ -113,7 +113,7 @@ npm run dev -- --host 0.0.0.0
 
 ## 3. Conflictos de puertos: el problema más común en desarrollo
 
-### 3.1 ¿Por qué se producen conflictos?
+### 3.1 Motivación de producen conflictos
 
 **Un puerto solo puede ser escuchado por un programa en cada momento.** Es como una habitación que solo puede alojar a una familia.
 
@@ -163,7 +163,7 @@ taskkill /PID <PID> /F
 
 ## 4. La "política del mismo origen" y CORS en desarrollo
 
-### 4.1 ¿Qué es un "origen"?
+### 4.1 Introducción a "origen"
 
 El navegador tiene un mecanismo de seguridad llamado **política del mismo origen (Same-Origin Policy)**: solo cuando **protocolo, dominio y puerto** coinciden exactamente, se considera el "mismo origen".
 
@@ -173,7 +173,7 @@ El navegador tiene un mecanismo de seguridad llamado **política del mismo orige
 | `http://localhost:5173` | `http://localhost:3000` | ❌ Distinto origen | **Puerto diferente** (5173 vs 3000) |
 | `http://localhost:5173` | `https://localhost:5173` | ❌ Distinto origen | **Protocolo diferente** (http vs https) |
 
-### 4.2 ¿Por qué la separación frontend/backend inevitablemente encuentra CORS?
+### 4.2 Motivación de separación frontend/backend inevitablemente encuentra CORS
 
 Cuando la arquitectura de tu proyecto es:
 

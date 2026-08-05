@@ -1,4 +1,4 @@
-# Patrones de diseño
+# Fundamentos de patrones de diseño
 
 ::: tip Prefacio
 **¿Por qué tu código siempre "funciona pero es un desastre"?** Probablemente te has encontrado con esta situación: cuando cambian los requisitos, hay que modificar el código en muchos sitios; quieres reutilizar una lógica, pero descubres que está entrelazada con otro código. Los patrones de diseño son las "fórmulas de organización del código" resumidas por los expertos, que te ayudan a escribir código flexible y mantenible.
@@ -190,7 +190,7 @@ A través del siguiente componente interactivo, experimenta con los efectos de d
 
 ---
 
-## 4. ¿Cómo elegir un patrón de diseño?
+## 4. Enfoque de elegir un patrón de diseño
 
 | El problema que encuentras | Patrón recomendado | Idea central |
 |-------------|---------|---------|

@@ -1,4 +1,4 @@
-# KI-Fähigkeitslexikon
+# AI-Fähigkeitsverzeichnis: Übersicht
 Mit der breiten Einführung generativer KI-Technologien in verschiedenen Produkten und Geschäftsszenarien stellt sich für jeden von uns eine immer drängendere Frage: **Welche KI-Fähigkeiten stehen überhaupt zur Verfügung?** Und bei einem konkreten Bedarf: **Welche Fähigkeit, welcher Modelltyp oder welches Produkt sollte eingesetzt werden?**
 
 Angesichts dieser Verwirrung scheint der naheliegendste Ansatz vielleicht das „Last-Minute-Lernen" zu sein: **bei Bedarf die Produkt-APIs der Cloud-Service-Anbieter oder die entsprechenden Modelle zu durchsuchen, nach kommerziellen Lösungen auf dem Markt zu suchen und anhand von Dokumentationen und Demos zu arbeiten**. Bei Bildanforderungen denkt man an Bildgenerierung, bei Textaufgaben greift man zu großen Sprachmodellen, bei Sprachinteraktionen erinnert man sich an ASR und TTS – und vergleicht dann aus einer Flut von APIs und Diensten die Angebote. Es sind jedoch zwei grundverschiedene Dinge, eine lose Produktsammlung zusammenzustellen oder KI-Fähigkeiten in unternehmenskritischen Szenarien systematisch zu planen, auszuwählen und zu kombinieren. Sich allein auf Ad-hoc-Recherchen und Erfahrungswerte zu verlassen, führt zu einer Reihe ernsthafter Herausforderungen: fragmentiertes Fähigkeitsverständnis, willkürliches Lösungsdesign und erschwerte Wiederverwendbarkeit von Fähigkeiten.
@@ -1248,7 +1248,7 @@ Aus Produktsicht wirkt diese Fähigkeitsebene fast „unsichtbar“ hinter allen
 
 Zusammenfassend legt diese Ebene vor allem „vor der Semantik“ die physikalische und wahrnehmungsbezogene Grundlage für Videos: Sie hilft Nutzern, ein angenehmeres Seherlebnis zu erhalten, und liefert zugleich sauberere, stabilere Eingaben für nachgelagerte Erkennungs- und Generierungsmodelle. Im Folgenden entfalten wir die Teilbereiche **Videoverbesserung und -reparatur** sowie **Super-Resolution und Frame-Interpolation**.
 
-### 5.1.1 Videoverbesserung und -reparatur: Vom „anschaubar“ zum „ansprechend“
+### 5.1.1 Videoverbesserung und -reparatur: Vom „anschaubar“ zum „anKommunikationd“
 
 Unter realen Aufnahmebedingungen sind Videos oft nicht „sauber“: starkes Wackeln durch Handgeräte, hohes Rauschen und verwaschene Texturen bei schwachem Licht, Blockartefakte und Farbverläufe durch Netzkompression, verblasste Farben und Kratzer bei alten Aufnahmegeräten – all das lässt die Videoqualität deutlich hinter dem Ideal zurück. Das Ziel von Videoverbesserung und -reparatur ist es, ohne Veränderung des semantischen Inhalts ein stabiles, klares und natürliches Seherlebnis weitestgehend wiederherzustellen und „gerade noch anschaubares“ Material auf das Niveau von „ansprechend bis schön“ zu heben.
 
@@ -1419,7 +1419,7 @@ Aus Produktperspektive sind digitale Menschen bereits in folgenden Bereichen wei
 
 Zusammenfassend ist der digitale Mensch sowohl ein Satz von Modellen als auch ein vollständiges System: Er integriert Sprachverstehen, Sprache, visuelle Generierung und Echtzeit-Inferenz, um eine interaktive virtuelle Figur „vor dem Bildschirm" zu präsentieren. Im Folgenden entfalten wir das Thema in die drei Richtungen **Antrieb & Ausdruck**, **Erscheinungsbild & Videogenerierung** sowie **Echtzeit-Interaktion & Systemintegration**.
 
-### 5.5.1 Antrieb & Ausdruck: Vom Skript / von der Sprache zum „sprechenden, mimikfähigen" Menschen
+### 5.5.1 Antrieb & Ausdruck: Vom Skript / von der Sprache zum „kommunizierenden, mimikfähigen" Menschen
 
 In der Digitalmenschen-Pipeline ist **Antrieb & Ausdruck** dafür verantwortlich, eine Kernfrage zu beantworten: Welche Mundform, welchen Gesichtsausdruck und welche Kopf-Schulter-Bewegung soll die virtuelle Figur bei gegebenem Skript oder gegebener Sprache in jedem Einzelbild zeigen. Dies umfasst sowohl Offline-Massenproduktionsszenarien als auch die Reaktion auf Echtzeitdialoge.
 

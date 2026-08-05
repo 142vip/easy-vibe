@@ -1,4 +1,4 @@
-# Colaboración en código abierto
+# Introducción a la colaboración en código abierto
 
 ::: tip Prefacio
 **¿Quieres participar en proyectos de código abierto pero no sabes por dónde empezar?** El código abierto no es solo "usar gratis el código de otros", sino también una forma de colaboración y un acelerador profesional. Una contribución de alta calidad a un proyecto de código abierto puede ser más convincente que diez proyectos personales en tu currículum.
@@ -80,7 +80,7 @@ A través del siguiente componente interactivo, compara las diferencias entre la
 | **GPL** | Las obras derivadas deben ser también de código abierto | Linux, WordPress |
 | **BSD** | Similar a MIT, con ligeras diferencias | FreeBSD, Flask |
 
-### 2.2 ¿Cómo elegir?
+### 2.2 Enfoque de elegir
 
 - **Si quieres que más personas lo usen**: Elige MIT
 - **Si quieres proteger patentes**: Elige Apache 2.0

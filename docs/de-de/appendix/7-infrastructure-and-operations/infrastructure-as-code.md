@@ -1,4 +1,4 @@
-# Infrastructure as Code
+# Infrastructure as Code: Automatisierung
 
 ::: tip Vorwort
 **Hast du schon diesen Albtraum erlebt: Der Online-Server ist ausgefallen, aber niemand erinnert sich an die urspruengliche Konfiguration?** Manuelle Server-Anmeldung, Befehle aus dem Gedaechtnis eintippen und hoffen, dass man sich nicht vertippt - das ist der Alltag des traditionellen Betriebs. Infrastructure as Code (IaC) hat all das grundlegend veraendert: Infrastruktur mit Code definieren und verwalten, sodass Serverkonfiguration wie Software versionskontrolliert, reproduzierbar und auditierbar wird.
@@ -24,7 +24,7 @@ Nach diesem Kapitel wirst du Folgendes koennen:
 
 ---
 
-## 0. Ueberblick: Warum braucht auch Infrastruktur "Quellcode"?
+## 0. Ueberblick: Motivation von braucht auch Infrastruktur "Quellcode"
 
 Stell dir vor, du bist ein Koch. Wenn du jedes Gericht nach Gefuehl zubereitest - heute ein Loeffel Salz, morgen zwei - wird der Geschmack nie konstant sein. Wenn du aber das Rezept aufschreibst - genau bis auf die Grammzahl jedes Gewuerzs - kann jeder denselben Geschmack reproduzieren.
 

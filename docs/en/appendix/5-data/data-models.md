@@ -1,4 +1,4 @@
-# Data Models Overview (Document / Graph / Time-Series / Vector)
+# Data Models: A Complete Overview — Document, Graph, Time-Series, and Vector
 
 ::: tip Core Question
 **Why can't you just stuff all your data into MySQL tables?** When your data is a social network graph, millions of sensor readings per second, or semantic vectors for AI to understand, relational tables fall short. Different data shapes require different modeling approaches.
@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Beyond Relational: Why Do We Need Other Data Models?
+## 1. Beyond Relational: Motivation for needing Other Data Models
 
 Relational databases (MySQL, PostgreSQL) organize data with "tables + rows + columns," suitable for structured, well-defined business data. But real-world data comes in far more forms than just this:
 
@@ -25,7 +25,7 @@ It's not about "replacing" relational databases, but "supplementing" them. Most 
 
 ## 2. Document Model
 
-### 2.1 What is the Document Model?
+### 2.1 Overview of the Document Model
 
 The document model stores data as **JSON/BSON documents**, where each record is a self-contained document that can have different field structures.
 
@@ -71,7 +71,7 @@ The document model stores data as **JSON/BSON documents**, where each record is 
 
 ## 3. Graph Model
 
-### 3.1 What is the Graph Model?
+### 3.1 Overview of the Graph Model
 
 The graph model uses **Nodes** and **Edges** to represent entities and their relationships. Each node is an entity, each edge is a relationship, and both nodes and edges can carry properties.
 
@@ -114,7 +114,7 @@ Each additional hop in the relational approach adds another JOIN, causing expone
 
 ## 4. Time-Series Model
 
-### 4.1 What is the Time-Series Model?
+### 4.1 Overview of the Time-Series Model
 
 The time-series model uses **timestamps** as the primary axis, specifically optimized for "write in chronological order, query by time range" scenarios.
 
@@ -125,7 +125,7 @@ timestamp            device      cpu_usage   memory
 2024-01-15 10:00:03  server-01   92%         14.1GB
 ```
 
-### 4.2 Why Not Use MySQL for Time-Series Data?
+### 4.2 Motivation for Noting Use MySQL for Time-Series Data
 
 | Issue | MySQL | Time-Series Database (InfluxDB) |
 |------|-------|----------------------|
@@ -145,7 +145,7 @@ timestamp            device      cpu_usage   memory
 
 ## 5. Vector Model
 
-### 5.1 What is the Vector Model?
+### 5.1 Overview of the Vector Model
 
 The vector model converts unstructured data like text, images, and audio into high-dimensional numerical vectors through an **Embedding model**, then measures semantic similarity by calculating the distance between vectors.
 
@@ -180,7 +180,7 @@ The vector model converts unstructured data like text, images, and audio into hi
 
 ---
 
-## 6. Selection Guide: How to Choose a Data Model?
+## 6. Selection Guide: Approach to choosing a Data Model
 
 | What Does Your Data Look Like? | Recommended Model | Representative Products |
 |-------------------|---------|---------|

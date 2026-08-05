@@ -1,10 +1,10 @@
-# Expresiones regulares
+# Fundamentos de expresiones regulares
 
 > 💡 **Guía de aprendizaje**: ¿Las expresiones regulares parecen jeroglíficos? En realidad son solo un "mini-lenguaje para describir patrones de texto". Este capítulo te lleva desde cero a entender la esencia de las regex, aprendiendo a resolver el 80% de los problemas de búsqueda y validación de texto con unos pocos símbolos clave.
 
 ---
 
-## 0. ¿Por qué necesitas expresiones regulares?
+## 0. Motivación de expresiones regulares
 
 Imagina los siguientes escenarios:
 - Extraer todas las direcciones IP de un registro extenso
@@ -174,5 +174,5 @@ Por defecto es modo codicioso. Añade `?` después del cuantificador para cambia
 :::
 
 **Siguiente paso**:
-- [Variables de entorno y PATH](./environment-path) - Entender la configuración del sistema
-- [SSH y autenticación por clave](./ssh-authentication) - Conexión segura a servidores remotos
+- [Introducción a las variables de entorno y PATH](./environment-path) - Entender la configuración del sistema
+- [Introducción a SSH y autenticación por clave](./ssh-authentication) - Conexión segura a servidores remotos

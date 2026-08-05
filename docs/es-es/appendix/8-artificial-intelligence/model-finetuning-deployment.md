@@ -1,4 +1,4 @@
-# Fine-tuning y despliegue de modelos
+# Introducción al ajuste fino y despliegue de modelos
 
 ::: tip Prólogo
 **Los grandes modelos son muy potentes, pero no entienden tu negocio.** GPT-4 puede escribir poesía y programar, pero no conoce la terminología de productos de tu empresa ni las normas profesionales de tu sector. El fine-tuning es el proceso de hacer que un modelo general "aprenda" tu conocimiento especializado: es como dar formación inicial a un erudito generalista para convertirlo en un experto en tu dominio.
@@ -24,7 +24,7 @@ Al terminar este capítulo, habrás aprendido:
 
 ---
 
-## 0. Panorama general: ¿por qué necesitas fine-tuning?
+## 0. Panorama general: Motivación de fine-tuning
 
 El entrenamiento de los grandes modelos de lenguaje se divide en dos fases: **preentrenamiento** y **fine-tuning**. El preentrenamiento consiste en aprender capacidades lingüísticas sobre enormes cantidades de datos generales; el fine-tuning consiste en aprender capacidades especializadas sobre datos de tareas específicas.
 

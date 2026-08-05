@@ -3,7 +3,7 @@ title: 'Transformer and Attention Mechanism: The Core Engine of Large Language M
 description: 'Deep dive into the Transformer architecture and attention mechanism, revealing the technical foundation of GPT, BERT, and other large language models.'
 ---
 
-# Transformer and Attention Mechanism: The Core Engine of Large Language Models
+# Principles of Transformers and Attention Mechanisms
 
 In 2017, Google introduced the Transformer architecture in their paper "Attention Is All You Need," fundamentally changing the landscape of natural language processing. It abandoned traditional recurrent neural networks (RNNs) and relied solely on the attention mechanism to achieve stronger performance and higher training efficiency. Today, nearly all large language models — GPT, BERT, T5, LLaMA — are built upon the Transformer.
 

@@ -1,11 +1,11 @@
-# CI / CD Automatisierung
+# CI/CD: Automatisierte Auslieferung
 ::: tip 🎯 Kernfrage
 **Der Code laeuft lokal einwandfrei - wie macht man ihn fuer die ganze Welt zugaenglich?**
 :::
 
 ---
 
-## 1. Warum muss man einen Dienst "online stellen"?
+## 1. Warum muss man einen Dienst "online stellen"
 
 Stell dir vor, du hast zu Hause ein grossartiges Essen gekocht. Das Problem: Nur deine Familie kann es geniessen. Nachbarn, Bekannte, Fremde - sie alle kommen nicht in den Genuss.
 
@@ -19,9 +19,9 @@ Im Folgenden wird der gesamte Prozess Schritt fuer Schritt erklaert, so dass auc
 
 ---
 
-## 2. Build: Aus Code wird ein "transportables Paket"
+## 2. Build: Aus Code wird ein "transportables Build-Artefakt"
 
-### 2.1 Warum muss man bauen?
+### 2.1 Warum muss man bauen
 
 Anfaenger fragen oft: Der Code ist fertig - warum kann man ihn nicht direkt auf den Server legen?
 
@@ -31,7 +31,7 @@ Ein Beispiel: Wenn du Vue-Code schreibst, verwendest du Tags wie `<template>` od
 
 Bevor der Code auf den Server kommt, muss etwas Wichtiges geschehen: **Uebersetzung in eine Sprache, die der Browser versteht.** Dieser Uebersetzungsprozess heisst "Build" (Erstellen).
 
-### 2.2 Was genau passiert beim Build?
+### 2.2 Was genau passiert beim Build
 
 Build bedeutet nicht nur Uebersetzung. Es werden auch viele Optimierungen durchgefuehrt, damit die Website schneller und ressourcenschonender laeuft. Hier sind die Details:
 
@@ -59,7 +59,7 @@ Der Zweck des Hashes: Wenn sich der Code aendert, aendert sich auch der Hash-Wer
 
 <DeploymentBuildDemo />
 
-### 2.3 Wie fuehrt man einen Build durch?
+### 2.3 Wie fuehrt man einen Build durch
 
 Die meisten modernen Frontend-Projekte haben bereits ein Build-Tool konfiguriert. Man muss sich nur einen Befehl merken:
 
@@ -76,7 +76,7 @@ pnpm build
 
 Nach der Ausfuehrung suche im Projektverzeichnis nach einem Ordner namens `dist` (manchmal auch `build` oder `.output`). Dort befinden sich alle fertiggestellten Dateien. Diese Dateien muessen nur noch auf den Server uebertragen werden - keine weiteren Aenderungen noetig.
 
-### 2.4 Was befindet sich im Build-Artefakt?
+### 2.4 Was befindet sich im Build-Artefakt
 
 Oeffnet man den dist-Ordner, findet man hauptsaechlich drei Dateitypen:
 
@@ -90,7 +90,7 @@ Bei komplexeren Backend-Projekten (z. B. Node.js) kann das Build-Artefakt eine a
 
 ## 3. Server: Ein "Haus", das nie schliesst
 
-### 3.1 Was ist eigentlich ein Server?
+### 3.1 Was ist eigentlich ein Server
 
 Viele stellen sich bei "Server" etwas Hochkomplexes vor. Dabei ist es ganz einfach: **Ein Server ist ein Computer.** Ein Computer, der nie heruntergefahren wird und immer mit dem Internet verbunden ist.
 
@@ -106,7 +106,7 @@ Drittens: Dein Computer hat keine "oeffentliche IP". Was bedeutet das? Eine welt
 
 <DeploymentServerDemo />
 
-### 3.2 Wie waehlt man einen Server?
+### 3.2 Wie waehlt man einen Server
 
 Bei der Serverwahl geht es um drei Kennzahlen: **CPU-Kerne**, **Arbeitsspeicher (RAM)** und **Festplattenplatz**. Je hoeher diese Werte, desto leistungsfaehiger der Server - und desto teurer.
 
@@ -118,7 +118,7 @@ Als Einsteiger brauchst du keine teure Konfiguration:
 
 Ein weiterer wichtiger Faktor: **Standort**. Wenn die Nutzer hauptsaechlich in China sind, waehle einen chinesischen Server (Alibaba Cloud, Tencent Cloud) fuer schnelle Zugriffszeiten. Wenn die Nutzer im Ausland sind, waehle einen internationalen Server (AWS, Google Cloud, DigitalOcean) oder einen Server in Hongkong - schnell und ohne ICP-Registrierung.
 
-### 3.3 Inland oder Ausland?
+### 3.3 Inland oder Ausland
 
 Das ist eine wichtige Frage, die viele anfaenglich nicht bedenken.
 
@@ -140,7 +140,7 @@ Empfehlung: Fuer persoenliche Projekte oder Lern-Websites waehle Server in Hongk
 
 Fuer Anfaenger besonders empfohlen: **Alibaba Cloud** oder **Tencent Cloud** mit Studenten- bzw. Neukundenangeboten - oft nur einige Dutzend Euro pro Jahr. Fuer reine Frontend-Projekte bietet sich **Vercel** oder **Netlify** an - nicht einmal einen Server mieten, einfach den Code pushen und alles wird automatisch bereitgestellt.
 
-### 3.5 Was tun nach dem Erhalt des Servers?
+### 3.5 Was tun nach dem Erhalt des Servers
 
 Nach dem Kauf erhaeltst du eine E-Mail mit folgenden wichtigen Informationen:
 
@@ -163,7 +163,7 @@ Nach erfolgreichem Login befindest du dich in der Kommandozeile des Servers. Es 
 
 ## 4. Deployment: Den Code ins "Haus" einziehen lassen
 
-### 4.1 Was ist Deployment?
+### 4.1 Was ist Deployment
 
 Deployment bedeutet: Nachdem der Server gemietet ist (das Haus), wird der Code (das Mobel) eingefuegt und die Tuer fuer den Betrieb geoefnet.
 
@@ -178,7 +178,7 @@ Diese vier Schritte klingen kompliziert, sind aber in der Praxis gut machbar. Im
 
 <DeploymentServerDemo />
 
-### 4.2 Wie laedt man den Code auf den Server hoch?
+### 4.2 Wie laedt man den Code auf den Server hoch
 
 **Methode 1: FTP/SFTP-Upload**
 
@@ -308,7 +308,7 @@ Nun sollte die Website unter `http://example.com` erreichbar sein (vorausgesetzt
 
 ## 5. Domain und DNS: Der Website einen guten Namen geben
 
-### 5.1 Warum eine Domain kaufen?
+### 5.1 Warum eine Domain kaufen
 
 Mit der Server-IP - warum noch eine Domain kaufen?
 
@@ -318,7 +318,7 @@ Eine Domain ist der Name der Website. Gut merkbar, professionell und spiegelt di
 
 <DeploymentDnsDemo />
 
-### 5.2 Was ist DNS?
+### 5.2 Was ist DNS
 
 Gut. Du hast eine Domain gekauft, z. B. `my-awesome-website.com`. Aber hier ist das Problem: Computer verstehen nur IP-Adressen, keine menschlichen Namen wie "my-awesome-website.com".
 
@@ -332,7 +332,7 @@ Wenn du `my-awesome-website.com` in den Browser eingibst und Enter draeuckst, pa
 
 Der gesamte Prozess dauert normalerweise nur wenige Millisekunden und ist fuer den Nutzer nicht spuerbar.
 
-### 5.3 Wie konfiguriert man DNS?
+### 5.3 Wie konfiguriert man DNS
 
 Die DNS-Konfiguration kann an zwei Stellen vorgenommen werden:
 
@@ -348,7 +348,7 @@ Dort, wo die Domain gekauft wurde, werden die DNS-Eintraege konfiguriert. Der ha
 
 Viele Profis nutzen nicht den DNS des Domain-Anbieters, sondern professionelle DNS-Dienste wie Cloudflare, Alibaba Cloud DNSPod oder Tencent Cloud DNS. Diese Dienste sind stabiler, schneller und bieten zusaetzliche Funktionen wie CDN und DDoS-Schutz.
 
-### 5.4 Wie lange dauert es, bis DNS aenderungen wirksam werden?
+### 5.4 Wie lange dauert es, bis DNS aenderungen wirksam werden
 
 Das ist eine haeufig gestellte Frage. Die Antwort: **Es variiert. Meist einige Minuten bis 24 Stunden.**
 
@@ -380,7 +380,7 @@ Vielleicht ist aufgefallen: Manche Webadressen beginnen mit `http://`, andere mi
 
 <DeploymentHttpsDemo />
 
-### 6.2 Warum HTTPS?
+### 6.2 Warum HTTPS
 
 Erstens: **Sicherheit**. Ohne HTTPS werden Passwoerter im Klartext uebertragen. Jeder mit etwas technischem Wissen kann sie abfangen. Wer wuerde heutzutage noch eine Website ohne HTTPS nutzen?
 
@@ -388,7 +388,7 @@ Zweitens: **Browser-Warnungen**. Moderne Browser wie Chrome und Edge zeigen bei 
 
 Drittens: **SEO**. Suchmaschinen wie Google priorisieren HTTPS-Websites in den Suchergebnissen.
 
-### 6.3 Wie erhaelt man ein HTTPS-Zertifikat?
+### 6.3 Wie erhaelt man ein HTTPS-Zertifikat
 
 Frueher waren HTTPS-Zertifikate teuer - Hunderte bis Tausende Euro pro Jahr. Heute gibt es **Let's Encrypt**, eine Organisation, die kostenlose SSL/TLS-Zertifikate anbietet. Zudem gibt es viele automatisierte Tools fuer die Installation und Erneuerung.
 
@@ -412,7 +412,7 @@ Das Zertifikat ist 90 Tage gueltig. Certbot richtet jedoch automatisch einen Cro
 
 Wenn du den DNS-Dienst von Cloudflare nutzt, musst du HTTPS gar nicht selbst konfigurieren. Cloudflare stellt automatisch HTTPS fuer deine Domain bereit und kuemmert sich auch um die 90-taegige Erneuerung.
 
-### 6.4 Was aendert sich nach der HTTPS-Konfiguration?
+### 6.4 Was aendert sich nach der HTTPS-Konfiguration
 
 Nach der HTTPS-Konfiguration aendert sich der Zugriff von `http://example.com` zu `https://example.com`. Diese Aenderung bringt eine Reihe von Sicherheitsvorteilen:
 
@@ -424,7 +424,7 @@ Nach der HTTPS-Konfiguration aendert sich der Zugriff von `http://example.com` z
 
 ## 7. CI/CD: Den Roboter fuer dich arbeiten lassen
 
-### 7.1 Was ist CI/CD?
+### 7.1 Was ist CI/CD
 
 CI/CD steht fuer **C**ontinuous **I**ntegration (Continuous Integration) und **C**ontinuous **D**eployment (Continuous Deployment). Man kann es sich als ein automatisiertes Robotersystem vorstellen.
 
@@ -485,7 +485,7 @@ Nachdem alle Tests bestanden wurden:
 
 Der gesamte Prozess dauert oft nur wenige Minuten. Vollautomatisch.
 
-### 7.3 Wie konfiguriert man GitHub Actions?
+### 7.3 Wie konfiguriert man GitHub Actions
 
 GitHub Actions ist die in GitHub integrierte CI/CD-Funktion. Keine zusaetzlichen Kosten (das kostenlose Kontingent reicht fuer persoenliche Projekte). Die Konfiguration ist sehr einfach.
 
@@ -553,7 +553,7 @@ Nach der Konfiguration wird bei jedem `git push origin main` das Deployment auto
 
 ## 8. Monitoring und Logs: Der "Waechter" der Website
 
-### 8.1 Warum Monitoring?
+### 8.1 Warum Monitoring
 
 Nach dem Online-Stellen sollte die Website theoretisch ununterbrochen laufen. In der Praxis ist das jedoch nicht der Fall. Server koennen ausfallen, Netzwerke koennen stoeren, Code kann Bugs enthalten. In einer echten Produktionsumgebung kann alles Moegliche passieren.
 
@@ -567,7 +567,7 @@ Mit Monitoring kannst du:
 
 <DeploymentMonitorDemo />
 
-### 8.2 Welche Metriken ueberwachen?
+### 8.2 Welche Metriken ueberwachen
 
 Die wichtigsten Monitoring-Metriken:
 
@@ -580,7 +580,7 @@ Die wichtigsten Monitoring-Metriken:
 | Antwortzeit | < 2 Sekunden | Datenbankabfragen optimieren oder Caching einfuegen |
 | Fehlerrate | < 1% | Fehlerlogs pruefen, um das Problem zu lokalisieren |
 
-### 8.3 Wie konfiguriert man Monitoring?
+### 8.3 Wie konfiguriert man Monitoring
 
 **Einfachste Loesung: Uptime Robot**
 
@@ -594,7 +594,7 @@ Wenn der Server bei Alibaba Cloud oder Tencent Cloud gehostet ist, ist Monitorin
 
 Das sind das "Schweizer Taschenmesser" der Ueberwachung. Extrem leistungsfaehig, kann jede erdenkliche Metrik ueberwachen und wunderschoene Visualisierungen erstellen. Die Konfiguration ist jedoch komplexer und erfordert etwas Erfahrung.
 
-### 8.4 Logs: Wie findet man die Ursache eines Problems?
+### 8.4 Logs: Ansatz für findet man die Ursache eines Problems
 
 Monitoring sagt dir: "Die Website hat ein Problem." Aber was genau das Problem ist und warum es auftritt, muss mit **Logs** herausgefunden werden.
 
@@ -627,7 +627,7 @@ Bei komplexeren Projekten werden professionelle Log-Sammlungstools empfohlen:
 - **ELK (Elasticsearch + Logstash + Kibana)**: Leistungsfaehig, aber komplex in der Einrichtung.
 - **Sentry**: Spezialisiert auf das Sammeln von Anwendungsfehlern. Erfasst automatisch Fehlerinformationen.
 
-### 8.5 Alarmierung: Wie erfaehrt man sofort von Problemen?
+### 8.5 Alarmierung: Ansatz für erfaehrt man sofort von Problemen
 
 Monitoring zeigt dir, dass es ein Problem gibt. Aber wenn man nicht staendig auf das Dashboard schaut? Hier kommt **Alarmierung** ins Spiel.
 

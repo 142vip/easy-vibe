@@ -1,4 +1,4 @@
-# The Nature of Frontend Frameworks
+# Principles of Frontend Frameworks
 
 > **Learning Guide**: This article answers a fundamental question — **What exactly do frontend frameworks (Vue, React, Svelte, etc.) do?** If you've only learned HTML, CSS, and a bit of JavaScript, that's perfectly fine — we'll start from the very beginning.
 
@@ -9,7 +9,7 @@ Before we begin, make sure you know these two basic concepts. If you're unsure, 
 
 There's also one concept that will appear frequently later, so let's give it a complete explanation here.
 
-### What is the DOM?
+### Overview of the DOM
 
 DOM stands for Document Object Model.
 
@@ -26,7 +26,7 @@ Hover your mouse over the HTML code on the left, and the corresponding node in t
 
 ---
 
-## 0. Introduction: What is a "Frontend Framework"?
+## 0. Introduction: Overview of a "Frontend Framework"
 
 First, let's explain the word "framework." In programming, a **Framework** is a set of pre-written code and rules that specifies how your code should be organized and run. You write code according to its conventions, and it handles a large amount of repetitive, tedious low-level work for you.
 
@@ -40,7 +40,7 @@ Let's expand on this step by step, starting from the most basic questions.
 
 ---
 
-## 1. The Core Question: When Data Changes, What Happens to the UI?
+## 1. The Core Question: Criteria for Data Changes, What Happens to the UI
 
 ### 1.1 First, Let's Clarify What "Data" and "UI" Are
 
@@ -58,7 +58,7 @@ Click the "Add Item" button and notice: the data (left) has already changed, but
 
 <DataUIGapDemo />
 
-### 1.2 Why Don't JavaScript Variable Changes Automatically Update the UI?
+### 1.2 Motivation for Doning 't JavaScript Variable Changes Automatically Update the UI
 
 This is the most confusing part for beginners, so let's explain the underlying principles step by step.
 
@@ -195,7 +195,7 @@ Modify the data (State) on the left and observe how the UI on the right automati
 
 <DeclarativeFormulaDemo />
 
-### 2.3 Why is Declarative Better than Imperative?
+### 2.3 Motivation for Declarativing Better than Imperative
 
 The advantage of declarative writing lies in:
 
@@ -210,9 +210,9 @@ Simply put: declarative lets you focus on "business logic" (how data changes) wi
 
 ---
 
-## 3. Reactivity System: How Does the Framework Know Data Changed?
+## 3. Reactivity System: Method for iting Framework Know Data Changed
 
-### 3.1 What is "Reactivity"?
+### 3.1 Overview of "Reactivity"
 
 Earlier we said "when data changes, the UI automatically updates." But there's a technical problem: **JavaScript itself doesn't have the ability to "automatically notify others when a variable is modified."**
 
@@ -278,7 +278,7 @@ None of the three approaches is absolutely better or worse. Vue is the most natu
 
 ## 4. Components: Breaking the UI into Reusable Small Pieces
 
-### 4.1 Why Split?
+### 4.1 Motivation for splitting
 
 A complete web page might have a navigation bar, sidebar, content area, search box, user avatar, various buttons... If all the code is in one file, that file would become extremely long and very hard to maintain.
 
@@ -306,7 +306,7 @@ Click the component name on the left to see its corresponding area on the page. 
 
 <ComponentTreeDemo />
 
-### 4.3 What Does a Component Look Like in Code?
+### 4.3 What Does a Component Look Like in Code
 
 Taking Vue as an example, a component is a `.vue` file containing three parts:
 
@@ -352,9 +352,9 @@ Three lines of code render three different product cards.
 
 ---
 
-## 5. The Cost of DOM Operations: Why Do Frameworks Try So Hard?
+## 5. The Cost of DOM Operations: Motivation for Frameworksing Try So Hard
 
-### 5.1 What are DOM Operations?
+### 5.1 Overview of DOM Operations
 
 As mentioned earlier, the DOM is the tree structure generated after the browser parses HTML. **DOM operations** are using JavaScript to modify nodes on this tree. For example, changing text, adding an element, deleting an element, or modifying a style.
 
@@ -371,7 +371,7 @@ Observe the time comparison between direct DOM operations and batch DOM operatio
 
 <DomOperationCostDemo />
 
-### 5.2 How Do Frameworks Solve This Problem?
+### 5.2 Method for Frameworksing Solve This Problem
 
 Since direct DOM operations are expensive, frameworks find ways to **reduce the number of DOM operations**. There are two specific strategies:
 

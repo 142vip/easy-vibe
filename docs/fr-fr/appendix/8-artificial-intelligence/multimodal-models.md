@@ -1,4 +1,4 @@
-# Modèles multimodaux (Vision / Audio / Vidéo)
+# Principes : Modèles multimodaux : Vision, Audio, Vidéo
 > 💡 **Guide d'apprentissage** : Ce chapitre ne nécessite pas de connaissances approfondies en vision par ordinateur. Grâce à des démonstrations interactives, vous comprendrez comment l'IA a acquis des « yeux ». Nous allons dévoiler les principes fondamentaux derrière des modèles comme GPT-4V et Qwen-VL.
 
 <VlmQuickStartDemo />
@@ -124,7 +124,7 @@ Un VLM dans un paradigme typique est composé des trois parties principales suiv
 
 ---
 
-## 4. Comment apprend-il à voir ? (Entraînement)
+## 4. Approche et mise en œuvre : apprend-il à voir (Entraînement)
 
 Bien, maintenant les différentes parties du corps sont cousues ensemble. Mais avant d'entrer officiellement en service, le VLM tout juste assemblé se trouve en réalité dans un état de « cécité et chaos » semblable à celui d'un nouveau-né — car le nerf optique (Projector) nouvellement ajouté est une page blanche, remplie de valeurs numériques aléatoires sans signification.
 

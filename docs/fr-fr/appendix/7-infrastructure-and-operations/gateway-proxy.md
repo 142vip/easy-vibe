@@ -1,11 +1,11 @@
-# Passerelles et proxy inverse
+# Principes : Passerelles API et proxy inverse
 ::: tip Question centrale
 **Dans une architecture Internet à forte concurrence, comment acheminer le trafic de manière sécurisée et efficace vers le bon service ?** Le proxy inverse résout le problème de « comment distribuer le trafic », la passerelle API résout le problème de « comment traiter les requêtes ». Cet article explore en profondeur la philosophie de conception des passerelles à travers des cas réels (réceptionniste, système de sécurité, routage intelligent).
 :::
 
 ---
 
-## 1. Pourquoi une « passerelle » ?
+## 1. Motivation et justification : une « passerelle »
 
 ### 1.1 Partons d'un cas réel : l'évolution de l'architecture d'une plateforme e-commerce
 
@@ -64,7 +64,7 @@ Imaginez que vous vous rendez dans une grande entreprise :
 
 ---
 
-## 2. Qu'est-ce qu'un proxy inverse ?
+## 2. Présentation et définition : un proxy inverse
 
 ### 2.1 Proxy direct vs proxy inverse
 
@@ -134,7 +134,7 @@ Client HTTPS → Nginx (chiffrement/déchiffrement) → Service backend HTTP
 
 ---
 
-## 3. Nginx : pourquoi peut-il supporter des millions de connexions simultanées ?
+## 3. Nginx : pourquoi peut-il supporter des millions de connexions simultanées
 
 ### 3.1 Modèle de processus Master-Worker
 
@@ -185,9 +185,9 @@ C'est le secret fondamental de la haute performance de Nginx :
 
 ---
 
-## 4. Qu'est-ce qu'une passerelle API ?
+## 4. Présentation et définition : une passerelle API
 
-### 4.1 Pourquoi une passerelle API ?
+### 4.1 Pourquoi une passerelle API
 
 **Imaginez un système sans passerelle :**
 
@@ -227,7 +227,7 @@ C'est le secret fondamental de la haute performance de Nginx :
 
 ---
 
-## 5. Pratique de la passerelle : comment construire une architecture de passerelle complète ?
+## 5. Pratique de la passerelle : comment construire une architecture de passerelle complète
 
 ### 5.1 Architecture complète
 
@@ -408,7 +408,7 @@ upstream backend_ip_hash {
 
 ---
 
-## 6. Sécurité de la passerelle : comment garder les portes du système ?
+## 6. Sécurité de la passerelle : comment garder les portes du système
 
 ### 6.1 Authentification et autorisation
 
@@ -462,7 +462,7 @@ Tout comme l'accueil d'une entreprise : le réceptionniste vérifie votre identi
 
 ---
 
-## 7. Limitation de débit et disjoncteur : comment empêcher le système d'être submergé par un « déluge de trafic » ?
+## 7. Limitation de débit et disjoncteur : comment empêcher le système d'être submergé par un « déluge de trafic »
 
 ### 7.1 Comparaison des algorithmes de limitation de débit
 

@@ -1,4 +1,4 @@
-# Visualización de Datos y Dashboards
+# Principios de visualización de datos
 
 ::: tip Prefacio
 **Una buena tabla vale más que mil filas de datos.** La visualización de datos transforma números abstractos en expresiones visuales intuitivas, permitiendo a las personas comprender la historia detrás de los datos en cuestión de segundos. Desde los gráficos de Excel hasta los paneles de monitorización de Grafana, la visualización está en todas partes.
@@ -24,7 +24,7 @@ Después de completar este capítulo, obtendrás:
 
 ---
 
-## 0. Panorama general: ¿Por qué necesitamos visualización?
+## 0. Panorama general: Motivación de visualización
 
 El cerebro humano procesa información visual mucho más rápido que el texto. Un gráfico de líneas te permite ver rápidamente que "las ventas del mes pasado están disminuyendo", mientras que la misma información presentada en una tabla requeriría comparar fila por fila para llegar a la misma conclusión.
 
@@ -65,7 +65,7 @@ El primer paso para elegir un gráfico no es "qué gráfico me gusta", sino "qu�
 
 ---
 
-## 2. Principios de diseño de visualización: Deja que los datos hablen
+## 2. Principios de diseño de visualización: Principios de codificación visual
 
 Una buena visualización no es "bonita", sino "comprensible". Varios principios clásicos propuestos por Edward Tufte en "The Visual Display of Quantitative Information" siguen siendo una referencia importante para el diseño de visualización hoy en día.
 

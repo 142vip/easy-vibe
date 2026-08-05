@@ -1,4 +1,4 @@
-# High Availability and Disaster Recovery
+# Principles of High Availability and Disaster Recovery
 
 ::: tip Introduction
 **One minute of downtime can mean losses in the hundreds of thousands.** High Availability (HA) refers to a system's ability to continue providing service in the face of hardware failures, software bugs, network issues, and other anomalies. Disaster Recovery (DR) is the ability to restore service when a larger-scale disaster strikes.
@@ -24,7 +24,7 @@ After reading this chapter, you will gain:
 
 ---
 
-## 1. Availability Metrics: What Do "Nines" Mean?
+## 1. Availability Metrics: What Do "Nines" Mean
 
 Availability is typically measured in "nines," calculated as:
 

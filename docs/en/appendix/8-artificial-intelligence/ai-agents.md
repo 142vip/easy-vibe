@@ -1,4 +1,4 @@
-# AI Agents and Tool Calling
+# Principles of AI Agents and Tool Calling
 > 💡 **Learning Guide**: This chapter requires no programming background. Through interactive demos, you'll gain a deep understanding of how AI Agents work. We'll start from the basics of "tool calling" and work our way up to how Agents plan, remember, and collaborate.
 
 <AgentQuickStartDemo />
@@ -16,7 +16,7 @@ ChatGPT: I cannot access real-time weather information. I suggest you check a we
 
 ChatGPT is like a **knowledgeable but immobile scholar** — it knows a lot, but can't execute any actual operations for you.
 
-### 0.1 Core Challenge: How to Make AI Go from "Chatting" to "Acting"?
+### 0.1 Core Challenge: Approach to making AI Go from "Chatting" to "Acting"
 
 To achieve this goal, we need to solve three core challenges:
 
@@ -34,7 +34,7 @@ Computers can do many things: search the web, run code, manipulate files, send e
 
 But LLMs inherently **do not** have these capabilities. Its core ability is just one thing: **generating text**.
 
-### 1.1 Why Can't LLMs Execute Operations Directly?
+### 1.1 Motivation for Caning 't LLMs Execute Operations Directly
 
 An LLM is a **pure text processor**:
 
@@ -75,7 +75,7 @@ LLM generates final answer: "The weather in Beijing today is sunny, temperature 
 
 ---
 
-## 2. Core Challenge: How to Complete Complex Tasks?
+## 2. Core Challenge: Approach to completing Complex Tasks
 
 Tool calling gives LLMs the ability to "act," but real-world tasks are often complex:
 
@@ -90,7 +90,7 @@ This task involves multiple steps:
 4.  Organize and analyze
 5.  Write the report
 
-### 2.1 Why is Planning Needed?
+### 2.1 Motivation for Planninging Needed
 
 If you let the LLM generate a report "in one shot," the results are often:
 
@@ -121,7 +121,7 @@ Humans can remember things from long ago, but an LLM's "memory" is very limited:
 -   **Session isolation**: Each conversation is a fresh start
 -   **No persistence**: Close the page and it "forgets everything"
 
-### 3.1 Why is Memory Needed?
+### 3.1 Motivation for Memorying Needed
 
 Imagine this scenario:
 

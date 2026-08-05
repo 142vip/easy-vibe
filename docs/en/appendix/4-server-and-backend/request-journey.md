@@ -1,4 +1,4 @@
-# The Complete Journey of a Request
+# A Panorama of Request Flow
 
 ::: tip Introduction
 **When you type a URL in your browser and press Enter, what exactly happens before the page appears?** This is a classic interview question, and more importantly, a key to understanding the entire Web architecture. Understanding this chain lets you see how frontend, backend, network, and databases work together.
@@ -23,7 +23,7 @@ After reading this chapter, you will gain:
 
 ---
 
-## 0. The Big Picture: What Does a Request Go Through?
+## 0. The Big Picture: What Does a Request Go Through
 
 Use an analogy to understand: you order a book online. This process is strikingly similar to an HTTP request.
 

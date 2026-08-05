@@ -88,7 +88,7 @@ This relies on a core technology: the **Speaker Encoder** and metric learning.
 
 ---
 
-## 6. Breathing in a Soul: Emotional Rhythm and Fine-Grained Style Control
+## 6. Auto-Scaling in a Soul: Emotional Rhythm and Fine-Grained Style Control
 
 A phrase like "Really?" can express surprise or angry disbelief. Commercial-grade advanced AI must not only "read words correctly" but also "convey emotion."
 

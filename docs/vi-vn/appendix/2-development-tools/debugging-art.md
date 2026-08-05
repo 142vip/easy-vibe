@@ -1,4 +1,4 @@
-# Nghệ thuật Debug
+# Debug: Nguyên tắc và phương pháp khoa học
 
 ::: tip Lời mở đầu
 **Code viết xong, chạy bị lỗi — rồi sao?** Nhiều người mới học bị kẹt ở bước này, nhìn chằm chằm vào màn hình không biết làm gì. Debug là một trong những kỹ năng cốt lõi nhất của lập trình, thậm chí quan trọng hơn cả viết code. Vì viết code chỉ chiếm 30% thời gian phát triển, 70% còn lại dành cho việc hiểu vấn đề, định vị Bug và xác nhận sửa chữa.
@@ -283,7 +283,7 @@ print(f"Kiểu: {type(data)}")  # Kiểm tra kiểu dữ liệu
 
 Các công cụ AI (ChatGPT, Claude, Cursor, v.v.) có thể tăng tốc đáng kể quá trình debug, nhưng bạn phải biết cách sử dụng.
 
-### 4.1 AI giỏi cái gì?
+### 4.1 Phạm vi năng lực AI
 
 | AI giỏi | AI không giỏi |
 |--------|----------|

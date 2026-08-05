@@ -1,4 +1,4 @@
-# Technical Writing
+# An Introduction to Technical Writing
 
 ::: tip Preface
 **Does anyone read the documentation you write?** Many developers think "if the code works, that's enough — documentation can wait." The result: new hires can't understand the project, API integration relies entirely on verbal communication, and six months later even you've forgotten why you designed it that way.

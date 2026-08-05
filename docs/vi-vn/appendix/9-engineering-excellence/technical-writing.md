@@ -19,7 +19,7 @@ Sau khi học xong chương này, bạn sẽ viết được tài liệu kỹ th
 
 ---
 
-## 0. Tổng quan: Tại sao tài liệu kỹ thuật quan trọng?
+## 0. Tổng quan: Động lực của tài liệu kỹ thuật quan trọng
 
 Code nói với máy tính "làm như thế nào", tài liệu nói với con người "tại sao làm như vậy". Dự án không có tài liệu giống như thiết bị điện không có hướng dẫn sử dụng — dùng được, nhưng toàn phải đoán.
 

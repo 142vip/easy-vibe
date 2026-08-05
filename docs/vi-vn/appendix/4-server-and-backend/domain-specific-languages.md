@@ -31,7 +31,7 @@ Sau khi học xong bài này, bạn sẽ có thể:
 
 ## 1. Tổng luận về DSL: Một thế giới khác bên ngoài ngôn ngữ đa dụng
 
-### 1.1 DSL là gì?
+### 1.1 DSL: Tổng quan
 
 **DSL (Domain-Specific Language, Ngôn ngữ chuyên biệt miền)** là ngôn ngữ được thiết kế cho một lĩnh vực hoặc nhiệm vụ cụ thể. Đối lập với nó là **GPL (General-Purpose Language, Ngôn ngữ lập trình đa dụng)**, như Python, Java, Go, C++ — chúng được thiết kế để giải quyết mọi bài toán tính toán.
 
@@ -99,13 +99,13 @@ Hiểu được toàn cảnh này, các chương tiếp theo sẽ lần lượt 
 
 ## 2. Định dạng tuần tự hóa dữ liệu: Mô tả dữ liệu có cấu trúc bằng văn bản
 
-### 2.1 Tuần tự hóa dữ liệu là gì?
+### 2.1 Tuần tự hóa dữ liệu: Tổng quan
 
 **Tuần tự hóa (Serialization)** là quá trình chuyển đổi cấu trúc dữ liệu trong bộ nhớ (đối tượng, từ điển, mảng, v.v.) thành một luồng văn bản/byte có thể lưu trữ hoặc truyền tải. Ngược lại, từ luồng văn bản/byte khôi phục thành cấu trúc dữ liệu trong bộ nhớ, gọi là **giải tuần tự hóa (Deserialization)**.
 
 Định dạng tuần tự hóa dữ liệu là loại DSL cơ bản nhất — chúng thuộc loại DSL ngoại vi mô tả dữ liệu thuần, không có bất kỳ khả năng logic nào, chỉ chịu trách nhiệm mô tả tĩnh "giá trị là gì".
 
-### 2.2 Tại sao cần những định dạng này?
+### 2.2 Động lực của cần những định dạng này
 
 Giả sử bạn phát triển một dịch vụ backend, địa chỉ cơ sở dữ liệu là `localhost:5432`. Nếu mã hóa cứng địa chỉ này trong mã nguồn, phát triển cục bộ không có vấn đề gì, nhưng khi triển khai lên môi trường production, địa chỉ cơ sở dữ liệu thay đổi thành `db.prod.company.com:5432`, bạn cần sửa mã nguồn và biên dịch lại.
 
@@ -331,7 +331,7 @@ end
 
 ## 4. Hạ tầng như mã (Infrastructure as Code)
 
-### 4.1 "Hạ tầng" là gì
+### 4.1 "Hạ tầng": Tổng quan
 
 Trong kỹ thuật backend, "hạ tầng" (Infrastructure) chỉ các tài nguyên nền tảng mà ứng dụng cần dựa vào để chạy:
 
@@ -427,7 +427,7 @@ Do sử dụng ngôn ngữ lập trình đa dụng, nhà phát triển có thể
 
 ## 5. Mã keo dán và tạo SDK tự động
 
-### 5.1 Mã keo dán là gì
+### 5.1 Mã keo dán: Tổng quan
 
 Trong kỹ thuật phần mềm, **mã keo dán (Glue Code)** chỉ mã không chứa logic nghiệp vụ, chỉ dùng để kết nối hai hệ thống hoặc module.
 

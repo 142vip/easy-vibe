@@ -1,4 +1,4 @@
-# La evolución de monolito a microservicios
+# Introducción a la evolución de monolito a microservicios
 
 ::: tip Prefacio
 **Ninguna arquitectura es "la mejor", solo "la más adecuada para la etapa actual".** La transición de monolito a microservicios no es un salto que se hace de una vez, sino un proceso gradual a medida que crecen la escala del negocio y la del equipo. Dividir en microservicios demasiado pronto es tan peligroso como hacerlo demasiado tarde.
@@ -47,7 +47,7 @@ En pocas palabras: si 3 equipos construyen un sistema, al final habrá 3 servici
 
 ---
 
-## 2. ¿Cuándo conviene dividir en microservicios?
+## 2. Criterios de conviene dividir en microservicios
 
 No todos los sistemas necesitan microservicios. Dividir demasiado pronto introduce complejidad innecesaria.
 

@@ -1,4 +1,4 @@
-# Analyse de données : Concepts clés, logique et approfondissements
+# Principes : Méthodologie d'analyse de données
 
 ::: tip 🎯 Question centrale
 **Comment extraire des données éparses la « certitude » capable de guider le business ?**
@@ -60,7 +60,7 @@ Le comportement individuel est souvent soumis au hasard, mais le comportement de
 2. **Calculer (Apply)** : Exécuter des fonctions d'agrégation dans chaque groupe, comme `COUNT()` pour compter, `SUM()` pour sommer, `AVG()` pour calculer la moyenne.
 3. **Combiner (Combine)** : Comparer les résultats des différents groupes et identifier les différences.
 
-### 2.2 Pourquoi faut-il obligatoirement faire un GROUP BY ?
+### 2.2 Pourquoi faut-il obligatoirement faire un GROUP BY
 Les données agrégées masquent souvent les problèmes. Par exemple, le taux de conversion global monte, mais en décomposant on s'aperçoit que c'est la région « Paris » qui a explosé et tire la moyenne vers le haut, tandis que toutes les autres régions baissent. L'analyse par agrégation permet de localiser précisément la meilleure ou la pire branche dans la « masse globale ».
 
 ---

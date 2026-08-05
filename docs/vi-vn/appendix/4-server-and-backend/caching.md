@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Tại sao cần "bộ nhớ đệm"?
+## 1. Động lực của cần "bộ nhớ đệm"
 
 ### 1.1 Từ "tra cứu mỗi lần" đến "ghi nhớ dữ liệu thường dùng"
 
@@ -38,7 +38,7 @@ Trong thời kỳ đầu của thế giới máy tính, mỗi khi cần dữ li�
 
 <CachePerformanceComparisonDemo />
 
-### 1.2 Một câu chuyện thực tế: tại sao bộ nhớ đệm là phao cứu sinh
+### 1.2 Trường hợp: tại sao bộ nhớ đệm là phao cứu sinh
 
 Bạn có thể nghĩ: "Hệ thống của tôi hiện tại vẫn ổn, tại sao phải thiết kế bộ nhớ đệm trước?" Hãy để tôi kể một câu chuyện có thật, bạn sẽ hiểu tại sao bộ nhớ đệm không phải là "tùy chọn", mà là "bắt buộc".
 
@@ -58,7 +58,7 @@ Giá trị của bộ nhớ đệm không chỉ là "nhanh hơn", quan trọng h
 
 ---
 
-## 2. Khái niệm cốt lõi: bộ nhớ đệm là gì?
+## 2. Khái niệm cốt lõi: bộ nhớ đệm: Tổng quan
 
 ::: tip 🤔 Bộ nhớ đệm thực sự là gì?
 Nói một cách đơn giản, **bộ nhớ đệm chính là không gian lưu trữ bản sao dữ liệu**. Giống như bạn dán một tờ giấy ghi chú trước bàn học, ghi lại những số điện thoại thường dùng, như vậy không cần lần nào cũng phải mở danh bạ điện thoại ra tra.
@@ -814,11 +814,11 @@ Demo dưới đây so sánh tình huống và giải pháp của ba vấn đề 
 
 ---
 
-## 5. Chiến lược nhất quán bộ nhớ đệm: làm thế nào để bộ nhớ đệm và cơ sở dữ liệu đồng bộ
+## 5. Chiến lược nhất quán bộ nhớ đệm: Cách để bộ nhớ đệm và cơ sở dữ liệu đồng bộ
 
 Bản chất của bộ nhớ đệm là bản sao dữ liệu, giữa bản sao và dữ liệu gốc (cơ sở dữ liệu) chắc chắn tồn tại một cửa sổ thời gian không nhất quán. Làm thế nào để kiểm soát cửa sổ thời gian này, là thách thức cốt lõi của thiết kế bộ nhớ đệm.
 
-### 5.1 Tại sao bộ nhớ đệm và cơ sở dữ liệu lại không nhất quán?
+### 5.1 Động lực của bộ nhớ đệm và cơ sở dữ liệu lại không nhất quán
 
 ::: tip 🤔 Dùng "tờ ghi chú và cuốn sách" để ẩn dụ sự không nhất quán
 Hãy tưởng tượng bạn ghi trên tờ giấy ghi chú: "Số điện thoại của Tiểu Minh: 123456", đây là bản sao của danh bạ (cơ sở dữ liệu) của bạn.

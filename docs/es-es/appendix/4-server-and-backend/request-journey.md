@@ -1,4 +1,4 @@
-# El viaje completo de una petición
+# Panorama del viaje de una petición
 
 ::: tip Prólogo
 **Cuando escribes una URL en el navegador y pulsas Enter, ¿qué ocurre exactamente hasta que se muestra la página?** Esta pregunta es un clásico de las entrevistas y, sobre todo, la llave para entender la arquitectura web completa. Comprender esta cadena te permitirá entender cómo colaboran el frontend, el backend, la red y la base de datos.
@@ -23,7 +23,7 @@ Al terminar este capítulo, habrás aprendido:
 
 ---
 
-## 0. Panorama general: ¿qué experimenta una petición?
+## 0. Panorama general: qué experimenta una petición
 
 Usemos una analogía para entenderlo: haces un pedido de un libro por Internet. Este proceso es sorprendentemente similar a una petición HTTP.
 

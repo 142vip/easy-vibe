@@ -1,4 +1,4 @@
-# Hochverfügbarkeit und Katastrophenwiederherstellung
+# Hochverfügbarkeit: Ausfallsicherheit
 
 ::: tip Einleitung
 **Ein Systemausfall von nur einer Minute kann Verluste in Hunderttausenden bedeuten.** Hochverfügbarkeit (High Availability) bezeichnet die Fähigkeit eines Systems, bei Hardwareausfällen, Software-Bugs, Netzwerkproblemen und anderen Störungen weiterhin Dienste bereitzustellen. Katastrophenwiederherstellung (Disaster Recovery) umfasst die Fähigkeit, den Dienst nach großräumigen Katastrophen wiederherzustellen.
@@ -24,7 +24,7 @@ Nach Abschluss dieses Kapitels werden Sie Folgendes beherrschen:
 
 ---
 
-## 1. Verfügbarkeitsmetriken: Was bedeuten die „Neuner"?
+## 1. Verfügbarkeitsmetriken: Überblick über bedeuten die „Neuner"
 
 Verfügbarkeit wird üblicherweise in „Neunern" gemessen. Die Berechnungsformel lautet:
 

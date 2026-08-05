@@ -1,11 +1,11 @@
-# HTML / CSS Layout System
+# Fundamentals of HTML/CSS Layout
 ::: tip 🎯 Core Question
 **How are web pages made? Why do some pages only have text, while others are as interactive as applications?** This question leads to the three cornerstones of web development, helping you understand the structure behind every web page.
 :::
 
 ---
 
-## 1. What Are HTML, CSS, and JavaScript?
+## 1. Overview of HTML, CSS, and JavaScript
 
 ### 1.1 From Static Pages to Dynamic Applications
 
@@ -48,7 +48,7 @@ But modern web pages are completely different. They behave like **desktop applic
 
 ## 2. HTML: The Skeleton of a Web Page
 
-### 2.1 Why Do We Need HTML?
+### 2.1 Motivation for needing HTML
 
 Before HTML existed, content on the internet was just **plain text**. Like the text you're reading right now — no formatting, no hierarchy, no links.
 
@@ -60,7 +60,7 @@ What's wrong with plain text?
 
 **HTML (HyperText Markup Language)** was created to solve these problems. It uses "tags" to mark the meaning of content, telling the browser "what this is."
 
-### 2.2 What Does HTML Code Look Like?
+### 2.2 What Does HTML Code Look Like
 
 The basic unit of HTML is the "tag." Tags are wrapped in angle brackets `< >` and come in pairs:
 
@@ -181,7 +181,7 @@ Many beginners get dizzy seeing a bunch of `<xxx>`. Actually, reading HTML code 
 **When to use div?** When there's no suitable semantic tag. For example, a purely decorative container.
 :::
 
-### 2.5 How to Remember So Many HTML Tags?
+### 2.5 Approach to remembering So Many HTML Tags
 
 ::: tip 🎯 Beginner Confusion
 
@@ -279,7 +279,7 @@ Many tags are abbreviations of English words:
 
 ## 3. CSS: The Skin of a Web Page
 
-### 3.1 Why Do We Need CSS?
+### 3.1 Motivation for needing CSS
 
 Imagine you've moved into a **bare shell apartment**: it has walls, windows, and doors — livable, but:
 
@@ -295,7 +295,7 @@ CSS (Cascading Style Sheets) is the web page's "decoration crew." It doesn't cha
 - 🖼️ **Hanging pictures**: Adding borders, shadows, rounded corners
 - 🪑 **Arranging furniture**: Adjusting layout, spacing, and alignment
 
-### 3.2 What Does CSS Code Look Like?
+### 3.2 What Does CSS Code Look Like
 
 CSS code has a fixed format:
 
@@ -381,7 +381,7 @@ p { color: red; }             /* Specificity: 1 */
 
 **Inline styles** (written in the style attribute) have a specificity of 1000 — the highest!
 
-### 3.5 The Box Model: Why Doesn't the Width Match?
+### 3.5 The Box Model: Motivation for Doesning 't the Width Match
 
 ::: tip 🎯 Real-World Scenario
 
@@ -415,7 +415,7 @@ Every HTML element is treated as a "box" in CSS, composed of four layers. Imagin
 
 This way, `width: 200px` is the final width, and padding and border are "squeezed" inside.
 
-### 3.6 Flexbox: How to Auto-Align Elements?
+### 3.6 Flexbox: Approach to Autoing -Align Elements
 
 Flexbox is the most commonly used layout method in modern CSS. It makes elements automatically align and arrange themselves, like books on a shelf that automatically stay aligned.
 
@@ -793,7 +793,7 @@ tailwind.css                # Base styles entry point
 | Vue + SCSS | In components + `styles/` shared files | Variables for unified management | Mixins for reuse |
 | Vue + Tailwind | None (in class names) | `tailwind.config.js` | Class name composition |
 
-### 3.8 How to Remember So Many CSS Properties?
+### 3.8 Approach to remembering So Many CSS Properties
 
 ::: tip 🎯 Beginner Confusion
 
@@ -973,7 +973,7 @@ Look up other properties as needed; you'll naturally remember them after using t
 
 ## 4. JavaScript: The Brain of a Web Page
 
-### 4.1 Why Do We Need JavaScript?
+### 4.1 Motivation for needing JavaScript
 
 A web page with only HTML + CSS is like a **mannequin in a store window**:
 
@@ -989,7 +989,7 @@ A web page with only HTML + CSS is like a **mannequin in a store window**:
 - ✅ Scroll the page, and more content loads
 - ✅ Submit a form, and it shows "Submitting..."
 
-### 4.2 What Does JavaScript Code Look Like?
+### 4.2 What Does JavaScript Code Look Like
 
 **Capability 1: Remembering data** (variables)
 
@@ -1064,7 +1064,7 @@ parent.appendChild(child)               // Add an element
 ```
 :::
 
-### 4.4 DOM: How Does JavaScript Manipulate the Page?
+### 4.4 DOM: Method for JavaScripting Manipulate the Page
 
 After the browser reads the HTML code, it doesn't treat them as a bunch of strings. Instead, it draws them as a "tree" in memory:
 
@@ -1541,7 +1541,7 @@ npm run build
 
 ---
 
-## 6. What to Do When You Encounter Unfamiliar Code?
+## 6. What to Do Criteria for You Encounter Unfamiliar Code
 
 ### 6.1 Ask AI
 

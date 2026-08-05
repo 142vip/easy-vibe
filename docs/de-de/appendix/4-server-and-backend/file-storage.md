@@ -1,4 +1,4 @@
-# Dateispeicherung und Objektspeicher
+# Dateispeicherung: Speichersysteme
 
 ::: tip Vorwort
 **Ein Benutzer lädt ein Profilbild hoch, du speicherst es im `/uploads`-Verzeichnis des Servers — und dann ist die Serverfestplatte voll, oder du fügst einen zweiten Server hinzu, und der Benutzer findet sein Bild mal da, mal nicht.** Dateispeicherung scheint einfach, ist aber in verteilten Umgebungen ein ernstzunehmendes Architekturproblem. Objektspeicher ist die Standardantwort des Internetzeitalters auf dieses Problem.
@@ -24,7 +24,7 @@ Nach Abschluss dieses Kapitels wirst du Folgendes erhalten:
 
 ---
 
-## 0. Übersicht: Warum man Dateien nicht lokal auf dem Server speichern sollte
+## 0. Übersicht: Motivation von man Dateien nicht lokal auf dem Server speichern sollte
 
 Zu Beginn eines Projekts ist es die intuitivste Lösung, vom Benutzer hochgeladene Dateien in einem lokalen Serververzeichnis zu speichern. Mit dem Projektwachstum treten jedoch eine Reihe von Problemen auf:
 
@@ -89,7 +89,7 @@ my-app-bucket/                    ← Bucket
 
 ---
 
-## 3. Datei-Upload-Strategien: Wer lädt die Datei hoch?
+## 3. Datei-Upload-Strategien: Wer lädt die Datei hoch
 
 Für den Datei-Upload gibt es zwei gängige Ansätze: Server-Relay und Client-Direktupload. In den meisten Szenarien ist **Client-Direktupload** die bessere Wahl.
 

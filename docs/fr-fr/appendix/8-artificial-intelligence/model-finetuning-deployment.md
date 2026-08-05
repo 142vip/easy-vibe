@@ -1,4 +1,4 @@
-# Fine-tuning et déploiement de modèles
+# Introduction : Ajustement fin et déploiement de modèles
 
 ::: tip Préface
 **Les grands modèles sont puissants, mais ils ne comprennent pas votre métier.** GPT-4 peut écrire des poèmes et programmer, mais il ne connaît pas la terminologie produit de votre entreprise ni les normes professionnelles de votre secteur. Le fine-tuning (ajustement fin) est le processus qui permet à un grand modèle généraliste d'« apprendre » vos connaissances spécialisées — comme former un érudit généraliste à un poste spécifique pour en faire un expert de votre domaine.
@@ -24,7 +24,7 @@ Après avoir étudié ce chapitre, vous obtiendrez :
 
 ---
 
-## 0. Vue d'ensemble : pourquoi le fine-tuning est-il nécessaire ?
+## 0. Vue d'ensemble : pourquoi le fine-tuning est-il nécessaire
 
 L'entraînement des grands modèles de langage se divise en deux phases : **le pré-entraînement** et **le fine-tuning**. Le pré-entraînement consiste à apprendre les capacités linguistiques sur des données générales massives, le fine-tuning consiste à apprendre des compétences spécialisées sur des données de tâches spécifiques.
 

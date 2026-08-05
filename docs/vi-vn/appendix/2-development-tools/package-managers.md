@@ -4,7 +4,7 @@
 
 ---
 
-## 0. Tại sao bạn chắc chắn sẽ dùng trình quản lý gói?
+## 0. Động lực của bạn chắc chắn sẽ dùng trình quản lý gói
 
 Tưởng tượng bạn muốn viết một chương trình Node.js có thể gửi HTTP request. Có hai con đường:
 
@@ -16,7 +16,7 @@ Trình quản lý gói bản chất là **"App Store của code"**. Nó giúp b�
 1. Tìm thư viện người khác xuất bản trong kho trung tâm (Registry)
 2. Tự động tải và cài vào dự án
 3. Xử lý thư viện mà thư viện đó phụ thuộc (dependency của dependency)
-4. Ghi nhận bạn đang dùng version chính xác nào, để làm việc nhóm không có vấn đề
+4. thu thập bạn đang dùng version chính xác nào, để làm việc nhóm không có vấn đề
 
 ---
 
@@ -28,7 +28,7 @@ Các ngôn ngữ lập trình và hệ điều hành khác nhau có chuỗi côn
 
 <PackageManagerOverviewDemo />
 
-### 1.1 Tải gói ở đâu? — Registry (Kho đăng ký)
+### 1.1 Tải gói ở đâu — Registry (Kho đăng ký)
 
 Mỗi hệ sinh thái có một kho trung tâm, lưu trữ tất cả các gói có thể tải:
 
@@ -66,7 +66,7 @@ Thói quen dùng: npm (phổ biến nhất) > pnpm (khuyên dùng dự án mới
 
 ---
 
-## 2. Cài gói — Phía sau xảy ra chuyện gì?
+## 2. Cài gói — Phía sau xảy ra chuyện gì
 
 Gõ `npm install axios`, terminal im lặng mấy giây rồi xong. Trong mấy giây đó đã xảy ra gì?
 
@@ -129,7 +129,7 @@ winget install Git.Git           # Cài phần mềm
 winget upgrade --all             # Cập nhật tất cả phần mềm đã cài
 ```
 
-### 2.3 npm scripts là gì?
+### 2.3 npm scripts: Tổng quan
 
 Trong `package.json` có trường `scripts`, đây là **task runner** tích hợp sẵn của npm:
 
@@ -220,7 +220,7 @@ Trong `package.json` bạn sẽ thấy:
 
 <DependencyTreeDemo />
 
-### 4.1 Tại sao không khóa cứng version?
+### 4.1 Động lực của không khóa cứng version
 
 | Cách làm | Ưu điểm | Nhược điểm |
 | :--- | :--- | :--- |
@@ -230,7 +230,7 @@ Trong `package.json` bạn sẽ thấy:
 
 **Thực hành tốt nhất**: Dùng `^` khai báo phạm vi + lockfile cố định version thực tế, dùng kết hợp.
 
-### 4.2 Dependency hell là gì?
+### 4.2 Dependency hell: Tổng quan
 
 Khi bạn phụ thuộc 50 gói, mỗi gói lại phụ thuộc vài gói, "cây dependency" có thể hàng trăm node. Nếu hai gói bạn phụ thuộc cần **cùng một thư viện nhưng version không tương thích**, tạo ra "xung đột dependency".
 
@@ -244,7 +244,7 @@ Giải pháp của mỗi hệ sinh thái:
 
 ## 5. Lockfile — Nền tảng hợp tác team
 
-### 5.1 Tại sao cần lockfile?
+### 5.1 Động lực của cần lockfile
 
 Giả sử `package.json` ghi `"axios": "^1.6.0"`:
 
@@ -260,7 +260,7 @@ Cùng một code, ba người ra kết quả khác nhau. **Lockfile** ghi lại 
 | CI / deploy production | `npm ci` | **Nghiêm ngặt** cài theo lockfile, có khác biệt báo lỗi ngay |
 | Nâng cấp version chủ động | `npm update` | Nâng cấp trong phạm vi cho phép, cập nhật lockfile |
 
-### 5.2 Lockfile nên commit lên Git không?
+### 5.2 Lockfile nên commit lên Git không
 
 **Ứng dụng phải commit, thư viện xuất bản lên npm có thể không.**
 

@@ -5,11 +5,11 @@
 Trước khi bắt đầu, hãy đảm bảo bạn đã biết hai khái niệm cơ bản sau. Nếu chưa chắc, có thể xem trước các chương tương ứng:
 
 - **HTML**: Bộ xương của trang web, định nghĩa những thành phần nào có trên trang (tiêu đề, đoạn văn, nút bấm, hình ảnh...). Xem thêm tại [Bố cục HTML và CSS](./html-css-layout.md).
-- **JavaScript**: Ngôn ngữ lập trình giúp trang web "chuyển động", có thể sửa đổi nội dung trang và phản hồi thao tác người dùng. Xem thêm tại [Hướng dẫn chuyên sâu JavaScript](./javascript-deep-dive.md).
+- **JavaScript**: Ngôn ngữ lập trình giúp trang web "chuyển động", có thể sửa đổi nội dung trang và phản hồi thao tác người dùng. Xem thêm tại [JavaScript: Nguyên tắc thực thi và Runtime](./javascript-deep-dive.md).
 
 Còn một khái niệm sẽ xuất hiện thường xuyên ở phía sau, chúng ta sẽ giải thích đầy đủ ở đây trước.
 
-### DOM là gì?
+### Tổng quan về DOM
 
 DOM là viết tắt của Document Object Model (Mô hình Đối tượng Tài liệu).
 
@@ -26,7 +26,7 @@ Di chuột vào mã HTML bên trái, nút tương ứng trong cây DOM bên ph�
 
 ---
 
-## 0. Mở đầu: "Framework frontend" là gì?
+## 0. Mở đầu: Định nghĩa Framework frontend
 
 Trước hết giải thích từ "framework". Trong lập trình, **Framework (khung làm việc)** là một bộ mã và quy tắc đã được viết sẵn, nó quy định cách mã của bạn nên được tổ chức và chạy như thế nào. Bạn viết mã theo cách của nó, nó giúp bạn xử lý lượng lớn công việc lặp đi lặp lại và phức tạp ở tầng dưới.
 
@@ -40,9 +40,9 @@ Tiếp theo chúng ta sẽ triển khai từng bước, bắt đầu từ vấn 
 
 ---
 
-## 1. Vấn đề cốt lõi: Dữ liệu thay đổi, giao diện xử lý thế nào?
+## 1. Vấn đề cốt lõi: Cách đồng bộ hóa dữ liệu-giao diện
 
-### 1.1 Trước hết hãy hiểu rõ "dữ liệu" và "giao diện" là gì
+### 1.1 Trước hết hãy hiểu rõ "dữ liệu" và "giao diện": Tổng quan
 
 Trong bất kỳ ứng dụng web nào, đều có hai thứ tồn tại đồng thời:
 
@@ -58,7 +58,7 @@ Nhấn nút "Thêm sản phẩm", chú ý quan sát: dữ liệu (bên trái) đ
 
 <DataUIGapDemo />
 
-### 1.2 Tại sao biến JavaScript thay đổi mà giao diện không tự động cập nhật?
+### 1.2 Trường hợp: Thiếu phản ứng tự động
 
 Đây là điểm khiến người mới học dễ bối rối nhất, chúng ta sẽ giải thích nguyên lý tầng dưới từng bước một.
 
@@ -76,15 +76,15 @@ let count = 3
 
 count = 4
 // JavaScript engine đã làm gì?
-//   → Thay đổi giá trị biến count trong bộ nhớ từ 3 thành 4
-//   → Xong. Hết.
+// → Thay đổi giá trị biến count trong bộ nhớ từ 3 thành 4
+// → Xong. Hết.
 // Trên trang <span> vẫn hiển thị "3"
 ```
 
 Nếu bạn muốn hiển thị trên trang cũng thành "4", bạn phải **viết thêm mã**, tự tìm nút DOM đó, rồi sửa nội dung của nó:
 
 ```javascript
-count = 4  // Bước 1: Sửa biến
+count = 4 // Bước 1: Sửa biến
 
 // Bước 2: Bạn phải tự viết — tìm nút DOM, sửa chữ thành giá trị mới
 document.getElementById('counter').textContent = count
@@ -92,7 +92,7 @@ document.getElementById('counter').textContent = count
 
 Nếu trên trang có 5 vị trí hiển thị giá trị count (số lượng giỏ hàng, danh sách sản phẩm, tổng giá, tạm tính, thông báo trạng thái), bạn cần viết 5 đoạn mã như vậy. **Bỏ sót bất kỳ đoạn nào, vị trí đó sẽ vẫn hiển thị giá trị cũ, người dùng nhìn thấy thông tin sai.**
 
-### 1.3 Framework đã làm gì? Hai bước thiết lập kết nối tự động
+### 1.3 Kết nối tự động trong Framework
 
 Framework có thể tự động đồng bộ dựa vào **phối hợp hai bước** — thiếu một không được.
 
@@ -102,9 +102,9 @@ Trong模板 HTML của framework, bạn dùng cú pháp như `{{ count }}` để
 
 ```html
 <!-- Template Vue -->
-<span>Giỏ hàng: {{ count }} sản phẩm</span>    <!-- Vị trí A: Tôi muốn hiển thị count -->
-<span>Tổng giá: ¥{{ count * 99 }}</span>   <!-- Vị trí B: Tôi cũng dùng count -->
-<span>{{ count > 5 ? 'Quá nhiều' : 'Bình thường' }}</span>  <!-- Vị trí C: Tôi cũng dùng count -->
+<span>Giỏ hàng: {{ count }} sản phẩm</span> <!-- Vị trí A: Tôi muốn hiển thị count -->
+<span>Tổng giá: ¥{{ count * 99 }}</span> <!-- Vị trí B: Tôi cũng dùng count -->
+<span>{{ count > 5 ? 'Quá nhiều' : 'Bình thường' }}</span> <!-- Vị trí C: Tôi cũng dùng count -->
 ```
 
 Khi framework render trang lần đầu, nó sẽ ghi lại "mối quan hệ đăng ký": **Vị trí A, B, C đều phụ thuộc count**.
@@ -115,13 +115,13 @@ Framework dùng `Proxy` (proxy) tích hợp sẵn trong JavaScript để "bao b�
 
 ```
 JS nguyên bản:
-  Bạn viết HTML → <span id="counter">3</span> (không có kết nối nào với biến)
-  Bạn sửa biến → count = 4 → Xong, giao diện không phản ứng gì
-  Bạn tự bổ sung → document.getElementById('counter').textContent = 4 → Giao diện mới cập nhật
+ Bạn viết HTML → <span id="counter">3</span> (không có kết nối nào với biến)
+ Bạn sửa biến → count = 4 → Xong, giao diện không phản ứng gì
+ Bạn tự bổ sung → document.getElementById('counter').textContent = 4 → Giao diện mới cập nhật
 
 Framework Vue:
-  Bạn viết template → <span>{{ count }}</span> (Framework ghi nhớ: nơi này phụ thuộc count)
-  Bạn sửa biến → count = 4 → Proxy拦截 → Thông báo framework → Framework tra bảng đăng ký → Tự động cập nhật A/B/C
+ Bạn viết template → <span>{{ count }}</span> (Framework ghi nhớ: nơi này phụ thuộc count)
+ Bạn sửa biến → count = 4 → Proxy拦截 → Thông báo framework → Framework tra bảng đăng ký → Tự động cập nhật A/B/C
 ```
 
 Đó là lý do "chỉ có framework mới có thể tự động đồng bộ" — `<span>` trong HTML nguyên bản và biến JS hoàn toàn không có kết nối nào, cú pháp模板 (`{{ }}`) của framework mới là chìa khóa thiết lập kết nối này. Bạn viết `{{ count }}`, framework mới biết nơi này cần hiển thị count; framework mới có thể khi count thay đổi, chính xác tìm đến đây và cập nhật nó.
@@ -195,7 +195,7 @@ Sửa đổi dữ liệu (State) bên trái, quan sát giao diện (UI) bên ph�
 
 <DeclarativeFormulaDemo />
 
-### 2.3 Tại sao Declarative tốt hơn Imperative?
+### 2.3 So sánh Declarative và Imperative
 
 Ưu điểm của cách viết declarative nằm ở:
 
@@ -210,9 +210,9 @@ Nói đơn giản: Declarative giúp bạn tập trung vào "logic nghiệp vụ
 
 ---
 
-## 3. Hệ thống Reactive: Framework biết dữ liệu thay đổi như thế nào?
+## 3. Hệ thống Reactive: Cách hoạt động của Reactive System
 
-### 3.1 "Reactive" là gì?
+### 3.1 Định nghĩa Reactive
 
 Phía trên đã nói "dữ liệu thay đổi, giao diện tự động cập nhật". Nhưng có một vấn đề kỹ thuật: **Bản thân JavaScript không có khả năng "tự động thông báo cho người khác khi biến bị sửa đổi".**
 
@@ -278,7 +278,7 @@ Ba cách không có đúng sai tuyệt đối. Vue viết tự nhiên nhất, Re
 
 ## 4. Component: Chia giao diện thành các小块 có thể tái sử dụng
 
-### 4.1 Tại sao phải chia?
+### 4.1 Động lực của chia component
 
 Một trang web hoàn chỉnh có thể có thanh điều hướng, sidebar, vùng nội dung, ô tìm kiếm, avatar người dùng, các nút bấm... Nếu tất cả mã viết trong một file, file đó sẽ rất dài và rất khó bảo trì.
 
@@ -306,19 +306,19 @@ Nhấn vào tên component bên trái, xem vùng tương ứng của nó trên t
 
 <ComponentTreeDemo />
 
-### 4.3 Component trong mã trông như thế nào?
+### 4.3 Cấu trúc component trong code
 
 Lấy Vue làm ví dụ, một component là một file `.vue`, bên trong chứa ba phần:
 
 ```html
 <!-- ProductCard.vue -->
 <template>
-  <!-- Phần này viết cấu trúc HTML — "vẻ ngoài" của component -->
-  <div class="card">
-    <h3>{{ name }}</h3>
-    <p>Giá: ¥{{ price }}</p>
-    <button @click="addToCart">Thêm vào giỏ</button>
-  </div>
+ <!-- Phần này viết cấu trúc HTML — "vẻ ngoài" của component -->
+ <div class="card">
+ <h3>{{ name }}</h3>
+ <p>Giá: ¥{{ price }}</p>
+ <button @click="addToCart">Thêm vào giỏ</button>
+ </div>
 </template>
 
 <script setup>
@@ -326,15 +326,15 @@ Lấy Vue làm ví dụ, một component là một file `.vue`, bên trong chứ
 const props = defineProps(['name', 'price'])
 
 function addToCart() {
-  // Xử lý logic "thêm vào giỏ hàng"
+ // Xử lý logic "thêm vào giỏ hàng"
 }
 </script>
 
 <style scoped>
 /* Phần này viết style CSS — "kiểu dáng" của component */
 .card {
-  border: 1px solid #ccc;
-  padding: 16px;
+ border: 1px solid #ccc;
+ padding: 16px;
 }
 </style>
 ```
@@ -352,9 +352,9 @@ Ba dòng mã đã render ra ba thẻ sản phẩm khác nhau.
 
 ---
 
-## 5. Chi phí thao tác DOM: Tại sao framework phải tốn nhiều công sức?
+## 5. Chi phí thao tác DOM: Động lực của tối ưu DOM
 
-### 5.1 Thao tác DOM là gì?
+### 5.1 Thao tác Tổng quan về DOM
 
 Phía trên đã đề cập DOM — cấu trúc cây được trình duyệt tạo ra sau khi phân tích HTML. **Thao tác DOM** chính là dùng JavaScript để sửa đổi các nút trên cây này. Ví dụ sửa một đoạn chữ, thêm một phần tử, xóa một phần tử, sửa một style.
 
@@ -371,7 +371,7 @@ Quan sát so sánh thời gian giữa thao tác DOM trực tiếp và thao tác 
 
 <DomOperationCostDemo />
 
-### 5.2 Framework giải quyết vấn đề này thế nào?
+### 5.2 Cách tối ưu DOM của Framework
 
 Vì thao tác DOM trực tiếp rất đắt, framework tìm cách **giảm số lần thao tác DOM**. Cụ thể có hai chiến lược:
 

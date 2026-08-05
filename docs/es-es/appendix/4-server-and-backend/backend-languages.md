@@ -1,11 +1,11 @@
-# Comparación de Lenguajes Backend
+# Introducción a los lenguajes backend
 ::: tip 🎯 Pregunta Central
 **"¿Qué lenguaje deberíamos usar en el backend?"** Es como preguntar: "¿Qué herramienta debería comprar?" La respuesta nunca es "la mejor", sino "la más adecuada para ti". Este capítulo te guiará a través de las características, escenarios de aplicación y estrategias de selección de los principales lenguajes de programación backend, ayudándote a tomar decisiones informadas.
 :::
 
 ---
 
-## 1. ¿Por qué entender los lenguajes backend?
+## 1. Motivación de entender los lenguajes backend
 
 ### 1.1 De lo único a lo diverso: la evolución de los lenguajes backend
 
@@ -38,7 +38,7 @@ Pero el desarrollo backend moderno ha cambiado por completo. Ahora nos enfrentam
 
 <BackendLanguagesDemo />
 
-### 1.2 Una historia real de tropiezos: por qué es tan importante elegir el lenguaje correcto
+### 1.2 Una historia real de tropiezos:Motivación: importante elegir el lenguaje correcto
 
 Podrías decir: "Con Python se puede escribir de todo, ¿por qué complicarse?" Déjame contarte una historia real para que entiendas por qué la selección del lenguaje es tan crucial.
 
@@ -152,7 +152,7 @@ El desarrollo de tecnologías modernas ha difuminado estos límites: Java es tan
 
 :::
 
-### 2.3 Modelo de concurrencia: ¿cuántas solicitudes puede manejar simultáneamente?
+### 2.3 Modelo de concurrencia: cuántas solicitudes puede manejar simultáneamente
 
 La concurrencia es uno de los conceptos más críticos en el desarrollo backend, determina cuántas solicitudes puede manejar el sistema simultáneamente. Los modelos de concurrencia de los diferentes lenguajes varían enormemente, y esto suele ser el factor decisivo en la selección.
 
@@ -191,7 +191,7 @@ En una CPU de un solo núcleo, solo se puede lograr concurrencia; en una CPU mul
 
 :::
 
-### 2.4 Gestión de memoria: ¿quién se encarga de recoger la basura?
+### 2.4 Gestión de memoria: quién se encarga de recoger la basura
 
 La gestión de memoria es un factor clave que afecta el rendimiento y la experiencia de desarrollo. Diferentes lenguajes adoptan diferentes estrategias, cada una con sus ventajas y desventajas.
 

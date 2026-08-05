@@ -1,11 +1,11 @@
-# The Complete Picture of Frontend Engineering
+# A Panorama of Frontend Engineering
 ::: tip 🎯 Core Question
 **How do you turn the code you write into a website that runs in users' browsers?** It's like asking: how do you turn raw materials into finished products while ensuring quality and controlling costs? This chapter will take you deep into the core concepts and build processes of frontend engineering.
 :::
 
 ---
 
-## 1. Why "Engineering"?
+## 1. Motivation for the "Engineering"
 
 ### 1.1 From Simple to Complex: The Evolution of Frontend Development
 
@@ -38,7 +38,7 @@ But modern frontend development has completely changed. We now use TypeScript in
 
 <BuildPipelineDemo />
 
-### 1.2 A Real-World Pitfall Story: Why You Need to Understand Build Principles
+### 1.2 Case: You Need to Understand Build Principles
 
 You might say: "I use Vite or Create React App, it works out of the box — why do I need to understand these build principles?" Let me tell you a real story, and you'll understand why this knowledge matters so much.
 
@@ -637,7 +637,7 @@ Browsers cache static assets to improve load speed, but if filenames don't chang
 
 ---
 
-## 4. Deep Dive: Why Is Vite So Fast?
+## 4. Deep Dive: Motivation for Viting So Fast
 
 Now that we've seen a real-world case study, let's dive deeper into how Vite works and understand why it's so much faster than traditional tools.
 

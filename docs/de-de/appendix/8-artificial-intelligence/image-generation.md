@@ -1,4 +1,4 @@
-# Prinzipien der Bildgenerierung
+# Bildgenerierung: Diffusionsmodelle
 > 💡 **Lernleitfaden**: Dieses Kapitel erforscht systematisch die Funktionsweise generativer visueller KI-Modelle. Wir beginnen mit dem Problem des hochdimensionalen Pixelraums, der die GPU zum Glühen bringt, und entmystifizieren die rigorose Mathematik hinter Variational Autoencodern (VAE), Diffusionsmodellen (Diffusion) und Cross-Attention. Gleichzeitig sorgen interaktive Komponenten dafür, dass du – selbst ohne jegliche KI-Vorkenntnisse – diese modernsten Technologien schnell verstehst!
 
 <ImageGenQuickStartDemo />

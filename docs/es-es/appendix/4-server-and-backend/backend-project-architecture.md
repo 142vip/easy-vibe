@@ -1,4 +1,4 @@
-# Diseño de Arquitectura de Proyectos Backend
+# Introducción a la arquitectura de proyectos backend
 
 ::: tip 🎯 Pregunta Central
 **Desde scripts simples hasta grandes sistemas distribuidos, ¿cómo elegir la arquitectura adecuada para proyectos backend de diferentes escalas y lenguajes?** Es como preguntar: desde un pequeño taller hasta una gran fábrica, ¿cómo diseñar diferentes líneas de producción según el volumen y el proceso? Una buena arquitectura backend debe evolucionar con el crecimiento del negocio, aprovechando al mismo tiempo las características del lenguaje.
@@ -899,7 +899,7 @@ Fase 3: Modularización/Microservicios (Nivel Empresarial)
 Fase 4: Arquitectura Cloud Native (Nivel Plataforma)
 ```
 
-### 6.2 ¿Cuándo Actualizar la Arquitectura?
+### 6.2 Criterios de Actualizar la Arquitectura
 
 | Señal | Nivel Actual | Actualización Recomendada |
 |------|----------|----------|

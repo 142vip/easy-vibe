@@ -1,7 +1,7 @@
-# Ligne de commande et scripts Shell
+# Introduction : Ligne de commande et scripts Shell
 > 💡 **Guide d'apprentissage** : Ce chapitre vise a fournir aux debutants sans experience une comprehension systematique du fonctionnement du terminal. Aucune formation en informatique n'est requise. Nous analyserons progressivement les mecanismes du terminal, de base en avance, a travers des demonstrations interactives.
 
-## 0. Demarrage rapide : Comment ouvrir le terminal ?
+## 0. Demarrage rapide : Comment ouvrir le terminal
 
 Avant de commencer a apprendre, vous devez d'abord le trouver. Le terminal est un composant "installe par defaut" de chaque systeme d'exploitation — vous n'avez besoin d'installer aucun logiciel pour l'utiliser.
 
@@ -45,7 +45,7 @@ _Choisissez ci-dessous le systeme d'exploitation que vous utilisez habituellemen
 
 <TerminalHandsOn />
 
-### 0.2 Pourquoi abandonner la souris ? (Why CLI ?)
+### 0.2 Pourquoi abandonner la souris (Why CLI )
 
 Vous pourriez vous demander : _"Les interfaces graphiques (GUI) sont si pratiques aujourd'hui, il suffit de cliquer avec la souris. Pourquoi taper des commandes complexes dans une fenetre au texte blanc sur fond noir ?"_
 
@@ -68,7 +68,7 @@ Ce n'est pas pour "faire le geek", mais parce que dans certaines situations, **l
 
 **Resume** : La GUI est adaptee a l'**exploration** (naviguer sur le Web, voir des images), la CLI a la **production** (developpement, exploitation, traitement par lots). En tant que developpeurs, nous utilisons le terminal parce qu'il est **plus precis, plus controle et plus efficace**.
 
-## 1. Definition des concepts : Qu'est-ce qu'un terminal ? (Definition)
+## 1. Definition des concepts : Qu'est-ce qu'un terminal (Definition)
 
 _Sur differents systemes d'exploitation, le terminal a une apparence differente et **les commandes sont aussi differentes**. Cliquez sur les boutons ci-dessous pour basculer et observez comment macOS, Windows et Linux accomplissent la meme chose avec des commandes differentes (par ex. `dir` vs `ls`) :_
 
@@ -111,7 +111,7 @@ Pour comprendre comment ils cooperent, examinons ces trois "travailleurs" aux ro
   - **Role** : Le coeur du systeme d'exploitation. Seul lui peut controler directement le materiel (lecture/ecriture disque, allocation memoire, controle du CPU).
   - **Relation** : Le Shell est le "secretaire" du noyau, traduisant le langage humain pour le noyau.
 
-### 2.2 Pourquoi les separer ? (Interchangeabilite)
+### 2.2 Pourquoi les separer (Interchangeabilite)
 
 Precisement parce que la **couche de presentation** (terminal) et la **couche logique** (Shell) sont completement separees, elles peuvent etre librement combinees :
 

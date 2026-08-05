@@ -1,4 +1,4 @@
-# Limitación de tasa y control de backpressure
+# Principios de limitación de tasa y control de contrapresión
 
 ::: tip Prólogo
 **El Double Eleven a medianoche, cientos de millones de usuarios accediendo simultáneamente -- ¿pueden los servidores soportarlo?** Todo sistema tiene un límite de capacidad de procesamiento. Cuando el volumen de solicitudes supera la capacidad de carga del sistema, sin control, el resultado es que nadie puede usarlo. La limitación de tasa y el backpressure son las dos líneas de defensa que protegen al sistema de ser "aplastado".
@@ -24,7 +24,7 @@ Después de completar este capítulo, habrás adquirido:
 
 ---
 
-## 0. Panorama: ¿Por qué "rechazar" usuarios?
+## 0. Panorama: Motivación de "rechazar" usuarios
 
 Parece contradictorio -- ¿no deberíamos servir bien a cada usuario? Pero la realidad es: **si no se rechazan algunas solicitudes, todas las solicitudes fallarán**.
 

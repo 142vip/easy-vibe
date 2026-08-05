@@ -1,4 +1,4 @@
-# API Design: The "Conversation Protocol" Between Frontend and Backend
+# Principles of API Design: Frontend-Backend Communication Protocols
 
 ::: tip 🎯 Core Question
 **How do frontend and backend communicate efficiently?** It's like asking: how should a restaurant design its menu so guests can understand it at a glance? How should waiters take orders without making mistakes? How should dishes be served to keep customers satisfied? API design solves the problem of "conversation rules."
@@ -6,7 +6,7 @@
 
 ---
 
-## 0. First, a Question: Have You Experienced These Nightmares?
+## 0. First, a Question: Have You Experienced These Nightmares
 
 **Scenario 1: Inconsistent API Naming**
 
@@ -57,7 +57,7 @@ Every endpoint returns a different format, requiring the frontend to handle each
 
 ---
 
-## 1. What is an API?
+## 1. Overview of an API
 
 **API** (Application Programming Interface) is simply the "agreement for communication between programs."
 
@@ -84,7 +84,7 @@ Before diving into specific RESTful design, let's understand four major API desi
 
 <ApiStyleCompare />
 
-### 2.1 REST vs RESTful: What's the Difference?
+### 2.1 REST vs RESTful: What's the Difference
 
 Many people confuse these two concepts:
 
@@ -117,7 +117,7 @@ Many people confuse these two concepts:
 
 ---
 
-## 3. RESTful Design: Making URLs Speak
+## 3. RESTful Design: Making URLs Communicate
 
 **REST** (Representational State Transfer) is an architectural style with core principles:
 
@@ -170,7 +170,7 @@ Using lowercase + hyphens (-) is the safest approach, avoiding case confusion an
 
 ---
 
-## 4. Status Codes: Making Errors "Speak"
+## 4. Status Codes: Making Errors "Communicate"
 
 HTTP status codes are the standard way for servers to tell clients "what happened."
 
@@ -237,7 +237,7 @@ Danger: Exposes code structure and database queries that attackers can exploit.
 
 ## 6. Versioning: API "Backward Compatibility"
 
-### 6.1 Why Versioning?
+### 6.1 Motivation for Versioninging
 
 Scenario: Your app has 1 million users, and you need to modify the order endpoint.
 

@@ -1,4 +1,4 @@
-# Pensamiento de seguridad y fundamentos de ataque y defensa
+# Fundamentos del pensamiento de seguridad y ataque-defensa
 
 ::: tip Prefacio
 **¿Es segura tu web?** Muchos desarrolladores piensan que "la seguridad es cosa del equipo de seguridad", hasta que su proyecto es atacado y los datos de los usuarios se filtran. La seguridad no es opcional, es una habilidad fundamental de cada desarrollador.
@@ -19,7 +19,7 @@ Al finalizar este capítulo, tendrás una conciencia de seguridad básica y ser�
 
 ---
 
-## 0. Panorama general: ¿Por qué los desarrolladores necesitan entender de seguridad?
+## 0. Panorama general: Motivación de desarrolladores necesitan entender de seguridad
 
 Imagina que construyes una casa con todas las comodidades y una decoración preciosa, pero olvidas poner cerraduras. Las vulnerabilidades de seguridad son las "cerraduras olvidadas" del mundo del código.
 

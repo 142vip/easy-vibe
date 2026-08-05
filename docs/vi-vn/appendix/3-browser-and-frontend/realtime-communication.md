@@ -1,4 +1,4 @@
-# Cơ chế Giao tiếp Thời gian thực (Polling / SSE / WebSocket)
+# Giao tiếp thời gian thực: Nguyên tắc Polling, SSE, WebSocket
 
 ::: tip Hướng dẫn cốt lõi
 **Trình duyệt làm thế nào để cập nhật dữ liệu thời gian thực?**

@@ -1,4 +1,4 @@
-# Guide approfondi JavaScript
+# Principes : Mécanismes internes de JavaScript
 
 ::: tip Préface
 Vous avez appris HTML et CSS et pouvez créer de belles pages web. Mais vous avez peut-être remarqué que : cliquer sur un bouton ne fait rien, remplir un formulaire ne permet pas de l'envoyer — la page web ressemble à une image « statique ».
@@ -67,7 +67,7 @@ Chaque chapitre commence par « reconnaître le code », pas besoin de l'écrire
 | **CSS** | Peau | Définit l'apparence et le style de la page |
 | **JavaScript** | Muscles et système nerveux | Rend la page réactive, interactive et capable de « penser » |
 
-### 1.2 Pourquoi le vibecoding nécessite aussi de comprendre JavaScript ?
+### 1.2 Pourquoi le vibecoding nécessite aussi de comprendre JavaScript
 
 ::: warning L'erreur classique d'un développeur débutant en JS
 Un développeur qui vient de commencer JavaScript a utilisé l'IA pour créer une application « compteur » : cliquer sur un bouton augmente le nombre de 1. Le code généré par l'IA fonctionnait correctement.

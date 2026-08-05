@@ -1,4 +1,4 @@
-# KI-Agent-Protokolle (MCP & A2A)
+# AI-Protokolle: Kommunikationsstandards
 
 ::: tip Kernfrage
 **Wie „kommuniziert" ein KI-Agent mit der Außenwelt?** Genau wie das Internet das HTTP-Protokoll benötigt, brauchen KI-Agenten standardisierte Kommunikationsprotokolle. Dieses Kapitel stellt die beiden wichtigsten Agent-Protokolle vor: MCP und A2A, die jeweils die Kommunikation zwischen KI und Werkzeugen sowie zwischen Agent und Agent regeln.
@@ -6,11 +6,11 @@
 
 ---
 
-## 0. Was ist ein Protokoll?
+## 0. Was ist ein Protokoll
 
 Im Bereich der Informatik ist ein **Protokoll (Protocol)** ein Satz standardisierter Regeln und Konventionen, die es verschiedenen Systemen und Programmen ermöglichen, sich gegenseitig zu „verstehen" und zu „kommunizieren".
 
-### 0.1 Warum braucht man Protokolle?
+### 0.1 Warum braucht man Protokolle
 
 Stell dir folgendes Szenario vor: Du verschickst ein Paket an einen Freund und musst die Adresse ausfüllen. Wenn jeder ein anderes Adressformat verwendet, kann der Zusteller nicht zustellen. Ein Protokoll legt den Standard fest, „wie die Adresse zu schreiben ist" – Provinz, Stadt, Bezirk, Straße, Hausnummer – wer in diesem Format schreibt, wird von allen verstanden.
 
@@ -110,7 +110,7 @@ Anthropic schrieb im offiziellen Blog:
 
 **Kernziel**: Werkzeugentwickler schreiben ihren Code einmal, und alle MCP-unterstützenden KI-Anwendungen können ihn nutzen.
 
-### 2.3 Was ist MCP?
+### 2.3 Was ist MCP
 
 <McpVisualDemo />
 
@@ -191,7 +191,7 @@ Google schrieb im offiziellen Blog:
 
 **Kernziel**: Agenten verschiedener Hersteller und Frameworks sollen nahtlos zusammenarbeiten können.
 
-### 3.3 Was ist A2A?
+### 3.3 Was ist A2A
 
 <A2AVisualDemo />
 
@@ -252,7 +252,7 @@ MCP und A2A sind **keine Konkurrenten, sondern ergänzen sich**:
 
 <ProtocolComparisonDemo />
 
-### 4.3 Wie wählt man?
+### 4.3 Wie wählt man
 
 | Szenario | Wahl |
 |------|------|

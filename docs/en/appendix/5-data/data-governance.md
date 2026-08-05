@@ -1,4 +1,4 @@
-# Data Governance and Data Quality
+# An Introduction to Data Governance
 
 ::: tip Introduction
 **Have you ever encountered this situation: the numbers on a report don't match the actual business, the same user's information is different across two systems, or analysis results are completely unreliable due to dirty data?** Data governance is the systematic approach to solving these problems. In the era of "data-driven decision-making," data quality directly determines decision quality — Garbage In, Garbage Out.
@@ -26,7 +26,7 @@ After completing this chapter, you will gain:
 
 ---
 
-## 0. The Big Picture: Why Do We Need Data Governance?
+## 0. The Big Picture: Motivation for needing Data Governance
 
 Data governance is not a technical problem — it's a **management problem**. It answers the core questions: **Who is responsible for the data? What are the data standards? How do we ensure data remains trustworthy?**
 

@@ -1,4 +1,4 @@
-# Die vollständige Reise einer Anfrage
+# Anfragereise: Panorama
 
 ::: tip Vorwort
 **Wenn du im Browser eine URL eingibst und Enter drückst — was passiert eigentlich, bis die Seite angezeigt wird?** Diese Frage ist ein Klassiker in Vorstellungsgesprächen und gleichzeitig der Schlüssel zum Verständnis der gesamten Web-Architektur. Wenn du diese Kette verstehst, begreifst du, wie Frontend, Backend, Netzwerk und Datenbank zusammenarbeiten.
@@ -23,7 +23,7 @@ Nach Abschluss dieses Kapitels wirst du Folgendes erhalten:
 
 ---
 
-## 0. Übersicht: Was durchlebt eine Anfrage?
+## 0. Übersicht: Überblick über durchlebt eine Anfrage
 
 Eine Analogie zum Verständnis: Du bestellst online ein Buch. Dieser Prozess ist erstaunlich ähnlich zu einer HTTP-Anfrage.
 
@@ -143,7 +143,7 @@ Häufige Verteilungsstrategien:
 
 ---
 
-## 3. Serververarbeitung: Was passiert in der "Küche"
+## 3. Serververarbeitung: Überblick über passiert in der "Küche"
 
 Nach dem Eintreffen auf dem Server durchläuft die Anfrage mehrere Verarbeitungsschichten.
 

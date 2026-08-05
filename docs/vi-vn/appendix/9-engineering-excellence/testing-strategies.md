@@ -19,7 +19,7 @@ Sau khi học xong chương này, bạn sẽ hiểu cách chọn chiến lược
 
 ---
 
-## 0. Tổng quan: Tại sao cần kiểm thử tự động?
+## 0. Tổng quan: Động lực của cần kiểm thử tự động
 
 Hãy tưởng tượng bạn là kỹ sư xây dựng. Mỗi lần sửa bản vẽ, bạn không tự leo lên từng tầng để kiểm tra kết cấu có an toàn không — bạn dựa vào một **hệ thống kiểm tra tự động**. Kiểm thử phần mềm chính là "hệ thống kiểm tra kết cấu" của thế giới code.
 
@@ -42,7 +42,7 @@ Thông qua component tương tác dưới đây, nhấp vào từng tầng kim t
 
 <TestPyramidDemo />
 
-### 1.2 Tại sao có hình kim tự tháp?
+### 1.2 Động lực của có hình kim tự tháp
 
 Hình kim tự tháp phản ánh một sự đánh đổi cốt lõi: **sự cân bằng giữa tốc độ và độ chân thực**.
 
@@ -56,7 +56,7 @@ Hình kim tự tháp phản ánh một sự đánh đổi cốt lõi: **sự câ
 
 ## 2. Thực hành unit test
 
-### 2.1 Unit test tốt là gì?
+### 2.1 Unit test tốt: Tổng quan
 
 Unit test tốt tuân theo nguyên tắc **FIRST**:
 
@@ -86,7 +86,7 @@ test('nên tính đúng giá có thuế', () => {
 })
 ```
 
-### 2.3 Test cái gì? Không test cái gì?
+### 2.3 Test cái gì Không test cái gì
 
 **Nên test:**
 - Logic nghiệp vụ cốt lõi (tính giá, kiểm tra quyền, chuyển đổi dữ liệu)

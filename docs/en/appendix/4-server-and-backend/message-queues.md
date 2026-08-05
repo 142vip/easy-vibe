@@ -1,4 +1,4 @@
-# Message Queues and Event-Driven Architecture
+# Principles of Message Queues and Event-Driven Architecture
 
 ::: tip Core Question
 **When systems are tightly coupled and traffic spikes, how do you ensure the critical path remains stable?** Message queues are the "buffer" and "decoupler" of modern distributed systems. This article uses real-world cases (restaurant queuing, package sorting, flash sale systems) to deeply understand the design philosophy and engineering practices of message queues.
@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Why "Message Queues"?
+## 1. Motivation for the "Message Queues"
 
 ### 1.1 A Real-World Case: The Evolution of Taobao's Order System
 
@@ -69,9 +69,9 @@ Imagine going to a popular restaurant:
 
 ---
 
-## 2. What Is a Message Queue? (Definition + Core Three Elements)
+## 2. Overview of a Message Queue (Definition + Core Three Elements)
 
-### 2.1 What Is a "Message Queue"?
+### 2.1 Overview of a "Message Queue"
 
 ::: tip Terminology
 **Message Queue (MQ)** is a container for storing messages. Producers put messages in, consumers take messages out for processing. It enables "asynchronous communication" — the sender doesn't need to wait for the receiver to finish processing.
@@ -129,7 +129,7 @@ It's like calling a friend (synchronous) vs sending them a message (asynchronous
 
 ---
 
-## 3. Core Problem 1: How to Decouple Systems and Avoid "Pulling One Thread and Moving the Whole System"?
+## 3. Core Problem 1: Approach to Decoupling Systems and Avoid "Pulling One Thread and Moving the Whole System"
 
 ### 3.1 The Tragedy of Tight Coupling: One Service Goes Down, Everything Falls
 
@@ -221,9 +221,9 @@ Event-driven thinking (declarative):
 
 ---
 
-## 4. Core Problem 2: How to Handle Traffic Spikes with Peak Shaving?
+## 4. Core Problem 2: Approach to handling Traffic Spikes with Peak Shaving
 
-### 4.1 Flash Sale Scenario: How to Handle 100K QPS Smoothly?
+### 4.1 Flash Sale Scenario: Approach to handling 100K QPS Smoothly
 
 **Scenario recreation**: An e-commerce platform's Double 11 flash sale, expected peak 100K QPS, but the database can only handle 1,000 QPS.
 
@@ -339,7 +339,7 @@ Time to consume all messages = Queue length / Consumer rate
 
 ---
 
-## 5. Core Problem 3: How to Ensure Messages Are Not Lost, Not Duplicated, and In Order?
+## 5. Core Problem 3: Approach to ensuring Messages Are Not Lost, Not Duplicated, and In Order
 
 ### 5.1 Message Reliability: Three Lines of Defense
 
@@ -364,7 +364,7 @@ Messages can be lost at three stages: during producer sending, during Broker sto
 
 <ReliabilityDemo />
 
-### 5.2 How to Handle Duplicate Message Consumption?
+### 5.2 Approach to handling Duplicate Message Consumption
 
 **Message duplication can occur in the following scenarios:**
 
@@ -388,7 +388,7 @@ Messages can be lost at three stages: during producer sending, during Broker sto
 
 ---
 
-## 6. Practice: How to Choose a Message Queue?
+## 6. Practice: Approach to choosing a Message Queue
 
 ### 6.1 Comparison of Four Mainstream Message Queues
 

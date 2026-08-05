@@ -1,4 +1,4 @@
-# Almacenamiento de Objetos y CDN
+# Principios de almacenamiento de objetos y CDN
 > 💡 **Guía de estudio**: Este artículo te llevará a través de un flujo completo: desde la subida de archivos hasta la descarga del usuario. Verás cómo el almacenamiento de objetos gestiona archivos masivos como un "almacén inteligente", cómo CDN entrega el contenido a la puerta del usuario como una "red de mensajería", y qué "trampas" te esperan en el camino. Se recomienda tener conocimientos básicos de solicitudes HTTP y resolución DNS.
 
 Antes de empezar, te sugerimos repasar algunos "ladrillos básicos":
@@ -8,7 +8,7 @@ Antes de empezar, te sugerimos repasar algunos "ladrillos básicos":
 
 ---
 
-## 0. Introducción: ¿Por qué la subida y descarga de archivos es tan "lenta"?
+## 0. Introducción: Motivación de subida y descarga de archivos es tan "lenta"
 
 Imagina esta escena: subes una foto HD de 10 MB en una comunidad de imágenes y tardas medio minuto en completar la subida; mientras que tu amigo en Pekín la descarga en solo 2 segundos. ¿Por qué la misma imagen tiene una experiencia de subida y descarga tan diferente?
 
@@ -20,7 +20,7 @@ La respuesta a estas preguntas está en la "pareja dorada" formada por el **alma
 
 ## 1. Almacenamiento de Objetos: Tu "Almacén Inteligente en la Nube"
 
-### 1.1 ¿Qué es el almacenamiento de objetos?
+### 1.1 Introducción a almacenamiento de objetos
 
 El sistema de archivos tradicional es como tu armario: la ropa se organiza por capas de "camisas/pantalones/faldas", y para encontrar una camisa tienes que abrir el armario → sección de camisas → estante de camisas. Este modelo de "anidamiento jerárquico" se vuelve extremadamente engorroso cuando el número de archivos explota.
 
@@ -85,7 +85,7 @@ El almacenamiento de objetos ofrece múltiples capas de control de permisos:
 
 ## 2. CDN: Tu "Red Global de Mensajería"
 
-### 2.1 ¿Por qué necesitas CDN?
+### 2.1 Motivación de CDN
 
 Imagina que tienes una tienda online con el servidor en Shenzhen. Ahora un usuario en Pekín accede a tus imágenes:
 
@@ -539,7 +539,7 @@ Ventajas:
 
 <HttpsOptimizationDemo />
 
-### 5.1 ¿Por qué es importante HTTPS en CDN?
+### 5.1 Motivación de importante HTTPS en CDN
 
 **Comparación de escenarios**:
 

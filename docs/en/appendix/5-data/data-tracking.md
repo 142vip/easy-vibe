@@ -1,4 +1,4 @@
-# Event Tracking: Recording What Users Do in Your App
+# An Introduction to Event Tracking
 
 ::: tip The Problem This Chapter Solves
 **How do we know what users are doing inside our app?**
@@ -19,7 +19,7 @@ This chapter explains the process in four steps:
 
 ---
 
-## Step 1: Choose a Collection Method — Where to Place Recorders?
+## Choose a Collection Method — Where to Place Collectors
 
 **Goal**: Decide how to record user actions.
 
@@ -68,7 +68,7 @@ An analogy: it's like installing cameras in every corner of the bubble tea shop,
 
 ---
 
-## Step 2: Design the Data Format — What Should Each Record Contain?
+## Design the Data Format — What Should Each Record Contain
 
 **Prerequisite**: We've chosen a tracking method (e.g., code tracking), and the app can now capture user actions.
 
@@ -119,7 +119,7 @@ This part records the specific business details of the action, called **custom a
 
 ---
 
-## Step 3: Transmission and Caching — How to Safely Deliver Data to the Server?
+## Transmission and Caching — How to Safely Deliver Data to the Server
 
 **Prerequisite**: Every user action has been recorded as a uniformly formatted JSON data entry.
 
@@ -157,7 +157,7 @@ The solution is to add a "buffer" in between — technically called a **message 
 
 ---
 
-## Step 4: Cleaning and Storage — Organize Data, Remove "Dirty Data"
+## Cleaning and Storage — Organize Data, Remove "Dirty Data"
 
 **Prerequisite**: Data has safely arrived at the server through the transmission pipeline.
 

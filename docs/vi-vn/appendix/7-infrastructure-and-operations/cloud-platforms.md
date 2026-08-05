@@ -8,7 +8,7 @@ Trước khi bắt đầu, nên tìm hiểu:
 
 ---
 
-## 0. Mở đầu: Tại sao ngày càng nhiều công ty không mua server?
+## 0. Mở đầu: Động lực của ngày càng nhiều công ty không mua server
 
 Tưởng tượng kịch bản này:
 
@@ -28,7 +28,7 @@ Trước đây, doanh nghiệp phải trải qua quá trình dài: mua server, t
 
 ---
 
-## 1. Nhà cung cấp dịch vụ đám mây là gì?
+## 1. Nhà cung cấp dịch vụ đám mây: Tổng quan
 
 ### 1.1 Dịch vụ tính toán như công ty nước và điện
 
@@ -81,7 +81,7 @@ Thị trường dịch vụ đám mây Trung Quốc cũng có ba nhà cung cấp
 
 **Huawei Cloud** là bộ phận dịch vụ đám mây Huawei thành lập 2015, thị phần Trung Quốc thứ ba, khoảng 10%. Tích lũy công nghệ phần cứng mạnh, khách hàng chính phủ và doanh nghiệp phong phú, năng lực compliance an ninh mạnh, chip AI (Ascend) đặc sắc. Phù hợp dự án chính phủ, doanh nghiệp nhà nước lớn và sản xuất.
 
-### 2.3 Cách chọn nhà cung cấp đám mây?
+### 2.3 Cách chọn nhà cung cấp đám mây
 
 Chọn nhà cung cấp đám mây giống chọn thuê nhà, phải xem vị trí, giá, tiện ích và nhiều yếu tố.
 
@@ -97,11 +97,11 @@ Khuyến nghị thực tế: người mới hoặc dự án nhỏ chọn Alibaba
 
 ---
 
-## 3. Thông thường sử dụng dịch vụ đám mây thế nào?
+## 3. Thông thường sử dụng dịch vụ đám mây: Cách tiếp cận
 
 ### 3.1 Quy trình hoàn chỉnh từ đăng ký đến上线
 
-Bước đầu tiên sử dụng dịch vụ đám mây là đăng ký tài khoản. Quá trình này giống mở tài khoản ngân hàng, cần xác minh danh tính. Mở website nhà cung cấp đám mây, click "Đăng ký miễn phí", điền email và mật khẩu, xác minh số điện thoại, upload CMND hoặc giấy phép kinh doanh để xác thực, cuối cùng liên kết phương thức thanh toán. Toàn bộ khoảng 10-20 phút.
+Bước đầu tiên sử dụng dịch vụ đám mây là đăng ký tài khoản. Quá trình này giống mở tài khoản ngân hàng, cần xác minh danh tính. Mở website nhà cung cấp đám mây, click "Đăng ký miễn phí", điền email và mật khẩu, xác minh số điện thoại, upload định danh duy nhất hoặc giấy phép kinh doanh để xác thực, cuối cùng liên kết phương thức thanh toán. Toàn bộ khoảng 10-20 phút.
 
 Sau khi đăng ký, cần hiểu vài khái niệm cốt lõi. **Region** là khu vực data center, như East China (Hangzhou), US East (Virginia), Asia Pacific (Singapore). Nguyên tắc chọn càng gần user càng tốt, vì latency thấp. **Availability Zone (AZ)** là nhiều data center trong một region, cách ly nhau, tăng availability. Nếu một AZ down, AZ khác vẫn hoạt động. **Instance** là server ảo, như cloud server 2 nhân 4GB, tính phí theo thời gian hoặc theo usage.
 
@@ -135,7 +135,7 @@ Tìm hiểu các loại dịch vụ lưu trữ đám mây và kịch bản sử 
 
 ---
 
-## 4. Mua và gọi API như thế nào?
+## 4. Mua và gọi API: Cách tiếp cận
 
 ### 4.1 Mô hình tính phí dịch vụ đám mây
 

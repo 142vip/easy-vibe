@@ -1,4 +1,4 @@
-# JavaScript Runtime In-Depth Guide
+# Principles of JavaScript Runtime
 
 ::: tip Preface
 You've already learned JavaScript basics, but have you ever wondered:
@@ -28,7 +28,7 @@ This article will take you deep into the JavaScript runtime environment, includi
 **What is a "runtime"?** JavaScript is just a language — why does the same code behave differently in different environments?
 :::
 
-### 1.1 What is a Runtime?
+### 1.1 Overview of a Runtime
 
 **Runtime = JavaScript Engine + Environment-provided APIs**
 
@@ -254,7 +254,7 @@ export { myFunction }
 **JavaScript is single-threaded — how does it achieve "non-blocking" behavior?**
 :::
 
-### 4.1 What is the Event Loop?
+### 4.1 Overview of the Event Loop
 
 **Event Loop = JavaScript's "task scheduling center"**
 
@@ -386,7 +386,7 @@ Step 4: c() completes, pop in order
 
 <CallStackDemo />
 
-### 5.2 Memory Management: Where Does the Garbage Go?
+### 5.2 Memory Management: Placement of the Garbage Go
 
 JavaScript has an "automatic garbage collection" mechanism — you don't need to manually free memory; the engine does it for you.
 

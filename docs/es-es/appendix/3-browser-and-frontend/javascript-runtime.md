@@ -1,4 +1,4 @@
-# Guía Completa del Entorno de Ejecución de JavaScript
+# Principios del entorno de ejecución de JavaScript
 
 ::: tip Prefacio
 Ya has aprendido la sintaxis básica de JavaScript, pero ¿alguna vez te has preguntado:
@@ -387,7 +387,7 @@ Paso 4: c() termina, se desapilan en orden
 
 <CallStackDemo />
 
-### 5.2 Gestión de memoria: ¿a dónde va la basura?
+### 5.2 Gestión de memoria: a dónde va la basura
 
 JavaScript tiene un mecanismo de "recolección de basura" automático: no necesitas liberar memoria manualmente, el motor lo hace por ti.
 

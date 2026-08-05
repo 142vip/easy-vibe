@@ -1,11 +1,11 @@
-# Định tuyến & Điều hướng
+# Định tuyến và Điều hướng: Giới thiệu Routing
 ::: tip 🎯 Câu hỏi cốt lõi
 **Tại sao một số trang web khi chuyển trang không bị nhấp nháy trắng màn hình, mà mượt mà như App?** Đây chính là phép màu của frontend routing. Chương này sẽ đưa bạn từ kiểu "lật trang" của website truyền thống, bước vào thế giới "chuyển slide" của Single Page Application, để hiểu cách frontend routing nâng tầm trải nghiệm người dùng.
 :::
 
 ---
 
-## 1. Tại sao cần "Frontend Routing"?
+## 1. Động lực của Frontend Routing
 
 ### 1.1 Từ website truyền thống đến SPA: Sự thay đổi về chất trong trải nghiệm người dùng
 
@@ -38,7 +38,7 @@ Phát triển frontend hiện đại đã thay đổi hoàn toàn mô hình này
 
 <RouteMatchingDemo />
 
-### 1.2 Một câu chuyện thực tế: Tại sao bạn cần hiểu về routing mode
+### 1.2 Trường hợp: Tại sao bạn cần hiểu về routing mode
 
 Bạn có thể nói: "Tôi dùng Vue Router hoặc React Router, cấu hình một chút là dùng được, tại sao còn cần hiểu những nguyên lý cơ bản này?" Hãy để tôi kể một câu chuyện thực tế, bạn sẽ hiểu tại sao những kiến thức này quan trọng đến vậy.
 
@@ -104,18 +104,18 @@ Route, về bản chất, là một "hợp đồng", nó quy định khi truy c�
 
 ```javascript
 const routes = [
-  {
-    path: '/',           // URL path
-    component: Home      // component tương ứng
-  },
-  {
-    path: '/user/:id',   // dynamic route có tham số
-    component: UserDetail,
-    children: [          // nested route
-      { path: 'profile', component: UserProfile },
-      { path: 'posts', component: UserPosts }
-    ]
-  }
+ {
+ path: '/', // URL path
+ component: Home // component tương ứng
+ },
+ {
+ path: '/user/:id', // dynamic route có tham số
+ component: UserDetail,
+ children: [ // nested route
+ { path: 'profile', component: UserProfile },
+ { path: 'posts', component: UserPosts }
+ ]
+ }
 ]
 ```
 
@@ -140,12 +140,12 @@ Câu trả lời nằm ở bản chất của "Single Page Application": SPA ch�
 **Nested route** (quan hệ cha-con):
 ```javascript
 {
-  path: '/user/:id',
-  component: UserLayout,    // component cha
-  children: [
-    { path: 'profile', component: UserProfile },   // đường dẫn thực tế /user/:id/profile
-    { path: 'posts', component: UserPosts }        // đường dẫn thực tế /user/:id/posts
-  ]
+ path: '/user/:id',
+ component: UserLayout, // component cha
+ children: [
+ { path: 'profile', component: UserProfile }, // đường dẫn thực tế /user/:id/profile
+ { path: 'posts', component: UserPosts } // đường dẫn thực tế /user/:id/posts
+ ]
 }
 ```
 
@@ -254,29 +254,29 @@ Trong giai đoạn này, website thương mại điện tử "Mua Nhiều Đư�
 **Cấu trúc dự án** (cấu trúc điển hình của server-side rendering):
 ```
 server/
-├── views/              # HTML template
-│   ├── index.html      # Template trang chủ
-│   ├── products.html   # Template trang danh sách sản phẩm
-│   └── product.html    # Template trang chi tiết sản phẩm
-├── public/             # Tài nguyên tĩnh
-│   ├── css/
-│   ├── js/
-│   └── images/
-└── server.js           # Điểm vào máy chủ
+├── views/ # HTML template
+│ ├── index.html # Template trang chủ
+│ ├── products.html # Template trang danh sách sản phẩm
+│ └── product.html # Template trang chi tiết sản phẩm
+├── public/ # Tài nguyên tĩnh
+│ ├── css/
+│ ├── js/
+│ └── images/
+└── server.js # Điểm vào máy chủ
 ```
 
 **Quy trình chuyển trang**:
 ```
 1. Người dùng nhấp liên kết <a href="/products/123">
-       ↓
+ ↓
 2. Trình duyệt gửi GET request đến máy chủ
-       ↓
+ ↓
 3. Máy chủ render product.html, chèn dữ liệu
-       ↓
+ ↓
 4. Trả về trang HTML hoàn chỉnh
-       ↓
+ ↓
 5. Trình duyệt parse HTML, tải CSS/JS, render trang
-       ↓
+ ↓
 6. Người dùng thấy trang (quá trình này thường mất 1-3 giây)
 ```
 
@@ -308,64 +308,64 @@ Nhưng giai đoạn này cũng có cái giá: URL mang dấu `#`, trông không 
 **Cấu trúc dự án** (cấu trúc điển hình của SPA sơ khai):
 ```
 project/
-├── index.html          # File HTML đầu vào duy nhất
+├── index.html # File HTML đầu vào duy nhất
 ├── css/
-│   └── app.css         # Tất cả style đóng gói trong một file
+│ └── app.css # Tất cả style đóng gói trong một file
 ├── js/
-│   ├── router.js       # Triển khai routing đơn giản
-│   ├── views/          # Page component
-│   │   ├── Home.js
-│   │   ├── ProductList.js
-│   │   └── ProductDetail.js
-│   └── app.js          # Điểm vào ứng dụng
-└── server.js           # File server tĩnh đơn giản
+│ ├── router.js # Triển khai routing đơn giản
+│ ├── views/ # Page component
+│ │ ├── Home.js
+│ │ ├── ProductList.js
+│ │ └── ProductDetail.js
+│ └── app.js # Điểm vào ứng dụng
+└── server.js # File server tĩnh đơn giản
 ```
 
 **Code cốt lõi của Hash routing**:
 ```javascript
 // router.js - Triển khai Hash routing đơn giản hóa
 class HashRouter {
-  constructor(routes) {
-    this.routes = routes
-    this.currentPath = null
+ constructor(routes) {
+ this.routes = routes
+ this.currentPath = null
 
-    // Lắng nghe thay đổi hash
-    window.addEventListener('hashchange', () => {
-      this.matchRoute()
-    })
+ // Lắng nghe thay đổi hash
+ window.addEventListener('hashchange', () => {
+ this.matchRoute()
+ })
 
-    // Khởi tạo
-    this.matchRoute()
-  }
+ // Khởi tạo
+ this.matchRoute()
+ }
 
-  matchRoute() {
-    // Lấy hash hiện tại (bỏ dấu #)
-    const hash = window.location.hash.slice(1) || '/'
-    const route = this.routes.find(r => r.path === hash)
+ matchRoute() {
+ // Lấy hash hiện tại (bỏ dấu #)
+ const hash = window.location.hash.slice(1) || '/'
+ const route = this.routes.find(r => r.path === hash)
 
-    if (route) {
-      this.render(route.component)
-    } else {
-      this.render(NotFoundComponent)
-    }
-  }
+ if (route) {
+ this.render(route.component)
+ } else {
+ this.render(NotFoundComponent)
+ }
+ }
 
-  render(component) {
-    const app = document.getElementById('app')
-    app.innerHTML = component.template()
-    component.mount?.(app)
-  }
+ render(component) {
+ const app = document.getElementById('app')
+ app.innerHTML = component.template()
+ component.mount?.(app)
+ }
 
-  navigate(path) {
-    window.location.hash = path
-  }
+ navigate(path) {
+ window.location.hash = path
+ }
 }
 
 // Sử dụng
 const router = new HashRouter([
-  { path: '/', component: Home },
-  { path: '/products', component: ProductList },
-  { path: '/products/:id', component: ProductDetail }
+ { path: '/', component: Home },
+ { path: '/products', component: ProductList },
+ { path: '/products/:id', component: ProductDetail }
 ])
 
 // Điều hướng
@@ -409,18 +409,18 @@ History routing tận dụng HTML5 History API, có thể làm cho URL trở nê
 ```
 project/
 ├── public/
-│   └── index.html          # HTML đầu vào duy nhất
+│ └── index.html # HTML đầu vào duy nhất
 ├── src/
-│   ├── router/
-│   │   └── index.js        # Cấu hình routing
-│   ├── views/              # Page component
-│   │   ├── Home.vue
-│   │   ├── ProductList.vue
-│   │   └── ProductDetail.vue
-│   ├── App.vue
-│   └── main.js
+│ ├── router/
+│ │ └── index.js # Cấu hình routing
+│ ├── views/ # Page component
+│ │ ├── Home.vue
+│ │ ├── ProductList.vue
+│ │ └── ProductDetail.vue
+│ ├── App.vue
+│ └── main.js
 ├── package.json
-└── vite.config.js          # Cấu hình build
+└── vite.config.js # Cấu hình build
 ```
 
 **Ví dụ cấu hình Vue Router**:
@@ -429,13 +429,13 @@ project/
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
-  history: createWebHistory(),  // History mode
-  routes: [
-    { path: '/', component: () => import('@/views/Home.vue') },
-    { path: '/products', component: () => import('@/views/ProductList.vue') },
-    { path: '/products/:id', component: () => import('@/views/ProductDetail.vue') },
-    { path: '/:pathMatch(.*)*', component: () => import('@/views/NotFound.vue') }
-  ]
+ history: createWebHistory(), // History mode
+ routes: [
+ { path: '/', component: () => import('@/views/Home.vue') },
+ { path: '/products', component: () => import('@/views/ProductList.vue') },
+ { path: '/products/:id', component: () => import('@/views/ProductDetail.vue') },
+ { path: '/:pathMatch(.*)*', component: () => import('@/views/NotFound.vue') }
+ ]
 })
 
 export default router
@@ -449,15 +449,15 @@ export default router
 **Quan trọng: Cấu hình Nginx** (phải cấu hình khi triển khai):
 ```nginx
 server {
-    listen 80;
-    server_name example.com;
-    root /var/www/app;
-    index index.html;
+ listen 80;
+ server_name example.com;
+ root /var/www/app;
+ index index.html;
 
-    # Cấu hình quan trọng: tất cả route đều trỏ về index.html
-    location / {
-        try_files $uri $uri/ /index.html;
-    }
+ # Cấu hình quan trọng: tất cả route đều trỏ về index.html
+ location / {
+ try_files $uri $uri/ /index.html;
+ }
 }
 ```
 
@@ -509,17 +509,17 @@ Cốt lõi của giai đoạn này là "isomorphic rendering" — lần đầu r
 **Quy trình tải trang**:
 ```
 1. Người dùng truy cập /products/123
-       ↓
+ ↓
 2. Máy chủ nhận request
-       ↓
+ ↓
 3. Máy chủ render ProductDetail component → tạo HTML hoàn chỉnh
-       ↓
+ ↓
 4. Trả HTML về trình duyệt (chứa nội dung đầy đủ)
-       ↓
+ ↓
 5. Trình duyệt hiển thị nhanh nội dung (render lần đầu nhanh)
-       ↓
+ ↓
 6. Tải JavaScript, thực hiện "hydration"
-       ↓
+ ↓
 7. Các lần chuyển trang sau do frontend routing tiếp quản (không tải lại)
 ```
 
@@ -535,7 +535,7 @@ Cốt lõi của giai đoạn này là "isomorphic rendering" — lần đầu r
 
 ---
 
-## 4. Nguyên lý sâu: Routing hoạt động như thế nào?
+## 4. Nguyên lý sâu: Cách hoạt động của Routing
 
 Sau khi hiểu case study thực tế, hãy cùng đi sâu vào nguyên lý hoạt động của frontend routing, hiểu sự khác biệt giữa hai mode Hash và History.
 
@@ -554,18 +554,18 @@ Cốt lõi của Hash mode là tận dụng phần `hash` trong URL (tức là n
 
 ```
 Người dùng nhấp liên kết <a href="#/user/123">
-       ↓
+ ↓
 Trình duyệt cập nhật URL (không tải lại trang)
 https://example.com/#/user/123
-       ↓
+ ↓
 Kích hoạt sự kiện hashchange
-       ↓
+ ↓
 Route listener bắt sự kiện
-       ↓
+ ↓
 Parse giá trị hash → /user/123
-       ↓
+ ↓
 Khớp cấu hình route → tìm thấy UserDetail component
-       ↓
+ ↓
 Render component ra trang
 ```
 
@@ -573,39 +573,39 @@ Render component ra trang
 
 ```javascript
 class HashRouter {
-  constructor(routes) {
-    this.routes = routes
+ constructor(routes) {
+ this.routes = routes
 
-    // Lắng nghe thay đổi hash
-    window.addEventListener('hashchange', () => {
-      this.loadRoute()
-    })
+ // Lắng nghe thay đổi hash
+ window.addEventListener('hashchange', () => {
+ this.loadRoute()
+ })
 
-    // Tải khởi tạo
-    this.loadRoute()
-  }
+ // Tải khởi tạo
+ this.loadRoute()
+ }
 
-  loadRoute() {
-    // Lấy hash hiện tại, bỏ dấu # ở đầu
-    const hash = window.location.hash.slice(1) || '/'
-    const route = this.matchRoute(hash)
+ loadRoute() {
+ // Lấy hash hiện tại, bỏ dấu # ở đầu
+ const hash = window.location.hash.slice(1) || '/'
+ const route = this.matchRoute(hash)
 
-    if (route) {
-      this.render(route.component)
-    }
-  }
+ if (route) {
+ this.render(route.component)
+ }
+ }
 
-  matchRoute(path) {
-    return this.routes.find(r => r.path === path)
-  }
+ matchRoute(path) {
+ return this.routes.find(r => r.path === path)
+ }
 
-  render(component) {
-    document.getElementById('app').innerHTML = component.template()
-  }
+ render(component) {
+ document.getElementById('app').innerHTML = component.template()
+ }
 
-  push(path) {
-    window.location.hash = path
-  }
+ push(path) {
+ window.location.hash = path
+ }
 }
 ```
 
@@ -631,7 +631,7 @@ history.replaceState(state, title, url)
 
 // Lắng nghe thay đổi bản ghi lịch sử (nút tiến/lùi)
 window.addEventListener('popstate', (event) => {
-  // event.state chứa state được truyền vào khi gọi pushState
+ // event.state chứa state được truyền vào khi gọi pushState
 })
 ```
 
@@ -639,24 +639,24 @@ window.addEventListener('popstate', (event) => {
 
 ```
 Người dùng nhấp liên kết <a href="/user/123">
-       ↓
+ ↓
 JavaScript chặn sự kiện nhấp
 event.preventDefault()
-       ↓
+ ↓
 Gọi history.pushState
 history.pushState({id: 123}, 'Chi tiết người dùng', '/user/123')
-       ↓
+ ↓
 URL cập nhật (không tải lại trang)
 https://example.com/user/123
-       ↓
+ ↓
 Route khớp và render component
-       ↓
+ ↓
 Người dùng nhấp nút lùi của trình duyệt
-       ↓
+ ↓
 Kích hoạt sự kiện popstate
-       ↓
+ ↓
 Route listener bắt sự kiện
-       ↓
+ ↓
 Dựa vào URL mới render component tương ứng
 ```
 
@@ -664,44 +664,44 @@ Dựa vào URL mới render component tương ứng
 
 ```javascript
 class HistoryRouter {
-  constructor(routes) {
-    this.routes = routes
+ constructor(routes) {
+ this.routes = routes
 
-    // Chặn tất cả nhấp liên kết
-    document.addEventListener('click', (e) => {
-      const link = e.target.closest('a')
-      if (link && link.getAttribute('href').startsWith('/')) {
-        e.preventDefault()
-        this.push(link.getAttribute('href'))
-      }
-    })
+ // Chặn tất cả nhấp liên kết
+ document.addEventListener('click', (e) => {
+ const link = e.target.closest('a')
+ if (link && link.getAttribute('href').startsWith('/')) {
+ e.preventDefault()
+ this.push(link.getAttribute('href'))
+ }
+ })
 
-    // Lắng nghe nút tiến/lùi của trình duyệt
-    window.addEventListener('popstate', () => {
-      this.loadRoute()
-    })
+ // Lắng nghe nút tiến/lùi của trình duyệt
+ window.addEventListener('popstate', () => {
+ this.loadRoute()
+ })
 
-    // Tải khởi tạo
-    this.loadRoute()
-  }
+ // Tải khởi tạo
+ this.loadRoute()
+ }
 
-  loadRoute() {
-    const path = window.location.pathname
-    const route = this.matchRoute(path)
+ loadRoute() {
+ const path = window.location.pathname
+ const route = this.matchRoute(path)
 
-    if (route) {
-      this.render(route.component)
-    }
-  }
+ if (route) {
+ this.render(route.component)
+ }
+ }
 
-  push(path) {
-    history.pushState({}, '', path)
-    this.loadRoute()
-  }
+ push(path) {
+ history.pushState({}, '', path)
+ this.loadRoute()
+ }
 
-  render(component) {
-    document.getElementById('app').innerHTML = component.template()
-  }
+ render(component) {
+ document.getElementById('app').innerHTML = component.template()
+ }
 }
 ```
 
@@ -728,33 +728,33 @@ import Home from '@/views/Home.vue'
 import NotFound from '@/views/NotFound.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/user/:id',
-      name: 'UserDetail',
-      component: () => import('@/views/UserDetail.vue'),
-      props: true  // Truyền tham số route dưới dạng props
-    },
-    {
-      path: '/:pathMatch(.*)*',
-      name: 'NotFound',
-      component: NotFound
-    }
-  ],
-  scrollBehavior(to, from, savedPosition) {
-    // Hành vi cuộn: khi quay lại giữ vị trí cuộn, nếu không thì cuộn lên đầu
-    if (savedPosition) {
-      return savedPosition
-    } else {
-      return { top: 0 }
-    }
-  }
+ history: createWebHistory(import.meta.env.BASE_URL),
+ routes: [
+ {
+ path: '/',
+ name: 'Home',
+ component: Home
+ },
+ {
+ path: '/user/:id',
+ name: 'UserDetail',
+ component: () => import('@/views/UserDetail.vue'),
+ props: true // Truyền tham số route dưới dạng props
+ },
+ {
+ path: '/:pathMatch(.*)*',
+ name: 'NotFound',
+ component: NotFound
+ }
+ ],
+ scrollBehavior(to, from, savedPosition) {
+ // Hành vi cuộn: khi quay lại giữ vị trí cuộn, nếu không thì cuộn lên đầu
+ if (savedPosition) {
+ return savedPosition
+ } else {
+ return { top: 0 }
+ }
+ }
 })
 
 export default router
@@ -773,16 +773,16 @@ import About from '@/views/About.vue'
 import User from '@/views/User.vue'
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/about', component: About },
-  { path: '/user', component: User }
+ { path: '/', component: Home },
+ { path: '/about', component: About },
+ { path: '/user', component: User }
 ]
 
 // ✅ Lazy loading (lần đầu nhanh)
 const routes = [
-  { path: '/', component: () => import('@/views/Home.vue') },
-  { path: '/about', component: () => import('@/views/About.vue') },
-  { path: '/user', component: () => import('@/views/User.vue') }
+ { path: '/', component: () => import('@/views/Home.vue') },
+ { path: '/about', component: () => import('@/views/About.vue') },
+ { path: '/user', component: () => import('@/views/User.vue') }
 ]
 ```
 
@@ -801,42 +801,42 @@ Route guard có thể thực thi logic trước và sau khi chuyển route, thư
 ```javascript
 // Global before guard
 router.beforeEach(async (to, from, next) => {
-  // Đặt tiêu đề trang
-  document.title = to.meta.title || 'My App'
+ // Đặt tiêu đề trang
+ document.title = to.meta.title || 'My App'
 
-  // Xác thực quyền
-  if (to.meta.requiresAuth) {
-    const isAuthenticated = await checkAuth()
-    if (!isAuthenticated) {
-      next('/login')
-      return
-    }
-  }
+ // Xác thực quyền
+ if (to.meta.requiresAuth) {
+ const isAuthenticated = await checkAuth()
+ if (!isAuthenticated) {
+ next('/login')
+ return
+ }
+ }
 
-  next()
+ next()
 })
 
 // Global after hook
 router.afterEach((to, from) => {
-  // Thống kê lượt truy cập trang
-  analytics.trackPageView(to.path)
+ // Thống kê lượt truy cập trang
+ analytics.trackPageView(to.path)
 })
 
 // Route-level guard
 const routes = [
-  {
-    path: '/admin',
-    component: Admin,
-    meta: { requiresAuth: true, roles: ['admin'] },
-    beforeEnter: (to, from, next) => {
-      // Logic riêng cho route này
-      if (hasPermission()) {
-        next()
-      } else {
-        next('/403')
-      }
-    }
-  }
+ {
+ path: '/admin',
+ component: Admin,
+ meta: { requiresAuth: true, roles: ['admin'] },
+ beforeEnter: (to, from, next) => {
+ // Logic riêng cho route này
+ if (hasPermission()) {
+ next()
+ } else {
+ next('/403')
+ }
+ }
+ }
 ]
 ```
 
@@ -863,19 +863,19 @@ const routes = [
 ```nginx
 # Cấu hình Nginx
 location / {
-    try_files $uri $uri/ /index.html;
+ try_files $uri $uri/ /index.html;
 }
 ```
 
 ```apache
 # Cấu hình Apache (.htaccess)
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+ RewriteEngine On
+ RewriteBase /
+ RewriteRule ^index\.html$ - [L]
+ RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond %{REQUEST_FILENAME} !-d
+ RewriteRule . /index.html [L]
 </IfModule>
 ```
 
@@ -890,18 +890,18 @@ location / {
 ```javascript
 // ❌ Cách làm sai: chỉ lấy tham số khi created
 created() {
-  const userId = this.$route.params.id
-  this.fetchUser(userId)
+ const userId = this.$route.params.id
+ this.fetchUser(userId)
 }
 
 // ✅ Cách làm đúng: lắng nghe thay đổi route
 watch: {
-  '$route.params.id': {
-    immediate: true,
-    handler(newId) {
-      this.fetchUser(newId)
-    }
-  }
+ '$route.params.id': {
+ immediate: true,
+ handler(newId) {
+ this.fetchUser(newId)
+ }
+ }
 }
 ```
 
@@ -913,18 +913,18 @@ watch: {
 
 ```javascript
 const router = createRouter({
-  scrollBehavior(to, from, savedPosition) {
-    // Giữ vị trí cuộn khi quay lại
-    if (savedPosition) {
-      return savedPosition
-    }
-    // Nhảy đến neo
-    if (to.hash) {
-      return { el: to.hash }
-    }
-    // Nếu không thì cuộn lên đầu
-    return { top: 0 }
-  }
+ scrollBehavior(to, from, savedPosition) {
+ // Giữ vị trí cuộn khi quay lại
+ if (savedPosition) {
+ return savedPosition
+ }
+ // Nhảy đến neo
+ if (to.hash) {
+ return { el: to.hash }
+ }
+ // Nếu không thì cuộn lên đầu
+ return { top: 0 }
+ }
 })
 ```
 

@@ -1,4 +1,4 @@
-# Contenedores Docker
+# Introducción a la contenedorización con Docker
 
 ::: tip Prefacio
 **"Funciona en mi máquina" es la excusa más clásica de los desarrolladores, y Docker hace que esta excusa desaparezca por completo.** La tecnología de contenedores empaqueta una aplicación y todas sus dependencias en una unidad estandarizada, garantizando que se ejecute de manera consistente en cualquier entorno. Es la piedra angular de la entrega de software moderno.
@@ -24,13 +24,13 @@ Después de completar este capítulo, obtendrás:
 
 ---
 
-## 1. Por qué se necesitan contenedores
+## 1. Motivación: contenedores
 
 Antes de la aparición de los contenedores, desplegar una aplicación requería instalar manualmente el entorno de ejecución, configurar variables de entorno y resolver conflictos de dependencias en el servidor. Las diferencias entre entornos (desarrollo, pruebas, producción) eran un caldo de cultivo para bugs.
 
 <DockerArchitectureDemo />
 
-### ¿Qué problemas resuelven los contenedores?
+### Qué problemas resuelven los contenedores
 
 | Problema | Enfoque tradicional | Enfoque con contenedores |
 |------|---------|---------|

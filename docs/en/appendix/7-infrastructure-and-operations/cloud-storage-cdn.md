@@ -1,4 +1,4 @@
-# Object Storage & CDN
+# Principles of Object Storage and CDN
 > 💡 **Learning Guide**: This article will walk you through a complete chain—from file upload to user download. You'll see how object storage manages massive files like a "smart warehouse," how CDN delivers content to users' doorsteps like a "courier network," and what pitfalls await you along the way. It's recommended to first understand basic HTTP requests and DNS resolution principles.
 
 Before we begin, here are some foundational topics to brush up on:
@@ -8,7 +8,7 @@ Before we begin, here are some foundational topics to brush up on:
 
 ---
 
-## 0. Introduction: Why Are File Uploads and Downloads So "Slow"?
+## 0. Introduction: Motivation for Filing Uploads and Downloads So "Slow"
 
 Imagine this scenario: you upload a 10MB high-resolution photo to an image-sharing community, and it takes half a minute to finish. Yet your friend in Beijing downloads it in just 2 seconds. Why does the same file produce such drastically different upload and download experiences?
 
@@ -20,7 +20,7 @@ The answers to these questions are hidden in the "golden duo" of **object storag
 
 ## 1. Object Storage: Your "Smart Cloud Warehouse"
 
-### 1.1 What Is Object Storage?
+### 1.1 Overview of Object Storage
 
 A traditional file system is like your wardrobe at home: clothes are organized by "tops/pants/skirts" in layers. To find a shirt, you have to open the wardrobe → tops section → shirt compartment. This "hierarchical nesting" model becomes extremely cumbersome when the number of files explodes.
 
@@ -85,7 +85,7 @@ Object storage provides multiple layers of permission control:
 
 ## 2. CDN: Your "Global Courier Network"
 
-### 2.1 Why Do You Need a CDN?
+### 2.1 Motivation for needing a CDN
 
 Imagine you run an online store with servers in Shenzhen. Now a user in Beijing wants to access your images:
 
@@ -539,7 +539,7 @@ Advantages:
 
 <HttpsOptimizationDemo />
 
-### 5.1 Why Is HTTPS on CDN Important?
+### 5.1 Motivation for HTTPSing on CDN Important
 
 **Scenario Comparison**:
 

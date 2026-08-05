@@ -1,4 +1,4 @@
-# Neuronale Netze und Deep Learning
+# Neuronale Netze: Grundlagen
 
 ::: tip Vorwort
 **Neuronale Netze sind der Motor der KI-Revolution.** Von ChatGPTs Sprachverständnis bis zur Bilderkennung beim autonomen Fahren – hinter allem stehen neuronale Netze. Das ist keine Magie, sondern ein ausgeklügeltes mathematisches Framework – es „lernt" aus großen Datenmengen die Abbildung von Eingabe auf Ausgabe. Das Grundprinzip zu verstehen hilft dir, KI-Werkzeuge besser zu nutzen und Fehler zu beheben.
@@ -40,7 +40,7 @@ Mathematischer Ausdruck: **y = f(w1x1 + w2x2 + w3x3 + b)**
 
 <NeuronDemo />
 
-### Aktivierungsfunktion: Warum braucht man Nichtlinearität?
+### Aktivierungsfunktion: Motivation von braucht man Nichtlinearität
 
 Ohne Aktivierungsfunktion ware jede Uberlagerung von Neuronen-Schichten letztlich aquivalent zu einer linearen Transformation (Matrixmultiplikation). Die Aktivierungsfunktion fuhrt **Nichtlinearitat** ein und ermoglicht dem Netzwerk, komplexe Muster zu lernen.
 

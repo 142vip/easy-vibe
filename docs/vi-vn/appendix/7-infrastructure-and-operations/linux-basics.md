@@ -73,7 +73,7 @@ Lệnh Linux tuân theo một định dạng thống nhất: `lệnh [tùy chọ
 
 <LinuxCommandDemo />
 
-### 10 lệnh thường dùng nhất
+### 10. lệnh thường dùng nhất
 
 Nếu chỉ có thể nhớ 10 lệnh, hãy nhớ những lệnh này:
 

@@ -1,4 +1,4 @@
-# Stockage objet et CDN
+# Principes : Stockage objet et réseau CDN
 > 💡 **Guide d'apprentissage** : Cet article vous guidera tout au long d'une chaîne complète — du téléversement de fichiers au téléchargement par l'utilisateur. Vous découvrirez comment le stockage objet gère massivement les fichiers comme un « entrepôt intelligent », comment le CDN les achemine jusqu'à l'utilisateur comme un « réseau de relais de livraison », et quels « pièges » vous attendent entre les deux. Il est recommandé de connaître les bases des requêtes HTTP et de la résolution DNS.
 
 Avant de commencer, nous vous recommandons de consolider quelques prérequis :
@@ -8,7 +8,7 @@ Avant de commencer, nous vous recommandons de consolider quelques prérequis :
 
 ---
 
-## 0. Introduction : pourquoi le téléversement et le téléchargement de fichiers sont-ils si « lents » ?
+## 0. Introduction : pourquoi le téléversement et le téléchargement de fichiers sont-ils si « lents »
 
 Imaginez ce scénario : vous téléversez une photo HD de 10 Mo sur une communauté d'images, et cela prend une demi-minute ; alors que votre ami à Pékin la télécharge en 2 secondes. Pourquoi la même fichier offre-t-elle une expérience si différente entre le téléversement et le téléchargement ?
 
@@ -20,7 +20,7 @@ Les réponses à ces questions se trouvent dans le **stockage objet** et le **CD
 
 ## 1. Stockage objet : votre « entrepôt cloud intelligent »
 
-### 1.1 Qu'est-ce que le stockage objet ?
+### 1.1 Qu'est-ce que le stockage objet
 
 Un système de fichiers traditionnel est comme votre armoire chez vous : les vêtements sont rangés par catégories (« hauts / pantalons / jupes ») et pour trouver une chemise, il faut ouvrir l'armoire → section hauts → compartiment chemises. Ce modèle « imbriqué en profondeur » devient extrêmement lourd quand le nombre de fichiers explose.
 
@@ -53,7 +53,7 @@ Le bucket est le conteneur de plus haut niveau du stockage objet, agissant comme
 
 **Conseil pratique** : une équipe avait créé des dizaines de buckets par ligne de métier, et la facture de fin de mois a été une surprise — chaque bucket a des frais minimum de stockage et de requêtes. Recommandation : planifier les buckets par combinaison « environnement + usage », par ex. `prod-static-assets`, `dev-backup-archive`.
 
-#### L'Objet : votre « colis de données »
+#### L'Objet : votre « artefact de build de données »
 
 L'objet est l'unité fondamentale du stockage, composé de trois parties :
 
@@ -69,7 +69,7 @@ L'objet est l'unité fondamentale du stockage, composé de trois parties :
    - Métadonnées système : Content-Type, ETag, Last-Modified, etc.
    - Métadonnées personnalisées : par ex. `x-oss-meta-owner`, `x-oss-meta-project`
 
-#### Contrôle d'accès : qui peut accéder à mon « entrepôt » ?
+#### Contrôle d'accès : qui peut accéder à mon « entrepôt »
 
 Le stockage objet offre plusieurs niveaux de contrôle des permissions :
 
@@ -85,7 +85,7 @@ Le stockage objet offre plusieurs niveaux de contrôle des permissions :
 
 ## 2. CDN : votre « réseau de livraison mondial »
 
-### 2.1 Pourquoi un CDN est-il nécessaire ?
+### 2.1 Pourquoi un CDN est-il nécessaire
 
 Imaginez que vous gérez une boutique en ligne dont le serveur est à Shenzhen. Un utilisateur à Pékin accède à vos images :
 
@@ -298,7 +298,7 @@ Tous les fragments envoyés, envoi d'une requête de « fusion »
 
 <CachePolicyDemo />
 
-#### Qu'est-ce que le « rappel d'origine » ?
+#### Qu'est-ce que le « rappel d'origine »
 
 Les nœuds edge du CDN mettent en cache le contenu de l'origine, mais quand :
 
@@ -539,7 +539,7 @@ Avantages :
 
 <HttpsOptimizationDemo />
 
-### 5.1 Pourquoi HTTPS est-il important sur le CDN ?
+### 5.1 Pourquoi HTTPS est-il important sur le CDN
 
 **Comparaison de scénarios** :
 

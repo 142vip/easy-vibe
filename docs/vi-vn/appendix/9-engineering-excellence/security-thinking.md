@@ -19,7 +19,7 @@ Sau khi học xong chương này, bạn sẽ có nhận thức bảo mật cơ b
 
 ---
 
-## 0. Tổng quan: Tại sao developer cần hiểu bảo mật?
+## 0. Tổng quan: Động lực của developer cần hiểu bảo mật
 
 Hãy tưởng tượng bạn xây một ngôi nhà, đầy đủ chức năng, trang trí đẹp mắt, nhưng quên lắp khóa. Lỗ hổng bảo mật chính là "những chiếc khóa quên lắp" trong thế giới code.
 

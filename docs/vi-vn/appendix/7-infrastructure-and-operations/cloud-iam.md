@@ -8,7 +8,7 @@ Trước khi bắt đầu, nên bổ sung hai "viên gạch cơ sở":
 
 ---
 
-## 0. Mở đầu: Tại sao mới lên đám mây đã "dẫm phải mìn"?
+## 0. Mở đầu: Động lực của mới lên đám mây đã "dẫm phải mìn"
 
 <IamRamComparisonDemo />
 
@@ -29,7 +29,7 @@ Nhưng phần lớn thời gian, vấn đề không nằm ở con người, mà 
 
 ---
 
-## 1. IAM/RAM là gì? Bắt đầu từ "hệ thống kiểm soát ra vào"
+## 1. Tổng quan về IAM/RAM: Bắt đầu từ "hệ thống kiểm soát ra vào"
 
 ### 1.1 Ví dụ: Hệ thống kiểm soát thông minh của công ty
 
@@ -71,7 +71,7 @@ Dù tên khác nhau, **khái niệm cốt lõi đều giống nhau**:
 
 ---
 
-## 2. User, Group, Role: Nên dùng cái nào?
+## 2. User, Group, Role: Nên dùng cái nào
 
 ### 2.1 Sự khác biệt giữa ba loại "danh tính"
 
@@ -132,7 +132,7 @@ Kiến trúc:
 Luồng quyền:
 - Developer mặc định chỉ có quyền đọc Dev
 - Cần sửa production, tạo ticket xin Assume Role tạm thời ở Prod
-- Mọi thao tác Assume được ghi nhận bởi CloudTrail, audit định kỳ
+- Mọi thao tác Assume được thu thập bởi CloudTrail, audit định kỳ
 ```
 
 ---
@@ -251,7 +251,7 @@ Quy trình đánh giá:
 
 ## 4. Access Key (AK/SK): "Chìa khóa" cần bảo quản cẩn thận
 
-### 4.1 AK/SK là gì?
+### 4.1 AK/SK: Tổng quan
 
 <AccessKeyManagementDemo />
 
@@ -262,7 +262,7 @@ Access Key là credential dài hạn do dịch vụ đám mây cung cấp, dùng
 | **Access Key ID** | ID khóa truy cập | Xác định bạn là ai (giống tên người dùng) | Số thẻ ngân hàng |
 | **Secret Access Key** | Khóa truy cập bí mật | Chứng minh bạn là bạn (giống mật khẩu) | Mã PIN thẻ ngân hàng |
 
-### 4.2 Tại sao AK/SK là "vật nguy hiểm"?
+### 4.2 Động lực của AK/SK là "vật nguy hiểm"
 
 **Trường hợp thực tế: Bài học của một startup**
 
@@ -382,7 +382,7 @@ jobs:
 
 ## 5. Xác thực đa yếu tố (MFA): Thêm "khóa" cho tài khoản
 
-### 5.1 MFA là gì?
+### 5.1 MFA: Tổng quan
 
 <MfaSecurityDemo />
 
@@ -394,7 +394,7 @@ MFA (Multi-Factor Authentication, Xác thực đa yếu tố), còn gọi 2FA (T
 | **Yếu tố sở hữu** (bạn có gì) | Thiết bị vật lý bạn sở hữu | Điện thoại, hardware key |
 | **Yếu tố sinh trắc** (bạn là ai) | Đặc điểm sinh trắc học | Vân tay, nhận diện khuôn mặt |
 
-### 5.2 Tại sao MFA quan trọng?
+### 5.2 Động lực của MFA quan trọng
 
 **Số liệu thực tế cho bạn câu trả lời**:
 
@@ -431,7 +431,7 @@ MFA (Multi-Factor Authentication, Xác thực đa yếu tố), còn gọi 2FA (T
 
 ## 6. Truy cập liên tài khoản: Cách "ghé thăm" an toàn
 
-### 6.1 Tại sao cần truy cập liên tài khoản?
+### 6.1 Động lực của cần truy cập liên tài khoản
 
 <CrossAccountAccessDemo />
 
@@ -653,7 +653,7 @@ Mục tiêu: Để ứng dụng truy cập tài nguyên AWS an toàn
    - Cấu hình rotate định kỳ (90 ngày)
    - Monitor usage AK/SK
 
-3. Cấu hình CloudTrail ghi nhận tất cả API call
+3. Cấu hình CloudTrail thu thập tất cả API call
    - Tạo S3 bucket riêng lưu log
    - Cấu hình log file validation (chống sửa đổi)
    - Cấu hình SNS notification cho event quan trọng (như sử dụng root, thay đổi policy)
@@ -719,7 +719,7 @@ Mục tiêu: Xây dựng cơ chế giám sát và cải thiện an ninh liên t�
 | **MFA** | Multi-Factor Authentication | Phương thức xác thực yêu cầu hai hoặc nhiều yếu tố |
 | **SSO** | Single Sign-On | Phương thức xác thực đăng nhập một lần truy cập nhiều hệ thống |
 | **ExternalId** | External ID | Định danh bảo mật dùng để ngăn tấn công confused deputy |
-| **CloudTrail** | Dịch vụ audit đám mây | Dịch vụ log ghi nhận tất cả API call và thao tác trong tài khoản đám mây |
+| **CloudTrail** | Dịch vụ audit đám mây | Dịch vụ log thu thập tất cả API call và thao tác trong tài khoản đám mây |
 
 ---
 

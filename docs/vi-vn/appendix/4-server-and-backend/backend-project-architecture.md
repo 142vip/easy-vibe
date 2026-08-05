@@ -899,7 +899,7 @@ Giai đoạn 3: Module hóa/Microservices (Doanh nghiệp)
 Giai đoạn 4: Kiến trúc Cloud Native (Nền tảng)
 ```
 
-### 6.2 Khi nào nên nâng cấp kiến trúc?
+### 6.2 Khi nào Tiêu chí nâng cấp kiến trúc
 
 | Tín hiệu | Cấp độ hiện tại | Khuyến nghị nâng cấp |
 |------|----------|----------|

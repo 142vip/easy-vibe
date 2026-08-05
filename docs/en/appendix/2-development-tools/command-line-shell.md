@@ -1,8 +1,8 @@
-# Command Line & Shell Scripts
+# An Introduction to Command Line and Shell Scripts
 
 > 💡 **Learning Guide**: This chapter aims to provide readers with zero prior experience a systematic understanding of how the terminal (Terminal) works. No computer science background is required — we will use interactive demonstrations to explain the terminal's operating mechanisms step by step.
 
-## 0. Quick Start: How to Open the Terminal?
+## 0. Quick Start: Approach to opening the Terminal
 
 Before you start learning, you first need to find it. The terminal comes pre-installed on every operating system — you don't need to install any additional software to use it.
 
@@ -46,7 +46,7 @@ _Please select your operating system below, then follow the guided steps to begi
 
 <TerminalHandsOn />
 
-### 0.2 Why Give Up the Mouse? (Why CLI?)
+### 0.2 Motivation for Giving Up the Mouse (Motivation for Giving Up the Mouse)
 
 You might ask: _"Graphical interfaces (GUIs) are so easy to use — just click with the mouse. Why bother typing complex commands into a black-and-white window?"_
 
@@ -69,7 +69,7 @@ This isn't about "acting like a hacker." It's because in certain situations, **l
 
 **Summary**: GUI is for **exploration** (browsing the web, viewing images), CLI is for **production** (development, operations, batch processing). As developers, we use the terminal because it is **more precise, more controllable, and more efficient**.
 
-## 1. Concept Definition: What Is a Terminal?
+## 1. Concept Definition: Overview of a Terminal
 
 _Different operating systems have different-looking terminals, and **different command syntax**. Click the buttons below to switch views — notice how macOS, Windows, and Linux use different commands (e.g., `dir` vs `ls`) to do the same thing:_
 
@@ -112,7 +112,7 @@ To understand how they work together, let's look at these three components with 
   - **Responsibility**: The core of the operating system — only it can directly control hardware (read/write disks, allocate memory, control the CPU).
   - **Relationship**: The Shell is the kernel's "secretary," translating your human language into something the kernel can understand.
 
-### 2.2 Why Separate Them? (Replaceability)
+### 2.2 Motivation for separating Them (Replaceability)
 
 Because the **display layer** (terminal) and the **logic layer** (Shell) are completely separate, they can be freely combined:
 

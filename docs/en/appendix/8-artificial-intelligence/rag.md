@@ -1,4 +1,4 @@
-# RAG: Retrieval-Augmented Generation
+# Principles of RAG: Retrieval-Augmented Generation
 
 ::: tip Preface
 **Why does ChatGPT sometimes "make things up with confidence"?** Large language models derive their knowledge from training data, but training data has a cutoff date and doesn't include your company's internal documents. RAG (Retrieval-Augmented Generation) is the core technology that solves this problem — letting AI "look up references" before answering.
@@ -24,7 +24,7 @@ After completing this chapter, you will gain:
 
 ---
 
-## 0. Overview: Why Do Large Models Need to "Look Up References"?
+## 0. Overview: Motivation for Larging Models Need to "Look Up References"
 
 Imagine you're a knowledgeable professor who has read countless books. But if someone asks you "what were yesterday's sales figures," you certainly can't answer — because that information isn't in the books you've read.
 
@@ -83,7 +83,7 @@ There is no "best" chunking strategy, only the one most suitable for your data. 
 
 ---
 
-## 3. Retrieval Techniques: How to Find the Most Relevant Content?
+## 3. Retrieval Techniques: Approach to finding the Most Relevant Content
 
 After chunking is complete, the next key question is: **When a user asks a question, how do you find the most relevant chunks from thousands of document segments?**
 
@@ -117,7 +117,7 @@ RAG technology has gone through three generations of evolution in just two years
 
 ---
 
-## 5. RAG vs Fine-tuning: Which Should You Choose?
+## 5. RAG vs Fine-tuning: Selection of Choose
 
 When you want a large model to master domain-specific knowledge, there are usually two paths: RAG and fine-tuning. They are not mutually exclusive but complementary.
 

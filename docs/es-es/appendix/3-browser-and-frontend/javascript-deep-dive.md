@@ -1,4 +1,4 @@
-# Guía Avanzada de JavaScript
+# Principios de JavaScript
 
 ::: tip Prefacio
 Ya has aprendido HTML y CSS y puedes crear páginas web atractivas. Pero probablemente te habrás dado cuenta: los botones no reaccionan al hacer clic, los formularios no se envían, la página web parece una imagen "estática".
@@ -26,7 +26,7 @@ Cada capítulo empieza desde "saber reconocer el código", no necesitas escribir
 
 ---
 
-## 1. ¿Qué es JavaScript?
+## 1. Introducción a JavaScript
 
 ::: tip 🤔 Pregunta clave
 **¿Por qué una página web necesita JavaScript?** HTML y CSS ya permiten que una página tenga contenido y estilo, ¿por qué aprender otro lenguaje?
@@ -67,7 +67,7 @@ Cada capítulo empieza desde "saber reconocer el código", no necesitas escribir
 | **CSS** | Piel | Define la apariencia y el estilo de la página |
 | **JavaScript** | Músculos y sistema nervioso | Hace que la página responda, interactúe y piense |
 
-### 1.2 ¿Por qué en el vibecoding también necesitas entender JavaScript?
+### 1.2 Motivación de el vibecoding también necesitas entender JavaScript
 
 ::: warning Errores típicos de quien empieza con JS
 Un desarrollador que acababa de empezar con JavaScript usó IA para crear una app de "contador": hacer clic en un botón suma 1 al número. El código generado por la IA funcionaba correctamente.

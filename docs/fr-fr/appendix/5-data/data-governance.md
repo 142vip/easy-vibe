@@ -1,4 +1,4 @@
-# Gouvernance des données et qualité des données
+# Introduction : Gouvernance et qualité des données
 
 ::: tip Préface
 **Avez-vous déjà rencontré cette situation : les chiffres du rapport ne correspondent pas au business réel, les informations d'un même utilisateur diffèrent entre deux systèmes, ou les résultats d'analyse sont totalement peu fiables à cause de données sales ?** La gouvernance des données est précisément la méthode systématique pour résoudre ces problèmes. À l'ère de la « prise de décision basée sur les données », la qualité des données détermine directement la qualité des décisions — Garbage In, Garbage Out.
@@ -26,7 +26,7 @@
 
 ---
 
-## 0. Vue d'ensemble : Pourquoi la gouvernance des données est-elle nécessaire ?
+## 0. Vue d'ensemble : Pourquoi la gouvernance des données est-elle nécessaire
 
 La gouvernance des données n'est pas un problème technique, mais un **problème de management**. Elle répond à la question centrale : **Qui est responsable des données ? Quels sont les standards des données ? Comment garantir que les données restent fiables dans le temps ?**
 
@@ -103,7 +103,7 @@ La gouvernance des données ne se résout pas en achetant un outil ; elle néces
 
 ---
 
-## 3. Lignage des données : D'où viennent-elles, où vont-elles ?
+## 3. Lignage des données : D'où viennent-elles, où vont-elles
 
 Le lignage des données (Data Lineage) enregistre le chemin complet de transformation des données, de leur source jusqu'à leur consommation finale. C'est comme l'« arbre généalogique » des données, qui vous permet de retracer l'origine et les transformations de chaque donnée.
 

@@ -1,4 +1,4 @@
-# Cómo Funcionan los Modelos de Lenguaje de Gran Escala
+# Principios de funcionamiento de los modelos de lenguaje de gran escala
 > 💡 **Guía de estudio**: Este capítulo no requiere conocimientos de programación. A través de demostraciones interactivas, te guiaremos a fondo en el funcionamiento interno de los Modelos de Lenguaje de Gran Escala (LLM). Comenzaremos desde lo más básico, la tokenización, hasta cómo se entrenan e infieren modelos como GPT.
 
 <LlmQuickStartDemo />
@@ -25,7 +25,7 @@ Este tutorial te llevará desde cero, desmontando paso a paso el proceso de cons
 El ordenador no puede leer los caracteres "hamburguesa", solo entiende números.
 Así que nuestra primera tarea es: **dividir el texto en las unidades más pequeñas que el ordenador pueda comprender**.
 
-### 1.1 ¿Qué es la tokenización?
+### 1.1 Introducción a tokenización
 
 La tokenización consiste en descomponer una frase completa en "unidades de palabra" (Tokens).
 
@@ -80,7 +80,7 @@ index=171,   string='！'
 
 ---
 
-## 2. El problema central: ¿Cómo hacer que el ordenador "calcule" el lenguaje?
+## 2. El problema central: Enfoque de ordenador "calcule" el lenguaje
 
 Nuestra tarea es procesar lenguaje. Pero el ordenador solo entiende números.
 La idea más directa es: asignar un número (ID) a cada palabra.
@@ -88,7 +88,7 @@ La idea más directa es: asignar un número (ID) a cada palabra.
 - manzana -> ID 10
 - plátano -> ID 20
 
-### 2.1 ¿Por qué no usar un simple ID?
+### 2.1 Motivación para un simple ID
 
 Si solo usáramos IDs, el ordenador pensaría que "10" y "20" son solo dos números sin relación alguna.
 Además, si el vocabulario tiene 100 000 palabras, podríamos necesitar un array de longitud 100 000 para representar una sola palabra (codificación One-Hot), donde 99 999 posiciones son 0 y solo una es 1.
@@ -112,7 +112,7 @@ En lugar de usar un array largo de 0/1, usamos un array más corto, lleno de dec
 
 Resuelto el problema de expresar "una palabra", toca resolver el de expresar "una frase".
 
-### 3.1 ¿Por qué tiene que ser una matriz?
+### 3.1 Motivación de tiene que ser una matriz
 
 Porque una frase contiene muchas palabras.
 
@@ -136,7 +136,7 @@ Repasemos cómo fluyen los datos:
 
 ---
 
-## 3.5 Interludio: ¿Qué es exactamente un "modelo"?
+## 3.5 Interludio: Introducción a exactamente un "modelo"
 
 Antes de hablar de arquitecturas concretas, entendamos de forma intuitiva la palabra "modelo".
 
@@ -308,7 +308,7 @@ Para convertirlo en un asistente educado, seguro y fiable como ChatGPT, hacen fa
 Con el avance tecnológico, hemos descubierto que limitarse a "predecir la siguiente palabra" a veces conduce a errores tontos, especialmente en problemas matemáticos y lógicos.
 Así nacieron los nuevos **Modelos de Pensamiento (Thinking Models)** (como OpenAI o1, DeepSeek-R1).
 
-### 7.1 ¿Qué es "pensar"? (Thinking Models)
+### 7.1 Introducción a "pensar" (Thinking Models)
 
 Cuando los humanos respondemos a preguntas complejas (como ¿qué es mayor, 9.11 o 9.9?), no soltamos lo primero que se nos ocurre, sino que primero pensamos un poco.
 Un Thinking Model ha aprendido precisamente esta capacidad de **pensamiento lento (System 2)**.
@@ -392,7 +392,7 @@ El Transformer tradicional (como GPT-4) utiliza el **mecanismo de atención est�
 
 Para resolver este problema, modelos como MiniMax (serie abab) y RWKV adoptan el **mecanismo de atención lineal (Linear Attention)**.
 
-### ¿Por qué uno es "en red" y el otro "lineal"?
+### Motivación de uno es "en red" y el otro "lineal"
 
 La diferencia fundamental es: **¿Prefieres "conservar todas las palabras originales" o "ir resumiendo sobre la marcha"?**
 

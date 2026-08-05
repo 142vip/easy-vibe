@@ -6,7 +6,7 @@ Khi dự án mở rộng từ vài chục dòng code lên hàng chục nghìn d�
 
 ---
 
-## 1. Tại Sao Cần Phân Tầng?
+## 1. Động lực của Cần Phân Tầng
 
 ### 1.1 Gốc Rễ Của Vấn Đề
 
@@ -354,7 +354,7 @@ public class User {
 
 ## 3. DTO: "Phiên Dịch Viên" Giữa Các Tầng
 
-### 3.1 Tại Sao Cần DTO?
+### 3.1 Động lực của Cần DTO
 
 **Vấn đề**: Nếu trả trực tiếp database entity cho frontend:
 
@@ -539,11 +539,11 @@ public class OrderController {
 
 ## 6. Câu Hỏi Thường Gặp
 
-### 6.1 Controller Có Thể Viết Logic Nghiệp Vụ Không?
+### 6.1 Controller Có Thể Viết Logic Nghiệp Vụ Không
 
 Controller không nên viết logic nghiệp vụ, nó chỉ chịu trách nhiệm nhận request và trả về response. Logic nghiệp vụ nên được đóng gói trong tầng Service, lợi ích của việc này là code có thể được tái sử dụng, ví dụ scheduled task hoặc message queue consumer có thể gọi trực tiếp Service mà không cần thông qua HTTP request. Đồng thời, logic nghiệp vụ tập trung ở một nơi, dễ kiểm thử và bảo trì hơn, tránh vấn đề không nhất quán do logic phân tán.
 
-### 6.2 Mô Hình Thiếu Máu (Anemic Model) Và Mô Hình Giàu Máu (Rich Model) Là Gì?
+### 6.2 Mô Hình Thiếu Máu (Anemic Model) Và Mô Hình Giàu Máu (Rich Model): Tổng quan
 
 Mô hình thiếu máu là entity class chỉ chứa thuộc tính và các phương thức getter/setter tương ứng, không chứa bất kỳ logic nghiệp vụ nào, tất cả quy tắc nghiệp vụ được triển khai trong tầng Service. Mô hình này có cấu trúc đơn giản, dễ hiểu, là cách tiếp cận được hầu hết các dự án áp dụng.
 
@@ -551,7 +551,7 @@ Mô hình giàu máu là entity class không chỉ chứa thuộc tính mà còn
 
 Khuyến nghị chọn mô hình phù hợp dựa trên nền tảng kỹ thuật của nhóm và độ phức tạp của dự án, nhưng dù chọn loại nào, cũng nên giữ tính nhất quán, và tầng Domain ít nhất nên chứa các phương thức hành vi nghiệp vụ cơ bản, thay vì hoàn toàn là một cái vỏ rỗng.
 
-### 6.3 Xử Lý Transaction Xuyên Nhiều Service Như Thế Nào?
+### 6.3 Xử Lý Transaction Xuyên Nhiều Service: Cách tiếp cận
 
 Khi một thao tác nghiệp vụ cần xuyên qua nhiều Service, nên sử dụng transaction annotation trong Service tầng trên, trong phương thức này lần lượt gọi nhiều Service tầng dưới. Như vậy có thể đảm bảo tất cả thao tác thực thi trong cùng một transaction context, hoặc tất cả thành công hoặc tất cả thất bại, đảm bảo tính nhất quán của dữ liệu. Cần lưu ý rằng ranh giới transaction nên càng nhỏ càng tốt, chỉ chứa các thao tác cần thiết, tránh giữ lock database quá lâu ảnh hưởng đến hiệu năng concurrent.
 
@@ -761,7 +761,7 @@ Các chiều lựa chọn chi tiết hơn:
 - **Clean Architecture**: "Clean Architecture" của Robert C. Martin — tác phẩm kinh điển đề xuất quy tắc dependency và mô hình bốn tầng đồng tâm
 - **Enterprise Architecture Patterns**: "Patterns of Enterprise Application Architecture" của Martin Fowler — tài liệu tham khảo uy tín về kiến trúc phân tầng và tổ chức logic domain
 
-### 8.5 Làm Sao Để Chọn?
+### 8.5 Cách Để Chọn
 
 **Hãy nhớ nguyên tắc này**: **Kiến trúc phục vụ nghiệp vụ, không phải kiến trúc vì kiến trúc**.
 

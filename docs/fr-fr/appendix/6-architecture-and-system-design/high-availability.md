@@ -1,4 +1,4 @@
-# Haute disponibilité et reprise après sinistre
+# Principes : Haute disponibilité et reprise après sinistre
 
 ::: tip Avant-propos
 **Une indisponibilité d'une minute peut représenter des centaines de milliers de pertes.** La haute disponibilité (High Availability) désigne la capacité d'un système à continuer de fournir un service face aux pannes matérielles, bugs logiciels, problèmes réseau et autres situations anormales. La reprise après sinistre (Disaster Recovery) est la capacité du système à rétablir ses services lorsqu'un sinistre de grande ampleur se produit.
@@ -24,7 +24,7 @@
 
 ---
 
-## 1. Mesure de la disponibilité : que signifient les « nines » ?
+## 1. Mesure de la disponibilité : que signifient les « nines »
 
 La disponibilité se mesure généralement en « nines », selon la formule :
 

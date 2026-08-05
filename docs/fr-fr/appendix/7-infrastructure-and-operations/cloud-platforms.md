@@ -1,4 +1,4 @@
-# Pratique des plateformes cloud
+# Fondamentaux : Pratique des plateformes cloud
 > **Guide d'apprentissage** : Les fournisseurs de services cloud ne sont pas des « sites pour acheter des serveurs », mais des « infrastructures fournissant de la puissance de calcul comme les compagnies d'eau et d'électricité ». Ce chapitre s'articule autour d'une question centrale : **par où commencer pour comprendre et utiliser les services cloud ?** Nous utiliserons des scénarios réels, des analogies vivantes et des étapes pratiques pour vous aider à construire une carte mentale complète des services cloud.
 
 Avant de commencer, nous vous recommandons de vous familiariser avec :
@@ -8,7 +8,7 @@ Avant de commencer, nous vous recommandons de vous familiariser avec :
 
 ---
 
-## 0. Introduction : pourquoi de plus en plus d'entreprises n'achètent plus de serveurs ?
+## 0. Introduction : pourquoi de plus en plus d'entreprises n'achètent plus de serveurs
 
 Imaginez ce scénario :
 
@@ -28,7 +28,7 @@ Autrefois, les entreprises devaient acheter des serveurs, trouver un datacenter,
 
 ---
 
-## 1. Qu'est-ce qu'un fournisseur de services cloud ?
+## 1. Présentation et définition : un fournisseur de services cloud
 
 ### 1.1 Un service de calcul comme l'eau et l'électricité
 
@@ -59,7 +59,7 @@ Cliquez sur les cartes de service ci-dessous pour découvrir les six grandes cat
 
 ---
 
-## 2. Quels sont les principaux fournisseurs de services cloud ?
+## 2. Présentation : sont les principaux fournisseurs de services cloud
 
 ### 2.1 Les trois géants internationaux : AWS, Azure, Google Cloud
 
@@ -81,7 +81,7 @@ Sur le marché chinois des services cloud, trois fournisseurs dominent égalemen
 
 **Huawei Cloud** est la division cloud de Huawei, fondée en 2015. Numéro trois en Chine avec environ 10 % de parts de marché. Solide expertise en matériel, large base de clients gouvernementaux et entreprise, forte capacité en sécurité et conformité, et des puces IA (Ascend) différenciantes. Adapté aux projets gouvernementaux, aux grandes entreprises publiques et à l'industrie manufacturière.
 
-### 2.3 Comment choisir un fournisseur cloud ?
+### 2.3 Comment choisir un fournisseur cloud
 
 Choisir un fournisseur cloud, c'est comme choisir un logement — il faut considérer l'emplacement, le prix, les équipements et bien d'autres facteurs.
 
@@ -97,7 +97,7 @@ Conseil pratique : pour les débutants ou les petits projets, choisissez Alibaba
 
 ---
 
-## 3. Comment utilise-t-on généralement les services cloud ?
+## 3. Approche et mise en œuvre : utilise-t-on généralement les services cloud
 
 ### 3.1 Le flux complet de l'inscription au déploiement
 
@@ -135,7 +135,7 @@ Découvrez les différents types de services de stockage cloud et leurs scénari
 
 ---
 
-## 4. Comment acheter et appeler des API ?
+## 4. Approche et mise en œuvre : acheter et appeler des API
 
 ### 4.1 Les modèles de facturation des services cloud
 

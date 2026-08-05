@@ -1,4 +1,4 @@
-# Ports et localhost
+# Principes : Ports et mécanismes de localhost
 
 > 💡 **Guide d'apprentissage** : Lorsque vous exécutez `npm run dev` et que le terminal affiche `http://localhost:5173`, vous êtes-vous déjà demandé : qu'est-ce que `localhost` ? Que représente `5173` ? Pourquoi obtient-on parfois l'erreur `EADDRINUSE` ? Ce chapitre va expliquer en profondeur ces concepts que vous voyez tous les jours en développement mais que vous n'avez jamais vraiment approfondis.
 
@@ -9,7 +9,7 @@ Avant de commencer, il est conseillé de poser deux « briques de base » :
 
 ---
 
-## 0. Introduction : qu'est-ce que ce fameux `localhost:5173` qu'on voit tous les jours ?
+## 0. Introduction : qu'est-ce que ce fameux `localhost:5173` qu'on voit tous les jours
 
 <DevServerFlowDemo />
 
@@ -29,7 +29,7 @@ Comprendre ces trois éléments vous permettra de résoudre 90 % des problèmes 
 
 ---
 
-## 1. Qu'est-ce qu'un port ? (L'IP est l'immeuble, le port est le numéro d'appartement)
+## 1. Présentation et définition : un port (L'IP est l'immeuble, le port est le numéro d'appartement)
 
 ### 1.1 Une analogie intuitive
 
@@ -66,7 +66,7 @@ Saisissez un numéro de port ou un nom de service pour rechercher, cliquez sur u
 
 ---
 
-## 2. Qu'est-ce que localhost ? (Se chercher soi-même)
+## 2. Qu'est-ce que localhost (Se chercher soi-même)
 
 ### 2.1 Le concept central de « boucle locale »
 
@@ -113,7 +113,7 @@ npm run dev -- --host 0.0.0.0
 
 ## 3. Conflit de ports : le problème le plus courant en environnement de développement
 
-### 3.1 Pourquoi y a-t-il conflit ?
+### 3.1 Pourquoi y a-t-il conflit
 
 **Un port ne peut être écouté que par un seul programme à la fois.** C'est comme un appartement qui ne peut être occupé que par une seule famille.
 
@@ -163,7 +163,7 @@ taskkill /PID <PID> /F
 
 ## 4. La « Same-Origin Policy » et le cross-origin en développement
 
-### 4.1 Qu'est-ce qu'une « origine » ?
+### 4.1 Qu'est-ce qu'une « origine »
 
 Le navigateur a un mécanisme de sécurité appelé **Same-Origin Policy (politique de même origine)** : seules les ressources ayant exactement le même **protocole, nom de domaine et port** sont considérées comme de « même origine ».
 
@@ -173,7 +173,7 @@ Le navigateur a un mécanisme de sécurité appelé **Same-Origin Policy (politi
 | `http://localhost:5173` | `http://localhost:3000` | ❌ Origine différente | **Port différent** (5173 vs 3000) |
 | `http://localhost:5173` | `https://localhost:5173` | ❌ Origine différente | **Protocole différent** (http vs https) |
 
-### 4.2 Pourquoi la séparation frontend/backend rencontre-t-elle forcément le cross-origin ?
+### 4.2 Pourquoi la séparation frontend/backend rencontre-t-elle forcément le cross-origin
 
 Quand l'architecture de votre projet est :
 

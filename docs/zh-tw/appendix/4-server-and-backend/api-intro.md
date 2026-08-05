@@ -1,4 +1,4 @@
-# API 入門：從零理解"程序之間的對话"
+# API 入門導論：從零理解程式之間的對話
 
 ::: tip 🎯 核心問题
 **什么是 API?** 這就像問:餐厅的菜單怎么設計,客人一看就懂?服務员怎么記單,不會出錯?API 解决的就是"程序之間如何對话"的問题。你写代碼的第一天就在用 API,只是你可能没意識到。
@@ -106,7 +106,7 @@ result = response.choices[0].message.content
 
 ---
 
-## 3. HTTP 方法:你是在"問"還是在"做"?
+## 3. HTTP 方法:問與做的類型區分
 
 調用 Web API 時,你需要告诉服務器你想做什么。這就是 HTTP 方法的由來。
 
@@ -143,7 +143,7 @@ result = response.choices[0].message.content
 
 ---
 
-## 4. HTTP 狀態碼:服務器在告诉你什么?
+## 4. HTTP 狀態碼的資訊含義
 
 服務器回複時,會先返回一个狀態碼,告诉你請求是否成功。
 
@@ -170,7 +170,7 @@ result = response.choices[0].message.content
 
 ---
 
-## 5. HTTP vs SDK:自己跑腿還是讓管家代辦?
+## 5與HTTP vs SDK：自己跑腿與讓管家代辦的途徑比較
 
 ### 5.1 兩種調用方式對比
 
@@ -181,7 +181,7 @@ result = response.choices[0].message.content
 | **缺點** | ✗ 需要處理所有细節<br>✗ 代碼冗長易出錯 | ✗ 需要安装依賴<br>✗ 可能有版本問题 |
 | **代碼示例** | `requests.post(url, json=..., headers={...})` | `client.chat.completions.create(...)` |
 
-### 5.2 如何選择?
+### 5.2 選择的方法
 
 | 場景 | 推荐方式 | 原因 |
 | :--- | :--- | :--- |
@@ -196,7 +196,7 @@ result = response.choices[0].message.content
 
 ---
 
-## 6. 如何阅讀 API 文檔?
+## 6. 阅讀 API 文檔的方法
 
 API 文檔就像說明書和菜單的結合體。你不需要從頭讀到尾,只需要學會"查字典"。
 

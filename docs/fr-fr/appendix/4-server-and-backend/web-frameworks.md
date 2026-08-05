@@ -1,11 +1,11 @@
-# L'essence des frameworks Web
+# Principes : Nature des frameworks Web backend
 ::: tip Question centrale
 **Le code est prêt, comment faire en sorte que le monde entier puisse y accéder ?** C'est comme demander : voulez-vous tenir un petit stand au bord de la route ou gérer une chaîne de restaurants internationale ? Le choix de l'architecture backend détermine combien de clients votre "restaurant" peut servir.
 :::
 
 ---
 
-## 1. Pourquoi comprendre l'évolution des architectures ?
+## 1. Motivation et justification : comprendre l'évolution des architectures
 
 Imaginez que vous planifiez un long voyage. Vous pouvez choisir le vélo, la voiture, le train à grande vitesse ou l'avion. Chaque moyen correspond à un scénario : le vélo pour les courtes distances et l'exercice, l'avion pour les traversées de continents.
 
@@ -45,7 +45,7 @@ Lisons-le ligne par ligne :
 
 ## 2. L'ère des serveurs physiques (1990s)
 
-### 2.1 Qu'est-ce qu'un serveur physique ?
+### 2.1 Qu'est-ce qu'un serveur physique
 
 Aux débuts d'Internet, le backend était un **serveur physique** (un véritable ordinateur) placé dans un datacenter.
 
@@ -115,7 +115,7 @@ C'est comme la différence entre votre cuisine personnelle et un restaurant prof
 
 ## 3. L'ère de l'architecture monolithe (2000s)
 
-### 3.1 Qu'est-ce que l'architecture monolithe ?
+### 3.1 Qu'est-ce que l'architecture monolithe
 
 Avec l'apparition de frameworks (Rails / Django / Spring), tout le monde a mis toutes les fonctionnalités dans une seule application.
 
@@ -200,7 +200,7 @@ Si vous apprenez le développement backend, **il est fortement recommandé de co
 
 ## 4. Conteneurisation et microservices (2010s)
 
-### 4.1 Pourquoi les microservices ?
+### 4.1 Pourquoi les microservices
 
 Les douleurs de l'architecture monolithe ont éclaté dans les années 2010 :
 
@@ -318,7 +318,7 @@ Transformer une fonctionnalité de 100 lignes en un service indépendant :
 
 ## 5. L'ère Serverless et Cloud natif (2020s+)
 
-### 5.1 Pourquoi Serverless ?
+### 5.1 Pourquoi Serverless
 
 Les microservices sont performants, mais maintenir des dizaines de petites cuisines reste épuisant. Il faut se soucier de :
 
@@ -345,7 +345,7 @@ Les microservices sont performants, mais maintenir des dizaines de petites cuisi
 **Comme la livraison de repas** : vous n'avez pas besoin de cuisine, il suffit de concevoir le menu ; quelqu'un cuisine pour vous.
 :::
 
-### 5.2 Qu'est-ce que Serverless ?
+### 5.2 Qu'est-ce que Serverless
 
 **Serverless = FaaS + BaaS**
 

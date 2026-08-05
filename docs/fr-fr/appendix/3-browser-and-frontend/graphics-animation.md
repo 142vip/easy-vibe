@@ -1,4 +1,4 @@
-# Graphiques et animation (Canvas et ses amis)
+# Fondamentaux : Graphiques et animation avec Canvas
 
 ::: tip 🎯 Question principale
 Les pages Web d'autrefois ne pouvaient afficher que du texte et des images ternes. Mais si vous souhaitez creer un casse-briques, des effets dynamiques eblouissants ou des rapports de donnees librement glissables, les simples `<div>` sont loin de suffire. C'est la raison pour laquelle **Canvas (canevas)** est ne.
@@ -8,7 +8,7 @@ Ce guide vous accompagnera depuis le trace de votre premiere ligne jusqu'a la cr
 
 ---
 
-## 1. Qu'est-ce que Canvas ?
+## 1. Qu'est-ce que Canvas
 
 Si les pages Web d'autrefois etaient des modeles statiques assembles avec des **briques Lego** (balises HTML), alors la balise HTML5 `<canvas>` est comme si l'on vous tendait une enorme **feuille blanche numerique** et un **pinceau** controle par du code, puis que l'on vous laissait libre de creer.
 
@@ -33,7 +33,7 @@ Dans le monde du dessin frontend, Canvas a un rival de toujours appele **SVG**. 
 
 ## 2. Premier trace : comprendre le systeme de coordonnees contre-intuitif
 
-### 2.1 Pourquoi le haut et le bas de cette feuille sont-ils inverses ?
+### 2.1 Pourquoi le haut et le bas de cette feuille sont-ils inverses
 
 Lorsque vous vous appretez a tracer, vous devez d'abord comprendre que la regle dans Canvas est a l'envers. Dans le systeme de coordonnees traditionnel des cours de mathematiques, le point zero central est au milieu et les valeurs augmentent vers le haut. Mais dans le domaine de l'affichage sur ecran d'ordinateur, sur presque tous les appareils, `` l'origine (0, 0) '' est situee dans le **coin superieur gauche de l'ecran**. Vers la droite, l'axe X augmente sans probleme, mais **vers le bas, l'axe Y augmente**.
 
@@ -81,7 +81,7 @@ Grace a la `` persistance retinienne '' naturelle de l'oeil humain, dans le cycl
 
 ---
 
-## 4. L'aveugle qui tate l'elephant : comment gerer les clics interactifs dans Canvas ?
+## 4. L'aveugle qui tate l'elephant : comment gerer les clics interactifs dans Canvas
 
 Parce que la toile Canvas n'est aux yeux du navigateur qu'un `` tissu de peinture '' sans aucune structure. Supposons que vous dessiniez un monstre avec `arc()` sur la toile et que vous souhaitiez implimenter `` cliquer sur le monstre reduit les points de vie '' — vous ne pouvez **absolument pas** utiliser le `document.getElementById` traditionnel pour obtenir ce monstre. Car dans la structure HTML, il n'y a que la balise `<canvas>` rigide de 600 pixels de large.
 
@@ -116,7 +116,7 @@ Votre navigateur peut en un instant devenir une usine produisant des feux d'arti
 
 ---
 
-## 6. Preserver la gloire du FPS : comment faire face a un CPU surchauffe ?
+## 6. Preserver la gloire du FPS : comment faire face a un CPU surchauffe
 
 Faire calculer et redessiner des milliers d'objets 60 fois par seconde est extremement gourmand en performances. Sans methode, le ventilateur de votre ordinateur sera bientot a plein regime.
 

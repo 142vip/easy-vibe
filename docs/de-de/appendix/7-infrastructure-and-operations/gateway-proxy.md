@@ -1,11 +1,11 @@
-# Gateway und Reverse Proxy
+# Gateway und Proxy: Verkehrslenkung
 ::: tip Kernfrage
 **Wie leitet man in einer hochparallelen Internetarchitektur Traffic sicher und effizient an die richtigen Dienste weiter?** Reverse Proxy loest das Problem der "Traffic-Verteilung", API-Gateway das Problem der "Anfrageverarbeitung". Dieser Artikel verwendet reale Beispiele (Empfang, Sicherheitsysteme, intelligentes Routing), um die Designphilosophie und Engineering-Praxis von Gateways zu erklaeren.
 :::
 
 ---
 
-## 1. Warum braucht man ein "Gateway"?
+## 1. Warum braucht man ein "Gateway"
 
 ### 1.1 Ein reales Beispiel: Die Architektur-Evolution eines E-Commerce-Unternehmens
 
@@ -66,7 +66,7 @@ Stell dir vor, du besuchst ein grosses Unternehmen:
 
 ---
 
-## 2. Was ist ein Reverse Proxy?
+## 2. Was ist ein Reverse Proxy
 
 ### 2.1 Forward Proxy vs. Reverse Proxy
 
@@ -136,7 +136,7 @@ HTTPS-Client -> Nginx (Verschluesselung/Entschluesselung) -> HTTP-Backend-Dienst
 
 ---
 
-## 3. Nginx: Warum kann es Millionen parallele Verbindungen bewaeltigen?
+## 3. Nginx: Motivation von kann es Millionen parallele Verbindungen bewaeltigen
 
 ### 3.1 Master-Worker-Prozessmodell
 
@@ -187,9 +187,9 @@ Das ist das Kerngeheimnis von Nginx's hoeher Performance:
 
 ---
 
-## 4. Was ist ein API-Gateway?
+## 4. Was ist ein API-Gateway
 
-### 4.1 Warum braucht man ein API-Gateway?
+### 4.1 Warum braucht man ein API-Gateway
 
 **Stell dir ein System ohne Gateway vor:**
 
@@ -277,7 +277,7 @@ server {
 
 ---
 
-## 6. Gateway-Sicherheit: Wie bewacht man das System-Tor?
+## 6. Gateway-Sicherheit: Ansatz für bewacht man das System-Tor
 
 ### 6.1 Authentifizierung und Autorisierung
 
@@ -311,7 +311,7 @@ Wie im Unternehmen: Der Empfang authentifiziert deine Identitaet (Ausweis), aber
 
 ---
 
-## 7. Rate-Limiting und Circuit-Breaking: Wie verhindert man, dass das System von einer "Traffic-Flut" weggespuelt wird?
+## 7. Rate-Limiting und Circuit-Breaking: Ansatz für verhindert man, dass das System von einer "Traffic-Flut" weggespuelt wird
 
 ### 7.1 Vergleich von Rate-Limiting-Algorithmen
 

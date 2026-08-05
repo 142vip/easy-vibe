@@ -1,4 +1,4 @@
-# Calidad del código y refactorización
+# Introducción a la calidad del código y la refactorización
 
 ::: tip Prefacio
 **¿Basta con que el código funcione?** Probablemente has escrito código que cumple su función, pero dos semanas después ni tú mismo lo entiendes. O alguien del equipo se fue y dejó un código que "solo Dios y él podían entender".
@@ -39,7 +39,7 @@ Martin Fowler dijo en su libro *Refactoring*: **"Cualquier imbécil puede escrib
 
 ## 1. Malos olores del código: Identificar problemas comunes
 
-### 1.1 ¿Qué son los malos olores del código?
+### 1.1 Introducción a malos olores del código
 
 El concepto de "Code Smell" (mal olor del código) fue propuesto por Kent Beck. Se refiere a características del código que **aunque no son bugs, sugieren problemas de diseño más profundos**. Es como cuando hay un olor raro en una habitación — no te enfermará inmediatamente, pero indica que algo necesita limpieza.
 
@@ -66,7 +66,7 @@ Los malos olores no son "errores", son "señales". Te indican que el diseño aqu
 
 ## 2. Técnicas de refactorización: Mejorar el código de forma segura
 
-### 2.1 ¿Qué es la refactorización?
+### 2.1 Introducción a refactorización
 
 La refactorización (Refactoring) tiene una definición muy precisa: **mejorar la estructura interna del código sin cambiar su comportamiento externo.**
 
@@ -150,7 +150,7 @@ El mayor riesgo de la refactorización es "introducir bugs mientras se modifica"
 
 ## 3. Revisión de código: Garantía de calidad en la colaboración del equipo
 
-### 3.1 ¿Por qué es necesaria la revisión de código?
+### 3.1 Motivación de necesaria la revisión de código
 
 La revisión de código (Code Review) es uno de los métodos más efectivos de garantía de calidad en un equipo. Su valor no reside solo en encontrar bugs, sino también en:
 
@@ -159,7 +159,7 @@ La revisión de código (Code Review) es uno de los métodos más efectivos de g
 - **Detectar problemas de diseño temprano**: Lo que es más difícil de corregir que un bug es una mala decisión arquitectónica
 - **Aprender mutuamente**: Ver el código de otros es un atajo para mejorar las habilidades de programación
 
-### 3.2 ¿Qué revisar?
+### 3.2 Qué revisar
 
 | Dimensión | Puntos de atención |
 |------|--------|

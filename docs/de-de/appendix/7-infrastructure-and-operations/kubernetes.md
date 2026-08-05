@@ -1,4 +1,4 @@
-# Kubernetes-Orchestrierung
+# Kubernetes: Orchestrierung
 
 ::: tip Vorwort
 **Docker loest das "Verpackungsproblem", Kubernetes loest das "Verwaltungsproblem".** Wenn du dutzende oder hunderte Container bereitstellen, skalieren und bei Ausfaellen wiederherstellen musst, ist manuelle Verwaltung unpraktikabel. Kubernetes (K8s) ist das "Betriebssystem" fuer Container - es automatisiert Bereitstellung, Skalierung und Betrieb containerisierter Anwendungen.
@@ -24,7 +24,7 @@ Nach diesem Kapitel wirst du Folgendes koennen:
 
 ---
 
-## 1. Warum Kubernetes?
+## 1. Warum Kubernetes
 
 Docker macht das Verpacken und Ausfuehren einzelner Container einfach. Aber wenn du vor folgenden Szenarien stehst, reicht manuelle Verwaltung nicht mehr aus:
 

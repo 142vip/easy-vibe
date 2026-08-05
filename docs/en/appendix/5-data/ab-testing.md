@@ -1,4 +1,4 @@
-# A/B Testing: Making Decisions with Data
+# Principles of A/B Testing: Decision-Making with Data
 
 ::: tip Core Question
 **How do you scientifically validate the impact of product changes?**
@@ -39,7 +39,7 @@ You can observe how the system splits traffic through the demo below:
 
 <ABTestingDemo tab="traffic" />
 
-### 1.1 Why is Random Assignment So Important?
+### 1.1 Motivation for Randoming Assignment So Important
 
 Only with 100% randomness can we maximally eliminate differences caused by all other characteristics. If we perform a perfectly random split on a sufficiently large sample, the proportion of young users, income levels, and geographic distribution between Group A and Group B should be remarkably consistent.
 

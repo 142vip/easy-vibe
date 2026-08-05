@@ -1,4 +1,4 @@
-# Grafik und Animation (Canvas und seine Freunde)
+# Grafik und Animation: Rendering-Techniken
 
 ::: tip 🎯 Kernfrage
 Fruehere Webseiten konnten nur trockene Texte und Bilder anzeigen. Wenn Sie aber ein Breakout-Spiel, brillante dynamische Effekte oder frei ziehbare Datenberichte erstellen mochten, reicht `<div>` allein bei weitem nicht aus. Deshalb wurde **Canvas (Leinwand)** geboren.
@@ -8,7 +8,7 @@ Dieser Guide fuhrt Sie vom Zeichnen der ersten Linie bis hin zur eigenhandigen E
 
 ---
 
-## 1. Was ist Canvas?
+## 1. Was ist Canvas
 
 Wenn fruehe Webseiten statische Modelle aus **Legosteinen** (HTML-Tags) waren, dann ist das HTML5-`<canvas>`-Tag, als wuerde man Ihnen ein riesiges **digitales Blankopapier** ueberreichen und Ihnen einen per Code gesteuerten **Pinsel** in die Hand druecken — der Rest liegt ganz bei Ihnen.
 
@@ -33,7 +33,7 @@ In der Frontend-Grafikwelt hat Canvas einen Erzrivalen namens **SVG**. Sie repra
 
 ## 2. Der erste Strich: Das intuitionwidrige Koordinatensystem verstehen
 
-### 2.1 Warum ist oben und unten bei diesem Papier vertauscht?
+### 2.1 Warum ist oben und unten bei diesem Papier vertauscht
 
 Bevor Sie den Pinsel ansetzen, muessen Sie verstehen, dass das Lineal in Canvas umgekehrt ist. Im traditionellen Mathe-Koordinatensystem liegt der Nullpunkt in der Mitte, und nach oben wird es groesser. Aber im Bereich der Computerbildschirmanzeige liegt der „Ursprung (0, 0)" bei fast allen Geraeten in der **oberen linken Ecke des Bildschirms**. Nach rechts wird die X-Achse groesser — kein Problem — aber **nach unten wird die Y-Achse groesser**.
 
@@ -62,7 +62,7 @@ Da Canvas eine reine Bitmap-Leinwand ist, gilt „was gezeichnet ist, ist gezeic
 
 ---
 
-## 3. Das Daumenkino: Wie man Bewegung butterweich hinbekommt
+## 3. Das Daumenkino: Ansatz für man Bewegung butterweich hinbekommt
 
 Da Canvas einmal ausgefuellt zu permanenten Pixeln wird, wie werden dann die auf den ganzen Bildschirm verteilten Charaktere in verschiedenen HTML5-Browsergames erzeugt?
 
@@ -81,7 +81,7 @@ Da das menschliche Auge von Natur aus einen „Nachbildeffekt" hat, sehen Sie be
 
 ---
 
-## 4. Blindenfuehlung: Wie macht man Klick-Interaktion in Canvas?
+## 4. Blindenfuehlung: Ansatz für macht man Klick-Interaktion in Canvas
 
 Da die Canvas-Leinwand fuer den Browser nur ein strukturoses „Farbtuch" ist, koennen Sie bei einem auf der Leinwand mit `arc()` gezeichneten Monster nicht auf traditionellem Weg wie mit `document.getElementById` darauf zugreifen, um „Klick auf Monster zieht Lebenspunkte ab" zu implementieren. In der HTML-Struktur gibt es nur das starre `<canvas>`-Tag mit 600 Pixel Breite.
 
@@ -116,7 +116,7 @@ Ihr Browser kann im Handumdrehen zu einer Fabrik werden, die Feuerwerk, Schneest
 
 ---
 
-## 6. FPS-Ehre wahren: Wie umgeht man den ueberhitzten CPU?
+## 6. FPS-Ehre wahren: Ansatz für umgeht man den ueberhitzten CPU
 
 Tausende Objekte sechzigmal pro Sekunde zu berechnen und neu zu zeichnen, ist extrem leistungsintensiv. Ohne Systematik wird Ihr Computerluefter bald durchdrehen.
 

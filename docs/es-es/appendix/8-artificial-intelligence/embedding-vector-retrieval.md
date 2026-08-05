@@ -1,4 +1,4 @@
-# Embedding y búsqueda vectorial
+# Principios de Embedding y búsqueda vectorial
 
 ::: tip Prólogo
 **¿Cómo entiende un ordenador que "el gato y el perro se parecen, pero no se parecen a un coche"?** Para los humanos es sentido común, pero para un ordenador "gato", "perro" y "coche" no son más que tres cadenas de texto sin relación alguna. La tecnología de Embedding es la clave para resolver este problema: convierte el texto en vectores numéricos, permitiendo que el ordenador también entienda la "cercanía y lejanía" semántica.
@@ -63,7 +63,7 @@ Imagina un sistema de coordenadas bidimensional. Colocamos "gato" en (0.2, 0.7),
 
 ---
 
-## 2. Cálculo de similitud: ¿cómo de "cerca" están los vectores?
+## 2. Cálculo de similitud: Enfoque de "cerca" están los vectores
 
 Con la representación vectorial, la siguiente pregunta natural es: **¿cómo medir cuán similares son dos vectores?** Es como medir en un mapa cómo de cerca están dos ciudades: puedes medir la distancia en línea recta o ver si apuntan en la misma dirección.
 
@@ -83,7 +83,7 @@ Con la representación vectorial, la siguiente pregunta natural es: **¿cómo me
 
 ---
 
-## 3. Índices vectoriales: ¿cómo buscar en milisegundos entre millones de vectores?
+## 3. Índices vectoriales: Enfoque de buscar en milisegundos entre millones de vectores
 
 Supón que tienes 1 millón de documentos, cada uno convertido en un vector de 1536 dimensiones. Un usuario hace una pregunta y necesitas encontrar los 10 más similares. El método más directo es calcular la similitud uno por uno, pero eso significa hacer 1 millón de operaciones vectoriales de 1536 dimensiones: demasiado lento.
 

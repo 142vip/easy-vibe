@@ -24,7 +24,7 @@ Sau khi học xong chương này, bạn sẽ có được:
 
 ---
 
-## 0. Toàn cảnh: Tại sao mô hình lớn cần "tra cứu tài liệu"?
+## 0. Toàn cảnh: Động lực của mô hình lớn cần "tra cứu tài liệu"
 
 Hãy tưởng tượng bạn là một giáo sư uyên bác, đã đọc vô số cuốn sách. Nhưng nếu có người hỏi bạn "dữ liệu bán hàng hôm qua của công ty là bao nhiêu", bạn chắc chắn không thể trả lời — bởi vì những thông tin này không có trong những cuốn sách bạn đã đọc.
 
@@ -83,7 +83,7 @@ Không có chiến lược phân đoạn "tốt nhất", chỉ có chiến lư�
 
 ---
 
-## 3. Kỹ thuật truy xuất: Làm sao tìm được nội dung liên quan nhất?
+## 3. Kỹ thuật truy xuất: Cách tìm được nội dung liên quan nhất
 
 Sau khi phân đoạn xong, câu hỏi then chốt tiếp theo là: **người dùng đặt một câu hỏi, làm sao tìm được vài đoạn liên quan nhất từ hàng nghìn đoạn tài liệu?**
 
@@ -117,7 +117,7 @@ Công nghệ RAG trong vòng hai năm ngắn ngủi đã trải qua ba thế h�
 
 ---
 
-## 5. RAG vs Fine-tune: Nên chọn cái nào?
+## 5. RAG vs Fine-tune: Nên chọn cái nào
 
 Khi bạn muốn mô hình lớn nắm vững kiến thức trong một lĩnh vực cụ thể, thường có hai con đường: RAG và Fine-tune (tinh chỉnh). Chúng không loại trừ lẫn nhau, mà bổ trợ cho nhau.
 

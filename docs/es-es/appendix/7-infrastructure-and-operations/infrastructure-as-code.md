@@ -1,4 +1,4 @@
-# Infraestructura como Código
+# Principios de la infraestructura como código
 
 ::: tip Prefacio
 **¿Alguna vez has vivido esta pesadilla: el servidor de producción se cae y nadie recuerda cómo se configuró originalmente?** Iniciar sesión manualmente en el servidor, escribir comandos de memoria, rezar para no equivocarse — este es el día a día de las operaciones tradicionales. La Infraestructura como Código (Infrastructure as Code, IaC) ha cambiado todo esto radicalmente: usar código para definir y gestionar la infraestructura, haciendo que la configuración de servidores sea controlable por versiones, reproducible y auditable, igual que el software.
@@ -24,7 +24,7 @@ Después de completar este capítulo, obtendrás:
 
 ---
 
-## 0. Panorama general: ¿por qué la infraestructura también necesita "código fuente"?
+## 0. Panorama general: Motivación de infraestructura también necesita "código fuente"
 
 Imagina que eres un chef. Si cocinas cada plato a ojo, hoy una cucharada de sal, mañana dos, el sabor nunca será consistente. Pero si escribes la receta, con la cantidad exacta de cada ingrediente en gramos, cualquiera podrá reproducir el mismo sabor.
 

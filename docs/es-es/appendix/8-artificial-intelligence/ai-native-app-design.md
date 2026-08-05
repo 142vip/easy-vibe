@@ -1,4 +1,4 @@
-# Diseño de aplicaciones nativas de IA
+# Introducción al diseño de aplicaciones nativas de IA
 
 ::: tip Prólogo
 **¿Por qué algunos productos de IA impresionan mientras que otros son solo un "wrapper de ChatGPT"?** La diferencia no está en la potencia del modelo utilizado, sino en si el producto se ha diseñado desde cero en torno a las características de la IA. Las aplicaciones nativas de IA no consisten en "añadir un chat" a una aplicación tradicional, sino en repensar por completo la interacción del usuario, la arquitectura del sistema y la lógica del producto con un nuevo paradigma.

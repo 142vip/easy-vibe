@@ -1,4 +1,4 @@
-# Docker Containerization
+# An Introduction to Docker Containerization
 
 ::: tip Foreword
 **"It works on my machine" is the most classic developer excuse, and Docker makes that excuse disappear completely.** Containerization technology packages an application and all its dependencies into a standardized unit, ensuring consistent execution across any environment. It is the cornerstone of modern software delivery.
@@ -24,13 +24,13 @@ After completing this chapter, you will gain:
 
 ---
 
-## 1. Why Containers?
+## 1. Motivation for Containersing
 
 Before containers, deploying an application required manually installing runtimes, configuring environment variables, and handling dependency conflicts on servers. Differences between environments (development, testing, production) were breeding grounds for bugs.
 
 <DockerArchitectureDemo />
 
-### What Problems Do Containers Solve?
+### What Problems Do Containers Solve
 
 | Problem | Traditional Approach | Container Approach |
 |---------|---------------------|-------------------|

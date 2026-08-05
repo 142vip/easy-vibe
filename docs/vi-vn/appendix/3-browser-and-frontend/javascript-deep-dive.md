@@ -1,4 +1,4 @@
-# Hướng dẫn chuyên sâu JavaScript
+# JavaScript: Nguyên tắc thực thi và Runtime
 
 ::: tip Lời nói đầu
 Bạn đã học HTML và CSS, có thể tạo ra những trang web đẹp mắt. Nhưng bạn có thể nhận thấy: nhấn nút không có phản hồi, điền form không gửi được, trang web giống như một bức ảnh "tĩnh".
@@ -26,7 +26,7 @@ Mỗi chương đều bắt đầu từ "nhận diện code", không cần bạn
 
 ---
 
-## 1. JavaScript là gì
+## 1. JavaScript: Tổng quan
 
 ::: tip 🤔 Câu hỏi cốt lõi
 **Tại sao trang web cần JavaScript?** HTML và CSS đã giúp trang web có nội dung và kiểu dáng, tại sao còn phải học một ngôn ngữ mới?
@@ -67,7 +67,7 @@ Mỗi chương đều bắt đầu từ "nhận diện code", không cần bạn
 | **CSS** | Làn da | Định nghĩa giao diện và kiểu dáng trang web |
 | **JavaScript** | Cơ bắp và hệ thần kinh | Giúp trang web phản hồi, tương tác và suy nghĩ |
 
-### 1.2 Tại sao vibecoding cũng cần hiểu JavaScript?
+### 1.2 Động lực của hiểu sâu JavaScript
 
 ::: warning Câu chuyện của một developer mới học JS
 Một developer mới học JavaScript đã dùng AI để làm ứng dụng "bộ đếm": nhấn nút, số tăng thêm 1. Code AI tạo ra hoạt động bình thường.
@@ -99,8 +99,8 @@ const button = document.querySelector('#changeBtn')
 
 // Thêm sự kiện nhấn cho nút
 button.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % colors.length
-  document.body.style.backgroundColor = colors[currentIndex]
+ currentIndex = (currentIndex + 1) % colors.length
+ document.body.style.backgroundColor = colors[currentIndex]
 })
 ```
 
@@ -131,8 +131,8 @@ Bạn không cần hiểu từng dòng code ngay bây giờ. Chỉ cần nhớ: 
 **Biến giống như một chiếc hộp có nhãn** — bạn có thể bỏ dữ liệu vào, sau này thông qua nhãn để lấy ra dùng.
 
 ```javascript
-const name = "张三"   // Tên sẽ không thay đổi, dùng const
-let age = 25          // Tuổi có thể thay đổi, dùng let
+const name = "张三" // Tên sẽ không thay đổi, dùng const
+let age = 25 // Tuổi có thể thay đổi, dùng let
 ```
 
 **Tại sao phải phân biệt const và let?**
@@ -141,7 +141,7 @@ Hãy tưởng tượng: số chứng minh nhân dân (const) của bạn cả đ
 
 | Từ khóa | Có thể sửa không | Tình huống sử dụng | Ví dụ |
 |--------|---------|----------|------|
-| `const` | ❌ Không | Dữ liệu không thay đổi | Số CMND, mục cấu hình, danh sách màu |
+| `const` | ❌ Không | Dữ liệu không thay đổi | Số định danh duy nhất, mục cấu hình, danh sách màu |
 | `let` | ✅ Có | Dữ liệu có thể thay đổi | Bộ đếm, tùy chọn đang chọn, người dùng nhập |
 
 ::: details 🔍 Xem một ví dụ cụ thể
@@ -153,13 +153,13 @@ const APP_NAME = "TodoList"
 
 // Dùng let: những giá trị này có thể thay đổi
 let count = 0
-count = 1  // ✅ Có thể sửa
+count = 1 // ✅ Có thể sửa
 
-count = count + 1  // ✅ Có thể tính toán dựa trên giá trị hiện tại
+count = count + 1 // ✅ Có thể tính toán dựa trên giá trị hiện tại
 
 // Nếu dùng const thì sao?
 const fixedCount = 0
-fixedCount = 1  // ❌ Báo lỗi! const không thể gán lại
+fixedCount = 1 // ❌ Báo lỗi! const không thể gán lại
 ```
 :::
 
@@ -206,14 +206,14 @@ const message = `Tôi tên là ${name}, năm nay ${age} tuổi`
 
 ```javascript
 const user = {
-  name: "张三",
-  age: 25,
-  isVIP: true
+ name: "张三",
+ age: 25,
+ isVIP: true
 }
 
 // Dùng dấu chấm để truy cập thuộc tính
-console.log(user.name)    // "张三"
-console.log(user.age)     // 25
+console.log(user.name) // "张三"
+console.log(user.age) // 25
 ```
 
 **Array = một nhóm dữ liệu có thứ tự** (giống như một danh sách)
@@ -222,8 +222,8 @@ console.log(user.age)     // 25
 const colors = ['đỏ', 'xanh lá', 'xanh dương']
 
 // Dùng chỉ mục để truy cập (bắt đầu từ 0)
-console.log(colors[0])  // "đỏ"
-console.log(colors[1])  // "xanh lá"
+console.log(colors[0]) // "đỏ"
+console.log(colors[1]) // "xanh lá"
 ```
 
 **Cấu trúc lồng nhau: object chứa array, array chứa object**
@@ -232,13 +232,13 @@ console.log(colors[1])  // "xanh lá"
 
 ```javascript
 const todos = [
-  { id: 1, text: "Học JavaScript", done: false },
-  { id: 2, text: "Làm dự án", done: true },
-  { id: 3, text: "Viết tài liệu", done: false }
+ { id: 1, text: "Học JavaScript", done: false },
+ { id: 2, text: "Làm dự án", done: true },
+ { id: 3, text: "Viết tài liệu", done: false }
 ]
 
 // Truy cập: trước tiên lấy phần tử thứ 0 của mảng, rồi lấy thuộc tính text của nó
-console.log(todos[0].text)  // "Học JavaScript"
+console.log(todos[0].text) // "Học JavaScript"
 ```
 
 ::: info 💡 Kỹ thuật nhận diện
@@ -255,7 +255,7 @@ console.log(todos[0].text)  // "Học JavaScript"
 
 ```javascript
 let a = 10
-let b = a      // b nhận được bản sao của a
+let b = a // b nhận được bản sao của a
 b = 20
 console.log(a) // 10（a không bị ảnh hưởng）
 ```
@@ -264,8 +264,8 @@ console.log(a) // 10（a không bị ảnh hưởng）
 
 ```javascript
 let user1 = { name: "张三" }
-let user2 = user1      // user2 trỏ đến cùng một object
-user2.name = "李四"     // sửa user2 sẽ ảnh hưởng đến user1
+let user2 = user1 // user2 trỏ đến cùng một object
+user2.name = "李四" // sửa user2 sẽ ảnh hưởng đến user1
 console.log(user1.name) // "李四"（user1 cũng thay đổi!）
 ```
 
@@ -276,10 +276,10 @@ Trong React/Vue, sửa trực tiếp dữ liệu sẽ khiến giao diện không
 ```javascript
 // Dùng spread operator để tạo bản sao
 const arr1 = [1, 2, 3]
-const arr2 = [...arr1]     // Tạo mảng mới
+const arr2 = [...arr1] // Tạo mảng mới
 arr2.push(4)
-console.log(arr1)          // [1, 2, 3]（không bị ảnh hưởng）
-console.log(arr2)          // [1, 2, 3, 4]
+console.log(arr1) // [1, 2, 3]（không bị ảnh hưởng）
+console.log(arr2) // [1, 2, 3, 4]
 ```
 
 👇 **Thử thực hành**: Quan sát sự thay đổi của dữ liệu gốc khi sửa bản sao
@@ -309,7 +309,7 @@ const { name, age } = user
 ```javascript
 // Sao chép mảng và thêm phần tử mới
 const arr1 = [1, 2, 3]
-const arr2 = [...arr1, 4, 5]  // [1, 2, 3, 4, 5]
+const arr2 = [...arr1, 4, 5] // [1, 2, 3, 4, 5]
 
 // Sao chép object và thêm thuộc tính mới
 const user1 = { name: "张三", age: 25 }
@@ -339,9 +339,9 @@ const user2 = { ...user1, city: "北京" }
 const age = 18
 
 if (age >= 18) {
-  console.log("Người lớn")
+ console.log("Người lớn")
 } else {
-  console.log("Vị thành niên")
+ console.log("Vị thành niên")
 }
 ```
 
@@ -351,9 +351,9 @@ if (age >= 18) {
 // Cách viết đầy đủ（4 dòng）
 let message
 if (age >= 18) {
-  message = "Người lớn"
+ message = "Người lớn"
 } else {
-  message = "Vị thành niên"
+ message = "Vị thành niên"
 }
 
 // Toán tử ba ngôi（1 dòng）
@@ -369,7 +369,7 @@ isLoggedIn && <UserPanel />
 
 // Tương đương với
 if (isLoggedIn) {
-  return <UserPanel />
+ return <UserPanel />
 }
 ```
 
@@ -390,12 +390,12 @@ if (isLoggedIn) {
 ```javascript
 // Định nghĩa hàm（viết công thức）
 function greet(name) {
-  return "Xin chào " + name
+ return "Xin chào " + name
 }
 
 // Gọi hàm（nấu ăn theo công thức）
-console.log(greet("张三"))  // "Xin chào 张三"
-console.log(greet("李四"))  // "Xin chào 李四"
+console.log(greet("张三")) // "Xin chào 张三"
+console.log(greet("李四")) // "Xin chào 李四"
 ```
 
 **Ba cách viết, nhận diện trong nháy mắt:**
@@ -403,12 +403,12 @@ console.log(greet("李四"))  // "Xin chào 李四"
 ```javascript
 // 1. Khai báo function（cách viết truyền thống）
 function greet(name) {
-  return "Xin chào " + name
+ return "Xin chào " + name
 }
 
 // 2. Hàm mũi tên（dùng nhiều nhất trong code AI）
 const greet = (name) => {
-  return "Xin chào " + name
+ return "Xin chào " + name
 }
 
 // 3. Hàm mũi tên viết tắt（chỉ khi có một dòng）
@@ -431,8 +431,8 @@ Trong React/Vue, hầu như mỗi lần render danh sách đều dùng đến c�
 
 ```javascript
 const todos = [
-  { id: 1, text: "Học tập", done: false },
-  { id: 2, text: "Làm việc", done: true }
+ { id: 1, text: "Học tập", done: false },
+ { id: 2, text: "Làm việc", done: true }
 ]
 
 // .map(): biến mỗi phần tử của mảng thành một thứ khác
@@ -462,14 +462,14 @@ const found = todos.find(todo => todo.id === 1)
 - Nhưng người trong phòng có thể nhìn thấy đồ ở hành lang (scope bên ngoài)
 
 ```javascript
-const global = "Biến toàn cục"  // Đồ ở hành lang
+const global = "Biến toàn cục" // Đồ ở hành lang
 
 function room() {
-  const local = "Đồ trong phòng"  // Đồ trong phòng
-  console.log(global)  // ✅ Có thể nhìn thấy hành lang
+ const local = "Đồ trong phòng" // Đồ trong phòng
+ console.log(global) // ✅ Có thể nhìn thấy hành lang
 }
 
-console.log(local)  // ❌ Báo lỗi! Bên ngoài không nhìn thấy đồ trong phòng
+console.log(local) // ❌ Báo lỗi! Bên ngoài không nhìn thấy đồ trong phòng
 ```
 
 **Trực giác cốt lõi:** Code viết ở đâu, quyết định nó có thể nhìn thấy biến gì.
@@ -484,17 +484,17 @@ console.log(local)  // ❌ Báo lỗi! Bên ngoài không nhìn thấy đồ tro
 
 ```javascript
 function setupCounter() {
-  let count = 0  // Biến này ở bên trong hàm
+ let count = 0 // Biến này ở bên trong hàm
 
-  return {
-    add: () => { count++; return count },
-    getCount: () => count
-  }
+ return {
+ add: () => { count++; return count },
+ getCount: () => count
+ }
 }
 
 const counter = setupCounter()
-console.log(counter.add())      // 1
-console.log(counter.add())      // 2
+console.log(counter.add()) // 1
+console.log(counter.add()) // 2
 console.log(counter.getCount()) // 2
 ```
 
@@ -512,24 +512,24 @@ console.log(counter.getCount()) // 2
 
 ```javascript
 const user = {
-  name: "张三",
-  sayHi() {
-    console.log("Xin chào, tôi là " + this.name)  // this trỏ đến user
-  }
+ name: "张三",
+ sayHi() {
+ console.log("Xin chào, tôi là " + this.name) // this trỏ đến user
+ }
 }
-user.sayHi()  // "Xin chào, tôi là 张三"
+user.sayHi() // "Xin chào, tôi là 张三"
 ```
 
 **Tình huống 2: Trong event listener, this trỏ đến phần tử kích hoạt sự kiện**
 
 ```javascript
 button.addEventListener('click', function() {
-  console.log(this)  // this trỏ đến phần tử button
+ console.log(this) // this trỏ đến phần tử button
 })
 
 // Nhưng hàm mũi tên không thay đổi this
 button.addEventListener('click', () => {
-  console.log(this)  // this trỏ đến this của bên ngoài
+ console.log(this) // this trỏ đến this của bên ngoài
 })
 ```
 
@@ -551,14 +551,14 @@ Trang web trong mắt JavaScript là một "cây", mỗi thẻ HTML là một "n
 
 ```html
 <html>
-  <body>
-    <h1>Tiêu đề</h1>
-    <p>Đoạn văn</p>
-    <ul>
-      <li>Mục 1</li>
-      <li>Mục 2</li>
-    </ul>
-  </body>
+ <body>
+ <h1>Tiêu đề</h1>
+ <p>Đoạn văn</p>
+ <ul>
+ <li>Mục 1</li>
+ <li>Mục 2</li>
+ </ul>
+ </body>
 </html>
 ```
 
@@ -574,8 +574,8 @@ Trang web trong mắt JavaScript là một "cây", mỗi thẻ HTML là một "n
 
 ```javascript
 // Tìm theo CSS selector（dùng nhiều nhất）
-const title = document.querySelector('h1')      // Tìm thẻ h1 đầu tiên
-const button = document.querySelector('#btn')   // Tìm phần tử có id="btn"
+const title = document.querySelector('h1') // Tìm thẻ h1 đầu tiên
+const button = document.querySelector('#btn') // Tìm phần tử có id="btn"
 const items = document.querySelectorAll('.item') // Tìm tất cả phần tử có class="item"
 ```
 
@@ -590,9 +590,9 @@ element.style.color = "red"
 element.style.fontSize = "20px"
 
 // Đổi CSS class
-element.classList.add('active')      // Thêm class
-element.classList.remove('hidden')   // Xóa class
-element.classList.toggle('open')     // Chuyển đổi class（có thì xóa, không có thì thêm）
+element.classList.add('active') // Thêm class
+element.classList.remove('hidden') // Xóa class
+element.classList.toggle('open') // Chuyển đổi class（có thì xóa, không có thì thêm）
 ```
 
 ::: info 💡 Kỹ thuật nhận diện
@@ -608,7 +608,7 @@ element.classList.toggle('open')     // Chuyển đổi class（có thì xóa, k
 
 ```javascript
 button.addEventListener('click', () => {
-  console.log("Nút đã được nhấn")
+ console.log("Nút đã được nhấn")
 })
 ```
 
@@ -625,8 +625,8 @@ button.addEventListener('click', () => {
 
 ```javascript
 input.addEventListener('input', (e) => {
-  console.log(e.target.value)  // Lấy giá trị của ô nhập
-  e.preventDefault()            // Ngăn hành vi mặc định（ví dụ form gửi xong thì refresh trang）
+ console.log(e.target.value) // Lấy giá trị của ô nhập
+ e.preventDefault() // Ngăn hành vi mặc định（ví dụ form gửi xong thì refresh trang）
 })
 ```
 
@@ -634,7 +634,7 @@ input.addEventListener('input', (e) => {
 Khi bạn muốn thêm chức năng cho một nút, về bản chất là đang nói với AI: "Thêm sự kiện nhấn cho nút này, sau khi nhấn thì thực hiện thao tác XYZ"
 :::
 
-### 4.4 Bất đồng bộ: tại sao một số thao tác không hoàn thành ngay lập tức
+### 4.4 Bất đồng bộ: Động lực của một số thao tác không hoàn thành ngay lập tức
 
 **Ẩn dụ nhà hàng:**
 
@@ -644,17 +644,17 @@ Sau khi gọi món, không cần đứng trước cửa bếp chờ, có thể l
 
 ```javascript
 // Cách viết đồng bộ（sẽ làm đứng trang, đừng dùng）
-const data = fetch('/api/data')  // ❌ Viết thế này sẽ làm đứng trang
+const data = fetch('/api/data') // ❌ Viết thế này sẽ làm đứng trang
 
 // Cách viết bất đồng bộ（đúng）
 async function loadData() {
-  try {
-    const response = await fetch('/api/data')
-    const data = await response.json()
-    console.log(data)
-  } catch (error) {
-    console.error('Có lỗi:', error)
-  }
+ try {
+ const response = await fetch('/api/data')
+ const data = await response.json()
+ console.log(data)
+ } catch (error) {
+ console.error('Có lỗi:', error)
+ }
 }
 ```
 
@@ -674,7 +674,7 @@ async function loadData() {
 - Thấy `try/catch` → Đang xử lý lỗi có thể xảy ra
 :::
 
-### 4.5 Event loop: JavaScript thực sự hoạt động như thế nào
+### 4.5 Event loop: JavaScript thực sự hoạt động: Cách tiếp cận
 
 **Không dùng thuật ngữ "microtask/macrotask", hãy hiểu bằng một mô hình đơn giản:**
 
@@ -685,7 +685,7 @@ Khi gặp thao tác cần chờ（yêu cầu mạng, timer）, JS không chờ n
 ```javascript
 console.log("1")
 
-setTimeout(() => console.log("2"), 0)  // Ngay cả khi là 0 giây, cũng sẽ bị hoãn lại
+setTimeout(() => console.log("2"), 0) // Ngay cả khi là 0 giây, cũng sẽ bị hoãn lại
 
 console.log("3")
 
@@ -727,12 +727,12 @@ import { useState } from 'react'
 ```javascript
 // utils.js
 export function formatDate(date) {
-  // ...
+ // ...
 }
 
 // Hoặc xuất mặc định
 export default function formatDate(date) {
-  // ...
+ // ...
 }
 ```
 
@@ -759,7 +759,7 @@ import _ from 'lodash'
 **Học nhiều cú pháp như vậy, khi thực sự cầm code AI thì dùng thế nào?** Làm sao đọc hiểu code nhanh? Gặp báo lỗi thì làm sao? Làm sao để AI sửa code chính xác cho bạn?
 :::
 
-### 5.1 Cầm code AI về thì đọc thế nào
+### 5.1 Cầm code AI về thì đọc: Cách tiếp cận
 
 **Phương pháp bốn bước:**
 
@@ -817,7 +817,7 @@ Khoảng cách giữa người mới và developer thành thạo, thường th�
 ```javascript
 // Code có bug
 function deleteTodo(index) {
-  todos.splice(index, 1)  // Luôn xóa mục cuối cùng
+ todos.splice(index, 1) // Luôn xóa mục cuối cùng
 }
 
 // Hiện tượng lỗi: Dù nhấn nút xóa nào, cũng xóa mục cuối cùng

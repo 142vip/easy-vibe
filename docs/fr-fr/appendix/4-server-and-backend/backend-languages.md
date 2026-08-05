@@ -1,11 +1,11 @@
-# Comparaison des langages backend
+# Introduction : Langages et écosystèmes backend
 ::: tip 🎯 Question centrale
 **"Quel langage devrions-nous utiliser pour le backend ?"** C'est comme demander : "Quel outil devrais-je acheter ?" La réponse n'est jamais "le meilleur", mais "celui qui te convient le mieux". Ce chapitre te présente de manière exhaustive les principaux langages de programmation backend, leurs caractéristiques, leurs scénarios d'utilisation et les stratégies de choix, pour t'aider à prendre une décision éclairée.
 :::
 
 ---
 
-## 1. Pourquoi comprendre les langages backend ?
+## 1. Motivation et justification : comprendre les langages backend
 
 ### 1.1 Du singulier au pluriel : l'évolution des langages backend
 
@@ -152,7 +152,7 @@ Les technologies modernes rendent cette distinction plus floue : Java est à la 
 
 :::
 
-### 2.3 Modèle de concurrence : combien de requêtes simultanées ?
+### 2.3 Modèle de concurrence : combien de requêtes simultanées
 
 La concurrence est l'un des concepts les plus critiques du développement backend. Elle détermine combien de requêtes le système peut traiter simultanément. Les modèles de concurrence varient considérablement d'un langage à l'autre, et c'est souvent le facteur décisif dans le choix technologique.
 
@@ -191,7 +191,7 @@ Sur un CPU monocœur, on ne peut faire que de la concurrence ; sur un CPU multic
 
 :::
 
-### 2.4 Gestion de la mémoire : qui s'occupe du ramassage des ordures ?
+### 2.4 Gestion de la mémoire : qui s'occupe du ramassage des ordures
 
 La gestion de la mémoire est un facteur clé qui influence les performances et l'expérience de développement. Différents langages adoptent différentes stratégies, chacune avec ses avantages et inconvénients.
 
@@ -641,7 +641,7 @@ Ils ont réécrit le cœur du moteur de stockage (Block Server) en Rust. Résult
 
 ---
 
-## 4. Comment choisir le bon langage : cadre de décision
+## 4. Approche et mise en œuvre : choisir le bon langage : cadre de décision
 
 ### 4.1 Méthode de décision en quatre étapes
 
@@ -1537,7 +1537,7 @@ Cette section détaille les principales directions d'application, les domaines s
 
 ---
 
-## Comment choisir : guide de décision rapide
+## Approche et mise en œuvre : choisir : guide de décision rapide
 
 ### Choisir par scénario d'application
 
@@ -1787,7 +1787,7 @@ Cette section détaille les principales directions d'application, les domaines s
 
 ---
 
-## Comment choisir : guide de décision complet
+## Approche et mise en œuvre : choisir : guide de décision complet
 
 ### Choisir par exigence de performance
 

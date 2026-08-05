@@ -1,10 +1,10 @@
-# Hướng dẫn Trình gỡ lỗi Trình duyệt (DevTools)
+# DevTools trình duyệt: Cơ bản về gỡ lỗi tương tác
 
 ::: tip 💡 Vai trò cốt lõi
 Công cụ phát triển trình duyệt (DevTools) là "máy X-quang" và "bàn phẫu thuật" của phát triển frontend. Nó cho phép bạn nhìn thấu bộ xương của trang web (HTML), lớp da (CSS) và hệ thần kinh (JavaScript), đồng thời cho phép bạn chỉnh sửa và debug chúng trong thời gian thực.
 :::
 
-## 1. DevTools là gì?
+## 1. Tổng quan về DevTools
 
 **DevTools** là bộ công cụ phát triển web được tích hợp sẵn trong các trình duyệt hiện đại (Chrome, Edge, Firefox, Safari, v.v.). Đối với lập trình viên, nó gần với "sự thật" hơn cả trình soạn code, vì **nó hiển thị cách code thực sự chạy trong trình duyệt**.
 

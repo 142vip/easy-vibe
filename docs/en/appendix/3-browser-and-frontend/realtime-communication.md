@@ -1,4 +1,4 @@
-# Real-Time Communication Mechanisms (Polling / SSE / WebSocket)
+# Principles of Real-Time Communication: Polling, SSE, and WebSocket
 
 ::: tip Core Reading Guide
 **How does the browser achieve real-time data updates?**

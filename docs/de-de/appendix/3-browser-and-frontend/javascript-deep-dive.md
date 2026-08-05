@@ -1,4 +1,4 @@
-# JavaScript Deep Dive
+# JavaScript: Vertiefte Prinzipien
 
 ::: tip Vorwort
 Du hast HTML und CSS gelernt und kannst ansprechende Webseiten erstellen. Aber dir fällt vielleicht auf: Buttons reagieren nicht, Formulare lassen sich nicht absenden, die Webseite wirkt wie ein „statisches" Bild.
@@ -26,7 +26,7 @@ Jedes Kapitel beginnt mit „Code erkennen" – du musst ihn nicht selbst schrei
 
 ---
 
-## 1. Was ist JavaScript?
+## 1. Was ist JavaScript
 
 ::: tip 🤔 Kernfrage
 **Warum brauchen Webseiten JavaScript?** HTML und CSS liefern bereits Inhalt und Stil – warum noch eine neue Sprache lernen?
@@ -67,7 +67,7 @@ Jedes Kapitel beginnt mit „Code erkennen" – du musst ihn nicht selbst schrei
 | **CSS** | Haut | Definiert Aussehen und Stil der Webseite |
 | **JavaScript** | Muskeln und Nervensystem | Macht die Webseite reaktionsfähig, interaktiv und intelligent |
 
-### 1.2 Warum brauchst du auch beim Vibecoding JavaScript-Kenntnisse?
+### 1.2 Warum brauchst du auch beim Vibecoding JavaScript-Kenntnisse
 
 ::: warning Stolperfalle für JS-Anfänger
 Ein Entwickler, der gerade JavaScript lernt, baute mit KI eine „Zähler"-App: Knopf drücken, Zahl um 1 erhöhen. Der KI-generierte Code funktionierte.
@@ -504,7 +504,7 @@ console.log(counter.getCount()) // 2
 
 <ClosureDemo />
 
-### 3.6 this: Von wem wird die Funktion aufgerufen?
+### 3.6 this: Von wem wird die Funktion aufgerufen
 
 **Keine komplizierten Bindungsregeln – nur die häufigsten Szenarien:**
 
@@ -634,7 +634,7 @@ input.addEventListener('input', (e) => {
 Wenn du einem Button eine Funktion hinzufügen willst, sagst du der KI im Grunde: „Füge diesem Button ein Klick-Event hinzu, das beim Klick folgende Aktion ausführt"
 :::
 
-### 4.4 Asynchronität: Warum manche Operationen nicht sofort abgeschlossen sind
+### 4.4 Asynchronität: Motivation von manche Operationen nicht sofort abgeschlossen sind
 
 **Restaurant-Analogie:**
 
@@ -674,7 +674,7 @@ async function loadData() {
 - `try/catch` → behandelt mögliche Fehler
 :::
 
-### 4.5 Event Loop: Wie JavaScript wirklich funktioniert
+### 4.5 Event Loop: Ansatz für JavaScript wirklich funktioniert
 
 **Keine Fachbegriffe wie „Microtask/Macrotask" – ein einfaches Modell genügt:**
 

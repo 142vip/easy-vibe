@@ -1,4 +1,4 @@
-# Sự tiến hóa từ Monolith đến Microservices
+# Monolith đến Microservices: Giới thiệu về kiến trúc tiến hóa
 
 ::: tip Lời mở đầu
 **Không có kiến trúc nào là "tốt nhất", chỉ có "phù hợp nhất với giai đoạn hiện tại".** Từ monolith đến microservices không phải là một bước nhảy hoàn thành ngay, mà là quá trình tiến hóa dần dần theo sự tăng trưởng về quy mô nghiệp vụ và quy mô đội ngũ. Phân tách microservices quá sớm cũng nguy hiểm không kém phân tách quá muộn.
@@ -47,7 +47,7 @@ Nói đơn giản: 3 đội nhóm làm một hệ thống, cuối cùng sẽ th�
 
 ---
 
-## 2. Khi nào nên tách microservices?
+## 2. Khi nào Tiêu chí tách microservices
 
 Không phải hệ thống nào cũng cần microservices. Tách quá sớm sẽ mang lại độ phức tạp không cần thiết.
 

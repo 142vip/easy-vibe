@@ -1,4 +1,4 @@
-# Linux Basics
+# Fundamentals of Linux
 
 ::: tip Foreword
 **In the world of servers, Linux is the undisputed star.** Over 90% of servers worldwide run Linux — from WeChat to Google Search, Linux powers it all behind the scenes. For developers, mastering Linux basics is not optional — it's a requirement.

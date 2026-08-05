@@ -40,7 +40,7 @@ Biểu thức toán học：**y = f(w₁x₁ + w₂x₂ + w₃x₃ + b)**
 
 <NeuronDemo />
 
-### Hàm kích hoạt：Tại sao cần phi tuyến？
+### Hàm kích hoạt：Động lực của cần phi tuyến
 
 Nếu không có hàm kích hoạt, dù có bao nhiêu tầng nơ-ron chồng lên nhau, kết quả cuối cùng cũng chỉ tương đương với một phép biến đổi tuyến tính (phép nhân ma trận). Hàm kích hoạt đưa vào tính **phi tuyến**, cho phép mạng học được các mẫu phức tạp.
 
@@ -56,13 +56,13 @@ Nếu không có hàm kích hoạt, dù có bao nhiêu tầng nơ-ron chồng l�
 Tổ chức nhiều nơ-ron thành các **tầng**, nhiều tầng nối tiếp nhau, tạo nên mạng nơ-ron：
 
 ```
-Tầng đầu vào      Tầng ẩn 1         Tầng ẩn 2        Tầng đầu ra
-(đặc trưng)      (trích xuất        (trích xuất       (dự đoán kết quả)
-                  đặc trưng cấp thấp) đặc trưng cấp cao)
+Tầng đầu vào Tầng ẩn 1 Tầng ẩn 2 Tầng đầu ra
+(đặc trưng) (trích xuất (trích xuất (dự đoán kết quả)
+ đặc trưng cấp thấp) đặc trưng cấp cao)
 
- x1 ──→  [○ ○ ○ ○] ──→ [○ ○ ○] ──→  [○ ○]
- x2 ──→  [○ ○ ○ ○] ──→ [○ ○ ○] ──→  mèo/chó
- x3 ──→  [○ ○ ○ ○] ──→ [○ ○ ○]
+ x1 ──→ [○ ○ ○ ○] ──→ [○ ○ ○] ──→ [○ ○]
+ x2 ──→ [○ ○ ○ ○] ──→ [○ ○ ○] ──→ mèo/chó
+ x3 ──→ [○ ○ ○ ○] ──→ [○ ○ ○]
 ```
 
 | Khái niệm | Giải thích |
@@ -72,13 +72,13 @@ Tầng đầu vào      Tầng ẩn 1         Tầng ẩn 2        Tầng đầu
 | Tầng đầu ra | Tạo dự đoán cuối cùng (xác suất phân loại, giá trị hồi quy, v.v.) |
 | Lan truyền xuôi | Quá trình dữ liệu chảy từ tầng đầu vào qua các tầng đến tầng đầu ra |
 
-::: tip Tại sao gọi là học "sâu"？
+::: tip Tại sao gọi là học "sâu"
 Machine learning truyền thống thường chỉ có 1-2 tầng. Khi số tầng ẩn tăng lên hàng chục thậm chí hàng trăm tầng, người ta gọi đó là học "sâu". Mạng càng sâu có thể học được các đặc trưng trừu tượng hơn：tầng đầu học cạnh viền, tầng thứ hai học kết cấu, tầng thứ ba học bộ phận, các tầng sâu hơn học được "đây là một con mèo".
 :::
 
 ---
 
-## 2. Mạng học như thế nào
+## 2. Mạng học: Cách tiếp cận
 
 "Việc học" của mạng nơ-ron bản chất là một **bài toán tối ưu**：tìm một tập trọng số (w) và bias (b), sao cho dự đoán của mạng gần với đáp án thật nhất có thể.
 
@@ -88,7 +88,7 @@ Machine learning truyền thống thường chỉ có 1-2 tầng. Khi số tần
 1. Lan truyền xuôi：Đưa dữ liệu vào, nhận kết quả dự đoán
 2. Tính mất mát：Dùng hàm mất mát đo khoảng cách giữa dự đoán và giá trị thật
 3. Lan truyền ngược：Dựa trên mất mát, tính gradient cho từng trọng số, cập nhật trọng số
-   ↓
+ ↓
 Lặp lại các bước trên, cho đến khi mất mát đủ nhỏ
 ```
 
@@ -108,13 +108,13 @@ Hãy tưởng tượng bạn đứng trên một ngọn núi, bị bịt mắt v
 
 ```
 Giá trị mất mát
-  ↑
-  │    ╱╲
-  │   ╱  ╲      ← Vị trí hiện tại
-  │  ╱    ╲    ↙ Đi xuống theo hướng gradient
-  │ ╱      ╲╱   ← Cực tiểu cục bộ
-  │╱            ╲╱  ← Cực tiểu toàn cục
-  └──────────────→ Giá trị trọng số
+ ↑
+ │ ╱╲
+ │ ╱ ╲ ← Vị trí hiện tại
+ │ ╱ ╲ ↙ Đi xuống theo hướng gradient
+ │ ╱ ╲╱ ← Cực tiểu cục bộ
+ │╱ ╲╱ ← Cực tiểu toàn cục
+ └──────────────→ Giá trị trọng số
 ```
 
 | Khái niệm | Giải thích |
@@ -150,7 +150,7 @@ CNN là vua xử lý ảnh. Ý tưởng cốt lõi：dùng các kernel tích ch�
 
 ```
 Ảnh đầu vào → [Tầng tích chập→Kích hoạt→Pooling] × N → Tầng fully connected → Đầu ra
-  28×28        Trích xuất cạnh/kết cấu/hình dạng      Kết quả phân loại
+ 28×28 Trích xuất cạnh/kết cấu/hình dạng Kết quả phân loại
 ```
 
 | Đặc điểm | Giải thích |
@@ -167,11 +167,11 @@ Các mô hình tiêu biểu：LeNet、AlexNet、VGG、ResNet、EfficientNet
 RNN được thiết kế riêng cho **dữ liệu chuỗi**. Trạng thái ẩn của nó được truyền sang bước thời gian tiếp theo, cho phép mạng có khả năng "ghi nhớ".
 
 ```
-Bước thời gian t1   Bước thời gian t2   Bước thời gian t3
-  "Tôi" ──→         "thích" ──→          "mèo"
-    ↓                  ↓                    ↓
-  [h1]  ──→         [h2]   ──→          [h3] ──→ Đầu ra
-    ↑                  ↑                    ↑
+Bước thời gian t1 Bước thời gian t2 Bước thời gian t3
+ "Tôi" ──→ "thích" ──→ "mèo"
+ ↓ ↓ ↓
+ [h1] ──→ [h2] ──→ [h3] ──→ Đầu ra
+ ↑ ↑ ↑
 Trạng thái ẩn được truyền giữa các bước thời gian (bộ nhớ)
 ```
 
@@ -192,8 +192,8 @@ Năm 2017, Google công bố bài báo "Attention Is All You Need" đề xuất 
 
 ```
 Chuỗi đầu vào → Embedding + Positional Encoding → [Multi-Head Attention → Feed-Forward] × N → Đầu ra
-                                                          ↑
-                                        Mỗi từ đều có thể "nhìn thấy" tất cả các từ khác
+ ↑
+ Mỗi từ đều có thể "nhìn thấy" tất cả các từ khác
 ```
 
 | Ưu điểm | Giải thích |
@@ -219,12 +219,12 @@ Có kiến trúc tốt thôi chưa đủ, trong quá trình huấn luyện còn 
 
 ```
 Sai số
-  ↑
-  │ ╲  Sai số huấn luyện    Sai số kiểm tra  ╱
-  │  ╲                                      ╱
-  │   ╲─────────────────╱
-  │  Underfitting ← Điểm tối ưu → Overfitting
-  └──────────────────────────→ Độ phức tạp mô hình
+ ↑
+ │ ╲ Sai số huấn luyện Sai số kiểm tra ╱
+ │ ╲ ╱
+ │ ╲─────────────────╱
+ │ Underfitting ← Điểm tối ưu → Overfitting
+ └──────────────────────────→ Độ phức tạp mô hình
 ```
 
 ### 4.2 Siêu tham số then chốt

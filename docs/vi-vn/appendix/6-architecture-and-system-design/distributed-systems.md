@@ -1,4 +1,4 @@
-# Thách thức của hệ thống phân tán
+# Hệ thống phân tán: Nguyên tắc cơ bản
 
 ::: tip Lời mở đầu
 **Khi một máy không đủ dùng, vấn đề mới thực sự bắt đầu.** Hệ thống phân tán là nền tảng của Internet hiện đại — từ tin nhắn WeChat đến đặt hàng trên Taobao, phía sau đều là hàng trăm hàng nghìn máy tính phối hợp làm việc. Nhưng "phân tán" không phải là bữa trưa miễn phí, nó mang theo một loạt thách thức mà hệ thống đơn máy chưa từng gặp phải.
@@ -25,7 +25,7 @@ Sau khi học xong chương này, bạn sẽ đạt được:
 
 ---
 
-## 0. Bức tranh toàn cảnh: Tại sao cần hệ thống phân tán?
+## 0. Bức tranh toàn cảnh: Động lực của hệ thống phân tán
 
 Hệ thống đơn máy đơn giản và đáng tin cậy, nhưng có ba giới hạn không thể vượt qua:
 
@@ -63,7 +63,7 @@ Năm 2000, Eric Brewer đưa ra phỏng đoán CAP (sau này được chứng mi
 
 <CAPTheoremDemo />
 
-### Tại sao chỉ có thể chọn hai?
+### Tại sao Định lý CAP: Ràng buộc phân tán
 
 Trong môi trường phân tán, phân vùng mạng (P) là không thể tránh khỏi — cáp quang bị đào đứt, thiết bị chuyển mạch hỏng, trung tâm dữ liệu mất mạng. Do đó P là bắt buộc, lựa chọn thực tế là đánh đổi giữa C và A:
 
@@ -119,7 +119,7 @@ Hệ thống phân tán không có giải pháp "hoàn hảo", chỉ có sự đ
 
 ---
 
-## 4. Thuật toán đồng thuận: Làm sao để nhiều máy "đạt được thống nhất"
+## 4. Thuật toán đồng thuận: Cách để nhiều máy "đạt được thống nhất"
 
 Thuật toán đồng thuận là cốt lõi của hệ thống phân tán — vấn đề nó giải quyết là: nhiều nút làm sao đạt được thống nhất về một giá trị nào đó? Ngay cả khi một số nút lỗi hoặc mạng bị trễ.
 

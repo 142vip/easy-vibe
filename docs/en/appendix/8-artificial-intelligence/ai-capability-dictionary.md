@@ -333,7 +333,7 @@ From a product perspective, image classification and recognition were among the 
 
 Corresponding to specific product forms, the capabilities of this layer are often delivered as "image content recognition / classification APIs," "face recognition SDK / SaaS," "person re-identification platforms," etc. They often directly drive business decisions (e.g., access control clearance, content tag writing) and also serve as upstream, providing structured labels and stable identity representations for subsequent retrieval, recommendation, behavior analysis, and multimodal understanding. Below, we expand on two directions: image classification and identity/attribute recognition.
 
-### 2.2.1 Image Classification: Answering "What Kind of Image Is This?"
+### 2.2.1 Image Classification: Answering "What Kind of Image Overview of This"
 
 In the most basic image classification task, the system faces an entire image and the goal is to assign it one or several semantic category labels. The most common form is single-label classification — for example, in datasets like ImageNet, each image is labeled with one primary category such as "dog," "cat," "car," "airplane." In business scenarios, this capability is widely used to tag user-uploaded images with theme labels like "landscape / food / pet / portrait / document" to support retrieval, recommendation, and content moderation. Similar to text classification, the model attaches a fully connected + Softmax layer on top of global visual features extracted by a pre-trained backbone, outputting a probability distribution over all candidate categories.
 
@@ -341,7 +341,7 @@ In many real-world applications, an image often belongs to multiple categories s
 
 At the human-machine interface level, image classification is typically provided as an "image content recognition API." Upstream businesses only need to upload an image to receive a set of category labels and their confidence scores for subsequent decision-making: for example, an ad delivery system can restrict certain sensitive categories based on image content; an e-commerce platform can use image classification to assist with product category correction; a content platform can use it to enrich recommendation features and moderation signals. Although technically relatively mature, this capability remains the cornerstone for more complex downstream capabilities like object detection, instance segmentation, and visual question answering.
 
-### 2.2.2 Image Recognition and Attribute Recognition: Answering "Who Is This / What Instance Is This?"
+### 2.2.2 Image Recognition and Attribute Recognition: Answering "Who Overview of This / What Instance Is This"
 
 Unlike "what type of image is this," image recognition is more concerned with "who is the person/object in this image" — that is, identity-level, instance-level differentiation. Typical representatives are face recognition and person re-identification: the former determines "which identity in the gallery is closest to the current face" in scenarios like access control, attendance, and payment; the latter searches across multiple camera feeds and time periods to find whether the same pedestrian appears, assisting with case review and trajectory analysis. The core of these tasks is no longer simple multi-class classification, but rather learning an embedding in feature space that is "compact within classes and separated between classes," so that images of the same identity captured under different poses, lighting, and cameras can still be clustered together.
 
@@ -1236,7 +1236,7 @@ At the product level, this layer's capabilities have already permeated various a
   - Voice Conversion / Cloning: VC frameworks based on speaker embedding + content encoder, as well as voice conversion models using neural codecs, supporting few-shot timbre cloning and cross-lingual speaker transfer. This type of technology has been commercially deployed by multiple platforms, providing convenient voice cloning API services. Common domestic platforms include ByteDance Volcano Engine, MiniMax, iFlytek Open Platform, Baidu AI Cloud Qianfan Large Model Platform, and Alibaba Cloud Intelligent Speech Interaction Platform; overseas mainstream platforms include ElevenLabs, Resemble.ai, Play.ht, and others. Among them, ByteDance Volcano Engine's voice cloning capability supports rapid training with a small number of audio samples, adapting to commercial use across multiple scenarios such as intelligent customer service and audiobooks; MiniMax leverages its large model technology advantages to achieve natural alignment between cloned timbre and text content, while also supporting cross-lingual speaker timbre transfer; iFlytek Open Platform's voice cloning has significant advantages in the clarity and emotional expressiveness of Chinese pronunciation, widely serving fields such as education and broadcasting.
   - Music and Sound Effect Generation: MusicLM, MusicGen, and Suno/Udio-type models typically generate long-form audio on discrete codec tokens using autoregressive or diffusion architectures based on text and/or reference audio conditions.
 
-### 4.4.1 Text-to-Speech (TTS): Making Machines "Speak Naturally"
+### 4.4.1 Text-to-Speech (TTS): Making Machines "Communicate Naturally"
 
 **Text-to-Speech (TTS)** is the most intuitive speech generation task: input a piece of text, output a segment of natural and fluent speech that ideally is nearly indistinguishable from a human voice. Modern TTS systems are typically divided into two main stages: text to acoustic features (such as Mel-spectrogram), and acoustic features to waveform.
 
@@ -1244,7 +1244,7 @@ In the first stage, the model needs to handle problems such as tokenization, pho
 
 In the second stage, Neural Vocoders such as WaveNet, WaveRNN, HiFi-GAN, WaveGlow, etc., are responsible for converting Mel-spectrograms or other intermediate representations into high-fidelity waveforms. A well-trained vocoder can not only generate natural and clear speech but also faithfully reproduce different timbres, emotions, and styles. Modern TTS systems also support **multi-speaker modeling** (via speaker embedding), timbre/speed/emotion control (such as "excited," "calm," "broadcasting style"), and cross-lingual TTS, providing highly customizable voice capabilities for various applications.
 
-### 4.4.2 Voice Conversion & Voice Cloning: Changing "Who Is Speaking"
+### 4.4.2 Voice Conversion & Voice Cloning: Changing "Who Is Communicating"
 
 In many creative and assistive scenarios, we want to change the speaker's timbre or style **without altering the content and prosody** — this is the task of **Voice Conversion (VC)** and **Voice Cloning**. The former primarily addresses "turning person A's speech into person B's voice"; the latter further emphasizes "learning a new timbre from just a few samples or even a few seconds of speech."
 
@@ -2808,7 +2808,7 @@ In the **industry continued pre-training (DAPT)** phase, the focus shifts to:
 
 In engineering practice, pre-training and continued pre-training run on large-scale distributed frameworks (Megatron-LM, DeepSpeed ZeRO, etc.) and efficient data pipelines (WebDataset / HF Datasets + object storage), forming **stable, reusable training pipelines**. For cloud vendors or large companies, such pipelines are often encapsulated as internal platforms, supporting periodic incremental pre-training and parallel iteration of multiple industry base models.
 
-### 11.1.2 Fine-tuning Paradigms and RLHF: From "Able to Talk" to "Understands the Business and Respects Boundaries"
+### 11.1.2 Fine-tuning Paradigms and RLHF: From "Able to Communicate" to "Understands the Business and Respects Boundaries"
 
 After having a powerful pre-trained base, the key to making the model "useful for the business" and "behaviorally controllable" lies in the fine-tuning and alignment stages. This includes both traditional supervised fine-tuning (SFT) and instruction fine-tuning, multi-task fine-tuning, and feedback-based reinforcement learning (RLHF / RLAIF).
 

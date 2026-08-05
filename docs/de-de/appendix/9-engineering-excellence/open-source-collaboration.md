@@ -80,7 +80,7 @@ Vergleichen Sie mit der folgenden interaktiven Komponente die Unterschiede zwisc
 | **GPL** | Abgeleitete Werke müssen ebenfalls Open Source sein | Linux, WordPress |
 | **BSD** | Ähnlich wie MIT, mit kleinen Unterschieden | FreeBSD, Flask |
 
-### 2.2 Wie wählt man aus?
+### 2.2 Wie wählt man aus
 
 - **Mehr Nutzer ermöglichen**: MIT wählen
 - **Patente schützen**: Apache 2.0 wählen

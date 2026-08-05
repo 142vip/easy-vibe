@@ -3,7 +3,7 @@ title: 'Breve historia de la IA: de la lógica simbólica a los modelos masivos 
 description: 'En sus 70 años de desarrollo, la IA ha experimentado tres oleadas y dos inviernos, culminando finalmente en la era actual de los grandes modelos de lenguaje.'
 ---
 
-# Breve historia de la IA: de la lógica simbólica a los modelos masivos de cientos de miles de millones de parámetros
+# Historia de la IA: desde la lógica simbólica hasta los modelos fundacionales
 
 En sus 70 años de desarrollo, la IA ha experimentado **tres oleadas y dos inviernos**, pasando del razonamiento lógico del simbolismo, a las redes neuronales del conexionismo, y al aprendizaje por refuerzo del conductismo, hasta fusionarse finalmente en la era actual de los grandes modelos. Comprender la historia de la IA nos ayuda a entender la esencia de la "inteligencia" que exhiben los grandes modelos actuales.
 

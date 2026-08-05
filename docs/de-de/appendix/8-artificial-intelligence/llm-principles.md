@@ -1,4 +1,4 @@
-# Funktionsweise von Large Language Models
+# LLM-Prinzipien: Sprachmodellgrundlagen
 > 💡 **Lernleitfaden**: Dieses Kapitel setzt keine Programmierkenntnisse voraus. Durch interaktive Demos lernst du die grundlegende Funktionsweise von Large Language Models (LLMs) kennen – von der einfachen Tokenisierung bis hin zum Training und zur Inferenz von GPT.
 
 <LlmQuickStartDemo />
@@ -25,7 +25,7 @@ Dieses Tutorial führt dich Schritt für Schritt von Grund auf durch den Aufbau 
 Der Computer kann die Zeichen „Hamburger" nicht lesen – er kennt nur Zahlen.
 Deshalb ist unsere erste Aufgabe: **Text in die kleinsten Einheiten zu zerlegen, die der Computer verstehen kann.**
 
-### 1.1 Was ist Tokenisierung?
+### 1.1 Was ist Tokenisierung
 
 Tokenisierung bedeutet, einen ganzen Satz in einzelne „Worteinheiten" (Token) zu zerlegen.
 
@@ -80,7 +80,7 @@ index=171,   string='！'
 
 ---
 
-## 2. Das Kernproblem: Wie bringt man den Computer dazu, Sprache zu „berechnen"?
+## 2. Das Kernproblem: Ansatz für bringt man den Computer dazu, Sprache zu „berechnen"
 
 Unsere Aufgabe ist es, Sprache zu verarbeiten. Aber Computer verstehen nur Zahlen.
 Die naheliegendste Idee: Jedem Wort eine Nummer (ID) zuweisen.
@@ -88,7 +88,7 @@ Die naheliegendste Idee: Jedem Wort eine Nummer (ID) zuweisen.
 - Apfel -> ID 10
 - Banane -> ID 20
 
-### 2.1 Warum nicht einfach IDs verwenden?
+### 2.1 Warum nicht einfach IDs verwenden
 
 Wenn wir nur IDs verwenden, würde der Computer „10" und „20" als zwei völlig zusammenhangslose Zahlen betrachten.
 Zudem bräuchten wir bei einem Vokabular von 100.000 Wörtern ein 100.000 Elemente langes Array, um ein einzelnes Wort darzustellen (One-Hot-Kodierung) – 99.999 Positionen wären Nullen, nur eine einzige wäre 1.
@@ -112,7 +112,7 @@ Statt eines langen 0/1-Arrays wird ein kürzeres Array mit Dezimalzahlen (z. B
 
 Nachdem das Problem der Darstellung „eines Wortes" gelöst ist, folgt die Darstellung „eines Satzes".
 
-### 3.1 Warum eine Matrix?
+### 3.1 Warum eine Matrix
 
 Weil ein Satz viele Wörter enthält.
 
@@ -136,7 +136,7 @@ Rückblick auf den Datenfluss:
 
 ---
 
-## 3.5 Exkurs: Was genau ist ein „Modell"?
+## 3.5 Exkurs: Überblick über genau ist ein „Modell"
 
 Bevor wir uns die konkrete Architektur ansehen, wollen wir den Begriff „Modell" anschaulich verstehen.
 
@@ -201,7 +201,7 @@ Der Transformer gibt die Information nicht mehr nacheinander weiter, sondern **l
 > - **RNN**: Wie ein Labyrinth, Schritt für Schritt, man verirrt sich leicht.
 > - **Transformer**: Wie eine Karte aus der Gott-Perspektive, Start und Ziel sind auf einen Blick zu erfassen.
 
-#### Warum brauchen wir trotzdem „Positions"-Informationen?
+#### Motivation von brauchen wir trotzdem „Positions"-Informationen
 
 Weil der Transformer alles „auf einmal" verarbeitet, könnte er ohne spezielle Behandlung den Unterschied zwischen „Ich liebe dich" und „Dich liebe ich" nicht erkennen (gleiche Wörter, nur andere Reihenfolge).
 Deshalb geben wir jedem Wort eine **Nummernkarte (Positionskodierung)**, die dem Modell sagt, wer an 1. und wer an 2. Stelle steht.
@@ -392,7 +392,7 @@ Der traditionelle Transformer (wie GPT-4) verwendet den **Standard-Aufmerksamkei
 
 Um dieses Problem zu lösen, haben Modelle wie MiniMax (abab-Serie) und RWKV eine **lineare Aufmerksamkeit (Linear Attention)** eingeführt.
 
-### Warum ist das eine „netzartig" und das andere „linear"?
+### Motivation: das eine „netzartig" und das andere „linear"
 
 Der grundlegende Unterschied liegt in der Frage: **Behältst du alle ursprünglichen Worte, oder fasst du jederzeit zusammen?**
 

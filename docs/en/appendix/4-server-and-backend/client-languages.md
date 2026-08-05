@@ -1,4 +1,4 @@
-# Client-Side Languages (Swift / Kotlin / Dart)
+# An Introduction to Client-Side Languages: Swift, Kotlin, and Dart
 
 ::: tip Core Question
 **"How should you choose a language for mobile app development?"** This chapter introduces the fundamentals of client-side development, traces the evolution of mobile programming languages, and provides a detailed analysis of mainstream client-side development languages and their applicable scenarios, helping readers build a systematic understanding of language selection.
@@ -17,7 +17,7 @@ In the mobile internet context, **"client-side development" typically refers spe
 
 ---
 
-## 2. Language Applicability and Boundaries: When Must You Use a Specific Language?
+## 2. Language Applicability and Boundaries: Criteria for Use a Specific Language
 
 When selecting a client-side development language, you cannot separate the decision from specific business requirements and engineering context. Even though modern cross-platform technologies (like Flutter/Dart) are developing rapidly, when facing extreme performance standards and engineering hard limits, native languages (Swift/Kotlin) remain the only irreplaceable solution. Architects must clearly define the application boundaries of each language type.
 
@@ -29,7 +29,7 @@ In the following engineering scenarios, adopting a cross-platform language archi
 2. **Startup MVP (Minimum Viable Product) validation and agile business experimentation**: Startups or new business lines at an early stage, with extremely limited funding and time windows. Cross-platform languages allow teams to rapidly build complete prototypes spanning both iOS and Android from a single codebase with single-digit staffing, accelerating time-to-market validation.
 3. **Design-driven, lightweight front-ends with weak interactions**: Based on an enterprise's standardized Design System, requiring pixel-perfect 100% consistency in control styles, margin specifications, and even micro-animations across both Android and iOS platforms.
 
-### 2.2 When Must You Stick with Native Languages (Swift / Kotlin)?
+### 2.2 Criteria for Stick with Native Languages (Swift / Kotlin)
 
 However, in scenarios involving extreme performance demands or the need to bypass standard generic abstractions, all technical compromises must be discarded in favor of pure native language systems:
 

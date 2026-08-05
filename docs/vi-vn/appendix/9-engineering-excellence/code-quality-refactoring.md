@@ -1,7 +1,7 @@
 # Chất lượng mã và Tái cấu trúc
 
 ::: tip Lời nói đầu
-**Chỉ cần code chạy được là đủ了吗？** Có thể bạn đã từng viết code như thế này: chức năng thì hoạt động, nhưng hai tuần sau chính bạn cũng không hiểu nổi. Hoặc có người trong team nghỉ việc, để lại một đống "chỉ có Chúa và người đó mới hiểu được".
+**Chỉ cần code chạy được là đủ了吗** Có thể bạn đã từng viết code như thế này: chức năng thì hoạt động, nhưng hai tuần sau chính bạn cũng không hiểu nổi. Hoặc có người trong team nghỉ việc, để lại một đống "chỉ có Chúa và người đó mới hiểu được".
 
 Chương này sẽ giúp bạn hiểu thế nào là code tốt, cách nhận diện code xấu và cách cải thiện nó một cách an toàn.
 :::
@@ -39,7 +39,7 @@ Martin Fowler đã nói trong cuốn sách *Refactoring*: **"Bất kỳ kẻ ng�
 
 ## 1. Code Smell: Nhận diện các vấn đề phổ biến
 
-### 1.1 Code Smell là gì?
+### 1.1 Code Smell: Tổng quan
 
 Khái niệm "Code Smell" được Kent Beck đề xuất, chỉ những đặc điểm trong code **mặc dù không phải bug, nhưng ám chỉ vấn đề thiết kế sâu hơn**. Giống như có mùi khó chịu trong phòng — không làm bạn ốm ngay lập tức, nhưng cho thấy cần dọn dẹp ở đâu đó.
 
@@ -66,7 +66,7 @@ Code smell không phải "lỗi", mà là "tín hiệu". Nó cho bạn biết: t
 
 ## 2. Kỹ thuật tái cấu trúc: Cải thiện code an toàn
 
-### 2.1 Tái cấu trúc là gì?
+### 2.1 Tái cấu trúc: Tổng quan
 
 Tái cấu trúc (Refactoring) có định nghĩa rất chính xác: **cải thiện cấu trúc bên trong của code mà không thay đổi hành vi bên ngoài.**
 
@@ -85,22 +85,22 @@ Thông qua component dưới đây, so sánh sự thay đổi trước và sau c
 ```javascript
 // Trước khi tái cấu trúc
 function printReport(data) {
-  // Tính tổng
-  let total = 0
-  for (const item of data.items) {
-    total += item.price * item.qty
-  }
-  // In...
+ // Tính tổng
+ let total = 0
+ for (const item of data.items) {
+ total += item.price * item.qty
+ }
+ // In...
 }
 
 // Sau khi tái cấu trúc
 function calculateTotal(items) {
-  return items.reduce((sum, item) => sum + item.price * item.qty, 0)
+ return items.reduce((sum, item) => sum + item.price * item.qty, 0)
 }
 
 function printReport(data) {
-  const total = calculateTotal(data.items)
-  // In...
+ const total = calculateTotal(data.items)
+ // In...
 }
 ```
 
@@ -110,7 +110,7 @@ function printReport(data) {
 
 ```javascript
 // Trước khi tái cấu trúc
-const d = new Date() - startTime  // Thời gian đã trôi qua
+const d = new Date() - startTime // Thời gian đã trôi qua
 const arr = users.filter(u => u.a) // Người dùng hoạt động
 
 // Sau khi tái cấu trúc
@@ -123,22 +123,22 @@ const activeUsers = users.filter(user => user.isActive)
 ```javascript
 // Trước khi tái cấu trúc
 function getPayAmount(employee) {
-  if (employee.isSeparated) {
-    return { amount: 0 }
-  } else {
-    if (employee.isRetired) {
-      return { amount: employee.pension }
-    } else {
-      return { amount: employee.salary }
-    }
-  }
+ if (employee.isSeparated) {
+ return { amount: 0 }
+ } else {
+ if (employee.isRetired) {
+ return { amount: employee.pension }
+ } else {
+ return { amount: employee.salary }
+ }
+ }
 }
 
 // Sau khi tái cấu trúc
 function getPayAmount(employee) {
-  if (employee.isSeparated) return { amount: 0 }
-  if (employee.isRetired) return { amount: employee.pension }
-  return { amount: employee.salary }
+ if (employee.isSeparated) return { amount: 0 }
+ if (employee.isRetired) return { amount: employee.pension }
+ return { amount: employee.salary }
 }
 ```
 
@@ -150,7 +150,7 @@ Rủi ro lớn nhất của tái cấu trúc là "sửa rồi lại sinh ra bug"
 
 ## 3. Code Review: Đảm bảo chất lượng trong phối hợp nhóm
 
-### 3.1 Tại sao cần Code Review?
+### 3.1 Động lực của cần Code Review
 
 Code Review là một trong những phương pháp đảm bảo chất lượng hiệu quả nhất trong nhóm. Giá trị của nó không chỉ nằm ở việc tìm bug, mà còn ở:
 
@@ -159,7 +159,7 @@ Code Review là một trong những phương pháp đảm bảo chất lượng 
 - **Phát hiện sớm vấn đề thiết kế**: Khó sửa hơn bug là quyết định kiến trúc tồi
 - **Học hỏi lẫn nhau**: Đọc code của người khác là捷径 để nâng cao kỹ năng lập trình
 
-### 3.2 Review cái gì?
+### 3.2 Review cái gì
 
 | Khía cạnh | Điểm chú ý |
 |------|--------|

@@ -1,4 +1,4 @@
-# JavaScript-Laufzeitumgebung: Ein tiefgehender Leitfaden
+# JavaScript-Laufzeitumgebung: Ausführungsmodell
 
 ::: tip Vorwort
 Sie haben bereits die grundlegende JavaScript-Syntax gelernt, aber haben Sie sich jemals gefragt:
@@ -387,7 +387,7 @@ Schritt 4: c() beendet, nacheinander abgebaut
 
 <CallStackDemo />
 
-### 5.2 Speicherverwaltung: Wohin geht der Muell?
+### 5.2 Speicherverwaltung: Wohin geht der Muell
 
 JavaScript hat einen "automatischen Garbage-Collection"-Mechanismus — Sie muessen Speicher nicht manuell freigeben, die Engine erledigt das fuer Sie.
 

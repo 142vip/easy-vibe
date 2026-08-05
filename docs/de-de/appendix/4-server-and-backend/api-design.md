@@ -1,4 +1,4 @@
-# API-Design: Das "Kommunikationsprotokoll" zwischen Frontend und Backend
+# API-Design: Schnittstellenprinzipien
 
 ::: tip 🎯 Kernfrage
 **Wie kommunizieren Frontend und Backend effizient miteinander?** Das ist wie die Frage: Wie sollte die Speisekarte eines Restaurants gestaltet sein, damit die Gäste sie sofort verstehen? Wie merkt sich der Kellner die Bestellungen, ohne Fehler zu machen? Wie wird das Servieren standardisiert, damit die Gäste zufrieden sind? API-Design löst das Problem der "Kommunikationsregeln".
@@ -6,7 +6,7 @@
 
 ---
 
-## 0. Zuerst eine Frage: Hast du diese Albträume schon erlebt?
+## Typische Szenarien und Schmerzpunkte
 
 **Szenario 1: Beliebige Benennung von Schnittstellen**
 
@@ -57,7 +57,7 @@ Jede Schnittstelle hat ein anderes Rückgabeformat. Das Frontend muss jede Schni
 
 ---
 
-## 1. Was ist eine API?
+## 1. Was ist eine API
 
 **API** (Application Programming Interface, Schnittstelle zur Anwendungsprogrammierung) ist die "Vereinbarung für die Kommunikation zwischen Programmen".
 
@@ -84,7 +84,7 @@ Bevor wir uns mit dem konkreten RESTful-Design befassen, lassen Sie uns vier vor
 
 <ApiStyleCompare />
 
-### 2.1 REST vs RESTful: Was ist der Unterschied?
+### 2.1 REST vs RESTful: Überblick über ist der Unterschied
 
 Viele verwechseln diese beiden Konzepte:
 
@@ -237,7 +237,7 @@ Gefahr: Die Codestruktur und Datenbankabfragen werden offengelegt, was Angreifer
 
 ## 6. Versionsverwaltung: "Abwärtskompatibilität" der API
 
-### 6.1 Warum Versionsverwaltung?
+### 6.1 Warum Versionsverwaltung
 
 Szenario: Deine App hat 1 Million Benutzer und du musst die Bestellschnittstelle ändern.
 

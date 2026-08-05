@@ -1,4 +1,4 @@
-# SSH und Schlüsselauthentifizierung
+# SSH-Authentifizierung: Sichere Kommunikation
 
 > 💡 **Lernleitfaden**: Du musst bei jedem `git push` ein Passwort eingeben? Server-Verbindungen scheitern ständig mit „Permission denied"? Dieses Kapitel erklärt dir in 5 Minuten das Prinzip der SSH-Schlüsselauthentifizierung und wie du dich ohne Passwort bei GitHub und Servern anmelden kannst.
 
@@ -14,7 +14,7 @@
 
 ---
 
-## 1. Passwort vs. Schlüssel: Warum sind Schlüssel besser?
+## 1. Passwort vs. Schlüssel: Vorteile der Schlüsselauthentifizierung
 
 👇 Probiere es aus: Vergleiche den Passwort-Login mit dem Schlüssel-Login
 
@@ -134,5 +134,5 @@ Das Ergebnis nach der Konfiguration:
 :::
 
 **Nächste Lernschritte**:
-- [Ports und localhost](./ports-localhost) - Die Grundlagen der Netzwerkverbindung verstehen
-- [Umgebungsvariablen und PATH](./environment-path) - Systemkonfiguration verstehen
+- [Ports und Localhost: Netzwerkgrundlagen](./ports-localhost) - Die Grundlagen der Netzwerkverbindung verstehen
+- [Umgebung und Pfad: Systemkonfiguration](./environment-path) - Systemkonfiguration verstehen

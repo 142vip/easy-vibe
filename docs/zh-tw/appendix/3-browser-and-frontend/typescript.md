@@ -1,4 +1,4 @@
-# TypeScript 深度指南
+# TypeScript 導論
 
 ::: tip 前言
 你已經會寫 JavaScript 了，但可能遇到過這些問題：
@@ -62,7 +62,7 @@ TypeScript 就是在程式碼執行前幫你發現這些問題的工具。讀完
 | **JavaScript** | 原始材料 | 可以直接執行的程式碼 |
 | **TypeScript** | 藍圖 + 品質檢查 | 給 JavaScript 加型別檢查，最後編譯成 JavaScript |
 
-### 1.2 為什麼 vibecoding 也需要 TypeScript？
+### 1.2 vibecoding 也需要 TypeScript的動機
 
 ::: warning AI 寫程式碼也會出錯
 一位開發者用 AI 生成了一個使用者管理功能。AI 寫的 JavaScript 程式碼能執行，但有個問題：使用者年齡應該是數字，但有時候會被錯誤地指派為字串。

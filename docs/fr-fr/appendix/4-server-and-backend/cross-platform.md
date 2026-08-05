@@ -1,4 +1,4 @@
-# Solutions multiplateformes (React Native / Flutter / Electron / Tauri)
+# Panorama : Solutions multiplateformes modernes
 
 ::: tip 🎯 Question centrale
 **« En génie logiciel, pourquoi avons-nous besoin de technologies multiplateformes ? Peuvent-elles remplacer définitivement le développement natif ? »**
@@ -22,7 +22,7 @@ La technologie de **« développement multiplateforme (Cross-Platform Developmen
 
 ---
 
-## 2. Frontières techniques des solutions multiplateformes : quand les utiliser ? Quand rester en natif ?
+## 2. Frontières techniques des solutions multiplateformes : quand les utiliser Quand rester en natif
 
 Bien que la technologie multiplateforme offre une immense valeur commerciale en matière de réduction des coûts et d'amélioration de l'efficacité, selon la classique « loi des abstractions qui fuient » (The Law of Leaky Abstractions) de l'informatique, toute encapsulation tentant de transcender les différences entre systèmes d'exploitation sous-jacents s'accompagne inévitablement de pertes de performance et de compromis sur les fonctionnalités. Les architectes doivent donc clairement délimiter le périmètre d'application des technologies multiplateformes.
 

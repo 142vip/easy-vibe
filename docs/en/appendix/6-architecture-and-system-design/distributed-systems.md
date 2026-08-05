@@ -1,4 +1,4 @@
-# Challenges of Distributed Systems
+# Principles of Distributed Systems
 
 ::: tip Introduction
 **When one machine is no longer enough, the real problems begin.** Distributed systems are the backbone of the modern internet — from WeChat messaging to Taobao orders, hundreds or thousands of machines work together behind the scenes. But "distributed" is no free lunch; it introduces a host of challenges that single-machine systems never face.
@@ -25,7 +25,7 @@ After reading this chapter, you will gain:
 
 ---
 
-## 0. The Big Picture: Why Do We Need Distributed Systems?
+## 0. The Big Picture: Motivation for needing Distributed Systems
 
 Single-machine systems are simple and reliable, but they have three insurmountable bottlenecks:
 
@@ -63,7 +63,7 @@ In 2000, Eric Brewer proposed the CAP conjecture (later proven as a theorem): a 
 
 <CAPTheoremDemo />
 
-### Why Can You Only Choose Two?
+### Motivation for Onlying Choose Two
 
 In a distributed environment, network partitions (P) are inevitable — fiber optic cables get dug up, switches fail, data centers lose connectivity. So P is mandatory, and the real choice is a trade-off between C and A:
 

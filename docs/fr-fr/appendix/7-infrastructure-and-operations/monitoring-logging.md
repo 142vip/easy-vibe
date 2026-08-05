@@ -1,4 +1,4 @@
-# Surveillance, journaux et alertes
+# Principes : Surveillance, journalisation et alerting
 > Guide d'apprentissage : ce chapitre ne nécessite aucune compétence en programmation. Des démonstrations interactives vous feront découvrir l'ensemble du corpus de connaissances en exploitation. De la surveillance des alertes à la résolution d'incidents, de la planification de capacité à l'exploitation automatisée, vous maîtriserez toutes les compétences nécessaires à l'exploitation de systèmes en production.
 
 ## 0. Introduction : la mise en production n'est que le début

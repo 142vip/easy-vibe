@@ -1,4 +1,4 @@
-# RAG: Generación Aumentada por Recuperación
+# Principios de RAG: generación aumentada por recuperación
 
 ::: tip Prólogo
 **¿Por qué ChatGPT a veces "alucina" con tanta seguridad?** El conocimiento de los grandes modelos de lenguaje proviene de sus datos de entrenamiento, pero estos datos tienen una fecha de corte y no incluyen los documentos internos de tu empresa. RAG (Retrieval-Augmented Generation, Generación Aumentada por Recuperación) es la tecnología clave para resolver este problema: permite que la IA "consulte fuentes" antes de responder.
@@ -24,7 +24,7 @@ Al terminar este capítulo, habrás aprendido:
 
 ---
 
-## 0. Panorama general: ¿por qué los grandes modelos necesitan "consultar fuentes"?
+## 0. Panorama general: Motivación de grandes modelos necesitan "consultar fuentes"
 
 Imagina que eres un profesor erudito que ha leído innumerables libros. Pero si alguien te pregunta "¿cuáles fueron las ventas de la empresa ayer?", seguro que no puedes responder, porque esa información no está en los libros que has leído.
 
@@ -83,7 +83,7 @@ No existe una estrategia de chunking "mejor" universal, solo la más adecuada pa
 
 ---
 
-## 3. Técnicas de recuperación: ¿cómo encontrar el contenido más relevante?
+## 3. Técnicas de recuperación: Enfoque para encontrar el contenido más relevante
 
 Una vez completado el chunking, la siguiente pregunta clave es: **el usuario hace una pregunta, ¿cómo encontrar los fragmentos más relevantes entre miles de documentos?**
 
@@ -117,7 +117,7 @@ La tecnología RAG ha experimentado tres generaciones de evolución en apenas do
 
 ---
 
-## 5. RAG vs Fine-tuning: ¿cuál elegir?
+## 5. RAG vs Fine-tuning: Selección de elegir
 
 Cuando quieres que un gran modelo domine conocimiento de un dominio específico, normalmente hay dos caminos: RAG y fine-tuning. No son mutuamente excluyentes, sino complementarios.
 

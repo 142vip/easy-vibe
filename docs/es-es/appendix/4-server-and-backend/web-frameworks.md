@@ -1,11 +1,11 @@
-# La esencia de los frameworks web
+# Principios de los frameworks web
 ::: tip 🎯 Pregunta central
 **El código está escrito, pero ¿cómo hacer que personas de todo el mundo puedan acceder a él?** Es como preguntarse: ¿quieres abrir un pequeño puesto callejero o gestionar una cadena internacional de restaurantes? La elección de la arquitectura backend determina a cuántos clientes puede atender tu "restaurante".
 :::
 
 ---
 
-## 1. ¿Por qué entender la evolución de la arquitectura?
+## 1. Motivación de entender la evolución de la arquitectura
 
 Imagina que estás planeando un viaje largo. Puedes elegir entre ir en bicicleta, conducir un coche, tomar el tren de alta velocidad o volar en avión. Cada medio tiene su escenario ideal: la bicicleta es adecuada para distancias cortas cuando quieres hacer ejercicio, mientras que el avión es ideal para viajes largos que cruzan continentes.
 
@@ -45,7 +45,7 @@ Interpretemos esta tabla fila por fila:
 
 ## 2. La era de los servidores físicos (1990s)
 
-### 2.1 ¿Qué es un servidor físico?
+### 2.1 Introducción a servidor físico
 
 En los inicios de Internet, el backend era simplemente un **servidor físico** (un ordenador real) colocado en una sala de servidores.
 
@@ -115,7 +115,7 @@ Es como comparar tu casa con un restaurante: en casa solo cocinas de vez en cuan
 
 ## 3. La era de la arquitectura monolítica (2000s)
 
-### 3.1 ¿Qué es la arquitectura monolítica?
+### 3.1 Introducción a arquitectura monolítica
 
 Con la aparición de frameworks (Rails / Django / Spring), se empezó a meter toda la funcionalidad en una sola aplicación.
 
@@ -200,7 +200,7 @@ Si estás aprendiendo desarrollo backend, **se recomienda encarecidamente empeza
 
 ## 4. Contenedores y microservicios (2010s)
 
-### 4.1 ¿Por qué necesitamos microservicios?
+### 4.1 Motivación de microservicios
 
 Los puntos débiles de la arquitectura monolítica estallaron en la década de 2010:
 
@@ -318,7 +318,7 @@ Convertir una funcionalidad de solo 100 líneas de código en un servicio indepe
 
 ## 5. La era Serverless y Cloud Native (2020s+)
 
-### 5.1 ¿Por qué necesitamos Serverless?
+### 5.1 Motivación de Serverless
 
 Aunque los microservicios son buenos, mantener docenas de pequeñas cocinas sigue siendo agotador. Tienes que preocuparte por:
 
@@ -345,7 +345,7 @@ Aunque los microservicios son buenos, mantener docenas de pequeñas cocinas sigu
 **Es como el delivery de comida**: No necesitas una cocina, solo diseñar el menú, alguien cocina por ti.
 :::
 
-### 5.2 ¿Qué es Serverless?
+### 5.2 Introducción a Serverless
 
 **Serverless = FaaS + BaaS**
 

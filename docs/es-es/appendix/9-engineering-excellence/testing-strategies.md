@@ -1,4 +1,4 @@
-# Estrategias de testing
+# Introducción a las estrategias de testing
 
 ::: tip Prefacio
 **¿Tu código está realmente "sin problemas"?** Cada vez que modificas código y haces clic manualmente para ver si algo se rompe — este enfoque funciona cuando el proyecto es pequeño, pero cuando el código crece a decenas de miles de líneas y el equipo se expande a más de diez personas, "probar haciendo clic" es un desastre.
@@ -19,7 +19,7 @@ Al finalizar este capítulo, entenderás cómo elegir la estrategia de testing a
 
 ---
 
-## 0. Panorama general: ¿Por qué se necesitan pruebas automatizadas?
+## 0. Panorama general: Motivación de pruebas automatizadas
 
 Imagina que eres un ingeniero de edificación. Cada vez que modificas los planos, no subes personalmente a cada piso para verificar la estructura — dependes de un **sistema de detección automatizado**. Las pruebas de software son el "sistema de detección estructural" del mundo del código.
 
@@ -42,7 +42,7 @@ A través del siguiente componente interactivo, haz clic en cada nivel de la pir
 
 <TestPyramidDemo />
 
-### 1.2 ¿Por qué tiene forma de pirámide?
+### 1.2 Motivación de tiene forma de pirámide
 
 La forma piramidal refleja un equilibrio fundamental: **la compensación entre velocidad y fidelidad**.
 
@@ -56,7 +56,7 @@ La forma piramidal refleja un equilibrio fundamental: **la compensación entre v
 
 ## 2. Práctica de tests unitarios
 
-### 2.1 ¿Qué hace que un test unitario sea bueno?
+### 2.1 Introducción a test unitario sea bueno
 
 Los buenos tests unitarios siguen el principio **FIRST**:
 
@@ -86,7 +86,7 @@ test('debería calcular correctamente el precio con impuestos', () => {
 })
 ```
 
-### 2.3 ¿Qué testear? ¿Qué no testear?
+### 2.3 Qué testear Qué no testear
 
 **Lo que sí se debe testear:**
 - Lógica de negocio central (cálculos de precios, verificación de permisos, transformación de datos)

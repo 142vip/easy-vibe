@@ -1,4 +1,4 @@
-# Monitoreo, Registro y Alertas
+# Principios de monitoreo, registros y alertas
 > 💡 **Guía de estudio**: Este capítulo no requiere conocimientos de programación. A través de demostraciones interactivas, te guiará por el sistema completo de operaciones. Desde monitoreo y alertas hasta resolución de fallos, desde planificación de capacidad hasta automatización de operaciones, domina todas las habilidades de operación de sistemas en producción.
 
 ## 0. Introducción: El lanzamiento es solo el comienzo
@@ -362,12 +362,12 @@ $ wrk -t10 -c100 -d30s http://example.com/api/users
 
 # Salida:
 # Running 30s test @ http://example.com/api/users
-#   10 threads and 100 connections
-#   Thread Stats   Avg      Stdev     Max   +/- Stdev
-#     Latency    45.32ms   12.45ms 120.50ms   87.56%
-#     Req/Sec     2.12k   123.45    3.45k    89.01%
-#   632450 requests in 30.00s, 1.23GB read
-# Requests/sec:  21081.67
+# 10 threads and 100 connections
+# Thread Stats Avg Stdev Max +/- Stdev
+# Latency 45.32ms 12.45ms 120.50ms 87.56%
+# Req/Sec 2.12k 123.45 3.45k 89.01%
+# 632450 requests in 30.00s, 1.23GB read
+# Requests/sec: 21081.67
 ```
 
 ### 7.3 Escalado elástico

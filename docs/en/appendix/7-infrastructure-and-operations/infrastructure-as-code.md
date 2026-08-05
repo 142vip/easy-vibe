@@ -1,4 +1,4 @@
-# Infrastructure as Code
+# Principles of Infrastructure as Code
 
 ::: tip Foreword
 **Have you ever experienced this nightmare: a production server goes down, but nobody remembers how it was originally configured?** Manually logging into servers, running commands from memory, praying you don't make a typo — this is the daily reality of traditional operations. Infrastructure as Code (IaC) has completely changed all of this: using code to define and manage infrastructure, making server configuration as version-controllable, reproducible, and auditable as software.
@@ -24,7 +24,7 @@ After completing this chapter, you will gain:
 
 ---
 
-## 0. Big Picture: Why Does Infrastructure Need "Source Code" Too?
+## 0. Big Picture: Motivation for Infrastructuring Need "Source Code" Too
 
 Imagine you're a chef. If you cook every dish by feel — a spoonful of salt today, two spoonfuls tomorrow — the taste will never be consistent. But if you write down the recipe — specifying the exact grams of each seasoning — anyone can reproduce the same taste.
 

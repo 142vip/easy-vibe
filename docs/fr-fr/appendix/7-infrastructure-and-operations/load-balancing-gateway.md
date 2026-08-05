@@ -1,11 +1,11 @@
-# Équilibrage de charge et passerelles
+# Principes : Équilibrage de charge et passerelles
 ::: tip Question centrale
 **Lorsqu'un seul serveur ne peut plus supporter la charge, comment répartir le trafic de manière « intelligente » vers plusieurs instances de serveurs ?** L'équilibrage de charge est le « distributeur » des systèmes distribués modernes. Cet article explore en profondeur la philosophie de conception et les pratiques d'ingénierie de l'équilibrage de charge à travers des cas réels (caisse de salon de thé, tri de colis, circulation routière).
 :::
 
 ---
 
-## 1. Pourquoi « l'équilibrage de charge » ?
+## 1. Motivation et justification : « l'équilibrage de charge »
 
 ### 1.1 Partons d'un cas réel : l'évolution de l'architecture d'un site web
 
@@ -64,7 +64,7 @@ Imaginez que vous gérez un salon de thé à la mode :
 
 ---
 
-## 2. Qu'est-ce que l'équilibrage de charge ?
+## 2. Qu'est-ce que l'équilibrage de charge
 
 ### 2.1 Équilibrage de charge couche 4 (L4) : ne regarde que le numéro de porte
 
@@ -88,7 +88,7 @@ Requête client → Équilibreur de charge L4 → Serveur backend
 
 :::
 
-### 2.2 Équilibrage de charge couche 7 (L7) : examine le contenu du colis
+### 2.2 Équilibrage de charge couche 7 (L7) : examine le contenu du artefact de build
 
 **Fonctionne au niveau applicatif (HTTP/HTTPS)**, comme un livreur qui, au-delà du numéro de porte, **ouvre le colis pour examiner son contenu** et décider comment le livrer en conséquence.
 
@@ -124,7 +124,7 @@ Requête client → Équilibreur de charge L7 → Analyse le contenu HTTP
 
 ---
 
-## 3. Problème central n°1 : comment éviter que les serveurs « en panne » continuent à recevoir des requêtes ?
+## 3. Problème central n°1 : comment éviter que les serveurs « en panne » continuent à recevoir des requêtes
 
 ### 3.1 Vérifications de santé : ne laissez pas un serveur « malade »拖垮 le système
 
@@ -167,9 +167,9 @@ Une équipe avait fixé le seuil de temps de réponse du contrôle de santé à 
 
 ---
 
-## 4. Problème central n°2 : comment s'assurer que le « client habituel » trouve toujours le même « caissier » ?
+## 4. Problème central n°2 : comment s'assurer que le « client habituel » trouve toujours le même « instance backend »
 
-### 4.1 Persistance de session : le « client habituel » trouve toujours le même « caissier »
+### 4.1 Persistance de session : le « client habituel » trouve toujours le même « instance backend »
 
 Imaginez que vous êtes un habitué du salon de thé, toujours accueilli par le même employé qui connaît vos préférences (moitié de sucre, sans glace). Le service est rapide et attentionné. Mais si à chaque visite vous avez un nouvel employé, vous devez tout répéter, l'efficacité en prend un coup.
 
@@ -194,7 +194,7 @@ Imaginez que vous êtes un habitué du salon de thé, toujours accueilli par le 
 
 ---
 
-## 5. Problème central n°3 : comment réaliser un déploiement sans interruption ?
+## 5. Problème central n°3 : comment réaliser un déploiement sans interruption
 
 ### 5.1 Déploiement bleu-vert : publication sans interruption par « basculement instantané »
 
@@ -244,7 +244,7 @@ Le nom « publication canari » vient de la pratique historique des « canaris d
 
 ---
 
-## 6. Problème central n°4 : comment permettre au système de « respirer » tout seul ?
+## 6. Problème central n°4 : comment permettre au système de « respirer » tout seul
 
 ### 6.1 Mise à l'échelle automatique : le système s'adapte comme un restaurant qui « ajuste son personnel »
 
@@ -307,7 +307,7 @@ Une équipe avait configuré la baisse d'échelle à CPU < 30 %. Après la mont�
 
 ---
 
-## 7. En pratique : comment choisir un équilibreur de charge ?
+## 7. En pratique : comment choisir un équilibreur de charge
 
 ### 7.1 Comparaison des équilibreurs de charge principaux
 

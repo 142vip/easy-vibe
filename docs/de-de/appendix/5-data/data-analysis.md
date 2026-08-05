@@ -1,4 +1,4 @@
-# Datenanalyse: Kernkonzepte, Logik und tiefe Einblicke
+# Datenanalyse: Verarbeitungsprinzipien
 
 ::: tip 🎯 Kernfrage
 **Wie extrahiert man aus unstrukturierten Daten die „Gewissheit", die das Business steuern kann?**
@@ -21,7 +21,7 @@ Unser Ziel ist es, einen systematischen Analyse-Rahmen aufzubauen, der das Gesch
 
 ---
 
-## 1. Deskriptive Statistik: Wie man das Gesamtbild in einem Satz zusammenfasst
+## 1. Deskriptive Statistik: Ansatz für man das Gesamtbild in einem Satz zusammenfasst
 
 > Wenn Sie vor 100.000 Datenzeilen stehen, können Sie unmöglich jede Zeile einzeln prüfen. Sie benötigen die Fähigkeit zur „Informationskompression" — mit extrem wenigen Kennzahlen den Kern der Daten präzise zu erfassen. Wenn Sie die statistischen Fallen von Mittelwert und Median nicht kennen, werden Sie bei der Analyse von Geschäftsleistung (z. B. Pro-Kopf-Ausgaben der Nutzer) durch Extremwerte in die Irre geführt und ziehen absurde Schlüsse.
 
@@ -60,7 +60,7 @@ Individuelles Verhalten ist oft zufällig, aber Gruppenverhalten folgt statistis
 2. **Berechnen (Apply)**: Innerhalb jeder Gruppe Aggregationsfunktionen ausführen, wie `COUNT()` Zählen, `SUM()` Summieren, `AVG()` Mittelwert berechnen.
 3. **Kombinieren (Combine)**: Die Ergebnisse verschiedener Gruppen vergleichen und Unterschiede entdecken.
 
-### 2.2 Warum ist eine Gruppierung (Group By) zwingend erforderlich?
+### 2.2 Warum ist eine Gruppierung (Group By) zwingend erforderlich
 Aggregierte Daten verbergen oft Probleme. Zum Beispiel: Die Gesamtkonversionsrate steigt, aber nach der Aufteilung zeigt sich, dass eigentlich nur die Region „Shanghai" rasant gewachsen ist und den Gesamtwert hochzieht, während alle anderen Regionen sinken. Durch die Aggregationsanalyse können wir aus dem „Gesamtdurchschnitt" den besten oder schlechtesten Zweig präzise lokalisieren.
 
 ---

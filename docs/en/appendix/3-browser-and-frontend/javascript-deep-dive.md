@@ -1,4 +1,4 @@
-# JavaScript Deep Dive
+# Principles of JavaScript
 
 ::: tip Foreword
 By now you've learned HTML and CSS and can make decent-looking web pages. But you might have noticed: buttons don't respond to clicks, forms can't be submitted, and the page feels like a "static" picture.
@@ -67,7 +67,7 @@ Each chapter starts from "being able to recognize code" — you don't need to wr
 | **CSS** | Skin | Defines the appearance and styling of the page |
 | **JavaScript** | Muscles and nervous system | Makes the page responsive, interactive, and capable of logic |
 
-### 1.2 Why Does Vibecoding Also Require Understanding JavaScript?
+### 1.2 Motivation for Vibecodinging Also Require Understanding JavaScript
 
 ::: warning A New Developer's Pitfall
 A developer new to JavaScript used AI to build a "counter" app: click a button, and the number increases by 1. The AI-generated code worked fine.

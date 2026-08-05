@@ -1,4 +1,4 @@
-# Almacenamiento de archivos y almacenamiento de objetos
+# Introducción al almacenamiento de archivos y de objetos
 
 ::: tip Prólogo
 **Un usuario sube una foto de perfil, la guardas en el directorio `/uploads` de tu servidor. Luego el disco del servidor se llena, o añades un segundo servidor y el usuario descubre que su foto a veces aparece y a veces no.** El almacenamiento de archivos parece simple, pero en un entorno distribuido es un problema arquitectónico que requiere atención seria. El almacenamiento de objetos es la respuesta estándar de la era de Internet para resolver este problema.
@@ -24,7 +24,7 @@ Al terminar este capítulo, habrás aprendido:
 
 ---
 
-## 0. Panorama general: ¿por qué no guardar archivos en el servidor local?
+## 0. Panorama general: Motivación para archivos en el servidor local
 
 Al empezar un proyecto, guardar los archivos subidos por los usuarios en el directorio local del servidor es lo más intuitivo. Pero a medida que el proyecto crece, te encontrarás con una serie de problemas:
 
@@ -89,7 +89,7 @@ my-app-bucket/                    ← Bucket
 
 ---
 
-## 3. Soluciones de subida de archivos: ¿quién sube el archivo?
+## 3. Soluciones de subida de archivos: quién sube el archivo
 
 Existen dos enfoques principales para la subida de archivos: a través del servidor y subida directa del cliente. Para la mayoría de los escenarios, la **subida directa del cliente** es la mejor opción.
 

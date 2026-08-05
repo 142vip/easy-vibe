@@ -1,4 +1,4 @@
-# Embedding und Vektorsuche
+# Embedding und Vektor-Retrieval
 
 ::: tip Vorwort
 **Wie versteht ein Computer, dass „Katze und Hund sich ähnlich sind, aber nicht einem Auto"?** Für Menschen ist das selbstverständlich, aber für den Computer sind „Katze", „Hund", „Auto" nur drei zusammenhangslose Zeichenketten. Die Embedding-Technologie ist der Schlüssel zur Lösung dieses Problems – sie verwandelt Text in numerische Vektoren, sodass der Computer semantische „Nähe und Distanz" verstehen kann.
@@ -63,7 +63,7 @@ Stell dir ein zweidimensionales Koordinatensystem vor. Wir platzieren „Katze" 
 
 ---
 
-## 2. Ähnlichkeitsberechnung: Wie „nah" sind sich Vektoren?
+## 2. Ähnlichkeitsberechnung: Ansatz für „nah" sind sich Vektoren
 
 Mit der Vektorrepräsentation stellt sich die nächste Frage: **Wie misst man, wie ähnlich zwei Vektoren sind?** Das ist wie die Messung der Entfernung zweier Städte auf einer Karte – du kannst die Luftlinie messen oder prüfen, ob die Richtung übereinstimmt.
 
@@ -83,7 +83,7 @@ Mit der Vektorrepräsentation stellt sich die nächste Frage: **Wie misst man, w
 
 ---
 
-## 3. Vektorindex: Wie durchsucht man Millionen von Vektoren in Millisekunden?
+## 3. Vektorindex: Ansatz für durchsucht man Millionen von Vektoren in Millisekunden
 
 Angenommen, du hast 1 Million Dokumente, jedes in einen 1536-dimensionalen Vektor umgewandelt. Ein Benutzer stellt eine Frage, und du musst die 10 ähnlichsten finden. Die direkteste Methode ist, jeden einzeln zu vergleichen – aber das bedeutet 1 Million Mal eine 1536-dimensionale Vektoroperation, viel zu langsam.
 

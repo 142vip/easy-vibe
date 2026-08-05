@@ -1,17 +1,17 @@
-# Theo dõi dữ liệu: Ghi lại người dùng đã làm gì trong ứng dụng
+# Thu thập dữ liệu hành vi: Giới thiệu về data tracking
 
 ::: tip 🎯 Vấn đề cần giải quyết trong chương này
 **Làm sao chúng ta biết người dùng đã làm gì trong ứng dụng?**
 
 Hãy tưởng tượng bạn mở một quán trà sữa trực tiếp. Bạn có thể đứng sau quầy, quan sát trực tiếp mỗi khách hàng: họ vào xem menu bao lâu? Gọi món gì? Có do dự rồi bỏ đi không?
 
-Nhưng nếu "cửa hàng" của bạn là một ứng dụng điện thoại hay trang web, bạn không thể nhìn thấy trực tiếp thao tác của người dùng. Lúc này cần một phương pháp kỹ thuật, "gắn" các điểm ghi nhận ở những vị trí quan trọng trong ứng dụng, tự động ghi lại từng thao tác của người dùng. Đó chính là **Theo dõi dữ liệu (Event Tracking)**.
+Nhưng nếu "cửa hàng" của bạn là một ứng dụng điện thoại hay trang web, bạn không thể nhìn thấy trực tiếp thao tác của người dùng. Lúc này cần một phương pháp kỹ thuật, "gắn" các điểm thu thập ở những vị trí quan trọng trong ứng dụng, tự động ghi lại từng thao tác của người dùng. Đó chính là **Theo dõi dữ liệu (Event Tracking)**.
 
-Từ "theo dõi" nghe rất chuyên môn, nhưng ý cốt lõi rất đơn giản: **ở những nơi người dùng có thể thao tác, đặt một "bộ ghi nhận", ghi lại người dùng đã làm gì.**
+Từ "theo dõi" nghe rất chuyên môn, nhưng ý cốt lõi rất đơn giản: **ở những nơi người dùng có thể thao tác, đặt một "bộ thu thập", ghi lại người dùng đã làm gì.**
 
 Chương này sẽ giải thích quá trình này qua bốn bước:
 
-1. **Chọn phương án thu thập** — quyết định đặt bộ ghi nhận ở đâu, đặt như thế nào
+1. **Chọn phương án thu thập** — quyết định đặt bộ thu thập ở đâu, đặt như thế nào
 2. **Thiết kế định dạng dữ liệu** — quyết định mỗi bản ghi nên chứa những thông tin gì
 3. **Truyền và bộ đệm** — đưa bản ghi từ điện thoại người dùng đến máy chủ một cách an toàn
 4. **Làm sạch và lưu trữ** — sắp xếp dữ liệu, loại bỏ trùng lặp và lỗi, lưu vào cơ sở dữ liệu
@@ -19,13 +19,13 @@ Chương này sẽ giải thích quá trình này qua bốn bước:
 
 ---
 
-## Bước 1: Chọn phương án thu thập — Đặt bộ ghi nhận ở đâu?
+## 1. Chọn phương án thu thập: Đặt bộ thu thập ở đâu
 
 **Mục tiêu**: Quyết định dùng cách nào để ghi lại thao tác của người dùng.
 
-Ví dụ: quản lý sản phẩm muốn biết "bao nhiêu người dùng đã nhấp nút mua hàng". Để trả lời, lập trình viên cần thêm logic ghi nhận vào mã của "nút mua hàng" — mỗi khi người dùng nhấp nút này, tự động ghi lại một bản ghi.
+Ví dụ: quản lý sản phẩm muốn biết "bao nhiêu người dùng đã nhấp nút mua hàng". Để trả lời, lập trình viên cần thêm logic thu thập vào mã của "nút mua hàng" — mỗi khi người dùng nhấp nút này, tự động ghi lại một bản ghi.
 
-Nhưng đây là một câu hỏi lựa chọn: chúng ta **chỉ đặt bộ ghi nhận ở những nơi quan trọng** (ví dụ chỉ ghi "mua hàng" và "đăng ký"), hay **đặt ở tất cả mọi nơi** (ghi lại mọi lần nhấp, trượt, dừng lại của người dùng)?
+Nhưng đây là một câu hỏi lựa chọn: chúng ta **chỉ đặt bộ thu thập ở những nơi quan trọng** (ví dụ chỉ ghi "mua hàng" và "đăng ký"), hay **đặt ở tất cả mọi nơi** (ghi lại mọi lần nhấp, trượt, dừng lại của người dùng)?
 
 Lựa chọn khác nhau tương ứng với phương án theo dõi khác nhau.
 
@@ -35,52 +35,52 @@ Lựa chọn khác nhau tương ứng với phương án theo dõi khác nhau.
 
 Trong ngành thường dùng ba phương pháp theo dõi, mỗi cái có ưu nhược điểm:
 
-**Phương pháp 1: Theo dõi bằng code (Code Tracking) — Ghi nhận thủ công chính xác**
+**Phương pháp 1: Theo dõi bằng code (Code Tracking) — thu thập thủ công chính xác**
 
 Lập trình viên chỉ định thủ công trong code: khi người dùng thực hiện thao tác nào đó, ghi lại một bản ghi.
 
-Ví dụ: giống như bố trí một người chuyên ghi nhận tại quầy thu ngân của quán trà sữa, chỉ ghi "ai đã mua gì, tiêu bao nhiêu". Thông tin ghi nhận rất chi tiết và chính xác.
+Ví dụ: giống như bố trí một người chuyên thu thập tại quầy máy chủ backend của quán trà sữa, chỉ ghi "ai đã mua gì, tiêu bao nhiêu". Thông tin thu thập rất chi tiết và chính xác.
 
-- *Ưu điểm*: có thể ghi nhận thông tin nghiệp vụ rất chi tiết, ví dụ người dùng dùng mã giảm giá nào, số dư tài khoản bao nhiêu
-- *Chi phí*: mỗi điểm ghi nhận mới đều cần lập trình viên viết code, kiểm thử, phát hành phiên bản mới — quy trình dài
+- *Ưu điểm*: có thể thu thập thông tin nghiệp vụ rất chi tiết, ví dụ người dùng dùng mã giảm giá nào, số dư tài khoản bao nhiêu
+- *Chi phí*: mỗi điểm thu thập mới đều cần lập trình viên viết code, kiểm thử, phát hành phiên bản mới — quy trình dài
 
 **Phương pháp 2: Theo dõi trực quan (Visual Tracking) — Chọn bằng cách nhấp**
 
-Không cần viết code. Hệ thống cung cấp công cụ trực quan, nhân viên vận hành có thể "chọn" trực tiếp trên giao diện ứng dụng nút hoặc khu vực muốn theo dõi, hệ thống tự động bắt đầu ghi nhận.
+Không cần viết code. Hệ thống cung cấp công cụ trực quan, nhân viên vận hành có thể "chọn" trực tiếp trên giao diện ứng dụng nút hoặc khu vực muốn theo dõi, hệ thống tự động bắt đầu thu thập.
 
-Ví dụ: giống như trên màn hình camera của quán, dùng chuột chọn "khu vực quầy thu ngân", hệ thống tự động bắt đầu thống kê lưu lượng người trong khu vực đó.
+Ví dụ: giống như trên màn hình camera của quán, dùng chuột chọn "khu vực quầy máy chủ backend", hệ thống tự động bắt đầu thống kê lưu lượng người trong khu vực đó.
 
 - *Ưu điểm*: không cần lập trình viên tham gia, nhân viên vận hành tự cấu hình được, hiệu suất cao
-- *Chi phí*: chỉ ghi nhận được thao tác giao diện như "người dùng đã nhấp gì", không ghi nhận được dữ liệu nghiệp vụ sâu như "số tiền đơn hàng"
+- *Chi phí*: chỉ thu thập được thao tác giao diện như "người dùng đã nhấp gì", không thu thập được dữ liệu nghiệp vụ sâu như "số tiền đơn hàng"
 
-**Phương pháp 3: Theo dõi toàn bộ (Auto Tracking) — Tự động ghi nhận mọi thứ**
+**Phương pháp 3: Theo dõi toàn bộ (Auto Tracking) — Tự động thu thập mọi thứ**
 
-Tích hợp một SDK (có thể hiểu là "bộ công cụ") vào ứng dụng, nó sẽ tự động ghi nhận mọi thao tác của người dùng: mỗi lần nhấp, mỗi lần trượt, ở mỗi trang dừng bao lâu.
+Tích hợp một SDK (có thể hiểu là "bộ công cụ") vào ứng dụng, nó sẽ tự động thu thập mọi thao tác của người dùng: mỗi lần nhấp, mỗi lần trượt, ở mỗi trang dừng bao lâu.
 
 Ví dụ: giống như lắp camera ở mọi góc của quán, ghi lại mọi cử chỉ của khách hàng.
 
 - *Ưu điểm*: không bỏ sót thao tác nào, độ phủ toàn diện nhất
 - *Chi phí*: lượng dữ liệu rất lớn, nhiều thông tin vô dụng (ví dụ người dùng trượt vô thức), cần nhiều công sức lọc và làm sạch sau này
 
-**Tóm tắt bước này**: sau khi chọn phương pháp theo dõi, ứng dụng đã có khả năng "ghi nhận thao tác người dùng".
+**Tóm tắt bước này**: sau khi chọn phương pháp theo dõi, ứng dụng đã có khả năng "thu thập thao tác người dùng".
 
-**Nhưng có một vấn đề mới**: bộ ghi nhận tuy có thể thu thập thao tác người dùng, nhưng nếu mỗi bộ ghi nhận ghi theo định dạng khác nhau (ví dụ có ghi "userID", có ghi "user_id", có không ghi), thì không thể phân tích thống nhất. Do đó bước tiếp theo, chúng ta cần quy định một định dạng ghi nhận thống nhất.
+**Nhưng có một vấn đề mới**: bộ thu thập tuy có thể thu thập thao tác người dùng, nhưng nếu mỗi bộ thu thập ghi theo định dạng khác nhau (ví dụ có ghi "userID", có ghi "user_id", có không ghi), thì không thể phân tích thống nhất. Do đó bước tiếp theo, chúng ta cần quy định một định dạng thu thập thống nhất.
 
 ---
 
-## Bước 2: Thiết kế định dạng dữ liệu — Mỗi bản ghi nên chứa gì?
+## 2. Thiết kế định dạng dữ liệu: Mỗi bản ghi nên chứa gì
 
 **Điều kiện tiên quyết**: đã chọn phương pháp theo dõi (ví dụ theo dõi bằng code), ứng dụng đã có thể thu thập thao tác người dùng.
 
-**Mục tiêu bước này**: quy định một "mẫu ghi nhận" thống nhất, để tất cả bản ghi theo dõi có định dạng nhất quán.
+**Mục tiêu bước này**: quy định một "mẫu thu thập" thống nhất, để tất cả bản ghi theo dõi có định dạng nhất quán.
 
-**Tại sao cần định dạng thống nhất?** Hãy tưởng tượng: nếu quán trà sữa có ba nhân viên cùng ghi nhận doanh số, một người viết "Minh mua trà sữa 15 nghìn", người khác viết "15, trà, trà sữa", người thứ ba viết "một ly trà sữa". Đến cuối tháng tổng hợp, các định dạng hoàn toàn khác nhau, việc thống kê sẽ rất đau đầu. Do đó cần một "phiếu ghi nhận" thống nhất, quy định mỗi bản ghi phải điền những trường nào.
+**Tại sao cần định dạng thống nhất?** Hãy tưởng tượng: nếu quán trà sữa có ba nhân viên cùng thu thập doanh số, một người viết "Minh mua trà sữa 15 nghìn", người khác viết "15, trà, trà sữa", người thứ ba viết "một ly trà sữa". Đến cuối tháng tổng hợp, các định dạng hoàn toàn khác nhau, việc thống kê sẽ rất đau đầu. Do đó cần một "phiếu thu thập" thống nhất, quy định mỗi bản ghi phải điền những trường nào.
 
 <DataTrackingDemo tab="model" />
 
-**💡 Nguyên lý cốt lõi: Mẫu ghi nhận 4W1H**
+**💡 Nguyên lý cốt lõi: Mẫu thu thập 4W1H**
 
-Dù ghi nhận thao tác gì, mỗi bản ghi đều cần trả lời năm câu hỏi sau (gọi tắt là 4W1H):
+Dù thu thập thao tác gì, mỗi bản ghi đều cần trả lời năm câu hỏi sau (gọi tắt là 4W1H):
 
 **Who — Ai đã làm?**
 
@@ -91,7 +91,7 @@ Chúng ta cần biết bản ghi này được tạo ra bởi người dùng nà
 
 **When — Khi nào làm?**
 
-Ghi nhận thời gian chính xác khi thao tác xảy ra, chính xác đến mili-giây.
+thu thập thời gian chính xác khi thao tác xảy ra, chính xác đến mili-giây.
 
 Có một chi tiết: nếu ứng dụng có người dùng ở nước ngoài, 3 giờ chiều giờ Bắc Kinh và 3 giờ chiều giờ New York thực tế chênh nhau 13 tiếng. Để tránh nhầm lẫn, tất cả thời gian được chuyển đổi về UTC (thời gian phối hợp quốc tế).
 
@@ -119,9 +119,9 @@ Phần này ghi lại chi tiết nghiệp vụ cụ thể của thao tác, gọi
 
 ---
 
-## Bước 3: Truyền và bộ đệm — Làm sao đưa dữ liệu đến máy chủ an toàn?
+## 3. Truyền và bộ đệm: Làm sao đưa dữ liệu đến máy chủ an toàn
 
-**Điều kiện tiên quyết**: mỗi thao tác của người dùng đã được ghi nhận thành dữ liệu JSON có định dạng thống nhất.
+**Điều kiện tiên quyết**: mỗi thao tác của người dùng đã được thu thập thành dữ liệu JSON có định dạng thống nhất.
 
 **Mục tiêu bước này**: truyền dữ liệu này từ điện thoại (hoặc trình duyệt) của người dùng đến máy chủ một cách đáng tin cậy, ngay cả khi mạng không tốt cũng không mất dữ liệu.
 
@@ -157,7 +157,7 @@ Giải pháp là thêm một "vùng đệm" ở giữa, kỹ thuật gọi là *
 
 ---
 
-## Bước 4: Làm sạch và lưu trữ — Sắp xếp dữ liệu, loại bỏ "dữ liệu bẩn"
+## 4. Làm sạch và lưu trữ: Sắp xếp dữ liệu, loại bỏ "dữ liệu bẩn"
 
 **Điều kiện tiên quyết**: dữ liệu đã đến máy chủ an toàn qua đường truyền.
 
@@ -200,7 +200,7 @@ Dưới đây là tóm tắt bốn bước của theo dõi dữ liệu từ thu 
 
 | Bước | Đã làm gì | Được gì | Còn vấn đề gì |
 |------|-----------|---------|---------------|
-| **1. Chọn phương án thu thập** | Quyết định cách ghi nhận thao tác người dùng | Ứng dụng có khả năng ghi nhận | Định dạng dữ liệu các bộ ghi nhận không thống nhất |
+| **1. Chọn phương án thu thập** | Quyết định cách thu thập thao tác người dùng | Ứng dụng có khả năng thu thập | Định dạng dữ liệu các bộ thu thập không thống nhất |
 | **2. Thiết kế định dạng dữ liệu** | Dùng mẫu 4W1H thống nhất định dạng | Mỗi bản ghi là JSON chuẩn | Lượng người dùng lớn gửi từng cái chịu không nổi |
 | **3. Truyền và bộ đệm** | Gom batch gửi, mất mạng lưu cục bộ, hàng đợi đệm | Dữ liệu đến máy chủ an toàn | Thử lại có thể gây trùng dữ liệu |
 | **4. Làm sạch và lưu trữ** | Loại trùng, kiểm tra, thống nhất định dạng | ✅ Dữ liệu sạch lưu vào kho dữ liệu | — |

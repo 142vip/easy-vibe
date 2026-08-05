@@ -1,4 +1,4 @@
-# Backend Layered Architecture
+# Principles of Backend Layered Architecture
 
 > **Core Question**: As code grows more chaotic, how should you organize it to stay clear and understandable?
 
@@ -6,7 +6,7 @@ When a project expands from dozens of lines to tens of thousands, from solo deve
 
 ---
 
-## 1. Why Layers?
+## 1. Motivation for Layersing
 
 ### 1.1 The Root of the Problem
 
@@ -354,7 +354,7 @@ public class User {
 
 ## 3. DTO: The "Translator" Between Layers
 
-### 3.1 Why DTOs?
+### 3.1 Motivation for DTOsing
 
 **The problem**: If you return database entities directly to the frontend:
 
@@ -539,11 +539,11 @@ public class OrderController {
 
 ## 6. Frequently Asked Questions
 
-### 6.1 Can the Controller contain business logic?
+### 6.1 Can the Controller contain business logic
 
 The Controller should not contain business logic — it is only responsible for accepting requests and returning responses. Business logic should be encapsulated in the Service layer. The benefit is that code can be reused: for example, scheduled tasks or message queue consumers can directly call the Service without going through HTTP. Additionally, business logic concentrated in one place is easier to test and maintain, avoiding inconsistencies caused by scattered logic.
 
-### 6.2 What are the Anemic Domain Model and Rich Domain Model?
+### 6.2 Overview of the Anemic Domain Model and Rich Domain Model
 
 The **Anemic Domain Model** means entity classes contain only properties and their corresponding getter/setter methods, with no business logic — all business rules reside in the Service layer. This model is simple in structure, easy to understand, and is the approach adopted by most projects.
 
@@ -551,7 +551,7 @@ The **Rich Domain Model** means entity classes contain not only properties but a
 
 It is recommended to choose the model based on the team's technical background and project complexity. Whichever you choose, maintain consistency, and the Domain layer should at least include basic behavioral methods rather than being a completely empty shell.
 
-### 6.3 How to handle transactions that span multiple Services?
+### 6.3 Approach to handling transactions that span multiple Services
 
 When a business operation needs to span multiple Services, use a `@Transactional` annotation on the upper-level Service method, and within that method, call the lower-level Services in sequence. This ensures all operations execute within the same transaction context — either all succeed or all fail, maintaining data consistency. Note that transaction boundaries should be as small as possible, including only necessary operations, to avoid holding database locks for extended periods and affecting concurrency performance.
 
@@ -761,7 +761,7 @@ More detailed selection dimensions:
 - **Clean Architecture**: Robert C. Martin's *Clean Architecture* — the classic that introduced dependency rules and the four-layer concentric model
 - **Enterprise Architecture Patterns**: Martin Fowler's *Patterns of Enterprise Application Architecture* — the authoritative reference on layered architecture and domain logic organization
 
-### 8.5 How to Choose?
+### 8.5 Approach to choosing
 
 **Remember this principle**: **Architecture serves the business — don't do architecture for architecture's sake**.
 

@@ -1,4 +1,4 @@
-# Guide approfondi de l'environnement d'execution JavaScript
+# Principes : Environnement d'exécution JavaScript
 
 ::: tip Preface
 Vous avez deja appris la syntaxe de base de JavaScript, mais vous etes-vous deja demande :
@@ -388,7 +388,7 @@ Etape 4 : c() terminee, depilage progressif
 
 <CallStackDemo />
 
-### 5.2 Gestion de la memoire : ou vont les dechets ?
+### 5.2 Gestion de la memoire : ou vont les dechets
 
 JavaScript dispose d'un mecanisme de "ramasse-miettes automatique" — vous n'avez pas besoin de liberer la memoire manuellement, le moteur s'en charge pour vous.
 

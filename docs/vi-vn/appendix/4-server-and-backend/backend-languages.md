@@ -4,7 +4,7 @@
 :::
 
 ---
-## 1. Tại sao cần hiểu về ngôn ngữ backend?
+## 1. Động lực của cần hiểu về ngôn ngữ backend
 
 ### 1.1 Từ đơn nhất đến đa dạng: Sự phát triển của ngôn ngữ backend
 
@@ -37,7 +37,7 @@ Nhưng sự phát triển backend hiện đại đã hoàn toàn thay đổi. Nh
 
 <BackendLanguagesDemo />
 
-### 1.2 Một câu chuyện thực tế đau thương: Tại sao chọn đúng ngôn ngữ lại quan trọng đến vậy
+### 1.2 Trường hợp: Tại sao chọn đúng ngôn ngữ lại quan trọng đến vậy
 
 Bạn có thể sẽ nói: "Dùng Python thì viết được mọi thứ, tại sao còn phải đắn đo?" Hãy để tôi kể một câu chuyện có thật, bạn sẽ hiểu tại sao việc lựa chọn ngôn ngữ lại quan trọng đến thế.
 
@@ -104,19 +104,19 @@ Hãy tưởng tượng bạn đang sửa nhà, các công cụ sửa chữa khá
 package main
 import "fmt"
 func main() {
-    fmt.Println("Hello")
+ fmt.Println("Hello")
 }
 ```
 
 ```
 Quá trình biên dịch:
 go build main.go
-    ↓
+ ↓
 [Trình biên dịch kiểm tra cú pháp, kiểm tra kiểu, tối ưu code]
-    ↓
+ ↓
 Tạo file thực thi main (mã máy)
-    ↓
-./main  ← Chạy trực tiếp, tốc độ cực nhanh
+ ↓
+./main ← Chạy trực tiếp, tốc độ cực nhanh
 ```
 
 **Code Python (thông dịch):**
@@ -128,9 +128,9 @@ print("Hello")
 ```
 Quá trình chạy:
 python main.py
-    ↓
+ ↓
 [Trình thông dịch đọc từng dòng, phân tích cú pháp, thực thi]
-    ↓
+ ↓
 Mỗi lần chạy đều phải phân tích lại
 ```
 
@@ -150,7 +150,7 @@ Sự phát triển của công nghệ hiện đại đã làm mờ ranh giới n
 
 :::
 
-### 2.3 Mô hình đồng thời: Xử lý được bao nhiêu request cùng lúc?
+### 2.3 Mô hình đồng thời: Xử lý được bao nhiêu request cùng lúc
 
 Đồng thời là một trong những khái niệm quan trọng nhất trong phát triển backend, nó quyết định hệ thống có thể xử lý đồng thời bao nhiêu request. Mô hình đồng thời của các ngôn ngữ khác nhau rất khác biệt, đây thường là yếu tố quyết định trong việc lựa chọn.
 
@@ -189,7 +189,7 @@ Trên CPU đơn nhân, chỉ có thể đạt được đồng thời; trên CPU
 
 :::
 
-### 2.4 Quản lý bộ nhớ: Ai chịu trách nhiệm dọn rác?
+### 2.4 Quản lý bộ nhớ: Ai chịu trách nhiệm dọn rác
 
 Quản lý bộ nhớ là yếu tố then chốt ảnh hưởng đến hiệu năng và trải nghiệm phát triển. Các ngôn ngữ khác nhau áp dụng các chiến lược khác nhau, mỗi chiến lược đều có ưu và nhược điểm.
 
@@ -258,23 +258,23 @@ Java ra đời năm 1995, do Sun Microsystems (sau này được Oracle mua lạ
 @RequestMapping("/api/users")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+ @Autowired
+ private UserService userService;
 
-    // API đăng ký：POST /api/users/register
-    @PostMapping("/register")
-    public ResponseEntity<User> register(@RequestBody RegisterRequest request) {
-        // 1. Kiểm tra tham số（phát hiện lỗi kiểu ngay khi biên dịch）
-        if (request.getUsername() == null || request.getUsername().length() < 3) {
-            return ResponseEntity.badRequest().build();
-        }
+ // API đăng ký：POST /api/users/register
+ @PostMapping("/register")
+ public ResponseEntity<User> register(@RequestBody RegisterRequest request) {
+ // 1. Kiểm tra tham số（phát hiện lỗi kiểu ngay khi biên dịch）
+ if (request.getUsername() == null || request.getUsername().length() < 3) {
+ return ResponseEntity.badRequest().build();
+ }
 
-        // 2. Gọi logic nghiệp vụ
-        User user = userService.register(request);
+ // 2. Gọi logic nghiệp vụ
+ User user = userService.register(request);
 
-        // 3. Trả về kết quả
-        return ResponseEntity.ok(user);
-    }
+ // 3. Trả về kết quả
+ return ResponseEntity.ok(user);
+ }
 }
 ```
 
@@ -356,21 +356,21 @@ const app = express();
 app.use(express.json()); // Tự động parse JSON
 
 app.post('/api/users/register', async (req, res) => {
-    try {
-        // 1. Kiểm tra tham số
-        const { username, password } = req.body;
-        if (!username || username.length < 3) {
-            return res.status(400).json({ error: 'Tên người dùng quá ngắn' });
-        }
+ try {
+ // 1. Kiểm tra tham số
+ const { username, password } = req.body;
+ if (!username || username.length < 3) {
+ return res.status(400).json({ error: 'Tên người dùng quá ngắn' });
+ }
 
-        // 2. Gọi logic nghiệp vụ（bất đồng bộ）
-        const user = await userService.register({ username, password });
+ // 2. Gọi logic nghiệp vụ（bất đồng bộ）
+ const user = await userService.register({ username, password });
 
-        // 3. Trả về kết quả
-        res.json(user);
-    } catch (err) {
-        res.status(500).json({ error: err.message });
-    }
+ // 3. Trả về kết quả
+ res.json(user);
+ } catch (err) {
+ res.status(500).json({ error: err.message });
+ }
 });
 
 app.listen(3000);
@@ -456,38 +456,38 @@ Go (còn gọi là Golang) được Robert Griesemer, Rob Pike và Ken Thompson 
 package main
 
 import (
-    "github.com/gin-gonic/gin"
-    "net/http"
+ "github.com/gin-gonic/gin"
+ "net/http"
 )
 
 type RegisterRequest struct {
-    Username string `json:"username" binding:"required,min=3"`
-    Password string `json:"password" binding:"required"`
+ Username string `json:"username" binding:"required,min=3"`
+ Password string `json:"password" binding:"required"`
 }
 
 func register(c *gin.Context) {
-    // 1. Bind và kiểm tra tham số（tự động thực hiện）
-    var req RegisterRequest
-    if err := c.ShouldBindJSON(&req); err != nil {
-        c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-        return
-    }
+ // 1. Bind và kiểm tra tham số（tự động thực hiện）
+ var req RegisterRequest
+ if err := c.ShouldBindJSON(&req); err != nil {
+ c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+ return
+ }
 
-    // 2. Gọi logic nghiệp vụ
-    user, err := userService.Register(req)
-    if err != nil {
-        c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-        return
-    }
+ // 2. Gọi logic nghiệp vụ
+ user, err := userService.Register(req)
+ if err != nil {
+ c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+ return
+ }
 
-    // 3. Trả về kết quả
-    c.JSON(http.StatusOK, user)
+ // 3. Trả về kết quả
+ c.JSON(http.StatusOK, user)
 }
 
 func main() {
-    r := gin.Default()
-    r.POST("/api/users/register", register)
-    r.Run(":3000")
+ r := gin.Default()
+ r.POST("/api/users/register", register)
+ r.Run(":3000")
 }
 ```
 
@@ -523,7 +523,7 @@ Uber đã chọn Go để viết lại một số dịch vụ lõi（như địn
 - Chi phí phần cứng giảm 50%
 - Độ ổn định hệ thống tăng đáng kể
 
-**Tại sao Go nhanh hơn Node.js nhiều đến vậy？**
+**Tại sao Go nhanh hơn Node.js nhiều đến vậy**
 1. **Song song thực sự**：Go có thể tận dụng CPU đa nhân, Node.js là đơn luồng
 2. **Tối ưu biên dịch**：Go là ngôn ngữ biên dịch, hiệu năng gần với C++
 3. **Tối ưu GC**：Bộ thu gom rác của Go có độ trễ cực thấp（<1ms）
@@ -532,7 +532,7 @@ Uber đã chọn Go để viết lại một số dịch vụ lõi（như địn
 
 ### 3.4 Rust: Ngôi Sao Mới Của Lập Trình Hệ Thống
 
-::: tip 🤔 "Lập trình hệ thống" là gì？
+::: tip 🤔 "Lập trình hệ thống" là gì
 
 **Lập trình hệ thống = Viết hệ điều hành, cơ sở dữ liệu, tầng thấp trình duyệt**
 
@@ -567,32 +567,32 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Deserialize, Serialize)]
 struct RegisterRequest {
-    username: String,
-    password: String,
+ username: String,
+ password: String,
 }
 
 async fn register(req: web::Json<RegisterRequest>) -> HttpResponse {
-    // 1. Kiểm tra tham số
-    if req.username.len() < 3 {
-        return HttpResponse::BadRequest().json(json!({"error": "Tên người dùng quá ngắn"}));
-    }
+ // 1. Kiểm tra tham số
+ if req.username.len() < 3 {
+ return HttpResponse::BadRequest().json(json!({"error": "Tên người dùng quá ngắn"}));
+ }
 
-    // 2. Gọi logic nghiệp vụ
-    match user_service::register(&req).await {
-        Ok(user) => HttpResponse::Ok().json(user),
-        Err(err) => HttpResponse::InternalServerError().json(json!({"error": err.to_string()})),
-    }
+ // 2. Gọi logic nghiệp vụ
+ match user_service::register(&req).await {
+ Ok(user) => HttpResponse::Ok().json(user),
+ Err(err) => HttpResponse::InternalServerError().json(json!({"error": err.to_string()})),
+ }
 }
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    HttpServer::new(|| {
-        App::new()
-            .route("/api/users/register", web::post().to(register))
-    })
-    .bind("127.0.0.1:3000")?
-    .run()
-    .await
+ HttpServer::new(|| {
+ App::new()
+ .route("/api/users/register", web::post().to(register))
+ })
+ .bind("127.0.0.1:3000")?
+ .run()
+ .await
 }
 ```
 
@@ -620,7 +620,7 @@ async fn main() -> std::io::Result<()> {
 | Cơ chế xử lý lỗi xuất sắc | Hiệu quả phát triển tương đối thấp |
 | Zero-cost abstraction | **Khó tuyển dụng**, nhân tài khan hiếm |
 
-**Case study thực tế: Tại sao Dropbox dùng Rust viết lại engine lưu trữ cốt lõi？**
+**Case study thực tế: Tại sao Dropbox dùng Rust viết lại engine lưu trữ cốt lõi**
 
 Hệ thống lưu trữ file của Dropbox ban đầu được viết bằng Python, nhưng khi lượng người dùng tăng lên 500 triệu, họ gặp phải nút thắt hiệu năng nghiêm trọng：chi phí CPU cho mỗi request file quá lớn, chi phí máy chủ cực cao.
 
@@ -629,7 +629,7 @@ Họ đã dùng Rust viết lại phần cốt lõi của engine lưu trữ（Bl
 - Mức sử dụng bộ nhớ giảm 50%
 - Chi phí phần cứng tiết kiệm hàng triệu đô la
 
-**Tại sao chọn Rust thay vì C++？**
+**Tại sao chọn Rust thay vì C++**
 1. **An toàn bộ nhớ**：Trình biên dịch Rust đảm bảo không rò rỉ bộ nhớ, C++ cần quản lý thủ công
 2. **An toàn đồng thời**：Rust kiểm tra data race khi biên dịch, C++ cần debug khi runtime
 3. **Chuỗi công cụ hiện đại**：Cargo package manager, hệ thống tài liệu, testing framework đều rất hoàn thiện
@@ -641,7 +641,7 @@ Họ đã dùng Rust viết lại phần cốt lõi của engine lưu trữ（Bl
 
 ### 4.1 Phương pháp ra quyết định bốn bước
 
-### Bước 1: Xác định loại tình huống của bạn
+### 1. Xác định loại tình huống của bạn
 
 | Loại tình huống | Đặc điểm | Ngôn ngữ khuyến nghị | Không khuyến nghị |
 | :--- | :--- | :--- | :--- |
@@ -665,7 +665,7 @@ Họ đã dùng Rust viết lại phần cốt lõi của engine lưu trữ（Bl
 **AI/ML nhất định phải chọn Python**: Đây không phải là lựa chọn, mà là điều tất yếu. Toàn bộ hệ sinh thái AI/ML đều là Python.
 :::
 
-### Bước 2: Đánh giá nền tảng của nhóm
+### 2. Đánh giá nền tảng của nhóm
 
 **Ưu tiên ra quyết định: Mức độ quen thuộc của nhóm > Giải pháp kỹ thuật tối ưu**
 
@@ -677,7 +677,7 @@ Họ đã dùng Rust viết lại phần cốt lõi của engine lưu trữ（Bl
 | **Nền tảng C/C++** | Rust / Go | Rust thay thế C++, Go phát triển nhanh cho nghiệp vụ |
 | **Nhóm hoàn toàn mới** | Go / Python | Go rèn luyện tư duy kỹ thuật, Python cho ra sản phẩm nhanh |
 
-### Bước 3: Cân bằng giữa hiệu suất và hiệu quả phát triển
+### 3. Cân bằng giữa hiệu suất và hiệu quả phát triển
 
 **Ma trận ra quyết định**:
 
@@ -688,7 +688,7 @@ Họ đã dùng Rust viết lại phần cốt lõi của engine lưu trữ（Bl
 | Trung bình (Web thông thường) | Ngắn | Node.js / Python | Ứng dụng nguyên khối, lặp nhanh |
 | Thấp (Công cụ nội bộ) | Rất ngắn | Python / Ruby | Script hóa, ưu tiên tự động hóa |
 
-### Bước 4: Cân nhắc chi phí bảo trì dài hạn
+### 4. Cân nhắc chi phí bảo trì dài hạn
 
 **Các mục ẩn của chi phí bảo trì**:
 
@@ -834,26 +834,26 @@ C# được Microsoft phát hành vào năm 2000, là ngôn ngữ cốt lõi c�
 [Route("api/[controller]")]
 public class UsersController : ControllerBase
 {
-    private readonly IUserService _userService;
+ private readonly IUserService _userService;
 
-    public UsersController(IUserService userService)
-    {
-        _userService = userService;
-    }
+ public UsersController(IUserService userService)
+ {
+ _userService = userService;
+ }
 
-    [HttpPost("register")]
-    public async Task<ActionResult<User>> Register([FromBody] RegisterRequest request)
-    {
-        // 1. Kiểm tra tham số（tự động）
-        if (string.IsNullOrEmpty(request.Username) || request.Username.Length < 3)
-            return BadRequest("Tên người dùng quá ngắn");
+ [HttpPost("register")]
+ public async Task<ActionResult<User>> Register([FromBody] RegisterRequest request)
+ {
+ // 1. Kiểm tra tham số（tự động）
+ if (string.IsNullOrEmpty(request.Username) || request.Username.Length < 3)
+ return BadRequest("Tên người dùng quá ngắn");
 
-        // 2. Gọi logic nghiệp vụ（bất đồng bộ）
-        var user = await _userService.Register(request);
+ // 2. Gọi logic nghiệp vụ（bất đồng bộ）
+ var user = await _userService.Register(request);
 
-        // 3. Trả về kết quả
-        return Ok(user);
-    }
+ // 3. Trả về kết quả
+ return Ok(user);
+ }
 }
 ```
 
@@ -907,21 +907,21 @@ Kotlin được JetBrains phát hành vào năm 2011, ban đầu là ngôn ngữ
 // Kotlin Ktor：API đăng ký người dùng
 @Route("/api/users/register")
 suspend fun register(call: ApplicationCall) {
-    val request = call.receive<RegisterRequest>()
+ val request = call.receive<RegisterRequest>()
 
-    // 1. Kiểm tra tham số
-    if (request.username.length < 3) {
-        call.respond(HttpStatusCode.BadRequest, "Tên người dùng quá ngắn")
-        return
-    }
+ // 1. Kiểm tra tham số
+ if (request.username.length < 3) {
+ call.respond(HttpStatusCode.BadRequest, "Tên người dùng quá ngắn")
+ return
+ }
 
-    // 2. Gọi logic nghiệp vụ（coroutine）
-    val user = withContext(Dispatchers.IO) {
-        userService.register(request)
-    }
+ // 2. Gọi logic nghiệp vụ（coroutine）
+ val user = withContext(Dispatchers.IO) {
+ userService.register(request)
+ }
 
-    // 3. Trả về kết quả
-    call.respond(user)
+ // 3. Trả về kết quả
+ call.respond(user)
 }
 ```
 
@@ -972,19 +972,19 @@ Scala được Martin Odersky phát hành vào năm 2004, là ngôn ngữ "kết
 ```scala
 // Scala Play Framework：API đăng ký người dùng
 class UsersController @Inject()(userService: UserService) extends Controller {
-  def register = Action.async { request =>
-    // 1. Kiểm tra tham số
-    if (request.body.username.length < 3) {
-      Future.successful(BadRequest("Tên người dùng quá ngắn"))
-    } else {
-      // 2. Gọi logic nghiệp vụ（bất đồng bộ）
-      userService.register(request.body).map { user =>
-        Ok(user)
-      }.recover {
-        case e: Exception => InternalServerError(e.getMessage)
-      }
-    }
-  }
+ def register = Action.async { request =>
+ // 1. Kiểm tra tham số
+ if (request.body.username.length < 3) {
+ Future.successful(BadRequest("Tên người dùng quá ngắn"))
+ } else {
+ // 2. Gọi logic nghiệp vụ（bất đồng bộ）
+ userService.register(request.body).map { user =>
+ Ok(user)
+ }.recover {
+ case e: Exception => InternalServerError(e.getMessage)
+ }
+ }
+ }
 }
 ```
 
@@ -1028,23 +1028,23 @@ Swift được Apple phát hành vào năm 2014, là ngôn ngữ chính thức c
 ```swift
 // Swift Vapor：API đăng ký người dùng
 struct RegisterRequest: Content {
-    var username: String
-    var password: String
+ var username: String
+ var password: String
 }
 
 func register(_ req: Request) throws -> EventLoopFuture<User> {
-    // 1. Kiểm tra tham số
-    let request = try req.content.decode(RegisterRequest.self)
-    guard request.username.count >= 3 else {
-        throw Abort(.badRequest, reason: "Tên người dùng quá ngắn")
-    }
+ // 1. Kiểm tra tham số
+ let request = try req.content.decode(RegisterRequest.self)
+ guard request.username.count >= 3 else {
+ throw Abort(.badRequest, reason: "Tên người dùng quá ngắn")
+ }
 
-    // 2. Gọi logic nghiệp vụ
-    return User.register(request: request, on: req.db)
-        .map { user in
-            // 3. Trả về kết quả
-            return user
-        }
+ // 2. Gọi logic nghiệp vụ
+ return User.register(request: request, on: req.db)
+ .map { user in
+ // 3. Trả về kết quả
+ return user
+ }
 }
 ```
 
@@ -1095,21 +1095,21 @@ Ruby được Yukihiro Matsumoto phát hành vào năm 1995, triết lý thiết
 ```ruby
 # Ruby Rails：API đăng ký người dùng
 class UsersController < ApplicationController
-  def register
-    # 1. Kiểm tra tham số
-    if params[:username].length < 3
-      render json: { error: 'Tên người dùng quá ngắn' }, status: :bad_request
-      return
-    end
+ def register
+ # 1. Kiểm tra tham số
+ if params[:username].length < 3
+ render json: { error: 'Tên người dùng quá ngắn' }, status: :bad_request
+ return
+ end
 
-    # 2. Gọi logic nghiệp vụ
-    user = User.register(params)
+ # 2. Gọi logic nghiệp vụ
+ user = User.register(params)
 
-    # 3. Trả về kết quả
-    render json: user, status: :ok
-  rescue => e
-    render json: { error: e.message }, status: :internal_server_error
-  end
+ # 3. Trả về kết quả
+ render json: user, status: :ok
+ rescue => e
+ render json: { error: e.message }, status: :internal_server_error
+ end
 end
 ```
 
@@ -1163,28 +1163,28 @@ use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]
 pub fn calculate_prime_factors(n: u64) -> Vec<u64> {
-    let mut factors = Vec::new();
-    let mut num = n;
+ let mut factors = Vec::new();
+ let mut num = n;
 
-    while num % 2 == 0 {
-        factors.push(2);
-        num /= 2;
-    }
+ while num % 2 == 0 {
+ factors.push(2);
+ num /= 2;
+ }
 
-    let mut i = 3;
-    while i * i <= num {
-        while num % i == 0 {
-            factors.push(i);
-            num /= i;
-        }
-        i += 2;
-    }
+ let mut i = 3;
+ while i * i <= num {
+ while num % i == 0 {
+ factors.push(i);
+ num /= i;
+ }
+ i += 2;
+ }
 
-    if num > 2 {
-        factors.push(num);
-    }
+ if num > 2 {
+ factors.push(num);
+ }
 
-    factors
+ factors
 }
 ```
 
@@ -1222,19 +1222,19 @@ Mỗi ngôn ngữ được trình bày theo ba cột: 「Hướng ứng dụng �
 ### 7.1 Ôn lại các quan điểm cốt lõi
 
 1. **Lựa chọn ngôn ngữ là quyết định kỹ thuật, không phải cuộc chiến tôn giáo**
-   - Mỗi ngôn ngữ đều có triết lý thiết kế và tình huống phù hợp riêng
-   - "Ngôn ngữ tốt nhất" không tồn tại, chỉ có "ngôn ngữ phù hợp nhất"
-   - Sự quen thuộc của đội ngũ thường quan trọng hơn các đặc tính kỹ thuật
+ - Mỗi ngôn ngữ đều có triết lý thiết kế và tình huống phù hợp riêng
+ - "Ngôn ngữ tốt nhất" không tồn tại, chỉ có "ngôn ngữ phù hợp nhất"
+ - Sự quen thuộc của đội ngũ thường quan trọng hơn các đặc tính kỹ thuật
 
 2. **Tiến hóa của stack công nghệ là quá trình dần dần, không phải cách mạng**
-   - GitHub mất 10 năm để chuyển từ Rails sang đa ngôn ngữ cùng tồn tại
-   - Twitter mất 5 năm để chuyển từ Rails sang Java
-   - Tái cấu trúc từng bước an toàn hơn là đập đi làm lại từ đầu
+ - GitHub mất 10 năm để chuyển từ Rails sang đa ngôn ngữ cùng tồn tại
+ - Twitter mất 5 năm để chuyển từ Rails sang Java
+ - Tái cấu trúc từng bước an toàn hơn là đập đi làm lại từ đầu
 
 3. **Thiết kế kiến trúc quan trọng hơn lựa chọn ngôn ngữ**
-   - Một hệ thống Go được thiết kế kém, hiệu năng sẽ kém xa một hệ thống Python được thiết kế xuất sắc
-   - Các chiến lược kiến trúc như microservices, caching, xử lý bất đồng bộ có ảnh hưởng lớn hơn nhiều so với ngôn ngữ
-   - Đừng kỳ vọng đổi ngôn ngữ sẽ giải quyết được mọi vấn đề
+ - Một hệ thống Go được thiết kế kém, hiệu năng sẽ kém xa một hệ thống Python được thiết kế xuất sắc
+ - Các chiến lược kiến trúc như microservices, caching, xử lý bất đồng bộ có ảnh hưởng lớn hơn nhiều so với ngôn ngữ
+ - Đừng kỳ vọng đổi ngôn ngữ sẽ giải quyết được mọi vấn đề
 
 ### 7.2 Lời khuyên cho kỹ sư ở các giai đoạn khác nhau
 
@@ -1322,24 +1322,24 @@ Các hệ thống hiện đại hiếm khi chỉ sử dụng một ngôn ngữ d
 Nếu bạn là một lập trình viên backend mới vào nghề, nên học theo trình tự sau:
 
 1. **Giai đoạn 1: Xây dựng nền tảng**
-   - Học Python hoặc JavaScript (Node.js)
-   - Hiểu về HTTP, cơ sở dữ liệu, thuật toán cơ bản
-   - Hoàn thành 2-3 dự án nhỏ
+ - Học Python hoặc JavaScript (Node.js)
+ - Hiểu về HTTP, cơ sở dữ liệu, thuật toán cơ bản
+ - Hoàn thành 2-3 dự án nhỏ
 
 2. **Giai đoạn 2: Đi sâu vào một ngôn ngữ**
-   - Chọn Python (phát triển nhanh) hoặc Go (cloud native)
-   - Học framework (Django/FastAPI hoặc Gin/Echo)
-   - Hiểu về đồng thời, tối ưu hiệu năng
+ - Chọn Python (phát triển nhanh) hoặc Go (cloud native)
+ - Học framework (Django/FastAPI hoặc Gin/Echo)
+ - Hiểu về đồng thời, tối ưu hiệu năng
 
 3. **Giai đoạn 3: Mở rộng tầm nhìn**
-   - Học ngôn ngữ thứ hai (khuyến nghị Go hoặc Rust)
-   - Hiểu triết lý thiết kế của các ngôn ngữ khác nhau
-   - Tham gia các dự án mã nguồn mở
+ - Học ngôn ngữ thứ hai (khuyến nghị Go hoặc Rust)
+ - Hiểu triết lý thiết kế của các ngôn ngữ khác nhau
+ - Tham gia các dự án mã nguồn mở
 
 4. **Giai đoạn 4: Trở thành chuyên gia**
-   - Hiểu sâu nguyên lý cốt lõi của một ngôn ngữ
-   - Có khả năng lựa chọn công nghệ và thiết kế kiến trúc
-   - Hướng dẫn và đào tạo người mới
+ - Hiểu sâu nguyên lý cốt lõi của một ngôn ngữ
+ - Có khả năng lựa chọn công nghệ và thiết kế kiến trúc
+ - Hướng dẫn và đào tạo người mới
 
 ### Suy ngẫm cuối cùng
 
@@ -1368,7 +1368,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**：Hiệu năng tối thượng · Nhúng / Hệ điều hành / Game engine / Âm thanh & Video · Nền tảng lập trình hệ thống
 
-### 10 hướng ứng dụng chính của C/C++
+### 10. hướng ứng dụng chính của C/C++
 
 | Hướng ứng dụng | Ví dụ chi tiết và mô tả | Ứng dụng / Chương trình điển hình |
 | :--- | :--- | :--- |
@@ -1388,7 +1388,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: An toàn bộ nhớ · Trừu tượng hóa không chi phí · Thay thế hiện đại cho C++ · Ngôn ngữ hệ thống phát triển nhanh nhất
 
-### 9 Hướng Ứng Dụng Chính Của Rust
+### 9. Hướng Ứng Dụng Chính Của Rust
 
 | Hướng ứng dụng | Ví dụ chi tiết & mô tả | Ứng dụng / Chương trình tiêu biểu |
 | :--- | :--- | :--- |
@@ -1407,7 +1407,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Ngôn ngữ số một cho AI/ML · Keo dán vạn năng · Khoa học dữ liệu · Tự động hóa · Tạo mẫu nhanh
 
-### 14 hướng ứng dụng chính của Python
+### 14. hướng ứng dụng chính của Python
 
 | Hướng ứng dụng | Ví dụ và mô tả chi tiết | Ứng dụng / Chương trình tiêu biểu |
 | :--- | :--- | :--- |
@@ -1431,7 +1431,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Kẻ thống trị Web · Toàn stack · Hệ sinh thái lớn nhất · Frontend/Backend/Desktop/Mobile/Plugin
 
-### 17 Hướng Ứng Dụng Chính của JavaScript/TypeScript
+### 17. Hướng Ứng Dụng Chính của JavaScript/TypeScript
 
 | Hướng ứng dụng | Ví dụ cụ thể & Mô tả | Ứng dụng / Chương trình điển hình |
 | :--- | :--- | :--- |
@@ -1458,7 +1458,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**：Hiệu năng cao · Đồng thời cao · Cloud-native/Microservices/API Gateway/CLI Tools · Đơn giản và hiệu quả
 
-### 10 hướng ứng dụng chính của Go
+### 10. hướng ứng dụng chính của Go
 
 | Hướng ứng dụng | Ví dụ chi tiết và mô tả | Ứng dụng / Chương trình điển hình |
 | :--- | :--- | :--- |
@@ -1478,7 +1478,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Phát triển doanh nghiệp · Hệ thống quy mô lớn · Tài chính/Thương mại điện tử/Dữ liệu lớn · Hệ sinh thái trưởng thành và ổn định
 
-### 12 hướng ứng dụng chính của Java
+### 12. hướng ứng dụng chính của Java
 
 | Hướng ứng dụng | Ví dụ chi tiết và mô tả | Ứng dụng / Chương trình điển hình |
 | :--- | :--- | :--- |
@@ -1500,7 +1500,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**：Chuyên sâu I/O · Ứng dụng thời gian thực · Lớp BFF · Tạo mẫu nhanh · Bao phủ cả frontend lẫn backend
 
-### 10 Hướng Ứng Dụng Chính của Node.js
+### 10. Hướng Ứng Dụng Chính của Node.js
 
 | Hướng ứng dụng | Ví dụ chi tiết & Mô tả | Ứng dụng / Chương trình điển hình |
 | :--- | :--- | :--- |
@@ -1563,7 +1563,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Tiên phong phát triển Web · Triển khai nhanh · CMS/TMĐT/Mạng xã hội · Triển khai đơn giản
 
-### 10 hướng ứng dụng chính của PHP
+### 10. hướng ứng dụng chính của PHP
 
 | Hướng ứng dụng | Ví dụ chi tiết & Mô tả | Ứng dụng / Chương trình điển hình |
 | :--- | :--- | :--- |
@@ -1583,7 +1583,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Thanh lịch súc tích · Phát triển nhanh · Ứng dụng Web/Rails · Trải nghiệm phát triển tuyệt vời
 
-### 10 Hướng Ứng Dụng Chính của Ruby
+### 10. Hướng Ứng Dụng Chính của Ruby
 
 | Hướng ứng dụng | Ví dụ và mô tả chi tiết | Ứng dụng / Chương trình tiêu biểu |
 | :--- | :--- | :--- |
@@ -1603,7 +1603,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Phát triển cấp doanh nghiệp · Hệ sinh thái Windows · Tài chính/Ứng dụng doanh nghiệp/Game · Hiệu năng xuất sắc
 
-### 11 hướng ứng dụng chính của C#
+### 11. hướng ứng dụng chính của C#
 
 | Hướng ứng dụng | Ví dụ chi tiết & Mô tả | Ứng dụng / Chương trình tiêu biểu |
 | :--- | :--- | :--- |
@@ -1624,7 +1624,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Ngôn ngữ JVM hiện đại · Phát triển Android · Thay thế Java tinh tế · Khả năng tương tác
 
-### 8 hướng ứng dụng chính của Kotlin
+### 8. hướng ứng dụng chính của Kotlin
 
 | Hướng ứng dụng | Ví dụ chi tiết & mô tả | Ứng dụng / Chương trình tiêu biểu |
 | :--- | :--- | :--- |
@@ -1642,7 +1642,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Lập trình hàm · Xử lý dữ liệu lớn · Đồng thời cao · Hệ sinh thái JVM
 
-### 8 Hướng Ứng Dụng Chính của Scala
+### 8. Hướng Ứng Dụng Chính của Scala
 
 | Hướng ứng dụng | Ví dụ chi tiết & Mô tả | Ứng dụng / Chương trình điển hình |
 | :--- | :--- | :--- |
@@ -1660,7 +1660,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Phát triển iOS/macOS · Swift phía máy chủ · Cú pháp thanh lịch · Hiệu suất xuất sắc
 
-### 7 hướng ứng dụng chính của Swift
+### 7. hướng ứng dụng chính của Swift
 
 | Hướng ứng dụng | Ví dụ chi tiết & Mô tả | Ứng dụng / Chương trình điển hình |
 | :--- | :--- | :--- |
@@ -1677,7 +1677,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Ứng dụng web hiệu năng cao · Không phụ thuộc ngôn ngữ · Sandbox trình duyệt · Đa nền tảng
 
-### 8 hướng ứng dụng chính của WebAssembly
+### 8. hướng ứng dụng chính của WebAssembly
 
 | Hướng ứng dụng | Ví dụ chi tiết và mô tả | Ứng dụng / Chương trình tiêu biểu |
 | :--- | :--- | :--- |
@@ -1695,7 +1695,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Đồng thời cao · Chịu lỗi · Độ tin cậy cấp viễn thông · Hệ thống phân tán
 
-### 8 hướng ứng dụng chính của Erlang / Elixir
+### 8. hướng ứng dụng chính của Erlang / Elixir
 
 | Hướng ứng dụng | Ví dụ chi tiết & mô tả | Ứng dụng / chương trình điển hình |
 | :--- | :--- | :--- |
@@ -1713,7 +1713,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Hiệu năng cao · Đồng thời cao · Cloud-native/Microservices/API Gateway/CLI Tools · Đơn giản và hiệu quả
 
-### 5 hướng ứng dụng bổ sung chính của Go
+### 5. hướng ứng dụng bổ sung chính của Go
 
 | Hướng ứng dụng | Ví dụ chi tiết và mô tả | Ứng dụng / Chương trình điển hình |
 | :--- | :--- | :--- |
@@ -1728,7 +1728,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Ngôn ngữ số một cho AI/ML · Keo dán vạn năng · Khoa học dữ liệu · Tự động hóa · Tạo mẫu nhanh
 
-### 5 hướng ứng dụng bổ sung của Python
+### 5. hướng ứng dụng bổ sung của Python
 
 | Hướng ứng dụng | Ví dụ chi tiết & Mô tả | Ứng dụng / Chương trình tiêu biểu |
 | :--- | :--- | :--- |
@@ -1743,7 +1743,7 @@ Phần này liệt kê chi tiết các hướng ứng dụng chính, lĩnh vực
 
 **Định vị**: Kẻ thống trị thống nhất Web · Full-stack toàn diện · Hệ sinh thái lớn nhất · Frontend/Backend/Desktop/Di động/Plugin
 
-### 5 hướng ứng dụng mở rộng của JavaScript/TypeScript
+### 5. hướng ứng dụng mở rộng của JavaScript/TypeScript
 
 | Hướng ứng dụng | Ví dụ chi tiết & mô tả | Ứng dụng / Chương trình tiêu biểu |
 | :--- | :--- | :--- |

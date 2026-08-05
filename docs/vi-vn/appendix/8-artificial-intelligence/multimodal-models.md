@@ -124,11 +124,11 @@ Một thực thể VLM trong khuôn mẫu điển hình, chủ yếu vận hành
 
 ---
 
-## 4. Nó học xem ảnh như thế nào? (Training)
+## 4. Nó học xem ảnh như thế nào (Training)
 
-Được rồi, bây giờ các bộ phận cơ thể đã được khâu lại với nhau. Nhưng trước khi chính thức tiếp khách, VLM vừa lắp ráp xong thực ra đang ở trạng thái "mù và hỗn loạn" tương tự như trẻ sơ sinh - bởi vì dây thần kinh thị giác (Projector) mới thêm vào là một tờ giấy trắng, bên trong toàn là các giá trị số ngẫu nhiên không có ý nghĩa.
+Được rồi, bây giờ các bộ phận cơ thể đã được khâu lại với nhau. Nhưng trước khi chính thức nhận lưu lượng, VLM vừa lắp ráp xong thực ra đang ở trạng thái "mù và hỗn loạn" tương tự như trẻ sơ sinh - bởi vì dây thần kinh thị giác (Projector) mới thêm vào là một tờ giấy trắng, bên trong toàn là các giá trị số ngẫu nhiên không có ý nghĩa.
 
-Muốn con quái vật ghép nối này có được khả năng xem ảnh và nói chuyện, giới khoa học đã tổng kết ra một bộ **"Quy tắc Huấn luyện Hai Giai đoạn (Two-Stage Training)"** hiệu quả.
+Muốn con quái vật ghép nối này có được khả năng xem ảnh và giao tiếp, giới khoa học đã tổng kết ra một bộ **"Quy tắc Huấn luyện Hai Giai đoạn (Two-Stage Training)"** hiệu quả.
 
 ### Giai đoạn một: Nhận biết vật (Feature Alignment —— Huấn luyện trước nhận biết vật)
 

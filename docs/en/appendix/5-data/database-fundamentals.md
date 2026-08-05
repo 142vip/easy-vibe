@@ -1,11 +1,11 @@
-# Database Fundamentals (Indexes / Transactions / Query Optimization)
+# Principles of Databases: Indexes, Transactions, and Query Optimization
 ::: tip Core Question
 **Why does your Excel query take 10 seconds, while Taobao's search takes only 0.01 seconds?** When data grows from "a few thousand rows" to "a billion rows," and from "one person using it" to "tens of millions accessing it simultaneously," Excel is no longer enough. Databases were created to solve this problem — they are "super Excels" specifically designed to handle massive data and high-concurrency access. This chapter will take you from zero to understanding the core principles of databases.
 :::
 
 ---
 
-## 1. Why "Databases"?
+## 1. Motivation for the "Databases"
 
 ### 1.1 From a Small Bookstore to Taobao: The Evolution of Data Scale
 
@@ -121,7 +121,7 @@ Imagine walking into a library — its organization is strikingly similar to a d
 - **Row**: Each row is one user (e.g., "Zhang San, 25, Beijing")
 - **Primary Key**: `user_id` (1001, 1002, 1003 — never duplicated)
 
-### 2.2 Primary Key: The "ID Number" for Data
+### 2.2 Primary Key: The "Unique Identifier" for Data
 
 ::: tip What is a Primary Key?
 A **primary key** is the unique identifier for each row in a table, just like an ID number.
@@ -194,7 +194,7 @@ Let's look at a real example:
 
 ---
 
-## 3. How to Talk to a Database? SQL Basics and Practice
+## 3. Approach to talking to a Database SQL Basics and Practice
 
 You can't directly "click" a database with a mouse (although GUI tools exist, they essentially convert actions into commands). You need a special language to instruct the database to work.
 
@@ -388,7 +388,7 @@ WHERE u.name = 'Zhang San';
 
 ---
 
-## 4. Why Are Databases So Fast? Demystifying Indexes
+## 4. Motivation for Databasesing So Fast Demystifying Indexes
 
 This is the most fascinating part of databases and also the most commonly asked topic in interviews.
 
@@ -483,7 +483,7 @@ This is the secret behind lightning-fast database queries.
 
 ---
 
-## 5. Transactions: How to Ensure Data Isn't Lost or Corrupted?
+## 5. Transactions: Approach to ensuring Data Isn't Lost or Corrupted
 
 Imagine the scenario of snapping up train tickets during the Spring Festival travel rush:
 
@@ -494,7 +494,7 @@ Imagine the scenario of snapping up train tickets during the Spring Festival tra
 
 This is a classic **concurrency conflict** problem.
 
-### 5.1 What is a Transaction?
+### 5.1 Overview of a Transaction
 
 A **transaction** is a group of database operations that **either all succeed or all fail** — there's no "half-done" state.
 

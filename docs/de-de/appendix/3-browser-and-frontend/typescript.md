@@ -1,4 +1,4 @@
-# TypeScript Deep Dive
+# TypeScript: Typsystem-Grundlagen
 
 ::: tip Vorwort
 Sie können bereits JavaScript schreiben, sind aber vielleicht auf diese Probleme gestoßen:

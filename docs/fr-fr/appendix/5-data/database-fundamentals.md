@@ -1,11 +1,11 @@
-# Fondamentaux des bases de données (Index / Transactions / Optimisation de requêtes)
+# Principes : Bases de données : Index, Transactions, Optimisation
 ::: tip 🎯 Question centrale
 **Pourquoi votre requête Excel prend 10 secondes, tandis qu'une recherche sur un site e-commerce ne prend que 0,01 seconde ?** Quand les données passent de « quelques milliers » à « un milliard », et d'« une seule personne » à « des millions d'utilisateurs simultanés », Excel ne suffit plus. Les bases de données ont été créées pour résoudre ce problème — ce sont des « super-Excel » spécialisées dans le traitement de données massives et la forte concurrence. Ce chapitre vous fait découvrir les principes fondamentaux des bases de données, depuis zéro.
 :::
 
 ---
 
-## 1. Pourquoi « les bases de données » ?
+## 1. Motivation et justification : « les bases de données »
 
 ### 1.1 De la petite librairie à Amazon : L'évolution de l'échelle des données
 
@@ -194,7 +194,7 @@ Un exemple concret :
 
 ---
 
-## 3. Comment parler à une base de données ? Introduction et pratique du SQL
+## 3. Approche et mise en œuvre : communication à une base de données Introduction et pratique du SQL
 
 Vous ne pouvez pas « cliquer » directement sur une base de données avec la souris (il existe des outils graphiques, mais ils convertissent essentiellement les clics en commandes). Vous avez besoin d'un langage spécial pour donner des instructions à la base de données.
 
@@ -388,7 +388,7 @@ WHERE u.name = 'Jean';
 
 ---
 
-## 4. Pourquoi les bases de données sont-elles si rapides ? Révélation du principe des index
+## 4. Motivation et justification : les bases de données sont-elles si rapides Révélation du principe des index
 
 C'est la partie la plus fascinante des bases de données, et aussi la question la plus posée en entretien.
 
@@ -483,7 +483,7 @@ C'est le secret de la rapidité fulgurante des requêtes en base de données.
 
 ---
 
-## 5. Transactions : Comment garantir que les données ne sont ni perdues ni corrompues ?
+## 5. Transactions : Comment garantir que les données ne sont ni perdues ni corrompues
 
 Imaginez la réservation de billets de train pour les fêtes :
 
@@ -494,7 +494,7 @@ Imaginez la réservation de billets de train pour les fêtes :
 
 C'est un classique problème de **conflit de concurrence**.
 
-### 5.1 Qu'est-ce qu'une transaction (Transaction) ?
+### 5.1 Qu'est-ce qu'une transaction (Transaction)
 
 Une **transaction** est un ensemble d'opérations de base de données qui **réussissent toutes ensemble ou échouent toutes ensemble** — il n'y a pas d'état « à moitié fait ».
 

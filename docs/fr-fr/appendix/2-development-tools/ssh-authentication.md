@@ -1,4 +1,4 @@
-# SSH et authentification par clé
+# Introduction : SSH et authentification par clé
 
 > 💡 **Guide d'apprentissage** : Vous devez saisir votre mot de passe à chaque `git push` ? Vous obtenez toujours "Permission denied" en vous connectant à un serveur ? Ce chapitre vous explique en 5 minutes le principe de l'authentification par clé SSH et comment vous connecter sans mot de passe à GitHub et à vos serveurs.
 
@@ -14,7 +14,7 @@
 
 ---
 
-## 1. Mot de passe vs Clé : pourquoi la clé est meilleure ?
+## 1. Mot de passe vs Clé : pourquoi la clé est meilleure
 
 👇 Essayez par vous-même : comparez la connexion par mot de passe et par clé
 

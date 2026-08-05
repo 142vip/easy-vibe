@@ -1,4 +1,4 @@
-# Gobernanza de datos y calidad de los datos
+# Introducción a la gobernanza de datos
 
 ::: tip Prólogo
 **¿Alguna vez te has encontrado en esta situación: los números de los informes no coinciden con el negocio real, la información de un mismo usuario es diferente en dos sistemas, o los resultados del análisis no son fiables debido a datos sucios?** La gobernanza de datos es el método sistemático para resolver estos problemas. En la era de las "decisiones basadas en datos", la calidad de los datos determina directamente la calidad de las decisiones: basura entra, basura sale (Garbage In, Garbage Out).
@@ -26,7 +26,7 @@ Después de completar este capítulo, obtendrás:
 
 ---
 
-## 0. Panorama general: ¿Por qué se necesita la gobernanza de datos?
+## 0. Panorama general: Motivación: gobernanza de datos
 
 La gobernanza de datos no es un problema técnico, sino un **problema de gestión**. Responde a la pregunta central: **¿quién es responsable de los datos? ¿Cuáles son los estándares de los datos? ¿Cómo garantizar que los datos sean continuamente fiables?**
 
@@ -103,7 +103,7 @@ La gobernanza de datos no se resuelve comprando una herramienta; necesita un mar
 
 ---
 
-## 3. Linaje de datos: ¿De dónde vienen y a dónde van?
+## 3. Linaje de datos: De dónde vienen y a dónde van
 
 El linaje de datos (Data Lineage) registra la ruta completa de transformación de los datos desde su origen hasta su consumo final. Es como el "árbol genealógico" de los datos, que te permite rastrear el origen y destino de cualquier dato.
 

@@ -1,11 +1,11 @@
-# Aperçu de l'ingénierie frontend
+# Panorama : Ingénierie frontend moderne
 ::: tip 🎯 Question centrale
 **Comment transformer le code que vous écrivez en un site web que le navigateur de l'utilisateur peut exécuter ?** C'est comme demander : comment transformer des matières premières en produits finis tout en garantissant la qualité et en maîtrisant les coûts ? Ce chapitre vous permettra de comprendre en profondeur les concepts fondamentaux de l'ingénierie frontend et le processus de construction.
 :::
 
 ---
 
-## 1. Pourquoi « l'ingénierie » ?
+## 1. Motivation et justification : « l'ingénierie »
 
 ### 1.1 Du simple au complexe : l'évolution du développement frontend
 
@@ -637,7 +637,7 @@ Le navigateur met en cache les ressources statiques pour améliorer la vitesse d
 
 ---
 
-## 4. Principes avancés : pourquoi Vite est-il si rapide ?
+## 4. Principes avancés : pourquoi Vite est-il si rapide
 
 Après avoir vu le cas pratique, examinons en profondeur le fonctionnement de Vite pour comprendre pourquoi il est tellement plus rapide que les outils traditionnels.
 

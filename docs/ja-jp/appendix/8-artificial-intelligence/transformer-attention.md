@@ -3,7 +3,8 @@ title: 'Transformer と Attention 機構：大規模モデルの核心エンジ�
 description: 'Transformer アーキテクチャと Attention 機構を深く理解し、GPT、BERT などの大規模モデルの技術基盤を解き明かします。'
 ---
 
-# Transformer と Attention 機構：大規模モデルの核心エンジン
+# Transformer：Attention 機構の核心
+
 
 2017年、Google が論文《Attention Is All You Need》で提案した Transformer アーキテクチャは、自然言語処理のゲームのルールを根本から変えました。従来のリカレントニューラルネットワーク（RNN）を捨て去り、Attention 機構だけに依存して、より強力なパフォーマンスとより高い訓練効率を実現しました。今日、ほぼすべての大規模言語モデル——GPT、BERT、T5、LLaMA——は Transformer の基盤の上に構築されています。
 

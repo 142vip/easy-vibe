@@ -1,11 +1,11 @@
-# Mesure et optimisation des performances web
+# Principes : Optimisation des performances Web
 ::: tip 🎯 Question centrale
 **Pourquoi votre page web est-elle si lente et pourquoi les utilisateurs se plaignent-ils encore des ralentissements ?** C'est comme demander : pourquoi le service au restaurant est-il lent et les clients s'impatientent-ils ? Ce chapitre vous plongera dans les concepts fondamentaux de l'optimisation des performances frontend pour faire « décoller » votre page web.
 :::
 
 ---
 
-## 1. Pourquoi « optimiser les performances » ?
+## 1. Motivation et justification : « optimiser les performances »
 
 ### 1.1 De fonctionnel à excellent : l'évolution de l'optimisation des performances
 

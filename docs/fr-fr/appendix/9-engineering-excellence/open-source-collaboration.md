@@ -1,4 +1,4 @@
-# Collaboration open source
+# Introduction : Collaboration et écosystème open source
 
 ::: tip Avant-propos
 **Vous voulez participer a des projets open source mais ne savez pas par ou commencer ?** L'open source n'est pas seulement « utiliser gratuitement le code des autres », c'est un mode de collaboration et un accelerateur de carriere. Une contribution open source de qualite peut etre plus convaincante que dix projets personnels sur un CV.
@@ -80,7 +80,7 @@ Comparez les differences entre les licences open source courantes avec le compos
 | **GPL** | Les oeuvres derivees doivent aussi etre open source | Linux, WordPress |
 | **BSD** | Similaire a MIT, avec quelques differences | FreeBSD, Flask |
 
-### 2.2 Comment choisir ?
+### 2.2 Comment choisir
 
 - **Pour permettre a plus de gens d'utiliser** : Choisir MIT
 - **Pour proteger les brevets** : Choisir Apache 2.0

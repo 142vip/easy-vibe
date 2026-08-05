@@ -1,4 +1,4 @@
-# Rate-Limiting und Backpressure-Steuerung
+# Rate Limiting und Backpressure
 
 ::: tip Vorwort
 **Am Black Friday um Mitternacht stürzen sich Hunderte Millionen Nutzer gleichzeitig auf die Seite — halten die Server das aus?** Jedes System hat eine maximale Verarbeitungskapazität. Wenn die Anzahl der Anfragen die Systemkapazität überschreitet und nicht kontrolliert wird, ist das Ergebnis, dass niemand mehr den Dienst nutzen kann. Rate-Limiting und Backpressure sind die zwei Verteidigungslinien, die das System davor schützen, "überlastet" zu werden.
@@ -24,7 +24,7 @@ Nach Abschluss dieses Kapitels wirst du Folgendes erhalten:
 
 ---
 
-## 0. Übersicht: Warum muss man Nutzer "ablehnen"?
+## 0. Übersicht: Motivation von muss man Nutzer "ablehnen"
 
 Das klingt kontraintuitiv — sollten wir nicht jeden Nutzer bestmöglich bedienen? Die Realität ist: **Wenn man einen Teil der Anfragen nicht ablehnt, werden alle Anfragen fehlschlagen.**
 

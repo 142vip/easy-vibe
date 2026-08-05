@@ -1,4 +1,4 @@
-# Identidad y gestión de accesos en la nube
+# Principios de identidad y gestión de accesos en la nube
 > **Guía de aprendizaje**: La ingeniería de prompts resuelve "cómo expresarse con claridad", la gestión de permisos de cuentas en la nube resuelve "quién puede hacer qué". Este capítulo se centra en una pregunta: **en el mundo cloud, ¿cómo autorizar convenientemente sin entregar las llaves a quien no debe?**
 
 Antes de comenzar, se recomienda repasar dos conceptos básicos:
@@ -8,7 +8,7 @@ Antes de comenzar, se recomienda repasar dos conceptos básicos:
 
 ---
 
-## 0. Introducción: ¿Por qué "pisamos minas" nada más empezar en la nube?
+## 0. Introducción: Motivación de "pisamos minas" nada más empezar en la nube
 
 <IamRamComparisonDemo />
 
@@ -29,7 +29,7 @@ Ante estos desafíos, simplemente "tener cuidado" ya no funciona. Necesitamos un
 
 ---
 
-## 1. ¿Qué es IAM/RAM? Empecemos con el "sistema de control de acceso"
+## 1. Introducción a IAM/RAM Empecemos con el "sistema de control de acceso"
 
 ### 1.1 Analogía: el control de acceso inteligente de una empresa
 
@@ -71,7 +71,7 @@ Aunque los nombres difieren, **los conceptos centrales son los mismos**:
 
 ---
 
-## 2. Usuarios, grupos, roles: ¿cuál usar?
+## 2. Usuarios, grupos, roles: Selección para usar
 
 ### 2.1 Diferencias entre los tres tipos de "identidad"
 
@@ -251,7 +251,7 @@ El flujo de evaluación es:
 
 ## 4. Claves de acceso (AK/SK): una "llave" que debe custodiarse con cuidado
 
-### 4.1 ¿Qué son AK/SK?
+### 4.1 Introducción a AK/SK
 
 <AccessKeyManagementDemo />
 
@@ -262,7 +262,7 @@ La Access Key (clave de acceso) es una credencial a largo plazo proporcionada po
 | **Access Key ID** | ID de clave de acceso | Identifica quién eres (similar al nombre de usuario) | Número de tarjeta bancaria |
 | **Secret Access Key** | Clave de acceso secreta | Demuestra que eres tú (similar a la contraseña) | PIN de la tarjeta bancaria |
 
-### 4.2 ¿Por qué AK/SK es un "artículo de alto riesgo"?
+### 4.2 Motivación de AK/SK es un "artículo de alto riesgo"
 
 **Caso real: La lección de una startup**
 
@@ -382,7 +382,7 @@ jobs:
 
 ## 5. Autenticación multifactor (MFA): añadir un "candado" a tu cuenta
 
-### 5.1 ¿Qué es MFA?
+### 5.1 Introducción a MFA
 
 <MfaSecurityDemo />
 
@@ -394,7 +394,7 @@ MFA (Multi-Factor Authentication, autenticación multifactor), también llamada 
 | **Factor de posesión** (algo que tienes) | Dispositivo físico que posee el usuario | Teléfono, clave de hardware |
 | **Factor biométrico** (algo que eres) | Características biométricas del usuario | Huella dactilar, reconocimiento facial |
 
-### 5.2 ¿Por qué MFA es tan importante?
+### 5.2 Motivación de MFA es tan importante
 
 **Los datos reales te dan la respuesta**:
 
@@ -429,9 +429,9 @@ MFA (Multi-Factor Authentication, autenticación multifactor), también llamada 
 
 ---
 
-## 6. Acceso entre cuentas: ¿cómo "visitar" de forma segura?
+## 6. Acceso entre cuentas: Enfoque de "visitar" de forma segura
 
-### 6.1 ¿Por qué necesitamos acceso entre cuentas?
+### 6.1 Motivación de acceso entre cuentas
 
 <CrossAccountAccessDemo />
 

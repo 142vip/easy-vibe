@@ -17,7 +17,7 @@ Trong ngữ cảnh Internet di động, **"phát triển client" thường đặ
 
 ---
 
-## 2. Ranh giới tình huống áp dụng của ngôn ngữ di động: Khi nào phải dùng ngôn ngữ cụ thể?
+## 2. Ranh giới tình huống áp dụng của ngôn ngữ di động: Khi nào phải dùng ngôn ngữ cụ thể
 
 Khi lựa chọn ngôn ngữ phát triển client, không thể tách rời khỏi nhu cầu nghiệp vụ cụ thể và bối cảnh kỹ thuật. Ngay cả khi các công nghệ đa nền tảng hiện đại (như Flutter / Dart) phát triển nhanh chóng, trong những tiêu chuẩn khắt khe và ranh giới kỹ thuật nhất định, ngôn ngữ gốc (Swift / Kotlin) vẫn là giải pháp duy nhất không thể bỏ qua. Điều này đòi hỏi kiến trúc sư phải xác định rõ ranh giới áp dụng của từng loại ngôn ngữ.
 
@@ -29,7 +29,7 @@ Trong các tình huống kỹ thuật sau, việc sử dụng kiến trúc ngôn
 2. **Xác thực MVP (Minimum Viable Product) giai đoạn khởi nghiệp và thử nghiệm kinh doanh linh hoạt**: Dự án khởi nghiệp giai đoạn đầu hoặc nhóm khám phá dòng kinh doanh mới, dự trữ vốn và cửa sổ thời gian rất hạn chế. Ngôn ngữ đa nền tảng cho phép nhóm với nhân lực gấp đơn, trên một kho mã duy nhất nhanh chóng xây dựng nguyên mẫu hoàn chỉnh trải dài iOS và Android, tăng tốc đưa ra thị trường xác thực.
 3. **Frontend nhẹ tương tác yếu do thiết kế chủ đạo**: Dựa trên Design System (quy chuẩn thiết kế) tiêu chuẩn hóa nội bộ doanh nghiệp, bắt buộc Android và iOS đa nền tảng phải đạt được sự đồng nhất tuyệt đối 100% ở cấp độ pixel về kiểu dáng control, quy chuẩn khoảng cách và thậm chí cả vi chuyển động.
 
-### 2.2 Khi nào phải kiên trì đào sâu ngôn ngữ gốc (Swift / Kotlin)?
+### 2.2 Khi nào phải kiên trì đào sâu ngôn ngữ gốc (Swift / Kotlin)
 
 Tuy nhiên, trong những lĩnh vực kỹ thuật sâu liên quan đến ép hiệu năng cực hạn hoặc cần vượt qua lớp đóng gói đa dụng tiêu chuẩn, phải hoàn toàn từ bỏ thỏa hiệp kỹ thuật, kiên quyết sử dụng hệ thống ngôn ngữ gốc thuần chính thống:
 

@@ -1,4 +1,4 @@
-# 即時通訊機制（Polling / SSE / WebSocket）
+# 即時通訊原理：Polling/SSE/WebSocket
 
 ::: tip 核心導讀
 **瀏覽器如何實現資料的即時更新？**

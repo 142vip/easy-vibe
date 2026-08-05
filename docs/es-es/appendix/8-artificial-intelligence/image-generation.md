@@ -1,4 +1,4 @@
-# Principios de Generación de Imágenes
+# Principios de generación de imágenes
 > 💡 **Guía de aprendizaje**: Este capítulo explorará sistemáticamente los mecanismos de trabajo de los modelos visuales generativos de gran escala. Comenzaremos con el desafío del espacio de píxeles de alta dimensión, desmontando detalladamente los principios matemáticos rigurosos detrás de los autoencoders variacionales (VAE), los modelos de difusión (Diffusion) y la atención cruzada (Cross-Attention). Al mismo tiempo, componentes interactivos ingeniosos y vívidos asegurarán que tú —incluso sin conocimientos previos de IA— puedas comprender rápidamente estas tecnologías de vanguardia.
 
 <ImageGenQuickStartDemo />

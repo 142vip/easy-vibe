@@ -1,11 +1,11 @@
-# Philosophie des State-Managements
+# State-Management: Zustandsverwaltung
 ::: tip 🎯 Kernfrage
 **Wenn die Anwendung immer größer wird, wie können Komponenten elegant Daten teilen und synchronisieren?** Du könntest auf folgendes Problem stoßen: Der Nutzer legt ein Produkt in den Warenkorb, aber die Warenkorb-Anzahl in der Kopfzeile wird nicht aktualisiert; zwei nicht verwandte Komponenten benötigen dieselben Daten, wissen aber nicht, wie sie diese übergeben sollen. Dieses Kapitel führt dich von der „chaotischen Datenübergabe" zum „klaren State-Management".
 :::
 
 ---
 
-## 1. Warum „Komponentisierung und State-Management"?
+## 1. Warum „Komponentisierung und State-Management"
 
 ### 1.1 Von der Werkstatt zur Fabrik: Die Entwicklung der Frontend-Entwicklung
 
@@ -44,7 +44,7 @@ Bevor wir weitermachen, erklären wir zwei Kernbegriffe:
 </div>
 </div>
 
-### 1.2 Eine wahre Leidensgeschichte: Warum du State-Management verstehen musst
+### 1.2 Eine wahre Leidensgeschichte: Motivation von du State-Management verstehen musst
 
 Du sagst vielleicht: „Ich benutze doch Vue/React? Die haben doch schon State-Management?" Lass mich eine wahre Geschichte erzählen, dann verstehst du, warum ein systematisches Verständnis von Komponentisierung und State-Management so wichtig ist.
 
@@ -182,7 +182,7 @@ So bleibt der Datenfluss klar und einseitig, und das Chaos von „jeder kann Dat
 
 <PropsFlowDemo />
 
-### 2.3 Einseitiger Datenfluss: Warum darf man Props nicht direkt ändern?
+### 2.3 Einseitiger Datenfluss: Motivation von darf man Props nicht direkt ändern
 
 Viele Anfänger machen einen Fehler: Sie ändern den Wert von Props direkt in der Kindkomponente.
 
@@ -727,7 +727,7 @@ function TodoList() {
 
 ---
 
-## 5. Praxisleitfaden: Wie entwirft man State-Management?
+## 5. Praxisleitfaden: Ansatz für entwirft man State-Management
 
 ::: tip 🤔 Wann braucht man eine State-Management-Bibliothek?
 Nicht jedes Projekt braucht eine State-Management-Bibliothek. Bevor du eine einführst, stelle dir diese Fragen:

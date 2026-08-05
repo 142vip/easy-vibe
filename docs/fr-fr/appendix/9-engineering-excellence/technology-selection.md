@@ -1,4 +1,4 @@
-# Methodologie de selection technologique
+# Méthodologie : Sélection et évaluation technologique
 
 ::: tip Avant-propos
 **React ou Vue ? MySQL ou PostgreSQL ?** La selection technologique est l'une des decisions les plus importantes au debut de chaque projet. Un mauvais choix peut necessiter des mois de reecriture ; un bon choix peut doubler l'efficacite de l'equipe.

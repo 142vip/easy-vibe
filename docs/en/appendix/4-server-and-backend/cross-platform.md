@@ -1,4 +1,4 @@
-# Cross-Platform Solutions (React Native / Flutter / Electron / Tauri)
+# A Panorama of Cross-Platform Solutions
 
 ::: tip Core Question
 **"In software engineering, why do we need cross-platform technologies? Can they completely replace native development?"**
@@ -22,7 +22,7 @@ This fully isolated engineering model not only results in extremely high human r
 
 ---
 
-## 2. Technical Boundaries of Cross-Platform Solutions: When to Use Them? When to Stick with Native?
+## 2. Technical Boundaries of Cross-Platform Solutions: Criteria for to Use Them Criteria for to Use Them
 
 Although cross-platform technology demonstrates enormous commercial value in reducing costs and increasing efficiency, according to the classic "Law of Leaky Abstractions" in computer science, any encapsulation that attempts to bridge underlying OS differences inevitably comes with performance overhead and feature compromises. This requires architects to clearly define the scope of cross-platform technology.
 

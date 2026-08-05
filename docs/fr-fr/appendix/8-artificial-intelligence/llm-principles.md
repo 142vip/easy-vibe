@@ -1,4 +1,4 @@
-# Principes de fonctionnement des grands modèles de langage (LLM)
+# Principes : Fonctionnement des grands modèles de langage
 > 💡 **Guide d'apprentissage** : Ce chapitre ne nécessite aucune base en programmation. Grâce à des démonstrations interactives, il vous plonge dans les mécanismes fondamentaux des grands modèles de langage (LLM). Nous commencerons par la tokenisation la plus élémentaire pour arriver à la manière dont GPT est entraîné et effectue son inférence.
 
 <LlmQuickStartDemo />
@@ -25,7 +25,7 @@ Ce tutoriel vous guidera pas à pas, en partant de zéro, pour déconstruire la 
 L'ordinateur ne comprend pas le mot « hamburger », il ne connaît que les nombres.
 Notre première tâche est donc : **découper le texte en unités minimales que l'ordinateur peut comprendre.**
 
-### 1.1 Qu'est-ce que la tokenisation ?
+### 1.1 Qu'est-ce que la tokenisation
 
 La tokenisation consiste à décomposer une phrase entière en « unités lexicales » (Tokens).
 
@@ -80,7 +80,7 @@ index=171,   string='！'
 
 ---
 
-## 2. Problème central : comment faire « calculer » le langage par un ordinateur ?
+## 2. Problème central : comment faire « calculer » le langage par un ordinateur
 
 Notre mission est de traiter le langage. Mais l'ordinateur ne connaît que les nombres.
 L'idée la plus directe est : attribuer un numéro (ID) à chaque mot.
@@ -88,7 +88,7 @@ L'idée la plus directe est : attribuer un numéro (ID) à chaque mot.
 - pomme -> ID 10
 - banane -> ID 20
 
-### 2.1 Pourquoi ne pas utiliser de simples ID ?
+### 2.1 Pourquoi ne pas utiliser de simples ID
 
 Si l'on n'utilise que des ID, l'ordinateur considérera « 10 » et « 20 » comme deux nombres sans aucun rapport.
 De plus, si le vocabulaire contient 100 000 mots, il nous faudrait potentiellement un tableau de longueur 100 000 pour représenter un seul mot (encodage One-Hot), avec 99 999 positions à 0 et une seule position à 1.
@@ -112,7 +112,7 @@ Au lieu d'utiliser un long tableau de 0/1, on utilise un tableau plus court, rem
 
 Après avoir résolu le problème d'expression d'« un mot », il faut maintenant résoudre celui d'expression d'« une phrase ».
 
-### 3.1 Pourquoi une matrice ?
+### 3.1 Pourquoi une matrice
 
 Parce qu'une phrase contient de nombreux mots.
 
@@ -136,7 +136,7 @@ Récapitulons comment les données circulent :
 
 ---
 
-## 3.5 Interlude : qu'est-ce qu'un « modèle » au juste ?
+## 3.5 Interlude : qu'est-ce qu'un « modèle » au juste
 
 Avant d'aborder l'architecture concrète, comprenons d'abord de manière intuitive ce qu'est un « modèle ».
 
@@ -201,7 +201,7 @@ Le Transformer ne transmet plus l'information mot par mot, mais fait **asseoir t
 > - **RNN** : comme traverser un labyrinthe, pas à pas, on s'y perd facilement.
 > - **Transformer** : comme regarder une carte avec une vue d'ensemble, le point de départ et la destination sont tous les deux visibles.
 
-#### Pourquoi a-t-on encore besoin de l'information de « position » ?
+#### Motivation : a-t-on encore besoin de l'information de « position »
 
 Parce que le Transformer traite tout « en une seule fournée », sans traitement spécial, il ne distingue pas « Je t'aime » de « Tu m'aimes » (les mots sont les mêmes, seul l'ordre change).
 C'est pourquoi nous collons à chaque mot une **étiquette numérotée (encodage positionnel)**, pour indiquer au modèle qui est en 1re position, qui est en 2e position.
@@ -308,7 +308,7 @@ Pour en faire un assistant poli, sûr et fiable comme ChatGPT, deux dernières �
 Avec l'évolution technologique, nous avons découvert que se contenter de « prédire le mot suivant » conduit parfois à des erreurs grossières, notamment face à des problèmes mathématiques et logiques.
 C'est ainsi qu'une nouvelle génération de **Thinking Models** (comme OpenAI o1, DeepSeek-R1) est née.
 
-### 7.1 Qu'est-ce que « réfléchir » ? (Thinking Models)
+### 7.1 Qu'est-ce que « réfléchir » (Thinking Models)
 
 Face à une question complexe (comme « 9.11 et 9.9, lequel est le plus grand ? »), un humain ne répond pas du tac au tac, il réfléchit d'abord dans sa tête.
 Un Thinking Model est un modèle qui a appris cette capacité de **réflexion lente (Système 2)**.
@@ -392,7 +392,7 @@ Le Transformer traditionnel (comme GPT-4) utilise un **mécanisme d'attention st
 
 Pour résoudre ce problème, des modèles comme MiniMax (série abab) et RWKV ont adopté le **mécanisme d'attention linéaire (Linear Attention)**.
 
-### Pourquoi l'un est « maillé » et l'autre « linéaire » ?
+### Motivation et justification : l'un est « maillé » et l'autre « linéaire »
 
 La différence fondamentale réside dans : **choisissez-vous de « conserver tous les propos originaux », ou de « résumer au fur et à mesure » ?**
 

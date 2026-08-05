@@ -1,4 +1,4 @@
-# Alta disponibilidad y recuperación ante desastres
+# Principios de alta disponibilidad y recuperación ante desastres
 
 ::: tip Prefacio
 **Un sistema caído 1 minuto puede significar pérdidas de cientos de miles.** La alta disponibilidad (High Availability) se refiere a la capacidad de un sistema para seguir prestando servicios ante situaciones anómalas como fallos de hardware, bugs de software o problemas de red. La recuperación ante desastres (Disaster Recovery) es la capacidad del sistema para restaurar sus servicios cuando ocurre un desastre de mayor envergadura.
@@ -24,7 +24,7 @@ Después de completar este capítulo, podrás:
 
 ---
 
-## 1. Medición de disponibilidad: ¿qué significan los "nueves"?
+## 1. Medición de disponibilidad: qué significan los "nueves"
 
 La disponibilidad se mide habitualmente en "nueves", con la fórmula:
 

@@ -1,4 +1,4 @@
-# AI-Native Application Design
+# An Introduction to AI-Native Application Design
 
 ::: tip Preface
 **Why do some AI products feel magical while others just feel like "ChatGPT in a wrapper"?** The difference isn't the model's capability — it's whether the product was designed from the ground up around AI's unique characteristics. AI-native applications aren't about "adding a chat box" to a traditional app; they represent an entirely new paradigm that rethinks user interaction, system architecture, and product logic.

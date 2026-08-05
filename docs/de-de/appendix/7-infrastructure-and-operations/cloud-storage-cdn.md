@@ -1,4 +1,4 @@
-# Object Storage und CDN
+# Cloud-Speicher und CDN: Bereitstellung
 > **Lernleitfaden**: Dieser Artikel fuehrt dich durch eine komplette Kette - vom Datei-Upload bis zum Download durch den Nutzer. Du wirst sehen, wie Object Storage wie ein "intelligentes Lager" unzaehlige Dateien verwaltet, wie CDN wie ein "Paketverteilnetz" Inhalte bis vor die Haustuer des Nutzers liefert und welche "Fallen" auf dem Weg warten. Grundkenntnisse zu HTTP-Anfragen und DNS-Aufloesung werden empfohlen.
 
 Bevor du beginnst, solltest du folgende Grundlagen auffrischen:
@@ -8,7 +8,7 @@ Bevor du beginnst, solltest du folgende Grundlagen auffrischen:
 
 ---
 
-## 0. Einleitung: Warum ist Datei-Upload und -Download so "langsam"?
+## 0. Einleitung: Upload und Download Performance
 
 Stell dir vor: Du laedst in einer Bild-Community ein 10-MB-Foto hoch und wartest eine halbe Minute, bis es fertig ist. Dein Freund in Berlin klickt auf Download und braucht nur 2 Sekunden. Warum ist dasselbe File beim Upload und Download so unterschiedlich schnell?
 
@@ -20,7 +20,7 @@ Die Antworten auf all diese Fragen verstecken sich in dem "Traumpaar" **Object S
 
 ## 1. Object Storage: Dein "intelligentes Cloud-Lager"
 
-### 1.1 Was ist Object Storage?
+### 1.1 Was ist Object Storage
 
 Traditionelle Dateisysteme sind wie dein Kleiderschrank: Kleidung wird nach "Oberteile/Hosen/Roecke" hierarchisch einsortiert. Um ein Hemd zu finden, oeffnest du den Schrank -> Oberteile -> Hemden-Fach. Dieses "hierarchisch verschachtelte" Modell wird extrem unhandlich, wenn die Dateianzahl explodiert.
 
@@ -69,7 +69,7 @@ Ein Objekt ist die Grundeinheit des Speichers und besteht aus drei Teilen:
    - System-Metadaten: Content-Type, ETag, Last-Modified etc.
    - Benutzerdefinierte Metadaten: z. B. `x-oss-meta-owner`, `x-oss-meta-project`
 
-#### Zugriffskontrolle: Wer darf an mein "Lager"?
+#### Zugriffskontrolle: Wer darf an mein "Lager"
 
 Object Storage bietet mehrstufige Berechtigungskontrolle:
 
@@ -83,9 +83,9 @@ Object Storage bietet mehrstufige Berechtigungskontrolle:
 
 ---
 
-## 2. CDN: Dein "globales Paketnetzwerk"
+## 2. CDN: Dein "globales Build-Artefaktnetzwerk"
 
-### 2.1 Warum braucht man CDN?
+### 2.1 Warum braucht man CDN
 
 Stell dir vor, du betreibst einen Online-Shop mit Servern in Muenchen. Jetzt greift ein Nutzer in Berlin auf deine Bilder zu:
 
@@ -99,7 +99,7 @@ Das ist der Kernwert von CDN: **Inhalte naeher zum Nutzer bringen**.
 
 ### 2.2 Kernarchitektur von CDN
 
-#### Edge-Knoten: Die "Paketstation" in Deiner Naehe
+#### Edge-Knoten: Die "Build-Artefaktstation" in Deiner Naehe
 
 Edge-Knoten sind die Ebene im CDN-Netzwerk, die den Nutzern am naechsten ist. Sie werden typischerweise in Rechenzentren von Internet-Providern, Internet-Knoten grosser Staedte und wichtigen Verkehrsknotenpunkten eingesetzt.
 
@@ -293,7 +293,7 @@ Vorteile:
 
 <HttpsOptimizationDemo />
 
-### 5.1 Warum ist HTTPS auf CDN wichtig?
+### 5.1 Warum ist HTTPS auf CDN wichtig
 
 **Szenarien-Vergleich**:
 

@@ -1,11 +1,11 @@
-# Colas de Mensajes y Arquitectura Orientada a Eventos
+# Principios de las colas de mensajes y la arquitectura orientada a eventos
 ::: tip 🎯 Pregunta Central
 **Cuando el sistema está fuertemente acoplado y el tráfico aumenta repentinamente, ¿cómo garantizar la estabilidad de la ruta crítica?** Las colas de mensajes son el "amortiguador" y "desacoplador" de los sistemas distribuidos modernos. Este artículo utiliza casos reales (sistema de turnos de restaurante, clasificación de paquetería, sistemas de venta flash) para comprender a fondo la filosofía de diseño y las prácticas de ingeniería de las colas de mensajes.
 :::
 
 ---
 
-## 1. ¿Por qué necesitamos "colas de mensajes"?
+## 1. Motivación de colas de mensajes
 
 ### 1.1 Un caso real: la evolución del sistema de pedidos de Taobao
 
@@ -69,9 +69,9 @@ Imagina que vas a un restaurante popular:
 
 ---
 
-## 2. ¿Qué es una cola de mensajes? (Definición + tres elementos fundamentales)
+## 2. Introducción a cola de mensajes (Definición + tres elementos fundamentales)
 
-### 2.1 ¿Qué es una "cola de mensajes"?
+### 2.1 Introducción a "cola de mensajes"
 
 ::: tip 🤔 Explicación del término
 **Cola de Mensajes (Message Queue, MQ)** es un contenedor que almacena mensajes: los productores depositan mensajes y los consumidores los recuperan para procesarlos. Implementa la "comunicación asíncrona" — el emisor no necesita esperar a que el receptor termine de procesar.
@@ -129,7 +129,7 @@ Es como llamar a un amigo (síncrono) vs enviarle un mensaje (asíncrono).
 
 ---
 
-## 3. Primer problema central: ¿cómo desacoplar el sistema para evitar que "un cambio afecte a todo"?
+## 3. Primer problema central: Enfoque de desacoplar el sistema para evitar que "un cambio afecte a todo"
 
 ### 3.1 La tragedia del acoplamiento fuerte: un servicio falla y todo se viene abajo
 
@@ -223,9 +223,9 @@ Pensamiento orientado a eventos (declarativo):
 
 ---
 
-## 4. Segundo problema central: ¿cómo recortar picos y rellenar valles para manejar aumentos repentinos de tráfico?
+## 4. Segundo problema central: Enfoque de recortar picos y rellenar valles para manejar aumentos repentinos de tráfico
 
-### 4.1 Escenario de venta flash: ¿cómo procesar 100K QPS de manera estable?
+### 4.1 Escenario de venta flash: Enfoque de procesar 100K QPS de manera estable
 
 **Reconstrucción del escenario**: evento de venta flash del Doble 11 en una plataforma de comercio electrónico, con un pico estimado de 100K QPS, pero la base de datos solo puede soportar 1000 QPS.
 
@@ -342,7 +342,7 @@ Tiempo para consumir todos los mensajes = Longitud de la cola / Tasa del consumi
 
 ---
 
-## 5. Tercer problema central: ¿cómo garantizar que los mensajes no se pierdan, no se dupliquen y mantengan el orden?
+## 5. Tercer problema central: Enfoque de garantizar que los mensajes no se pierdan, no se dupliquen y mantengan el orden
 
 ### 5.1 Fiabilidad de mensajes: tres líneas de defensa
 
@@ -367,7 +367,7 @@ Los mensajes pueden perderse en tres etapas: al enviar del productor, al almacen
 
 <ReliabilityDemo />
 
-### 5.2 ¿Cómo manejar el consumo duplicado de mensajes?
+### 5.2 Enfoque de manejar el consumo duplicado de mensajes
 
 **La duplicación de mensajes puede ocurrir en los siguientes escenarios:**
 
@@ -391,7 +391,7 @@ Los mensajes pueden perderse en tres etapas: al enviar del productor, al almacen
 
 ---
 
-## 6. Guía práctica: ¿cómo elegir una cola de mensajes?
+## 6. Guía práctica: Enfoque de elegir una cola de mensajes
 
 ### 6.1 Comparativa de las cuatro principales colas de mensajes
 

@@ -1,4 +1,4 @@
-# JavaScript 執行時期深度指南
+# JavaScript 執行時期原理
 
 ::: tip 前言
 你已經學會了 JavaScript 的基本語法，但你是否想過：

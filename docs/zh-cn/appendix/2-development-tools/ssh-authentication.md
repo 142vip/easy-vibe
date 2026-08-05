@@ -1,4 +1,4 @@
-# SSH 与密钥认证
+# SSH 与密钥认证导论
 
 > 💡 **学习指南**：每次 `git push` 输密码？连服务器总被提示"Permission denied"？本章用 5 分钟带你搞懂 SSH 密钥认证的原理，以及如何一键免密登录 GitHub 和服务器。
 
@@ -14,7 +14,7 @@
 
 ---
 
-## 1. 密码 vs 密钥：为什么密钥更好？
+## 1. 密码 vs 密钥：密钥更好的原理
 
 👇 动手点点看：对比密码登录和密钥登录的区别
 
@@ -134,5 +134,5 @@ Host github.com
 :::
 
 **下一步学习**：
-- [端口与 localhost](./ports-localhost) - 理解网络连接的基础
-- [环境变量与 PATH](./environment-path) - 理解系统配置
+- [端口与 localhost 原理](./ports-localhost) - 理解网络连接的基础
+- [环境变量与 PATH 导论](./environment-path) - 理解系统配置

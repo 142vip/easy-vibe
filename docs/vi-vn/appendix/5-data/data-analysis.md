@@ -1,4 +1,4 @@
-# Phân tích dữ liệu: Khái niệm cốt lõi, logic và insight chuyên sâu
+# Phân tích dữ liệu: Nguyên tắc và thực hành
 
 ::: tip 🎯 Vấn đề cốt lõi
 **Làm thế nào để trích xuất "tính xác định" có thể hướng dẫn kinh doanh từ dữ liệu phân tán?**
@@ -60,7 +60,7 @@ Hành vi cá nhân thường mang tính ngẫu nhiên, nhưng hành vi nhóm có
 2. **Tính toán (Apply)**: thực hiện hàm tổng hợp trong mỗi nhóm, như `COUNT()` đếm, `SUM()` tính tổng, `AVG()` tính trung bình.
 3. **Kết hợp (Combine)**: so sánh kết quả giữa các nhóm, phát hiện điểm khác biệt.
 
-### 2.2 Tại sao phải phân nhóm (Group By)?
+### 2.2 Động lực của phân nhóm
 Dữ liệu tổng hợp thường che giấu vấn đề. Ví dụ, tỷ lệ chuyển đổi tổng thể đang tăng, nhưng khi phân tích chi tiết lại phát hiện thực chất là "khu vực Thượng Hải" tăng vọt kéo theo mức trung bình, trong khi các khu vực khác đều giảm. Thông qua phân tích tổng hợp, chúng ta có thể định vị chính xác từ mức trung bình chung đến nhánh có hiệu suất tốt nhất hoặc tệ nhất.
 
 ---

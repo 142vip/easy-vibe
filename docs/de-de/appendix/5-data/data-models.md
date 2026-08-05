@@ -1,4 +1,4 @@
-# Datenmodelle im Überblick (Dokument / Graph / Zeitreihe / Vektor)
+# Datenmodelle: Modellierungsgrundlagen
 
 ::: tip 🎯 Kernfrage
 **Warum kann man nicht einfach alle Daten in MySQL-Tabellen stecken?** Wenn Ihre Daten soziale Netzwerke, Millionen von Sensormeldungen pro Sekunde oder semantische Vektoren sind, die KI verstehen soll, stößt das relationale Tabellenmodell an seine Grenzen. Verschiedene Datenformen erfordern unterschiedliche Modellierungsansätze.
@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Jenseits des Relationalen: Warum braucht man andere Datenmodelle?
+## 1. Jenseits des Relationalen: Motivation von braucht man andere Datenmodelle
 
 Relationale Datenbanken (MySQL, PostgreSQL) organisieren Daten in „Tabelle + Zeile + Spalte" und eignen sich für strukturierte Geschäftsdaten mit festem Schema und klaren Beziehungen. Die Daten der realen Welt sind jedoch viel vielfältiger:
 
@@ -25,7 +25,7 @@ Es geht nicht um „Ersetzen" des Relationalen, sondern um „Ergänzung". Der K
 
 ## 2. Dokumentenmodell (Document)
 
-### 2.1 Was ist das Dokumentenmodell?
+### 2.1 Was ist das Dokumentenmodell
 
 Das Dokumentenmodell speichert Daten als **JSON/BSON-Dokumente**. Jeder Datensatz ist ein in sich geschlossenes Dokument, das eine unterschiedliche Feldstruktur aufweisen kann.
 
@@ -71,7 +71,7 @@ Das Dokumentenmodell speichert Daten als **JSON/BSON-Dokumente**. Jeder Datensat
 
 ## 3. Graphmodell (Graph)
 
-### 3.1 Was ist das Graphmodell?
+### 3.1 Was ist das Graphmodell
 
 Das Graphmodell drückt Entitäten und deren Beziehungen durch **Knoten (Nodes)** und **Kanten (Edges)** aus. Jeder Knoten ist eine Entität, jede Kante eine Beziehung; sowohl Knoten als auch Kanten können Eigenschaften tragen.
 
@@ -114,7 +114,7 @@ Im Relationalen führt jeder zusätzliche Hop zu einem weiteren JOIN mit exponen
 
 ## 4. Zeitreihenmodell (Time-Series)
 
-### 4.1 Was ist das Zeitreihenmodell?
+### 4.1 Was ist das Zeitreihenmodell
 
 Das Zeitreihenmodell verwendet **Zeitstempel** als zentrale Achse und ist auf Szenarien optimiert, in denen „chronologisch geschrieben und nach Zeitbereichen abgefragt" wird.
 
@@ -125,7 +125,7 @@ timestamp            device      cpu_usage   memory
 2024-01-15 10:00:03  server-01   92%         14.1GB
 ```
 
-### 4.2 Warum MySQL nicht für Zeitreihendaten verwenden?
+### 4.2 Warum MySQL nicht für Zeitreihendaten verwenden
 
 | Problem | MySQL | Zeitreihen-Datenbank (InfluxDB) |
 |------|-------|----------------------|
@@ -145,7 +145,7 @@ timestamp            device      cpu_usage   memory
 
 ## 5. Vektormodell (Vector)
 
-### 5.1 Was ist das Vektormodell?
+### 5.1 Was ist das Vektormodell
 
 Das Vektormodell wandelt unstrukturierte Daten wie Text, Bilder und Audio über **Embedding-Modelle** in hochdimensionale numerische Vektoren um und misst dann die semantische Ähnlichkeit durch die Berechnung von Vektorabständen.
 
@@ -180,7 +180,7 @@ Das Vektormodell wandelt unstrukturierte Daten wie Text, Bilder und Audio über 
 
 ---
 
-## 6. Auswahl-Entscheidung: Wie wählt man das passende Datenmodell?
+## 6. Auswahl-Entscheidung: Ansatz für wählt man das passende Datenmodell
 
 | Wie sehen Ihre Daten aus? | Empfohlenes Modell | Repräsentative Produkte |
 |-------------------|---------|---------|

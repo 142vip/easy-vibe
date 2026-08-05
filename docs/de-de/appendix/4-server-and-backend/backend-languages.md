@@ -1,11 +1,11 @@
-# Backend-Sprachen im Vergleich
+# Backend-Sprachen: Ökosystem-Übersicht
 ::: tip 🎯 Kernfrage
 **"Welche Sprache sollten wir für unser Backend verwenden?"** Das ist, als würde man fragen: "Welches Werkzeug soll ich kaufen?" Die Antwort ist nie "das Beste", sondern "das am besten Geeignete". Dieses Kapitel gibt dir einen umfassenden Überblick über die Eigenschaften, Anwendungsszenarien und Auswahlstrategien der gängigsten Backend-Programmiersprachen, damit du eine fundierte Entscheidung treffen kannst.
 :::
 
 ---
 
-## 1. Warum sollte man Backend-Sprachen kennen?
+## 1. Warum sollte man Backend-Sprachen kennen
 
 ### 1.1 Von der Einheit zur Vielfalt: Die Entwicklung der Backend-Sprachen
 
@@ -38,7 +38,7 @@ Doch die moderne Backend-Entwicklung hat sich völlig verändert. Heute stehen w
 
 <BackendLanguagesDemo />
 
-### 1.2 Eine wahre Geschichte aus der Praxis: Warum die richtige Sprachwahl so wichtig ist
+### 1.2 Eine wahre Geschichte aus der Praxis: Bedeutung der richtigen Sprachwahl
 
 Du könntest sagen: „Mit Python kann man alles schreiben, warum sich also den Kopf zerbrechen?" Lass mich eine wahre Geschichte erzählen, dann verstehst du, warum die Sprachwahl so entscheidend ist.
 
@@ -152,7 +152,7 @@ Moderne Technologien lassen diese Grenzen verschwimmen: Java ist sowohl compilie
 
 :::
 
-### 2.3 Nebenläufigkeitsmodell: Wie viele Anfragen gleichzeitig verarbeiten?
+### 2.3 Nebenläufigkeitsmodell: Ansatz für viele Anfragen gleichzeitig verarbeiten
 
 Nebenläufigkeit ist eines der wichtigsten Konzepte in der Backend-Entwicklung – sie bestimmt, wie viele Anfragen das System gleichzeitig verarbeiten kann. Die Nebenläufigkeitsmodelle verschiedener Sprachen unterscheiden sich erheblich, was oft der entscheidende Faktor bei der Sprachwahl ist.
 
@@ -191,7 +191,7 @@ Auf einer Single-Core-CPU ist nur Nebenläufigkeit möglich; auf einer Multi-Cor
 
 :::
 
-### 2.4 Speicherverwaltung: Wer ist für die Müllabfuhr zuständig?
+### 2.4 Speicherverwaltung: Wer ist für die Müllabfuhr zuständig
 
 Die Speicherverwaltung ist ein Schlüsselfaktor, der Leistung und Entwicklungserfahrung beeinflusst. Verschiedene Sprachen verfolgen unterschiedliche Strategien mit jeweiligen Vor- und Nachteilen.
 
@@ -645,7 +645,7 @@ Sie schrieben den Kernteil der Speicher-Engine (Block Server) in Rust neu. Ergeb
 
 ### 4.1 Die Vier-Schritte-Entscheidungsmethode
 
-### Schritt 1: Bestimme deinen Szenariotyp
+### 1. Bestimme deinen Szenariotyp
 
 | Szenariotyp | Merkmale | Empfohlene Sprachen | Nicht empfohlen |
 | :--- | :--- | :--- | :--- |
@@ -669,7 +669,7 @@ Sie schrieben den Kernteil der Speicher-Engine (Block Server) in Rust neu. Ergeb
 **AI/ML → zwingend Python**: Das ist keine Wahl, sondern eine Notwendigkeit. Das gesamte AI/ML-Ökosystem ist Python.
 :::
 
-### Schritt 2: Bewerte den Teamhintergrund
+### 2. Bewerte den Teamhintergrund
 
 **Entscheidungspriorität: Teamvertrautheit > Technisch optimale Lösung**
 
@@ -681,7 +681,7 @@ Sie schrieben den Kernteil der Speicher-Engine (Block Server) in Rust neu. Ergeb
 | **C/C++-Hintergrund** | Rust / Go | Rust als C++-Ersatz, Go für schnelle Geschäftsentwicklung |
 | **Komplett neues Team** | Go / Python | Go fördert Engineering-Denken, Python für schnelle Ergebnisse |
 
-### Schritt 3: Wäge Leistung gegen Entwicklungseffizienz ab
+### 3. Wäge Leistung gegen Entwicklungseffizienz ab
 
 **Entscheidungsmatrix**:
 
@@ -692,7 +692,7 @@ Sie schrieben den Kernteil der Speicher-Engine (Block Server) in Rust neu. Ergeb
 | Mittel (Standard-Web) | Kurz | Node.js / Python | Monolith, schnelle Iteration |
 | Niedrig (Interne Tools) | Sehr kurz | Python / Ruby | Skripting, Automatisierung priorisieren |
 
-### Schritt 4: Berücksichtige langfristige Wartungskosten
+### 4. Berücksichtige langfristige Wartungskosten
 
 **Versteckte Wartungskosten**:
 
@@ -705,7 +705,7 @@ Sie schrieben den Kernteil der Speicher-Engine (Block Server) in Rust neu. Ergeb
 
 ---
 
-## 5. Praxisbeispiele: Wie sich Technologie-Stacks entwickeln
+## 5. Praxisbeispiele: Ansatz für sich Technologie-Stacks entwickeln
 
 Nachdem wir die Theorie verstanden haben, schauen wir uns anhand echter Beispiele an, wie sich Technologie-Stacks in realen Projekten entwickeln.
 
@@ -1537,7 +1537,7 @@ Dieser Abschnitt listet detailliert die wichtigsten Anwendungsrichtungen, Teilbe
 
 ---
 
-## Wie man wählt: Schneller Entscheidungsleitfaden
+## Ansatz für man wählt: Schneller Entscheidungsleitfaden
 
 ### Nach Anwendungsszenario wählen
 
@@ -1787,7 +1787,7 @@ Dieser Abschnitt listet detailliert die wichtigsten Anwendungsrichtungen, Teilbe
 
 ---
 
-## Wie man wählt: Vollständiger Entscheidungsleitfaden
+## Ansatz für man wählt: Vollständiger Entscheidungsleitfaden
 
 ### Nach Leistungsanforderung wählen
 

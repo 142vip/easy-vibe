@@ -1,4 +1,4 @@
-# SSH and Key Authentication
+# An Introduction to SSH and Key Authentication
 
 > 💡 **Learning Guide**: Tired of entering your password every time you `git push`? Getting "Permission denied" when connecting to a server? This chapter takes 5 minutes to explain how SSH key authentication works and how to set up password-free login to GitHub and servers with a single command.
 
@@ -134,5 +134,5 @@ After configuration:
 :::
 
 **Next Steps**:
-- [Ports and localhost](./ports-localhost) - Understanding the basics of network connections
-- [Environment Variables and PATH](./environment-path) - Understanding system configuration
+- [Principles of Ports and Localhost](./ports-localhost) - Understanding the basics of network connections
+- [An Introduction to Environment Variables and PATH](./environment-path) - Understanding system configuration

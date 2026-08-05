@@ -24,7 +24,7 @@ Sau khi học xong chương này, bạn sẽ có được:
 
 ---
 
-## 0. Toàn cảnh: Tại sao cần tinh chỉnh?
+## 0. Toàn cảnh: Động lực của cần tinh chỉnh
 
 Quá trình huấn luyện mô hình ngôn ngữ lớn được chia thành hai giai đoạn: **tiền huấn luyện** và **tinh chỉnh**. Tiền huấn luyện là học năng lực ngôn ngữ trên dữ liệu đa năng khổng lồ, tinh chỉnh là học năng lực chuyên môn trên dữ liệu tác vụ cụ thể.
 

@@ -4,7 +4,7 @@
 
 ---
 
-## 0. Trước hết một câu hỏi: Bạn đã từng trải qua những cơn ác mộng này chưa?
+## 0. Trước hết một câu hỏi: Bạn đã từng trải qua những cơn ác mộng này chưa
 
 **Kịch bản 1: Địa ngục phiên bản**
 
@@ -42,7 +42,7 @@ Không nói quá, Git là một trong những công cụ quan trọng nhất c�
 
 ---
 
-## 1. Git và GitHub là một chứ?
+## 1. Git và GitHub là một chứ
 
 Nhiều người mới học nhầm lẫn hai khái niệm này, hãy làm rõ:
 
@@ -78,7 +78,7 @@ Là **kho lưu trữ lịch sử vĩnh viễn**, ẩn trong thư mục `.git`. M
 
 <GitCommitFlow />
 
-### Tại sao phải "hai bước" (add + commit)?
+### Động lực của quy trình hai bước (add + commit) (add + commit)
 
 Nhiều người mới học hỏi: Tại sao không lưu bằng một cú click, mà phải `add` rồi mới `commit`?
 
@@ -156,7 +156,7 @@ git commit -m "feat: thêm chức năng đăng nhập người dùng"
 
 Nội dung trong ngoặc kép sau `-m` gọi là **commit message** (mô tả commit). Viết cho bản thân tương lai và đồng nghiệp xem, cần có ý nghĩa.
 
-### 3.3 Viết Commit Message thế nào mới chuyên nghiệp?
+### 3.3 Viết Commit Message thế nào mới chuyên nghiệp
 
 ```bash
 # ❌ Viết vô dụng — đọc không biết làm gì
@@ -206,7 +206,7 @@ git log --oneline
 
 **Branch** là tính năng mạnh mẽ nhất, cũng là thứ khiến người mới bối rối nhất trong Git. Nhưng khi hiểu rồi, bạn sẽ thấy thiết kế này rất thanh lịch.
 
-### 4.1 Branch là gì? Hiểu qua "vũ trụ song song"
+### 4.1 Tổng quan về Branch: Hiểu qua "vũ trụ song song"
 
 Hãy tưởng tượng bạn đang chơi game nhập vai, có một lựa chọn quan trọng:
 - Lựa chọn A: Thách thức Boss lớn (phát triển tính năng mới)
@@ -284,7 +284,7 @@ git merge feature-login
 git branch -d feature-login
 ```
 
-### 4.4 Khi nào nên mở branch?
+### 4.4 Khi nào nên mở branch
 
 | Tình huống | Khuyến nghị | Lý do |
 | :--- | :--- | :--- |
@@ -393,7 +393,7 @@ git clone: Từ xa → Cục bộ   (lần đầu copy toàn bộ kho)
 
 Xung đột là điều không thể tránh trong hợp tác, nhưng cũng không đáng sợ lắm.
 
-### 6.1 Xung đột xảy ra như thế nào?
+### 6.1 Xung đột xảy ra: Cách tiếp cận
 
 Khi bạn và đồng nghiệp **cùng sửa cùng một dòng của cùng một file**, lúc merge Git không biết dùng bản nào, tạo ra xung đột.
 
@@ -402,7 +402,7 @@ Ví dụ:
 - Đồng nghiệp viết cùng dòng: `const timeout = 5000`
 - Khi `git pull` hoặc `git merge`, Git phát hiện mâu thuẫn và "tạm dừng": không biết dùng cái nào, bạn tự quyết định.
 
-### 6.2 File xung đột trông như thế nào?
+### 6.2 File xung đột trông: Cách tiếp cận
 
 Git chèn đánh dấu đặc biệt ở nơi xung đột:
 
@@ -423,7 +423,7 @@ function login() {
 - Giữa `<<<<<<< HEAD` và `=======`: nội dung branch hiện tại của bạn
 - Giữa `=======` và `>>>>>>> xxx`: nội dung đang được merge vào
 
-### 6.3 Cách giải quyết xung đột?
+### 6.3 Cách giải quyết xung đột
 
 **Bước 1**: Mở file xung đột, tìm tất cả dấu `<<<<<<<` (thường VS Code highlight tự động)
 
@@ -503,7 +503,7 @@ git branch -d feature/user-profile
 
 ---
 
-## 9. .gitignore: File nào không nên được theo dõi?
+## 9. .gitignore: File nào không nên được theo dõi
 
 Một số file bạn **không muốn** commit vào kho Git:
 - `node_modules/`: Gói dependency, rất nặng, có thể tạo lại bằng `npm install`

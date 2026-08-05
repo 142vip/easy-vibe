@@ -1,4 +1,4 @@
-# Domain Names, DNS, and HTTPS
+# Principles of Domain Names, DNS, and HTTPS
 
 ::: tip Foreword
 **When you type `www.google.com` in your browser and press Enter, what happens behind the scenes?** This seemingly simple action involves a series of precisely coordinated processes: domain name resolution, DNS queries, and TLS encryption handshakes. Understanding these mechanisms is essential for every developer — it directly determines whether your website can be accessed and whether your data can be intercepted.
@@ -110,7 +110,7 @@ The TLS handshake is the critical step for establishing a secure connection. It 
 
 ---
 
-## 4. Certificate Trust Chain: Why Should You Trust This Website?
+## 4. Certificate Trust Chain: Motivation for Trusting This Website
 
 The most critical step in the TLS handshake is "certificate verification." How does the browser determine whether a website's certificate is genuine and not forged by an attacker? The answer is the **certificate trust chain** — a system of endorsements at every level.
 

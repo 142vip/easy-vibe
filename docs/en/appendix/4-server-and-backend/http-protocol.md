@@ -1,4 +1,4 @@
-# HTTP Protocol: The "Communication Language" Between Frontend and Backend
+# Principles of HTTP Protocol: Frontend-Backend Communication
 
 ::: tip Core Question
 **How does HTTP work?** It's like asking: how do two people hold a conversation? They need to agree on a language, grammar, and conversation rules. HTTP is the "conversation protocol" between frontend and backend.
@@ -10,7 +10,7 @@
 
 **HTTP** (HyperText Transfer Protocol) is the foundational protocol for frontend-backend communication.
 
-### 0.1 Conversation Analogy
+### 0.1 Communication Analogy
 
 | Conversation Element | HTTP Equivalent | Description |
 | :--- | :--- | :--- |

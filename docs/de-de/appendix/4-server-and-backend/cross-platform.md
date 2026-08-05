@@ -1,4 +1,4 @@
-# Cross-Plattform-Lösungen (React Native / Flutter / Electron / Tauri)
+# Cross-Plattform-Entwicklung: Übersicht
 
 ::: tip Kernfrage
 **"Warum werden in der Softwaretechnik Cross-Plattform-Technologien benötigt? Können sie die native Entwicklung vollständig ersetzen?"**
@@ -22,7 +22,7 @@ Dieses vollständig isolierte Engineering-Modell führt nicht nur zu extrem hohe
 
 ---
 
-## 2. Die technologischen Grenzen von Cross-Plattform-Lösungen: Wann sind sie geeignet? Wann muss man nativ bleiben?
+## 2. Die technologischen Grenzen von Cross-Plattform-Lösungen: Wann sind sie geeignet? Wann muss man nativ bleiben
 
 Obwohl Cross-Plattform-Technologien bei der Kostensenkung und Effizienzsteigerung enormen geschäftlichen Wert zeigen, gilt gemäß dem klassischen "Gesetz der leaky Abstractions" aus der Informatik: Jede Abstraktionsschicht, die die zugrundeliegenden Unterschiede der Betriebssysteme überbrücken will, bringt unvermeidbar Performance-Verluste und Kompromisse bei Funktionsmerkmalen mit sich. Dies erfordert von Architekten eine klare Abgrenzung des Anwendungsbereichs von Cross-Plattform-Technologien.
 

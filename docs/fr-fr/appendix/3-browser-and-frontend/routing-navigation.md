@@ -1,11 +1,11 @@
-# Routage et navigation
+# Introduction : Routage et navigation frontend
 ::: tip 🎯 Question centrale
 **Pourquoi certains sites web ne clignotent-ils pas en blanc lors du changement de page, et sont aussi fluides qu'une application ?** C'est la magie du routage frontend. Ce chapitre vous fera passer de la navigation traditionnelle « à tourne-page » des sites web classiques au monde du « changement de diapositive » des applications monopages, pour comprendre comment le routage frontend améliore considérablement l'expérience utilisateur.
 :::
 
 ---
 
-## 1. Pourquoi le « routage frontend » ?
+## 1. Motivation et justification : le « routage frontend »
 
 ### 1.1 Des sites traditionnels aux applications monopages : un changement qualitatif de l'expérience utilisateur
 
@@ -535,7 +535,7 @@ Le cœur de cette phase est le « rendu isomorphe » — le premier écran est r
 
 ---
 
-## 4. Principes en profondeur : comment fonctionne le routage ?
+## 4. Principes en profondeur : comment fonctionne le routage
 
 Après avoir vu le cas concret, approfondissons le principe de fonctionnement du routage frontend pour comprendre ce qui différencie vraiment les modes Hash et History.
 

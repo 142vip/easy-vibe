@@ -1,10 +1,10 @@
-# Integrated Development Environment (IDE) Basics
+# Fundamentals of Integrated Development Environment (IDE)
 
 ::: tip 💡 Learning Guide
 This chapter will take you deep into the core productivity tool for programmers—the **Integrated Development Environment (IDE)**. We'll start from the design philosophy of IDEs, analyze their core components one by one, and demonstrate their working principles through a virtual IDE.
 :::
 
-## What to Do When You Don't Understand Something? (How to solve problems)
+## What to Do Criteria for You Don't Understand Something (How to solve problems)
 
 In the process of learning and using an IDE, you may encounter various buttons, menus, or code errors that you don't understand. At this time, **don't panic—using an AI assistant is the most efficient solution**.
 
@@ -20,7 +20,7 @@ Modern AIs (such as ChatGPT, Claude, DeepSeek, etc.) have powerful image recogni
 
 ---
 
-## 0. Introduction: Why Do We Need an IDE?
+## 0. Introduction: Motivation for needing an IDE
 
 In the software development process, programmers need to frequently write code, manage files, compile and run programs, debug errors, and so on. If all these operations needed to be completed in different independent software (for example, using Notepad to write code, command line to compile, and file folders to manage files), efficiency would be extremely low and error-prone.
 
@@ -74,7 +74,7 @@ Seeing is believing. To let you truly feel the convenience of an IDE, we have pr
 
 ---
 
-## 3. Core Mechanism: Why Can VS Code Do Everything?
+## 3. Core Mechanism: Motivation for VSing Code Do Everything
 
 You might be curious: Why can the same software write Python, C++, and do web development? How does it do it?
 Actually, VS Code's design philosophy can be summarized in one sentence: **"Minimalist core, pluggable capabilities."**

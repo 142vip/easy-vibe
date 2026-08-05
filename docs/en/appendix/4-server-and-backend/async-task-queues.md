@@ -1,4 +1,4 @@
-# Async Task Queues and the Producer-Consumer Model
+# Principles of Asynchronous Task Queues
 
 ::: tip Introduction
 **A user clicks "Export Report" and stares at a spinning loading animation for 30 seconds — is this reasonable?** When an operation takes several seconds or even minutes to complete, making the user wait is clearly a poor experience. Async task queues are the core architectural pattern for solving this problem — offloading time-consuming operations to background processing so the user gets an immediate response.
@@ -24,7 +24,7 @@ After reading this chapter, you will gain:
 
 ---
 
-## 0. The Big Picture: Why Can't We Make Users "Just Wait"?
+## 0. The Big Picture: Motivation for Caning 't We Make Users "Just Wait"
 
 Imagine going to a restaurant to order food. A good restaurant gives you an order number right after you place your order, then you can find a seat, play on your phone, and come back when the food is ready. They don't make you stand at the counter watching the chef cook the entire dish.
 

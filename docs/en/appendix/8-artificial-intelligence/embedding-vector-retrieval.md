@@ -1,4 +1,4 @@
-# Embedding & Vector Retrieval
+# Principles of Embeddings and Vector Retrieval
 
 ::: tip Preface
 **How does a computer understand that "cats and dogs are similar, but neither is similar to a car"?** To humans this is common sense, but to a computer, "cat", "dog", and "car" are just three unrelated strings. Embedding technology is the key to solving this problem — it turns text into numerical vectors, allowing computers to understand semantic "closeness and distance."
@@ -63,7 +63,7 @@ Imagine a two-dimensional coordinate system. Place "cat" at coordinates (0.2, 0.
 
 ---
 
-## 2. Similarity Calculation: How "Close" Are Two Vectors?
+## 2. Similarity Calculation: Method for "Close" Are Two Vectors
 
 With vector representations in hand, the next question is naturally: **how do we measure how similar two vectors are?** It's like measuring how close two cities are on a map — you can measure the straight-line distance, or you can check whether they point in the same direction.
 
@@ -83,7 +83,7 @@ With vector representations in hand, the next question is naturally: **how do we
 
 ---
 
-## 3. Vector Indexing: How to Search Millions of Vectors in Milliseconds?
+## 3. Vector Indexing: Approach to searching Millions of Vectors in Milliseconds
 
 Suppose you have 1 million documents, each converted into a 1536-dimensional vector. A user asks a question, and you need to find the 10 most similar ones. The most direct approach is to compute similarity one by one — but that means performing 1 million 1536-dimensional vector operations, which is far too slow.
 

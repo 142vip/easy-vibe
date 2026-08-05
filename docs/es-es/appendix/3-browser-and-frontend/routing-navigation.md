@@ -1,11 +1,11 @@
-# Enrutamiento y Navegación
+# Introducción al enrutamiento y navegación
 ::: tip 🎯 Pregunta central
 **¿Por qué algunos sitios web no muestran una pantalla en blanco al cambiar de página, siendo tan fluidos como una App?** Esta es la magia del enrutamiento del frontend. Este capítulo te llevará desde la "navegación tipo pasar páginas" de los sitios web tradicionales al mundo del "cambio de diapositivas" de las aplicaciones de una sola página, para que entiendas cómo el enrutamiento del frontend eleva la experiencia del usuario a otro nivel.
 :::
 
 ---
 
-## 1. ¿Por qué necesitamos "enrutamiento del frontend"?
+## 1. Motivación de enrutamiento del frontend
 
 ### 1.1 De los sitios web tradicionales a las SPAs: un salto cualitativo en la experiencia de usuario
 
@@ -38,7 +38,7 @@ El desarrollo frontend moderno ha cambiado completamente este modelo. Utilizamos
 
 <RouteMatchingDemo />
 
-### 1.2 Una historia real de tropiezos: por qué necesitas entender los modos de enrutamiento
+### 1.2 Una historia real de tropiezos:Motivación: entender los modos de enrutamiento
 
 Podrías decir: "Yo uso Vue Router o React Router, lo configuro y ya funciona, ¿por qué necesito entender estos principios subyacentes?" Déjame contarte una historia real para que entiendas por qué este conocimiento es tan importante.
 
@@ -535,7 +535,7 @@ El núcleo de esta etapa es el "renderizado isomórfico": la primera carga se re
 
 ---
 
-## 4. Principios en profundidad: ¿cómo funciona el enrutamiento?
+## 4. Principios en profundidad: Enfoque de enrutamiento
 
 Después de ver los casos reales, profundicemos en los principios de funcionamiento del enrutamiento del frontend para entender en qué se diferencian realmente los modos Hash y History.
 

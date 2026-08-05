@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Tại sao cần "Tối ưu Hiệu suất"?
+## 1. Động lực của tối ưu hiệu suất
 
 ### 1.1 Từ dùng được đến dùng tốt: Sự phát triển của tối ưu hiệu suất
 
@@ -36,7 +36,7 @@ Nhưng bây giờ mọi thứ đã hoàn toàn khác. Độ phức tạp của t
 
 **Đây chính là vấn đề mà "tối ưu hiệu suất" giải quyết: giảm thời gian chờ đợi của người dùng, làm cho thao tác mượt mà hơn.**
 
-### 1.2 Một câu chuyện thực tế: Tại sao bạn cần hiểu về tối ưu hiệu suất
+### 1.2 Trường hợp: Tại sao bạn cần hiểu về tối ưu hiệu suất
 
 Bạn có thể nói: "Mạng bây giờ nhanh như vậy, thiết bị tốt như vậy, còn cần tối ưu hiệu suất sao?" Hãy để tôi kể một câu chuyện thực tế, bạn sẽ hiểu tại sao những kiến thức này lại quan trọng đến vậy.
 
@@ -139,29 +139,29 @@ Quá trình này rất phức tạp, bất kỳ khâu nào có vấn đề đề
 
 ```
 HTML (chuỗi)
-    ↓
+ ↓
 [Phân tích HTML] → Tạo cây DOM
-    ↓
+ ↓
 Cây DOM (cấu trúc trang)
 
 CSS (bảng kiểu)
-    ↓
+ ↓
 [Phân tích CSS] → Tạo cây CSSOM
-    ↓
+ ↓
 Cây CSSOM (kiểu dáng trang)
 
 Cây DOM + Cây CSSOM
-    ↓
+ ↓
 [Hợp nhất] → Tạo cây render
-    ↓
+ ↓
 Cây render (các phần tử cần render)
-    ↓
+ ↓
 [Bố cục Layout] → Tính toán vị trí và kích thước mỗi phần tử
-    ↓
+ ↓
 [Vẽ Paint] → Tô màu, vẽ văn bản
-    ↓
+ ↓
 [Tổng hợp Composite] → Hợp nhất nhiều lớp
-    ↓
+ ↓
 Hình ảnh cuối cùng
 ```
 
@@ -274,10 +274,10 @@ Nhưng khi dự án lớn dần, người dùng tăng lên, vấn đề bắt đ
 <!-- Dùng loading overlay để "lừa" người dùng -->
 <div id="loading">Đang tải...</div>
 <script>
-  // Chỉ xóa overlay sau khi trang tải xong
-  window.onload = function() {
-    document.getElementById('loading').style.display = 'none'
-  }
+ // Chỉ xóa overlay sau khi trang tải xong
+ window.onload = function() {
+ document.getElementById('loading').style.display = 'none'
+ }
 </script>
 ```
 
@@ -303,34 +303,34 @@ Nhưng tối ưu ở giai đoạn này còn khá thô sơ, chủ yếu dựa và
 **Các biện pháp tối ưu thủ công**:
 
 1. **Nén ảnh thủ công**:
-   - Dùng Photoshop "Save for Web" từng ảnh một cách thủ công
-   - Chuyển PNG sang JPEG (nén mất dữ liệu, nhưng dung lượng nhỏ hơn nhiều)
-   - Thu nhỏ kích thước ảnh (ví dụ ảnh rộng 2000px thu nhỏ xuống 800px)
+ - Dùng Photoshop "Save for Web" từng ảnh một cách thủ công
+ - Chuyển PNG sang JPEG (nén mất dữ liệu, nhưng dung lượng nhỏ hơn nhiều)
+ - Thu nhỏ kích thước ảnh (ví dụ ảnh rộng 2000px thu nhỏ xuống 800px)
 
 2. **Gộp tệp thủ công**:
-   ```html
-   <!-- Trước tối ưu: 10 tệp JS = 10 yêu cầu -->
-   <script src="utils.js"></script>
-   <script src="api.js"></script>
-   <script src="component-a.js"></script>
-   <script src="component-b.js"></script>
-   ...（còn 6 tệp nữa）
+ ```html
+ <!-- Trước tối ưu: 10 tệp JS = 10 yêu cầu -->
+ <script src="utils.js"></script>
+ <script src="api.js"></script>
+ <script src="component-a.js"></script>
+ <script src="component-b.js"></script>
+ ...（còn 6 tệp nữa）
 
-   <!-- Sau tối ưu: 1 tệp JS đã gộp = 1 yêu cầu -->
-   <script src="all.js"></script>
-   ```
+ <!-- Sau tối ưu: 1 tệp JS đã gộp = 1 yêu cầu -->
+ <script src="all.js"></script>
+ ```
 
 3. **Đưa CSS/JS xuống cuối trang**:
-   ```html
-   <body>
-     <!-- Nội dung trang -->
-     <h1>Chào mừng</h1>
+ ```html
+ <body>
+ <!-- Nội dung trang -->
+ <h1>Chào mừng</h1>
 
-     <!-- Tối ưu: đặt CSS/JS ở cuối -->
-     <link rel="stylesheet" href="style.css">
-     <script src="app.js"></script>
-   </body>
-   ```
+ <!-- Tối ưu: đặt CSS/JS ở cuối -->
+ <link rel="stylesheet" href="style.css">
+ <script src="app.js"></script>
+ </body>
+ ```
 
 **Cải thiện mang lại**:
 - Dung lượng ảnh từ 5MB giảm xuống 500KB (giảm 90%)
@@ -343,7 +343,7 @@ Nhưng tối ưu ở giai đoạn này còn khá thô sơ, chủ yếu dựa và
 3. **Thiếu định lượng**: Chỉ biết "nhanh hơn một chút", nhưng không biết cụ thể nhanh hơn bao nhiêu
 :::
 
-### 3.4 Giai đoạn 3: Tối ưu có hệ thống — Dùng công cụ và dữ liệu để nói chuyện
+### 3.4 Giai đoạn 3: Tối ưu có hệ thống — Dùng công cụ và dữ liệu để giao tiếp
 
 Vấn đề của giai đoạn 2 (khối lượng công việc thủ công lớn, thiếu định lượng) đã làm phiền nhóm trong thời gian dài. Mãi đến sau này, nhóm đã khám phá ra các công cụ chuyên nghiệp như Lighthouse, bảng Performance, bước vào thời đại tối ưu có hệ thống.
 
@@ -420,13 +420,13 @@ Nếu cần render 10.000 dòng dữ liệu, đừng thực sự tạo 10.000 n�
 ```vue
 <!-- Sử dụng component vue-virtual-scroller -->
 <RecycleScroller
-  :items="items"
-  :item-size="50"
-  key-field="id"
+ :items="items"
+ :item-size="50"
+ key-field="id"
 >
-  <template #default="{ item }">
-    <div>{{ item.name }}</div>
-  </template>
+ <template #default="{ item }">
+ <div>{{ item.name }}</div>
+ </template>
 </RecycleScroller>
 ```
 
@@ -452,16 +452,16 @@ Cốt lõi của giai đoạn này là **thiết lập hệ thống giám sát v
 ```js
 // vite.config.js
 export default defineConfig({
-  build: {
-    rollupOptions: {
-      output: {
-        // Giới hạn mỗi tệp không vượt quá 200KB
-        chunkFileNames: 'js/[name]-[hash].js',
-      }
-    },
-    // Cảnh báo khi vượt quá 200KB
-    chunkSizeWarningLimit: 200
-  }
+ build: {
+ rollupOptions: {
+ output: {
+ // Giới hạn mỗi tệp không vượt quá 200KB
+ chunkFileNames: 'js/[name]-[hash].js',
+ }
+ },
+ // Cảnh báo khi vượt quá 200KB
+ chunkSizeWarningLimit: 200
+ }
 })
 ```
 
@@ -474,16 +474,16 @@ Mỗi lần commit mã, tự động chạy kiểm tra Lighthouse, nếu điểm
 name: Lighthouse CI
 on: [pull_request]
 jobs:
-  lighthouse:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Run Lighthouse CI
-        uses: treosh/lighthouse-ci-action@v9
-        with:
-          urls: |
-            https://staging.example.com
-          budgetPath: ./budget.json
+ lighthouse:
+ runs-on: ubuntu-latest
+ steps:
+ - uses: actions/checkout@v3
+ - name: Run Lighthouse CI
+ uses: treosh/lighthouse-ci-action@v9
+ with:
+ urls: |
+ https://staging.example.com
+ budgetPath: ./budget.json
 ```
 
 **3. Giám sát người dùng thực (RUM)**:
@@ -496,12 +496,12 @@ const perfData = performance.getEntriesByType('navigation')[0]
 const lcp = performance.getEntriesByType('largest-contentful-paint')[0]
 
 fetch('/api/perf', {
-  method: 'POST',
-  body: JSON.stringify({
-    fcp: perfData.loadEventEnd - perfData.fetchStart,
-    lcp: lcp.renderTime || lcp.loadTime,
-    url: window.location.href
-  })
+ method: 'POST',
+ body: JSON.stringify({
+ fcp: perfData.loadEventEnd - perfData.fetchStart,
+ lcp: lcp.renderTime || lcp.loadTime,
+ url: window.location.href
+ })
 })
 ```
 
@@ -540,8 +540,8 @@ fetch('/api/perf', {
 ```html
 <!-- Hiện đại: định dạng WebP, dung lượng nhỏ hơn 30-70% -->
 <picture>
-  <source srcset="image.webp" type="image/webp">
-  <img src="image.jpg" alt="Ảnh">
+ <source srcset="image.webp" type="image/webp">
+ <img src="image.jpg" alt="Ảnh">
 </picture>
 ```
 
@@ -550,14 +550,14 @@ fetch('/api/perf', {
 ```html
 <!-- Thiết bị nhỏ tải ảnh nhỏ, thiết bị lớn tải ảnh lớn -->
 <img
-  src="image-800.jpg"
-  srcset="image-400.jpg 400w,
-          image-800.jpg 800w,
-          image-1200.jpg 1200w"
-  sizes="(max-width: 600px) 400px,
-         (max-width: 1200px) 800px,
-         1200px"
-  alt="Ảnh responsive">
+ src="image-800.jpg"
+ srcset="image-400.jpg 400w,
+ image-800.jpg 800w,
+ image-1200.jpg 1200w"
+ sizes="(max-width: 600px) 400px,
+ (max-width: 1200px) 800px,
+ 1200px"
+ alt="Ảnh responsive">
 ```
 
 3. **Lazy loading** (tải khi người dùng cuộn đến):
@@ -588,10 +588,10 @@ Demo dưới đây so sánh sự khác biệt giữa lazy loading và không laz
 ```js
 // Route lazy loading: chỉ tải khi truy cập
 const routes = [
-  {
-    path: '/about',
-    component: () => import('./views/About.vue')  // Chỉ tải khi truy cập /about
-  }
+ {
+ path: '/about',
+ component: () => import('./views/About.vue') // Chỉ tải khi truy cập /about
+ }
 ]
 ```
 
@@ -608,8 +608,8 @@ const routes = [
 ```html
 <!-- Nhúng trực tiếp CSS cần cho màn hình đầu tiên vào HTML -->
 <style>
-  /* Kiểu dáng quan trọng cho màn hình đầu tiên */
-  .hero { background: #000; color: #fff; }
+ /* Kiểu dáng quan trọng cho màn hình đầu tiên */
+ .hero { background: #000; color: #fff; }
 </style>
 ```
 
@@ -629,12 +629,12 @@ const routes = [
 ```vue
 <!-- Chỉ render nội dung trong vùng hiển thị -->
 <RecycleScroller
-  :items="10000"
-  :item-size="50"
+ :items="10000"
+ :item-size="50"
 >
-  <template #default="{ item }">
-    <div>{{ item.name }}</div>
-  </template>
+ <template #default="{ item }">
+ <div>{{ item.name }}</div>
+ </template>
 </RecycleScroller>
 ```
 
@@ -648,7 +648,7 @@ Demo dưới đây so sánh sự khác biệt về hiệu suất giữa danh sá
 ```js
 // Giới hạn tần suất kích hoạt sự kiện cuộn (tối đa mỗi 100ms kích hoạt một lần)
 const throttledScroll = throttle(() => {
-  updatePosition()
+ updatePosition()
 }, 100)
 
 window.addEventListener('scroll', throttledScroll)
@@ -659,7 +659,7 @@ window.addEventListener('scroll', throttledScroll)
 ```css
 /* Thông báo trước cho trình duyệt: phần tử này sẽ thay đổi, hãy chuẩn bị */
 .scroll-container {
-  will-change: transform;
+ will-change: transform;
 }
 ```
 
@@ -678,7 +678,7 @@ window.addEventListener('scroll', throttledScroll)
 ```js
 // Chỉ thực thi sau khi người dùng ngừng nhấp 300ms
 const debouncedClick = debounce(() => {
-  submitForm()
+ submitForm()
 }, 300)
 
 button.addEventListener('click', debouncedClick)
@@ -690,18 +690,18 @@ button.addEventListener('click', debouncedClick)
 // Luồng chính
 const worker = new Worker('calculator.js')
 button.addEventListener('click', () => {
-  worker.postMessage({ data: largeData })
+ worker.postMessage({ data: largeData })
 })
 
 worker.onmessage = (e) => {
-  // Tính toán hoàn thành, hiển thị kết quả
-  showResult(e.data.result)
+ // Tính toán hoàn thành, hiển thị kết quả
+ showResult(e.data.result)
 }
 
 // calculator.js (Luồng Worker)
 self.onmessage = (e) => {
-  const result = heavyCalculation(e.data.data)
-  self.postMessage({ result })
+ const result = heavyCalculation(e.data.data)
+ self.postMessage({ result })
 }
 ```
 

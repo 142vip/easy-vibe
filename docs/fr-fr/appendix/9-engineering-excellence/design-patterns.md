@@ -1,4 +1,4 @@
-# Patterns de conception
+# Fondamentaux : Patterns de conception logicielle
 
 ::: tip Avant-propos
 **Pourquoi votre code est-il toujours « fonctionnel mais brouillon » ?** Vous avez peut-etre deja rencontre cette situation : les exigences changent et le code doit etre largement modifie ; vous voulez reutiliser une logique, mais elle est entremelee avec d'autres code. Les patterns de conception sont les « recettes d'organisation du code » resumees par les anciens, qui vous aident a ecrire du code flexible et maintenable.
@@ -190,7 +190,7 @@ Experimenter les effets de differents patterns de conception avec le composant i
 
 ---
 
-## 4. Comment choisir un pattern de conception ?
+## 4. Approche et mise en œuvre : choisir un pattern de conception
 
 | Probleme rencontre | Pattern recommande | Idee cle |
 |-------------|---------|---------|

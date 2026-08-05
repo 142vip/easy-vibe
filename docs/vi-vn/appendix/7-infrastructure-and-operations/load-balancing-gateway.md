@@ -1,11 +1,11 @@
 # Cân bằng tải & Gateway
 ::: tip 🎯 Câu hỏi cốt lõi
-**Khi một máy chủ không thể chịu nổi, làm thế nào để phân phối lưu lượng một cách "thông minh" đến nhiều instance máy chủ?** Cân bằng tải là "người điều phối" của hệ thống phân tán hiện đại. Bài viết này thông qua các tình huống thực tế (thu ngân quán trà sữa, phân loại chuyển phát nhanh, chỉ huy giao thông) giúp hiểu sâu về triết lý thiết kế và thực tiễn kỹ thuật của cân bằng tải.
+**Khi một máy chủ không thể chịu nổi, làm thế nào để phân phối lưu lượng một cách "thông minh" đến nhiều instance máy chủ?** Cân bằng tải là "người điều phối" của hệ thống phân tán hiện đại. Bài viết này thông qua các tình huống thực tế (máy chủ backend quán trà sữa, phân loại chuyển phát nhanh, chỉ huy giao thông) giúp hiểu sâu về triết lý thiết kế và thực tiễn kỹ thuật của cân bằng tải.
 :::
 
 ---
 
-## 1. Tại sao cần "cân bằng tải"?
+## 1. Động lực của cần "cân bằng tải"
 
 ### 1.1 Bắt đầu từ một tình huống thực tế: quá trình phát triển kiến trúc của một website
 
@@ -49,24 +49,24 @@ Người dùng → Cân bằng tải (Nginx)
 
 ### 1.2 Ẩn dụ đời sống về cân bằng tải
 
-**Quầy thu ngân quán trà sữa**
+**Quầy máy chủ backend quán trà sữa**
 
 Hãy tưởng tượng bạn mở một quán trà sữa nổi tiếng:
 
-- **1 quầy thu ngân**: Khách xếp hàng, người phía sau không chờ nổi, đánh giá kém
-- **3 quầy thu ngân**: Nhân viên phân bổ khách đến các quầy khác nhau, hiệu suất tăng gấp 3
+- **1 quầy máy chủ backend**: Khách xếp hàng, người phía sau không chờ nổi, đánh giá kém
+- **3 quầy máy chủ backend**: Nhân viên phân bổ khách đến các quầy khác nhau, hiệu suất tăng gấp 3
 
-**Cân bằng tải chính là "người phân bổ quầy thu ngân"**:
+**Cân bằng tải chính là "người phân bổ quầy máy chủ backend"**:
 
 - **Người dùng** (khách hàng) → Yêu cầu dịch vụ
 - **Cân bằng tải** (người phân bổ) → Phân phối yêu cầu đến các máy chủ khác nhau
-- **Máy chủ** (quầy thu ngân) → Xử lý yêu cầu
+- **Máy chủ** (quầy máy chủ backend) → Xử lý yêu cầu
 
 <LoadBalancerTypesDemo />
 
 ---
 
-## 2. Cân bằng tải là gì?
+## 2. Cân bằng tải: Tổng quan
 
 ### 2.1 Cân bằng tải lớp 4 (L4): Chỉ xem số nhà
 
@@ -126,11 +126,11 @@ Yêu cầu client → Cân bằng tải L7 → Phân tích nội dung HTTP
 
 ---
 
-## 3. Vấn đề cốt lõi 1: Làm thế nào để tránh máy chủ "hỏng" vẫn nhận khách?
+## 3. Vấn đề cốt lõi 1: Cách để tránh máy chủ "hỏng" vẫn nhận khách
 
 ### 3.1 Kiểm tra sức khỏe: Đừng để máy chủ "ốm" kéo cả hệ thống xuống
 
-Hãy tưởng tượng, một quầy thu ngân của bạn đột nhiên hỏng, nhưng người phân bổ không biết, vẫn liên tục đưa khách đến đó. Kết quả là hàng đợi ngày càng dài, khách hàng phàn nàn không ngớt.
+Hãy tưởng tượng, một quầy máy chủ backend của bạn đột nhiên hỏng, nhưng người phân bổ không biết, vẫn liên tục đưa khách đến đó. Kết quả là hàng đợi ngày càng dài, khách hàng phàn nàn không ngớt.
 
 **Kiểm tra sức khỏe (Health Check) chính là "lính gác" ngăn chặn tình huống này**. Nó định kỳ "khám sức khỏe" mỗi máy chủ, phát hiện máy "ốm" thì lập tức loại khỏi hàng đợi, đợi "khỏe lại" thì mời quay về.
 
@@ -169,9 +169,9 @@ Một nhóm đã đặt ngưỡng thời gian phản hồi của health check l�
 
 ---
 
-## 4. Vấn đề cốt lõi 2: Làm thế nào để "khách quen" luôn gặp cùng một "thu ngân"?
+## 4. Vấn đề cốt lõi 2: Cách để "khách quen" luôn gặp cùng một "máy chủ backend"
 
-### 4.1 Duy trì phiên: Để "khách quen" luôn gặp cùng một "thu ngân"
+### 4.1 Duy trì phiên: Để "khách quen" luôn gặp cùng một "máy chủ backend"
 
 Hãy tưởng tượng bạn là khách quen của quán trà sữa, mỗi lần đến đều do cùng một nhân viên phục vụ. Cô ấy biết sở thích của bạn (nửa đường, không đá), phục vụ vừa nhanh vừa chu đáo. Nhưng nếu mỗi lần đến đều đổi người mới, bạn phải lặp đi lặp lại cùng một yêu cầu, hiệu suất giảm đáng kể.
 
@@ -196,7 +196,7 @@ Hãy tưởng tượng bạn là khách quen của quán trà sữa, mỗi lần
 
 ---
 
-## 5. Vấn đề cốt lõi 3: Làm thế nào để triển khai không downtime?
+## 5. Vấn đề cốt lõi 3: Cách để triển khai không downtime
 
 ### 5.1 Triển khai xanh-lam: Phát hành không downtime với "chuyển đổi một chạm"
 
@@ -246,7 +246,7 @@ Phát hành canary lấy tên từ "chim hoàng yến trong mỏ than" lịch s�
 
 ---
 
-## 6. Vấn đề cốt lõi 4: Làm thế nào để hệ thống tự "thở"?
+## 6. Vấn đề cốt lõi 4: Cách để hệ thống tự "tự động co giãn"
 
 ### 6.1 Tự động mở rộng và thu hẹp: Để hệ thống "xếp ca linh hoạt" như nhà hàng
 
@@ -309,7 +309,7 @@ Một nhóm thiết lập CPU < 30% thu hẹp. Sau khi mở rộng, lưu lượn
 
 ---
 
-## 7. Thực chiến: Làm thế nào để chọn cân bằng tải?
+## 7. Thực chiến: Cách để chọn cân bằng tải
 
 ### 7.1 So sánh các cân bằng tải chính
 
@@ -362,7 +362,7 @@ Chọn cân bằng tải:
 | **Phân tầng** | L4 xử lý "phân loại chuyển phát" (nhanh nhưng đơn giản) | L4 xử lý CSDL, game; L7 xử lý Web, API     |
 | **Dự phòng** | Điểm lỗi đơn là kẻ thù của kiến trúc | Triển khai đa instance, đa khu vực để nâng cao tính sẵn sàng |
 | **Tiệm tiến** | Phát hành phiên bản mới không "một nhát cắt" | Triển khai xanh-lam đạt không downtime; canary đạt rủi ro kiểm soát được |
-| **Đàn hồi** | Hệ thống nên "thở" như sinh vật sống | Lúc bận tự động mở rộng, lúc rảnh tự động thu hẹp |
+| **Đàn hồi** | Hệ thống nên "tự động co giãn" như sinh vật sống | Lúc bận tự động mở rộng, lúc rảnh tự động thu hẹp |
 
 ### 8.2 Danh sách kiểm tra thiết kế
 

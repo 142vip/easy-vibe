@@ -1,11 +1,11 @@
-# Cache-Ebenen und -Strategien
+# Caching: Leistungsoptimierung
 ::: tip 🎯 Kernfrage
 **Warum laden manche Websites in 50 Millisekunden, während andere 5 Sekunden brauchen?** Das ist, als würde man fragen: Warum dauert es 1 Sekunde, ein Buch aus dem Schulranzen zu holen, aber 10 Minuten, es in der Bibliothek zu suchen? Die Antwort lautet – Caching. Dieses Kapitel führt dich tief in die Kernprinzipien, Designmuster und praktischen Techniken des Cachings ein, damit du deine Systemleistung um das 100-fache steigern kannst.
 :::
 
 ---
 
-## 1. Warum „Caching"?
+## 1. Warum „Caching"
 
 ### 1.1 Die Entwicklung vom „Jedes-mal-Nachschlagen" zum „Häufige-Daten-Merken"
 
@@ -38,7 +38,7 @@ Das ist wie ein Schüler, der für jede Unterrichtsstunde vom Wohnheim in die Bi
 
 <CachePerformanceComparisonDemo />
 
-### 1.2 Eine wahre Geschichte: Warum Caching der Rettungsanker ist
+### 1.2 Eine wahre Geschichte: Motivation von Caching der Rettungsanker ist
 
 Du denkst vielleicht: „Mein System läuft doch gerade gut, warum sollte ich Caching im Voraus einplanen?" Lass mich eine wahre Geschichte erzählen, damit du verstehst, warum Caching keine „Option", sondern ein „Muss" ist.
 
@@ -58,7 +58,7 @@ Der Wert von Caching liegt nicht nur in „schneller", sondern vor allem im „S
 
 ---
 
-## 2. Kernkonzepte: Was ist ein Cache?
+## 2. Kernkonzepte: Überblick über ist ein Cache
 
 ::: tip 🤔 Was genau ist ein Cache?
 Einfach ausgedrückt: **Ein Cache ist ein Speicherplatz für Datenkopien**. So wie ein Haftnotiz-Zettel an deinem Schreibtisch mit den wichtigsten Telefonnummern – dann musst du nicht jedes Mal das Telefonbuch durchblättern.
@@ -814,11 +814,11 @@ Die folgende Demo vergleicht die Szenarien und Lösungen der drei Cache-Probleme
 
 ---
 
-## 5. Cache-Konsistenzstrategien: Wie Cache und Datenbank synchron bleiben
+## 5. Cache-Konsistenzstrategien: Ansatz für Cache und Datenbank synchron bleiben
 
 Der Cache ist von Natur aus eine Kopie der Daten. Zwischen Kopie und Originaldaten (Datenbank) besteht zwangsläufig ein Zeitfenster der Inkonsistenz. Wie man dieses Zeitfenster kontrolliert, ist die zentrale Herausforderung des Cache-Designs.
 
-### 5.1 Warum können Cache und Datenbank inkonsistent sein?
+### 5.1 Warum können Cache und Datenbank inkonsistent sein
 
 ::: tip 🤔 Inkonsistenz mit der „Haftnotiz und Buch"-Analogie
 Stell dir vor, auf deiner Haftnotiz steht: „Ming's Telefon: 123456" – eine Kopie deines Adressbuchs (Datenbank).

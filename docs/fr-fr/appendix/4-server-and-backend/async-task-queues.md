@@ -1,4 +1,4 @@
-# Files de tâches asynchrones et modèle producteur-consommateur
+# Principes : Files de tâches asynchrones
 
 ::: tip Préface
 **Un utilisateur clique sur le bouton « Exporter le rapport », puis fixe l'animation de chargement qui tourne pendant 30 secondes — est-ce raisonnable ?** Lorsqu'une opération nécessite plusieurs secondes voire plusieurs minutes pour se terminer, faire attendre l'utilisateur n'est clairement pas une bonne expérience. Les files de tâches asynchrones sont le modèle architectural clé pour résoudre ce problème — déléguer les opérations longues en arrière-plan et répondre immédiatement à l'utilisateur.
@@ -24,7 +24,7 @@ Après avoir étudié ce chapitre, vous serez en mesure de :
 
 ---
 
-## 0. Vue d'ensemble : pourquoi ne pas faire « attendre » l'utilisateur ?
+## 0. Vue d'ensemble : pourquoi ne pas faire « attendre » l'utilisateur
 
 Imaginez que vous commandiez dans un restaurant. Un bon restaurant vous donne immédiatement un numéro de commande après votre commande, puis vous pouvez vous installer et utiliser votre téléphone en attendant que le repas soit prêt. Plutôt que de vous faire rester debout au comptoir à regarder le chef préparer tout le plat.
 

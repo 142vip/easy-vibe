@@ -1,4 +1,4 @@
-# Sérialisation : la "traduction" des données
+# Principes : Sérialisation et formats de données
 
 ::: tip Question centrale
 **Comment les données sont-elles transmises sur le réseau ?** C'est comme demander : comment faire en sorte que ce qu'une personne dit soit compris par une autre ? La sérialisation résout le problème de la "traduction des données" — traduire les objets en mémoire dans un format transmissible.
@@ -55,13 +55,13 @@ La redondance du format JSON rend le paquet de données trop volumineux, affecta
 
 ---
 
-## 1. Qu'est-ce que la sérialisation/désérialisation ?
+## 1. Qu'est-ce que la sérialisation/désérialisation
 
 **La sérialisation** (Serialization) est le processus de transformation d'un objet en un format transmissible.
 
 **La désérialisation** (Deserialization) est le processus de transformation d'un format transmissible en objet.
 
-### 1.1 Analogie avec l'envoi d'un colis
+### 1.1 Analogie avec l'envoi d'un artefact de build
 
 | Envoi de colis | Sérialisation | Explication |
 | :--- | :--- | :--- |
@@ -69,7 +69,7 @@ La redondance du format JSON rend le paquet de données trop volumineux, affecta
 | Transport | Transfert réseau | Le camion de livraison achemine vers la destination |
 | Déballer et récupérer | Désérialisation | Le destinataire ouvre le carton, sort les objets |
 
-### 1.2 Pourquoi la sérialisation est-elle nécessaire ?
+### 1.2 Pourquoi la sérialisation est-elle nécessaire
 
 | Raison | Explication | Exemple |
 | :--- | :--- | :--- |

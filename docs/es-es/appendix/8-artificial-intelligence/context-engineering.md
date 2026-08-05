@@ -1,4 +1,4 @@
-# Ingeniería de Contexto
+# Introducción a la ingeniería de contexto
 > 💡 **Guía de estudio**: La ingeniería de prompts resuelve "cómo expresar las cosas con claridad", mientras que la ingeniería de contexto resuelve "cómo hacer que el modelo vea la información adecuada en el momento adecuado". Este capítulo gira en torno a una pregunta central: **Dentro de una ventana de contexto limitada, ¿cómo lograr que el modelo te entienda sin arruinarte?**
 
 Antes de empezar, te recomendamos repasar dos conceptos fundamentales:
@@ -8,7 +8,7 @@ Antes de empezar, te recomendamos repasar dos conceptos fundamentales:
 
 ---
 
-## 0. Introducción: ¿Por qué se olvida de las cosas a medida que avanza la conversación y además se vuelve cada vez más caro?
+## 0. Introducción: Motivación de olvida de las cosas a medida que avanza la conversación y además se vuelve cada vez más caro
 
 <AgentContextFlow />
 
@@ -27,7 +27,7 @@ Ante estos desafíos, limitarse a "escribir buenos prompts" ya no es suficiente.
 
 ---
 
-## 1. ¿Qué es la "Ingeniería de Contexto"? (Definición + Escenarios)
+## 1. Introducción a "Ingeniería de Contexto" (Definición + Escenarios)
 
 Primero, una definición operativa breve, y luego veremos algunos escenarios típicos.
 
@@ -55,7 +55,7 @@ Esto genera un conflicto central:
 
 El equipo de Manus pasó por múltiples reconstrucciones de arquitectura antes de comprender una verdad: **el contexto no se puede limitar a "escribirse", sino que debe "diseñarse".**
 
-### 2.1 ¿Qué nos enseñan las cuatro reconstrucciones?
+### 2.1 Qué nos enseñan las cuatro reconstrucciones
 
 El cofundador de Manus, Ji Yichao, compartió su "historial de tropiezos":
 
@@ -68,7 +68,7 @@ El cofundador de Manus, Ji Yichao, compartió su "historial de tropiezos":
 
 **Conclusión clave**: **No se trata de recordar más, sino de recordar mejor**.
 
-### 2.2 ¿A qué se parece realmente la "memoria" de la IA?
+### 2.2 A qué se parece realmente la "memoria" de la IA
 
 **La memoria RAM tradicional** = **Disco duro**:
 - Gran capacidad: puede almacenar grandes cantidades de datos a largo plazo;
@@ -84,9 +84,9 @@ El cofundador de Manus, Ji Yichao, compartió su "historial de tropiezos":
 
 ---
 
-## 3. Primer paso: Conocer los costes - ¿A dónde va cada céntimo?
+## 3. Primer paso: Conocer los costes - A dónde va cada céntimo
 
-### 3.1 ¿Por qué empezar por los costes?
+### 3.1 Motivación para por los costes
 
 Veamos cómo se gasta el dinero en una conversación típica con IA:
 
@@ -99,7 +99,7 @@ Veamos cómo se gasta el dinero en una conversación típica con IA:
 
 **Hallazgo sorprendente**: **¡El 70% del dinero se gasta en hacer que la IA relea lo que ya habías dicho antes!**
 
-### 3.2 ¿Qué es el KV Cache? (Reutilización de prefijos)
+### 3.2 Introducción a KV Cache (Reutilización de prefijos)
 
 Antes de hablar de precios, necesitamos entender un concepto técnico clave: **KV Cache (Caché Clave-Valor)**.
 No te asustes por el nombre técnico; en realidad es la "tabla de referencia rápida de memoria a corto plazo" de la IA.
@@ -162,7 +162,7 @@ Observa: cuando el primer bloque de contenido pasa a estar "memorizado", ¿qué 
 
 A medida que la conversación se alarga, el primer problema que aparece es: **¿Qué hacer cuando la ventana se llena?**
 
-### 4.1 ¿Por qué "el primero en entrar, primero en salir" causa problemas?
+### 4.1 Motivación de "el primero en entrar, primero en salir" causa problemas
 
 La gestión de memoria más simple es la **ventana deslizante (Sliding Window)**: **lo nuevo entra, lo viejo sale**.
 Suena justo, pero en tareas reales es un desastre.
@@ -207,7 +207,7 @@ Memoria:   Alta     → Baja  → Alta
 Si "el primero en entrar, primero en salir" no funciona, ¿qué hacemos?
 La respuesta de Manus: **establecer un "sistema de clasificación de la información"**.
 
-### 5.1 ¿Por qué clasificar la información por niveles?
+### 5.1 Motivación de clasificar la información por niveles
 
 En lugar de tratar cada pieza de información por igual, decidimos su permanencia según su importancia:
 
@@ -239,7 +239,7 @@ Observa: cuando sigas conversando, ¿la información fijada permanece siempre vi
 
 A veces, la cantidad de información que necesitamos procesar es demasiado grande (por ejemplo, cientos de páginas de documentación técnica) y la pizarra simplemente no da abasto. Ahí es cuando necesitamos un cerebro externo: **RAG (Generación Aumentada por Recuperación)**.
 
-### 6.1 ¿Por qué la "pizarra pequeña" no es suficiente?
+### 6.1 Motivación de "pizarra pequeña" no es suficiente
 
 Cuando Manus se enfrentó a documentación técnica de millones de tokens, comparó dos enfoques:
 
@@ -271,7 +271,7 @@ Escribe una pregunta en el cuadro de búsqueda (por ejemplo, "cómo restablecer 
 Si toda la información es importante, no se puede eliminar y tampoco quieres consultar en otro sitio, ¿qué se puede hacer?
 Solo queda **escribir con letra más pequeña**: eso es la **compresión de contexto**.
 
-### 7.1 ¿Cuándo se necesita "abreviar"?
+### 7.1 Criterios de compresión del contexto
 *   El material recuperado es demasiado extenso (> 2000 tokens).
 *   El historial de conversación es demasiado verboso (ocupa > 80% del espacio de la pizarra).
 *   Se necesita una respuesta rápida y no conviene que la IA lea textos larguísimos.
@@ -310,7 +310,7 @@ Haz clic en "Empezar construcción" para ver cómo levantamos este palacio capa 
 
 <MemoryPalaceDemo />
 
-### 8.2 ¿Por qué este diseño es el más potente?
+### 8.2 Motivación del diseño arquitectónico
 
 La filosofía de diseño de este palacio busca resolver tres contradicciones fundamentales:
 

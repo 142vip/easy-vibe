@@ -1,4 +1,4 @@
-# Desafíos de los sistemas distribuidos
+# Principios de los sistemas distribuidos
 
 ::: tip Prefacio
 **Cuando una máquina no es suficiente, los problemas realmente comienzan.** Los sistemas distribuidos son la piedra angular del internet moderno — desde los mensajes de WeChat hasta las compras en Taobao, detrás hay cientos o miles de máquinas trabajando en coordinación. Pero "distribuido" no es un almuerzo gratis; trae consigo una serie de desafíos que los sistemas de una sola máquina nunca han enfrentado.
@@ -25,7 +25,7 @@ Después de completar este capítulo, podrás:
 
 ---
 
-## 0. Visión general: ¿por qué se necesitan sistemas distribuidos?
+## 0. Visión general: Motivación de sistemas distribuidos
 
 Los sistemas de una sola máquina son simples y confiables, pero tienen tres cuellos de botella insuperables:
 
@@ -63,7 +63,7 @@ En el año 2000, Eric Brewer propuso la conjetura CAP (posteriormente demostrada
 
 <CAPTheoremDemo />
 
-### ¿Por qué solo se pueden elegir dos?
+### Motivación de solo se pueden elegir dos
 
 En un entorno distribuido, las particiones de red (P) son inevitables — los cables de fibra óptica se cortan, los switches fallan, los centros de datos pierden conectividad. Por lo tanto, P es obligatorio, y la elección real es sopesar entre C y A:
 

@@ -1,4 +1,4 @@
-# Colas de tareas asíncronas y modelo productor-consumidor
+# Principios de las colas de tareas asíncronas
 
 ::: tip Prólogo
 **El usuario hace clic en "Exportar informe" y se queda mirando una animación de carga durante 30 segundos. ¿Es esto razonable?** Cuando una operación tarda varios segundos o incluso minutos en completarse, hacer esperar al usuario claramente no es una buena experiencia. Las colas de tareas asíncronas son el patrón arquitectónico clave para resolver este problema: enviar las operaciones costosas a procesarse en segundo plano y dar una respuesta inmediata al usuario.
@@ -24,7 +24,7 @@ Al terminar este capítulo, habrás aprendido:
 
 ---
 
-## 0. Panorama general: ¿por qué no hacer esperar al usuario?
+## 0. Panorama general: Motivación para esperar al usuario
 
 Imagina que vas a un restaurante a pedir comida. Un buen restaurante te da un número de ticket inmediatamente después de hacer el pedido, luego puedes buscar mesa, usar el móvil, y recoger la comida cuando esté lista. No te hacen quedarte de pie en la barra mirando al chef preparar todo el plato.
 

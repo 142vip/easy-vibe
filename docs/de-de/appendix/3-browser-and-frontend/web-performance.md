@@ -1,11 +1,11 @@
-# Messung und Optimierung der Web-Performance
+# Web-Performance: Optimierungsprinzipien
 ::: tip 🎯 Kernfrage
 **Warum lädt deine Webseite langsam und Nutzer beschweren sich ständig über Ruckeln?** Das ist wie die Frage: Warum dauert das Essen im Restaurant so lange und die Gäste werden ungeduldig? Dieses Kapitel führt dich in die Kernkonzepte der Frontend-Performance-Optimierung ein und lässt deine Webseite „fliegen".
 :::
 
 ---
 
-## 1. Warum „Performance-Optimierung"?
+## 1. Warum „Performance-Optimierung"
 
 ### 1.1 Von funktionsfähig zu benutzerfreundlich: Die Entwicklung der Performance-Optimierung
 
@@ -36,7 +36,7 @@ Doch heute ist das völlig anders. Die Komplexität moderner Webseiten wächst e
 
 **Das ist das Problem, das „Performance-Optimierung" löst: Die Wartezeit der Nutzer verkürzen und die Bedienung flüssiger machen.**
 
-### 1.2 Eine wahre Geschichte aus der Praxis: Warum du Performance-Optimierung verstehen musst
+### 1.2 Eine wahre Geschichte aus der Praxis: Motivation von du Performance-Optimierung verstehen musst
 
 Du könntest sagen: „Das Internet ist heute so schnell und die Geräte sind so gut – muss man sich da wirklich noch um Performance-Optimierung kümmern?" Lass mich eine wahre Geschichte erzählen, damit du verstehst, warum dieses Wissen so wichtig ist.
 

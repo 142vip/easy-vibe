@@ -1,4 +1,4 @@
-# Lenguajes de cliente (Swift / Kotlin / Dart)
+# Introducción a los lenguajes de cliente: Swift/Kotlin/Dart
 
 ::: tip 🎯 Pregunta central
 **"En el desarrollo de aplicaciones móviles, ¿cómo elegir el lenguaje adecuado?"** Este capítulo presenta los conceptos básicos del desarrollo de clientes, traza la evolución de los lenguajes de programación móvil y analiza en detalle los principales lenguajes de desarrollo de clientes actuales y sus escenarios de aplicación, ayudando al lector a construir un conocimiento sistemático para la selección de lenguajes.
@@ -17,7 +17,7 @@ En el contexto de la Internet móvil, **"desarrollo de clientes" suele referirse
 
 ---
 
-## 2. Escenarios y límites de los lenguajes móviles: ¿cuándo es obligatorio usar un lenguaje específico?
+## 2. Escenarios y límites de los lenguajes móviles: Criterios de obligatorio usar un lenguaje específico
 
 La selección del lenguaje de desarrollo de clientes no puede desvincularse de los requisitos de negocio y del contexto de ingeniería concretos. Incluso con el rápido avance de las tecnologías multiplataforma modernas (como Flutter / Dart), ante ciertos estándares exigentes y líneas rojas de ingeniería, los lenguajes nativos (Swift / Kotlin) siguen siendo la única solución viable. Esto exige que el arquitecto defina con claridad los límites de aplicación de cada lenguaje.
 
@@ -29,7 +29,7 @@ En los siguientes escenarios de ingeniería, adoptar arquitecturas de lenguaje c
 2. **Validación de MVP (Producto Mínimo Viable) en fase inicial y experimentación ágil de negocio**: Proyectos en etapa temprana o equipos de exploración de nuevas líneas de negocio, con reservas de capital y ventanas de tiempo extremadamente limitadas. Los lenguajes multiplataforma permiten al equipo, con la mitad de recursos humanos, construir rápidamente un prototipo completo que abarque iOS y Android desde un único repositorio de código, acelerando la entrada al mercado y la validación.
 3. **Frontends ligeros con fuerte predominio del diseño e interacción débil**: Basados en un Design System (sistema de diseño) corporativo estandarizado, que exige obligatoriamente una identidad absoluta del 100% a nivel de píxel entre las plataformas Android e iOS en cuanto a estilos de controles, normas de espaciado e incluso microanimaciones.
 
-### 2.2 ¿Cuándo es obligatorio mantenerse firme en los lenguajes nativos (Swift / Kotlin)?
+### 2.2 Criterios de obligatorio mantenerse firme en los lenguajes nativos (Swift / Kotlin)
 
 Sin embargo, cuando se trata de exprimir el máximo rendimiento o de sortear las capas de abstracción estándar en zonas de ingeniería profunda, es imperativo descartar cualquier compromiso técnico y adoptar decididamente el sistema de lenguajes nativos puros:
 

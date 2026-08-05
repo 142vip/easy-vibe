@@ -1,7 +1,7 @@
-# Dòng lệnh và Shell Script
+# Dòng lệnh và Shell: Cơ bản về Terminal và Script
 > 💡 **Hướng dẫn học**: Chương này được thiết kế để cung cấp cho người đọc không có nền tảng một hiểu biết có hệ thống về cách Terminal hoạt động. Không cần có chuyên môn máy tính, chúng ta sẽ thông qua các demo tương tác để phân tích cơ chế hoạt động của Terminal từ nông đến sâu.
 
-## 0. Bắt đầu nhanh: Mở Terminal như thế nào?
+## 0. Bắt đầu nhanh: Cách mở Terminal
 
 Trước khi bắt đầu học, trước hết bạn phải tìm thấy nó. Terminal là "phụ kiện tiêu chuẩn" của mọi hệ điều hành, bạn không cần cài đặt thêm bất kỳ phần mềm nào để sử dụng.
 
@@ -45,7 +45,7 @@ _Hãy chọn hệ điều hành bạn hay dùng bên dưới, sau đó làm theo
 
 <TerminalHandsOn />
 
-### 0.2 Tại sao phải bỏ chuột? (Why CLI?)
+### 0.2 Động lực của việc dùng dòng lệnh thay cho chuột (Why CLI)
 
 Bạn có thể hỏi: _"Giao diện đồ họa (GUI) hiện nay dễ dùng thế, chỉ cần click chuột, tại sao còn phải gõ lệnh phức tạp trong cửa sổ nền đen chữ trắng?"_
 
@@ -68,7 +68,7 @@ Không phải để "làm màu mè", mà vì trong những tình huống cụ th
 
 **Tóm lại**: GUI phù hợp để **khám phá** (duyệt web, xem ảnh), CLI phù hợp để **sản xuất** (phát triển, vận hành, xử lý hàng loạt). Là lập trình viên, chúng ta dùng terminal vì nó **chính xác hơn, kiểm soát tốt hơn, hiệu quả hơn**.
 
-## 1. Định nghĩa khái niệm: Terminal là gì? (Definition)
+## 1. Định nghĩa khái niệm: Tổng quan về Terminal (Definition)
 
 _Terminal trên các hệ điều hành khác nhau có giao diện khác nhau, **cách dùng lệnh cũng khác nhau**. Nhấn vào nút bên dưới để chuyển đổi, chú ý cách macOS, Windows và Linux dùng các lệnh khác nhau (như `dir` vs `ls`) để làm cùng một việc:_
 
@@ -111,7 +111,7 @@ Shell mới là "bộ não" có thể hiểu bạn nói gì và điều khiển 
   - **Trách nhiệm**: Lõi của hệ điều hành, chỉ nó có thể trực tiếp điều khiển phần cứng (đọc/ghi ổ cứng, cấp phát bộ nhớ, điều khiển CPU).
   - **Mối quan hệ**: Shell là "thư ký" của kernel, giúp bạn dịch ngôn ngữ con người cho kernel hiểu.
 
-### 2.2 Tại sao phải tách riêng? (Khả năng thay thế)
+### 2.2 Động lực của việc tách riêng các lớp (Khả năng thay thế)
 
 Vì **tầng hiển thị** (terminal) và **tầng logic** (Shell) hoàn toàn tách biệt, nên chúng có thể kết hợp tự do:
 

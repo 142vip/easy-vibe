@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Tại sao cần "Hàng đợi tin nhắn"?
+## 1. Động lực của Hàng đợi tin nhắn
 
 ### 1.1 Bắt đầu từ một case study thực tế: Sự phát triển của hệ thống đơn hàng Taobao
 
@@ -15,8 +15,8 @@ Năm 2012, hệ thống đơn hàng của Taobao gặp một sự cố nghiêm t
 
 ```
 Người dùng đặt hàng → Dịch vụ đơn hàng → Gọi đồng bộ dịch vụ kho → Gọi đồng bộ dịch vụ thanh toán → Gọi đồng bộ dịch vụ logistics
-                              ↓                    ↓                    ↓
-                         Phản hồi 200ms        Phản hồi 500ms        Phản hồi 300ms
+ ↓ ↓ ↓
+ Phản hồi 200ms Phản hồi 500ms Phản hồi 300ms
 ```
 
 ::: warning ⚠️ Vấn đề chết người của ghép nối chặt chẽ
@@ -25,20 +25,20 @@ Người dùng đặt hàng → Dịch vụ đơn hàng → Gọi đồng bộ d
 - **Dịch vụ kho gặp sự cố** → Dịch vụ đơn hàng cũng gặp sự cố (cạn kiệt thread pool)
 - **Dịch vụ thanh toán chậm** → Toàn bộ chuỗi bị kéo chậm
 - **Không thể mở rộng ngang** → Chỉ có thể mở rộng dọc (thêm máy, đắt và có giới hạn)
-  :::
+ :::
 
 **Kiến trúc cải tiến (giới thiệu hàng đợi tin nhắn):**
 
 ```
 Người dùng đặt hàng → Dịch vụ đơn hàng → Gửi tin nhắn "Đơn hàng đã tạo" → Phản hồi ngay (50ms)
-                                              ↓
-                                    Hàng đợi tin nhắn (Kafka)
-                                              ↓
-                ┌─────────────┬─────────────┬─────────────┬─────────────┐
-                ▼             ▼             ▼             ▼             ▼
-        Dịch vụ kho    Dịch vụ thanh toán  Dịch vụ logistics  Dịch vụ thông báo
-        (trừ kho bất   (xử lý bất đồng     (tạo bất đồng      (gửi bất đồng
-        đồng bộ)        bộ)                  bộ)                 bộ)
+ ↓
+ Hàng đợi tin nhắn (Kafka)
+ ↓
+ ┌─────────────┬─────────────┬─────────────┬─────────────┐
+ ▼ ▼ ▼ ▼ ▼
+ Dịch vụ kho Dịch vụ thanh toán Dịch vụ logistics Dịch vụ thông báo
+ (trừ kho bất (xử lý bất đồng (tạo bất đồng (gửi bất đồng
+ đồng bộ) bộ) bộ) bộ)
 ```
 
 ::: tip ✨ Hiệu quả sau cải tiến
@@ -47,7 +47,7 @@ Người dùng đặt hàng → Dịch vụ đơn hàng → Gửi tin nhắn "Đ
 - **Dịch vụ kho gặp sự cố** → Tin nhắn được lưu tạm trong hàng đợi, xử lý tiếp sau khi khôi phục
 - **Dịch vụ thanh toán chậm** → Không ảnh hưởng đến việc tạo đơn hàng
 - **Có thể mở rộng ngang** → Chỉ cần tăng số lượng consumer instance
-  :::
+ :::
 
 ### 1.2 Phép so sánh đời thường về hàng đợi tin nhắn
 
@@ -68,9 +68,9 @@ Hãy tưởng tượng bạn đến một nhà hàng nổi tiếng:
 
 ---
 
-## 2. Hàng đợi tin nhắn là gì? (Định nghĩa + Ba yếu tố cốt lõi)
+## 2. Tổng quan về Hàng đợi tin nhắn (Định nghĩa + Ba yếu tố cốt lõi)
 
-### 2.1 "Hàng đợi tin nhắn" là gì?
+### 2.1 Định nghĩa Hàng đợi tin nhắn
 
 ::: tip 🤔 Giải thích thuật ngữ
 **Hàng đợi tin nhắn (Message Queue, MQ)** là một container lưu trữ tin nhắn, producer đưa tin nhắn vào, consumer lấy tin nhắn ra để xử lý. Nó thực hiện "giao tiếp bất đồng bộ" — bên gửi không cần chờ bên nhận xử lý xong.
@@ -96,7 +96,7 @@ Hãy tưởng tượng bạn đến một nhà hàng nổi tiếng:
 - **Cách gửi**: Gửi đồng bộ (tin cậy nhưng chặn) vs Gửi bất đồng bộ (hiệu suất cao nhưng cần xử lý callback)
 - **Xác nhận tin nhắn**: Chờ Broker xác nhận (At Least Once) vs Gửi rồi quên (At Most Once)
 - **Xử lý thất bại**: Chiến lược thử lại, sao lưu log cục bộ, hàng đợi tin chết
-  :::
+ :::
 
 #### Yếu tố thứ hai: Consumer (Người tiêu dùng)
 
@@ -110,7 +110,7 @@ Hãy tưởng tượng bạn đến một nhà hàng nổi tiếng:
 - **Xác nhận tiêu thụ**: Tự động ACK (hiệu quả nhưng có thể mất tin nhắn) vs Thủ công ACK (tin cậy nhưng cần xử lý timeout)
 - **Kiểm soát đồng thời**: Tiêu thụ tuần tự đơn luồng vs Tiêu thụ song song đa luồng
 - **Xử lý thất bại**: Chiến lược thử lại, hàng đợi tin chết, cơ chế bù trừ
-  :::
+ :::
 
 #### Yếu tố thứ ba: Broker (Môi giới tin nhắn)
 
@@ -124,11 +124,11 @@ Hãy tưởng tượng bạn đến một nhà hàng nổi tiếng:
 - **Chiến lược sao chép**: Sao chép chủ-tớ, đồng bộ đa bản sao
 - **Cơ chế sẵn sàng cao**: Triển khai cụm, chuyển đổi dự phòng tự động
 - **Khả năng mở rộng**: Phân vùng (Partition), Phân mảnh (Sharding)
-  :::
+ :::
 
 ---
 
-## 3. Vấn đề cốt lõi thứ nhất: Làm thế nào để giải ghép hệ thống, tránh "động một chỗ ảnh hưởng toàn bộ"?
+## 3. Vấn đề cốt lõi thứ nhất: Cách để giải ghép hệ thống, tránh "động một chỗ ảnh hưởng toàn bộ"
 
 ### 3.1 Bi kịch của ghép nối chặt chẽ: Một dịch vụ gặp sự cố, toàn bộ thất bại
 
@@ -139,12 +139,12 @@ Dịch vụ đơn hàng gọi trực tiếp các dịch vụ hạ nguồn:
 ┌─────────────┐
 │ Dịch vụ đơn hàng │
 └──────┬──────┘
-       │
-       ├───────────┬───────────┬───────────┬───────────┐
-       ▼           ▼           ▼           ▼           ▼
+ │
+ ├───────────┬───────────┬───────────┬───────────┐
+ ▼ ▼ ▼ ▼ ▼
 ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐
 │Dịch vụ kho│ │Dịch vụ TT│ │Dịch vụ LH│ │Dịch vụ TN│ │Dịch vụ SMS│
-│  200ms   │ │  500ms   │ │  300ms   │ │  100ms   │ │  100ms   │
+│ 200ms │ │ 500ms │ │ 300ms │ │ 100ms │ │ 100ms │
 └──────────┘ └──────────┘ └──────────┘ └──────────┘ └──────────┘
 ```
 
@@ -166,25 +166,25 @@ Dịch vụ đơn hàng chỉ chịu trách nhiệm gửi tin nhắn, không qua
 
 ┌─────────────┐
 │ Dịch vụ đơn hàng │ ──Gửi tin nhắn "Đơn hàng đã tạo"──┐
-└─────────────┘                                         │
-                                                        ▼
-                                              ┌───────────────────┐
-                                              │   Hàng đợi tin nhắn│
-                                              │  (Kafka/RabbitMQ) │
-                                              │   - Lưu trữ tin cậy│
-                                              │   - Đa bản sao     │
-                                              │   - Đảm bảo thứ tự │
-                                              └─────────┬─────────┘
-                                                        │
-                        ┌───────────────────────────────┼───────────────────────────────┐
-                        │                               │                               │
-                        ▼                               ▼                               ▼
-                 ┌──────────────┐              ┌──────────────┐              ┌──────────────┐
-                 │ Dịch vụ kho  │              │Dịch vụ thanh │              │Dịch vụ logis │
-                 │ Đăng ký sự    │              │toán Đăng ký  │              │tics Đăng ký  │
-                 │ kiện đơn hàng │              │sự kiện đơn   │              │sự kiện đơn   │
-                 └──────────────┘              │hàng          │              │hàng          │
-                                               └──────────────┘              └──────────────┘
+└─────────────┘ │
+ ▼
+ ┌───────────────────┐
+ │ Hàng đợi tin nhắn│
+ │ (Kafka/RabbitMQ) │
+ │ - Lưu trữ tin cậy│
+ │ - Đa bản sao │
+ │ - Đảm bảo thứ tự │
+ └─────────┬─────────┘
+ │
+ ┌───────────────────────────────┼───────────────────────────────┐
+ │ │ │
+ ▼ ▼ ▼
+ ┌──────────────┐ ┌──────────────┐ ┌──────────────┐
+ │ Dịch vụ kho │ │Dịch vụ thanh │ │Dịch vụ logis │
+ │ Đăng ký sự │ │toán Đăng ký │ │tics Đăng ký │
+ │ kiện đơn hàng │ │sự kiện đơn │ │sự kiện đơn │
+ └──────────────┘ │hàng │ │hàng │
+ └──────────────┘ └──────────────┘
 ```
 
 <DecouplingDemo />
@@ -205,22 +205,22 @@ Dịch vụ đơn hàng chỉ chịu trách nhiệm gửi tin nhắn, không qua
 ```
 Tư duy truyền thống (Mệnh lệnh):
 "Dịch vụ đơn hàng ra lệnh cho dịch vụ kho: trừ kho cho tôi!"
-  ↓ Gọi trực tiếp
-  ↓ Độ ghép nối cao, bên được gọi phải online
-  ↓ Bên gọi cần biết interface của bên được gọi
+ ↓ Gọi trực tiếp
+ ↓ Độ ghép nối cao, bên được gọi phải online
+ ↓ Bên gọi cần biết interface của bên được gọi
 
 Tư duy hướng sự kiện (Khai báo):
 "Dịch vụ đơn hàng tuyên bố: Đơn hàng đã được tạo, ai quan tâm thì đến xử lý."
-  ↓ Gửi sự kiện đến hàng đợi tin nhắn
-  ↓ Giải ghép, consumer có thể offline
-  ↓ Producer không cần biết sự tồn tại của consumer
+ ↓ Gửi sự kiện đến hàng đợi tin nhắn
+ ↓ Giải ghép, consumer có thể offline
+ ↓ Producer không cần biết sự tồn tại của consumer
 ```
 
 ---
 
-## 4. Vấn đề cốt lõi thứ hai: Làm thế nào để cắt đỉnh lấp thung lũng, đối phó với lưu lượng tăng đột biến?
+## 4. Vấn đề cốt lõi thứ hai: Cách để cắt đỉnh lấp thung lũng, đối phó với lưu lượng tăng đột biến
 
-### 4.1 Kịch bản flash sale: Làm thế nào để xử lý ổn định 10 vạn QPS?
+### 4.1 Kịch bản flash sale: Cách để xử lý ổn định 10 vạn QPS
 
 **Tái hiện tình huống**: Sự kiện flash sale 11/11 của một nền tảng thương mại điện tử, dự kiến đỉnh 10 vạn QPS, nhưng cơ sở dữ liệu chỉ chịu được 1000 QPS.
 
@@ -228,13 +228,13 @@ Tư duy hướng sự kiện (Khai báo):
 
 ```
 Yêu cầu người dùng ──→ Máy chủ ứng dụng ──→ Cơ sở dữ liệu
-   10 vạn/s              10 vạn/s              1000/s (giới hạn)
-                                                    ↓
-                                             Cạn kiệt connection pool
-                                             Timeout phản hồi
-                                             Cơ sở dữ liệu sụp đổ
-                                                    ↓
-                                             Hiệu ứng tuyết lở (tất cả dịch vụ phụ thuộc CSDL đều gặp sự cố)
+ 10 vạn/s 10 vạn/s 1000/s (giới hạn)
+ ↓
+ Cạn kiệt connection pool
+ Timeout phản hồi
+ Cơ sở dữ liệu sụp đổ
+ ↓
+ Hiệu ứng tuyết lở (tất cả dịch vụ phụ thuộc CSDL đều gặp sự cố)
 ```
 
 ::: tip 🌊 Giải thích thuật ngữ
@@ -249,56 +249,56 @@ Yêu cầu người dùng ──→ Máy chủ ứng dụng ──→ Cơ sở d
 
 ```
 ┌───────────────────────────────────────────────────────────────────────────────────────┐
-│                        Kiến trúc hệ thống flash sale                                    │
+│ Kiến trúc hệ thống flash sale │
 ├───────────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                         │
-│  Tầng 1: Tầng Gateway (Giới hạn cứng)                                                    │
-│  ┌───────────────────────────────────────────────────────────────────────────────────┐  │
-│  │  - Token bucket rate limiting: 10 vạn/s → 1 vạn/s (loại bỏ 90% yêu cầu)            │  │
-│  │  - CDN cache tài nguyên tĩnh (trang chi tiết sản phẩm)                               │  │
-│  │  - Mã xác minh / Trang xếp hàng (tầng cắt đỉnh thứ nhất)                             │  │
-│  └───────────────────────────────────────────────────────────────────────────────────┘  │
-│                            │                                                             │
-│                            ▼                                                             │
-│  Tầng 2: Tầng dịch vụ (Giới hạn mềm)                                                    │
-│  ┌───────────────────────────────────────────────────────────────────────────────────┐  │
-│  │  - Nginx rate limiting: 1 vạn/s → 5000/s                                            │  │
-│  │  - Redis trừ kho trước (thao tác nguyên tử):                                          │  │
-│  │    * Sử dụng Lua script đảm bảo tính nguyên tử                                       │  │
-│  │    * Hết kho trả về ngay "Đã bán hết"                                                 │  │
-│  │  - Tạo token đơn hàng (chứng từ xếp hàng)                                             │  │
-│  └───────────────────────────────────────────────────────────────────────────────────┘  │
-│                            │                                                             │
-│                            ▼                                                             │
-│  Tầng 3: Tầng hàng đợi tin nhắn (Cắt đỉnh cốt lõi)                                       │
-│  ┌───────────────────────────────────────────────────────────────────────────────────┐  │
-│  │  Kafka/RocketMQ:                                                                   │  │
-│  │  - Ghi theo lô: 5000/s → 1000/s (khả năng chịu đựng của CSDL)                       │  │
-│  │  - Tin nhắn bền vững: Ghi xuống đĩa đảm bảo không mất tin nhắn                        │  │
-│  │  - Tiêu thụ song song đa partition: Tăng thông lượng                                   │  │
-│  │  - Quản lý offset tiêu thụ: Hỗ trợ khôi phục sự cố                                    │  │
-│  │                                                                                     │  │
-│  │  Giám sát chỉ số chính:                                                               │  │
-│  │  - Tốc độ sản xuất (Produce Rate)                                                     │  │
-│  │  - Tốc độ tiêu thụ (Consume Rate)                                                     │  │
-│  │  - Tồn đọng tin nhắn (Lag)                                                            │  │
-│  └───────────────────────────────────────────────────────────────────────────────────┘  │
-│                            │                                                             │
-│                            ▼                                                             │
-│  Tầng 4: Tầng tiêu thụ (Xử lý bất đồng bộ)                                               │
-│  ┌───────────────────────────────────────────────────────────────────────────────────┐  │
-│  │  Consumer xử lý đơn hàng (đa instance):                                               │  │
-│  │  - Kéo tin nhắn từ Kafka (1000/s, phù hợp khả năng CSDL)                              │  │
-│  │  - Transaction CSDL: Tạo đơn hàng + Trừ kho                                           │  │
-│  │  - Cập nhật trạng thái đơn hàng thành "Đã tạo"                                         │  │
-│  │  - Gửi thông báo tạo đơn hàng thành công (Email/SMS/Push)                              │  │
-│  │  - Xác nhận đã tiêu thụ tin nhắn (ACK)                                                 │  │
-│  │                                                                                       │  │
-│  │  Chiến lược mở rộng consumer:                                                          │  │
-│  │  - Khi Lag > 10000, tự động tăng số lượng consumer instance                              │  │
-│  │  - Khi Lag < 1000, giảm số lượng consumer instance (tiết kiệm chi phí)                  │  │
-│  └───────────────────────────────────────────────────────────────────────────────────┘  │
-│                                                                                         │
+│ │
+│ Tầng 1: Tầng Gateway (Giới hạn cứng) │
+│ ┌───────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ - Token bucket rate limiting: 10 vạn/s → 1 vạn/s (loại bỏ 90% yêu cầu) │ │
+│ │ - CDN cache tài nguyên tĩnh (trang chi tiết sản phẩm) │ │
+│ │ - Mã xác minh / Trang xếp hàng (tầng cắt đỉnh thứ nhất) │ │
+│ └───────────────────────────────────────────────────────────────────────────────────┘ │
+│ │ │
+│ ▼ │
+│ Tầng 2: Tầng dịch vụ (Giới hạn mềm) │
+│ ┌───────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ - Nginx rate limiting: 1 vạn/s → 5000/s │ │
+│ │ - Redis trừ kho trước (thao tác nguyên tử): │ │
+│ │ * Sử dụng Lua script đảm bảo tính nguyên tử │ │
+│ │ * Hết kho trả về ngay "Đã bán hết" │ │
+│ │ - Tạo token đơn hàng (chứng từ xếp hàng) │ │
+│ └───────────────────────────────────────────────────────────────────────────────────┘ │
+│ │ │
+│ ▼ │
+│ Tầng 3: Tầng hàng đợi tin nhắn (Cắt đỉnh cốt lõi) │
+│ ┌───────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Kafka/RocketMQ: │ │
+│ │ - Ghi theo lô: 5000/s → 1000/s (khả năng chịu đựng của CSDL) │ │
+│ │ - Tin nhắn bền vững: Ghi xuống đĩa đảm bảo không mất tin nhắn │ │
+│ │ - Tiêu thụ song song đa partition: Tăng thông lượng │ │
+│ │ - Quản lý offset tiêu thụ: Hỗ trợ khôi phục sự cố │ │
+│ │ │ │
+│ │ Giám sát chỉ số chính: │ │
+│ │ - Tốc độ sản xuất (Produce Rate) │ │
+│ │ - Tốc độ tiêu thụ (Consume Rate) │ │
+│ │ - Tồn đọng tin nhắn (Lag) │ │
+│ └───────────────────────────────────────────────────────────────────────────────────┘ │
+│ │ │
+│ ▼ │
+│ Tầng 4: Tầng tiêu thụ (Xử lý bất đồng bộ) │
+│ ┌───────────────────────────────────────────────────────────────────────────────────┐ │
+│ │ Consumer xử lý đơn hàng (đa instance): │ │
+│ │ - Kéo tin nhắn từ Kafka (1000/s, phù hợp khả năng CSDL) │ │
+│ │ - Transaction CSDL: Tạo đơn hàng + Trừ kho │ │
+│ │ - Cập nhật trạng thái đơn hàng thành "Đã tạo" │ │
+│ │ - Gửi thông báo tạo đơn hàng thành công (Email/SMS/Push) │ │
+│ │ - Xác nhận đã tiêu thụ tin nhắn (ACK) │ │
+│ │ │ │
+│ │ Chiến lược mở rộng consumer: │ │
+│ │ - Khi Lag > 10000, tự động tăng số lượng consumer instance │ │
+│ │ - Khi Lag < 1000, giảm số lượng consumer instance (tiết kiệm chi phí) │ │
+│ └───────────────────────────────────────────────────────────────────────────────────┘ │
+│ │
 └───────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -309,14 +309,14 @@ Yêu cầu người dùng ──→ Máy chủ ứng dụng ──→ Cơ sở d
 **Hiệu quả làm mịn lưu lượng:**
 
 ```
-Lưu lượng gốc (đỉnh nhọn):                 Lưu lượng sau khi làm mịn:
+Lưu lượng gốc (đỉnh nhọn): Lưu lượng sau khi làm mịn:
 
-10 vạn/s │    ╱╲                             1000/s │████████████████
-         │   ╱  ╲                                   │
-         │  ╱    ╲                                  │
-  1000/s │╱        ╲                            0/s │
-         └───────────────                          └────────────────
-         0s   1s   2s                              0s              20s
+10 vạn/s │ ╱╲ 1000/s │████████████████
+ │ ╱ ╲ │
+ │ ╱ ╲ │
+ 1000/s │╱ ╲ 0/s │
+ └─────────────── └────────────────
+ 0s 1s 2s 0s 20s
 
 Gốc: Đỉnh 10 vạn/s, kéo dài 1 giây
 Làm mịn: Tốc độ không đổi 1000/s, kéo dài 100 giây
@@ -326,17 +326,17 @@ Làm mịn: Tốc độ không đổi 1000/s, kéo dài 100 giây
 
 ```
 Độ dài hàng đợi = Tốc độ producer × Thời gian - Tốc độ consumer × Thời gian
-                 = 100.000 × 1 - 1.000 × 1
-                 = 99.000 tin nhắn (tồn đọng hàng đợi tại đỉnh)
+ = 100.000 × 1 - 1.000 × 1
+ = 99.000 tin nhắn (tồn đọng hàng đợi tại đỉnh)
 
 Thời gian tiêu thụ hết tất cả tin nhắn = Độ dài hàng đợi / Tốc độ consumer
-                                        = 99.000 / 1.000
-                                        = 99 giây
+ = 99.000 / 1.000
+ = 99 giây
 ```
 
 ---
 
-## 5. Vấn đề cốt lõi thứ ba: Làm thế nào để đảm bảo tin nhắn không bị mất, không trùng lặp, có thứ tự?
+## 5. Vấn đề cốt lõi thứ ba: Cách để đảm bảo tin nhắn không bị mất, không trùng lặp, có thứ tự
 
 ### 5.1 Độ tin cậy của tin nhắn: Ba tuyến phòng thủ
 
@@ -357,11 +357,11 @@ Tin nhắn có thể bị mất ở ba khâu: khi producer gửi, khi Broker lư
 
 - Sau khi xử lý xong tin nhắn, xác nhận thủ công (ACK)
 - Nếu xử lý thất bại, không xác nhận, Broker gửi lại
-  :::
+ :::
 
 <ReliabilityDemo />
 
-### 5.2 Làm thế nào để xử lý tin nhắn bị tiêu thụ trùng lặp?
+### 5.2 Cách để xử lý tin nhắn bị tiêu thụ trùng lặp
 
 **Tin nhắn trùng lặp có thể xảy ra trong các tình huống sau:**
 
@@ -385,19 +385,19 @@ Tin nhắn có thể bị mất ở ba khâu: khi producer gửi, khi Broker lư
 
 ---
 
-## 6. Thực hành: Làm thế nào để chọn hàng đợi tin nhắn?
+## 6. Thực hành: Cách để chọn hàng đợi tin nhắn
 
 ### 6.1 So sánh bốn hàng đợi tin nhắn chính
 
-| Đặc tính     | RabbitMQ     | Kafka        | RocketMQ       | Redis Stream |
+| Đặc tính | RabbitMQ | Kafka | RocketMQ | Redis Stream |
 | ------------ | ------------ | ------------ | -------------- | ------------ |
-| **Định vị**  | Hàng đợi truyền thống | Log stream phân tán | Hàng đợi cấp TMĐT | Hàng đợi nhẹ |
-| **Thông lượng** | ~1 vạn/s     | ~100 vạn/s   | ~10 vạn/s      | ~5 vạn/s     |
-| **Độ trễ**   | Micro giây   | Milli giây   | Milli giây     | Milli giây   |
+| **Định vị** | Hàng đợi truyền thống | Log stream phân tán | Hàng đợi cấp TMĐT | Hàng đợi nhẹ |
+| **Thông lượng** | ~1 vạn/s | ~100 vạn/s | ~10 vạn/s | ~5 vạn/s |
+| **Độ trễ** | Micro giây | Milli giây | Milli giây | Milli giây |
 | **Độ tin cậy** | Cao (bền vững) | Cao (đa bản sao) | Cao (đồng bộ ghi đĩa) | Trung bình (AOF) |
-| **Phát lại tin nhắn** | Không hỗ trợ | Hỗ trợ       | Hỗ trợ         | Hỗ trợ       |
-| **Transaction message** | Hỗ trợ (yếu) | Không hỗ trợ | Hỗ trợ (mạnh)  | Không hỗ trợ |
-| **Tin nhắn trễ** | Hỗ trợ       | Không hỗ trợ | Hỗ trợ         | Không hỗ trợ |
+| **Phát lại tin nhắn** | Không hỗ trợ | Hỗ trợ | Hỗ trợ | Hỗ trợ |
+| **Transaction message** | Hỗ trợ (yếu) | Không hỗ trợ | Hỗ trợ (mạnh) | Không hỗ trợ |
+| **Tin nhắn trễ** | Hỗ trợ | Không hỗ trợ | Hỗ trợ | Không hỗ trợ |
 | **Kịch bản phù hợp** | Ứng dụng doanh nghiệp truyền thống | Log, dữ liệu lớn | TMĐT, tài chính | Ứng dụng quy mô nhỏ |
 
 ::: tip 💡 Gợi ý lựa chọn
@@ -407,24 +407,24 @@ Tin nhắn có thể bị mất ở ba khâu: khi producer gửi, khi Broker lư
 Chọn hàng đợi tin nhắn:
 │
 ├─ Cần transaction message (giao dịch phân tán)?
-│  ├─ Có → RocketMQ (ưu tiên) hoặc RabbitMQ
-│  └─ Không → Tiếp tục
+│ ├─ Có → RocketMQ (ưu tiên) hoặc RabbitMQ
+│ └─ Không → Tiếp tục
 │
 ├─ Cần xử lý lượng lớn log/real-time stream?
-│  ├─ Có → Kafka (ưu tiên)
-│  └─ Không → Tiếp tục
+│ ├─ Có → Kafka (ưu tiên)
+│ └─ Không → Tiếp tục
 │
 ├─ QPS > 1 vạn/s?
-│  ├─ Có → RocketMQ hoặc Kafka
-│  └─ Không → Tiếp tục
+│ ├─ Có → RocketMQ hoặc Kafka
+│ └─ Không → Tiếp tục
 │
 ├─ Cần định tuyến phức tạp (như khớp headers)?
-│  ├─ Có → RabbitMQ
-│  └─ Không → Tiếp tục
+│ ├─ Có → RabbitMQ
+│ └─ Không → Tiếp tục
 │
 ├─ Đã có hạ tầng Redis?
-│  ├─ Có → Redis Stream (bắt đầu nhanh)
-│  └─ Không → RabbitMQ (chức năng đầy đủ, đường cong học tập vừa phải)
+│ ├─ Có → Redis Stream (bắt đầu nhanh)
+│ └─ Không → RabbitMQ (chức năng đầy đủ, đường cong học tập vừa phải)
 ```
 
 :::
@@ -435,11 +435,11 @@ Chọn hàng đợi tin nhắn:
 
 ### 7.1 Ôn tập nguyên tắc cốt lõi
 
-| Nguyên tắc | Ý nghĩa               | Điểm thực hành                             |
+| Nguyên tắc | Ý nghĩa | Điểm thực hành |
 | -------- | ---------------------- | ------------------------------------------ |
 | **Giải ghép** | Các dịch vụ không phụ thuộc trực tiếp | Giao tiếp qua hàng đợi tin nhắn, lỗi consumer không ảnh hưởng producer |
 | **Cắt đỉnh** | Làm mịn biến động lưu lượng | Hàng đợi tin nhắn làm bể chứa, consumer xử lý với tốc độ không đổi |
-| **Tin cậy** | Tin nhắn không bị mất  | Producer xác nhận + Broker bền vững + Consumer xác nhận |
+| **Tin cậy** | Tin nhắn không bị mất | Producer xác nhận + Broker bền vững + Consumer xác nhận |
 | **Lũy đẳng** | Tiêu thụ trùng lặp không ảnh hưởng | Đảm bảo tính lũy đẳng ở tầng nghiệp vụ (khóa duy nhất, state machine) |
 | **Có thứ tự** | Đảm bảo thứ tự tin nhắn | Có thứ tự trong một partition hoặc sắp xếp ở phía consumer |
 
@@ -458,25 +458,25 @@ Trước khi giới thiệu hàng đợi tin nhắn, hãy tự hỏi những câ
 
 ## 8. Bảng tra cứu thuật ngữ
 
-| Thuật ngữ               | Tên đầy đủ        | Giải thích                                                      |
+| Thuật ngữ | Tên đầy đủ | Giải thích |
 | ----------------------- | ----------------- | --------------------------------------------------------------- |
-| **MQ**                  | Message Queue     | **Hàng đợi tin nhắn**. Middleware dùng cho giao tiếp bất đồng bộ, thực hiện giải ghép giữa producer và consumer. |
-| **Producer**            | -                 | **Nhà sản xuất**. Bên gửi tin nhắn.                             |
-| **Consumer**            | -                 | **Người tiêu dùng**. Bên nhận và xử lý tin nhắn.                |
-| **Broker**              | -                 | **Môi giới tin nhắn**. Chương trình máy chủ lưu trữ và chuyển tiếp tin nhắn. |
-| **Topic**               | -                 | **Chủ đề**. Phân loại logic của tin nhắn (ví dụ: "orders").     |
-| **Queue**               | -                 | **Hàng đợi**. Container vật lý lưu trữ tin nhắn.                |
-| **Partition**           | -                 | **Phân vùng**. Khái niệm của Kafka, một Topic có thể chia thành nhiều Partition, tăng khả năng đồng thời. |
-| **ACK**                 | Acknowledgment    | **Xác nhận**. Sau khi consumer xử lý xong tin nhắn, xác nhận với Broker. |
-| **Pub/Sub**             | Publish/Subscribe | **Xuất bản/Đăng ký**. Một mô hình tin nhắn, một tin nhắn có thể được nhiều consumer nhận. |
-| **P2P**                 | Point-to-Point    | **Điểm-đến-điểm**. Một mô hình tin nhắn, một tin nhắn chỉ có thể được một consumer nhận. |
-| **DLQ**                 | Dead Letter Queue | **Hàng đợi tin chết**. Lưu trữ những tin nhắn không thể tiêu thụ. |
-| **Idempotence**         | -                 | **Tính lũy đẳng**. Nhiều lần thực hiện cho cùng một kết quả.    |
-| **Throughput**          | -                 | **Thông lượng**. Số lượng tin nhắn được xử lý trong một đơn vị thời gian. |
-| **Latency**             | -                 | **Độ trễ**. Khoảng thời gian từ khi tin nhắn được gửi đến khi được nhận. |
-| **Persistence**         | -                 | **Tính bền vững**. Tin nhắn được ghi vào đĩa, không chỉ tồn tại trong bộ nhớ. |
-| **Replication**         | -                 | **Bản sao**. Để đảm bảo tính sẵn sàng cao, tin nhắn được sao chép sang nhiều node. |
-| **Transaction Message** | -                 | **Transaction message**. Đảm bảo tính nhất quán giữa giao dịch cục bộ và việc gửi tin nhắn. |
-| **Backpressure**        | -                 | **Áp lực ngược**. Khi consumer không xử lý kịp, thông báo cho producer giảm tốc độ. |
-| **Offset**              | -                 | **Offset**. Vị trí tiêu thụ của consumer trong partition.       |
-| **Rebalance**           | -                 | **Tái cân bằng**. Khi thành viên consumer group thay đổi, phân phối lại partition. |
+| **MQ** | Message Queue | **Hàng đợi tin nhắn**. Middleware dùng cho giao tiếp bất đồng bộ, thực hiện giải ghép giữa producer và consumer. |
+| **Producer** | - | **Nhà sản xuất**. Bên gửi tin nhắn. |
+| **Consumer** | - | **Người tiêu dùng**. Bên nhận và xử lý tin nhắn. |
+| **Broker** | - | **Môi giới tin nhắn**. Chương trình máy chủ lưu trữ và chuyển tiếp tin nhắn. |
+| **Topic** | - | **Chủ đề**. Phân loại logic của tin nhắn (ví dụ: "orders"). |
+| **Queue** | - | **Hàng đợi**. Container vật lý lưu trữ tin nhắn. |
+| **Partition** | - | **Phân vùng**. Khái niệm của Kafka, một Topic có thể chia thành nhiều Partition, tăng khả năng đồng thời. |
+| **ACK** | Acknowledgment | **Xác nhận**. Sau khi consumer xử lý xong tin nhắn, xác nhận với Broker. |
+| **Pub/Sub** | Publish/Subscribe | **Xuất bản/Đăng ký**. Một mô hình tin nhắn, một tin nhắn có thể được nhiều consumer nhận. |
+| **P2P** | Point-to-Point | **Điểm-đến-điểm**. Một mô hình tin nhắn, một tin nhắn chỉ có thể được một consumer nhận. |
+| **DLQ** | Dead Letter Queue | **Hàng đợi tin chết**. Lưu trữ những tin nhắn không thể tiêu thụ. |
+| **Idempotence** | - | **Tính lũy đẳng**. Nhiều lần thực hiện cho cùng một kết quả. |
+| **Throughput** | - | **Thông lượng**. Số lượng tin nhắn được xử lý trong một đơn vị thời gian. |
+| **Latency** | - | **Độ trễ**. Khoảng thời gian từ khi tin nhắn được gửi đến khi được nhận. |
+| **Persistence** | - | **Tính bền vững**. Tin nhắn được ghi vào đĩa, không chỉ tồn tại trong bộ nhớ. |
+| **Replication** | - | **Bản sao**. Để đảm bảo tính sẵn sàng cao, tin nhắn được sao chép sang nhiều node. |
+| **Transaction Message** | - | **Transaction message**. Đảm bảo tính nhất quán giữa giao dịch cục bộ và việc gửi tin nhắn. |
+| **Backpressure** | - | **Áp lực ngược**. Khi consumer không xử lý kịp, thông báo cho producer giảm tốc độ. |
+| **Offset** | - | **Offset**. Vị trí tiêu thụ của consumer trong partition. |
+| **Rebalance** | - | **Tái cân bằng**. Khi thành viên consumer group thay đổi, phân phối lại partition. |

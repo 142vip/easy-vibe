@@ -1,4 +1,4 @@
-# Entwurfsmuster
+# Design Patterns: Entwurfsmuster
 
 ::: tip Vorwort
 **Warum ist Ihr Code immer „funktional, aber unordentlich"?** Sie kennen vielleicht diese Situation: Wenn sich die Anforderungen ändern, muss der Code massiv geändert werden; wenn Sie eine Logik wiederverwenden wollen, stellen Sie fest, dass sie mit anderem Code verflochten ist. Entwurfsmuster sind die von Experten zusammengeellten „Code-Organisationsmuster", die Ihnen helfen, flexiblen und wartbaren Code zu schreiben.
@@ -35,7 +35,7 @@ Durch die folgende interaktive Komponente können Sie die Klassifikation und Ver
 
 ---
 
-## 1. Erzeugungsmuster: Wie man Objekte elegant erstellt
+## 1. Erzeugungsmuster: Ansatz für man Objekte elegant erstellt
 
 ### 1.1 Singleton-Muster (Singleton)
 
@@ -88,7 +88,7 @@ notification.send()
 
 ---
 
-## 2. Strukturmuster: Wie man Codestruktur organisiert
+## 2. Strukturmuster: Ansatz für man Codestruktur organisiert
 
 ### 2.1 Adapter-Muster (Adapter)
 
@@ -136,7 +136,7 @@ enhancedLog('Dienst erfolgreich gestartet')
 
 ---
 
-## 3. Verhaltensmuster: Wie man Interaktionen zwischen Objekten verwaltet
+## 3. Verhaltensmuster: Ansatz für man Interaktionen zwischen Objekten verwaltet
 
 ### 3.1 Beobachter-Muster (Observer)
 
@@ -190,7 +190,7 @@ Erleben Sie die Auswirkungen verschiedener Entwurfsmuster interaktiv mit der fol
 
 ---
 
-## 4. Wie wählt man Entwurfsmuster aus?
+## 4. Wie wählt man Entwurfsmuster aus
 
 | Problem | Empfohlenes Muster | Kernidee |
 |-------------|---------|---------|

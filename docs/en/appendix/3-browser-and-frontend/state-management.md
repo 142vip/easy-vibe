@@ -1,11 +1,11 @@
-# The Philosophy of State Management
+# Principles of State Management
 ::: tip 🎯 Core Question
 **As applications grow larger, how do components elegantly share and synchronize data?** You might face this dilemma: a user adds an item to the cart on the product page, but the cart count in the header doesn't update; two unrelated components need the same piece of data, but you don't know how to pass it. This chapter will guide you from "chaotic data passing" to "clear state management."
 :::
 
 ---
 
-## 1. Why "Componentization and State Management"?
+## 1. Motivation for the "Componentization and State Management"
 
 ### 1.1 From Small Workshop to Factory: The Evolution of Frontend Development
 
@@ -44,7 +44,7 @@ Before continuing, let's explain two core terms:
 </div>
 </div>
 
-### 1.2 A Real Pitfall Story: Why You Need to Understand State Management
+### 1.2 Case: You Need to Understand State Management
 
 You might say: "I'm using Vue/React, don't they already have state management?" Let me tell you a true story that will make you understand why systematically understanding componentization and state management is so important.
 
@@ -182,7 +182,7 @@ This keeps the data flow clear and one-way, avoiding the chaos of "anyone can mo
 
 <PropsFlowDemo />
 
-### 2.3 One-Way Data Flow: Why Can't You Directly Modify Props?
+### 2.3 One-Way Data Flow: Motivation for Caning 't You Directly Modify Props
 
 Many beginners make the mistake of directly modifying props values in child components.
 
@@ -727,7 +727,7 @@ function TodoList() {
 
 ---
 
-## 5. Practical Guide: How to Design State Management?
+## 5. Practical Guide: Approach to designing State Management
 
 ::: tip 🤔 When Do You Need a State Management Library?
 Not every project needs a state management library. Before introducing one, ask yourself a few questions:

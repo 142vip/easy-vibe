@@ -1,4 +1,4 @@
-# Umgebungsvariablen und PATH
+# Umgebung und Pfad: Systemkonfiguration
 
 > 💡 **Lernleitfaden**: Jedes Mal, wenn Sie im Terminal `git` oder `python` eingeben, muss das System suchen, wo sich dieses Programm befindet. Jedes Mal, wenn Ihr Code eine Large-Language-Model-API aufruft, muss das Programm wissen, welcher Schlussel verwendet werden soll. Hinter beiden Aufgaben steckt derselbe Mechanismus — **Umgebungsvariablen**.
 
@@ -14,7 +14,7 @@ Klicken Sie auf eine beliebige Variable in der Liste unten, um ihren Wert im Ter
 
 ---
 
-## 1. PATH: Wie die Shell Ihre eingegebenen Befehle findet
+## 1. PATH: Ansatz für die Shell Ihre eingegebenen Befehle findet
 
 `PATH` ist eine besondere Umgebungsvariable, die eine Reihe von Verzeichnispfaden (doppelpunktgetrennt) speichert. Wenn Sie `git` eingeben, durchsucht die Shell diese Verzeichnisse in der angegebenen Reihenfolge nach einer ausfuhrbaren Datei namens `git` — sie stoppt beim ersten Treffer.
 
@@ -34,7 +34,7 @@ Wahlen Sie einen Befehl und beobachten Sie, wie die Shell Verzeichnis fur Verzei
 
 ---
 
-## 2. Warum muss das Terminal nach der Installation eines Tools neu gestartet werden?
+## 2. Warum muss das Terminal nach der Installation eines Tools neu gestartet werden
 
 Bei der Installation von Tools wie nvm, Homebrew oder conda fugt das Installationsskript automatisch eine Zeile zu `~/.zshrc` hinzu, um sein eigenes Verzeichnis zum PATH hinzuzufugen:
 
@@ -67,7 +67,7 @@ pipx install aider-chat
 
 ---
 
-## 3. Gultigkeitsbereich von Variablen: Wer kann diese Variable sehen?
+## 3. Gultigkeitsbereich von Variablen: Wer kann diese Variable sehen
 
 Umgebungsvariablen werden nicht an alle Programme gesendet — jeder Prozess halt eine **eigene Kopie**, die vom Elternprozess geerbt wurde. Änderungen an der eigenen Kopie beeinflussen den Elternprozess nicht.
 

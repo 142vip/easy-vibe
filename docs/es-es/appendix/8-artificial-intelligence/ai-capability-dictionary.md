@@ -1,4 +1,4 @@
-# Diccionario de Capacidades de IA
+# Diccionario de capacidades de IA
 A medida que la tecnología de IA generativa se implementa ampliamente en diversos productos y escenarios de negocio, surge una pregunta cada vez más concreta: **¿qué capacidades de IA están realmente disponibles?** Y, ante una necesidad específica, **¿qué capacidad, qué tipo de modelo o qué producto deberíamos elegir para abordarla?**
 
 Ante esta confusión, el enfoque más intuitivo quizás sea «improvisar sobre la marcha»: **cuando surja una necesidad, buscar las API de los productos de los proveedores de servicios en la nube, o los modelos correspondientes, y consultar la documentación y demos de las soluciones comerciales disponibles**. Si se necesita trabajar con imágenes, se piensa en generación de imágenes; si aparece una tarea de texto, se recurre a un modelo grande; si implica interacción por voz, se recuerdan ASR y TTS, y luego se comparan innumerables API y servicios. Sin embargo, apilar productos dispersos es algo muy distinto a planificar, seleccionar y combinar capacidades de IA de forma sistemática en un entorno empresarial. Limitarse a buscar información puntual y confiar en el criterio personal conlleva una serie de desafíos graves: fragmentación del conocimiento sobre capacidades, diseño arbitrario de soluciones y dificultad para reutilizar capacidades.
@@ -315,7 +315,7 @@ Desde la perspectiva del producto, la clasificación y el reconocimiento de imá
 
 En cuanto a la forma del producto, las capacidades de esta capa suelen ofrecerse como "API de reconocimiento/clasificación de contenido de imágenes", "SDK/SaaS de reconocimiento facial" o "plataforma de re-identificación de peatones". A menudo, estas capacidades impulsan directamente decisiones de negocio (como la apertura de un torno o la escritura de etiquetas de contenido), y también actúan como módulo previo, proporcionando etiquetas estructuradas y representaciones de identidad estables para tareas posteriores como búsqueda, recomendación, análisis de comportamiento y comprensión multimodal. A continuación, desarrollamos los dos enfoques: clasificación de imágenes y reconocimiento de identidad/atributos.
 
-### 2.2.1 Clasificación de imágenes: responder a "¿qué tipo de imagen es esta?"
+### 2.2.1 Clasificación de imágenes: responder a "qué tipo de imagen es esta"
 
 En la tarea más básica de clasificación de imágenes, el sistema recibe una imagen completa y el objetivo es asignarle una o varias etiquetas semánticas de categoría. El caso más común es la clasificación de etiqueta única: por ejemplo, en conjuntos de datos como ImageNet, cada imagen se etiqueta con una categoría principal como "perro", "gato", "coche", "avión"; en escenarios de negocio, esta capacidad se usa ampliamente para asignar etiquetas temáticas como "paisaje / comida / mascota / retrato / documento" a las imágenes subidas por usuarios, facilitando la búsqueda, recomendación y moderación de contenido. De forma similar a la clasificación de texto, el modelo añade una capa fully connected + Softmax sobre las características visuales globales extraídas por el Backbone pre-entrenado y genera una distribución de probabilidad sobre todas las categorías candidatas.
 
@@ -323,7 +323,7 @@ En muchas aplicaciones reales, una imagen suele pertenecer a varias categorías 
 
 En la interfaz humano-máquina, la clasificación de imágenes suele ofrecerse como una "API de reconocimiento de contenido de imágenes". El sistema upstream solo necesita subir una imagen para obtener un conjunto de etiquetas de categoría con sus niveles de confianza, que se utilizan para decisiones posteriores: por ejemplo, un sistema de publicación de anuncios puede restringir ciertas categorías sensibles según el contenido de la imagen, una plataforma de e-commerce puede usar la clasificación de imágenes para corregir categorías de productos, y una plataforma de contenido puede enriquecer sus señales de recomendación y moderación. Aunque desde el punto de vista técnico estas capacidades son relativamente maduras, siguen siendo la base sobre la que se construyen capacidades más complejas como detección de objetos, segmentación de instancias o respuesta a preguntas visuales (VQA).
 
-### 2.2.2 Reconocimiento de imágenes y atributos: responder a "¿quién es? / ¿qué instancia es esta?"
+### 2.2.2 Reconocimiento de imágenes y atributos: responder a " Identificación: / qué instancia es esta"
 
 A diferencia de "qué tipo de imagen es esta", el reconocimiento de imágenes se centra más en "quién es la persona/objeto en la imagen", es decir, una distinción a nivel de identidad o de instancia. Los ejemplos típicos son el reconocimiento facial y la re-identificación de peatones: el primero determina, en escenarios de control de acceso, fichaje o pago, "a qué identidad de la base de datos se parece más el rostro actual"; el segundo busca al mismo peatón entre múltiples cámaras y en distintos momentos temporales para apoyar la investigación de casos y el análisis de trayectorias. El núcleo de estas tareas ya no es la simple clasificación múltiple, sino cómo aprender en el espacio de características un embedding "compacto dentro de cada clase y separado entre clases", de modo que las imágenes de la misma identidad capturadas bajo diferentes poses, iluminaciones y cámaras puedan agruparse juntas.
 
@@ -1294,7 +1294,7 @@ Desde la perspectiva del producto, esta capa de capacidades ya está profundamen
 
 En conjunto, esta capa de capacidades eleva el video de "flujo de píxeles de alta calidad" a "flujo de comportamientos y eventos", sentando las bases estructurales para la comprensión multimodal, la recuperación y la toma de decisiones en niveles superiores. A continuación, profundizamos en tres direcciones: **reconocimiento de acciones y análisis de comportamiento**, **detección y seguimiento de objetivos** y **detección de eventos y anomalías**.
 
-### 5.2.1 Reconocimiento de acciones y análisis de comportamiento: de la secuencia de fotogramas a "quién hace qué"
+### 5.2.1 Reconocimiento de acciones y análisis de comportamiento: de la secuencia de fotogramas a " Identificación: qué"
 
 El reconocimiento de acciones y el análisis de comportamiento se centran en "qué está haciendo un sujeto dentro de una ventana temporal". En escenarios de vigilancia, esto implica identificar comportamientos como "caminar, correr, caerse, pelear" a partir del video; en deportes y fitness, corresponde a acciones más detalladas como "si el tiro, el saque o la sentadilla son correctos" o "si la postura de yoga es adecuada". Técnicamente, los primeros métodos se basaban principalmente en convolución 2D + flujo óptico o características artesanales, apilando varios fotogramas para una clasificación global; los métodos modernos, en cambio, emplean convolución 3D（I3D, diversas variantes de 3D ResNet）, estructuras multiescala temporal como SlowFast, o modelos basados en atención espaciotemporal como TimeSformer y Video Swin Transformer, para modelar conjuntamente las texturas espaciales y los cambios temporales.
 
@@ -2702,7 +2702,7 @@ En la fase de **preentrenamiento continuo sectorial (DAPT)**, el enfoque se desp
 
 En la práctica de ingeniería, el preentrenamiento y el preentrenamiento continuo se ejecutan junto con marcos distribuidos a gran escala (Megatron-LM, DeepSpeed ZeRO, etc.) y pipelines de datos eficientes (WebDataset/HF Datasets + almacenamiento de objetos), formando **pipelines de entrenamiento estables y reutilizables**. Para proveedores de nube o grandes empresas, este pipeline suele encapsularse como una plataforma interna, que soporta preentrenamiento incremental periódico e iteración paralela de múltiples bases sectoriales.
 
-### 11.1.2 Paradigmas de ajuste fino y RLHF: de "saber hablar" a "entender el negocio y respetar los límites"
+### 11.1.2 Paradigmas de ajuste fino y RLHF: de "saber comunicación" a "entender el negocio y respetar los límites"
 
 Una vez que se dispone de una base de preentrenamiento potente, la clave para que el modelo sea "útil para el negocio" y tenga un "comportamiento controlable" reside en las fases de ajuste fino y alineación. Esto incluye tanto el ajuste fino supervisado (SFT) en sentido tradicional como el ajuste fino por instrucciones, el ajuste fino multitarea y el aprendizaje por refuerzo basado en retroalimentación (RLHF/RLAIF).
 
@@ -3024,7 +3024,7 @@ Esta capa conecta por un lado los sistemas de autenticación de identidad, gesti
     - KMS (Key Management Service), HashiCorp Vault.
     - Terminación TLS, computación confidencial (Confidential Computing), etc.
 
-### 11.5.1 Control de acceso y aislamiento de tenants: garantizar "quién puede usar, qué puede usar y cuánto puede usar"
+### 11.5.1 Control de acceso y aislamiento de tenants: garantizar " Identificación: usar, qué puede usar y cuánto puede usar"
 
 En una plataforma de modelos grandes utilizada por múltiples líneas de negocio, clientes y roles, la ausencia de un control de acceso detallado y aislamiento de tenants puede provocar fácilmente problemas graves como abuso de permisos, fugas de datos y disputas por recursos. Un sistema completo de acceso y aislamiento requiere coordinación en las siguientes dimensiones:
 

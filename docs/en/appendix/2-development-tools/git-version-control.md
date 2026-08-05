@@ -1,10 +1,10 @@
-# Git: A Time Machine for Code
+# Principles of Git Version Control
 
 > 💡 **Learning Guide**: This chapter is written specifically for people who have never used Git. We won't start by making you memorize commands. Instead, we'll first understand "what problem Git is solving for you," and then step-by-step connect commands and concepts. After reading, you should be able to independently: make local commits, create branches, and push to GitHub.
 
 ---
 
-## 0. First, a Question: Have You Experienced These Nightmares?
+## 0. First, a Question: Have You Experienced These Nightmares
 
 **Scenario One: Version Hell**
 
@@ -42,7 +42,7 @@ It's no exaggeration to say that Git is one of the most important tools in moder
 
 ---
 
-## 1. Are Git and GitHub the Same Thing?
+## 1. Overview of Git and GitHub
 
 Many beginners confuse these two concepts. Let's clarify:
 
@@ -78,7 +78,7 @@ This is the **permanent archive of historical records**, hidden inside the `.git
 
 <GitCommitFlow />
 
-### Why the "Two-Step" Process (add + commit)?
+### Motivation for the "Two-Step" Process (add + commit)
 
 Many beginners ask: why can't you just save with one click? Why `add` first, then `commit`?
 
@@ -206,7 +206,7 @@ git log --oneline
 
 **Branches** are Git's most powerful — and also most confusing for beginners — feature. But once you understand them, you'll find the design very elegant.
 
-### 4.1 What Are Branches? Understanding Through "Parallel Universes"
+### 4.1 Overview of Branches Understanding Through "Parallel Universes"
 
 Imagine you're playing an RPG game with a critical choice:
 - Choice A: Challenge the final boss (develop a new feature)
@@ -284,7 +284,7 @@ git merge feature-login
 git branch -d feature-login
 ```
 
-### 4.4 When Should You Create a Branch?
+### 4.4 Criteria for Branch Creation
 
 | Scenario | Recommendation | Reason |
 | :--- | :--- | :--- |
@@ -393,7 +393,7 @@ git clone:  Remote → Local   (first-time full copy of the entire repository)
 
 Conflicts are inevitable in collaboration, but they're not that scary.
 
-### 6.1 How Do Conflicts Happen?
+### 6.1 Method for Conflictsing Happen
 
 When you and a teammate **both modify the same line in the same file**, Git doesn't know whose version to use during a merge, so a conflict occurs.
 
@@ -402,7 +402,7 @@ For example:
 - Your teammate simultaneously wrote on the same line: `const timeout = 5000`
 - When you `git pull` or `git merge`, Git discovers this contradiction and "pauses" to tell you: I don't know which one to use — you decide.
 
-### 6.2 What Does a Conflicted File Look Like?
+### 6.2 What Does a Conflicted File Look Like
 
 Git inserts special markers at the conflict location:
 
@@ -423,7 +423,7 @@ function login() {
 - Between `<<<<<<< HEAD` and `=======`: your current branch's content
 - Between `=======` and `>>>>>>> xxx`: the content being merged in
 
-### 6.3 How to Resolve Conflicts?
+### 6.3 Approach to resolving Conflicts
 
 **Step 1**: Open the conflicted file and find all `<<<<<<<` markers (editors like VS Code will usually highlight them automatically)
 
@@ -503,7 +503,7 @@ git branch -d feature/user-profile
 
 ---
 
-## 9. .gitignore: Which Files Should Not Be Tracked?
+## 9. .gitignore: Selection of Files Should Not Be Tracked
 
 Some files you **don't** want to commit to the Git repository, for example:
 - `node_modules/`: dependency packages, huge in size, can be regenerated with `npm install`

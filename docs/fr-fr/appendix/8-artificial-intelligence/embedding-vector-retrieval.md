@@ -1,4 +1,4 @@
-# Embedding et recherche vectorielle
+# Principes : Embeddings et recherche vectorielle
 
 ::: tip Préface
 **Comment l'ordinateur comprend-il que « le chat et le chien se ressemblent, mais pas la voiture » ?** Pour les humains, c'est du bon sens, mais pour l'ordinateur, « chat », « chien », « voiture » ne sont que trois chaînes de caractères sans aucun lien. La technologie d'Embedding (plongement) est la clé pour résoudre ce problème — elle transforme les mots en vecteurs numériques, permettant à l'ordinateur de comprendre la « proximité sémantique ».
@@ -63,7 +63,7 @@ Imaginez un système de coordonnées bidimensionnel. Nous plaçons « chat » au
 
 ---
 
-## 2. Calcul de similarité : à quel point deux vecteurs sont-ils « proches » ?
+## 2. Calcul de similarité : à quel point deux vecteurs sont-ils « proches »
 
 Avec la représentation vectorielle, la question suivante est naturellement : **comment mesurer la similarité entre deux vecteurs ?** C'est comme mesurer la distance entre deux villes sur une carte — vous pouvez mesurer la distance à vol d'oiseau ou vérifier si les directions coïncident.
 
@@ -83,7 +83,7 @@ Avec la représentation vectorielle, la question suivante est naturellement : **
 
 ---
 
-## 3. Index vectoriel : comment rechercher en millisecondes parmi des millions de vecteurs ?
+## 3. Index vectoriel : comment rechercher en millisecondes parmi des millions de vecteurs
 
 Supposons que vous ayez 1 million de documents, chacun transformé en un vecteur de 1536 dimensions. Un utilisateur pose une question, vous devez trouver les 10 plus similaires. La méthode la plus directe est de calculer la similarité un par un — mais cela signifie effectuer 1 million de calculs vectoriels à 1536 dimensions, c'est trop lent.
 

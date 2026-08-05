@@ -1,4 +1,4 @@
-# Context Engineering
+# Context Engineering: Kontextgestaltung
 > 💡 **Lernleitfaden**: Prompt Engineering beantwortet die Frage „Wie formuliere ich klar?“, Context Engineering beantwortet die Frage „Wie sorge ich dafür, dass das Modell zur richtigen Zeit die richtigen Informationen sieht?“. Dieses Kapitel dreht sich um eine zentrale Frage: **Wie können wir innerhalb eines begrenzten Kontextfensters das Modell dazu bringen, uns zu verstehen, ohne das Budget zu sprengen?**
 
 Bevor wir beginnen, empfehlen wir dir, zwei Grundlagen aufzufrischen:
@@ -8,7 +8,7 @@ Bevor wir beginnen, empfehlen wir dir, zwei Grundlagen aufzufrischen:
 
 ---
 
-## 0. Einleitung: Warum vergisst das Modell mitten im Gespräch alles – und warum wird es immer teurer?
+## 0. Einleitung: Motivation von vergisst das Modell mitten im Gespräch alles – und warum wird es immer teurer
 
 <AgentContextFlow />
 
@@ -55,7 +55,7 @@ Daraus ergibt sich ein zentraler Widerspruch:
 
 Das Manus-Team hat mehrere Architektur-Revisionen hinter sich und musste eine wichtige Lektion lernen: **Kontext kann man nicht einfach nur „schreiben“, man muss ihn „gestalten“.**
 
-### 2.1 Was haben uns vier Refactorings gelehrt?
+### 2.1 Was haben uns vier Refactorings gelehrt
 
 Manus-Mitbegründer Ji Yichao hat ihre Fehlergeschichte geteilt:
 
@@ -68,7 +68,7 @@ Manus-Mitbegründer Ji Yichao hat ihre Fehlergeschichte geteilt:
 
 **Kernerkenntnis**: **Es geht nicht darum, sich möglichst viel zu merken, sondern möglichst geschickt.**
 
-### 2.2 Womit ist das „Gedächtnis“ der KI eigentlich vergleichbar?
+### 2.2 Womit ist das „Gedächtnis“ der KI eigentlich vergleichbar
 
 **Herkömmlicher Arbeitsspeicher** = **Festplatte**:
 - Große Kapazität: kann große Datenmengen langfristig speichern;
@@ -84,9 +84,9 @@ Manus-Mitbegründer Ji Yichao hat ihre Fehlergeschichte geteilt:
 
 ---
 
-## 3. Schritt 1: Kosten verstehen – Wohin fließt dein Geld?
+## 3. Schritt 1: Kosten verstehen – Wohin fließt dein Geld
 
-### 3.1 Warum zuerst die Kosten betrachten?
+### 3.1 Warum zuerst die Kosten betrachten
 
 Schauen wir uns an, wie dein Geld bei einer typischen KI-Konversation ausgegeben wird:
 
@@ -162,7 +162,7 @@ Beobachte, was mit der **Antwortzeit (TTFT)** passiert, wenn der erste Inhaltsbl
 
 Je länger das Gespräch wird, desto eher stellt sich die Frage: **Was tun, wenn das Fenster voll ist?**
 
-### 4.1 Warum „First In, First Out“ problematisch ist?
+### 4.1 Warum „First In, First Out“ problematisch ist
 
 Die einfachste Gedächtnisverwaltung ist das **Sliding Window**: **Neues kommt rein, Altes fliegt raus.**
 Das klingt fair, ist aber in der Praxis eine Katastrophe.
@@ -202,12 +202,12 @@ Gedächtnis: Hoch  → Niedrig → Hoch
 
 ---
 
-## 5. Schritt 3: Selektives Behalten – Wie „heftet“ man Schlüsselinformationen an?
+## 5. Schritt 3: Selektives Behalten – Wie „heftet“ man Schlüsselinformationen an
 
 Wenn „First In, First Out“ nicht zuverlässig ist, was tun wir dann?
 Manus' Antwort: **Ein „Informations-Hierarchiesystem“ aufbauen.**
 
-### 5.1 Warum Informationen nach Wichtigkeit einstufen?
+### 5.1 Warum Informationen nach Wichtigkeit einstufen
 
 Statt alle Informationen gleich zu behandeln, entscheiden wir über ihre Verweildauer basierend auf ihrer Wichtigkeit:
 
@@ -239,7 +239,7 @@ Beobachte: Bleibt die angeheftete Information erhalten, während nicht angehefte
 
 Manchmal gibt es zu viele Informationen (z. B. hunderte Seiten technischer Dokumentation), als dass sie auf die Tafel passen würden. Dann brauchen wir ein externes Gehirn – **RAG (Retrieval Augmented Generation)**.
 
-### 6.1 Warum die „Tafel“ nicht ausreicht?
+### 6.1 Warum die „Tafel“ nicht ausreicht
 
 Als Manus auf millionen Token umfassende technische Dokumentationen traf, verglich das Team zwei Ansätze:
 
@@ -266,12 +266,12 @@ Gib eine Frage in das Suchfeld ein (z. B. „Wie setze ich mein Passwort zurück
 
 ---
 
-## 7. Schritt 5: Komprimierung – Wie macht man die „Tafel“ dichter beschreibbar?
+## 7. Schritt 5: Komprimierung – Wie macht man die „Tafel“ dichter beschreibbar
 
 Was, wenn alle Informationen wichtig sind, nicht gelöscht werden können und wir auch nicht nachschlagen wollen?
 Dann bleibt nur: **kleiner schreiben** – das ist **Kontextkomprimierung**.
 
-### 7.1 Wann braucht man „Verkürzung“?
+### 7.1 Wann braucht man „Verkürzung“
 *   Abgerufenes Material ist zu umfangreich (> 2000 Wörter).
 *   Der Gesprächsverlauf ist zu ausschweifend (> 80 % der Tafelfläche belegt).
 *   Eine schnelle Antwort ist nötig, ohne dass die KI lange Texte lesen muss.
@@ -310,7 +310,7 @@ Klicke auf „Baubeginn“ und beobachte, wie wir diesen Palast Schicht für Sch
 
 <MemoryPalaceDemo />
 
-### 8.2 Warum ist dieses Design das stärkste?
+### 8.2 Warum ist dieses Design das stärkste
 
 Die Designphilosophie dieses Palastes zielt darauf ab, drei grundlegende Widersprüche zu lösen:
 

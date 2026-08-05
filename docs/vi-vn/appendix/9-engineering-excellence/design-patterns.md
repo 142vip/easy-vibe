@@ -190,7 +190,7 @@ Thông qua component tương tác dưới đây, trải nghiệm trực tiếp h
 
 ---
 
-## 4. Lựa chọn Design Pattern như thế nào?
+## 4. Lựa chọn Design Pattern: Cách tiếp cận
 
 | Vấn đề bạn gặp phải | Pattern đề xuất | Ý tưởng cốt lõi |
 |-------------|---------|---------|

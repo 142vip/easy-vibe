@@ -1,4 +1,4 @@
-# Mecanismos de Comunicación en Tiempo Real (Polling / SSE / WebSocket)
+# Principios de comunicación en tiempo real: Polling/SSE/WebSocket
 
 ::: tip Lectura central
 **¿Cómo logra el navegador la actualización de datos en tiempo real?**

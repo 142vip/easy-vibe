@@ -1,4 +1,4 @@
-# Pipeline de rendu du navigateur
+# Principes : Pipeline de rendu du navigateur
 ::: tip 🎯 Question centrale
 **Pourquoi certaines pages web sont-elles fluides comme de la soie, tandis que d'autres rament comme un diaporama ?** Comment le navigateur transforme-t-il un tas de code HTML, CSS et JavaScript en la page web que vous voyez ? Ce chapitre vous emmène dans les coulisses du navigateur pour comprendre son fonctionnement et ainsi écrire des pages web plus performantes.
 :::
@@ -21,7 +21,7 @@ Chaque chapitre commence par « comprendre le principe » — pas besoin de savo
 
 ---
 
-## 1. Pourquoi comprendre le « pipeline de rendu » ?
+## 1. Motivation et justification : comprendre le « pipeline de rendu »
 
 ### 1.1 De « ça marche » à « ça marche vite » : la progression du développeur frontend
 
@@ -50,7 +50,7 @@ C'est comme apprendre à conduire. Le débutant se demande seulement si « la vo
 
 **Comprendre le pipeline de rendu, c'est l'étape clé pour passer de « ça marche » à « ça marche vite ».**
 
-### 1.2 Une histoire vraie : pourquoi l'« optimisation » a rendu la page encore plus lente ?
+### 1.2 Une histoire vraie : pourquoi l'« optimisation » a rendu la page encore plus lente
 
 ::: warning La mésaventure de performance de Xiao Zhang
 Xiao Zhang est développeur frontend dans une entreprise d'e-commerce. Il doit optimiser la page de détail produit. Cette page rame tellement à l'affichage des informations produit que les utilisateurs se plaignent sans arrêt.
@@ -86,7 +86,7 @@ Sans comprendre le fonctionnement du navigateur, vous risquez d'écrire du code 
 
 ---
 
-## 2. Concept fondamental : qu'est-ce que le « pipeline de rendu » ?
+## 2. Concept fondamental : qu'est-ce que le « pipeline de rendu »
 
 ::: tip 🤔 Qu'est-ce que le « rendu » ?
 Le **rendu (Rendering)** , c'est tout simplement le processus par lequel le navigateur « dessine » le code pour en faire la page web que vous voyez.
@@ -134,7 +134,7 @@ Parcourons ce tableau ligne par ligne pour comprendre chaque étape du pipeline 
 
 ## 3. Première étape : construire l'arbre DOM et le CSSOM
 
-### 3.1 Pourquoi « arbrifier » ?
+### 3.1 Pourquoi « arbrifier »
 
 ::: tip 🤔 Qu'est-ce que le DOM ?
 Le **DOM (Document Object Model, modèle d'objet de document)** est une structure arborescente que le navigateur crée à partir du document HTML, pour permettre à JavaScript de manipuler facilement les éléments de la page.
@@ -230,7 +230,7 @@ StyleSheet
 ```
 :::
 
-### 3.3 Pièges courants : pourquoi mon CSS ne « s'applique pas » ?
+### 3.3 Pièges courants : pourquoi mon CSS ne « s'applique pas »
 
 **Piège n°1 : conflit de spécificité des sélecteurs CSS**
 
@@ -271,7 +271,7 @@ Le navigateur est « indulgent » et corrige automatiquement vos erreurs. Mais c
 
 ## 4. Deuxième étape : construire l'arbre de rendu
 
-### 4.1 Pourquoi a-t-on besoin de l'« arbre de rendu » ?
+### 4.1 Pourquoi a-t-on besoin de l'« arbre de rendu »
 
 Vous vous demandez peut-être : **« On a déjà l'arbre DOM et le CSSOM, pourquoi construire encore un arbre de rendu ? On ne peut pas utiliser directement le DOM ? »**
 
@@ -322,7 +322,7 @@ Lors de la construction de l'arbre de rendu, le navigateur suit un ensemble de r
 En revanche, `visibility: hidden` et `opacity: 0`, bien qu'« invisibles », restent dans l'arbre de rendu — le navigateur doit quand même calculer leur layout (ils occupent de l'espace). Si vous devez « masquer sans affecter le layout » (par exemple pour une animation de fondu), utilisez `opacity` ; si vous devez « masquer complètement sans occuper d'espace », utilisez `display: none`.
 :::
 
-### 4.3 Pièges courants : pourquoi ma page rame-t-elle encore malgré display:none ?
+### 4.3 Pièges courants : pourquoi ma page rame-t-elle encore malgré display:none
 
 ::: danger ❌ Idée reçue : croire que les éléments en display:none « n'existent pas »
 Beaucoup pensent qu'avec `display: none`, l'élément « disparaît » et qu'aucune opération dessus n'affecte les performances. C'est **faux** !
@@ -377,7 +377,7 @@ container.appendChild(fragment)
 
 ## 5. Troisième étape : layout et reflow
 
-### 5.1 Qu'est-ce que le « layout » ?
+### 5.1 Qu'est-ce que le « layout »
 
 ::: tip 🤔 Qu'est-ce que le layout ?
 Le **layout**, aussi appelé **reflow**, est le processus par lequel le navigateur calcule « à quelle position et quelle taille » chaque élément de l'arbre de rendu doit apparaître.
@@ -412,7 +412,7 @@ Voici les opérations courantes qui déclenchent un reflow, **à collectionner e
 3. **transform et opacity sont les plus performantes** : elles ne déclenchent pas de reflow, seulement la composition
 :::
 
-### 5.3 Pièges courants : pourquoi mon animation rame comme un diaporama ?
+### 5.3 Pièges courants : pourquoi mon animation rame comme un diaporama
 
 **Piège : animer avec width**
 
@@ -500,7 +500,7 @@ requestAnimationFrame(() => {
 
 ## 6. Quatrième étape : paint et repaint
 
-### 6.1 Qu'est-ce que le « paint » ?
+### 6.1 Qu'est-ce que le « paint »
 
 ::: tip 🤔 Qu'est-ce que le paint ?
 Le **paint (peinture)** est le processus par lequel le navigateur « dessine » réellement à l'écran les éléments dont le layout a été calculé.
@@ -532,7 +532,7 @@ Contrairement au reflow, le repaint ne concerne que les changements d'« apparen
 De plus, **les ombres et les dégradés sont plus coûteux que le repaint** car ils nécessitent des calculs de pixels complexes. Si votre page a beaucoup de `box-shadow`, envisagez d'utiliser des pseudo-éléments ou des images à la place.
 :::
 
-### 6.3 Pièges courants : pourquoi mon effet hover est-il saccadé ?
+### 6.3 Pièges courants : pourquoi mon effet hover est-il saccadé
 
 **Piège : animer le hover avec box-shadow**
 
@@ -572,7 +572,7 @@ De plus, **les ombres et les dégradés sont plus coûteux que le repaint** car 
 
 ## 7. Cinquième étape : composition et accélération GPU
 
-### 7.1 Qu'est-ce que la « composition » ?
+### 7.1 Qu'est-ce que la « composition »
 
 ::: tip 🤔 Qu'est-ce que la composition (Composite) ?
 La **composition** est la « magie » des navigateurs modernes. Elle divise les différentes parties de la page en plusieurs **couches (Layers)** , puis utilise le **GPU (processeur graphique)** pour composer l'image finale en parallèle.
@@ -584,7 +584,7 @@ Imaginez les **calques de Photoshop** :
 **Pourquoi la composition est-elle rapide ?** Parce que le GPU excelle dans les tâches parallèles comme la « composition d'images », jusqu'à des dizaines de fois plus vite que le CPU.
 :::
 
-### 7.2 Quels éléments sont promus en « couche de composition » ?
+### 7.2 Quels éléments sont promus en « couche de composition »
 
 Le navigateur promeut automatiquement certains éléments dans des couches de composition indépendantes. Voici les déclencheurs courants :
 
@@ -604,7 +604,7 @@ Le navigateur promeut automatiquement certains éléments dans des couches de co
 Mais attention : **chaque couche de composition consomme de la mémoire GPU**. Abuser de `translateZ(0)` peut faire exploser la mémoire (voir section 7.4).
 :::
 
-### 7.3 Pièges courants : trop de couches de composition rendent la page plus lente ?
+### 7.3 Pièges courants : trop de couches de composition rendent la page plus lente
 
 ::: danger 💀 Le piège de la sur-optimisation
 Certains entendent dire que « l'accélération GPU, c'est rapide » et ajoutent `transform: translateZ(0)` à tous les éléments — résultat, la page est encore plus lente.
@@ -682,7 +682,7 @@ Au début, JavaScript n'avait qu'une seule file de tâches. Mais avec la complex
 4. Démarrer le prochain cycle de boucle d'événements, exécuter la prochaine macro-tâche
 ```
 
-### 8.2 Pièges courants : Promise est plus rapide que setTimeout ?
+### 8.2 Pièges courants : Promise est plus rapide que setTimeout
 
 ::: danger ❌ Idée reçue : setTimeout(fn, 0) s'exécute « immédiatement »
 Beaucoup pensent que `setTimeout(fn, 0)` signifie « exécuter immédiatement après 0 milliseconde ». C'est une compréhension **erronée**.

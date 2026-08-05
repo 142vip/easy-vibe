@@ -4,7 +4,7 @@
 
 ---
 
-## 0. Tại sao bạn cần biểu thức chính quy?
+## 0. Động lực của bạn cần biểu thức chính quy
 
 Tưởng tượng các kịch bản:
 - Trích tất cả địa chỉ IP từ một đoạn log dài
@@ -174,5 +174,5 @@ Mặc định là chế độ greedy. Thêm `?` sau lượng từ thành lazy. �
 :::
 
 **Học tiếp**:
-- [Biến môi trường và PATH](./environment-path) - Hiểu cấu hình hệ thống
+- [Biến môi trường và PATH: Cơ bản về cấu hình môi trường](./environment-path) - Hiểu cấu hình hệ thống
 - [SSH và xác thực khóa](./ssh-authentication) - Kết nối an toàn server từ xa

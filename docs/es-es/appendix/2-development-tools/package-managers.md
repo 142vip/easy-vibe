@@ -1,10 +1,10 @@
-# Gestores de paquetes
+# Introducción a los gestores de artefactos de compilación
 
 > 💡 **Guía de aprendizaje**: Para escribir código no hace falta reinventar la rueda — el 99% de las funcionalidades ya han sido escritas y publicadas en internet. Un **gestor de paquetes** es la herramienta que te ayuda a encontrar, descargar y gestionar esas "piezas prefabricadas". Este capítulo gira en torno a una pregunta central: **¿cómo hacer que las dependencias de código sean reproducibles, colaborativas y mantenibles?**
 
 ---
 
-## 0. ¿Por qué inevitablemente usarás un gestor de paquetes?
+## 0. Motivación de inevitablemente usarás un gestor de artefactos de compilación
 
 Imagina que quieres escribir un programa Node.js que pueda hacer peticiones HTTP. Tienes dos caminos:
 
@@ -20,7 +20,7 @@ Un gestor de paquetes es esencialmente la **"tienda de aplicaciones" del código
 
 ---
 
-## 1. Panorama de gestores de paquetes por ecosistema/lenguaje
+## 1. Panorama de gestores de artefactos de compilación por ecosistema/lenguaje
 
 Diferentes lenguajes de programación y sistemas operativos tienen sus propias cadenas de herramientas, pero la lógica subyacente es idéntica.
 
@@ -28,7 +28,7 @@ Diferentes lenguajes de programación y sistemas operativos tienen sus propias c
 
 <PackageManagerOverviewDemo />
 
-### 1.1 ¿De dónde se descargan los paquetes? — Registry (Registro)
+### 1.1 De dónde se descargan los artefactos de compilación — Registry (Registro)
 
 Cada ecosistema tiene un registro central donde se almacenan todos los paquetes descargables:
 
@@ -66,7 +66,7 @@ Hábito de uso: npm (el más universal) > pnpm (recomendado para nuevos proyecto
 
 ---
 
-## 2. Instalar un paquete — ¿qué pasa por detrás?
+## 2. Instalar un artefacto de compilación — qué pasa por detrás
 
 Escribes `npm install axios`, la línea de comandos se queda quieta unos segundos y luego termina. ¿Qué pasó en esos segundos?
 
@@ -129,7 +129,7 @@ winget install Git.Git           # Instalar software
 winget upgrade --all             # Actualizar todo el software instalado
 ```
 
-### 2.3 ¿Qué son los npm scripts?
+### 2.3 Introducción a npm scripts
 
 En `package.json` hay un campo `scripts`; es el **ejecutor de tareas** integrado en npm:
 
@@ -220,7 +220,7 @@ En `package.json` verás algo como:
 
 <DependencyTreeDemo />
 
-### 4.1 ¿Por qué no fijar la versión exacta?
+### 4.1 Motivación de fijar la versión exacta
 
 | Enfoque | Ventaja | Desventaja |
 | :--- | :--- | :--- |
@@ -230,7 +230,7 @@ En `package.json` verás algo como:
 
 **Mejor práctica**: Declarar rangos con `^` + lockfile para fijar la versión exacta, usados en combinación.
 
-### 4.2 ¿Qué es el "infierno de las dependencias"?
+### 4.2 Introducción a "infierno de las dependencias"
 
 Cuando dependes de 50 paquetes y cada uno depende de varios más, el "árbol de dependencias" puede tener cientos de nodos. Si dos paquetes que usas necesitan **versiones incompatibles de la misma librería**, se produce un "conflicto de dependencias".
 
@@ -244,7 +244,7 @@ Soluciones de cada ecosistema:
 
 ## 5. El lockfile — La piedra angular de la colaboración en equipo
 
-### 5.1 ¿Por qué se necesita un lockfile?
+### 5.1 Motivación de un lockfile
 
 Supongamos que `package.json` dice `"axios": "^1.6.0"`:
 
@@ -260,7 +260,7 @@ Mismo código, tres resultados distintos. El **lockfile** registra la versión e
 | CI / despliegue en producción | `npm ci` | Instala **estrictamente** según el lockfile; si hay diferencias, da error |
 | Actualizar versiones manualmente | `npm update` | Actualiza dentro del rango permitido y actualiza el lockfile |
 
-### 5.2 ¿El lockfile debe subirse a Git?
+### 5.2 El lockfile debe subirse a Git
 
 **Las aplicaciones deben subirlo; las librerías publicadas en npm pueden no hacerlo.**
 
@@ -382,7 +382,7 @@ winget instala por defecto en el directorio del sistema (necesita admin) o `%LOC
 
 ---
 
-## Resumen: La esencia de los gestores de paquetes
+## Resumen: La esencia de los gestores de artefactos de compilación
 
 Recuerda el núcleo en cuatro frases:
 

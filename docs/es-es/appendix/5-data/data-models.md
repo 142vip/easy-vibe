@@ -1,4 +1,4 @@
-# Panorama de modelos de datos (Documento / Grafo / Serie temporal / Vector)
+# Panorama de modelos de datos: documento/grafo/serie temporal/vector
 
 ::: tip 🎯 Pregunta central
 **¿Por qué no puedes meter todos los datos en tablas de MySQL?** Cuando tus datos son redes sociales, millones de registros de sensores por segundo, o vectores semánticos que la IA necesita comprender, las tablas relacionales se quedan cortas. Diferentes formas de datos requieren diferentes enfoques de modelado.
@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Más allá de lo relacional: ¿Por qué se necesitan otros modelos de datos?
+## 1. Más allá de lo relacional: Motivación de otros modelos de datos
 
 Las bases de datos relacionales (MySQL, PostgreSQL) organizan los datos en "tablas + filas + columnas", adecuadas para datos de negocio con estructura fija y relaciones claras. Pero los datos del mundo real van mucho más allá de esta forma:
 
@@ -25,7 +25,7 @@ No se trata de "reemplazar" lo relacional, sino de "complementarlo". El núcleo 
 
 ## 2. Modelo documental (Document)
 
-### 2.1 ¿Qué es el modelo documental?
+### 2.1 Introducción a modelo documental
 
 El modelo documental almacena datos como **documentos JSON/BSON**, donde cada registro es un documento autocontenido que puede tener diferentes estructuras de campos.
 
@@ -71,7 +71,7 @@ El modelo documental almacena datos como **documentos JSON/BSON**, donde cada re
 
 ## 3. Modelo de grafo (Graph)
 
-### 3.1 ¿Qué es el modelo de grafo?
+### 3.1 Introducción a modelo de grafo
 
 El modelo de grafo utiliza **nodos (Node)** y **aristas (Edge)** para representar entidades y sus relaciones. Cada nodo es una entidad, cada arista es una relación, y tanto nodos como aristas pueden llevar propiedades.
 
@@ -114,7 +114,7 @@ En lo relacional, cada salto adicional añade un JOIN y el rendimiento cae expon
 
 ## 4. Modelo de serie temporal (Time-Series)
 
-### 4.1 ¿Qué es el modelo de serie temporal?
+### 4.1 Introducción a modelo de serie temporal
 
 El modelo de serie temporal se organiza en torno a **timestamps**, optimizado específicamente para escenarios de "escritura ordenada por tiempo y consulta por rango temporal".
 
@@ -125,7 +125,7 @@ timestamp            device      cpu_usage   memory
 2024-01-15 10:00:03  server-01   92%         14.1GB
 ```
 
-### 4.2 ¿Por qué no usar MySQL para datos de serie temporal?
+### 4.2 Motivación para MySQL para datos de serie temporal
 
 | Problema | MySQL | Base de datos de serie temporal (InfluxDB) |
 |----------|-------|---------------------------------------------|
@@ -145,7 +145,7 @@ timestamp            device      cpu_usage   memory
 
 ## 5. Modelo vectorial (Vector)
 
-### 5.1 ¿Qué es el modelo vectorial?
+### 5.1 Introducción a modelo vectorial
 
 El modelo vectorial convierte datos no estructurados como texto, imágenes y audio en vectores numéricos de alta dimensión mediante **modelos de Embedding**, y luego calcula la distancia entre vectores para medir la similitud semántica.
 
@@ -180,7 +180,7 @@ El modelo vectorial convierte datos no estructurados como texto, imágenes y aud
 
 ---
 
-## 6. Guía de decisión: ¿Cómo elegir el modelo de datos?
+## 6. Guía de decisión: Enfoque de elegir el modelo de datos
 
 | ¿Cómo son tus datos? | Modelo recomendado | Productos representativos |
 |-----------------------|-------------------|---------------------------|

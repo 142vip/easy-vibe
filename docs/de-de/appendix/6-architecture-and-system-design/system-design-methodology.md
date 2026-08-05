@@ -1,4 +1,4 @@
-# Systemdesign-Methodik
+# Systemdesign-Methodik: Entwurfsprinzipien
 
 ::: tip Einleitung
 **Systemdesign ist kein Bauchgefühl beim Zeichnen von Architekturdiagrammen, sondern eine systematische Methodik.** Egal ob es sich um eine Systemdesign-Aufgabe in einem Vorstellungsgespräch oder um eine echte Architekturplanung in der Praxis handelt — es gilt ein ähnlicher Denkrahmen: Zunächst das Problem verstehen, dann den Umfang abschätzen, anschließend einen Entwurf erstellen und schließlich vertiefend optimieren.

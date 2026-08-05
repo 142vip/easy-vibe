@@ -1,10 +1,10 @@
-# Grundlagen der Integrierten Entwicklungsumgebung (IDE)
+# IDE-Grundlagen: Entwicklungsumgebung
 
 ::: tip 💡 Lernleitfaden
 Dieses Kapitel fuhrt Sie tief in das wichtigste Produktivitatswerkzeug von Programmierern ein — die **Integrierte Entwicklungsumgebung (IDE)**. Wir beginnen mit dem Designkonzept der IDE, analysieren die Kernkomponenten Schritt fur Schritt und demonstrieren die Funktionsweise anhand einer virtuellen IDE.
 :::
 
-## Was tun, wenn man etwas nicht versteht? (How to solve problems)
+## Überblick über tun, wenn man etwas nicht versteht? (How to solve problems)
 
 Beim Erlernen und Verwenden einer IDE stoßen Sie vielleicht auf verschiedene unverstandliche Schaltflachen, Menus oder Codefehler. In diesem Fall **nicht in Panik geraten — die Nutzung von KI-Assistenten ist die effizienteste Losung**.
 
@@ -20,7 +20,7 @@ Heutige KI (wie ChatGPT, Claude, DeepSeek usw.) verfugen uber leistungsstarke Bi
 
 ---
 
-## 0. Einleitung: Warum braucht man eine IDE?
+## 0. Einleitung: Motivation von braucht man eine IDE
 
 Beim Softwareentwicklungsprozess mussen Programmierer haufig Code schreiben, Dateien verwalten, kompilieren/ausfuhren und Fehler debuggen. Wenn all diese Operationen in verschiedenen, unabhangigen Programmen durchgefuhrt werden mussen (z.B. Code im Editor schreiben, in der Kommandozeile kompilieren, Dateien im Dateimanager verwalten), ist die Effizienz extrem niedrig und fehleranfallig.
 
@@ -74,7 +74,7 @@ Hundertmal horen ist nicht so gut wie einmal sehen. Damit Sie die Bequemlichkeit
 
 ---
 
-## 3. Kernmechanismus: Warum kann VS Code alles?
+## 3. Kernmechanismus: Motivation von kann VS Code alles
 
 Sie fragen sich vielleicht: Warum kann dieselbe Software Python schreiben, C++ schreiben und Webentwicklung betreiben? Wie macht sie das?
 Die Designphilosophie von VS Code lasst sich in einem Satz zusammenfassen: **"Minimaler Kern, Fahigkeiten uber Plugins".**

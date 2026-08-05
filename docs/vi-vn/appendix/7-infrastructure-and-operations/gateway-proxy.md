@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Tại sao cần "Gateway"?
+## 1. Động lực của cần "Gateway"
 
 ### 1.1 Từ một ví dụ thực tế: Sự phát triển kiến trúc của một nền tảng thương mại điện tử
 
@@ -66,7 +66,7 @@ Hãy tưởng tượng bạn đến một công ty lớn:
 
 ---
 
-## 2. Reverse Proxy là gì?
+## 2. Reverse Proxy: Tổng quan
 
 ### 2.1 Forward Proxy và Reverse Proxy
 
@@ -136,7 +136,7 @@ HTTPS Client → Nginx (mã hóa/giải mã) → HTTP Backend Service
 
 ---
 
-## 3. Nginx: Tại sao có thể chịu được hàng triệu kết nối đồng thời?
+## 3. Nginx: Động lực của có thể chịu được hàng triệu kết nối đồng thời
 
 ### 3.1 Mô hình tiến trình Master-Worker
 
@@ -187,9 +187,9 @@ Nginx sử dụng kiến trúc **đa tiến trình**, không phải đa luồng:
 
 ---
 
-## 4. API Gateway là gì?
+## 4. API Gateway: Tổng quan
 
-### 4.1 Tại sao cần API Gateway?
+### 4.1 Động lực của cần API Gateway
 
 **Hãy tưởng tượng một hệ thống không có gateway:**
 
@@ -229,7 +229,7 @@ Nginx sử dụng kiến trúc **đa tiến trình**, không phải đa luồng:
 
 ---
 
-## 5. Gateway Hands-on: Làm sao xây dựng kiến trúc gateway hoàn chỉnh?
+## 5. Gateway Hands-on: Cách xây dựng kiến trúc gateway hoàn chỉnh
 
 ### 5.1 Sơ đồ kiến trúc đầy đủ
 
@@ -409,7 +409,7 @@ upstream backend_ip_hash {
 
 ---
 
-## 6. Bảo mật Gateway: Làm thế nào bảo vệ cánh cổng hệ thống?
+## 6. Bảo mật Gateway: Cách bảo vệ cánh cổng hệ thống
 
 ### 6.1 Xác thực và Ủy quyền
 
@@ -432,7 +432,7 @@ upstream backend_ip_hash {
 - **Xác thực**: Bạn là ai? (Kiểm tra Token, lấy danh tính người dùng)
 - **Ủy quyền**: Bạn có thể làm gì? (Dựa trên vai trò người dùng để xác định quyền hạn)
 
-Giống như lễ tân công ty: lễ tân xác thực danh tính của bạn (CMND), nhưng quyền hạn cụ thể do từng phòng ban xác định.
+Giống như lễ tân công ty: lễ tân xác thực danh tính của bạn (định danh duy nhất), nhưng quyền hạn cụ thể do từng phòng ban xác định.
 :::
 
 <AuthMiddlewareDemo />
@@ -463,7 +463,7 @@ Giống như lễ tân công ty: lễ tân xác thực danh tính của bạn (C
 
 ---
 
-## 7. Giới hạn lưu lượng và Ngắt mạch: Làm sao ngăn hệ thống bị "lũ lưu lượng" cuốn trôi?
+## 7. Giới hạn lưu lượng và Ngắt mạch: Cách ngăn hệ thống bị "lũ lưu lượng" cuốn trôi
 
 ### 7.1 So sánh thuật toán giới hạn lưu lượng
 

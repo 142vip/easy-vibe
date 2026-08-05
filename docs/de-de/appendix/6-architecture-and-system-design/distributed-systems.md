@@ -1,4 +1,4 @@
-# Herausforderungen verteilter Systeme
+# Verteilte Systeme: Kernprinzipien
 
 ::: tip Einleitung
 **Wenn eine Maschine nicht mehr ausreicht, fangen die Probleme erst richtig an.** Verteilte Systeme sind das Fundament des modernen Internets — von WeChat-Nachrichten bis hin zu Taobao-Bestellungen, im Hintergrund arbeiten Hunderte von Maschinen zusammen. Aber „verteilt" ist kein kostenloses Mittagessen. Es bringt eine Reihe von Herausforderungen mit sich, die in Einzelplatzsystemen nie auftreten.
@@ -25,7 +25,7 @@ Nach Abschluss dieses Kapitels werden Sie Folgendes beherrschen:
 
 ---
 
-## 0. Übersicht: Warum verteilte Systeme?
+## 0. Übersicht: Motivation von verteilte Systeme
 
 Einzelplatzsysteme sind einfach und zuverlässig, haben jedoch drei unüberwindbare Engpässe:
 
@@ -63,7 +63,7 @@ Im Jahr 2000 stellte Eric Brewer die CAP-Vermutung auf (später als Theorem bewi
 
 <CAPTheoremDemo />
 
-### Warum nur zwei?
+### Motivation: zwei
 
 In einer verteilten Umgebung sind Netzwerkpartitionen (P) unvermeidbar — Glasfaserkabel werden durchtrennt, Switches fallen aus, Rechenzentren verlieren die Netzverbindung. Daher ist P ein Muss, die eigentliche Entscheidung liegt zwischen C und A:
 
@@ -119,7 +119,7 @@ Verteilte Systeme haben keine „perfekte" Lösung, nur „geeignete" Kompromiss
 
 ---
 
-## 4. Konsensalgorithmen: Wie mehrere Maschinen sich „einig" werden
+## 4. Konsensalgorithmen: Ansatz für mehrere Maschinen sich „einig" werden
 
 Konsensalgorithmen sind der Kern verteilter Systeme — sie lösen das Problem: Wie kommen mehrere Knoten über einen Wert überein, selbst wenn einige Knoten ausfallen oder Netzwerkverzögerungen auftreten?
 

@@ -1,10 +1,10 @@
-# Expressions régulières
+# Fondamentaux : Expressions régulières
 
 > 💡 **Guide d'apprentissage** : Les expressions régulières ressemblent à du charabia ? En réalité, c'est simplement un mini-langage pour « décrire des motifs de texte ». Ce chapitre vous guide depuis zéro pour comprendre les idées fondamentales des regex et apprendre à résoudre 80 % des problèmes de recherche et de validation de texte avec quelques symboles clés.
 
 ---
 
-## 0. Pourquoi avez-vous besoin des expressions régulières ?
+## 0. Motivation et justification : avez-vous besoin des expressions régulières
 
 Imaginez les scénarios suivants :
 - Extraire toutes les adresses IP d'un gros fichier de logs

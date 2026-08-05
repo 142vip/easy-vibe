@@ -1,4 +1,4 @@
-# Open Source Collaboration
+# An Introduction to Open-Source Collaboration
 
 ::: tip Preface
 **Want to contribute to open source but don't know where to start?** Open source is more than "using other people's code for free" — it's a way of collaborating and a career accelerator. One high-quality open source contribution can be more convincing than ten personal projects on your resume.
@@ -80,7 +80,7 @@ Use the interactive component below to compare common open source licenses:
 | **GPL** | Derivative works must also be open source | Linux, WordPress |
 | **BSD** | Similar to MIT, with slight differences | FreeBSD, Flask |
 
-### 2.2 How to Choose?
+### 2.2 Approach to choosing
 
 - **Want more people to use it**: Choose MIT
 - **Want to protect patents**: Choose Apache 2.0

@@ -1,4 +1,4 @@
-# Das HTTP-Protokoll: Die "Kommunikationssprache" von Frontend und Backend
+# HTTP-Protokoll: Kommunikationsgrundlagen
 
 ::: tip Kernfrage
 **Wie funktioniert HTTP?** Das ist wie die Frage: Wie kommunizieren zwei Personen? Man braucht eine vereinbarte Sprache, Grammatik und Gesprächsregeln. HTTP ist das "Gesprächsprotokoll" zwischen Frontend und Backend.

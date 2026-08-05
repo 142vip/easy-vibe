@@ -1,4 +1,4 @@
-# File Storage and Object Storage
+# An Introduction to File and Object Storage
 
 ::: tip Introduction
 **A user uploads an avatar, and you save it in the server's `/uploads` directory — then the server's disk fills up, or you add a second server and the user finds their avatar appears and disappears.** File storage seems simple, but in distributed environments it's an architectural problem that requires serious attention. Object storage is the standard answer to this problem in the internet age.
@@ -24,7 +24,7 @@ After reading this chapter, you will gain:
 
 ---
 
-## 0. The Big Picture: Why Can't You Store Files on the Server Locally?
+## 0. The Big Picture: Motivation for Caning 't You Store Files on the Server Locally
 
 When starting a project, saving user-uploaded files in a local server directory is the most intuitive approach. But as the project grows, you'll encounter a series of problems:
 
@@ -89,7 +89,7 @@ my-app-bucket/                    ← Bucket
 
 ---
 
-## 3. File Upload Solutions: Who Uploads the File?
+## 3. File Upload Solutions: Who Uploads the File
 
 There are two mainstream approaches for file upload: server-side relay and client-side direct upload. For most scenarios, **client-side direct upload** is the better choice.
 

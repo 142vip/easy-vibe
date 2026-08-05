@@ -1,11 +1,11 @@
-# Message Queues und ereignisgesteuerte Architektur
+# Nachrichtenwarteschlangen: Systemkommunikation
 ::: tip 🎯 Kernfrage
 **Wie kann die Stabilität der Kernprozesse sichergestellt werden, wenn das System stark gekoppelt ist und der Datenverkehr plötzlich ansteigt?** Message Queues sind der „Puffer" und „Entkoppler" moderner verteilter Systeme. Dieser Artikel vertieft das Verständnis der Designphilosophie und Ingenieurspraxis von Message Queues anhand realer Beispiele (Restaurant-Wartesystem, Paketsortierung, Flash-Sale-Systeme).
 :::
 
 ---
 
-## 1. Warum „Message Queues"?
+## 1. Warum „Message Queues"
 
 ### 1.1 Ein realer Fall: Die Entwicklung des Taobao-Bestellsystems
 
@@ -70,7 +70,7 @@ Stell dir ein beliebtes Restaurant vor:
 
 ## 2. Was ist eine Message Queue? (Definition + drei Kernelemente)
 
-### 2.1 Was ist eine „Message Queue"?
+### 2.1 Was ist eine „Message Queue"
 
 ::: tip 🤔 Begriffserklärung
 **Message Queue (MQ)** ist ein Container zum Speichern von Nachrichten. Producer legen Nachrichten hinein, Consumer entnehmen und verarbeiten sie. Sie ermöglicht „asynchrone Kommunikation" – der Sender muss nicht auf die Verarbeitung durch den Empfänger warten.
@@ -128,7 +128,7 @@ Es ist wie der Unterschied zwischen einem Anruf (synchron) und einer Textnachric
 
 ---
 
-## 3. Kernfrage 1: Wie entkoppelt man Systeme, um „Kettenreaktionen" zu vermeiden?
+## 3. Kernfrage 1: Ansatz für entkoppelt man Systeme, um „Kettenreaktionen" zu vermeiden
 
 ### 3.1 Die Tragödie enger Kopplung: Ein Service fällt aus, alles bricht zusammen
 
@@ -221,9 +221,9 @@ Ereignisgesteuertes Denken (deklarativ):
 
 ---
 
-## 4. Kernfrage 2: Wie glättet man Lastspitzen bei plötzlichem Traffic-Anstieg?
+## 4. Kernfrage 2: Ansatz für glättet man Lastspitzen bei plötzlichem Traffic-Anstieg
 
-### 4.1 Flash-Sale-Szenario: Wie verarbeitet man 100.000 QPS stabil?
+### 4.1 Flash-Sale-Szenario: Ansatz für verarbeitet man 100.000 QPS stabil
 
 **Szenario**: Flash-Sale am Singles' Day einer E-Commerce-Plattform, erwarteter Spitzenwert 100.000 QPS, aber die Datenbank verträgt nur 1.000 QPS.
 
@@ -342,7 +342,7 @@ Zeit zum vollständigen Konsum = Queue-Länge / Consumer-Rate
 
 ---
 
-## 5. Kernfrage 3: Wie stellt man sicher, dass Nachrichten nicht verloren gehen, nicht dupliziert werden und in richtiger Reihenfolge bleiben?
+## 5. Kernfrage 3: Ansatz für stellt man sicher, dass Nachrichten nicht verloren gehen, nicht dupliziert werden und in richtiger Reihenfolge bleiben
 
 ### 5.1 Nachrichtenzuverlässigkeit: Drei Verteidigungslinien
 
@@ -367,7 +367,7 @@ Nachrichten können in drei Phasen verloren gehen: beim Senden durch den Produce
 
 <ReliabilityDemo />
 
-### 5.2 Umgang mit doppelten Nachrichten?
+### 5.2 Umgang mit doppelten Nachrichten
 
 **Nachrichtenduplizierung kann in folgenden Szenarien auftreten:**
 
@@ -391,7 +391,7 @@ Nachrichten können in drei Phasen verloren gehen: beim Senden durch den Produce
 
 ---
 
-## 6. Praxis: Wie wählt man die richtige Message Queue?
+## 6. Praxis: Ansatz für wählt man die richtige Message Queue
 
 ### 6.1 Vergleich der vier wichtigsten Message Queues
 

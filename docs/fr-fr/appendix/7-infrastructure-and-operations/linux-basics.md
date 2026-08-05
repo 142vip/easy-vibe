@@ -1,4 +1,4 @@
-# Bases de Linux
+# Fondamentaux : Système d'exploitation Linux
 
 ::: tip Avant-propos
 **Dans le monde des serveurs, Linux est le protagoniste absolu.** Plus de 90 % des serveurs dans le monde fonctionnent sous Linux. De WeChat que vous utilisez chaque jour aux recherches Google, tout repose sur Linux. Pour un développeur, maîtriser les bases de Linux n'est pas une option — c'est un prérequis indispensable.

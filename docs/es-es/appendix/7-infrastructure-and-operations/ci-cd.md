@@ -1,11 +1,11 @@
-# Automatización CI / CD
+# Introducción a la automatización CI/CD
 ::: tip 🎯 Pregunta central
 **El código funciona perfectamente en local, ¿cómo hacer que todo el mundo pueda acceder a él?**
 :::
 
 ---
 
-## 1. ¿Por qué necesitamos "poner un servicio en línea"?
+## 1. Motivación de poner un servicio en línea
 
 Imagina que preparas una mesa llena de platos deliciosos en tu casa. Pero el problema es que solo tu familia puede probarlos. Los vecinos, el portero, los desconocidos... nadie más puede disfrutarlos.
 
@@ -19,9 +19,9 @@ A continuación, desglosaré todo el proceso. Cada paso se explicará con detall
 
 ---
 
-## 2. Construcción: convertir el código en un "paquete portátil"
+## 2. Construcción: convertir el código en un "artefacto de compilación portátil"
 
-### 2.1 ¿Por qué necesitamos construir?
+### 2.1 Motivación de construir
 
 Los principiantes suelen preguntar: si el código ya está listo, ¿por qué no se puede poner directamente en el servidor para que los usuarios accedan?
 
@@ -31,7 +31,7 @@ Por ejemplo, cuando escribes código Vue, ¿usas etiquetas como `<template>` y `
 
 Por eso, antes de poner el código en el servidor, hay que hacer algo importante: **traducirlo a un lenguaje que el navegador pueda entender**. Este proceso de traducción se llama "construcción" (Build).
 
-### 2.2 ¿Qué hace exactamente la construcción?
+### 2.2 Introducción a exactamente la construcción
 
 La construcción no es solo traducción. También realiza muchas optimizaciones para que el sitio web funcione más rápido y consuma menos recursos. Veamos en detalle qué hace:
 
@@ -59,7 +59,7 @@ La función del hash es: cuando el código cambia, el valor del hash también ca
 
 <DeploymentBuildDemo />
 
-### 2.3 ¿Cómo ejecutar la construcción?
+### 2.3 Enfoque para ejecutar la construcción
 
 La mayoría de proyectos frontend modernos ya tienen la herramienta de construcción configurada. Solo necesitas recordar un comando:
 
@@ -76,7 +76,7 @@ pnpm build
 
 Tras ejecutarlo, ve a la raíz del proyecto y busca una carpeta llamada `dist` (a veces también `build` o `.output`). Dentro están todos los archivos construidos. Estos son los archivos finales que se subirán al servidor. No necesitan ninguna modificación adicional. Solo hay que copiarlos al servidor.
 
-### 2.4 ¿Qué hay en los artefactos de construcción?
+### 2.4 Qué hay en los artefactos de construcción
 
 Al abrir la carpeta dist, verás principalmente tres tipos de archivos:
 
@@ -90,7 +90,7 @@ Si es un proyecto backend más complejo (como Node.js), el artefacto de construc
 
 ## 3. Servidor: encontrar una "casa" que nunca cierra
 
-### 3.1 ¿Qué es exactamente un servidor?
+### 3.1 Introducción a exactamente un servidor
 
 Mucha gente, al oír "servidor" por primera vez, piensa que es algún dispositivo misterioso y sofisticado. En realidad no es tan complicado. **Un servidor es un ordenador**. Un ordenador que nunca se apaga y que siempre está conectado a internet.
 
@@ -106,7 +106,7 @@ Tercero, tu ordenador de casa no tiene una "IP pública". ¿Qué es una IP públ
 
 <DeploymentServerDemo />
 
-### 3.2 ¿Cómo elegir un servidor?
+### 3.2 Enfoque de elegir un servidor
 
 Para elegir un servidor, hay tres indicadores principales: **núcleos de CPU**, **memoria RAM** y **espacio en disco**. Cuanto más altos sean estos indicadores, mejor será el rendimiento del servidor y más caro será.
 
@@ -118,7 +118,7 @@ Para un principiante, no hace falta comprar una configuración muy cara. Recuerd
 
 Otro aspecto a considerar: **la ubicación**. Si tus usuarios están principalmente en China, compra servidores nacionales (Alibaba Cloud, Tencent Cloud) para mayor velocidad de acceso. Si tus usuarios están principalmente en el extranjero, compra servidores internacionales (AWS, Google Cloud, DigitalOcean), o servidores en Hong Kong. Rápidos y sin necesidad de registro ICP.
 
-### 3.3 ¿Nacional o extranjero?
+### 3.3 Nacional o extranjero
 
 Esta es una pregunta muy importante. Mucha gente no lo piensa al principio y luego tiene problemas.
 
@@ -140,7 +140,7 @@ Recomendación: si es un proyecto personal o un sitio web de demostración, comp
 
 Para principiantes, lo más recomendable son las ofertas para estudiantes o nuevos usuarios de **Alibaba Cloud** o **Tencent Cloud**. Normalmente solo cuestan decenas de yuanes al año. Excelente relación calidad-precio. Si es un proyecto puramente frontend y quieres evitar complicaciones, también puedes usar **Vercel** o **Netlify**. Ni siquiera necesitas comprar un servidor. Solo sube el código y se despliega automáticamente.
 
-### 3.5 ¿Qué hacer después de recibir el servidor?
+### 3.5 Qué hacer después de recibir el servidor
 
 Después de comprar el servidor, recibirás un correo electrónico con información importante:
 
@@ -163,7 +163,7 @@ Una vez iniciada sesión, entrarás en la interfaz de línea de comandos del ser
 
 ## 4. Despliegue: mudar el código a la "casa"
 
-### 4.1 ¿Qué es el despliegue?
+### 4.1 Introducción a despliegue
 
 Despliegue es, después de alquilar el servidor (la casa), mover el código (el equipaje y los muebles) y abrir las puertas para empezar a funcionar.
 
@@ -178,7 +178,7 @@ Estos cuatro pasos suenan complicados, pero en realidad no son tan difíciles. A
 
 <DeploymentServerDemo />
 
-### 4.2 ¿Cómo subir el código al servidor?
+### 4.2 Enfoque de subir el código al servidor
 
 **Método 1: Subida por FTP/SFTP**
 
@@ -308,7 +308,7 @@ Ahora, al visitar `http://example.com` (recuerda configurar la resolución DNS d
 
 ## 5. Dominio y DNS: ponerle un buen nombre al sitio web
 
-### 5.1 ¿Por qué comprar un dominio?
+### 5.1 Motivación de comprar un dominio
 
 Teniendo la IP del servidor, ¿por qué还需要 comprar un dominio?
 
@@ -318,7 +318,7 @@ El dominio es el nombre del sitio web. Fácil de recordar, profesional, y tambi�
 
 <DeploymentDnsDemo />
 
-### 5.2 ¿Qué es DNS?
+### 5.2 Introducción a DNS
 
 Bien. Ahora has comprado un dominio. Por ejemplo `mi-sitio-increible.com`. Pero surge el problema: los ordenadores solo entienden direcciones IP. No entienden el lenguaje humano "mi-sitio-increible.com".
 
@@ -332,7 +332,7 @@ Cuando escribes `mi-sitio-increible.com` en el navegador y pulsas Enter, esto es
 
 Todo este proceso suele tardar solo unas decenas de milisegundos. El usuario no se da cuenta.
 
-### 5.3 ¿Cómo configurar DNS?
+### 5.3 Enfoque para configurar DNS
 
 La configuración de DNS se puede hacer normalmente en dos lugares:
 
@@ -348,7 +348,7 @@ Configura los registros DNS donde compraste el dominio. El tipo de registro más
 
 Muchos profesionales no usan el DNS que viene con el proveedor del dominio. En su lugar, usan servicios DNS profesionales como Cloudflare, Alibaba Cloud DNSPod o Tencent Cloud DNS. Estos servicios suelen ser más estables, con resolución más rápida. Además incluyen funciones adicionales como CDN y protección DDoS.
 
-### 5.4 ¿Cuánto tarda en surtir efecto DNS?
+### 5.4 Cuánto tarda en surtir efecto DNS
 
 Esta es una pregunta que mucha gente se hace. La respuesta es: **depende. Normalmente entre unos minutos y 24 horas**.
 
@@ -380,7 +380,7 @@ Puede que hayas notado que algunas direcciones web empiezan por `http://` y otra
 
 <DeploymentHttpsDemo />
 
-### 6.2 ¿Por qué HTTPS?
+### 6.2 Motivación de HTTPS
 
 Primera razón: **seguridad**. Sin HTTPS, las contraseñas que los usuarios introducen en el sitio se transmiten en texto plano. Cualquier persona con conocimientos técnicos puede interceptarlas. Hoy en día, ¿quién se atrevería a usar un sitio sin HTTPS?
 
@@ -388,7 +388,7 @@ Segunda razón: **advertencias del navegador**. Ahora Chrome, Edge y otros naveg
 
 Tercera razón: **SEO**. Google, Baidu y otros buscadores dan prioridad a sitios HTTPS. El posicionamiento SEO será mejor.
 
-### 6.3 ¿Cómo obtener un certificado HTTPS?
+### 6.3 Enfoque de obtener un certificado HTTPS
 
 Antes, los certificados HTTPS eran caros. Costaban cientos o incluso miles de yuanes al año. Ahora las cosas han mejorado. Existe una organización llamada **Let's Encrypt** que proporciona certificados SSL/TLS completamente gratuitos. Y la comunidad tiene muchas herramientas automáticas para ayudarte a instalarlos y renovarlos.
 
@@ -412,7 +412,7 @@ El certificado es válido por 90 días. Pero Certbot configurará una tarea prog
 
 Si usas el servicio DNS de Cloudflare, no necesitas configurar el certificado HTTPS tú mismo. Cloudflare proporciona automáticamente soporte HTTPS para tu dominio. Y hasta se encarga de la renovación cada 90 días.
 
-### 6.4 ¿Qué cambia después de configurar HTTPS?
+### 6.4 Qué cambia después de configurar HTTPS
 
 Después de configurar HTTPS, el acceso de los usuarios pasa de `http://example.com` a `https://example.com`. Este cambio aporta una serie de garantías de seguridad:
 
@@ -424,7 +424,7 @@ Después de configurar HTTPS, el acceso de los usuarios pasa de `http://example.
 
 ## 7. CI/CD: deja que el robot trabaje por ti
 
-### 7.1 ¿Qué es CI/CD?
+### 7.1 Introducción a CI/CD
 
 CI/CD es la abreviatura de dos términos: **C**ontinuous **I**ntegration (Integración Continua) y **C**ontinuous **D**eployment (Despliegue Continuo). Se puede entender como un sistema robótico que trabaja automáticamente por ti.
 
@@ -485,7 +485,7 @@ Después de que todos los tests pasen, el sistema CI:
 
 Todo el proceso puede tardar solo unos minutos. Completamente automático.
 
-### 7.3 ¿Cómo configurar GitHub Actions?
+### 7.3 Enfoque para configurar GitHub Actions
 
 GitHub Actions es la función CI/CD integrada de GitHub. No requiere pago adicional (la cuota gratuita es suficiente para proyectos personales). La configuración también es muy sencilla.
 
@@ -553,7 +553,7 @@ Una vez configurado, cada vez que hagas `git push origin main`, GitHub iniciará
 
 ## 8. Monitorización y logs: ser el "guardián" del sitio web
 
-### 8.1 ¿Por qué monitorizar?
+### 8.1 Motivación de monitorizar
 
 Una vez que el sitio web está en línea, en teoría debería funcionar 24/7 sin interrupciones. Pero en el mundo real las cosas no son tan perfectas. Los servidores pueden caerse. La red puede tener problemas. El código puede tener bugs. En un entorno de producción real, puede pasar de todo.
 
@@ -567,7 +567,7 @@ Con monitorización, puedes:
 
 <DeploymentMonitorDemo />
 
-### 8.2 ¿Qué métricas monitorizar?
+### 8.2 Qué métricas monitorizar
 
 Las métricas de monitorización más importantes son estas:
 
@@ -580,7 +580,7 @@ Las métricas de monitorización más importantes son estas:
 | Tiempo de respuesta | < 2 segundos | Optimizar consultas a la base de datos o añadir caché |
 | Tasa de errores | < 1% | Revisar los logs de errores para localizar el problema |
 
-### 8.3 ¿Cómo configurar la monitorización?
+### 8.3 Enfoque para configurar la monitorización
 
 **La solución más sencilla: Uptime Robot**
 
@@ -594,7 +594,7 @@ Si el servidor está en Alibaba Cloud o Tencent Cloud, ya incluyen funciones de 
 
 Estas dos son la "navaja suiza" de la monitorización. Funcionalidades muy potentes. Puedes monitorizar cualquier métrica que se te ocurra. Y además crear gráficos de visualización preciosos. Pero la configuración es más compleja. Adecuado para desarrolladores con cierta experiencia.
 
-### 8.4 Logs: ¿cómo investigar cuando hay problemas?
+### 8.4 Logs: Enfoque de investigar cuando hay problemas
 
 La monitorización te dice "el sitio tiene un problema". Pero qué problema exacto y por qué ha ocurrido, necesitas los **logs** para localizarlo.
 
@@ -627,7 +627,7 @@ Si el proyecto es más complejo, se recomienda usar herramientas profesionales d
 - **ELK (Elasticsearch + Logstash + Kibana)**: muy potente pero de configuración compleja.
 - **Sentry**: herramienta especializada en recopilar errores de aplicaciones. Recopila automáticamente la información de los errores.
 
-### 8.5 Alertas: ¿cómo enterarte inmediatamente cuando hay un problema?
+### 8.5 Alertas: Enfoque de enterarte inmediatamente cuando hay un problema
 
 La monitorización te dice que hay un problema. Pero si no estás mirando el panel de monitorización, ¿qué haces? Aquí es donde necesitas las **alertas**.
 

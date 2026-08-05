@@ -1,4 +1,4 @@
-# Serialisierung: Die "Übersetzung" von Daten
+# Serialisierung: Datenformatkonvertierung
 
 ::: tip Kernfrage
 **Wie werden Daten über das Netzwerk übertragen?** Das ist wie die Frage: Wie kann eine Person so sprechen, dass eine andere sie versteht? Serialisierung löst das Problem der "Datenübersetzung" — Objekte im Arbeitsspeicher in ein übertragbares Format zu übersetzen.
@@ -55,13 +55,13 @@ Die Redundanz des JSON-Formats führt zu großen Datenpaketen, was die Performan
 
 ---
 
-## 1. Was ist Serialisierung/Deserialisierung?
+## 1. Was ist Serialisierung/Deserialisierung
 
 **Serialisierung** (Serialization) ist der Prozess der Umwandlung von Objekten in ein übertragbares Format.
 
 **Deserialisierung** (Deserialization) ist der Prozess der Rückwandlung des Übertragungsformats in Objekte.
 
-### 1.1 Analogie mit dem Paketversand
+### 1.1 Analogie mit dem Build-Artefaktversand
 
 | Paketversand | Serialisierung | Beschreibung |
 | :--- | :--- | :--- |
@@ -69,7 +69,7 @@ Die Redundanz des JSON-Formats führt zu großen Datenpaketen, was die Performan
 | Transport | Netzwerkübertragung | Paketwagen transportiert zum Ziel |
 | Auspacken | Deserialisierung | Empfänger öffnet die Kiste und entnimmt die Gegenstände |
 
-### 1.2 Warum ist Serialisierung nötig?
+### 1.2 Warum ist Serialisierung nötig
 
 | Grund | Beschreibung | Beispiel |
 | :--- | :--- | :--- |

@@ -3,7 +3,7 @@ title: 'KI-Kurzgeschichte: Von symbolischer Logik zu hundertmilliardenparametrig
 description: '70 Jahre KI-Entwicklung, drei Wellen, zwei Winter, schließlich verschmolzen zum heutigen Zeitalter der großen Modelle.'
 ---
 
-# KI-Kurzgeschichte: Von symbolischer Logik zu hundertmilliardenparametrigen großen Modellen
+# KI-Geschichte: Entwicklungslinie
 
 In 70 Jahren KI-Entwicklung gab es **drei Wellen und zwei Winter** — von der symbolistischen Logik-Deduktion, über konnektionistische neuronale Netze, bis hin zum behaviouristischen bestärkenden Lernen, die schließlich zum heutigen Zeitalter der großen Modelle verschmolzen. Die Geschichte der KI zu verstehen, hilft uns, den Ursprung der „Intelligenz" heutiger großer Modelle zu erkennen.
 

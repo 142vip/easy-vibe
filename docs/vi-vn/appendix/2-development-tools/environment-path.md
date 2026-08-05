@@ -1,4 +1,4 @@
-# Biến môi trường và PATH
+# Biến môi trường và PATH: Cơ bản về cấu hình môi trường
 
 > 💡 **Hướng dẫn học**: Mỗi khi bạn gõ `git` hoặc `python` trong terminal, hệ thống phải tìm xem chương trình đó ở đâu. Mỗi khi code của bạn gọi API mô hình ngôn ngữ lớn, chương trình cần biết dùng khóa nào. Hai việc này đều dựa trên cùng một cơ chế — **biến môi trường**.
 
@@ -14,7 +14,7 @@ Nhấn vào bất kỳ biến nào trong danh sách bên dưới để "xem" gi�
 
 ---
 
-## 1. PATH: Shell tìm lệnh bạn nhập như thế nào
+## 1. PATH: Cách Shell tìm kiếm lệnh
 
 `PATH` là một biến môi trường đặc biệt, lưu một chuỗi đường dẫn thư mục (phân tách bằng dấu hai chấm). Khi bạn nhập `git`, Shell sẽ duyệt qua các thư mục theo thứ tự, tìm file thực thi tên `git` — dừng lại ngay khi tìm thấy cái đầu tiên.
 
@@ -34,7 +34,7 @@ Chọn một lệnh, quan sát quá trình Shell tìm kiếm từng thư mục:
 
 ---
 
-## 2. Tại sao sau khi cài công cụ phải khởi động lại terminal?
+## 2. Động lực của việc khởi động lại terminal
 
 Khi cài các công cụ như nvm, Homebrew, conda, script cài đặt sẽ tự động thêm một dòng vào `~/.zshrc` để đưa thư mục của nó vào PATH:
 
@@ -67,7 +67,7 @@ pipx install aider-chat
 
 ---
 
-## 3. Phạm vi biến: Ai có thể thấy biến này?
+## 3. Phạm vi biến: Phạm vi truy cập biến
 
 Biến môi trường không được phát sóng cho tất cả các chương trình — mỗi tiến trình giữ **bản sao riêng của mình**, kế thừa từ tiến trình cha. Sửa bản sao của mình không ảnh hưởng đến tiến trình cha.
 
@@ -99,7 +99,7 @@ source ~/.bashrc
 
 ## 5. Khóa API: Tuyệt đối không ghi vào code
 
-Khi gọi API OpenAI, Anthropic, DeepSeek, v.v., khóa chính là "CMND + thẻ tín dụng" của bạn. Nếu bị lộ, người khác có thể dùng hạn mức của bạn, chi phí do bạn chịu.
+Khi gọi API OpenAI, Anthropic, DeepSeek, v.v., khóa chính là "định danh duy nhất + thẻ tín dụng" của bạn. Nếu bị lộ, người khác có thể dùng hạn mức của bạn, chi phí do bạn chịu.
 
 Lỗi phổ biến nhất là ghi khóa trực tiếp vào code:
 

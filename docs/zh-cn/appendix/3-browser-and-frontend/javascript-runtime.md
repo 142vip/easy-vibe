@@ -1,4 +1,4 @@
-# JavaScript 运行时深度指南
+# JavaScript 运行时原理
 
 ::: tip 前言
 你已经学会了 JavaScript 的基本语法，但你是否想过：

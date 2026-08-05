@@ -1,4 +1,4 @@
-# Das Wesen von Frontend-Frameworks
+# Frontend-Framework: Kernprinzipien
 
 > 💡 **Lernleitfaden**: Dieser Artikel beantwortet eine grundlegende Frage — **Was machen Frontend-Frameworks (Vue, React, Svelte etc.) eigentlich?** Wenn du nur HTML, CSS und ein wenig JavaScript gelernt hast, ist das völlig in Ordnung — wir fangen ganz von vorne an.
 
@@ -9,7 +9,7 @@ Bevor wir beginnen, stelle sicher, dass du diese beiden Grundkonzepte kennst. We
 
 Ein weiteres Konzept wird später häufig auftauchen, daher hier zunächst eine vollständige Erklärung.
 
-### Was ist das DOM?
+### Überblick über das DOM
 
 DOM steht für Document Object Model, auf Deutsch „Dokumentobjektmodell".
 
@@ -26,7 +26,7 @@ Bewege die Maus über den HTML-Code auf der linken Seite — der entsprechende K
 
 ---
 
-## 0. Einleitung: Was ist ein „Frontend-Framework"?
+## 0. Einleitung: Überblick über ist ein „Frontend-Framework"
 
 Erklären wir zunächst das Wort „Framework". In der Programmierung ist ein **Framework** ein Satz bereits geschriebener Code und Regeln, der vorgibt, wie dein Code organisiert und ausgeführt werden soll. Du schreibst Code nach seinen Vorgaben, und es übernimmt eine Menge sich wiederholender, mühsamer Low-Level-Arbeit für dich.
 
@@ -40,7 +40,7 @@ Im Folgenden gehen wir Schritt für Schritt ins Detail, beginnend mit den grundl
 
 ---
 
-## 1. Das Kernproblem: Die Daten haben sich geändert — was passiert mit der Oberfläche?
+## 1. Das Kernproblem: Die Daten haben sich geändert — was passiert mit der Oberfläche
 
 ### 1.1 Zuerst klären, was „Daten" und „Oberfläche" sind
 
@@ -58,7 +58,7 @@ Klicke auf den Button „Artikel hinzufügen" und achte darauf: Die Daten (links
 
 <DataUIGapDemo />
 
-### 1.2 Warum ändert sich die Oberfläche nicht automatisch, wenn sich eine JavaScript-Variable ändert?
+### 1.2 Warum ändert sich die Oberfläche nicht automatisch, wenn sich eine JavaScript-Variable ändert
 
 Das ist der Punkt, der für absolute Anfänger am verwirrendsten ist. Wir erklären das zugrunde liegende Prinzip Schritt für Schritt.
 
@@ -195,7 +195,7 @@ Diese Formel bedeutet:
 
 <DeclarativeFormulaDemo />
 
-### 2.3 Warum ist deklarativ besser als imperativ?
+### 2.3 Warum ist deklarativ besser als imperativ
 
 Die Vorteile der deklarativen Schreibweise:
 
@@ -210,9 +210,9 @@ Kurz gesagt: Deklarativ ermöglicht es dir, dich auf die „Geschäftslogik" (wi
 
 ---
 
-## 3. Reaktive Systeme: Wie weiß das Framework, dass sich Daten geändert haben?
+## 3. Reaktive Systeme: Ansatz für weiß das Framework, dass sich Daten geändert haben
 
-### 3.1 Was bedeutet „reaktiv"?
+### 3.1 Was bedeutet „reaktiv"
 
 Bisher hieß es: „Daten ändern sich, Oberfläche aktualisiert sich automatisch". Aber es gibt ein technisches Problem: **JavaScript selbst hat nicht die Fähigkeit, „andere automatisch zu benachrichtigen, wenn eine Variable geändert wird"**.
 
@@ -278,7 +278,7 @@ Keiner der drei Ansätze ist absolut besser oder schlechter. Vue fühlt sich am 
 
 ## 4. Komponenten: Die Oberfläche in wiederverwendbare Bausteine zerlegen
 
-### 4.1 Warum aufteilen?
+### 4.1 Warum aufteilen
 
 Eine vollständige Webseite kann eine Navigationsleiste, eine Seitenleiste, einen Inhaltsbereich, ein Suchfeld, Benutzeravatare, verschiedene Buttons … enthalten. Wenn der gesamte Code in einer einzigen Datei stünde, wäre diese Datei extrem lang und sehr schwer zu warten.
 
@@ -306,7 +306,7 @@ Klicke links auf einen Komponentennamen, um den entsprechenden Bereich auf der S
 
 <ComponentTreeDemo />
 
-### 4.3 Wie sieht eine Komponente im Code aus?
+### 4.3 Wie sieht eine Komponente im Code aus
 
 Am Beispiel von Vue besteht eine Komponente aus einer `.vue`-Datei mit drei Teilen:
 
@@ -352,9 +352,9 @@ Drei Codezeilen rendern drei verschiedene Produktkarten.
 
 ---
 
-## 5. Die Kosten von DOM-Operationen: Warum nehmen Frameworks so viel Aufwand auf sich?
+## 5. Die Kosten von DOM-Operationen: Motivation von nehmen Frameworks so viel Aufwand auf sich
 
-### 5.1 Was sind DOM-Operationen?
+### 5.1 Was sind DOM-Operationen
 
 Das DOM wurde bereits erwähnt — die baumartige Datenstruktur, die der Browser aus dem HTML generiert. **DOM-Operationen** bedeuten, diesen Knotenbaum mit JavaScript zu verändern: z. B. einen Text ändern, ein Element hinzufügen, ein Element löschen oder einen Stil verändern.
 
@@ -371,7 +371,7 @@ Beobachte den Zeitvergleich zwischen direkten DOM-Operationen und gebündelten D
 
 <DomOperationCostDemo />
 
-### 5.2 Wie lösen Frameworks dieses Problem?
+### 5.2 Wie lösen Frameworks dieses Problem
 
 Da direkte DOM-Manipulation teuer ist, versuchen Frameworks, **die Anzahl der DOM-Operationen zu reduzieren**. Es gibt zwei konkrete Strategien:
 

@@ -1,4 +1,4 @@
-# Escritura de documentación técnica
+# Introducción a la escritura de documentación técnica
 
 ::: tip Prefacio
 **¿Alguien lee la documentación que escribes?** Muchos desarrolladores piensan que "si el código funciona, la documentación ya vendrá después". El resultado: los recién llegados no entienden el proyecto, la integración de APIs depende completamente de la comunicación verbal, y medio año después ni tú recuerdas por qué lo diseñaste así.
@@ -19,7 +19,7 @@ Al finalizar este capítulo, serás capaz de escribir documentación técnica co
 
 ---
 
-## 0. Panorama general: ¿Por qué es importante la documentación técnica?
+## 0. Panorama general: Motivación de importante la documentación técnica
 
 El código le dice a la computadora "cómo hacerlo", la documentación le dice a las personas "por qué se hizo así". Un proyecto sin documentación es como un electrodoméstico sin manual de instrucciones — funciona, pero usarlo es pura suposición.
 

@@ -1,4 +1,4 @@
-# Seguimiento de datos: Registrar lo que hacen los usuarios en la aplicación
+# Introducción al seguimiento de datos
 
 ::: tip 🎯 El problema que resuelve este capítulo
 **¿Cómo sabemos lo que hacen los usuarios dentro de nuestra aplicación?**
@@ -19,7 +19,7 @@ Este capítulo explica el proceso en cuatro pasos:
 
 ---
 
-## Paso 1: Elegir el esquema de recopilación — ¿Dónde colocar los registradores?
+## Plan de recopilación de datos
 
 **Objetivo**: Decidir qué método utilizar para registrar las acciones de los usuarios.
 
@@ -68,7 +68,7 @@ Por analogía: es como instalar cámaras en cada rincón de la tienda, registran
 
 ---
 
-## Paso 2: Diseñar el formato de datos — ¿Qué debe contener cada registro?
+## Especificación de formato de datos
 
 **Prerrequisito**: ya hemos elegido un método de seguimiento (por ejemplo, seguimiento por código) y la aplicación ya puede capturar las acciones del usuario.
 
@@ -119,7 +119,7 @@ Esta parte registra los detalles de negocio específicos de la acción, denomina
 
 ---
 
-## Paso 3: Transmisión y caché — ¿Cómo llevar los datos de forma segura al servidor?
+## Mecanismo de transmisión y caché
 
 **Prerrequisito**: cada acción del usuario ha sido registrada como datos JSON con formato unificado.
 
@@ -157,7 +157,7 @@ La solución es añadir un "búfer" intermedio, técnicamente llamado **cola de 
 
 ---
 
-## Paso 4: Limpieza y almacenamiento — Organizar los datos y eliminar los "datos sucios"
+## Proceso de limpieza y almacenamiento
 
 **Prerrequisito**: los datos han llegado de forma segura al servidor a través del pipeline de transmisión.
 

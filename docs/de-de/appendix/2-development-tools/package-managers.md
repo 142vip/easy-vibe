@@ -1,10 +1,10 @@
-# Paketmanager
+# Paketmanager: Abhängigkeitsverwaltung
 
 > 💡 **Lernleitfaden**: Beim Codieren muss man das Rad nicht neu erfinden — 99 % der Funktionen wurden bereits von jemand anderem geschrieben und im Internet veroffentlicht. Der **Paketmanager** ist das Werkzeug, das Ihnen hilft, diese "fertigen Bauteile" zu finden, herunterzuladen und zu verwalten. Dieses Kapitel dreht sich um eine Kernfrage: **Wie macht man Code-Abhangigkeiten reproduzierbar, kollaborativ und wartbar?**
 
 ---
 
-## 0. Warum werden Sie unweigerlich einen Paketmanager brauchen?
+## 0. Warum werden Sie unweigerlich einen Build-Artefaktmanager brauchen
 
 Stellen Sie sich vor, Sie mochten ein Node.js-Programm schreiben, das HTTP-Anfragen sendet. Zwei Wege:
 
@@ -20,7 +20,7 @@ Ein Paketmanager ist im Wesentlichen der **"App Store" fur Code**. Er hilft Ihne
 
 ---
 
-## 1. Paketmanager der verschiedenen Sprachen/Systeme im Uberblick
+## 1. Build-Artefaktmanager der verschiedenen Sprachen/Systeme im Uberblick
 
 Verschiedene Programmiersprachen und Betriebssysteme haben ihre eigenen Okosystem-Toolchains, aber die zugrundeliegende Logik ist identisch.
 
@@ -28,7 +28,7 @@ Verschiedene Programmiersprachen und Betriebssysteme haben ihre eigenen Okosyste
 
 <PackageManagerOverviewDemo />
 
-### 1.1 Wo werden Pakete heruntergeladen? — Registry
+### 1.1 Wo werden Build-Artefakte heruntergeladen? — Registry
 
 Hinter jedem Okosystem steht ein zentrales Repository, das alle herunterladbaren Pakete speichert:
 
@@ -66,7 +66,7 @@ Nutzerfahrung: npm (am weitesten verbreitet) > pnpm (fur neue Projekte empfohlen
 
 ---
 
-## 2. Paketinstallation — Was passiert im Hintergrund?
+## 2. Build-Artefaktinstallation — Was passiert im Hintergrund
 
 Nach der Eingabe von `npm install axios` ist die Kommandozeile einige Sekunden still und dann fertig. Was passiert in diesen Sekunden?
 
@@ -129,7 +129,7 @@ winget install Git.Git           # Software installieren
 winget upgrade --all             # Alle installierten Programme aktualisieren
 ```
 
-### 2.3 Was sind npm scripts?
+### 2.3 Was sind npm scripts
 
 In `package.json` gibt es ein Feld `scripts` — das ist der in npm integrierte **Task-Runner**:
 
@@ -220,7 +220,7 @@ Was bedeuten `^` und `~`?
 
 <DependencyTreeDemo />
 
-### 4.1 Warum nicht die Version komplett fixieren?
+### 4.1 Warum nicht die Version komplett fixieren
 
 | Vorgehen | Vorteile | Nachteile |
 | :--- | :--- | :--- |
@@ -230,7 +230,7 @@ Was bedeuten `^` und `~`?
 
 **Best Practice**: Bereich mit `^` deklarieren + tatsachliche Version mit Lockfile fixieren — beides kombiniert verwenden.
 
-### 4.2 Was ist die "Abhangigkeitsholle"?
+### 4.2 Was ist die "Abhangigkeitsholle"
 
 Wenn Sie von 50 Paketen abhangen und jedes Paket wieder von mehreren Paketen abhangt, kann der "Abhangigkeitsbaum" Hunderte von Knoten haben. Wenn zwei Pakete, von denen Sie abhangen, **inkompatible Versionen derselben Bibliothek** bentigen, entsteht ein "Abhangigkeitskonflikt".
 
@@ -244,7 +244,7 @@ Losungen der verschiedenen Okosysteme:
 
 ## 5. Lockfile — Das Fundament der Teamarbeit
 
-### 5.1 Warum wird ein Lockfile bentigt?
+### 5.1 Warum wird ein Lockfile bentigt
 
 Angenommen, in `package.json` steht `"axios": "^1.6.0"`:
 
@@ -260,7 +260,7 @@ Derselbe Code, drei verschiedene Ergebnisse. Das **Lockfile** protokolliert die 
 | CI / Produktionsbereitstellung | `npm ci` | **Streng** nach Lockfile installieren; bei Abweichung sofort Fehler |
 | Aktives Versions-Upgrade | `npm update` | Upgrade im erlaubten Bereich, Lockfile aktualisieren |
 
-### 5.2 Soll das Lockfile in Git committet werden?
+### 5.2 Soll das Lockfile in Git committet werden
 
 **Anwendungen mussen committet werden; auf npm veroffentlichte Bibliotheken mussen nicht.**
 
@@ -382,7 +382,7 @@ winget installiert standardmaßig in Systemverzeichnisse (erfordert Admin-Rechte
 
 ---
 
-## Zusammenfassung: Das Wesen des Paketmanagers
+## Zusammenfassung: Das Wesen des Build-Artefaktmanagers
 
 Vier Satze zum Merken:
 

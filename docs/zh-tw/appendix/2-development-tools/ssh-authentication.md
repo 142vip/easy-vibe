@@ -1,4 +1,4 @@
-# SSH 與金鑰認證
+# SSH 與金鑰認證原理
 
 > 💡 **學習指南**：每次 `git push` 輸密碼？連伺服器總被提示「Permission denied」？本章用 5 分鐘帶你搞懂 SSH 金鑰認證的原理，以及如何一鍵免密登入 GitHub 和伺服器。
 
@@ -14,7 +14,7 @@
 
 ---
 
-## 1. 密碼 vs 金鑰：為什麼金鑰更好？
+## 1. 密碼 vs 金鑰：金鑰更好的動機
 
 👇 動手試試看：對比密碼登入和金鑰登入的區別
 
@@ -134,5 +134,5 @@ Host github.com
 :::
 
 **下一步學習**：
-- [連接埠與 localhost](./ports-localhost) - 理解網路連線的基礎
-- [環境變數與 PATH](./environment-path) - 理解系統設定
+- [連接埠與 localhost 原理](./ports-localhost) - 理解網路連線的基礎
+- [環境變數與 PATH 導論](./environment-path) - 理解系統設定

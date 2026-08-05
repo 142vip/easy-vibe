@@ -5,11 +5,11 @@
 Trước khi bắt đầu, nên bổ sung hai "gạch nền tảng":
 
 - **Mạng cơ bản**: Nếu chưa rõ khái niệm IP và HTTP, có thể xem [Tin học cơ bản - Truyền thông mạng](../1-computer-fundamentals/network-fundamentals.md).
-- **Terminal cơ bản**: Nếu chưa quen lệnh terminal, xem [Dòng lệnh và Shell Script](./command-line-shell.md).
+- **Terminal cơ bản**: Nếu chưa quen lệnh terminal, xem [Dòng lệnh và Shell: Cơ bản về Terminal và Script](./command-line-shell.md).
 
 ---
 
-## 0. Mở đầu: `localhost:5173` hay gặp kia thực ra là gì?
+## 0. Mở đầu: `localhost:5173` hay gặp kia thực ra: Tổng quan
 
 <DevServerFlowDemo />
 
@@ -29,7 +29,7 @@ Hiểu ba việc này, bạn hiểu được 90% vấn đề mạng môi trườ
 
 ---
 
-## 1. Port là gì? (IP là tòa nhà, port là số phòng)
+## 1. Tổng quan về Port (IP là tòa nhà, port là số phòng)
 
 ### 1.1 Một phép ẩn dụ trực giác
 
@@ -66,7 +66,7 @@ Nhập số port hoặc tên service để tìm, nhấn bất kỳ dòng nào đ
 
 ---
 
-## 2. localhost là gì? (Tự tìm mình)
+## 2. Tổng quan về localhost (Tự tìm mình)
 
 ### 2.1 Khái niệm cốt lõi "loopback"
 
@@ -113,7 +113,7 @@ npm run dev -- --host 0.0.0.0
 
 ## 3. Xung đột port: Vấn đề phổ biến nhất môi trường phát triển
 
-### 3.1 Tại sao xung đột?
+### 3.1 Động lực của xung đột
 
 **Một port cùng thời điểm chỉ có thể được một chương trình nghe.** Giống một phòng chỉ ở được một hộ gia đình.
 
@@ -163,7 +163,7 @@ taskkill /PID <PID> /F
 
 ## 4. "Same-Origin Policy" và CORS trong phát triển
 
-### 4.1 "Origin" là gì?
+### 4.1 "Origin": Tổng quan
 
 Trình duyệt có cơ chế bảo mật gọi là **Same-Origin Policy**: chỉ khi **protocol, domain, port** hoàn toàn giống nhau mới tính là "cùng origin".
 
@@ -173,7 +173,7 @@ Trình duyệt có cơ chế bảo mật gọi là **Same-Origin Policy**: chỉ
 | `http://localhost:5173` | `http://localhost:3000` | ❌ Khác origin | **Port khác nhau** (5173 vs 3000) |
 | `http://localhost:5173` | `https://localhost:5173` | ❌ Khác origin | **Protocol khác nhau** (http vs https) |
 
-### 4.2 Tại sao tách frontend/backend chắc chắn gặp CORS?
+### 4.2 Động lực của tách frontend/backend chắc chắn gặp CORS
 
 Khi kiến trúc dự án:
 

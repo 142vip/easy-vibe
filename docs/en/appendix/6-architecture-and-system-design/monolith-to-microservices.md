@@ -1,4 +1,4 @@
-# The Evolution from Monolith to Microservices
+# An Introduction to Monolith-to-Microservices Evolution
 
 ::: tip Introduction
 **No architecture is "the best" — there is only "the best fit for the current stage."** Moving from monolith to microservices is not a single leap but a gradual evolution as business scale and team size grow. Splitting into microservices too early is just as dangerous as splitting too late.
@@ -47,7 +47,7 @@ Simply put: 3 teams building one system will end up with 3 services. The essence
 
 ---
 
-## 2. When Should You Split into Microservices?
+## 2. Criteria for Split into Microservices
 
 Not all systems need microservices. Splitting too early introduces unnecessary complexity.
 

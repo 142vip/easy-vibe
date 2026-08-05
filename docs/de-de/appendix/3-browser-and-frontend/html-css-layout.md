@@ -1,11 +1,11 @@
-# HTML / CSS-Layoutsystem
+# HTML/CSS-Layout: Gestaltungsgrundlagen
 ::: tip 🎯 Kernfrage
 **Wie werden Webseiten eigentlich erstellt? Warum enthalten manche Webseiten nur Text, während andere sich wie Anwendungen verhalten und interaktiv sind?** Diese Frage führt zu den drei Grundpfeilern der Webentwicklung und hilft dir, die Struktur hinter jeder Webseite zu verstehen.
 :::
 
 ---
 
-## 1. Was sind HTML, CSS und JavaScript?
+## 1. Was sind HTML, CSS und JavaScript
 
 ### 1.1 Von statischen Webseiten zu dynamischen Anwendungen
 
@@ -48,7 +48,7 @@ Moderne Webseiten sind jedoch völlig anders. Sie funktionieren wie **Desktop-An
 
 ## 2. HTML: Das Skelett der Webseite
 
-### 2.1 Warum brauchen wir HTML?
+### 2.1 Warum brauchen wir HTML
 
 Vor der Einführung von HTML bestanden die Inhalte im Internet nur aus **reinem Text**. So wie dieser Text hier – ohne Formatierung, ohne Hierarchie, ohne Links.
 
@@ -60,7 +60,7 @@ Was ist das Problem mit reinem Text?
 
 **HTML (HyperText Markup Language)** wurde genau dafür geschaffen. Es verwendet „Tags" (Markierungen), um die Bedeutung von Inhalten zu kennzeichnen, damit der Browser weiß, „was das ist".
 
-### 2.2 Wie sieht HTML-Code aus?
+### 2.2 Wie sieht HTML-Code aus
 
 Die Grundeinheit von HTML ist der „Tag". Tags werden in spitze Klammern `< >` gesetzt und treten meist paarweise auf:
 
@@ -79,7 +79,7 @@ Die Grundeinheit von HTML ist der „Tag". Tags werden in spitze Klammern `< >` 
 | **Attribut** | Zusätzliche Information im Tag | `href="url"`, `class="card"` |
 | **Verschachtelung** | Tags innerhalb von Tags | `<div><p>Text</p></div>` |
 
-### 2.3 Wie liest man HTML-Code?
+### 2.3 Wie liest man HTML-Code
 
 ::: tip 🎯 Für absolute Anfänger: Code lesen lernen
 
@@ -181,7 +181,7 @@ Viele Anfänger sind von den ganzen `<xxx>` überfordert. Dabei gibt es für HTM
 **Wann verwendet man `div`?** Wenn es keinen passenden semantischen Tag gibt. Zum Beispiel für einen rein dekorativen Container.
 :::
 
-### 2.5 Wie merkt man sich so viele HTML-Tags?
+### 2.5 Wie merkt man sich so viele HTML-Tags
 
 ::: tip 🎯 Anfängerfrage
 
@@ -247,7 +247,7 @@ Viele Anfänger sind von den ganzen `<xxx>` überfordert. Dabei gibt es für HTM
 
 **Merkhilfe**: div = Division (Bereich), span = Spanne. `div` teilt große Bereiche auf, `span` markiert Textfragmente.
 
-#### Was tun bei unbekannten Tags?
+#### Überblick über tun bei unbekannten Tags
 
 **Methode 1: Das englische Wort erraten**
 
@@ -279,7 +279,7 @@ Die [MDN HTML-Element-Referenz](https://developer.mozilla.org/de/docs/Web/HTML/E
 
 ## 3. CSS: Die Haut der Webseite
 
-### 3.1 Warum brauchen wir CSS?
+### 3.1 Warum brauchen wir CSS
 
 Stell dir vor, du ziehst in einen **Rohbau**: Wände, Fenster, Türen sind da, bewohnbar, aber:
 
@@ -295,7 +295,7 @@ CSS (Cascading Style Sheets) ist das „Renovierungsteam" der Webseite. Es verä
 - 🖼️ **Bilder aufhängen**: Rahmen, Schatten, abgerundete Ecken hinzufügen
 - 🪑 **Möbel aufstellen**: Layout, Abstände, Ausrichtung anpassen
 
-### 3.2 Wie sieht CSS-Code aus?
+### 3.2 Wie sieht CSS-Code aus
 
 CSS-Code hat ein festes Format:
 
@@ -321,7 +321,7 @@ Selektor {
 <link rel="stylesheet" href="styles.css" />
 ```
 
-### 3.3 Wie liest man CSS-Code?
+### 3.3 Wie liest man CSS-Code
 
 ::: tip 🎯 Für absolute Anfänger: CSS lesen lernen
 
@@ -381,7 +381,7 @@ p { color: red; }             /* Spezifität: 1 */
 
 **Inline-Styles** (im `style`-Attribut) haben die Spezifität 1000 – die höchste!
 
-### 3.5 Das Box-Modell: Warum stimmt die Breite nicht?
+### 3.5 Das Box-Modell: Motivation von stimmt die Breite nicht
 
 ::: tip 🎯 Echte Situation
 
@@ -415,7 +415,7 @@ Jedes HTML-Element wird in CSS als „Box" betrachtet, die aus vier Schichten be
 
 So ist `width: 200px` die endgültige Breite, und `padding` sowie `border` werden „hineingequetscht".
 
-### 3.6 Flexbox: Wie richtet man Elemente automatisch aus?
+### 3.6 Flexbox: Ansatz für richtet man Elemente automatisch aus
 
 Flexbox ist die am häufigsten verwendete Layout-Methode im modernen CSS. Es ordnet Elemente automatisch an und richtet sie aus – wie Bücher, die sich in einem Regal von selbst ausrichten.
 
@@ -447,7 +447,7 @@ Du hast ein Projekt geschrieben, die CSS-Datei ist 2000 Zeilen lang. Später wil
 **CSS-Präprozessoren** lösen genau diese Probleme. Sie machen CSS „programmierbar": mit Variablen, Verschachtelung und wiederverwendbarem Code.
 :::
 
-#### 3.7.1 Was sind CSS-Präprozessoren?
+#### 3.7.1 Was sind CSS-Präprozessoren
 
 **Einfach erklärt**: Ein Präprozessor ist eine Art „schlaueres CSS". Du schreibst Styles mit einer mächtigeren Syntax, und er **kompiliert** sie in normales CSS, das der Browser versteht.
 
@@ -614,7 +614,7 @@ $primary: #3b82f6;
 </TabItem>
 </Tabs>
 
-#### 3.7.4 Wie wählt man aus?
+#### 3.7.4 Wie wählt man aus
 
 | Situation | Empfehlung |
 |-----------|------------|
@@ -793,7 +793,7 @@ tailwind.css                # Basis-Styles-Einstieg
 | Vue + SCSS | In Komponenten + `styles/`-Shared-Dateien | Variablen zentral verwalten | Mixins zur Wiederverwendung |
 | Vue + Tailwind | Keine (in Klassennamen) | `tailwind.config.js` | Klassen-Kombination |
 
-### 3.8 Wie merkt man sich so viele CSS-Eigenschaften?
+### 3.8 Wie merkt man sich so viele CSS-Eigenschaften
 
 ::: tip 🎯 Anfängerfrage
 
@@ -912,7 +912,7 @@ transition: all 0.3s ease 0s;
 transform: translateX(10px) rotate(45deg) scale(1.1);
 ```
 
-#### Was tun bei unbekannten Eigenschaften?
+#### Überblick über tun bei unbekannten Eigenschaften
 
 **Methode 1: Das englische Wort erraten**
 
@@ -973,7 +973,7 @@ Andere Eigenschaften bei Bedarf nachschlagen – durch häufige Nutzung merkt ma
 
 ## 4. JavaScript: Das Gehirn der Webseite
 
-### 4.1 Warum brauchen wir JavaScript?
+### 4.1 Warum brauchen wir JavaScript
 
 Eine Webseite nur mit HTML + CSS ist wie eine **Schaufensterpuppe**:
 
@@ -989,7 +989,7 @@ Eine Webseite nur mit HTML + CSS ist wie eine **Schaufensterpuppe**:
 - ✅ Seite scrollen → mehr Inhalte werden geladen
 - ✅ Formular absenden → „Wird gesendet..." erscheint
 
-### 4.2 Wie sieht JavaScript-Code aus?
+### 4.2 Wie sieht JavaScript-Code aus
 
 **Fähigkeit 1: Daten merken** (Variablen)
 
@@ -1024,7 +1024,7 @@ document.getElementById('title').textContent = 'Neuer Titel'
 document.getElementById('box').style.background = 'red'
 ```
 
-### 4.3 Wie liest man JavaScript-Code?
+### 4.3 Wie liest man JavaScript-Code
 
 ::: tip 🎯 Für absolute Anfänger: JS-Code lesen lernen
 
@@ -1064,7 +1064,7 @@ parent.appendChild(child)                // Element hinzufügen
 ```
 :::
 
-### 4.4 DOM: Wie manipuliert JavaScript die Seite?
+### 4.4 DOM: Ansatz für manipuliert JavaScript die Seite
 
 Nachdem der Browser den HTML-Code gelesen hat, behandelt er ihn nicht als bloße Zeichenkette, sondern zeichnet ihn im Speicher als „Baum":
 
@@ -1125,7 +1125,7 @@ Genau deshalb wurden moderne Frameworks wie **Vue / React** entwickelt: Sie arbe
 
 **ECMAScript** ist die „Standard-Spezifikation" von JavaScript. Browser-Hersteller implementieren ihre JavaScript-Engines nach diesem Standard.
 
-#### Warum gibt es Versionsnummern?
+#### Motivation von gibt es Versionsnummern
 
 JavaScript ist nicht unveränderlich. Jedes Jahr kommen neue Funktionen hinzu und Probleme werden behoben. Die Versionsnummer sagt dir: „Welche Funktionen unterstützt dieser Browser?"
 
@@ -1281,7 +1281,7 @@ const streetName = user?.address?.street ?? 'Unbekannt'
 
 ### 4.6 TypeScript: Typsicherheit für JavaScript
 
-#### Warum brauchen wir TypeScript?
+#### Motivation von brauchen wir TypeScript
 
 **Szenario 1: Unklare Funktionsparametertypen**
 
@@ -1541,7 +1541,7 @@ npm run build
 
 ---
 
-## 6. Was tun bei unbekanntem Code?
+## 6. Was tun bei unbekanntem Code
 
 ### 6.1 KI fragen
 

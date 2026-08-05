@@ -16,7 +16,7 @@ Nếu ví hệ thống backend như một tòa nhà:
 - **Xác thực (Authentication)**: xác nhận "bạn là ai" (xác minh chứng minh thư/thẻ ra vào).
 - **Ủy quyền (Authorization)**: xác nhận "bạn có thể đi đâu" (VIP được vào phòng VIP, người dùng thường thì không).
 
-### 0.1 Tại sao cần xác thực?
+### 0.1 Động lực của cần xác thực
 
 Chỉ có một lý do: **bảo vệ tài nguyên**.
 
@@ -38,7 +38,7 @@ Hãy cùng trải nghiệm một demo đăng nhập thực tế để hiểu cá
 
 ## 1. Khái niệm cơ bản: Xác thực vs Ủy quyền
 
-### 1.1 Xác thực (Authentication): bạn là ai?
+### 1.1 Xác thực (Authentication): bạn là ai
 
 Xác nhận danh tính của người dùng.
 
@@ -46,7 +46,7 @@ Xác nhận danh tính của người dùng.
 - _Đầu ra_: một Token đại diện cho "bạn".
 - _Tên viết tắt_: **AuthN**
 
-### 1.2 Ủy quyền (Authorization): bạn có thể làm gì?
+### 1.2 Ủy quyền (Authorization): bạn có thể làm gì
 
 Xác nhận người dùng có những quyền gì.
 

@@ -1,4 +1,4 @@
-# Suchmaschinen-Prinzipien
+# Suchmaschinen: Indizierung und Abfrage
 
 ::: tip Vorwort
 **Du suchst auf Taobao nach "rotes Kleid" und findest in 0,1 Sekunden aus Milliarden von Produkten die relevantesten Ergebnisse — wie funktioniert das?** Suchmaschinen sind eine der wichtigsten Infrastrukturen des Internets. Von Google bis zur internen Suche von E-Commerce-Plattformen — das Kernprinzip ist immer dasselbe: Invertierter Index + Relevanz-Ranking.
@@ -24,7 +24,7 @@ Nach Abschluss dieses Kapitels wirst du Folgendes erhalten:
 
 ---
 
-## 0. Übersicht: Was ist die Essenz der Suche?
+## 0. Übersicht: Überblick über ist die Essenz der Suche
 
 Die Essenz der Suche ist ein **Information Retrieval**-Problem: Zu einer gegebenen Anfrage die relevantesten Ergebnisse aus einer riesigen Dokumentmenge finden und nach Relevanz sortiert zurückgeben.
 
@@ -81,7 +81,7 @@ Segmentierung ist nur ein Schritt der Textanalyse. Die vollständige Pipeline um
 
 ---
 
-## 3. Relevanz-Ranking: Welches Ergebnis ist am "relevantesten"?
+## 3. Relevanz-Ranking: Welches Ergebnis ist am "relevantesten"
 
 Die passenden Dokumente zu finden ist nur der erste Schritt. Noch wichtiger ist die **Sortierung** — die relevantesten Ergebnisse oben.
 

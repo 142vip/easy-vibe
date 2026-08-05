@@ -1,4 +1,4 @@
-# 实时通信机制（Polling / SSE / WebSocket）
+# 实时通信原理：Polling/SSE/WebSocket
 
 ::: tip 核心导读
 **浏览器如何实现数据的实时更新？** 

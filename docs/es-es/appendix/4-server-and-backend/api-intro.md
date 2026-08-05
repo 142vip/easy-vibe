@@ -1,4 +1,4 @@
-# Introducción a las API: entender el "diálogo entre programas" desde cero
+# Introducción a las API: comprensión del diálogo entre programas desde cero
 
 ::: tip 🎯 Pregunta clave
 **¿Qué es una API?** Es como preguntar: ¿cómo se diseña el menú de un restaurante para que el cliente lo entienda de un vistazo? ¿Cómo toma nota el camarero sin equivocarse? Las API resuelven el problema de "cómo dialogan los programas entre sí". Desde el primer día que escribes código estás usando APIs, aunque quizás no te hayas dado cuenta.
@@ -106,7 +106,7 @@ Al enfrentarse a diferentes tipos de documentación de API, los puntos de atenci
 
 ---
 
-## 3. Métodos HTTP: ¿estás "preguntando" o "haciendo"?
+## 3. Métodos HTTP: estás "preguntando" o "haciendo"
 
 Al llamar a una Web API, necesitas decirle al servidor qué quieres hacer. De ahí nacen los métodos HTTP.
 
@@ -143,7 +143,7 @@ Al llamar a una Web API, necesitas decirle al servidor qué quieres hacer. De ah
 
 ---
 
-## 4. Códigos de estado HTTP: ¿qué te está diciendo el servidor?
+## 4. Códigos de estado HTTP: qué te está diciendo el servidor
 
 Cuando el servidor responde, primero devuelve un código de estado que indica si la petición tuvo éxito.
 
@@ -170,7 +170,7 @@ Cuando el servidor responde, primero devuelve un código de estado que indica si
 
 ---
 
-## 5. HTTP vs SDK: ¿ir tú mismo o que te lo gestione un asistente?
+## 5. HTTP vs SDK: ir tú mismo o que te lo gestione un asistente
 
 ### 5.1 Comparación de los dos métodos de llamada
 
@@ -181,7 +181,7 @@ Cuando el servidor responde, primero devuelve un código de estado que indica si
 | **Desventajas** | ✗ Necesitas gestionar todos los detalles<br>✗ Código extenso y propenso a errores | ✗ Necesita instalar dependencias<br>✗ Puede haber problemas de versión |
 | **Ejemplo de código** | `requests.post(url, json=..., headers={...})` | `client.chat.completions.create(...)` |
 
-### 5.2 ¿Cómo elegir?
+### 5.2 Enfoque de elegir
 
 | Escenario | Recomendación | Motivo |
 | :--- | :--- | :--- |
@@ -196,7 +196,7 @@ Cuando el servidor responde, primero devuelve un código de estado que indica si
 
 ---
 
-## 6. ¿Cómo leer la documentación de una API?
+## 6. Enfoque de leer la documentación de una API
 
 La documentación de una API es como una combinación de manual de instrucciones y menú. No necesitas leerla de principio a fin, solo aprender a "consultar el diccionario".
 

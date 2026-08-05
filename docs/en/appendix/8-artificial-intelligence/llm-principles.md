@@ -1,4 +1,4 @@
-# How Large Language Models Work
+# Principles of Large Language Model Operation
 > 💡 **Learning Guide**: This chapter requires no programming background. Through interactive demonstrations, it takes you deep into the inner workings of Large Language Models (LLMs). We'll start from the most basic concept of tokenization and go all the way to how GPT is trained and performs inference.
 
 <LlmQuickStartDemo />
@@ -25,7 +25,7 @@ This tutorial will take you from zero, step by step, through the construction of
 A computer cannot read the word "hamburger" — it only understands numbers.
 So our first task is: **break text into the smallest units a computer can process.**
 
-### 1.1 What Is Tokenization?
+### 1.1 Overview of Tokenization
 
 Tokenization is the process of splitting a sentence into individual "word units" (Tokens).
 
@@ -80,7 +80,7 @@ index=171,   string='！'
 
 ---
 
-## 2. The Core Challenge: How to Make Computers "Compute" Language?
+## 2. The Core Challenge: Approach to making Computers "Compute" Language
 
 Our task is to process language. But computers only understand numbers.
 The most direct idea: assign each word an ID number.
@@ -88,7 +88,7 @@ The most direct idea: assign each word an ID number.
 - apple -> ID 10
 - banana -> ID 20
 
-### 2.1 Why Not Just Use Simple IDs?
+### 2.1 Motivation for Noting Just Use Simple IDs
 
 If we only use IDs, the computer would think "10" and "20" are just two unrelated numbers.
 Moreover, if the vocabulary has 100,000 words, we might need an array of length 100,000 to represent a single word (One-Hot encoding), where 99,999 positions are 0 and only one position is 1.
@@ -112,7 +112,7 @@ Instead of using a long 0/1 array, it uses a shorter array filled with decimals 
 
 Having solved the problem of representing "a single word," we now need to solve the problem of representing "a sentence."
 
-### 3.1 Why Matrices?
+### 3.1 Motivation for Matricesing
 
 Because a sentence contains many words.
 
@@ -136,7 +136,7 @@ Let's review how data flows:
 
 ---
 
-## 3.5 Interlude: What Exactly Is a "Model"?
+## 3.5 Interlude: What Exactly Overview of a "Model"
 
 Before diving into specific architectures, let's understand the term "model" in plain terms.
 
@@ -308,7 +308,7 @@ To make it a polite, safe, and reliable assistant like ChatGPT, two final polish
 As technology advances, we've found that relying solely on "predicting the next token" sometimes leads to silly mistakes, especially with math and logic problems.
 Thus, a new generation of **Thinking Models** (such as OpenAI o1, DeepSeek-R1) was born.
 
-### 7.1 What Is "Thinking"? (Thinking Models)
+### 7.1 Overview of "Thinking" (Thinking Models)
 
 When humans answer complex questions (like "which is larger, 9.11 or 9.9?"), we don't blurt out an answer — we think in our heads first.
 A Thinking Model is one that has learned this **slow thinking (System 2)** capability.
@@ -392,7 +392,7 @@ Traditional Transformers (like GPT-4) use **standard attention mechanisms**, who
 
 To solve this, models like MiniMax (abab series) and RWKV adopted **Linear Attention**.
 
-### Why Is One "Web-like" and the Other "Linear"?
+### Motivation for the "Web-like" and the Other "Linear"
 
 The fundamental difference is: **do you choose to "keep all original words," or do you choose to "summarize as you go"?**
 

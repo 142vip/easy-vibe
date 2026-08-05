@@ -1,4 +1,4 @@
-# Ingénierie de Contexte
+# Introduction : Ingénierie de contexte pour LLM
 > 💡 **Guide d'apprentissage** : L'ingénierie de prompt résout le problème de « comment s'exprimer clairement », tandis que l'ingénierie de contexte résout celui de « faire en sorte que le modèle voie les bonnes informations au bon moment ». Ce chapitre s'articule autour d'une question : **dans une fenêtre de contexte limitée, comment faire en sorte que le modèle vous comprenne sans faire exploser votre budget ?**
 
 Avant de commencer, nous vous recommandons de consolider deux bases :
@@ -8,7 +8,7 @@ Avant de commencer, nous vous recommandons de consolider deux bases :
 
 ---
 
-## 0. Introduction : Pourquoi le modèle oublie-t-il au fil de la conversation et devient-il de plus en plus cher ?
+## 0. Introduction : Pourquoi le modèle oublie-t-il au fil de la conversation et devient-il de plus en plus cher
 
 <AgentContextFlow />
 
@@ -27,7 +27,7 @@ Face à ces défis, se contenter de « bien rédiger ses prompts » ne suffit pl
 
 ---
 
-## 1. Qu'est-ce que l'« Ingénierie de Contexte » ? (Définition + Scénarios)
+## 1. Qu'est-ce que l'« Ingénierie de Contexte » (Définition + Scénarios)
 
 Commençons par une définition opérationnelle succincte, puis examinons quelques scénarios typiques.
 
@@ -55,7 +55,7 @@ Cela crée une contradiction fondamentale :
 
 L'équipe Manus a traversé plusieurs refontes d'architecture avant de comprendre une vérité : **le contexte ne se « rédige » pas, il se « conçoit »**.
 
-### 2.1 Que nous apprennent ces quatre refontes ?
+### 2.1 Que nous apprennent ces quatre refontes
 
 Ji Yichao, co-fondateur de Manus, a partagé leur historique d'erreurs :
 
@@ -68,7 +68,7 @@ Ji Yichao, co-fondateur de Manus, a partagé leur historique d'erreurs :
 
 **Leçon fondamentale** : **Il ne s'agit pas de se souvenir du maximum, mais de se souvenir intelligemment**.
 
-### 2.2 À quoi ressemble vraiment la « mémoire » de l'IA ?
+### 2.2 À quoi ressemble vraiment la « mémoire » de l'IA
 
 **Mémoire d'ordinateur traditionnelle** = **Disque dur** :
 - Grande capacité : peut stocker de grandes quantités de données à long terme ;
@@ -84,9 +84,9 @@ Ji Yichao, co-fondateur de Manus, a partagé leur historique d'erreurs :
 
 ---
 
-## 3. Première étape : Comprendre les coûts - Où va chaque centime ?
+## 3. Première étape : Comprendre les coûts - Où va chaque centime
 
-### 3.1 Pourquoi commencer par les coûts ?
+### 3.1 Pourquoi commencer par les coûts
 
 Examinons comment votre argent est dépensé lors d'une conversation IA typique :
 
@@ -99,7 +99,7 @@ Examinons comment votre argent est dépensé lors d'une conversation IA typique 
 
 **Constat surprenant** : **70 % de l'argent est dépensé pour faire relire à l'IA ce que vous avez déjà dit !**
 
-### 3.2 Qu'est-ce que le KV Cache ? (Réutilisation du préfixe)
+### 3.2 Qu'est-ce que le KV Cache (Réutilisation du préfixe)
 
 Avant de parler de prix, comprenons un concept technique clé : le **KV Cache (Cache Clé-Valeur)**.
 Ne vous laissez pas intimider par ce terme technique, c'est simplement la « fiche de mémoire à court terme » de l'IA.
@@ -162,7 +162,7 @@ Observez : quand le premier bloc devient « déjà appris », qu'arrive-t-il au 
 
 Au fur et à mesure que la conversation s'allonge, le premier problème qui survient est : **que faire quand la fenêtre est pleine ?**
 
-### 4.1 Pourquoi le « premier entré, premier sorti » pose-t-il problème ?
+### 4.1 Pourquoi le « premier entré, premier sorti » pose-t-il problème
 
 La gestion de mémoire la plus simple est la **fenêtre glissante (Sliding Window)** : **ce qui est nouveau entre, ce qui est ancien sort**.
 Cela semble équitable, mais dans les tâches réelles, c'est une catastrophe.
@@ -180,7 +180,7 @@ Historique de conversation :
 
 **Le fond du problème** : cette stratégie traite de la même manière les **informations importantes** (identité, stack technique) et le **bruit** (« OK », « Bien reçu »), tout est expulsé ensemble.
 
-### 4.2 « Amnésie du milieu » - Pourquoi l'IA ne voit-elle jamais les informations clés ?
+### 4.2 « Amnésie du milieu » - Pourquoi l'IA ne voit-elle jamais les informations clés
 
 En plus d'« oublier vite », l'IA a une autre bizarrerie : **elle « rate » aussi des informations**.
 Des recherches montrent que : **l'IA est la plus sensible au début et à la fin, et le milieu est le plus facilement ignoré**. C'est le célèbre phénomène de **Lost in the Middle (perte au milieu)**.
@@ -202,12 +202,12 @@ Mémoire :  Élevée → Faible → Élevée
 
 ---
 
-## 5. Troisième étape : Rétention sélective - Comment « épingler » les informations clés ?
+## 5. Troisième étape : Rétention sélective - Comment « épingler » les informations clés
 
 Puisque le « premier entré, premier sorti » n'est pas fiable, que faire ?
 La réponse de Manus : **établir une « hiérarchie de l'information »**.
 
-### 5.1 Pourquoi classer l'information par niveau ?
+### 5.1 Pourquoi classer l'information par niveau
 
 Ne traitez plus chaque information de manière égale, décidez de leur sort en fonction de leur importance :
 
@@ -239,7 +239,7 @@ Observez : lorsque vous continuez la conversation, les informations épinglées 
 
 Parfois, le volume d'informations à traiter est trop important (des centaines de pages de documentation technique), le tableau noir ne suffit plus. Il faut alors un cerveau externe — le **RAG (Retrieval-Augmented Generation, Génération Augmentée par Récupération)**.
 
-### 6.1 Pourquoi le « tableau noir » ne suffit-il pas ?
+### 6.1 Pourquoi le « tableau noir » ne suffit-il pas
 
 Face à une documentation technique de plusieurs millions de mots, Manus a comparé deux approches :
 
@@ -266,12 +266,12 @@ Saisissez une question dans la barre de recherche (par exemple « Comment réini
 
 ---
 
-## 7. Cinquième étape : Compression - Comment écrire plus dense sur le « tableau noir » ?
+## 7. Cinquième étape : Compression - Comment écrire plus dense sur le « tableau noir »
 
 Si toutes les informations sont importantes, qu'on ne peut vraiment pas les supprimer et qu'on ne veut pas chercher ailleurs ?
 Il ne reste qu'une solution : **écrire plus petit** — c'est la **compression de contexte**.
 
-### 7.1 Quand a-t-on besoin de « condenser » ?
+### 7.1 Quand a-t-on besoin de « condenser »
 *   Les documents récupérés sont trop longs (> 2000 tokens).
 *   L'historique de conversation est trop verbeux (occupe > 80 % du tableau noir).
 *   On a besoin d'une réponse rapide, on ne veut pas que l'IA lise un roman.
@@ -310,7 +310,7 @@ Cliquez sur « Commencer la construction » et observez comment nous édifions c
 
 <MemoryPalaceDemo />
 
-### 8.2 Pourquoi cette conception est-elle la plus performante ?
+### 8.2 Pourquoi cette conception est-elle la plus performante
 
 La philosophie de conception de ce palais vise à résoudre trois contradictions :
 

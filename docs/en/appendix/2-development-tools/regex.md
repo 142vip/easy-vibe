@@ -1,10 +1,10 @@
-# Regular Expressions
+# Fundamentals of Regular Expressions
 
 > 💡 **Learning Guide**: Regular expressions look like gibberish? They're actually just a mini "language for describing text patterns." This chapter takes you from zero to understanding the core ideas of regex, and teaches you to solve 80% of text search and validation problems with just a few key symbols.
 
 ---
 
-## 0. Why Do You Need Regular Expressions?
+## 0. Motivation for needing Regular Expressions
 
 Imagine these scenarios:
 - Finding all IP addresses in a large log file
@@ -174,5 +174,5 @@ The default is greedy mode. Add `?` after a quantifier to switch to lazy mode. M
 :::
 
 **Next Steps**:
-- [Environment Variables and PATH](./environment-path) - Understanding system configuration
+- [An Introduction to Environment Variables and PATH](./environment-path) - Understanding system configuration
 - [SSH and Key Authentication](./ssh-authentication) - Secure remote server connections

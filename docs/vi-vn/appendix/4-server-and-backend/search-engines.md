@@ -24,7 +24,7 @@ Sau khi học xong chương này, bạn sẽ đạt được:
 
 ---
 
-## 0. Toàn cảnh: bản chất của tìm kiếm là gì?
+## 0. Toàn cảnh: bản chất của tìm kiếm: Tổng quan
 
 Bản chất của tìm kiếm là một bài toán **truy xuất thông tin (Information Retrieval)**: với một truy vấn cho trước, tìm ra kết quả phù hợp nhất từ khối lượng tài liệu khổng lồ, và trả về theo thứ tự độ liên quan.
 
@@ -81,7 +81,7 @@ Phân tách từ chỉ là một bước trong phân tích văn bản, pipeline 
 
 ---
 
-## 3. Sắp xếp theo độ liên quan: kết quả nào "liên quan" nhất?
+## 3. Sắp xếp theo độ liên quan: kết quả nào "liên quan" nhất
 
 Tìm thấy tài liệu phù hợp mới chỉ là bước đầu, quan trọng hơn là **sắp xếp** -- đặt kết quả phù hợp nhất lên đầu.
 

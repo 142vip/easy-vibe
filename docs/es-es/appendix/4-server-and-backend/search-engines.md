@@ -24,7 +24,7 @@ Al terminar este capítulo, habrás aprendido:
 
 ---
 
-## 0. Panorama general: ¿cuál es la esencia de la búsqueda?
+## 0. Panorama general: Selección de la esencia de la búsqueda
 
 La esencia de la búsqueda es un problema de **recuperación de información (Information Retrieval)**: dado un query, encontrar los documentos más relevantes entre una enorme colección y devolverlos ordenados por relevancia.
 
@@ -81,7 +81,7 @@ La tokenización es solo un paso del análisis de texto. El pipeline completo in
 
 ---
 
-## 3. Ordenación por relevancia: ¿qué resultado es el más "relevante"?
+## 3. Ordenación por relevancia: qué resultado es el más "relevante"
 
 Encontrar los documentos coincidentes es solo el primer paso. Lo más importante es la **ordenación**: colocar los resultados más relevantes al principio.
 

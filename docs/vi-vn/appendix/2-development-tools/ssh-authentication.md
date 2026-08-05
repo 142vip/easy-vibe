@@ -14,7 +14,7 @@
 
 ---
 
-## 1. Mật khẩu vs Khóa: Tại sao khóa tốt hơn?
+## 1. Mật khẩu vs Khóa: Động lực của khóa tốt hơn
 
 👇 Thử click: So sánh sự khác biệt giữa đăng nhập bằng mật khẩu và bằng khóa
 
@@ -135,4 +135,4 @@ Kết quả sau cấu hình:
 
 **Học tiếp**:
 - [Port và localhost](./ports-localhost) - Hiểu nền tảng kết nối mạng
-- [Biến môi trường và PATH](./environment-path) - Hiểu cấu hình hệ thống
+- [Biến môi trường và PATH: Cơ bản về cấu hình môi trường](./environment-path) - Hiểu cấu hình hệ thống

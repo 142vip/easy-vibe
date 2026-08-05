@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Tại sao cần "component hóa và quản lý state"?
+## 1. Động lực của component hóa
 
 ### 1.1 Từ xưởng nhỏ đến nhà máy: Sự tiến hóa của phát triển frontend
 
@@ -44,7 +44,7 @@ Trước khi tiếp tục, hãy giải thích hai thuật ngữ cốt lõi:
 </div>
 </div>
 
-### 1.2 Một câu chuyện thực tế: Tại sao bạn cần hiểu về quản lý state
+### 1.2 Trường hợp: Tại sao bạn cần hiểu về quản lý state
 
 Bạn có thể nói: "Tôi đang dùng Vue/React mà? Chúng chẳng phải đã có quản lý state rồi sao?" Để tôi kể một câu chuyện thực tế, bạn sẽ hiểu tại sao việc hiểu một cách có hệ thống về component hóa và quản lý state lại quan trọng đến vậy.
 
@@ -118,14 +118,14 @@ Trong các framework frontend (Vue, React), **Props và Events là cách chuẩn
 ```vue
 <!-- Parent.vue - Component cha -->
 <template>
-  <div>
-    <!-- Như đưa thực đơn cho nhân viên, truyền dữ liệu qua props -->
-    <Child
-      :user-name="currentUser.name"
-      :is-admin="currentUser.isAdmin"
-      @delete-user="handleDelete"
-    />
-  </div>
+ <div>
+ <!-- Như đưa thực đơn cho nhân viên, truyền dữ liệu qua props -->
+ <Child
+ :user-name="currentUser.name"
+ :is-admin="currentUser.isAdmin"
+ @delete-user="handleDelete"
+ />
+ </div>
 </template>
 
 <script setup>
@@ -133,13 +133,13 @@ import { ref } from 'vue'
 import Child from './Child.vue'
 
 const currentUser = ref({
-  name: 'Trương Tam',
-  isAdmin: true
+ name: 'Trương Tam',
+ isAdmin: true
 })
 
 const handleDelete = (userId) => {
-  console.log('Xóa người dùng:', userId)
-  // Xử lý logic xóa
+ console.log('Xóa người dùng:', userId)
+ // Xử lý logic xóa
 }
 </script>
 ```
@@ -147,26 +147,26 @@ const handleDelete = (userId) => {
 ```vue
 <!-- Child.vue - Component con -->
 <template>
-  <div class="user-card">
-    <h3>{{ userName }}</h3>
-    <span v-if="isAdmin" class="badge">Quản trị viên</span>
-    <button @click="requestDelete">Xóa người dùng</button>
-  </div>
+ <div class="user-card">
+ <h3>{{ userName }}</h3>
+ <span v-if="isAdmin" class="badge">Quản trị viên</span>
+ <button @click="requestDelete">Xóa người dùng</button>
+ </div>
 </template>
 
 <script setup>
 // Nhận dữ liệu từ component cha
 const props = defineProps({
-  userName: { type: String, required: true },
-  isAdmin: { type: Boolean, default: false }
+ userName: { type: String, required: true },
+ isAdmin: { type: Boolean, default: false }
 })
 
 // Định nghĩa sự kiện có thể kích hoạt
 const emit = defineEmits(['delete-user'])
 
 const requestDelete = () => {
-  // Thông báo cho component cha qua sự kiện
-  emit('delete-user', props.userName)
+ // Thông báo cho component cha qua sự kiện
+ emit('delete-user', props.userName)
 }
 </script>
 ```
@@ -182,7 +182,7 @@ const requestDelete = () => {
 
 <PropsFlowDemo />
 
-### 2.3 Luồng dữ liệu một chiều: Tại sao không thể trực tiếp sửa props?
+### 2.3 Luồng dữ liệu một chiều: Động lực của luồng dữ liệu một chiều
 
 Nhiều người mới học sẽ mắc một lỗi: trực tiếp sửa giá trị của props trong component con.
 
@@ -190,11 +190,11 @@ Nhiều người mới học sẽ mắc một lỗi: trực tiếp sửa giá tr
 <!-- ❌ Cách làm sai -->
 <script setup>
 const props = defineProps({
-  count: { type: Number, default: 0 }
+ count: { type: Number, default: 0 }
 })
 
 // Trực tiếp sửa props - điều này bị cấm!
-props.count = 10  // Sẽ báo lỗi
+props.count = 10 // Sẽ báo lỗi
 </script>
 ```
 
@@ -206,14 +206,14 @@ Hãy tưởng tượng: bạn mượn một cuốn sách từ thư viện (props
 <!-- ✅ Cách làm đúng -->
 <script setup>
 const props = defineProps({
-  count: { type: Number, default: 0 }
+ count: { type: Number, default: 0 }
 })
 
 const emit = defineEmits(['update-count'])
 
 // Yêu cầu component cha sửa qua sự kiện
 const increment = () => {
-  emit('update-count', props.count + 1)
+ emit('update-count', props.count + 1)
 }
 </script>
 ```
@@ -262,46 +262,46 @@ Tại sao gọi là "truyền tự do"? Bởi vì giai đoạn này không có b
 ```javascript
 // Component trang chi tiết sản phẩm
 export default {
-  data() {
-    return {
-      localCart: []  // Tự duy trì một bản dữ liệu giỏ hàng
-    }
-  },
-  methods: {
-    addToCart(product) {
-      this.localCart.push(product)
-      // Cố gắng đồng bộ sang component khác
-      window.cart = this.localCart  // ❌ Biến toàn cục!
-    }
-  }
+ data() {
+ return {
+ localCart: [] // Tự duy trì một bản dữ liệu giỏ hàng
+ }
+ },
+ methods: {
+ addToCart(product) {
+ this.localCart.push(product)
+ // Cố gắng đồng bộ sang component khác
+ window.cart = this.localCart // ❌ Biến toàn cục!
+ }
+ }
 }
 
 // Component trang giỏ hàng
 export default {
-  data() {
-    return {
-      cartItems: []  // Lại một bản dữ liệu giỏ hàng nữa
-    }
-  },
-  mounted() {
-    // Cố gắng đọc từ biến toàn cục
-    this.cartItems = window.cart || []  // ❌ Không đáng tin cậy!
-  }
+ data() {
+ return {
+ cartItems: [] // Lại một bản dữ liệu giỏ hàng nữa
+ }
+ },
+ mounted() {
+ // Cố gắng đọc từ biến toàn cục
+ this.cartItems = window.cart || [] // ❌ Không đáng tin cậy!
+ }
 }
 
 // Component header navigation
 export default {
-  data() {
-    return {
-      cartCount: 0  // Còn bản dữ liệu thứ ba!
-    }
-  },
-  mounted() {
-    // Polling kiểm tra thay đổi (thật vô lý)
-    setInterval(() => {
-      this.cartCount = window.cart?.length || 0
-    }, 1000)  // ❌ Hiệu năng kém!
-  }
+ data() {
+ return {
+ cartCount: 0 // Còn bản dữ liệu thứ ba!
+ }
+ },
+ mounted() {
+ // Polling kiểm tra thay đổi (thật vô lý)
+ setInterval(() => {
+ this.cartCount = window.cart?.length || 0
+ }, 1000) // ❌ Hiệu năng kém!
+ }
 }
 ```
 
@@ -318,10 +318,10 @@ Sự hỗn loạn của truyền tự do khiến team nhận ra: **chúng ta c�
 ```vue
 <!-- Component tổ tiên: App.vue -->
 <template>
-  <div class="app">
-    <!-- Truyền thông tin người dùng qua từng tầng -->
-    <Layout :user-name="userName" />
-  </div>
+ <div class="app">
+ <!-- Truyền thông tin người dùng qua từng tầng -->
+ <Layout :user-name="userName" />
+ </div>
 </template>
 
 <script setup>
@@ -335,17 +335,17 @@ const userName = ref('Trương Tam')
 ```vue
 <!-- Tầng trung gian: Layout.vue -->
 <template>
-  <div class="layout">
-    <Header :user-name="userName" />  <!-- Chỉ truyền, không dùng -->
-    <Main>
-      <Page :user-name="userName" />  <!-- Chỉ truyền, không dùng -->
-    </Main>
-  </div>
+ <div class="layout">
+ <Header :user-name="userName" /> <!-- Chỉ truyền, không dùng -->
+ <Main>
+ <Page :user-name="userName" /> <!-- Chỉ truyền, không dùng -->
+ </Main>
+ </div>
 </template>
 
 <script setup>
 const props = defineProps({
-  userName: String
+ userName: String
 })
 </script>
 ```
@@ -353,14 +353,14 @@ const props = defineProps({
 ```vue
 <!-- Nơi thực sự cần: Header.vue -->
 <template>
-  <header>
-    <span>{{ userName }}</span>  <!-- Cuối cùng cũng dùng đến -->
-  </header>
+ <header>
+ <span>{{ userName }}</span> <!-- Cuối cùng cũng dùng đến -->
+ </header>
 </template>
 
 <script setup>
 const props = defineProps({
-  userName: String
+ userName: String
 })
 </script>
 ```
@@ -387,29 +387,29 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 
 export const useCartStore = defineStore('cart', () => {
-  // Tất cả dữ liệu giỏ hàng tập trung ở đây
-  const items = ref([])
+ // Tất cả dữ liệu giỏ hàng tập trung ở đây
+ const items = ref([])
 
-  // Computed property: số lượng sản phẩm
-  const itemCount = computed(() =>
-    items.value.reduce((sum, item) => sum + item.quantity, 0)
-  )
+ // Computed property: số lượng sản phẩm
+ const itemCount = computed(() =>
+ items.value.reduce((sum, item) => sum + item.quantity, 0)
+ )
 
-  // Method: thêm sản phẩm
-  const addItem = (product) => {
-    const existing = items.value.find(item => item.id === product.id)
-    if (existing) {
-      existing.quantity++
-    } else {
-      items.value.push({ ...product, quantity: 1 })
-    }
-  }
+ // Method: thêm sản phẩm
+ const addItem = (product) => {
+ const existing = items.value.find(item => item.id === product.id)
+ if (existing) {
+ existing.quantity++
+ } else {
+ items.value.push({ ...product, quantity: 1 })
+ }
+ }
 
-  return {
-    items,
-    itemCount,
-    addItem
-  }
+ return {
+ items,
+ itemCount,
+ addItem
+ }
 })
 ```
 
@@ -421,7 +421,7 @@ import { useCartStore } from '@/stores/cart'
 const cart = useCartStore()
 
 const addToCart = (product) => {
-  cart.addItem(product)  // Gọi trực tiếp, không cần truyền từng tầng
+ cart.addItem(product) // Gọi trực tiếp, không cần truyền từng tầng
 }
 </script>
 ```
@@ -429,15 +429,15 @@ const addToCart = (product) => {
 ```vue
 <!-- Component header navigation -->
 <template>
-  <header>
-    <span>Giỏ hàng ({{ cart.itemCount }})</span>
-  </header>
+ <header>
+ <span>Giỏ hàng ({{ cart.itemCount }})</span>
+ </header>
 </template>
 
 <script setup>
 import { useCartStore } from '@/stores/cart'
 
-const cart = useCartStore()  // Đọc trực tiếp, tự động đồng bộ
+const cart = useCartStore() // Đọc trực tiếp, tự động đồng bộ
 </script>
 ```
 
@@ -456,26 +456,26 @@ Thư viện quản lý state tuy mạnh mẽ, nhưng cũng có vấn đề "dùn
 import { ref, computed } from 'vue'
 
 export function useCart() {
-  const items = ref([])
+ const items = ref([])
 
-  const itemCount = computed(() =>
-    items.value.reduce((sum, item) => sum + item.quantity, 0)
-  )
+ const itemCount = computed(() =>
+ items.value.reduce((sum, item) => sum + item.quantity, 0)
+ )
 
-  const addItem = (product) => {
-    const existing = items.value.find(item => item.id === product.id)
-    if (existing) {
-      existing.quantity++
-    } else {
-      items.value.push({ ...product, quantity: 1 })
-    }
-  }
+ const addItem = (product) => {
+ const existing = items.value.find(item => item.id === product.id)
+ if (existing) {
+ existing.quantity++
+ } else {
+ items.value.push({ ...product, quantity: 1 })
+ }
+ }
 
-  return {
-    items,
-    itemCount,
-    addItem
-  }
+ return {
+ items,
+ itemCount,
+ addItem
+ }
 }
 ```
 
@@ -551,36 +551,36 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 
 export const useUserStore = defineStore('user', () => {
-  // 1. State: lưu trữ dữ liệu
-  const userInfo = ref(null)
-  const isLoggedIn = computed(() => !!userInfo.value)
+ // 1. State: lưu trữ dữ liệu
+ const userInfo = ref(null)
+ const isLoggedIn = computed(() => !!userInfo.value)
 
-  // 2. Actions: phương thức sửa dữ liệu
-  const login = async (username, password) => {
-    const response = await fetch('/api/login', {
-      method: 'POST',
-      body: JSON.stringify({ username, password })
-    })
-    const user = await response.json()
-    userInfo.value = user  // Sửa trực tiếp, Pinia sẽ xử lý reactive
-  }
+ // 2. Actions: phương thức sửa dữ liệu
+ const login = async (username, password) => {
+ const response = await fetch('/api/login', {
+ method: 'POST',
+ body: JSON.stringify({ username, password })
+ })
+ const user = await response.json()
+ userInfo.value = user // Sửa trực tiếp, Pinia sẽ xử lý reactive
+ }
 
-  const logout = () => {
-    userInfo.value = null
-  }
+ const logout = () => {
+ userInfo.value = null
+ }
 
-  // 3. Getters: computed property
-  const displayName = computed(() => {
-    return userInfo.value?.name || 'Khách'
-  })
+ // 3. Getters: computed property
+ const displayName = computed(() => {
+ return userInfo.value?.name || 'Khách'
+ })
 
-  return {
-    userInfo,
-    isLoggedIn,
-    login,
-    logout,
-    displayName
-  }
+ return {
+ userInfo,
+ isLoggedIn,
+ login,
+ logout,
+ displayName
+ }
 })
 ```
 :::
@@ -589,11 +589,11 @@ export const useUserStore = defineStore('user', () => {
 
 ```vue
 <template>
-  <div class="user-panel">
-    <span v-if="user.isLoggedIn">Chào mừng, {{ user.displayName }}</span>
-    <button v-if="user.isLoggedIn" @click="user.logout">Đăng xuất</button>
-    <button v-else @click="showLoginDialog">Đăng nhập</button>
-  </div>
+ <div class="user-panel">
+ <span v-if="user.isLoggedIn">Chào mừng, {{ user.displayName }}</span>
+ <button v-if="user.isLoggedIn" @click="user.logout">Đăng xuất</button>
+ <button v-else @click="showLoginDialog">Đăng nhập</button>
+ </div>
 </template>
 
 <script setup>
@@ -603,7 +603,7 @@ import { useUserStore } from '@/stores/user'
 const user = useUserStore()
 
 const showLoginDialog = () => {
-  // Hiển thị hộp thoại đăng nhập...
+ // Hiển thị hộp thoại đăng nhập...
 }
 </script>
 ```
@@ -641,39 +641,39 @@ const TOGGLE_TODO = 'TOGGLE_TODO'
 
 // 2. Định nghĩa Action Creators
 const addTodo = (text) => ({
-  type: ADD_TODO,
-  payload: { id: Date.now(), text, completed: false }
+ type: ADD_TODO,
+ payload: { id: Date.now(), text, completed: false }
 })
 
 const toggleTodo = (id) => ({
-  type: TOGGLE_TODO,
-  payload: { id }
+ type: TOGGLE_TODO,
+ payload: { id }
 })
 
 // 3. Định nghĩa Reducer (pure function)
 const initialState = {
-  todos: []
+ todos: []
 }
 
 const todoReducer = (state = initialState, action) => {
-  switch (action.type) {
-    case ADD_TODO:
-      return {
-        ...state,
-        todos: [...state.todos, action.payload]
-      }
-    case TOGGLE_TODO:
-      return {
-        ...state,
-        todos: state.todos.map(todo =>
-          todo.id === action.payload.id
-            ? { ...todo, completed: !todo.completed }
-            : todo
-        )
-      }
-    default:
-      return state
-  }
+ switch (action.type) {
+ case ADD_TODO:
+ return {
+ ...state,
+ todos: [...state.todos, action.payload]
+ }
+ case TOGGLE_TODO:
+ return {
+ ...state,
+ todos: state.todos.map(todo =>
+ todo.id === action.payload.id
+ ? { ...todo, completed: !todo.completed }
+ : todo
+ )
+ }
+ default:
+ return state
+ }
 }
 
 // 4. Tạo Store
@@ -688,25 +688,25 @@ const store = createStore(todoReducer)
 import { useSelector, useDispatch } from 'react-redux'
 
 function TodoList() {
-  // Đọc state
-  const todos = useSelector(state => state.todos)
+ // Đọc state
+ const todos = useSelector(state => state.todos)
 
-  // Lấy hàm dispatch
-  const dispatch = useDispatch()
+ // Lấy hàm dispatch
+ const dispatch = useDispatch()
 
-  return (
-    <ul>
-      {todos.map(todo => (
-        <li
-          key={todo.id}
-          onClick={() => dispatch(toggleTodo(todo.id))}
-          style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
-        >
-          {todo.text}
-        </li>
-      ))}
-    </ul>
-  )
+ return (
+ <ul>
+ {todos.map(todo => (
+ <li
+ key={todo.id}
+ onClick={() => dispatch(toggleTodo(todo.id))}
+ style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+ >
+ {todo.text}
+ </li>
+ ))}
+ </ul>
+ )
 }
 ```
 
@@ -727,22 +727,22 @@ function TodoList() {
 
 ---
 
-## 5. Hướng dẫn thực chiến: Làm thế nào để thiết kế quản lý state?
+## 5. Hướng dẫn thực chiến: Làm thế nào để Hướng dẫn thực chiến quản lý state
 
 ::: tip 🤔 Khi nào cần thư viện quản lý state?
 Không phải dự án nào cũng cần thư viện quản lý state. Trước khi引入, hãy tự hỏi mình vài câu:
 
 1. **Có bao nhiêu component cần chia sẻ dữ liệu này?**
-   - Nếu chỉ 2-3 component, dùng props/events là đủ
-   - Nếu có 5+ component, cân nhắc thư viện quản lý state
+ - Nếu chỉ 2-3 component, dùng props/events là đủ
+ - Nếu có 5+ component, cân nhắc thư viện quản lý state
 
 2. **Dữ liệu này có thường xuyên thay đổi không?**
-   - Nếu gần như không đổi (như thông tin người dùng), dùng Provide/Inject
-   - Nếu thường xuyên thay đổi (như giỏ hàng), dùng thư viện quản lý state
+ - Nếu gần như không đổi (như thông tin người dùng), dùng Provide/Inject
+ - Nếu thường xuyên thay đổi (như giỏ hàng), dùng thư viện quản lý state
 
 3. **Quy mô team lớn cỡ nào?**
-   - Cá nhân hoặc team nhỏ: giải pháp đơn giản là được
-   - Team lớn: cần quy phạm nghiêm ngặt và công cụ debug mạnh mẽ
+ - Cá nhân hoặc team nhỏ: giải pháp đơn giản là được
+ - Team lớn: cần quy phạm nghiêm ngặt và công cụ debug mạnh mẽ
 
 **Hãy nhớ: bắt đầu từ đơn giản, nâng cấp theo nhu cầu.**
 :::
@@ -762,7 +762,7 @@ const CartPage = { items: [] }
 const Header = { count: 0 }
 
 // ✅ Đúng: Dữ liệu quản lý tập trung
-const cartStore = { items: [] }  // Nguồn dữ liệu duy nhất
+const cartStore = { items: [] } // Nguồn dữ liệu duy nhất
 ```
 
 **Nguyên tắc 2: Immutability**
@@ -784,12 +784,12 @@ State chia sẻ nên được đặt trong component tổ tiên chung gần nh�
 ```vue
 <!-- ❌ Sai: State ở trong component con -->
 <Parent>
-  <Child :data="childData" @update="childData = $event" />
+ <Child :data="childData" @update="childData = $event" />
 </Parent>
 
 <!-- ✅ Đúng: State ở trong component cha -->
 <Parent>
-  <Child :data="parentData" @update="parentData = $event" />
+ <Child :data="parentData" @update="parentData = $event" />
 </Parent>
 ```
 
@@ -813,109 +813,109 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 
 export const useCartStore = defineStore('cart', () => {
-  // ============ State ============
-  const items = ref([])  // Danh sách sản phẩm trong giỏ hàng
-  const selectedIds = ref([])  // ID sản phẩm đã chọn
+ // ============ State ============
+ const items = ref([]) // Danh sách sản phẩm trong giỏ hàng
+ const selectedIds = ref([]) // ID sản phẩm đã chọn
 
-  // Khôi phục dữ liệu từ localStorage
-  const initFromStorage = () => {
-    const stored = localStorage.getItem('cart')
-    if (stored) {
-      try {
-        const data = JSON.parse(stored)
-        items.value = data.items || []
-        selectedIds.value = data.selectedIds || []
-      } catch (e) {
-        console.error('Đọc dữ liệu giỏ hàng thất bại:', e)
-      }
-    }
-  }
+ // Khôi phục dữ liệu từ localStorage
+ const initFromStorage = () => {
+ const stored = localStorage.getItem('cart')
+ if (stored) {
+ try {
+ const data = JSON.parse(stored)
+ items.value = data.items || []
+ selectedIds.value = data.selectedIds || []
+ } catch (e) {
+ console.error('Đọc dữ liệu giỏ hàng thất bại:', e)
+ }
+ }
+ }
 
-  // Persist vào localStorage
-  const persist = () => {
-    localStorage.setItem('cart', JSON.stringify({
-      items: items.value,
-      selectedIds: selectedIds.value
-    }))
-  }
+ // Persist vào localStorage
+ const persist = () => {
+ localStorage.setItem('cart', JSON.stringify({
+ items: items.value,
+ selectedIds: selectedIds.value
+ }))
+ }
 
-  // ============ Getters (computed property) ============
-  const itemCount = computed(() =>
-    items.value.reduce((sum, item) => sum + item.quantity, 0)
-  )
+ // ============ Getters (computed property) ============
+ const itemCount = computed(() =>
+ items.value.reduce((sum, item) => sum + item.quantity, 0)
+ )
 
-  const totalPrice = computed(() =>
-    items.value.reduce((sum, item) => sum + item.price * item.quantity, 0)
-  )
+ const totalPrice = computed(() =>
+ items.value.reduce((sum, item) => sum + item.price * item.quantity, 0)
+ )
 
-  const selectedItems = computed(() =>
-    items.value.filter(item => selectedIds.value.includes(item.id))
-  )
+ const selectedItems = computed(() =>
+ items.value.filter(item => selectedIds.value.includes(item.id))
+ )
 
-  const selectedTotalPrice = computed(() =>
-    selectedItems.value.reduce((sum, item) => sum + item.price * item.quantity, 0)
-  )
+ const selectedTotalPrice = computed(() =>
+ selectedItems.value.reduce((sum, item) => sum + item.price * item.quantity, 0)
+ )
 
-  // ============ Actions (method) ============
-  const addItem = (product) => {
-    const existing = items.value.find(item => item.id === product.id)
-    if (existing) {
-      existing.quantity += product.quantity || 1
-    } else {
-      items.value.push({
-        ...product,
-        quantity: product.quantity || 1
-      })
-    }
-    persist()
-  }
+ // ============ Actions (method) ============
+ const addItem = (product) => {
+ const existing = items.value.find(item => item.id === product.id)
+ if (existing) {
+ existing.quantity += product.quantity || 1
+ } else {
+ items.value.push({
+ ...product,
+ quantity: product.quantity || 1
+ })
+ }
+ persist()
+ }
 
-  const updateQuantity = (productId, quantity) => {
-    const item = items.value.find(item => item.id === productId)
-    if (item) {
-      if (quantity <= 0) {
-        removeItem(productId)
-      } else {
-        item.quantity = quantity
-        persist()
-      }
-    }
-  }
+ const updateQuantity = (productId, quantity) => {
+ const item = items.value.find(item => item.id === productId)
+ if (item) {
+ if (quantity <= 0) {
+ removeItem(productId)
+ } else {
+ item.quantity = quantity
+ persist()
+ }
+ }
+ }
 
-  const removeItem = (productId) => {
-    items.value = items.value.filter(item => item.id !== productId)
-    selectedIds.value = selectedIds.value.filter(id => id !== productId)
-    persist()
-  }
+ const removeItem = (productId) => {
+ items.value = items.value.filter(item => item.id !== productId)
+ selectedIds.value = selectedIds.value.filter(id => id !== productId)
+ persist()
+ }
 
-  const toggleSelection = (productId) => {
-    const index = selectedIds.value.indexOf(productId)
-    if (index > -1) {
-      selectedIds.value.splice(index, 1)
-    } else {
-      selectedIds.value.push(productId)
-    }
-    persist()
-  }
+ const toggleSelection = (productId) => {
+ const index = selectedIds.value.indexOf(productId)
+ if (index > -1) {
+ selectedIds.value.splice(index, 1)
+ } else {
+ selectedIds.value.push(productId)
+ }
+ persist()
+ }
 
-  // Khởi tạo
-  initFromStorage()
+ // Khởi tạo
+ initFromStorage()
 
-  return {
-    // State
-    items,
-    selectedIds,
-    // Getters
-    itemCount,
-    totalPrice,
-    selectedItems,
-    selectedTotalPrice,
-    // Actions
-    addItem,
-    updateQuantity,
-    removeItem,
-    toggleSelection
-  }
+ return {
+ // State
+ items,
+ selectedIds,
+ // Getters
+ itemCount,
+ totalPrice,
+ selectedItems,
+ selectedTotalPrice,
+ // Actions
+ addItem,
+ updateQuantity,
+ removeItem,
+ toggleSelection
+ }
 })
 ```
 
@@ -924,28 +924,28 @@ export const useCartStore = defineStore('cart', () => {
 ```vue
 <!-- Trang chi tiết sản phẩm: ProductDetail.vue -->
 <template>
-  <div class="product-detail">
-    <h2>{{ product.name }}</h2>
-    <p class="price">¥{{ product.price }}</p>
-    <button @click="addToCart">Thêm vào giỏ hàng</button>
-  </div>
+ <div class="product-detail">
+ <h2>{{ product.name }}</h2>
+ <p class="price">¥{{ product.price }}</p>
+ <button @click="addToCart">Thêm vào giỏ hàng</button>
+ </div>
 </template>
 
 <script setup>
 import { useCartStore } from '@/stores/cart'
 
 const props = defineProps({
-  product: Object
+ product: Object
 })
 
 const cart = useCartStore()
 
 const addToCart = () => {
-  cart.addItem({
-    id: props.product.id,
-    name: props.product.name,
-    price: props.product.price
-  })
+ cart.addItem({
+ id: props.product.id,
+ name: props.product.name,
+ price: props.product.price
+ })
 }
 </script>
 ```
@@ -953,21 +953,21 @@ const addToCart = () => {
 ```vue
 <!-- Header navigation: Header.vue -->
 <template>
-  <header class="header">
-    <div class="logo">Cửa hàng của tôi</div>
-    <nav>
-      <RouterLink to="/">Trang chủ</RouterLink>
-      <RouterLink to="/cart">
-        Giỏ hàng ({{ cart.itemCount }})
-      </RouterLink>
-    </nav>
-  </header>
+ <header class="header">
+ <div class="logo">Cửa hàng của tôi</div>
+ <nav>
+ <RouterLink to="/">Trang chủ</RouterLink>
+ <RouterLink to="/cart">
+ Giỏ hàng ({{ cart.itemCount }})
+ </RouterLink>
+ </nav>
+ </header>
 </template>
 
 <script setup>
 import { useCartStore } from '@/stores/cart'
 
-const cart = useCartStore()  // Dùng trực tiếp, tự động reactive
+const cart = useCartStore() // Dùng trực tiếp, tự động reactive
 </script>
 ```
 
@@ -1002,18 +1002,18 @@ Các framework frontend (Vue/React) cần "theo dõi" sự thay đổi của d�
 
 ```javascript
 // ✅ Vue 3 / Pinia: sửa trực tiếp thuộc tính顶层
-store.user.name = 'Lý Tứ'  // Pinia sẽ tự động xử lý reactive
+store.user.name = 'Lý Tứ' // Pinia sẽ tự động xử lý reactive
 
 // ✅ Vue 2 / Vuex: thông qua mutation
 mutations: {
-  UPDATE_USER_NAME(state, newName) {
-    state.user.name = newName
-  }
+ UPDATE_USER_NAME(state, newName) {
+ state.user.name = newName
+ }
 }
 
 // ✅ Sửa mảng: tạo mảng mới
 state.items = state.items.map((item, index) =>
-  index === 0 ? { ...item, name: 'Tên mới' } : item
+ index === 0 ? { ...item, name: 'Tên mới' } : item
 )
 ```
 
@@ -1024,10 +1024,10 @@ state.items = state.items.map((item, index) =>
 ```javascript
 // ❌ Sửa state trong getter
 getters: {
-  doubleCount(state) {
-    state.count *= 2  // Side effect!
-    return state.count
-  }
+ doubleCount(state) {
+ state.count *= 2 // Side effect!
+ return state.count
+ }
 }
 ```
 
@@ -1040,16 +1040,16 @@ Getter phải là "pure function", chỉ phụ trách tính toán và trả về
 ```javascript
 // ✅ Getter chỉ tính toán, không sửa
 getters: {
-  doubleCount(state) {
-    return state.count * 2
-  }
+ doubleCount(state) {
+ return state.count * 2
+ }
 }
 
 // ✅ Nếu cần sửa, dùng action
 actions: {
-  doubleCountAndSave({ commit }) {
-    commit('SET_DOUBLE_COUNT')
-  }
+ doubleCountAndSave({ commit }) {
+ commit('SET_DOUBLE_COUNT')
+ }
 }
 ```
 
@@ -1060,10 +1060,10 @@ actions: {
 ```javascript
 // ❌ Quên hủy subscribe
 export default {
-  created() {
-    EventBus.$on('cart-updated', this.handleCartUpdate)
-  }
-  // Component đã bị hủy, nhưng listener vẫn còn!
+ created() {
+ EventBus.$on('cart-updated', this.handleCartUpdate)
+ }
+ // Component đã bị hủy, nhưng listener vẫn còn!
 }
 ```
 
@@ -1076,12 +1076,12 @@ Nếu component đã bị hủy nhưng event listener vẫn còn, sẽ dẫn đ�
 ```javascript
 // ✅ Hủy subscribe kịp thời
 export default {
-  created() {
-    EventBus.$on('cart-updated', this.handleCartUpdate)
-  },
-  beforeUnmount() {  // Vue 3 dùng beforeUnmount, Vue 2 dùng beforeDestroy
-    EventBus.$off('cart-updated', this.handleCartUpdate)
-  }
+ created() {
+ EventBus.$on('cart-updated', this.handleCartUpdate)
+ },
+ beforeUnmount() { // Vue 3 dùng beforeUnmount, Vue 2 dùng beforeDestroy
+ EventBus.$off('cart-updated', this.handleCartUpdate)
+ }
 }
 ```
 
@@ -1108,8 +1108,8 @@ Không phải tất cả state đều cần bỏ vào store toàn cục. Nếu m
 const inputValue = ref('')
 
 // ✅ Chỉ state cần chia sẻ mới bỏ vào store
-const userInfo = useUserStore()  // Nhiều component cần thông tin người dùng
-const cart = useCartStore()  // Nhiều component cần dữ liệu giỏ hàng
+const userInfo = useUserStore() // Nhiều component cần thông tin người dùng
+const cart = useCartStore() // Nhiều component cần dữ liệu giỏ hàng
 ```
 
 ---

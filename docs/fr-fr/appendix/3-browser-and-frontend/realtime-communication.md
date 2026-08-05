@@ -1,4 +1,4 @@
-# Mecanismes de communication en temps reel (Polling / SSE / WebSocket)
+# Principes : Communication temps réel : Polling, SSE, WebSocket
 
 ::: tip Guide principal
 **Comment le navigateur realise-t-il les mises a jour de donnees en temps reel ?**

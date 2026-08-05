@@ -1,4 +1,4 @@
-# Code Quality and Refactoring
+# An Introduction to Code Quality and Refactoring
 
 ::: tip Preface
 **Is it enough that your code just works?** You may have written code like this: the feature works, but two weeks later even you can't understand it. Or someone on the team left behind a pile of "code that only God and they can understand."
@@ -39,7 +39,7 @@ Martin Fowler once said in *Refactoring*: **"Any fool can write code that a comp
 
 ## 1. Code Smells: Identifying Common Problems
 
-### 1.1 What Are Code Smells?
+### 1.1 Overview of Code Smells
 
 The concept of "Code Smell" was proposed by Kent Beck. It refers to characteristics in code that **are not bugs but suggest deeper design problems**. It's like a strange odor in a room — it won't make you sick immediately, but it signals that something needs cleaning.
 
@@ -66,7 +66,7 @@ Code smells are not "errors" — they are "signals." They tell you: the design h
 
 ## 2. Refactoring Techniques: Safely Improving Code
 
-### 2.1 What Is Refactoring?
+### 2.1 Overview of Refactoring
 
 The definition of Refactoring is precise: **improving the internal structure of code without changing its external behavior.**
 
@@ -150,7 +150,7 @@ The biggest risk of refactoring is "introducing bugs while making changes." So t
 
 ## 3. Code Review: Quality Assurance in Team Collaboration
 
-### 3.1 Why Code Review?
+### 3.1 Motivation for Coding Review
 
 Code Review is one of the most effective quality assurance methods in a team. Its value goes beyond finding bugs:
 
@@ -159,7 +159,7 @@ Code Review is one of the most effective quality assurance methods in a team. It
 - **Early Detection of Design Issues**: Bad architectural decisions are harder to fix than bugs
 - **Mutual Learning**: Reading others' code is a shortcut to improving your own programming skills
 
-### 3.2 What to Review?
+### 3.2 What to Review
 
 | Dimension | Focus |
 |------|--------|

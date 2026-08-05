@@ -1,4 +1,4 @@
-# Fehlerbehebung und Incident-Response
+# Incident Response: Vorfallbearbeitung
 
 ::: tip Vorwort
 **Drei Uhr morgens, das Handy vibriert unkontrolliert, der Online-Service ist komplett ausgefallen - was tust du?** Fuer jedes Internet-Team ist die Frage nicht "ob" ein Ausfall passiert, sondern "wann". Herausragende Teams zeichnen sich nicht dadurch aus, dass keine Ausfaelle auftreten, sondern dass sie bei Ausfaellen schnell reagieren, effizient wiederherstellen und daraus lernen, um Wiederholungen zu vermeiden.
@@ -84,7 +84,7 @@ Eine Incident-Response ist wie ein Staffellauf - jede Phase hat klare Ziele und 
 
 ---
 
-## 3. Kommandostruktur: Wer leitet diesen "Kampf"?
+## 3. Kommandostruktur: Wer leitet diesen "Vorfall"
 
 Bei grossen Incidents ist das groesste Problem nicht die Technologie, sondern das **Chaos** - ein Dutzend Leute debuggen gleichzeitig, niemand weiss, was die anderen tun, kritische Informationen werden in verschiedenen Chat-Gruppen fragmentiert. Das Incident Command System (ICS) loest genau dieses Problem.
 

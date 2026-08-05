@@ -1,4 +1,4 @@
-# Browser Rendering Pipeline
+# Principles of Browser Rendering
 ::: tip 🎯 Core Question
 **Why are some web pages smooth as silk while others stutter like a slideshow?** How does the browser turn a pile of HTML, CSS, and JavaScript into the page you see? This chapter takes you inside the browser's "workshop" to understand its workflow so you can write higher-performance web pages.
 :::
@@ -21,7 +21,7 @@ Each chapter starts with "understanding the principles" — you don't need to ha
 
 ---
 
-## 1. Why Understand the "Rendering Pipeline"?
+## 1. Motivation for Understanding the "Rendering Pipeline"
 
 ### 1.1 From "It Works" to "It's Fast": The Advanced Path of Frontend Development
 
@@ -50,7 +50,7 @@ It's like learning to drive. Beginners only care about "can the car move," but e
 
 **Understanding the rendering pipeline is the key step from "it works" to "it's fast."**
 
-### 1.2 A Real Pitfall Story: Why Did "Optimization" Make It Slower?
+### 1.2 Case: "Optimization" Actually Making It Slower
 
 ::: warning Xiao Zhang's Performance Pitfall
 Xiao Zhang is a frontend engineer at an e-commerce company, responsible for optimizing the product detail page. The page was horribly laggy when displaying product information, and user complaints kept pouring in.
@@ -86,7 +86,7 @@ Without understanding the browser's workflow, you might "cleverly" write a bunch
 
 ---
 
-## 2. Core Concept: What Is the "Rendering Pipeline"?
+## 2. Core Concept: Overview of the "Rendering Pipeline"
 
 ::: tip 🤔 What Is "Rendering"?
 **Rendering**, simply put, is the process by which the browser "draws" code into the web page you see.
@@ -134,7 +134,7 @@ Let's interpret this table row by row to understand each stage of the rendering 
 
 ## 3. Stage 1: Building the DOM Tree and CSSOM Tree
 
-### 3.1 Why "Tree-ify"?
+### 3.1 Motivation for the "Tree-ify"
 
 ::: tip 🤔 What Is the DOM?
 **DOM (Document Object Model)** is a tree structure that the browser converts the HTML document into, making it easy for JavaScript to manipulate page elements.
@@ -230,7 +230,7 @@ StyleSheet
 ```
 :::
 
-### 3.3 Pitfall Journal: Why Doesn't My CSS "Take Effect"?
+### 3.3 Case: My CSS "Take Effect"
 
 **Pitfall 1: CSS Selector Specificity Conflicts**
 
@@ -271,7 +271,7 @@ The browser is very "forgiving" and will automatically fix your errors. But this
 
 ## 4. Stage 2: Building the Render Tree
 
-### 4.1 Why Do We Need a "Render Tree"?
+### 4.1 Motivation for needing a "Render Tree"
 
 You might ask: **"We already have the DOM tree and CSSOM tree, why build yet another render tree? Can't we just use the DOM directly?"**
 
@@ -322,7 +322,7 @@ When building the render tree, the browser follows a set of rules:
 In contrast, `visibility: hidden` and `opacity: 0` are "invisible" but still in the render tree, so the browser still needs to calculate their layout (they occupy space). If you need to "hide without affecting layout" (e.g., for fade-in/fade-out animations), use `opacity`; if you need to "completely hide and not occupy space," use `display: none`.
 :::
 
-### 4.3 Pitfall Journal: Why Is the Page Still Laggy After Setting display:none?
+### 4.3 Case: Page Lag After Setting display:none
 
 ::: danger ❌ Common Misconception: Thinking display:none Elements "Don't Exist"
 Many people think that after setting `display: none`, the element "disappears" and no operations on it will affect performance. This is **wrong**!
@@ -377,7 +377,7 @@ container.appendChild(fragment)
 
 ## 5. Stage 3: Layout and Reflow
 
-### 5.1 What Is "Layout"?
+### 5.1 Overview of "Layout"
 
 ::: tip 🤔 What Is Layout?
 **Layout**, also called **Reflow**, is the process where the browser calculates "where each element is and how much space it occupies" in the render tree.
@@ -412,7 +412,7 @@ Here are common operations that trigger reflow — **recommended to bookmark and
 3. **transform and opacity have the best performance**: They don't trigger reflow, only compositing
 :::
 
-### 5.3 Pitfall Journal: Why Is My Animation Choppy as a Slideshow?
+### 5.3 Case: Animation Choppy Like a Slideshow
 
 **Pitfall: Animating with width**
 
@@ -500,7 +500,7 @@ requestAnimationFrame(() => {
 
 ## 6. Stage 4: Paint and Repaint
 
-### 6.1 What Is "Paint"?
+### 6.1 Overview of "Paint"
 
 ::: tip 🤔 What Is Paint?
 **Paint** is the process where the browser actually "draws" the layout-calculated elements onto the screen.
@@ -532,7 +532,7 @@ Unlike reflow, repaint only involves "appearance" changes, not "geometric" chang
 Also, **shadows and gradients are more expensive than repaint** because they require complex pixel calculations. If your page has many `box-shadow`s, consider using pseudo-elements or images instead.
 :::
 
-### 6.3 Pitfall Journal: Why Is My Hover Effect Choppy?
+### 6.3 Case: Hover Effect Stuttering
 
 **Pitfall: Using box-shadow for hover animation**
 
@@ -572,7 +572,7 @@ Also, **shadows and gradients are more expensive than repaint** because they req
 
 ## 7. Stage 5: Compositing and GPU Acceleration
 
-### 7.1 What Is "Compositing"?
+### 7.1 Overview of "Compositing"
 
 ::: tip 🤔 What Is Compositing?
 **Compositing** is the "magic" of modern browsers. It divides different parts of the page into multiple **layers** and uses the **GPU (Graphics Processing Unit)** to composite the final image in parallel.
@@ -584,7 +584,7 @@ You can think of it as **Photoshop layers**:
 **Why is compositing fast?** Because GPUs excel at "image compositing" — parallel tasks that they can do dozens of times faster than CPUs.
 :::
 
-### 7.2 Which Elements Get Promoted to "Compositing Layers"?
+### 7.2 Criteria for Element Promotion to Compositing Layers
 
 The browser automatically promotes certain elements to independent compositing layers. Here are the common triggers:
 
@@ -604,7 +604,7 @@ The browser automatically promotes certain elements to independent compositing l
 But be careful: **each compositing layer consumes GPU memory**. Abusing `translateZ(0)` can cause memory explosions (see section 7.4).
 :::
 
-### 7.3 Pitfall Journal: Too Many Compositing Layers Make It Slower?
+### 7.3 Case: Too Many Compositing Layers Making It Slower
 
 ::: danger 💀 The Trap of Over-Optimization
 Some people hear "GPU acceleration is fast" and add `transform: translateZ(0)` to every element, only to find the page is even slower.
@@ -682,7 +682,7 @@ Early JavaScript only had a single task queue. But as asynchronous programming b
 4. Start the next event loop cycle, execute the next macrotask
 ```
 
-### 8.2 Pitfall Journal: Promise Is Faster Than setTimeout?
+### 8.2 Case: Promise vs setTimeout Execution Speed
 
 ::: danger ❌ Common Misconception: setTimeout(fn, 0) Executes "Immediately"
 Many people think `setTimeout(fn, 0)` means "execute immediately after 0 milliseconds." This is a **wrong** understanding.

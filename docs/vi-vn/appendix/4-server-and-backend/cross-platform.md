@@ -22,7 +22,7 @@ Công nghệ **"phát triển đa nền tảng (Cross-Platform Development)"** r
 
 ---
 
-## 2. Giới hạn kỹ thuật của giải pháp đa nền tảng: Khi nào nên sử dụng? Khi nào phải giữ native?
+## 2. Giới hạn kỹ thuật của giải pháp đa nền tảng: Tiêu chí lựa chọn đa nền tảng
 
 Mặc dù công nghệ đa nền tảng thể hiện giá trị thương mại lớn trong việc giảm chi phí và tăng hiệu quả, theo "Định luật Abstraction rò rỉ (The Law of Leaky Abstractions)" kinh điển trong khoa học máy tính, bất kỳ đóng gói nào cố gắng vượt qua sự khác biệt nền tảng của hệ điều hành đều tất yếu đi kèm với tổn thất hiệu suất và sự thỏa hiệp về tính năng. Điều này đòi hỏi kiến trúc sư phải xác định rõ phạm vi áp dụng của công nghệ đa nền tảng.
 

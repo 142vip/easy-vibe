@@ -1,4 +1,4 @@
-# Resolución de incidentes y respuesta ante emergencias
+# Introducción a la resolución de incidentes y respuesta ante emergencias
 
 ::: tip Prefacio
 **A las tres de la mañana, tu teléfono vibra sin parar: el servicio en producción está caído por completo. ¿Qué haces?** Para cualquier equipo de Internet, los incidentes no son una cuestión de "si van a ocurrir", sino de "cuándo van a ocurrir". Los equipos excelentes no son los que nunca tienen incidentes, sino los que pueden responder rápidamente, recuperarse eficientemente y aprender de la experiencia para no repetir los mismos errores.
@@ -84,7 +84,7 @@ La respuesta a un incidente es como una carrera de relevos, donde cada etapa tie
 
 ---
 
-## 3. Sistema de mando: ¿quién dirige esta "batalla"?
+## 3. Sistema de mando: quién dirige esta "incidente"
 
 En incidentes grandes, lo que más se teme no son los problemas técnicos, sino el **caos**: más de una docena de personas investigando simultáneamente, sin que nadie sepa qué están haciendo los demás, con información crítica fragmentada en varios grupos de chat. El Sistema de Mando de Incidentes (Incident Command System) existe para resolver este problema.
 

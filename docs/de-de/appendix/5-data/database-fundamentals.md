@@ -1,11 +1,11 @@
-# Datenbankgrundlagen (Indizes / Transaktionen / Abfrageoptimierung)
+# Datenbanken: Grundlagen
 ::: tip 🎯 Kernfrage
 **Warum braucht Ihre Excel-Abfrage 10 Sekunden, während die Shopping-Suche nur 0,01 Sekunden benötigt?** Wenn Daten von „einigen Tausend" auf „eine Milliarde" anwachsen und von „Einzelplatznutzung" auf „Millionen gleichzeitiger Zugriffe", reicht Excel nicht mehr aus. Datenbanken wurden genau für dieses Problem entwickelt — sie sind das „Super-Excel" zur Verarbeitung riesiger Datenmengen und hoher Parallelität. Dieses Kapitel führt Sie von Null an in die Kernprinzipien von Datenbanken ein.
 :::
 
 ---
 
-## 1. Warum „Datenbanken"?
+## 1. Warum „Datenbanken"
 
 ### 1.1 Vom kleinen Buchladen zum Online-Marktplatz: Die Evolution der Datenmenge
 
@@ -46,7 +46,7 @@ Das Notizbuch reicht völlig aus. Aber wenn Ihr Buchladen zu einem „Amazon" wi
 
 **Das ist das Problem, das „Datenbanken" lösen: Wie speichert man riesige Datenmengen effizient, fragt sie schnell ab und verwaltet sie sicher?**
 
-### 1.2 Eine wahre Geschichte: Warum man Nutzerdaten nicht in Excel speichern sollte
+### 1.2 Eine wahre Geschichte: Motivation von man Nutzerdaten nicht in Excel speichern sollte
 
 Sie könnten sagen: „Mein Projekt hat nur ein paar Zehntausend Nutzer — da reicht Excel doch, oder?" Lassen Sie mich eine wahre Geschichte erzählen.
 
@@ -121,7 +121,7 @@ Stellen Sie sich vor, Sie betreten eine Bibliothek. Die Organisation dort ist er
 - **Zeilen**: Jede Zeile ist ein Nutzer (z. B. „Max, 25 Jahre, Berlin")
 - **Primärschlüssel**: `user_id` (1001, 1002, 1003 — niemals doppelt)
 
-### 2.2 Primärschlüssel (Primary Key): Die „Personalausweisnummer" der Daten
+### 2.2 Primärschlüssel (Primary Key): Die „Eindeutiger Bezeichnernummer" der Daten
 
 ::: tip 📖 Was ist ein Primärschlüssel?
 Der **Primärschlüssel** ist die eindeutige Kennung jeder Zeile in einer Tabelle — wie die Personalausweisnummer.
@@ -483,7 +483,7 @@ Das ist das Geheimnis, warum Datenbankabfragen so extrem schnell sind.
 
 ---
 
-## 5. Transaktionen: Wie verhindert man Datenverlust und Daten-Chaos?
+## 5. Transaktionen: Ansatz für verhindert man Datenverlust und Daten-Chaos
 
 Stellen Sie sich die Ticketsituation zur Feiertagssaison vor:
 
@@ -494,7 +494,7 @@ Stellen Sie sich die Ticketsituation zur Feiertagssaison vor:
 
 Das ist ein klassisches **Parallelitätskonflikt**-Problem.
 
-### 5.1 Was ist eine Transaktion (Transaction)?
+### 5.1 Was ist eine Transaktion (Transaction)
 
 Eine **Transaktion** ist eine Gruppe von Datenbankoperationen, die **entweder alle erfolgreich sind oder alle fehlschlagen** — es gibt keinen Zustand „halb ausgeführt".
 

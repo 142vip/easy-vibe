@@ -6,7 +6,7 @@
 
 ---
 
-## 0. Hãy tự hỏi: bạn đã từng gặp những cơn ác mộng này chưa?
+## 0. Hãy tự hỏi: bạn đã từng gặp những cơn ác mộng này chưa
 
 **Tình huống 1: Đặt tên API tùy tiện**
 
@@ -57,7 +57,7 @@ Mỗi API trả về định dạng khác nhau, frontend phải xử lý riêng 
 
 ---
 
-## 1. API là gì?
+## 1. API: Tổng quan
 
 **API** (Application Programming Interface, giao diện lập trình ứng dụng) chính là "quy ước đối thoại giữa các chương trình".
 
@@ -84,7 +84,7 @@ Trước khi đi vào thiết kế RESTful cụ thể, hãy tìm hiểu bốn ph
 
 <ApiStyleCompare />
 
-### 2.1 REST vs RESTful: khác nhau thế nào?
+### 2.1 REST vs RESTful: khác nhau: Cách tiếp cận
 
 Rất nhiều người nhầm lẫn hai khái niệm này:
 
@@ -237,7 +237,7 @@ Nguy hiểm: lộ cấu trúc code, truy vấn database, kẻ tấn công có th
 
 ## 6. Versioning: "tương thích ngược" của API
 
-### 6.1 Tại sao cần versioning?
+### 6.1 Động lực của cần versioning
 
 Tình huống: App của bạn có 1 triệu người dùng, cần sửa API đơn hàng.
 

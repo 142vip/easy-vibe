@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Tại sao cần "đưa dịch vụ lên mạng"?
+## 1. Động lực của cần "đưa dịch vụ lên mạng"
 
 Hãy tưởng tượng, bạn nấu một bàn đầy món ăn rất ngon ở nhà. Nhưng vấn đề là chỉ có người trong nhà mới được ăn. Hàng xóm, bảo vệ, người lạ đều không thể thưởng thức.
 
@@ -21,7 +21,7 @@ Dưới đây tôi sẽ phân tích chi tiết toàn bộ quy trình. Mỗi khâ
 
 ## 2. Xây dựng: biến code thành "gói hàng có thể mang theo"
 
-### 2.1 Tại sao cần xây dựng?
+### 2.1 Động lực của cần xây dựng
 
 Người mới thường hỏi: code đã viết xong, sao không đưa thẳng lên server để người dùng truy cập?
 
@@ -31,7 +31,7 @@ Ví dụ, khi bạn viết code Vue, bạn sử dụng các thẻ như `<templat
 
 Vì vậy, trước khi đưa code lên server, cần làm một việc quan trọng: **dịch nó sang ngôn ngữ mà trình duyệt hiểu được**. Quá trình dịch này gọi là "xây dựng" (Build).
 
-### 2.2 Xây dựng cụ thể làm những gì?
+### 2.2 Xây dựng cụ thể làm những gì
 
 Xây dựng không chỉ là dịch thuật. Nó còn thực hiện nhiều tối ưu hóa để trang web chạy nhanh hơn, tiết kiệm tài nguyên hơn. Hãy xem chi tiết nó làm những gì:
 
@@ -59,7 +59,7 @@ Tác dụng của hash: khi code có bất kỳ thay đổi nào, giá trị has
 
 <DeploymentBuildDemo />
 
-### 2.3 Cách thực hiện xây dựng?
+### 2.3 Cách thực hiện xây dựng
 
 Hầu hết các dự án frontend hiện đại đều đã cấu hình sẵn công cụ xây dựng. Chỉ cần nhớ một lệnh:
 
@@ -76,7 +76,7 @@ pnpm build
 
 Sau khi chạy xong, vào thư mục gốc dự án tìm thư mục `dist` (đôi khi cũng gọi là `build` hoặc `.output`). Bên trong là tất cả các file đã được xây dựng. Đây là những file cuối cùng cần tải lên server. Không cần chỉnh sửa thêm gì. Kéo thẳng lên server là được.
 
-### 2.4 Sản phẩm xây dựng chứa gì?
+### 2.4 Sản phẩm xây dựng chứa gì
 
 Mở thư mục dist, bạn sẽ thấy chủ yếu ba loại file:
 
@@ -90,7 +90,7 @@ Nếu là dự án backend phức tạp hơn (như Node.js), sản phẩm xây d
 
 ## 3. Server: tìm một "ngôi nhà" không bao giờ đóng cửa
 
-### 3.1 Server thực chất là gì?
+### 3.1 Server thực chất: Tổng quan
 
 Nhiều người lần đầu nghe "server" nghĩ đó là thiết bị bí ẩn gì cao siêu. Thực ra không phức tạp vậy. **Server chính là một máy tính**. Một máy tính không bao giờ tắt, luôn cắm dây mạng.
 
@@ -106,7 +106,7 @@ Thứ ba, máy tính ở nhà không có "IP công cộng". IP công cộng là 
 
 <DeploymentServerDemo />
 
-### 3.2 Cách chọn server?
+### 3.2 Cách chọn server
 
 Chọn server chủ yếu dựa vào ba tiêu chí: **số nhân CPU**, **dung lượng RAM**, **dung lượng ổ cứng**. Ba tiêu chí này càng cao, hiệu năng server càng tốt, giá càng đắt.
 
@@ -130,7 +130,7 @@ Còn một yếu tố nữa: **vị trí**. Nếu người dùng chủ yếu ở
 
 Dành cho người mới, khuyên dùng ưu đãi sinh viên/người dùng mới của **Alibaba Cloud** hoặc **Tencent Cloud**. Thường chỉ vài chục đồng một năm. Nếu làm dự án frontend thuần, muốn đơn giản, có thể dùng **Vercel** hoặc **Netlify**. Không cần mua server. Đẩy code lên là tự động deploy.
 
-### 3.5 Sau khi có server cần làm gì?
+### 3.5 Sau khi có server cần làm gì
 
 Sau khi mua server, bạn sẽ nhận được email chứa thông tin quan trọng:
 
@@ -153,7 +153,7 @@ Sau khi đăng nhập thành công, bạn vào giao diện dòng lệnh của se
 
 ## 4. Triển khai: chuyển code vào "ngôi nhà"
 
-### 4.1 Triển khai là gì?
+### 4.1 Triển khai: Tổng quan
 
 Triển khai là sau khi thuê xong server (ngôi nhà), chuyển code (hành lý đồ đạc) vào và mở cửa bắt đầu kinh doanh.
 
@@ -168,7 +168,7 @@ Bốn bước này nghe khá phức tạp. Nhưng thực tế không khó lắm.
 
 <DeploymentServerDemo />
 
-### 4.2 Cách tải code lên server?
+### 4.2 Cách tải code lên server
 
 **Cách 1: Upload FTP/SFTP**
 
@@ -298,7 +298,7 @@ Bây giờ truy cập `http://example.com` (nhớ cấu hình DNS trỏ về IP 
 
 ## 5. Domain và DNS: đặt tên hay cho trang web
 
-### 5.1 Tại sao cần mua domain?
+### 5.1 Động lực của cần mua domain
 
 Đã có IP server, tại sao còn phải mua domain?
 
@@ -308,7 +308,7 @@ Domain chính là tên của trang web. Dễ nhớ, chuyên nghiệp, còn thể
 
 <DeploymentDnsDemo />
 
-### 5.2 DNS là gì?
+### 5.2 DNS: Tổng quan
 
 Tốt. Bây giờ bạn đã mua domain. Ví dụ `trang-web-tuyet-voi.com`. Nhưng vấn đề: máy tính chỉ hiểu địa chỉ IP. Không hiểu "trang-web-tuyet-voi.com" - ngôn ngữ con người.
 
@@ -322,7 +322,7 @@ Khi bạn nhập `trang-web-tuyet-voi.com` vào trình duyệt và nhấn Enter,
 
 Toàn bộ quá trình thường chỉ mất vài chục mili-giây. Người dùng hoàn toàn không nhận ra.
 
-### 5.3 Cách cấu hình DNS?
+### 5.3 Cách cấu hình DNS
 
 Cấu hình DNS thường có thể làm ở hai nơi:
 
@@ -338,7 +338,7 @@ Cấu hình DNS thường có thể làm ở hai nơi:
 
 Nhiều chuyên gia không dùng DNS đi kèm của nhà cung cấp domain. Mà dùng các dịch vụ DNS chuyên nghiệp như Cloudflare, Alibaba Cloud DNSPod, Tencent Cloud DNS. Các dịch vụ này thường ổn định hơn, tốc độ phân giải nhanh hơn. Còn đi kèm CDN, bảo vệ DDoS, v.v.
 
-### 5.4 DNS mất bao lâu để có hiệu lực?
+### 5.4 DNS mất bao lâu để có hiệu lực
 
 Đây là câu hỏi nhiều người quan tâm. Câu trả lời: **không nhất thiết. Thường từ vài phút đến 24 giờ**.
 
@@ -370,7 +370,7 @@ Có thể bạn đã để ý. Một số địa chỉ trang web bắt đầu b�
 
 <DeploymentHttpsDemo />
 
-### 6.2 Tại sao cần HTTPS?
+### 6.2 Động lực của cần HTTPS
 
 Lý do đầu tiên: **an toàn**. Không có HTTPS, mật khẩu người dùng nhập trên trang web được truyền dạng plaintext. Bất kỳ ai có chút kỹ thuật đều có thể chặn được. Ngày nay, ai dám dùng trang web không có HTTPS?
 
@@ -378,7 +378,7 @@ Lý do thứ hai: **cảnh báo trình duyệt**. Hiện nay Chrome, Edge và c�
 
 Lý do thứ ba: **SEO**. Google, Baidu và các công cụ tìm kiếm ưu tiên_index trang HTTPS. SEO sẽ tốt hơn.
 
-### 6.3 Cách lấy chứng chỉ HTTPS?
+### 6.3 Cách lấy chứng chỉ HTTPS
 
 Trước đây chứng chỉ HTTPS rất đắt. Tốn hàng trăm đến hàng nghìn đồng mỗi năm. Bây giờ thì tốt rồi. Có tổ chức **Let's Encrypt** cung cấp chứng chỉ SSL/TLS hoàn toàn miễn phí. Và cộng đồng có nhiều công cụ tự động giúp cài đặt và gia hạn.
 
@@ -402,7 +402,7 @@ Chứng chỉ có hiệu lực 90 ngày. Nhưng Certbot sẽ thiết lập cronj
 
 Nếu bạn sử dụng dịch vụ DNS của Cloudflare thì hoàn toàn không cần tự cấu hình chứng chỉ HTTPS. Cloudflare tự động cung cấp hỗ trợ HTTPS cho domain. Còn giải quyết luôn vấn đề gia hạn 90 ngày.
 
-### 6.4 Sau khi cấu hình HTTPS có gì thay đổi?
+### 6.4 Sau khi cấu hình HTTPS có gì thay đổi
 
 Sau khi cấu hình HTTPS, người dùng truy cập chuyển từ `http://example.com` sang `https://example.com`. Thay đổi này mang theo loạt bảo đảm an toàn:
 
@@ -414,7 +414,7 @@ Sau khi cấu hình HTTPS, người dùng truy cập chuyển từ `http://examp
 
 ## 7. CI/CD: để robot làm việc cho bạn
 
-### 7.1 CI/CD là gì?
+### 7.1 CI/CD: Tổng quan
 
 CI/CD là viết tắt của hai từ: **C**ontinuous **I**ntegration (Tích hợp liên tục) và **C**ontinuous **D**eployment (Triển khai liên tục). Có thể hiểu là hệ thống robot tự động làm việc giúp bạn.
 
@@ -475,7 +475,7 @@ Sau khi tất cả test pass. Hệ thống CI sẽ:
 
 Toàn bộ quá trình có thể chỉ mất vài phút. Hoàn toàn tự động.
 
-### 7.3 Cách cấu hình GitHub Actions?
+### 7.3 Cách cấu hình GitHub Actions
 
 GitHub Actions là tính năng CI/CD tích hợp sẵn của GitHub. Không cần trả thêm phí (gói miễn phí đủ cho dự án cá nhân). Cấu hình cũng rất đơn giản.
 
@@ -543,7 +543,7 @@ Sau khi cấu hình xong. Mỗi lần `git push origin main`. GitHub sẽ tự �
 
 ## 8. Monitoring và log: làm "người gác đêm" cho trang web
 
-### 8.1 Tại sao cần monitoring?
+### 8.1 Động lực của cần monitoring
 
 Sau khi trang web lên mạng. Về lý thuyết phải hoạt động 24/7 liên tục. Nhưng thực tế không hoàn hảo đến vậy. Server có thể down. Mạng có thể nhiễu. Code có thể có bug. Trong môi trường production thực tế, đủ thứ rủi ro đều có thể xảy ra.
 
@@ -557,7 +557,7 @@ Có monitoring rồi. Bạn có thể:
 
 <DeploymentMonitorDemo />
 
-### 8.2 Monitor những chỉ số nào?
+### 8.2 Monitor những chỉ số nào
 
 Những chỉ số monitoring quan trọng nhất gồm:
 
@@ -570,7 +570,7 @@ Những chỉ số monitoring quan trọng nhất gồm:
 | Response time | < 2 giây | Tối ưu query database hoặc thêm cache |
 | Error rate | < 1% | Xem error log để định vị vấn đề |
 
-### 8.3 Cách cấu hình monitoring?
+### 8.3 Cách cấu hình monitoring
 
 **Giải pháp đơn giản nhất: Uptime Robot**
 
@@ -584,7 +584,7 @@ Nếu server mua ở Alibaba Cloud hoặc Tencent Cloud, chúng đã tích hợp
 
 Hai công cụ này là "dao thú cước" trong lĩnh vực monitoring. Chức năng rất mạnh. Có thể monitor bất kỳ chỉ số nào bạn nghĩ đến. Còn tạo biểu đồ visualization đẹp mắt. Nhưng cấu hình khá phức tạp. Phù hợp developer có kinh nghiệm.
 
-### 8.4 Log: khi có vấn đề tra cứu thế nào?
+### 8.4 Log: khi có vấn đề tra cứu: Cách tiếp cận
 
 Monitoring cho bạn biết "trang web có vấn đề". Nhưng cụ thể vấn đề gì, tại sao xảy ra. Cần dựa vào **log** để định vị.
 
@@ -617,7 +617,7 @@ Nếu dự án khá phức tạp. Khuyến nghị dùng công cụ thu thập lo
 - **ELK (Elasticsearch + Logstash + Kibana)**: mạnh mẽ nhưng cấu hình phức tạp.
 - **Sentry**: công cụ chuyên thu thập lỗi ứng dụng. Tự động thu thập thông tin báo lỗi.
 
-### 8.5 Cảnh báo: khi có vấn đề biết ngay lập tức thế nào?
+### 8.5 Cảnh báo: khi có vấn đề biết ngay lập tức: Cách tiếp cận
 
 Monitoring cho bạn biết có vấn đề. Nhưng nếu bạn không nhìn dashboard monitoring thì sao? Đây là lúc cần **cảnh báo (alert)**.
 

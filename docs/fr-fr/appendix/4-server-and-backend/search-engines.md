@@ -1,4 +1,4 @@
-# Principes des moteurs de recherche
+# Principes : Fonctionnement des moteurs de recherche
 
 ::: tip Préface
 **Vous cherchez "robe rouge" sur Taobao, et en 0,1 seconde vous trouvez les résultats les plus pertinents parmi des milliards de produits — comment est-ce possible ?** Les moteurs de recherche sont l'une des infrastructures les plus centrales d'Internet. De Google à la recherche interne des sites e-commerce, leur principe fondamental est le même : l'index inversé + le classement par pertinence.
@@ -24,7 +24,7 @@ Après avoir étudié ce chapitre, vous serez en mesure de :
 
 ---
 
-## 0. Vue d'ensemble : quelle est l'essence de la recherche ?
+## 0. Vue d'ensemble : quelle est l'essence de la recherche
 
 L'essence de la recherche est un problème de **recherche d'information (Information Retrieval)** : étant donné une requête, trouver les résultats les plus pertinents parmi une masse de documents, et les retourner classés par pertinence.
 
@@ -81,7 +81,7 @@ La segmentation n'est qu'une étape de l'analyse de texte. Le pipeline complet c
 
 ---
 
-## 3. Classement par pertinence : quel résultat est le plus "pertinent" ?
+## 3. Classement par pertinence : quel résultat est le plus "pertinent"
 
 Trouver les documents correspondants n'est que la première étape. Ce qui est plus important, c'est le **classement** — mettre les résultats les plus pertinents en premier.
 

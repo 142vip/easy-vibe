@@ -1,4 +1,4 @@
-# Protocoles pour agents IA (MCP et A2A)
+# Principes : Protocoles agents IA : MCP et A2A
 
 ::: tip Question centrale
 **Comment les agents IA « dialoguent-ils » avec le monde extérieur ?** Tout comme Internet a besoin du protocole HTTP, les agents IA ont besoin de protocoles de communication standardisés. Ce chapitre présente les deux protocoles d'agent les plus répandus : MCP et A2A, qui résolvent respectivement les problèmes de communication entre l'IA et les outils, et entre agents.
@@ -6,11 +6,11 @@
 
 ---
 
-## 0. Qu'est-ce qu'un protocole ?
+## 0. Présentation et définition : un protocole
 
 Dans le domaine informatique, un **protocole (Protocol)** est un ensemble de règles et de conventions standardisées permettant à différents systèmes et programmes de se « comprendre » et de « communiquer » entre eux.
 
-### 0.1 Pourquoi a-t-on besoin de protocoles ?
+### 0.1 Pourquoi a-t-on besoin de protocoles
 
 Imaginez un scénario : vous envoyez un colis à un ami, vous devez remplir l'adresse. Si chacun écrivait le format d'adresse différemment, le livreur ne pourrait pas livrer. Le protocole définit la norme « comment écrire l'adresse » — province, ville, arrondissement, rue, numéro, en suivant ce format, tout le monde peut comprendre.
 
@@ -110,7 +110,7 @@ Anthropic a écrit dans son blog officiel :
 
 **Objectif central** : permettre aux développeurs d'outils d'écrire le code une seule fois, et que toutes les applications IA supportant MCP puissent l'utiliser.
 
-### 2.3 Qu'est-ce que MCP ?
+### 2.3 Qu'est-ce que MCP
 
 <McpVisualDemo />
 
@@ -191,7 +191,7 @@ Google a écrit dans son blog officiel :
 
 **Objectif central** : permettre aux agents développés par différents fournisseurs et frameworks de collaborer de manière transparente.
 
-### 3.3 Qu'est-ce que A2A ?
+### 3.3 Qu'est-ce que A2A
 
 <A2AVisualDemo />
 
@@ -252,7 +252,7 @@ MCP et A2A ne sont **pas en concurrence, mais complémentaires** :
 
 <ProtocolComparisonDemo />
 
-### 4.3 Comment choisir ?
+### 4.3 Comment choisir
 
 | Scénario | Choix |
 |------|------|

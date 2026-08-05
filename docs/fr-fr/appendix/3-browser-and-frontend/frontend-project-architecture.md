@@ -1,4 +1,4 @@
-# Conception d'architecture de projet frontend
+# Principes : Architecture de projet frontend
 
 ::: tip 🎯 Question principale
 **Des simples pages HTML aux applications d'entreprise complexes, comment choisir l'architecture adaptee a la taille de votre projet ?** C'est comme demander : d'un studio a un grand centre commercial, comment concevoir differents agencements selon les besoins ? Une bonne architecture doit evoluer avec le projet, sans etre surdimensionnee des le depart.
@@ -513,7 +513,7 @@ Etape 3 : Modularisation des fonctionnalites (organisation par fonctionnalite)
 Etape 4 : Architecture micro-frontend (Monorepo)
 ```
 
-### 6.2 Quand faut-il mettre a niveau l'architecture ?
+### 6.2 Quand faut-il mettre a niveau l'architecture
 
 | Signal | Description | Recommandation |
 |--------|------------|----------------|

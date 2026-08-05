@@ -1,10 +1,10 @@
-# Browser-Debugger (DevTools) Leitfaden
+# Debugging-Lernpfad: Übersicht
 
 ::: tip 💡 Kernfunktion
 Die Browser-Entwicklertools (DevTools) sind das "Rontgengerat" und der "Operationstisch" der Frontend-Entwicklung. Sie ermoglichen es Ihnen, das Skept (HTML), die Haut (CSS) und das Nervensystem (JavaScript) einer Webseite zu durchleuchten und diese in Echtzeit zu bearbeiten und zu debuggen.
 :::
 
-## 1. Was sind DevTools?
+## 1. Was sind DevTools
 
 **DevTools** sind eine in modernen Browsern (Chrome, Edge, Firefox, Safari usw.) integrierte Sammlung von Web-Entwicklungs- und Debugging-Werkzeugen. Fur Entwickler sind sie naher an der "Wahrheit" als der Code-Editor, denn **sie zeigen, wie der Code im Browser tatsachlich ausgefuhrt wird**.
 

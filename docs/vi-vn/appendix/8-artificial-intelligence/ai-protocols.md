@@ -6,11 +6,11 @@
 
 ---
 
-## 0. Giao thức là gì?
+## 0. Giao thức: Tổng quan
 
 Trong lĩnh vực máy tính, **Giao thức (Protocol)** là một tập hợp các quy tắc và quy ước được chuẩn hóa, cho phép các hệ thống và chương trình khác nhau "hiểu" và "giao tiếp" lẫn nhau.
 
-### 0.1 Tại sao cần giao thức?
+### 0.1 Động lực của cần giao thức
 
 Hãy tưởng tượng một tình huống: bạn gửi hàng cho bạn bè và cần điền địa chỉ. Nếu mỗi người viết địa chỉ theo định dạng khác nhau, người giao hàng sẽ không thể giao được. Giao thức chính là tiêu chuẩn quy định "cách viết địa chỉ" — tỉnh/thành, quận/huyện, phường/xã, đường, số nhà, viết theo định dạng này thì ai cũng có thể hiểu.
 
@@ -110,7 +110,7 @@ Anthropic đã viết trên blog chính thức:
 
 **Mục tiêu cốt lõi**: Cho phép nhà phát triển công cụ viết code một lần, tất cả ứng dụng AI hỗ trợ MCP đều có thể sử dụng.
 
-### 2.3 MCP là gì?
+### 2.3 MCP: Tổng quan
 
 <McpVisualDemo />
 
@@ -191,7 +191,7 @@ Google đã viết trên blog chính thức:
 
 **Mục tiêu cốt lõi**: Cho phép các Agent do nhà cung cấp và framework khác nhau phát triển hợp tác liền mạch.
 
-### 3.3 A2A là gì?
+### 3.3 A2A: Tổng quan
 
 <A2AVisualDemo />
 
@@ -224,7 +224,7 @@ Các Agent khác nhau giống như các đồng nghiệp khác nhau, A2A cho ph�
 |------|------|------|
 | **Phát triển phần mềm** | Nhiều Agent hợp tác hoàn thành nhiệm vụ phát triển | Phân tích yêu cầu→Mã→Kiểm thử→Triển khai |
 | **Quy trình công việc doanh nghiệp** | Agent các phòng ban khác nhau hợp tác xử lý nghiệp vụ | Agent HR + Agent Tài chính + Agent Pháp chế |
-| **Chăm sóc khách hàng thông minh** | Nhiều Agent chuyên môn phân công xử lý | Tiếp nhận→Giải đáp→Chuyển tiếp→Ghi nhận |
+| **Chăm sóc khách hàng thông minh** | Nhiều Agent chuyên môn phân công xử lý | Tiếp nhận→Giải đáp→Chuyển tiếp→thu thập |
 | **Phân tích dữ liệu** | Nhiều Agent hợp tác phân tích dữ liệu | Thu thập→Làm sạch→Phân tích→Trực quan→Báo cáo |
 
 **Trường hợp thực tế**:
@@ -252,7 +252,7 @@ MCP và A2A **không cạnh tranh mà bổ sung cho nhau**:
 
 <ProtocolComparisonDemo />
 
-### 4.3 Cách lựa chọn?
+### 4.3 Cách lựa chọn
 
 | Kịch bản | Lựa chọn |
 |------|------|

@@ -8,7 +8,7 @@ Trước khi bắt đầu, bạn nên bổ sung hai "viên gạch nền tảng" 
 
 ---
 
-## 0. Lời mở đầu: Tại sao dịch vụ của bạn lại "đơ" vào giờ cao điểm?
+## 0. Lời mở đầu: Trường hợp: Nghẽn giờ cao điểm
 
 <ProcessThreadCoroutineDemo />
 
@@ -29,7 +29,7 @@ Nhưng phần lớn thời gian, vấn đề không nằm ở chỗ phần cứn
 
 ---
 
-## 1. Khái niệm cốt lõi: Process, Thread, Coroutine, rốt cuộc khác nhau thế nào?
+## 1. Khái niệm cốt lõi: So sánh Process/Thread/Coroutine
 
 ### 1.1 Phép so sánh với nhà hàng
 

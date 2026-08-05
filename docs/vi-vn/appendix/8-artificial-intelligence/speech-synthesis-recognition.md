@@ -40,7 +40,7 @@ Sau khi biến đổi logarit, chúng ta có được nền tảng linh hồn c�
 Sau khi trích xuất xong đặc trưng, làm thế nào để dạy AI tạo ra âm thanh? Hiện nay, giới học thuật và công nghiệp có hai "vòng tròn ma thuật" song song.
 
 ### 2.1 Mô hình 1: Coi âm thanh như văn bản (Audio Tokenization)
-Cùng với sự bùng nổ của ChatGPT, các nhà khoa học đã suy nghĩ: nếu biến âm thanh thành từng "chữ Hán (Token)" nối tiếp nhau, liệu Mô hình Ngôn ngữ Lớn (LLM) có thể trực tiếp hát và nói chuyện không?
+Cùng với sự bùng nổ của ChatGPT, các nhà khoa học đã suy nghĩ: nếu biến âm thanh thành từng "chữ Hán (Token)" nối tiếp nhau, liệu Mô hình Ngôn ngữ Lớn (LLM) có thể trực tiếp hát và giao tiếp không?
 - **Nén và lượng tử hóa**: Dựa vào **Bộ mã hóa-giải mã thần kinh (Neural Codec, như EnCodec)** mạnh mẽ và kiến trúc VQ-VAE, một đoạn âm thanh kích thước vài megabyte sẽ được nén cực hạn, cuối cùng trở thành các mã hiệu rời rạc trong một cuốn từ điển (ví dụ: chuỗi `[82, 105, 33...]`).
 - **Sinh nối tiếp**: Mô hình AI chỉ cần như trò chơi nối chữ, dự đoán Token âm thanh tiếp theo là gì. Điều này thống nhất mạnh mẽ kiến trúc cơ bản của học đa phương thức!
 

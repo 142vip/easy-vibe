@@ -5,7 +5,7 @@
 
 <PromptQuickStartDemo />
 
-## 0. Lời mở đầu: Tại sao bạn đã nói rồi, mà nó vẫn làm sai?
+## 0. Lời mở đầu: Động lực của bạn đã nói rồi, mà nó vẫn làm sai
 
 Vấn đề giao tiếp giữa bạn và AI thường không phải là "nó không biết", mà là "bạn chưa nói rõ".
 
@@ -17,7 +17,7 @@ Nếu prompt của bạn mơ hồ, nó chỉ có thể "đoán mò"; nếu bạn
 
 ---
 
-## 1. Tại sao chúng ta cần "Engineering"?
+## 1. Động lực của Engineering
 
 Khi nói về "Engineering", chúng ta nhấn mạnh: **có thể tái tạo, có thể kiểm chứng, có thể chuyển giao**.
 
@@ -125,7 +125,7 @@ Yêu cầu: Độ dài/số điểm chính/giọng điệu/phải bao gồm/ph�
 Bạn nói "tóm tắt một chút", AI rất có thể cho bạn một đoạn dài.
 Bạn nói "xuất theo JSON", nó sẽ giống một "công cụ có cấu trúc" hơn.
 
-#### Tại sao định dạng lại quan trọng?
+#### Động lực của việc định dạng Prompt
 
 Bởi vì định dạng quyết định bạn có thể **sao chép trực tiếp/dán trực tiếp/đưa thẳng vào chương trình** hay không.
 
@@ -137,9 +137,9 @@ Bởi vì định dạng quyết định bạn có thể **sao chép trực ti�
 
 ```json
 {
-  "summary": "Tóm tắt một câu",
-  "keywords": ["từ khóa 1", "từ khóa 2", "từ khóa 3"],
-  "next_actions": ["bước tiếp theo 1", "bước tiếp theo 2"]
+ "summary": "Tóm tắt một câu",
+ "keywords": ["từ khóa 1", "từ khóa 2", "từ khóa 3"],
+ "next_actions": ["bước tiếp theo 1", "bước tiếp theo 2"]
 }
 ```
 
@@ -204,7 +204,7 @@ Lúc này **cho 2-3 ví dụ**, thường hiệu quả hơn viết một đoạn
 
 <FewShotDemo />
 
-#### Ví dụ tốt trông như thế nào?
+#### Cấu trúc của ví dụ Prompt chất lượng
 
 - **Ngắn**: Nhìn một cái là hiểu
 - **Nhất quán**: Định dạng đầu vào/đầu ra cố định
@@ -237,7 +237,7 @@ Nhiệm vụ: ......
 Yêu cầu:
 1. Trước tiên xuất một 「Kế hoạch/Danh sách kiểm tra」(3-7 mục)
 2. Đợi tôi xác nhận xong, rồi mới xuất kết quả cuối cùng
-   Đầu ra: Chỉ đưa kế hoạch trước, không sinh trực tiếp kết quả
+ Đầu ra: Chỉ đưa kế hoạch trước, không sinh trực tiếp kết quả
 ```
 
 Như vậy bạn có thể căn chỉnh hướng trước, rồi mới để nó sinh nội dung, tiết kiệm rất nhiều thời gian.
@@ -257,9 +257,9 @@ Bạn viết một Prompt, chạy thử, phát hiện: "ôi, dài quá" hoặc "
 1. **Chạy được trước**: Viết một phiên bản tối thiểu khả dụng.
 2. **Kiểm tra độ ổn định**: Chạy thử 2-3 lần, xem kết quả có gần giống nhau mỗi lần không.
 3. **Vá lỗi**:
-    - Nếu **quá dài dòng** -> thêm câu "không quá 100 từ".
-    - Nếu **định dạng lộn xộn** -> cho một mẫu JSON.
-    - Nếu **phong cách kỳ lạ** -> ném cho nó hai "ví dụ xuất sắc" để bắt chước.
+ - Nếu **quá dài dòng** -> thêm câu "không quá 100 từ".
+ - Nếu **định dạng lộn xộn** -> cho một mẫu JSON.
+ - Nếu **phong cách kỳ lạ** -> ném cho nó hai "ví dụ xuất sắc" để bắt chước.
 
 #### Triệu chứng và đơn thuốc thường gặp
 

@@ -1,4 +1,4 @@
-# Monitoring, Logging & Alerting
+# Principles of Monitoring, Logging, and Alerting
 > 💡 **Learning Guide**: This chapter requires no programming background. Through interactive demos, you'll gain a comprehensive understanding of operations — from monitoring and alerting to troubleshooting, from capacity planning to automated operations, mastering all the skills needed to run production systems.
 
 ## 0. Introduction: Deployment Is Just the Beginning

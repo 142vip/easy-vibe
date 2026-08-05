@@ -1,4 +1,4 @@
-# API 入门：从零理解"程序之间的对话"
+# API 入门导论：从零理解程序之间的对话
 
 ::: tip 🎯 核心问题
 **什么是 API?** 这就像问:餐厅的菜单怎么设计,客人一看就懂?服务员怎么记单,不会出错?API 解决的就是"程序之间如何对话"的问题。你写代码的第一天就在用 API,只是你可能没意识到。
@@ -106,7 +106,7 @@ result = response.choices[0].message.content
 
 ---
 
-## 3. HTTP 方法:你是在"问"还是在"做"?
+## 3. HTTP 方法:你是在"问"还是在"做"
 
 调用 Web API 时,你需要告诉服务器你想做什么。这就是 HTTP 方法的由来。
 
@@ -143,7 +143,7 @@ result = response.choices[0].message.content
 
 ---
 
-## 4. HTTP 状态码:服务器在告诉你什么?
+## 4. HTTP 状态码:服务器在告诉你什么
 
 服务器回复时,会先返回一个状态码,告诉你请求是否成功。
 
@@ -170,7 +170,7 @@ result = response.choices[0].message.content
 
 ---
 
-## 5. HTTP vs SDK:自己跑腿还是让管家代办?
+## 5. HTTP vs SDK:自己跑腿还是让管家代办
 
 ### 5.1 两种调用方式对比
 
@@ -181,7 +181,7 @@ result = response.choices[0].message.content
 | **缺点** | ✗ 需要处理所有细节<br>✗ 代码冗长易出错 | ✗ 需要安装依赖<br>✗ 可能有版本问题 |
 | **代码示例** | `requests.post(url, json=..., headers={...})` | `client.chat.completions.create(...)` |
 
-### 5.2 如何选择?
+### 5.2 选择的方法
 
 | 场景 | 推荐方式 | 原因 |
 | :--- | :--- | :--- |
@@ -196,7 +196,7 @@ result = response.choices[0].message.content
 
 ---
 
-## 6. 如何阅读 API 文档?
+## 6. 阅读 API 文档的方法
 
 API 文档就像说明书和菜单的结合体。你不需要从头读到尾,只需要学会"查字典"。
 

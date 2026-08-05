@@ -1,4 +1,5 @@
-# TypeScript ディープガイド
+# TypeScript 原理：型システムの設計哲学
+
 
 ::: tip はじめに
 あなたはもう JavaScript を書けますが、おそらくこんな問題に遭遇したことがあるでしょう：
@@ -22,7 +23,7 @@ TypeScript は、コードを実行する前にこれらの問題を発見して
 
 ---
 
-## 1. TypeScript とは
+## 1. TypeScriptの概要
 
 ::: tip 🤔 核心的な問い
 **JavaScript で十分なのに、なぜ TypeScript が必要なのか？** 新しい文法を学ぶ価値はあるのか？

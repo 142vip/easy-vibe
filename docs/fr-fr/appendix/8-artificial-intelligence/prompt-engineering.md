@@ -1,4 +1,4 @@
-# Ingénierie de Prompt (Prompt Engineering)
+# Introduction : Ingénierie de prompts
 
 > 💡 **Guide d'apprentissage** : Ce chapitre présente, à travers des démonstrations interactives, comment rédiger des prompts efficaces.
 >
@@ -6,7 +6,7 @@
 
 <PromptQuickStartDemo />
 
-## 0. Introduction : Pourquoi l'IA ne fait-elle pas ce que vous demandez ?
+## 0. Introduction : Pourquoi l'IA ne fait-elle pas ce que vous demandez
 
 Vos problèmes de communication avec l'IA ne viennent généralement pas du fait qu'elle « ne sait pas faire », mais du fait que « vous ne l'avez pas dit clairement ».
 
@@ -18,7 +18,7 @@ Si votre prompt est vague, elle ne peut que « deviner au hasard » ; si vous do
 
 ---
 
-## 1. Pourquoi avons-nous besoin d'« ingénierie » ?
+## 1. Motivation et justification : avons-nous besoin d'« ingénierie »
 
 Quand nous parlons d'« ingénierie », nous insistons sur : **reproductible, vérifiable, transférable**.
 
@@ -126,7 +126,7 @@ Sortie : Format (Markdown/JSON/bloc de code)
 Si vous dites « résume », l'IA vous donnera probablement un gros paragraphe.
 Si vous dites « en JSON », elle se comportera davantage comme un « outil structuré ».
 
-#### Pourquoi le format est-il si important ?
+#### Motivation : le format est-il si important
 
 Parce que le format détermine si vous pouvez **copier/coller directement / alimenter directement un programme**.
 
@@ -205,7 +205,7 @@ Dans ce cas, **donner 2-3 exemples** est souvent plus efficace qu'une longue des
 
 <FewShotDemo />
 
-#### À quoi ressemble un bon exemple ?
+#### À quoi ressemble un bon exemple
 
 - **Court** : Compréhensible en un coup d'œil
 - **Cohérent** : Format d'entrée/sortie fixe

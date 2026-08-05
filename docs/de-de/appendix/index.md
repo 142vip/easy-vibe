@@ -1,4 +1,4 @@
-# Anhang
+# Anhang: Systematischer Wissenspanorama
 
 Willkommen im **Anhang**-Abschnitt! Dies ist eine Sammlung von Grundlagen der künstlichen Intelligenz und Grundlagen der Full-Stack-Entwicklung, die als wichtige Referenzbibliothek während deiner Lernreise dient.
 

@@ -1,4 +1,4 @@
-# API 设计：前后端的"对话协议"
+# Principios de diseño de API: protocolo de comunicación entre frontend y backend
 
 ::: tip 🎯 Pregunta central
 **¿Cómo pueden comunicarse eficientemente el frontend y el backend?** Es como preguntar: ¿cómo diseñar el menú de un restaurante para que los clientes lo entiendan de un vistazo? ¿Cómo anotan los camareros los pedidos sin errores? ¿Cómo se sirven los platos de forma estandarizada para que los clientes queden satisfechos? El diseño de API resuelve precisamente el problema de las "reglas de diálogo".
@@ -6,7 +6,7 @@
 
 ---
 
-## 0. Primero, preguntémonos: ¿has vivido alguna de estas pesadillas?
+## 0. Primero, preguntémonos: has vivido alguna de estas pesadillas
 
 **Escenario 1: Nombres de endpoints arbitrarios**
 
@@ -57,7 +57,7 @@ Cada endpoint devuelve un formato diferente, obligando al frontend a manejar cad
 
 ---
 
-## 1. ¿Qué es una API?
+## 1. Introducción a API
 
 **API** (Application Programming Interface, Interfaz de Programación de Aplicaciones) es el "contrato de diálogo" entre programas.
 
@@ -84,7 +84,7 @@ Antes de adentrarnos en el diseño RESTful, conozcamos los cuatro estilos princi
 
 <ApiStyleCompare />
 
-### 2.1 REST vs RESTful: ¿cuál es la diferencia?
+### 2.1 REST vs RESTful: Selección de diferencia
 
 Mucha gente confunde estos dos conceptos:
 
@@ -237,7 +237,7 @@ Peligro: expone la estructura del código y las consultas a la base de datos, in
 
 ## 6. Versionado: compatibilidad hacia atrás de la API
 
-### 6.1 ¿Por qué versionar?
+### 6.1 Motivación de versionar
 
 Escenario: tu aplicación tiene 1 millón de usuarios y necesitas modificar el endpoint de pedidos.
 

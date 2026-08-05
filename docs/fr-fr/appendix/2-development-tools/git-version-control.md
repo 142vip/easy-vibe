@@ -1,10 +1,10 @@
-# Git : La machine a remonter le temps du code
+# Principes : Gestion de versions avec Git
 
 > 💡 **Guide d'apprentissage** : Ce chapitre est destine a ceux qui n'ont jamais utilise Git. Nous ne vous ferons pas memoriser des commandes des le depart, mais nous clarifierons d'abord "quel probleme Git resout pour vous", puis nous relierons les commandes et les concepts etape par etape. Apres lecture, vous serez capable de committer localement, de creer des branches et de pousser vers GitHub de maniere autonome.
 
 ---
 
-## 0. D'abord une question : Avez-vous deja vecu ces cauchemars ?
+## 0. D'abord une question : Avez-vous deja vecu ces cauchemars
 
 **Scenario 1 : L'enfer des versions**
 
@@ -42,7 +42,7 @@ Sans exageration, Git est l'un des outils les plus importants du developpement l
 
 ---
 
-## 1. Git et GitHub sont-ils la meme chose ?
+## 1. Git et GitHub sont-ils la meme chose
 
 Beaucoup de debutants confondent ces deux concepts. Clarifions d'abord :
 
@@ -78,7 +78,7 @@ C'est le **depot d'historique permanent**, cache dans le dossier `.git`. Chaque 
 
 <GitCommitFlow />
 
-### Pourquoi un "processus en deux etapes" (add + commit) ?
+### Motivation et justification : un "processus en deux etapes" (add + commit)
 
 Beaucoup de debutants demandent : pourquoi ne pas simplement sauvegarder en un clic, au lieu de faire d'abord `add` puis `commit` ?
 
@@ -156,7 +156,7 @@ git commit -m "feat: ajout de la fonctionnalite de connexion utilisateur"
 
 Le contenu entre guillemets apres `-m` s'appelle le **message de commit** (commit message). Il est destine a votre futur vous et a vos collegues — redigez-le de maniere significative.
 
-### 3.3 Comment rediger des messages de commit professionnels ?
+### 3.3 Comment rediger des messages de commit professionnels
 
 ```bash
 # ❌ Redaction inutile — on ne comprend pas ce qui a ete fait
@@ -206,7 +206,7 @@ git log --oneline
 
 **Les branches** sont la fonctionnalite la plus puissante mais aussi la plus deroutante de Git pour les debutants. Mais une fois comprise, vous decouvrirez que ce design est tres elegant.
 
-### 4.1 Qu'est-ce qu'une branche ? Comprendre avec les "univers paralleles"
+### 4.1 Qu'est-ce qu'une branche Comprendre avec les "univers paralleles"
 
 Imaginez que vous jouez a un jeu de role avec un choix cle :
 - Choix A : Affronter le grand boss (developper une nouvelle fonctionnalite)
@@ -284,7 +284,7 @@ git merge feature-login
 git branch -d feature-login
 ```
 
-### 4.4 Quand faut-il creer une branche ?
+### 4.4 Quand faut-il creer une branche
 
 | Scenario | Recommandation | Raison |
 | :--- | :--- | :--- |
@@ -393,7 +393,7 @@ git clone : distant → local   (premiere copie complete du depot)
 
 Les conflits sont inevitables en collaboration, mais ils ne sont pas si effrayants.
 
-### 6.1 Comment les conflits se produisent-ils ?
+### 6.1 Comment les conflits se produisent-ils
 
 Quand vous et un collegue **modifiez simultanement la meme ligne du meme fichier**, Git ne sait pas quelle version utiliser lors de la fusion, et un conflit apparait.
 
@@ -402,7 +402,7 @@ Exemple :
 - Votre collegue a ecrit en meme temps sur la meme ligne : `const timeout = 5000`
 - Lors d'un `git pull` ou `git merge`, Git detecte cette contradiction et "met en pause" pour vous dire : "Je ne peux pas decider, choisissez."
 
-### 6.2 A quoi ressemble un fichier en conflit ?
+### 6.2 A quoi ressemble un fichier en conflit
 
 Git insere des marqueurs speciaux aux endroits en conflit :
 
@@ -423,7 +423,7 @@ function login() {
 - Entre `<<<<<<< HEAD` et `=======` : le contenu de votre branche actuelle
 - Entre `=======` et `>>>>>>> xxx` : le contenu a fusionner
 
-### 6.3 Comment resoudre un conflit ?
+### 6.3 Comment resoudre un conflit
 
 **Etape 1** : Ouvrir le fichier en conflit et trouver tous les marqueurs `<<<<<<<` (generalement les editeurs comme VS Code les surlignent automatiquement)
 
@@ -503,7 +503,7 @@ git branch -d feature/user-profile
 
 ---
 
-## 9. .gitignore : Quels fichiers ne doivent pas etre suivis ?
+## 9. .gitignore : Quels fichiers ne doivent pas etre suivis
 
 Certains fichiers ne doivent **pas** etre committer dans le depot Git :
 - `node_modules/` : dependances, tres volumineux, regenerable avec `npm install`

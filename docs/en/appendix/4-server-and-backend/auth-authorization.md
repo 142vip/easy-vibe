@@ -1,4 +1,4 @@
-# Authentication & Authorization System
+# Principles of Authentication and Authorization
 > 💡 **Learning Guide**: This chapter takes you deep into the "access control system" of backend architecture — authentication and authorization. We'll start from the most basic "who are you" and progressively master modern authentication schemes like Session, JWT, OAuth 2.0, and more.
 
 <AuthEvolutionDemo />
@@ -16,7 +16,7 @@ If we compare a backend system to an office building:
 - **Authentication**: Confirms "who you are" (verifying an ID badge / access card).
 - **Authorization**: Confirms "where you can go" (VIPs can enter the VIP lounge; regular users cannot).
 
-### 0.1 Why Do We Need Authentication?
+### 0.1 Motivation for needing Authentication
 
 There's only one reason: **to protect resources**.
 
@@ -38,7 +38,7 @@ Let's understand how authentication and authorization work through a real login 
 
 ## 1. Core Concepts: Authentication vs Authorization
 
-### 1.1 Authentication: Who Are You?
+### 1.1 Authentication: Who Overview of You
 
 Confirms a user's identity.
 
@@ -46,7 +46,7 @@ Confirms a user's identity.
 - *Output*: A token that represents "you."
 - *Abbreviation*: **AuthN**
 
-### 1.2 Authorization: What Can You Do?
+### 1.2 Authorization: What Can You Do
 
 Confirms what permissions a user has.
 

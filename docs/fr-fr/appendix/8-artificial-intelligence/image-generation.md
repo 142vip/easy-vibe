@@ -1,4 +1,4 @@
-# Principes de génération d'images
+# Principes : Génération d'images par IA
 
 > 💡 **Guide d'apprentissage** : Ce chapitre explore systématiquement le mécanisme de fonctionnement des modèles visuels génératifs à grande échelle. Nous partirons du problème de l'espace pixel haute dimension pour décortiquer les principes mathématiques rigoureux derrière les autoencodeurs variationnels (VAE), les modèles de diffusion (Diffusion) et l'attention croisée (Cross-Attention). Des composants interactifs astucieux et vivants vous garantiront une compréhension rapide de ces technologies de pointe, même sans aucune base en IA !
 

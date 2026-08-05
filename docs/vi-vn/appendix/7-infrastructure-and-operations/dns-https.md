@@ -110,7 +110,7 @@ Bắt tay TLS là bước quan trọng để thiết lập kết nối bảo m�
 
 ---
 
-## 4. Chuỗi tin cậy chứng chỉ: tại sao tin tưởng trang web này?
+## 4. Chuỗi tin cậy chứng chỉ: Động lực của tin tưởng trang web này
 
 Bước quan trọng nhất trong bắt tay TLS là "xác minh chứng chỉ". Trình duyệt xác định chứng chỉ của một trang web là thật hay giả mạo như thế nào? Câu trả lời là **chuỗi tin cậy chứng chỉ** — một hệ thống bảo chứng theo tầng.
 
@@ -131,7 +131,7 @@ Bước quan trọng nhất trong bắt tay TLS là "xác minh chứng chỉ". T
 
 ---
 
-## 5. HTTP vs HTTPS: tại sao mã hóa là yêu cầu tối thiểu?
+## 5. HTTP vs HTTPS: Động lực của mã hóa là yêu cầu tối thiểu
 
 Năm 2024, hơn 95% lưu lượng trang web toàn cầu đã được truyền qua HTTPS. Trình duyệt Chrome đánh dấu cảnh báo "Không an toàn" cho các trang web HTTP, và các công cụ tìm kiếm cũng giảm xếp hạng các trang web HTTP. HTTPS không còn là "tùy chọn", mà là yêu cầu tối thiểu của Web hiện đại.
 

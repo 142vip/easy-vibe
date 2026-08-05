@@ -10,7 +10,7 @@ Hướng dẫn này sẽ đưa bạn từ việc vẽ đường đầu tiên, đ
 
 ---
 
-## 1. Canvas là gì?
+## 1. Tổng quan về Canvas
 
 Nếu trang web thời kỳ đầu được lắp ráp bằng **đồ chơi Lego** (thẻ HTML), thì thẻ `<canvas>` của HTML5 giống như việc ai đó đưa bạn một **tờ giấy trắng kỹ thuật số khổng lồ**, rồi trao cho bạn một **cọ vẽ** được điều khiển bằng code, phần còn lại là do bạn tự do sáng tạo.
 
@@ -35,7 +35,7 @@ Trong giới vẽ frontend, Canvas có một đối thủ truyền kiếp là **
 
 ## 2. Nét vẽ đầu tiên: Hiểu hệ tọa độ trái ngược trực giác
 
-### 2.1 Tại sao tờ giấy này bị lộn trên dưới?
+### 2.1 Trường hợp: Vấn đề Z-index
 
 Khi chuẩn bị xuống bút, bạn phải hiểu trước rằng thước kẻ trong Canvas bị ngược. Trong hệ tọa độ toán học truyền thống, điểm gốc số không nằm ở giữa, càng lên trên giá trị càng lớn. Nhưng trong lĩnh vực hiển thị màn hình máy tính, hầu hết các thiết bị đặt "điểm gốc (0, 0)" ở **góc trên cùng bên trái** của màn hình. Đi sang phải trục X tăng thì không vấn đề, nhưng **đi xuống dưới, trục Y tăng.**
 
@@ -64,7 +64,7 @@ Vì Canvas là khung vẽ bitmap thuần túy, "bút sa không thể thu hồi",
 
 ---
 
-## 3. Cuốn sách hoạt hình lật trang: Làm sao để hình ảnh chuyển động cực kỳ mượt
+## 3. Cuốn sách hoạt hình lật trang: Cách để hình ảnh chuyển động cực kỳ mượt
 
 Vì Canvas một khi fill màu đã trở thành pixel vĩnh viễn, vậy các nhân vật chạy loạn khắp màn hình trong các game HTML5 được làm thế nào?
 
@@ -83,7 +83,7 @@ Vì mắt người có "lưu ảnh", trong 60 lần mỗi giây của [xóa -> c
 
 ---
 
-## 4. Người mù voi sờ: Làm tương tác click trong Canvas thế nào?
+## 4. Người mù voi sờ: Cách tương tác trong Canvas
 
 Vì khung vẽ Canvas trong mắt trình duyệt chỉ là một "tấm vải màu" không có cấu trúc. Giả sử bạn vẽ một con quái vật bằng `arc()` trên canvas, khi muốn triển khai "click quái vật trừ máu", bạn **hoàn toàn không thể** dùng `document.getElementById` truyền thống để lấy con quái vật này. Vì trong cấu trúc HTML chỉ có thẻ `<canvas>` rộng 600 pixel cứng nhắc đó.
 
@@ -118,7 +118,7 @@ Trình duyệt của bạn trong chớp mắt có thể biến thành xưởng s
 
 ---
 
-## 6. Bảo vệ vinh quang FPS: Đối mặt với CPU sốt cao thế nào?
+## 6. Bảo vệ vinh quang FPS: Cách tối ưu hiệu năng FPS
 
 Khi hàng nghìn đối tượng được tính toán và vẽ lại 60 lần trong một giây thì rất tốn hiệu năng. Nếu làm vô tổ chức, quạt máy tính của bạn sẽ sớm cất cánh.
 
@@ -133,7 +133,7 @@ Dưới đây là "tuyệt kỹ hộ thể" mà các cao nhân engine thực th�
 3. **Rửa cọ theo lô (Batching):**
    Chuyển từ màu đỏ sang màu xanh trong bảng pha màu rất tốn kém ở tầng dưới. Nếu trên canvas có 1000 vòng tròn đỏ và 1000 vòng tròn xanh xen kẽ. Cách nhanh nhất là: chuẩn bị màu đỏ trước, lặp vẽ xong tất cả vòng tròn đỏ, rồi đổi màu xanh vẽ tất cả vòng tròn xanh. Đây là tư tưởng render theo lô (Batch Rendering) nổi tiếng.
 
-👇 Kéo số lượng đối tượng lên trên 3000, nhìn trang web rơi vào vực thẳm giật lag, rồi bật lần lượt các công tắc "kỹ thuật tối ưu" ở góc dưới bên phải, tận mắt chứng kiến cứu vãn tỷ lệ khung hình thực sự:
+👇 Kéo số lượng đối tượng lên trên 3000, nhìn trang web rơi vào ràng buộc giật lag, rồi bật lần lượt các công tắc "kỹ thuật tối ưu" ở góc dưới bên phải, tận mắt chứng kiến cứu vãn tỷ lệ khung hình thực sự:
 
 <PerformanceDemo />
 

@@ -1,4 +1,4 @@
-# Pensee securitaire et bases de l'attaque/defense
+# Fondamentaux : Pensée sécuritaire et attaque/défense
 
 ::: tip Avant-propos
 **Votre site web est-il securise ?** Beaucoup de developpeurs pensent que « la securite est l'affaire de l'equipe de securite », jusqu'a ce que leur propre projet soit attaque et que les donnees utilisateur soient compromisees. La securite n'est pas une option, c'est une competence fondamentale de chaque developpeur.
@@ -19,7 +19,7 @@ Apres ce chapitre, vous aurez une sensibilite basique a la securite et serez cap
 
 ---
 
-## 0. Vue d'ensemble : Pourquoi les developpeurs doivent-ils comprendre la securite ?
+## 0. Vue d'ensemble : Pourquoi les developpeurs doivent-ils comprendre la securite
 
 Imaginez que vous avez construit une maison — fonctionnelle et bien decoree, mais vous avez oublie d'installer des serrures. Les vulnerabilites de securite sont les « serrures oubliees » dans le monde du code.
 

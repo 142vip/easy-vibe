@@ -1,4 +1,4 @@
-# JavaScript 런타임 심층 가이드
+# JavaScript 런타임 원리
 
 ::: tip 서문
 여러분은 이미 JavaScript의 기본 문법을 배웠지만, 다음을 생각해 본 적이 있나요?

@@ -1,4 +1,4 @@
-# La Esencia de los Frameworks Frontend
+# Principios de los frameworks frontend
 
 > 💡 **Guía de aprendizaje**: Este artículo responderá una pregunta fundamental — **¿Qué hacen exactamente los frameworks frontend (Vue, React, Svelte, etc.)?** Si solo has aprendido HTML, CSS y un poco de JavaScript, no hay problema, empezaremos desde cero.
 
@@ -9,7 +9,7 @@ Antes de comenzar, confirma que conoces estos dos conceptos básicos. Si no est�
 
 También hay un concepto que aparecerá frecuentemente más adelante, aquí hacemos una explicación completa.
 
-### ¿Qué es el DOM?
+### Introducción a DOM
 
 DOM significa Document Object Model, en chino "Modelo de Objetos del Documento".
 
@@ -26,7 +26,7 @@ Pasa el ratón sobre el código HTML a la izquierda, y el nodo correspondiente e
 
 ---
 
-## 0. Introducción: ¿Qué es un "framework frontend"?
+## 0. Introducción: Introducción a "framework frontend"
 
 Primero expliquemos la palabra "framework". En programación, un **Framework** es un conjunto de código y reglas ya escritos, que estipula cómo debe organizarse y ejecutarse tu código. Tú escribes código siguiendo su manera, y él te ayuda a manejar una gran cantidad de trabajo subyacente repetitivo y tedioso.
 
@@ -40,7 +40,7 @@ A continuación, desplegaremos paso a paso, comenzando desde la pregunta más b�
 
 ---
 
-## 1. Pregunta central: Los datos cambian, ¿qué pasa con la interfaz?
+## 1. Pregunta central: Los datos cambian, qué pasa con la interfaz
 
 ### 1.1 Primero aclaremos qué son "datos" e "interfaz"
 
@@ -58,7 +58,7 @@ Haz clic en el botón "Añadir producto", observa atentamente: los datos (izquie
 
 <DataUIGapDemo />
 
-### 1.2 ¿Por qué cuando una variable JS cambia, la interfaz no cambia automáticamente?
+### 1.2 Motivación de variable JS cambia, la interfaz no cambia automáticamente
 
 Este es el punto que más confunde a los principiantes, vamos a explicar el principio subyacente paso a paso.
 
@@ -92,7 +92,7 @@ document.getElementById('counter').textContent = count
 
 Si hay 5 lugares en la página mostrando el valor de count (cantidad del carrito, lista de productos, precio total, subtotal, mensaje de estado), necesitas escribir 5 fragmentos de código así. **Si olvidas alguno, ese lugar seguirá mostrando el valor antiguo, y el usuario verá información incorrecta.**
 
-### 1.3 ¿Qué hace el framework? Dos pasos para establecer la conexión automática
+### 1.3 Introducción a framework Dos pasos para establecer la conexión automática
 
 El framework logra la sincronización automática gracias a **dos pasos coordinados** — ambos indispensables.
 
@@ -195,7 +195,7 @@ Modifica los datos (State) a la izquierda, observa cómo la interfaz (UI) a la d
 
 <DeclarativeFormulaDemo />
 
-### 2.3 ¿Por qué la declarativa es mejor que la imperativa?
+### 2.3 Motivación de declarativa es mejor que la imperativa
 
 La ventaja del enfoque declarativo:
 
@@ -210,9 +210,9 @@ En pocas palabras: lo declarativo te permite concentrar tu energía en la "lógi
 
 ---
 
-## 3. Sistema reactivo: ¿Cómo sabe el framework que los datos han cambiado?
+## 3. Sistema reactivo: Enfoque de sabe el framework que los datos han cambiado
 
-### 3.1 ¿Qué es la "reactividad"?
+### 3.1 Introducción a "reactividad"
 
 Antes dijimos "los datos cambian, la interfaz se actualiza automáticamente". Pero hay un problema técnico: **JavaScript en sí no tiene la capacidad de "notificar automáticamente a otros cuando una variable es modificada"**.
 
@@ -278,7 +278,7 @@ Los tres enfoques no son absolutamente mejores o peores. Vue se escribe de forma
 
 ## 4. Componentes: Dividir la interfaz en piezas pequeñas reutilizables
 
-### 4.1 ¿Por qué dividir?
+### 4.1 Motivación de dividir
 
 Una página web completa puede tener barra de navegación, barra lateral, área de contenido, cuadro de búsqueda, avatar de usuario, diversos botones... Si todo el código está en un archivo, este archivo será muy largo y muy difícil de mantener.
 
@@ -306,7 +306,7 @@ Haz clic en los nombres de componentes a la izquierda para ver su área correspo
 
 <ComponentTreeDemo />
 
-### 4.3 ¿Cómo se ve un componente en el código?
+### 4.3 Enfoque de ve un componente en el código
 
 Tomando Vue como ejemplo, un componente es un archivo `.vue` que contiene tres partes:
 
@@ -352,9 +352,9 @@ Tres líneas de código renderizan tres tarjetas de productos diferentes.
 
 ---
 
-## 5. El coste de las operaciones DOM: ¿Por qué el framework se esfuerza tanto?
+## 5. El coste de las operaciones DOM: Motivación de framework se esfuerza tanto
 
-### 5.1 ¿Qué es una operación DOM?
+### 5.1 Introducción a operación DOM
 
 Mencionamos antes el DOM — la estructura de árbol generada por el navegador al analizar HTML. Una **operación DOM** es usar JavaScript para modificar los nodos de este árbol. Por ejemplo, cambiar un texto, añadir un elemento, eliminar un elemento, modificar un estilo.
 
@@ -371,7 +371,7 @@ Observa la comparación de tiempo entre operar el DOM directamente y hacerlo por
 
 <DomOperationCostDemo />
 
-### 5.2 ¿Cómo resuelve esto el framework?
+### 5.2 Enfoque de resuelve esto el framework
 
 Ya que operar el DOM directamente es caro, el framework busca **reducir el número de operaciones DOM**. Concretamente, hay dos estrategias:
 

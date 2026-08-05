@@ -1,4 +1,4 @@
-# Security Thinking and Attack/Defense Fundamentals
+# Fundamentals of Security Thinking: Offense and Defense
 
 ::: tip Preface
 **Is your website secure?** Many developers think "security is the security team's job" — until their own project gets attacked and user data is leaked. Security is not optional; it's a fundamental skill for every developer.

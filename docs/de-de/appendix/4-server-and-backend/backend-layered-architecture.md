@@ -1,4 +1,4 @@
-# Backend-Schichtenarchitektur
+# Backend-Schichtenarchitektur: Strukturprinzipien
 
 > **Kernfrage**: Wie organisiert man Code, damit er klar und verständlich bleibt, statt immer chaotischer zu werden?
 
@@ -6,7 +6,7 @@ Wenn ein Projekt von einigen Dutzend auf Zehntausende Codezeilen wächst, von de
 
 ---
 
-## 1. Warum braucht man Schichten?
+## 1. Warum braucht man Schichten
 
 ### 1.1 Die Wurzel des Problems
 
@@ -354,7 +354,7 @@ public class User {
 
 ## 3. DTO: Der „Übersetzer" zwischen den Schichten
 
-### 3.1 Warum braucht man DTOs?
+### 3.1 Warum braucht man DTOs
 
 **Das Problem**: Wenn Datenbank-Entitäten direkt an das Frontend zurückgegeben werden:
 
@@ -539,11 +539,11 @@ public class OrderController {
 
 ## 6. Häufige Fragen
 
-### 6.1 Darf der Controller Geschäftslogik enthalten?
+### 6.1 Darf der Controller Geschäftslogik enthalten
 
 Der Controller sollte keine Geschäftslogik enthalten — er ist nur für das Empfangen von Anfragen und das Zurückgeben von Antworten zuständig. Geschäftslogik sollte in der Service-Schicht gekapselt sein. Der Vorteil: Der Code kann wiederverwendet werden — z. B. können zeitgesteuerte Aufgaben oder Message-Queue-Consumer den Service direkt aufrufen, ohne eine HTTP-Anfrage zu benötigen. Zudem ist die Geschäftslogik an einem Ort konzentriert und damit leichter zu testen und zu warten, was Inkonsistenzen durch verstreute Logik vermeidet.
 
-### 6.2 Was sind das „Anemic Domain Model" und das „Rich Domain Model"?
+### 6.2 Was sind das „Anemic Domain Model" und das „Rich Domain Model"
 
 Das Anemic Domain Model bedeutet, dass Entitätsklassen nur Attribute und deren Getter/Setter-Methoden enthalten, aber keine Geschäftslogik. Alle Geschäftsregeln werden in der Service-Schicht implementiert. Dieses Modell ist einfach strukturiert, leicht verständlich und wird in den meisten Projekten verwendet.
 
@@ -551,7 +551,7 @@ Das Rich Domain Model bedeutet, dass Entitätsklassen nicht nur Attribute, sonde
 
 Es wird empfohlen, das Modell basierend auf dem technischen Hintergrund des Teams und der Projektkomplexität zu wählen. Unabhängig von der Wahl sollte Konsistenz gewahrt bleiben und die Domain-Schicht sollte zumindest grundlegende Geschäftsverhaltensmethoden enthalten, statt eine vollständig leere Hülle zu sein.
 
-### 6.3 Wie behandelt man Transaktionen über mehrere Services hinweg?
+### 6.3 Wie behandelt man Transaktionen über mehrere Services hinweg
 
 Wenn eine Geschäftsoperation mehrere Services umfasst, sollte die Transaktionsannotation in der übergeordneten Service-Methode verwendet werden, die nacheinander die untergeordneten Services aufruft. So wird sichergestellt, dass alle Operationen im selben Transaktionskontext ausgeführt werden — entweder alle erfolgreich oder alle fehlgeschlagen — und die Datenkonsistenz gewahrt bleibt. Wichtig: Die Transaktionsgrenze sollte so klein wie möglich sein und nur die notwendigen Operationen enthalten, um zu vermeiden, dass lange gehaltene Datenbanksperren die Parallelverarbeitung beeinträchtigen.
 
@@ -763,7 +763,7 @@ Detailliertere Auswahlkriterien:
 - **Clean Architecture**: Robert C. Martins „Clean Architecture" — das klassische Werk zu Abhängigkeitsregeln und dem Vier-Kreise-Modell
 - **Unternehmensarchitekturmuster**: Martin Fowlers „Patterns of Enterprise Application Architecture" — die maßgebliche Referenz zu Schichtenarchitektur und Organisation von Domänenlogik
 
-### 8.5 Wie wählt man aus?
+### 8.5 Wie wählt man aus
 
 **Merke dir dieses Prinzip**: **Architektur dient dem Geschäft, nicht umgekehrt**.
 

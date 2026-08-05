@@ -1,4 +1,4 @@
-# Quản trị dữ liệu và chất lượng dữ liệu
+# Quản trị dữ liệu: Giới thiệu về quản trị và chất lượng
 
 ::: tip Lời mở đầu
 **Bạn đã từng gặp tình huống này chưa: số liệu trên báo cáo không khớp với nghiệp vụ thực tế, thông tin của cùng một người dùng khác nhau giữa hai hệ thống, hoặc kết quả phân tích hoàn toàn không đáng tin cậy do dữ liệu bẩn?** Quản trị dữ liệu chính là phương pháp hệ thống để giải quyết những vấn đề này. Trong thời đại "quyết định dựa trên dữ liệu", chất lượng dữ liệu quyết định trực tiếp chất lượng quyết định — rác vào, rác ra (Garbage In, Garbage Out).
@@ -26,7 +26,7 @@ Sau khi học xong chương này, bạn sẽ có được:
 
 ---
 
-## 0. Toàn cảnh: Tại sao cần quản trị dữ liệu?
+## 0. Toàn cảnh: Động lực của quản trị dữ liệu
 
 Quản trị dữ liệu không phải là vấn đề kỹ thuật, mà là **vấn đề quản lý**. Câu hỏi cốt lõi mà nó trả lời là: **Ai chịu trách nhiệm về dữ liệu? Tiêu chuẩn của dữ liệu là gì? Làm sao đảm bảo dữ liệu liên tục đáng tin cậy?**
 
@@ -75,7 +75,7 @@ Quản trị dữ liệu không phải là dự án một lần, mà là quá tr
 | Giai đoạn | Sản phẩm chính | Vai trò then chốt |
 |-----------|----------------|-------------------|
 | Xác định tiêu chuẩn | Từ điển dữ liệu, quy ước đặt tên, tiêu chuẩn phân loại | Kiến trúc sư dữ liệu |
-| Thu thập và tiếp nhận | Quy chuẩn tiếp nhận, quy tắc kiểm tra, ghi nhận dòng đời | Kỹ sư dữ liệu |
+| Thu thập và tiếp nhận | Quy chuẩn tiếp nhận, quy tắc kiểm tra, thu thập dòng đời | Kỹ sư dữ liệu |
 | Lưu trữ và quản lý | Mô hình phân tầng, ma trận phân quyền, chính sách vòng đời | DBA / Kỹ sư nền tảng |
 | Sử dụng và tiêu thụ | Danh mục dữ liệu, quy tắc ẩn danh, báo cáo chất lượng | Phân tích dữ liệu / Đơn vị nghiệp vụ |
 | Lưu trữ và tiêu hủy | Chính sách lưu trữ, nhật ký xóa, nhật ký kiểm toán | Đội bảo mật và tuân thủ |
@@ -119,7 +119,7 @@ Dòng đời dữ liệu có ba ứng dụng cốt lõi trong công việc thự
 
 ::: tip Hai phương pháp thu thập dòng đời
 - **Thu thập chủ động**: phân tích câu lệnh SQL, cấu hình ETL, tự động trích xuất quan hệ dòng đời cấp bảng/trường
-- **Thu thập bị động**: chặn kế hoạch thực thi của công cụ truy vấn (như Hive, Spark) qua Hook, ghi nhận dòng đời theo thời gian thực
+- **Thu thập bị động**: chặn kế hoạch thực thi của công cụ truy vấn (như Hive, Spark) qua Hook, thu thập dòng đời theo thời gian thực
 
 Các công cụ phổ biến như Apache Atlas, DataHub, OpenLineage đều hỗ trợ thu thập dòng đời tự động.
 :::

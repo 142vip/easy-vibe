@@ -1,11 +1,11 @@
-# Hiérarchies et stratégies de mise en cache
+# Principes : Stratégies et hiérarchies de cache
 ::: tip 🎯 Question centrale
 **Pourquoi certains sites web s'ouvrent en 50 millisecondes, alors que d'autres prennent 5 secondes ?** C'est comme demander : pourquoi sortir un livre de son cartable prend 1 seconde, alors qu'aller le chercher à la bibliothèque prend 10 minutes ? La réponse, c'est le cache. Ce chapitre vous fera plonger dans les principes fondamentaux, les modèles de conception et les techniques pratiques du cache, pour multiplier par 100 les performances de votre système.
 :::
 
 ---
 
-## 1. Pourquoi mettre en cache ?
+## 1. Motivation et justification : mettre en cache
 
 ### 1.1 L'évolution : de « tout interroger à chaque fois » à « mémoriser les données fréquentes »
 
@@ -58,7 +58,7 @@ La valeur du cache ne réside pas seulement dans la « rapidité », mais surtou
 
 ---
 
-## 2. Concepts fondamentaux : qu'est-ce que le cache ?
+## 2. Concepts fondamentaux : qu'est-ce que le cache
 
 ::: tip 🤔 Qu'est-ce que le cache, au juste ?
 En bref, **le cache est un espace de stockage pour des copies de données**. C'est comme un post-it sur votre bureau où vous notez les numéros de téléphone fréquents, pour ne pas avoir à fouiller dans votre répertoire à chaque fois.
@@ -818,7 +818,7 @@ La démonstration ci-dessous compare les scénarios et solutions des trois probl
 
 Le cache est par essence une copie des données. Entre la copie et les données originales (base de données), il existe inévitablement une fenêtre d'incohérence temporelle. Maîtriser cette fenêtre est le défi central de la conception d'un cache.
 
-### 5.1 Pourquoi le cache et la base de données deviennent-ils incohérents ?
+### 5.1 Pourquoi le cache et la base de données deviennent-ils incohérents
 
 ::: tip 🤔 L'incohérence expliquée par l'analogie du post-it et du livre
 Imaginez que vous avez noté sur un post-it : « Tél de Xiaoming : 123456 ». C'est une copie de votre répertoire (la base de données).

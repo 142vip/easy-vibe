@@ -1,11 +1,11 @@
-# The Essence of Web Frameworks
+# Principles of Web Frameworks
 ::: tip 🎯 Core Question
 **You've written the code — how do you make it accessible to people around the world?** It's like asking: do you want to open a roadside food stall, or run a multinational restaurant chain? Your choice of backend architecture determines how many customers your "restaurant" can serve.
 :::
 
 ---
 
-## 1. Why Understand Architectural Evolution?
+## 1. Motivation for Understanding Architectural Evolution
 
 Imagine you're planning a long-distance trip. You could choose to ride a bicycle, drive a car, take a high-speed train, or fly. Each mode of transport has its own sweet spot: a bicycle works for short distances when you want exercise; a plane is ideal for transcontinental journeys.
 
@@ -45,7 +45,7 @@ Let's interpret it row by row:
 
 ## 2. The Physical Server Era (1990s)
 
-### 2.1 What Is a Physical Server?
+### 2.1 Overview of a Physical Server
 
 When the internet was just getting started, the backend was simply a **physical server** (a real computer) sitting in a data center.
 
@@ -115,7 +115,7 @@ It's like your home kitchen vs. a restaurant: your home kitchen cooks occasional
 
 ## 3. The Monolithic Architecture Era (2000s)
 
-### 3.1 What Is Monolithic Architecture?
+### 3.1 Overview of Monolithic Architecture
 
 With the rise of frameworks (Rails / Django / Spring), everyone started packing all functionality into a single application.
 
@@ -200,7 +200,7 @@ If you're learning backend development, **I strongly recommend starting with mon
 
 ## 4. Containerization and Microservices (2010s)
 
-### 4.1 Why Microservices?
+### 4.1 Motivation for Microservicesing
 
 The pain points of monolithic architecture erupted in the 2010s:
 
@@ -318,7 +318,7 @@ Splitting a 100-line feature into its own independent service:
 
 ## 5. The Serverless and Cloud-Native Era (2020s+)
 
-### 5.1 Why Serverless?
+### 5.1 Motivation for Serverlessing
 
 Microservices are great, but maintaining dozens of small kitchens is still exhausting. You still need to worry about:
 
@@ -345,7 +345,7 @@ Microservices are great, but maintaining dozens of small kitchens is still exhau
 **It's like food delivery**: you don't need a kitchen — you just design the menu, and someone else does the cooking.
 :::
 
-### 5.2 What Is Serverless?
+### 5.2 Overview of Serverless
 
 **Serverless = FaaS + BaaS**
 

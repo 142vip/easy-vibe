@@ -1,11 +1,11 @@
-# Load Balancing & Gateway
+# Principles of Load Balancing and Gateways
 ::: tip 🎯 Core Question
 **When a single server can't handle the load, how do you "smartly" distribute traffic across multiple server instances?** Load balancing is the "dispatcher" of modern distributed systems. This article uses real-world analogies (bubble tea shop checkout, package sorting, traffic control) to deeply explore the design philosophy and engineering practices of load balancing.
 :::
 
 ---
 
-## 1. Why "Load Balancing"?
+## 1. Motivation for the "Load Balancing"
 
 ### 1.1 A Real-World Case: The Architecture Evolution of a Website
 
@@ -66,7 +66,7 @@ Imagine you run a popular bubble tea shop:
 
 ---
 
-## 2. What Is Load Balancing?
+## 2. Overview of Load Balancing
 
 ### 2.1 Layer 4 Load Balancing (L4): Only Looking at the Address
 
@@ -90,7 +90,7 @@ Client request → L4 Load Balancer → Backend server
 
 :::
 
-### 2.2 Layer 7 Load Balancing (L7): Inspecting the Package Contents
+### 2.2 Layer 7 Load Balancing (L7): Inspecting the Build Artifact Contents
 
 **Operates at the application layer (HTTP/HTTPS)** — like a delivery driver who not only checks the address but also **opens the package to inspect its contents** before deciding how to deliver.
 
@@ -126,9 +126,9 @@ Client request → L7 Load Balancer → Parses HTTP content
 
 ---
 
-## 3. Core Problem 1: How to Prevent "Broken" Servers from Continuing to Serve?
+## 3. Core Problem 1: Approach to preventing "Broken" Servers from Continuing to Serve
 
-### 3.1 Health Checks: Don't Let "Sick" Servers Drag Down the System
+### 3.1 Health Checks: Don't Let Unhealthy Instances Drag Down the System
 
 Imagine one of your checkout counters breaks, but the assignment person doesn't know and keeps sending customers there. The queue grows longer, and customers grow angrier.
 
@@ -169,9 +169,9 @@ A team set the health check response time threshold to 100ms, but their applicat
 
 ---
 
-## 4. Core Problem 2: How to Ensure "Returning Customers" Always Get the Same "Cashier"?
+## 4. Core Problem 2: Approach to Ensuring Returning Users Always Get "Backend Instance"
 
-### 4.1 Session Persistence: Let "Returning Customers" Always Find the Same "Cashier"
+### 4.1 Session Persistence: Let "Returning User" Always Find "Backend Instance"
 
 Imagine you're a regular at a bubble tea shop, and the same staff member serves you every time. She knows your preferences (half sugar, no ice) and serves you quickly and thoughtfully. But if you get a new person every time, you have to repeat the same requests over and over — a huge efficiency loss.
 
@@ -196,7 +196,7 @@ Imagine you're a regular at a bubble tea shop, and the same staff member serves 
 
 ---
 
-## 5. Core Problem 3: How to Achieve Zero-Downtime Deployment?
+## 5. Core Problem 3: Approach to achieving Zero-Downtime Deployment
 
 ### 5.1 Blue-Green Deployment: "One-Click Switch" for Zero-Downtime Releases
 
@@ -246,9 +246,9 @@ The canary release is named after the historical "coal mine canary" — miners b
 
 ---
 
-## 6. Core Problem 4: How to Make the System "Breathe" on Its Own?
+## 6. Core Problem 4: Approach to making the System "Auto-Scale" on Its Own
 
-### 6.1 Auto Scaling: Let the System "Flexibly Schedule" Like a Restaurant
+### 6.1 Auto Scaling: Let the System Flexibly Schedule Workloads
 
 Imagine you run a restaurant:
 
@@ -309,7 +309,7 @@ A team set CPU < 30% as the scale-down trigger. After scaling up, traffic was st
 
 ---
 
-## 7. Practical Guide: How to Choose a Load Balancer?
+## 7. Practical Guide: Approach to choosing a Load Balancer
 
 ### 7.1 Comparison of Mainstream Load Balancers
 

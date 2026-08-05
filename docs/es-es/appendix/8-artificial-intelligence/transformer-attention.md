@@ -3,7 +3,7 @@ title: 'Transformer y el mecanismo de atención: el motor central de los grandes
 description: 'Comprende en profundidad la arquitectura Transformer y el mecanismo de atención, revelando los fundamentos técnicos de GPT, BERT y otros grandes modelos.'
 ---
 
-# Transformer y el mecanismo de atención: el motor central de los grandes modelos
+# Principios de Transformer y mecanismos de atención
 
 En 2017, Google presentó la arquitectura Transformer en el paper "Attention Is All You Need", cambiando por completo las reglas del juego del procesamiento del lenguaje natural. Abandonó las redes neuronales recurrentes (RNN) tradicionales y, apoyándose únicamente en el mecanismo de atención, logró un rendimiento superior y una mayor eficiencia de entrenamiento. Hoy en día, prácticamente todos los grandes modelos de lenguaje —GPT, BERT, T5, LLaMA— se construyen sobre la base de Transformer.
 

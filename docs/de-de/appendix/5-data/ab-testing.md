@@ -1,4 +1,4 @@
-# A/B-Tests: Mit Daten „Entscheidungen treffen"
+# A/B-Testing: Experimentmethodik
 
 ::: tip 🎯 Kernfrage
 **Wie kann man die Wirkung von Produktänderungen wissenschaftlich überprüfen?**
@@ -39,7 +39,7 @@ In der folgenden Demo können Sie anschaulich beobachten, wie das System den Tra
 
 <ABTestingDemo tab="traffic" />
 
-### 1.1 Warum ist die Zufallsverteilung so wichtig?
+### 1.1 Warum ist die Zufallsverteilung so wichtig
 
 Nur bei 100 % „Zufälligkeit" lassen sich die Unterschiede durch alle anderen Merkmale bestmöglich nivellieren. Bei einer ausreichend großen Stichprobe und einer perfekten Zufallsverteilung sind der Anteil jüngerer Nutzer, das Einkommensniveau und die regionale Verteilung in Gruppe A und Gruppe B im Prinzip erstaunlich konsistent.
 

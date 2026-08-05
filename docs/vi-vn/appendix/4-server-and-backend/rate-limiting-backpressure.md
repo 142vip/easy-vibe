@@ -24,7 +24,7 @@ Sau khi hoàn thành chương này, bạn sẽ có:
 
 ---
 
-## 0. Toàn cảnh: Tại sao phải "từ chối" người dùng?
+## 0. Toàn cảnh: Động lực của việc điều tiết lưu lượng người dùng
 
 Nghe có vẻ phản trực giác -- chúng ta không nên phục vụ tốt mỗi người dùng sao? Nhưng thực tế là: **không từ chối một phần yêu cầu, tất cả yêu cầu đều sẽ thất bại**.
 

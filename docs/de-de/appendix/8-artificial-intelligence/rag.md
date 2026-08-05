@@ -24,7 +24,7 @@ Nach diesem Kapitel wirst du:
 
 ---
 
-## 0. Panorama: Warum große Modelle „nachschlagen" müssen
+## 0. Panorama: Motivation von große Modelle „nachschlagen" müssen
 
 Stell dir vor, du bist ein belesener Professor, der unzählige Bücher gelesen hat. Aber wenn dich jemand fragt: „Wie hoch waren die Verkaufszahlen von gestern?", kannst du nicht antworten – weil diese Informationen nicht in den Büchern stehen, die du gelesen hast.
 
@@ -83,7 +83,7 @@ Es gibt keine „beste" Chunking-Strategie, nur die für deine Daten am besten g
 
 ---
 
-## 3. Abfragetechniken: Wie findet man die relevantesten Inhalte?
+## 3. Abfragetechniken: Ansatz für findet man die relevantesten Inhalte
 
 Nach dem Chunking stellt sich die nächste Schlüsselfrage: **Ein Benutzer stellt eine Frage – wie findet man aus Tausenden von Dokumentfragmenten die relevantesten?**
 
@@ -117,7 +117,7 @@ Die RAG-Technologie hat in nur zwei Jahren drei Generationen der Evolution durch
 
 ---
 
-## 5. RAG vs. Fine-Tuning: Welches soll man wählen?
+## 5. RAG vs. Fine-Tuning: Welches soll man wählen
 
 Wenn du einem großen Modell Wissen in einem bestimmten Bereich beibringen willst, gibt es normalerweise zwei Wege: RAG und Fine-Tuning. Sie schließen sich nicht gegenseitig aus, sondern ergänzen sich.
 

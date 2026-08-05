@@ -1,4 +1,4 @@
-# Incident Response and Troubleshooting
+# An Introduction to Incident Response and Troubleshooting
 
 ::: tip Foreword
 **At 3 AM, your phone buzzes frantically — the entire online service is down. What do you do?** For any internet team, it's not a matter of "whether incidents will happen," but "when they will happen." Great teams aren't those that never have incidents — they're the ones that can respond quickly, recover efficiently, and learn from failures to avoid repeating them.
@@ -84,7 +84,7 @@ An incident response is like a relay race — each stage has clear objectives an
 
 ---
 
-## 3. Command System: Who Commands This "Battle"?
+## 3. Command System: Who Commands ThOverview of "Incident"
 
 In a major incident, the biggest fear isn't technical challenges but **chaos** — a dozen people investigating simultaneously, nobody knowing what others are doing, critical information fragmented across various chat groups. The Incident Command System exists to solve this problem.
 

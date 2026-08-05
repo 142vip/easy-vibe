@@ -1,11 +1,11 @@
-# Niveles y estrategias de caché
+# Principios y estrategias de caché
 ::: tip 🎯 Pregunta central
 **¿Por qué algunos sitios web cargan en solo 50 milisegundos, mientras que otros tardan 5 segundos?** Es como preguntar: ¿por qué sacar un libro de la mochila toma 1 segundo, pero ir a buscarlo a la biblioteca toma 10 minutos? La respuesta es: la caché. Este capítulo te llevará a comprender a fondo los principios básicos, los patrones de diseño y las técnicas prácticas de la caché, para que el rendimiento de tu sistema mejore 100 veces.
 :::
 
 ---
 
-## 1. ¿Por qué necesitamos "caché"?
+## 1. Motivación de caché
 
 ### 1.1 De "consultar siempre" a "recordar los datos frecuentes"
 
@@ -58,7 +58,7 @@ El valor de la caché no es solo "ser más rápido", sino sobre todo "proteger".
 
 ---
 
-## 2. Conceptos básicos: ¿qué es la caché?
+## 2. Conceptos básicos: Introducción a caché
 
 ::: tip 🤔 ¿Qué es exactamente la caché?
 En pocas palabras, **la caché es un espacio de almacenamiento para copias de datos**. Es como tener una nota adhesiva en tu escritorio con los números de teléfono más usados, para no tener que buscar en la agenda del móvil cada vez.
@@ -818,7 +818,7 @@ La siguiente demostración compara los escenarios y soluciones de los tres probl
 
 La esencia de la caché es ser una copia de los datos, y entre la copia y los datos originales (base de datos) siempre existe una ventana de tiempo de inconsistencia. Cómo controlar esta ventana es el desafío central del diseño de caché.
 
-### 5.1 ¿Por qué la caché y la base de datos pueden estar inconsistentes?
+### 5.1 Motivación de caché y la base de datos pueden estar inconsistentes
 
 ::: tip 🤔 Entendiendo la inconsistencia con la analogía de "la nota adhesiva y el libro"
 Imagina que tienes una nota adhesiva con: "Teléfono de Xiao Ming: 123456", que es una copia de tu agenda (base de datos).

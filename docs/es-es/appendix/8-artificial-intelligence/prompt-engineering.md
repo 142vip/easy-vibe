@@ -1,4 +1,4 @@
-# Ingeniería de Prompts (Prompt Engineering)
+# Introducción a la ingeniería de prompts
 
 > 💡 **Guía de aprendizaje**：Este capítulo presenta, mediante demostraciones interactivas, cómo escribir prompts efectivos.
 >
@@ -6,7 +6,7 @@
 
 <PromptQuickStartDemo />
 
-## 0. Introducción: ¿Por qué no hace lo que le dices?
+## 0. Introducción: Motivación de hace lo que le dices
 
 El problema de comunicación entre tú y la IA no suele ser que "ella no sepa hacerlo", sino que "tú no lo has dicho con claridad".
 
@@ -18,7 +18,7 @@ La **Ingeniería de Prompts (Prompt Engineering)** es precisamente la técnica d
 
 ---
 
-## 1. ¿Por qué necesitamos "ingeniería"?
+## 1. Motivación de ingeniería
 
 Cuando hablamos de "ingeniería", enfatizamos: **reproducible, verificable y transferible**.
 
@@ -99,7 +99,7 @@ Si dejas claras estas 3 cosas, muchas "correcciones repetidas" desaparecerán de
 
 ---
 
-### 3.1 Paso 1: Convertir "lo que se te ocurre" en una "tarea ejecutable"
+### 3.1 Plan de recopilación de datos
 
 El peor tipo de prompt más común: solo una frase como "escríbemelo".
 La IA no sabe: para quién escribir, qué longitud, qué estilo, cómo verificar el resultado.
@@ -121,7 +121,7 @@ Salida: formato (Markdown/JSON/bloque de código)
 
 ---
 
-### 3.2 Paso 2: Usar el "formato de salida" para que el resultado sea directamente utilizable
+### 3.2 Especificación de formato de datos
 
 Si dices "resúmelo", la IA probablemente te dará un párrafo largo.
 Si dices "genera en formato JSON", se comportará más como una "herramienta estructurada".
@@ -161,7 +161,7 @@ El texto es el siguiente (delimitado por ```):
 
 ---
 
-### 3.3 Paso 3: Definir claramente el "estilo" (Rol + Audiencia)
+### 3.3 Mecanismo de transmisión y caché
 
 Muchas dificultades no están en la tarea en sí, sino en "cómo debe escribirse".
 
@@ -198,7 +198,7 @@ Requisitos:
 
 ---
 
-## 4. Paso 4: Fijar el estilo con "ejemplos" (Few-shot)
+## 4. Proceso de limpieza y almacenamiento
 
 Hay estilos difíciles de describir (como "que se parezca al tono de redes sociales" o "como el guion de atención al cliente").
 En estos casos, **dar 2-3 ejemplos** suele ser más efectivo que escribir un párrafo largo de adjetivos.
@@ -223,7 +223,7 @@ En estos casos, **dar 2-3 ejemplos** suele ser más efectivo que escribir un pá
 
 ---
 
-## 5. Paso 5: Para tareas complejas, primero "haz un plan/lista de verificación", luego genera
+## 5. Validación y mejora continua
 
 Las tareas complejas suelen presentar 3 problemas: **omitir pasos**, **desviarse del tema** y **tener que rehacer el trabajo**.
 

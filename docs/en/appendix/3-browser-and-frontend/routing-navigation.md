@@ -1,11 +1,11 @@
-# Routing & Navigation
+# An Introduction to Routing and Navigation
 ::: tip 🎯 Core Question
 **Why do some websites switch pages without a white-screen refresh, as smooth as a native app?** This is the magic of frontend routing. This chapter will take you from the traditional "page-flip" style of website navigation into the "slide transition" world of single-page applications, helping you understand how frontend routing elevates the user experience to the next level.
 :::
 
 ---
 
-## 1. Why "Frontend Routing"?
+## 1. Motivation for the "Frontend Routing"
 
 ### 1.1 From Traditional Websites to SPAs: A Quantum Leap in UX
 
@@ -535,7 +535,7 @@ The core of this stage is "isomorphic rendering" — the first screen is rendere
 
 ---
 
-## 4. Under the Hood: How Does Routing Actually Work?
+## 4. Under the Hood: Working Principles of Routing Actually
 
 Now that we've seen real-world cases, let's dive deeper into how frontend routing works under the hood and understand what really sets Hash and History modes apart.
 

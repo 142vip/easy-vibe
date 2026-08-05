@@ -1,4 +1,4 @@
-# The Art of Debugging
+# Principles of Debugging
 
 ::: tip Foreword
 **The code is done, you run it, and it throws an error — now what?** Many beginners get stuck at this point, staring at the screen not knowing what to do. Debugging is one of the most core skills in programming — arguably even more important than writing code itself. Writing code only accounts for about 30% of development time; the remaining 70% is spent understanding problems, locating bugs, and verifying fixes.
@@ -283,7 +283,7 @@ print(f"Type: {type(data)}")  # Check data types
 
 AI tools (ChatGPT, Claude, Cursor, etc.) can greatly accelerate debugging — but only if you know how to use them properly.
 
-### 4.1 What Is AI Good At?
+### 4.1 Overview of AI Good At
 
 | AI Is Good At | AI Is Not Good At |
 |--------|----------|

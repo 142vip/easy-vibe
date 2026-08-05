@@ -1,11 +1,11 @@
-# Das Wesen von Web-Frameworks
+# Web-Frameworks: Anwendungsgerüste
 ::: tip 🎯 Kernfrage
 **Der Code ist geschrieben – wie machst du ihn für die ganze Welt zugänglich?** Das ist, als würdest du dich fragen: Willst du einen kleinen Imbissstand eröffnen oder eine internationale Restaurantkette betreiben? Die Wahl der Backend-Architektur entscheidet darüber, wie viele Kunden dein „Restaurant" bedienen kann.
 :::
 
 ---
 
-## 1. Warum sollte man die Architekturentwicklung verstehen?
+## 1. Warum sollte man die Architekturentwicklung verstehen
 
 Stell dir vor, du planst eine lange Reise. Du kannst mit dem Fahrrad fahren, das Auto nehmen, den Hochgeschwindigkeitszug oder das Flugzeug. Jedes Verkehrsmittel hat seinen passenden Anwendungsfall: Das Fahrrad eignet sich für kurze Strecken, wenn du dich bewegen willst, das Flugzeug für Langstrecken über Kontinente hinweg.
 
@@ -45,7 +45,7 @@ Lass uns die Tabelle Zeile für Zeile interpretieren:
 
 ## 2. Die Ära der physischen Server (1990er)
 
-### 2.1 Was ist ein physischer Server?
+### 2.1 Was ist ein physischer Server
 
 In den Anfängen des Internets war das Backend ein **physischer Server** (ein echter Computer), der in einem Rechenzentrum stand.
 
@@ -115,7 +115,7 @@ Das ist wie der Unterschied zwischen deiner Küche und einem Restaurant: Zu Haus
 
 ## 3. Die Ära der monolithischen Architektur (2000er)
 
-### 3.1 Was ist eine monolithische Architektur?
+### 3.1 Was ist eine monolithische Architektur
 
 Mit dem Aufkommen von Frameworks (Rails / Django / Spring) packte man alle Funktionen in eine einzige Anwendung.
 
@@ -200,7 +200,7 @@ Wenn du Backend-Entwicklung lernst, **beginne unbedingt mit einer monolithischen
 
 ## 4. Containerisierung und Microservices (2010er)
 
-### 4.1 Warum braucht man Microservices?
+### 4.1 Warum braucht man Microservices
 
 Die Schmerzpunkte der monolithischen Architektur brachen in den 2010er Jahren geballt aus:
 
@@ -318,7 +318,7 @@ Eine Funktion mit nur 100 Zeilen Code wird als eigener Service ausgegliedert:
 
 ## 5. Die Ära von Serverless und Cloud Native (2020er+)
 
-### 5.1 Warum braucht man Serverless?
+### 5.1 Warum braucht man Serverless
 
 Microservices sind gut, aber Dutzende kleiner Küchen zu unterhalten, ist immer noch anstrengend. Du musst dich fragen:
 
@@ -345,7 +345,7 @@ Microservices sind gut, aber Dutzende kleiner Küchen zu unterhalten, ist immer 
 **Wie ein Lieferservice**: Du brauchst keine Küche, nur ein Menü – jemand anderes kocht für dich.
 :::
 
-### 5.2 Was ist Serverless?
+### 5.2 Was ist Serverless
 
 **Serverless = FaaS + BaaS**
 

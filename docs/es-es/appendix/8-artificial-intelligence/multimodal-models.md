@@ -1,4 +1,4 @@
-# Modelos Multimodales (Visión / Audio / Video)
+# Principios de los modelos multimodales: visión/audio/video
 > 💡 **Guía de estudio**：Este capítulo no requiere conocimientos profundos de visión artificial. A través de demostraciones interactivas, entenderás cómo la IA adquirió "ojos". Desvelaremos los principios fundamentales detrás de modelos como GPT-4V, Qwen-VL y otros.
 
 <VlmQuickStartDemo />
@@ -124,7 +124,7 @@ Una entidad VLM bajo el paradigma típico funciona mediante la colaboración de 
 
 ---
 
-## 4. ¿Cómo aprende a ver? (Entrenamiento)
+## 4. Enfoque de aprende a ver (Entrenamiento)
 
 Bien, ahora todas las partes del cuerpo están ensambladas. Pero antes de entrar en servicio, el VLM recién montado se encuentra realmente en un estado de "ceguera y caos" similar al de un recién nacido — porque el nuevo nervio óptico (Projector) es una página en blanco llena de valores numéricos aleatorios sin significado.
 

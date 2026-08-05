@@ -1,11 +1,11 @@
-# Sistema de maquetación HTML / CSS
+# Fundamentos de maquetación HTML/CSS
 ::: tip 🎯 Pregunta central
 **¿Cómo se crean las páginas web? ¿Por qué algunas solo tienen texto y otras funcionan como aplicaciones interactivas?** Esta pregunta nos lleva a los tres pilares del desarrollo web, permitiéndote entender la estructura detrás de cada página web.
 :::
 
 ---
 
-## 1. ¿Qué son HTML, CSS y JavaScript?
+## 1. Introducción a HTML, CSS y JavaScript
 
 ### 1.1 De páginas web estáticas a aplicaciones dinámicas
 
@@ -48,7 +48,7 @@ Pero las páginas web modernas son completamente diferentes. Funcionan como **ap
 
 ## 2. HTML: el esqueleto de la página web
 
-### 2.1 ¿Por qué necesitamos HTML?
+### 2.1 Motivación de HTML
 
 Antes de que existiera HTML, el contenido en Internet era solo **texto plano**. Como el texto que estás leyendo ahora, sin formato, sin jerarquía, sin enlaces.
 
@@ -60,7 +60,7 @@ Antes de que existiera HTML, el contenido en Internet era solo **texto plano**. 
 
 **HTML (HyperText Markup Language)** nació para resolver este problema. Utiliza "etiquetas" (tags) para marcar el significado del contenido, permitiendo que el navegador sepa "qué es esto".
 
-### 2.2 ¿Qué aspecto tiene el código HTML?
+### 2.2 Qué aspecto tiene el código HTML
 
 La unidad básica de HTML es la "etiqueta" (tag). Las etiquetas se envuelven con corchetes angulares `< >` y aparecen en pares:
 
@@ -79,7 +79,7 @@ La unidad básica de HTML es la "etiqueta" (tag). Las etiquetas se envuelven con
 | **Atributo** | Información adicional en la etiqueta | `href="url"`, `class="card"` |
 | **Anidamiento** | Etiqueta dentro de otra etiqueta | `<div><p>Texto</p></div>` |
 
-### 2.3 ¿Cómo entender el código HTML?
+### 2.3 Enfoque de entender el código HTML
 
 ::: tip 🎯 Lectura obligatoria para principiantes: método para leer código
 
@@ -181,7 +181,7 @@ Muchos principiantes se marea al ver un montón de `<xxx>`. En realidad, leer c�
 **¿Cuándo usar div?** Cuando no hay una etiqueta semántica adecuada. Por ejemplo, un contenedor puramente decorativo.
 :::
 
-### 2.5 ¿Cómo recordar tantas etiquetas HTML?
+### 2.5 Enfoque de recordar tantas etiquetas HTML
 
 ::: tip 🎯 Duda de principiantes
 
@@ -279,7 +279,7 @@ Muchas etiquetas son abreviaturas de palabras en inglés:
 
 ## 3. CSS: la piel de la página web
 
-### 3.1 ¿Por qué necesitamos CSS?
+### 3.1 Motivación de CSS
 
 Imagina que te mudas a una **casa en obra gris**: tiene paredes, ventanas, puertas, se puede vivir, pero:
 
@@ -295,7 +295,7 @@ CSS (Cascading Style Sheets) es el "equipo de decoración" de la página web. No
 - 🖼️ **Colgar cuadros**: añadir bordes, sombras, esquinas redondeadas
 - 🪑 **Colocar muebles**: ajustar maquetación, espaciado, alineación
 
-### 3.2 ¿Qué aspecto tiene el código CSS?
+### 3.2 Qué aspecto tiene el código CSS
 
 El código CSS tiene un formato fijo:
 
@@ -321,7 +321,7 @@ selector {
 <link rel="stylesheet" href="styles.css" />
 ```
 
-### 3.3 ¿Cómo entender el código CSS?
+### 3.3 Enfoque de entender el código CSS
 
 ::: tip 🎯 Lectura obligatoria para principiantes: método para leer CSS
 
@@ -381,7 +381,7 @@ p { color: red; }             /* Prioridad: 1 */
 
 **El estilo en línea** (escrito en el atributo style) tiene prioridad 1000, ¡la más alta!
 
-### 3.5 El modelo de caja: ¿por qué no coincide el ancho?
+### 3.5 El modelo de caja: Motivación de coincide el ancho
 
 ::: tip 🎯 Escenario real
 
@@ -415,7 +415,7 @@ Cada elemento HTML en CSS se considera una "caja" compuesta por cuatro capas. Im
 
 Así, `width: 200px` es el ancho final, y el padding y border se "comprimen" dentro.
 
-### 3.6 Flexbox: ¿cómo hacer que los elementos se alineen automáticamente?
+### 3.6 Flexbox: Enfoque de elementos se alineen automáticamente
 
 Flexbox es la forma de maquetación más utilizada en CSS moderno. Permite que los elementos se alineen automáticamente, como los libros en una estantería que se alinean solos.
 
@@ -793,7 +793,7 @@ tailwind.css                # Punto de entrada de estilos base
 | Vue + SCSS | En componentes + archivos comunes `styles/` | Gestión unificada con variables | Reutilización con mixins |
 | Vue + Tailwind | Ninguna (en nombres de clase) | `tailwind.config.js` | Combinación de clases |
 
-### 3.8 ¿Cómo recordar tantas propiedades CSS?
+### 3.8 Enfoque de recordar tantas propiedades CSS
 
 ::: tip 🎯 Duda de principiantes
 
@@ -973,7 +973,7 @@ Para otras propiedades, consulta cuando las necesites, con la práctica las memo
 
 ## 4. JavaScript: el cerebro de la página web
 
-### 4.1 ¿Por qué necesitamos JavaScript?
+### 4.1 Motivación de JavaScript
 
 Una página web solo con HTML + CSS es como un **maniquí en un escaparate**:
 
@@ -989,7 +989,7 @@ Una página web solo con HTML + CSS es como un **maniquí en un escaparate**:
 - ✅ Al hacer scroll, se carga más contenido
 - ✅ Al enviar un formulario, se muestra "Enviando..."
 
-### 4.2 ¿Qué aspecto tiene el código JavaScript?
+### 4.2 Qué aspecto tiene el código JavaScript
 
 **Capacidad 1: Recordar datos** (variables)
 
@@ -1024,7 +1024,7 @@ document.getElementById('title').textContent = 'Nuevo título'
 document.getElementById('box').style.background = 'red'
 ```
 
-### 4.3 ¿Cómo entender el código JavaScript?
+### 4.3 Enfoque de entender el código JavaScript
 
 ::: tip 🎯 Lectura obligatoria para principiantes: método para leer código JS
 
@@ -1064,7 +1064,7 @@ parent.appendChild(child)                   // Añadir elemento
 ```
 :::
 
-### 4.4 DOM: ¿Cómo manipula JavaScript la página?
+### 4.4 DOM: Enfoque de manipula JavaScript la página
 
 Cuando el navegador lee el código HTML, no lo trata como un montón de cadenas de texto, sino que dibuja un "árbol" en la memoria:
 
@@ -1541,7 +1541,7 @@ npm run build
 
 ---
 
-## 6. ¿Qué hacer cuando encuentras código que no conoces?
+## 6. Qué hacer cuando encuentras código que no conoces
 
 ### 6.1 Pregunta a la IA
 

@@ -1,4 +1,4 @@
-# Lenguajes de Dominio Específico (DSL): El "código que no parece código" en el mundo del backend
+# Principios de los lenguajes de dominio específico (DSL)
 
 ::: tip Prefacio
 En un caso real, el ingeniero Armin construyó un conjunto de servicios de infraestructura en su nueva empresa utilizando IA, con un total de aproximadamente 40 000 líneas de código (Go + YAML + Pulumi + código de pegamento SDK), de las cuales más del 90% fue generado por IA. En este caso aparecen muchos términos con los que un principiante no está familiarizado: YAML, Pulumi, HCL, Lua, código de pegamento SDK… No son Python ni JavaScript, pero están en todas partes en los proyectos backend. Este artículo presenta sistemáticamente estas tecnologías desde una perspectiva unificada: los **Lenguajes de Dominio Específico (DSL)**.
@@ -31,7 +31,7 @@ Al finalizar este artículo, serás capaz de:
 
 ## 1. Panorama general de los DSL: Otro mundo más allá de los lenguajes de propósito general
 
-### 1.1 ¿Qué es un DSL?
+### 1.1 Introducción a DSL
 
 Un **DSL (Domain-Specific Language, Lenguaje de Dominio Específico)** es un lenguaje diseñado para un dominio o tarea específica. Su contraparte es el **GPL (General-Purpose Language, Lenguaje de Programación de Propósito General)**, como Python, Java, Go, C++, etc., que están diseñados para resolver cualquier problema computacional.
 
@@ -99,13 +99,13 @@ Con esta vista panorámica, los capítulos siguientes desarrollarán cada rama.
 
 ## 2. Formatos de serialización de datos: Describir datos estructurados con texto
 
-### 2.1 ¿Qué es la serialización de datos?
+### 2.1 Introducción a serialización de datos
 
 La **serialización (Serialization)** es el proceso de convertir estructuras de datos en memoria (objetos, diccionarios, arrays, etc.) en un flujo de texto o bytes que se pueda almacenar o transmitir. A la inversa, la restauración de un flujo de texto/bytes a una estructura de datos en memoria se denomina **deserialización (Deserialization)**.
 
 Los formatos de serialización de datos son la categoría más básica de los DSL — pertenecen al tipo de DSL externo de descripción de datos pura, sin ninguna capacidad lógica, y solo se encargan de describir estáticamente "cuál es el valor".
 
-### 2.2 ¿Por qué necesitamos estos formatos?
+### 2.2 Motivación de estos formatos
 
 Supón que desarrollas un servicio backend con la dirección de base de datos `localhost:5432`. Si codificas esta dirección directamente en el código fuente, funciona en desarrollo local, pero al desplegar en producción, la dirección de la base de datos cambia a `db.prod.company.com:5432`, y necesitarías modificar el código fuente y recompilar.
 
@@ -331,7 +331,7 @@ end
 
 ## 4. Infraestructura como Código (Infrastructure as Code)
 
-### 4.1 ¿Qué es la "infraestructura"?
+### 4.1 Introducción a "infraestructura"
 
 En la ingeniería backend, la "infraestructura" (Infrastructure) se refiere a los recursos subyacentes de los que depende la ejecución de una aplicación:
 
@@ -427,7 +427,7 @@ Al usar un lenguaje de programación de propósito general, los desarrolladores 
 
 ## 5. Código de pegamento y generación automática de SDKs
 
-### 5.1 ¿Qué es el código de pegamento?
+### 5.1 Introducción a código de pegamento
 
 En ingeniería de software, el **código de pegamento (Glue Code)** se refiere al código que no contiene lógica de negocio en sí mismo y solo sirve para conectar dos sistemas o módulos.
 

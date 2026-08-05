@@ -24,7 +24,7 @@ Sau khi học xong chương này, bạn sẽ đạt được:
 
 ---
 
-## 0. Toàn cảnh: tại sao không thể để người dùng "chờ suông"?
+## 0. Toàn cảnh: Động lực của không thể để người dùng "chờ suông"
 
 Hãy tưởng tượng bạn đi ăn nhà hàng. Nhà hàng tốt sẽ đưa cho bạn một số thứ tự ngay sau khi bạn gọi món, rồi bạn có thể tìm chỗ ngồi, chơi điện thoại, đợi món xong rồi đến lấy. Thay vì bắt bạn đứng trước quầy, nhìn chằm chằm đầu bếp nấu xong toàn bộ món ăn.
 

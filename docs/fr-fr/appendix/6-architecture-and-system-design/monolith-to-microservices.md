@@ -1,4 +1,4 @@
-# L'évolution du monolithe vers les microservices
+# Introduction : Évolution monolithe vers microservices
 
 ::: tip Avant-propos
 **Aucune architecture n'est « la meilleure », il n'y a que « la plus adaptée à l'étape actuelle ».** Passer du monolithe aux microservices n'est pas un bond effectué en une seule étape, mais un processus d'évolution progressive à mesure que la taille de l'entreprise et de l'équipe augmente. Décomposer en microservices trop tôt est tout aussi dangereux que trop tard.
@@ -47,7 +47,7 @@ En d'autres termes : 3 équipes construisant un système finiront par créer 3 s
 
 ---
 
-## 2. Quand passer aux microservices ?
+## 2. Quand passer aux microservices
 
 Tous les systèmes n'ont pas besoin de microservices. Une décomposition prématurée apporte une complexité inutile.
 

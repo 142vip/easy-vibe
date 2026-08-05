@@ -8,7 +8,7 @@ Trước khi bắt đầu, bạn nên ôn lại một vài "viên gạch nền t
 
 ---
 
-## 0. Lời mở đầu: Tại sao tải tệp lên và tải xuống lại "chậm" như vậy?
+## 0. Lời mở đầu: Động lực của tải tệp lên và tải xuống lại "chậm" như vậy
 
 Hãy tưởng tượng tình huống này: Bạn tải lên một bức ảnh HD 10MB trong một cộng đồng nhiếp ảnh, nhưng phải mất nửa phút mới xong; trong khi bạn của bạn ở Bắc Kinh chỉ mất 2 giây để tải xuống. Tại sao cùng một tệp, trải nghiệm tải lên và tải xuống lại khác biệt đến vậy?
 
@@ -20,7 +20,7 @@ Câu trả lời cho những vấn đề này đều nằm trong bộ đôi "và
 
 ## 1. Lưu trữ đối tượng: "Nhà kho thông minh trên đám mây" của bạn
 
-### 1.1 Lưu trữ đối tượng là gì?
+### 1.1 Lưu trữ đối tượng: Tổng quan
 
 Hệ thống tệp truyền thống giống như tủ quần áo nhà bạn: quần áo được phân theo "áo/quần/váy", muốn tìm một cái áo sơ mi, bạn phải mở tủ → khu vực áo → ngăn áo sơ mi. Mô hình "phân cấp lồng nhau" này trở nên cực kỳ cồng kềnh khi số lượng tệp tăng vọt.
 
@@ -69,7 +69,7 @@ Object là đơn vị cơ bản của lưu trữ, bao gồm ba phần:
    - System metadata: Content-Type, ETag, Last-Modified, v.v.
    - Custom metadata: như `x-oss-meta-owner`, `x-oss-meta-project`
 
-#### Kiểm soát truy cập: Ai có thể động vào "kho hàng" của tôi?
+#### Kiểm soát truy cập: Quản lý quyền truy cập kho lưu trữ
 
 Lưu trữ đối tượng cung cấp kiểm soát quyền đa tầng:
 
@@ -85,7 +85,7 @@ Lưu trữ đối tượng cung cấp kiểm soát quyền đa tầng:
 
 ## 2. CDN: "Mạng lưới chuyển phát toàn cầu" của bạn
 
-### 2.1 Tại sao cần CDN?
+### 2.1 Động lực của cần CDN
 
 Hãy tưởng tượng bạn mở một cửa hàng trực tuyến, máy chủ đặt ở Thâm Quyến. Bây giờ có một người dùng ở Bắc Kinh truy cập ảnh của bạn:
 
@@ -298,7 +298,7 @@ Tất cả mảnh tải xong, gửi yêu cầu "hợp nhất"
 
 <CachePolicyDemo />
 
-#### "Truy xuất nguồn" là gì?
+#### Tổng quan về Truy xuất nguồn
 
 Node biên CDN cache nội dung từ origin server, nhưng khi:
 
@@ -539,7 +539,7 @@ Client → Bỏ qua DNS hệ thống → Hỏi trực tiếp dịch vụ HTTP DN
 
 <HttpsOptimizationDemo />
 
-### 5.1 Tại sao HTTPS trên CDN lại quan trọng?
+### 5.1 Động lực của HTTPS trên CDN lại quan trọng
 
 **So sánh tình huống**:
 

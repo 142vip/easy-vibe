@@ -1,4 +1,4 @@
-# Backend Project Architecture Design
+# An Introduction to Backend Project Architecture
 
 ::: tip 🎯 Core Question
 **From simple scripts to large distributed systems, how do you choose the right architecture for backend projects of different scales and languages?** It's like asking: from a home workshop to a large factory, how do you design different production lines based on output and processes? Good backend architecture should evolve with business growth while fully leveraging language characteristics.
@@ -899,7 +899,7 @@ Phase 3: Modular/Microservices (Enterprise Level)
 Phase 4: Cloud-Native Architecture (Platform Level)
 ```
 
-### 6.2 When to Upgrade Architecture?
+### 6.2 Criteria for to Upgrade Architecture
 
 | Signal | Current Level | Recommended Upgrade |
 |------|----------|----------|

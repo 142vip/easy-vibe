@@ -1,4 +1,4 @@
-# Concurrence, asynchrone et multithreading
+# Principes : Concurrence et programmation asynchrone
 > 💡 **Guide d'apprentissage** : La programmation concurrente est le "talon d'Achille" de nombreux ingénieurs backend — ils sont mis en difficulté lors des entretiens, rencontrent des bugs en production, et manquent d'idées pour l'optimisation des performances. Ce chapitre s'articule autour d'une question centrale : **lorsque 100 000 utilisateurs sollicitent votre service simultanément, votre code va-t-il planter ?**
 
 Avant de commencer, il est conseillé de consolider deux "briques fondamentales" :
@@ -8,7 +8,7 @@ Avant de commencer, il est conseillé de consolider deux "briques fondamentales"
 
 ---
 
-## 0. Introduction : pourquoi votre service se "fige" lors des pics de trafic ?
+## 0. Introduction : pourquoi votre service se "fige" lors des pics de trafic
 
 <ProcessThreadCoroutineDemo />
 
@@ -29,7 +29,7 @@ Face à ces défis, se contenter d'"ajouter des machines" ne suffit plus. Nous a
 
 ---
 
-## 1. Concepts fondamentaux : processus, threads, coroutines, quelles différences ?
+## 1. Concepts fondamentaux : processus, threads, coroutines, quelles différences
 
 ### 1.1 L'analogie du restaurant
 

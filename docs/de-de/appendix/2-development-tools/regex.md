@@ -1,10 +1,10 @@
-# Reguläre Ausdrücke
+# Reguläre Ausdrücke: Mustererkennung
 
 > 💡 **Lernleitfaden**: Sehen reguläre Ausdrücke für dich wie eine Geheimsprache aus? In Wirklichkeit sind sie nur eine Minisprache zur Beschreibung von Textmustern. Dieses Kapitel führt dich von Grund auf in die Kernideen der regulären Ausdrücke ein und zeigt dir, wie du mit wenigen Schlüsselsymbolen 80 % aller Textsuchen- und Validierungsprobleme löst.
 
 ---
 
-## 0. Wozu brauchst du reguläre Ausdrücke?
+## 0. Wozu brauchst du reguläre Ausdrücke
 
 Stell dir folgende Szenarien vor:
 - Aus einem riesigen Logfile alle IP-Adressen herausfiltern
@@ -29,7 +29,7 @@ Reguläre Ausdrücke = **Beschreibe mit Spezialsymbolen, nach welchem Textmuster
 
 ---
 
-## 2. Kernkonzepte: Wie ein Baukastensystem kombinieren
+## 2. Kernkonzepte: Ansatz für ein Baukastensystem kombinieren
 
 Das Wesen der regulären Ausdrücke besteht darin, aus **drei Bausteintypen** das gewünschte Muster zusammenzusetzen:
 
@@ -174,5 +174,5 @@ Standardmäßig ist der Modus greedy. Durch Anhängen von `?` an einen Quantor w
 :::
 
 **Nächste Lernschritte**:
-- [Umgebungsvariablen und PATH](./environment-path) - Systemkonfiguration verstehen
+- [Umgebung und Pfad: Systemkonfiguration](./environment-path) - Systemkonfiguration verstehen
 - [SSH und Schlüsselauthentifizierung](./ssh-authentication) - Sichere Verbindung zu Remote-Servern

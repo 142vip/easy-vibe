@@ -4,7 +4,7 @@
 Este capítulo te llevará a conocer en profundidad la herramienta de productividad central de los programadores: el **Entorno de Desarrollo Integrado (IDE)**. Partiremos de la filosofía de diseño del IDE, analizaremos uno por uno sus componentes principales y, a través de un IDE virtual, demostraremos su funcionamiento.
 :::
 
-## ¿Qué hacer cuando no entiendes algo? (How to solve problems)
+## Qué hacer cuando no entiendes algo (How to solve problems)
 
 Durante el aprendizaje y uso de un IDE, puedes encontrar botones, menús o errores de código que no entiendes. En ese caso, **no te asustes; usar un asistente de IA es la solución más eficiente**.
 
@@ -20,7 +20,7 @@ Las IA actuales (como ChatGPT, Claude, DeepSeek, etc.) tienen poderosas capacida
 
 ---
 
-## 0. Introducción: ¿Por qué necesitamos un IDE?
+## 0. Introducción: Motivación de un IDE
 
 En el desarrollo de software, los programadores necesitan realizar frecuentemente operaciones como escribir código, gestionar archivos, compilar y ejecutar, y depurar errores. Si todas estas operaciones requirieran programas independientes (por ejemplo, usar el Bloc de notas para escribir código, la línea de comandos para compilar, y el explorador de archivos para gestionar archivos), la eficiencia sería bajísima y propensa a errores.
 
@@ -74,7 +74,7 @@ Ver es mejor que creer. Para que realmente sientas la comodidad de un IDE, te he
 
 ---
 
-## 3. Mecanismo central: ¿Por qué VS Code lo puede todo?
+## 3. Mecanismo central: Motivación del entorno VS Code: lo puede todo
 
 Puede que te preguntes: ¿cómo es que el mismo software sirve para escribir Python, C++ y también desarrollo web? ¿Cómo lo logra?
 En realidad, la filosofía de diseño de VS Code se resume en una frase: **"Núcleo minimalista, capacidades enchufables".**

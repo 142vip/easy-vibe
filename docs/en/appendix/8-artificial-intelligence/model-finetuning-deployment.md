@@ -1,4 +1,4 @@
-# Model Fine-tuning and Deployment
+# An Introduction to Model Fine-Tuning and Deployment
 
 ::: tip Preface
 **Large models are powerful, but they don't understand your business.** GPT-4 can write poetry and code, but it doesn't know your company's product terminology or your industry's professional standards. Fine-tuning is the process of making a general-purpose large model "learn" your professional knowledge — like giving a knowledgeable generalist on-the-job training to become your domain expert.
@@ -24,7 +24,7 @@ After completing this chapter, you will gain:
 
 ---
 
-## 0. Overview: Why is Fine-tuning Needed?
+## 0. Overview: Motivation for Fining -tuning Needed
 
 Large language model training is divided into two phases: **pre-training** and **fine-tuning**. Pre-training learns language capabilities from massive general data, while fine-tuning learns specialized capabilities from task-specific data.
 

@@ -1,4 +1,4 @@
-# Asynchrone Aufgabenwarteschlangen und das Producer-Consumer-Modell
+# Asynchrone Aufgabenwarteschlangen
 
 ::: tip Vorwort
 **Der Benutzer klickt auf "Bericht exportieren" und starrt dann 30 Sekunden auf die rotierende Ladeanimation — ist das akzeptabel?** Wenn eine Operation mehrere Sekunden oder sogar Minuten dauert, den Benutzer warten zu lassen, ist offensichtlich keine gute Erfahrung. Asynchrone Aufgabenwarteschlangen sind das Kernarchitecturmuster zur Lösung dieses Problems — zeitaufwändige Operationen in den Hintergrund auslagern und dem Benutzer sofort eine Antwort geben.
@@ -24,7 +24,7 @@ Nach Abschluss dieses Kapitels wirst du Folgendes erhalten:
 
 ---
 
-## 0. Übersicht: Warum kann man den Benutzer nicht "einfach warten lassen"?
+## 0. Übersicht: Motivation von kann man den Benutzer nicht "einfach warten lassen"
 
 Stell dir vor, du gehst in ein Restaurant und bestellst. Ein gutes Restaurant gibt dir sofort eine Nummer, nachdem du bestellt hast, und du kannst dich hinsetzen, dein Handy nutzen und dein Essen abholen, wenn es fertig ist. Anstatt dich an der Theke stehen zu lassen und dem Koch bei der Zubereitung des gesamten Gerichts zuzusehen.
 

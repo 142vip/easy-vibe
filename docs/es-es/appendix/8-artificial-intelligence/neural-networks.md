@@ -1,4 +1,4 @@
-# Redes Neuronales y Aprendizaje Profundo
+# Fundamentos de redes neuronales y aprendizaje profundo
 
 ::: tip Prefacio
 **Las redes neuronales son el motor de la revolución de la IA.** Desde la comprensión del lenguaje de ChatGPT hasta el reconocimiento de imágenes en la conducción autónoma, las redes neuronales están detrás de todo. No es magia, sino un elegante marco matemático que "aprende" la relación entre entradas y salidas a partir de grandes volúmenes de datos. Comprender sus principios básicos te ayudará a usar y depurar mejor las herramientas de IA.
@@ -40,7 +40,7 @@ Expresión matemática: **y = f(w₁x₁ + w₂x₂ + w₃x₃ + b)**
 
 <NeuronDemo />
 
-### Función de activación: ¿por qué necesitamos no linealidad?
+### Función de activación: Motivación de no linealidad
 
 Sin una función de activación, por muchas capas de neuronas que se apilen, el resultado siempre equivale a una transformación lineal (multiplicación de matrices). La función de activación introduce **no linealidad**, permitiendo que la red aprenda patrones complejos.
 

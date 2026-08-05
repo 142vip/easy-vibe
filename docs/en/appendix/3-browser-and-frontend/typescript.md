@@ -1,4 +1,4 @@
-# TypeScript In-Depth Guide
+# Principles of TypeScript
 
 ::: tip Preface
 You already know JavaScript, but you may have encountered these problems:
@@ -62,7 +62,7 @@ TypeScript is the tool that helps you catch these issues before your code runs. 
 | **JavaScript** | Raw material | Code that can run directly |
 | **TypeScript** | Blueprint + quality check | Adds type checking to JavaScript, then compiles to JavaScript |
 
-### 1.2 Why Does Vibecoding Need TypeScript Too?
+### 1.2 Motivation for Vibecodinging Need TypeScript Too
 
 ::: warning AI-Generated Code Can Also Have Bugs
 A developer used AI to generate a user management feature. The AI-written JavaScript code ran, but there was a problem: the user's age was supposed to be a number, but sometimes it was mistakenly assigned as a string.

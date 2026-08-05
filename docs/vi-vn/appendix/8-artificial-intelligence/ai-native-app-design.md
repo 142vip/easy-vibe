@@ -129,7 +129,7 @@ Khi người dùng gửi một tin nhắn trong ứng dụng AI, điều gì x�
 3. **Gọi mô hình**: Gửi Prompt đã lắp ráp đến LLM API, bật phản hồi streaming
 4. **Hậu xử lý đầu ra**: Định dạng đầu ra, lọc an toàn nội dung, trích xuất dữ liệu có cấu trúc
 5. **Cache kết quả**: Cache kết quả cho các câu hỏi phổ biến, giảm chi phí và độ trễ
-6. **Ghi nhận giám sát**: Ghi nhận lượng token sử dụng, thời gian phản hồi, phản hồi người dùng, để liên tục tối ưu
+6. **thu thập giám sát**: thu thập lượng token sử dụng, thời gian phản hồi, phản hồi người dùng, để liên tục tối ưu
 :::
 
 | Giai Đoạn | Cân Nhắc Chính | Vấn Đề Thường Gặp |

@@ -1,4 +1,4 @@
-# Stockage de fichiers et stockage d'objets
+# Introduction : Stockage de fichiers et stockage objet
 
 ::: tip Préface
 **Un utilisateur charge un avatar, vous le stockez dans le répertoire `/uploads` du serveur — puis le disque du serveur se remplit, ou vous ajoutez un second serveur, et l'utilisateur constate que son avatar apparaît et disparaît.** Le stockage de fichiers peut sembler simple, mais dans un environnement distribué, c'est un problème architectural qui nécessite une attention sérieuse. Le stockage d'objets est la réponse standard de l'ère Internet à ce problème.
@@ -24,7 +24,7 @@ Après avoir étudié ce chapitre, vous serez en mesure de :
 
 ---
 
-## 0. Vue d'ensemble : pourquoi ne pas stocker les fichiers localement sur le serveur ?
+## 0. Vue d'ensemble : pourquoi ne pas stocker les fichiers localement sur le serveur
 
 Au début d'un projet, stocker les fichiers chargés par les utilisateurs dans un répertoire local du serveur est l'approche la plus intuitive. Mais à mesure que le projet évolue, vous rencontrerez une série de problèmes :
 
@@ -89,7 +89,7 @@ my-app-bucket/                    ← Bucket (seau)
 
 ---
 
-## 3. Solutions de téléchargement de fichiers : qui télécharge ?
+## 3. Solutions de téléchargement de fichiers : qui télécharge
 
 Il existe deux approches principales pour le téléchargement de fichiers : le transit par le serveur et le téléchargement direct par le client. Pour la plupart des scénarios, le **téléchargement direct par le client** est le meilleur choix.
 

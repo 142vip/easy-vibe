@@ -1,4 +1,4 @@
-# Arquitectura en Capas del Backend
+# Principios de la arquitectura en capas del backend
 
 > **Pregunta central**: El código se vuelve cada vez más desordenado, ¿cómo organizarlo para que sea claro y comprensible?
 
@@ -6,7 +6,7 @@ Cuando un proyecto pasa de docenas de líneas de código a decenas de miles, de 
 
 ---
 
-## 1. ¿Por qué necesitamos capas?
+## 1. Motivación de capas
 
 ### 1.1 La raíz del problema
 
@@ -354,7 +354,7 @@ public class User {
 
 ## 3. DTO: el "traductor" entre capas
 
-### 3.1 ¿Por qué necesitamos DTO?
+### 3.1 Motivación de DTO
 
 **Problema**: si devolvemos directamente la entidad de base de datos al frontend:
 
@@ -539,11 +539,11 @@ public class OrderController {
 
 ## 6. Preguntas frecuentes
 
-### 6.1 ¿Puede el Controller contener lógica de negocio?
+### 6.1 Puede el Controller contener lógica de negocio
 
 El Controller no debe contener lógica de negocio, solo debe encargarse de recibir peticiones y devolver respuestas. La lógica de negocio debe estar encapsulada en la capa Service, lo que permite que el código sea reutilizable: por ejemplo, las tareas programadas o los consumidores de colas de mensajes pueden llamar directamente al Service sin necesidad de pasar por HTTP. Además, tener la lógica de negocio concentrada en un solo lugar facilita las pruebas y el mantenimiento, evitando inconsistencias por lógica dispersa.
 
-### 6.2 ¿Qué son el modelo anémico y el modelo rico?
+### 6.2 Introducción a modelo anémico y el modelo rico
 
 El modelo anémico (Anemic Domain Model) es aquel donde las clases de entidad solo contienen atributos y sus correspondientes getters/setters, sin ninguna lógica de negocio; todas las reglas de negocio se implementan en la capa Service. Este modelo tiene una estructura simple, es fácil de entender y es el enfoque adoptado por la mayoría de los proyectos.
 
@@ -551,7 +551,7 @@ El modelo rico (Rich Domain Model) es aquel donde las clases de entidad no solo 
 
 Se recomienda elegir el modelo adecuado según el nivel técnico del equipo y la complejidad del proyecto, pero independientemente de la elección, se debe mantener la consistencia. La capa Domain debería al menos contener métodos básicos de comportamiento de negocio, en lugar de ser un cascarón completamente vacío.
 
-### 6.3 ¿Cómo manejar transacciones que abarcan múltiples Service?
+### 6.3 Enfoque de manejar transacciones que abarcan múltiples Service
 
 Cuando una operación de negocio necesita abarcar múltiples Service, se debe usar la anotación de transacción en el Service de nivel superior, y dentro de ese método llamar secuencialmente a los Service de nivel inferior. Esto garantiza que todas las operaciones se ejecuten en el mismo contexto transaccional: o todas tienen éxito o todas fallan, asegurando la consistencia de los datos. Hay que tener en cuenta que los límites de la transacción deben ser lo más pequeños posible, incluyendo solo las operaciones necesarias, para evitar mantener bloqueos de base de datos durante mucho tiempo y afectar el rendimiento de concurrencia.
 
@@ -763,7 +763,7 @@ Dimensiones de selección más detalladas:
 - **Arquitectura limpia**: "Clean Architecture" de Robert C. Martin — obra clásica que propone las reglas de dependencia y el modelo de cuatro capas concéntricas
 - **Patrones de arquitectura empresarial**: "Patterns of Enterprise Application Architecture" de Martin Fowler — referencia autorizada sobre arquitectura en capas y organización de lógica de dominio
 
-### 8.5 ¿Cómo elegir?
+### 8.5 Enfoque de elegir
 
 **Recuerda este principio**: **la arquitectura sirve al negocio, no se hace arquitectura por la arquitectura misma**.
 

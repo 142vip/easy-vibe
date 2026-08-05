@@ -1,10 +1,10 @@
-# Git: Die Zeitmaschine fur Code
+# Git-Versionskontrolle: Prinzipien
 
 > 💡 **Lernleitfaden**: Dieses Kapitel ist fur alle geschrieben, die noch nie Git verwendet haben. Wir lassen Sie nicht sofort Befehle auswendig lernen, sondern klaren zuerst, "welches Problem Git eigentlich fur Sie lost", bevor wir Befehle und Konzepte Schritt fur Schritt verknupfen. Nach dem Lesen sollten Sie in der Lage sein, lokal zu committen, Branches zu erstellen und zu GitHub zu pushen.
 
 ---
 
-## 0. Zunachst eine Frage: Haben Sie diese Albtraume schon erlebt?
+## Typische Szenarien und Schmerzpunkte
 
 **Szenario 1: Versionsholle**
 
@@ -42,7 +42,7 @@ Ohne Ubertreibung ist Git eines der wichtigsten Werkzeuge der modernen Softwaree
 
 ---
 
-## 1. Sind Git und GitHub dasselbe?
+## 1. Überblick: Git vs. GitHub
 
 Viele Anfanger verwechseln diese beiden Konzepte. Klaren wir das zunachst:
 
@@ -78,7 +78,7 @@ Das ist der **permanent gespeicherte Historienspeicher**, versteckt im Ordner `.
 
 <GitCommitFlow />
 
-### Warum der "Zweischritt" (add + commit)?
+### Motivation: "Zweischritt" (add + commit)
 
 Viele Anfanger fragen: Warum nicht einfach mit einem Klick speichern, statt zuerst `add` und dann `commit`?
 
@@ -156,7 +156,7 @@ git commit -m "feat: Benutzer-Login-Funktion hinzufugen"
 
 Der Text in den Anfuhrungszeichen nach `-m` heißt **Commit Message** (Commit-Beschreibung). Diese ist fur das zukunftige Ich und Ihre Teamkollegen gedacht — schreiben Sie sie aussagekraftig.
 
-### 3.3 Wie schreibt man professionelle Commit Messages?
+### 3.3 Wie schreibt man professionelle Commit Messages
 
 ```bash
 # ❌ Nutzlose Schreibweise — man sieht nicht, was gemacht wurde
@@ -284,7 +284,7 @@ git merge feature-login
 git branch -d feature-login
 ```
 
-### 4.4 Wann sollte man einen Branch erstellen?
+### 4.4 Wann sollte man einen Branch erstellen
 
 | Situation | Empfehlung | Grund |
 | :--- | :--- | :--- |
@@ -393,7 +393,7 @@ git clone: Remote → Lokal   (Erstmaliges vollstandiges Kopieren des gesamten R
 
 Konflikte sind in der Zusammenarbeit unvermeidbar, aber auch nicht so schlimm.
 
-### 6.1 Wie entstehen Konflikte?
+### 6.1 Wie entstehen Konflikte
 
 Wenn Sie und ein Kollege **gleichzeitig dieselbe Zeile in derselben Datei andern**, weiß Git beim Mergen nicht, welche Version verwendet werden soll, und es entsteht ein Konflikt.
 
@@ -402,7 +402,7 @@ Beispiel:
 - Ihr Kollege hat gleichzeitig in derselben Zeile geschrieben: `const timeout = 5000`
 - Bei `git pull` oder `git merge` entdeckt Git diesen Widerspruch und "pausiert": Es teilt Ihnen mit, dass es nicht entscheiden kann — Sie mussen die Wahl treffen.
 
-### 6.2 Wie sieht eine Konfliktdatei aus?
+### 6.2 Wie sieht eine Konfliktdatei aus
 
 Git fugt an den Konfliktstellen spezielle Markierungen ein:
 
@@ -423,7 +423,7 @@ function login() {
 - Zwischen `<<<<<<< HEAD` und `=======`: Inhalt Ihres aktuellen Branches
 - Zwischen `=======` und `>>>>>>> xxx`: Inhalt, der gemerged werden soll
 
-### 6.3 Wie lost man Konflikte?
+### 6.3 Wie lost man Konflikte
 
 **Schritt 1**: Die Konfliktdatei offnen und alle `<<<<<<<`-Markierungen finden (meistens heben Editoren wie VS Code diese automatisch hervor)
 
@@ -503,7 +503,7 @@ git branch -d feature/user-profile
 
 ---
 
-## 9. .gitignore: Welche Dateien sollten nicht verfolgt werden?
+## 9. .gitignore: Welche Dateien sollten nicht verfolgt werden
 
 Einige Dateien sollten Sie **nicht** in das Git-Repository committen:
 - `node_modules/`: Abhangigkeiten, sehr groß, mit `npm install` regenerierbar

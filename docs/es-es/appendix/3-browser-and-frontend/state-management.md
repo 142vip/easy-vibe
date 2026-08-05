@@ -1,11 +1,11 @@
-# Filosofía de la gestión de estado
+# Principios de gestión de estado
 ::: tip 🎯 El problema central
 **Cuando la aplicación crece, ¿cómo compartir y sincronizar datos elegantemente entre componentes?** Puede que te encuentres con este dilema: el usuario añade un producto al carrito en la página del producto, pero el contador del carrito en el encabezado no se actualiza; dos componentes no relacionados necesitan los mismos datos, pero no sabes cómo pasárselos. Este capítulo te guiará desde el "caos del paso de datos" hacia una "gestión de estado clara".
 :::
 
 ---
 
-## 1. ¿Por qué "componentización y gestión de estado"?
+## 1. Motivación de "componentización y gestión de estado"
 
 ### 1.1 Del taller artesanal a la fábrica: la evolución del desarrollo frontend
 
@@ -44,7 +44,7 @@ Antes de continuar, aclaremos dos términos clave:
 </div>
 </div>
 
-### 1.2 Una historia real de tropiezos: por qué necesitas entender la gestión de estado
+### 1.2 Una historia real de tropiezos:Motivación: entender la gestión de estado
 
 Podrías decir: "¿No uso ya Vue/React? ¿No tienen gestión de estado incorporada?". Déjame contarte una historia real para que entiendas por qué es tan importante comprender sistemáticamente la componentización y la gestión de estado.
 
@@ -182,7 +182,7 @@ Esto mantiene el flujo de datos claro y unidireccional, evitando el caos de "cua
 
 <PropsFlowDemo />
 
-### 2.3 Flujo de datos unidireccional: ¿por qué no se pueden modificar directamente las props?
+### 2.3 Flujo de datos unidireccional: Motivación de se pueden modificar directamente las props
 
 Muchos principiantes cometen el error de modificar directamente las props dentro del componente hijo.
 
@@ -727,7 +727,7 @@ function TodoList() {
 
 ---
 
-## 5. Guía práctica: ¿cómo diseñar la gestión de estado?
+## 5. Guía práctica: Enfoque para diseñar la gestión de estado
 
 ::: tip 🤔 ¿Cuándo necesitas una librería de gestión de estado?
 No todos los proyectos necesitan una librería de gestión de estado. Antes de introducir una, hazte estas preguntas:

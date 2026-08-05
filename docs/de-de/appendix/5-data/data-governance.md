@@ -1,4 +1,4 @@
-# Data Governance und Datenqualität
+# Data Governance: Datenverwaltung
 
 ::: tip Vorwort
 **Sind Sie schon einmal in folgende Situation geraten: Die Zahlen im Bericht stimmen nicht mit dem tatsächlichen Geschäft überein, die Informationen desselben Nutzers sind in zwei Systemen unterschiedlich, oder die Analyseergebnisse sind wegen fehlerhafter Daten völlig unzuverlässig?** Data Governance ist der systematische Ansatz zur Lösung dieser Probleme. Im Zeitalter der „datengetriebenen Entscheidungsfindung" bestimmt die Datenqualität direkt die Entscheidungsqualität — Garbage In, Garbage Out.
@@ -26,7 +26,7 @@ Nach Abschluss dieses Kapitels werden Sie Folgendes erworben haben:
 
 ---
 
-## 0. Gesamtbild: Warum wird Data Governance benötigt?
+## 0. Gesamtbild: Motivation von wird Data Governance benötigt
 
 Data Governance ist kein technisches Problem, sondern ein **Management-Problem**. Es beantwortet die Kernfrage: **Wer ist für die Daten verantwortlich? Was sind die Standards für Daten? Wie wird sichergestellt, dass die Daten kontinuierlich vertrauenswürdig bleiben?**
 
@@ -103,7 +103,7 @@ Data Governance lässt sich nicht durch den Kauf eines Tools lösen; es erforder
 
 ---
 
-## 3. Datenherkunft: Woher kommen die Daten, wohin gehen sie?
+## 3. Datenherkunft: Woher kommen die Daten, wohin gehen sie
 
 Data Lineage dokumentiert den vollständigen Transformationspfad der Daten von der Quelle bis zum endgültigen Verbrauch. Es ist wie ein „Stammbaum" der Daten, der es Ihnen ermöglicht, die Herkunft und Verbindung jedes einzelnen Datenwerts zurückzuverfolgen.
 

@@ -1,4 +1,4 @@
-# Dominios, DNS y HTTPS
+# Principios de DNS de dominio y HTTPS
 
 ::: tip Prefacio
 **Cuando escribes `www.google.com` en tu navegador y presionas Enter, ¿qué sucede detrás de escena?** Esta acción aparentemente simple implica una serie de procesos de colaboración que incluyen resolución de nombres de dominio, consultas DNS, cifrado TLS y más. Comprender estos mecanismos es esencial para cualquier desarrollador: determina directamente si tu sitio web puede ser visitado y si tus datos pueden ser interceptados.
@@ -110,7 +110,7 @@ El handshake TLS es el paso clave para establecer una conexión segura. Antes de
 
 ---
 
-## 4. Cadena de confianza de certificados: ¿por qué confiar en este sitio web?
+## 4. Cadena de confianza de certificados: Motivación de confiar en este sitio web
 
 El paso más crítico en el handshake TLS es la "verificación del certificado". ¿Cómo determina el navegador que el certificado de un sitio web es auténtico y no una falsificación de un atacante? La respuesta es la **cadena de confianza de certificados**, un sistema de respaldo de confianza en capas.
 
@@ -131,7 +131,7 @@ El paso más crítico en el handshake TLS es la "verificación del certificado".
 
 ---
 
-## 5. HTTP vs HTTPS: ¿por qué el cifrado es el requisito mínimo?
+## 5. HTTP vs HTTPS: Motivación de cifrado es el requisito mínimo
 
 En 2024, más del 95% del tráfico web global ya se transmite a través de HTTPS. El navegador Chrome marca los sitios HTTP con una advertencia de "No seguro", y los motores de búsqueda también reducen el ranking de los sitios HTTP. HTTPS ya no es una "opción", sino un requisito mínimo de la Web moderna.
 

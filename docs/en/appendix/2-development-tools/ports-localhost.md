@@ -1,15 +1,15 @@
-# Ports and localhost
+# Principles of Ports and Localhost
 
 > 💡 **Learning Guide**: When you run `npm run dev` and the terminal shows `http://localhost:5173`, have you ever wondered: what is `localhost`? What does `5173` represent? Why do you sometimes get an `EADDRINUSE` error? This chapter will thoroughly explain these concepts you see every day in development but rarely dig into.
 
 Before we begin, it's recommended to brush up on two foundational topics:
 
 - **Networking basics**: If you're not clear on IP addresses and HTTP concepts, check out [Computer Fundamentals - Network Communication](../1-computer-fundamentals/network-fundamentals.md).
-- **Terminal basics**: If you're not familiar with the command line terminal, check out [Command Line & Shell Scripts](./command-line-shell.md).
+- **Terminal basics**: If you're not familiar with the command line terminal, check out [An Introduction to Command Line and Shell Scripts](./command-line-shell.md).
 
 ---
 
-## 0. Introduction: What Exactly Is That `localhost:5173` You See Every Day?
+## 0. Introduction: What Exactly Overview of That `localhost:5173` You See Every Day
 
 <DevServerFlowDemo />
 
@@ -29,7 +29,7 @@ Understand these three things, and you'll be able to figure out 90% of developme
 
 ---
 
-## 1. What Is a Port? (IP Is the Building, Port Is the Room Number)
+## 1. Overview of a Port (IP Is the Building, Port Is the Room Number)
 
 ### 1.1 An Intuitive Analogy
 
@@ -66,7 +66,7 @@ Enter a port number or service name to search. Click any row to expand and see u
 
 ---
 
-## 2. What Is localhost? (Finding Yourself)
+## 2. Overview of localhost (Finding Yourself)
 
 ### 2.1 The Core Concept of "Loopback"
 
@@ -113,7 +113,7 @@ npm run dev -- --host 0.0.0.0
 
 ## 3. Port Conflicts: The Most Common Dev Environment Issue
 
-### 3.1 Why Do Conflicts Happen?
+### 3.1 Motivation for Conflictsing Happen
 
 **One port can only be listened on by one program at a time.** It's like one room can only house one family.
 
@@ -163,7 +163,7 @@ taskkill /PID <PID> /F
 
 ## 4. Same-Origin Policy and CORS in Development
 
-### 4.1 What Is an "Origin"?
+### 4.1 Overview of an "Origin"
 
 Browsers have a security mechanism called the **Same-Origin Policy**: only when the **protocol, domain, and port** are all identical, are two URLs considered the "same origin."
 
@@ -173,7 +173,7 @@ Browsers have a security mechanism called the **Same-Origin Policy**: only when 
 | `http://localhost:5173` | `http://localhost:3000` | ❌ Different origin | **Different ports** (5173 vs 3000) |
 | `http://localhost:5173` | `https://localhost:5173` | ❌ Different origin | **Different protocols** (http vs https) |
 
-### 4.2 Why Does Frontend-Backend Separation Always Encounter CORS?
+### 4.2 Motivation for Frontending -Backend Separation Always Encounter CORS
 
 When your project architecture is:
 

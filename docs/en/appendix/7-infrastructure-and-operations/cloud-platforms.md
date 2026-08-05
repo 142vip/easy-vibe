@@ -1,4 +1,4 @@
-# Cloud Platforms in Practice
+# Fundamentals of Cloud Platforms in Practice
 > **Learning Guide**: Cloud service providers are not "websites for buying servers" — they are "infrastructure that provides computing power like utility companies." This chapter revolves around one core question: **Starting from scratch, how do you understand and use cloud services?** We'll use real-world scenarios, vivid analogies, and hands-on steps to help you build a complete cognitive map of cloud services.
 
 Before you begin, we recommend you first understand:
@@ -8,7 +8,7 @@ Before you begin, we recommend you first understand:
 
 ---
 
-## 0. Introduction: Why Are Fewer Companies Buying Servers?
+## 0. Introduction: Motivation for Fewering Companies Buying Servers
 
 Imagine this scenario:
 
@@ -28,7 +28,7 @@ In the past, companies had to go through a lengthy process of buying servers, fi
 
 ---
 
-## 1. What Are Cloud Service Providers?
+## 1. Overview of Cloud Service Providers
 
 ### 1.1 Computing Services Like Utility Companies
 
@@ -59,7 +59,7 @@ Click the service cards below to learn about the six core categories of cloud se
 
 ---
 
-## 2. What Are the Major Cloud Service Providers?
+## 2. Overview of the Major Cloud Service Providers
 
 ### 2.1 The Global Big Three: AWS, Azure, Google Cloud
 
@@ -81,7 +81,7 @@ In the Chinese cloud services market, there are also three major providers.
 
 **Huawei Cloud** was established in 2015 as Huawei's cloud services division, holding approximately 10% market share in China at #3. It has strong hardware technology expertise, rich government and enterprise customer resources, strong security and compliance capabilities, and distinctive AI chips (Ascend). Suitable for government projects, large state-owned enterprises, and manufacturing.
 
-### 2.3 How to Choose a Cloud Provider?
+### 2.3 Approach to choosing a Cloud Provider
 
 Choosing a cloud provider is like choosing an apartment — you need to consider location, price, amenities, and more.
 
@@ -97,7 +97,7 @@ Practical advice: Beginners or small projects should choose Alibaba Cloud or Ten
 
 ---
 
-## 3. How Do You Typically Use Cloud Services?
+## 3. Method for Typicallying Use Cloud Services
 
 ### 3.1 The Complete Process from Registration to Going Live
 
@@ -135,7 +135,7 @@ Learn about different types of cloud storage services and their applicable scena
 
 ---
 
-## 4. How to Purchase and Call APIs?
+## 4. Approach to Purchasing and Call APIs
 
 ### 4.1 Cloud Service Billing Models
 

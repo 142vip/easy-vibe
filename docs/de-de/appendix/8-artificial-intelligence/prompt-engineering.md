@@ -1,4 +1,4 @@
-# Prompt Engineering (Prompt Engineering)
+# Prompt-Engineering: Anweisungsgestaltung
 
 > 💡 **Lernleitfaden**: Dieses Kapitel stellt durch interaktive Demonstrationen vor, wie man effiziente Prompts schreibt.
 >
@@ -6,7 +6,7 @@
 
 <PromptQuickStartDemo />
 
-## 0. Einleitung: Warum macht es nicht, was du sagst?
+## 0. Einleitung: Motivation von macht es nicht, was du sagst
 
 Das Kommunikationsproblem mit KI liegt meist nicht daran, dass „sie es nicht kann", sondern daran, dass „du es nicht klar genug gesagt hast".
 
@@ -18,7 +18,7 @@ Wenn dein Prompt vage ist, kann sie nur „raten"; gibst du klare Anweisungen, k
 
 ---
 
-## 1. Warum brauchen wir „Engineering"?
+## 1. Warum brauchen wir „Engineering"
 
 Wenn wir von „Engineering" sprechen, betonen wir: **reproduzierbar, verifizierbar, übertragbar**.
 
@@ -126,7 +126,7 @@ Ausgabe: Format (Markdown/JSON/Codeblock)
 Sagst du „Fass zusammen", gibt die KI dir wahrscheinlich einen langen Absatz.
 Sagst du „Gib als JSON aus", verhält sie sich eher wie ein „strukturiertes Werkzeug".
 
-#### Warum ist das Format wichtig?
+#### Motivation: das Format wichtig
 
 Weil das Format bestimmt, ob du es **direkt kopieren/einfügen/an ein Programm übergeben** kannst.
 
@@ -205,7 +205,7 @@ In solchen Fällen sind **2-3 Beispiele** oft effektiver als ein langer Absatz m
 
 <FewShotDemo />
 
-#### Wie sieht ein gutes Beispiel aus?
+#### Ansatz für sieht ein gutes Beispiel aus
 
 - **Kurz**: Auf einen Blick verständlich
 - **Konsistent**: Ein-/Ausgabeformat einheitlich

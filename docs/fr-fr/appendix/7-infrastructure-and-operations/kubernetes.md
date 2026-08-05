@@ -1,4 +1,4 @@
-# Orchestration Kubernetes
+# Principes : Orchestration de conteneurs avec Kubernetes
 
 ::: tip Avant-propos
 **Docker résout le problème de « l'empaquetage », Kubernetes résout le problème de « la gestion ».** Lorsque vous avez des dizaines, voire des centaines de conteneurs à déployer, mettre à l'échelle et restaurer en cas de panne, la gestion manuelle est irréaliste. Kubernetes (K8s) est le « système d'exploitation » des conteneurs : il automatise le déploiement, la mise à l'échelle et l'exploitation des applications conteneurisées.
@@ -24,7 +24,7 @@
 
 ---
 
-## 1. Pourquoi Kubernetes ?
+## 1. Motivation et justification : Kubernetes
 
 Docker simplifie l'empaquetage et l'exécution d'un conteneur individuel, mais face aux scénarios suivants, la gestion manuelle atteint vite ses limites :
 

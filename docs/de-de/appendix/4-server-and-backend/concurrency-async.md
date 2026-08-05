@@ -1,4 +1,4 @@
-# Nebenläufigkeit, Asynchronität & Multithreading
+# Nebenläufigkeit und Asynchronität
 > 💡 **Lernleitfaden**: Nebenläufige Programmierung ist die „Achillesferse" vieler Backend-Ingenieure – sie scheitern im Vorstellungsgespräch, produzieren Bugs in der Produktion und haben keine Ideen für Performance-Optimierungen. Dieses Kapitel dreht sich um eine zentrale Frage: **Wenn 100.000 Benutzer gleichzeitig auf deinen Dienst zugreifen, stürzt dein Code dann ab?**
 
 Bevor wir beginnen, solltest du zwei „Grundbausteine" auffrischen:
@@ -8,7 +8,7 @@ Bevor wir beginnen, solltest du zwei „Grundbausteine" auffrischen:
 
 ---
 
-## 0. Einleitung: Warum „hängt" dein Dienst in Spitzenzeiten?
+## 0. Einleitung: Motivation von „hängt" dein Dienst in Spitzenzeiten
 
 <ProcessThreadCoroutineDemo />
 
@@ -29,7 +29,7 @@ Angesichts dieser Herausforderungen reicht es nicht aus, einfach „mehr Maschin
 
 ---
 
-## 1. Kernkonzepte: Prozesse, Threads, Coroutinen – was ist der Unterschied?
+## 1. Kernkonzepte: Prozesse, Threads, Coroutinen – was ist der Unterschied
 
 ### 1.1 Eine Restaurant-Analogie
 

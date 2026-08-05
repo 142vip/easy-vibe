@@ -1,11 +1,11 @@
-# Files de messages et pilotage par événements
+# Principes : Files de messages et architecture événementielle
 ::: tip Question centrale
 **Quand le couplage système est sévère et que le trafic augmente soudainement, comment garantir la stabilité de la chaîne principale ?** Les files de messages sont le "tampon" et le "découpleur" des systèmes distribués modernes. Cet article explore en profondeur la philosophie de conception et la pratique d'ingénierie des files de messages à travers des cas réels (système de tickets de restaurant, tri express, système de vente flash).
 :::
 
 ---
 
-## 1. Pourquoi les "files de messages" ?
+## 1. Motivation et justification : les "files de messages"
 
 ### 1.1 Un cas réel : l'évolution du système de commandes de Taobao
 
@@ -67,9 +67,9 @@ Imaginez que vous allez dans un restaurant très prisé :
 
 ---
 
-## 2. Qu'est-ce qu'une file de messages ? (Définition + trois éléments clés)
+## 2. Présentation et définition : une file de messages (Définition + trois éléments clés)
 
-### 2.1 Qu'est-ce qu'une "file de messages" ?
+### 2.1 Qu'est-ce qu'une "file de messages"
 
 ::: tip Explication terminologique
 **File de messages (Message Queue, MQ)** est un conteneur de stockage de messages. Les producteurs y placent des messages, les consommateurs les extraient pour les traiter. Elle implémente la "communication asynchrone" — l'expéditeur n'a pas besoin d'attendre la fin du traitement par le récepteur.
@@ -127,7 +127,7 @@ C'est comme la différence entre appeler un ami (synchrone) et envoyer un messag
 
 ---
 
-## 3. Problème central 1 : comment découpler le système pour éviter l'effet domino ?
+## 3. Problème central 1 : comment découpler le système pour éviter l'effet domino
 
 ### 3.1 La tragédie du couplage fort : un service tombe, tout s'effondre
 
@@ -220,9 +220,9 @@ Pensée événementielle (déclarative) :
 
 ---
 
-## 4. Problème central 2 : comment lisser les pics de trafic ?
+## 4. Problème central 2 : comment lisser les pics de trafic
 
-### 4.1 Scénario de vente flash : comment gérer 100 000 QPS ?
+### 4.1 Scénario de vente flash : comment gérer 100 000 QPS
 
 **Reconstitution du scénario** : une plateforme e-commerce lors d'une vente flash du Double Onze, avec un pic estimé à 100 000 QPS, mais la base de données ne peut supporter que 1 000 QPS.
 
@@ -329,7 +329,7 @@ Temps pour consommer tous les messages = longueur de la file / taux de consommat
 
 ---
 
-## 5. Problème central 3 : comment garantir que les messages ne sont ni perdus, ni dupliqués, et restent ordonnés ?
+## 5. Problème central 3 : comment garantir que les messages ne sont ni perdus, ni dupliqués, et restent ordonnés
 
 ### 5.1 Fiabilité des messages : trois lignes de défense
 
@@ -354,7 +354,7 @@ Les messages peuvent être perdus à trois étapes : lors de l'envoi par le prod
 
 <ReliabilityDemo />
 
-### 5.2 Comment gérer la consommation en double des messages ?
+### 5.2 Comment gérer la consommation en double des messages
 
 **La duplication de messages peut survenir dans les scénarios suivants :**
 
@@ -378,7 +378,7 @@ Les messages peuvent être perdus à trois étapes : lors de l'envoi par le prod
 
 ---
 
-## 6. Pratique : comment choisir une file de messages ?
+## 6. Pratique : comment choisir une file de messages
 
 ### 6.1 Comparaison des quatre files de messages principales
 

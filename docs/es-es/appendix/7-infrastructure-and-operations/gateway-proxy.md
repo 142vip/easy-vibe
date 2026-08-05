@@ -1,11 +1,11 @@
-# Gateway y Proxy Inverso
+# Principios de puerta de enlace y proxy inverso
 ::: tip 🎯 Pregunta Central
 **En una arquitectura de internet de alta concurrencia, ¿cómo enrutar el tráfico de forma segura y eficiente al servicio correcto?** El proxy inverso resuelve "cómo distribuir el tráfico", y el API Gateway resuelve "cómo procesar las solicitudes". Este artículo utiliza casos reales (recepcionista, sistema de seguridad, enrutamiento inteligente) para comprender a fondo la filosofía de diseño y la práctica de ingeniería de los gateways.
 :::
 
 ---
 
-## 1. ¿Por qué necesitamos un "Gateway"?
+## 1. Motivación de un "Gateway
 
 ### 1.1 Un caso real: la evolución de la arquitectura de un e-commerce
 
@@ -66,7 +66,7 @@ Imagina que visitas una gran empresa:
 
 ---
 
-## 2. ¿Qué es un Proxy Inverso?
+## 2. Introducción a Proxy Inverso
 
 ### 2.1 Proxy Directo vs Proxy Inverso
 
@@ -136,7 +136,7 @@ Cliente HTTPS → Nginx (cifrado/descifrado) → Servicio backend HTTP
 
 ---
 
-## 3. Nginx: ¿Cómo maneja millones de conexiones concurrentes?
+## 3. Nginx: Enfoque de maneja millones de conexiones concurrentes
 
 ### 3.1 Modelo de procesos Master-Worker
 
@@ -187,9 +187,9 @@ Este es el secreto central del alto rendimiento de Nginx:
 
 ---
 
-## 4. ¿Qué es un API Gateway?
+## 4. Introducción a API Gateway
 
-### 4.1 ¿Por qué necesitamos un API Gateway?
+### 4.1 Motivación de un API Gateway
 
 **Imagina un sistema sin gateway:**
 
@@ -229,7 +229,7 @@ Este es el secreto central del alto rendimiento de Nginx:
 
 ---
 
-## 5. Gateway en la práctica: ¿Cómo construir una arquitectura de gateway completa?
+## 5. Gateway en la práctica: Enfoque para construir una arquitectura de gateway completa
 
 ### 5.1 Diagrama de arquitectura completo
 
@@ -410,7 +410,7 @@ upstream backend_ip_hash {
 
 ---
 
-## 6. Seguridad del Gateway: ¿Cómo proteger la puerta del sistema?
+## 6. Seguridad del Gateway: Enfoque de proteger la puerta del sistema
 
 ### 6.1 Autenticación y autorización
 
@@ -464,7 +464,7 @@ Como el recepcionista de una empresa: autentica tu identidad (DNI), pero los per
 
 ---
 
-## 7. Limitación de tasa y Circuit Breaker: ¿Cómo evitar que el sistema colapse por una "inundación de tráfico"?
+## 7. Limitación de tasa y Circuit Breaker: Enfoque de evitar que el sistema colapse por una "inundación de tráfico"
 
 ### 7.1 Comparación de algoritmos de limitación de tasa
 

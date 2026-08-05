@@ -1,4 +1,4 @@
-# Prinzipien der Sprachsynthese und -erkennung
+# Sprachsynthese und -erkennung
 > 💡 **Lernleitfaden**: Dieses Kapitel führt dich tief in die Grundlagen der KI-Audioverarbeitung ein. Wir behandeln nicht nur die „trockenen" akustischen Fachbegriffe (wie STFT, Flow Matching, Speaker Embeddings), sondern zeigen dir durch verständliche Analogien und interaktive Demonstrationen, wie KI tatsächlich „menschliche Sprache versteht" und „selbst spricht". Selbst wenn du ein kompletter Anfänger bist, wirst du es mühelos verstehen!
 
 <AudioQuickStartDemo />

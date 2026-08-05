@@ -24,7 +24,7 @@ Sau khi học xong chương này, bạn sẽ có được:
 
 ---
 
-## 0. Toàn cảnh: Tại sao hạ tầng cũng cần "mã nguồn"?
+## 0. Toàn cảnh: Động lực của hạ tầng cũng cần "mã nguồn"
 
 Tưởng tượng bạn là một đầu bếp. Nếu mỗi món ăn đều nấu theo cảm giác, hôm nay một thìa muối, ngày mai hai thìa, hương vị không bao giờ ổn định. Nhưng nếu bạn viết công thức ra — chính xác đến từng gram gia vị — bất kỳ ai cũng có thể tái tạo cùng một hương vị.
 

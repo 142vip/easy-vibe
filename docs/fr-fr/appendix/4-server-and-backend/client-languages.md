@@ -1,4 +1,4 @@
-# Langages client (Swift / Kotlin / Dart)
+# Introduction : Langages clients : Swift, Kotlin, Dart
 
 ::: tip Question centrale
 **"Dans le développement d'applications mobiles, comment choisir le langage ?"** Ce chapitre présente les concepts fondamentaux du développement client, retrace l'évolution des langages de programmation mobile, et analyse en détail les langages de développement client actuels et leurs scénarios d'application, afin d'aider le lecteur à acquérir une vision systématique du choix de langage.
@@ -17,7 +17,7 @@ Dans le contexte de l'Internet mobile, le **"développement client" désigne gé
 
 ---
 
-## 2. Scénarios d'application et limites des langages mobiles : quand utiliser un langage spécifique ?
+## 2. Scénarios d'application et limites des langages mobiles : quand utiliser un langage spécifique
 
 Lors du choix d'un langage de développement client, il ne faut pas se détacher des besoins métier concrets et du contexte d'ingénierie. Même si les technologies multiplateformes modernes (comme Flutter / Dart) progressent rapidement, face à certaines exigences extrêmes et à des lignes rouges d'ingénierie, les langages natifs (Swift / Kotlin) restent la seule solution incontournable. Il est donc essentiel que les architectes délimitent clairement les domaines d'application de chaque langage.
 
@@ -29,7 +29,7 @@ Dans les scénarios d'ingénierie suivants, l'adoption d'un langage multiplatefo
 2. **Vérification MVP (Produit Minimum Viable) en phase de démarrage et essais commerciaux agiles** : les startups ou équipes explorant de nouveaux business ont des ressources financières et des fenêtres temporelles très limitées. Les langages multiplateformes permettent à l'équipe de construire rapidement un système prototype complet couvrant iOS et Android à partir d'un seul dépôt de code, accélérant la validation commerciale sur le marché.
 3. **Frontends légers à faible interactivité pilotés par des spécifications de design unifiées** : basées sur un Design System interne standardisé, exigeant une conformité pixel-perfect à 100 % des contrôles, marges et micro-animations sur Android et iOS.
 
-### 2.2 Quand rester en natif (Swift / Kotlin) ?
+### 2.2 Quand rester en natif (Swift / Kotlin)
 
 Cependant, dans les zones profondes de l'ingénierie impliquant l'extraction de performances extrêmes ou nécessitant de contourner les encapsulations génériques standard, il est impératif d'abandonner tout compromis technique et d'adopter résolument des langages natifs purs :
 

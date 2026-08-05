@@ -1,4 +1,4 @@
-# TypeScript 深度指南
+# TypeScript 原理
 
 ::: tip 前言
 你已经会写 JavaScript 了，但可能遇到过这些问题：
@@ -62,7 +62,7 @@ TypeScript 就是在代码运行前帮你发现这些问题的工具。读完这
 | **JavaScript** | 原始材料 | 可以直接运行的代码 |
 | **TypeScript** | 蓝图 + 质检 | 给 JavaScript 加类型检查，最后编译成 JavaScript |
 
-### 1.2 为什么 vibecoding 也需要 TypeScript？
+### 1.2 vibecoding 也需要 TypeScript的原理
 
 ::: warning AI 写代码也会出错
 一位开发者用 AI 生成了一个用户管理功能。AI 写的 JavaScript 代码能运行，但有个问题：用户年龄应该是数字，但有时候会被错误地赋值为字符串。

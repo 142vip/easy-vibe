@@ -3,7 +3,7 @@ title: 'Transformer und Attention-Mechanismus: Die Kern-Engine großer Modelle'
 description: 'Vertieftes Verständnis der Transformer-Architektur und des Attention-Mechanismus, Enthüllung der technischen Grundlagen von GPT, BERT und anderen großen Modellen.'
 ---
 
-# Transformer und Attention-Mechanismus: Die Kern-Engine großer Modelle
+# Transformer und Attention: Kernmechanismus
 
 2017 schlug Google im Paper "Attention Is All You Need" die Transformer-Architektur vor und veränderte damit die Spielregeln der natürlichen Sprachverarbeitung grundlegend. Sie verwarf die traditionellen rekurrenten neuronalen Netze (RNN) und erreichte allein durch den Attention-Mechanismus eine höhere Leistung und Trainingseffizienz. Heute basieren nahezu alle großen Sprachmodelle – GPT, BERT, T5, LLaMA – auf dem Transformer.
 

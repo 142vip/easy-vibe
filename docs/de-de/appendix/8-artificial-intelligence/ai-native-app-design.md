@@ -1,4 +1,4 @@
-# KI-native Anwendungsentwicklung
+# KI-native App-Design: Gestaltungsprinzipien
 
 ::: tip Vorwort
 **Warum sind manche KI-Produkte beeindruckend, während andere nur ein „ChatGPT-Wrapper" sind?** Der Unterschied liegt nicht in der Stärke des verwendeten Modells, sondern darin, ob das Produkt von Grund auf um die Eigenschaften von KI herum entwickelt wurde. KI-native Anwendungen sind nicht einfach traditionelle Apps mit einem „Chat-Fenster" obendrauf, sondern ein völlig neues Paradigma, das Benutzerinteraktion, Systemarchitektur und Produktlogik neu denkt.

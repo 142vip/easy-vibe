@@ -1,4 +1,4 @@
-# Sistema de Autenticación y Autorización
+# Principios de autenticación y autorización
 > 💡 **Guía de estudio**: Este capítulo te lleva a profundizar en el "sistema de control de acceso" del backend: autenticación y autorización. Comenzaremos desde lo más básico, "quién eres", y avanzaremos paso a paso para dominar Session, JWT, OAuth 2.0 y otros esquemas modernos de autenticación.
 
 <AuthEvolutionDemo />
@@ -16,7 +16,7 @@ Si comparamos el sistema backend con un edificio:
 - **Autenticación (Authentication)**: Confirma "quién eres" (verificar documento de identidad / tarjeta de acceso).
 - **Autorización (Authorization)**: Confirma "a dónde puedes ir" (los VIP pueden entrar a la sala VIP, los usuarios normales no).
 
-### 0.1 ¿Por qué necesitamos autenticación?
+### 0.1 Motivación de autenticación
 
 Solo hay una razón: **proteger los recursos**.
 
@@ -38,7 +38,7 @@ A través de una demostración real de inicio de sesión, comprendamos cómo fun
 
 ## 1. Conceptos básicos: Autenticación vs Autorización
 
-### 1.1 Autenticación (Authentication): ¿Quién eres?
+### 1.1 Autenticación (Authentication): Quién eres
 
 Confirma la identidad del usuario.
 
@@ -46,7 +46,7 @@ Confirma la identidad del usuario.
 - _Salida_: Un token que representa "tu" identidad.
 - _Abreviatura en inglés_: **AuthN**
 
-### 1.2 Autorización (Authorization): ¿Qué puedes hacer?
+### 1.2 Autorización (Authorization): Qué puedes hacer
 
 Confirma qué permisos tiene el usuario.
 

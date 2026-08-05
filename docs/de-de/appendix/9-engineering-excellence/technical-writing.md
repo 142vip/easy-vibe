@@ -1,4 +1,4 @@
-# Technische Dokumentation
+# Technisches Schreiben: Dokumentationsprinzipien
 
 ::: tip Vorwort
 **Liest überhaupt jemand Ihre Dokumentation?** Viele Entwickler denken: „Solange der Code funktioniert, kann die Dokumentation warten." Das Ergebnis: Neue Mitarbeiter verstehen das Projekt nicht, API-Integrationen funktionieren nur über mündliche Absprachen, und nach einem halben Jahr hat man selbst vergessen, warum man etwas so entworfen hat.
@@ -19,7 +19,7 @@ Nach diesem Kapitel werden Sie in der Lage sein, gut strukturierte, inhaltlich p
 
 ---
 
-## 0. Überblick: Warum ist technische Dokumentation wichtig?
+## 0. Überblick: Bedeutung der technischen Dokumentation
 
 Code sagt dem Computer „wie", Dokumentation sagt den Menschen „warum". Ein Projekt ohne Dokumentation ist wie ein Haushaltsgerät ohne Bedienungsanleitung — man kann es benutzen, aber man muss alles erraten.
 

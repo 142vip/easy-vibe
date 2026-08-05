@@ -1,10 +1,10 @@
-# Git: la máquina del tiempo del código
+# Principios del control de versiones con Git
 
 > 💡 **Guía de aprendizaje**: Este capítulo está escrito específicamente para personas que nunca han usado Git. No vamos a empezar haciéndote memorizar comandos, sino a entender primero "¿qué problema te ayuda a resolver Git?", y luego conectarás los comandos y conceptos paso a paso. Al terminar, deberías poder realizar de forma independiente: commits locales, crear ramas y hacer push a GitHub.
 
 ---
 
-## 0. Primero una pregunta: ¿has vivido estas pesadillas?
+## 0. Primero una pregunta: has vivido estas pesadillas
 
 **Escenario uno: el infierno de las versiones**
 
@@ -42,7 +42,7 @@ Sin exagerar, Git es una de las herramientas más importantes del desarrollo de 
 
 ---
 
-## 1. ¿Git y GitHub son lo mismo?
+## 1. Git y GitHub son lo mismo
 
 Muchos principiantes confunden estos dos conceptos. Vamos a aclarar:
 
@@ -78,7 +78,7 @@ Es el **archivo permanente del historial**, oculto en la carpeta `.git`. Cada ve
 
 <GitCommitFlow />
 
-### ¿Por qué el enfoque de "dos pasos" (add + commit)?
+### Motivación de enfoque de "dos pasos" (add + commit)
 
 Muchos principiantes preguntan: ¿por qué no se puede guardar con un solo clic y hay que hacer primero `add` y luego `commit`?
 
@@ -156,7 +156,7 @@ git commit -m "feat: añadir funcionalidad de login de usuario"
 
 El contenido entre comillas después de `-m` se llama **commit message** (mensaje de commit). Está escrito para tu yo futuro y tus compañeros; debe ser significativo.
 
-### 3.3 ¿Cómo escribir un Commit Message profesional?
+### 3.3 Enfoque para escribir un Commit Message profesional
 
 ```bash
 # ❌ Escritura inútil — no sabes qué se hizo al leerlo
@@ -206,7 +206,7 @@ git log --oneline
 
 Las **ramas** son la funcionalidad más potente y a la vez más confusa de Git para los principiantes. Pero una vez la entiendas, descubrirás que el diseño es muy elegante.
 
-### 4.1 ¿Qué es una rama? Entiéndela como "universos paralelos"
+### 4.1 Introducción a rama Entiéndela como "universos paralelos"
 
 Imagina que juegas un RPG con una decisión clave:
 - Opción A: desafiarte al gran jefe final (desarrollar nueva funcionalidad)
@@ -255,7 +255,7 @@ git branch
 
 # Salida (* indica la rama actual):
 # * feature-login
-#   main
+# main
 ```
 
 **Desarrollar normalmente en la rama:**
@@ -284,7 +284,7 @@ git merge feature-login
 git branch -d feature-login
 ```
 
-### 4.4 ¿Cuándo deberías crear una rama?
+### 4.4 Criterios para crear una rama
 
 | Escenario | Recomendación | Razón |
 | :--- | :--- | :--- |
@@ -337,8 +337,8 @@ git remote add origin https://github.com/tu-usuario/tu-repo.git
 # Confirmar la asociación
 git remote -v
 # Salida:
-# origin  https://github.com/tu-usuario/tu-repo.git (fetch)
-# origin  https://github.com/tu-usuario/tu-repo.git (push)
+# origin https://github.com/tu-usuario/tu-repo.git (fetch)
+# origin https://github.com/tu-usuario/tu-repo.git (push)
 ```
 
 **Paso 3**: Sube el contenido local al remoto:
@@ -393,7 +393,7 @@ git clone: Remoto → Local   (primera copia completa del repositorio)
 
 Los conflictos son inevitables en la colaboración, pero tampoco son tan terroríficos.
 
-### 6.1 ¿Cómo se producen los conflictos?
+### 6.1 Enfoque de producen los conflictos
 
 Cuando tú y tu compañero **modificáis la misma línea del mismo archivo**, al fusionar, Git no sabe qué versión usar y se produce un conflicto.
 
@@ -402,7 +402,7 @@ Ejemplo:
 - Tu compañero, en la misma línea, escribió: `const timeout = 5000`
 - Al hacer `git pull` o `git merge`, Git detecta la contradicción y se "pausa" diciéndote: no sé cuál usar; decídete tú.
 
-### 6.2 ¿Qué aspecto tiene un archivo en conflicto?
+### 6.2 Qué aspecto tiene un archivo en conflicto
 
 Git inserta marcas especiales en las zonas del conflicto:
 
@@ -423,7 +423,7 @@ function login() {
 - Entre `<<<<<<< HEAD` y `=======`: contenido de tu rama actual
 - Entre `=======` y `>>>>>>> xxx`: contenido que se está fusionando
 
-### 6.3 ¿Cómo resolver un conflicto?
+### 6.3 Enfoque para resolver un conflicto
 
 **Primer paso**: Abre el archivo en conflicto y busca todas las marcas `<<<<<<<` (normalmente VS Code y otros editores las resaltan automáticamente)
 
@@ -503,7 +503,7 @@ git branch -d feature/user-profile
 
 ---
 
-## 9. .gitignore: ¿qué archivos no deberían ser rastreados?
+## 9. .gitignore: qué archivos no deberían ser rastreados
 
 Hay archivos que **no quieres** confirmar en el repositorio Git, como:
 - `node_modules/`: dependencias, muy grandes, se pueden regenerar con `npm install`

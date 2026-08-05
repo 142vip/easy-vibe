@@ -1,4 +1,4 @@
-# Principes de synthèse et reconnaissance vocale
+# Principes : Synthèse et reconnaissance vocale
 
 > 💡 **Guide d'apprentissage** : Ce chapitre vous plonge dans les principes fondamentaux de l'audio par IA. Nous n'explorerons pas seulement les termes acoustiques « ardus » (comme STFT, Flow Matching, embeddings de timbre), mais aussi, à travers des analogies accessibles et des démonstrations interactives intuitives, vous comprendrez parfaitement comment l'IA « comprend le langage humain » et « prend la parole ». Même si vous êtes un lecteur sans aucune base, vous pourrez facilement maîtriser ces concepts !
 

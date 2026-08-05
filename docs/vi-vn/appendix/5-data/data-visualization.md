@@ -1,4 +1,4 @@
-# Trực quan hóa Dữ liệu và Bảng điều khiển
+# Trực quan hóa dữ liệu: Nguyên tắc mã hóa trực quan
 
 ::: tip Lời nói đầu
 **Một biểu đồ tốt đáng giá ngàn dòng dữ liệu.** Trực quan hóa dữ liệu là việc chuyển đổi những con số trừu tượng thành biểu đạt trực quan sinh động, giúp con người có thể hiểu câu chuyện đằng sau dữ liệu chỉ trong vài giây. Từ biểu đồ Excel đến màn hình giám sát Grafana, trực quan hóa có mặt ở khắp nơi.
@@ -24,7 +24,7 @@ Sau khi học xong chương này, bạn sẽ đạt được:
 
 ---
 
-## 0. Toàn cảnh: Tại sao cần trực quan hóa?
+## 0. Toàn cảnh: Động lực của trực quan hóa
 
 Não bộ con người xử lý thông tin trực quan nhanh hơn nhiều so với văn bản. Một biểu đồ đường có thể giúp bạn nhanh chóng nhận thấy "doanh thu tháng trước đang giảm", trong khi cùng một thông tin nếu được trình bày dưới dạng bảng, bạn có thể cần so sánh từng dòng mới có thể kết luận.
 
@@ -125,7 +125,7 @@ Bảng điều khiển（Dashboard）là sự kết hợp hữu cơ của nhiề
 | Phân tích chuyên sâu | Mở rộng từng tầng từ tổng hợp đến chi tiết | Phân tích bán hàng, phân tích hành vi người dùng | Hỗ trợ tương tác nhấp, đi sâu từng tầng |
 | Giám sát thời gian thực | Số lớn + Đường cong thời gian thực + Trạng thái cảnh báo | Màn hình sự kiện quy mô lớn, giám sát máy chủ | Tự động làm mới, nền tối, phù hợp chiếu màn hình lớn |
 
-### 5 nguyên tắc thiết kế bảng điều khiển
+### 5. nguyên tắc thiết kế bảng điều khiển
 
 1. **Hỏi trước "Ai đang xem"**: CEO xem chỉ số chiến lược, vận hành xem chỉ số quy trình, kỹ sư xem chỉ số kỹ thuật
 2. **Quy tắc 5 giây**: Người dùng nên hiểu được thông tin cốt lõi của bảng điều khiển trong vòng 5 giây

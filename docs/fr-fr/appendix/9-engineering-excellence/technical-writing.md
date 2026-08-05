@@ -1,4 +1,4 @@
-# Redaction technique
+# Introduction : Rédaction technique pour ingénieurs
 
 ::: tip Avant-propos
 **Quelqu'un lit-il votre documentation ?** Beaucoup de developpeurs pensent que « tant que le code fonctionne, la documentation peut attendre ». Le resultat : les nouveaux employes ne comprennent pas le projet, l'integration d'API se fait uniquement par communication orale, et apres six mois, vous avez vous-meme oublie pourquoi vous avez concu les choses ainsi.
@@ -19,7 +19,7 @@ Apres ce chapitre, vous serez capable de rediger une documentation technique bie
 
 ---
 
-## 0. Vue d'ensemble : Pourquoi la documentation technique est-elle importante ?
+## 0. Vue d'ensemble : Pourquoi la documentation technique est-elle importante
 
 Le code dit a l'ordinateur « comment », la documentation dit aux humains « pourquoi ». Un projet sans documentation est comme un appareil electro-menager sans mode d'emploi — on peut l'utiliser, mais il faut tout deviner.
 

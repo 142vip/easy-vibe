@@ -1,4 +1,4 @@
-# Design Patterns
+# Fundamentals of Design Patterns
 
 ::: tip Preface
 **Why is your code always "works but messy"?** You may have encountered this: when requirements change, the code needs major rewrites; you want to reuse a piece of logic but find it tangled with other code. Design patterns are "code organization recipes" summarized by predecessors to help you write flexible, maintainable code.
@@ -190,7 +190,7 @@ Use the interactive component below to try out the effects of different design p
 
 ---
 
-## 4. How to Choose a Design Pattern?
+## 4. Approach to choosing a Design Pattern
 
 | Problem You Encounter | Recommended Pattern | Core Idea |
 |-------------|---------|---------|

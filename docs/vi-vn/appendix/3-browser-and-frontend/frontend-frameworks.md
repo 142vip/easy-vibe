@@ -27,7 +27,7 @@ Mỗi chương đều bắt đầu từ "tại sao cần công nghệ này", gi�
 
 ---
 
-## 1. Tại Sao Cần Quan Tâm Đến Lịch Sử Phát Triển Frontend?
+## 1. Động lực của lịch sử Frontend
 
 ::: tip 🤔 Câu Hỏi Cốt Lõi
 **Tại sao trang web ngày càng phức tạp? Tại sao công nghệ frontend không ngừng phát triển?** Câu hỏi này sẽ dẫn bạn đi qua con đường phát triển công nghệ từ trang web đơn giản đến ứng dụng Web hiện đại.
@@ -39,7 +39,7 @@ Hãy tưởng tượng một tấm **poster** bạn thấy trên phố:
 
 - ✅ Có nội dung (chữ, hình ảnh)
 - ✅ Có thiết kế (màu sắc, bố cục)
-- ❌ Nhưng bạn nói chuyện với nó, nó không trả lời
+- ❌ Nhưng bạn giao tiếp với nó, nó không trả lời
 - ❌ Bạn click vào đâu đó, không có gì xảy ra
 
 **Trang web đầu tiên** chính là "poster điện tử" như vậy: chỉ có thể xem, không thể thay đổi, nội dung cố định.
@@ -83,7 +83,7 @@ Sự phát triển của công nghệ frontend giống như sự tiến hóa c�
 
 <FrontendEvolutionDemo />
 
-### 2.1 Thời đại này như thế nào?
+### 2.1 Đặc điểm của thời đại
 
 **Cách phát triển**:
 
@@ -104,11 +104,11 @@ project/
 ├── index.html
 ├── login.html
 ├── css/
-│   ├── bootstrap.css
-│   └── custom.css
+│ ├── bootstrap.css
+│ └── custom.css
 ├── js/
-│   ├── jquery.js
-│   └── app.js
+│ ├── jquery.js
+│ └── app.js
 └── images/
 ```
 
@@ -119,7 +119,7 @@ project/
 3. **Code khó tái sử dụng**: Muốn dùng lại chức năng nào đó, chỉ có thể copy-paste
 :::
 
-### 2.2 "Cắt Ảnh" Là Gì?
+### 2.2 Định nghĩa kỹ thuật PSD to HTML
 
 Có thể bạn đã nghe đến từ "cắt ảnh". Đó là công việc chính của frontend thời kỳ đầu:
 
@@ -154,7 +154,7 @@ Bài học của giai đoạn này: **quá nhiều request là kẻ thù lớn c
 **Tại sao cần jQuery? Nó giải quyết vấn đề gì, và mang đến vấn đề mới gì?** Hiểu được giới hạn của jQuery, mới hiểu được giá trị của Vue/React.
 :::
 
-### 3.1 Tại Sao Cần jQuery?
+### 3.1 Động lực của jQuery
 
 Khi trang web trở nên phức tạp, vấn đề của JavaScript thuần lộ ra:
 
@@ -200,14 +200,14 @@ Hãy tưởng tượng bạn đang làm một giỏ hàng:
 ```javascript
 // Người dùng click "thêm vào giỏ hàng"
 function addToCart() {
-  cartCount++ // Dữ liệu thay đổi
+ cartCount++ // Dữ liệu thay đổi
 
-  // Bạn phải cập nhật thủ công tất cả nơi liên quan
-  $('#cart-count').text(cartCount) // Chấm đỏ góc trên bên phải
-  $('#cart-page-count').text(cartCount) // Trang giỏ hàng
-  $('#checkout-price').text(calculatePrice()) // Nút thanh toán
+ // Bạn phải cập nhật thủ công tất cả nơi liên quan
+ $('#cart-count').text(cartCount) // Chấm đỏ góc trên bên phải
+ $('#cart-page-count').text(cartCount) // Trang giỏ hàng
+ $('#checkout-price').text(calculatePrice()) // Nút thanh toán
 
-  // Nếu bỏ sót một chỗ, trang sẽ không đồng nhất!
+ // Nếu bỏ sót một chỗ, trang sẽ không đồng nhất!
 }
 ```
 
@@ -225,16 +225,16 @@ Trang web phải thích ứng với các màn hình khác nhau. Điều này c�
 ```css
 /* Màn hình máy tính (lớn hơn 640px) */
 @media (min-width: 640px) {
-  .container {
-    display: flex;
-  }
+ .container {
+ display: flex;
+ }
 }
 
 /* Màn hình điện thoại (nhỏ hơn 640px) */
 @media (max-width: 640px) {
-  .container {
-    display: block;
-  }
+ .container {
+ display: block;
+ }
 }
 ```
 
@@ -262,7 +262,7 @@ Hãy tưởng tượng bạn xem cùng một bức ảnh ở các phòng khác n
 **Tại sao cần Vue/React? Sự khác biệt bản chất giữa chúng và jQuery là gì?** Hiểu "declarative" và "data-driven" là chìa khóa để nắm vững frontend framework hiện đại.
 :::
 
-### 4.1 Tại Sao Cần Framework Mới?
+### 4.1 Động lực của Framework mới
 
 Vấn đề của thời đại jQuery tích tụ đến một mức độ nhất định:
 
@@ -288,11 +288,11 @@ $('#title').show()
 ```javascript
 // Bạn chỉ cần nói với trình duyệt "muốn hiển thị gì"
 data() {
-  return {
-    title: "Tiêu đề mới",
-    color: "red",
-    visible: true
-  }
+ return {
+ title: "Tiêu đề mới",
+ color: "red",
+ visible: true
+ }
 }
 ```
 
@@ -390,7 +390,7 @@ Hãy tưởng tượng bạn đang lắp Lego:
 
 <RenderingStrategyDemo />
 
-::: info 💡 Làm sao để chọn?
+::: info 💡 Chiến lược lựa chọn
 - **Website nội dung** (blog, tài liệu): Ưu tiên SSG
 - **Website động cần SEO** (thương mại điện tử, tin tức): Dùng SSR
 - **Hệ thống quản trị backend**: Dùng CSR
@@ -405,7 +405,7 @@ Hãy tưởng tượng bạn đang lắp Lego:
 **Tại sao frontend cần "engineering"? Công cụ build thực sự đang làm gì?** Hiểu engineering mới có thể hiểu được quy trình làm việc của dự án frontend hiện đại.
 :::
 
-### 6.1 Tại Sao Cần "Engineering"?
+### 6.1 Động lực của Engineering
 
 Dự án frontend ngày càng lớn, không thể chỉ dựa vào "nhúng script thủ công".
 
@@ -482,16 +482,16 @@ Trong môi trường phát triển, phần lớn thời gian bạn chỉ cần s
 
 ```vue
 <template>
-  <div>{{ message }}</div>
+ <div>{{ message }}</div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      message: 'Hello Vue'
-    }
-  }
+ data() {
+ return {
+ message: 'Hello Vue'
+ }
+ }
 }
 </script>
 ```
@@ -517,8 +517,8 @@ export default {
 
 ```jsx
 function App() {
-  const [message, setMessage] = useState('Hello React')
-  return <div>{message}</div>
+ const [message, setMessage] = useState('Hello React')
+ return <div>{message}</div>
 }
 ```
 
@@ -544,7 +544,7 @@ function App() {
 
 ```svelte
 <script>
-  let message = 'Hello Svelte'
+ let message = 'Hello Svelte'
 </script>
 
 <div>{message}</div>
@@ -572,11 +572,11 @@ function App() {
 
 ```typescript
 @Component({
-  selector: 'app-root',
-  template: '<div>{{ message }}</div>'
+ selector: 'app-root',
+ template: '<div>{{ message }}</div>'
 })
 export class AppComponent {
-  message = 'Hello Angular'
+ message = 'Hello Angular'
 }
 ```
 

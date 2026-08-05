@@ -10,42 +10,42 @@
 <NavGrid>
   <NavCard
     href="/ar-sa/appendix/8-artificial-intelligence/prompt-engineering"
-    title="هندسة الموجهات"
+    title="مدخل هندسة التوجيه (Prompt Engineering)"
     description="إتقان فن الحوار الفعال مع الذكاء الاصطناعي لإطلاق إمكانات النماذج الكبيرة"
   />
   <NavCard
     href="/ar-sa/appendix/8-artificial-intelligence/ai-history"
-    title="تاريخ تطور الذكاء الاصطناعي"
+    title="تاريخ موجز للذكاء الاصطناعي"
     description="مراجعة المعالم الرئيسية في تطوير الذكاء الاصطناعي وفهم مسار تطور التكنولوجيا"
   />
   <NavCard
     href="/ar-sa/appendix/8-artificial-intelligence/llm-principles"
-    title="النماذج اللغوية الكبيرة"
+    title="مبادئ عمل نماذج اللغة الكبيرة"
     description="شرح عميق ولكن سهل الوصول إليه لكيفية عمل النماذج اللغوية الكبيرة (LLMs) وتطبيقاتها"
   />
   <NavCard
     href="/ar-sa/appendix/8-artificial-intelligence/multimodal-models"
-    title="النماذج متعددة الوسائط الكبيرة"
+    title="مبادئ النماذج متعددة الوسائط: الرؤية / الصوت / الفيديو"
     description="استكشاف النماذج المتقدمة القادرة على معالجة أنواع متعددة من البيانات مثل الصور والصوت"
   />
   <NavCard
     href="/ar-sa/appendix/8-artificial-intelligence/image-generation"
-    title="مبادئ توليد الصور بالذكاء الاصطناعي"
+    title="مبادئ توليد الصور"
     description="كشف المنطق الأساسي والتنفيذ التقني لتوليد الصور بالذكاء الاصطناعي"
   />
   <NavCard
     href="/ar-sa/appendix/8-artificial-intelligence/speech-synthesis-recognition"
-    title="نماذج الصوت بالذكاء الاصطناعي"
+    title="مبادئ تركيب الصوت والتعرف عليه"
     description="فهم تطبيقات الذكاء الاصطناعي في توليف الكلام والتعرف عليه وتوليد الموسيقى"
   />
   <NavCard
     href="/ar-sa/appendix/8-artificial-intelligence/context-engineering"
-    title="هندسة السياق"
+    title="مدخل هندسة السياق"
     description="تعلم كيفية تحسين إدارة السياق لتحسين الاتساق طويل المدى لمهام الذكاء الاصطناعي"
   />
   <NavCard
     href="/ar-sa/appendix/8-artificial-intelligence/ai-agents"
-    title="ذكاء الوكلاء"
+    title="مبادئ وكيل الذكاء الاصطناعي واستدعاء الأدوات"
     description="استكشاف هياكل وكلاء الذكاء الاصطناعي مع قدرات صنع القرار والتنفيذ المستقل"
   />
   <NavCard
@@ -62,32 +62,32 @@
 <NavGrid>
   <NavCard
     href="/ar-sa/appendix/3-browser-and-frontend/html-css-layout"
-    title="أساسيات HTML/CSS/JS"
+    title="أساسيات تخطيط HTML / CSS"
     description="الركائز الثلاث لبناء صفحات الويب، ضرورية للمبتدئين في تطوير الواجهة الأمامية"
   />
   <NavCard
     href="/ar-sa/appendix/3-browser-and-frontend/frontend-frameworks"
-    title="تاريخ تطور الواجهة الأمامية"
+    title="مدخل أطر العمل الأمامية"
     description="فهم تطور مكدسات تقنيات الواجهة الأمامية وفهم اتجاهات تطوير التكنولوجيا"
   />
   <NavCard
     href="/ar-sa/appendix/3-browser-and-frontend/web-performance"
-    title="تحسين أداء الواجهة الأمامية"
+    title="مبادئ قياس أداء الويب وتحسينه"
     description="تعلم الاستراتيجيات الرئيسية لتحسين سرعة تحميل صفحات الويب وسلاسة التفاعل"
   />
   <NavCard
     href="/ar-sa/appendix/3-browser-and-frontend/graphics-animation"
-    title="مقدمة في Canvas 2D"
+    title="أساسيات الرسوميات والرسوم المتحركة: Canvas وأصدقاؤه"
     description="إتقان واجهة برمجة تطبيقات الرسم Canvas لتحقيق تأثيرات رسومية ومتحركة رائعة"
   />
   <NavCard
     href="/ar-sa/appendix/3-browser-and-frontend/browser-as-os-rendering"
-    title="من URL إلى عرض المتصفح"
+    title="مبادئ عرض المتصفح"
     description="تحليل السلسلة الكاملة للعملية الكاملة لعرض الصفحات بواسطة المتصفح"
   />
   <NavCard
     href="/ar-sa/appendix/2-development-tools/debugging-art/"
-    title="أدوات تطوير المتصفح"
+    title="أساسيات مصحح أخطاء المتصفح (DevTools)"
     description="استخدام أدوات التطوير ببراعة لتحديد وحل مشاكل الواجهة الأمامية بكفاءة"
   />
 </NavGrid>
@@ -99,12 +99,12 @@
 <NavGrid>
   <NavCard
     href="/ar-sa/appendix/6-architecture-and-system-design/monolith-to-microservices"
-    title="تاريخ تطور الواجهة الخلفية"
+    title="مدخل التطور من التطبيق المتجانب إلى الخدمات المصغرة"
     description="من الأحادية إلى الخدمات المصغرة، استكشاف تطور بنية الواجهة الخلفية"
   />
   <NavCard
     href="/ar-sa/appendix/4-server-and-backend/backend-languages"
-    title="لغات برمجة الواجهة الخلفية"
+    title="مدخل لغات الواجهة الخلفية"
     description="مقارنة خصائص وسيناريوهات تطبيق لغات الواجهة الخلفية الرائدة لاختيار أفضل مكدس تقني"
   />
   <NavCard
@@ -114,32 +114,32 @@
   />
   <NavCard
     href="/ar-sa/appendix/4-server-and-backend/caching"
-    title="تصميم ذاكرة التخزين المؤقت للنظام"
+    title="مبادئ مستويات واستراتيجيات التخزين المؤقت"
     description="تعلم استراتيجيات التخزين المؤقت لتحسين قدرات المعالجة عالية التزامن للنظام"
   />
   <NavCard
     href="/ar-sa/appendix/4-server-and-backend/message-queues"
-    title="تصميم قوائم انتظار الرسائل"
+    title="مبادئ طوابير الرسائل والبنية المدفوعة بالأحداث"
     description="إتقان الدور الرئيسي لقوائم انتظار الرسائل في فصل الاهتمامات وتقليل الذروات"
   />
   <NavCard
     href="/ar-sa/appendix/4-server-and-backend/auth-authorization"
-    title="مبادئ وممارسة المصادقة"
+    title="مبادئ المصادقة والترخيص"
     description="بناء أنظمة آمنة للمصادقة على الهوية وإدارة الأذونات"
   />
   <NavCard
     href="/ar-sa/appendix/5-data/data-tracking"
-    title="تصميم التتبع"
+    title="مدخل تتبع البيانات"
     description="تصميم تتبع البيانات بشكل علمي لتوفير دعم البيانات لقرارات المنتج"
   />
   <NavCard
     href="/ar-sa/appendix/5-data/data-visualization"
-    title="تصوير البيانات ولوحات المعلومات"
+    title="مبادئ تصوير البيانات ولوحات المعلومات"
     description="اختيار المخططات المناسبة وتصميم لوحات المعلومات وتجنب مصائد التصوير المضللة"
   />
   <NavCard
     href="/ar-sa/appendix/7-infrastructure-and-operations/monitoring-logging"
-    title="العمليات عبر الإنترنت"
+    title="مبادئ المراقبة والسجلات والتنبيهات"
     description="إتقان مهارات التشغيل لنشر النظام ومراقبته واستكشاف الأخطاء وإصلاحها"
   />
 </NavGrid>
@@ -151,22 +151,22 @@
 <NavGrid>
   <NavCard
     href="/ar-sa/appendix/4-server-and-backend/api-intro"
-    title="مقدمة في API"
+    title="مدخل API: فهم اتصال البرامج من الصفر"
     description="المعرفة الأساسية بتصميم واجهات API وتطويرها"
   />
   <NavCard
     href="/ar-sa/appendix/2-development-tools/ide-basics"
-    title="مبادئ IDE"
+    title="أساسيات بيئة التطوير المتكاملة (IDE)"
     description="فهم آلية العمل الداخلية لبيئات التطوير المتكاملة (IDEs)"
   />
   <NavCard
     href="/ar-sa/appendix/2-development-tools/command-line-shell"
-    title="مقدمة في Terminal"
+    title="مدخل سطر الأوامر وسكربتات Shell"
     description="إتقان العمليات الأساسية لمحطة سطر الأوامر لتحسين كفاءة التطوير"
   />
   <NavCard
     href="/ar-sa/appendix/2-development-tools/git-version-control"
-    title="مقدمة مفصلة في Git"
+    title="مبادئ التحكم في إصدار Git"
     description="فهم عميق لمبادئ التحكم في إصدار Git والاستخدام المتقدم"
   />
   <NavCard

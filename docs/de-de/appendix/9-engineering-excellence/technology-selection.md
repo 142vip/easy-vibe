@@ -1,4 +1,4 @@
-# Methodik der Technologieauswahl
+# Technologieauswahl: Entscheidungsprinzipien
 
 ::: tip Vorwort
 **React oder Vue? MySQL oder PostgreSQL?** Die Technologieauswahl ist eine der wichtigsten Entscheidungen zu Beginn jedes Projekts. Falsch gewählt, kann ein monatelanger Rewrite drohen; richtig gewählt, verdoppelt sich die Teameffizienz.

@@ -1,4 +1,4 @@
-# Frontend-Frameworks – Ein tiefer Einblick
+# Frontend-Frameworks: Übersicht
 
 ::: tip Vorwort
 Du hast bereits die Grundlagen von HTML, CSS und JavaScript gelernt und kannst einfache Webseiten erstellen. Doch je komplexer die Funktionen einer Webseite werden, desto deutlicher wird: Mit nativem JavaScript wird der Code schwer zu warten – eine Änderung an einer Stelle zieht viele weitere Änderungen nach sich, und bei der Zusammenarbeit im Team kommt es häufig zu Konflikten.
@@ -83,7 +83,7 @@ Die Evolution der Frontend-Technologien gleicht der Entwicklung des Hausbaus:
 
 <FrontendEvolutionDemo />
 
-### 2.1 Wie war diese Ära?
+### 2.1 Wie war diese Ära
 
 **Entwicklungsmethode**:
 
@@ -119,7 +119,7 @@ project/
 3. **Schwer wiederverwendbarer Code**: Um eine Funktion wiederzuverwenden, bleibt nur Kopieren und Einfügen
 :::
 
-### 2.2 Was ist „Slicing"?
+### 2.2 Was ist „Slicing"
 
 Du hast vielleicht schon den Begriff „Slicing" gehört. Es war die Hauptaufgabe der frühen Frontend-Entwicklung:
 
@@ -154,7 +154,7 @@ Die Lehre aus dieser Phase: **Zu viele Anfragen sind der größte Feind der Perf
 **Warum brauchte man jQuery? Welche Probleme hat es gelöst und welche neuen hat es gebracht?** Nur wenn du die Grenzen von jQuery verstehst, erkennst du den Wert von Vue/React.
 :::
 
-### 3.1 Warum brauchte man jQuery?
+### 3.1 Warum brauchte man jQuery
 
 Mit zunehmender Komplexität der Webseiten traten die Probleme von nativem JavaScript zutage:
 
@@ -262,7 +262,7 @@ Stell dir vor, du betrachtest dasselbe Foto in verschiedenen Räumen:
 **Warum brauchen wir Vue/React? Was ist der wesentliche Unterschied zu jQuery?** Das Verständnis von „deklarativ" und „datengetrieben" ist der Schlüssel zur Beherrschung moderner Frontend-Frameworks.
 :::
 
-### 4.1 Warum brauchen wir neue Frameworks?
+### 4.1 Warum brauchen wir neue Frameworks
 
 Die Probleme der jQuery-Ära häuften sich:
 
@@ -405,7 +405,7 @@ In der **Vue / React**-Ära gab es noch eine wichtige Veränderung: **von MPA zu
 **Warum braucht das Frontend „Engineering"? Was machen Build-Tools eigentlich?** Nur wenn du Engineering verstehst, kannst du den Workflow moderner Frontend-Projekte nachvollziehen.
 :::
 
-### 6.1 Warum brauchen wir „Engineering"?
+### 6.1 Warum brauchen wir „Engineering"
 
 Frontend-Projekte werden immer größer – „Skripte manuell einbinden" reicht nicht mehr aus.
 

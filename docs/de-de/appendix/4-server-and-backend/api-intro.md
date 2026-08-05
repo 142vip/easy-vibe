@@ -1,4 +1,4 @@
-# API-Einführung: Von null an verstehen, wie "Programme miteinander sprechen"
+# API-Einführung: Schnittstellengrundlagen
 
 ::: tip 🎯 Kernfrage
 **Was ist eine API?** Das ist wie die Frage: Wie sollte die Speisekarte eines Restaurants gestaltet sein, damit die Gäste sie sofort verstehen? Wie merkt sich der Kellner die Bestellungen, ohne Fehler zu machen? API löst das Problem, wie "Programme miteinander kommunizieren". Du verwendest seit deinem ersten Tag beim Programmieren APIs, auch wenn du es vielleicht nicht bemerkt hast.
@@ -106,7 +106,7 @@ Bei verschiedenen Arten von API-Dokumentation sind die Schwerpunkte unterschiedl
 
 ---
 
-## 3. HTTP-Methoden: Fragst du oder tust du?
+## 3. HTTP-Methoden: Fragst du oder tust du
 
 Beim Aufrufen einer Web-API musst du dem Server mitteilen, was du tun möchtest. Dafür gibt es HTTP-Methoden.
 
@@ -143,7 +143,7 @@ Beim Aufrufen einer Web-API musst du dem Server mitteilen, was du tun möchtest.
 
 ---
 
-## 4. HTTP-Statuscodes: Was dir der Server mitteilt
+## 4. HTTP-Statuscodes: Überblick über dir der Server mitteilt
 
 Wenn der Server antwortet, gibt er zuerst einen Statuscode zurück, der dir mitteilt, ob die Anfrage erfolgreich war.
 
@@ -170,7 +170,7 @@ Wenn der Server antwortet, gibt er zuerst einen Statuscode zurück, der dir mitt
 
 ---
 
-## 5. HTTP vs SDK: Selbst erledigen oder den Butler schicken?
+## 5. HTTP vs SDK: Selbst erledigen oder den Butler schicken
 
 ### 5.1 Vergleich der beiden Aufrufmethoden
 
@@ -181,7 +181,7 @@ Wenn der Server antwortet, gibt er zuerst einen Statuscode zurück, der dir mitt
 | **Nachteile** | ✗ Alle Details selbst behandeln<br>✗ Code ist lang und fehleranfällig | ✗ Abhängigkeit muss installiert werden<br>✗ Mögliche Versionsprobleme |
 | **Code-Beispiel** | `requests.post(url, json=..., headers={...})` | `client.chat.completions.create(...)` |
 
-### 5.2 Wie wählen?
+### 5.2 Wie wählen
 
 | Szenario | Empfohlene Methode | Grund |
 | :--- | :--- | :--- |
@@ -196,7 +196,7 @@ Wenn der Server antwortet, gibt er zuerst einen Statuscode zurück, der dir mitt
 
 ---
 
-## 6. Wie liest man API-Dokumentation?
+## 6. Wie liest man API-Dokumentation
 
 API-Dokumentation ist wie eine Kombination aus Bedienungsanleitung und Speisekarte. Du musst sie nicht von vorne bis hinten lesen, sondern nur lernen, "im Wörterbuch nachzuschlagen".
 

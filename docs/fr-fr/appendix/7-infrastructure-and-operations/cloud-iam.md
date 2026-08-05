@@ -1,4 +1,4 @@
-# Gestion des identités et des accès dans le cloud
+# Principes : Gestion des identités et accès cloud
 > **Guide d'apprentissage** : L'ingénierie des prompts résout le problème de « comment s'exprimer clairement », tandis que la gestion des permissions des comptes cloud résout le problème de « qui peut faire quoi ». Ce chapitre s'articule autour d'une question centrale : **dans le monde du cloud, comment autoriser facilement sans donner les clés à la mauvaise personne ?**
 
 Avant de commencer, nous vous recommandons de consolider deux prérequis :
@@ -8,7 +8,7 @@ Avant de commencer, nous vous recommandons de consolider deux prérequis :
 
 ---
 
-## 0. Introduction : pourquoi tombe-t-on dans les pièges dès le début du cloud ?
+## 0. Introduction : pourquoi tombe-t-on dans les pièges dès le début du cloud
 
 <IamRamComparisonDemo />
 
@@ -29,7 +29,7 @@ Face à ces défis, se contenter de « faire attention » ne suffit plus. Nous a
 
 ---
 
-## 1. Qu'est-ce que IAM/RAM ? En partant du « système de contrôle d'accès »
+## 1. Qu'est-ce que IAM/RAM En partant du « système de contrôle d'accès »
 
 ### 1.1 Analogie : le système de contrôle d'accès intelligent d'une entreprise
 
@@ -71,7 +71,7 @@ Bien que les noms diffèrent, **les concepts fondamentaux sont identiques** :
 
 ---
 
-## 2. Utilisateurs, groupes, rôles : lequel utiliser ?
+## 2. Utilisateurs, groupes, rôles : lequel utiliser
 
 ### 2.1 Différences entre les trois types d'« identités »
 
@@ -251,7 +251,7 @@ Le flux d'évaluation est le suivant :
 
 ## 4. Clés d'accès (AK/SK) : une « clé » à conserver avec précaution
 
-### 4.1 Qu'est-ce qu'AK/SK ?
+### 4.1 Qu'est-ce qu'AK/SK
 
 <AccessKeyManagementDemo />
 
@@ -262,7 +262,7 @@ Une clé d'accès (Access Key) est un identifiant à long terme fourni par les s
 | **Access Key ID** | ID de clé d'accès | Identifie qui vous êtes (similaire à un nom d'utilisateur) | Numéro de carte bancaire |
 | **Secret Access Key** | Clé d'accès secrète | Prouve que c'est bien vous (similaire à un mot de passe) | Code PIN de la carte bancaire |
 
-### 4.2 Pourquoi AK/SK est-il un « article à haut risque » ?
+### 4.2 Pourquoi AK/SK est-il un « article à haut risque »
 
 **Histoire vraie : la leçon d'une startup**
 
@@ -382,7 +382,7 @@ jobs:
 
 ## 5. Authentification multi-facteurs (MFA) : ajouter un « cadenas » à votre compte
 
-### 5.1 Qu'est-ce que le MFA ?
+### 5.1 Qu'est-ce que le MFA
 
 <MfaSecurityDemo />
 
@@ -394,7 +394,7 @@ Le MFA (Multi-Factor Authentication, authentification multi-facteurs), aussi app
 | **Facteur de possession** (ce que vous possédez) | Dispositif physique détenu par l'utilisateur | Téléphone, clé matérielle |
 | **Facteur biométrique** (ce que vous êtes) | Caractéristique biométrique de l'utilisateur | Empreinte digitale, reconnaissance faciale |
 
-### 5.2 Pourquoi le MFA est-il si important ?
+### 5.2 Pourquoi le MFA est-il si important
 
 **Les données parlent d'elles-mêmes** :
 
@@ -429,9 +429,9 @@ Le MFA (Multi-Factor Authentication, authentification multi-facteurs), aussi app
 
 ---
 
-## 6. Accès inter-comptes : comment « rendre visite » en toute sécurité ?
+## 6. Accès inter-comptes : comment « rendre visite » en toute sécurité
 
-### 6.1 Pourquoi l'accès inter-comptes est-il nécessaire ?
+### 6.1 Pourquoi l'accès inter-comptes est-il nécessaire
 
 <CrossAccountAccessDemo />
 

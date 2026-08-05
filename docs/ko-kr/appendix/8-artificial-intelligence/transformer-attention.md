@@ -3,7 +3,7 @@ title: 'Transformer와 어텐션 메커니즘: 대형 모델의 핵심 엔진'
 description: 'Transformer 아키텍처와 어텐션 메커니즘을 깊이 이해하고, GPT, BERT 등 대형 모델의 기술 기반을 해부합니다.'
 ---
 
-# Transformer와 어텐션 메커니즘: 대형 모델의 핵심 엔진
+# 트랜스포머와 어텐션 전체상
 
 2017년, Google이 논문 《Attention Is All You Need》에서 제안한 Transformer 아키텍처는 자연어 처리의 게임 규칙을 완전히 바꾸었습니다. 이는 전통적인 순환 신경망(RNN)을 버리고 어텐션 메커니즘만으로 더 강력한 성능과 더 높은 학습 효율을 달성했습니다. 오늘날 거의 모든 대형 언어 모델——GPT, BERT, T5, LLaMA——는 Transformer를 기반으로 구축되어 있습니다.
 

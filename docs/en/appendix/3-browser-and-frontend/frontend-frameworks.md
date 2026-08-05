@@ -1,4 +1,4 @@
-# Frontend Frameworks In-Depth Guide
+# An Introduction to Frontend Frameworks
 
 ::: tip Preface
 You've learned the basics of HTML, CSS, and JavaScript and can now build simple web pages. But as web functionality grows more complex, you may notice that writing raw JavaScript becomes hard to maintain — changing one thing requires touching many places, and collaboration often leads to conflicts.
@@ -27,7 +27,7 @@ Each chapter begins with "Why do we need this technology?" so you understand the
 
 ---
 
-## 1. Why Care About Frontend Evolution?
+## 1. Motivation for Caring About Frontend Evolution
 
 ::: tip 🤔 Core Question
 **Why are web pages getting more complex? Why does frontend technology keep evolving?** This question will guide you through the technological journey from simple web pages to modern web applications.
@@ -83,7 +83,7 @@ The evolution of frontend technology is like the evolution of house construction
 
 <FrontendEvolutionDemo />
 
-### 2.1 What Was This Era Like?
+### 2.1 What Was ThOverview of Era Like
 
 **Development approach**:
 
@@ -119,7 +119,7 @@ project/
 3. **Code hard to reuse**: To reuse a feature, you can only copy and paste
 :::
 
-### 2.2 What Is "Image Slicing"?
+### 2.2 Overview of "Image Slicing"
 
 You may have heard the term "image slicing." It was the main task of early frontend work:
 
@@ -154,7 +154,7 @@ The lesson from this phase: **too many requests is the enemy of performance**.
 **Why was jQuery needed? What problems did it solve, and what new problems did it create?** Understanding jQuery's limitations helps you appreciate the value of Vue/React.
 :::
 
-### 3.1 Why Was jQuery Needed?
+### 3.1 Motivation for jQuerying Needed
 
 As web pages grew more complex, the problems of vanilla JavaScript became apparent:
 
@@ -262,7 +262,7 @@ Imagine viewing the same photo in different rooms:
 **Why do we need Vue/React? What is the essential difference between them and jQuery?** Understanding "declarative" and "data-driven" is key to mastering modern frontend frameworks.
 :::
 
-### 4.1 Why Do We Need New Frameworks?
+### 4.1 Motivation for needing New Frameworks
 
 The problems of the jQuery era accumulated to a tipping point:
 
@@ -405,7 +405,7 @@ The **Vue / React** era brought another major shift: **from MPA to SPA**.
 **Why does frontend need "engineering"? What do build tools actually do?** Understanding engineering helps you grasp the workflow of modern frontend projects.
 :::
 
-### 6.1 Why Do We Need "Engineering"?
+### 6.1 Motivation for needing "Engineering"
 
 Frontend projects have grown too large to rely on "manually including scripts."
 

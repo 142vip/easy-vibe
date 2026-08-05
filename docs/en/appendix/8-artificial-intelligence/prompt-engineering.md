@@ -1,4 +1,4 @@
-# Prompt Engineering
+# An Introduction to Prompt Engineering
 
 > 💡 **Learning Guide**: This chapter introduces how to write effective prompts through interactive demonstrations.
 >
@@ -6,7 +6,7 @@
 
 <PromptQuickStartDemo />
 
-## 0. Introduction: Why Does It Still Get It Wrong After You Told It?
+## 0. Introduction: Motivation for Stilling Get It Wrong After You Told It
 
 Your communication problems with AI usually aren't about "it can't do it" — they're about "you weren't clear enough."
 
@@ -18,7 +18,7 @@ If your prompt is vague, it can only "guess blindly"; if you give clear instruct
 
 ---
 
-## 1. Why Do We Need "Engineering"?
+## 1. Motivation for needing "Engineering"
 
 When we talk about "engineering," we emphasize: **reproducible, verifiable, transferable**.
 
@@ -99,7 +99,7 @@ Clarify these 3 things, and many "back-and-forth corrections" will disappear.
 
 ---
 
-### 3.1 Step 1: Turn "Casual Remarks" into "Executable Tasks"
+### 3.1 Turn "Casual Remarks" into "Executable Tasks"
 
 The most common bad prompt: just "help me write something."
 The AI doesn't know: who it's for, how long, what style, how to verify.
@@ -121,7 +121,7 @@ Output: Format (Markdown / JSON / code block)
 
 ---
 
-### 3.2 Step 2: Use "Output Format" to Make Results Directly Usable
+### 3.2 Use "Output Format" to Make Results Directly Usable
 
 If you say "summarize this," the AI will likely give you a big paragraph.
 If you say "output as JSON," it behaves more like a "structured tool."
@@ -161,7 +161,7 @@ Text follows (wrapped in ```):
 
 ---
 
-### 3.3 Step 3: Clarify the "Style" (Role + Audience)
+### 3.3 Clarify the "Style" (Role + Audience)
 
 Many requirement pain points aren't about the task itself, but about "how it should be written."
 

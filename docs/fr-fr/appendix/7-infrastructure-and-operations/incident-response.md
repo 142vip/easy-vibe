@@ -1,4 +1,4 @@
-# Résolution d'incidents et réponse d'urgence
+# Introduction : Résolution d'incidents et réponse d'urgence
 
 ::: tip Avant-propos
 **Trois heures du matin, votre téléphone vibre frénétiquement, le service en production est totalement en panne — que faites-vous ?** Pour toute équipe Internet, la question n'est pas de savoir « si » un incident se produira, mais « quand » il se produira. Les meilleures équipes ne sont pas celles qui n'ont jamais d'incidents, mais celles qui, lorsqu'un incident survient, savent répondre rapidement, restaurer efficacement et en tirer des leçons pour éviter de répéter les mêmes erreurs.
@@ -84,7 +84,7 @@ La réponse à un incident est comme une course de relais : chaque étape a des 
 
 ---
 
-## 3. Système de commandement : qui dirige cette « bataille » ?
+## 3. Système de commandement : qui dirige cette « incident »
 
 Lors d'un incident majeur, le danger le plus redoutable n'est pas le défi technique, mais le **chaos** — une dizaine de personnes enquêtant simultanément sans savoir ce que font les autres, les informations clés se fragmentant dans différents groupes de discussion. Le système de commandement d'incident (Incident Command System) a précisément été conçu pour résoudre ce problème.
 

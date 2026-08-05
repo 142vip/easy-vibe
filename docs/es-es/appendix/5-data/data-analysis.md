@@ -1,4 +1,4 @@
-# Análisis de datos: Conceptos clave, lógica e insights profundos
+# Principios de análisis de datos
 
 ::: tip 🎯 Pregunta central
 **¿Cómo extraer de datos dispersos la "certeza" capaz de guiar el negocio?**
@@ -60,7 +60,7 @@ El comportamiento individual suele ser casual, pero el comportamiento grupal obe
 2. **Calcular (Apply)**: ejecutar funciones de agregación dentro de cada grupo, como `COUNT()` para contar, `SUM()` para sumar, `AVG()` para calcular la media.
 3. **Combinar (Combine)**: comparar los resultados de los distintos grupos y descubrir puntos de divergencia.
 
-### 2.2 ¿Por qué es imprescindible agrupar (Group By)?
+### 2.2 Motivación de imprescindible agrupar (Group By)
 Los datos resumidos suelen ocultar problemas. Por ejemplo, la tasa de conversión general puede estar subiendo, pero al desglosar se descubre que en realidad es "Shanghái" la que ha experimentado un aumento espectacular que eleva el promedio, mientras que todas las demás regiones están descendiendo. Mediante el análisis de agregación, podemos localizar con precisión desde el promedio global hasta la rama con el mejor o peor rendimiento.
 
 ---

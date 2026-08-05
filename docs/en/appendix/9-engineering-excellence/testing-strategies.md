@@ -1,4 +1,4 @@
-# Testing Strategies
+# An Introduction to Testing Strategies
 
 ::: tip Preface
 **Is your code really "bug-free"?** After every code change, you manually click through to see if anything broke — this works when the project is small. But when the codebase grows to tens of thousands of lines and the team expands to a dozen people, "clicking around manually" becomes a disaster.
@@ -19,7 +19,7 @@ After reading this chapter, you will understand how to choose appropriate testin
 
 ---
 
-## 0. The Big Picture: Why Automated Testing?
+## 0. The Big Picture: Motivation for Automateding Testing
 
 Imagine you're a structural engineer. After every blueprint revision, you don't personally climb every floor to check if the structure is safe — you rely on an **automated inspection system**. Software testing is the "structural inspection system" of the code world.
 
@@ -42,7 +42,7 @@ Use the interactive component below — click on each layer of the pyramid to le
 
 <TestPyramidDemo />
 
-### 1.2 Why a Pyramid Shape?
+### 1.2 Motivation for a Pyramid Shape
 
 The pyramid shape reflects a core tradeoff: **the balance between speed and realism**.
 
@@ -56,7 +56,7 @@ The pyramid shape reflects a core tradeoff: **the balance between speed and real
 
 ## 2. Unit Testing in Practice
 
-### 2.1 What Makes a Good Unit Test?
+### 2.1 What Makes a Good Unit Test
 
 Good unit tests follow the **FIRST** principles:
 
@@ -86,7 +86,7 @@ test('should correctly calculate price with tax', () => {
 })
 ```
 
-### 2.3 What to Test? What Not to Test?
+### 2.3 What to Test? What Not to Test
 
 **Should test:**
 - Core business logic (price calculations, permission checks, data transformations)

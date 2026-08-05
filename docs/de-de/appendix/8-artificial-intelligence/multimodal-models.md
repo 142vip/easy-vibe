@@ -1,4 +1,4 @@
-# Multimodale Modelle (Vision / Audio / Video)
+# Multimodale Modelle: Integration
 > 💡 **Lernleitfaden**: Dieses Kapitel erfordert keine tiefgehenden Kenntnisse in Computer Vision. Durch interaktive Demonstrationen verstehen Sie, wie KI „Augen" bekommt. Wir enthüllen die Kernprinzipien hinter Modellen wie GPT-4V und Qwen-VL.
 
 <VlmQuickStartDemo />

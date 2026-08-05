@@ -1,4 +1,4 @@
-# API Fundamentals: Understanding "Conversations Between Programs" from Scratch
+# An Introduction to APIs: Understanding Inter-Program Communication from Scratch
 
 ::: tip 🎯 Core Question
 **What is an API?** It's like asking: how should a restaurant design its menu so guests can understand it at a glance? How should waiters take orders without making mistakes? APIs solve the problem of "how programs communicate with each other." You've been using APIs since your first day of coding — you just might not have realized it.
@@ -66,7 +66,7 @@ result = response.choices[0].message.content
 
 <ApiTypesComparison />
 
-### 1.3 Function API vs HTTP API: What's the Difference?
+### 1.3 Function API vs HTTP API: What's the Difference
 
 Many beginners wonder: what's the real difference between function APIs and HTTP APIs? How to tell them apart when reading documentation?
 
@@ -106,7 +106,7 @@ Different types of API documentation have different focus areas:
 
 ---
 
-## 3. HTTP Methods: Are You "Asking" or "Doing"?
+## 3. HTTP Methods: Overview of You "Asking" or "Doing"
 
 When calling a Web API, you need to tell the server what you want to do. That's where HTTP methods come in.
 
@@ -143,7 +143,7 @@ When calling a Web API, you need to tell the server what you want to do. That's 
 
 ---
 
-## 4. HTTP Status Codes: What Is the Server Telling You?
+## 4. HTTP Status Codes: Overview of the Server Telling You
 
 When the server responds, it first returns a status code telling you whether the request was successful.
 
@@ -170,7 +170,7 @@ When the server responds, it first returns a status code telling you whether the
 
 ---
 
-## 5. HTTP vs SDK: Run Errands Yourself or Let the Butler Handle It?
+## 5. HTTP vs SDK: Run Errands Yourself or Let the Butler Handle It
 
 ### 5.1 Two Calling Methods Compared
 
@@ -181,7 +181,7 @@ When the server responds, it first returns a status code telling you whether the
 | **Cons** | ✗ Need to handle all details<br>✗ Verbose and error-prone code | ✗ Need to install dependencies<br>✗ May have version issues |
 | **Code Example** | `requests.post(url, json=..., headers={...})` | `client.chat.completions.create(...)` |
 
-### 5.2 How to Choose?
+### 5.2 Approach to choosing
 
 | Scenario | Recommended Approach | Reason |
 | :--- | :--- | :--- |
@@ -196,7 +196,7 @@ When the server responds, it first returns a status code telling you whether the
 
 ---
 
-## 6. How to Read API Documentation?
+## 6. Approach to reading API Documentation
 
 API documentation is like a combination of a manual and a menu. You don't need to read it cover to cover — just learn how to "look things up in a dictionary."
 

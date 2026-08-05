@@ -24,7 +24,7 @@ Sau khi học xong chương này, bạn sẽ có được:
 
 ---
 
-## 0. Toàn cảnh: Tại sao không thể lưu tệp cục bộ trên máy chủ?
+## 0. Toàn cảnh: Động lực của không thể lưu tệp cục bộ trên máy chủ
 
 Khi mới bắt đầu làm dự án, việc lưu tệp người dùng tải lên vào thư mục cục bộ của máy chủ là cách làm trực quan nhất. Nhưng khi dự án phát triển, bạn sẽ gặp một loạt vấn đề:
 
@@ -89,7 +89,7 @@ my-app-bucket/                    ← Bucket (thùng chứa)
 
 ---
 
-## 3. Giải pháp tải tệp lên: Ai tải tệp?
+## 3. Giải pháp tải tệp lên: Ai tải tệp
 
 Có hai giải pháp tải tệp lên chính: tải qua máy chủ trung gian và tải trực tiếp từ client. Đối với hầu hết tình huống, **tải trực tiếp từ client** là lựa chọn tốt hơn.
 

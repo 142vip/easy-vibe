@@ -1,4 +1,4 @@
-# El arte de la depuración
+# Principios y arte de la depuración
 
 ::: tip Prólogo
 **Has terminado de escribir el código, lo ejecutas y falla; ¿y ahora qué?** Muchos principiantes se atascan en este punto, mirando la pantalla sin saber qué hacer. La depuración (Debug) es una de las habilidades más centrales de la programación, incluso más importante que escribir código. Porque escribir código ocupa solo el 30% del tiempo de desarrollo; el 70% restante se dedica a entender el problema, localizar el error y verificar la corrección.
@@ -283,7 +283,7 @@ print(f"Tipo: {type(data)}")  # Verificar el tipo de dato
 
 Las herramientas de IA (ChatGPT, Claude, Cursor, etc.) pueden acelerar enormemente la depuración, pero necesitas saber cómo usarlas.
 
-### 4.1 ¿En qué es buena la IA?
+### 4.1 En qué es buena la IA
 
 | La IA es buena en | La IA no es buena en |
 |--------|----------|

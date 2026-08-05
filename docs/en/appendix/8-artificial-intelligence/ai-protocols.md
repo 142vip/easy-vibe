@@ -1,4 +1,4 @@
-# AI Agent Protocols (MCP & A2A)
+# Principles of AI Agent Protocols: MCP and A2A
 
 ::: tip The Core Question
 **How do AI Agents "talk" to the external world?** Just as the internet needs the HTTP protocol, AI Agents also need standardized communication protocols. This chapter introduces the two most mainstream Agent protocols: MCP and A2A, which respectively solve the problems of AI-to-tool and Agent-to-Agent communication.
@@ -6,11 +6,11 @@
 
 ---
 
-## 0. What Is a Protocol?
+## 0. Overview of a Protocol
 
 In computing, a **protocol** is a set of standardized rules and conventions that enable different systems and programs to "understand" and "communicate" with each other.
 
-### 0.1 Why Do We Need Protocols?
+### 0.1 Motivation for needing Protocols
 
 Imagine this scenario: you send a package to a friend and need to write the address. If everyone wrote addresses in a different format, the courier wouldn't be able to deliver anything. A protocol is the standard that defines "how to write an address" — province, city, district, street, house number. Write it this way, and anyone can understand it.
 
@@ -110,7 +110,7 @@ Anthropic wrote in their official blog:
 
 **Core goal**: Let tool developers write code once, and have it usable by all MCP-compatible AI applications.
 
-### 2.3 What Is MCP?
+### 2.3 Overview of MCP
 
 <McpVisualDemo />
 
@@ -191,7 +191,7 @@ Google wrote in their official blog:
 
 **Core goal**: Enable Agents built by different vendors and frameworks to collaborate seamlessly.
 
-### 3.3 What Is A2A?
+### 3.3 Overview of A2A
 
 <A2AVisualDemo />
 
@@ -252,7 +252,7 @@ MCP and A2A are **not competitors, but complements**:
 
 <ProtocolComparisonDemo />
 
-### 4.3 How to Choose?
+### 4.3 Approach to choosing
 
 | Scenario | Choice |
 |----------|--------|

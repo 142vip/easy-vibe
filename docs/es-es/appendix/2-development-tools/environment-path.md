@@ -1,4 +1,4 @@
-# Variables de entorno y PATH
+# Introducción a las variables de entorno y PATH
 
 > 💡 **Guía de aprendizaje**: Cada vez que escribes `git` o `python` en la terminal, el sistema tiene que buscar dónde está ese programa. Cada vez que tu código llama a la API de un modelo grande de lenguaje, el programa necesita saber qué clave usar. Ambas cosas dependen del mismo mecanismo: las **variables de entorno**.
 
@@ -34,7 +34,7 @@ Selecciona un comando y observa el proceso de búsqueda directorio por directori
 
 ---
 
-## 2. ¿Por qué hay que reiniciar la terminal después de instalar una herramienta?
+## 2. Motivación para la terminal después de instalar una herramienta
 
 Al instalar herramientas como nvm, Homebrew o conda, el script de instalación añade automáticamente una línea en `~/.zshrc` para incluir su directorio en PATH:
 
@@ -67,7 +67,7 @@ pipx install aider-chat
 
 ---
 
-## 3. Ámbito de las variables: ¿Quién puede ver esta variable?
+## 3. Ámbito de las variables Identificación: ver esta variable
 
 Las variables de entorno no se difunden a todos los programas — cada proceso tiene **su propia copia**, heredada del proceso padre. Modificar tu propia copia no afecta al proceso padre.
 

@@ -1,7 +1,7 @@
-# Línea de comandos y scripts de Shell
+# Introducción a la línea de comandos y scripts de Shell
 > 💡 **Guía de aprendizaje**: Este capítulo está diseñado para ofrecer a los lectores sin conocimientos previos una comprensión sistemática de cómo funciona la terminal. No necesitas tener formación en informática; a través de demostraciones interactivas, analizaremos el funcionamiento de la terminal de forma gradual.
 
-## 0. Inicio rápido: ¿Cómo abrir la terminal?
+## 0. Inicio rápido: Enfoque para abrir la terminal
 
 Antes de empezar a aprender, primero tienes que encontrarla. La terminal viene "de fábrica" en todos los sistemas operativos; no necesitas instalar ningún software para usarla.
 
@@ -45,7 +45,7 @@ _Selecciona abajo el sistema operativo que sueles usar y sigue las instrucciones
 
 <TerminalHandsOn />
 
-### 0.2 ¿Por qué dejar el ratón? (Why CLI?)
+### 0.2 Motivación de dejar el ratón (Why CLI)
 
 Puede que te preguntes: _"Si las interfaces gráficas (GUI) son tan fáciles de usar y basta con hacer clic, ¿por qué molestarse en escribir comandos complicados en una ventana con fondo negro?"_
 
@@ -68,7 +68,7 @@ No es para "parecer un geek", sino porque en situaciones específicas, **el leng
 
 **En resumen**: La GUI es ideal para **explorar** (navegar por la web, ver imágenes); la CLI es ideal para **producir** (desarrollo, operaciones, procesamiento por lotes). Como desarrolladores, usamos la terminal porque es **más precisa, más controlable y más eficiente**.
 
-## 1. Definición de conceptos: ¿Qué es la terminal? (Definition)
+## 1. Definición de conceptos: Introducción a terminal (Definition)
 
 _Las terminales se ven distintas en cada sistema operativo y los comandos también son diferentes. Haz clic en los botones de abajo para alternar y observa cómo macOS, Windows y Linux usan comandos distintos (como `dir` vs `ls`) para hacer lo mismo:_
 
@@ -111,7 +111,7 @@ Para entender cómo colaboran, veamos estos tres "trabajadores" con roles bien d
   - **Responsabilidad**: El núcleo del sistema operativo; es el único que puede controlar directamente el hardware (leer/escribir discos, asignar memoria, controlar la CPU).
   - **Relación**: El Shell es el "secretario" del kernel, traduciéndole tu lenguaje humano.
 
-### 2.2 ¿Por qué están separados? (Reemplazabilidad)
+### 2.2 Motivación de separados (Reemplazabilidad)
 
 Como la **capa de visualización** (terminal) y la **capa de lógica** (Shell) están completamente separadas, se pueden combinar libremente:
 

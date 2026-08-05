@@ -1,4 +1,4 @@
-# Guía Profunda de TypeScript
+# Principios de TypeScript
 
 ::: tip Prefacio
 Ya sabes escribir JavaScript, pero probablemente te has encontrado con estos problemas:
@@ -62,7 +62,7 @@ TypeScript es una herramienta que te ayuda a encontrar estos problemas antes de 
 | **JavaScript** | Material en bruto | Código que se puede ejecutar directamente |
 | **TypeScript** | Plano + control de calidad | Añade verificación de tipos a JavaScript, y finalmente se compila a JavaScript |
 
-### 1.2 ¿Por qué vibecoding también necesita TypeScript?
+### 1.2 Motivación de vibecoding también necesita TypeScript
 
 ::: warning La IA también puede escribir código con errores
 Un desarrollador usó IA para generar una funcionalidad de gestión de usuarios. El código JavaScript que la IA escribió funcionaba, pero había un problema: la edad del usuario debía ser un número, pero a veces se asignaba erróneamente como una cadena de texto.

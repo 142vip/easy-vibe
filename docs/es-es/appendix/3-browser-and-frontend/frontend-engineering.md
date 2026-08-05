@@ -1,11 +1,11 @@
-# Panorama de la Ingeniería Frontend
+# Panorama de la ingeniería frontend
 ::: tip 🎯 Pregunta central
 **¿Cómo convertir el código que escribes en un sitio web que los usuarios puedan ejecutar en sus navegadores?** Es como preguntar: ¿cómo transformar materias primas en un producto terminado, garantizando la calidad y controlando los costes? Este capítulo te guiará a través de los conceptos centrales de la ingeniería frontend y el flujo de construcción.
 :::
 
 ---
 
-## 1. ¿Por qué "ingeniería"?
+## 1. Motivación de "ingeniería"
 
 ### 1.1 De lo simple a lo complejo: la evolución del desarrollo frontend
 
@@ -38,7 +38,7 @@ Pero el desarrollo frontend moderno ha cambiado por completo. Ahora usamos TypeS
 
 <BuildPipelineDemo />
 
-### 1.2 Una historia real de tropiezos: por qué necesitas entender los principios de construcción
+### 1.2 Una historia real de tropiezos:Motivación: entender los principios de construcción
 
 Podrías decir: "Uso Vite o Create React App, todo funciona nada más instalarlo, ¿por qué necesito entender estos principios de construcción?" Déjame contarte una historia real para que entiendas por qué este conocimiento es tan importante.
 
@@ -637,7 +637,7 @@ El navegador almacena en caché los recursos estáticos para mejorar la velocida
 
 ---
 
-## 4. Principios en profundidad: ¿por qué Vite es tan rápido?
+## 4. Principios en profundidad: Motivación de Vite es tan rápido
 
 Después de conocer los casos prácticos, profundicemos en el principio de funcionamiento de Vite para entender por qué puede ser mucho más rápido que las herramientas tradicionales.
 

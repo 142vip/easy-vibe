@@ -1,4 +1,4 @@
-# Variables d'environnement et PATH
+# Introduction : Variables d'environnement et PATH
 
 > 💡 **Guide d'apprentissage** : Chaque fois que vous saisissez `git` ou `python` dans le terminal, le systeme doit trouver ou se trouve ce programme. Chaque fois que votre code appelle une API de grand modele linguistique, le programme doit savoir quelle cle utiliser. Derriere ces deux taches se cache le meme mecanisme — les **variables d'environnement**.
 
@@ -34,7 +34,7 @@ Selectionnez une commande et observez le processus de recherche repertoire par r
 
 ---
 
-## 2. Pourquoi faut-il redemarrer le terminal apres l'installation d'un outil ?
+## 2. Motivation et justification : faut-il redemarrer le terminal apres l'installation d'un outil
 
 Lors de l'installation d'outils comme nvm, Homebrew ou conda, le script d'installation ajoute automatiquement une ligne a `~/.zshrc` pour inclure son propre repertoire dans le PATH :
 
@@ -67,7 +67,7 @@ pipx install aider-chat
 
 ---
 
-## 3. Portee des variables : Qui peut voir cette variable ?
+## 3. Portee des variables : Qui peut voir cette variable
 
 Les variables d'environnement ne sont pas diffusees a tous les programmes — chaque processus detient sa **propre copie**, heritee du processus parent. Modifier sa propre copie n'affecte pas le processus parent.
 

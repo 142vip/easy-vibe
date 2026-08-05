@@ -1,4 +1,4 @@
-# Toàn cảnh mô hình dữ liệu (Document / Đồ thị / Chuỗi thời gian / Vector)
+# Mô hình dữ liệu: Toàn cảnh Document, Đồ thị, Chuỗi thời gian, Vector
 
 ::: tip 🎯 Vấn đề cốt lõi
 **Tại sao không thể nhét tất cả dữ liệu vào bảng MySQL?** Khi dữ liệu của bạn là mạng lưới quan hệ xã hội, hàng triệu bản ghi cảm biến mỗi giây, hoặc vector ngữ nghĩa mà AI cần hiểu, bảng quan hệ sẽ bất lực. Các hình thái dữ liệu khác nhau cần phương pháp mô hình hóa khác nhau.
@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Ngoài quan hệ: Tại sao cần các mô hình dữ liệu khác?
+## 1. Ngoài quan hệ: Động lực của các mô hình dữ liệu khác
 
 Cơ sở dữ liệu quan hệ (MySQL, PostgreSQL) tổ chức dữ liệu bằng "bảng + hàng + cột", phù hợp cho dữ liệu nghiệp vụ có cấu trúc cố định và quan hệ rõ ràng. Nhưng dữ liệu trong thế giới thực không chỉ có hình thái này:
 
@@ -25,20 +25,20 @@ Không phải "thay thế" quan hệ, mà là "bổ sung". Nghiệp vụ cốt l
 
 ## 2. Mô hình Document (Tài liệu)
 
-### 2.1 Mô hình Document là gì?
+### 2.1 Tổng quan về Mô hình Document
 
 Mô hình Document lưu trữ dữ liệu dưới dạng **tài liệu JSON/BSON**, mỗi bản ghi là một tài liệu tự chứa, có thể có cấu trúc trường khác nhau.
 
 ```json
 {
-  "_id": "user_1001",
-  "name": "张三",
-  "tags": ["VIP", "活跃"],
-  "address": { "city": "北京", "district": "朝阳区" },
-  "orders": [
-    { "id": "o1", "amount": 299 },
-    { "id": "o2", "amount": 599 }
-  ]
+ "_id": "user_1001",
+ "name": "张三",
+ "tags": ["VIP", "活跃"],
+ "address": { "city": "北京", "district": "朝阳区" },
+ "orders": [
+ { "id": "o1", "amount": 299 },
+ { "id": "o2", "amount": 599 }
+ ]
 }
 ```
 
@@ -71,14 +71,14 @@ Mô hình Document lưu trữ dữ liệu dưới dạng **tài liệu JSON/BSON
 
 ## 3. Mô hình đồ thị (Graph)
 
-### 3.1 Mô hình đồ thị là gì?
+### 3.1 Tổng quan về Mô hình đồ thị
 
 Mô hình đồ thị sử dụng **Node (Nút)** và **Edge (Cạnh)** để thể hiện thực thể và quan hệ của chúng. Mỗi nút là một thực thể, mỗi cạnh là một quan hệ, cả nút và cạnh đều có thể mang thuộc tính.
 
 ```
 (张三) --[关注]--> (李四) --[关注]--> (王五)
-   |                                    |
-   +--------[购买]----> (iPhone) <--[购买]--+
+ | |
+ +--------[购买]----> (iPhone) <--[购买]--+
 ```
 
 ### 3.2 Khả năng đỉnh cao của mô hình đồ thị: truy vấn đa bước
@@ -114,18 +114,18 @@ Trong quan hệ, mỗi bước thêm một JOIN, hiệu suất giảm theo cấp
 
 ## 4. Mô hình chuỗi thời gian (Time-Series)
 
-### 4.1 Mô hình chuỗi thời gian là gì?
+### 4.1 Tổng quan về Mô hình chuỗi thời gian
 
 Mô hình chuỗi thời gian lấy **timestamp** làm trục chính, tối ưu hóa riêng cho kịch bản "ghi theo thứ tự thời gian, truy vấn theo phạm vi thời gian".
 
 ```
-timestamp            device      cpu_usage   memory
-2024-01-15 10:00:01  server-01   45%         12.3GB
-2024-01-15 10:00:02  server-01   67%         12.5GB
-2024-01-15 10:00:03  server-01   92%         14.1GB
+timestamp device cpu_usage memory
+2024-01-15 10:00:01 server-01 45% 12.3GB
+2024-01-15 10:00:02 server-01 67% 12.5GB
+2024-01-15 10:00:03 server-01 92% 14.1GB
 ```
 
-### 4.2 Tại sao không dùng MySQL lưu dữ liệu chuỗi thời gian?
+### 4.2 Động lực của TSDB chuyên dụng
 
 | Vấn đề | MySQL | CSDL chuỗi thời gian (InfluxDB) |
 |---------|-------|---------------------------------|
@@ -145,15 +145,15 @@ timestamp            device      cpu_usage   memory
 
 ## 5. Mô hình vector
 
-### 5.1 Mô hình vector là gì?
+### 5.1 Tổng quan về Mô hình vector
 
 Mô hình vector chuyển đổi dữ liệu phi cấu trúc như văn bản, hình ảnh, âm thanh thành vector số chiều cao thông qua **mô hình Embedding**, sau đó tính khoảng cách giữa các vector để đo lường độ tương đồng ngữ nghĩa.
 
 ```
 "好吃的日料" → Embedding → [0.82, 0.15, 0.91, 0.33, ...]
-                                    ↓ cosine similarity
-"银座寿司之神"  → [0.80, 0.18, 0.89, ...] → 96% tương đồng
-"意大利披萨"    → [0.12, 0.85, 0.20, ...] → 31% tương đồng
+ ↓ cosine similarity
+"银座寿司之神" → [0.80, 0.18, 0.89, ...] → 96% tương đồng
+"意大利披萨" → [0.12, 0.85, 0.20, ...] → 31% tương đồng
 ```
 
 ### 5.2 Tìm kiếm vector vs Tìm kiếm từ khóa
@@ -180,7 +180,7 @@ Mô hình vector chuyển đổi dữ liệu phi cấu trúc như văn bản, h�
 
 ---
 
-## 6. Hướng dẫn quyết định: Chọn mô hình dữ liệu như thế nào?
+## 6. Hướng dẫn quyết định: Chiến lược lựa chọn mô hình dữ liệu
 
 | Dữ liệu của bạn trông như thế nào? | Mô hình đề xuất | Sản phẩm đại diện |
 |--------------------------------------|----------------|-------------------|

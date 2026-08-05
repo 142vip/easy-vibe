@@ -1,4 +1,4 @@
-# Domänenspezifische Sprachen (DSL): "Code, der nicht wie Code aussieht" in der Backend-Welt
+# Domänenspezifische Sprachen: DSL-Grundlagen
 
 ::: tip Vorwort
 In einem realen Fall baute Ingenieur Armin in seinem neuen Unternehmen mit KI eine Infrastrukturdienstleistung mit insgesamt ca. 40.000 Zeilen Code (Go + YAML + Pulumi + SDK-Klebe-Code), wobei über 90% von KI generiert wurden. In diesem Fall tauchten viele Begriffe auf, die Anfängern nicht vertraut sind: YAML, Pulumi, HCL, Lua, SDK-Klebe-Code... Sie sind weder Python noch JavaScript, aber in Backend-Projekten allgegenwärtig. Dieser Artikel führt diese Technologien systematisch aus einer einheitlichen Perspektive ein: **Domänenspezifische Sprachen (DSL)**.
@@ -31,7 +31,7 @@ Nach Abschluss dieses Artikels wirst du in der Lage sein:
 
 ## 1. DSL-Überblick: Eine andere Welt jenseits der allgemeinen Sprachen
 
-### 1.1 Was ist eine DSL?
+### 1.1 Was ist eine DSL
 
 **DSL (Domain-Specific Language, domänenspezifische Sprache)** ist eine Sprache, die für ein bestimmtes Gebiet oder eine bestimmte Aufgabe entwickelt wurde. Das Gegenteil ist die **GPL (General-Purpose Language, allgemeine Programmiersprache)** wie Python, Java, Go, C++ usw. — sie wurden entwickelt, um beliebige Rechenprobleme zu lösen.
 
@@ -99,13 +99,13 @@ Wenn du dieses Panorama verstanden hast, werden die folgenden Kapitel jeden Zwei
 
 ## 2. Daten-Serialisierungsformate: Strukturierte Daten mit Text beschreiben
 
-### 2.1 Was ist Daten-Serialisierung?
+### 2.1 Was ist Daten-Serialisierung
 
 **Serialisierung (Serialization)** ist der Prozess der Umwandlung von Datenstrukturen im Arbeitsspeicher (Objekte, Dictionaries, Arrays usw.) in ein speicherbares oder übertragbares Text-/Bytestromformat. Die Rückwandlung aus Text-/Bytestrom in Datenstrukturen im Arbeitsspeicher wird als **Deserialisierung (Deserialization)** bezeichnet.
 
 Daten-Serialisierungsformate sind die grundlegendste Art von DSL — sie gehören zu den rein datenbeschreibenden externen DSLs, besitzen keine Logikfähigkeiten und beschreiben nur statisch, "welche Werte vorhanden sind".
 
-### 2.2 Warum werden diese Formate benötigt?
+### 2.2 Warum werden diese Formate benötigt
 
 Angenommen, du entwickelst einen Backend-Service mit der Datenbankadresse `localhost:5432`. Wenn du diese Adresse fest im Quellcode hinterlegst, funktioniert das bei der lokalen Entwicklung problemlos. Bei der Bereitstellung in der Produktionsumgebung ändert sich die Datenbankadresse jedoch zu `db.prod.company.com:5432`, und du musst den Quellcode ändern und neu kompilieren.
 
@@ -331,7 +331,7 @@ end
 
 ## 4. Infrastructure as Code
 
-### 4.1 Was ist "Infrastruktur"?
+### 4.1 Was ist "Infrastruktur"
 
 Im Backend-Engineering bezeichnet "Infrastruktur" (Infrastructure) die zugrundeliegenden Ressourcen, von denen das Funktionieren einer Anwendung abhängt:
 
@@ -427,7 +427,7 @@ Da eine allgemeine Programmiersprache verwendet wird, können Entwickler Schleif
 
 ## 5. Klebe-Code und automatische SDK-Generierung
 
-### 5.1 Was ist Klebe-Code?
+### 5.1 Was ist Klebe-Code
 
 In der Softwaretechnik bezeichnet **Klebe-Code (Glue Code)** Code, der selbst keine Geschäftslogik enthält, sondern nur der Verbindung zweier Systeme oder Module dient.
 

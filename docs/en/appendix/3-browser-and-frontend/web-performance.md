@@ -1,11 +1,11 @@
-# Web Performance Measurement and Optimization
+# Principles of Web Performance Optimization
 ::: tip 🎯 Core Question
 **Why is your webpage loading slowly, with users furiously complaining about lag?** It's like asking: why is the restaurant slow to serve, with customers growing impatient? This chapter will take you deep into the core concepts of frontend performance optimization, making your web pages "fly."
 :::
 
 ---
 
-## 1. Why "Performance Optimization"?
+## 1. Motivation for the "Performance Optimization"
 
 ### 1.1 From Functional to Excellent: The Evolution of Performance Optimization
 
@@ -36,7 +36,7 @@ But things are completely different now. Modern web page complexity has grown ex
 
 **This is the problem "performance optimization" aims to solve: make users wait less, make interactions smoother.**
 
-### 1.2 A Real-World Story: Why You Need to Understand Performance Optimization
+### 1.2 Case: You Need to Understand Performance Optimization
 
 You might say: "Networks are so fast and devices are so good now — do we still need to consider performance optimization?" Let me tell you a real story, and you'll understand why this knowledge is so important.
 

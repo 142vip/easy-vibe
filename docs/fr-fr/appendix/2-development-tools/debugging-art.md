@@ -1,4 +1,4 @@
-# L'art du debogage
+# Principes : Art et méthodologie du débogage
 
 ::: tip Preface
 **Le code est termine, mais une erreur se produit a l'execution — et maintenant ?** Beaucoup de debutants restent bloques a cette etape, fixant l'ecran sans savoir quoi faire. Le debogage (Debug) est l'une des competences les plus fondamentales en programmation, encore plus importante que l'ecriture du code lui-meme. Car l'ecriture du code ne represente que 30 % du temps de developpement ; les 70 % restants sont consacres a la comprehension des problemes, a la localisation des bugs et a la verification des corrections.
@@ -283,7 +283,7 @@ print(f"Type : {type(data)}")  # Verifier le type de donnees
 
 Les outils d'IA (ChatGPT, Claude, Cursor, etc.) peuvent accelerer considerablement le processus de debogage, a condition de savoir les utiliser.
 
-### 4.1 Que fait bien l'IA — et que fait-elle mal ?
+### 4.1 Que fait bien l'IA — et que fait-elle mal
 
 | L'IA fait bien | L'IA fait moins bien |
 |--------|----------|

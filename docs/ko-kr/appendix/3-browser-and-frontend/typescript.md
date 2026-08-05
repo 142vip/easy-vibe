@@ -1,4 +1,4 @@
-# TypeScript 심층 가이드
+# TypeScript 기초
 
 ::: tip 머리말
 이미 JavaScript를 작성할 수 있지만, 다음과 같은 문제를 겪어본 적이 있을 것입니다:
@@ -22,8 +22,7 @@ TypeScript는 코드가 실행되기 전에 이런 문제를 발견해주는 도
 
 ---
 
-## 1. TypeScript란 무엇인가
-
+## 1. TypeScript란 개요
 ::: tip 🤔 핵심 질문
 **JavaScript만으로도 충분한데 왜 TypeScript가 필요할까요?** 새로운 문법을 배울 가치가 있을까요?
 :::

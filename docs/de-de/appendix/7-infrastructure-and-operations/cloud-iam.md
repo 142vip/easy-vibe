@@ -1,4 +1,4 @@
-# Cloud-Identitaets- und Zugriffsverwaltung
+# Cloud-IAM: Zugriffsverwaltung
 > **Lernleitfaden**: Prompt-Engineering loest das Problem "wie man etwas klar ausdrueckt", Cloud-Zugriffsverwaltung loest das Problem "wer was tun darf". Dieses Kapitel dreht sich um eine Frage: **Wie kann man in der Cloud bequem Berechtigungen erteilen, ohne die Schluessel an die Falschen zu geben?**
 
 Bevor du beginnst, solltest du zwei Grundlagen auffrischen:
@@ -8,7 +8,7 @@ Bevor du beginnst, solltest du zwei Grundlagen auffrischen:
 
 ---
 
-## 0. Einleitung: Warum man schon am ersten Tag in der Cloud "auf die Nase faellt"
+## 0. Einleitung: Motivation von man schon am ersten Tag in der Cloud "auf die Nase faellt"
 
 <IamRamComparisonDemo />
 
@@ -71,7 +71,7 @@ Obwohl die Namen unterschiedlich sind, sind **die Kernkonzepte identisch**:
 
 ---
 
-## 2. Benutzer, Gruppen, Rollen: Was sollte man verwenden?
+## 2. Benutzer, Gruppen, Rollen: Überblick über sollte man verwenden
 
 ### 2.1 Der Unterschied zwischen drei "Identitaeten"
 
@@ -251,7 +251,7 @@ Der Auswertungsprozess:
 
 ## 4. Zugriffsschluessel (AK/SK): Ein Schluessel, der sorgfaeltig aufbewahrt werden muss
 
-### 4.1 Was ist AK/SK?
+### 4.1 Was ist AK/SK
 
 <AccessKeyManagementDemo />
 
@@ -262,7 +262,7 @@ Access Keys (Zugriffsschluessel) sind langfristige Anmeldeinformationen, die von
 | **Access Key ID** | Zugriffsschluessel-ID | Identifiziert wer du bist (aehnlich einem Benutzernamen) | Kontonummer |
 | **Secret Access Key** | Geheimer Zugriffsschluessel | Beweist dass du es bist (aehnlich einem Passwort) | PIN |
 
-### 4.2 Warum sind AK/SK "hochriskante Gegenstaende"?
+### 4.2 Warum sind AK/SK "hochriskante Gegenstaende"
 
 **Praxisbeispiel: Die Lektion eines Startups**
 
@@ -382,7 +382,7 @@ jobs:
 
 ## 5. Multi-Faktor-Authentifizierung (MFA): Ein zusaetzliches "Schloss" fuer dein Konto
 
-### 5.1 Was ist MFA?
+### 5.1 Was ist MFA
 
 <MfaSecurityDemo />
 
@@ -394,7 +394,7 @@ MFA (Multi-Faktor-Authentifizierung), auch 2FA (Zwei-Faktor-Authentifizierung) g
 | **Besitzfaktor** (Was hast du) | Physische Geraete im Besitz des Benutzers | Smartphone, Hardware-Key |
 | **Biometriefaktor** (Wer bist du) | Biometrische Merkmale des Benutzers | Fingerabdruck, Gesichtserkennung |
 
-### 5.2 Warum ist MFA so wichtig?
+### 5.2 Warum ist MFA so wichtig
 
 **Reale Zahlen geben die Antwort**:
 
@@ -429,9 +429,9 @@ MFA (Multi-Faktor-Authentifizierung), auch 2FA (Zwei-Faktor-Authentifizierung) g
 
 ---
 
-## 6. Kontoübergreifender Zugriff: Wie man sicher "zu Besuch" geht
+## 6. Kontoübergreifender Zugriff: Ansatz für man sicher "zu Besuch" geht
 
-### 6.1 Warum ist kontoübergreifender Zugriff noetig?
+### 6.1 Warum ist kontoübergreifender Zugriff noetig
 
 <CrossAccountAccessDemo />
 

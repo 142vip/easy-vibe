@@ -1,4 +1,4 @@
-# Event Tracking : Enregistrer ce que les utilisateurs font dans l'application
+# Introduction : Collecte d'événements et tracking utilisateur
 
 ::: tip 🎯 Problème abordé dans ce chapitre
 **Comment savoir ce que les utilisateurs font dans notre application ?**
@@ -19,7 +19,7 @@ Ce chapitre explique le processus en quatre étapes :
 
 ---
 
-## Étape 1 : Choisir la méthode de collecte — Où placer les enregistreurs ?
+## 1. Choisir la méthode de collecte — Où placer les collecteur
 
 **Objectif** : Décider avec quelle méthode enregistrer les actions des utilisateurs.
 
@@ -68,7 +68,7 @@ Par analogie : c'est comme installer des caméras dans chaque recoin du salon de
 
 ---
 
-## Étape 2 : Concevoir le format des données — Que doit contenir chaque enregistrement ?
+## 2. Concevoir le format des données — Que doit contenir chaque enregistrement
 
 **Prérequis** : Nous avons choisi la méthode de tracking (par exemple le tracking par code) et l'application peut capturer les actions des utilisateurs.
 
@@ -119,7 +119,7 @@ Cette partie enregistre les détails métier spécifiques de l'action, appelés 
 
 ---
 
-## Étape 3 : Transmission et mise en cache — Comment envoyer les données en toute sécurité au serveur ?
+## 3. Transmission et mise en cache — Comment envoyer les données en toute sécurité au serveur
 
 **Prérequis** : Chaque action de l'utilisateur a été enregistrée sous forme de données JSON au format unifié.
 
@@ -157,7 +157,7 @@ La solution est d'ajouter un « tampon » au milieu, techniquement appelé **fil
 
 ---
 
-## Étape 4 : Nettoyage et chargement — Trier les données, éliminer les « données sales »
+## 4. Nettoyage et chargement — Trier les données, éliminer les « données sales »
 
 **Prérequis** : Les données sont arrivées en toute sécurité sur le serveur via le pipeline de transmission.
 

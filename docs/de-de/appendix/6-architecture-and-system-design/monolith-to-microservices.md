@@ -1,4 +1,4 @@
-# Die Evolution vom Monolith zu Microservices
+# Monolith zu Microservices: Architektur-Evolution
 
 ::: tip Einleitung
 **Keine Architektur ist „die beste" — es gibt nur die Architektur, die am besten zur aktuellen Phase passt.** Der Übergang vom Monolithen zu Microservices ist kein Sprung, der in einem Schritt vollzogen wird, sondern ein schrittweiser Evolutionsprozess, der mit dem Wachstum des Geschäftsumfangs und der Teamgröße einhergeht. Eine zu frühe Aufspaltung in Microservices ist genauso gefährlich wie eine zu späte.
@@ -47,7 +47,7 @@ Einfach gesagt: 3 Teams, die ein System bauen, werden am Ende 3 Services haben. 
 
 ---
 
-## 2. Wann sollte man zu Microservices aufspalten?
+## 2. Wann sollte man zu Microservices aufspalten
 
 Nicht jedes System benötigt Microservices. Eine zu frühe Aufspaltung bringt unnötige Komplexität mit sich.
 

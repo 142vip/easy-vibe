@@ -1,4 +1,4 @@
-# Protocolos de Agent de IA (MCP y A2A)
+# Principios de protocolos de agentes de IA: MCP y A2A
 
 ::: tip Pregunta central
 **¿Cómo "conversan" los Agentes de IA con el mundo exterior?** Al igual que Internet necesita el protocolo HTTP, los Agentes de IA también necesitan protocolos de comunicación estandarizados. Este capítulo presenta los dos protocolos de Agent más importantes: MCP y A2A, que resuelven respectivamente los problemas de comunicación entre IA y herramientas, y entre Agent y Agent.
@@ -6,11 +6,11 @@
 
 ---
 
-## 0. ¿Qué es un protocolo?
+## 0. Introducción a protocolo
 
 En el campo de la informática, un **protocolo (Protocol)** es un conjunto de reglas y convenciones estandarizadas que permiten que diferentes sistemas y programas se "comprendan" y "comuniquen" entre sí.
 
-### 0.1 ¿Por qué se necesitan protocolos?
+### 0.1 Motivación de protocolos
 
 Imagina una situación: quieres enviar un paquete a un amigo y necesitas escribir la dirección. Si cada persona escribe el formato de dirección de manera diferente, el cartero no podrá entregarlo. El protocolo es el estándar que prescribe "cómo escribir la dirección" — provincia, ciudad, distrito, calle, número de puerta; si se escribe según este formato, cualquiera puede entenderlo.
 
@@ -110,7 +110,7 @@ Anthropic escribió en su blog oficial:
 
 **Objetivo central**: Permitir que los desarrolladores de herramientas escriban el código una vez, y que todas las aplicaciones de IA compatibles con MCP puedan usarlo.
 
-### 2.3 ¿Qué es MCP?
+### 2.3 Introducción a MCP
 
 <McpVisualDemo />
 
@@ -191,7 +191,7 @@ Google escribió en su blog oficial:
 
 **Objetivo central**: Permitir que Agentes desarrollados por diferentes fabricantes y frameworks colaboren sin problemas.
 
-### 3.3 ¿Qué es A2A?
+### 3.3 Introducción a A2A
 
 <A2AVisualDemo />
 
@@ -252,7 +252,7 @@ MCP y A2A **no compiten, sino que se complementan**:
 
 <ProtocolComparisonDemo />
 
-### 4.3 ¿Cómo elegir?
+### 4.3 Enfoque de elegir
 
 | Escenario | Elección |
 |------|------|

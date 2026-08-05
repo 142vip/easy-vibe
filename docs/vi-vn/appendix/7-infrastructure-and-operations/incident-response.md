@@ -84,7 +84,7 @@ Một lần phản ứng sự cố giống như một cuộc chạy tiếp sức
 
 ---
 
-## 3. Hệ thống chỉ huy: Ai chỉ huy "trận chiến" này?
+## 3. Hệ thống chỉ huy: Ai chỉ huy "sự cố" này
 
 Trong các sự cố lớn, điều đáng sợ nhất không phải là vấn đề kỹ thuật khó, mà là **hỗn loạn** — hơn chục người cùng điều tra, không ai biết người khác đang làm gì, thông tin quan trọng bị phân mảnh trong các nhóm chat khác nhau. Hệ thống Chỉ huy Sự cố (Incident Command System) sinh ra để giải quyết vấn đề này.
 

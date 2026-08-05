@@ -1,4 +1,4 @@
-# Langages dédiés (DSL) : dans le monde backend, ces "codes qui ne ressemblent pas à du code"
+# Principes : Langages dédiés (DSL) backend
 
 ::: tip Préface
 Dans un cas réel, l'ingénieur Armin a construit dans sa nouvelle entreprise un ensemble de services d'infrastructure à l'aide de l'IA, totalisant environ 40 000 lignes de code (Go + YAML + Pulumi + code de collage SDK), dont plus de 90 % ont été générés par l'IA. Ce cas implique de nombreux termes peu familiers pour les débutants : YAML, Pulumi, HCL, Lua, code de collage SDK... Ce ne sont ni du Python ni du JavaScript, mais ils sont omniprésents dans les projets backend. Cet article présente ces technologies depuis un point de vue unifié : les **langages dédiés (DSL)**.
@@ -31,7 +31,7 @@ Après avoir étudié cet article, vous serez en mesure de :
 
 ## 1. Vue d'ensemble des DSL : un autre monde au-delà des langages généraux
 
-### 1.1 Qu'est-ce qu'un DSL ?
+### 1.1 Qu'est-ce qu'un DSL
 
 Un **DSL (Domain-Specific Language, langage dédié)** est un langage conçu pour un domaine ou une tâche spécifique. Par opposition, les **GPL (General-Purpose Language, langages de programmation généraux)** comme Python, Java, Go, C++, etc., sont conçus pour résoudre n'importe quel problème de calcul.
 
@@ -99,13 +99,13 @@ Une fois ce panorama compris, les chapitres suivants détailleront chaque branch
 
 ## 2. Formats de sérialisation de données : décrire des données structurées en texte
 
-### 2.1 Qu'est-ce que la sérialisation de données ?
+### 2.1 Qu'est-ce que la sérialisation de données
 
 La **sérialisation (Serialization)** est le processus de conversion de structures de données en mémoire (objets, dictionnaires, tableaux, etc.) en un format texte ou flux d'octets stockable ou transmissible. L'opération inverse, la reconstitution des données à partir du texte ou flux d'octets, est appelée **désérialisation (Deserialization)**.
 
 Les formats de sérialisation de données sont la catégorie la plus fondamentale de DSL — ce sont des DSL externes de type description de données pure, sans aucune capacité logique, responsables uniquement de décrire statiquement "quelle est la valeur".
 
-### 2.2 Pourquoi ces formats sont-ils nécessaires ?
+### 2.2 Pourquoi ces formats sont-ils nécessaires
 
 Supposons que vous développiez un service backend dont l'adresse de base de données est `localhost:5432`. Si cette adresse est codée en dur dans le code source, le développement local fonctionne, mais lors du déploiement en production, l'adresse devient `db.prod.company.com:5432`, et vous devez modifier le code source et recompiler.
 

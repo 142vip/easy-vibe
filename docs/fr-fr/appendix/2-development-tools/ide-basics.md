@@ -1,10 +1,10 @@
-# Bases de l'environnement de developpement integre (IDE)
+# Fondamentaux : Environnements de développement intégré (IDE)
 
 ::: tip 💡 Guide d'apprentissage
 Ce chapitre vous permettra de decouvrir en profondeur l'outil de productivite cle des programmeurs — l'**environnement de developpement integre (IDE)**. Nous commencerons par la philosophie de conception de l'IDE, analyserons systematiquement ses composants cles et demontrerons son fonctionnement grace a un IDE virtuel.
 :::
 
-## Que faire quand on ne comprend pas ? (How to solve problems)
+## Que faire quand on ne comprend pas (How to solve problems)
 
 Durant l'apprentissage et l'utilisation d'un IDE, vous pourriez rencontrer divers boutons, menus ou erreurs de code incomprehensibles. Dans ce cas, **ne paniquez pas — utiliser un assistant IA est la solution la plus efficace**.
 
@@ -20,7 +20,7 @@ Les IA actuelles (comme ChatGPT, Claude, DeepSeek, etc.) possedent de puissantes
 
 ---
 
-## 0. Introduction : Pourquoi a-t-on besoin d'un IDE ?
+## 0. Introduction : Pourquoi a-t-on besoin d'un IDE
 
 Au cours du developpement logiciel, les programmeurs doivent frequemment ecrire du code, gerer des fichiers, compiler/executer des programmes et deboguer des erreurs. Si toutes ces operations devaient etre realisees dans des logiciels independants differents (par ex. ecrire le code dans le Bloc-notes, compiler en ligne de commande, gerer les fichiers dans l'Explorateur), l'efficacite serait extremement faible et sujette aux erreurs.
 
@@ -74,7 +74,7 @@ Mieux voir qu'entendre cent fois. Pour que vous puissiez vraiment ressentir le c
 
 ---
 
-## 3. Mecanisme cle : Pourquoi VS Code peut-il tout faire ?
+## 3. Mecanisme cle : Pourquoi VS Code peut-il tout faire
 
 Vous vous demandez peut-etre : pourquoi le meme logiciel peut-il ecrire du Python, du C++ et faire du developpement Web ? Comment y parvient-il ?
 En realite, la philosophie de conception de VS Code se resume en une phrase : **"Noyau minimal, capacites via les extensions".**

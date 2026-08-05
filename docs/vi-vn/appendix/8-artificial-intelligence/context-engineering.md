@@ -1,5 +1,5 @@
 # Kỹ thuật Ngữ cảnh (Context Engineering)
-> 💡 **Hướng dẫn học tập**：Kỹ thuật Prompt giải quyết vấn đề "làm sao để diễn đạt rõ ràng", còn Kỹ thuật Ngữ cảnh giải quyết vấn đề "làm sao để mô hình thấy đúng thông tin vào đúng thời điểm". Chương này sẽ xoay quanh một câu hỏi：**Trong một cửa sổ ngữ cảnh hữu hạn, làm thế nào để vừa khiến mô hình hiểu bạn, vừa không đốt cháy ngân sách？**
+> 💡 **Hướng dẫn học tập**：Kỹ thuật Prompt giải quyết vấn đề "làm sao để diễn đạt rõ ràng", còn Kỹ thuật Ngữ cảnh giải quyết vấn đề "làm sao để mô hình thấy đúng thông tin vào đúng thời điểm". Chương này sẽ xoay quanh một câu hỏi：**Trong một cửa sổ ngữ cảnh hữu hạn, làm thế nào để vừa khiến mô hình hiểu bạn, vừa không đốt cháy ngân sách**
 
 Trước khi bắt đầu, bạn nên bổ sung hai "viên gạch nền tảng" sau：
 
@@ -8,7 +8,7 @@ Trước khi bắt đầu, bạn nên bổ sung hai "viên gạch nền tảng" 
 
 ---
 
-## 0. Mở đầu：Tại sao càng trò chuyện, mô hình càng hay quên và ngày càng đắt đỏ？
+## 0. Mở đầu：Động lực của càng trò chuyện, mô hình càng hay quên và ngày càng đắt đỏ
 
 <AgentContextFlow />
 
@@ -27,7 +27,7 @@ Nhưng phần lớn thời gian，vấn đề không nằm ở việc mô hình 
 
 ---
 
-## 1. "Kỹ thuật Ngữ cảnh" là gì？（Định nghĩa + Tình huống）
+## 1. Tổng quan về Kỹ thuật Ngữ cảnh（Định nghĩa + Tình huống）
 
 Trước tiên đưa ra một định nghĩa ngắn gọn，sau đó xem một vài tình huống điển hình。
 
@@ -55,20 +55,20 @@ Khác với hội thoại thông thường，Manus cần tự lập kế hoạch
 
 Nhóm Manus đã trải qua nhiều lần tái cấu trúc kiến trúc，mới hiểu ra một đạo lý：**Ngữ cảnh không thể chỉ dựa vào "viết"，mà phải dựa vào "thiết kế"。**
 
-### 2.1 Bốn lần tái cấu trúc đã dạy chúng ta điều gì？
+### 2.1 Bốn lần tái cấu trúc đã dạy chúng ta điều gì
 
 Đồng sáng lập của Manus，Ji Yichao，đã chia sẻ "lịch sử dẫm hố" của họ：
 
 | Giai đoạn | Vấn đề gặp phải | Suy nghĩ lúc đó | Kết quả |
 | :--- | :--- | :--- | :--- |
-| **Lần đầu** | AI càng nói chuyện càng quên | "Viết thêm Prompt là được" | Càng viết càng dài，càng viết càng đắt |
+| **Lần đầu** | AI càng giao tiếp càng quên | "Viết thêm Prompt là được" | Càng viết càng dài，càng viết càng đắt |
 | **Lần hai** | Thông tin quan trọng luôn bị đẩy ra | "Sao chép phần quan trọng vài lần" | Văn bản dài hơn，chi phí cao hơn |
-| **Lần ba** | Hóa đơn cao kinh khủng | "Có thể tái sử dụng tính toán trước đó không？" | Tìm ra cách giảm chi phí tính toán lặp lại |
-| **Lần tư** | Không xử lý được tài liệu dài | "Có thể tra cứu khi cần không？" | Xây dựng giải pháp "thư viện + truy xuất theo nhu cầu" |
+| **Lần ba** | Hóa đơn cao kinh khủng | "Có thể tái sử dụng tính toán trước đó không" | Tìm ra cách giảm chi phí tính toán lặp lại |
+| **Lần tư** | Không xử lý được tài liệu dài | "Có thể tra cứu khi cần không" | Xây dựng giải pháp "thư viện + truy xuất theo nhu cầu" |
 
 **Bài học cốt lõi**：**Không phải càng nhớ nhiều càng tốt，mà là càng nhớ khéo léo càng tốt**。
 
-### 2.2 "Trí nhớ" của AI thực sự giống cái gì？
+### 2.2 "Trí nhớ" của AI thực sự giống cái gì
 
 **Bộ nhớ máy tính truyền thống** = **Ổ cứng**：
 - Dung lượng lớn：có thể lưu trữ lượng lớn dữ liệu trong thời gian dài；
@@ -84,22 +84,22 @@ Nhóm Manus đã trải qua nhiều lần tái cấu trúc kiến trúc，mới 
 
 ---
 
-## 3. Bước đầu tiên：Nhận thức chi phí - Mỗi đồng tiền của bạn tiêu vào đâu？
+## 3. Bước đầu tiên：Nhận thức chi phí - Mỗi đồng tiền của bạn tiêu vào đâu
 
-### 3.1 Tại sao phải xem xét chi phí trước？
+### 3.1 Động lực của việc đánh giá chi phí trước
 
 Hãy xem trong một cuộc hội thoại AI điển hình，tiền của bạn được tiêu như thế nào：
 
 ```
 💰 Cấu thành chi phí（một cuộc hội thoại）：
-├─ 70% đọc lại nội dung cũ（"Vừa nãy nói chuyện gì rồi？"）
-├─ 20% xử lý nội dung mới（"Bây giờ nói gì？"）
-└─ 10% tạo phản hồi（"Trả lời thế nào？"）
+├─ 70% đọc lại nội dung cũ（"Vừa nãy giao tiếp gì rồi"）
+├─ 20% xử lý nội dung mới（"Bây giờ nói gì"）
+└─ 10% tạo phản hồi（"Trả lời thế nào"）
 ```
 
 **Phát hiện đáng kinh ngạc**：**70% tiền bạc tiêu vào việc để AI đọc lại những gì bạn đã nói trước đó！**
 
-### 3.2 KV Cache là gì？（Tái sử dụng tiền tố）
+### 3.2 Tổng quan về KV Cache（Tái sử dụng tiền tố）
 
 Trước khi thảo luận về giá cả，chúng ta cần hiểu một khái niệm kỹ thuật cốt lõi：**KV Cache（Bộ nhớ đệm Khóa-Giá trị）**。
 Đừng sợ thuật ngữ kỹ thuật này，nó thực chất chính là "bảng tra nhanh trí nhớ ngắn hạn" của AI。
@@ -152,7 +152,7 @@ User: (Truyền thời gian hiện tại qua công cụ gọi hoặc tin nhắn 
 
 👇 **Thử tương tác**：
 Nhấp vào nút chuyển đổi bên dưới，bật **"Tăng tốc học thuộc"**，sau đó nhấp "Gửi request mới" nhiều lần。
-Quan sát：khi khối nội dung đầu tiên trở thành "đã học thuộc"，**tốc độ phản hồi（TTFT）**sẽ thay đổi như thế nào？
+Quan sát：khi khối nội dung đầu tiên trở thành "đã học thuộc"，**tốc độ phản hồi（TTFT）**sẽ thay đổi như thế nào
 
 <KVCacheDemo />
 
@@ -160,9 +160,9 @@ Quan sát：khi khối nội dung đầu tiên trở thành "đã học thuộc"
 
 ## 4. Bước thứ hai：Cửa sổ trượt - Khi "trí nhớ" trở thành "chi phí"
 
-Khi hội thoại ngày càng dài，vấn đề đầu tiên gặp phải là：**Cửa sổ đầy rồi thì làm sao？**
+Khi hội thoại ngày càng dài，vấn đề đầu tiên gặp phải là：**Cửa sổ đầy rồi thì làm sao**
 
-### 4.1 Tại sao "vào trước ra trước" lại gây vấn đề？
+### 4.1 Động lực của "vào trước ra trước" lại gây vấn đề
 
 Cách quản lý trí nhớ đơn giản nhất là **Cửa sổ trượt（Sliding Window）**：**cái mới vào，cái cũ ra**。
 Nghe có vẻ công bằng，nhưng trong nhiệm vụ thực tế nó là một thảm họa。
@@ -180,7 +180,7 @@ Bản ghi hội thoại：
 
 **Bản chất vấn đề**：Chiến lược này đối xử **thông tin quan trọng**（danh tính、tech stack）và **thông tin vô nghĩa**（"được"、"đã nhận"）ngang hàng nhau，cùng bị đá ra ngoài。
 
-### 4.2 "Hội chứng mất trí nhớ ở giữa" - Tại sao AI luôn không thấy thông tin then chốt？
+### 4.2 "Hội chứng mất trí nhớ ở giữa" - Động lực của AI luôn không thấy thông tin then chốt
 
 Ngoài "quên nhanh"，AI còn có một thói quen kỳ lạ：**nó cũng "bỏ sót" thông tin**。
 Nghiên cứu phát hiện：**AI nhạy cảm nhất với phần đầu và phần cuối，phần giữa dễ bị bỏ qua nhất**。Đây chính là hiện tượng nổi tiếng **Lost in the Middle（Lạc giữa chừng）**。
@@ -193,7 +193,7 @@ Trí nhớ：Cao → Thấp → Cao
 
 👇 **Thử tương tác**：
 1. Thử **"Cửa sổ trượt"** trước：gửi thêm vài tin nhắn trong khung chat bên dưới，xem các hội thoại cũ bị "đá ra ngoài" không thương tiếc như thế nào。
-2. Sau đó xem **"Lạc giữa chừng"**：quan sát xem，khi thông tin then chốt bị giấu ở vị trí giữa của cả đoạn văn，tỷ lệ truy xuất thành công có phải thấp nhất không？
+2. Sau đó xem **"Lạc giữa chừng"**：quan sát xem，khi thông tin then chốt bị giấu ở vị trí giữa của cả đoạn văn，tỷ lệ truy xuất thành công có phải thấp nhất không
 
 <SlidingWindowDemo />
 <LostInMiddleDemo />
@@ -202,12 +202,12 @@ Trí nhớ：Cao → Thấp → Cao
 
 ---
 
-## 5. Bước thứ ba：Giữ lại có chọn lọc - Làm sao để "ghim" thông tin then chốt？
+## 5. Bước thứ ba：Giữ lại có chọn lọc - Cách để "ghim" thông tin then chốt
 
-Vì "vào trước ra trước" không đáng tin，vậy chúng ta nên làm gì？
+Vì "vào trước ra trước" không đáng tin，vậy chúng ta nên làm gì
 Câu trả lời của Manus là：**Xây dựng "hệ thống phân cấp thông tin"**。
 
-### 5.1 Tại sao phải phân cấp thông tin？
+### 5.1 Động lực của việc phân cấp thông tin
 
 Không còn đối xử bình đẳng với mọi thông tin，mà quyết định giữ hay bỏ dựa trên mức độ quan trọng：
 
@@ -229,7 +229,7 @@ Bạn có thể hình dung cửa sổ ngữ cảnh như một tấm bảng đen�
 
 👇 **Thử tương tác**：
 Thử "ghim" một tin nhắn hội thoại quan trọng trong demo bên dưới。
-Quan sát：khi bạn tiếp tục trò chuyện，tin nhắn được ghim có luôn ở đó không，còn những tin không ghim thì bị đẩy đi？
+Quan sát：khi bạn tiếp tục trò chuyện，tin nhắn được ghim có luôn ở đó không，còn những tin không ghim thì bị đẩy đi
 
 <SelectiveContextDemo />
 
@@ -239,25 +239,25 @@ Quan sát：khi bạn tiếp tục trò chuyện，tin nhắn được ghim có 
 
 Đôi khi，chúng ta phải xử lý quá nhiều thông tin（ví dụ hàng trăm trang tài liệu kỹ thuật），bảng đen không thể viết hết。Lúc này cần một bộ não ngoài——**RAG（Truy xuất Tăng cường Sinh）**。
 
-### 6.1 Tại sao "bảng đen nhỏ" không đủ dùng？
+### 6.1 Động lực của "bảng đen nhỏ" không đủ dùng
 
 Manus khi đối mặt với tài liệu kỹ thuật hàng triệu từ，đã so sánh hai cách làm：
 
-1.  **Nạp toàn bộ**：Tất cả nội dung nhét một lần vào ngữ cảnh。
-    *   **Hậu quả**：Bảng đen ngay lập tức bị lấp đầy，xử lý cực chậm，và theo lý thuyết "Lạc giữa chừng"，AI căn bản không nhớ nổi nội dung ở giữa。
-    *   **Chi phí**：khoảng $50/lần，chờ 15 giây。
-2.  **Truy xuất theo nhu cầu（RAG）**：Đi thư viện（cơ sở dữ liệu）tra trước，chỉ chép vài đoạn liên quan lên bảng đen。
-    *   **Hậu quả**：Bảng đen rất gọn gàng，AI tập trung vào thông tin then chốt。
-    *   **Chi phí**：khoảng $0.5/lần，chờ 2 giây。
+1. **Nạp toàn bộ**：Tất cả nội dung nhét một lần vào ngữ cảnh。
+ * **Hậu quả**：Bảng đen ngay lập tức bị lấp đầy，xử lý cực chậm，và theo lý thuyết "Lạc giữa chừng"，AI căn bản không nhớ nổi nội dung ở giữa。
+ * **Chi phí**：khoảng $50/lần，chờ 15 giây。
+2. **Truy xuất theo nhu cầu（RAG）**：Đi thư viện（cơ sở dữ liệu）tra trước，chỉ chép vài đoạn liên quan lên bảng đen。
+ * **Hậu quả**：Bảng đen rất gọn gàng，AI tập trung vào thông tin then chốt。
+ * **Chi phí**：khoảng $0.5/lần，chờ 2 giây。
 
 **Tiết kiệm 99% tiền，87% thời gian！**
 
 ### 6.2 Thực tiễn tốt nhất cho "tra cứu tài liệu"
 
 Tổng kết kinh nghiệm của Manus：
-*   **Mỗi cuốn sách xé thành miếng to cỡ nào？** 500-1000 từ hiệu quả nhất。
-*   **Mỗi lần tra mấy cuốn？** 3-5 cuốn，nhiều quá sẽ gây nhiễu。
-*   **Liên quan đến mức nào mới tra？** Độ tương đồng > 0.7，tránh "gượng ép" nội dung không liên quan。
+* **Mỗi cuốn sách xé thành miếng to cỡ nào** 500-1000 từ hiệu quả nhất。
+* **Mỗi lần tra mấy cuốn** 3-5 cuốn，nhiều quá sẽ gây nhiễu。
+* **Liên quan đến mức nào mới tra** Độ tương đồng > 0.7，tránh "gượng ép" nội dung không liên quan。
 
 👇 **Thử tương tác**：
 Nhập câu hỏi vào ô tìm kiếm（ví dụ "làm sao để đặt lại mật khẩu"），xem hệ thống chỉ lấy ra những tài liệu liên quan nhất từ một đống tài liệu lớn như thế nào。
@@ -266,15 +266,15 @@ Nhập câu hỏi vào ô tìm kiếm（ví dụ "làm sao để đặt lại m�
 
 ---
 
-## 7. Bước thứ năm：Nén - Làm sao để "bảng đen nhỏ" viết được dày đặc hơn？
+## 7. Bước thứ năm：Nén - Cách để "bảng đen nhỏ" viết được dày đặc hơn
 
-Nếu thông tin đều rất quan trọng，thực sự không thể xóa，mà lại không muốn tra cứu tài liệu thì sao？
+Nếu thông tin đều rất quan trọng，thực sự không thể xóa，mà lại không muốn tra cứu tài liệu thì sao
 Vậy chỉ còn cách **viết chữ nhỏ lại**——đây chính là **nén ngữ cảnh**。
 
-### 7.1 Khi nào cần "viết tắt"？
-*   Tài liệu truy xuất về quá dày（>2000 từ）。
-*   Lịch sử hội thoại quá dài dòng（chiếm >80% không gian bảng đen）。
-*   Cần trả lời nhanh，không muốn để AI đọc bài dài dằng dặc。
+### 7.1 Khi nào cần "viết tắt"
+* Tài liệu truy xuất về quá dày（>2000 từ）。
+* Lịch sử hội thoại quá dài dòng（chiếm >80% không gian bảng đen）。
+* Cần trả lời nhanh，không muốn để AI đọc bài dài dằng dặc。
 
 ### 7.2 Ba cảnh giới của "viết tắt"
 
@@ -294,10 +294,10 @@ Chọn các chiến lược nén khác nhau，xem những bài dài dằng dặc
 ## 8. Tích hợp hệ thống：Xây dựng "Cung điện Trí nhớ" cho AI
 
 Phía trước chúng ta đã học từng chiến lược độc lập như xếp các khối gỗ：
-*   **KV Cache**：giúp chúng ta tiết kiệm tiền（Chương 3）
-*   **Cửa sổ trượt**：giúp chúng ta dọn chỗ（Chương 4）
-*   **Giữ lại phân cấp**：giúp chúng ta giữ trọng điểm（Chương 5）
-*   **RAG**：giúp chúng ta mở rộng não ngoài（Chương 6）
+* **KV Cache**：giúp chúng ta tiết kiệm tiền（Chương 3）
+* **Cửa sổ trượt**：giúp chúng ta dọn chỗ（Chương 4）
+* **Giữ lại phân cấp**：giúp chúng ta giữ trọng điểm（Chương 5）
+* **RAG**：giúp chúng ta mở rộng não ngoài（Chương 6）
 
 Bây giờ，đã đến lúc xếp những khối gỗ này thành một tòa lâu đài hoàn chỉnh——chúng tôi gọi nó là **"Cung điện Trí nhớ"** của Manus。
 
@@ -310,31 +310,31 @@ Nhấp "Bắt đầu xây dựng"，xem chúng ta xây từng tầng của cung 
 
 <MemoryPalaceDemo />
 
-### 8.2 Tại sao thiết kế này mạnh nhất？
+### 8.2 Động lực của thiết kế này mạnh nhất
 
 Triết lý thiết kế của cung điện này，thực ra là để giải quyết ba mâu thuẫn：
 
-1.  **Móng（System Prompt）—— Giải quyết vấn đề "đắt"**
-    *   **Mâu thuẫn**：Thiết lập hệ thống（bạn là ai、quy tắc là gì）dài nhất，mỗi lần đều phải gửi。
-    *   **Giải pháp**：Đặt nó ở tầng đáy，tận dụng công nghệ **KV Cache**，chỉ cần không sửa đổi，AI có thể "thuộc lòng toàn văn"。Hàng trăm vòng hội thoại sau đó，chi phí tính toán cho phần này gần như bằng **0**。
+1. **Móng（System Prompt）—— Giải quyết vấn đề "đắt"**
+ * **Mâu thuẫn**：Thiết lập hệ thống（bạn là ai、quy tắc là gì）dài nhất，mỗi lần đều phải gửi。
+ * **Giải pháp**：Đặt nó ở tầng đáy，tận dụng công nghệ **KV Cache**，chỉ cần không sửa đổi，AI có thể "thuộc lòng toàn văn"。Hàng trăm vòng hội thoại sau đó，chi phí tính toán cho phần này gần như bằng **0**。
 
-2.  **Cột trụ（Task Context）—— Giải quyết vấn đề "quên"**
-    *   **Mâu thuẫn**：Hội thoại dài，AI dễ quên mục tiêu nhiệm vụ ban đầu（ví dụ "viết một game rắn săn mồi"）。
-    *   **Giải pháp**：Dùng chiến lược **giữ lại phân cấp**，"ghim" mục tiêu nhiệm vụ ở tầng thứ hai。Dù có nói bao nhiêu vòng，tầng này vĩnh viễn không xóa，đảm bảo AI không quên mục đích ban đầu。
+2. **Cột trụ（Task Context）—— Giải quyết vấn đề "quên"**
+ * **Mâu thuẫn**：Hội thoại dài，AI dễ quên mục tiêu nhiệm vụ ban đầu（ví dụ "viết một game rắn săn mồi"）。
+ * **Giải pháp**：Dùng chiến lược **giữ lại phân cấp**，"ghim" mục tiêu nhiệm vụ ở tầng thứ hai。Dù có nói bao nhiêu vòng，tầng này vĩnh viễn không xóa，đảm bảo AI không quên mục đích ban đầu。
 
-3.  **Tầng trên cùng（Chat & RAG）—— Giải quyết vấn đề "lộn xộn"**
-    *   **Mâu thuẫn**：Vừa có hội thoại mới，vừa có tài liệu tra cứu，trộn lẫn dễ bị rối。
-    *   **Giải pháp**：
-        *   **Phòng khách（Hội thoại）**：Dùng **cửa sổ trượt** quản lý，chỉ giữ 5-10 câu gần đây nhất。
-        *   **Thư viện（RAG）**：Tài liệu dùng xong là đi，không chiếm chỗ。
+3. **Tầng trên cùng（Chat & RAG）—— Giải quyết vấn đề "lộn xộn"**
+ * **Mâu thuẫn**：Vừa có hội thoại mới，vừa có tài liệu tra cứu，trộn lẫn dễ bị rối。
+ * **Giải pháp**：
+ * **Phòng khách（Hội thoại）**：Dùng **cửa sổ trượt** quản lý，chỉ giữ 5-10 câu gần đây nhất。
+ * **Thư viện（RAG）**：Tài liệu dùng xong là đi，không chiếm chỗ。
 
 ### 8.3 Hiệu quả thực chiến
 
 Sau khi nhóm Manus đưa kiến trúc này lên production，hiệu quả thấy rõ ngay lập tức：
 
-*   **Tiết kiệm tiền**：Vì phần móng được "học thuộc"，chi phí mỗi vòng hội thoại giảm mạnh **84%**。
-*   **Nhanh hơn**：AI không cần đọc lại hàng nghìn chữ từ đầu mỗi lần，thời gian phản hồi trung bình rút từ 8 giây xuống còn **2 giây**。
-*   **Chính xác hơn**：Thông tin then chốt bị "đóng đinh"，không bao giờ còn tình trạng nói chuyện một hồi quên mất mình đang làm gì。
+* **Tiết kiệm tiền**：Vì phần móng được "học thuộc"，chi phí mỗi vòng hội thoại giảm mạnh **84%**。
+* **Nhanh hơn**：AI không cần đọc lại hàng nghìn chữ từ đầu mỗi lần，thời gian phản hồi trung bình rút từ 8 giây xuống còn **2 giây**。
+* **Chính xác hơn**：Thông tin then chốt bị "đóng đinh"，không bao giờ còn tình trạng giao tiếp một hồi quên mất mình đang làm gì。
 
 ---
 
@@ -376,31 +376,31 @@ Ràng buộc lõi：
 **2. Logic lắp ráp ngữ cảnh (Mã giả)**
 ```python
 def build_engineer_context(user_input, chat_history, task_info):
-    context = []
+ context = []
 
-    # 1. Tầng móng：Thiết lập danh tính (Tận dụng KV Cache để cache)
-    # Phần này hàng trăm vòng hội thoại không đổi，chi phí tính toán gần như bằng 0
-    context.append(SYSTEM_PROMPT)
+ # 1. Tầng móng：Thiết lập danh tính (Tận dụng KV Cache để cache)
+ # Phần này hàng trăm vòng hội thoại không đổi，chi phí tính toán gần như bằng 0
+ context.append(SYSTEM_PROMPT)
 
-    # 2. Tầng cột trụ：Khóa nhiệm vụ (Pinned)
-    # Dù hội thoại dài bao nhiêu，phần này luôn được chèn sau System
-    context.append(f"Nhiệm vụ hiện tại：{task_info}")
+ # 2. Tầng cột trụ：Khóa nhiệm vụ (Pinned)
+ # Dù hội thoại dài bao nhiêu，phần này luôn được chèn sau System
+ context.append(f"Nhiệm vụ hiện tại：{task_info}")
 
-    # 3. Tầng truy xuất：Đoạn code (RAG)
-    # Dựa vào câu hỏi của người dùng，tìm code liên quan trong kho code
-    relevant_code = search_codebase(user_input)
-    if relevant_code:
-        context.append(f"Code tham khảo：\n{relevant_code}")
+ # 3. Tầng truy xuất：Đoạn code (RAG)
+ # Dựa vào câu hỏi của người dùng，tìm code liên quan trong kho code
+ relevant_code = search_codebase(user_input)
+ if relevant_code:
+ context.append(f"Code tham khảo：\n{relevant_code}")
 
-    # 4. Tầng tương tác：Lịch sử hội thoại (Sliding Window)
-    # Chỉ lấy 10 vòng gần nhất，tránh làm nổ ngữ cảnh
-    recent_chat = chat_history[-10:]
-    context.extend(recent_chat)
+ # 4. Tầng tương tác：Lịch sử hội thoại (Sliding Window)
+ # Chỉ lấy 10 vòng gần nhất，tránh làm nổ ngữ cảnh
+ recent_chat = chat_history[-10:]
+ context.extend(recent_chat)
 
-    # 5. Đầu vào mới nhất
-    context.append(user_input)
+ # 5. Đầu vào mới nhất
+ context.append(user_input)
 
-    return context
+ return context
 ```
 
 #### Tình huống 2：Agent Chăm sóc khách hàng thông minh（Loại trả lời chính xác）
@@ -420,27 +420,27 @@ Nguyên tắc trả lời：
 **2. Logic lắp ráp ngữ cảnh (Mã giả)**
 ```python
 def build_support_context(user_input):
-    context = []
+ context = []
 
-    # 1. Tầng móng：Thiết lập danh tính
-    context.append(SYSTEM_PROMPT)
+ # 1. Tầng móng：Thiết lập danh tính
+ context.append(SYSTEM_PROMPT)
 
-    # 2. Tầng thư viện：Truy xuất động (RAG)
-    # Chỉ trong tình huống chăm sóc khách hàng，RAG mới là nhân vật chính，đặt ở vị trí giữa
-    docs = vector_db.search(user_input, top_k=3)
+ # 2. Tầng thư viện：Truy xuất động (RAG)
+ # Chỉ trong tình huống chăm sóc khách hàng，RAG mới là nhân vật chính，đặt ở vị trí giữa
+ docs = vector_db.search(user_input, top_k=3)
 
-    context.append("【Tài liệu tham khảo bắt đầu】")
-    for doc in docs:
-        context.append(doc.content)
-    context.append("【Tài liệu tham khảo kết thúc】")
+ context.append("【Tài liệu tham khảo bắt đầu】")
+ for doc in docs:
+ context.append(doc.content)
+ context.append("【Tài liệu tham khảo kết thúc】")
 
-    # 3. Tầng tương tác：Lịch sử cực ngắn
-    # Chăm sóc khách hàng thường không cần trí nhớ quá lâu，giữ 3 vòng gần nhất là đủ
-    context.extend(get_recent_chat(limit=3))
+ # 3. Tầng tương tác：Lịch sử cực ngắn
+ # Chăm sóc khách hàng thường không cần trí nhớ quá lâu，giữ 3 vòng gần nhất là đủ
+ context.extend(get_recent_chat(limit=3))
 
-    context.append(user_input)
+ context.append(user_input)
 
-    return context
+ return context
 ```
 
 ---

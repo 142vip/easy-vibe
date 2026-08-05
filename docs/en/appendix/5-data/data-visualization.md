@@ -1,4 +1,4 @@
-# Data Visualization and Dashboards
+# Principles of Data Visualization
 
 ::: tip Preface
 **A good chart is worth a thousand rows of data.** Data visualization transforms abstract numbers into intuitive visual representations, allowing people to understand the story behind the data in seconds. From Excel charts to Grafana monitoring dashboards, visualization is everywhere.
@@ -65,7 +65,7 @@ The first step in choosing a chart is not "what chart do I like," but "what info
 
 ---
 
-## 2. Visualization Design Principles: Let the Data Speak
+## 2. Visualization Design Principles: Visual Encoding Principles
 
 Good visualization is not about being "pretty" but about being "understandable." Several classic principles proposed by Edward Tufte in *The Visual Display of Quantitative Information* remain important references for visualization design today.
 

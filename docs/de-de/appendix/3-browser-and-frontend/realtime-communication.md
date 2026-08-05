@@ -1,4 +1,4 @@
-# Echtzeit-Kommunikationsmechanismen (Polling / SSE / WebSocket)
+# Echtzeitkommunikation: Netzwerkprotokolle
 
 ::: tip Kernleitfaden
 **Wie realisiert der Browser Echtzeit-Updates von Daten?**

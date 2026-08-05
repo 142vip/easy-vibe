@@ -1,4 +1,4 @@
-# CI/CD Automation
+# An Introduction to CI/CD Automation
 
 ::: tip 🎯 Core Question
 **Your code runs fine locally, but how do you make it accessible to people around the world?**
@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Why Do We Need to "Go Live"?
+## 1. Motivation for needing to "Go Live"
 
 Imagine you've cooked a feast at home, and it's delicious. But the problem is, only your family can taste it. Your neighbors, the security guard, strangers — none of them can try it.
 
@@ -20,9 +20,9 @@ Below, I'll break down the entire process. Every step will be explained in detai
 
 ---
 
-## 2. Building: Turning Code into a "Portable Package"
+## 2. Building: Turning Code into a "Portable Build Artifact"
 
-### 2.1 Why Do We Need to Build?
+### 2.1 Motivation for needing to Build
 
 Beginners often ask: once the code is written, why can't we just put it on a server for users to access?
 
@@ -32,7 +32,7 @@ For example, when writing Vue code, don't you use tags like `<template>` and `<s
 
 So before putting the code on a server, there's one important thing you must do: **translate it into a language the browser can understand**. This translation process is called "Build."
 
-### 2.2 What Does Building Actually Do?
+### 2.2 What Does Building Actually Do
 
 Building is more than just translation. It also performs many optimizations to make the website run faster and use fewer resources. Let's look at what it specifically does:
 
@@ -60,7 +60,7 @@ The hash works like this: when the code changes in any way, the hash value chang
 
 <DeploymentBuildDemo />
 
-### 2.3 How to Run a Build?
+### 2.3 Approach to running a Build
 
 Most modern frontend projects already have build tools configured. Just remember one command:
 
@@ -77,7 +77,7 @@ pnpm build
 
 After running, look for a `dist` folder in the project root directory (sometimes called `build` or `.output`). It contains all the built files. These are the files that will ultimately be uploaded to the server. No further modifications are needed — just drag them to the server.
 
-### 2.4 What's Inside the Build Output?
+### 2.4 What's Inside the Build Output
 
 Open the dist folder and you'll see mainly three types of files:
 
@@ -91,7 +91,7 @@ For more complex backend projects (like Node.js), the build output might be an e
 
 ## 3. Server: Finding a "House" That Never Closes
 
-### 3.1 What Exactly Is a Server?
+### 3.1 What Exactly Overview of a Server
 
 Many people think a "server" is some mysterious, high-end device when they first hear about it. It's really not that complicated. **A server is just a computer** — a computer that never shuts down and is always connected to the internet.
 
@@ -107,7 +107,7 @@ Third, your home computer doesn't have a "public IP." What's a public IP? It's a
 
 <DeploymentServerDemo />
 
-### 3.2 How to Choose a Server?
+### 3.2 Approach to choosing a Server
 
 When choosing a server, look at three main metrics: **CPU cores**, **memory size**, and **disk space**. The higher these three metrics, the better the server performance, and the more expensive it is.
 
@@ -119,7 +119,7 @@ For beginners, there's absolutely no need to buy an expensive configuration. Rem
 
 Another factor to consider: **location**. If your users are mainly in China, buy domestic servers (Alibaba Cloud, Tencent Cloud) for faster access. If users are mainly overseas, buy foreign servers (AWS, Google Cloud, DigitalOcean), or servers in Hong Kong. Fast speed and no ICP filing required.
 
-### 3.3 Domestic or Foreign?
+### 3.3 Domestic or Foreign
 
 This is a very important question. Many people don't think it through at first and run into trouble later.
 
@@ -141,7 +141,7 @@ The recommendation is: for personal projects and learning/demo websites, buy Hon
 
 For beginners, the most recommended options are **Alibaba Cloud** or **Tencent Cloud** student/new user discounts. Usually only a few dozen yuan per year. Excellent value. If you're working on a pure frontend project and want to keep things simple, you can also use **Vercel** or **Netlify** directly. No need to buy a server at all — just push the code and it deploys automatically.
 
-### 3.5 What to Do After Getting a Server?
+### 3.5 What to Do After Getting a Server
 
 After purchasing a server, you'll receive an email containing several important pieces of information:
 
@@ -164,7 +164,7 @@ After logging in successfully, you'll enter the server's command-line interface.
 
 ## 4. Deployment: Moving Code into the "House"
 
-### 4.1 What Is Deployment?
+### 4.1 Overview of Deployment
 
 Deployment is like renting a server (the house) and then moving your code (the furniture) in, opening the door, and starting business.
 
@@ -179,7 +179,7 @@ These four steps sound complicated, but they're not that hard in practice. Below
 
 <DeploymentServerDemo />
 
-### 4.2 How to Upload Code to the Server?
+### 4.2 Approach to Uploading Code to the Server
 
 **Method 1: FTP/SFTP Upload**
 
@@ -309,7 +309,7 @@ Now visit `http://example.com` (remember to point the domain to this server's IP
 
 ## 5. Domain Name and DNS: Giving Your Website a Good Name
 
-### 5.1 Why Buy a Domain Name?
+### 5.1 Motivation for buying a Domain Name
 
 With a server IP, why do you still need to buy a domain name?
 
@@ -319,7 +319,7 @@ A domain name is your website's name. It's memorable, professional, and can refl
 
 <DeploymentDnsDemo />
 
-### 5.2 What Is DNS?
+### 5.2 Overview of DNS
 
 Okay. Now you've bought a domain name, say `my-awesome-website.com`. But here's the problem: computers only understand IP addresses, not human language like "my-awesome-website.com."
 
@@ -333,7 +333,7 @@ When you type `my-awesome-website.com` in your browser and press Enter, here's w
 
 The whole process usually takes only tens of milliseconds. Users don't notice it at all.
 
-### 5.3 How to Configure DNS?
+### 5.3 Approach to configuring DNS
 
 DNS configuration can usually be done in two places:
 
@@ -349,7 +349,7 @@ Configure DNS records wherever you bought the domain. The most common record typ
 
 Many professionals don't use the domain registrar's built-in DNS. Instead, they use specialized DNS providers like Cloudflare, Alibaba Cloud DNSPod, or Tencent Cloud DNS. These services are usually more stable, have faster resolution speeds, and come with value-added features like CDN and DDoS protection.
 
-### 5.4 How Long Does DNS Take to Propagate?
+### 5.4 Method for Longing Does DNS Take to Propagate
 
 This is a question many people ask. The answer is: **it varies. Usually from a few minutes to 24 hours.**
 
@@ -381,7 +381,7 @@ You may have noticed that some website addresses start with `http://` and others
 
 <DeploymentHttpsDemo />
 
-### 6.2 Why HTTPS?
+### 6.2 Motivation for HTTPSing
 
 First reason: **Security**. Without HTTPS, passwords users enter on the website are transmitted in plain text. Anyone with a bit of technical skill can intercept them. These days, who would dare use a website without HTTPS?
 
@@ -389,7 +389,7 @@ Second reason: **Browser Warnings**. Modern browsers like Chrome and Edge now di
 
 Third reason: **SEO**. Search engines like Google and Baidu prioritize indexing HTTPS websites. Your SEO results will be better.
 
-### 6.3 How to Get an HTTPS Certificate?
+### 6.3 Approach to getting an HTTPS Certificate
 
 In the past, HTTPS certificates were expensive, costing hundreds or even thousands of yuan per year. Now there's an organization called **Let's Encrypt** that provides completely free SSL/TLS certificates. And the community has many automated tools to help you install and renew them.
 
@@ -413,7 +413,7 @@ The certificate is valid for 90 days, but Certbot will set up an automatic renew
 
 If you use Cloudflare's DNS service, you don't need to configure HTTPS certificates at all. Cloudflare automatically provides HTTPS support for your domain. It even takes care of the 90-day renewal for you.
 
-### 6.4 What Changes After Configuring HTTPS?
+### 6.4 What Changes After Configuring HTTPS
 
 After configuring HTTPS, user access changes from `http://example.com` to `https://example.com`. This change brings a series of security guarantees:
 
@@ -425,7 +425,7 @@ After configuring HTTPS, user access changes from `http://example.com` to `https
 
 ## 7. CI/CD: Letting Robots Do the Work
 
-### 7.1 What Is CI/CD?
+### 7.1 Overview of CI/CD
 
 CI/CD is an abbreviation of two terms: **C**ontinuous **I**ntegration and **C**ontinuous **D**eployment. You can think of it as a robotic system that does the work for you automatically.
 
@@ -486,7 +486,7 @@ After all tests pass, the CI system:
 
 The whole process might take only a few minutes. All automatic.
 
-### 7.3 How to Configure GitHub Actions?
+### 7.3 Approach to configuring GitHub Actions
 
 GitHub Actions is GitHub's built-in CI/CD feature. No extra cost (the free tier is sufficient for personal projects). And it's very simple to configure.
 
@@ -554,7 +554,7 @@ After configuring this, every time you `git push origin main`, GitHub will autom
 
 ## 8. Monitoring and Logging: Being the "Night Watchman" for Your Website
 
-### 8.1 Why Monitor?
+### 8.1 Motivation for monitoring
 
 After a website goes live, it should theoretically run 24/7 without interruption. But the real world isn't that perfect. Servers can go down. Networks can hiccup. Code can have bugs. In a real production environment, all kinds of unexpected things can happen.
 
@@ -568,7 +568,7 @@ With monitoring, you can:
 
 <DeploymentMonitorDemo />
 
-### 8.2 What Metrics to Monitor?
+### 8.2 What Metrics to Monitor
 
 The most important monitoring metrics are these:
 
@@ -581,7 +581,7 @@ The most important monitoring metrics are these:
 | Response Time | < 2 seconds | Optimize database queries or add caching |
 | Error Rate | < 1% | Check error logs to locate the problem |
 
-### 8.3 How to Configure Monitoring?
+### 8.3 Approach to configuring Monitoring
 
 **Simplest Solution: Uptime Robot**
 
@@ -595,7 +595,7 @@ If your server is on Alibaba Cloud or Tencent Cloud, they have built-in monitori
 
 These two are the "Swiss Army Knife" of the monitoring world. Very powerful. They can monitor any metric you can think of and create beautiful visualizations. But the configuration is relatively complex. Suitable for experienced developers.
 
-### 8.4 Logs: How to Investigate Problems?
+### 8.4 Logs: Approach to Investigating Problems
 
 Monitoring tells you "the website has a problem." But what exactly the problem is and why it happened — you need **logs** to figure that out.
 
@@ -628,7 +628,7 @@ For more complex projects, professional log collection tools are recommended:
 - **ELK (Elasticsearch + Logstash + Kibana)**: Powerful but complex to configure.
 - **Sentry**: A tool specifically for collecting application errors. Automatically collects error information.
 
-### 8.5 Alerts: How to Know About Problems Immediately?
+### 8.5 Alerts: Approach to knowing About Problems Immediately
 
 Monitoring tells you there's a problem. But what if you're not staring at the monitoring dashboard? This is where **alerts** come in.
 

@@ -1,4 +1,4 @@
-# Tests A/B: Tomar decisiones con datos
+# Principios de los tests A/B: tomar decisiones con datos
 
 ::: tip 🎯 Pregunta central
 **¿Cómo verificar científicamente el efecto de los cambios en un producto?**
@@ -39,7 +39,7 @@ Puedes observar intuitivamente cómo el sistema distribuye el tráfico en la sig
 
 <ABTestingDemo tab="traffic" />
 
-### 1.1 ¿Por qué es tan importante la asignación aleatoria?
+### 1.1 Motivación de importante la asignación aleatoria
 
 Solo una "aleatoriedad" al cien por cien puede eliminar al máximo las diferencias causadas por cualquier otra característica. Si se realiza una división aleatoria perfecta con un tamaño de muestra suficientemente grande, la proporción de usuarios jóvenes, el nivel de ingresos y la distribución geográfica del grupo A y del grupo B serán sorprendentemente similares.
 

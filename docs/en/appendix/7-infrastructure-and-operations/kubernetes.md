@@ -1,4 +1,4 @@
-# Kubernetes Orchestration
+# Principles of Kubernetes Orchestration
 
 ::: tip Foreword
 **Docker solved the "packaging" problem, and Kubernetes solves the "management" problem.** When you have dozens or hundreds of containers that need deployment, scaling, and fault recovery, manual management is impractical. Kubernetes (K8s) is the "operating system" for containers, automating the deployment, scaling, and operations of containerized applications.
@@ -24,7 +24,7 @@ After completing this chapter, you will gain:
 
 ---
 
-## 1. Why Kubernetes?
+## 1. Motivation for Kubernetesing
 
 Docker makes packaging and running individual containers simple, but when you face the following scenarios, manual management becomes inadequate:
 

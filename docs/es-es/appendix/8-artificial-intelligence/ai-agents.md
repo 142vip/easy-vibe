@@ -1,9 +1,9 @@
-# Agent de IA y Llamada a Herramientas
+# Principios de los agentes de IA y llamada a herramientas
 > 💡 **Guía de aprendizaje**: Este capítulo no requiere conocimientos de programación. A través de demostraciones interactivas, te llevará a profundizar en los principios de funcionamiento de los Agentes de IA (agentes inteligentes). Comenzaremos desde la "llamada a herramientas" más básica, hasta cómo un Agent planifica, recuerda y colabora.
 
 <AgentQuickStartDemo />
 
-## 0. Introducción: De "poder hablar" a "poder actuar"
+## 0. Introducción: De "poder comunicación" a "poder actuar"
 
 Seguramente has usado chatbots como ChatGPT o Claude. Son muy potentes, pero tienen una limitación evidente:
 
@@ -16,7 +16,7 @@ ChatGPT: No puedo obtener información del clima en tiempo real. Te sugiero cons
 
 ChatGPT es como un **sabio muy culto pero con movilidad limitada**: sabe mucho, pero no puede ejecutar ninguna operación práctica por ti.
 
-### 0.1 Desafío central: ¿Cómo hacer que la IA pase de "chatear" a "actuar"?
+### 0.1 Desafío central: Enfoque de IA pase de "chatear" a "actuar"
 
 Para lograr este objetivo, necesitamos resolver tres desafíos centrales:
 
@@ -34,7 +34,7 @@ Las computadoras pueden hacer muchas cosas: buscar en la web, ejecutar código, 
 
 Pero un LLM **no tiene** estas capacidades por sí mismo. Su capacidad central es solo una: **generar texto**.
 
-### 1.1 ¿Por qué un LLM no puede ejecutar operaciones directamente?
+### 1.1 Motivación de LLM no puede ejecutar operaciones directamente
 
 Un LLM es un **procesador de texto puro**:
 
@@ -75,7 +75,7 @@ LLM genera la respuesta final: "Hoy en Madrid el clima es soleado, la temperatur
 
 ---
 
-## 2. Desafío central: ¿Cómo completar tareas complejas?
+## 2. Desafío central: Enfoque de completar tareas complejas
 
 La llamada a herramientas le da al LLM la capacidad de "actuar", pero las tareas reales suelen ser complejas:
 
@@ -90,7 +90,7 @@ Esta tarea contiene múltiples pasos:
 4.  Organizar y analizar
 5.  Redactar el informe
 
-### 2.1 ¿Por qué se necesita planificación?
+### 2.1 Motivación de planificación
 
 Si se deja que el LLM genere el informe "de un solo golpe", el resultado suele ser:
 
@@ -121,7 +121,7 @@ Los humanos pueden recordar cosas de hace mucho tiempo, pero la "memoria" de un 
 -   **Aislamiento de sesiones**: Cada conversación es un comienzo completamente nuevo
 -   **Sin persistencia**: Al cerrar la página, se "amnesia"
 
-### 3.1 ¿Por qué se necesita memoria?
+### 3.1 Motivación de memoria
 
 Imagina esta situación:
 
