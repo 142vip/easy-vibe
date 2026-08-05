@@ -1,4 +1,4 @@
-# Full-Stack Development in the Vibe Coding Era
+# Full-Stack Development: An Introduction — A Computer Map for the Vibe Coding Era
 
 ::: tip Preface
 **What is Vibe Coding?** Simply put, it's "writing code with natural language" — you describe what you want in Chinese or English, and AI generates the code for you. This has completely changed the rules of the software development game.
@@ -29,7 +29,7 @@ After completing this chapter, you will gain:
 
 ## 0. Vibe Coding: A New Paradigm for Software Development
 
-### 0.1 What Is Vibe Coding?
+### 0.1 Vibe Coding Overview
 
 Imagine software development in the past:
 
@@ -37,7 +37,7 @@ Imagine software development in the past:
 
 **Core shift**: From "how to write code" to "how to describe requirements."
 
-### 0.2 What Skills Matter More in the Vibe Coding Era?
+### 0.2 Core Skills in the Vibe Coding Era
 
 <DeveloperSkillShiftDemo />
 
@@ -57,7 +57,7 @@ Before diving into each direction, let's first build a holistic understanding.
 
 <ComputerFieldMapDemo />
 
-### 1.1 Understanding Each Domain Through a "Restaurant" Analogy
+### 1.1 Role Division by Domain: A Restaurant Analogy
 
 Think of a software system as a **restaurant**:
 
@@ -88,7 +88,7 @@ Don't try to learn everything at once. Pick one direction to go deep first, esta
 
 ---
 
-## 2. What Is Frontend?
+## 2. Frontend Overview
 
 ### 2.1 One-Sentence Definition
 
@@ -112,7 +112,7 @@ When you open a webpage:
 | **CSS** | Decorative style | Wall colors, furniture arrangement, lighting effects |
 | **JavaScript** | Smart home | Light switches, automatic curtains, security system |
 
-### 2.3 Frontend Frameworks: Why Use Them?
+### 2.3 Purpose of Frontend Frameworks
 
 You can write webpages with plain HTML/CSS/JS, so why learn frameworks like React and Vue?
 
@@ -133,7 +133,7 @@ You can write webpages with plain HTML/CSS/JS, so why learn frameworks like Reac
 
 ---
 
-## 3. What Is Backend?
+## 3. Backend Overview
 
 ### 3.1 One-Sentence Definition
 
@@ -160,7 +160,7 @@ When you place an online order:
 | **Performance Optimization** | Kitchen efficiency | Caching, async processing, load balancing |
 | **Security** | Food safety | Prevent SQL injection, access control |
 
-### 3.3 Which Backend Language to Choose?
+### 3.3 Backend Language Selection
 
 | Language | Characteristics | Best For |
 |-----|------|---------|
@@ -186,9 +186,9 @@ If you already know JavaScript (frontend basics), Node.js is the most natural ba
 
 ---
 
-## 4. Programming Language Landscape
+## 4. Programming Language Concepts: Paradigms, Evolution, and Selection
 
-### 4.1 What Are Programming Languages?
+### 4.1 Programming Languages Overview
 
 **Programming languages = the bridge between humans and computers.**
 
@@ -217,7 +217,7 @@ Computers only understand 0s and 1s, while humans prefer natural language. Progr
 | **Strong typing** | Strict type checking, no auto-conversion | Python, Java |
 | **Weak typing** | Loose type checking, auto-conversion | JavaScript, PHP |
 
-### 4.3 Which Language Should You Learn?
+### 4.3 Language Selection Guidance
 
 <LanguageSelectionDemo />
 
@@ -232,7 +232,7 @@ There is no "best language," only the "most suitable language for the scenario."
 
 ## 5. Full-Stack Engineer: Mastering Both Frontend and Backend
 
-### 5.1 What Is Full-Stack?
+### 5.1 Full-Stack Overview
 
 **A full-stack engineer = someone who can independently complete both frontend and backend development.**
 

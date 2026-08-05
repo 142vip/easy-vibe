@@ -1,4 +1,4 @@
-# Que es la Codificacion y Transmision de Datos?
+# Principios de representación de datos: codificación, almacenamiento y transmisión
 
 ::: tip Prologo
 Cuando envias una foto a un amigo, un mensaje por WeChat, o descargas un juego de varios GB, como llega esa informacion a traves de medio mundo intacta a tu pantalla? Este capitulo se centra en una pregunta que suele confundir a los principiantes: **por que el archivo que recibi se convirtio en caracteres ilegibles?** A partir de esta pregunta, descubriremos los tres pilares fundamentales de la computacion: **codificacion, almacenamiento y transmision**.
@@ -21,7 +21,7 @@ Despues de completar este capitulo, obtendras:
 
 ---
 
-## 0. Introduccion: Por que los archivos se vuelven "jeroglificos"?
+## 0. Problemática de la descodificación incorrecta y codificación de datos
 
 Imagina que recibes un archivo importante de un colega, lo abres con doble clic y esta lleno de caracteres extranos como "浣犲ソ" o "ä½ å¥½".
 
@@ -37,7 +37,7 @@ Si el remitente uso el diccionario UTF-8 para traducir caracteres chinos a numer
 
 ---
 
-## 1. Que es la codificacion de datos? (Convertir todo en numeros)
+## 1. Visión general de la codificación de datos
 
 **La codificacion de datos (Encoding)** es crear un "diccionario bidireccional" que mapee informacion del mundo real (texto, color, sonido) a 0 y 1 que la computadora puede entender.
 
@@ -57,7 +57,7 @@ Los expertos en computacion se sentaron juntos y crearon **Unicode**, que asigna
 
 <CharacterEncodingExplorer />
 
-### 1.2 Como se convierten el color y el sonido en numeros?
+### 1.2 Principios de codificación multimedia (imagen y audio)
 
 * **Codificacion de imagenes**: Una foto se compone de millones de pixeles. Asignamos un numero a cada color (como `#FF0000` para rojo).
 <ImageEncodingDemo />
@@ -80,7 +80,7 @@ El sistema operativo actua como un administrador de almacen extremadamente intel
 
 ---
 
-## 3. Que es la transmision de datos? (Enviar 0 y 1 de viaje)
+## 3. Visión general de la transmisión de datos
 
 ### 3.1 Transmision en hardware y LAN
 
@@ -100,7 +100,7 @@ Gracias a este mecanismo **TCP (Protocolo de Control de Transmision)**, incluso 
 
 ---
 
-## 4. Practica final: Desde tomar una foto hasta subirla a redes sociales
+## 4. Caso práctico: flujo completo de codificación, almacenamiento y transmisión
 
 <PhotoUploadJourneyDemo />
 

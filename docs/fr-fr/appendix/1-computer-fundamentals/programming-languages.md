@@ -1,4 +1,4 @@
-# La carte des langages de programmation
+# Concepts des langages de programmation : paradigmes, évolution et sélection
 
 ::: tip Préface
 Pourquoi existe-t-il tant de langages de programmation ? Lequel faut-il apprendre ? Ce chapitre vous guide de « l'évolution des langages » aux « paradigmes de programmation » puis à « comment choisir », pour construire une compréhension d'ensemble des langages de programmation. **La conclusion d'abord : il n'y a pas de meilleur langage, seulement le langage le plus adapté au contexte.**
@@ -21,7 +21,7 @@ Pourquoi existe-t-il tant de langages de programmation ? Lequel faut-il apprendr
 
 ---
 
-## 0. Comment l'homme « parle-t-il » à l'ordinateur ?
+## 0. Principe de communication entre l'homme et l'ordinateur
 
 Imaginez que vous devez communiquer avec un robot qui ne comprend que le binaire :
 
@@ -95,11 +95,11 @@ La plupart des langages modernes sont **multi-paradigmes**. Python supporte à l
 | **Statique** | Java, Rust, TypeScript — le plus sûr | C, C++ — efficace mais prudence requise |
 | **Dynamique** | Python, Ruby — flexible et sûr | JavaScript, PHP — flexible mais sujet aux erreurs |
 
-**Question clé** : que vaut `"1" + 1` ?
+**Point clé** : que vaut `"1" + 1` ?
 - **JavaScript (typage faible)** : `"11"` — conversion automatique silencieuse
 - **Python (typage fort)** : `TypeError` — à vous de réfléchir
 
-Pour aller plus loin → [Introduction au système de types](./type-systems) | [Introduction aux compilateurs](./compilers)
+Pour aller plus loin → [Introduction aux systèmes de types](./type-systems) | [Principes de compilation](./compilers)
 
 ---
 
@@ -114,7 +114,7 @@ Pour aller plus loin → [Introduction au système de types](./type-systems) | [
 
 ---
 
-## 5. Comment choisir un langage de programmation ?
+## 5. Principe du choix d'un langage de programmation
 
 ### Choix par contexte
 
@@ -147,7 +147,7 @@ Pour aller plus loin → [Introduction au système de types](./type-systems) | [
 :::
 
 **Prochaines étapes** :
-- [Introduction aux compilateurs](./compilers) - Approfondir le processus de compilation et l'optimisation du code
-- [Introduction au système de types](./type-systems) - Approfondir le système de types et la sécurité des types
-- [Structures de données](./data-structures) - Comprendre l'organisation des données
-- [Introduction à la pensée algorithmique](./algorithm-thinking) - Apprendre les méthodes de résolution de problèmes
+- [Principes de compilation](./compilers) - Approfondir le processus de compilation et l'optimisation du code
+- [Introduction aux systèmes de types](./type-systems) - Approfondir le système de types et la sécurité des types
+- [Introduction aux structures de données](./data-structures) - Comprendre l'organisation des données
+- [Introduction aux algorithmes](./algorithm-thinking) - Apprendre les méthodes de résolution de problèmes

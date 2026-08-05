@@ -1,4 +1,4 @@
-# Ban do Ngon ngu Lap trinh
+# Khái niệm ngôn ngữ lập trình: Phạm trù, tiến hóa và lựa chọn
 
 ::: tip Loi noi dau
 Tai sao co nhieu ngon ngu lap trinh nhu vay? Nen hoc cai nao? Chuong nay se dan ban tu "su tien hoa cua ngon ngu" den "cac hinh thuc lap trinh" den "cach lua chon", xay dung hieu bieu toan canh ve ngon ngu lap trinh. **Ket luan truoc: Khong co ngon ngu tot nhat, chi co ngon ngu phu hop voi tung tinh huong.**
@@ -21,7 +21,7 @@ Sau khi hoc xong chuong nay, ban se co duoc:
 
 ---
 
-## 0. Con nguoi "noi chuyen" voi may tinh nhu the nao?
+## 0. Tổng quan giao tiếp người-máy
 
 Tuong tuong ban can giao tiep voi robot chi hieu nhi phan:
 
@@ -88,7 +88,7 @@ Ngon ngu hien dai da so la **da hinh thuc**. Python ho tro ca huong doi tuong va
 
 ---
 
-## 3. He thong kieu: Quy tac giao thong cua du lieu
+## 3. Tổng quan hệ thống kiểu
 
 | | Kieu manh | Kieu yeu |
 |---|---|---|
@@ -99,7 +99,7 @@ Ngon ngu hien dai da so la **da hinh thuc**. Python ho tro ca huong doi tuong va
 - **JavaScript (yeu)**: `"11"` -- Tu doi cho ban
 - **Python (manh)**: `TypeError` -- Bat ban tu nghi
 
-Tim hieu sau ve he thong kieu -> [Nhap mon He thong Kieu](./type-systems) | [Nhap mon Bien dich](./compilers)
+Tim hieu sau ve he thong kieu -> [Giới thiệu hệ thống kiểu](./type-systems) | [Nguyên lý biên dịch](./compilers)
 
 ---
 
@@ -114,7 +114,7 @@ Tim hieu sau ve he thong kieu -> [Nhap mon He thong Kieu](./type-systems) | [Nha
 
 ---
 
-## 5. Cach chon ngon ngu lap trinh?
+## 5. Lựa chọn ngôn ngữ lập trình
 
 ### Chon theo tinh huong
 
@@ -147,7 +147,7 @@ Tim hieu sau ve he thong kieu -> [Nhap mon He thong Kieu](./type-systems) | [Nha
 :::
 
 **Buoc hoc tiep theo**:
-- [Nhap mon Bien dich](./compilers) - Hieu qua trinh bien dich
-- [Nhap mon He thong Kieu](./type-systems) - Hieu an toan kieu
-- [Cau truc Du lieu](./data-structures) - Hieu to chuc du lieu
-- [Tu duy Thuat toan](./algorithm-thinking) - Hoc phuong phap giai quyet
+- [Nguyên lý biên dịch](./compilers) - Hieu qua trinh bien dich
+- [Giới thiệu hệ thống kiểu](./type-systems) - Hieu an toan kieu
+- [Giới thiệu cấu trúc dữ liệu](./data-structures) - Hieu to chuc du lieu
+- [Giới thiệu thuật toán](./algorithm-thinking) - Hoc phuong phap giai quyet

@@ -1,4 +1,4 @@
-# Was passiert vom Drücken des Power-Knopfes bis zum Besuch einer Website?
+# Panorama des Computersystems: Vom Booten bis zum Webzugriff
 
 ::: tip Einleitung
 Hast du dich jemals gefragt, was zwischen dem Drücken des Power-Knopfes deines Computers und dem Moment, in dem du eine Webseite im Browser siehst, tatsächlich passiert?
@@ -126,8 +126,7 @@ Ein moderner Browser ist ein komplexes „Betriebssystem", das im Wesentlichen a
 
 ## 5. URL aufrufen: Der vollständige Ablauf einer Netzwerkanfrage
 
-### 5.1 Was ist eine URL?
-
+### 5.1 Überblick über URLs
 **URL (Uniform Resource Locator)** ist die Adresse einer Ressource – ähnlich wie eine Postadresse im Alltag dient sie dazu, Ressourcen im Internet zu lokalisieren.
 
 ```

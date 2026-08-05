@@ -1,7 +1,7 @@
-# Einführung in die Compiler-Theorie
+# Prinzipien der Kompilierung
 
 ::: tip Vorwort
-**Was passiert, wenn Sie auf „Ausführen" klicken — wie wird Code zu einem Ergebnis auf dem Bildschirm?** Jede Zeile Code, die Sie schreiben, kann der Computer eigentlich nicht „lesen" — er kennt nur 0 und 1. Der Compiler ist der „Dolmetscher", der menschliche Sprache in Maschinensprache übersetzt. Wenn Sie die Compiler-Theorie verstehen, wissen Sie, woher Fehlermeldungen kommen, warum manche Sprachen schnell und andere langsam sind und wie Code-Optimierung auf unterster Ebene funktioniert.
+**Was passiert, wenn Sie auf „Ausführen" klicken — wie wird Code zu einem Ergebnis auf dem Bildschirm?** Jede Zeile Code, die Sie schreiben, kann der Computer eigentlich nicht „lesen" — er kennt nur 0 und 1. Der Compiler ist der „Dolmetscher", der menschliche Sprache in Maschinensprache übersetzt. Wenn Sie die Prinzipien der Kompilierung verstehen, wissen Sie, woher Fehlermeldungen kommen, warum manche Sprachen schnell und andere langsam sind und wie Code-Optimierung auf unterster Ebene funktioniert.
 :::
 
 **Was werden Sie in diesem Artikel lernen?**
@@ -28,7 +28,7 @@ Nach Abschluss dieses Kapitels werden Sie Folgendes gewonnen haben:
 
 ---
 
-## 0. Überblick: Die „Reise der Übersetzung" des Codes
+## 0. Überblick: Die Reise der Übersetzung des Codes
 
 Stellen Sie sich vor, Sie sind ein Dolmetscher, der einen chinesischen Roman ins Englische übersetzt. Sie übersetzen nicht Wort für Wort, sondern:
 
@@ -70,7 +70,7 @@ Die Arbeit des Compilers kann in sechs Phasen unterteilt werden, die wie eine Fa
 
 ---
 
-## 2. Lexikalische Analyse: Code in „Wörter" zerlegen
+## 2. Lexikalische Analyse: Code in Wörter zerlegen
 
 Die lexikalische Analyse ist der erste Schritt der Kompilierung. Der Compiler scannt jedes Zeichen des Quellcodes von links nach rechts und fasst sie zu sinnvollen **Token (lexikalische Einheiten)** zusammen.
 
@@ -132,7 +132,7 @@ Der AST ist die „Kerndatenstruktur" des Compilers; die nachfolgende semantisch
 
 ---
 
-## 4. AST-Visualisierung: Das „Gerüst" des Codes sehen
+## 4. AST-Visualisierung: Das Gerüst des Codes sehen
 
 Oben haben wir die Struktur des AST textuell beschrieben, aber „sehen" ist intuitiver als „lesen". Die folgende interaktive Komponente ermöglicht es Ihnen, verschiedene Ausdrücke auszuwählen und deren Syntaxbaum in Echtzeit zu beobachten.
 
@@ -162,7 +162,7 @@ Die Syntaxanalyse stellt sicher, dass der Code „strukturell korrekt" ist, aber
 
 <CompilationPracticeDemo />
 
-### 4.1 Semantische Analyse: Prüfen, ob die „Bedeutung" stimmt
+### 5.1 Semantische Analyse: Prüfen, ob die Bedeutung stimmt
 
 | Prüfgegenstand | Beispiel | Ergebnis |
 |---------|------|------|
@@ -177,7 +177,7 @@ Die Syntaxanalyse stellt sicher, dass der Code „strukturell korrekt" ist, aber
 - `Expected 2 arguments, but got 3` — Parameterprüfung
 :::
 
-### 4.2 Code-Optimierung: Das Programm schneller machen
+### 5.2 Code-Optimierung: Das Programm schneller machen
 
 Vor der Generierung des endgültigen Codes führt der Compiler verschiedene Optimierungen am Zwischencode durch. Diese Optimierungen sind für den Programmierer transparent, können aber die Performance deutlich steigern.
 
@@ -234,7 +234,7 @@ Der JIT-Compiler der V8-Engine überwacht, welcher Code häufig ausgeführt wird
 
 ## Zusammenfassung
 
-Compiler-Theorie ist kein Wissen, das nur Compiler-Entwickler brauchen. Das Verständnis des Kompilierungsprozesses hilft Ihnen, Fehlermeldungen besser zu verstehen, die richtige Sprache zu wählen und effizienteren Code zu schreiben.
+Prinzipien der Kompilierung ist kein Wissen, das nur Compiler-Entwickler brauchen. Das Verständnis des Kompilierungsprozesses hilft Ihnen, Fehlermeldungen besser zu verstehen, die richtige Sprache zu wählen und effizienteren Code zu schreiben.
 
 Die wichtigsten Punkte dieses Kapitels:
 

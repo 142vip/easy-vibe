@@ -48,7 +48,7 @@ Trong chương trước "Từ Transistor đến CPU", chúng ta đã hiểu các
 
 ---
 
-## 1. Kiến Trúc Von Neumann: "Hiến Pháp" Của Máy Tính Hiện Đại
+## 1. Nguyên lý kiến trúc Von Neumann
 
 ### 1.1 Nguyên Lý Lưu Trữ Chương Trình
 
@@ -130,7 +130,7 @@ Chuỗi dịch này là chìa khóa để hiểu hệ thống lệnh:
 - Khi chọn kiến trúc CPU (x86 vs ARM), bạn biết sự khác biệt nằm ở "API tập lệnh" khác nhau
 :::
 
-### 2.2 Một Lệnh Trông Như Thế Nào?
+### 2.2 Tổng quan về định dạng lệnh
 
 Biết code được dịch thành lệnh, câu hỏi tiếp theo là: **cấu trúc bên trong của một lệnh là gì?**
 
@@ -163,7 +163,7 @@ Dựa trên số lượng toán hạng, định dạng lệnh được chia thà
 Đây là **sự đánh đổi giữa không gian và tính linh hoạt**. Lệnh không địa chỉ ngắn nhất (tiết kiệm bộ nhớ), nhưng cần thêm thao tác ngăn xếp; lệnh ba địa chỉ linh hoạt nhất (không phá hủy dữ liệu nguồn), nhưng chiếm nhiều bit hơn. Các kiến trúc CPU khác nhau sẽ chọn tổ hợp định dạng lệnh khác nhau.
 :::
 
-### 2.3 CPU Tìm Dữ Liệu Như Thế Nào? — Chế Độ Địa Chỉ
+### 2.3 Nguyên lý chế độ địa chỉ
 
 Lệnh bảo CPU "làm phép cộng", nhưng hai số để cộng ở đâu? Có thể được viết trực tiếp trong lệnh, có thể trong thanh ghi, cũng có thể ở một địa chỉ bộ nhớ nào đó. **Chế độ địa chỉ** là quy tắc nói cho CPU biết "đi đâu tìm toán hạng".
 
@@ -235,7 +235,7 @@ Dùng một phép so sánh để hiểu:
 
 ---
 
-## 3. Bộ Điều Khiển: "Trung Tâm Chỉ Huy" Của CPU
+## 3. Nguyên lý bộ điều khiển
 
 ### 3.1 Thành Phần Của Bộ Điều Khiển
 
@@ -286,7 +286,7 @@ CPU thực thi một lệnh cần trải qua một **chu kỳ lệnh** hoàn ch�
 
 ---
 
-## 4. Hệ Thống Lưu Trữ: Tại Sao Cần Cache?
+## 4. Nguyên lý hệ thống lưu trữ
 
 ### 4.1 Cấu Trúc Phân Cấp Lưu Trữ
 
@@ -360,7 +360,7 @@ Hãy tưởng tượng bộ nhớ ảo như **quản lý phòng khách sạn**:
 
 ---
 
-## 5. Bus và I/O: "Mạch Máu" Của Máy Tính
+## 5. Nguyên lý Bus và I/O
 
 ### 5.1 Bus Hệ Thống
 
@@ -457,7 +457,7 @@ Pipeline tuy nâng cao hiệu năng, nhưng cũng mang đến vấn đề **Haza
 
 ---
 
-## 7. Tổng Kết: Máy Tính "Chạy" Như Thế Nào?
+## 7. Tổng kết: nguyên lý vận hành máy tính
 
 Hãy dùng thuật ngữ chuyên nghiệp để xâu chuỗi toàn bộ quy trình:
 
@@ -481,5 +481,5 @@ Hãy dùng thuật ngữ chuyên nghiệp để xâu chuỗi toàn bộ quy trì
 
 Bây giờ bạn đã nắm vững kiến thức chuyên nghiệp về nguyên lý tổ chức máy tính. Tiếp theo có thể học:
 
-- **[Hệ Điều Hành](./operating-systems.md)**：Tìm hiểu cách chương trình chạy trên hệ điều hành, tiến trình, luồng, quản lý bộ nhớ được triển khai như thế nào
-- **[Mã Hóa, Lưu Trữ và Truyền Dữ Liệu](./data-encoding-storage.md)**：Hiểu sâu về cách biểu diễn dữ liệu trong máy tính
+- **[Nguyên lý hệ điều hành: Tiến trình, bộ nhớ và hệ thống tệp](./operating-systems.md)**：Tìm hiểu cách chương trình chạy trên hệ điều hành, tiến trình, luồng, quản lý bộ nhớ được triển khai như thế nào
+- **[Nguyên lý biểu diễn dữ liệu: Mã hóa, lưu trữ và truyền tải](./data-encoding-storage.md)**：Hiểu sâu về cách biểu diễn dữ liệu trong máy tính

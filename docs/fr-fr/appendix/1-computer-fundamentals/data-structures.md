@@ -1,4 +1,4 @@
-# Structures de données
+# Introduction aux structures de données
 
 ::: tip Préface
 **Programme = Structure de données + Algorithme.** Nous avons appris comment le CPU exécute les instructions et comment le système d'exploitation gère les ressources. Mais l'objet central que traitent les programmes est la **donnée** — informations utilisateur, listes de produits, relations sociales... La façon dont ces données sont organisées en mémoire détermine directement la vitesse du programme. Vous êtes-vous déjà demandé pourquoi certains programmes traitent des dizaines de milliers d'enregistrements en un instant, tandis que d'autres bloquent après quelques centaines ? La réponse résume souvent dans le **choix de la structure de données**.
@@ -26,7 +26,7 @@
 
 ---
 
-## 1. Vue d'ensemble : Qu'est-ce qu'une structure de données ?
+## 1. Présentation des structures de données
 
 Imaginez que vous devez organiser une pile de livres :
 
@@ -109,7 +109,7 @@ Le principe est en réalité très simple :
 
 C'est comme le système d'indexation d'une bibliothèque : au lieu de parcourir toutes les étagères, on consulte le fichier et on localise directement le livre.
 
-### 3.2 Collision de hachage : Que faire quand deux clés se télescopent ?
+### 3.2 Principe de gestion des collisions de hachage
 
 Deux clés différentes peuvent donner le même index — c'est une **collision de hachage**. Comme deux livres avec le même numéro de fichier pointant vers le même emplacement.
 
@@ -236,7 +236,7 @@ Note : Ce sont toutes des **moyennes**. Dans le pire des cas, la table de hachag
 
 ---
 
-## 7. Guide de sélection : Quelle structure de données choisir ?
+## 7. Guide de sélection : principe du choix d'une structure de données
 
 Avec toutes ces structures de données, comment choisir face à un besoin réel ? La clé est de **partir du besoin** et de se poser quelques questions :
 
@@ -270,7 +270,7 @@ Avec toutes ces structures de données, comment choisir face à un besoin réel 
 
 ## Résumé
 
-> Les structures de données sont le squelette des programmes. Le **tableau** est comme une rangée de casiers numérotés — le plus rapide pour retirer par position ; la **liste chaînée** comme une chasse au trésor — la plus flexible pour insérer/supprimer ; la **table de hachage** comme un fichier de bibliothèque — la plus rapide pour chercher par nom ; l'**arbre** comme un arbre généalogique — exprimant des relations hiérarchiques tout en restant trié ; le **graphe** comme un plan de métro — exprimant des relations en réseau arbitrairement complexes. Il n'y a pas de meilleure structure de données, seulement la plus adaptée — la clé est de comprendre les forces et les coûts de chaque structure et de faire des compromis selon les besoins réels.
+> Les structures de données sont la base organisationnelle des programmes. Le **tableau** est le plus rapide pour l'accès par position ; la **liste chaînée** est la plus flexible pour l'insertion et la suppression ; la **table de hachage** est la plus rapide pour la recherche par clé ; l'**arbre** exprime des relations hiérarchiques tout en gardant les données triées ; le **graphe** exprime des relations en réseau arbitrairement complexes. Il n'y a pas de meilleure structure de données, seulement la plus adaptée — la clé est de comprendre les forces et les coûts de chaque structure et de faire des compromis selon les besoins réels.
 
 ---
 
@@ -289,5 +289,5 @@ Avec toutes ces structures de données, comment choisir face à un besoin réel 
 
 Vous avez maintenant maîtrisé les concepts clés des structures de données. Vous pouvez continuer avec :
 
-- **[Pensée algorithmique](./algorithm-thinking.md)** : Apprendre à résoudre des problèmes avec le tri, la recherche, la récursivité et la programmation dynamique
-- **[Langages de programmation](./programming-languages.md)** : Comprendre comment différents langages implémentent ces structures de données
+- **[Introduction aux algorithmes](./algorithm-thinking.md)** : Apprendre à résoudre des problèmes avec le tri, la recherche, la récursivité et la programmation dynamique
+- **[Concepts des langages de programmation : paradigmes, évolution et sélection](./programming-languages.md)** : Comprendre comment différents langages implémentent ces structures de données

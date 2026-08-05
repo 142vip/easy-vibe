@@ -60,7 +60,7 @@ Un mundo sin sistema de tipos es como una calle sin reglas de transito -- cualqu
 
 ---
 
-## 2. Estatico vs Dinamico: Cuando verificar?
+## 2. Principios de verificación de tipos: estático vs dinámico
 
 Esta es la dimension de clasificacion mas importante -- **el momento de verificacion**.
 

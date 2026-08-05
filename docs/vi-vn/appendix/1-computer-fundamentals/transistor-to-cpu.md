@@ -1,4 +1,4 @@
-# Tu Transistor den CPU
+# Cơ sở mạch số: Từ bóng bán dẫn đến CPU
 
 ::: tip Loi noi dau
 **May tinh "tu duy" nhu the nao?** Ban co the biet CPU la "nao" cua may tinh, nhung nao nay thuc chat hoat dong ra sao? No tu kim loai va nhua lam sao thanh thiet bi thong minh co the thuc thi chuong trinh va xu ly du lieu? Chuong nay se dan ban tu transistor co ban nhat den khi hieu nguyen ly xay dung CPU.
@@ -40,7 +40,7 @@ Tu cat den tri tue, co bon cap:
 
 <TransistorDemo />
 
-### 1.1 Transistor la gi?
+### 1.1 Tổng quan về Transistor
 
 **Transistor** la thiet bi ban dan co the truu tuong thanh "cong tac" hoan hao:
 - **Nguon (Source)** va **Thot (Drain)**: nhu hai dau ong nuoc
@@ -48,7 +48,7 @@ Tu cat den tri tue, co bon cap:
 
 Dieu khien bang **dien ap** thay bang tay. Khi mot cong tac co the duoc dieu khien boi tin hieu dien cua cong tac khac, chung ta da vuot qua khoang cach tu "can thiep nhan cong" den "tinh toan tu dong".
 
-### 1.2 Bieu dien 0 va 1 nhu the nao?
+### 1.2 Nguyên lý biểu diễn 0 và 1
 
 - **Dien ap cao (vd: 3.3V)** = logic **1**
 - **Dien ap thap (gan 0V)** = logic **0**
@@ -126,7 +126,7 @@ Bo nho duoc tao bang **phan hoi**: dau ra quay lai dau vao, tao vong kin giu tra
 
 <MinCpuDemo />
 
-### 4.2 CPU thuc thi lenh nhu the nao?
+### 4.2 Nguyên lý thực thi lệnh CPU
 
 1. **Fetch**: Doc lenh tu bo nho
 2. **Decode**: Phan tich thuc hien phep toan gi

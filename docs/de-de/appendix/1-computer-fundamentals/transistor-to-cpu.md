@@ -1,4 +1,4 @@
-# Vom Transistor zur CPU
+# Grundlagen digitaler Schaltungen: Vom Transistor zur CPU
 
 ::: tip Vorwort
 **Wie „denkt" ein Computer?** Du weißt vielleicht, dass die CPU das „Gehirn" eines Computers ist – aber wie funktioniert dieses Gehirn eigentlich? Wie wird aus einem Haufen Metall und Plastik ein intelligentes Gerät, das Programme ausführen und Daten verarbeiten kann? Dieses Kapitel führt dich von den grundlegendsten Transistoren aus Schritt für Schritt durch die Funktionsweise einer CPU.
@@ -54,8 +54,7 @@ Beginnen wir in der mikroskopischen Welt. Die folgende Komponente zeigt das Grun
 
 <TransistorDemo />
 
-### 1.1 Was ist ein Transistor?
-
+### 1.1 Überblick über Transistoren
 ::: tip Konzepteinführung
 In der Ingenieurwissenschaft ist der **Transistor** ein Halbleiterbauelement, das die Menschheitsgeschichte verändert hat. Im Kontext digitaler Schaltungen können wir ihn direkt als perfekten „Schalter" abstrahieren.
 
@@ -66,8 +65,7 @@ Warum brauchen wir Transistoren? Denk an einen Wasserhahn im Alltag. Du drehst d
 Der entscheidende Unterschied: Wir drehen den Schalter nicht mit der Hand, sondern mit einem **Spannungssignal**. Sobald ein Schalter vom elektrischen Signal eines anderen Schalters gesteuert werden kann, haben wir die riesige Kluft zwischen „menschlichem Eingriff" und „automatischer Berechnung" überwunden.
 :::
 
-### 1.2 Wie stellen Transistoren 0 und 1 dar?
-
+### 1.2 Prinzipien der Binärdarstellung
 Du fragst dich vielleicht: Was bedeutet das „Computer kennen nur 0 und 1" in der physikalischen Welt? Fließen im Chip wirklich winzige Nullen und Einsen?
 
 Natürlich nicht. Alles beruht auf einer von Menschen gemachten **Abstraktionsvereinbarung**. Wir müssen uns von der Vorstellung kontinuierlicher analoger Signale lösen und zwei extreme Schwellwerte festlegen:
@@ -219,8 +217,7 @@ Betrachtet man eine CPU als Maschine mit klarer Arbeitsteilung, hat jede Einheit
 
 <MinCpuDemo />
 
-### 4.2 Wie führt eine CPU Befehle aus?
-
+### 4.2 Ablauf der Befehlsausführung
 Egal wie komplex die von dir geschriebene Hochsprache ist – am Ende wird sie zu einer Abfolge von Maschinenbefehlen im Speicher. Die Ausführung jedes Befehls durch die CPU wiederholt im Wesentlichen die folgenden vier Schritte:
 
 1. **Fetch (Abrufen)** : Die CPU folgt dem aktuellen Befehlszähler, greift in den relativ langsamen Speicher und holt den nächsten binären „Befehl" in den Kern.

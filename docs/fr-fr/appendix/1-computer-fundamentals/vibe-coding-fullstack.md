@@ -1,4 +1,4 @@
-# Développement full-stack à l'ère du Vibe Coding
+# Introduction au développement full stack : carte des connaissances informatiques à l'ère Vibe Coding
 
 ::: tip Préface
 **Qu'est-ce que le Vibe Coding ?** En bref, c'est « écrire du code en langage naturel » — vous décrivez ce que vous voulez en français ou en anglais, et l'IA génère le code pour vous. Cela change complètement les règles du jeu du développement logiciel.
@@ -6,7 +6,7 @@
 Mais il y a une question cruciale : **l'IA peut vous aider à écrire du code, mais elle ne peut pas penser à votre place.** Vous devez toujours savoir « quoi écrire », « pourquoi l'écrire ainsi » et « comment juger si c'est correct ». C'est exactement le cadre de compréhension fondamental que ce chapitre va vous aider à construire.
 :::
 
-**Qu'allez-vous apprendre dans cet article ?**
+**Qu'allez-vous apprendre dans cet article**
 
 Après avoir étudié ce chapitre, vous obtiendrez :
 
@@ -18,9 +18,9 @@ Après avoir étudié ce chapitre, vous obtiendrez :
 | Chapitre | Contenu | Concepts clés |
 |-----|------|---------|
 | **Chapitre 1** | Panorama du domaine informatique | Frontend, backend, mobile, IA, DevOps |
-| **Chapitre 2** | Qu'est-ce que le frontend | La couche d'interface perceptible par l'utilisateur |
-| **Chapitre 3** | Qu'est-ce que le backend | La logique serveur en coulisses |
-| **Chapitre 4** | Cartographie des langages de programmation | Les outils pour communiquer avec l'ordinateur |
+| **Chapitre 2** | Présentation du frontend | La couche d'interface perceptible par l'utilisateur |
+| **Chapitre 3** | Présentation du backend | La logique serveur en coulisses |
+| **Chapitre 4** | Concepts des langages de programmation | Les outils pour communiquer avec l'ordinateur |
 | **Chapitre 5** | Ingénieur full-stack | Le généraliste qui maîtrise frontend et backend |
 | **Chapitre 6** | Ingénieur en algorithmes IA | Faire apprendre à la machine à penser |
 | **Chapitre 7** | Trajectoire de croissance | Feuille de route du débutant à l'expert |
@@ -29,7 +29,7 @@ Après avoir étudié ce chapitre, vous obtiendrez :
 
 ## 0. Vibe Coding : le nouveau paradigme du développement logiciel
 
-### 0.1 Qu'est-ce que le Vibe Coding ?
+### 0.1 Présentation du Vibe Coding
 
 Imaginez le développement logiciel d'avant :
 
@@ -37,7 +37,7 @@ Imaginez le développement logiciel d'avant :
 
 **Changement fondamental** : de « comment écrire le code » à « comment décrire le besoin ».
 
-### 0.2 À l'ère du Vibe Coding, quelles compétences deviennent plus importantes ?
+### 0.2 Principes des compétences importantes à l'ère du Vibe Coding
 
 <DeveloperSkillShiftDemo />
 
@@ -57,7 +57,7 @@ Avant d'approfondir chaque direction, établissons une compréhension globale.
 
 <ComputerFieldMapDemo />
 
-### 1.1 Comprendre les domaines avec l'analogie du « restaurant »
+### 1.1 Comprendre les domaines avec l'analogie du restaurant
 
 Imaginez un système logiciel comme un **restaurant** :
 
@@ -88,7 +88,7 @@ N'essayez pas de tout apprendre d'un coup. Choisissez d'abord une direction pour
 
 ---
 
-## 2. Qu'est-ce que le frontend ?
+## 2. Présentation du frontend
 
 ### 2.1 Définition en une phrase
 
@@ -104,7 +104,7 @@ Quand vous ouvrez une page web :
 
 <FrontendTriadDemo />
 
-**Avec l'analogie de la « décoration d'une maison »** :
+**Analogie : flux de décoration d'une maison**
 
 | Technologie | Rôle dans la décoration | Responsabilité |
 |-----|---------|------|
@@ -112,9 +112,9 @@ Quand vous ouvrez une page web :
 | **CSS** | Style décoratif | Couleur des murs, disposition des meubles, effets d'éclairage |
 | **JavaScript** | Domotique | Allumer/éteindre les lumières, ouverture automatique des rideaux, système de sécurité |
 
-### 2.3 Frameworks frontend : pourquoi les utiliser ?
+### 2.3 Principes de l'utilisation des frameworks frontend
 
-On peut écrire des pages web avec HTML/CSS/JS natifs, alors pourquoi apprendre des frameworks comme React, Vue ?
+On peut écrire des pages web avec HTML/CSS/JS natifs, alors pourquoi apprendre des frameworks comme React, Vue.
 
 <FrontendFrameworkDemo />
 
@@ -133,7 +133,7 @@ On peut écrire des pages web avec HTML/CSS/JS natifs, alors pourquoi apprendre 
 
 ---
 
-## 3. Qu'est-ce que le backend ?
+## 3. Présentation du backend
 
 ### 3.1 Définition en une phrase
 
@@ -150,7 +150,7 @@ Quand vous passez une commande en ligne :
 
 <BackendCoreDemo />
 
-**Avec l'analogie de la « cuisine d'un restaurant »** :
+**Analogie : flux de cuisine d'un restaurant**
 
 | Responsabilité backend | Analogie cuisine | Contenu concret |
 |---------|---------|---------|
@@ -160,7 +160,7 @@ Quand vous passez une commande en ligne :
 | **Optimisation des performances** | Efficacité de la cuisine | Cache, traitement asynchrone, équilibrage de charge |
 | **Protection de sécurité** | Sécurité alimentaire | Prévenir l'injection SQL, contrôle d'accès |
 
-### 3.3 Comment choisir un langage backend ?
+### 3.3 Principes du choix d'un langage backend
 
 | Langage | Caractéristiques | Scénarios adaptés |
 |-----|------|---------|
@@ -186,9 +186,9 @@ Si vous connaissez déjà JavaScript (base frontend), Node.js est le choix le pl
 
 ---
 
-## 4. Cartographie des langages de programmation
+## 4. Concepts des langages de programmation
 
-### 4.1 Qu'est-ce qu'un langage de programmation ?
+### 4.1 Présentation d'un langage de programmation
 
 **Langage de programmation = le pont entre l'humain et l'ordinateur.**
 
@@ -217,7 +217,7 @@ L'ordinateur ne comprend que les 0 et les 1, l'humain est habitué au langage na
 | **Typage fort** | Vérification stricte des types, pas de conversion automatique | Python, Java |
 | **Typage faible** | Vérification souple des types, conversion automatique | JavaScript, PHP |
 
-### 4.3 Quel langage apprendre ?
+### 4.3 Principes du choix du langage à apprendre
 
 <LanguageSelectionDemo />
 
@@ -232,7 +232,7 @@ Il n'y a pas de « meilleur langage », seulement le « langage le plus adapté 
 
 ## 5. Ingénieur full-stack : maîtriser frontend et backend
 
-### 5.1 Qu'est-ce que le full-stack ?
+### 5.1 Présentation du full-stack
 
 **Ingénieur full-stack = ingénieur capable de réaliser indépendamment le développement frontend + backend.**
 

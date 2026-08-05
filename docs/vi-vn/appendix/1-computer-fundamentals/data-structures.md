@@ -1,4 +1,4 @@
-# Cau truc Du lieu
+# Giới thiệu cấu trúc dữ liệu
 
 ::: tip Loi noi dau
 **Chuong trinh = Cau truc Du lieu + Thuat toan.** Chung ta da hoc CPU thuc thi lenh nhu the nao, he dieu hanh quan ly tai nguyen ra sao. Nhung doi tuong cot loi ma chuong trinh xu ly la **du lieu** -- thong tin nguoi dung, danh sach san pham, quan he xa hoi... Cach to chuc du lieu nay trong bo nho quyet dinh truc tiep toc do chuong trinh. Cau tra loi thuong nam o **lua chon cau truc du lieu**.
@@ -23,7 +23,7 @@
 
 ---
 
-## 1. Toan canh: Cau truc du lieu la gi?
+## 1. Tổng quan cấu trúc dữ liệu
 
 Tuong tuong ban sap xep mot dong sach:
 
@@ -157,5 +157,5 @@ Quy tac: **nho hon ben trai, lon hon ben phai**. Tim kiem O(log n).
 
 ## Buoc tiep theo
 
-- **[Tu duy Thuat toan](./algorithm-thinking.md)**: Hoc giai quyet van de bang thuat toan
-- **[Ngon ngu Lap trinh](./programming-languages.md)**: Cac ngon ngu trien khai cau truc nay
+- **[Giới thiệu thuật toán](./algorithm-thinking.md)**: Hoc giai quyet van de bang thuat toan
+- **[Khái niệm ngôn ngữ lập trình](./programming-languages.md)**: Cac ngon ngu trien khai cau truc nay

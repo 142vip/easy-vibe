@@ -1,4 +1,5 @@
-# 타입 시스템 입문
+# 타입 시스템 서론
+
 
 ::: tip 서론
 **왜 `"1" + 1`이 JavaScript에서는 `"11"`이 되고, Python에서는 에러가 발생할까요?** 이면에서 작동하는 것이 바로 타입 시스템입니다. 타입 시스템은 프로그래밍 언어의 "교통 규칙"입니다 — 데이터가 어떻게 사용될 수 있는지, 어떤 데이터와 연산될 수 있는지, 언제 합법적인지 검사할지를 결정합니다. 타입 시스템을 이해하면 다른 언어들의 "성격 차이"를 이해할 수 있습니다.
@@ -28,6 +29,7 @@
 
 ## 0. 전경도: 타입은 데이터의 "신분증"
 
+
 현실 세계에서 책을 커피잔에 끼워 넣지 않습니다 — 서로 다른 "타입"의 것이기 때문입니다. 프로그래밍 세계도 마찬가지입니다: 숫자, 문자열, 불리언, 배열... 각 데이터는 자신의 "신분"을 가지고 있으며, 이것이 어떤 연산에 참여할 수 있는지를 결정합니다.
 
 **타입 시스템**은 프로그래밍 언어가 이러한 "신분"을 관리하는 규칙 체계입니다. 두 가지 핵심 질문에 답합니다:
@@ -40,6 +42,7 @@
 ---
 
 ## 1. 타입 시스템이란: 데이터의 교통 규칙
+
 
 <TypeSystemDemo />
 
@@ -60,7 +63,8 @@
 
 ---
 
-## 2. 정적 타입 vs 동적 타입: 언제 검사할까?
+## 2. 정적 타입 vs 동적 타입: 언제 검사할까
+
 
 이것은 타입 시스템의 가장 중요한 분류 차원 — **검사 시점**입니다.
 
@@ -86,7 +90,8 @@ Python에 Type Hints가 추가되고, JavaScript 커뮤니티가 TypeScript로 �
 
 ---
 
-## 3. 강타입 vs 약타입: "몰래 변환"을 허용할까?
+## 3. 강타입 vs 약타입: 암시적 변환 허용 여부
+
 
 두 번째 분류 차원은 **타입 변환의 엄격함**입니다.
 
@@ -108,6 +113,7 @@ Python에 Type Hints가 추가되고, JavaScript 커뮤니티가 TypeScript로 �
 
 ## 4. 타입 추론: 현대적인 두 마리 토끼 해법
 
+
 초기의 정적 타입 언어(Java 등)는 모든 변수의 타입을 명시적으로 선언해야 해서 작성이 번거로웠습니다. 현대 언어는 **타입 추론**으로 이 문제를 해결합니다 — 컴파일러가 타입을 자동으로 추론하므로, 작성하지 않아도 엄격하게 검사해 줍니다.
 
 <TypeInferenceFlowDemo />
@@ -123,6 +129,7 @@ Python에 Type Hints가 추가되고, JavaScript 커뮤니티가 TypeScript로 �
 ---
 
 ## 5. 제네릭: 한 번 작성, 모든 타입에 적용
+
 
 "배열의 첫 번째 요소 가져오기" 함수를 작성했다고 합시다. 숫자 배열용, 문자열 배열용, 객체 배열용... 코드는 완전히 같고 타입만 다릅니다. **제네릭(Generics)**은 이 문제를 해결합니다 — 구체적인 타입 대신 "타입 매개변수"를 사용하여, 하나의 코드가 모든 타입에 적용되도록 합니다.
 
@@ -145,6 +152,7 @@ Python에 Type Hints가 추가되고, JavaScript 커뮤니티가 TypeScript로 �
 
 ## 6. 타입 안전 실전: 일반적인 함정과 방어
 
+
 이론을 배웠으니, 실제 개발에서 가장 흔히 겪는 타입 함정을 살펴보겠습니다. 이러한 함정은 언어를 불문하고 거의 모든 개발자가 만납니다.
 
 <TypeSafetyPracticeDemo />
@@ -166,6 +174,7 @@ Python에 Type Hints가 추가되고, JavaScript 커뮤니티가 TypeScript로 �
 ---
 
 ## 7. 언어 타입 사분면: 프로그래밍 언어에 "초상화" 그리기
+
 
 "정적/동적"과 "강/약" 두 차원을 조합하면 사분면 분류도가 나옵니다. 모든 프로그래밍 언어를 이 도표에 배치할 수 있습니다.
 
@@ -190,6 +199,7 @@ Python에 Type Hints가 추가되고, JavaScript 커뮤니티가 TypeScript로 �
 
 ## 요약
 
+
 타입 시스템은 프로그래밍 언어의 차이를 이해하는 핵심 관점입니다. 지루한 이론이 아니라, 코드 작성 경험과 코드 품질에 직접적인 영향을 미칩니다.
 
 이 장의 핵심 요점을 돌아보겠습니다:
@@ -204,8 +214,9 @@ Python에 Type Hints가 추가되고, JavaScript 커뮤니티가 TypeScript로 �
 
 ## 추가 읽기
 
+
 - [TypeScript 공식 문서](https://www.typescriptlang.org/docs/) - 가장 인기 있는 정적 타입 JavaScript 확장
 - [Python Type Hints](https://docs.python.org/3/library/typing.html) - Python의 타입 힌트 시스템
-- [Rust Book - Data Types](https://doc.rust-lang.org/book/ch03-02-data-types.html) - Rust의 타입 시스템 입문
+- [Rust Book - Data Types](https://doc.rust-lang.org/book/ch03-02-data-types.html) - Rust의 타입 시스템 서론
 - [Type Systems (Wikipedia)](https://en.wikipedia.org/wiki/Type_system) - 타입 시스템의 학술적 개요
 - [What To Know Before Debating Type Systems](https://cdsmith.wordpress.com/2011/01/09/an-old-article-i-wrote/) - 타입 시스템에 관한 고전적 논의

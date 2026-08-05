@@ -1,4 +1,4 @@
-# 型システム入門
+# 型システム序論
 
 ::: tip はじめに
 **なぜ `"1" + 1` は JavaScript では `"11"` になるのに、Python では直接エラーになるのか？** その背後には型システムが働いています。型システムはプログラミング言語の「交通ルール」です——データをどのように使えるか、何と演算できるか、いつ正当性をチェックするかを決定します。型システムを理解すれば、異なる言語の「性格の違い」を理解できるようになります。
@@ -26,7 +26,7 @@
 
 ---
 
-## 0. 全景図：型はデータの「身分証明書」
+## 0. 型システムの役割
 
 現実世界では、本をコーヒーカップに押し込んだりしません——それらは異なる「型」のものだからです。プログラミングの世界も同じです：数値、文字列、真偽値、配列……それぞれのデータには独自の「身分」があり、どのような演算に参加できるかが決まっています。
 
@@ -39,7 +39,7 @@
 
 ---
 
-## 1. 型システムとは：データの交通ルール
+## 1. 型システムの概要
 
 <TypeSystemDemo />
 
@@ -60,7 +60,7 @@
 
 ---
 
-## 2. 静的型付け vs 動的型付け：いつチェックするか？
+## 2. 静的型付け vs 動的型付け
 
 これは型システムの最も重要な分類次元——**チェックのタイミング**です。
 
@@ -86,7 +86,7 @@ Python は Type Hints を追加し、JavaScript コミュニティは TypeScript
 
 ---
 
-## 3. 強い型付け vs 弱い型付け：「こっそり変換」を許すか？
+## 3. 強い型付け vs 弱い型付け
 
 2つ目の分類次元は**型変換の厳格さ**です。
 
@@ -165,7 +165,7 @@ Python は Type Hints を追加し、JavaScript コミュニティは TypeScript
 
 ---
 
-## 7. 言語型象限図：プログラミング言語の「プロファイリング」
+## 7. 言語型象限図
 
 「静的/動的」と「強い/弱い」の2つの次元を組み合わせると、4象限分類図が得られます。各プログラミング言語をこの図に配置できます。
 
@@ -206,6 +206,6 @@ Python は Type Hints を追加し、JavaScript コミュニティは TypeScript
 
 - [TypeScript 公式ドキュメント](https://www.typescriptlang.org/docs/) - 最も人気のある静的型付け JavaScript スーパーセット
 - [Python Type Hints](https://docs.python.org/3/library/typing.html) - Python の型ヒントシステム
-- [Rust Book - Data Types](https://doc.rust-lang.org/book/ch03-02-data-types.html) - Rust の型システム入門
+- [Rust Book - Data Types](https://doc.rust-lang.org/book/ch03-02-data-types.html) - Rust の型システム序論
 - [Type Systems (Wikipedia)](https://en.wikipedia.org/wiki/Type_system) - 型システムの学術的概要
 - [What To Know Before Debating Type Systems](https://cdsmith.wordpress.com/2011/01/09/an-old-article-i-wrote/) - 型システムに関する古典的議論

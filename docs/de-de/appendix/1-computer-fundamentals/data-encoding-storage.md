@@ -1,4 +1,4 @@
-# Was ist Datenkodierung und -übertragung?
+# Prinzipien der Datendarstellung: Codierung, Speicherung und Übertragung
 
 ::: tip Vorwort
 Wenn Sie einem Freund ein Foto schicken, eine WeChat-Nachricht senden oder ein mehrere GB großes Spiel herunterladen — wie durchquert diese Information mehr als den halben Erdball und erscheint unversehen auf Ihrem Bildschirm? Dieses Kapitel dreht sich um eine Frage, die Anfänger oft quält: **Warum wird eine empfangene Datei plötzlich zu unverständlichem Zeichensalat?** Entlang dieser Frage werden wir die drei wichtigsten Grundpfeiler der Informatik vollständig enthüllen: **Kodierung, Speicherung und Übertragung**.
@@ -37,8 +37,7 @@ Versteht man den logischen Ausgangspunkt, dass „alles im Computer im Grunde Co
 
 ---
 
-## 0. Einleitung: Warum werden Dateien zu „Hieroglyphen"?
-
+## 0. Einleitung: Kodierungsinkompatibilitäten und Zeichensalat
 Stellen Sie sich vor, Sie erhalten eine wichtige Datei von einem Kollegen, öffnen sie per Doppelklick und sehen nur seltsame Zeichenfolgen wie „浣犲ソ" oder „ä½ å¥½".
 
 Intuitiv denken Sie sicher: Wurde die Datei bei der Übertragung beschädigt? Gingen Datenpakete verloren?
@@ -63,8 +62,7 @@ Um zu verstehen, warum unbeschädigte Daten zu Zeichensalat werden, müssen wir 
 
 ---
 
-## 1. Was ist Datenkodierung? (Alles in Zahlen verwandeln)
-
+## 1. Überblick über Datenkodierung (Abbildung der realen Welt auf Zahlen)
 Einfach ausgedrückt:
 
 > **Datenkodierung (Encoding)** ist das Erstellen eines „zweisprachigen Wörterbuchs", das die vielfältigen Informationen der realen Welt (Text, Farben, Klänge) in Regeln übersetzt, die der Computer als 0 und 1 verstehen kann.
@@ -105,8 +103,7 @@ Geben Sie unten einige chinesische und englische Zeichen oder Emojis ein (z. B. 
 
 > **Wussten Sie schon?** Warum können bei gleich langer SMS viel mehr englische als chinesische Zeichen verschickt werden? Weil in der zugrunde liegenden Signalsequenz die physische Größe eines chinesischen Schriftzeichens dreimal so groß ist wie die eines englischen Buchstabens!
 
-### 1.2 Wie werden Farben und Klänge zu Zahlen?
-
+### 1.2 Überblick über Bild- und Audiokodierung
 Text lässt sich per Tabellennachschlag übersetzen. Aber was ist mit dem Lächeln der Mona Lisa oder einem Song? Wie werden sie zu 0 und 1?
 
 Die Methode ist dieselbe: **Zerstückeln und abbilden**.
@@ -153,8 +150,7 @@ Es gibt keinen perfekten Speicher. Daher funktioniert das Betriebssystem (wie Wi
 
 ---
 
-## 3. Was ist Datenübertragung? (Die 0 und 1 auf die Reise schicken)
-
+## 3. Überblick über Datenübertragung (Übermittlung der digitalen Signale)
 Die Daten sind kodiert und im Arbeitsspeicher abgelegt — jetzt sollen sie an einen Freund geschickt werden.
 
 > **Datenübertragung** ist der Vorgang, bei dem die elektrischen (oder optischen) Signale, die 0 und 1 repräsentieren, über Netzwerkkabel, Glasfaser oder Funkwellen korrekt von einem Gerät zu einem anderen gelangen.
@@ -196,8 +192,7 @@ Gerade weil es dieses extrem rigorose Paketierungs- und Abrechnungssystem namens
 
 ---
 
-## 4. Praxisbeispiel: Der gesamte Prozess vom Auslösen bis zum Teilen in sozialen Netzwerken
-
+## 4. Praxisbeispiel: Fotoaufnahme bis Cloud-Speicher
 Bisher haben wir „Übersetzung in Zahlen (Kodierung)", „Aufbewahrung (Speicherung)" und „Verlustfreier Transport (Übertragung)" separat behandelt.
 
 Nun lassen Sie uns diese Bausteine zusammensetzen und einen alltäglichen Vorgang hautnah miterleben: **Ein Foto aufnehmen und automatisch in der Cloud sichern.**

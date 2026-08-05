@@ -1,4 +1,4 @@
-# El Navegador es un Sistema Operativo
+# Redes de computadoras: desde la entrada de URL hasta el renderizado de páginas
 
 ::: tip Prologo
 Usas el navegador todos los dias -- ves videos, lees noticias, trabajas en linea. Pero alguna vez te has preguntado: **cuando escribes una URL en la barra de direcciones y presionas Enter, que sucede detras de escena?**
@@ -35,7 +35,7 @@ Despues de completar este capitulo, dominaras el flujo tecnico completo desde in
 **Cuando escribes una URL en el navegador y presionas Enter, que sucede en segundo plano?** Por que algunas paginas se abren rapido y otras lentamente? Por que a veces aparece el error "servidor no encontrado"?
 :::
 
-### Analogia cotidiana: Un viaje de compras en linea
+### Proceso: flujo de solicitud de página web
 
 Imagina que estas realizando una **compra en linea**. Todo el proceso se puede dividir en 5 pasos:
 
@@ -87,13 +87,13 @@ La clave para entender como funciona el navegador es: **mapear el proceso tecnic
 
 ---
 
-## 1. Primer paso: Rellenar el "pedido" -- Analisis de URL
+## 1. Análisis de estructura de URL
 
 ::: tip Pregunta central
 **Por que la URL tiene este formato?** `https://www.example.com:8080/path/page.html?id=123#section` -- que significan estos caracteres?
 :::
 
-### Analogia cotidiana: Rellenar un formulario de compra
+### Analogía: flujo de solicitud de compra
 
 Si solo escribes "comprar zapatos" en el pedido, el almacen no sabra cuales enviar. Necesitas especificar:
 
@@ -103,7 +103,7 @@ Si solo escribes "comprar zapatos" en el pedido, el almacen no sabra cuales envi
 - **Modelo especifico** (Air Max 90)
 - **Informacion adicional** (lo quiero rojo)
 
-### Proceso real: El navegador analiza la URL
+### Proceso real: flujo de análisis de URL
 
 **URL (Uniform Resource Locator, Localizador Uniforme de Recursos)** es el "codigo de localizacion de productos" del mundo del navegador. Cuando escribes `https://www.example.com:8080/path/page.html?id=123#section` en la barra de direcciones, el navegador lo descompone inmediatamente:
 
@@ -124,13 +124,13 @@ La URL existe para que los **humanos** puedan recordar e ingresar. Lo que la com
 
 ---
 
-## 2. Segundo paso: Consultar la "guia de direcciones" -- Consulta DNS
+## 2. Principios y proceso de resolución DNS
 
 ::: tip Pregunta central
 **Por que el navegador puede encontrar el sitio web?** Ingresas un dominio legible (como `baidu.com`), pero la computadora realmente necesita una direccion numerica (IP). Que sucede en medio?
 :::
 
-### Analogia cotidiana: Buscar la direccion del almacen
+### Analogía: flujo de consulta de direcciones
 
 Escribiste "Tienda oficial Nike" en el pedido, pero el sistema de logistica no sabe donde esta el almacen. Necesita consultar la guia:
 
@@ -139,7 +139,7 @@ Escribiste "Tienda oficial Nike" en el pedido, pero el sistema de logistica no s
 3. Pregunta al **centro de despacho central** (saben quien gestiona las tiendas .com) → Servidor DNS raiz
 4. Pregunta a la **oficina de gestion de marca** (encuentra el almacen real de Nike) → Servidor DNS autoritativo
 
-### Proceso real: Consulta jerarquica DNS
+### Proceso real: flujo de consulta jerárquica DNS
 
 **DNS (Domain Name System, Sistema de Nombres de Dominio)** es el "sistema de consulta de directorio distribuido" de Internet. Como hay miles de millones de dominios en el mundo, se usa una arquitectura jerarquica para distribuir la carga:
 
@@ -183,7 +183,7 @@ Si el camion de logistica llega directamente al almacen:
 
 **Por eso, antes de enviar realmente, se debe establecer un canal de transporte confiable.**
 
-### Proceso real: Handshake TCP de tres vias
+### Proceso real: flujo de handshake TCP
 
 **TCP (Transmission Control Protocol, Protocolo de Control de Transmision)** es la regla que asegura la transmision confiable de datos. Antes de transmitir productos (datos), se debe establecer una conexion mediante el "handshake de tres vias":
 
@@ -213,7 +213,7 @@ El handshake de tres vias asegura: **ambos pueden enviar, ambos pueden recibir**
 
 ---
 
-## 4. Cuarto paso: Dialogo entre "comprador" y "vendedor" -- Peticion y respuesta HTTP
+## 4. Principios de comunicación HTTP (petición y respuesta)
 
 ::: tip Pregunta central
 **Que estan diciendo el navegador y el servidor?** Despues de establecer la conexion, como el navegador "dice" al servidor lo que quiere? Y como "responde" el servidor?
@@ -287,7 +287,7 @@ Ambas envian una peticion, y el servidor devuelve datos de texto.
 **Como se convierte el codigo en imagen?** El servidor envia aburrido codigo HTML/CSS/JavaScript, como los convierte el navegador en paginas web coloridas?
 :::
 
-### Analogia cotidiana: Abrir y ensamblar
+### Analogía: flujo de construcción de interfaz visual
 
 Finalmente recibiste el paquete (respuesta HTTP), pero al abrirlo no encuentras muebles listos, sino un monton de **piezas** (HTML) y un **manual de instrucciones** (CSS). Como "comprador" (navegador), necesitas ensamblar:
 
@@ -298,7 +298,7 @@ Finalmente recibiste el paquete (respuesta HTTP), pero al abrirlo no encuentras 
 5. **Pintar y decorar**: Pintar los muebles, pegar calcomanias (pintar)
 6. **Exhibicion final**: Limpiar, encender las luces (sintetizar)
 
-### Proceso real: Motor de renderizado del navegador
+### Proceso real: flujo de motor de renderizado
 
 El navegador recibe **codigo HTML/CSS/JavaScript** (texto aburrido), pero debe convertirlo en **pixeles en pantalla** (pagina web hermosa). Este proceso se llama **renderizado (Rendering)**, ejecutado por el **motor de renderizado** del navegador (como Blink de Chrome, WebKit de Safari).
 
@@ -366,7 +366,7 @@ Los navegadores modernos dividen la pagina en multiples **capas (Layers)**, dibu
 
 ---
 
-## 6. Resumen: Un viaje completo de "compras en linea"
+## 6. Resumen: flujo completo de solicitud web y renderizado
 
 | Etapa | Termino tecnico | Analogia de compra | Tarea central | Tecnologia clave |
 | ----------- | ---------- | -------- | ------------------ | ------------------------------ |

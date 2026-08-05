@@ -1,4 +1,4 @@
-# Nhap mon Tu duy Thuat toan
+# Giới thiệu thuật toán
 
 ::: tip Loi noi dau
 **Lam the nao de giai quyet van de mot cach hieu qua?** Ban co the da gap qua su hoang mang nay: cung mot van de, ma cua nguoi nay chay vai giay da co ket qua, con cua nguoi khac chay vai phut van dang xoay. Su khac biet thuong nam o thuat toan. Chuong nay se huong dan ban hieu tu duy cot loi cua thuat toan.
@@ -21,7 +21,7 @@ Sau khi hoc xong chuong nay, ban se co duoc:
 
 ---
 
-## 0. Toan canh: Thuat toan la gi?
+## 0. Tổng quan thuật toán
 
 Tuong tuong ban can tim mot tu trong tu dien:
 
@@ -74,7 +74,7 @@ Bai demo nay cho thay cach tim kiem nhi phan hoat dong, ban co the chon tim kiem
 
 <SearchAlgorithmDemo />
 
-### 1.2 Vi sao tim kiem nhi phan nhanh nhu vay?
+### 1.2 Nguyên lý hiệu năng tìm kiếm nhị phân
 
 | Luong du lieu | Tim kiem tuyen tinh | Tim kiem nhi phan |
 |--------|---------|---------|
@@ -131,7 +131,7 @@ Day la suc manh cua su tang truong logarit -- du lieu tang 1000 lan, so lan tim 
 **Sap xep vung dong (HeapSort)**: su dung cau truc du lieu vung dong de sap xep tai cho (khong can khong gian bo sung), nhung trong thuc te thuong cham hon QuickSort.
 :::
 
-### 2.2 Vi sao QuickSort "nhanh"?
+### 2.2 Nguyên lý hiệu năng QuickSort
 
 ::: tip Nguyen ly cua QuickSort
 **Tu duy cot loi**: chia de tri

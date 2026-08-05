@@ -1,10 +1,10 @@
-# Architecture des ordinateurs
+# Principes d'organisation des ordinateurs
 
 ::: tip Préface
-**Après avoir construit un CPU à partir de transistors, comment l'ordinateur forme-t-il un système complet ?** Dans le chapitre précédent, nous sommes partis des transistors pour construire des additionneurs, des registtres, des unités de calcul, et finalement assembler le cœur du CPU. Mais le CPU seul ne suffit pas — il doit collaborer avec la mémoire et les périphériques d'entrée/sortie, les bus relient les composants, et un jeu d'instructions pilote le tout. Dans ce chapitre, nous passons de la perspective interne du CPU à celle du système informatique dans son ensemble, pour approfondir notre compréhension de l'architecture de von Neumann, du jeu d'instructions, de la hiérarchie de stockage, ainsi que des bus et des entrées/sorties.
+**Après avoir construit un CPU à partir de transistors, comment l'ordinateur forme-t-il un système complet.** Dans le chapitre précédent, nous sommes partis des transistors pour construire des additionneurs, des registtres, des unités de calcul, et finalement assembler le cœur du CPU. Mais le CPU seul ne suffit pas — il doit collaborer avec la mémoire et les périphériques d'entrée/sortie, les bus relient les composants, et un jeu d'instructions pilote le tout. Dans ce chapitre, nous passons de la perspective interne du CPU à celle du système informatique dans son ensemble, pour approfondir notre compréhension de l'architecture de von Neumann, du jeu d'instructions, de la hiérarchie de stockage, ainsi que des bus et des entrées/sorties.
 :::
 
-**Que allez-vous apprendre dans cet article ?**
+**Ce que vous allez apprendre dans cet article**
 
 À la fin de ce chapitre, vous aurez acquis :
 
@@ -25,7 +25,7 @@
 
 ## 0. Vue d'ensemble : le système hardware de l'ordinateur
 
-Dans le chapitre précédent « Du transistor au CPU », nous avons compris le fonctionnement interne du CPU — de l'extraction, au décodage, à l'exécution, jusqu'à l'écriture. Mais le CPU lui-même n'est qu'une unité d'exécution ; pour que l'ordinateur soit réellement « utilisable », il faut la coopération de plusieurs composants périphériques.
+Dans le chapitre précédent « Fondamentaux des circuits numériques : du transistor au CPU », nous avons compris le fonctionnement interne du CPU — de l'extraction, au décodage, à l'exécution, jusqu'à l'écriture. Mais le CPU lui-même n'est qu'une unité d'exécution ; pour que l'ordinateur soit réellement utilisable, il faut la coopération de plusieurs composants périphériques.
 
 <CpuArchitectureDemo />
 
@@ -48,7 +48,7 @@ Dans le chapitre précédent « Du transistor au CPU », nous avons compris le f
 
 ---
 
-## 1. Architecture de von Neumann : la « constitution » de l'ordinateur moderne
+## 1. Architecture de von Neumann : principe de l'ordinateur moderne
 
 ### 1.1 Le concept de programme stocké
 
@@ -105,11 +105,11 @@ Le CPU se retrouve donc souvent en état d'attente. De nombreuses techniques d'o
 
 ## 2. Jeu d'instructions : l'interface entre le CPU et le logiciel
 
-Dans la section précédente, nous avons découvert le concept clé de l'architecture de von Neumann : **les programmes et les données sont stockés de la même manière en mémoire**. Mais cela soulève une question essentielle — à quoi ressemble le « programme » stocké en mémoire ? Comment le CPU le comprend-il ?
+Dans la section précédente, nous avons découvert le concept clé de l'architecture de von Neumann : **les programmes et les données sont stockés de la même manière en mémoire**. Mais cela soulève une question essentielle — à quoi ressemble le programme stocké en mémoire. Comment le CPU le comprend-il.
 
-La réponse est le **jeu d'instructions (Instruction Set Architecture, ISA)**. Si l'on compare le CPU à un service, le jeu d'instructions est sa **documentation API** — il définit toutes les commandes que le CPU peut comprendre, le format de chaque commande et la portée des données sur lesquelles les commandes peuvent opérer. Chaque ligne de code que vous écrivez est finalement traduite par le compilateur en une séquence d'appels de cette « API ».
+La réponse est le **jeu d'instructions (Instruction Set Architecture, ISA)**. Si l'on compare le CPU à un service, le jeu d'instructions est sa **documentation API** — il définit toutes les commandes que le CPU peut comprendre, le format de chaque commande et la portée des données sur lesquelles les commandes peuvent opérer. Chaque ligne de code que vous écrivez est finalement traduite par le compilateur en une séquence d'appels de cette API.
 
-### 2.1 Du code à l'instruction : le voyage de traduction d'une ligne de code
+### 2.1 Du code à l'instruction : flux de traduction d'une ligne de code
 
 Tout d'abord, établissons une vue d'ensemble : le code que vous écrivez dans votre éditeur et ce que le CPU exécute réellement sont séparés par plusieurs couches de traduction.
 
@@ -123,23 +123,23 @@ Cette chaîne de traduction est la clé pour comprendre le jeu d'instructions :
 | Langage assembleur | `MOV R1, #10` / `ADD R3, R1, R2` | Les humains (avec formation) |
 | Code machine | `0001 0001 0000 1010` | Le CPU |
 
-::: tip Pourquoi comprendre cette chaîne ?
-- En voyant une erreur de compilation, vous savez que l'erreur s'est produite à l'étape « langage de haut niveau → assembleur »
+::: tip Principes de compréhension de cette chaîne
+- En voyant une erreur de compilation, vous savez que l'erreur s'est produite à l'étape langage de haut niveau → assembleur
 - En voyant un crash à l'exécution, vous savez que le problème survient au stade d'exécution des instructions par le CPU
-- Pour l'optimisation des performances, vous comprenez quelles optimisations le compilateur effectue lors de la « traduction »
-- Lors du choix d'une architecture CPU (x86 vs ARM), vous savez que la différence réside dans « l'API du jeu d'instructions »
+- Pour l'optimisation des performances, vous comprenez quelles optimisations le compilateur effectue lors de la traduction
+- Lors du choix d'une architecture CPU (x86 vs ARM), vous savez que la différence réside dans l'API du jeu d'instructions
 :::
 
-### 2.2 À quoi ressemble une instruction ?
+### 2.2 Présentation du format d'une instruction
 
-Maintenant que nous savons que le code est traduit en instructions, la question suivante est : **quelle est la structure interne d'une instruction ?**
+Maintenant que nous savons que le code est traduit en instructions, la question suivante est : **quelle est la structure interne d'une instruction.**
 
 Chaque instruction machine est essentiellement une séquence de bits, mais avec un format interne strict. Les deux parties les plus importantes :
 
-- **Code opération (Opcode)** : indique au CPU « quoi faire » — addition ? saut ? lecture mémoire ?
-- **Opérandes** : indiquent au CPU « avec quoi » — quel registre ? quelle adresse mémoire ? quelle constante ?
+- **Code opération (Opcode)** : indique au CPU quoi faire — addition. Saut. Lecture mémoire.
+- **Opérandes** : indiquent au CPU avec quoi — quel registre. Quelle adresse mémoire. Quelle constante.
 
-Comme une phrase a une structure « verbe + objet », une instruction a une structure « opération + cible » :
+Comme une phrase a une structure verbe + objet, une instruction a une structure opération + cible :
 
 ```
 Instruction :  ADD  R3, R1, R2
@@ -159,28 +159,28 @@ Selon le nombre d'opérandes, les formats d'instructions se divisent en quatre t
 | Deux adresses | Opcode + 2 adresses | `MOV R1, R2` | Le plus courant, transfert et opérations |
 | Trois adresses | Opcode + 3 adresses | `ADD R3, R1, R2` | Ne détruit pas les opérandes sources |
 
-::: tip Pourquoi autant de formats ?
+::: tip Principes de la multiplicité des formats
 C'est un **compromis entre espace et flexibilité**. Les instructions à zéro adresse sont les plus courtes (économie de mémoire) mais nécessitent des opérations de pile supplémentaires ; les instructions à trois adresses sont les plus flexibles (les données sources sont préservées) mais occupent plus de bits. Différentes architectures CPU choisissent différentes combinaisons de formats d'instructions.
 :::
 
-### 2.3 Comment le CPU trouve-t-il les données ? — Modes d'adressage
+### 2.3 Principes de localisation des données — Modes d'adressage
 
-L'instruction dit au CPU « fais une addition », mais où sont les deux nombres à additionner ? Ils peuvent être écrits directement dans l'instruction, se trouver dans un registre, ou à une adresse mémoire. Les **modes d'adressage** sont les règles qui indiquent au CPU « où trouver les opérandes ».
+L'instruction dit au CPU fais une addition, mais où sont les deux nombres à additionner. Ils peuvent être écrits directement dans l'instruction, se trouver dans un registre, ou à une adresse mémoire. Les **modes d'adressage** sont les règles qui indiquent au CPU où trouver les opérandes.
 
-Analogie quotidienne « retrouver quelqu'un » :
+Analogie quotidienne : flux de localisation d'une personne
 
 | Mode d'adressage | Analogie | Exemple d'instruction | Explication |
 |---------|------|---------|------|
 | **Adressage immédiat** | La personne est devant vous | `MOV R1, #100` | Donnée directement dans l'instruction, le plus rapide |
 | **Adressage par registre** | Appeler un collègue au poste interne | `MOV R1, R2` | Donnée dans un registre interne du CPU, très rapide |
 | **Adressage direct** | Connaître le numéro de porte et s'y rendre | `MOV R1, [0x1000]` | Adresse mémoire dans l'instruction |
-| **Adressage indirect** | Demander à l'accueil « Dans quelle chambre est Dupont ? » | `MOV R1, [R2]` | Le registre contient une adresse, recherche supplémentaire nécessaire |
-| **Adressage indexé** | « Bâtiment 3 + 5ème étage » pour trouver la chambre | `MOV R1, [R2+10]` | Adresse de base + décalage, pour l'accès aux tableaux |
+| **Adressage indirect** | Demander à l'accueil Dans quelle chambre est Dupont. | `MOV R1, [R2]` | Le registre contient une adresse, recherche supplémentaire nécessaire |
+| **Adressage indexé** | Bâtiment 3 + 5ème étage pour trouver la chambre | `MOV R1, [R2+10]` | Adresse de base + décalage, pour l'accès aux tableaux |
 
 <AddressingModeDemo />
 
-::: tip Pourquoi autant de modes d'adressage ?
-Différents scénarios nécessitent différentes stratégies de « recherche de données » :
+::: tip Principes de la multiplicité des modes d'adressage
+Différents scénarios nécessitent différentes stratégies de recherche de données :
 - **Affectation de constante** (`x = 100`) → adressage immédiat, la donnée est dans l'instruction
 - **Opération sur variable** (`a + b`) → adressage par registre, la donnée est déjà chargée dans un registre
 - **Accès à un tableau** (`arr[i]`) → adressage indexé, adresse de base + décalage d'index
@@ -191,7 +191,7 @@ Quand vous écrivez `arr[i]`, vous ne pensez pas aux modes d'adressage, mais le 
 
 ### 2.4 La liste des capacités du CPU — Classification des instructions
 
-Maintenant que nous connaissons les formats d'instructions et les modes d'adressage, la dernière question : **que peut faire réellement le CPU ?**
+Maintenant que nous connaissons les formats d'instructions et les modes d'adressage, la dernière question : **que peut faire réellement le CPU.**
 
 Toutes les instructions peuvent être classées en six grandes catégories, couvrant tout ce qu'un ordinateur peut faire :
 
@@ -205,12 +205,12 @@ Toutes les instructions peuvent être classées en six grandes catégories, couv
 | **Entrée/Sortie** | Communication avec les périphériques | IN, OUT | Lire le clavier, écrire à l'écran |
 
 ::: tip Une observation clé
-Tout le code que vous écrivez — aussi complexe soit la logique métier, aussi spectaculaire soit l'animation UI — sera finalement décomposé en combinaisons de ces six opérations de base. L'« intelligence » du CPU ne réside pas dans sa capacité à faire des choses complexes, mais dans sa capacité à exécuter ces opérations simples à une vitesse de plusieurs milliards par seconde.
+Tout le code que vous écrivez — aussi complexe soit la logique métier, aussi spectaculaire soit l'animation UI — sera finalement décomposé en combinaisons de ces six opérations de base. L'intelligence du CPU ne réside pas dans sa capacité à faire des choses complexes, mais dans sa capacité à exécuter ces opérations simples à une vitesse de plusieurs milliards par seconde.
 :::
 
 ### 2.5 Deux philosophies de conception : CISC vs RISC
 
-La conception du jeu d'instructions comporte une divergence fondamentale : **rendre chaque instruction aussi puissante que possible, ou aussi simple que possible ?**
+La conception du jeu d'instructions comporte une divergence fondamentale : **rendre chaque instruction aussi puissante que possible, ou aussi simple que possible.**
 
 Cette divergence a créé deux camps, affectant directement chaque appareil que vous utilisez aujourd'hui :
 
@@ -220,7 +220,7 @@ Une analogie pour comprendre :
 - **CISC comme un couteau suisse** : un couteau intégrant ciseaux, ouvre-bouteille, tournevis... beaucoup de fonctions, mais aucune n'est forcément optimale
 - **RISC comme une boîte à outils professionnelle** : chaque outil ne fait qu'une chose, mais la fait vite et bien
 
-::: tip Pourquoi votre smartphone utilise ARM et votre PC x86 ?
+::: tip Principes du choix entre smartphone et PC
 - **x86 (CISC)** domine le marché des PC et serveurs depuis 40 ans, accumulant un vaste écosystème logiciel. Changer d'architecture signifie recompiler tous les logiciels
 - **ARM (RISC)** domine les appareils mobiles grâce à sa faible consommation. Les batteries de téléphones sont petites, chaque milliwatt compte
 - **Apple Silicon** a prouvé que RISC peut aussi offrir de hautes performances — la série M dépasse simultanément les concurrents x86 en performance et en consommation
@@ -231,15 +231,15 @@ Une analogie pour comprendre :
 
 > **Résumé** : Le jeu d'instructions est le pont entre le logiciel et le hardware. Votre code est traduit en instructions par le compilateur ; les instructions indiquent au CPU via l'opcode et les opérandes quoi faire et avec quoi ; le mode d'adressage détermine d'où proviennent les données. Différentes conceptions de jeux d'instructions (CISC/RISC) déterminent les caractéristiques de performance et les scénarios d'utilisation du CPU.
 >
-> Nous connaissons maintenant la « structure statique » des instructions — leur apparence et leurs types. La question suivante est : **comment le CPU exécute-t-il ces instructions étape par étape en interne ?** C'est le rôle de l'unité de commande.
+> Nous connaissons maintenant la structure statique des instructions — leur apparence et leurs types. La question suivante est : **comment le CPU exécute-t-il ces instructions étape par étape en interne.** C'est le rôle de l'unité de commande.
 
 ---
 
-## 3. Unité de commande : le « centre de commandement » du CPU
+## 3. Unité de commande : principe de contrôle du CPU
 
 ### 3.1 Composition de l'unité de commande
 
-L'unité de commande est le « cerveau » du CPU, chargée de coordonner tous les composants selon les exigences des instructions :
+L'unité de commande est le cerveau du CPU, chargée de coordonner tous les composants selon les exigences des instructions :
 
 <ControllerDemo />
 
@@ -265,7 +265,7 @@ Pour exécuter une instruction, le CPU traverse un **cycle d'instruction** compl
 
 ### 3.3 Micro-opérations
 
-Les **micro-opérations** sont les opérations les plus élémentaires pilotées par des signaux de contrôle. Par exemple, la phase « d'extraction » peut être décomposée en micro-opérations suivantes :
+Les **micro-opérations** sont les opérations les plus élémentaires pilotées par des signaux de contrôle. Par exemple, la phase d'extraction peut être décomposée en micro-opérations suivantes :
 
 | Tempo | Micro-opération | Signaux de contrôle |
 |------|--------|---------|
@@ -286,7 +286,7 @@ Les **micro-opérations** sont les opérations les plus élémentaires pilotées
 
 ---
 
-## 4. Hiérarchie de stockage : pourquoi le cache est-il nécessaire ?
+## 4. Hiérarchie de stockage : principes de la nécessité du cache
 
 ### 4.1 Structure de la hiérarchie de stockage
 
@@ -310,7 +310,7 @@ Si l'accès du CPU au cache L1 correspond à **prendre une feuille de papier sur
 - Accès au SSD → conduire dans une autre ville pour acheter du papier
 - Accès au HDD → prendre l'avion pour un autre pays pour acheter du papier
 
-Les différences de vitesse peuvent atteindre **plusieurs millions de fois** !
+Les différences de vitesse peuvent atteindre **plusieurs millions de fois**.
 :::
 
 ### 4.2 Principe du cache
@@ -354,13 +354,13 @@ La **mémoire virtuelle** est une abstraction importante fournie par le système
 Imaginez la mémoire virtuelle comme la **gestion des chambres d'hôtel** :
 - Vous (le processus) croyez que tout l'immeuble est à vous
 - En réalité, l'hôtel (l'OS) ne vous alloue que les chambres actuellement nécessaires
-- Les chambres inoccupées sont « échangées » vers l'entrepôt (disque)
-- Les chambres nécessaires peuvent être « rapatriées » à tout moment
+- Les chambres inoccupées sont échangées vers l'entrepôt (disque)
+- Les chambres nécessaires peuvent être rapatriées à tout moment
 :::
 
 ---
 
-## 5. Bus et E/S : les « vaisseaux sanguins » de l'ordinateur
+## 5. Bus et E/S : les canaux de communication de l'ordinateur
 
 ### 5.1 Bus système
 
@@ -376,7 +376,7 @@ Le **Bus** est le canal de données reliant les composants de l'ordinateur :
 
 ### 5.2 Arbitrage de bus
 
-Quand plusieurs appareils demandent simultanément l'utilisation du bus, un mécanisme d'**arbitrage** décide qui l'utilisera en premier :
+Quand plusieurs appareils demandent simultanément l'utilisation du bus, un mécanisme d'arbitrage décide qui l'utilisera en premier :
 
 | Méthode d'arbitrage | Description |
 |---------|------|
@@ -400,12 +400,12 @@ Le **DMA (Direct Memory Access)** permet aux périphériques E/S d'échanger dir
 <NetworkOverviewDemo />
 
 - **Sans DMA** : Le CPU participe à tout le transfert de données et ne peut rien faire d'autre
-- **Avec DMA** : Le CPU indique au contrôleur DMA « d'où à où, combien transférer », puis va exécuter d'autres tâches ; le DMA notifie le CPU une fois terminé
+- **Avec DMA** : Le CPU indique au contrôleur DMA d'où à où, combien transférer, puis va exécuter d'autres tâches ; le DMA notifie le CPU une fois terminé
 
 ::: tip Analogie du DMA
 C'est comme **commander en livraison** :
 - **Sans DMA** : Vous allez vous-même au supermarché, faites les courses, rentrez, lavez et cuisinez (participation totale)
-- **Avec DMA** : Vous commandez par téléphone et le livreur dépose tout directement dans la cuisine (quelqu'un d'autre s'en charge, vous n'avez qu'à « réceptionner »)
+- **Avec DMA** : Vous commandez par téléphone et le livreur dépose tout directement dans la cuisine (quelqu'un d'autre s'en charge, vous n'avez qu'à réceptionner)
 :::
 
 ### 5.5 Mécanisme d'interruption
@@ -457,7 +457,7 @@ Le pipeline peut améliorer les performances mais introduit aussi des problèmes
 
 ---
 
-## 7. Résumé : comment l'ordinateur « fonctionne-t-il » ?
+## 7. Résumé : flux de fonctionnement de l'ordinateur
 
 Relions l'ensemble du processus avec la terminologie professionnelle :
 
@@ -473,7 +473,7 @@ Relions l'ensemble du processus avec la terminologie professionnelle :
 | Microarchitecture CPU | « Computer Systems: A Programmer's Perspective » - Bryant & O'Hallaron |
 | Architecture de jeu d'instructions | Manuel de référence ARMv8, Manuel Intel x64 |
 | Principes du cache | Protocole de cohérence de cache (MESI), Politiques d'écriture du cache |
-| Systèmes d'exploitation | Chapitre suivant « Systèmes d'exploitation » |
+| Systèmes d'exploitation | Chapitre suivant « Principes des systèmes d'exploitation : processus, mémoire et systèmes de fichiers » |
 
 ---
 
@@ -481,5 +481,5 @@ Relions l'ensemble du processus avec la terminologie professionnelle :
 
 Vous avez maintenant maîtrisé les connaissances professionnelles de l'architecture des ordinateurs. Vous pouvez continuer à apprendre :
 
-- **[Systèmes d'exploitation](./operating-systems.md)** : comprendre comment les programmes s'exécutent sur le système d'exploitation, comment les processus, les threads et la gestion mémoire sont implémentés
-- **[Codage, stockage et transmission des données](./data-encoding-storage.md)** : approfondir la compréhension de la représentation des données dans l'ordinateur
+- **[Principes des systèmes d'exploitation : processus, mémoire et systèmes de fichiers](./operating-systems.md)** : comprendre comment les programmes s'exécutent sur le système d'exploitation, comment les processus, les threads et la gestion mémoire sont implémentés
+- **[Principes de représentation des données : codage, stockage et transmission](./data-encoding-storage.md)** : approfondir la compréhension de la représentation des données dans l'ordinateur

@@ -1,4 +1,4 @@
-# Mapa de Lenguajes de Programacion
+# Conceptos de lenguajes de programación: paradigmas, evolución y selección
 
 ::: tip Prologo
 Por que hay tantos lenguajes de programacion? Cual deberia aprender? Este capitulo te lleva desde la "evolucion de los lenguajes" hasta los "paradigmas de programacion" hasta "como elegir", construyendo una comprension completa del panorama de los lenguajes de programacion. **Conclusion anticipada: no existe el mejor lenguaje, solo el mas adecuado para cada escenario.**
@@ -21,7 +21,7 @@ Despues de completar este capitulo, obtendras:
 
 ---
 
-## 0. Como los humanos "hablan" con las computadoras?
+## 0. Principios de comunicación entre humanos y computadoras
 
 Imagina que necesitas comunicarte con un robot que solo entiende binario:
 
@@ -99,7 +99,7 @@ Los lenguajes modernos son en su mayoria **multiparadigma**. Python soporta tant
 - **JavaScript (debil)**: `"11"` -- Te lo convirtio silenciosamente
 - **Python (fuerte)**: `TypeError` -- Te hace pensar
 
-Profundiza en sistemas de tipos -> [Introduccion al Sistema de Tipos](./type-systems) | [Introduccion a Compilacion](./compilers)
+Profundiza en sistemas de tipos -> [Introducción a los sistemas de tipos](./type-systems) | [Principios de compilación](./compilers)
 
 ---
 
@@ -147,7 +147,7 @@ Profundiza en sistemas de tipos -> [Introduccion al Sistema de Tipos](./type-sys
 :::
 
 **Proximos pasos**:
-- [Introduccion a Compilacion](./compilers) - Entender el proceso de compilacion
-- [Introduccion al Sistema de Tipos](./type-systems) - Entender la seguridad de tipos
-- [Estructuras de Datos](./data-structures) - Entender la organizacion de datos
-- [Pensamiento Algoritmico](./algorithm-thinking) - Aprender metodos de resolucion
+- [Principios de compilación](./compilers) - Entender el proceso de compilacion
+- [Introducción a los sistemas de tipos](./type-systems) - Entender la seguridad de tipos
+- [Introducción a las estructuras de datos](./data-structures) - Entender la organizacion de datos
+- [Introducción a los algoritmos](./algorithm-thinking) - Aprender metodos de resolucion

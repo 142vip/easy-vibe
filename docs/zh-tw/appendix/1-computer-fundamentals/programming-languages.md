@@ -1,4 +1,4 @@
-# 程式語言圖譜
+# 程式語言概念：範式、演化與選型
 
 ::: tip 前言
 為什麼有這麼多程式語言？該學哪個？本章帶你從「語言演化」到「程式設計範式」到「如何選擇」，建立對程式語言全景的理解。**結論先行：沒有最好的語言，只有最適合場景的語言。**
@@ -21,7 +21,7 @@
 
 ---
 
-## 0. 人類如何和電腦「說話」？
+## 0. 程式語言的進化
 
 - **直接打 0 和 1** — 最原始，效率極低（機器語言）
 - **用助憶符代替** — `MOV AX, 1`（組合語言）
@@ -78,7 +78,7 @@ SELECT name FROM users WHERE active = true
 
 ---
 
-## 3. 型別系統：資料的交通規則
+## 3. 型別系統分類
 
 | | 強型別 | 弱型別 |
 |---|---|---|
@@ -86,10 +86,10 @@ SELECT name FROM users WHERE active = true
 | **動態** | Python, Ruby — 靈活且安全 | JavaScript, PHP — 靈活但容易出錯 |
 
 **關鍵問題**：`"1" + 1` 等於什麼？
-- **JavaScript（弱型別）**：`"11"` — 悄悄幫你轉了
-- **Python（強型別）**：`TypeError` — 讓你自己想清楚
+- **JavaScript（弱型別）**：`"11"` — 自動轉換
+- **Python（強型別）**：`TypeError` — 需明確轉換
 
-想深入了解型別系統？→ [型別系統入門](./type-systems) | [編譯原理入門](./compilers)
+想深入了解型別系統？→ [型別系統導論](./type-systems) | [編譯原理](./compilers)
 
 ---
 
@@ -103,7 +103,7 @@ SELECT name FROM users WHERE active = true
 
 ---
 
-## 5. 如何選擇程式語言？
+## 5. 程式語言選擇
 
 ### 按場景選擇
 
@@ -136,7 +136,7 @@ SELECT name FROM users WHERE active = true
 :::
 
 **下一步學習**：
-- [編譯原理入門](./compilers) - 深入理解編譯過程和程式碼最佳化
-- [型別系統入門](./type-systems) - 深入理解型別系統和型別安全
-- [資料結構](./data-structures) - 理解資料的組織方式
-- [演算法思維入門](./algorithm-thinking) - 學習解決問題的方法
+- [編譯原理](./compilers) - 深入理解編譯過程和程式碼最佳化
+- [型別系統導論](./type-systems) - 深入理解型別系統和型別安全
+- [資料結構導論](./data-structures) - 理解資料的組織方式
+- [演算法導論](./algorithm-thinking) - 學習解決問題的方法

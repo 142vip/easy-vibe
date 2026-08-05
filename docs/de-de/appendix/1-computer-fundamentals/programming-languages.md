@@ -1,4 +1,4 @@
-# Die Landkarte der Programmiersprachen
+# Konzepte von Programmiersprachen: Paradigmen, Evolution und Auswahl
 
 ::: tip Vorwort
 Warum gibt es so viele Programmiersprachen? Welche sollte man lernen? Dieses Kapitel führt Sie von der „Sprachevolution" über „Programmierparadigmen" bis hin zur „Sprachwahl" und vermittelt ein Gesamtverständnis der Programmiersprachen. **Vorab die Antwort: Es gibt keine beste Sprache, nur die für den Einsatzzweck passende.**
@@ -21,7 +21,7 @@ Nach Abschluss dieses Kapitels werden Sie Folgendes gewonnen haben:
 
 ---
 
-## 0. Wie „spricht" der Mensch mit dem Computer?
+## 0. Wie spricht der Mensch mit dem Computer
 
 Stellen Sie sich vor, Sie müssen mit einem Roboter kommunizieren, der nur Binärcode versteht:
 
@@ -49,7 +49,7 @@ Der Entwicklungstrend der Programmiersprachen: **Immer näher am menschlichen De
 
 Programmierparadigmen sind keine Sprachfeatures, sondern **Denkweisen** — wie es beim Schreiben Lyrik, Romane und Essays als verschiedene literarische Formen gibt.
 
-### 2.1 Imperativ — „Dem Computer Schritt für Schritt sagen, wie es geht"
+### 2.1 Imperativ — Dem Computer Schritt für Schritt sagen, wie es geht"
 
 ```c
 int sum = 0;
@@ -58,7 +58,7 @@ for (int i = 0; i < n; i++) {
 }
 ```
 
-### 2.2 Objektorientiert — „Daten und Verhalten in Objekten kapseln"
+### 2.2 Objektorientiert — Daten und Verhalten in Objekten kapseln"
 
 ```python
 class Dog:
@@ -68,14 +68,14 @@ class Dog:
         print(f"{self.name} says woof!")
 ```
 
-### 2.3 Funktional — „Mit reinen Funktionen kombinieren, keinen Zustand verändern"
+### 2.3 Funktional — Mit reinen Funktionen kombinieren, keinen Zustand verändern"
 
 ```haskell
 sum = foldl (+) 0
 -- Gleiche Eingabe erzeugt immer gleiche Ausgabe
 ```
 
-### 2.4 Deklarativ — „Nur sagen, was getan werden soll, nicht wie"
+### 2.4 Deklarativ — Nur sagen, was getan werden soll, nicht wie"
 
 ```sql
 SELECT name FROM users WHERE active = true
@@ -88,7 +88,7 @@ Die meisten modernen Sprachen sind **Multiparadigmen**. Python unterstützt sowo
 
 ---
 
-## 3. Typsystem: Die Verkehrsregeln für Daten
+## 3. Typsystem: Statisch/dynamisch und stark/schwach
 
 | | Stark typisiert | Schwach typisiert |
 |---|---|---|
@@ -99,7 +99,7 @@ Die meisten modernen Sprachen sind **Multiparadigmen**. Python unterstützt sowo
 - **JavaScript (schwach typisiert)**: `"11"` — automatische Typumwandlung
 - **Python (stark typisiert)**: `TypeError` — Sie müssen selbst klären
 
-Tiefer einsteigen? → [Typsystem-Einführung](./type-systems) | [Compiler-Theorie](./compilers)
+Tiefer einsteigen? → [Einführung in Typsysteme](./type-systems) | [Prinzipien der Kompilierung](./compilers)
 
 ---
 
@@ -114,7 +114,7 @@ Tiefer einsteigen? → [Typsystem-Einführung](./type-systems) | [Compiler-Theor
 
 ---
 
-## 5. Welche Programmiersprache wählen?
+## 5. Welche Programmiersprache wählen
 
 ### Nach Einsatzgebiet
 
@@ -147,7 +147,7 @@ Tiefer einsteigen? → [Typsystem-Einführung](./type-systems) | [Compiler-Theor
 :::
 
 **Nächste Schritte**:
-- [Compiler-Theorie](./compilers) - Kompilierungsprozess und Code-Optimierung vertiefen
-- [Typsystem-Einführung](./type-systems) - Typsysteme und Typsicherheit vertiefen
-- [Datenstrukturen](./data-structures) - Datenorganisation verstehen
+- [Prinzipien der Kompilierung](./compilers) - Kompilierungsprozess und Code-Optimierung vertiefen
+- [Einführung in Typsysteme](./type-systems) - Typsysteme und Typsicherheit vertiefen
+- [Einführung in Datenstrukturen](./data-structures) - Datenorganisation verstehen
 - [Algorithmisches Denken](./algorithm-thinking) - Problemlösungsmethoden lernen

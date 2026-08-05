@@ -1,4 +1,4 @@
-# Der Browser ist ein Betriebssystem
+# Computernetzwerke: Von der URL-Eingabe bis zum Seitenrendering
 
 ::: tip Vorwort
 Sie nutzen täglich einen Browser — schauen Videos, lesen Nachrichten, arbeiten online. Aber haben Sie sich schon einmal gefragt: **Was passiert im Hintergrund, wenn Sie in der Adresszeile eine URL eingeben und Enter drücken?**
@@ -27,8 +27,7 @@ Nach Abschluss dieses Kapitels werden Sie den vollständigen technischen Ablauf 
 **Was passiert, wenn Sie im Browser eine URL eingeben und Enter drücken?** Warum öffnen sich manche Seiten schnell und andere langsam? Warum erscheint manchmal die Fehlermeldung „Server nicht gefunden"?
 :::
 
-### Alltagsanalogie: Eine Online-Shopping-Reise
-
+### Analogie: Ablauf einer Internetanfrage
 Stellen Sie sich vor, Sie machen einen **Online-Einkauf**. Der gesamte Prozess lässt sich in 5 Schritte unterteilen:
 
 <div style="display: flex; gap: 20px; margin: 20px 0;">
@@ -79,14 +78,13 @@ Der Schlüssel zum Verständnis der Browser-Funktionsweise liegt darin, **komple
 
 ---
 
-## 1. Erster Schritt: Die „Bestellung" ausfüllen — URL-Auswertung
+## 1. Erste Phase: URL-Auswertung durch den Browser
 
 ::: tip 🤔 Kernfrage
 **Warum sieht eine Webadresse so aus?** `https://www.example.com:8080/path/page.html?id=123#section` — Was bedeutet diese Zeichenkette?
 :::
 
-### Alltagsanalogie: Einkaufszettel ausfüllen
-
+### Analogie: URL-Komponenten-Ablauf
 Wenn Sie auf dem Bestellformular nur „Schuhe kaufen" schreiben, weiß das Lager nicht, welches Paar gemeint ist. Sie müssen Folgendes angeben:
 
 - **Shop-Typ** (Offizielles Flagship / Normaler Shop)
@@ -95,7 +93,7 @@ Wenn Sie auf dem Bestellformular nur „Schuhe kaufen" schreiben, weiß das Lage
 - **Konkretes Modell** (Air Max 90)
 - **Zusatzinformation** (Ich hätte gerne rote)
 
-### Tatsächlicher Prozess: URL-Auswertung durch den Browser
+### realer Ablauf: URL-Auswertung durch den Browser
 
 **URL (Uniform Resource Locator)** ist der „Produktcode" der Browser-Welt. Wenn Sie `https://www.example.com:8080/path/page.html?id=123#section` eingeben, zerlegt der Browser diese sofort:
 
@@ -116,13 +114,13 @@ URLs existieren, damit **Menschen** sie sich merken und eingeben können. Der Co
 
 ---
 
-## 2. Zweiter Schritt: Das „Adressbuch" konsultieren — DNS-Auflösung
+## 2. Zweite Phase: Hierarchische DNS-Auflösung
 
 ::: tip 🤔 Kernfrage
 **Wie findet der Browser die Website?** Sie geben einen menschenlesbaren Domainnamen ein (z. B. `baidu.com`), aber der Computer braucht eine numerische Adresse (IP). Was passiert dazwischen?
 :::
 
-### Alltagsanalogie: Lageradresse finden
+### Analogie: Lageradresse finden-Ablauf
 
 Sie bestellen bei „Nike Offizieller Shop", aber das Logistiksystem weiß nicht, wo das Lager ist. Es muss das Adressbuch konsultieren:
 
@@ -131,7 +129,7 @@ Sie bestellen bei „Nike Offizieller Shop", aber das Logistiksystem weiß nicht
 3. Die **Zentrale** fragen (weiß, wer für .com-Shops zuständig ist) → Root-Nameserver
 4. Die **Markverwaltung** fragen (endgültig das echte Versandlager von Nike finden) → Autoritativer Nameserver
 
-### Tatsächlicher Prozess: Hierarchische DNS-Auflösung
+### realer Ablauf: Hierarchische DNS-Auflösung
 
 **DNS (Domain Name System)** ist das „verteilte Adressbuch-Abfragesystem" des Internets. Da es weltweit Milliarden von Domainnamen gibt, wird eine hierarchische Architektur verwendet, um die Abfragelast zu verteilen:
 
@@ -165,13 +163,13 @@ Das ist das Kernprinzip des Internet-Designs: **Verteilte Systeme**.
 
 ---
 
-## 3. Dritter Schritt: Telefonische Bestätigung — TCP-Drei-Wege-Handshake
+## 3. Dritte Phase: TCP-Drei-Wege-Handshake
 
 ::: tip 🤔 Kernfrage
 **Warum ist ein „Drei-Wege-Handshake" nötig?** Nachdem die Serveradresse gefunden ist, warum können die Daten nicht einfach gesendet werden? Warum sind erst drei Kommunikationsschritte erforderlich?
 :::
 
-### Alltagsanalogie: Logistikkanal aufbauen
+### Analogie: Logistikkanal aufbauen-Ablauf
 
 Wenn das Logistikfahrzeug direkt zum Lager fährt, kann Folgendes passieren:
 
@@ -181,7 +179,7 @@ Wenn das Logistikfahrzeug direkt zum Lager fährt, kann Folgendes passieren:
 
 **Deshalb muss vor dem eigentlichen Versand ein zuverlässiger Transportkanal aufgebaut werden.**
 
-### Tatsächlicher Prozess: TCP-Drei-Wege-Handshake
+### realer Ablauf: TCP-Drei-Wege-Handshake
 
 **TCP (Transmission Control Protocol)** ist das Protokoll, das die zuverlässige Datenübertragung sicherstellt. Vor der Übertragung der „Ware" (Daten) muss die Verbindung durch einen „Drei-Wege-Handshake" hergestellt werden:
 
@@ -218,18 +216,18 @@ Der Drei-Wege-Handshake stellt sicher: **Beide Seiten können senden und empfang
 
 ---
 
-## 4. Vierter Schritt: Der Dialog zwischen „Käufer" und „Verkäufer" — HTTP-Anfrage und -Antwort
+## 4. Vierte Phase: HTTP-Anfrage und -Antwort
 
 ::: tip 🤔 Kernfrage
 **Was sagen sich Browser und Server?** Nach dem Verbindungsaufbau — wie „teilt" der Browser dem Server mit, was er möchte? Und wie „antwortet" der Server?
 :::
 
-### Alltagsanalogie: Lager versendet
+### Analogie: Lager versendet-Ablauf
 
 Das Logistikfahrzeug kommt am Lager an: „Hier ist die Bestellung (HTTP-Anfrage), **ich möchte die Ware (HTML-Quellcode der Webseite) abholen!**"
 Der Lagerverwalter prüft: „Bestellung gültig, hier ist Ihr Paket (**HTML-Datei**), bitte sehr."
 
-### Tatsächlicher Prozess: HTTP-Protokoll-Kommunikation
+### realer Ablauf: HTTP-Protokoll-Kommunikation
 
 **HTTP (HyperText Transfer Protocol)** ist der „Dialog-Regelsatz" zwischen Browser und Server. Nach dem Verbindungsaufbau sendet der Browser eine **Abruf-Anfrage**; das **Kernziel ist es, den Quellcode der Webseite (HTML-Datei) abzurufen**:
 
@@ -302,14 +300,13 @@ Set-Cookie: user_id=xyz789        ← Cookie setzen
 
 ---
 
-## 5. Fünfter Schritt: Das „Paket" öffnen — Browser-Rendering
+## 5. Fünfte Phase: Browser-Rendering-Pipeline
 
 ::: tip 🤔 Kernfrage
 **Wie wird Code zum Bild?** Der Server sendet langweiligen HTML/CSS/JavaScript-Code — wie macht der Browser daraus eine farbenfrohe Webseite?
 :::
 
-### Alltagsanalogie: Auspacken und Zusammenbauen
-
+### Analogie: Rendering-Ablauf
 Endlich haben Sie das Paket (HTTP-Antwort) erhalten. Doch beim Öffnen finden Sie keine fertigen Möbel, sondern **Einzelteile** (HTML) und eine **Aufbauanleitung** (CSS). Als „Käufer" (Browser) müssen Sie selbst Hand anlegen:
 
 1. **Verpackung öffnen**: Alle Teile herausnehmen und die Stückliste prüfen (HTML parsen → DOM-Baum)
@@ -319,7 +316,7 @@ Endlich haben Sie das Paket (HTTP-Antwort) erhalten. Doch beim Öffnen finden Si
 5. **Anmalen und dekorieren**: Möbel anstreichen, Aufkleber anbringen (Painting)
 6. **Endpräsentation**: Aufräumen, Licht einschalten, präsentieren (Compositing)
 
-### Tatsächlicher Prozess: Browser-Rendering-Engine
+### realer Ablauf: Browser-Rendering-Engine
 
 Der Browser erhält **HTML/CSS/JavaScript-Code** (langweiliger Text), muss ihn aber in **Pixelbilder** (schöne Webseiten) umwandeln. Dieser Prozess heißt **Rendering** und wird von der **Rendering-Engine** des Browsers ausgeführt (z. B. Blink in Chrome, WebKit in Safari).
 
@@ -387,8 +384,7 @@ Moderne Browser teilen die Seite in mehrere **Ebenen (Layers)** auf, die separat
 
 ---
 
-## 5.5 Wie entsteht eine Webseite? Statische vs. dynamische Websites
-
+## 5.5 Überblick über Webseitentypen: Statisch vs. dynamisch
 ::: tip 🤔 Kernfrage
 **Woher kommt der Seiteninhalt?** Wir haben erklärt, wie der Browser eine Seite rendert. Aber wie entsteht die HTML-Datei auf dem Server? Wird sie vorab erstellt oder on-the-fly?
 :::
@@ -437,8 +433,7 @@ Viele moderne Websites sind „hybrid": Der Hauptteil der Seite ist statisch, ab
 | **Geeignet für** | Präsentationsinhalte (Vorstellung, Dokumentation) | Interaktive Anwendungen (Shopping, Social) |
 | **Typische Beispiele** | Unternehmenswebsite, Hilfedokumentation | Amazon, Facebook, Online-Banking |
 
-### 🤔 Häufige Fragen
-
+### Häufige Fragen
 **F: Können statische Websites kein JavaScript verwenden?**
 
 Doch! Bilderkarussells, aufklappbare Menüs, Formularvalidierung — all diese interaktiven Funktionen können mit JavaScript auf statischen Websites realisiert werden. „Statisch" und „dynamisch" bezieht sich darauf, **ob der Seiteninhalt vorab vorbereitet ist**, nicht auf das Vorhandensein von Interaktivität.
@@ -457,8 +452,7 @@ Als Frontend-Entwickler konzentrieren Sie sich hauptsächlich darauf, wie der Br
 
 ---
 
-## 6. Zusammenfassung: Eine vollständige „Online-Shopping-Reise"
-
+## 6. Zusammenfassung: Ablauf einer Netzwerkanfrage
 ::: tip 🎉 Nach diesem Kapitel sollten Sie Folgendes können
 - Den vollständigen Ablauf von der URL-Eingabe bis zur Seitenanzeige erklären
 - Die Rolle und Beziehung von URL, DNS, TCP und HTTP verstehen

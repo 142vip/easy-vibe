@@ -1,4 +1,4 @@
-# Introduccion al Pensamiento Algoritmico
+# Introducción a los algoritmos
 
 ::: tip Prologo
 **Como resolver problemas de manera eficiente?** Quizas te hayas enfrentado a esta duda: el mismo problema, el codigo de alguien se ejecuta en segundos, mientras que el de otra persona sigue girando durante minutos. La diferencia suele estar en el algoritmo. Este capitulo te guia para comprender los conceptos centrales del pensamiento algoritmico.
@@ -21,7 +21,7 @@ Despues de completar este capitulo, obtendras:
 
 ---
 
-## 0. Vision general: Que es un algoritmo?
+## 0. Visión general de los algoritmos
 
 Imagina que necesitas buscar una palabra en un diccionario:
 
@@ -74,7 +74,7 @@ Esta demostracion muestra como funciona la busqueda binaria. Puedes elegir entre
 
 <SearchAlgorithmDemo />
 
-### 1.2 Por que la busqueda binaria es tan rapida?
+### 1.2 Principios de eficiencia de búsqueda binaria
 
 | Cantidad de datos | Busqueda lineal | Busqueda binaria |
 |--------|---------|---------|
@@ -131,7 +131,7 @@ Este es el poder del crecimiento logaritmico: los datos aumentan 1000 veces, las
 **HeapSort**: utiliza la estructura de datos heap para ordenar in-place (sin espacio adicional), pero en la practica suele ser mas lento que QuickSort.
 :::
 
-### 2.2 Por que QuickSort es "rapido"?
+### 2.2 Principios de optimización de QuickSort
 
 ::: tip Principio de QuickSort
 **Idea central**: divide y venceras

@@ -1,4 +1,4 @@
-# Introduccion a los Principios de Compilacion
+# Principios de compilación
 
 ::: tip Prologo
 **Cuando presionas el boton "ejecutar", como se convierte el codigo en el resultado en pantalla?** Cada linea de codigo que escribes, la computadora en realidad "no la entiende" -- solo reconoce 0 y 1. El compilador es el "traductor" que convierte el lenguaje humano en lenguaje maquina. Comprender los principios de compilacion te permite entender de donde vienen los mensajes de error, por que algunos lenguajes son rapidos y otros lentos, y la logica subyacente de la optimizacion de codigo.
@@ -162,7 +162,7 @@ El analisis sintactico asegura que el codigo sea "estructuralmente correcto", pe
 
 <CompilationPracticeDemo />
 
-### 4.1 Analisis semantico: verificar si el "significado" es correcto
+### 5.1 Análisis semántico: verificación de tipos y significado
 
 | Contenido de verificacion | Ejemplo | Resultado |
 |---------|------|------|

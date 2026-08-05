@@ -1,4 +1,4 @@
-# Introduction to Compiler Principles
+# Compiler Principles
 
 ::: tip Preface
 **When you press the "Run" button, how does your code become the result on screen?** The computer actually can't "understand" any line of code you write — it only recognizes 0s and 1s. The compiler is the "translator" that converts human language into machine language. Understanding compiler principles helps you understand where error messages come from, why some languages are faster than others, and the underlying logic of code optimization.
@@ -28,7 +28,7 @@ After completing this chapter, you will gain:
 
 ---
 
-## 0. Big Picture: The "Translation Journey" of Code
+## 0. Big Picture: Compilation Pipeline Overview
 
 Imagine you're a translator tasked with translating a Chinese novel into English. You wouldn't translate word by word literally. Instead, you would:
 
@@ -70,7 +70,7 @@ A compiler's work can be divided into six stages, like a factory assembly line w
 
 ---
 
-## 2. Lexical Analysis: Breaking Code into "Words"
+## 2. Lexical Analysis: Tokenization of Source Code
 
 Lexical analysis is the first step of compilation. The compiler scans each character of the source code from left to right, combining them into meaningful **tokens**.
 
@@ -132,7 +132,7 @@ AST is the "core data structure" of a compiler. Subsequent semantic analysis, op
 
 ---
 
-## 4. AST Visualization: Seeing the "Skeleton" of Code
+## 4. AST Visualization: Intuitive Presentation of Code Structure
 
 Above we described AST structure in text, but "seeing" is more intuitive than "reading." The interactive component below lets you select different expressions and observe their syntax trees in real time.
 
@@ -162,7 +162,7 @@ Syntax analysis ensures code is "structurally correct," but structural correctne
 
 <CompilationPracticeDemo />
 
-### 4.1 Semantic Analysis: Checking if the "Meaning" Is Correct
+### 5.1 Semantic Analysis and Type Checking
 
 | Check | Example | Result |
 |---------|------|------|
@@ -177,7 +177,7 @@ Syntax analysis ensures code is "structurally correct," but structural correctne
 - `Expected 2 arguments, but got 3` — Parameter checking
 :::
 
-### 4.2 Code Optimization: Making Programs Faster
+### 5.2 Code Optimization: Equivalent Transformation of Intermediate Representation
 
 Before generating the final code, the compiler applies various optimizations to the intermediate code. These optimizations are transparent to the programmer but can significantly improve performance.
 

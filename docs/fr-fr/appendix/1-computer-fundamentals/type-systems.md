@@ -1,10 +1,10 @@
 # Introduction aux systèmes de types
 
 ::: tip Préface
-**Pourquoi `"1" + 1` donne `"11"` en JavaScript mais lève une erreur en Python ?** C'est le système de types qui est à l'œuvre. Le système de types est le « code de la route » d'un langage de programmation — il détermine comment les données peuvent être utilisées, avec quelles autres données elles peuvent opérer, et quand la légalité est vérifiée. Comprendre les systèmes de types, c'est comprendre les « différences de personnalité » entre les langages.
+**Pourquoi `"1" + 1` donne `"11"` en JavaScript mais lève une erreur en Python ?** C'est le système de types qui est à l'œuvre. Le système de types est l'ensemble de règles d'un langage de programmation — il détermine comment les données peuvent être utilisées, avec quelles autres données elles peuvent opérer, et quand la légalité est vérifiée. Comprendre les systèmes de types, c'est comprendre les différences entre les langages.
 :::
 
-**Que allez-vous apprendre dans cet article ?**
+**Contenu de cet article**
 
 À la fin de ce chapitre, vous aurez acquis :
 
@@ -26,30 +26,30 @@
 
 ---
 
-## 0. Vue d'ensemble : Les types sont la « carte d'identité » des données
+## 0. Présentation du système de types et des données
 
-Dans le monde réel, vous n'essayez pas de glisser un livre dans une tasse de café — ce sont des « types » différents d'objets. Le monde de la programmation est identique : nombres, chaînes, booléens, tableaux... chaque donnée a sa propre « identité » qui détermine à quelles opérations elle peut participer.
+Dans le monde réel, vous n'essayez pas de glisser un livre dans une tasse de café — ce sont des types différents d'objets. Le monde de la programmation est identique : nombres, chaînes, booléens, tableaux... chaque donnée a sa propre identité qui détermine à quelles opérations elle peut participer.
 
-Le **système de types** est l'ensemble de règles par lequel un langage de programmation gère ces « identités ». Il répond à deux questions fondamentales :
+Le **système de types** est l'ensemble de règles par lequel un langage de programmation gère ces identités. Il répond à deux questions fondamentales :
 
-::: tip Les deux questions fondamentales du système de types
-- **Quand vérifier ?** Au moment d'écrire le code (statique) ou à l'exécution (dynamique) ?
-- **Quelle sévérité ?** Interdire strictement le mélange (fort) ou convertir automatiquement (faible) ?
+::: tip Les deux dimensions du système de types
+- **Quand vérifier** : Au moment d'écrire le code (statique) ou à l'exécution (dynamique)
+- **Quelle sévérité** : Interdire strictement le mélange (fort) ou convertir automatiquement (faible)
 :::
 
 ---
 
-## 1. Qu'est-ce qu'un système de types : Le code de la route des données
+## 1. Présentation d'un système de types : principes de base
 
 <TypeSystemDemo />
 
 L'essence d'un système de types est un ensemble de **contraintes** qui indiquent au compilateur ou à l'interpréteur :
 
-- Quelles valeurs cette variable peut-elle stocker ?
-- Ces deux valeurs peuvent-elles être additionnées ?
-- Quel devrait être le type du paramètre de cette fonction ?
+- Quelles valeurs cette variable peut stocker
+- Ces deux valeurs peuvent être additionnées
+- Quel devrait être le type du paramètre de cette fonction
 
-Un monde sans système de types est comme une route sans code de la route — n'importe quelle donnée peut opérer avec n'importe quelle autre, avec des résultats totalement imprévisibles.
+Un monde sans système de types est un environnement sans contraintes — n'importe quelle donnée peut opérer avec n'importe quelle autre, avec des résultats totalement imprévisibles.
 
 | Rôle du système de types | Description | Exemple |
 |-------------|------|------|
@@ -60,7 +60,7 @@ Un monde sans système de types est comme une route sans code de la route — n'
 
 ---
 
-## 2. Typage statique vs dynamique : Quand vérifier ?
+## 2. Typage statique vs dynamique : Principe du moment de vérification
 
 C'est la dimension de classification la plus importante — le **moment de la vérification**.
 
@@ -86,7 +86,7 @@ Python a ajouté les Type Hints, la communauté JavaScript se tourne vers TypeSc
 
 ---
 
-## 3. Typage fort vs faible : Permettre ou non les « conversions cachées » ?
+## 3. Typage fort vs faible : Principe de la conversion de types
 
 La seconde dimension de classification est le **degré de sévérité des conversions de types**.
 
@@ -122,7 +122,7 @@ Les premiers langages à typage statique (comme Java) exigeaient la déclaration
 
 ---
 
-## 5. Génériques : Écrire une fois,适用 tous les types
+## 5. Génériques : Écrire une fois, appliquer à tous les types
 
 Quand vous écrivez une fonction « récupérer le premier élément d'un tableau », vous découvrez : un pour les tableaux de nombres, un pour les tableaux de chaînes, un pour les tableaux d'objets... Le code est identique, seul le type diffère. Les **génériques** résolvent ce problème — en utilisant un « paramètre de type » à la place d'un type concret, un seul code fonctionne pour tous les types.
 
@@ -165,7 +165,7 @@ La théorie est terminée — voyons maintenant les pièges de types les plus fr
 
 ---
 
-## 7. Quadrant des types de langages : « Profiler » les langages de programmation
+## 7. Quadrant des types de langages : classification des langages de programmation
 
 En combinant les dimensions « statique/dynamique » et « fort/faible », on obtient une classification en quatre quadrants. Chaque langage de programmation peut être placé dans ce diagramme.
 
@@ -194,7 +194,7 @@ Les systèmes de types sont une perspective clé pour comprendre les différence
 
 Les points clés de ce chapitre :
 
-1. **Les types sont des cartes d'identité** : chaque donnée a un type qui détermine les opérations possibles
+1. **Les types définissent le comportement des données** : chaque donnée a un type qui détermine les opérations possibles
 2. **Statique vs Dynamique** : quand vérifier les types — à la compilation ou à l'exécution
 3. **Fort vs Faible** : permettre ou non les conversions implicites
 4. **Inférence de types** : les langages modernes combinent la concision dynamique et la sécurité statique

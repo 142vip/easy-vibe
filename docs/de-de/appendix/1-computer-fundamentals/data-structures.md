@@ -1,4 +1,4 @@
-# Datenstrukturen
+# Einführung in Datenstrukturen
 
 ::: tip Vorwort
 **Programm = Datenstruktur + Algorithmus.** Wir haben gelernt, wie der CPU Befehle ausführt und wie das Betriebssystem Ressourcen verwaltet. Aber das zentrale Objekt, das Programme verarbeiten, sind **Daten** — Benutzerinformationen, Produktlisten, soziale Beziehungen... Wie diese Daten im Speicher organisiert sind, bestimmt direkt die Geschwindigkeit des Programms. Haben Sie sich schon gefragt, warum manche Programme Zehntausende von Datensätzen schnell verarbeiten, während andere schon bei Hunderten einfrieren? Die Antwort liegt meist in der **Wahl der Datenstruktur**.
@@ -26,8 +26,7 @@ Nach Abschluss dieses Kapitels werden Sie Folgendes gewonnen haben:
 
 ---
 
-## 1. Überblick: Was sind Datenstrukturen?
-
+## 1. Überblick über Datenstrukturen
 Stellen Sie sich vor, Sie müssen einen Stapel Bücher ordnen:
 
 - **Auf dem Boden gestapelt**: Jedes Buch einzeln durchsuchen — das ist die ursprünglichste Speicherung
@@ -78,7 +77,7 @@ Arrays und verkettete Listen sind die beiden grundlegendsten linearen Strukturen
 - **Unsicher?** → Zuerst Array verwenden. In den meisten Szenarien überwiegt der Cache-freundliche Performance-Vorteil
 :::
 
-### 2.2 Stack und Queue: Lineare Strukturen mit „Regeln"
+### 2.2 Stack und Queue: Lineare Strukturen mit Regeln"
 
 Stacks und Queues sind im Grunde Arrays oder verkettete Listen mit **eingeschränkten Operationen**. Es sieht aus, als würden Funktionen wegfallen, aber genau diese Einschränkung gibt ihnen klare Einsatzgebiete:
 
@@ -93,7 +92,7 @@ Stellen Sie sich einen Stack vor, der nur „Teller drauflegen" und „Teller we
 
 ---
 
-## 3. Hashtabelle: Die schnellste Suche
+## 3. Hashtabelle: Hashfunktion und Kollisionsbehandlung
 
 Die Suche in linearen Strukturen ist nicht schnell genug — Array erfordert Traversierung O(n), selbst sortiert mit binärer Suche O(log n). Gibt es eine Struktur, die **O(1) direkt findet**? Ja, die Hashtabelle.
 
@@ -109,8 +108,7 @@ Das Prinzip ist eigentlich sehr einfach:
 
 Wie das Indexsystem einer Bibliothek: Man muss nicht Regal für Regal durchsuchen, man schlägt im Katalog nach und findet direkt den Standort.
 
-### 3.2 Hash-Kollision: Was tun, wenn zwei Schlüssel kollidieren?
-
+### 3.2 Hash-Kollision und Behandlungsstrategien
 Zwei verschiedene Schlüssel können denselben Index berechnen — das nennt man **Hash-Kollision**. Wie zwei Bücher mit derselben Katalognummer, die auf denselben Platz zeigen.
 
 | Lösung | Prinzip | Analogie |
@@ -236,7 +234,7 @@ Hinweis: Dies sind alles **Durchschnittswerte**. Im schlimmsten Fall degeneriert
 
 ---
 
-## 7. Auswahlleitfaden: Welche Datenstruktur verwenden?
+## 7. Auswahlleitfaden: Welche Datenstruktur verwenden
 
 Mit all diesen Datenstrukturen — wie wählen Sie bei echten Anforderungen? Der Schlüssel ist, **vom Bedarf auszugehen** und sich folgende Fragen zu stellen:
 

@@ -1,4 +1,4 @@
-# The Browser Is an Operating System
+# Computer Networks: From URL to Page Rendering
 
 ::: tip Preface
 You use a browser every day — watching videos, reading news, working online. But have you ever wondered: **When you type a URL in the address bar and press Enter, what happens behind the scenes?**
@@ -29,13 +29,13 @@ After completing this chapter, you will master the complete technical process fr
 
 ---
 
-## 0. Introduction: The Moment You Press Enter
+## 0. Introduction: Lifecycle of a Network Request
 
 ::: tip Core Question
 **When you type a URL in your browser and press Enter, what happens behind the scenes?** Why do some pages load quickly while others are slow? Why do you sometimes get a "server not found" error?
 :::
 
-### Real-life Analogy: An Online Shopping Journey
+### Analogy: An Online Shopping Journey
 
 Imagine you're doing some **online shopping**. The entire process can be divided into 5 steps:
 
@@ -87,13 +87,13 @@ The key to understanding how browsers work is: **map complex technical processes
 
 ---
 
-## 1. Step One: Fill Out the "Order" — URL Parsing
+## 1. URL Parsing
 
 ::: tip Core Question
 **Why does a URL look like this?** `https://www.example.com:8080/path/page.html?id=123#section` — What does this string of characters actually mean?
 :::
 
-### Real-life Analogy: Filling Out an Order Form
+### Analogy: Filling Out an Order Form
 
 If you only wrote "buy shoes" on an order, the warehouse wouldn't know which pair to send. You need to specify:
 
@@ -103,7 +103,7 @@ If you only wrote "buy shoes" on an order, the warehouse wouldn't know which pai
 - **Specific model** (Air Max 90)
 - **Special notes** (I want the red one)
 
-### The Real Process: Browser Parses the URL
+### Actual Process: URL Parsing Flow
 
 A **URL (Uniform Resource Locator)** is the "product locator code" of the browser world. When you type `https://www.example.com:8080/path/page.html?id=123#section` in the address bar, the browser immediately breaks it down:
 
@@ -124,13 +124,13 @@ URLs exist so that **humans** can remember and type them. What computers ultimat
 
 ---
 
-## 2. Step Two: Check the "Address Book" — DNS Lookup
+## 2. DNS Lookup
 
 ::: tip Core Question
 **How does the browser find the website?** You type a human-readable domain name (like `baidu.com`), but what computers really need are numeric addresses (IP). What happens in between?
 :::
 
-### Real-life Analogy: Looking Up the Warehouse Address
+### Analogy: Looking Up the Warehouse Address
 
 You wrote "Nike Official Store" on your order, but the logistics system doesn't know where the warehouse is. It needs to check an address book:
 
@@ -139,7 +139,7 @@ You wrote "Nike Official Store" on your order, but the logistics system doesn't 
 3. Ask the **headquarters dispatch center** (knows who manages .com stores) → Root name server
 4. Ask the **brand management office** (ultimately finds the real shipping warehouse for the Nike store) → Authoritative name server
 
-### The Real Process: DNS Hierarchical Lookup
+### Actual Process: DNS Hierarchical Lookup Flow
 
 **DNS (Domain Name System)** is the internet's "distributed address book lookup system." Since there are billions of domain names worldwide, a hierarchical architecture is used to distribute the query load:
 
@@ -173,13 +173,13 @@ This is a core design principle of the internet: **distributed systems**.
 
 ---
 
-## 3. Step Three: Phone Confirmation — TCP Three-Way Handshake
+## 3. TCP Connection Establishment: The Three-Way Handshake
 
 ::: tip Core Question
 **Why is a "three-way handshake" needed?** After finding the server address, why can't you just send data directly? Why go through three rounds of communication first?
 :::
 
-### Real-life Analogy: Establishing a Logistics Channel
+### Analogy: Establishing a Logistics Channel
 
 If a logistics truck drove directly to the warehouse, the result could be:
 
@@ -189,7 +189,7 @@ If a logistics truck drove directly to the warehouse, the result could be:
 
 **So before actually shipping goods, you must first establish a reliable transport channel.**
 
-### The Real Process: TCP Three-Way Handshake
+### Actual Process: TCP Three-Way Handshake Flow
 
 **TCP (Transmission Control Protocol)** is the protocol that ensures reliable data transmission. Before transmitting goods (data), a connection must be established through the "three-way handshake":
 
@@ -226,18 +226,18 @@ The three-way handshake ensures: **both parties can send and both can receive** 
 
 ---
 
-## 4. Step Four: The "Buyer" and "Merchant" Conversation — HTTP Request and Response
+## 4. HTTP Protocol: Requests and Responses
 
 ::: tip Core Question
 **What are the browser and server saying to each other?** After establishing a connection, how does the browser "tell" the server what it wants? And how does the server "respond"?
 :::
 
-### Real-life Analogy: Warehouse Shipping
+### Analogy: Ordering, Shipping, and Order Verification
 
 The logistics truck arrives at the warehouse: "Here's the order (HTTP request), **I want to pick up the product (webpage HTML source code)!**"
 The warehouse manager verifies: "The order is valid. Here's your package (**HTML file**). Please take it."
 
-### The Real Process: HTTP Protocol Communication
+### Actual Process: HTTP Communication Flow
 
 **HTTP (HyperText Transfer Protocol)** is the "conversation rules" between browser and server. After the channel is established, the browser sends a **pickup request**. The **core goal is to retrieve the webpage's source code (HTML file)**:
 
@@ -310,13 +310,13 @@ Set-Cookie: user_id=xyz789        ← Set Cookie
 
 ---
 
-## 5. Step Five: Opening the "Package" — Browser Rendering
+## 5. Browser Rendering Engine
 
 ::: tip Core Question
 **How does code become a visual display?** The server sends dry HTML/CSS/JavaScript code. How does the browser turn it into a rich, colorful webpage?
 :::
 
-### Real-life Analogy: Unboxing and Assembly
+### Analogy: Unboxing and Assembly
 
 You finally receive the delivery package (HTTP response), but when you open it, it's not ready-made furniture — it's a pile of **parts** (HTML) and an **assembly manual** (CSS). As the "buyer" (browser), you need to assemble it yourself:
 
@@ -327,7 +327,7 @@ You finally receive the delivery package (HTTP response), but when you open it, 
 5. **Paint and decorate**: Apply paint and decals to the furniture (paint).
 6. **Final display**: Clean up and turn on the lights for display (compositing).
 
-### The Real Process: Browser Rendering Engine
+### Actual Process: Page Rendering Flow
 
 What the browser receives is **HTML/CSS/JavaScript code** (dry text), but it needs to become **pixel imagery** (a beautiful webpage). This process is called **rendering**, performed by the browser's **rendering engine** (such as Chrome's Blink, Safari's WebKit).
 
@@ -395,7 +395,7 @@ Modern browsers divide the page into multiple **layers** for separate painting (
 
 ---
 
-## 5.5 How Are Webpages "Generated"? Static vs Dynamic Websites
+## 5.5 Page Generation Methods: Static vs. Dynamic Websites
 
 ::: tip Core Question
 **Where does webpage content come from?** We covered how browsers render pages, but how does the HTML file on the server get there? Is it prepared in advance or made on demand?
@@ -443,7 +443,7 @@ A **dynamic website** generates pages "on the spot" when you visit — after rec
 Many websites today are "hybrid": the main page structure is static, but certain parts (like comment sections, search boxes) are dynamically loaded. JavaScript can call APIs to fetch data after the page loads, achieving "static pages + dynamic functionality."
 :::
 
-### Static vs Dynamic — A Clear Comparison
+### Static and Dynamic Websites: A Clear Comparison
 
 | | Static Website | Dynamic Website |
 |---|---------|---------|
@@ -474,7 +474,7 @@ As a frontend developer, your main focus is how the browser handles the content 
 
 ---
 
-## 6. Summary: A Complete "Online Shopping" Journey
+## 6. Summary: The Complete Network Request Process
 
 ::: tip After This Chapter, You Should Be Able To
 - Explain the complete process from entering a URL to displaying a page

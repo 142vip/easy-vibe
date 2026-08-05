@@ -1,4 +1,4 @@
-# Fullstack-Entwicklung im Zeitalter des Vibe Coding
+# Einführung in die Full-Stack-Entwicklung: Wissenskarte im Zeitalter von Vibe Coding
 
 ::: tip Vorwort
 **Was ist Vibe Coding?** Vereinfacht gesagt: „Code mit naturlicher Sprache schreiben" – du beschreibst auf Deutsch oder Englisch, was du willst, und die KI generiert den Code fur dich. Das hat die Spielregeln der Softwareentwicklung grundlegend verandert.
@@ -29,15 +29,14 @@ Nach diesem Kapitel wirst du:
 
 ## 0. Vibe Coding: Ein neues Paradigma der Softwareentwicklung
 
-### 0.1 Was ist Vibe Coding?
-
+### 0.1 Überblick über Vibe Coding
 Stell dir die Softwareentwicklung von fruher vor:
 
 <VibeCodingFlowDemo />
 
 **Der Kernwandel**: Von „Wie schreibe ich Code?" zu „Wie beschreibe ich Anforderungen?".
 
-### 0.2 Welche Fahigkeiten werden im Zeitalter des Vibe Coding wichtiger?
+### 0.2 Welche Fahigkeiten werden im Zeitalter des Vibe Coding wichtiger
 
 <DeveloperSkillShiftDemo />
 
@@ -57,7 +56,7 @@ Bevor wir in die einzelnen Richtungen eintauchen, erstellen wir ein globales Ver
 
 <ComputerFieldMapDemo />
 
-### 1.1 Die Domanen mit einer „Restaurant"-Metapher verstehen
+### 1.1 Die Domanen mit einer Restaurant"-Metapher verstehen
 
 Stell dir ein Softwaresystem als **Restaurant** vor:
 
@@ -88,8 +87,7 @@ Versuche nicht, alles auf einmal zu lernen. Wahle zuerst eine Richtung und verti
 
 ---
 
-## 2. Was ist Frontend?
-
+## 2. Überblick über Frontend-Entwicklung
 ### 2.1 Definition in einem Satz
 
 **Frontend = Der Teil, den der Benutzer direkt sieht, anklickt und mit dem er interagiert.**
@@ -112,8 +110,7 @@ Wenn du eine Webseite offnest:
 | **CSS** | Dekorationsstil | Welche Wandfarbe, wie die Mobel stehen, Lichteffekte |
 | **JavaScript** | Smart Home | Lichtschalter, automatische Vorhange, Sicherheitssystem |
 
-### 2.3 Frontend-Frameworks: Wozu braucht man sie?
-
+### 2.3 Frontend-Frameworks und ihre Aufgaben
 Mit reinem HTML/CSS/JS kann man Webseiten bauen – wozu also Frameworks wie React, Vue lernen?
 
 <FrontendFrameworkDemo />
@@ -133,8 +130,7 @@ Mit reinem HTML/CSS/JS kann man Webseiten bauen – wozu also Frameworks wie Rea
 
 ---
 
-## 3. Was ist Backend?
-
+## 3. Überblick über Backend-Entwicklung
 ### 3.1 Definition in einem Satz
 
 **Backend = Die Logik, die der Benutzer nicht sieht, aber den gesamten Systembetrieb tragt.**
@@ -160,7 +156,7 @@ Wenn du online eine Bestellung aufgibst:
 | **Performance-Optimierung** | Kucheffizienz | Caching, asynchrone Verarbeitung, Lastverteilung |
 | **Sicherheit** | Lebensmittelsicherheit | SQL-Injection verhindern, Zugriffskontrolle |
 
-### 3.3 Welche Backend-Sprache soll man wahlen?
+### 3.3 Welche Backend-Sprache soll man wahlen
 
 | Sprache | Eigenschaften | Geeignete Szenarien |
 |-----|------|---------|
@@ -188,8 +184,7 @@ Wenn du bereits JavaScript kannst (Frontend-Grundlage), ist Node.js der naturlic
 
 ## 4. Programmiersprachen-Landschaft
 
-### 4.1 Was sind Programmiersprachen?
-
+### 4.1 Überblick über Programmiersprachen
 **Programmiersprache = Brucke zwischen Mensch und Computer.**
 
 Der Computer versteht nur 0 und 1, der Mensch spricht naturliche Sprache. Programmiersprachen sind die Zwischenschicht:
@@ -217,8 +212,7 @@ Der Computer versteht nur 0 und 1, der Mensch spricht naturliche Sprache. Progra
 | **Starke Typisierung** | Strenge Typprufung, keine automatische Konvertierung | Python, Java |
 | **Schwache Typisierung** | Lockere Typprufung, automatische Konvertierung | JavaScript, PHP |
 
-### 4.3 Welche Sprache soll man lernen?
-
+### 4.3 Überblick über Sprachauswahl
 <LanguageSelectionDemo />
 
 ::: tip 💡 Auswahlprinzip
@@ -232,14 +226,12 @@ Es gibt keine „beste Sprache", nur die „fur das Szenario am besten geeignete
 
 ## 5. Fullstack-Entwickler: Frontend und Backend beherrschen
 
-### 5.1 Was ist Fullstack?
-
+### 5.1 Überblick über Full-Stack-Entwicklung
 **Fullstack-Entwickler = Ein Entwickler, der sowohl Frontend- als auch Backend-Entwicklung selbststandig durchfuhren kann.**
 
 <FullstackSkillDemo />
 
-### 5.2 Die Vorteile von Fullstack
-
+### 5.2 Vorteile von Full-Stack-Entwicklung
 | Vorteil | Beschreibung |
 |-----|------|
 | **Projekte selbststandig abschliessen** | Von der Anforderung bis zum Deployment – alles in einer Hand |

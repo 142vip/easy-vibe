@@ -26,8 +26,7 @@ Nach Abschluss dieses Kapitels werden Sie Folgendes gewonnen haben:
 
 ---
 
-## 0. Überblick: Typen sind der „Ausweis" von Daten
-
+## 0. Überblick über Typen und ihre Bedeutung
 In der realen Welt würden Sie kein Buch in eine Kaffeetasse stecken — weil es sich um verschiedene „Typen" von Dingen handelt. In der Programmierwelt genauso: Zahlen, Strings, Booleans, Arrays... Jedes Datum hat seine eigene „Identität", die bestimmt, an welchen Operationen es teilnehmen kann.
 
 Das **Typsystem** ist das Regelsystem, mit dem eine Programmiersprache diese „Identitäten" verwaltet. Es beantwortet zwei Kernfragen:
@@ -39,8 +38,7 @@ Das **Typsystem** ist das Regelsystem, mit dem eine Programmiersprache diese „
 
 ---
 
-## 1. Was ist ein Typsystem: Die Verkehrsregeln für Daten
-
+## 1. Überblick über Typsysteme
 <TypeSystemDemo />
 
 Ein Typsystem ist im Kern ein **Regelwerk**, das dem Compiler oder Interpreter mitteilt:
@@ -60,8 +58,7 @@ Eine Welt ohne Typsystem ist wie eine Straße ohne Verkehrsregeln — jedes Datu
 
 ---
 
-## 2. Statisch vs. Dynamisch: Wann wird geprüft?
-
+## 2. Statisch vs. Dynamisch: Prüfzeitpunkt der Typen
 Die wichtigste Klassifikationsdimension — der **Prüfzeitpunkt**.
 
 <StaticVsDynamicDemo />
@@ -86,8 +83,7 @@ Python hat Type Hints bekommen, die JavaScript-Community wendet sich TypeScript 
 
 ---
 
-## 3. Stark vs. Schwach: „Versteckte Konvertierung" erlauben?
-
+## 3. Stark vs. Schwach: Implizite Typkonvertierung
 Die zweite Klassifikationsdimension ist die **Strenge der Typkonvertierung**.
 
 <StrongVsWeakDemo />
@@ -165,8 +161,7 @@ Die Theorie ist abgeschlossen — nun zu den häufigsten Typ-Fallen in der Praxi
 
 ---
 
-## 7. Sprach-Typ-Quadrant: Programmiersprachen „profilieren"
-
+## 7. Sprach-Typ-Quadrant: Klassifikation von Sprachen
 Die Kombination der Dimensionen „statisch/dynamisch" und „stark/schwach" ergibt ein Vier-Quadranten-Diagramm. Jede Programmiersprache lässt sich darin einordnen.
 
 <LanguageTypeModelDemo />

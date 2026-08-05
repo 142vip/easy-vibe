@@ -1,4 +1,4 @@
-# Principios de Organización de Computadores
+# Principios de organización de computadoras
 
 ::: tip Prólogo
 **Del transistor a la CPU: ¿cómo se compone un sistema informático completo?** En el capítulo anterior partimos de los transistores para construir sumadores, registros, unidades aritméticas y, finalmente, el núcleo de la CPU. Pero una CPU por sí sola no basta: necesita cooperar con la memoria y los dispositivos de E/S, requiere buses que conecten los distintos componentes y un sistema de instrucciones que la impulse. En este capítulo pasaremos de la perspectiva interna de la CPU a la del sistema informático completo, profundizando en la arquitectura Von Neumann, el sistema de instrucciones, la jerarquía de memoria, los buses y los principios profesionales de E/S.
@@ -48,7 +48,7 @@ En el capítulo anterior "Del transistor a la CPU", ya entendimos cómo funciona
 
 ---
 
-## 1. Arquitectura Von Neumann: la "constitución" del computador moderno
+## 1. Principios de la arquitectura Von Neumann
 
 ### 1.1 Principio de programa almacenado
 
@@ -109,7 +109,7 @@ En la sección anterior aprendimos la idea central de la arquitectura Von Neuman
 
 La respuesta es el **sistema de instrucciones (Instruction Set Architecture, ISA)**. Si comparamos la CPU con un servicio, el sistema de instrucciones sería su **documentación de API**: define todos los comandos que la CPU puede entender, el formato de cada comando y el rango de datos sobre los que puede operar. Cada línea de código que escribes acaba siendo traducida por el compilador a una secuencia de llamadas a esta "API".
 
-### 2.1 Del código a la instrucción: el viaje de traducción de una línea de código
+### 2.1 Flujo de traducción de código a instrucción
 
 Construyamos primero una comprensión global: el código que escribes en el editor y lo que realmente ejecuta la CPU están separados por varias capas de traducción.
 
@@ -130,7 +130,7 @@ Esta cadena de traducción es clave para entender el sistema de instrucciones:
 - Al elegir arquitectura de CPU (x86 vs ARM), sabes que la diferencia radica en que la "API del conjunto de instrucciones" es distinta
 :::
 
-### 2.2 ¿Qué aspecto tiene una instrucción?
+### 2.2 Visión general del formato de instrucción
 
 Sabiendo que el código se traduce a instrucciones, la siguiente pregunta es: **¿cuál es la estructura interna de una instrucción?**
 
@@ -163,7 +163,7 @@ Según la cantidad de operandos, el formato de instrucción se divide en cuatro 
 Es un **compromiso entre espacio y flexibilidad**. Las instrucciones de cero direcciones son las más cortas (ahorran memoria), pero requieren operaciones de pila adicionales; las de tres direcciones son las más flexibles (no destruyen los datos fuente), pero ocupan más bits. Cada arquitectura de CPU elige una combinación diferente de formatos de instrucción.
 :::
 
-### 2.3 ¿Cómo encuentra la CPU los datos? — Modos de direccionamiento
+### 2.3 Principios de modos de direccionamiento
 
 La instrucción le dice a la CPU «haz una suma», pero ¿dónde están los dos números que hay que sumar? Pueden estar directamente escritos en la instrucción, en un registro o en alguna dirección de memoria. El **modo de direccionamiento** es la regla que le indica a la CPU «dónde buscar los operandos».
 
@@ -235,7 +235,7 @@ Usemos una analogía para entenderlo:
 
 ---
 
-## 3. Unidad de control: el "centro de mando" de la CPU
+## 3. Principios de la unidad de control
 
 ### 3.1 Componentes de la unidad de control
 
@@ -286,7 +286,7 @@ Una **microoperación** es la operación más básica impulsada por señales de 
 
 ---
 
-## 4. Jerarquía de memoria: ¿por qué necesitamos caché?
+## 4. Principios de jerarquía de memoria y caché
 
 ### 4.1 Estructura jerárquica de la memoria
 
@@ -360,7 +360,7 @@ Imagina la memoria virtual como la **gestión de habitaciones de un hotel**:
 
 ---
 
-## 5. Buses y E/S: el "sistema circulatorio" del computador
+## 5. Principios de buses y entrada/salida
 
 ### 5.1 Bus del sistema
 
@@ -457,7 +457,7 @@ Aunque la segmentación mejora el rendimiento, también introduce problemas de *
 
 ---
 
-## 7. Resumen: ¿cómo "arranca" un computador?
+## 7. Resumen: flujo de arranque del computador
 
 Recapitulemos todo el proceso usando la terminología técnica:
 

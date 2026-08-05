@@ -1,7 +1,7 @@
-# Ce qui se passe entre le moment où vous appuyez sur le bouton d'alimentation et l'affichage d'un site web
+# Panorama du système informatique : du démarrage à la visite web
 
 ::: tip Préface
-Vous êtes-vous déjà demandé ce qui se passe exactement entre le moment où vous appuyez sur le bouton d'alimentation de votre ordinateur et celui où vous voyez enfin une page web dans votre navigateur ?
+Vous êtes-vous déjà demandé ce qui se passe exactement entre le moment où vous appuyez sur le bouton d'alimentation de votre ordinateur et celui où vous voyez enfin une page web dans votre navigateur.
 
 Ce processus est semblable à une **course de relais** — une fois sous tension, le matériel réveille le firmware, qui après avoir terminé ses vérifications passe le relais au système d'exploitation. Une fois l'environnement prêt, le système d'exploitation peut lancer le navigateur, qui se connecte ensuite au réseau pour récupérer la page web depuis un serveur distant. Chaque maillon **dépend de la réussite du maillon précédent** : si un seul relayeur échoue, les étapes suivantes ne peuvent pas avoir lieu.
 
@@ -16,7 +16,7 @@ Cet article suit l'ordre chronologique réel des événements et vous guide à t
 2. **Auto-test du firmware** (Section 2) → Comment le BIOS/UEFI vérifie le matériel et trouve le périphérique de démarrage
 3. **Démarrage du système d'exploitation** (Section 3) → Comment le noyau se charge et comment le bureau apparaît
 4. **Lancement du navigateur** (Section 4) → Comment une application est exécutée par le système d'exploitation
-5. **Requête réseau** (Section 5) → Le voyage complet d'une requête réseau, de la saisie de l'URL jusqu'au rendu de la page
+5. **Requête réseau** (Section 5) → Le flux complet d'une requête réseau, de la saisie de l'URL jusqu'au rendu de la page
 
 Chaque étape se construit sur la précédente, aucune ne peut être omise.
 
@@ -34,7 +34,7 @@ Bouton d'alimentation → Bloc d'alimentation (PSU) → Sortie courant continu �
 
 ### 1.2 Réveil du chipset de la carte mère
 
-Une fois l'alimentation stabilisée, le **chipset de la carte mère** entre en action. Il joue le rôle de « chef d'orchestre » de l'ordinateur, chargé de coordonner tous les composants matériels.
+Une fois l'alimentation stabilisée, le **chipset de la carte mère** entre en action. Il joue le rôle de chef d'orchestre de l'ordinateur, chargé de coordonner tous les composants matériels.
 
 ### 1.3 Réinitialisation du CPU
 
@@ -46,7 +46,7 @@ Après avoir reçu le signal de réinitialisation, le CPU remet à zéro tous se
 
 > **Premier relais terminé** ⛳ À ce stade, le travail au niveau matériel est achevé : le bloc d'alimentation a converti le courant alternatif en courant continu stable, le chipset de la carte mère a été réveillé et coordonne les composants, et le CPU a terminé sa réinitialisation — ses registres sont vidés et il est prêt à exécuter sa première instruction.
 >
-> Mais attention — à cet instant, le CPU est comme un « nouveau-né qui vient d'ouvrir les yeux ». Bien qu'il puisse exécuter des instructions, il ne sait rien de son environnement : combien de mémoire est installée ? La carte graphique fonctionne-t-elle ? Où se trouve le disque dur ? Depuis quel périphérique faut-il démarrer le système d'exploitation ? Le CPU ne peut pas répondre seul à ces questions.
+> Mais attention — à cet instant, le CPU est comme un nouveau-né qui vient d'ouvrir les yeux. Bien qu'il puisse exécuter des instructions, il ne sait rien de son environnement : combien de mémoire est installée. La carte graphique fonctionne-t-elle. Où se trouve le disque dur. Depuis quel périphérique faut-il démarrer le système d'exploitation. Le CPU ne peut pas répondre seul à ces questions.
 >
 > Ainsi, la première instruction exécutée par le CPU après sa réinitialisation est un saut vers une **adresse mémoire fixe** — cette adresse pointe vers la puce de firmware BIOS/UEFI soudée sur la carte mère. À partir de cet instant, le contrôle passe du matériel pur au firmware. La mission du BIOS/UEFI est claire : **vérifier que tout le matériel fonctionne correctement, puis trouver le système d'exploitation et le démarrer**. C'est le deuxième relais de la course.
 
@@ -58,7 +58,7 @@ Après avoir reçu le signal de réinitialisation, le CPU remet à zéro tous se
 
 > **Deuxième relais terminé** ⛳ Le BIOS/UEFI a rempli ses trois missions : le POST a confirmé que la mémoire, la carte graphique, le clavier et les autres périphériques fonctionnent correctement ; les modes de fonctionnement de chaque composant ont été initialisés ; et le secteur de démarrage sur le disque dur a été trouvé en suivant l'ordre de démarrage.
 >
-> Mais le rôle du BIOS/UEFI s'arrête là — c'est essentiellement un « médecin examinateur + dispatcheur ». Il peut vérifier si le matériel est en bonne santé et décider depuis quel périphérique démarrer, mais il ne gère pas vos fichiers, n'exécute pas vos applications et ne vous affiche pas un joli bureau. Ces tâches complexes nécessitent un logiciel plus puissant pour prendre le relais — c'est le **système d'exploitation**.
+> Mais le rôle du BIOS/UEFI s'arrête là — c'est essentiellement un médecin examinateur + dispatcheur. Il peut vérifier si le matériel est en bonne santé et décider depuis quel périphérique démarrer, mais il ne gère pas vos fichiers, n'exécute pas vos applications et ne vous affiche pas un joli bureau. Ces tâches complexes nécessitent un logiciel plus puissant pour prendre le relais — c'est le **système d'exploitation**.
 >
 > La passation est très concrète : le BIOS/UEFI lit le code du programme d'amorçage situé dans le premier secteur du disque dur (le secteur de démarrage), le charge en mémoire, puis fait sauter le CPU vers ce code pour l'exécuter. À partir de cet instant, le contrôle passe officiellement du firmware au programme d'amorçage du système d'exploitation. Le programme d'amorçage va charger le noyau du système d'exploitation étape par étape, démarrer les services système, pour finalement afficher le bureau que vous connaissez bien. Le maillon le plus complexe de cette chaîne commence.
 
@@ -70,9 +70,9 @@ Après avoir reçu le signal de réinitialisation, le CPU remet à zéro tous se
 
 > **Troisième relais terminé** ⛳ Le système d'exploitation est complètement démarré, le bureau s'affiche devant vous. Récapitulons ce que ce relais a accompli : le programme d'amorçage a lu le noyau depuis le disque dur, le noyau a pris le contrôle du CPU et de la mémoire, les services système ont démarré un par un (réseau, audio, centre de sécurité…), et enfin l'interface graphique a rendu le bureau.
 >
-> À cet instant, le système d'exploitation est comme un immeuble où l'eau et l'électricité sont branchées et où le gestionnaire a emménagé — la **gestion des processus** attribue un appartement à chaque résident (programme), la **gestion mémoire** alloue l'espace, le **système de fichiers** gère l'entrepôt, et la **pile de protocoles réseau** s'occupe des communications extérieures. Ces « services publics » constituent l'infrastructure sur laquelle toutes les applications s'exécutent : sans eux, aucun programme ne peut démarrer.
+> À cet instant, le système d'exploitation est comme un immeuble où l'eau et l'électricité sont branchées et où le gestionnaire a emménagé — la **gestion des processus** attribue un appartement à chaque résident (programme), la **gestion mémoire** alloue l'espace, le **système de fichiers** gère l'entrepôt, et la **pile de protocoles réseau** s'occupe des communications extérieures. Ces services publics constituent l'infrastructure sur laquelle toutes les applications s'exécutent : sans eux, aucun programme ne peut démarrer.
 >
-> Maintenant, vous voulez aller sur Internet, alors vous double-cliquez sur l'icône du navigateur sur le bureau. Derrière ce simple geste, le système d'exploitation accomplit une série de tâches : trouver où se situe le fichier exécutable du navigateur sur le disque dur, lui créer un processus indépendant, allouer de l'espace mémoire, charger le code du programme… C'est l'expression directe de la capacité de « gestion des processus » du système d'exploitation. Voyons maintenant comment le navigateur est lancé.
+> Maintenant, vous voulez aller sur Internet, alors vous double-cliquez sur l'icône du navigateur sur le bureau. Derrière ce simple geste, le système d'exploitation accomplit une série de tâches : trouver où se situe le fichier exécutable du navigateur sur le disque dur, lui créer un processus indépendant, allouer de l'espace mémoire, charger le code du programme… C'est l'expression directe de la capacité de gestion des processus du système d'exploitation. Voyons maintenant comment le navigateur est lancé.
 
 ## 4. Ouverture du navigateur : le lancement de l'application
 
@@ -101,7 +101,7 @@ Lancement du navigateur :
 
 ### 4.2 Les principaux composants du navigateur
 
-Un navigateur moderne est un véritable « système d'exploitation », composé principalement des éléments suivants :
+Un navigateur moderne est un véritable système d'exploitation, composé principalement des éléments suivants :
 
 | Module | Fonction |
 |-----|------|
@@ -119,13 +119,13 @@ Un navigateur moderne est un véritable « système d'exploitation », composé 
 
 > **Quatrième relais terminé** ⛳ Le navigateur a bien été lancé. Le système d'exploitation lui a créé un processus indépendant, alloué de l'espace mémoire, et les différents modules du navigateur sont initialisés : le moteur de rendu est prêt à analyser le HTML/CSS, le moteur JavaScript est prêt à exécuter les scripts, et le module réseau est prêt à envoyer et recevoir des données.
 >
-> Vous pouvez imaginer le navigateur à cet instant comme une voiture dont le moteur tourne — le moteur ronronne, le tableau de bord est allumé, le système de navigation est prêt, mais la voiture est encore à l'arrêt car le conducteur (vous) ne lui a pas encore dit « où aller ». La fenêtre du navigateur est vide pour le moment, et le curseur clignote dans la barre d'adresse, attendant votre saisie.
+> Vous pouvez imaginer le navigateur à cet instant comme une voiture dont le moteur tourne — le moteur ronronne, le tableau de bord est allumé, le système de navigation est prêt, mais la voiture est encore à l'arrêt car le conducteur (vous) ne lui a pas encore dit où aller. La fenêtre du navigateur est vide pour le moment, et le curseur clignote dans la barre d'adresse, attendant votre saisie.
 >
-> Lorsque vous tapez `https://www.example.com` dans la barre d'adresse et appuyez sur Entrée, un voyage à travers tout Internet commence. Le module réseau du navigateur prend en charge cette requête : il analyse d'abord la structure de l'URL, puis traduit le nom de domaine en adresse IP via DNS, établit ensuite une connexion TCP avec le serveur distant à travers le réseau, négocie un canal chiffré, envoie la requête HTTP, attend la réponse du serveur, et enfin transmet le code HTML/CSS/JS reçu au moteur de rendu pour le dessiner en page web. C'est le relais qui comporte le plus d'étapes et qui fait intervenir le plus de protocoles — et c'est aussi celui que les développeurs web doivent le mieux comprendre.
+> Lorsque vous tapez `https://www.example.com` dans la barre d'adresse et appuyez sur Entrée, un flux à travers tout Internet commence. Le module réseau du navigateur prend en charge cette requête : il analyse d'abord la structure de l'URL, puis traduit le nom de domaine en adresse IP via DNS, établit ensuite une connexion TCP avec le serveur distant à travers le réseau, négocie un canal chiffré, envoie la requête HTTP, attend la réponse du serveur, et enfin transmet le code HTML/CSS/JS reçu au moteur de rendu pour le dessiner en page web. C'est le relais qui comporte le plus d'étapes et qui fait intervenir le plus de protocoles — et c'est aussi celui que les développeurs web doivent le mieux comprendre.
 
 ## 5. Accès à une URL : tout le processus d'une requête réseau
 
-### 5.1 Qu'est-ce qu'une URL ?
+### 5.1 Présentation d'une URL
 
 Une **URL (Uniform Resource Locator)** est l'adresse d'une ressource. Comme une adresse postale, elle sert à localiser des ressources sur Internet.
 
@@ -142,7 +142,7 @@ Structure d'une URL :
 - **Chemin (Path)** : l'emplacement de la ressource sur le serveur
 - **Requête (Query)** : les paramètres supplémentaires
 
-### 5.2 Le processus complet d'accès à une URL
+### 5.2 Le flux complet d'accès à une URL
 
 Lorsque vous accédez à `https://www.example.com`, voici ce qui se passe :
 
@@ -173,7 +173,7 @@ Processus de résolution DNS :
 └─────────────────────────────────────────────────────────────────┘
 
 Processus réel :
-1. Le navigateur vérifie son cache (a-t-il été visité récemment ?)
+1. Le navigateur vérifie son cache (a-t-il été visité récemment)
 2. Le système d'exploitation vérifie le cache DNS
 3. Envoi d'une requête au serveur DNS
 4. Le serveur DNS renvoie l'adresse IP
@@ -293,7 +293,7 @@ Processus de rendu du navigateur :
 
 ---
 
-> **Dernier relais terminé** ⛳ La page web s'affiche enfin devant vos yeux ! Revenons sur toutes les étapes de ce dernier relais : le navigateur analyse l'URL pour en extraire le protocole et le nom de domaine, traduit le nom de domaine en adresse IP par des requêtes DNS successives, établit une connexion fiable avec le serveur via le handshake TCP en trois étapes, négocie un canal chiffré par handshake TLS, envoie la requête HTTP, le serveur traite la logique métier, interroge la base de données, assemble les données de réponse et les renvoie, et enfin le moteur de rendu du navigateur analyse le HTML en arbre DOM, calcule les règles de style CSS, fusionne les deux en arbre de rendu, calcule la mise en page, et peint pixel par pixel sur l'écran.
+> **Dernier relais terminé** ⛳ La page web s'affiche enfin devant vos yeux. Revenons sur toutes les étapes de ce dernier relais : le navigateur analyse l'URL pour en extraire le protocole et le nom de domaine, traduit le nom de domaine en adresse IP par des requêtes DNS successives, établit une connexion fiable avec le serveur via le handshake TCP en trois étapes, négocie un canal chiffré par handshake TLS, envoie la requête HTTP, le serveur traite la logique métier, interroge la base de données, assemble les données de réponse et les renvoie, et enfin le moteur de rendu du navigateur analyse le HTML en arbre DOM, calcule les règles de style CSS, fusionne les deux en arbre de rendu, calcule la mise en page, et peint pixel par pixel sur l'écran.
 >
 > Prenons maintenant du recul et examinons cette course de relais dans son ensemble, du début à la fin. Depuis l'instant où vous appuyez sur le bouton d'alimentation : le courant réveille le matériel (1er relais) → le firmware vérifie les périphériques et trouve le disque de démarrage (2e relais) → le système d'exploitation démarre complètement, du noyau jusqu'au bureau (3e relais) → le navigateur est lancé en tant qu'application par le système d'exploitation (4e relais) → la requête réseau traverse Internet pour récupérer les données et les afficher en page web (5e relais). Ces cinq relais sont étroitement imbriqués, chacun se construit sur les acquis du précédent — si un seul maillon manque, vous ne pourriez pas voir cette page web.
 >
@@ -336,7 +336,7 @@ Du bouton d'alimentation à l'affichage d'un site web — le processus complet :
 
 > En observant l'ensemble de cette chaîne, vous remarquerez une règle intéressante : chaque étape résout un problème complètement différent et fait appel à des domaines techniques radicalement distincts. Le 1er relais relève du **génie électronique** — conversion de puissance, conception de circuits, transmission de signaux ; le 2e relais appartient à la **programmation firmware** — utiliser du code bas niveau pour contrôler directement le matériel ; le 3e relais est le monde des **systèmes d'exploitation** — ordonnancement des processus, gestion mémoire, systèmes de fichiers, qui sont au cœur de l'informatique ; le 4e relais touche au **développement d'applications** — comment concevoir l'architecture logicielle complexe d'un navigateur ; le 5e relais couvre à la fois les **réseaux informatiques** et le **développement frontend** — des protocoles réseau comme DNS, TCP/IP, HTTP jusqu'à l'analyse et le rendu de HTML/CSS/JS.
 >
-> Cela explique aussi pourquoi un « ingénieur full-stack » a besoin d'un large éventail de connaissances : chaque ligne de code frontend que vous écrivez doit traverser toute cette chaîne avant d'être présentée à l'utilisateur. Comprendre chaque maillon de la chaîne vous aide à localiser rapidement l'origine d'un problème — est-ce un problème de couche réseau ? Un problème de serveur ? Ou un problème de rendu dans le navigateur ?
+> Cela explique aussi pourquoi un ingénieur full-stack a besoin d'un large éventail de connaissances : chaque ligne de code frontend que vous écrivez doit traverser toute cette chaîne avant d'être présentée à l'utilisateur. Comprendre chaque maillon de la chaîne vous aide à localiser rapidement l'origine d'un problème — est-ce un problème de couche réseau. Un problème de serveur. Ou un problème de rendu dans le navigateur.
 >
 > La carte des connaissances ci-dessous organise ces domaines techniques et vous indique la direction pour vos apprentissages futurs.
 
@@ -371,7 +371,7 @@ Aperçu du système informatique
 ::: tip Pour aller plus loin
 Si vous souhaitez approfondir certains aspects, vous pouvez continuer avec :
 
-- **Du transistor au CPU** : comprendre les bases du matériel informatique
-- **Système d'exploitation (processus/mémoire/système de fichiers)** : comprendre le système d'exploitation en profondeur
-- **Réseaux informatiques** : comprendre les protocoles réseau en profondeur
+- **Fondamentaux des circuits numériques : du transistor au CPU** : comprendre les bases du matériel informatique
+- **Principes des systèmes d'exploitation : processus, mémoire et systèmes de fichiers** : comprendre le système d'exploitation en profondeur
+- **Réseaux informatiques : de la saisie d'URL au rendu des pages** : comprendre les protocoles réseau en profondeur
 :::

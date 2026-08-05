@@ -1,4 +1,4 @@
-# Trinh duyet la mot He dieu hanh
+# Mạng máy tính: Từ nhập URL đến render trang
 
 ::: tip Loi noi dau
 Ban dung trinh duyet moi ngay -- xem video, doc tin tuc, lam viec truc tuyen. Nhung ban co bao gio tu hoi: **khi ban nhap mot dia chi vao thanh dia chi va nhan Enter, dieu gi xay ra phia sau?**
@@ -27,53 +27,53 @@ Sau khi hoc xong chuong nay, ban se lam chu luong trinh ky thuat hoan chinh tu n
 **Khi ban nhap URL vao trinh duyet va nhan Enter, dieu gi xay ra phia sau?** Tai sao mot so trang mo nhanh, mot so cham? Tai sao doi khi xuat hien loi "khong tim thay may chu"?
 :::
 
-### Vi du cuoc song: Mot chuyen mua sam truc tuyen
+### So sánh: mô hình quy trình năm giai đoạn
 
-Tuong tuong ban dang thuc hien mot chyen **mua sam truc tuyen**. Toan bo qua trinh co the chia thanh 5 buoc:
-
-<div style="display: flex; gap: 20px; margin: 20px 0;">
-<div style="flex: 1; padding: 16px; background: var(--vp-c-bg-alt); border-radius: 12px;">
-
-**Buoc 1: Dien don hang**
-Chon san pham, xac nhan dia chi nhan
-
-</div>
-<div style="flex: 1; padding: 16px; background: var(--vp-c-bg-alt); border-radius: 12px;">
-
-**Buoc 2: Tim kho hang**
-He thong tim kho hang cu the
-
-</div>
-<div style="flex: 1; padding: 16px; background: var(--vp-c-bg-alt); border-radius: 12px;">
-
-**Buoc 3: Thiet lap kenh**
-Xac nhan kho hang dang mo va co the gui hang
-
-</div>
-</div>
+Toàn bộ quy trình truy cập trang web có thể chia thành 5 giai đoạn:
 
 <div style="display: flex; gap: 20px; margin: 20px 0;">
 <div style="flex: 1; padding: 16px; background: var(--vp-c-bg-alt); border-radius: 12px;">
 
-**Buoc 4: Kho hang gui hang**
-Shipper giao goi den nha ban
+**Giai đoạn 1: Phân tích yêu cầu**
+Xác định tài nguyên cần truy cập
 
 </div>
 <div style="flex: 1; padding: 16px; background: var(--vp-c-bg-alt); border-radius: 12px;">
 
-**Buoc 5: Mo goi va trai nghiem**
-Mo goi, thay san pham yeu thich
+**Giai đoạn 2: Phân giải tên miền**
+Tìm địa chỉ máy chủ tương ứng
+
+</div>
+<div style="flex: 1; padding: 16px; background: var(--vp-c-bg-alt); border-radius: 12px;">
+
+**Giai đoạn 3: Thiết lập kết nối**
+Xác nhận kết nối tin cậy với máy chủ
 
 </div>
 </div>
 
-**Qua trinh truy cap trang web tuong tu nhu mua sam truc tuyen mot cach kinh ngac!**
+<div style="display: flex; gap: 20px; margin: 20px 0;">
+<div style="flex: 1; padding: 16px; background: var(--vp-c-bg-alt); border-radius: 12px;">
+
+**Giai đoạn 4: Giao tiếp HTTP**
+Gửi yêu cầu và nhận phản hồi
+
+</div>
+<div style="flex: 1; padding: 16px; background: var(--vp-c-bg-alt); border-radius: 12px;">
+
+**Giai đoạn 5: Kết xuất trang**
+Phân tích mã nguồn và hiển thị nội dung
+
+</div>
+</div>
+
+**Quy trình truy cập trang web bao gồm năm giai đoạn phối hợp liên tục.**
 
 <UrlToBrowserQuickStart />
 
 ---
 
-## 1. Buoc dau tien: Dien "don hang" -- Phan tich URL
+## 1. Quá trình thực tế: luồng phân tích URL
 
 ::: tip Cau hoi cot loi
 **Tai sao URL co dang nhu vay?** `https://www.example.com:8080/path/page.html?id=123#section` -- nhung ky tu nay co y nghia gi?
@@ -96,7 +96,7 @@ Mo goi, thay san pham yeu thich
 
 ---
 
-## 2. Buoc thu hai: Tra cuu "so dia chi" -- Truy van DNS
+## 2. Quá trình thực tế: luồng truy vấn DNS
 
 ::: tip Cau hoi cot loi
 **Tai sao trinh duyet tim thay trang web?** Ban nhap mien doc duoc (nhu `baidu.com`), nhung may tinh can dia chi so (IP). Dieu gi xay ra o giua?
@@ -124,7 +124,7 @@ Tra ve IP cho trinh duyet
 
 ---
 
-## 3. Buoc thu ba: Goi dien xac nhan -- Bat tay TCP ba lan
+## 3. Quá trình thực tế: luồng bắt tay TCP
 
 ::: tip Cau hoi cot loi
 **Tai sao can "bat tay ba lan"?** Sau khi tim thay dia chi may chu, tai sao khong gui du lieu truc tiep?
@@ -150,7 +150,7 @@ May khach (may tinh cua ban)              May chu (kho hang)
 
 ---
 
-## 4. Buoc thu tu: Doi chuyen giua "nguoi mua" va "nguoi ban" -- HTTP
+## 4. Quá trình thực tế: luồng giao tiếp HTTP
 
 ::: tip Cau hoi cot loi
 **Trinh duyet va may chu dang noi gi?** Sau khi thiet lap ket noi, trinh duyet bao may chu muon gi nhu the nao?
@@ -178,7 +178,7 @@ May khach (may tinh cua ban)              May chu (kho hang)
 
 ---
 
-## 5. Buoc thu nam: Mo "goi hang" -- Render cua trinh duyet
+## 5. Quá trình thực tế: luồng kết xuất trình duyệt
 
 ::: tip Cau hoi cot loi
 **Code bien thanh hinh anh nhu the nao?** May chu gui code HTML/CSS/JavaScript nhiet nhan, trinh duyet bien chung thanh trang web phong phu nhu the nao?
@@ -201,11 +201,11 @@ Trinh duyet nhan **code HTML/CSS/JavaScript**, nhung phai bien thanh **hinh anh 
 
 ## 5.5 Trang tinh vs Trang dong
 
-### Trang web tinh: Lam san, giao truc tiep
+### Trang web tĩnh: nguyên lý và đặc điểm
 
 **Trang web tinh** la "san pham hoan thien" -- trang da duoc chuan bi tren may chu, khi ban truy cap may chu gui truc tiep file HTML san.
 
-### Trang web dong: Lam tai cho, khac moi lan
+### Trang web động: nguyên lý và đặc điểm
 
 **Trang web dong** la trang "lam tai cho" khi ban truy cap -- may chu nhan yeu cau, tra cuu co so du lieu, tinh toan du lieu, roi tao HTML moi gui ban.
 

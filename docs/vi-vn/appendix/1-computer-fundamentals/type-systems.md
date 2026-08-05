@@ -1,4 +1,4 @@
-# Nhap mon He thong Kieu
+# Giới thiệu hệ thống kiểu
 
 ::: tip Loi noi dau
 **Tai sao `"1" + 1` trong JavaScript cho `"11"`, nhung trong Python lai bao loi?** Phia sau la he thong kieu dang hoat dong. He thong kieu la "quy tac giao thong" cua ngon ngu -- no quyet dinh du lieu co the su dung nhu the nao, co the tinh toan voi ai, va khi nao kiem tra tinh hop phap. Hieu he thong kieu giup ban hieu "su khac biet ve tinh cach" giua cac ngon ngu.
@@ -26,7 +26,7 @@ Sau khi hoc xong chuong nay, ban se co duoc:
 
 ---
 
-## 0. Toan canh: Kieu la "CMND" cua du lieu
+## 0. Tổng quan hệ thống kiểu
 
 Trong doi thuc, ban khong nhay mot cuon sach vao coc ca phe -- vi chung la nhung "kieu" khac nhau. The gioi lap trinh cung vay: so, chuoi, boolean, mang... moi du lieu co "danh tinh" rieng, quyet dinh no co the tham gia phep toan nao.
 
@@ -39,7 +39,7 @@ Trong doi thuc, ban khong nhay mot cuon sach vao coc ca phe -- vi chung la nhung
 
 ---
 
-## 1. He thong kieu la gi: Quy tac giao thong cua du lieu
+## 1. Tổng quan về hệ thống kiểu
 
 <TypeSystemDemo />
 
@@ -60,7 +60,7 @@ The gioi khong co he thong kieu nhu con duong khong co quy tac giao thong -- bat
 
 ---
 
-## 2. Tinh vs Dong: Khi nao kiem tra?
+## 2. Nguyên lý phân loại: kiểu tĩnh và kiểu động
 
 Day la chieu phan loai quan trong nhat -- **thoi diem kiem tra**.
 
@@ -73,7 +73,7 @@ Day la chieu phan loai quan trong nhat -- **thoi diem kiem tra**.
 
 ---
 
-## 3. Manh vs Yeu: Co cho phep "chuyen doi an" khong?
+## 3. Nguyên lý phân loại: kiểu mạnh và kiểu yếu
 
 <StrongVsWeakDemo />
 

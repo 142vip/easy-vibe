@@ -1,4 +1,4 @@
-# Sistema Operativo: Contratar un "Gran Administrador" para tu Computadora
+# Principios de sistemas operativos: procesos, memoria y sistemas de archivos
 
 ::: tip Prologo
 **Con una CPU perfecta y memoria infinita, se puede usar la computadora directamente?**
@@ -24,7 +24,7 @@ Despues de completar este capitulo, obtendras:
 
 ---
 
-## 0. Vision general: Que pasaria sin sistema operativo?
+## 0. Principios y necesidad de los sistemas operativos
 
 Imagina que abriste una "fabrica de computo" extremadamente prometedora (tu computadora), con un trabajador de elite incansable (CPU), un almacen gigante (memoria) e innumerables contenedores (disco duro).
 
@@ -47,7 +47,7 @@ La respuesta: **no las hace al mismo tiempo. Es el sistema operativo haciendo un
 
 <ProcessDemo />
 
-### 1.1 Que es un "proceso"?
+### 1.1 Visión general de los procesos
 Cada programa en ejecucion se llama un **proceso**. Puedes entenderlo como un "equipo de proyecto" con su propio codigo (lista de tareas), sus propios datos en memoria (fondos del proyecto), esperando su turno para ver la CPU.
 
 ### 1.2 Round-robin de tiempos
@@ -79,7 +79,7 @@ Si compras un disco duro nuevo, es un terreno baldio de celdas de almacenamiento
 
 <FilesystemDemo />
 
-### 3.1 Que hace el sistema de archivos?
+### 3.1 Principios de los sistemas de archivos
 1. **Cortar el disco**: Divide el disco en innumerables **bloques** de tamano fijo (generalmente 4KB)
 2. **Crear un libro de cuentas**: Registra que bloques estan llenos y cuales vacios
 3. **Traducir rutas**: Convierte `D:/Fotos/Mascota.jpg` en "bloques 3, 7, 11"

@@ -1,4 +1,4 @@
-# Betriebssystem: Dem Computer einen „Generalmanager" anstellen
+# Prinzipien von Betriebssystemen: Prozesse, Speicher und Dateisysteme
 
 ::: tip Vorwort
 **Mit einem perfekten CPU und unendlich viel Arbeitsspeicher lässt sich der Computer direkt nutzen?**
@@ -24,8 +24,7 @@ Nach Abschluss dieses Kapitels werden Sie Folgendes gewonnen haben:
 
 ---
 
-## 0. Überblick: Was wäre ohne Betriebssystem?
-
+## 0. Überblick über Betriebssysteme
 Stellen Sie sich vor, Sie eröffnen eine hochpotente „Computerfabrik" (Ihren PC). In der Fabrik gibt es einen allround-fähigen, unermüdlichen Top-Mitarbeiter (CPU), einen riesigen Lagerhallenkomplex (Arbeitsspeicher) und unzählige Container (Festplatte).
 
 Wenn Sie **keinen** Fabrikleiter (Betriebssystem) **einstellen**:
@@ -47,7 +46,7 @@ Die Antwort: **Er macht sie nicht gleichzeitig. Das Betriebssystem betreibt verr
 
 <ProcessDemo />
 
-### 1.1 Was ist ein „Prozess"?
+### 1.1 Überblick über Prozesse
 Jedes laufende Programm ist ein **Prozess**. Man kann ihn sich als „Projektteam" vorstellen: mit eigenem Code (Aufgabenliste), eigenen Speicherdaten (Projektbudget), das in der Schlange auf eine Audienz beim CPU wartet.
 
 ### 1.2 Round-Robin mit Zeitscheiben
@@ -79,7 +78,7 @@ Wenn Sie eine nagelneue Festplatte kaufen, ist sie nur eine leere Fläche aus Sp
 
 <FilesystemDemo />
 
-### 3.1 Was macht das Dateisystem?
+### 3.1 Überblick über Dateisystemfunktionen
 1. **Festplatte zerteilen**: Die Festplatte in unzählige **Blöcke** fester Größe (meist 4KB) aufteilen
 2. **Buchführung**: Notieren, welche Blöcke voll und welche leer sind
 3. **Pfadübersetzung**: `D:/Fotos/Haustier.jpg` übersetzen in „Blöcke 3, 7 und 11"

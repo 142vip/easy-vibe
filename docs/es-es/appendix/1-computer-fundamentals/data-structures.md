@@ -1,4 +1,4 @@
-# Estructuras de Datos
+# Introducción a las estructuras de datos
 
 ::: tip Prologo
 **Programa = Estructura de Datos + Algoritmo.** Ya aprendimos como la CPU ejecuta instrucciones y como el sistema operativo gestiona recursos. Pero el objeto central que procesan los programas son los **datos** -- informacion de usuarios, listas de productos, relaciones sociales... Como se organizan estos datos en memoria determina directamente la velocidad del programa. La respuesta suele estar en la **eleccion de la estructura de datos**.
@@ -23,7 +23,7 @@
 
 ---
 
-## 1. Vision general: Que son las estructuras de datos?
+## 1. Visión general de las estructuras de datos
 
 Imagina que quieres organizar un monton de libros:
 
@@ -168,5 +168,5 @@ Regla simple: **menores a la izquierda, mayores a la derecha**. Busqueda O(log n
 
 ## Proximos pasos
 
-- **[Pensamiento Algoritmico](./algorithm-thinking.md)**: Aprender a resolver problemas con algoritmos
-- **[Lenguajes de Programacion](./programming-languages.md)**: Como implementan estas estructuras
+- **[Introducción a los algoritmos](./algorithm-thinking.md)**: Aprender a resolver problemas con algoritmos
+- **[Conceptos de lenguajes de programación](./programming-languages.md)**: Como implementan estas estructuras

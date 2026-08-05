@@ -1019,51 +1019,51 @@ const appendixSidebarEn = [
     collapsed: false,
     items: [
       {
-        text: 'Full-Stack in Vibe Coding Era',
+        text: 'Full-Stack Development: An Introduction',
         link: '/zh-cn/appendix/1-computer-fundamentals/vibe-coding-fullstack'
       },
       {
-        text: 'Power On to Web Visit',
+        text: 'Computer System Overview: From Boot to Web',
         link: '/zh-cn/appendix/1-computer-fundamentals/power-on-to-web'
       },
       {
-        text: 'Transistor to CPU',
+        text: 'Digital Circuits Basics: From Transistors to CPU',
         link: '/zh-cn/appendix/1-computer-fundamentals/transistor-to-cpu'
       },
       {
-        text: 'Computer Organization',
+        text: 'Computer Organization Principles',
         link: '/zh-cn/appendix/1-computer-fundamentals/computer-organization'
       },
       {
-        text: 'Operating Systems',
+        text: 'Operating Systems Principles',
         link: '/zh-cn/appendix/1-computer-fundamentals/operating-systems'
       },
       {
-        text: 'Data Encoding & Storage',
+        text: 'Data Representation: Encoding, Storage, Transmission',
         link: '/zh-cn/appendix/1-computer-fundamentals/data-encoding-storage'
       },
       {
-        text: 'Computer Networks',
+        text: 'Computer Networks: From URL to Rendering',
         link: '/zh-cn/appendix/1-computer-fundamentals/computer-networks'
       },
       {
-        text: 'Data Structures',
+        text: 'Data Structures: An Introduction',
         link: '/zh-cn/appendix/1-computer-fundamentals/data-structures'
       },
       {
-        text: 'Algorithm Thinking',
+        text: 'Introduction to Algorithms',
         link: '/zh-cn/appendix/1-computer-fundamentals/algorithm-thinking'
       },
       {
-        text: 'Programming Languages',
+        text: 'Programming Language Concepts',
         link: '/zh-cn/appendix/1-computer-fundamentals/programming-languages'
       },
       {
-        text: 'Compilers Intro',
+        text: 'Compiler Principles',
         link: '/zh-cn/appendix/1-computer-fundamentals/compilers'
       },
       {
-        text: 'Type Systems Intro',
+        text: 'Type Systems: An Introduction',
         link: '/zh-cn/appendix/1-computer-fundamentals/type-systems'
       }
     ]
@@ -3220,15 +3220,15 @@ Sitemap: ${siteUrl}/sitemap.xml
               collapsed: false,
               items: [
                 {
-                  text: 'Vibe Coding 时代下的全栈开发',
+                  text: '全栈开发导论：Vibe Coding 时代的计算机知识地图',
                   link: '/zh-cn/appendix/1-computer-fundamentals/vibe-coding-fullstack'
                 },
                 {
-                  text: '从按下电源到访问网站发生了什么',
+                  text: '计算机系统全景：从开机到访问网站',
                   link: '/zh-cn/appendix/1-computer-fundamentals/power-on-to-web'
                 },
                 {
-                  text: '从晶体管到 CPU',
+                  text: '数字电路基础：从晶体管到 CPU',
                   link: '/zh-cn/appendix/1-computer-fundamentals/transistor-to-cpu'
                 },
                 {
@@ -3236,35 +3236,35 @@ Sitemap: ${siteUrl}/sitemap.xml
                   link: '/zh-cn/appendix/1-computer-fundamentals/computer-organization'
                 },
                 {
-                  text: '操作系统（进程 / 内存 / 文件系统）',
+                  text: '操作系统原理：进程、内存与文件系统',
                   link: '/zh-cn/appendix/1-computer-fundamentals/operating-systems'
                 },
                 {
-                  text: '数据的编码、存储与传输',
+                  text: '数据表示原理：编码、存储与传输',
                   link: '/zh-cn/appendix/1-computer-fundamentals/data-encoding-storage'
                 },
                 {
-                  text: '网络：从输入网址到返回结果的过程',
+                  text: '计算机网络：从输入网址到渲染页面',
                   link: '/zh-cn/appendix/1-computer-fundamentals/computer-networks'
                 },
                 {
-                  text: '数据结构',
+                  text: '数据结构导论',
                   link: '/zh-cn/appendix/1-computer-fundamentals/data-structures'
                 },
                 {
-                  text: '算法思维入门',
+                  text: '算法导论',
                   link: '/zh-cn/appendix/1-computer-fundamentals/algorithm-thinking'
                 },
                 {
-                  text: '编程语言图谱',
+                  text: '编程语言概念：范式、演化与选型',
                   link: '/zh-cn/appendix/1-computer-fundamentals/programming-languages'
                 },
                 {
-                  text: '编译原理入门',
+                  text: '编译原理',
                   link: '/zh-cn/appendix/1-computer-fundamentals/compilers'
                 },
                 {
-                  text: '类型系统入门',
+                  text: '类型系统导论',
                   link: '/zh-cn/appendix/1-computer-fundamentals/type-systems'
                 }
               ]

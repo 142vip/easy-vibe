@@ -48,7 +48,7 @@ In the previous chapter "From Transistors to CPU," we understood how the CPU wor
 
 ---
 
-## 1. Von Neumann Architecture: The "Constitution" of Modern Computers
+## 1. Von Neumann Architecture: The Foundation of Modern Computers
 
 ### 1.1 The Stored-Program Principle
 
@@ -109,7 +109,7 @@ In the previous section, we learned the core idea of the Von Neumann architectur
 
 The answer is the **Instruction Set Architecture (ISA)**. If the CPU is a service, then the instruction set is its **API documentation** — it defines all the commands the CPU can understand, the format of each command, and the data range each command can operate on. Every line of code you write is ultimately translated by the compiler into a sequence of calls to this "API."
 
-### 2.1 From Code to Instructions: A Line of Code's Translation Journey
+### 2.1 From Code to Instructions: Instruction Encoding and Execution
 
 First, let's establish a holistic understanding: the code you write in an editor and what the CPU actually executes are separated by several layers of translation.
 
@@ -130,7 +130,7 @@ This translation chain is key to understanding instruction sets:
 - When choosing a CPU architecture (x86 vs ARM), you know the difference is in the "instruction set API"
 :::
 
-### 2.2 What Does an Instruction Look Like?
+### 2.2 Instruction Formats
 
 Now that we know code gets translated into instructions, the next question is: **what is the internal structure of an instruction?**
 
@@ -163,7 +163,7 @@ Based on the number of operands, instruction formats range from simple to comple
 This is a **trade-off between space and flexibility**. Zero-address instructions are the shortest (saving memory) but require extra stack operations; three-address instructions are the most flexible (preserving source data) but occupy more bits. Different CPU architectures choose different combinations of instruction formats.
 :::
 
-### 2.3 How Does the CPU Find Data? — Addressing Modes
+### 2.3 Addressing Modes
 
 An instruction tells the CPU to "do addition," but where are the two numbers for the addition? They might be written directly in the instruction, in a register, or at some memory address. **Addressing modes** are the rules that tell the CPU "where to find the operands."
 
@@ -235,7 +235,7 @@ An analogy to understand this:
 
 ---
 
-## 3. Control Unit: The CPU's "Command Center"
+## 3. Control Unit: The CPU's Control Logic
 
 ### 3.1 Components of the Control Unit
 
@@ -286,7 +286,7 @@ The CPU executes an instruction through a complete **instruction cycle**, typica
 
 ---
 
-## 4. Storage Hierarchy: Why Do We Need Cache?
+## 4. Storage Hierarchy and Cache Principles
 
 ### 4.1 Storage Hierarchy Structure
 
@@ -360,7 +360,7 @@ Think of virtual memory as **a hotel managing rooms**:
 
 ---
 
-## 5. Bus and I/O: The Computer's "Blood Vessels"
+## 5. Bus and I/O Systems
 
 ### 5.1 System Bus
 
@@ -457,7 +457,7 @@ While pipelining improves performance, it also introduces **hazard** problems:
 
 ---
 
-## 7. Summary: How Does a Computer "Run"?
+## 7. Summary: The Computer Execution Model
 
 Let's connect the entire process using professional terminology:
 

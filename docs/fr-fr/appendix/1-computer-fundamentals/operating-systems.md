@@ -1,4 +1,4 @@
-# Le système d'exploitation : engager un « grand intendant » pour l'ordinateur
+# Principes des systèmes d'exploitation : processus, mémoire et systèmes de fichiers
 
 ::: tip Préface
 **Avec un CPU parfait et une mémoire infinie, peut-on utiliser directement l'ordinateur ?**
@@ -24,7 +24,7 @@ Pour résoudre ces cauchemars, le **système d'exploitation (Operating System, O
 
 ---
 
-## 0. Vue d'ensemble : Que se passerait-il sans système d'exploitation ?
+## 0. Vue d'ensemble : Principe d'un système d'exploitation
 
 Imaginez que vous ouvrez une « usine de calcul » (votre ordinateur) très prometteuse. L'usine compte un collaborateur surpuissant et infatigable (CPU), un immense entrepôt (mémoire) et d'innombrables conteneurs (disque dur).
 
@@ -47,7 +47,7 @@ La réponse : **il ne les fait pas en même temps. C'est le système d'exploitat
 
 <ProcessDemo />
 
-### 1.1 Qu'est-ce qu'un « processus » ?
+### 1.1 Présentation d'un processus
 Chaque programme en cours d'exécution est un **processus**. On peut le comparer à une « équipe projet » : avec son propre code (liste de tâches), ses propres données mémoire (budget du projet), qui fait la queue pour être reçu par le CPU.
 
 ### 1.2 Tourniquet à tranches de temps
@@ -61,12 +61,12 @@ Le problème de l'utilisation alternée du CPU étant résolu, passons à l'espa
 
 <MemoryDemo />
 
-### 2.1 La mémoire virtuelle (Virtual Memory)
+### 2.1 Présentation de la mémoire virtuelle
 Le système d'exploitation ment effrontément à chaque processus : « Hey, tu as l'exclusivité de toute la mémoire disponible de cet ordinateur, utilise-la comme tu veux ! »
 
 Du point de vue du processus, sa mémoire est toujours **contiguë** et **propre**. Il y écrit ses données en toute tranquillité.
 
-### 2.2 La table des pages (Page Table)
+### 2.2 Principe de la table des pages
 En réalité ? Le système d'exploitation glisse subrepticement les données dans les interstices de la **vraie mémoire physique**. Cela présente deux avantages géniaux :
 1. **Sécurité absolue** : WeChat ne voit que son propre espace et ne peut pas modifier les données des autres
 2. **Utilisation de la fragmentation** : Même si la mémoire physique est chaotique, l'espace virtuel du processus reste bien ordonné
@@ -79,7 +79,7 @@ Si vous achetez un disque dur tout neuf, il ne contient que des cellules de stoc
 
 <FilesystemDemo />
 
-### 3.1 Que fait le système de fichiers ?
+### 3.1 Fonction du système de fichiers
 1. **Découper le disque** : Diviser le disque en innombrables **blocs** de taille fixe (généralement 4 Ko)
 2. **Tenir un registre** : Noter quels blocs sont pleins et lesquels sont vides
 3. **Traduire les chemins** : Traduire `D:/Photos/Animal de compagnie.jpg` en « blocs 3, 7 et 11 »

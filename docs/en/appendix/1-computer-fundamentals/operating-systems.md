@@ -1,4 +1,4 @@
-# Operating Systems: Hiring a "Chief Manager" for Your Computer
+# Operating Systems Principles: Processes, Memory, and File Systems
 
 ::: tip Preface
 **With a perfect CPU and unlimited memory, is a computer ready to use?**
@@ -24,7 +24,7 @@ After completing this chapter, you will gain:
 
 ---
 
-## 0. Big Picture: What Happens Without an Operating System?
+## 0. Big Picture: The Role and Position of Operating Systems
 
 Imagine you open a "computing factory" (your computer) with immense potential. The factory has one all-powerful, tireless top worker (CPU), a vast warehouse (memory), and countless shipping containers (hard drives).
 
@@ -47,7 +47,7 @@ The answer: **It doesn't do them simultaneously. Instead, the operating system p
 
 <ProcessDemo />
 
-### 1.1 What Is a "Process"?
+### 1.1 Process Overview
 Every running program is called a **process**. You can think of it as a "project team" with its own code (task list), its own memory data (project budget), queuing up for CPU attention.
 
 ### 1.2 Round-Robin Scheduling
@@ -79,7 +79,7 @@ If you buy a brand-new hard drive, it's essentially a barren expanse of storage 
 
 <FilesystemDemo />
 
-### 3.1 What Does a File System Do?
+### 3.1 File System Functions
 1. **Partition the hard drive**: Cut the hard drive into countless fixed-size **blocks** (typically 4KB)
 2. **Maintain a ledger**: Record which blocks are full and which are empty
 3. **Translate paths**: Convert `D drive/Photos/Pet.jpg` into "blocks 3, 7, and 11"

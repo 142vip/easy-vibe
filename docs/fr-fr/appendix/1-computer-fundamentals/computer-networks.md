@@ -1,4 +1,4 @@
-# Le navigateur est un système d'exploitation
+# Réseaux informatiques : de la saisie d'URL au rendu des pages
 
 ::: tip Préface
 Vous utilisez un navigateur tous les jours — regarder des vidéos, lire des actualités, travailler en ligne. Mais avez-vous déjà réfléchi à ce qui se passe **quand vous tapez une adresse web dans la barre d'adresse et appuyez sur Entrée** ?
@@ -21,81 +21,27 @@ Cet article utilise l'analogie quotidienne du **« achats en ligne »** associé
 
 ---
 
-## 0. Introduction : Le moment où vous appuyez sur Entrée
+## 0. Introduction : Principe d'accès à une page web
 
 ::: tip 🤔 Question centrale
 **Que se passe-t-il quand vous tapez une adresse web et appuyez sur Entrée ?** Pourquoi certaines pages s'ouvrent rapidement et d'autres lentement ? Pourquoi voit-on parfois l'erreur « serveur introuvable » ?
 :::
 
-### Analogie quotidienne : Un achat en ligne
-
-Imaginez que vous faites un **achat en ligne**. Le processus complet se divise en 5 étapes :
-
-<div style="display: flex; gap: 20px; margin: 20px 0;">
-<div style="flex: 1; padding: 16px; background: var(--vp-c-bg-alt); border-radius: 12px;">
-
-**🛒 Étape 1 : Remplir la commande**
-Choisir le produit, confirmer l'adresse de livraison
-
-</div>
-<div style="flex: 1; padding: 16px; background: var(--vp-c-bg-alt); border-radius: 12px;">
-
-**🗺️ Étape 2 : Chercher l'entrepôt**
-Le système trouve l'entrepôt d'expédition concerné
-
-</div>
-<div style="flex: 1; padding: 16px; background: var(--vp-c-bg-alt); border-radius: 12px;">
-
-**📞 Étape 3 : Établir le canal**
-Confirmer que l'entrepôt est ouvert et peut expédier
-
-</div>
-</div>
-
-<div style="display: flex; gap: 20px; margin: 20px 0;">
-<div style="flex: 1; padding: 16px; background: var(--vp-c-bg-alt); border-radius: 12px;">
-
-**🚚 Étape 4 : L'entrepôt expédie**
-Le livreur apporte le colis
-
-</div>
-<div style="flex: 1; padding: 16px; background: var(--vp-c-bg-alt); border-radius: 12px;">
-
-**🎁 Étape 5 : Déballer**
-Ouvrir le colis et découvrir le produit souhaité
-
-</div>
-</div>
-
-**Le processus d'accès à une page web est remarquablement similaire à un achat en ligne !**
-
-Quand vous tapez `google.com` et appuyez sur Entrée, vous êtes l'« acheteur », et le navigateur, par une série d'opérations, achemine la « marchandise » (le contenu de la page) depuis un serveur distant jusqu'à votre écran.
-
 <UrlToBrowserQuickStart />
 
-::: info 💡 Insight central
-La clé pour comprendre le fonctionnement du navigateur est de **faire correspondre des processus techniques complexes à des scénarios quotidiens familiers**. Les 5 étapes de l'achat en ligne correspondent parfaitement aux 5 phases techniques de l'accès à une page web.
+::: info 💡 Aperçu central
+Le processus d'accès à une page web comprend 5 phases principales : analyse d'URL, résolution DNS, établissement de la connexion, échange HTTP, et rendu du navigateur.
 :::
 
 ---
 
-## 1. Première étape : Remplir la « commande » — Analyse d'URL
+## 1. Analyse d'URL
 
 ::: tip 🤔 Question centrale
-**Pourquoi une adresse web a-t-elle cette forme ?** `https://www.example.com:8080/path/page.html?id=123#section` — Que signifie cette chaîne de caractères ?
+`https://www.example.com:8080/path/page.html?id=123#section` — Principe de la structure d'une URL.
 :::
 
-### Analogie quotidienne : Remplir un bon de commande
-
-Si vous écrivez simplement « acheter des chaussures » sur le bon de commande, l'entrepôt ne saura pas quelle paire envoyer. Vous devez préciser :
-
-- **Type de magasin** (boutique officielle / magasin ordinaire)
-- **Nom du magasin** (Boutique officielle Nike)
-- **Emplacement du produit** (Rayon homme / Collection running)
-- **Modèle exact** (Air Max 90)
-- **Informations supplémentaires** (Je les veux en rouge)
-
-### Processus réel : Le navigateur analyse l'URL
+### 1.1 Principe de l'analyse de l'URL
 
 **L'URL (Uniform Resource Locator)** est le « code produit » du monde du navigateur. Quand vous tapez `https://www.example.com:8080/path/page.html?id=123#section`, le navigateur la décompose immédiatement :
 
@@ -116,22 +62,13 @@ Les URL existent pour que les **humains** puissent les retenir et les saisir. Ce
 
 ---
 
-## 2. Deuxième étape : Consulter l'« annuaire » — Résolution DNS
+## 2. Résolution DNS
 
 ::: tip 🤔 Question centrale
-**Comment le navigateur trouve-t-il le site web ?** Vous saisissez un nom de domaine lisible (ex. `baidu.com`), mais l'ordinateur a besoin d'une adresse numérique (IP). Que se passe-t-il entre les deux ?
+Principe de conversion d'un nom de domaine en adresse IP.
 :::
 
-### Analogie quotidienne : Chercher l'adresse de l'entrepôt
-
-Vous avez commandé chez « la Boutique officielle Nike », mais le système logistique ne sait pas où se trouve l'entrepôt. Il faut consulter l'annuaire :
-
-1. D'abord vérifier les **adresses fréquentes** (ai-je déjà acheté ici récemment ?) → Cache du navigateur
-2. Sinon, demander au **point relais du quartier** (ils connaissent les grandes zones) → Serveur DNS local
-3. Demander au **centre de répartition** (sait qui gère les .com) → Serveur de noms racine
-4. Demander au **service des marques** (trouve finalement le véritable entrepôt d'expédition de Nike) → Serveur de noms faisant autorité
-
-### Processus réel : Résolution DNS hiérarchique
+### 2.1 Principe de la résolution DNS hiérarchique
 
 **Le DNS (Domain Name System)** est le « système d'annuaire distribué » d'Internet. Avec des milliards de noms de domaine dans le monde, une architecture hiérarchique répartit la charge de requêtes :
 
@@ -157,31 +94,19 @@ Adresse IP renvoyée au navigateur
 
 <DnsLookupDemo />
 
-::: info 💡 Pourquoi tant de niveaux ?
-Imaginez qu'il n'existe qu'un seul annuaire dans le monde — des milliards de personnes consultant en même temps le feraient s'effondrer instantanément. La conception hiérarchique permet à chaque niveau de ne gérer que sa propre « juridiction » — efficace et fiable.
-
-C'est le principe fondamental de la conception d'Internet : les **systèmes distribués**.
+::: info 💡 Principe de la hiérarchie DNS
+La conception hiérarchique permet à chaque niveau de ne gérer que sa propre zone — efficace et fiable. C'est le principe fondamental des **systèmes distribués**.
 :::
 
 ---
 
-## 3. Troisième étape : Confirmation par téléphone — Poignée de main TCP en trois temps
+## 3. Poignée de main TCP en trois temps
 
 ::: tip 🤔 Question centrale
-**Pourquoi une « poignée de main en trois temps » ?** Une fois l'adresse du serveur trouvée, pourquoi ne peut-on pas envoyer les données directement ? Pourquoi trois échanges préliminaires sont-ils nécessaires ?
+Principe de l'établissement d'une connexion TCP fiable.
 :::
 
-### Analogie quotidienne : Établir un canal logistique
-
-Si le camion de livraison arrive directement à l'entrepôt, plusieurs problèmes peuvent survenir :
-
-- L'entrepôt est fermé → déplacement inutile
-- L'entrepôt est saturé et ne prend plus de commandes → impossible d'expédier
-- Le quai de déchargement est introuvable → impossible de se connecter
-
-**C'est pourquoi il faut établir un canal de transport fiable avant l'expédition.**
-
-### Processus réel : Poignée de main TCP en trois temps
+### 3.1 Principe de la poignée de main TCP en trois temps
 
 **TCP (Transmission Control Protocol, protocole de contrôle de transmission)** est le protocole garantissant un transfert fiable des données. Avant de transporter la « marchandise » (les données), la connexion doit être établie par une « poignée de main en trois temps » :
 
@@ -197,7 +122,7 @@ Client (votre ordinateur)              Serveur (entrepôt du vendeur)
    ===== Canal établi, l'expédition commence =====
 ```
 
-**Pourquoi trois et pas deux ?**
+**Principe de la poignée de main en trois temps**
 
 - **Premier temps (SYN)** : Le client prouve qu'il peut envoyer
 - **Deuxième temps (SYN-ACK)** : Le serveur prouve qu'il peut recevoir et envoyer
@@ -214,22 +139,17 @@ La poignée de main en trois temps garantit : **les deux parties peuvent envoyer
 
 <TcpHandshakeDemo />
 
-> **Étape supplémentaire pour HTTPS** : Pour les sites HTTPS (sécurisés), après la poignée de main TCP a lieu une **poignée de main TLS** (1-RTT ou 2-RTT), où les deux parties échangent des clés de chiffrement, afin que seuls les deux interlocuteurs puissent comprendre la suite de la conversation — comme communiquer en code secret.
+> **Étape supplémentaire pour HTTPS** : Pour les sites HTTPS (sécurisés), après la poignée de main TCP a lieu une **poignée de main TLS** (1-RTT ou 2-RTT), où les deux parties échangent des clés de chiffrement, afin que seuls les deux interlocuteurs puissent comprendre la suite de la conversation.
 
 ---
 
-## 4. Quatrième étape : Le dialogue entre « l'acheteur » et le « vendeur » — Requête et réponse HTTP
+## 4. Requête et réponse HTTP
 
 ::: tip 🤔 Question centrale
-**Que se disent le navigateur et le serveur ?** Une fois la connexion établie, comment le navigateur « indique-t-il » au serveur ce qu'il veut ? Et comment le serveur « répond-il » ?
+Principe de la communication HTTP entre navigateur et serveur.
 :::
 
-### Analogie quotidienne : L'entrepôt expédie
-
-Le camion de livraison arrive à l'entrepôt : « Voici la commande (requête HTTP), **je viens récupérer la marchandise (le code source HTML de la page) !** »
-Le gestionnaire de l'entrepôt vérifie : « Commande valide, voici votre colis (**fichier HTML**), tenez. »
-
-### Processus réel : Communication via le protocole HTTP
+### 4.1 Principe de la communication via le protocole HTTP
 
 **HTTP (HyperText Transfer Protocol, protocole de transfert hypertexte)** est le « règlement de dialogue » entre le navigateur et le serveur. Une fois le canal établi, le navigateur envoie une **requête de récupération** ; l'**objectif central est de récupérer le code source de la page (fichier HTML)** :
 
@@ -302,30 +222,19 @@ Set-Cookie: user_id=xyz789        ← Définition d'un cookie
 
 ---
 
-## 5. Cinquième étape : Ouvrir le « colis » — Rendu du navigateur
+## 5. Rendu du navigateur
 
 ::: tip 🤔 Question centrale
-**Comment le code devient-il une image ?** Le serveur envoie du code HTML/CSS/JavaScript ennuyeux — comment le navigateur le transforme-t-il en une page web riche et colorée ?
+Principe de transformation du code HTML/CSS/JavaScript en page web.
 :::
 
-### Analogie quotidienne : Déballage et assemblage
-
-Vous avez enfin reçu le colis (réponse HTTP), mais en l'ouvrant, vous ne trouvez pas de meuble tout fait, mais des **pièces détachées** (HTML) et un **mode d'emploi** (CSS). En tant qu'« acheteur » (navigateur), vous devez tout assembler vous-même :
-
-1. **Ouvrir l'emballage** : Sortir toutes les pièces et vérifier la liste (analyser le HTML → arbre DOM)
-2. **Lire le mode d'emploi** : Comprendre quelle pièce va où et de quelle couleur (analyser le CSS → arbre CSSOM)
-3. **Trier** : Sélectionner les pièces à assembler, jeter les emballages (`display: none`), préparer l'assemblage (construire l'arbre de rendu)
-4. **Mesurer les positions** : Prendre les dimensions de la pièce et décider où placer chaque meuble (layout/reflow)
-5. **Peindre et décorer** : Peindre les meubles, appliquer des autocollants (painting)
-6. **Présentation finale** : Nettoyer, allumer la lumière, présenter (compositing)
-
-### Processus réel : Le moteur de rendu du navigateur
+### 5.1 Principe du moteur de rendu du navigateur
 
 Le navigateur reçoit du **code HTML/CSS/JavaScript** (du texte ennuyeux) qu'il doit convertir en **pixels à l'écran** (une belle page web). Ce processus s'appelle le **rendu (Rendering)** et est exécuté par le **moteur de rendu** du navigateur (par ex. Blink dans Chrome, WebKit dans Safari).
 
-#### Étape 1 : Analyser le HTML → Construire l'arbre DOM (liste des pièces)
+#### 5.1.1 Construction de l'arbre DOM
 
-Le navigateur lit le flux d'octets HTML et le transforme en un **arbre DOM (Document Object Model)**. C'est comme organiser des pièces éparses dans une liste hiérarchique :
+Le navigateur lit le flux d'octets HTML et le transforme en un **arbre DOM (Document Object Model)**.
 
 ```html
 <!-- HTML original -->
@@ -342,42 +251,42 @@ Document
          └─ div.content ("Contenu")
 ```
 
-#### Étape 2 : Analyser le CSS → Construire l'arbre CSSOM (mode d'emploi)
+#### 5.1.2 Construction de l'arbre CSSOM
 
-Le navigateur analyse toutes les règles CSS (en ligne, fichiers externes) et construit un **arbre CSSOM (CSS Object Model)**. C'est comme comprendre les règles de style du mode d'emploi :
+Le navigateur analyse toutes les règles CSS (en ligne, fichiers externes) et construit un **arbre CSSOM (CSS Object Model)**.
 
 ```css
 .header {
   color: blue;
   font-size: 24px;
-} /* Le titre doit être bleu */
+}
 .content {
   display: none;
-} /* Le contenu est temporairement caché */
+}
 ```
 
-#### Étape 3 : Fusionner → Arbre de rendu (préparation de l'assemblage)
+#### 5.1.3 Construction de l'arbre de rendu
 
 Arbre DOM + Arbre CSSOM = **Arbre de rendu (Render Tree)**.
 Point clé : **Seuls les éléments « visibles » figurent dans l'arbre de rendu**.
 
 - `.header` : Dans l'arbre de rendu (visible).
-- `.content` : **Absent** de l'arbre de rendu (`display: none` — comme un emballage jeté, pas besoin d'assembler).
+- `.content` : **Absent** de l'arbre de rendu (`display: none`).
 
-#### Étape 4 : Layout (Layout / Reflow) — Prendre les mesures
+#### 5.1.4 Layout (Reflow)
 
 Le navigateur calcule les **coordonnées et dimensions exactes** de chaque nœud de l'arbre de rendu à l'écran.
 
 - « Ce cadre de titre fait 100px de large, 50px de haut, positionné en haut à gauche (0,0). »
-- Ce processus s'appelle le **reflow**. Si la taille de la fenêtre change (ex. passage en mode paysage sur mobile), toutes les positions doivent être recalculées — très coûteux en performance.
+- Ce processus s'appelle le **reflow**. Si la taille de la fenêtre change, toutes les positions doivent être recalculées — très coûteux en performance.
 
-#### Étape 5 : Paint — Peindre
+#### 5.1.5 Paint
 
 Une fois les positions connues, le navigateur commence à remplir les pixels : peindre les couleurs de fond, les couleurs de texte, les bordures, les ombres, etc.
 
-#### Étape 6 : Composite — Présentation finale
+#### 5.1.6 Composite
 
-Les navigateurs modernes divisent la page en plusieurs **couches (Layers)** dessinées séparément (ex. transformations 3D, barre de défilement indépendante), puis le GPU les superpose comme des calques Photoshop pour les afficher à l'écran.
+Les navigateurs modernes divisent la page en plusieurs **couches (Layers)** dessinées séparément, puis le GPU les superpose pour les afficher à l'écran.
 
 <BrowserRenderingDemo />
 
@@ -387,17 +296,15 @@ Les navigateurs modernes divisent la page en plusieurs **couches (Layers)** dess
 
 ---
 
-## 5.5 Comment une page web est-elle « générée » ? Sites statiques vs sites dynamiques
+## 6. Sites statiques vs sites dynamiques
 
 ::: tip 🤔 Question centrale
-**D'où vient le contenu des pages ?** Nous avons expliqué comment le navigateur rend une page. Mais comment le fichier HTML sur le serveur est-il créé ? Est-il préparé à l'avance ou fabriqué à la volée ?
+Principe de génération du contenu des pages web.
 :::
 
-### Site statique : Préparé à l'avance, livré directement
+### 6.1 Principe du site statique
 
-Imaginez que vous achetez des biscuits au supermarché. Les biscuits sur l'étagère sont déjà produits en usine — vous les prenez et repartez, sans attendre.
-
-Un **site statique** est un tel « produit fini » — les pages sont déjà prêtes sur le serveur. Lors de la visite, le serveur envoie directement le fichier HTML tel quel, sans traitement supplémentaire.
+Un **site statique** est un site dont les pages sont déjà prêtes sur le serveur. Lors de la visite, le serveur envoie directement le fichier HTML tel quel, sans traitement supplémentaire.
 
 **Caractéristiques :**
 - ✅ Accès rapide (le serveur ne fait qu'envoyer des fichiers, pas de calcul)
@@ -407,50 +314,43 @@ Un **site statique** est un tel « produit fini » — les pages sont déjà pr�
 
 **Exemples courants :** Pages de présentation d'entreprise, documentation produit, centre d'aide, blogs personnels
 
-### Site dynamique : Préparé à la commande, différent à chaque fois
+### 6.2 Principe du site dynamique
 
-Maintenant, imaginez que vous commandez au restaurant. Le cuisinier prépare votre plat selon votre commande — si vous commandez du poulet Kung Pao, on ne vous sert pas du porc aigre-doux.
-
-Un **site dynamique** est une page « fabriquée à la volée » à chaque visite — le serveur reçoit la requête, interroge la base de données, calcule les données, puis génère un nouveau HTML qu'il vous envoie.
+Un **site dynamique** est une page générée à la volée à chaque visite — le serveur reçoit la requête, interroge la base de données, calcule les données, puis génère un nouveau HTML qu'il vous envoie.
 
 **Caractéristiques :**
 - ✅ Contenu en temps réel (panier affichant le stock actualisé, nouvelles mises à jour instantanées)
 - ✅ Personnalisation (affichage de vos informations personnelles après connexion)
 - ✅ Fonctionnalités puissantes (recherche, commentaires, recommandations, paiement)
 - ❌ Accès plus lent (le serveur a besoin de temps pour calculer)
-- ❨ Charge serveur élevée (de nombreux visiteurs simultanés créent des files d'attente)
+- ❌ Charge serveur élevée (de nombreux visiteurs simultanés créent des files d'attente)
 
 **Exemples courants :** Sites e-commerce, réseaux sociaux, banque en ligne, éditeurs de documents en ligne
 
-**Faut-il un serveur ?** Les sites dynamiques nécessitent effectivement un « backend » sous une forme ou une autre, mais les options sont variées :
+**Options d'hébergement :** Les sites dynamiques nécessitent effectivement un « backend » sous une forme ou une autre, mais les options sont variées :
 - **Serveur traditionnel** : Acheter/louer son propre serveur (AWS EC2, etc.)
 - **Serverless** : Pas besoin de gérer de serveur, le fournisseur cloud exécute le code (AWS Lambda, Cloudflare Workers, etc.)
 - **Appels à des API tierces** : Paiement via Stripe, météo via l'API météo, sans écrire de code backend
 
-::: tip 💡 Combiner statique et dynamique
+::: tip 💡 Combinaison statique et dynamique
 Beaucoup de sites modernes sont « hybrides » : le corps de la page est statique, mais certaines parties (zone de commentaires, barre de recherche) sont chargées dynamiquement. JavaScript peut appeler des API après le chargement de la page pour récupérer des données, réalisant ainsi « page statique + fonctionnalités dynamiques ».
 :::
 
-### 📊 Statique vs Dynamique — Comparaison claire
+### 6.3 Comparaison claire des deux modes
 
 | | Site statique | Site dynamique |
 |---|---------|---------|
 | **Origine** | Préparé à l'avance, stocké sur le serveur | Fabriqué à la volée à chaque visite |
-| **Analogie** | Produit sur l'étagère du supermarché | Plat commandé au restaurant |
 | **Vitesse** | Rapide | Lent (calcul nécessaire) |
 | **Modification du contenu** | Difficile (régénération nécessaire) | Facile (modification directe dans le backend) |
 | **Usage adapté** | Contenu de présentation (page d'accueil, documentation) | Applications interactives (shopping, réseaux sociaux) |
 | **Exemples typiques** | Site vitrine d'entreprise, documentation d'aide | Amazon, Facebook, banque en ligne |
 
-### 🤔 Questions fréquentes
+### 6.4 Points clés à retenir
 
-**Q : Un site statique ne peut-il pas utiliser JavaScript ?**
+**Point 1 :** Les sites statiques peuvent utiliser JavaScript pour des fonctionnalités interactives. « Statique » et « dynamique » désignent **si le contenu de la page est préparé à l'avance**, et non la présence ou l'absence de fonctionnalités interactives.
 
-Bien sûr que si ! Carrousels d'images, menus déroulants, validation de formulaires — toutes ces fonctionnalités interactives peuvent être réalisées en JavaScript sur un site statique. « Statique » et « dynamique » désignent **si le contenu de la page est préparé à l'avance**, et non la présence ou l'absence de fonctionnalités interactives.
-
-**Q : Un site dynamique nécessite-t-il obligatoirement son propre serveur ?**
-
-Pas forcément. Outre les serveurs traditionnels, vous pouvez utiliser le serverless (fonctions cloud) ou appeler directement des API tierces. La tendance actuelle est de « ne pas toucher au serveur » — site statique + appels d'API via JavaScript, rapide et économique.
+**Point 2 :** Les sites dynamiques ne nécessitent pas obligatoirement son propre serveur. Outre les serveurs traditionnels, vous pouvez utiliser le serverless (fonctions cloud) ou appeler directement des API tierces.
 
 ::: tip 💡 Remarque importante
 Que le site soit statique ou dynamique, **le principe de rendu du navigateur est le même !** Le navigateur rend ce que le serveur envoie. La seule différence :
@@ -462,25 +362,24 @@ En tant que développeur frontend, votre préoccupation principale est la façon
 
 ---
 
-## 6. Résumé : Un « achat en ligne » complet
+## 7. Résumé
 
 ::: tip 🎉 Après ce chapitre, vous devriez pouvoir
 - Expliquer le flux complet de la saisie de l'URL à l'affichage de la page
 - Comprendre le rôle et la relation de l'URL, DNS, TCP et HTTP
 - Savoir comment le navigateur rend une page
 - Distinguer sites statiques et sites dynamiques
-- Expliquer le fonctionnement du navigateur avec des analogies quotidiennes
 :::
 
-Revenons sur l'ensemble du voyage :
+Revenons sur l'ensemble du processus :
 
-| Phase | Terme technique | Analogie achat en ligne | Tâche centrale | Technologies clés |
-| ----------- | ---------- | -------- | ------------------ | ------------------------------ |
-| **1. Analyse** | Analyse d'URL | Remplir la commande | Comprendre ce que veut l'acheteur | Protocole, domaine, port, chemin, paramètres |
-| **2. Requête** | Résolution DNS | Chercher l'adresse de l'entrepôt | Trouver l'entrepôt d'expédition du magasin | Requête récursive/itérative, mécanisme de cache |
-| **3. Connexion** | Poignée de main TCP | Établir le canal | Assurer la fluidité logistique | Poignée de main en 3 temps, numéros de séquence, contrôle de flux |
-| **4. Dialogue** | Échange HTTP | L'entrepôt expédie | Passer commande et réceptionner | Méthodes de requête, codes de statut, champs d'en-tête |
-| **5. Présentation** | Rendu du navigateur | Déballage et assemblage | Présenter le produit | DOM, CSSOM, arbre de rendu, layout, paint |
+| Phase | Terme technique | Tâche centrale | Technologies clés |
+| ----------- | ---------- | ------------------ | ------------------------------ |
+| **1. Analyse** | Analyse d'URL | Comprendre la ressource demandée | Protocole, domaine, port, chemin, paramètres |
+| **2. Requête** | Résolution DNS | Trouver l'adresse IP du serveur | Requête récursive/itérative, mécanisme de cache |
+| **3. Connexion** | Poignée de main TCP | Établir une connexion fiable | Poignée de main en 3 temps, numéros de séquence, contrôle de flux |
+| **4. Dialogue** | Échange HTTP | Demander et recevoir les données | Méthodes de requête, codes de statut, champs d'en-tête |
+| **5. Présentation** | Rendu du navigateur | Afficher la page web | DOM, CSSOM, arbre de rendu, layout, paint |
 
 **L'ensemble du processus s'accomplit généralement en quelques centaines de millisecondes** — pensez à quel point c'est remarquable !
 
@@ -503,22 +402,22 @@ Si vous souhaitez approfondir un aspect particulier :
 
 ---
 
-## 7. Glossaire
+## 8. Glossaire
 
 | Terme | Nom complet | Brève explication |
 | ----------- | ----------------------------- | -------------------------------------------------------------------------- |
-| **URL** | Uniform Resource Locator | **Localisateur uniforme de ressource**. L'« adresse » d'une page web, indiquant au navigateur où trouver la ressource |
-| **DNS** | Domain Name System | **Système de noms de domaine**. L'« annuaire téléphonique » d'Internet, convertissant les noms de domaine lisibles en adresses IP lisibles par les machines |
-| **Adresse IP** | Internet Protocol Address | **Adresse de protocole Internet**. Le « numéro de porte » unique de chaque appareil connecté, ex. `192.168.1.1` |
-| **TCP** | Transmission Control Protocol | **Protocole de contrôle de transmission**. Le « règlement » garantissant un transfert de données fiable, via la poignée de main en trois temps |
-| **HTTP** | HyperText Transfer Protocol | **Protocole de transfert hypertexte**. Les « règles de dialogue » entre le navigateur et le serveur |
+| **URL** | Uniform Resource Locator | **Localisateur uniforme de ressource**. Indique au navigateur où trouver une ressource web |
+| **DNS** | Domain Name System | **Système de noms de domaine**. Système distribué convertissant les noms de domaine lisibles en adresses IP lisibles par les machines |
+| **Adresse IP** | Internet Protocol Address | **Adresse de protocole Internet**. Identifiant unique de chaque appareil connecté, ex. `192.168.1.1` |
+| **TCP** | Transmission Control Protocol | **Protocole de contrôle de transmission**. Protocole garantissant un transfert de données fiable, via la poignée de main en trois temps |
+| **HTTP** | HyperText Transfer Protocol | **Protocole de transfert hypertexte**. Règles de communication entre le navigateur et le serveur |
 | **HTTPS** | HTTP Secure | **HTTP sécurisé**. HTTP avec chiffrement (TLS/SSL) ajouté pour protéger la sécurité des données |
-| **HTML** | HyperText Markup Language | **Langage de balisage hypertexte**. Le « squelette » de la page web, définissant la structure du contenu |
-| **CSS** | Cascading Style Sheets | **Feuilles de style en cascade**. L'« apparence » de la page web, définissant le look du contenu |
-| **DOM** | Document Object Model | **Modèle objet de document**. La structure arborescente dans laquelle le navigateur convertit le HTML, facilitant la manipulation |
-| **CSSOM** | CSS Object Model | **Modèle objet CSS**. La structure arborescente dans laquelle le navigateur convertit le CSS |
-| **Rendu** | Rendering | Le processus par lequel le navigateur convertit le code en pixels à l'écran |
-| **RTT** | Round Trip Time | **Temps aller-retour**. Le temps entre l'envoi d'un paquet de données et la réception de l'accusé de réception, affectant la vitesse de chargement |
+| **HTML** | HyperText Markup Language | **Langage de balisage hypertexte**. Définit la structure du contenu d'une page web |
+| **CSS** | Cascading Style Sheets | **Feuilles de style en cascade**. Définit le style et la présentation du contenu d'une page web |
+| **DOM** | Document Object Model | **Modèle objet de document**. Structure arborescente dans laquelle le navigateur convertit le HTML, facilitant la manipulation |
+| **CSSOM** | CSS Object Model | **Modèle objet CSS**. Structure arborescente dans laquelle le navigateur convertit le CSS |
+| **Rendu** | Rendering | Processus par lequel le navigateur convertit le code en pixels à l'écran |
+| **RTT** | Round Trip Time | **Temps aller-retour**. Temps entre l'envoi d'un paquet de données et la réception de l'accusé de réception, affectant la vitesse de chargement |
 
 ---
 

@@ -1,4 +1,4 @@
-# De Transistores a CPU
+# Fundamentos de circuitos digitales: desde los transistores hasta la CPU
 
 ::: tip Prologo
 **Como "piensa" la computadora?** Probablemente sabes que la CPU es el "cerebro" del ordenador, pero como funciona realmente? Como pasa de metal y plastico a un dispositivo inteligente capaz de ejecutar programas y procesar datos? Este capitulo te lleva desde los transistores mas basicos hasta entender los principios de construccion de la CPU.
@@ -40,7 +40,7 @@ La clave para entender los sistemas computacionales es la **abstraccion**. Desde
 
 <TransistorDemo />
 
-### 1.1 Que es un transistor?
+### 1.1 Visión general de los transistores
 
 Un **transistor** es un dispositivo semiconductor que podemos abstraer como un "interruptor" perfecto:
 - **Fuente (Source)** y **Drenaje (Drain)**: como los dos extremos de una tuberia
@@ -48,7 +48,7 @@ Un **transistor** es un dispositivo semiconductor que podemos abstraer como un "
 
 La diferencia clave: no controlamos con la mano, sino con **voltaje**. Cuando un interruptor puede ser controlado por la senal electrica de otro interruptor, cruzamos el abismo de la "intervencion humana" a la "computacion automatica".
 
-### 1.2 Como representan 0 y 1?
+### 1.2 Principios de representación binaria
 
 - **Alto voltaje (ej: 3.3V)** = logico **1** (True)
 - **Bajo voltaje (cercano 0V)** = logico **0** (False)
@@ -126,7 +126,7 @@ La memoria se crea mediante **retroalimentacion**: la salida vuelve a la entrada
 
 <MinCpuDemo />
 
-### 4.2 Como ejecuta instrucciones la CPU?
+### 4.2 Principios de ejecución de instrucciones de la CPU
 
 1. **Fetch**: Leer la instruccion de memoria
 2. **Decode**: Analizar que operacion realizar

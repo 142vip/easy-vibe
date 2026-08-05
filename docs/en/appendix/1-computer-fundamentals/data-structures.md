@@ -1,4 +1,4 @@
-# Data Structures
+# Data Structures: An Introduction
 
 ::: tip Preface
 **Programs = Data Structures + Algorithms.** Previously, we learned how the CPU executes instructions and how the operating system manages resources. But the core objects that programs handle are **data** — user information, product lists, social relationships... How this data is organized in memory directly determines whether a program is fast or slow. You may have wondered: why do some programs process tens of thousands of records quickly while others freeze with just a few hundred? The answer often lies in **the choice of data structures**.
@@ -26,7 +26,7 @@ After completing this chapter, you will gain:
 
 ---
 
-## 1. Big Picture: What Are Data Structures?
+## 1. Big Picture: Data Structures Overview
 
 Imagine you need to organize a pile of books:
 
@@ -109,7 +109,7 @@ The principle of hash tables is actually quite simple:
 
 This is like a library's index system: instead of searching shelf by shelf, you check the index card to find the book's exact location.
 
-### 3.2 Hash Collisions: What When Two Keys Collide?
+### 3.2 Hash Collision Resolution Methods
 
 Two different keys may compute the same index — this is called a **hash collision**. Like two books having the same index number pointing to the same location.
 
@@ -236,7 +236,7 @@ Note: These are all **average cases**. In the worst case, hash tables degrade to
 
 ---
 
-## 7. Selection Guide: Which Data Structure to Use?
+## 7. Selection Guide: Data Structure Application Scenarios
 
 After learning so many data structures, how do you choose when facing actual requirements? The key is to **start from the requirements** and ask yourself a few questions:
 
@@ -289,5 +289,5 @@ After learning so many data structures, how do you choose when facing actual req
 
 Now that you've mastered the core knowledge of data structures, you can continue learning:
 
-- **[Algorithmic Thinking](./algorithm-thinking.md)**: Learn to solve problems using sorting, searching, recursion, dynamic programming, and other algorithmic paradigms
+- **[Introduction to Algorithms](./algorithm-thinking.md)**: Learn to solve problems using sorting, searching, recursion, dynamic programming, and other algorithmic paradigms
 - **[Programming Languages](./programming-languages.md)**: Understand how different programming languages implement these data structures

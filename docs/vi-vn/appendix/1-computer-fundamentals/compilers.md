@@ -1,4 +1,4 @@
-# Nhap mon Nguyen ly Bien dich
+# Nguyên lý biên dịch
 
 ::: tip Loi noi dau
 **Khi ban nhan nut "chay", lam the nao code bien thanh ket qua tren man hinh?** Moi dong code ban viet, may tinh thuc chat "khong hieu" -- no chi nhan dien 0 va 1. Trinh bien dich chinh la "nguoi dich" chuyen ngon ngu con nguoi thanh ngon ngu may. Hieu nguyen ly bien dich giup ban hieu thong bao loi den tu dau, tai sao mot so ngon ngu nhanh mot so cham, va logic co ban cua toi uu hoa code.
@@ -28,7 +28,7 @@ Sau khi hoc xong chuong nay, ban se co duoc:
 
 ---
 
-## 0. Toan canh: "Hanh trinh dich" cua code
+## 0. Tổng quan quy trình biên dịch
 
 Tuong tuong ban la mot nguoi dich, can dich mot cuon tieu thuyet Trung Quoc sang tieng Anh. Ban se khong dich tung chu mot cach khac dinh, ma:
 
@@ -162,7 +162,7 @@ Phan tich ngu phap dam bao code "dung cau truc", nhung dung cau truc khong co ng
 
 <CompilationPracticeDemo />
 
-### 4.1 Phan tich ngu nghia: kiem tra "y nghia" co dung khong
+### 5.1 Tổng quan phân tích ngữ nghĩa
 
 | Noi dung kiem tra | Vi du | Ket qua |
 |---------|------|------|
@@ -177,7 +177,7 @@ Phan tich ngu phap dam bao code "dung cau truc", nhung dung cau truc khong co ng
 - `Expected 2 arguments, but got 3` — kiem tra tham so
 :::
 
-### 4.2 Toi uu hoa code: lam chuong trinh nhanh hon
+### 5.2 Nguyên lý tối ưu hóa code
 
 Truoc khi tao ma cuoi cung, trinh bien dich thuc hien cac toi uu hoa khac nhau cho ma trung gian. Cac toi uu hoa nay trong suot voi lap trinh vien, nhung co the cai thien hieu suat dang ke.
 

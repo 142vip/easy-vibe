@@ -1,4 +1,4 @@
-# He dieu hanh: Thue mot "Quan ly lon" cho may tinh
+# Nguyên lý hệ điều hành: Tiến trình, bộ nhớ và hệ thống tệp
 
 ::: tip Loi noi dau
 **Co CPU hoan hao va bo nho vo han, may tinh co the su dung ngay duoc khong?**
@@ -24,7 +24,7 @@ Sau khi hoc xong chuong nay, ban se co duoc:
 
 ---
 
-## 0. Toan canh: Se nhu the nao khong co he dieu hanh?
+## 0. Tổng quan hệ điều hành
 
 Tuong tuong ban mo mot "nha may tinh toan" tiem nang vuot troi (may tinh cua ban), voi mot nhan vat tot nhat khong bao gio met moi (CPU), mot kho lon (bo nho) va vo so container (o cung).
 
@@ -47,7 +47,7 @@ Dap an: **No khong lam cung luc. Ma he dieu hanh dang "quan ly thoi gian" dien c
 
 <ProcessDemo />
 
-### 1.1 "Tien trinh" la gi?
+### 1.1 Tổng quan về tiến trình
 Moi chuong trinh dang chay duoc goi la mot **tien trinh**. Ban co the hieu nhu mot "nhom du an", voi code rieng (danh sach cong viec), du lieu bo nho rieng (von du an), doi gap CPU.
 
 ### 1.2 Vong quay thoi gian
@@ -79,7 +79,7 @@ Neu ban mua mot o cung moi, no chi la vung luu trong hoang tat. Neu ban muon luu
 
 <FilesystemDemo />
 
-### 3.1 He thong tep lam gi?
+### 3.1 Tổng quan về chức năng hệ thống tệp
 1. **Cat o cung**: Chia o cung thanh vo so **khoi** co kich thuoc co dinh (thuong la 4KB)
 2. **Tao so ke**: Ghi khoi nao day, khoi nao trong
 3. **Dich duong dan**: Chuyen `D:/Anh/ThuCung.jpg` thanh "khoi 3, 7, 11"

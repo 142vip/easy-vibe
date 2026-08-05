@@ -1,4 +1,4 @@
-# What Is Data Encoding and Transmission?
+# Data Representation Principles: Encoding, Storage, and Transmission
 
 ::: tip Preface
 When you send a photo to a friend, post a WeChat message, or download a multi-GB game, how does that information travel across half the globe and appear intact on your screen? This chapter revolves around a question that often puzzles beginners: **Why did my received file turn into garbled text?** Following this question, we'll thoroughly uncover the three foundational pillars of computing: **encoding, storage, and transmission**.
@@ -37,7 +37,7 @@ Once you understand the logical starting point that "everything in a computer is
 
 ---
 
-## 0. Introduction: Why Do Files Become "Gibberish"?
+## 0. Introduction: The Significance of Data Representation
 
 Imagine you receive an important document from a colleague. You double-click to open it, and it's full of strange text like "浣犲ソ" or "ä½ å¥½."
 
@@ -63,7 +63,7 @@ To thoroughly understand why undamaged data becomes garbled, we need to understa
 
 ---
 
-## 1. What Is Data Encoding? (Turning Everything into Numbers)
+## 1. Data Encoding: The Digital Representation of Everything
 
 Simply put:
 
@@ -105,7 +105,7 @@ Type any mix of Chinese, English, or Emoji in the input box below (e.g., `你好
 
 > **Fun fact**: Why do many people feel that sending a text message of the same length allows much more English text than Chinese? Because in the underlying electrical signal sequence, the physical size of Chinese characters is three times that of English!
 
-### 1.2 How Do Colors and Sounds Become Numbers?
+### 1.2 Multimedia Data Encoding
 
 Text can be looked up in a table, but what about the Mona Lisa's smile or Jay Chou's singing? How do they become 0s and 1s?
 
@@ -125,7 +125,7 @@ The method is the same: **slicing and mapping.**
 
 ---
 
-## 2. Storage Bridge: Before Sending, You Need a Place to Put It
+## 2. Data Storage: Persistence Before Transmission
 
 After data is encoded and ready to be sent to someone else, it must first be placed on the computer's physical media. This brings up an unavoidable hardware law.
 
@@ -153,7 +153,7 @@ There is no perfect storage device. Therefore, the operating system (like Window
 
 ---
 
-## 3. What Is Data Transmission? (Sending 0s and 1s on a Journey)
+## 3. Data Transmission: Cross-Device Data Transfer
 
 After data is encoded and stored in memory, the next step is sending it to your friend.
 
@@ -196,7 +196,7 @@ Thanks to this extremely rigorous packet-slicing and verification mechanism call
 
 ---
 
-## 4. Final Exercise: The Complete Process from Pressing the Shutter to Posting on Social Media
+## 4. Case Study: End-to-End Pipeline from Image Capture to Network Sharing
 
 Earlier, we covered "how to translate into numbers (encoding)," "where to store it (storage)," and "how to complete the journey intact (transmission)" as separate modules.
 

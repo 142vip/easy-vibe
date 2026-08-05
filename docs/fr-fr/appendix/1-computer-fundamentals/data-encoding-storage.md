@@ -1,4 +1,4 @@
-# Qu'est-ce que le codage et la transmission des données ?
+# Principes de représentation des données : codage, stockage et transmission
 
 ::: tip Préface
 Lorsque vous envoyez une photo à un ami, un message WeChat, ou que vous téléchargez un jeu de plusieurs Go, comment ces informations traversent-elles plus de la moitié du globe pour apparaître intactes sur votre écran ? Ce chapitre s'articule autour d'une question qui perturbe souvent les débutants : **Pourquoi les fichiers que je reçois deviennent-ils illisibles ?** En suivant cette question, nous révélerons complètement les trois piliers fondamentaux de l'informatique : **le codage, le stockage et la transmission**.
@@ -37,7 +37,7 @@ Une fois compris ce point de départ logique — « tout dans l'ordinateur est f
 
 ---
 
-## 0. Introduction : Pourquoi les fichiers deviennent-ils des « hiéroglyphes » ?
+## 0. Introduction : Principe de l'encodage des données
 
 Imaginez : vous recevez un fichier important d'un collègue, vous double-cliquez pour l'ouvrir, et tout ce que vous voyez est une série de caractères étranges comme « 浣犲ソ » ou « ä½ å¥½ ».
 
@@ -63,13 +63,13 @@ Pour comprendre complètement pourquoi des données non endommagées deviennent 
 
 ---
 
-## 1. Qu'est-ce que l'encodage des données ? (Transformer tout en nombres)
+## 1. Présentation de l'encodage des données
 
 Pour faire simple :
 
 > **L'encodage des données (Encoding)**, c'est créer un « dictionnaire de traduction bidirectionnel » qui mappe les informations complexes et diverses du monde réel (texte, couleurs, sons) en règles de 0 et de 1 que l'ordinateur peut comprendre.
 
-### 1.1 Transformer le texte en nombres : d'ASCII au code universel
+### 1.1 Principe de l'encodage des caractères : d'ASCII au code universel
 
 Chaque fois que nous tapons un message dans WeChat, à chaque touche enfoncée, l'ordinateur effectue secrètement une action : **la substitution par consultation de table**.
 
@@ -105,7 +105,7 @@ Dans le champ de saisie ci-dessous, tapez quelques caractères chinois, anglais 
 
 > **Le saviez-vous ?** Pourquoi, à longueur égale, un SMS en anglais peut contenir beaucoup plus de texte qu'un SMS en chinois ? Parce que dans la séquence de signaux sous-jacente, la taille physique d'un caractère chinois est trois fois celle d'une lettre anglaise !
 
-### 1.2 Comment les couleurs et les sons deviennent-ils des nombres ?
+### 1.2 Principe de l'encodage des images et de l'audio
 
 Le texte peut être traduit par consultation de table. Mais le sourire de la Joconde, ou une chanson ? Comment deviennent-ils des 0 et des 1 ?
 
@@ -125,7 +125,7 @@ La méthode est la même : **découper et mapper**.
 
 ---
 
-## 2. Pont de stockage : avant d'envoyer, il faut bien ranger quelque part
+## 2. Principe du stockage des données
 
 Une fois les données encodées, elles sont prêtes à être envoyées à quelqu'un d'autre. Mais avant cela, elles doivent être placées sur un support physique de l'ordinateur. Cela nous confronte à une loi hardware incontournable.
 
@@ -153,13 +153,13 @@ Il n'existe pas de mémoire parfaite. C'est pourquoi le système d'exploitation 
 
 ---
 
-## 3. Qu'est-ce que la transmission des données ? (Envoyer les 0 et les 1 en voyage)
+## 3. Présentation de la transmission des données
 
 Les données sont encodées et stockées en mémoire — il est maintenant temps de les envoyer à un ami.
 
 > **La transmission des données**, c'est le processus par lequel les signaux électriques (ou optiques) représentant des 0 et des 1 sont acheminés, via des câbles réseau, des câbles ou des ondes radio, de manière précise et intacte d'une machine à une autre.
 
-### 3.1 Transmission hardware et en réseau local : les limites physiques d'un câble
+### 3.1 Principe de la transmission matérielle et locale
 
 À l'intérieur du boîtier ou entre deux ordinateurs très proches, nous sommes confrontés à un **défi purement physique**.
 
@@ -173,14 +173,14 @@ Comparez les animations de transmission série et parallèle.
 
 <DataTransmissionDemo />
 
-**Pourquoi la « petite route à une voie » a-t-elle battu la « voie express à huit voies » ?**
+**Principe de prédominance de la transmission série**
 
 À basse vitesse, 8 fils sont effectivement meilleurs. Mais quand nous devons envoyer des milliards de signaux par seconde, des problèmes apparaissent :
 Les faibles courants sur les fils parallèles génèrent de puissantes ondes électromagnétiques qui s'interfèrent mutuellement (diaphonie / Crosstalk) ; et il est physiquement impossible de garantir que 8 signaux envoyés simultanément arriveront **exactement en même temps** à la ligne d'arrivée. Si un seul fil est légèrement plus lent en raison d'impuretés de matériau, les 8 bits assemblés en un mot seront complètement désordonnés.
 
 Plutôt que de dépenser des sommes astronomiques pour équilibrer 8 pistes, mieux vaut concentrer toutes les ressources techniques sur un seul véhicule de course et le pousser à la vitesse de la lumière. C'est la vérité physique derrière la victoire mondiale des interfaces série.
 
-### 3.2 Transmission WAN et Internet : l'art de la livraison sans perte à travers les océans
+### 3.2 Principe de la transmission réseau étendue
 
 Et si vos données ne sont pas destinées à une carte graphique à un centimètre dans le boîtier, mais à un serveur américain de l'autre côté de l'océan ?
 

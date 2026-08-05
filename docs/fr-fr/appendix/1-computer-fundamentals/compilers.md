@@ -1,4 +1,4 @@
-# Introduction à la théorie des compilateurs
+# Principes de compilation
 
 ::: tip Préface
 **Que se passe-t-il quand vous appuyez sur le bouton « Exécuter » ? Comment le code devient-il un résultat à l'écran ?** Chaque ligne de code que vous écrivez est en réalité « illisible » pour l'ordinateur — il ne connaît que les 0 et les 1. Le compilateur est le « traducteur » qui transforme le langage humain en langage machine. Comprendre la théorie des compilateurs vous permet de comprendre d'où viennent les messages d'erreur, pourquoi certains langages sont rapides et d'autres lents, et les mécanismes fondamentaux de l'optimisation du code.
@@ -28,17 +28,15 @@
 
 ---
 
-## 0. Vue d'ensemble : le « voyage de traduction » du code
+## 0. Principe du pipeline de compilation
 
-Imaginez que vous êtes un traducteur chargé de traduire un roman chinois en anglais. Vous ne traduisez pas mot à mot, mais vous :
+Le pipeline de compilation comprend cinq étapes principales :
 
-1. **Identifiez les mots** — découpez la phrase en unités (analyse lexicale)
-2. **Comprenez la syntaxe** — jugez si la structure de la phrase est correcte (analyse syntaxique)
-3. **Comprenez le sens** — assurez-vous que le sens est fluide et cohérent (analyse sémantique)
-4. **Affinez** — rendez la traduction plus naturelle (optimisation du code)
-5. **Produisez la traduction** — rédigez la version anglaise finale (génération de code)
-
-Le compilateur fait exactement la même chose, sauf qu'il traduit des langages de programmation.
+1. **Analyse lexicale** — découper le code source en tokens
+2. **Analyse syntaxique** — organiser les tokens en arbre syntaxique (AST)
+3. **Analyse sémantique** — vérifier la validité du code (types, portée)
+4. **Optimisation du code** — rendre le code plus efficace
+5. **Génération de code** — produire le code machine cible
 
 <CompilerAnalogyDemo />
 
@@ -132,7 +130,7 @@ L'AST est la « structure de données centrale » du compilateur ; l'analyse sé
 
 ---
 
-## 4. Visualisation de l'AST : voir le « squelette » du code
+## 4. Visualisation de l'AST : structure arborescente du code
 
 Ci-dessus, nous avons décrit la structure de l'AST textuellement, mais « voir » est plus intuitif que « lire ». Le composant interactif ci-dessous vous permet de choisir différentes expressions et d'observer leur arbre syntaxique en temps réel.
 
@@ -158,11 +156,11 @@ Vous n'avez peut-être jamais écrit de compilateur, mais vous utilisez chaque j
 
 ## 5. Analyse sémantique et optimisation du code
 
-L'analyse syntaxique garantit que le code est « structurellement correct », mais une structure correcte ne signifie pas que le « sens est correct ». L'analyse sémantique vérifie la validité du sens du code, tandis que l'optimisation du code permet au programme de s'exécuter plus rapidement.
+L'analyse syntaxique garantit que le code est « structurellement correct », mais une structure correcte ne signifie pas que le code est valide. L'analyse sémantique vérifie la validité du code, tandis que l'optimisation du code permet au programme de s'exécuter plus rapidement.
 
 <CompilationPracticeDemo />
 
-### 4.1 Analyse sémantique : vérifier que le « sens » est correct
+### 5.1 Analyse sémantique : vérification de la validité du code
 
 | Vérification | Exemple | Résultat |
 |---------|------|------|
@@ -177,7 +175,7 @@ L'analyse syntaxique garantit que le code est « structurellement correct », ma
 - `Expected 2 arguments, but got 3` — vérification des paramètres
 :::
 
-### 4.2 Optimisation du code : rendre le programme plus rapide
+### 5.2 Optimisation du code : rendre le programme plus rapide
 
 Avant de générer le code final, le compilateur applique diverses optimisations au code intermédiaire. Ces optimisations sont transparentes pour le programmeur mais peuvent améliorer significativement les performances.
 
@@ -238,13 +236,12 @@ La théorie des compilateurs n'est pas un savoir réservé aux seuls développeu
 
 Revenons sur les points clés de ce chapitre :
 
-1. **Le compilateur est un traducteur** : il traduit le code lisible par l'humain en instructions exécutables par la machine
-2. **Pipeline en six étapes** : analyse lexicale → analyse syntaxique → analyse sémantique → code intermédiaire → optimisation → génération de code
-3. **L'analyse lexicale découpe en tokens** : découpe le flux de caractères en mots-clés, identifiants, opérateurs et autres unités significatives
-4. **L'analyse syntaxique construit l'AST** : organise les tokens en structure arborescente selon les règles grammaticales, reflétant la priorité des opérateurs
-5. **L'analyse sémantique garantit la correction** : vérification de types, vérification de portée — la plupart des erreurs que vous voyez proviennent d'ici
-6. **Le compilateur optimise automatiquement** : le constant folding, l'élimination du code mort, l'inlining de fonctions accélèrent le code automatiquement
-7. **Trois modèles d'exécution** : compilé le plus rapide, interprété le plus flexible, JIT combine les deux
+1. **Pipeline en cinq étapes** : analyse lexicale → analyse syntaxique → analyse sémantique → optimisation → génération de code
+2. **L'analyse lexicale découpe en tokens** : découpe le flux de caractères en mots-clés, identifiants, opérateurs et autres unités significatives
+3. **L'analyse syntaxique construit l'AST** : organise les tokens en structure arborescente selon les règles grammaticales, reflétant la priorité des opérateurs
+4. **L'analyse sémantique garantit la correction** : vérification de types, vérification de portée — la plupart des erreurs que vous voyez proviennent d'ici
+5. **Le compilateur optimise automatiquement** : le constant folding, l'élimination du code mort, l'inlining de fonctions accélèrent le code automatiquement
+6. **Trois modèles d'exécution** : compilé le plus rapide, interprété le plus flexible, JIT combine les deux
 
 ## Lectures complémentaires
 

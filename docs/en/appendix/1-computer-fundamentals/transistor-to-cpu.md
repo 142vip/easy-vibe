@@ -1,4 +1,4 @@
-# From Transistors to CPU
+# Digital Circuit Basics: From Transistors to CPU
 
 ::: tip Preface
 **How does a computer "think"?** You probably know the CPU is the computer's "brain," but how does this brain actually work? How does it go from a pile of metal and plastic to a smart device that can execute programs and process data? This chapter takes you from the most fundamental transistors, step by step, to understand the principles behind CPU construction.
@@ -54,7 +54,7 @@ Let's start from the microscopic world. The component below demonstrates the bas
 
 <TransistorDemo />
 
-### 1.1 What Is a Transistor?
+### 1.1 Transistor Overview
 
 ::: tip Concept Introduction
 In engineering, a **transistor** is a semiconductor device that changed the course of human history. In the context of digital circuits, we can directly abstract it as a perfect "switch."
@@ -66,7 +66,7 @@ Why do we need transistors? Think of a water faucet in daily life. You turn the 
 The key difference is: we don't turn the switch by hand, but with **voltage signals**. When one switch can be controlled by electrical signals produced by another switch, we've crossed the enormous chasm from "manual intervention" to "automatic computation."
 :::
 
-### 1.2 How Do Transistors Represent 0 and 1?
+### 1.2 Representing Binary with Transistors
 
 You might ask: what does the computer's so-called "only understanding 0s and 1s" actually look like in the physical world? Are there really tiny 0s and 1s flowing through chips?
 
@@ -220,7 +220,7 @@ If we view the CPU as a machine with clear division of labor, each unit has its 
 
 <MinCpuDemo />
 
-### 4.2 How Does the CPU Execute Instructions?
+### 4.2 CPU Instruction Execution Flow
 
 No matter how complex the high-level programming language you write, it ultimately becomes a series of底层 instructions in memory. The process of executing any instruction essentially repeats these four typical steps:
 

@@ -1,4 +1,4 @@
-# Ma hoa va Truyen tai Du lieu la gi?
+# Nguyên lý biểu diễn dữ liệu: Mã hóa, lưu trữ và truyền tải
 
 ::: tip Loi noi dau
 Khi ban gui mot buc anh cho ban, gui tin nhan WeChat, hoac tai mot game vai GB, nhung thong tin nay di qua nua trai dat va xuat hien nguyen ven tren man hinh cua ban nhu the nao? Chuong nay tap trung vao mot cau hoi thuong lam bối rối nguoi moi: **Tai sao tep ban nhan lai bi loi ma?** Tu cau hoi nay, chung ta se kham pha ba trong tam co ban nhat cua may tinh: **ma hoa, luu tru va truyen tai**.
@@ -21,7 +21,7 @@ Sau khi hoc xong chuong nay, ban se co duoc:
 
 ---
 
-## 0. Mo dau: Tai sao tep lai thanh "van tu co"?
+## 0. Tổng quan vấn đề mã hóa
 
 Tuong tuong ban nhan duoc mot tep quan trong tu dong nghiep, mo ra thay toan ky tu la nhu "浣犲ソ" hoac "ä½ å¥½".
 
@@ -37,7 +37,7 @@ Nguoi gui dung tu dien UTF-8 de dich hanh tu Thanh so, ban neu dung tu dien GBK 
 
 ---
 
-## 1. Ma hoa du lieu la gi? (Bien moi thu thanh so)
+## 1. Tổng quan về mã hóa dữ liệu
 
 **Ma hoa du lieu (Encoding)** la tao mot "tu dien hai chieu", anh xa thong tin the gioi thuc (van ban, mau sac, am thanh) thanh 0 va 1.
 
@@ -51,7 +51,7 @@ Nguoi gui dung tu dien UTF-8 de dich hanh tu Thanh so, ban neu dung tu dien GBK 
 
 <CharacterEncodingExplorer />
 
-### 1.2 Mau va am thanh thanh so nhu the nao?
+### 1.2 Nguyên lý mã hóa hình ảnh và âm thanh
 
 * **Ma hoa hinh anh**: Anh gom hang trieu pixel. Moi mau co ma so (nhu `#FF0000` la do).
 <ImageEncodingDemo />
@@ -71,7 +71,7 @@ He dieu hanh nhu mot quan ly kho thong minh: luu phim/game o o cung cham nhung l
 
 ---
 
-## 3. Truyen tai du lieu la gi? (Gui 0 va 1 di du lich)
+## 3. Tổng quan về truyền tải dữ liệu
 
 ### 3.1 Truyen tai phan cung va LAN
 
@@ -91,7 +91,7 @@ Nho co che **TCP** nay, ngay ca WiFi khong on dinh, tep tai ve luon nguyen ven 1
 
 ---
 
-## 4. Thuc hanh cuoi: Tu chup anh den dang mang xa hoi
+## 4. Quá trình thực tế: luồng xử lý hình ảnh từ chụp đến lưu trữ
 
 <PhotoUploadJourneyDemo />
 

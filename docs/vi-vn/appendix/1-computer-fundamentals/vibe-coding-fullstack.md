@@ -1,4 +1,4 @@
-# Phát Triển Full-Stack Trong Thời Đại Vibe Coding
+# Giới thiệu phát triển full-stack: Bản đồ tri thức máy tính trong thời đại Vibe Coding
 
 ::: tip Lời Nói Đầu
 **Vibe Coding là gì?** Nói đơn giản, đó là "viết code bằng ngôn ngữ tự nhiên" — bạn dùng tiếng Trung hoặc tiếng Anh mô tả điều bạn muốn, AI sẽ giúp bạn sinh code. Điều này đã thay đổi hoàn toàn luật chơi của phát triển phần mềm.
@@ -29,7 +29,7 @@ Sau khi học xong chương này, bạn sẽ có được:
 
 ## 0. Vibe Coding: Mô Hình Mới Của Phát Triển Phần Mềm
 
-### 0.1 Vibe Coding Là Gì?
+### 0.1 Tổng quan về Vibe Coding
 
 Hãy tưởng tượng phát triển phần mềm trước đây:
 
@@ -37,7 +37,7 @@ Hãy tưởng tượng phát triển phần mềm trước đây:
 
 **Thay đổi cốt lõi**: Từ "viết code như thế nào" thành "mô tả yêu cầu ra sao".
 
-### 0.2 Trong Thời Đại Vibe Coding, Năng Lực Nào Quan Trọng Hơn?
+### 0.2 Năng lực cốt lõi trong thời đại Vibe Coding
 
 <DeveloperSkillShiftDemo />
 
@@ -57,7 +57,7 @@ Trước khi đi sâu vào từng hướng, hãy xây dựng nhận thức toàn
 
 <ComputerFieldMapDemo />
 
-### 1.1 Dùng Phép So Sánh "Nhà Hàng" Để Hiểu Các Lĩnh Vực
+### 1.1 So sánh: mô hình nhà hàng
 
 Hãy tưởng tượng một hệ thống phần mềm như một **nhà hàng**:
 
@@ -88,7 +88,7 @@ Hãy tưởng tượng một hệ thống phần mềm như một **nhà hàng**
 
 ---
 
-## 2. Frontend Là Gì?
+## 2. Tổng quan về Frontend
 
 ### 2.1 Định Nghĩa Một Câu
 
@@ -112,7 +112,7 @@ Khi bạn mở một trang web:
 | **CSS** | Phong cách trang trí | Tường màu gì, đồ đạc bày thế nào, hiệu ứng ánh sáng |
 | **JavaScript** | Nhà thông minh | Bật tắt đèn, rèm tự động đóng mở, hệ thống an ninh |
 
-### 2.3 Frontend Framework: Tại Sao Cần Dùng?
+### 2.3 Nguyên lý Frontend Framework
 
 HTML/CSS/JS thuần có thể viết trang web, vậy tại sao còn phải học React, Vue và các framework?
 
@@ -133,7 +133,7 @@ HTML/CSS/JS thuần có thể viết trang web, vậy tại sao còn phải họ
 
 ---
 
-## 3. Backend Là Gì?
+## 3. Tổng quan về Backend
 
 ### 3.1 Định Nghĩa Một Câu
 
@@ -160,7 +160,7 @@ Khi bạn mua sắm online đặt hàng:
 | **Tối ưu hiệu năng** | Hiệu suất bếp | Cache, xử lý bất đồng bộ, cân bằng tải |
 | **Bảo vệ an ninh** | An toàn thực phẩm | Ngăn SQL injection, kiểm soát quyền |
 
-### 3.3 Chọn Ngôn Ngữ Backend Như Thế Nào?
+### 3.3 Lựa chọn ngôn ngữ Backend
 
 | Ngôn Ngữ | Đặc Điểm | Tình Huống Phù Hợp |
 |-----|------|---------|
@@ -186,9 +186,9 @@ Nếu bạn đã biết JavaScript (nền tảng frontend), Node.js là lựa ch
 
 ---
 
-## 4. Bản Đồ Ngôn Ngữ Lập Trình
+## 4. Khái niệm ngôn ngữ lập trình
 
-### 4.1 Ngôn Ngữ Lập Trình Là Gì?
+### 4.1 Tổng quan về ngôn ngữ lập trình
 
 **Ngôn ngữ lập trình = cầu nối giao tiếp giữa con người và máy tính.**
 
@@ -217,7 +217,7 @@ Máy tính chỉ hiểu 0 và 1, con người quen nói ngôn ngữ tự nhiên.
 | **Kiểu mạnh** | Kiểm tra kiểu nghiêm ngặt, không tự động chuyển đổi | Python, Java |
 | **Kiểu yếu** | Kiểm tra kiểu lỏng lẻo, tự động chuyển đổi | JavaScript, PHP |
 
-### 4.3 Nên Học Ngôn Ngữ Nào?
+### 4.3 Lựa chọn ngôn ngữ học tập
 
 <LanguageSelectionDemo />
 
@@ -232,7 +232,7 @@ Không có "ngôn ngữ tốt nhất", chỉ có "ngôn ngữ phù hợp nhất 
 
 ## 5. Kỹ Sư Full-Stack: Làm Được Cả Frontend Lẫn Backend
 
-### 5.1 Full-Stack Là Gì?
+### 5.1 Tổng quan về Full-Stack
 
 **Kỹ sư full-stack = kỹ sư có thể độc lập hoàn thành phát triển frontend + backend.**
 

@@ -1,4 +1,4 @@
-# Introduction à la pensée algorithmique
+# Introduction aux algorithmes
 
 ::: tip Préface
 **Comment résoudre efficacement les problèmes ?** Vous avez peut-être déjà rencontré cette situation : pour un même problème, le code de l'un donne un résultat en quelques secondes, tandis que celui d'un autre tourne toujours au bout de plusieurs minutes. La différence réside souvent dans l'algorithme. Ce chapitre vous guide vers la compréhension des concepts fondamentaux de la pensée algorithmique.
@@ -21,7 +21,7 @@
 
 ---
 
-## 0. Vue d'ensemble : Qu'est-ce qu'un algorithme ?
+## 0. Présentation d'un algorithme
 
 Imaginez que vous cherchez un mot dans un dictionnaire :
 
@@ -74,7 +74,7 @@ La démo ci-dessous illustre le principe de la recherche binaire. Choisissez ent
 
 <SearchAlgorithmDemo />
 
-### 1.2 Pourquoi la recherche binaire est-elle si rapide ?
+### 1.2 Principe de l'efficacité de la recherche binaire
 
 | Taille des données | Recherche linéaire | Recherche binaire |
 |--------|---------|---------|
@@ -131,7 +131,7 @@ C'est la puissance de la croissance logarithmique : la taille des données est m
 **Tri par tas** : utilise la structure de données « tas » pour trier, sur place (pas d'espace supplémentaire), mais souvent plus lent que le tri rapide en pratique.
 :::
 
-### 2.2 Pourquoi le tri rapide est-il « rapide » ?
+### 2.2 Principe de l'efficacité du tri rapide
 
 ::: tip 💡 Principe du tri rapide
 **Idée centrale** : Diviser pour régner
@@ -160,12 +160,12 @@ La démo ci-dessous visualise les algorithmes de tri. Générez un tableau et ob
 
 ### 3.1 L'essence de la récursivité
 
-::: tip 💡 Qu'est-ce que la récursivité ?
+::: tip 💡 Principe de la récursivité
 **La récursivité** est une technique de programmation où une fonction s'appelle elle-même.
 
 **Deux éléments clés** :
-1. **Cas de base** : quand arrêter la récursivité ?
-2. **Étape récursive** : comment décomposer le problème en sous-problèmes plus petits ?
+1. **Cas de base** : condition d'arrêt de la récursivité
+2. **Étape récursive** : décomposition du problème en sous-problèmes plus petits
 
 **Exemple classique : la factorielle**
 ```js
@@ -217,7 +217,7 @@ La démo ci-dessous montre le processus d'appel récursif. Observez comment une 
 
 ### 4.1 La pensée gloutonne
 
-::: tip 💡 Qu'est-ce qu'un algorithme glouton ?
+::: tip 💡 Principe de l'algorithme glouton
 **Les algorithmes gloutons** font à chaque étape le choix qui semble localement optimal, en espérant obtenir une solution globalement optimale.
 
 **Conditions d'application** :

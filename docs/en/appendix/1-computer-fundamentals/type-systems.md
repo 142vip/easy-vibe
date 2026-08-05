@@ -1,4 +1,4 @@
-# Introduction to Type Systems
+# Type Systems: An Introduction
 
 ::: tip Preface
 **Why does `"1" + 1` produce `"11"` in JavaScript but throw an error in Python?** Behind this is the type system at work. A type system is the "traffic rules" of a programming language — it determines how data can be used, what it can be combined with, and when things are checked for validity. Understanding type systems helps you understand the "personality differences" between languages.
@@ -26,7 +26,7 @@ After completing this chapter, you will gain:
 
 ---
 
-## 0. Big Picture: Types Are the "ID Cards" of Data
+## 0. Big Picture: Type Systems Overview
 
 In the real world, you wouldn't stuff a book into a coffee mug — because they are different "types" of things. The programming world is the same: numbers, strings, booleans, arrays... each type of data has its own "identity" that determines what operations it can participate in.
 
@@ -39,7 +39,7 @@ A **type system** is the rule system a programming language uses to manage these
 
 ---
 
-## 1. What Is a Type System: Traffic Rules for Data
+## 1. Type Systems: Classification and Constraints of Data
 
 <TypeSystemDemo />
 
@@ -60,7 +60,7 @@ A world without a type system is like a road without traffic rules — any data 
 
 ---
 
-## 2. Static vs Dynamic Typing: When to Check?
+## 2. Static vs. Dynamic Typing
 
 This is the most important classification dimension of type systems — **check timing**.
 
@@ -86,7 +86,7 @@ Python added Type Hints, and the JavaScript community shifted to TypeScript — 
 
 ---
 
-## 3. Strong vs Weak Typing: Allow "Sneaky Conversions"?
+## 3. Strong vs. Weak Typing
 
 The second classification dimension is **strictness of type conversion**.
 
@@ -165,7 +165,7 @@ Having covered the theory, let's look at the most common type-related pitfalls i
 
 ---
 
-## 7. Language Type Quadrant Chart: "Profiling" Programming Languages
+## 7. Language Type Quadrant Chart
 
 Combining the "static/dynamic" and "strong/weak" dimensions creates a four-quadrant classification chart. Every programming language can be placed on this chart.
 

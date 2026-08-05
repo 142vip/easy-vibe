@@ -1,4 +1,4 @@
-# Computerarchitektur
+# Prinzipien des Computeraufbaus
 
 ::: tip Vorwort
 **Wie wird aus dem CPU ein vollständiges Computersystem?** Im vorherigen Kapitel haben wir vom Transistor ausgehend Addierer, Register, Rechenwerke konstruiert und schließlich den CPU-Kern zusammengesetzt. Doch der CPU allein reicht nicht — er muss mit Speicher und I/O-Geräten zusammenarbeiten, Bussysteme verbinden die Komponenten und ein Befehlssystem steuert alles an. In diesem Kapitel wechseln wir von der CPU-internen Perspektive zur Systemsicht und vertiefen unser Verständnis der Von-Neumann-Architektur, des Befehlssystems, der Speicherhierarchie sowie von Bus und I/O.
@@ -48,7 +48,7 @@ Im vorherigen Kapitel „Vom Transistor zum CPU" haben wir verstanden, wie der C
 
 ---
 
-## 1. Von-Neumann-Architektur: Die „Verfassung" des modernen Computers
+## 1. Von-Neumann-Architektur: Speicherprogrammkonzept und Datenpfad
 
 ### 1.1 Das Speicherprogrammkonzept
 
@@ -109,8 +109,7 @@ Im vorherigen Abschnitt haben wir das Kernkonzept der Von-Neumann-Architektur ke
 
 Die Antwort ist das **Befehlssystem (Instruction Set Architecture, ISA)**. Vergleicht man den CPU mit einem Dienst, dann ist das Befehlssystem seine **API-Dokumentation** — es definiert alle Befehle, die der CPU versteht, das Format jedes Befehls und den Datenbereich, den die Befehle ansprechen können. Jede Codezeile, die Sie schreiben, wird vom Compiler in eine Aufrufsequenz dieser „API" übersetzt.
 
-### 2.1 Vom Code zum Befehl: Die Übersetzungsreise einer Codezeile
-
+### 2.1 Vom Code zum Befehl: Übersetzungsablauf
 Lassen Sie uns zunächst ein Gesamtbild gewinnen: Der Code, den Sie in Ihrem Editor schreiben, und das, was der CPU tatsächlich ausführt, sind durch mehrere Übersetzungsschichten getrennt.
 
 <CodeToInstructionDemo />
@@ -130,8 +129,7 @@ Diese Übersetzungskette ist der Schlüssel zum Verständnis des Befehlssystems:
 - Bei der Wahl der CPU-Architektur (x86 vs. ARM) wissen Sie, dass der Unterschied im „Befehlssatz-API" liegt
 :::
 
-### 2.2 Wie sieht ein Befehl aus?
-
+### 2.2 Überblick über Befehlsformate
 Nun wissen wir, dass Code in Befehle übersetzt wird. Die nächste Frage: **Wie ist ein Befehl intern strukturiert?**
 
 Jeder Maschinenbefehl ist im Kern eine Binärzahl, hat aber ein strenges internes Format. Die zwei wichtigsten Teile:
@@ -163,8 +161,7 @@ Je nach Anzahl der Operanden werden Befehlsformate in vier Arten unterteilt:
 Es handelt sich um einen **Kompromiss zwischen Platz und Flexibilität**. Null-Adressen-Befehle sind am kürzesten (Speicherersparnis), erfordern aber zusätzliche Stack-Operationen; Drei-Adressen-Befehle sind am flexibelsten (Quelldaten bleiben erhalten), belegen aber mehr Bits. Verschiedene CPU-Architekturen wählen unterschiedliche Kombinationen von Befehlsformaten.
 :::
 
-### 2.3 Wie findet der CPU Daten? — Adressierungsarten
-
+### 2.3 Überblick über Adressierungsarten
 Der Befehl teilt dem CPU mit, „addiere", aber wo sind die beiden Summanden? Sie können direkt im Befehl stehen, in einem Register oder an einer Speicheradresse. **Adressierungsarten** sind die Regeln, die dem CPU sagen, „wo die Operanden zu finden sind".
 
 Alltagsanalogie „Jemanden finden":
@@ -189,8 +186,7 @@ Verschiedene Szenarien erfordern verschiedene „Daten-Finden"-Strategien:
 Wenn Sie `arr[i]` schreiben, denken Sie nicht an Adressierungsarten, aber der Compiler wählt automatisch die passendste Methode.
 :::
 
-### 2.4 Die Fähigkeitenliste des CPU — Befehlsklassifikation
-
+### 2.4 Überblick über Befehlsklassifikation
 Nachdem wir Befehlsformate und Adressierungsarten kennen, die letzte Frage: **Was genau kann der CPU tun?**
 
 Alle Befehle lassen sich in sechs Hauptkategorien einteilen, die alles abdecken, was ein Computer tun kann:
@@ -209,7 +205,6 @@ Jeglicher Code, den Sie schreiben — egal wie komplexe Geschäftslogik, wie spe
 :::
 
 ### 2.5 Zwei Designphilosophien: CISC vs. RISC
-
 Beim Entwurf von Befehlssystemen gibt es eine grundlegende Richtungsentscheidung: **Jeden Befehl so mächtig wie möglich machen oder so einfach wie möglich?**
 
 Diese Entscheidung hat zwei Lager hervorgebracht, die jedes Gerät beeinflussen, das Sie heute verwenden:
@@ -235,7 +230,7 @@ Eine Analogie zum Verständnis:
 
 ---
 
-## 3. Steuereinheit: Das „Kommandozentrum" des CPU
+## 3. Steuereinheit: Befehlszyklus und Mikrooperationen
 
 ### 3.1 Aufbau der Steuereinheit
 
@@ -286,7 +281,7 @@ Der CPU durchläuft zur Ausführung eines Befehls einen vollständigen **Befehls
 
 ---
 
-## 4. Speicherhierarchie: Warum braucht man Cache?
+## 4. Speicherhierarchie: Cache und virtueller Speicher
 
 ### 4.1 Speicherhierarchie-Struktur
 
@@ -360,7 +355,7 @@ Stellen Sie sich den virtuellen Speicher als **Hotel-Zimmerverwaltung** vor:
 
 ---
 
-## 5. Bus und I/O: Die „Blutgefäße" des Computers
+## 5. Bus und I/O: Systembus, DMA und Interrupts
 
 ### 5.1 Systembus
 
@@ -457,7 +452,7 @@ Pipelines können die Leistung steigern, bringen aber auch **Gefahren (Hazards)*
 
 ---
 
-## 7. Zusammenfassung: Wie „läuft" ein Computer?
+## 7. Zusammenfassung: Wie läuft ein Computer
 
 Lassen Sie uns den gesamten Ablauf mit Fachbegriffen verknüpfen:
 

@@ -1,4 +1,4 @@
-# Từ Khi Nhấn Nút Nguồn Đến Khi Truy Cập Website Đã Xảy Ra Điều Gì
+# Tổng quan hệ thống máy tính: Từ khởi động đến truy cập web
 
 ::: tip Lời Nói Đầu
 Bạn đã bao giờ tự hỏi, từ khi bạn nhấn nút nguồn máy tính, đến khi cuối cùng nhìn thấy trang web trong trình duyệt, điều gì đã xảy ra ở giữa?
@@ -123,7 +123,7 @@ Trình duyệt hiện đại là một "hệ điều hành" phức tạp, chủ 
 
 ## 5. Truy Cập URL: Toàn Bộ Quá Trình Yêu Cầu Mạng
 
-### 5.1 URL Là Gì?
+### 5.1 Tổng quan về URL
 
 **URL (Uniform Resource Locator)** là địa chỉ của tài nguyên, giống như địa chỉ trong cuộc sống, dùng để định vị tài nguyên trên Internet.
 
@@ -146,7 +146,7 @@ Khi bạn truy cập `https://www.example.com`, những điều này đã xảy 
 
 <URLRequestDemo />
 
-#### Bước 1: Phân Tích URL
+#### Quá trình thực tế: luồng phân tích URL
 
 Trình duyệt trước tiên **phân tích URL**, trích xuất giao thức, tên miền, đường dẫn và các thông tin khác.
 
@@ -159,7 +159,7 @@ Tên miền: www.example.com
 Đường dẫn: /index.html
 ```
 
-#### Bước 2: Phân Giải DNS
+#### Quá trình thực tế: luồng phân giải DNS
 
 Máy tính truy cập máy chủ qua mạng, nhưng mạng dùng **địa chỉ IP** (như 93.184.216.34), không phải tên miền. Vì vậy cần chuyển đổi tên miền thành địa chỉ IP, quá trình này gọi là **phân giải DNS**.
 
@@ -176,7 +176,7 @@ Quá trình thực tế:
 4. Máy chủ DNS trả về địa chỉ IP
 ```
 
-#### Bước 3: Thiết Lập Kết Nối TCP
+#### Quá trình thực tế: luồng thiết lập kết nối TCP
 
 Lấy được địa chỉ IP rồi, trình duyệt cần thiết lập **kết nối TCP** với máy chủ. TCP là giao thức tầng vận chuyển, đảm bảo truyền dữ liệu tin cậy.
 
@@ -193,7 +193,7 @@ TCP bắt tay ba bước:
 
 Nếu là **HTTPS**, còn cần thực hiện **bắt tay TLS/SSL**, thiết lập kênh mã hóa.
 
-#### Bước 4: Gửi Yêu Cầu HTTP
+#### Quá trình thực tế: luồng gửi yêu cầu HTTP
 
 Sau khi kết nối được thiết lập, trình duyệt gửi **yêu cầu HTTP** đến máy chủ:
 
@@ -218,7 +218,7 @@ Các phương thức HTTP phổ biến:
 | **PUT** | Tải lên tài nguyên | Tải tệp lên |
 | **DELETE** | Xóa tài nguyên | Xóa dữ liệu |
 
-#### Bước 5: Máy Chủ Xử Lý Yêu Cầu
+#### Quá trình thực tế: luồng xử lý yêu cầu máy chủ
 
 Máy chủ (thường là **Web server** như Nginx, Apache) sau khi nhận yêu cầu:
 
@@ -239,7 +239,7 @@ Quy trình xử lý của máy chủ:
 └─────────────────────────────────────────────────────────┘
 ```
 
-#### Bước 6: Trả Về Phản Hồi HTTP
+#### Quá trình thực tế: luồng trả về phản hồi HTTP
 
 Máy chủ trả về **phản hồi HTTP**, bao gồm mã trạng thái, header phản hồi và body phản hồi:
 
@@ -264,7 +264,7 @@ Các mã trạng thái phổ biến:
 | **404** | Không tìm thấy tài nguyên |
 | **500** | Lỗi máy chủ |
 
-#### Bước 7: Trình Duyệt Kết Xuất Trang
+#### Quá trình thực tế: luồng kết xuất trang trình duyệt
 
 Trình duyệt nhận phản hồi xong, bắt đầu **kết xuất trang**:
 
@@ -362,7 +362,7 @@ Tổng quan hệ thống máy tính
 ::: tip Tiếp Tục Học
 Nếu bạn muốn tìm hiểu sâu về một khâu nào đó, có thể tiếp tục học:
 
-- **Từ Transistor đến CPU**: Tìm hiểu cơ sở phần cứng máy tính
-- **Hệ Điều Hành (tiến trình/bộ nhớ/hệ thống tệp)**: Hiểu sâu về hệ điều hành
-- **Mạng Máy Tính**: Hiểu sâu về giao thức mạng
+- **Cơ sở mạch số: Từ bóng bán dẫn đến CPU**: Tìm hiểu cơ sở phần cứng máy tính
+- **Nguyên lý hệ điều hành: Tiến trình, bộ nhớ và hệ thống tệp**: Hiểu sâu về hệ điều hành
+- **Mạng máy tính: Từ nhập URL đến render trang**: Hiểu sâu về giao thức mạng
 :::

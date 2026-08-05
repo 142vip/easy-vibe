@@ -1,4 +1,4 @@
-# Qué sucede desde que presionas el botón de encendido hasta que visitas un sitio web
+# Panorama del sistema informático: desde el arranque hasta la visita web
 
 ::: tip Prólogo
 ¿Alguna vez te has preguntado qué ocurre exactamente entre el momento en que presionas el botón de encendido de tu ordenador y el instante en que ves una página web en el navegador?
@@ -124,7 +124,7 @@ Un navegador moderno es un "sistema operativo" complejo formado principalmente p
 
 ## 5. Visitar una URL: el proceso completo de una petición de red
 
-### 5.1 ¿Qué es una URL?
+### 5.1 Visión general de URL
 
 Una **URL (Uniform Resource Locator)** es la dirección de un recurso; igual que una dirección postal en la vida real, sirve para localizar recursos en internet.
 

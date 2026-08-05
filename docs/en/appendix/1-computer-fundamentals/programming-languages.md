@@ -1,4 +1,4 @@
-# Programming Language Landscape
+# Programming Language Concepts: Paradigms, Evolution, and Selection
 
 ::: tip Preface
 Why are there so many programming languages? Which one should you learn? This chapter takes you from "language evolution" to "programming paradigms" to "how to choose," building a panoramic understanding of programming languages. **Bottom line first: there is no best language, only the most suitable language for the scenario.**
@@ -21,7 +21,7 @@ After completing this chapter, you will gain:
 
 ---
 
-## 0. How Do Humans "Talk" to Computers?
+## 0. Introduction: The Role of Programming Languages
 
 Imagine you need to communicate with a robot that only understands binary:
 
@@ -49,7 +49,7 @@ The trend in programming language evolution: **increasingly close to human think
 
 Programming paradigms are not language features but **ways of thinking** — just as writing has different genres like poetry, novels, and essays.
 
-### 2.1 Imperative — "Tell the computer step-by-step how to do it"
+### 2.1 Imperative Programming: Step-by-Step Execution Description
 
 ```c
 int sum = 0;
@@ -58,7 +58,7 @@ for (int i = 0; i < n; i++) {
 }
 ```
 
-### 2.2 Object-Oriented — "Encapsulate data and behavior into objects"
+### 2.2 Object-Oriented Programming: Encapsulation of Data and Behavior
 
 ```python
 class Dog:
@@ -68,14 +68,14 @@ class Dog:
         print(f"{self.name} says woof!")
 ```
 
-### 2.3 Functional — "Compose with pure functions, don't modify state"
+### 2.3 Functional Programming: Pure Functions and Immutable State
 
 ```haskell
 sum = foldl (+) 0
 -- Same input always produces the same output
 ```
 
-### 2.4 Declarative — "Just say what to do, not how to do it"
+### 2.4 Declarative Programming: Describing Goals Rather Than Steps
 
 ```sql
 SELECT name FROM users WHERE active = true
@@ -88,7 +88,7 @@ Most modern languages are **multi-paradigm**. Python supports both object-orient
 
 ---
 
-## 3. Type Systems: Traffic Rules for Data
+## 3. Type System Fundamentals
 
 | | Strongly Typed | Weakly Typed |
 |---|---|---|
@@ -99,7 +99,7 @@ Most modern languages are **multi-paradigm**. Python supports both object-orient
 - **JavaScript (weakly typed)**: `"11"` — silently converted for you
 - **Python (strongly typed)**: `TypeError` — forces you to think clearly
 
-Want to dive deeper into type systems? → [Introduction to Type Systems](./type-systems) | [Introduction to Compiler Principles](./compilers)
+Want to dive deeper into type systems? → [Type Systems: An Introduction](./type-systems) | [Compiler Principles](./compilers)
 
 ---
 
@@ -114,7 +114,7 @@ Want to dive deeper into type systems? → [Introduction to Type Systems](./type
 
 ---
 
-## 5. How to Choose a Programming Language?
+## 5. Programming Language Selection
 
 ### Choose by Scenario
 
@@ -147,7 +147,7 @@ Want to dive deeper into type systems? → [Introduction to Type Systems](./type
 :::
 
 **Next steps for learning**:
-- [Introduction to Compiler Principles](./compilers) - Deepen your understanding of the compilation process and code optimization
-- [Introduction to Type Systems](./type-systems) - Deepen your understanding of type systems and type safety
-- [Data Structures](./data-structures) - Understand how data is organized
-- [Introduction to Algorithmic Thinking](./algorithm-thinking) - Learn methods for solving problems
+- [Compiler Principles](./compilers) - Deepen your understanding of the compilation process and code optimization
+- [Type Systems: An Introduction](./type-systems) - Deepen your understanding of type systems and type safety
+- [Data Structures: An Introduction](./data-structures) - Understand how data is organized
+- [Introduction to Algorithms](./algorithm-thinking) - Learn methods for solving problems

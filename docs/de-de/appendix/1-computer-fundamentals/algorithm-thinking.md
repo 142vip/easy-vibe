@@ -1,4 +1,4 @@
-# Einführung in algorithmisches Denken
+# Einführung in Algorithmen
 
 ::: tip Vorwort
 **Wie löst man Probleme effizient?** Sie haben vielleicht schon folgende Erfahrung gemacht: Dasselbe Problem — der Code der einen Person liefert in wenigen Sekunden ein Ergebnis, während der einer anderen nach Minuten noch immer rechnet. Der Unterschied liegt meist im Algorithmus. Dieses Kapitel vermittelt Ihnen die Kernkonzepte algorithmischen Denkens.
@@ -21,8 +21,7 @@ Nach Abschluss dieses Kapitels werden Sie Folgendes gewonnen haben:
 
 ---
 
-## 0. Überblick: Was ist ein Algorithmus?
-
+## 0. Überblick über Algorithmen
 Stellen Sie sich vor, Sie suchen ein Wort in einem Wörterbuch:
 
 - **Methode 1**: Von der ersten Seite an Seite für Seite blättern (lineare Suche)
@@ -74,8 +73,7 @@ Die folgende Demo zeigt das Funktionsprinzip der binären Suche. Wählen Sie zwi
 
 <SearchAlgorithmDemo />
 
-### 1.2 Warum ist die binäre Suche so schnell?
-
+### 1.2 Prinzipien der logarithmischen Komplexität
 | Datenmenge | Lineare Suche | Binäre Suche |
 |--------|---------|---------|
 | 100 | 100 Vergleiche | 7 Vergleiche |
@@ -131,8 +129,7 @@ Das ist die Macht des logarithmischen Wachstums: Die Datenmenge wächst um das 1
 **Heap Sort**: Nutzt die Heap-Datenstruktur zum Sortieren, in-place (kein zusätzlicher Speicherplatz), aber in der Praxis oft langsamer als Quick Sort.
 :::
 
-### 2.2 Warum ist Quick Sort „schnell"?
-
+### 2.2 Prinzipien der schnellen Sortierung
 ::: tip 💡 Prinzip von Quick Sort
 **Kernidee**: Teile-und-Herrsche-Methode
 

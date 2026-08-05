@@ -1,4 +1,4 @@
-# What Happens from Pressing the Power Button to Visiting a Website
+# Computer System Overview: From Boot to Web Visit
 
 ::: tip Preface
 Have you ever wondered what happens between pressing your computer's power button and finally seeing a webpage in your browser?
@@ -124,7 +124,7 @@ A modern browser is a complex "operating system," primarily composed of:
 
 ## 5. Accessing a URL: The Complete Network Request Process
 
-### 5.1 What Is a URL?
+### 5.1 URL Overview
 
 A **URL (Uniform Resource Locator)** is the address of a resource. Just like a real-world address, it locates resources on the internet.
 

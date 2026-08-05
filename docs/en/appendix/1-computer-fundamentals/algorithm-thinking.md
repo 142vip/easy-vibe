@@ -1,4 +1,4 @@
-# Introduction to Algorithmic Thinking
+# Introduction to Algorithms
 
 ::: tip Preface
 **How do you solve problems efficiently?** You may have encountered this frustration: for the same problem, someone's code finishes in seconds while another's keeps running for minutes. The difference often comes down to algorithms. This chapter will help you understand the core mindset behind algorithms.
@@ -21,7 +21,7 @@ After completing this chapter, you will gain:
 
 ---
 
-## 0. Big Picture: What Are Algorithms?
+## 0. Big Picture: Algorithms Overview
 
 Imagine you need to find a word in a dictionary:
 
@@ -74,7 +74,7 @@ This demo shows how binary search works. You can choose linear search or binary 
 
 <SearchAlgorithmDemo />
 
-### 1.2 Why Is Binary Search So Fast?
+### 1.2 Time Complexity Analysis of Binary Search
 
 | Data Volume | Linear Search | Binary Search |
 |--------|---------|---------|
@@ -131,7 +131,7 @@ This is the power of logarithmic growth — when data increases 1000 times, the 
 **Heap Sort**: Sorting using the heap data structure. In-place (no extra space needed), but in practice often slower than quick sort.
 :::
 
-### 2.2 Why Is Quick Sort "Quick"?
+### 2.2 Complexity Analysis of Quick Sort
 
 ::: tip How Quick Sort Works
 **Core idea**: Divide and conquer
@@ -279,7 +279,7 @@ This demo shows the characteristics and application scenarios of different algor
 
 ---
 
-## 6. Summary: Algorithms Are the Art of Problem Solving
+## 6. Summary: Core Ideas of Algorithm Design
 
 Let's summarize various algorithmic ideas with analogies:
 

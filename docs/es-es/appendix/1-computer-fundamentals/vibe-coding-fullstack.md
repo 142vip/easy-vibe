@@ -1,4 +1,4 @@
-# Desarrollo Fullstack en la era del Vibe Coding
+# Introducción al desarrollo full stack: mapa del conocimiento informático en la era de Vibe Coding
 
 ::: tip Prefacio
 **¿Qué es Vibe Coding?** En pocas palabras, es "escribir código con lenguaje natural": describes lo que quieres en español o inglés, y la IA genera el código por ti. Esto ha cambiado por completo las reglas del desarrollo de software.
@@ -29,7 +29,7 @@ Al terminar este capítulo, habrás adquirido:
 
 ## 0. Vibe Coding: el nuevo paradigma del desarrollo de software
 
-### 0.1 ¿Qué es Vibe Coding?
+### 0.1 Visión general de Vibe Coding
 
 Imagina cómo era antes el desarrollo de software:
 
@@ -37,7 +37,7 @@ Imagina cómo era antes el desarrollo de software:
 
 **Cambio fundamental**: de "cómo escribir código" a "cómo describir requisitos".
 
-### 0.2 En la era del Vibe Coding, ¿qué habilidades son más importantes?
+### 0.2 Principios de habilidades en la era del Vibe Coding
 
 <DeveloperSkillShiftDemo />
 
@@ -57,7 +57,7 @@ Antes de profundizar en cada área, construyamos una visión global.
 
 <ComputerFieldMapDemo />
 
-### 1.1 Entender cada área con la analogía del "restaurante"
+### 1.1 Analogía: flujo de servicio de restaurante
 
 Imagina un sistema de software como un **restaurante**:
 
@@ -88,7 +88,7 @@ No intentes aprenderlo todo de una vez. Elige primero una dirección y profundiz
 
 ---
 
-## 2. ¿Qué es el frontend?
+## 2. Visión general del frontend
 
 ### 2.1 Definición en una frase
 
@@ -112,7 +112,7 @@ Cuando abres una página web:
 | **CSS** | Estilo decorativo | De qué color son las paredes, cómo se colocan los muebles, efectos de iluminación |
 | **JavaScript** | Domótica | Encender/apagar luces, persianas automáticas, sistema de seguridad |
 
-### 2.3 Frameworks de frontend: ¿por qué usarlos?
+### 2.3 Principios de frameworks de frontend
 
 Si con HTML/CSS/JS nativo ya se pueden hacer páginas web, ¿por qué aprender frameworks como React o Vue?
 
@@ -120,7 +120,7 @@ Si con HTML/CSS/JS nativo ya se pueden hacer páginas web, ¿por qué aprender f
 
 **Razón principal**: cuando la página se vuelve compleja (como Taobao o la versión web de WeChat), manipular directamente cada elemento de la página se vuelve muy caótico. Los frameworks te ayudan a "gestionar la complejidad".
 
-### 2.4 Un día en la vida de un ingeniero frontend
+### 2.4 Flujo diario de trabajo de un ingeniero frontend
 
 ```
 9:00  Revisar los diseños y entender qué funcionalidad hay que implementar
@@ -133,7 +133,7 @@ Si con HTML/CSS/JS nativo ya se pueden hacer páginas web, ¿por qué aprender f
 
 ---
 
-## 3. ¿Qué es el backend?
+## 3. Visión general del backend
 
 ### 3.1 Definición en una frase
 
@@ -160,7 +160,7 @@ Cuando compras algo en línea:
 | **Optimización de rendimiento** | Eficiencia de la cocina | Caché, procesamiento asíncrono, balanceo de carga |
 | **Protección de seguridad** | Seguridad alimentaria | Prevenir inyección SQL, control de permisos |
 
-### 3.3 ¿Cómo elegir un lenguaje de backend?
+### 3.3 Principios de selección de lenguajes de backend
 
 | Lenguaje | Características | Escenarios adecuados |
 |----------|-----------------|----------------------|
@@ -173,7 +173,7 @@ Cuando compras algo en línea:
 Si ya sabes JavaScript (base de frontend), Node.js es la opción más natural para empezar con backend. Un solo lenguaje para escribir tanto frontend como backend.
 :::
 
-### 3.4 Un día en la vida de un ingeniero backend
+### 3.4 Flujo diario de trabajo de un ingeniero backend
 
 ```
 9:00  Revisar la documentación de requisitos de API
@@ -188,7 +188,7 @@ Si ya sabes JavaScript (base de frontend), Node.js es la opción más natural pa
 
 ## 4. Mapa de lenguajes de programación
 
-### 4.1 ¿Qué es un lenguaje de programación?
+### 4.1 Visión general de los lenguajes de programación
 
 **Lenguaje de programación = el puente de comunicación entre humanos y computadoras.**
 
@@ -217,7 +217,7 @@ Las computadoras solo entienden ceros y unos, y los humanos estamos acostumbrado
 | **Tipado fuerte** | Verificación estricta de tipos, sin conversión automática | Python, Java |
 | **Tipado débil** | Verificación laxa de tipos, conversión automática | JavaScript, PHP |
 
-### 4.3 ¿Qué lenguaje aprender?
+### 4.3 Principios de selección de lenguajes
 
 <LanguageSelectionDemo />
 
@@ -232,7 +232,7 @@ No existe el "mejor lenguaje", solo el "lenguaje más adecuado para cada escenar
 
 ## 5. Ingeniero fullstack: dominar frontend y backend
 
-### 5.1 ¿Qué es fullstack?
+### 5.1 Visión general del desarrollo fullstack
 
 **Ingeniero fullstack = ingeniero capaz de completar de forma independiente el desarrollo frontend + backend.**
 
