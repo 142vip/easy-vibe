@@ -1810,7 +1810,7 @@ const withLocalizedArticleText = (item, locale) => {
 const localizeArticleLinks = (items, locale) =>
   items.map((item) => ({
     ...withLocalizedArticleText(item, locale),
-    href: item.href.replace(/^\/zh-cn\/stage-1\//, `/${locale}/stage-1/`)
+    href: item.href.replace(/^\/zh-cn\//, `/${locale}/`)
   }))
 
 export const relatedArticlesMap = new Proxy(rawRelatedArticlesMap, {
