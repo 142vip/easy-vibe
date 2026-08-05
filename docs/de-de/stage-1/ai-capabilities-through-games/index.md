@@ -160,6 +160,7 @@ Neben z.ai empfehlen wir dir, auch folgende hervorragende AI-Programmierplattfor
 
 | Werkzeug | Adresse | Merkmale |
 |------|------|------|
+| **Kimi Code** | [kimi.com/code/console](https://kimi.com/code/console) | KI-Programmierassistent von Moonshot AI mit terminalbasiertem Kimi Code CLI und VS-Code-Erweiterung, basierend auf dem auf Programmierung spezialisierten Modell Kimi K2.7 Code, kompatibel mit Claude Code, Roo Code usw. |
 | **Google AI Studio** (empfohlen) | [aistudio.google.com/apps](https://aistudio.google.com/apps) | Offizielles Google-Produkt, unterstützt Gemini-Modelle, geeignet für schnelle Prototypenentwicklung |
 | **Figma Make** | [figma.com/make](https://www.figma.com/make) | Tiefe Integration mit Designwerkzeugen, geeignet für Designer zur schnellen Erstellung interaktiver Prototypen |
 | **Coze** | [coze.com](https://www.coze.cn) | AI-Bot-Plattform von ByteDance, bietet No-Code-Visuellerstellung. Tiefe Integration mit nationalen Modellen wie Doubao und Kimi, unterstützt Plugin-Marktplatz, geplante Aufgaben und Multi-Kanal-Publishing |
@@ -268,40 +269,29 @@ Du kannst auch Spezialeffekte für den „Fress"-Vorgang hinzufügen oder magisc
 
 Wenn das zu anspruchsvoll klingt, kannst du das Sprachmoduell direkt um Hilfe bitten! Es kann kreative Vorschläge machen, um dein Spiel interessanter zu gestalten. Probier es aus!
 
-```
-1. „Wörter-entfesseln-Welten"-Mechanismus
-Jedes Mal, wenn die Schlange ein Wort frisst, assoziiert das LLM poetisch damit (z. B. „Baum" → „Wald", „Schatten") und das Bildmodell erstellt sofort ein kleines Kunstwerk für dieses Wort. Diese Bilder setzen sich nach und nach zu einem einzigartigen, vom Spieler geschaffenen Panorama zusammen, sodass der Spieler bei jedem Durchlauf „malend und dichtend" spielt.
+1. „Wörter erschließen Welten"-Mechanismus
+   Funktion: Nachdem die Schlange ein Wort gefressen hat, generiert das Bildmodell sofort ein kleines Kunstwerk für dieses Wort, das sich nach und nach zu einer einzigartigen, vom Spieler geschaffenen Panoramaansicht zusammensetzt – „malend und dichtend" beim Spielen.
 
 2. „Gedicht-Puzzle"-Gameplay
-Jedes gefressene Wort löst das LLM aus, einen kurzen Vers zu generieren, und das Bildmodell erstellt eine Illustration. Diese Verse und Bilder setzen sich wie ein Puzzle zusammen und bilden am Ende einer Runde ein AI-gestaffeltes Gedicht und Bild.
+   Funktion: Jedes gefressene Wort veranlasst das LLM, eine Gedichtzeile zu generieren, und das Bildmodell erstellt eine Illustration; am Ende einer Runde fügt sich alles wie ein Puzzle zu einem AI-kollaborativen Gedicht und Bild zusammen.
 
 3. „Magische Wörter" & „Story-Verzweigungen"
-Besondere „magische Wörter" (z. B. „Wind", „Nacht", „Traum") lösen nicht nur LLM-Gedichte aus, sondern ändern auch die Stimmung oder das Thema der Szene – der Stil der Bildgenerierung wechselt zu Nacht, Sturm oder traumhafter Atmosphäre.
-Story-Verzweigung: Das LLM gibt zu Beginn ein Thema oder Rätsel (z. B. „Herbsterinnerungen"). Die Wortwahl des Spielers beeinflusst direkt die Entwicklung der Geschichte und der Gedichte, und das Bildmodell aktualisiert Hintergrund und visuelle Effekte in Echtzeit.
+   Funktion: Beim Fressen magischer Wörter wie „Wind", „Nacht" oder „Traum" ändert das LLM das Szenenthema und schaltet den Bildstil auf Nacht-, Sturm- oder Traumatmosphäre um; die verschiedenen gefressenen Wörter lassen die AI-generierte Geschichte ständig weiterentwickeln.
 
 4. „Echtzeit-Interaktionsgenerierung"
-Nach jedem Wort generiert das LLM eine Dialogzeile oder Beschreibung; NPCs im Spiel können mit dem Spieler „sprechen" oder die Umgebung ändert sich entsprechend.
-Das Aussehen der Schlange oder die Hindernisse im Spiel können sich basierend auf den gefressenen Wörtern visuell verändern – dank des Bildmodells.
+   Funktion: Pro gefressenem Wort generiert das LLM einen Dialog oder eine Beschreibung, sodass NPCs im Spiel „sprechen" können und sich die Umgebung entsprechend verändert; auch das Aussehen der Schlange und die Hindernisse ändern sich je nach gefressenen Wörtern.
 
-5. „Kreation & Teilen"
-Spieler können am Ende der Sitzung ihre AI-kreierten Gedichte und Bilder speichern und teilen und ihre einzigartige „AI-Kollaboration" präsentieren.
-Bestenlisten für „Schönstes Gedicht + Kunst", „Kreativste Wortkombination" etc., die Replayability und Kreativität fördern.
+5. „Satz-Snake"-Herausforderung
+   Funktion: Umgekehrter Modus – das LLM gibt eine Gedichtzeile oder ein Rätsel vor, und der Spieler führt die Schlange, um die Wörter in der richtigen Reihenfolge zu fressen und den Satz zu rekonstruieren; falsch gefressene Wörter lösen über das Bildmodell lustige, künstlerische Konsequenzen aus.
 
-6. „Satz-Snake"-Herausforderung
-Umgekehrter Modus: Das LLM gibt einen Vers oder ein Rätsel, und der Spieler muss die Schlange leiten, um die Wörter in der richtigen Reihenfolge zu fressen und den Satz zu rekonstruieren. Falsche Wörter lösen über das Bildgenerierungsmodell lustige oder künstlerische Konsequenzen aus.
+6. „Themen-Level" & „Stilauswahl"
+   Funktion: Zu Beginn wählt der Spieler ein Thema wie „Märchen", „Sci-Fi" oder „Tang-Gedichte", und LLM und Bildmodell passen Wortwahl, Gedichtstil und Bildgestaltung entsprechend an, sodass jeder Durchlauf frisch wirkt.
 
-7. „Themen-Level" & „Stilauswahl"
-Zu Beginn des Spiels wählt der Spieler ein Thema (z. B. „Märchen", „Sci-Fi", „Tang-Gedichte"); LLM und Bildmodell passen Wortauswahl, Gedichtstil und visuelle Effekte entsprechend an, sodass jeder Durchlauf frisch wirkt.
+7. „Live-Zusammenarbeit"
+   Funktion: Beim Fressen eines besonderen Wortes fordert das LLM den Spieler auf, einen Satz einzugeben oder einen Stil zu wählen, und generiert dann passende Verse und Illustrationen – eine echte Mensch-AI-Zusammenarbeit.
 
-8. „Live-Zusammenarbeit"
-Wenn ein spezielles Wort gefressen wird, kann das LLM den Spieler auffordern, einen Satz oder Stil einzugeben, und generiert dann entsprechende Verse und Illustrationen – eine echte Mensch-AI-Kollaboration.
-
-9. „AI-Easter Eggs & Erfolge"
-Bestimmte Wortkombinationen werden vom LLM als spezielle Themen oder interne Witze erkannt (z. B. „Mond", „Osmanthus", „Flussufer") und lösen seltene Verse und Illustrationen aus, die Erkundung belohnen.
-
-10. „Wachsende Geschichte"
-Mit dem Wachsen der Schlange generiert das LLM ein fortlaufendes Geschichtsgedicht, und das Bildmodell erstellt ein nahtloses langes Scroll- oder Panorama-Bild, sodass der Spieler gleichzeitig „schreibt, malt und spielt".
-```
+8. „Wachsende Geschichte"
+   Funktion: Während die Schlange weiter wächst, schreibt das LLM das Geschichtsgedicht fort, und das Bildmodell generiert ein langes Panorama-Bild, sodass der Spieler „Schreiben, Malen und Spielen" gleichzeitig erlebt.
 
 Darüber hinaus können wir das LLM bitten, projektweite Prompts für uns zu generieren. Im vorherigen Abschnitt haben wir nur selbst den Prompt für das Snake-Spiel geschrieben. Lass uns jetzt versuchen, das Modell einen Prompt mit einem Gesamtframework und Implementierungspfad generieren zu lassen (du kannst das direkt mit z.ai machen).
 
@@ -336,111 +326,111 @@ Neben dem Snake-Spiel können wir der Fantasie freien Lauf lassen.
 
 Erschaffe alles, was du willst, versuche sogar, alles kaputt zu machen! Und dann fang von vorne an!
 
-```
-1. AI-Kunstgalerie-Plattform
-   Beschreibung: Eine Online-Galerie zur Präsentation von AI-generierter Kunst, auf der Nutzer Werke hochladen, teilen und kommentieren können.
-   Funktionen: Nutzerkontosystem, Kunstwerk-Upload und -Präsentation, Bewertungssystem, Kategorisierungsbrowser, AI-Generierungstool-Integration.
-   Technische Highlights: React/Vue-Frontend, Node.js-Backend, MongoDB-Datenbank, AI-API-Integration.
-
-2. Retro-Spiele-Archiv
-   Beschreibung: Eine Website, die klassische Spiele ehrt, mit Spielgeschichte, Spielanleitungen und online spielbaren Retro-Spielen.
-   Funktionen: Spieledatenbank, Zeitstrahl-Anzeige, Online-Emulator, Nutzerkommentare, Spielsammlung.
-   Technische Highlights: Responsive Design, WebGL/Canvas-Spiele, RESTful API, Nutzer-Authentifizierungssystem.
-
-3. Nachhaltiger-Lebensstil-Tracker
-   Beschreibung: Eine Website, die Nutzern hilft, ihren CO2-Fußabdruck durch Umweltschutztipps und Community-Challenges zu verfolgen und zu reduzieren.
-   Funktionen: Persönlicher CO2-Rechner, Zielsetzung, Fortschrittsverfolgung, Community-Challenges, Umweltschutzwissensdatenbank.
-   Technische Highlights: Datenvisualisierung, mobile Optimierung, Social-Funktionen, Push-Benachrichtigungen.
-
-4. Virtuelle-Küchen-Assistent
-   Beschreibung: Eine AI-basierte Kochberatungsplattform mit personalisierten Rezeptvorschlägen und Schritt-für-Schritt-Kochanweisungen.
-   Funktionen: Rezeptdatenbank, Zutatenerkennung, personalisierte Empfehlungen, Küchentimer, Nährwertanalyse.
-   Technische Highlights: Bilderkennungs-API, ML-Empfehlungssystem, Sprachsteuerung, Echtzeit-Videoführung.
-
-5. Indie-Musik-Entdeckungsplattform
-   Beschreibung: Eine Musikstreaming-Plattform, die sich auf unabhängige und aufstrebende Künstler konzentriert, mit einzigartigem Entdeckungserlebnis.
-   Funktionen: Musikstreaming, Künstlerprofile, personalisierte Empfehlungen, Playlist-Erstellung, Community-Bewertungen.
-   Technische Highlights: Audio-Stream-Verarbeitung, Empfehlungsalgorithmus, Social-Funktionen, Musikvisualisierung.
-
-6. Minimalistische Aufgabenverwaltung
-   Beschreibung: Ein Aufgabenverwaltungstool mit zen-ästhetischem Design, das sich auf einfache und effiziente Aufgabenorganisation konzentriert.
-   Funktionen: Aufgabenerstellung und -kategorisierung, Prioritäteneinstellung, Fortschrittsverfolgung, Teamzusammenarbeit, Datenanalyse.
-   Technische Highlights: Minimalistisches UI-Design, Drag-and-Drop, Echtzeit-Synchronisation, plattformübergreifende Kompatibilität.
-
-7. Sci-Fi-Schreibwerkstatt
-   Beschreibung: Eine Plattform für Sci-Fi-Autoren mit kreativen Werkzeugen und Inspiration, einschließlich Worldbuilding-Hilfe und Charakterentwicklungstools.
-   Funktionen: Geschichtenstrukturwerkzeuge, Charakterprofile, Worldbuilding-Vorlagen, Schreibstatistiken, Community-Feedback.
-   Technische Highlights: Rich-Text-Editor, Datenvisualisierung, kollaboratives Editieren, AI-gestützte Kreation.
-
-8. Persönliches Wissens-Graph
-   Beschreibung: Ein Tool, das Nutzern hilft, persönliche Wissensnetzwerke aufzubauen und verschiedene Ideen und Informationen zu visualisieren und zu verknüpfen.
-   Funktionen: Knotenerstellung und -verknüpfung, Tag-System, Suchfunktion, Import/Export-Werkzeuge, Visualisierungsdiagramme.
-   Technische Highlights: Graph-Datenbank, Datenvisualisierungsalgorithmen, Markdown-Unterstützung, geräteübergreifende Synchronisation.
-
-9. Virtueller Pflanzengarten
-   Beschreibung: Eine interaktive Pflanzenenzyklopädie, in der Nutzer die Pflanzenwelt erkunden und virtuelle Gärten anlegen können.
-   Funktionen: Pflanzendatenbank, 3D-Pflanzenmodelle, Wachstumssimulation, Gartenbauanleitung, Community-Showcase.
-   Technische Highlights: 3D-Rendering, saisonale Wechselsimulation, AR-Integration, Pflanzen-Identifikations-API.
-
-10. Programmier-Challenge-Arena
-    Beschreibung: Eine Online-Wettbewerbsplattform für Programmierer mit verschiedenen Schwierigkeitsstufen.
-    Funktionen: Herausforderungsaufgaben, Code-Editor, automatische Bewertung, Bestenliste, Lernpfad.
-    Technische Highlights: Code-Sandbox-Umgebung, Echtzeit-Bewertungssystem, Algorithmus-Visualisierung, Social-Learning-Funktionen.
-```
+1. AI-Kunstgalerie-Plattform: Hilf mir, eine Online-Galerie zu bauen, in der Nutzer AI-generierte Kunstwerke hochladen, durchstöbern, liken und kommentieren können, mit Übersicht nach Stilen sortiert.
+2. Retro-Spiele-Archiv: Hilf mir, eine Website zu bauen, die klassischen Spielen Tribut zollt, mit Spielgeschichte, Spielanleitungen und einigen direkt online spielbaren Retro-Minispielen.
+3. Tracker für nachhaltigen Lebensstil: Hilf mir, ein CO₂-Fußabdruck-Tracking-Tool zu bauen, das nach Eingabe des Alltagsverhaltens automatisch den CO₂-Ausstoß schätzt und Umwelttipps sowie wöchentliche Challenges bietet.
+4. Virtueller Küchenassistent: Hilf mir, einen AI-Kochassistenten zu bauen, der bei Eingabe der zu Hause vorhandenen Zutaten Rezepte empfiehlt und Schritt-für-Schritt-Kochanleitungen gibt.
+5. Underground-Musik-Entdeckungsplattform: Hilf mir, eine Musik-Streaming-Website zu bauen, die unabhängige und aufstrebende Künstler in den Fokus rückt und das Erstellen von Playlists sowie Kommentar-Interaktion unterstützt.
+6. Minimalistisches Aufgabenverwaltungssystem: Hilf mir, ein Aufgabenverwaltungstool im minimalistischen Stil zu bauen, das das Erstellen von Aufgaben, das Festlegen von Prioritäten, Drag-and-Drop-Sortierung und die Anzeige des Fortschritts unterstützt.
+7. Sci-Fi-Schreibwerkstatt: Hilf mir, eine Sci-Fi-Schreibplattform zu bauen, die Worldbuilding-Vorlagen, Charakter-Profilkarten und Story-Outline-Werkzeuge bereitstellt, damit Autoren ihre Settings aufbauen können.
+8. Persönlicher Wissensgraph: Hilf mir, ein visuelles Notiz-Tool zu bauen, das verstreute Ideen in Knoten verwandelt und zusammenhängende Inhalte mit Verbindungslinien zu einem Wissensnetz verknüpft.
+9. Virtueller Pflanzengarten: Hilf mir, eine Pflanzen-Enzyklopädie-Website zu bauen, die Bebilderungen und Informationen zu verschiedenen Pflanzen enthält und in der Nutzer eigene virtuelle Pflanzen pflanzen und beim Wachsen beobachten können.
+10. Programmier-Challenge-Arena: Hilf mir, eine Online-Programmierwettbewerbsplattform zu bauen, die Algorithmusaufgaben verschiedener Schwierigkeitsgrade, einen Online-Code-Editor, automatische Bewertung und eine Rangliste bietet.
 
 Und noch mehr... Wenn du gerne spielst, lass uns gemeinsam versuchen, Spiele zu erschaffen!
 
-```
-1. 3D Open-World RPG
-   Beschreibung: Ein Fantasy-RPG mit weitläufiger Open World, Quests und Charakterentwicklung.
-   Funktionen: Tag-Nacht-Zyklus, dynamisches Wetter, Skill-Baum, Multiplayer-Koop, Handwerkssystem.
-   Technische Highlights: Three.js oder Babylon.js für 3D-Rendering, serverseitige Spiellogik, Charakteranpassung, Save-System.
+1. 3D-Open-World-RPG: Hilf mir, ein frei erkundbares 3D-Open-World-Spiel mit Tag-Nacht-Zyklus, Wetterwechseln, Quest-System und Charakterentwicklung zu bauen.
+2. Ego-Shooter (FPS)-Arena: Hilf mir, ein schnelles Multiplayer-FPS-Spiel zu bauen, das Team-Deathmatch, Capture the Flag, mehrere Spielmodi und mehrere Karten unterstützt.
+3. AI-Schach und Mehrspieler: Hilf mir, eine Schachplattform zu bauen, auf der man sowohl gegen AI-Gegner verschiedener Schwierigkeitsgrade als auch online gegen echte Spieler antreten kann.
+4. Mahjong-Online-Mehrspieler: Hilf mir, ein traditionelles Mahjong-Spiel zu bauen, das mehrere Regelwerke, private Räume und automatische Punktezählung unterstützt.
+5. Rundenbasiertes Strategiespiel: Hilf mir, ein rundenbasiertes Strategiespiel auf einer Rasterkarte mit Einheitenbewegung, Angriff, Upgrade und Nebel des Krieges zu bauen.
+6. Zeitfahr-Rennspiel: Hilf mir, ein 3D-Rennspiel mit Fokus auf Zeitfahr-Gameplay zu bauen, das mehrere Strecken, Fahrzeug-Tuning und Geister-Replays unterstützt.
+7. Kartenspiel (Deck-Building): Hilf mir, ein Kartenspiel zu bauen, in dem Spieler Karten sammeln, frei Decks bauen und an Ranglisten-Kämpfen teilnehmen können.
+8. Battle Royale (Top-Down 2D): Hilf mir, ein Top-Down-2D-Battle-Royale-Spiel mit Schrumpfzone, zufälliger Beute und Solo-/Team-Modus zu bauen.
+9. Horror-Überlebensspiel (Ego-Perspektive): Hilf mir, ein Horror-Überlebensspiel in der Ego-Perspektive zu bauen, mit Fokus auf Ressourcenmanagement, dem Schleichen an Gegnern vorbei und der Suche nach einem Fluchtweg.
+10. Musik-Rhythmus-Spiel (3D): Hilf mir, ein 3D-Musik-Rhythmus-Spiel zu bauen, bei dem Noten im Takt der Musik von weitem heranfliegen und der Spieler sie zum richtigen Zeitpunkt trifft, um Punkte zu erzielen.
 
-2. Ego-Shooter (FPS) Arena
-   Beschreibung: Ein schnelles Multiplayer-FPS mit verschiedenen Spielmodi und Karten.
-   Funktionen: Team-Deathmatch, Capture-the-Flag, Waffenanpassung, Rangliste.
-   Technische Highlights: WebGL/Three.js für 3D-Grafik, Multiplayer-Netzwerkcode, Treffererkennung, Voice-Chat.
+### 3.4 Handverlesene Fälle aus dem Netz: Was andere mit AI gebaut haben
 
-3. AI-Schach und Multiplayer
-   Beschreibung: Eine voll funktionsfähige Schachplattform mit AI-Gegnern und Online-Multiplayer.
-   Funktionen: AI-Schwierigkeitsstufen, Endspiel-Herausforderungen, Turniermodus, Replay-Analyse.
-   Technische Highlights: Schachlogikbibliothek, WebSocket für Echtzeit-Multiplayer, ELO-Ranglistensystem, Anti-Cheat.
+An diesem Punkt fragst du dich vielleicht immer noch: Snake ist doch nur ein Einstiegsbeispiel – kann AI wirklich komplexere Spiele bauen?
 
-4. Mahjong Online-Multiplayer
-   Beschreibung: Ein traditionelles Mahjong-Spiel mit Online-Multiplayer und Punktestand.
-   Funktionen: Mehrere Regelwerke, private Räume, Ranglistensystem, Replay-Funktion.
-   Technische Highlights: Tile-Matching-Logik, Echtzeit-Multiplayer, Lobby-System, Punktestand-Tracking.
+Die Antwort ist ja. Im Folgenden findest du **8** handverlesene, öffentlich zugängliche Fallbeispiele aus dem Netz – von Sammlungen klassischer Arcade-Spiele und 2048-artigen Puzzles über Nachbauten von *Minecraft* und *Super Mario* bis hin zu einem 3D-Spiel und einer offiziellen Spielplattform des chinesischen LLM Kimi. Manche dieser Entwickler sind Programmierer, andere völlige Anfänger ohne Vorkenntnisse – aber allen gemeinsam ist: **Sie haben AI per Dialog den Großteil des Codes schreiben lassen**.
 
-5. Rundenbasiertes Strategiespiel
-   Beschreibung: Ein taktisches Strategiespiel mit Raster-Kampf und Einheitenverwaltung.
-   Funktionen: Kampagnenmodus, Gefechtsmodus, Einheitenupgrade, Nebel des Krieges, Multiplayer.
-   Technische Highlights: Raster-Bewegungssystem, AI-Entscheidungsfindung, Runden-Synchronisation, Save/Load-System.
+#### 🕹️ Fall 1: An einem Nachmittag 10 klassische Arcade-Spiele nachgebaut (WotAI Games)
 
-6. Zeitfahren-Rennspiel
-   Beschreibung: Ein 3D-Rennspiel mit Fokus auf Zeitfahren und Streckenrekorde.
-   Funktionen: Mehrere Strecken, Autoanpassung, Geister-Replay, Bestenliste.
-   Technische Highlights: 3D-Auto-Physik, Streckeneditor, Replay-System, Online-Bestenliste.
+[WotAI Games](https://games.wotai.co/) ist eine Sammlung von Browserspielen, die komplett von Grund auf mit Claude Code (Vibe Coding) entwickelt wurde und **keine Spielengine verwendet**. Per Dialog ließ man AI in einem Rutsch 10 klassische Arcade-Spiele nachbauen: Pac-Man, Tetris, Space Invaders, Snake, Flappy Bird, Breakout, Galaga, Frogger, Doodle Jump und Sudoku. Jedes Spiel ist direkt online spielbar und bringt ein eigenes Ranglistensystem mit.
 
-7. Kartenspiel (Deck-Building)
-   Beschreibung: Ein strategisches Kartenspiel, in dem Spieler Decks bauen und gegen Gegner antreten.
-   Funktionen: Kartensammlung, Deck-Building, Rangliste, Saison-Events.
-   Technische Highlights: Kartenspiellogik, Matchmaking-System, AI-Gegner, Kartenanimationen.
+![Startseite von WotAI Games – Sammlung von 10 klassischen Arcade-Spielen](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.png)
 
-8. Battle Royale (Top-Down 2D)
-   Beschreibung: Ein Top-Down-2D-Battle-Royale mit schrumpfender Spielzone und Loot-Mechanik.
-   Funktionen: Solo- und Squad-Modus, Waffenvielfalt, In-Game-Events, Bestenliste.
-   Technische Highlights: Echtzeit-Multiplayer, Zonen-Schrumpfungslogik, Loot-Spawn-System, Matchmaking.
+![Tetris (WotAI Games, per Vibe Coding generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-tetris.png)
 
-9. Horror-Überlebensspiel (Ego-Perspektive)
-   Beschreibung: Ein Ego-Perspektive-Horrorspiel mit Ressourcenmanagement und Fluchtmechanik.
-   Funktionen: Atmosphärische Umgebung, Rätsel, Enemy-AI, Multiple Endings.
-   Technische Highlights: Dynamische Beleuchtung, Sound-Design, Enemy-Pathfinding, Save-System.
+![Pac-Man (WotAI Games, per Vibe Coding generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.png)
 
-10. Rhythmus-Musikspiel (3D)
-    Beschreibung: Ein 3D-Rhythmus-Spiel, in dem Spieler im Takt der Musik Noten treffen.
-    Funktionen: Mehrere Schwierigkeitsstufen, Streckeneditor, Custom-Song-Unterstützung, Bestenliste.
-    Technische Highlights: Audioanalyse, Beat-Synchronisation, 3D-Noten-Spuren, Input-Timing-Erkennung.
-```
+> 🔗 Online spielen: [games.wotai.co](https://games.wotai.co/) ｜ Entwicklungs-Rückblick: [We vibe coded 10 classic arcade games with Claude Code](https://wotai.co/blog/wotai-games-vibe-coded-arcade-classics)
+
+#### 🌸 Fall 2: Ein Anfänger ohne Vorkenntnisse baut in 2 Stunden ein 2048-artiges Spiel (Blooming Garden)
+
+Der japanische Entwickler [in0ho1no](https://github.com/in0ho1no), der überhaupt nicht programmieren kann, hat mit Claude rein über Dialoge (Vibe Coding) in **etwa 2 Stunden** das 2048-artige „Pflanzengarten"-Spiel [Blooming Garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) gebaut: Pflanzen gleicher Art fusionieren und upgraden, prächtige Blüteffekte, Partikel-Animationen, Rangliste, Soundeffekte, Handy-Anpassung … Alle diese Funktionen wurden rein über natürliche Sprachdialoge umgesetzt – ohne eine einzige von Hand geschriebene Codezeile.
+
+![Blooming Garden Pflanzensynthese-Spiel (100 % AI-generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.png)
+
+> 🔗 Online spielen: [in0ho1no.github.io/2025-adhoc-blooming-garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) ｜ Quellcode: [github.com/in0ho1no/2025-adhoc-blooming-garden](https://github.com/in0ho1no/2025-adhoc-blooming-garden)
+
+#### 🌍 Fall 3: Ein Designer baut mit AI ein online spielbares 3D-Mehrspieler-Spiel (Planet Jumper)
+
+Der Designer [Ricardo de Zoete (Hammy)](https://x.com/RicardoDeZoete) hat mit der AI von OpenAI rein über Dialoge (Vibe Coding) auf Basis von three.js [Planet Jumper](https://gamesbyhammy.cloud/play/planetjumper) gebaut – ein **3D-Mehrspieler-Platformer**: Auf der Oberfläche eines kleinen kugelförmigen Planeten rennen, sprinten und springen und dabei sogar online gegen Fremde antreten. Systeme wie kugelförmige Schwerkraft, Online-Synchronisation und Sprunggefühl sind alles andere als einfach und wurden komplett per Prompt „herausgeplaudert".
+
+![Planet Jumper 3D-Mehrspieler-Platformer (per Vibe Coding generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.png)
+
+> 🔗 Online spielen: [gamesbyhammy.cloud/play/planetjumper](https://gamesbyhammy.cloud/play/planetjumper) ｜ Ausführliche Vorstellung: [Planet Jumper: A Vibe-Coded Three.js Multiplayer Platformer](https://www.webgpu.com/showcase/planet-jumper-threejs-multiplayer/)
+
+#### 🎮 Fall 4: Eine Person hat mit Vibe Coding 100 Browserspiele gebaut (2026)
+
+Im Juli 2026 hat der Entwickler [wangzifan396-wzf](https://github.com/wangzifan396-wzf) aus der chinesischen Community [mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) als Open Source veröffentlicht – **100 Browser-Minispiele, die eine einzelne Person mit Vibe Coding gebaut und kontinuierlich verfeinert hat**. Alle sind abhängigkeitsfreie einzelne HTML-Dateien, die man per Doppelklick starten kann. Die Spielarten decken Action, Strategie, Tower Defense, Management, Kartenspiele, Physik, Logik, Rennspiele, Rhythmus, Brettspiele und Puzzles ab; viele davon erreichen bereits produktionsreife Tiefe mit Mehr-Kapitel-Kampagnen, Aufbausystemen und geräteübergreifender Synchronisierung per Speichercode. Das gesamte Projekt ist unter der MIT-Lizenz open source, und der Online-Katalog lässt sich direkt durchspielen.
+
+![Online-Katalog der 100 Browserspiele (Open-Source-Vibe-Coding-Projekt von 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
+
+![„Neon 2048": Expedition mit sechs Kapiteln und 18 Knoten + mehrere Modi und Werkzeugsysteme](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.png)
+
+> 🔗 Online-Katalog: [wangzifan396-wzf.github.io/mini-browser-games](https://wangzifan396-wzf.github.io/mini-browser-games/) ｜ Quellcode: [github.com/wangzifan396-wzf/mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) ｜ Entstehungs-Rückblick: [Ich habe mit Vibe Coding 100 Browserspiele gebaut und alle als Open Source veröffentlicht](https://blog.csdn.net/m0_74023007/article/details/162945755)
+
+#### ⛏️ Fall 5: Ein Minecraft-Nachbau für die Neffen des Entwicklers (CraftMine, 2026)
+
+Im Februar 2026 hat der Entwickler [Trent Sterling](https://tront.xyz/blog/posts/craftmine/), weil seine Neffen *Minecraft* spielen wollten, aber keine Originalversion besaßen, einfach eine leere HTML-Datei geöffnet und mit Claude Code rein über Dialoge [CraftMine](https://tront.xyz/craftmine/) gebaut – einen **6.820 Zeilen umfassenden Einzeldatei**-Nachbau von *Minecraft* für den Browser: 46 Blockarten (zusätzlich 21 DOOM-Höllen-Themenblöcke), 36 Kreaturen (vom Huhn bis zum Titan-Boss mit 300 HP), 19 Waffen (inklusive BFG 9000), 5 Biome, Tag-Nacht-Zyklus und sogar **P2P-Mehrspieler**. Es gibt keinen Build-Schritt – Webseite öffnen und losspielen.
+
+![CraftMine: Minecraft-Nachbau, 6.820 Zeilen in einer einzigen Datei (per Vibe Coding generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.png)
+
+> 🔗 Online spielen: [tront.xyz/craftmine](https://tront.xyz/craftmine/) ｜ Entwicklungs-Rückblick: [CraftMine: A 6,820-line vibe-coded Minecraft clone in one HTML file](https://tront.xyz/blog/posts/craftmine/)
+
+#### 🍄 Fall 6: Ein Super Mario mit in Echtzeit AI-generierten unendlichen Leveln (2026)
+
+Im März 2026 hat ein Entwickler die Open-Source-Version von *Super Mario* mit den Modellen von OpenAI kombiniert und daraus [AI Super Mario](https://supermario.leanmcp.live/) gebaut: Du kannst sowohl die klassischen Original-Level spielen als auch AI **in Echtzeit neue Level generieren** lassen – im „Unendlichkeitsmodus" erzeugt AI während des Voranschreitens dynamisch brandneue Szenen und Gegner; im Test ließ es sich 45 Minuten am Stück spielen. Du kannst sogar direkt im Spiel per Text AI bitten, Gegner hinzuzufügen, Plattformen zu platzieren oder das Thema zu ändern.
+
+![AI Super Mario: drei Spielmodi – Klassik, AI-Level und Unendlichkeitsmodus](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-ai-mario-menu.png)
+
+![Mario-Spielbildschirm mit in Echtzeit von AI generierten Leveln](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-ai-mario-gameplay.png)
+
+> 🔗 Online spielen: [supermario.leanmcp.live](https://supermario.leanmcp.live/) ｜ Ausführliche Vorstellung: [OpenAI and Idiomorph Power Infinite Mario Level Generation in Browser](https://www.thenextgentechinsider.com/pulse/openai-and-idiomorph-power-infinite-mario-level-generation-in-browser)
+
+#### 🇨🇳 Fall 7: Ein Prompt genügte dem chinesischen LLM Kimi K3 für ein 3D-Spiel (2026)
+
+Im Juli 2026 hat der Entwickler [Dr. Josh Simmons](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it) dem chinesischen LLM **Kimi K3** nur einen einzigen Prompt geschickt und es daraufhin ein spielbares Ego-3D-Spiel bauen lassen: Datenkerne in einer prozedural generierten Serveranlage sammeln, patrouillierenden Drohnen ausweichen und mit dem Frachtaufzug drei Stockwerke nach unten fahren. Das gesamte Spiel war nach einer einzigen Generierung spielbar; nach zwei Dialogrunden zum Beheben von zwei Bugs ließ es sich problemlos durchspielen – für insgesamt etwa **2 US-Dollar**.
+
+![Das 3D-Serveranlagen-Spiel, das Kimi K3 aus einem einzigen Prompt generiert hat](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.png)
+
+> 🔗 Online spielen: [kimi-test-theta.vercel.app](https://kimi-test-theta.vercel.app/) ｜ Quellcode: [github.com/jcpsimmons/kimi-test](https://github.com/jcpsimmons/kimi-test) ｜ Entwickler-Rückblick: [Kimi K3 Built the Game. I Still Had to Play It.](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it)
+
+#### 🎯 Fall 8: K399, die offizielle Spieleplattform von Kimi – dutzende AI-Spiele direkt online spielbar (2026)
+
+Am 17. Juli 2026 veröffentlichte Moonshot AI das Modell Kimi K3 und brachte zeitgleich die Browserspiele-Plattform [K399](https://www.k399.games/) online – dutzende Spiele dort wurden alle mit dem K3-Modell erstellt und sind mit einem Klick spielbar. Die Bandbreite reicht von 3D-Shootern, Musikspielen, Side-Scrolling-Action und Hof-Intrigen-AVGs über 3D-Puzzles bis hin zu Open-World-Spielen: Neben Nachbauten klassischer Gameplay-Konzepte wie *The Legend of Zelda*, *Black Myth: Wukong*, *Bubble Land* und *Vampire Survivors* gibt es auch Originale, deren Fertigstellungstiefe weit über Demos hinausgeht, etwa *Pioneer Practice Ground* (ein 3D-FPS mit Bewegen, Springen, Rutschen, Zielen und Schießen), das Open-World-Spiel *SpiderPunk* und das Hof-Intrigen-AVG *Fengque Shen Gong* mit einer Hauptstory über fünf Kapitel, acht Nebensträngen und 32 Zufallsereignissen.
+
+![K399-Plattformoberfläche – K3 Game Arcade, Spieleliste mit einem Klick spielbar](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
+
+![SpiderPunk, ein Open-World-Spiel auf K399: zwischen Cyberpunk-Hochhäusern an Spinnenseilen schwingen (mit K3-Modell generiert, echtes Gameplay)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.png)
+
+> 🔗 Online spielen: [k399.games](https://www.k399.games/) (K3 Game Arcade, mit einem Klick spielbar) ｜ Ausführliche Vorstellung: [Ein ehemaliger miHoYo-Manager stößt dazu – das gerade angesagteste AI-Unternehmen hat plötzlich dutzende Spiele gemacht](https://eu.36kr.com/zh/p/3906895998178441) ｜ [Kimi K3: Wer wird nervös?](https://36kr.com/p/3905392402748801)
+
+Wenn du dir diese Fälle anschaust, wirst du feststellen: **Snake ist nur die Spitze des Eisbergs der AI-Programmierfähigkeiten**. Ob klassische Arcade-Spiele, 2048-Puzzles, 3D-Spiele, Nachbauten von *Minecraft* und *Super Mario*, Sammlungen von hunderten Spielen oder sogar die offizielle Spieleplattform eines chinesischen LLM – solange du deine Ideen klar beschreiben kannst und bereit bist, sie in mehreren Dialogrunden zu verfeinern, kann AI sie für dich von 0 auf 1 umsetzen. Als Nächstes bist du an der Reihe!
 
 ## 📚 Assignment
 

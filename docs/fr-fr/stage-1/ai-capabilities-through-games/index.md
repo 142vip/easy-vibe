@@ -160,6 +160,7 @@ Outre z.ai, nous vous recommandons également d'essayer les plateformes suivante
 
 | Outil | Adresse | Caractéristiques |
 |------|---------|-----------------|
+| **Kimi Code** | [kimi.com/code/console](https://kimi.com/code/console) | Assistant de programmation IA de Moonshot AI, avec le CLI Kimi Code pour le terminal et l'extension VS Code, basé sur le modèle dédié au code Kimi K2.7 Code, et compatible avec Claude Code, Roo Code, etc. |
 | **Google AI Studio** (recommandé) | [aistudio.google.com/apps](https://aistudio.google.com/apps) | Proposé par Google, avec le modèle Gemini, idéal pour le prototypage rapide |
 | **Figma Make** | [figma.com/make](https://www.figma.com/make) | Intégré à l'outil de design, adapté aux designers pour des prototypes interactifs |
 | **Coze** | [coze.com](https://www.coze.cn) | Plateforme de création de bots IA par ByteDance, développement sans code, intégration avec Doubao, Kimi et d'autres modèles chinois |
@@ -266,37 +267,29 @@ Vous pouvez également ajouter des effets spéciaux au processus de « mangeage 
 
 Si cela vous semble trop difficile, vous pouvez demander directement au modèle de langage de l'aide ! Il peut fournir des suggestions créatives pour rendre votre jeu plus amusant. Essayez !
 
-```
-1. Mécanique "Les mots déverrouillent des mondes"
-Chaque fois que le serpent mange un mot, le LLM fait une association poétique (par exemple, "arbre" → "forêt", "ombrage"), et le modèle d'image génère instantanément une petite œuvre d'art pour ce mot. Ces images s'assemblent progressivement en un panorama unique créé par le joueur.
+1. Mécanisme « Les mots débloquent des mondes »
+   Fonction : après que le serpent a mangé un mot, le modèle d'image génère instantanément une petite œuvre d'art pour ce mot ; ces œuvres s'assemblent peu à peu en un panorama unique créé par le joueur — on « peint » tout en jouant.
 
-2. Jouabilité "Puzzle poétique"
-Chaque mot mangé par le serpent déclenche la génération d'un vers court par le LLM et une illustration par le modèle d'image. Ces vers et images se combinent comme un puzzle pour former, à la fin de la partie, un poème et un tableau collaboratifs avec l'IA.
+2. Jouabilité « Puzzle poétique »
+   Fonction : chaque mot mangé par le serpent déclenche la génération d'un vers par le LLM et d'une illustration par le modèle d'image ; à la fin de la manche, le tout se combine en un poème et un tableau créés en collaboration avec l'IA.
 
-3. "Mots magiques" et "Branches narratives"
-Des "mots magiques" spéciaux (par exemple, "vent", "nuit", "rêve") ne déclenchent pas seulement de la poésie, mais changent aussi l'ambiance ou le thème — transformant le style de l'image générée en nocturne, tempête ou ambiance onirique.
+3. « Mots magiques » et embranchements narratifs
+   Fonction : en mangeant des mots magiques comme « vent », « nuit » ou « rêve », le LLM change le thème de la scène et bascule le style de l'image vers une ambiance nocturne, orageuse ou onirique ; les différents mots mangés par le joueur font aussi évoluer en continu l'histoire générée par l'IA.
 
-4. "Génération en temps réel"
-Après chaque mot, le LLM génère une ligne de dialogue ou de description, un NPC dans le jeu peut "parler" au joueur, ou l'environnement change en conséquence.
+4. « Génération interactive en temps réel »
+   Fonction : à chaque mot mangé, le LLM génère une phrase de dialogue ou une description, faisant « parler » les PNJ du jeu et modifiant l'environnement ; l'apparence du serpent ou les obstacles changent également selon les mots mangés.
 
-5. "Créer et partager"
-Les joueurs peuvent sauvegarder et partager leurs poèmes et images créés par l'IA à la fin de la session.
+5. Défi « Snake par phrase »
+   Fonction : mode inversé — le LLM donne un vers ou une énigme, et le joueur guide le serpent pour manger les mots dans l'ordre afin de reconstituer la phrase ; manger un mauvais mot déclenche des conséquences artistiques amusantes générées par le modèle d'image.
 
-6. "Snake par phrase" — mode inversé
-Le LLM donne un vers ou une énigme, le joueur doit guider le serpent pour manger les mots dans le bon ordre pour reconstituer la phrase.
+6. « Niveaux thématiques » et sélection de style
+   Fonction : au début de la partie, choisissez un thème comme « conte de fées », « science-fiction » ou « poésie Tang » ; le LLM et le modèle d'image adaptent les mots, le style poétique et le style visuel pour que chaque partie soit totalement renouvelée.
 
-7. "Niveaux thématiques" et "Sélection de style"
-Au début, le joueur choisit un thème (par exemple, "conte de fées", "science-fiction", "poésie Tang"), et le LLM ainsi que le modèle d'image adaptent les mots, le style poétique et les effets visuels en conséquence.
+7. « Co-création en direct »
+   Fonction : en mangeant un mot spécial, le LLM invite le joueur à saisir une phrase ou à choisir un style, puis génère les vers et illustrations correspondants — une véritable co-création homme-machine.
 
-8. "Co-création en direct"
-Quand un mot spécial est mangé, le LLM peut inviter le joueur à saisir une phrase ou à choisir un style, puis l'IA génère les vers et illustrations correspondants.
-
-9. "Easter eggs IA" et "Succès"
-Certaines combinaisons de mots sont identifiées par le LLM comme des thèmes spéciaux, déclenchant des vers et illustrations rares.
-
-10. "Histoire qui grandit"
-Au fil de la croissance du serpent, le LLM génère un poème narratif continu, et le modèle d'image crée un long parchemin panoramique.
-```
+8. « L'histoire qui grandit »
+   Fonction : au fur et à mesure que le serpent grandit, le LLM poursuit en continu le poème narratif et le modèle d'image génère un long panorama en rouleau, pour que le joueur vive en même temps « l'écriture, le dessin et le jeu ».
 
 De plus, nous pouvons demander au LLM de générer directement un prompt de niveau projet. Dans la section précédente, nous n'avons écrit nous-mêmes que le prompt du Snake. Maintenant, essayons de demander au modèle de générer un prompt avec un cadre d'ensemble et un chemin de réalisation (vous pouvez utiliser z.ai directement).
 
@@ -331,53 +324,111 @@ Outre le Snake, nous pouvons laisser libre cours à notre imagination.
 
 Créer tout ce que nous voulons, même essayer de tout casser ! Puis recommencer à zéro !
 
-```
-1. Galerie d'art IA
-   Description : une galerie en ligne présentant des œuvres d'art générées par IA, avec upload, partage et commentaires.
-   Fonctionnalités : comptes utilisateurs, upload et affichage d'œuvres, système de notation, navigation par catégorie, intégration d'outils de génération IA.
-
-2. Archives de jeux rétro
-   Description : un site rendant hommage aux jeux classiques, avec historique, guides de jeu et jeux rétro jouables en ligne.
-
-3. Suivi de vie durable
-   Description : un site aidant à suivre et réduire l'empreinte carbone grâce à des conseils écologiques et des défis communautaires.
-
-4. Assistant culinaire virtuel
-   Description : une plateforme de cuisine assistée par IA avec recommandations de recettes personnalisées et instructions étape par étape.
-
-5. Plateforme de découverte musicale underground
-   Description : un service de streaming musical centré sur les artistes indépendants et émergents.
-
-6. Gestionnaire de tâches minimaliste
-   Description : un outil de gestion de tâches avec une esthétique zen, axé sur la simplicité et l'efficacité.
-
-7. Atelier d'écriture science-fiction
-   Description : une plateforme offrant des outils créatifs et de l'inspiration aux écrivains de SF, incluant la construction d'univers et le développement de personnages.
-
-8. Graphe de connaissances personnel
-   Description : un outil permettant de construire un réseau de connaissances personnel, avec visualisation et connexion d'idées.
-
-9. Jardin botanique virtuel
-   Description : une encyclopédie interactive des plantes où les utilisateurs peuvent explorer le monde végétal et créer un jardin virtuel.
-
-10. Arène de défis de programmation
-    Description : une plateforme de compétition en ligne pour programmeurs avec des défis de différents niveaux de difficulté.
-```
+1. Plateforme de galerie d'art IA : Aide-moi à créer une galerie en ligne où les utilisateurs peuvent télécharger, parcourir, liker et commenter des œuvres d'art générées par IA, avec un affichage classé par style.
+2. Archives de jeux rétro : Aide-moi à créer un site rendant hommage aux jeux classiques, qui recense l'histoire des jeux et des guides de jeu, avec plusieurs mini-jeux rétro jouables directement en ligne.
+3. Suivi de vie durable : Aide-moi à créer un outil de suivi de l'empreinte carbone : l'utilisateur renseigne ses habitudes quotidiennes, l'outil estime automatiquement ses émissions de carbone et propose des conseils écologiques ainsi que des défis hebdomadaires.
+4. Assistant culinaire virtuel : Aide-moi à créer un assistant de cuisine IA : l'utilisateur saisit les ingrédients disponibles chez lui, et il recommande des recettes avec des instructions de cuisson étape par étape.
+5. Plateforme de découverte musicale underground : Aide-moi à créer un site de streaming musical qui met en avant les œuvres d'artistes indépendants et émergents, avec création de playlists et interactions par commentaires.
+6. Gestionnaire de tâches minimaliste : Aide-moi à créer un outil de gestion de tâches au style épuré, avec création de tâches, définition des priorités, tri par glisser-déposer et suivi de la progression.
+7. Atelier d'écriture science-fiction : Aide-moi à créer une plateforme d'écriture de SF proposant des modèles de construction d'univers, des fiches de personnages et des outils de synopsis, pour aider les auteurs à bâtir leur univers.
+8. Graphe de connaissances personnel : Aide-moi à créer un outil de prise de notes visuel qui transforme les idées éparses en nœuds reliés par des lignes pour former une carte de connaissances.
+9. Jardin botanique virtuel : Aide-moi à créer un site encyclopédique sur les plantes avec des fiches illustrées, où les utilisateurs peuvent aussi cultiver leurs propres plantes virtuelles et observer leur croissance.
+10. Arène de défis de programmation : Aide-moi à créer une plateforme de compétition de programmation en ligne, avec des problèmes d'algorithmes de différents niveaux, un éditeur de code en ligne, une évaluation automatique et un classement.
 
 Et aussi... si vous aimez les jeux, essayons ensemble d'en créer !
 
-```
-1. RPG monde ouvert 3D
-2. FPS arène multijoueur
-3. Échecs IA et multijoueur
-4. Mahjong en ligne multijoueur
-5. Jeu de stratégie au tour par tour
-6. Course automobile contre la montre
-7. Jeu de cartes à collectionner
-8. Battle royale (vue 2D du dessus)
-9. Jeu d'horreur survival (vue à la première personne)
-10. Jeu de rythme musical (3D)
-```
+1. RPG 3D en monde ouvert : Aide-moi à créer un jeu 3D en monde ouvert librement explorable, avec cycle jour/nuit, météo, système de quêtes et croissance des personnages.
+2. Arène FPS (tir à la première personne) : Aide-moi à créer un FPS multijoueur rapide, avec plusieurs modes comme le match à mort par équipe et la capture de drapeau, ainsi que plusieurs cartes.
+3. Échecs IA et multijoueur : Aide-moi à créer une plateforme d'échecs où l'on peut jouer contre une IA de différents niveaux, mais aussi s'apparier en ligne avec de vrais joueurs.
+4. Mahjong en ligne multijoueur : Aide-moi à créer un jeu de mahjong traditionnel prenant en charge plusieurs règles, la création de salons privés et le comptage automatique des points.
+5. Jeu de stratégie au tour par tour : Aide-moi à créer un jeu de stratégie au tour par tour sur carte quadrillée, avec déplacement des unités, attaques, améliorations et brouillard de guerre.
+6. Jeu de course contre la montre : Aide-moi à créer un jeu de course 3D axé sur le contre-la-montre, avec plusieurs circuits, personnalisation des véhicules et fantômes de replay.
+7. Jeu de cartes à collectionner (construction de deck) : Aide-moi à créer un jeu de cartes où les joueurs peuvent collectionner des cartes, construire librement leur deck et participer à des matchs classés.
+8. Battle royale (vue 2D de dessus) : Aide-moi à créer un battle royale 2D en vue de dessus, avec zone qui se rétrécit, butin aléatoire et modes solo/équipe.
+9. Jeu d'horreur survival (première personne) : Aide-moi à créer un jeu d'horreur survival à la première personne, centré sur la gestion des ressources, l'esquive furtive des ennemis et la recherche d'une sortie.
+10. Jeu de rythme musical (3D) : Aide-moi à créer un jeu de rythme musical 3D où les notes arrivent de loin au rythme de la musique et où le joueur doit les frapper au bon moment pour marquer des points.
+
+### 3.4 Sélection de cas d'école du web : ce que d'autres ont créé avec l'IA
+
+À ce stade, vous vous demandez peut-être encore : le Snake n'est qu'un exemple d'introduction, l'IA peut-elle vraiment créer des jeux plus complexes ?
+
+La réponse est oui. Voici une sélection de **8 cas réels** publics sur le web — des compilations de jeux d'arcade classiques, des puzzles de type 2048, des répliques de *Minecraft* et de *Super Mario*, jusqu'à un jeu 3D et une plateforme officielle de jeux créés par le grand modèle chinois Kimi. Parmi les développeurs de ces projets, certains sont des programmeurs, d'autres des débutants complets sans aucune base, mais ils ont tous un point commun : **ils ont laissé l'IA écrire l'essentiel du code par la conversation**.
+
+#### 🕹️ Cas n° 1 : répliquer 10 jeux d'arcade classiques en un après-midi (WotAI Games)
+
+[WotAI Games](https://games.wotai.co/) est une collection de jeux web développée entièrement de zéro avec Claude Code (Vibe Coding), **sans utiliser aucun moteur de jeu**. Grâce au dialogue, l'IA a répliqué d'un coup 10 jeux d'arcade classiques : Pac-Man, Tetris, Space Invaders, Snake, Flappy Bird, Breakout, Galaga, Frogger, Doodle Jump et Sudoku. Chacun est jouable directement en ligne et dispose de son propre système de classement.
+
+![Accueil de WotAI Games — collection de 10 jeux d'arcade classiques](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.png)
+
+![Tetris (WotAI Games, généré par Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-tetris.png)
+
+![Pac-Man (WotAI Games, généré par Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.png)
+
+> 🔗 Jouer en ligne : [games.wotai.co](https://games.wotai.co/) ｜ Rétrospective : [We vibe coded 10 classic arcade games with Claude Code](https://wotai.co/blog/wotai-games-vibe-coded-arcade-classics)
+
+#### 🌸 Cas n° 2 : un débutant complet crée un jeu de type 2048 en 2 heures (Blooming Garden)
+
+Un développeur japonais qui ne savait absolument pas programmer, [in0ho1no](https://github.com/in0ho1no), a créé avec Claude, par simple dialogue (Vibe Coding) et en **environ 2 heures**, le jeu « jardin de plantes » de type 2048 [Blooming Garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) : fusion et amélioration de plantes identiques, effets de floraison somptueux, animations de particules, classement, effets sonores, adaptation mobile… Toutes ces fonctionnalités ont été réalisées par dialogue en langage naturel, sans écrire une seule ligne de code à la main.
+
+![Blooming Garden, jeu de fusion de plantes (100 % généré par IA)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.png)
+
+> 🔗 Jouer en ligne : [in0ho1no.github.io/2025-adhoc-blooming-garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) ｜ Code source : [github.com/in0ho1no/2025-adhoc-blooming-garden](https://github.com/in0ho1no/2025-adhoc-blooming-garden)
+
+#### 🌍 Cas n° 3 : un designer crée avec l'IA un jeu 3D multijoueur en ligne (Planet Jumper)
+
+Le designer [Ricardo de Zoete (Hammy)](https://x.com/RicardoDeZoete) a créé avec l'IA d'OpenAI, par simple dialogue (Vibe Coding), [Planet Jumper](https://gamesbyhammy.cloud/play/planetjumper) sur la base de three.js — un **jeu de plateforme 3D multijoueur** : courir, sprinter et sauter à la surface d'une petite planète sphérique, tout en affrontant en ligne des inconnus. La gravité sphérique, la synchronisation réseau et la sensation de saut — des systèmes loin d'être simples — ont toutes été « discutées » à coups de prompts.
+
+![Planet Jumper, jeu de plateforme 3D multijoueur (généré par Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.png)
+
+> 🔗 Jouer en ligne : [gamesbyhammy.cloud/play/planetjumper](https://gamesbyhammy.cloud/play/planetjumper) ｜ En détail : [Planet Jumper: A Vibe-Coded Three.js Multiplayer Platformer](https://www.webgpu.com/showcase/planet-jumper-threejs-multiplayer/)
+
+#### 🎮 Cas n° 4 : une personne a créé 100 jeux navigateur avec le Vibe Coding (2026)
+
+En juillet 2026, le développeur de la communauté chinoise [wangzifan396-wzf](https://github.com/wangzifan396-wzf) a open-sourcé [mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) — **100 mini-jeux navigateur créés et peaufinés en continu par une seule personne avec le Vibe Coding**, tous en un seul fichier HTML sans aucune dépendance, lancés d'un simple double-clic. Les genres couvrent l'action, la stratégie, la défense de tour, la gestion, les cartes, la physique, le raisonnement, la course, le rythme, les jeux de plateau et les casse-tête ; certains atteignent déjà une profondeur digne d'un vrai produit : campagnes multi-chapitres, système d'évolution, codes de sauvegarde synchronisés entre appareils. L'ensemble du projet est open source sous licence MIT, et le catalogue en ligne permet de jouer directement.
+
+![Catalogue en ligne des 100 jeux navigateur (projet open source Vibe Coding 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
+
+![« Neon 2048 » : expédition de 18 nœuds en six chapitres + plusieurs modes et système d'outils](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.png)
+
+> 🔗 Catalogue en ligne : [wangzifan396-wzf.github.io/mini-browser-games](https://wangzifan396-wzf.github.io/mini-browser-games/) ｜ Code source : [github.com/wangzifan396-wzf/mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) ｜ Rétrospective : [J'ai créé 100 jeux navigateur avec le Vibe Coding et je les ai tous open-sourcés](https://blog.csdn.net/m0_74023007/article/details/162945755)
+
+#### ⛏️ Cas n° 5 : une réplique de Minecraft pour ses neveux (CraftMine, 2026)
+
+En février 2026, le développeur [Trent Sterling](https://tront.xyz/blog/posts/craftmine/) a ouvert un fichier HTML vierge parce que ses neveux voulaient jouer à Minecraft sans en avoir la version officielle, et a créé [CraftMine](https://tront.xyz/craftmine/) avec Claude Code par simple dialogue — une réplique de Minecraft en version web **de 6 820 lignes dans un seul fichier** : 46 blocs (dont 21 blocs sur le thème de l'enfer de DOOM), 36 créatures (du poulet au boss titan de 300 PV), 19 armes (dont la BFG 9000), 5 biomes, un cycle jour/nuit, et même le **multijoueur P2P**. Aucune étape de compilation : il suffit d'ouvrir la page web pour jouer.
+
+![CraftMine : réplique de Minecraft en un seul fichier de 6 820 lignes (généré par Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.png)
+
+> 🔗 Jouer en ligne : [tront.xyz/craftmine](https://tront.xyz/craftmine/) ｜ Rétrospective : [CraftMine: A 6,820-line vibe-coded Minecraft clone in one HTML file](https://tront.xyz/blog/posts/craftmine/)
+
+#### 🍄 Cas n° 6 : Super Mario aux niveaux infinis générés en temps réel par l'IA (2026)
+
+En mars 2026, un développeur a combiné la version open source de Super Mario avec les modèles d'OpenAI pour créer [Super Mario version IA](https://supermario.leanmcp.live/) : on peut jouer aux niveaux classiques d'origine, mais aussi laisser l'IA **générer de nouveaux niveaux en temps réel** — dans le « mode infini », l'IA crée dynamiquement des décors et des ennemis inédits au fil de votre progression, et l'on peut enchaîner jusqu'à 45 minutes de jeu. On peut même, directement dans le jeu, demander par écrit à l'IA d'ajouter des ennemis, de placer des plateformes ou de changer le thème.
+
+![Super Mario version IA : trois modes — classique, niveaux IA et mode infini](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-ai-mario-menu.png)
+
+![Image de gameplay de Mario générée en temps réel par l'IA](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-ai-mario-gameplay.png)
+
+> 🔗 Jouer en ligne : [supermario.leanmcp.live](https://supermario.leanmcp.live/) ｜ En détail : [OpenAI and Idiomorph Power Infinite Mario Level Generation in Browser](https://www.thenextgentechinsider.com/pulse/openai-and-idiomorph-power-infinite-mario-level-generation-in-browser)
+
+#### 🇨🇳 Cas n° 7 : le grand modèle chinois Kimi K3 crée un jeu 3D avec un seul prompt (2026)
+
+En juillet 2026, le développeur [Dr. Josh Simmons](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it) n'a envoyé qu'un seul prompt au grand modèle chinois **Kimi K3** pour qu'il crée un jeu 3D jouable à la première personne : collecter des noyaux de données dans une installation de serveurs générée par procédure, esquiver des drones de patrouille, et descendre trois étages en monte-charge. Le jeu entier est jouable dès sa première génération ; deux tours de conversation suffisent pour corriger deux bugs et terminer le jeu en douceur, pour un coût total d'environ **2 dollars**.
+
+![Jeu 3D dans une installation de serveurs généré par Kimi K3 avec un seul prompt](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.png)
+
+> 🔗 Jouer en ligne : [kimi-test-theta.vercel.app](https://kimi-test-theta.vercel.app/) ｜ Code source : [github.com/jcpsimmons/kimi-test](https://github.com/jcpsimmons/kimi-test) ｜ Rétrospective du développeur : [Kimi K3 Built the Game. I Still Had to Play It.](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it)
+
+#### 🎯 Cas n° 8 : K399, la plateforme officielle de jeux de Kimi — des dizaines de jeux IA jouables en ligne (2026)
+
+Le 17 juillet 2026, après la sortie du modèle Kimi K3 par Moonshot AI, la plateforme de jeux web [K399](https://www.k399.games/) a été lancée en parallèle — des dizaines de jeux tous créés avec la participation du modèle K3, jouables d'un clic. Les genres couvrent le tir 3D, les jeux de rythme, l'action en défilement horizontal, les AVG de drame de palais, les puzzles 3D et même les mondes ouverts : on y trouve aussi bien des répliques de classiques comme *The Legend of Zelda*, *Black Myth: Wukong*, *Bubble Land* et *Vampire Survivors*, que des jeux originaux bien plus aboutis qu'une simple démo, comme *Pioneer Practice Ground* (un FPS 3D avec déplacement, saut, glissade et tir à la visée), le monde ouvert *SpiderPunk*, ou encore *Fengque Shen Gong*, un AVG de drame de palais avec cinq chapitres d'intrigue principale, huit intrigues secondaires et 32 événements aléatoires.
+
+![Interface de la plateforme K399 — K3 Game Arcade, liste de jeux jouables d'un clic](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
+
+![SpiderPunk, jeu en monde ouvert sur K399 : se balancer entre les gratte-ciels d'une ville cyberpunk (généré par le modèle K3, image de gameplay réel)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.png)
+
+> 🔗 Jouer en ligne : [k399.games](https://www.k399.games/) (K3 Game Arcade, jouable d'un clic) ｜ En détail : [Un ancien dirigeant de miHoYo rejoint l'entreprise ; la société IA la plus en vogue du moment a soudainement créé des dizaines de jeux](https://eu.36kr.com/zh/p/3906895998178441) ｜ [Kimi K3, qui s'inquiète ?](https://36kr.com/p/3905392402748801)
+
+En découvrant ces cas, vous vous rendrez compte que **le Snake n'est que la partie émergée de l'iceberg des capacités de programmation de l'IA**. Qu'il s'agisse de jeux d'arcade classiques, de puzzles 2048, de jeux 3D, de répliques de *Minecraft* et de *Super Mario*, de collections de centaines de jeux, ou même de la plateforme officielle de jeux d'un grand modèle chinois, tant que vous savez exprimer clairement vos idées et que vous êtes prêt à itérer au fil des conversations, l'IA peut vous aider à les réaliser de 0 à 1. Et maintenant, à vous de jouer !
 
 ## 📚 Devoir
 
