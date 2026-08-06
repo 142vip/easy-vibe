@@ -1,4 +1,4 @@
-# Rate Limiting und Backpressure
+# Prinzipien von Rate Limiting und Backpressure
 
 ::: tip Vorwort
 **Am Black Friday um Mitternacht stürzen sich Hunderte Millionen Nutzer gleichzeitig auf die Seite — halten die Server das aus?** Jedes System hat eine maximale Verarbeitungskapazität. Wenn die Anzahl der Anfragen die Systemkapazität überschreitet und nicht kontrolliert wird, ist das Ergebnis, dass niemand mehr den Dienst nutzen kann. Rate-Limiting und Backpressure sind die zwei Verteidigungslinien, die das System davor schützen, "überlastet" zu werden.

@@ -1,4 +1,4 @@
-# Hàng đợi tin nhắn và Kiến trúc hướng sự kiện
+# Nguyên tắc về Hàng đợi tin nhắn và Kiến trúc hướng sự kiện
 ::: tip 🎯 Câu hỏi cốt lõi
 **Khi hệ thống bị ghép nối chặt chẽ và lưu lượng tăng đột biến, làm thế nào để đảm bảo luồng chính ổn định?** Hàng đợi tin nhắn là "bộ đệm" và "bộ giải ghép" của hệ thống phân tán hiện đại. Bài viết này sử dụng các tình huống thực tế (hệ thống gọi số nhà hàng, phân loại chuyển phát nhanh, hệ thống flash sale) để hiểu sâu về triết lý thiết kế và thực tiễn kỹ thuật của hàng đợi tin nhắn.
 :::

@@ -1,4 +1,4 @@
-# AI Agent và Gọi Công cụ
+# Nguyên tắc về AI Agent và Gọi Công cụ
 > 💡 **Hướng dẫn học**: Chương này không yêu cầu kiến thức lập trình. Thông qua các bản demo tương tác, bạn sẽ tìm hiểu sâu về nguyên lý hoạt động của AI Agent (tác nhân thông minh). Chúng ta sẽ bắt đầu từ "gọi công cụ" cơ bản nhất, cho đến cách Agent lập kế hoạch, ghi nhớ và hợp tác.
 
 <AgentQuickStartDemo />

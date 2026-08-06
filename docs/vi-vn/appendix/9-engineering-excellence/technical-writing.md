@@ -1,4 +1,4 @@
-# Viết tài liệu kỹ thuật
+# Nguyên tắc về Viết tài liệu kỹ thuật
 
 ::: tip Lời nói đầu
 **Tài liệu bạn viết có ai đọc không?** Nhiều developer nghĩ "code chạy được là xong, tài liệu để sau". Kết quả là: nhân viên mới không hiểu dự án, đối接 API hoàn toàn dựa vào trao đổi miệng, nửa năm sau chính mình cũng quên tại sao thiết kế như vậy.

@@ -1,4 +1,4 @@
-# Thực hành nền tảng đám mây
+# Nguyên tắc về Thực hành nền tảng đám mây
 > **Hướng dẫn học**: Nhà cung cấp dịch vụ đám mây không phải là "website mua server", mà là "cơ sở hạ tầng cung cấp năng lực tính toán như công ty nước và điện". Chương này tập trung vào câu hỏi: **Từ con số 0, làm thế nào để hiểu và sử dụng dịch vụ đám mây?** Chúng ta sẽ dùng kịch bản thực tế, ví dụ sinh động và bước thực hành để giúp bạn xây dựng bản đồ nhận thức hoàn chỉnh.
 
 Trước khi bắt đầu, nên tìm hiểu:

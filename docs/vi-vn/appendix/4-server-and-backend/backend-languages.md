@@ -1,4 +1,4 @@
-# So sánh các ngôn ngữ backend
+# Giới thiệu về ngôn ngữ backend
 ::: tip 🎯 Câu hỏi cốt lõi
 **"Backend của chúng ta nên dùng ngôn ngữ gì?"** Điều này giống như hỏi: "Tôi nên mua công cụ gì?" Câu trả lời không bao giờ là "tốt nhất", mà là "phù hợp nhất với bạn". Chương này sẽ giúp bạn hiểu toàn diện về đặc điểm, tình huống ứng dụng và chiến lược lựa chọn của các ngôn ngữ lập trình backend phổ biến, giúp bạn đưa ra quyết định sáng suốt.
 :::

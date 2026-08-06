@@ -1,4 +1,4 @@
-# Mạng Nơ-ron và Học Sâu
+# Nguyên tắc về Mạng Nơ-ron và Học Sâu
 
 ::: tip Lời mở đầu
 **Mạng nơ-ron là động cơ của cuộc cách mạng AI.** Từ hiểu ngôn ngữ của ChatGPT đến nhận dạng hình ảnh trong xe tự lái, đằng sau tất cả đều có mạng nơ-ron hoạt động. Nó không phải là phép thuật, mà là một khung toán học tinh xảo — "học" ánh xạ từ đầu vào sang đầu ra thông qua lượng lớn dữ liệu. Hiểu nguyên lý cơ bản của nó sẽ giúp bạn sử dụng và gỡ lỗi các công cụ AI tốt hơn.

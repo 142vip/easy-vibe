@@ -1,4 +1,4 @@
-# Ngôn ngữ client (Swift / Kotlin / Dart)
+# Cơ bản về Ngôn ngữ client (Swift / Kotlin / Dart)
 
 ::: tip 🎯 Câu hỏi cốt lõi
 **"Trong phát triển ứng dụng di động, nên chọn ngôn ngữ như thế nào?"** Chương này sẽ giới thiệu các khái niệm cơ bản về phát triển client, sắp xếp quá trình tiến hóa của ngôn ngữ lập trình di động, và phân tích chi tiết các ngôn ngữ phát triển client chính hiện nay cùng tình huống áp dụng, giúp người đọc xây dựng nhận thức có hệ thống về lựa chọn ngôn ngữ.

@@ -1,4 +1,4 @@
-# Tự động hóa CI / CD
+# Giới thiệu về CI / CD
 ::: tip 🎯 Vấn đề cốt lõi
 **Code chạy rất tốt trên máy cục bộ, làm thế nào để mọi người trên toàn thế giới có thể truy cập?**
 :::

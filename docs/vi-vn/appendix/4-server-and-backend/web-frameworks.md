@@ -1,4 +1,4 @@
-# Bản chất của Web Framework
+# Giới thiệu về Web Framework
 ::: tip 🎯 Câu hỏi cốt lõi
 **Code đã viết xong, làm sao để cả thế giới truy cập được?** Điều này giống như hỏi: bạn muốn mở một quán ăn vỉa hè, hay điều hành một chuỗi nhà hàng xuyên quốc gia? Lựa chọn kiến trúc backend quyết định "nhà hàng" của bạn có thể phục vụ bao nhiêu khách hàng.
 :::

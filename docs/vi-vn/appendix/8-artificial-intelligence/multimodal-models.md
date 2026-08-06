@@ -1,4 +1,4 @@
-# Mô hình Đa phương thức (Thị giác / Âm thanh / Video)
+# Nguyên tắc về Mô hình Đa phương thức (Thị giác / Âm thanh / Video)
 > 💡 **Hướng dẫn học tập**: Chương này không yêu cầu nền tảng sâu về thị giác máy tính, thông qua các minh họa tương tác giúp bạn hiểu cách AI có được "đôi mắt". Chúng ta sẽ giải mã các nguyên lý cốt lõi đằng sau các mô hình như GPT-4V, Qwen-VL.
 
 <VlmQuickStartDemo />

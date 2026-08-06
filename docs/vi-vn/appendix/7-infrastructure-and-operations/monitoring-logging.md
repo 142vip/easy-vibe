@@ -1,4 +1,4 @@
-# Giám sát, Ghi nhật ký và Cảnh báo
+# Cơ bản về Giám sát, Ghi nhật ký và Cảnh báo
 > 💡 **Hướng dẫn học tập**: Chương này không yêu cầu nền tảng lập trình, thông qua các minh họa tương tác để giúp bạn hiểu toàn bộ hệ thống kiến thức về vận hành. Từ giám sát và cảnh báo đến khắc phục sự cố, từ lập kế hoạch dung lượng đến vận hành tự động, nắm vững toàn diện kỹ năng vận hành hệ thống trực tuyến.
 
 ## 0. Lời mở đầu: Đưa hệ thống lên production mới chỉ là bắt đầu

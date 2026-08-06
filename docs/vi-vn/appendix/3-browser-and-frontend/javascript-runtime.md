@@ -1,4 +1,4 @@
-# Hướng dẫn chuyên sâu về JavaScript Runtime
+# Nguyên tắc về JavaScript Runtime
 
 ::: tip Lời nói đầu
 Bạn đã học cú pháp cơ bản của JavaScript, nhưng bạn có từng tự hỏi:

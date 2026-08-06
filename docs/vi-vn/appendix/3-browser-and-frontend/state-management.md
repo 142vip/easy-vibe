@@ -1,4 +1,4 @@
-# Triết lý quản lý state
+# Nguyên tắc về quản lý state
 ::: tip 🎯 Câu hỏi cốt lõi
 **Khi ứng dụng ngày càng lớn, làm thế nào để chia sẻ và đồng bộ dữ liệu một cách thanh lịch giữa các component?** Bạn có thể gặp phải tình huống khó xử này: người dùng thêm hàng vào giỏ trên trang chi tiết sản phẩm, nhưng số lượng giỏ hàng ở header không cập nhật; hai component không liên quan cần cùng một dữ liệu nhưng không biết truyền như thế nào. Chương này sẽ đưa bạn từ "truyền dữ liệu hỗn loạn" tiến hóa lên "quản lý state rõ ràng".
 :::

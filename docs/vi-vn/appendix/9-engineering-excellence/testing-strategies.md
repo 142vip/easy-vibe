@@ -1,4 +1,4 @@
-# Chiến lược kiểm thử
+# Nguyên tắc về Chiến lược kiểm thử
 
 ::: tip Lời nói đầu
 **Code của bạn thực sự "không vấn đề" không?** Mỗi lần sửa code xong lại bấm thử xem có hỏng gì không — cách này khi dự án còn nhỏ thì tạm được, nhưng khi code lên hàng vạn dòng, nhóm mở rộng hơn chục người, thì "bấm thử xem" là một thảm họa.

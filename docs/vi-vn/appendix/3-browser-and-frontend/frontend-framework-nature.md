@@ -1,4 +1,4 @@
-# Bản chất của Framework Frontend
+# Nguyên tắc về Framework Frontend
 
 > 💡 **Hướng dẫn học**: Bài viết này sẽ trả lời một câu hỏi nền tảng — **Framework frontend (Vue, React, Svelte v.v.) rốt cuộc đang làm gì?** Nếu bạn chỉ mới học HTML, CSS và một chút JavaScript, hoàn toàn không sao, chúng ta sẽ bắt đầu từ đầu.
 

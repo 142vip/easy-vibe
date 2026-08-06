@@ -1,4 +1,4 @@
-# Asynchrone Aufgabenwarteschlangen
+# Prinzipien von Asynchrone Aufgabenwarteschlangen
 
 ::: tip Vorwort
 **Der Benutzer klickt auf "Bericht exportieren" und starrt dann 30 Sekunden auf die rotierende Ladeanimation — ist das akzeptabel?** Wenn eine Operation mehrere Sekunden oder sogar Minuten dauert, den Benutzer warten zu lassen, ist offensichtlich keine gute Erfahrung. Asynchrone Aufgabenwarteschlangen sind das Kernarchitecturmuster zur Lösung dieses Problems — zeitaufwändige Operationen in den Hintergrund auslagern und dem Benutzer sofort eine Antwort geben.

@@ -1,4 +1,4 @@
-# Monitoring, Logging und Alerting
+# Grundlagen von Monitoring, Logging und Alerting
 > **Lernleitfaden**: Dieses Kapitel erfordert keine Programmierkenntnisse. Durch interaktive Demonstrationen fuehrt es dich in das vollstaendige Wissenssystem des Betriebs ein - von Monitoring und Alerting ueber Fehlerbehebung und Kapazitaetsplanung bis hin zu automatisiertem Betrieb.
 
 ## 0. Einleitung: Systemstart ist erst der Anfang

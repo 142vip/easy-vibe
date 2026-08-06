@@ -1,4 +1,4 @@
-# Hàng đợi task bất đồng bộ và mô hình Producer-Consumer
+# Nguyên tắc về Hàng đợi task bất đồng bộ và mô hình Producer-Consumer
 
 ::: tip Lời nói đầu
 **Người dùng nhấn nút "Xuất báo cáo", rồi nhìn chằm chằm vào animation loading xoay tròn 30 giây -- điều này có hợp lý không?** Khi một thao tác cần vài giây thậm chí vài phút mới hoàn thành, để người dùng chờ đợi rõ ràng không phải là trải nghiệm tốt. Hàng đợi task bất đồng bộ chính là mẫu kiến trúc cốt lõi giải quyết vấn đề này -- đưa thao tác tốn thời gian ra xử lý ở background, để người dùng nhận được phản hồi ngay lập tức.

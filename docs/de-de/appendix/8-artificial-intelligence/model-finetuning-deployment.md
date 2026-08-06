@@ -1,4 +1,4 @@
-# Modell-Finetuning und -Bereitstellung
+# Prinzipien von Modell-Finetuning und -Bereitstellung
 
 ::: tip Vorwort
 **Große Modelle sind leistungsstark, aber sie verstehen dein Geschäft nicht.** GPT-4 kann Gedichte schreiben und programmieren, aber es kennt weder die Produktterminologie deines Unternehmens noch die Fachstandards deiner Branche. Fine-Tuning ist der Prozess, der ein allgemeines großes Modell dein Fachwissen „lehrt" – wie eine Einarbeitungsschulung für einen vielseitigen Generalisten, um ihn zu einem Fachexperten für dein Gebiet zu machen.

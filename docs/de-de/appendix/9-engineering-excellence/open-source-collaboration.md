@@ -1,4 +1,4 @@
-# Open-Source-Zusammenarbeit
+# Einführung in Open-Source-Zusammenarbeit
 
 ::: tip Vorwort
 **Möchten Sie an Open-Source-Projekten teilnehmen, wissen aber nicht, wo Sie anfangen sollen?** Open Source bedeutet nicht nur „kostenlos den Code anderer nutzen", sondern ist eine Zusammenarbeitweise und ein Karrierebeschleuniger. Ein hochwertiger Open-Source-Beitrag kann überzeugender sein als zehn persönliche Projekte auf dem Lebenslauf.

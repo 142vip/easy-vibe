@@ -1,4 +1,4 @@
-# Port và localhost
+# Giới thiệu về Port và localhost
 
 > 💡 **Hướng dẫn học**: Khi bạn chạy `npm run dev`, terminal hiện `http://localhost:5173`, bạn có bao giờ nghĩ: `localhost` là gì? `5173` nghĩa là gì? Tại sao đôi khi báo lỗi `EADDRINUSE`? Chương này sẽ giải thích một lần những khái niệm bạn gặp mỗi ngày khi phát triển nhưng ít khi đào sâu.
 

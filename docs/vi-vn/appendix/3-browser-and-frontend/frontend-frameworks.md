@@ -1,4 +1,4 @@
-# Hướng Dẫn Chuyên Sâu Về Frontend Framework
+# Nguyên tắc về Frontend Framework
 
 ::: tip Lời Mở Đầu
 Bạn đã học HTML, CSS và JavaScript cơ bản, có thể tạo ra những trang web đơn giản. Nhưng khi chức năng trang web ngày càng phức tạp, bạn có thể nhận ra: viết code bằng JavaScript thuần trở nên khó bảo trì, sửa một chỗ phải động đến nhiều nơi, làm việc nhóm thường xuyên xung đột.

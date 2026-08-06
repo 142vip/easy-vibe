@@ -1,4 +1,4 @@
-# Nebenläufigkeit und Asynchronität
+# Prinzipien von Nebenläufigkeit und Asynchronität
 > 💡 **Lernleitfaden**: Nebenläufige Programmierung ist die „Achillesferse" vieler Backend-Ingenieure – sie scheitern im Vorstellungsgespräch, produzieren Bugs in der Produktion und haben keine Ideen für Performance-Optimierungen. Dieses Kapitel dreht sich um eine zentrale Frage: **Wenn 100.000 Benutzer gleichzeitig auf deinen Dienst zugreifen, stürzt dein Code dann ab?**
 
 Bevor wir beginnen, solltest du zwei „Grundbausteine" auffrischen:

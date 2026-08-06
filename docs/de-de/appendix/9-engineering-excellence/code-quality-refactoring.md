@@ -1,4 +1,4 @@
-# Code-Qualität und Refactoring
+# Einführung in Code-Qualität und Refactoring
 
 ::: tip Vorwort
 **Code, der funktioniert, reicht das aus?** Sie haben wahrscheinlich schon solchen Code geschrieben: Die Funktion ist implementiert, aber nach zwei Wochen verstehen Sie ihn selbst nicht mehr. Oder ein Teammitglied hat das Unternehmen verlassen und einen Haufen Code hinterlassen, den "nur Gott und er verstehen".

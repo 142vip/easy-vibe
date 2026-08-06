@@ -1,4 +1,4 @@
-# Kỹ thuật Ngữ cảnh (Context Engineering)
+# Nguyên tắc về Kỹ thuật Ngữ cảnh (Context Engineering)
 > 💡 **Hướng dẫn học tập**：Kỹ thuật Prompt giải quyết vấn đề "làm sao để diễn đạt rõ ràng", còn Kỹ thuật Ngữ cảnh giải quyết vấn đề "làm sao để mô hình thấy đúng thông tin vào đúng thời điểm". Chương này sẽ xoay quanh một câu hỏi：**Trong một cửa sổ ngữ cảnh hữu hạn, làm thế nào để vừa khiến mô hình hiểu bạn, vừa không đốt cháy ngân sách**
 
 Trước khi bắt đầu, bạn nên bổ sung hai "viên gạch nền tảng" sau：

@@ -1,4 +1,4 @@
-# Tinh chỉnh và Triển khai Mô hình
+# Giới thiệu về Tinh chỉnh và Triển khai Mô hình
 
 ::: tip Lời nói đầu
 **Mô hình lớn rất mạnh mẽ, nhưng nó không hiểu nghiệp vụ của bạn.** GPT-4 có thể làm thơ, lập trình, nhưng nó không biết thuật ngữ sản phẩm của công ty bạn, không hiểu các quy chuẩn chuyên môn trong ngành của bạn. Tinh chỉnh (Fine-tuning) chính là quá trình giúp mô hình lớn đa năng "học" kiến thức chuyên môn của bạn — giống như đào tạo trước khi vào việc cho một học giả uyên bác, biến nó thành chuyên gia trong lĩnh vực của bạn.

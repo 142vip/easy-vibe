@@ -1,4 +1,4 @@
-# Hệ thống xác thực và ủy quyền
+# Giới thiệu về xác thực và ủy quyền
 > 💡 **Hướng dẫn học tập**: Chương này sẽ giúp bạn hiểu sâu về "hệ thống kiểm soát ra vào" của hệ thống backend -- xác thực và ủy quyền. Chúng ta sẽ bắt đầu từ khái niệm cơ bản nhất "bạn là ai", từng bước nắm vững các giải pháp xác thực hiện đại như Session, JWT, OAuth 2.0.
 
 <AuthEvolutionDemo />

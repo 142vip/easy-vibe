@@ -1,4 +1,4 @@
-# Đồng thời, Bất đồng bộ và Đa luồng
+# Nguyên tắc về Đồng thời, Bất đồng bộ và Đa luồng
 > 💡 **Hướng dẫn học tập**: Lập trình đồng thời là "gót chân Achilles" của nhiều kỹ sư backend — bị hỏi khi phỏng vấn, gây lỗi trên production, không biết tối ưu hiệu năng. Chương này sẽ xoay quanh một câu hỏi cốt lõi: **Khi 100.000 người dùng đồng thời gửi request đến dịch vụ của bạn, code của bạn có sập không?**
 
 Trước khi bắt đầu, bạn nên bổ sung hai "viên gạch nền tảng" sau:

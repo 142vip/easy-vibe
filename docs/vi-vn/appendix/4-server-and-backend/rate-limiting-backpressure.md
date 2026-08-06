@@ -1,4 +1,4 @@
-# Giới hạn tốc độ và kiểm soát backpressure
+# Nguyên tắc về Giới hạn tốc độ và kiểm soát backpressure
 
 ::: tip Lời mở đầu
 **Đêm Double 11, hàng trăm triệu người dùng truy cập cùng lúc -- máy chủ có chịu được không?** Mọi hệ thống đều có giới hạn xử lý. Khi lượng yêu cầu vượt quá khả năng chịu đựng của hệ thống, nếu không kiểm soát, kết quả là tất cả đều không thể sử dụng. Giới hạn tốc độ và backpressure là hai tuyến phòng vệ bảo vệ hệ thống khỏi bị "quá tải".

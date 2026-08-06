@@ -1,4 +1,4 @@
-# Quản lý danh tính và quyền truy cập đám mây
+# Nguyên tắc về Quản lý danh tính và quyền truy cập đám mây
 > **Hướng dẫn học**: Kỹ thuật prompt giải quyết "cách diễn đạt rõ ràng", quản lý quyền tài khoản đám mây giải quyết "ai có thể làm gì". Chương này tập trung vào một câu hỏi: **trong thế giới đám mây, làm thế nào để cấp quyền thuận tiện mà không giao chìa khóa cho người sai?**
 
 Trước khi bắt đầu, nên bổ sung hai "viên gạch cơ sở":

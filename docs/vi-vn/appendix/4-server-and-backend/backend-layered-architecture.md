@@ -1,4 +1,4 @@
-# Kiến Trúc Phân Tầng Backend
+# Nguyên tắc về Kiến Trúc Phân Tầng Backend
 
 > **Câu hỏi cốt lõi**: Code ngày càng lộn xộn, làm sao để tổ chức cho rõ ràng dễ hiểu?
 

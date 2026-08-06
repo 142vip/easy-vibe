@@ -1,4 +1,4 @@
-# Giao thức AI Agent (MCP & A2A)
+# Giới thiệu về Giao thức AI Agent (MCP & A2A)
 
 ::: tip Câu hỏi cốt lõi
 **AI Agent "giao tiếp" với thế giới bên ngoài như thế nào?** Giống như Internet cần giao thức HTTP, AI Agent cũng cần giao thức truyền thông được chuẩn hóa. Chương này giới thiệu hai giao thức Agent phổ biến nhất: MCP và A2A, tương ứng giải quyết vấn đề truyền thông giữa AI và công cụ, cũng như giữa Agent với Agent.

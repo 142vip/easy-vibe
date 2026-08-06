@@ -1,4 +1,4 @@
-# Hợp tác mã nguồn mở
+# Nguyên tắc về Hợp tác mã nguồn mở
 
 ::: tip Lời nói đầu
 **Muốn tham gia dự án mã nguồn mở nhưng không biết bắt đầu từ đâu?** Mã nguồn mở không chỉ là "dùng miễn phí code của người khác", mà còn là phương thức hợp tác và công cụ tăng tốc nghề nghiệp. Một đóng góp chất lượng cao cho dự án mã nguồn mở có thể thuyết phục hơn mười dự án cá nhân trên CV.

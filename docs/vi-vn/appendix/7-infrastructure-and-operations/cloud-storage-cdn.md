@@ -1,4 +1,4 @@
-# Lưu trữ đối tượng & CDN
+# Cơ bản về Lưu trữ đối tượng & CDN
 > 💡 **Hướng dẫn học tập**: Bài viết này sẽ dẫn bạn đi qua một chuỗi hoàn chỉnh — từ tải tệp lên cho đến khi người dùng tải xuống. Bạn sẽ thấy cách lưu trữ đối tượng hoạt động như một "nhà kho thông minh" để quản lý lượng lớn tệp tin, cách CDN như một "mạng lưới điểm giao hàng" đưa nội dung đến tận cửa người dùng, và những "cạm bẫy" nào đang chờ bạn trên đường đi. Bạn nên nắm được kiến thức cơ bản về HTTP request và nguyên lý phân giải DNS trước khi đọc.
 
 Trước khi bắt đầu, bạn nên ôn lại một vài "viên gạch nền tảng":

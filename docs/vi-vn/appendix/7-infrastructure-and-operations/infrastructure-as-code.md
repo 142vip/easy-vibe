@@ -1,4 +1,4 @@
-# Hạ tầng dưới dạng Mã
+# Nguyên tắc về Hạ tầng dưới dạng Mã
 
 ::: tip Lời nói đầu
 **Bạn đã từng trải qua cơn ác mộng này chưa: máy chủ sản xuất bị lỗi, nhưng không ai nhớ ban đầu đã cấu hình như thế nào?** Đăng nhập thủ công vào máy chủ, gõ lệnh theo trí nhớ, cầu nguyện không gõ sai — đây là hoạt động hàng ngày của vận hành truyền thống. Hạ tầng dưới dạng Mã (Infrastructure as Code, IaC) đã thay đổi hoàn toàn điều này: dùng mã để định nghĩa và quản lý hạ tầng, khiến cấu hình máy chủ có thể kiểm soát phiên bản, tái lập và kiểm toán như phần mềm.

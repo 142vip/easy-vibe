@@ -1,4 +1,4 @@
-# Xử lý sự cố và Phản ứng khẩn cấp
+# Giới thiệu về Xử lý sự cố và Phản ứng khẩn cấp
 
 ::: tip Lời nói đầu
 **Ba giờ sáng, điện thoại rung liên tục, dịch vụ trực tuyến sụp đổ hoàn toàn — bạn phải làm gì?** Đối với bất kỳ đội ngũ Internet nào, sự cố không phải là câu hỏi "có xảy ra hay không", mà là "k nào xảy ra". Đội ngũ xuất sắc không phải là đội không bao giờ có sự cố, mà là đội có thể phản ứng nhanh chóng, phục hồi hiệu quả, và học hỏi để không lặp lại sai lầm.

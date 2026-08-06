@@ -1,4 +1,4 @@
-# Cổng gateway và Reverse Proxy
+# Nguyên tắc về Cổng gateway và Reverse Proxy
 ::: tip 🎯 Câu hỏi cốt lõi
 **Trong kiến trúc Internet có mức độ truy cập đồng thời cao, làm thế nào để đưa lưu lượng truy cập đến đúng dịch vụ một cách an toàn và hiệu quả?** Reverse proxy giải quyết vấn đề "phân phối lưu lượng", API gateway giải quyết vấn đề "xử lý yêu cầu". Bài viết này thông qua các ví dụ thực tế (lễ tân, hệ thống bảo vệ, định tuyến thông minh) giúp bạn hiểu sâu về triết lý thiết kế và thực hành kỹ thuật của gateway.
 :::

@@ -1,4 +1,4 @@
-# SSH và xác thực khóa
+# Giới thiệu về SSH và xác thực khóa
 
 > 💡 **Hướng dẫn học**: Mỗi lần `git push` lại nhập mật khẩu? SSH connect server luôn bị "Permission denied"? Chương này giúp bạn hiểu nguyên lý xác thực khóa SSH trong 5 phút, và cách cấu hình đăng nhập không cần mật khẩu GitHub và server chỉ bằng một lệnh.
 

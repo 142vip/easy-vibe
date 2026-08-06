@@ -1,4 +1,4 @@
-# Giải pháp đa nền tảng (React Native / Flutter / Electron / Tauri)
+# Toàn cảnh về Giải pháp đa nền tảng (React Native / Flutter / Electron / Tauri)
 
 ::: tip 🎯 Câu hỏi cốt lõi
 **"Trong kỹ thuật phần mềm, tại sao cần công nghệ đa nền tảng? Nó có thể thay thế hoàn toàn phát triển native không?"**

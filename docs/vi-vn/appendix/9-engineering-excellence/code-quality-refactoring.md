@@ -1,4 +1,4 @@
-# Chất lượng mã và Tái cấu trúc
+# Nguyên tắc về Chất lượng mã và Tái cấu trúc
 
 ::: tip Lời nói đầu
 **Chỉ cần code chạy được là đủ了吗** Có thể bạn đã từng viết code như thế này: chức năng thì hoạt động, nhưng hai tuần sau chính bạn cũng không hiểu nổi. Hoặc có người trong team nghỉ việc, để lại một đống "chỉ có Chúa và người đó mới hiểu được".

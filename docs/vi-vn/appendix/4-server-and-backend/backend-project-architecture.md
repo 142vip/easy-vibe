@@ -1,4 +1,4 @@
-# Thiết Kế Kiến Trúc Dự Án Backend
+# Giới thiệu về Thiết Kế Kiến Trúc Dự Án Backend
 
 ::: tip 🎯 Câu hỏi cốt lõi
 **Từ script đơn giản đến hệ thống phân tán lớn, làm thế nào để chọn kiến trúc phù hợp cho các dự án backend ở quy mô và ngôn ngữ khác nhau?** Điều này giống như hỏi: từ xưởng gia đình đến nhà máy lớn, làm thế nào để thiết kế dây chuyền sản xuất khác nhau dựa trên sản lượng và quy trình? Một kiến trúc backend tốt nên phát triển cùng với sự tăng trưởng của doanh nghiệp, đồng thời phát huy tối đa đặc tính của ngôn ngữ.

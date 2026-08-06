@@ -1,4 +1,4 @@
-# Kubernetes
+# Nguyên tắc về Kubernetes
 
 ::: tip Lời mở đầu
 **Docker giải quyết vấn đề "đóng gói", Kubernetes giải quyết vấn đề "quản lý".** Khi bạn có hàng chục đến hàng trăm container cần triển khai, mở rộng, thu hẹp, phục hồi sự cố, quản lý thủ công là không thực tế. Kubernetes (K8s) chính là "hệ điều hành" của container, tự động hóa việc triển khai, mở rộng và vận hành các ứng dụng đã được container hóa.

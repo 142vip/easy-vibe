@@ -1,4 +1,4 @@
-# Đo lường và Tối ưu Hiệu suất Web
+# Nguyên tắc về Hiệu suất Web
 ::: tip 🎯 Câu hỏi cốt lõi
 **Tại sao trang web của bạn tải chậm và người dùng vẫn phàn nàn về tình trạng giật lag?** Điều này giống như hỏi: tại sao nhà hàng phục vụ chậm và khách hàng mất kiên nhẫn? Chương này sẽ giúp bạn hiểu sâu các khái niệm cốt lõi về tối ưu hiệu suất frontend, giúp trang web của bạn "bay" lên.
 :::

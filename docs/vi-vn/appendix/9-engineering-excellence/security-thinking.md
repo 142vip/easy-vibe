@@ -1,4 +1,4 @@
-# Tư duy bảo mật và nền tảng tấn công - phòng thủ
+# Nguyên tắc về Tư duy bảo mật và nền tảng tấn công - phòng thủ
 
 ::: tip Lời nói đầu
 **Website của bạn có an toàn không?** Nhiều developer nghĩ "bảo mật là việc của team bảo mật", cho đến khi dự án của mình bị tấn công, dữ liệu người dùng bị lộ. Bảo mật không phải tùy chọn, mà là kỹ năng cơ bản của mọi developer.

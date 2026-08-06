@@ -1,4 +1,4 @@
-# Lưu trữ tệp và Lưu trữ đối tượng
+# Cơ bản về Lưu trữ tệp và Lưu trữ đối tượng
 
 ::: tip Lời mở đầu
 **Người dùng tải lên một ảnh đại diện, bạn lưu nó vào thư mục `/uploads` trên máy chủ — rồi ổ đĩa máy chủ đầy, hoặc bạn thêm máy chủ thứ hai, người dùng phát hiện ảnh đại diện lúc có lúc không.** Lưu trữ tệp tưởng chừng đơn giản, nhưng trong môi trường phân tán lại là một vấn đề kiến trúc cần được xem xét nghiêm túc. Lưu trữ đối tượng chính là câu trả lời tiêu chuẩn cho vấn đề này trong thời đại Internet.

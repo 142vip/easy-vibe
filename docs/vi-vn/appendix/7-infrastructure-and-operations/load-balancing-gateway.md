@@ -1,4 +1,4 @@
-# Cân bằng tải & Gateway
+# Nguyên tắc về Cân bằng tải & Gateway
 ::: tip 🎯 Câu hỏi cốt lõi
 **Khi một máy chủ không thể chịu nổi, làm thế nào để phân phối lưu lượng một cách "thông minh" đến nhiều instance máy chủ?** Cân bằng tải là "người điều phối" của hệ thống phân tán hiện đại. Bài viết này thông qua các tình huống thực tế (máy chủ backend quán trà sữa, phân loại chuyển phát nhanh, chỉ huy giao thông) giúp hiểu sâu về triết lý thiết kế và thực tiễn kỹ thuật của cân bằng tải.
 :::

@@ -1,4 +1,4 @@
-# Đồ họa và Hoạt ảnh (Canvas và những người bạn)
+# Nguyên tắc về Đồ họa và Hoạt ảnh (Canvas và những người bạn)
 
 ::: tip 🎯 Câu hỏi cốt lõi
 

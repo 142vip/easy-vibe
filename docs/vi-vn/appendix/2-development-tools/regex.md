@@ -1,4 +1,4 @@
-# Biểu thức chính quy (Regex)
+# Giới thiệu về Biểu thức chính quy (Regex)
 
 > 💡 **Hướng dẫn học**: Regex trông như chữ tượng hình? Thực ra nó chỉ là "ngôn ngữ mini mô tả pattern văn bản". Chương này giúp bạn hiểu essence của regex từ con số không, học cách dùng vài ký hiệu quan trọng giải quyết 80% vấn đề tìm kiếm và xác thực văn bản.
 

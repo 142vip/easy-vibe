@@ -1,4 +1,4 @@
-# Container hóa Docker
+# Giới thiệu về Docker
 
 ::: tip Lời nói đầu
 **"Chạy được trên máy tôi" là lời bào điển kinh điển nhất của lập trình viên, và Docker khiến lời bào chữa này biến mất hoàn toàn.** Công nghệ container đóng gói ứng dụng cùng tất cả các phụ thuộc thành một đơn vị tiêu chuẩn hóa, đảm bảo chạy nhất quán trên mọi môi trường. Đây là nền tảng của phân phối phần mềm hiện đại.

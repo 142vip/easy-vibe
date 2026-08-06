@@ -1,4 +1,4 @@
-# Embedding und Vektor-Retrieval
+# Prinzipien von Embedding und Vektor-Retrieval
 
 ::: tip Vorwort
 **Wie versteht ein Computer, dass „Katze und Hund sich ähnlich sind, aber nicht einem Auto"?** Für Menschen ist das selbstverständlich, aber für den Computer sind „Katze", „Hund", „Auto" nur drei zusammenhangslose Zeichenketten. Die Embedding-Technologie ist der Schlüssel zur Lösung dieses Problems – sie verwandelt Text in numerische Vektoren, sodass der Computer semantische „Nähe und Distanz" verstehen kann.

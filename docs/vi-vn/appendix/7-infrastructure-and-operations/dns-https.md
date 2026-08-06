@@ -1,4 +1,4 @@
-# Tên miền, DNS và HTTPS
+# Giới thiệu về Tên miền, DNS và HTTPS
 
 ::: tip Lời nói đầu
 **Khi bạn gõ `www.google.com` vào trình duyệt và nhấn Enter, điều gì đã xảy ra phía sau?** Hành động tưởng chừng đơn giản này liên quan đến một loạt quá trình phối hợp chính xác bao gồm phân giải tên miền, truy vấn DNS, bắt tay mã hóa TLS, v.v. Hiểu các cơ chế này là bài học bắt buộc đối với mọi lập trình viên — nó liên quan trực tiếp đến việc trang web của bạn có thể được truy cập hay không, dữ liệu có bị đánh cắp hay không.

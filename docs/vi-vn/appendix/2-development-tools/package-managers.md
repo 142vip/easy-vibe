@@ -1,4 +1,4 @@
-# Trình quản lý gói
+# Giới thiệu về Trình quản lý gói
 
 > 💡 **Hướng dẫn học**: Viết code không cần phát minh lại bánh xe — 99% tính năng đã có người viết và xuất bản trên internet. **Trình quản lý gói** chính là công cụ giúp bạn tìm, tải và quản lý những "linh kiện sẵn có" đó. Chương này tập trung vào một câu hỏi cốt lõi: **Làm sao để dependency code có thể tái lập, hợp tác, và bảo trì?**
 

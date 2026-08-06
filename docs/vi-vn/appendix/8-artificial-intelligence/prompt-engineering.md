@@ -1,4 +1,4 @@
-# Prompt Engineering (Kỹ thuật Prompt)
+# Nguyên tắc về Prompt Engineering (Kỹ thuật Prompt)
 > 💡 **Hướng dẫn học tập**: Chương này thông qua các minh họa tương tác, giới thiệu cách viết prompt hiệu quả.
 >
 > Rất nhiều lần câu trả lời của AI không như mong đợi, thường là do hướng dẫn chưa đủ rõ ràng. Chúng ta sẽ bắt đầu từ cấu trúc hướng dẫn cơ bản nhất, từng bước minh họa cách bổ sung ngữ cảnh, quy định định dạng đầu ra và Chuỗi Tư duy (CoT), để đầu ra của AI trở nên chính xác và có thể kiểm soát.

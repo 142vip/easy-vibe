@@ -1,4 +1,4 @@
-# Các tầng và chiến lược của bộ nhớ đệm
+# Nguyên tắc về bộ nhớ đệm
 ::: tip 🎯 Câu hỏi cốt lõi
 **Tại sao một số trang web chỉ mất 50 mili giây để mở, trong khi một số khác phải mất 5 giây?** Điều này giống như hỏi: tại sao lấy sách từ cặp chỉ mất 1 giây, còn đi thư viện tìm sách lại mất 10 phút? Câu trả lời chính là — bộ nhớ đệm (cache). Chương này sẽ giúp bạn hiểu sâu về nguyên lý cốt lõi, mẫu thiết kế và kỹ thuật thực chiến của bộ nhớ đệm, giúp hiệu năng hệ thống của bạn tăng lên 100 lần.
 :::

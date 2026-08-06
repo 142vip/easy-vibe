@@ -1,4 +1,4 @@
-# Embedding và Truy xuất Vector
+# Nguyên tắc về Embedding và Truy xuất Vector
 
 ::: tip Lời mở đầu
 **Làm thế nào để máy tính hiểu được "mèo và chó giống nhau, nhưng lại khác với ô tô"?** Với con người đó là kiến thức thông thường, nhưng với máy tính thì "mèo", "chó", "ô tô" chỉ là ba chuỗi ký tự không có mối liên hệ nào. Công nghệ Embedding (nhúng) chính là chìa khóa để giải quyết vấn đề này — nó biến văn bản thành vector số, giúp máy tính cũng có thể hiểu được "khoảng cách gần xa" về mặt ngữ nghĩa.

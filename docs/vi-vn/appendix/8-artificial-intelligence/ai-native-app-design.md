@@ -1,4 +1,4 @@
-# Thiết Kế Ứng Dụng AI Native
+# Giới thiệu về Thiết Kế Ứng Dụng AI Native
 
 ::: tip Lời Mở Đầu
 **Tại sao một số sản phẩm AI khiến người dùng kinh ngạc, trong khi những sản phẩm khác chỉ đơn thuần là "ChatGPT bọc vỏ"?** Sự khác biệt không nằm ở việc sử dụng mô hình mạnh đến mức nào, mà nằm ở chỗ sản phẩm có được thiết kế từ nền tảng xoay quanh các đặc tính của AI hay không. Ứng dụng AI Native không phải là "thêm một hộp chat" vào ứng dụng truyền thống, mà là một mô hình hoàn toàn mới, suy nghĩ lại về tương tác người dùng, kiến trúc hệ thống và logic sản phẩm.

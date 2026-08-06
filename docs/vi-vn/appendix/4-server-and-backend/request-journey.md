@@ -1,4 +1,4 @@
-# Hành Trình Toàn Diện Của Một Request
+# Toàn cảnh về Hành trình của một Request
 
 ::: tip Lời mở đầu
 **Khi bạn nhập một URL vào trình duyệt và nhấn Enter, cho đến khi trang hiển thị, điều gì đã xảy ra ở giữa?** Đây là câu hỏi kinh điển trong phỏng vấn, và cũng là chìa khóa để hiểu toàn bộ kiến trúc Web. Nắm vững chuỗi liên kết này, bạn sẽ hiểu cách frontend, backend, mạng và cơ sở dữ liệu phối hợp với nhau.

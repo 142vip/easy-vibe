@@ -1,4 +1,4 @@
-# Design Pattern (Mẫu thiết kế)
+# Nguyên tắc về Design Pattern (Mẫu thiết kế)
 
 ::: tip Lời nói đầu
 **Tại sao code của bạn luôn "chạy được nhưng rất lộn xộn"?** Có thể bạn đã gặp tình huống này: yêu cầu thay đổi một chút, phải sửa code ở rất nhiều nơi; muốn tái sử dụng một đoạn logic, nhưng phát hiện nó纠缠 với code khác. Design Pattern là những "công thức tổ chức code" được đúc kết từ kinh nghiệm, giúp bạn viết code linh hoạt và dễ bảo trì.
