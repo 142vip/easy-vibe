@@ -35,7 +35,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/1-computer-fundamentals/compilers</loc>
-    <lastmod>2026-08-06T01:10:51+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/1-computer-fundamentals/compilers"/>
@@ -99,7 +99,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/1-computer-fundamentals/data-structures</loc>
-    <lastmod>2026-08-06T01:10:51+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/1-computer-fundamentals/data-structures"/>
@@ -147,7 +147,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/1-computer-fundamentals/programming-languages</loc>
-    <lastmod>2026-08-06T01:10:51+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/1-computer-fundamentals/programming-languages"/>
@@ -179,7 +179,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/1-computer-fundamentals/type-systems</loc>
-    <lastmod>2026-08-06T01:10:51+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/1-computer-fundamentals/type-systems"/>
@@ -211,7 +211,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/command-line-shell</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/command-line-shell"/>
@@ -227,7 +227,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/debugging-art/</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/debugging-art/"/>
@@ -243,7 +243,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/debugging-art</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/debugging-art"/>
@@ -259,7 +259,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/environment-path</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/environment-path"/>
@@ -275,7 +275,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/git-version-control</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/git-version-control"/>
@@ -291,7 +291,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/ide-basics</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/ide-basics"/>
@@ -307,7 +307,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/package-managers</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/package-managers"/>
@@ -323,7 +323,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/ports-localhost</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/ports-localhost"/>
@@ -339,7 +339,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/regex</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/2-development-tools/regex"/>
@@ -387,7 +387,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/browser-as-os-rendering</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/browser-as-os-rendering"/>
@@ -403,7 +403,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/frontend-engineering</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/frontend-engineering"/>
@@ -419,7 +419,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/frontend-framework-nature</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/frontend-framework-nature"/>
@@ -435,7 +435,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks"/>
@@ -467,7 +467,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/graphics-animation</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/graphics-animation"/>
@@ -483,7 +483,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/html-css-layout</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/html-css-layout"/>
@@ -499,7 +499,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive"/>
@@ -547,7 +547,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/routing-navigation</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/routing-navigation"/>
@@ -563,7 +563,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/state-management</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/state-management"/>
@@ -579,7 +579,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/typescript</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/typescript"/>
@@ -595,7 +595,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/web-performance</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/3-browser-and-frontend/web-performance"/>
@@ -611,7 +611,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/api-design</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/api-design"/>
@@ -627,7 +627,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/api-intro</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/api-intro"/>
@@ -643,7 +643,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/async-task-queues</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/async-task-queues"/>
@@ -659,7 +659,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/auth-authorization</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/auth-authorization"/>
@@ -675,7 +675,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/backend-languages</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/backend-languages"/>
@@ -691,7 +691,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/backend-layered-architecture</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/backend-layered-architecture"/>
@@ -723,7 +723,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/caching</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/caching"/>
@@ -755,7 +755,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/concurrency-async</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/concurrency-async"/>
@@ -771,7 +771,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/cross-platform</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/cross-platform"/>
@@ -787,7 +787,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/domain-specific-languages</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/domain-specific-languages"/>
@@ -803,7 +803,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/file-storage</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/file-storage"/>
@@ -819,7 +819,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/http-protocol</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/http-protocol"/>
@@ -835,7 +835,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/message-queues</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/message-queues"/>
@@ -851,7 +851,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/rate-limiting-backpressure</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/rate-limiting-backpressure"/>
@@ -899,7 +899,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/serialization</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/serialization"/>
@@ -915,7 +915,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/web-frameworks</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/4-server-and-backend/web-frameworks"/>
@@ -931,7 +931,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/5-data/ab-testing</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/5-data/ab-testing"/>
@@ -947,7 +947,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/5-data/data-analysis</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/5-data/data-analysis"/>
@@ -979,7 +979,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/5-data/data-models</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/5-data/data-models"/>
@@ -1027,7 +1027,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/5-data/database-fundamentals</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/5-data/database-fundamentals"/>
@@ -1043,7 +1043,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/6-architecture-and-system-design/distributed-systems</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/6-architecture-and-system-design/distributed-systems"/>
@@ -1107,7 +1107,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/ci-cd</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/ci-cd"/>
@@ -1123,7 +1123,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/cloud-iam</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/cloud-iam"/>
@@ -1139,7 +1139,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/cloud-platforms</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/cloud-platforms"/>
@@ -1155,7 +1155,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/cloud-storage-cdn</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/cloud-storage-cdn"/>
@@ -1203,7 +1203,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/gateway-proxy</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/gateway-proxy"/>
@@ -1251,7 +1251,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/kubernetes</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/kubernetes"/>
@@ -1283,7 +1283,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/load-balancing-gateway</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/load-balancing-gateway"/>
@@ -1299,7 +1299,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/monitoring-logging</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/monitoring-logging"/>
@@ -1315,7 +1315,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/ai-agents</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/ai-agents"/>
@@ -1331,7 +1331,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/ai-capability-dictionary</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/ai-capability-dictionary"/>
@@ -1363,7 +1363,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/ai-native-app-design</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/ai-native-app-design"/>
@@ -1379,7 +1379,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/ai-protocols</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/ai-protocols"/>
@@ -1395,7 +1395,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/context-engineering</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/context-engineering"/>
@@ -1443,7 +1443,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/llm-principles</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/llm-principles"/>
@@ -1475,7 +1475,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/multimodal-models</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/multimodal-models"/>
@@ -1491,7 +1491,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/neural-networks</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/8-artificial-intelligence/neural-networks"/>
@@ -1571,7 +1571,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/9-engineering-excellence/code-quality-refactoring</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/9-engineering-excellence/code-quality-refactoring"/>
@@ -1587,7 +1587,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/9-engineering-excellence/design-patterns</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/9-engineering-excellence/design-patterns"/>
@@ -1651,7 +1651,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/9-engineering-excellence/technology-selection</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/9-engineering-excellence/technology-selection"/>
@@ -1667,7 +1667,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/9-engineering-excellence/testing-strategies</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/9-engineering-excellence/testing-strategies"/>
@@ -1683,7 +1683,7 @@
   </url>
   <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/</loc>
-    <lastmod>2026-08-06T06:07:16+08:00</lastmod>
+    <lastmod>2026-08-06T09:50:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/"/>
