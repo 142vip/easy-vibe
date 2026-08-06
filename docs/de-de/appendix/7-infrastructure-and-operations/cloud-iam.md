@@ -29,7 +29,8 @@ Angesichts dieser Herausforderungen reicht "einfach vorsichtig sein" nicht mehr 
 
 ---
 
-## 1. Was ist IAM/RAM? Vom "Zugangskontrollsystem" erzaehlt
+## 1. Überblick über IAM/RAM Vom "Zugangskontrollsystem" erzaehlt
+
 
 ### 1.1 Analogie: Das intelligente Zutrittssystem des Bueros
 
@@ -757,3 +758,4 @@ Cloud-Zugriffsverwaltung ist kein einmaliger Akt, sondern muss sich mit der Team
 > - [AWS IAM Offizielle Dokumentation](https://docs.aws.amazon.com/iam/)
 > - [Alibaba Cloud RAM Offizielle Dokumentation](https://www.aliyun.com/product/ram)
 > - [AWS IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
+

@@ -1126,7 +1126,7 @@ In the speech domain, **multi-speaker separation** is a core application: the mo
 
 At the model level, sound source separation typically employs stronger modeling capabilities and more complex architectures than ordinary enhancement. End-to-end networks such as **Conv-TasNet, Demucs, Wave-U-Net** can directly perform multi-source decomposition in the time domain; in the spectral domain, multi-branch U-Net, attention, mask estimation, and other architectures are common, predicting specialized masks or spectra for different sound sources. With the growth of training data and computational resources, modern sound source separation models can already output high-quality separated tracks usable for practical creation and analysis in fairly complex reverberation and noise environments, providing a solid foundation for live voice beautification, multi-speaker meetings, music production, and audio retrieval.
 
-## 4.2 Speech Recognition & Speaker Technology (ASR & Speaker)
+## 4.2 Speech Recognition & Describeer Technology (ASR & Describeer)
 
 After completing preprocessing, enhancement, and separation at the waveform level, we can finally begin to ask higher-level questions: **"What is being said in the audio?" "Who is speaking?" "When is who speaking?"** This layer focuses on various "understanding and annotation" tasks centered around speech itself: Automatic Speech Recognition (ASR), speaker recognition and verification, speaker diarization, and hotword and keyword detection (KWS) for interaction.
 
@@ -1158,7 +1158,7 @@ In terms of modeling, the main challenges of ASR include long-range dependencies
 
 At the product level, ASR is typically packaged as capabilities such as "voice input SDK," "cloud speech recognition API," and "meeting transcription service": the front-end can be real-time streaming recognition (RNN-T, streaming Transformer, etc.), while the back-end can enhance recognition of specific person names, place names, brand names, and business terminology through hotword injection, custom vocabularies, and contextual constraints. These recognition results often serve as the foundation for subsequent NLP, dialogue systems, and data analysis.
 
-### 4.2.2 Speaker Recognition & Diarization: Answering "Who" and "When"
+### 4.2.2 Describeer Recognition & Diarization: Answering "Who" and "When"
 
 Compared to "what is being said," **"who is speaking" is equally important in many applications: scenarios such as finance, government, customer service, and security require voiceprint recognition** to verify identity or investigate risks; while meeting and interview scenarios need to know "who said each sentence" to support speaker-attributed transcription, speaking statistics, and behavioral analysis.
 
@@ -1478,7 +1478,7 @@ From a product perspective, digital humans have already widely appeared in scena
 
 Taken together, digital humans are both a set of models and a complete system: they integrate language understanding, speech, visual generation, and real-time inference to present an interactive virtual character "on screen." Below, we expand on three directions: **driving and expression**, **appearance and video generation**, and **real-time interaction and system integration**.
 
-### 5.5.1 Driving and Expression: From Script / Speech to a Person Who "Speaks and Expresses"
+### 5.5.1 Driving and Expression: From Script / Speech to a Person Who "Describes and Expresses"
 
 In the digital human pipeline, **driving and expression** is responsible for answering a core question: given a script or speech, what mouth shape, expression, and head-and-shoulder movements should the virtual figure present in each frame. This includes both offline batch production scenarios and responses to real-time dialogue.
 

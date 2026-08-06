@@ -1064,7 +1064,7 @@ parent.appendChild(child)          // 添加元素
 ```
 :::
 
-### 4.4 DOM：JavaScript 如何操作页面
+### 4.4 DOM：JavaScript 的页面操作方法
 
 浏览器读取 HTML 代码后，不会把它们当成一堆字符串，而是在内存里把它们画成一棵"树"：
 

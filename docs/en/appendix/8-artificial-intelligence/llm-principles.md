@@ -20,7 +20,7 @@ This tutorial will take you from zero, step by step, through the construction of
 
 ---
 
-## 1. Step One: Translation (Tokenization)
+## 1. 分词（Tokenization）
 
 A computer cannot read the word "hamburger" — it only understands numbers.
 So our first task is: **break text into the smallest units a computer can process.**

@@ -156,7 +156,7 @@ git commit -m "feat: 添加用户登录功能"
 
 `-m` 后面引号里的内容叫做 **commit message**（提交说明）。这是写给未来的自己和队友看的，要写得有意义。
 
-### 3.3 Commit Message 怎么写才专业
+### 3.3 Commit Message 編寫規範
 
 ```bash
 # ❌ 没用的写法——看了不知道做了什么
@@ -202,11 +202,11 @@ git log --oneline
 
 ---
 
-## 4. 平行宇宙：分支（Branch）
+## 4. 分支概念：Branch
 
 **分支**是 Git 最强大、也是最让初学者困惑的功能。但理解了它之后，你会发现这个设计非常优雅。
 
-### 4.1 分支是什么？用"平行宇宙"来理解
+### 4.1 分支概述：用"分支概念"来理解
 
 想象你在玩一个角色扮演游戏，游戏里有一个关键选择：
 - 选择 A：去挑战大 Boss（开发新功能）
@@ -337,8 +337,10 @@ git remote add origin https://github.com/你的用户名/仓库名.git
 # 确认关联成功
 git remote -v
 # 输出：
-# origin  https://github.com/你的用户名/仓库名.git (fetch)
-# origin  https://github.com/你的用户名/仓库名.git (push)
+# origin https://github.com/你的用户名/仓库名.git (fetch)
+
+# origin https://github.com/你的用户名/仓库名.git (push)
+
 ```
 
 **第三步**：推送本地内容到远程：
@@ -393,7 +395,7 @@ git clone： 远程 → 本地   （第一次完整复制整个仓库）
 
 冲突是协作中不可避免的，但也没那么可怕。
 
-### 6.1 冲突是怎么发生的
+### 6.1 衝突發生機制
 
 当你和队友**同时修改了同一个文件的同一行**，在合并时 Git 不知道该用谁的版本，就会产生冲突。
 
@@ -556,3 +558,4 @@ GitHub 上有各种语言和框架的 .gitignore 模板：[github.com/github/git
 | **origin** | origin | 远程仓库的默认别名（约定俗成的名字） |
 | **stash** | Stash | 临时保存还没 commit 的改动，切换任务时用 |
 | **PR / MR** | Pull Request / Merge Request | 请求把你的分支合并进主分支，通常需要队友 review |
+

@@ -28,7 +28,7 @@ Verschiedene Programmiersprachen und Betriebssysteme haben ihre eigenen Okosyste
 
 <PackageManagerOverviewDemo />
 
-### 1.1 Wo werden Build-Artefakte heruntergeladen? — Registry
+### 1.1 Quellen für Build-Artefakte — Registry
 
 Hinter jedem Okosystem steht ein zentrales Repository, das alle herunterladbaren Pakete speichert:
 

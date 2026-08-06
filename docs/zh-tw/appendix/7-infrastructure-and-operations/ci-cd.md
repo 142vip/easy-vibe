@@ -332,7 +332,7 @@ sudo systemctl restart nginx
 
 整個過程通常只需要幾十毫秒。使用者完全感知不到。
 
-### 5.3 設定 DNS的實作
+### 5.3 設定 DNS 的實作
 
 設定 DNS 通常有兩個地方可以操作：
 
@@ -380,7 +380,7 @@ ping 你的域名
 
 <DeploymentHttpsDemo />
 
-### 6.2 要 HTTPS的動機
+### 6.2 要 HTTPS 的動機
 
 第一個原因：**安全**。沒有 HTTPS，使用者在網站上輸入的密碼是明文傳輸的。但凡有點技術的人都能截獲。這年頭，誰敢用沒有 HTTPS 的網站？
 
@@ -424,7 +424,7 @@ sudo certbot --nginx -d example.com -d www.example.com
 
 ## 7. CI/CD：讓機器人幫你幹活
 
-### 7.1 什麼是概述 CI/CD
+### 7.1 CI/CD 概述
 
 CI/CD 是兩個詞的縮寫：**C**ontinuous **I**ntegration（持續整合）和 **C**ontinuous **D**eployment（持續部署）。可以理解為一套幫你自動幹活的機器人系統。
 
@@ -485,7 +485,7 @@ CI 系統會啟動一台虛擬電腦。在上面：
 
 整個過程可能只需要幾分鐘。全部自動完成。
 
-### 7.3 設定 GitHub Actions的實作
+### 7.3 設定 GitHub Actions 的實作
 
 GitHub Actions 是 GitHub 自帶的 CI/CD 功能。不需要額外付費（免費額度足夠個人專案用）。設定起來也非常簡單。
 

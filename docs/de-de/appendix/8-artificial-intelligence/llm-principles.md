@@ -308,7 +308,7 @@ Um es zu einem höflichen und zuverlässigen Assistenten wie ChatGPT zu machen, 
 Mit dem technologischen Fortschritt haben wir festgestellt, dass das bloße „Vorhersagen des nächsten Worts" manchmal zu Dummheiten führt – besonders bei mathematischen und logischen Problemen.
 So entstand eine neue Generation von **Thinking Models** (wie OpenAI o1, DeepSeek-R1).
 
-### 7.1 Was ist „Denken"? (Thinking Models)
+### 7.1 Was ist „Denken" (Thinking Models)
 
 Wenn Menschen vor einer komplexen Frage stehen (z. B. „Ist 9,11 oder 9,9 größer?"), antworten sie nicht reflexartig, sondern denken erst im Kopf nach.
 Ein Thinking Model hat genau diese Fähigkeit des **langsamen Denkens (System 2)** gelernt.

@@ -27,7 +27,7 @@ Angesichts dieser Herausforderungen reicht es nicht mehr aus, sich allein auf �
 
 ---
 
-## 1. Was ist „Context Engineering“? (Definition & Szenarien)
+## 1. Was ist „Context Engineering“ (Definition & Szenarien)
 
 Zunächst eine kurze Arbeitsdefinition, dann einige typische Szenarien.
 
@@ -99,7 +99,8 @@ Schauen wir uns an, wie dein Geld bei einer typischen KI-Konversation ausgegeben
 
 **Überraschende Erkenntnis**: **70 % des Geldes wird dafür ausgegeben, dass die KI deine vorherigen Nachrichten erneut liest!**
 
-### 3.2 Was ist KV Cache? (Prefix-Wiederverwendung)
+### 3.2 Überblick über KV Cache (Prefix-Wiederverwendung)
+
 
 Bevor wir über Preise sprechen, müssen wir ein zentrales technisches Konzept verstehen: **KV Cache (Key-Value Cache)**.
 Lass dich vom Fachbegriff nicht abschrecken – es ist im Grunde das „Kurzzeitgedächtnis-Schnellnachschlagewerk“ der KI.
@@ -478,3 +479,4 @@ Manus' vier Refactorings lehren uns:
 - Bei sehr langen Dokumenten und Wissensdatenbanken ist es nicht realistisch, nur das Kontextfenster zu vergrößern – Abruf- und Komprimierungsmechanismen müssen integriert werden.
 
 Das Ziel ist: Jeder investierte Token soll innerhalb des gegebenen Modell- und Kontextlimits einen klaren Zweck erfüllen.
+

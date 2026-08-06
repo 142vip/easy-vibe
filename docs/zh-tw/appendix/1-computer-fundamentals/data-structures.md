@@ -160,7 +160,7 @@
 
 ---
 
-## 7. 選型指南：該用哪種資料結構？
+## 7. 選型指南
 
 <DataStructureSelectorDemo />
 

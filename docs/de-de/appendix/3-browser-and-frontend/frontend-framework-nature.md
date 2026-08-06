@@ -26,7 +26,7 @@ Bewege die Maus über den HTML-Code auf der linken Seite — der entsprechende K
 
 ---
 
-## 0. Einleitung: Überblick über ist ein „Frontend-Framework"
+## 0. Einleitung: Überblick über Frontend-Frameworks
 
 Erklären wir zunächst das Wort „Framework". In der Programmierung ist ein **Framework** ein Satz bereits geschriebener Code und Regeln, der vorgibt, wie dein Code organisiert und ausgeführt werden soll. Du schreibst Code nach seinen Vorgaben, und es übernimmt eine Menge sich wiederholender, mühsamer Low-Level-Arbeit für dich.
 
@@ -92,7 +92,8 @@ document.getElementById('counter').textContent = count
 
 Wenn der Wert von `count` an 5 verschiedenen Stellen auf der Seite angezeigt wird (Warenkorb-Anzahl, Artikelliste, Gesamtpreis, Zwischensumme, Statusmeldung), musst du 5 solcher Code-Blöcke schreiben. **Wenn du auch nur einen einzigen vergisst, zeigt diese Stelle weiterhin den alten Wert an — und der Benutzer sieht falsche Informationen.**
 
-### 1.3 Was macht das Framework? Eine automatische Verbindung in zwei Schritten
+### 1.3 Was das Framework macht Eine automatische Verbindung in zwei Schritten
+
 
 Dass ein Framework automatisch synchronisieren kann, beruht auf **zwei zusammenwirkenden Schritten** — beide sind unverzichtbar.
 
@@ -471,3 +472,4 @@ Rückblick auf die Kernpunkte dieses Artikels:
 | **Compile-time** | Compile-Zeit | Der Zeitraum, in dem der Code während der Build-Phase verarbeitet wird, bevor der Benutzer die Webseite öffnet. |
 | **Runtime** | Laufzeit | Der Zeitraum, in dem der Code im Browser des Benutzers ausgeführt wird. |
 | **Compiler** | Compiler | Ein Programm, das Quellcode in eine andere Form von Code umwandelt. Der Svelte-Compiler wandelt `.svelte`-Dateien in effizientes JavaScript um. |
+

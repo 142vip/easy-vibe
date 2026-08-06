@@ -202,11 +202,11 @@ git log --oneline
 
 ---
 
-## 4. Parallel Universes: Branches
+## 4. Branch Concepts
 
 **Branches** are Git's most powerful — and also most confusing for beginners — feature. But once you understand them, you'll find the design very elegant.
 
-### 4.1 Overview of Branches Understanding Through "Parallel Universes"
+### 4.1 Overview of Branches Understanding Through Branch Isolation
 
 Imagine you're playing an RPG game with a critical choice:
 - Choice A: Challenge the final boss (develop a new feature)
@@ -337,8 +337,10 @@ git remote add origin https://github.com/your-username/your-repo.git
 # Confirm the link was successful
 git remote -v
 # Output:
-# origin  https://github.com/your-username/your-repo.git (fetch)
-# origin  https://github.com/your-username/your-repo.git (push)
+# origin https://github.com/your-username/your-repo.git (fetch)
+
+# origin https://github.com/your-username/your-repo.git (push)
+
 ```
 
 **Step 3**: Push local content to remote:
@@ -556,3 +558,4 @@ GitHub has .gitignore templates for various languages and frameworks: [github.co
 | **origin** | origin | The default alias for a remote repository (a conventional name) |
 | **stash** | Stash | Temporarily saving uncommitted changes, useful when switching tasks |
 | **PR / MR** | Pull Request / Merge Request | A request to merge your branch into the main branch, usually requiring teammate review |
+

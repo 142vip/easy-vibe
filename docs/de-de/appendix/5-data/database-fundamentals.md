@@ -194,7 +194,8 @@ Ein konkretes Beispiel:
 
 ---
 
-## 3. Wie spricht man mit einer Datenbank? SQL-Einführung und Praxis
+## 3. Ansatz für spricht man mit einer Datenbank SQL-Einführung und Praxis
+
 
 Sie können eine Datenbank nicht einfach mit der Maus „anklicken" (es gibt zwar grafische Tools, aber diese wandeln die Klicks im Hintergrund in Befehle um). Sie benötigen eine spezielle Sprache, um die Datenbank zu steuern.
 
@@ -388,7 +389,8 @@ WHERE u.name = 'Max';
 
 ---
 
-## 4. Warum sind Datenbanken so schnell? Das Geheimnis der Indizes
+## 4. Motivation für sind Datenbanken so schnell Das Geheimnis der Indizes
+
 
 Das ist der faszinierendste Teil von Datenbanken und gleichzeitig die am häufigsten gestellte Frage in Vorstellungsgesprächen.
 
@@ -711,3 +713,4 @@ Datenbanken sind ein tiefgründiges und umfangreiches Thema; dieser Artikel ist 
 
 Denken Sie daran: **Theorie + Praxis = wahre Meisterschaft**.
 :::
+

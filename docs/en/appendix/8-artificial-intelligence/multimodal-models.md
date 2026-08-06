@@ -18,7 +18,7 @@ The core task of a VLM is to **translate "pixel signals" into "text signals"** s
 
 ---
 
-## 1. Step One: Turning Images into "Words" (Visual Tokenization)
+## 1. 视觉分词：图像转词嵌入（Visual Tokenization）
 
 Imagine you're describing a jigsaw puzzle to a friend over the phone. You can't describe it all at once — you have to go piece by piece.
 Computers "see" images the same way.
@@ -55,7 +55,7 @@ After this step, an image is truly transformed into a "visual token sequence."
 
 ---
 
-## 2. Step Two: Cross-Species Translation (Projection)
+## 2. 跨模态投影（Projection）
 
 At this point, although the image has been converted into a one-dimensional sequence of "visual words," this sequence is still an unreadable mess to the LLM.
 
@@ -97,7 +97,7 @@ To make this "translation process" of feature alignment faster and more accurate
 
 ---
 
-## 3. Step Three: Assembly (The Architecture)
+## 3. 多模态架构组装
 
 With the components and interface standards in place, let's look at how everything fits together. Mainstream multimodal Vision-Language Models (VLMs) almost all follow a unified **"three-stage" architectural pattern**.
 

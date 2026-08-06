@@ -45,7 +45,8 @@ _Wählen Sie unten Ihr übliches Betriebssystem aus und folgen Sie der Anleitung
 
 <TerminalHandsOn />
 
-### 0.2 Warum auf die Maus verzichten? (Why CLI?)
+### 0.2 Motivation für auf die Maus verzichten (Why CLI)
+
 
 Sie könnten sich fragen: _"Die grafischen Benutzeroberflächen (GUI) heutzutage sind so gut — man kann einfach mit der Maus klicken. Warum sollte man komplexe Befehle in ein Fenster mit weißem Text auf schwarzem Hintergrund eingeben?"_
 
@@ -68,7 +69,7 @@ Es geht nicht darum, "geeky" zu wirken, sondern darum, dass in bestimmten Situat
 
 **Zusammenfassung**: GUI eignet sich für **Entdeckung** (Webseiten durchsuchen, Bilder ansehen), CLI für **Produktion** (Entwicklung, Betrieb, Stapelverarbeitung). Als Entwickler nutzen wir das Terminal, weil es **präziser, kontrollierbarer und effizienter** ist.
 
-## 1. Begriffsbestimmung: Überblick über ist ein Terminal? (Definition)
+## 1. Überblick über das Terminal (Definition)
 
 _Auf verschiedenen Betriebssystemen sieht das Terminal unterschiedlich aus und **die Befehle sind auch verschieden**. Klicken Sie unten auf die Schaltflächen, um zu wechseln, und beobachten Sie, wie macOS, Windows und Linux mit verschiedenen Befehlen (z.B. `dir` vs `ls`) dieselbe Aufgabe erledigen:_
 
@@ -111,7 +112,8 @@ Um zu verstehen, wie sie zusammenarbeiten, betrachten wir diese drei klar getren
   - **Aufgabe**: Der Kern des Betriebssystems. Nur er kann Hardware direkt steuern (Festplatte lesen/schreiben, Speicher zuweisen, CPU steuern).
   - **Beziehung**: Die Shell ist der "Sekretär" des Kernels und übersetzt menschliche Sprache für den Kernel.
 
-### 2.2 Warum getrennt? (Austauschbarkeit)
+### 2.2 Motivation für getrennt (Austauschbarkeit)
+
 
 Da die **Darstellungsschicht** (Terminal) und die **Logikschicht** (Shell) vollständig getrennt sind, können sie frei kombiniert werden:
 
@@ -282,3 +284,4 @@ Durch das Verständnis dieser zugrundeliegenden Prinzipien lernen Sie nicht mehr
 ## Referenzen (Reference)
 
 - [How Terminals Work](https://how-terminals-work.vercel.app/): Die Struktur und die Demos dieses Artikels wurden stark von diesem Projekt inspiriert. Wenn Sie die technischen Implementierungsdetails vertiefen möchten, wird dringend empfohlen, das Original-Tutorial zu lesen.
+

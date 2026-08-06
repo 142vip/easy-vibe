@@ -124,7 +124,8 @@ Ein typisches VLM besteht aus drei Hauptkomponenten, die zusammenarbeiten:
 
 ---
 
-## 4. Wie lernt es, Bilder zu sehen? (Training)
+## 4. Ansatz für lernt es, Bilder zu sehen (Training)
+
 
 Gut, jetzt sind alle Körperteile zusammengenäht. Aber bevor es offiziell in Betrieb geht, befindet sich das frisch zusammengebaute VLM tatsächlich in einem neugeborenenartigen Zustand der „Blindheit und Verwirrung" — denn der neu hinzugefügte Sehnerv (Projector) ist ein unbeschriebenes Blatt voller bedeutungsloser Zufallswerte.
 
@@ -200,3 +201,4 @@ Wenn Sie das verstanden haben, haben Sie alles über VLMs verstanden.
 | **Patch**     | -                             | **Bildblock**. In kleine Quadrate zerschnittenes Bild — entspricht „visuellen Wörtern".                        |
 | **Projector** | -                             | **Projektor/Übersetzer**. Die Brücke zwischen Auge und Gehirn.                                                |
 | **Alignment** | -                             | **Alignment**. Bild- und Text-Features so ausrichten, dass sie sich im selben Raum „gegenseitig verstehen".    |
+

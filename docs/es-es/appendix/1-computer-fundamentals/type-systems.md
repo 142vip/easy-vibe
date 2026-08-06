@@ -82,7 +82,7 @@ Esta es la dimension de clasificacion mas importante -- **el momento de verifica
 
 ---
 
-## 3. Fuerte vs Debil: Se permite la "conversion secreta"?
+## 3. Fuerte vs Debil: Se permite la "conversion secreta"
 
 La segunda dimension es **que tan estricta es la conversion de tipos**.
 

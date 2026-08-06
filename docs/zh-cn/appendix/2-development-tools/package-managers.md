@@ -28,7 +28,7 @@
 
 <PackageManagerOverviewDemo />
 
-### 1.1 包去哪里下载？—— Registry（注册表）
+### 1.1 包下载来源：—— Registry（注册表）
 
 每个生态背后都有一个中央仓库，存放所有可下载的包：
 

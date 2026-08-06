@@ -154,7 +154,7 @@ project/
 **為什麼需要 jQuery？它解決了什麼問題，又帶來了什麼新問題？** 理解 jQuery 的局限性，才能明白 Vue/React 的價值。
 :::
 
-### 3.1 需要 jQuery的動機
+### 3.1 需要 jQuery 的動機
 
 隨著網頁變複雜，原生 JavaScript 的問題暴露出來：
 

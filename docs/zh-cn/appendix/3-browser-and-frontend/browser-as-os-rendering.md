@@ -604,7 +604,7 @@ requestAnimationFrame(() => {
 但要注意：**每个合成层都要占用GPU内存**，滥用`translateZ(0)`会导致内存爆炸（详见7.4节）。
 :::
 
-### 7.3 踩坑实录：合成层太多反而卡
+### 7.3 问题案例：合成层太多反而卡
 
 ::: danger 💀 过度优化的陷阱
 有人听说"GPU加速快"，就给所有元素都加`transform: translateZ(0)`，结果页面反而更卡了。
@@ -682,7 +682,7 @@ requestAnimationFrame(() => {
 4. 开启下一轮事件循环，执行下一个宏任务
 ```
 
-### 8.2 踩坑实录：Promise比setTimeout快
+### 8.2 问题案例：Promise比setTimeout快
 
 ::: danger ❌ 常见误解：setTimeout(fn, 0)会"立即"执行
 很多人以为`setTimeout(fn, 0)`是"0毫秒后立即执行"，这是**错误**的理解。

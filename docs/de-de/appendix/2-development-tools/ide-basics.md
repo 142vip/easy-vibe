@@ -4,7 +4,8 @@
 Dieses Kapitel fuhrt Sie tief in das wichtigste Produktivitatswerkzeug von Programmierern ein — die **Integrierte Entwicklungsumgebung (IDE)**. Wir beginnen mit dem Designkonzept der IDE, analysieren die Kernkomponenten Schritt fur Schritt und demonstrieren die Funktionsweise anhand einer virtuellen IDE.
 :::
 
-## Überblick über tun, wenn man etwas nicht versteht? (How to solve problems)
+## Überblick über tun, wenn man etwas nicht versteht (How to solve problems)
+
 
 Beim Erlernen und Verwenden einer IDE stoßen Sie vielleicht auf verschiedene unverstandliche Schaltflachen, Menus oder Codefehler. In diesem Fall **nicht in Panik geraten — die Nutzung von KI-Assistenten ist die effizienteste Losung**.
 
@@ -311,3 +312,4 @@ Dieses Menu ist hauptsachlich fur Folgendes zustandig: **Neues Terminal erstelle
 - **About (Uber)**: Zeigt Versionsnummer, Build-Zeit, Electron/Node-Versionsinformationen.
 
 </details>
+

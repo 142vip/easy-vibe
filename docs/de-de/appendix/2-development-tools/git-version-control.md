@@ -206,7 +206,8 @@ git log --oneline
 
 **Branches** sind die starkste, aber auch fur Anfanger verwirrendste Funktion von Git. Wenn Sie sie jedoch einmal verstanden haben, werden Sie feststellen, dass dieses Design sehr elegant ist.
 
-### 4.1 Was ist ein Branch? Mit "Paralleluniversen" verstehen
+### 4.1 Überblick über Branch Mit "Paralleluniversen" verstehen
+
 
 Stellen Sie sich vor, Sie spielen ein Rollenspiel mit einer wichtigen Entscheidung:
 - Wahl A: Den großen Boss herausfordern (neue Funktion entwickeln)
@@ -556,3 +557,4 @@ GitHub bietet .gitignore-Vorlagen fur verschiedene Sprachen und Frameworks: [git
 | **origin** | origin | Standardalias fur das Remote-Repository (konventionsgemasser Name) |
 | **stash** | Stash | Noch nicht committete Änderungen temporar speichern; nutzlich beim Aufgabenwechsel |
 | **PR / MR** | Pull Request / Merge Request | Anforderung, Ihren Branch in den Hauptbranch zu mergen; meist mit Team-Review |
+

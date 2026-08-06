@@ -124,7 +124,8 @@ Projector 的学术本质是实现**特征隐空间的对齐 (Latent Space Align
 
 ---
 
-## 4. 它是怎么学会看图的？(Training)
+## 多模态训练流程（Training）
+
 
 好，现在身体各部分已经缝合在一起。但是在正式接客之前，刚组装好的 VLM 实际上是处于类似于新生儿的“失明与混乱”状态的——因为新增的视神经 (Projector) 是一张白纸，里边全是没有意义的随机数值。
 
@@ -141,7 +142,7 @@ Projector 的学术本质是实现**特征隐空间的对齐 (Latent Space Align
 
 <FeatureAlignmentDemo />
 
-### 阶段二：对话 (Visual Instruction Tuning —— 对话演练)
+### 阶段二：多轮交互微调 (Visual Instruction Tuning)
 
 如果第一阶段只会让模型变成报菜名似的认字机，那么第二阶段的任务就是激发它的高级智商，让它真正能根据上下文解答人类复杂的图文结合指令。
 
@@ -200,3 +201,4 @@ Projector 的学术本质是实现**特征隐空间的对齐 (Latent Space Align
 | **Patch**     | -                     | **图像块**。图片被切成的小方块，相当于“视觉单词”。         |
 | **Projector** | -                     | **投射器/翻译官**。连接眼睛和大脑的桥梁。                  |
 | **Alignment** | -                     | **对齐**。让图像特征和文本特征在同一个空间里“互相听得懂”。 |
+

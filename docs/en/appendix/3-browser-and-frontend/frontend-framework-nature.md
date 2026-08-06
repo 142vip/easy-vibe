@@ -92,7 +92,8 @@ document.getElementById('counter').textContent = count
 
 If there are 5 places on the page displaying count's value (cart quantity, product list, total price, subtotal, status indicator), you need to write 5 such code blocks. **Miss any one, and that location will still show the old value — the user sees incorrect information.**
 
-### 1.3 What Does the Framework Do? Two Steps to Establish Automatic Connection
+### 1.3 What Does the Framework Do Two Steps to Establish Automatic Connection
+
 
 Frameworks can automatically sync, relying on **two coordinated steps** — neither can be missing.
 
@@ -471,3 +472,4 @@ Let's review the core points of this article:
 | **Compile-time** | Compile-time | The period when code is processed during the build phase, before users open the web page. |
 | **Runtime** | Runtime | The period when code executes in the user's browser. |
 | **Compiler** | Compiler | A program that transforms source code into another form of code. Svelte's compiler transforms `.svelte` files into efficient JavaScript. |
+

@@ -202,11 +202,11 @@ git log --oneline
 
 ---
 
-## 4. 平行宇宙：分支（Branch）
+## 4. 分支概念：Branch
 
 **分支**是 Git 最強大、也是最讓初學者困惑的功能。但理解了它之後，你會發現這個設計非常優雅。
 
-### 4.1 分支概述用「平行宇宙」來理解
+### 4.1 分支概述用「分支概念」來理解
 
 想像你在玩一個角色扮演遊戲，遊戲裡有一個關鍵選擇：
 - 選擇 A：去挑戰大 Boss（開發新功能）
@@ -337,8 +337,10 @@ git remote add origin https://github.com/你的使用者名稱/儲存庫名.git
 # 確認關聯成功
 git remote -v
 # 輸出：
-# origin  https://github.com/你的使用者名稱/儲存庫名.git (fetch)
-# origin  https://github.com/你的使用者名稱/儲存庫名.git (push)
+# origin https://github.com/你的使用者名稱/儲存庫名.git (fetch)
+
+# origin https://github.com/你的使用者名稱/儲存庫名.git (push)
+
 ```
 
 **第三步**：推送本地內容到遠端：
@@ -556,3 +558,4 @@ GitHub 上有各種語言和框架的 .gitignore 範本：[github.com/github/git
 | **origin** | origin | 遠端儲存庫的預設別名（約定俗成的名字） |
 | **stash** | Stash | 臨時儲存還沒 commit 的改動，切換任務時用 |
 | **PR / MR** | Pull Request / Merge Request | 請求把你的分支合併進主分支，通常需要隊友 review |
+

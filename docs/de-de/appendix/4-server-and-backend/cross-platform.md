@@ -22,7 +22,8 @@ Dieses vollständig isolierte Engineering-Modell führt nicht nur zu extrem hohe
 
 ---
 
-## 2. Die technologischen Grenzen von Cross-Plattform-Lösungen: Wann sind sie geeignet? Wann muss man nativ bleiben
+## 2. Die technologischen Grenzen von Cross-Plattform-Lösungen: Eignungskriterien für Cross-Plattform vs. Native - Eignungskriterien
+
 
 Obwohl Cross-Plattform-Technologien bei der Kostensenkung und Effizienzsteigerung enormen geschäftlichen Wert zeigen, gilt gemäß dem klassischen "Gesetz der leaky Abstractions" aus der Informatik: Jede Abstraktionsschicht, die die zugrundeliegenden Unterschiede der Betriebssysteme überbrücken will, bringt unvermeidbar Performance-Verluste und Kompromisse bei Funktionsmerkmalen mit sich. Dies erfordert von Architekten eine klare Abgrenzung des Anwendungsbereichs von Cross-Plattform-Technologien.
 
@@ -93,3 +94,4 @@ Die Architekturentscheidung ist eine direkte Abbildung der strategischen Projekt
 | **Das Team verfügt über signifikante Web-Frontend-Erfahrung (z. B. React-Entwicklung), betreibt mittelgroße bis große Online-Business-Systeme mit starkem Bedarf an Hot-Updates und sofortigen Fixes** | **React Native** | Effiziente Verwertung der bestehenden intellektuellen Assets und Toolchains des Frontend-Teams mit einer sehr flachen Lern- und Migrationskurve und ausgereiften zuverlässigen Online-Hot-Publishing- und Sofort-Fix-Fähigkeiten. |
 | **Ein Start-up-Team, das komplexe Geschäftserlebnisse neu gestalten will, höchste Wert legt auf 100% absolute Konsistenz der plattformübergreifenden visuellen Spezifikationen und strikte Kontrolle der Framerate-Indikatoren** | **Flutter** | Derzeit die ultimative Performance-Obergrenze und das Self-Rendering-Kerngebiet im mobilen Cross-Plattform-Bereich. Mit bestimmten initialen Lernkosten und etwas größerem Paketvolumen als Kompromiss wird die absolute Herrschaft über die plattformübergreifende visuelle Interaktionsdarstellung gewonnen. |
 | **Ziel ist der schnelle Aufbau hochkomplexer Desktop-Ökosystem-Produktivitätsplattformen, das Team hat tiefe Web-Technologie-Erfahrung und die lokalen Rechen- und Speicherressourcen der Zielgeräte sind relativ gut kontrollierbar** | **Electron** | Derzeit die bevorzugte Engineering-Antwort führender internationaler Softwarehersteller im Desktop-Bereich. Angesichts der enormen Vorteile von Ökosystem-Fülle, plattformübergreifender Stabilität und Entwicklungseffizienz wird der hohe Speicherverbrauch von Geschäftsteams im Allgemeinen als tolerierbare Architekturkosten eingestuft. |
+

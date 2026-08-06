@@ -86,7 +86,8 @@ test('sollte den Preis inklusive Steuer korrekt berechnen', () => {
 })
 ```
 
-### 2.3 Was testen? Was nicht testen
+### 2.3 Was testen Was nicht testen
+
 
 **Was getestet werden sollte:**
 - Kern-Geschäftslogik (Preisberechnung, Berechtigungsprüfung, Datentransformation)
@@ -215,3 +216,4 @@ Tests sind keine Belastung, sondern ein **Beschleuniger**. Kurzfristig kostet da
 - **Praktischer Leitfaden**: Versuchen Sie, mit Vitest Tests für ein kleines Projekt zu schreiben und den gesamten Testprozess von null an zu erleben.
 - **Testmuster**: Verstehen Sie die Unterschiede und Einsatzszenarien von Mock, Stub und Spy.
 - **Continuous Integration**: Integrieren Sie Tests in Ihre CI/CD-Pipeline, damit sie bei jedem Commit automatisch ausgeführt werden.
+

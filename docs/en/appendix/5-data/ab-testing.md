@@ -27,7 +27,7 @@ Only when the cure rate (conversion rate) of the experimental group is consisten
 
 ---
 
-## 1. Traffic Allocation: Splitting Parallel Universes
+## 1. Traffic Allocation: Splitting Branch Isolation
 
 The first iron rule of A/B testing is: **simultaneous, random, and isolated**.
 

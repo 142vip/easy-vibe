@@ -58,7 +58,7 @@ Der Wert von Caching liegt nicht nur in „schneller", sondern vor allem im „S
 
 ---
 
-## 2. Kernkonzepte: Überblick über ist ein Cache
+## 2. Kernkonzepte: Überblick über Caches
 
 ::: tip 🤔 Was genau ist ein Cache?
 Einfach ausgedrückt: **Ein Cache ist ein Speicherplatz für Datenkopien**. So wie ein Haftnotiz-Zettel an deinem Schreibtisch mit den wichtigsten Telefonnummern – dann musst du nicht jedes Mal das Telefonbuch durchblättern.

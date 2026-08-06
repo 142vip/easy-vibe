@@ -68,7 +68,8 @@ Stell dir ein beliebtes Restaurant vor:
 
 ---
 
-## 2. Was ist eine Message Queue? (Definition + drei Kernelemente)
+## 2. Überblick über Message Queue (Definition + drei Kernelemente)
+
 
 ### 2.1 Was ist eine „Message Queue"
 
@@ -486,3 +487,4 @@ Vor der Einführung einer Message Queue folgende Fragen stellen:
 | **Backpressure**        | -                 | **Backpressure**. Consumer signalisiert Producer, langsamer zu senden, wenn die Verarbeitung nicht hinterherkommt. |
 | **Offset**              | -                 | **Offset**. Die Konsumposition eines Consumers innerhalb einer Partition.                    |
 | **Rebalance**           | -                 | **Rebalance**. Neuverteilung der Partitionen bei Änderungen in der Consumer-Gruppe.          |
+

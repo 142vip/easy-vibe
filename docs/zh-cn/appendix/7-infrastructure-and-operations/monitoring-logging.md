@@ -363,11 +363,15 @@ $ wrk -t10 -c100 -d30s http://example.com/api/users
 # 输出：
 # Running 30s test @ http://example.com/api/users
 #   10 threads and 100 connections
-#   Thread Stats   Avg      Stdev     Max   +/- Stdev
-#     Latency    45.32ms   12.45ms 120.50ms   87.56%
-#     Req/Sec     2.12k   123.45    3.45k    89.01%
+# Thread Stats Avg Stdev Max +/- Stdev
+
+# Latency 45.32ms 12.45ms 120.50ms 87.56%
+
+# Req/Sec 2.12k 123.45 3.45k 89.01%
+
 #   632450 requests in 30.00s, 1.23GB read
-# Requests/sec:  21081.67
+# Requests/sec: 21081.67
+
 ```
 
 ### 7.3 弹性扩缩容
@@ -637,3 +641,4 @@ resource "aws_security_group" "web" {
 - **[鉴权原理与实战](/zh-cn/appendix/4-server-and-backend/auth-authorization)** - 认证授权、安全加固
 - **[后端进化史](/zh-cn/appendix/4-server-and-backend/backend-layered-architecture)** - 从单体到微服务到 Serverless
 - **[部署与上线](/zh-cn/appendix/7-infrastructure-and-operations/ci-cd)** - 从开发到生产的最后一公里
+

@@ -141,7 +141,7 @@ Projector 的學術本質是實現**特徵隱空間的對齊 (Latent Space Align
 
 <FeatureAlignmentDemo />
 
-### 階段二：對話 (Visual Instruction Tuning —— 對話演練)
+### 階段二：多輪交互微調 (Visual Instruction Tuning)
 
 如果第一階段只會讓模型變成報菜名似的認字機，那麼第二階段的任務就是激發它的高級智商，讓它真正能根據上下文解答人類複雜的圖文結合指令。
 

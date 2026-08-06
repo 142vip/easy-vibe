@@ -29,7 +29,8 @@ Wenn du diese drei Dinge verstehst, verstehst du 90 % aller Netzwerkprobleme in 
 
 ---
 
-## 1. Was ist ein Port? (IP ist das Gebäude, Port ist die Zimmernummer)
+## 1. Überblick über Port (IP ist das Gebäude, Port ist die Zimmernummer)
+
 
 ### 1.1 Eine intuitive Analogie
 
@@ -66,7 +67,8 @@ Gib eine Portnummer oder einen Dienstnamen für die Suche ein. Klicke auf eine Z
 
 ---
 
-## 2. Was ist localhost? (Sich selbst finden)
+## 2. Überblick über localhost (Sich selbst finden)
+
 
 ### 2.1 Das Kernkonzept des „Loopbacks"
 

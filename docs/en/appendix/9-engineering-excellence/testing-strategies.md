@@ -86,7 +86,7 @@ test('should correctly calculate price with tax', () => {
 })
 ```
 
-### 2.3 What to Test? What Not to Test
+### 2.3 What to Test and What Not to Test
 
 **Should test:**
 - Core business logic (price calculations, permission checks, data transformations)

@@ -317,7 +317,8 @@ Aus Produktsicht gehört die Bildklassifikation und -erkennung zu den ersten in 
 
 In konkreten Produktformen werden die Fähigkeiten dieser Ebene häufig als „Bildinhaltserkennungs-/-klassifikations-API", „Gesichtserkennungs-SDK/SaaS" oder „Personen-Re-Identifikationsplattform" bereitgestellt. Sie treiben einerseits direkt geschäftliche Entscheidungen (z. B. Zutrittsfreigabe, Content-Tag-Vergabe) und dienen andererseits als Upstream-Quelle, die strukturierte Labels und stabile Identitätsrepräsentationen für nachgelagerte Suche, Empfehlung, Verhaltensanalyse und multimodales Verstehen liefert. Im Folgenden entfalten wir dies aus den beiden Perspektiven Bildklassifikation sowie Identitäts-/Attributerkennung.
 
-### 2.2.1 Bildklassifikation: Die Frage beantworten: „Um welche Art von Bild handelt es sich?"
+### 2.2.1 Bildklassifikation: Die Frage beantworten: „Um welche Art von Bild handelt es sich"
+
 
 Bei der grundlegendsten Bildklassifikationsaufgabe betrachtet das System das gesamte Bild mit dem Ziel, ihm ein oder mehrere semantische Kategorielabels zuzuweisen. Am häufigsten ist die Einzel-Label-Klassifikation: In Datensätzen wie ImageNet wird jedes Bild mit einer Hauptkategorie wie „Hund", „Katze", „Auto", „Flugzeug" annotiert. In Geschäftsszenarien wird diese Fähigkeit breit eingesetzt, um hochgeladene Bilder mit Themenlabels wie „Landschaft / Essen / Haustier / Porträt / Dokument" zu versehen und so Suche, Empfehlung und Inhaltsmoderation zu unterstützen. Ähnlich wie bei der Textklassifikation wird auf die vom vortrainierten Backbone extrahierten globalen visuellen Merkmale eine vollvernetzte Schicht + Softmax aufgesetzt, die eine Wahrscheinlichkeitsverteilung über alle Kandidatenkategorien ausgibt.
 
@@ -325,7 +326,8 @@ In vielen praktischen Anwendungen gehört ein Bild oft gleichzeitig mehreren Kat
 
 Auf der Mensch-Maschine-Schnittstelle wird die Bildklassifikation typischerweise als „Bildinhaltserkennungs-API" bereitgestellt. Die vorgelagerte Anwendung muss lediglich ein Bild hochladen und erhält eine Menge von Kategorielabels mit Konfidenzwerten für die weitere strategische Entscheidungsfindung: So kann ein Werbeauslieferungssystem anhand des Bildinhalts bestimmte sensible Kategorien einschränken, eine E-Commerce-Plattform kann die Bildklassifikation zur Korrektur von Produktkategorien nutzen, und eine Content-Plattform reichert damit Empfehlungsmerkmale und Moderationssignale an. Obwohl diese Fähigkeiten aus technischer Sicht vergleichsweise ausgereift sind, bleiben sie das Fundament für komplexere Fähigkeiten wie Objekterkennung, Instanzsegmentierung und Visual Question Answering.
 
-### 2.2.2 Bilderkennung und Attributerkennung: Die Frage beantworten: „Wer ist das / Welche Instanz ist das?"
+### 2.2.2 Bilderkennung und Attributerkennung: Die Frage beantworten: „Wer ist das / Welche Instanz ist das"
+
 
 Anders als bei der Frage „Um welche Art von Bild handelt es sich?" geht es bei der Bilderkennung eher um „Wer ist diese Person/dieses Ziel im Bild?", also um die Unterscheidung auf Identitäts- und Instanzebene. Typische Vertreter sind die Gesichtserkennung und die Personen-Re-Identifikation: Erstere beurteilt in Szenarien wie Zutrittskontrolle, Zeiterfassung und Bezahlung, „welcher Identität in der Datenbank das aktuelle Gesicht am nächsten kommt"; Letztere sucht in Überwachungsbildern mehrerer Kameras und verschiedener Zeiträume nach demselben Fußgänger, um Fallrekonstruktionen und Bewegungsanalysen zu unterstützen. Der Kern dieser Aufgaben ist nicht mehr die einfache Mehrklassen-Klassifikation, sondern die Frage, wie man im Merkmalsraum ein Embedding lernt, das „innerhalb einer Klasse kompakt und zwischen Klassen separiert" ist, sodass Bilder derselben Identität, aufgenommen unter unterschiedlichen Posen, Lichtverhältnissen und Kameras, dennoch gruppiert werden können.
 

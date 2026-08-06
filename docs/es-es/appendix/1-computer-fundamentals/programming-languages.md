@@ -114,7 +114,7 @@ Profundiza en sistemas de tipos -> [Introducción a los sistemas de tipos](./typ
 
 ---
 
-## 5. Como elegir un lenguaje de programacion?
+## 5. Como elegir un lenguaje de programacion
 
 ### Seleccion por escenario
 
