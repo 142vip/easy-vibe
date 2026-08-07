@@ -17,7 +17,14 @@
     "lint": "eslint docs/.vitepress/theme",
     "lint:fix": "eslint docs/.vitepress/theme --fix",
     "prepare": "husky",
-    "sitemap": "node scripts/generate-sitemap.mjs"
+    "sitemap": "node scripts/generate-sitemap.mjs",
+    "book:pdf": "node scripts/build-latex-book.mjs",
+    "book:epub": "node scripts/build-epub.mjs",
+    "book:all": "node scripts/build-books.mjs",
+    "book:all:pdf": "BOOK_PDF_ONLY=1 node scripts/build-books.mjs",
+    "book:all:epub": "BOOK_EPUB_ONLY=1 node scripts/build-books.mjs",
+    "book:zh": "node scripts/build-books.mjs zh-cn",
+    "book:en": "node scripts/build-books.mjs en"
   },
   "keywords": [
     "easy-vibe",
@@ -31,11 +38,18 @@
   "license": "CC-BY-NC-SA-4.0",
   "devDependencies": {
     "@eslint/js": "^9.0.0",
+    "archiver": "^8.0.0",
     "eslint": "^9.0.0",
     "eslint-plugin-vue": "^9.30.0",
+    "gray-matter": "^4.0.3",
     "husky": "^9.1.7",
+    "katex": "^0.18.1",
+    "markdown-it": "^15.0.0",
+    "markdown-it-container": "^4.0.0",
+    "markdown-it-footnote": "^4.0.0",
     "markdown-it-katex": "^2.0.3",
     "prettier": "^3.7.4",
+    "puppeteer-core": "^25.5.0",
     "vue-eslint-parser": "^9.4.3"
   },
   "dependencies": {

@@ -1,0 +1,65 @@
+# Builds multi-language PDF (LaTeX) and EPUB books on every version tag,
+# then uploads them as assets to the corresponding GitHub Release.
+name: Build & Publish Books (PDF/EPUB)
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-books:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-xetex texlive-latex-extra texlive-fonts-recommended \
+            texlive-lang-cjk texlive-lang-arabic texlive-lang-korean \
+            texlive-lang-japanese texlive-lang-chinese texlive-lang-other \
+            texlive-lang-european \
+            fonts-noto-cjk fonts-noto-core fonts-noto-mono \
+            fonts-dejavu fonts-dejavu-extra fonts-liberation fonts-lmodern \
+            fonts-wqy-zenhei fonts-wqy-microhei fonts-nanum fonts-nanum-coding \
+            imagemagick ffmpeg ghostscript librsvg2-bin
+          which xelatex gs magick convert ffmpeg rsvg-convert
+          fc-cache -fv
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build PDF + EPUB for all locales
+        env:
+          PDF_VERSION: ${{ github.ref_name }}
+          EPUB_VERSION: ${{ github.ref_name }}
+          NODE_OPTIONS: --max-old-space-size=8192
+        run: npm run book:all
+
+      - name: List built artifacts
+        run: ls -lh docs/.vitepress/dist/*.pdf docs/.vitepress/dist/*.epub
+
+      - name: Upload books to GitHub Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          tag_name: ${{ github.ref_name }}
+          files: |
+            docs/.vitepress/dist/*.pdf
+            docs/.vitepress/dist/*.epub
+          generate_release_notes: true
