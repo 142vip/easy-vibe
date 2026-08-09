@@ -181,7 +181,8 @@ const parseLocaleHref = (href) => {
   const [pathWithoutQuery] = pathname.split(/[?#]/)
   const locale = supportedLocaleDirs.find(
     (item) =>
-      pathWithoutQuery === `/${item}/` || pathWithoutQuery.startsWith(`/${item}/`)
+      pathWithoutQuery === `/${item}/` ||
+      pathWithoutQuery.startsWith(`/${item}/`)
   )
 
   if (!locale) return null
@@ -1565,7 +1566,7 @@ const vibeStoriesLabels = {
       'Il a quitté un salaire à cinq chiffres pour aider des écoliers ruraux à "utiliser l\'IA pour chasser les mouches"',
       'Pendant la semaine des examens, j\'ai secrètement construit un "Xianyu du campus" avec l\'IA',
       "J'ai construit à chaque étudiant un « camarade d'études brillant » infatigable",
-      'À 48 ans, un camionneur a passé plusieurs nuits blanches et a utilisé l\'IA pour créer un site d\'outils à l\'international',
+      "À 48 ans, un camionneur a passé plusieurs nuits blanches et a utilisé l'IA pour créer un site d'outils à l'international",
       'Comparaison de sept outils de programmation IA',
       'Construire des sites web avec des agents de design et de programmation'
     ]
@@ -1966,10 +1967,7 @@ const stage1SidebarLabels = {
     },
     {
       text: '第二章 開發環境與工具',
-      items: [
-        'AI 程式設計工具介紹與使用',
-        '從截圖复刻：第一次模仿練習'
-      ]
+      items: ['AI 程式設計工具介紹與使用', '從截圖复刻：第一次模仿練習']
     },
     {
       text: '第三章 產品需求與方向',
@@ -1991,17 +1989,16 @@ const stage1SidebarLabels = {
     },
     {
       text: '附錄',
-      items: [
-        '產品思維基礎',
-        'AI 應用場景參考',
-        '常見問題與除錯'
-      ]
+      items: ['產品思維基礎', 'AI 應用場景參考', '常見問題與除錯']
     }
   ],
   'es-es': [
     {
       text: 'Capítulo 1: Introducción a la Programación',
-      items: ['Cómo aprender este curso', 'Primera experiencia de programación en la era de la IA']
+      items: [
+        'Cómo aprender este curso',
+        'Primera experiencia de programación en la era de la IA'
+      ]
     },
     {
       text: 'Capítulo 2: Entorno de Desarrollo y Herramientas',
@@ -2040,12 +2037,15 @@ const stage1SidebarLabels = {
   'fr-fr': [
     {
       text: 'Chapitre 1 : Introduction à la Programmation',
-      items: ["Comment apprendre ce cours", "Première expérience de programmation à l'ère de l'IA"]
+      items: [
+        'Comment apprendre ce cours',
+        "Première expérience de programmation à l'ère de l'IA"
+      ]
     },
     {
       text: 'Chapitre 2 : Environnement et Outils de Développement',
       items: [
-        "Présentation et utilisation des outils de programmation IA",
+        'Présentation et utilisation des outils de programmation IA',
         "Cloner depuis des captures d'écran : premier exercice d'imitation"
       ]
     },
@@ -2053,33 +2053,36 @@ const stage1SidebarLabels = {
       text: 'Chapitre 3 : Exigences et Orientation Produit',
       items: [
         "Sources d'inspiration créative",
-        "Comment identifier une bonne idée",
-        "Modèle de conception Double Diamond",
-        "Théorie Jobs to Be Done",
+        'Comment identifier une bonne idée',
+        'Modèle de conception Double Diamond',
+        'Théorie Jobs to Be Done',
         "The Mom Test : méthode d'entretiens utilisateurs"
       ]
     },
     {
       text: 'Chapitre 4 : Développement et Implémentation du Produit',
       items: [
-        "Construction de prototypes de produit interactifs",
-        "Intégration de capacités IA dans les prototypes",
+        'Construction de prototypes de produit interactifs',
+        'Intégration de capacités IA dans les prototypes',
         "Projet complet pratique : de l'idée au produit"
       ]
     },
     {
       text: 'Annexe',
       items: [
-        "Fondamentaux de la pensée produit",
+        'Fondamentaux de la pensée produit',
         "Référence des scénarios d'application IA",
-        "Problèmes courants et dépannage"
+        'Problèmes courants et dépannage'
       ]
     }
   ],
   'de-de': [
     {
       text: 'Kapitel 1: Einführung in die Programmierung',
-      items: ['Wie man diesen Kurs lernt', 'Erste Programmiererfahrung im KI-Zeitalter']
+      items: [
+        'Wie man diesen Kurs lernt',
+        'Erste Programmiererfahrung im KI-Zeitalter'
+      ]
     },
     {
       text: 'Kapitel 2: Entwicklungsumgebung und Werkzeuge',
@@ -2157,7 +2160,10 @@ const stage1SidebarLabels = {
   'vi-vn': [
     {
       text: 'Chương 1: Giới thiệu Lập trình',
-      items: ['Cách học khóa học này', 'Trải nghiệm lập trình đầu tiên trong thời đại AI']
+      items: [
+        'Cách học khóa học này',
+        'Trải nghiệm lập trình đầu tiên trong thời đại AI'
+      ]
     },
     {
       text: 'Chương 2: Môi trường Phát triển và Công cụ',
@@ -3265,7 +3271,8 @@ Sitemap: ${siteUrl}/sitemap.xml
           {
             text: 'Vibe 故事',
             link: '/zh-cn/vibe-stories/story-1',
-            activeMatch: '/zh-cn/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
+            activeMatch:
+              '/zh-cn/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
@@ -3866,13 +3873,16 @@ Sitemap: ${siteUrl}/sitemap.xml
           {
             text: getVibeStoriesNavText('en'),
             link: '/en/vibe-stories/story-1',
-            activeMatch: '/en/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
+            activeMatch:
+              '/en/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
           '/en/vibe-stories/': getVibeStoriesSidebar('en'),
-          '/en/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('en'),
-          '/en/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('en'),
+          '/en/stage-1/appendix-articles/example0-1/':
+            getVibeStoriesSidebar('en'),
+          '/en/stage-1/appendix-articles/example0-2/':
+            getVibeStoriesSidebar('en'),
           '/en/stage-1/': productManagerSidebarEn,
           '/en/stage-2/': stage2SidebarEn,
           '/en/stage-3/': stage3SidebarEn,
@@ -3932,13 +3942,16 @@ Sitemap: ${siteUrl}/sitemap.xml
           {
             text: getVibeStoriesNavText('ja-jp'),
             link: '/ja-jp/vibe-stories/story-1',
-            activeMatch: '/ja-jp/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
+            activeMatch:
+              '/ja-jp/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
           '/ja-jp/vibe-stories/': getVibeStoriesSidebar('ja-jp'),
-          '/ja-jp/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('ja-jp'),
-          '/ja-jp/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('ja-jp'),
+          '/ja-jp/stage-1/appendix-articles/example0-1/':
+            getVibeStoriesSidebar('ja-jp'),
+          '/ja-jp/stage-1/appendix-articles/example0-2/':
+            getVibeStoriesSidebar('ja-jp'),
           '/ja-jp/stage-1/': getStage1Sidebar('ja-jp'),
           '/ja-jp/stage-2/': getStage2Sidebar('ja-jp'),
           '/ja-jp/stage-3/': getStage3Sidebar('ja-jp'),
@@ -3999,13 +4012,16 @@ Sitemap: ${siteUrl}/sitemap.xml
           {
             text: getVibeStoriesNavText('zh-tw'),
             link: '/zh-tw/vibe-stories/story-1',
-            activeMatch: '/zh-tw/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
+            activeMatch:
+              '/zh-tw/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
           '/zh-tw/vibe-stories/': getVibeStoriesSidebar('zh-tw'),
-          '/zh-tw/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('zh-tw'),
-          '/zh-tw/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('zh-tw'),
+          '/zh-tw/stage-1/appendix-articles/example0-1/':
+            getVibeStoriesSidebar('zh-tw'),
+          '/zh-tw/stage-1/appendix-articles/example0-2/':
+            getVibeStoriesSidebar('zh-tw'),
           '/zh-tw/stage-1/': getStage1Sidebar('zh-tw'),
           '/zh-tw/stage-2/': getStage2Sidebar('zh-tw'),
           '/zh-tw/stage-3/': getStage3Sidebar('zh-tw'),
@@ -4066,13 +4082,16 @@ Sitemap: ${siteUrl}/sitemap.xml
           {
             text: getVibeStoriesNavText('ko-kr'),
             link: '/ko-kr/vibe-stories/story-1',
-            activeMatch: '/ko-kr/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
+            activeMatch:
+              '/ko-kr/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
           '/ko-kr/vibe-stories/': getVibeStoriesSidebar('ko-kr'),
-          '/ko-kr/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('ko-kr'),
-          '/ko-kr/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('ko-kr'),
+          '/ko-kr/stage-1/appendix-articles/example0-1/':
+            getVibeStoriesSidebar('ko-kr'),
+          '/ko-kr/stage-1/appendix-articles/example0-2/':
+            getVibeStoriesSidebar('ko-kr'),
           '/ko-kr/stage-1/': productManagerSidebarKo,
           '/ko-kr/stage-2/': getStage2Sidebar('ko-kr'),
           '/ko-kr/stage-3/': getStage3Sidebar('ko-kr'),
@@ -4133,13 +4152,16 @@ Sitemap: ${siteUrl}/sitemap.xml
           {
             text: getVibeStoriesNavText('es-es'),
             link: '/es-es/vibe-stories/story-1',
-            activeMatch: '/es-es/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
+            activeMatch:
+              '/es-es/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
           '/es-es/vibe-stories/': getVibeStoriesSidebar('es-es'),
-          '/es-es/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('es-es'),
-          '/es-es/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('es-es'),
+          '/es-es/stage-1/appendix-articles/example0-1/':
+            getVibeStoriesSidebar('es-es'),
+          '/es-es/stage-1/appendix-articles/example0-2/':
+            getVibeStoriesSidebar('es-es'),
           '/es-es/stage-1/': getStage1Sidebar('es-es'),
           '/es-es/stage-2/': getStage2Sidebar('es-es'),
           '/es-es/stage-3/': getStage3Sidebar('es-es'),
@@ -4200,13 +4222,16 @@ Sitemap: ${siteUrl}/sitemap.xml
           {
             text: getVibeStoriesNavText('fr-fr'),
             link: '/fr-fr/vibe-stories/story-1',
-            activeMatch: '/fr-fr/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
+            activeMatch:
+              '/fr-fr/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
           '/fr-fr/vibe-stories/': getVibeStoriesSidebar('fr-fr'),
-          '/fr-fr/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('fr-fr'),
-          '/fr-fr/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('fr-fr'),
+          '/fr-fr/stage-1/appendix-articles/example0-1/':
+            getVibeStoriesSidebar('fr-fr'),
+          '/fr-fr/stage-1/appendix-articles/example0-2/':
+            getVibeStoriesSidebar('fr-fr'),
           '/fr-fr/stage-1/': getStage1Sidebar('fr-fr'),
           '/fr-fr/stage-2/': getStage2Sidebar('fr-fr'),
           '/fr-fr/stage-3/': getStage3Sidebar('fr-fr'),
@@ -4267,13 +4292,16 @@ Sitemap: ${siteUrl}/sitemap.xml
           {
             text: getVibeStoriesNavText('de-de'),
             link: '/de-de/vibe-stories/story-1',
-            activeMatch: '/de-de/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
+            activeMatch:
+              '/de-de/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
           '/de-de/vibe-stories/': getVibeStoriesSidebar('de-de'),
-          '/de-de/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('de-de'),
-          '/de-de/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('de-de'),
+          '/de-de/stage-1/appendix-articles/example0-1/':
+            getVibeStoriesSidebar('de-de'),
+          '/de-de/stage-1/appendix-articles/example0-2/':
+            getVibeStoriesSidebar('de-de'),
           '/de-de/stage-1/': getStage1Sidebar('de-de'),
           '/de-de/stage-2/': getStage2Sidebar('de-de'),
           '/de-de/stage-3/': getStage3Sidebar('de-de'),
@@ -4334,13 +4362,16 @@ Sitemap: ${siteUrl}/sitemap.xml
           {
             text: getVibeStoriesNavText('ar-sa'),
             link: '/ar-sa/vibe-stories/story-1',
-            activeMatch: '/ar-sa/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
+            activeMatch:
+              '/ar-sa/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
           '/ar-sa/vibe-stories/': getVibeStoriesSidebar('ar-sa'),
-          '/ar-sa/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('ar-sa'),
-          '/ar-sa/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('ar-sa'),
+          '/ar-sa/stage-1/appendix-articles/example0-1/':
+            getVibeStoriesSidebar('ar-sa'),
+          '/ar-sa/stage-1/appendix-articles/example0-2/':
+            getVibeStoriesSidebar('ar-sa'),
           '/ar-sa/stage-1/': getStage1Sidebar('ar-sa'),
           '/ar-sa/stage-2/': getStage2Sidebar('ar-sa'),
           '/ar-sa/stage-3/': getStage3Sidebar('ar-sa'),
@@ -4402,13 +4433,16 @@ Sitemap: ${siteUrl}/sitemap.xml
           {
             text: getVibeStoriesNavText('vi-vn'),
             link: '/vi-vn/vibe-stories/story-1',
-            activeMatch: '/vi-vn/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
+            activeMatch:
+              '/vi-vn/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
           '/vi-vn/vibe-stories/': getVibeStoriesSidebar('vi-vn'),
-          '/vi-vn/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('vi-vn'),
-          '/vi-vn/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('vi-vn'),
+          '/vi-vn/stage-1/appendix-articles/example0-1/':
+            getVibeStoriesSidebar('vi-vn'),
+          '/vi-vn/stage-1/appendix-articles/example0-2/':
+            getVibeStoriesSidebar('vi-vn'),
           '/vi-vn/stage-1/': getStage1Sidebar('vi-vn'),
           '/vi-vn/stage-2/': getStage2Sidebar('vi-vn'),
           '/vi-vn/stage-3/': getStage3Sidebar('vi-vn'),
