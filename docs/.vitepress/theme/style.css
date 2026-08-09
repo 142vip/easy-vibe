@@ -617,3 +617,111 @@ body.mermaid-viewer-open .viewer-canvas img {
   border-color: rgba(96, 165, 250, 0.38);
   background: rgba(96, 165, 250, 0.18);
 }
+
+/* Friendly user ↔ Agent conversations in workflow tutorials */
+.vp-doc .workflow-chat {
+  display: grid;
+  gap: 14px;
+  margin: 22px 0 28px;
+}
+
+.vp-doc .workflow-message {
+  width: fit-content;
+  max-width: min(88%, 720px);
+  padding: 16px 20px 18px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(30, 41, 59, 0.07);
+}
+
+.vp-doc .workflow-message--user {
+  justify-self: end;
+  border-color: rgba(37, 99, 235, 0.24);
+  border-bottom-right-radius: 6px;
+  background: linear-gradient(145deg, #eef6ff 0%, #e8f0ff 100%);
+  color: #14213d;
+}
+
+.vp-doc .workflow-message--agent {
+  justify-self: start;
+  border-bottom-left-radius: 6px;
+  background: var(--vp-c-bg-soft);
+}
+
+.vp-doc .workflow-message__speaker {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 9px;
+  color: var(--vp-c-text-2);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.vp-doc .workflow-message__command {
+  display: inline-flex;
+  margin: 1px 0 9px;
+  padding: 6px 11px;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #1d4ed8;
+  font-family: var(--vp-font-family-mono);
+  font-size: 1.18rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.vp-doc .workflow-message p {
+  margin: 7px 0 0;
+  line-height: 1.75;
+}
+
+.vp-doc .workflow-message--user p {
+  font-size: 1.1rem;
+  font-weight: 540;
+}
+
+.vp-doc .workflow-message--agent p,
+.vp-doc .workflow-message--agent li {
+  color: var(--vp-c-text-1);
+  font-size: 1rem;
+}
+
+.vp-doc .workflow-message ol,
+.vp-doc .workflow-message ul {
+  margin: 9px 0 0;
+  padding-left: 1.3rem;
+}
+
+.vp-doc .workflow-message li + li {
+  margin-top: 5px;
+}
+
+.dark .vp-doc .workflow-message--user {
+  border-color: rgba(96, 165, 250, 0.32);
+  background: linear-gradient(145deg, #172554 0%, #1e3a5f 100%);
+  color: #eff6ff;
+}
+
+.dark .vp-doc .workflow-message__command {
+  border-color: rgba(147, 197, 253, 0.28);
+  background: rgba(15, 23, 42, 0.46);
+  color: #bfdbfe;
+}
+
+@media (max-width: 720px) {
+  .vp-doc .workflow-message {
+    max-width: 96%;
+    padding: 14px 16px 16px;
+  }
+
+  .vp-doc .workflow-message--user p {
+    font-size: 1.04rem;
+  }
+
+  .vp-doc .workflow-message__command {
+    font-size: 1.08rem;
+  }
+}
