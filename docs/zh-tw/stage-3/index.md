@@ -44,6 +44,11 @@
     title="Claude Code 工作流最佳實踐"
     description="掌握 Claude Code 在不同場景下的最佳實踐"
   />
+  <NavCard
+    href="/zh-tw/stage-3/core-skills/github-iterative-development/"
+    title="GitHub Issues 驅動開發實戰"
+    description="用真實倉庫走通需求討論、任務依賴、逐票實現、測試和審查"
+  />
 </NavGrid>
 
 ### 跨平台開發

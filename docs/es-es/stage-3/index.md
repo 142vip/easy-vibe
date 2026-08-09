@@ -44,6 +44,11 @@ Domina profundamente el protocolo MCP y las técnicas avanzadas de Claude Code p
     title="Mejores prácticas de flujo de trabajo de Claude Code"
     description="Domina las mejores prácticas de Claude Code en diferentes escenarios"
   />
+  <NavCard
+    href="/es-es/stage-3/core-skills/github-iterative-development/"
+    title="Desarrollo integral con GitHub Issues"
+    description="Conecta requisitos, dependencias, implementación, pruebas y revisión en un repositorio real"
+  />
 </NavGrid>
 
 ### Desarrollo multiplataforma

@@ -44,6 +44,11 @@ Meistern Sie das MCP-Protokoll und fortgeschrittene Claude-Code-Techniken im Det
     title="Claude Code Workflow Bewährte Methoden"
     description="Meistern Sie die bewährten Methoden von Claude Code in verschiedenen Szenarien"
   />
+  <NavCard
+    href="/de-de/stage-3/core-skills/github-iterative-development/"
+    title="KI-Entwicklung mit GitHub Issues"
+    description="Verbinden Sie Anforderungen, Abhängigkeiten, Umsetzung, Tests und Review in einem echten Repository"
+  />
 </NavGrid>
 
 ### Plattformübergreifende Entwicklung

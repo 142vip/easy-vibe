@@ -924,6 +924,10 @@ const stage3SidebarEn = [
       {
         text: 'From Vibe Coding to Spec Coding',
         link: '/en/stage-3/core-skills/spec-coding/'
+      },
+      {
+        text: 'Building Software End to End with GitHub Issues',
+        link: '/en/stage-3/core-skills/github-iterative-development/'
       }
     ]
   },
@@ -2711,7 +2715,8 @@ const stage3SidebarLabels = {
         'Claude Code ワークフロー最佳实践',
         'Claude Code モバイルリモート開発',
         'Claude Agent SDK 完全ガイド',
-        'Vibe Coding から Spec Coding へ'
+        'Vibe Coding から Spec Coding へ',
+        'GitHub Issues で AI 開発を最後まで進める'
       ]
     },
     {
@@ -2752,7 +2757,8 @@ const stage3SidebarLabels = {
         'Claude Code 工作流最佳實踐',
         'Claude Code 手機遠端開發',
         'Claude Agent SDK 完全指南',
-        '從 Vibe Coding 到 Spec Coding'
+        '從 Vibe Coding 到 Spec Coding',
+        '用 GitHub Issues 推進 AI 全流程開發'
       ]
     },
     {
@@ -2793,7 +2799,8 @@ const stage3SidebarLabels = {
         'Claude Code 워크플로우 모범 사례',
         'Claude Code 모바일 원격 개발',
         'Claude Agent SDK 완전 가이드',
-        'Vibe Coding에서 Spec Coding으로'
+        'Vibe Coding에서 Spec Coding으로',
+        'GitHub Issues로 AI 개발을 끝까지 진행하기'
       ]
     },
     {
@@ -2834,7 +2841,8 @@ const stage3SidebarLabels = {
         'Mejores Prácticas de Flujo de Trabajo con Claude Code',
         'Desarrollo Remoto Móvil con Claude Code',
         'Guía Completa de Claude Agent SDK',
-        'De Vibe Coding a Spec Coding'
+        'De Vibe Coding a Spec Coding',
+        'Desarrollo integral con IA y GitHub Issues'
       ]
     },
     {
@@ -2875,7 +2883,8 @@ const stage3SidebarLabels = {
         'Meilleures Pratiques de Workflow Claude Code',
         'Développement à Distance sur Mobile avec Claude Code',
         'Guide Complet Claude Agent SDK',
-        'Du Vibe Coding au Spec Coding'
+        'Du Vibe Coding au Spec Coding',
+        'Développer de bout en bout avec GitHub Issues'
       ]
     },
     {
@@ -2916,7 +2925,8 @@ const stage3SidebarLabels = {
         'Claude Code Workflow Best Practices',
         'Claude Code Mobile Remote-Entwicklung',
         'Claude Agent SDK Vollständiger Leitfaden',
-        'Vom Vibe Coding zum Spec Coding'
+        'Vom Vibe Coding zum Spec Coding',
+        'KI-Softwareentwicklung mit GitHub Issues'
       ]
     },
     {
@@ -2957,7 +2967,8 @@ const stage3SidebarLabels = {
         'أفضل ممارسات سير عمل Claude Code',
         'التطوير عن بُعد عبر الهاتف مع Claude Code',
         'الدليل الشامل لـ Claude Agent SDK',
-        'من Vibe Coding إلى Spec Coding'
+        'من Vibe Coding إلى Spec Coding',
+        'تطوير البرمجيات بالذكاء الاصطناعي عبر GitHub Issues'
       ]
     },
     {
@@ -2998,7 +3009,8 @@ const stage3SidebarLabels = {
         'Thực hành Tốt nhất Workflow Claude Code',
         'Phát triển Từ xa trên Mobile với Claude Code',
         'Hướng dẫn Toàn diện Claude Agent SDK',
-        'Từ Vibe Coding đến Spec Coding'
+        'Từ Vibe Coding đến Spec Coding',
+        'Phát triển phần mềm trọn quy trình với GitHub Issues'
       ]
     },
     {

@@ -44,6 +44,11 @@ MCP 프로토콜과 Claude Code 고급 기술을 깊이 마스터하여 개발 �
     title="Claude Code 워크플로우 모범 사례"
     description="다양한 시나리오에서 Claude Code 모범 사례를 마스터합니다"
   />
+  <NavCard
+    href="/ko-kr/stage-3/core-skills/github-iterative-development/"
+    title="GitHub Issues로 AI 개발을 끝까지 진행하기"
+    description="실제 저장소에서 요구사항, 의존성, 구현, 테스트, 리뷰를 연결합니다"
+  />
 </NavGrid>
 
 ### 크로스 플랫폼 개발

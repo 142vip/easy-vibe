@@ -44,6 +44,11 @@
     title="أفضل ممارسات سير عمل Claude Code"
     description="أتقن أفضل ممارسات Claude Code في سيناريوهات مختلفة"
   />
+  <NavCard
+    href="/ar-sa/stage-3/core-skills/github-iterative-development/"
+    title="تطوير متكامل باستخدام GitHub Issues"
+    description="اربط المتطلبات والاعتماديات والتنفيذ والاختبارات والمراجعة في مستودع حقيقي"
+  />
 </NavGrid>
 
 ### التطوير متعدد المنصات

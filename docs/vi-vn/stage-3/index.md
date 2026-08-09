@@ -44,6 +44,11 @@ Thành thạo sâu giao thức MCP và các kỹ thuật nâng cao của Claude 
     title="Phương pháp Hay nhất về Quy trình Claude Code"
     description="Thành thạo các phương pháp hay nhất của Claude Code trong các tình huống khác nhau"
   />
+  <NavCard
+    href="/vi-vn/stage-3/core-skills/github-iterative-development/"
+    title="Phát triển trọn quy trình với GitHub Issues"
+    description="Kết nối yêu cầu, phụ thuộc, triển khai, kiểm thử và rà soát trong một kho mã thực tế"
+  />
 </NavGrid>
 
 ### Phát triển đa nền tảng

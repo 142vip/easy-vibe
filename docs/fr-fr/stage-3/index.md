@@ -44,6 +44,11 @@ Maîtrisez en profondeur le protocole MCP et les techniques avancées de Claude 
     title="Meilleures pratiques de flux de travail Claude Code"
     description="Maîtrisez les meilleures pratiques de Claude Code dans différents scénarios"
   />
+  <NavCard
+    href="/fr-fr/stage-3/core-skills/github-iterative-development/"
+    title="Développement de bout en bout avec GitHub Issues"
+    description="Reliez exigences, dépendances, implémentation, tests et revue dans un dépôt réel"
+  />
 </NavGrid>
 
 ### Développement multiplateforme

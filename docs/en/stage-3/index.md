@@ -44,6 +44,11 @@ Master the MCP protocol and advanced Claude Code techniques in depth to improve 
     title="Claude Code Workflow Best Practices"
     description="Master Claude Code best practices in different scenarios"
   />
+  <NavCard
+    href="/en/stage-3/core-skills/github-iterative-development/"
+    title="End-to-End Development with GitHub Issues"
+    description="Use a real repository to connect requirements, dependencies, implementation, tests, and review"
+  />
 </NavGrid>
 
 ### Cross-Platform Development

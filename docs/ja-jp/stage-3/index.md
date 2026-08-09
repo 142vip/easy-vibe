@@ -44,6 +44,11 @@ MCPプロトコルとClaude Codeの高度なテクニックを深くマスター
     title="Claude Codeワークフローベストプラクティス"
     description="さまざまなシナリオでのClaude Codeのベストプラクティスをマスターする"
   />
+  <NavCard
+    href="/ja-jp/stage-3/core-skills/github-iterative-development/"
+    title="GitHub Issues で AI 開発を最後まで進める"
+    description="実在するリポジトリで要件、依存関係、実装、テスト、レビューをつなげる"
+  />
 </NavGrid>
 
 ### クロスプラットフォーム開発
