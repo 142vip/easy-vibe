@@ -1,5 +1,5 @@
 ---
-title: '给原型加上 AI 能力 - 接入文本与图像 API'
+title: '为原型接入 AI 能力'
 description: '在已有 Web 原型中接入真实的 AI 能力：理解 API 的核心概念，学会找到 API Key 和官方示例；实战集成 DeepSeek 文本模型与多种图像生成服务（SiliconFlow Qwen-Image、Recraft、Seedream），并掌握常用的模型选型方法。'
 ---
 
@@ -11,7 +11,7 @@ const relatedArticles =
   relatedArticlesMap['zh-cn/stage-1/integrating-ai-capabilities'] ?? []
 </script>
 
-# 初级四：为原型注入 AI 能力
+# 为原型接入 AI 能力
 
 ## 章节导读
 
@@ -19,7 +19,7 @@ const relatedArticles =
 
 在前面的章节中，我们完成了从<strong>找到好点子</strong>到<strong>做出产品原型</strong>的完整流程。但现在的原型还只是一个"壳子"——点击按钮不会真的生成内容，页面上的数据都是写死的。
 
-还记得我们在第一章强调的吗？<strong>我们要做"有人愿意买单的产品"，而不是"看起来像样的原型"。</strong> 真正的价值来自于产品能<strong>解决真实问题</strong>，而要做到这一点，原型必须能<strong>真正运行</strong>。
+还记得我们前面强调的吗？<strong>我们要做"有人愿意买单的产品"，而不是"看起来像样的原型"。</strong> 真正的价值来自于产品能<strong>解决真实问题</strong>，而要做到这一点，原型必须能<strong>真正运行</strong>。
 
 这一章要让原型<strong>"活"起来</strong>：我们会接入<strong>真实的 AI 能力</strong>，从拿到 API Key 开始，到读懂官方文档、让 AI IDE 帮你把接口集成进代码里。你会以 <strong>DeepSeek 文本模型</strong>为例，学会怎么让应用<strong>真正调用大模型生成内容</strong>；如果感兴趣，还可以<strong>选做图像生成的接入</strong>。
 

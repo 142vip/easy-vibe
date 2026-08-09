@@ -1,13 +1,13 @@
 ---
-title: '用 Jobs to Be Done 找到用户真正想完成的事'
-description: '面向零基础读者的 Jobs to Be Done 入门文章。理解用户不是在买功能，而是在特定场景里“雇用”你的产品完成进展，并学会用 JTBD 拆解产品方向、访谈问题与 AI 提示词。'
+title: 'Jobs to Be Done 需求理论'
+description: '面向零基础读者的 Jobs to Be Done 入门文章。理解用户不是在买功能，而是在特定场景里"雇用"你的产品完成进展，并学会用 JTBD 拆解产品方向、访谈问题与 AI 提示词。'
 ---
 
 <script setup>
 const duration = '约 <strong>1.5 小时</strong>'
 </script>
 
-# 用 Jobs to Be Done 找到用户真正想完成的事
+# Jobs to Be Done 需求理论
 
 <a id="top-jtbd"></a>
 

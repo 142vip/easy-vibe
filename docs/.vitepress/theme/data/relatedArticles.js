@@ -8,37 +8,49 @@ const rawRelatedArticlesMap = {
   'zh-cn/stage-1/learning-map': [
     {
       href: '/zh-cn/stage-1/ai-capabilities-through-games/',
-      title: '初级一：AI 时代，会说话就会编程',
+      title: 'AI 时代的编程初体验',
       description: '先用小游戏感受 AI 编程，快速建立手感，理解"什么问题适合交给 AI"。',
       icon: '🎮'
     },
     {
       href: '/zh-cn/stage-1/introduction-to-ai-ide/',
-      title: '初级二：学会 AI 编程工具',
+      title: 'AI 编程工具介绍与使用',
       description: '从网页试玩升级到本地 AI IDE（Trae），建立完整开发环境，学会高效与 AI 对话。',
       icon: '💻'
     },
     {
-      href: '/zh-cn/stage-1/finding-great-idea/',
-      title: '初级三：找到好点子',
-      description: '从"我有想法"走向"做对方向"，学会挖掘真实用户需求，找到有人愿意买单的产品方向。',
+      href: '/zh-cn/stage-1/clone-your-favorite-app/',
+      title: '从截图复刻：第一次模仿练习',
+      description: '看着截图做作品，练手巩固工具使用，不急于创造。',
+      icon: '📱'
+    },
+    {
+      href: '/zh-cn/stage-1/appendix-idea-sources/',
+      title: '创意灵感的来源',
+      description: '了解从哪些渠道可以找到靠谱的产品灵感，为自己的方向做准备。',
       icon: '💡'
     },
     {
+      href: '/zh-cn/stage-1/finding-great-idea/',
+      title: '如何判断一个好点子',
+      description: '学会挖掘真实用户需求，判断什么方向值得投入时间去做。',
+      icon: '🎯'
+    },
+    {
       href: '/zh-cn/stage-1/building-prototype/',
-      title: '初级四：动手做出原型',
-      description: '从需求拆解到页面落地，学会用 AI IDE 生成多页面应用，快速完成第一版可交互 Demo。',
+      title: '构建可交互的产品原型',
+      description: '从需求拆解到页面落地，用 AI IDE 生成多页面应用，完成第一版可交互 Demo。',
       icon: '🧩'
     },
     {
       href: '/zh-cn/stage-1/integrating-ai-capabilities/',
-      title: '初级五：给原型加上 AI 能力',
-      description: '接入真实 API（文本模型、文生图），让原型从"可看"变"可用"，学会模型选型与调试。',
+      title: '为原型接入 AI 能力',
+      description: '接入真实 API（文本模型、文生图），让原型从"可看"变"可用"。',
       icon: '🤖'
     },
     {
       href: '/zh-cn/stage-1/complete-project-practice/',
-      title: '初级六：完整项目实战',
+      title: '完整项目实战：从想法到作品',
       description: '补齐数据、交互、异常处理，做出可展示、可交互的完整 AI 产品原型。',
       icon: '🚀'
     }
@@ -46,53 +58,83 @@ const rawRelatedArticlesMap = {
   'zh-cn/stage-1/ai-capabilities-through-games': [
     {
       href: '/zh-cn/stage-1/introduction-to-ai-ide/',
-      title: '初级二：学会 AI 编程工具',
+      title: 'AI 编程工具介绍与使用',
       description: '把网页试玩升级到本地 AI IDE（Trae），建立完整开发环境，学会高效与 AI 对话。',
       icon: '💻'
     },
     {
-      href: '/zh-cn/stage-1/finding-great-idea/',
-      title: '初级三：找到好点子',
-      description: '从「会用工具」走向「做对方向」，学会挖掘真实用户需求，找到有人愿意买单的产品方向。',
-      icon: '💡'
-    },
-    {
       href: '/zh-cn/stage-1/learning-map/',
-      title: '返回学习地图',
+      title: '返回：如何学习本课程',
       description: '按完整路线查看每个阶段目标与推荐学习顺序。',
       icon: '🗺️'
     }
   ],
   'zh-cn/stage-1/introduction-to-ai-ide': [
     {
-      href: '/zh-cn/stage-1/finding-great-idea/',
-      title: '初级三：找到好点子',
-      description: '从「我有想法」走向「做对方向」，学会挖掘真实用户需求，找到有人愿意买单的产品方向。',
+      href: '/zh-cn/stage-1/clone-your-favorite-app/',
+      title: '从截图复刻：第一次模仿练习',
+      description: '用截图复刻练手，巩固工具使用，获得更多实战经验。',
+      icon: '📱'
+    }
+  ],
+  'zh-cn/stage-1/clone-your-favorite-app': [
+    {
+      href: '/zh-cn/stage-1/appendix-idea-sources/',
+      title: '创意灵感的来源',
+      description: '工具练熟了，开始了解从哪些渠道可以找到靠谱的产品灵感。',
       icon: '💡'
-    },
+    }
+  ],
+  'zh-cn/stage-1/appendix-idea-sources': [
+    {
+      href: '/zh-cn/stage-1/finding-great-idea/',
+      title: '如何判断一个好点子',
+      description: '有了灵感来源，学会判断什么样的点子值得做。',
+      icon: '🎯'
+    }
+  ],
+  'zh-cn/stage-1/finding-great-idea': [
+    {
+      href: '/zh-cn/stage-1/appendix-double-diamond/',
+      title: '双钻设计模型',
+      description: '用经典设计框架梳理思路，确保方向正确再动手。',
+      icon: '💎'
+    }
+  ],
+  'zh-cn/stage-1/appendix-double-diamond': [
+    {
+      href: '/zh-cn/stage-1/appendix-jobs-to-be-done/',
+      title: 'Jobs to Be Done 需求理论',
+      description: '深入理解用户需求本质，挖掘用户真正要完成的任务。',
+      icon: '🎯'
+    }
+  ],
+  'zh-cn/stage-1/appendix-jobs-to-be-done': [
+    {
+      href: '/zh-cn/stage-1/appendix-mom-test/',
+      title: 'The Mom Test：用户访谈方法',
+      description: '学会正确的用户访谈方法，避免自嗨式验证。',
+      icon: '🎤'
+    }
+  ],
+  'zh-cn/stage-1/appendix-mom-test': [
     {
       href: '/zh-cn/stage-1/building-prototype/',
-      title: '初级四：动手做出原型',
-      description: '从需求拆解到页面落地，学会用 AI IDE 生成多页面应用，快速完成第一版可交互 Demo。',
+      title: '构建可交互的产品原型',
+      description: '需求验证清楚了，开始动手把想法变成可交互产品。',
       icon: '🧩'
-    },
-    {
-      href: '/zh-cn/stage-1/integrating-ai-capabilities/',
-      title: '初级五：给原型加上 AI 能力',
-      description: '接入真实 API（文本模型、文生图），让原型从「可看」变「可用」。',
-      icon: '🤖'
     }
   ],
   'zh-cn/stage-1/building-prototype': [
     {
       href: '/zh-cn/stage-1/integrating-ai-capabilities/',
-      title: '初级五：给原型加上 AI 能力',
+      title: '为原型接入 AI 能力',
       description: '接入真实 API（文本模型、文生图），把静态原型升级为可调用真实模型服务的应用。',
       icon: '🤖'
     },
     {
       href: '/zh-cn/stage-1/complete-project-practice/',
-      title: '初级六：完整项目实战',
+      title: '完整项目实战：从想法到作品',
       description: '补齐数据、交互与异常处理，完成可演示的完整 AI 产品原型。',
       icon: '🚀'
     },
@@ -106,7 +148,7 @@ const rawRelatedArticlesMap = {
   'zh-cn/stage-1/integrating-ai-capabilities': [
     {
       href: '/zh-cn/stage-1/complete-project-practice/',
-      title: '初级六：完整项目实战',
+      title: '完整项目实战：从想法到作品',
       description: '把分散能力拼成完整业务链路，做出可展示的完整 AI 产品原型。',
       icon: '🧱'
     },
@@ -277,36 +319,16 @@ const rawRelatedArticlesMap = {
       icon: '🗄️'
     }
   ],
-  'zh-cn/stage-1/finding-great-idea': [
-    {
-      href: '/zh-cn/stage-1/building-prototype/',
-      title: '初级四：动手做出原型',
-      description: '从需求拆解到页面落地，学会用 AI IDE 生成多页面应用，快速完成第一版可交互 Demo。',
-      icon: '🧩'
-    },
-    {
-      href: '/zh-cn/stage-1/integrating-ai-capabilities/',
-      title: '初级五：给原型加上 AI 能力',
-      description: '接入真实 API（文本模型、文生图），让原型从「可看」变「可用」。',
-      icon: '🤖'
-    },
-    {
-      href: '/zh-cn/stage-1/learning-map/',
-      title: '返回学习地图',
-      description: '按完整路线查看每个阶段目标与推荐学习顺序。',
-      icon: '🗺️'
-    }
-  ],
   'zh-cn/stage-1/appendix-b-common-errors': [
     {
       href: '/zh-cn/stage-1/introduction-to-ai-ide/',
-      title: '初级二：学会 AI 编程工具',
+      title: '第2课：学会 AI 编程工具',
       description: '重新梳理 Trae IDE 的环境配置与常见设置。',
       icon: '💻'
     },
     {
       href: '/zh-cn/stage-1/building-prototype/',
-      title: '初级四：动手做出原型',
+      title: '第5课：动手做出原型',
       description: '从需求拆解到页面落地，学会用 AI IDE 生成多页面应用。',
       icon: '🧩'
     },

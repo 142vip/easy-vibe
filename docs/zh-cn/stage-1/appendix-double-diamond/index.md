@@ -1,5 +1,5 @@
 ---
-title: '双钻模型：先做对的事，再把事做对'
+title: '双钻设计模型'
 description: '面向零基础读者的 Double Diamond 入门文章。理解 Discover、Define、Develop、Deliver 四个阶段，避免在问题还没搞清楚时就急着做原型。'
 ---
 
@@ -7,7 +7,7 @@ description: '面向零基础读者的 Double Diamond 入门文章。理解 Disc
 const duration = '约 <strong>1.5 小时</strong>'
 </script>
 
-# 双钻模型：先做对的事，再把事做对
+# 双钻设计模型
 
 <a id="top-dd"></a>
 

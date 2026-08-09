@@ -1,5 +1,5 @@
 ---
-title: '完整项目实战 - 从 Demo 到产品级原型'
+title: '完整项目实战：从想法到作品'
 description: '走出 Demo 阶段，学习如何完善产品链路、构建逼真的模拟数据、通过反馈快速迭代，最终完成一个可展示、可交互的完整 AI 产品原型。'
 ---
 
@@ -11,7 +11,7 @@ const relatedArticles =
   relatedArticlesMap['zh-cn/stage-1/complete-project-practice'] ?? []
 </script>
 
-# 初级五：完整项目实战
+# 完整项目实战：从想法到作品
 
 ## 章节导读
 

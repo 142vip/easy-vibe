@@ -1,5 +1,5 @@
 ---
-title: '产品思维与方案设计'
+title: '产品思维基础'
 description: '学习如何从会搭 AI 工具过渡到会想、会判断、会打磨一个有 sense 的 AI 应用，掌握产品思维的核心理念和实践方法。'
 ---
 
@@ -7,7 +7,7 @@ description: '学习如何从会搭 AI 工具过渡到会想、会判断、会�
 const duration = '约 <strong>6 小时</strong>'
 </script>
 
-# 产品思维与方案设计
+# 产品思维基础
 
 ## 本章导读
 

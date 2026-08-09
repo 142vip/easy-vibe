@@ -1,13 +1,13 @@
 ---
-title: 'The Mom Test：如何通过用户访谈验证需求'
-description: '面向零基础读者的 The Mom Test 入门文章。学会避免礼貌性反馈，围绕真实行为、具体事实和已有问题做用户访谈，把“听起来不错”变成更可靠的需求判断。'
+title: 'The Mom Test：用户访谈方法'
+description: '面向零基础读者的 The Mom Test 入门文章。学会避免礼貌性反馈，围绕真实行为、具体事实和已有问题做用户访谈，把"听起来不错"变成更可靠的需求判断。'
 ---
 
 <script setup>
 const duration = '约 <strong>1.5 小时</strong>'
 </script>
 
-# The Mom Test：如何通过用户访谈验证需求
+# The Mom Test：用户访谈方法
 
 <a id="top-mom"></a>
 

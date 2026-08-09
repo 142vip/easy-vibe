@@ -456,97 +456,89 @@ const commonThemeConfig = {
 
 const productManagerSidebarEn = [
   {
-    text: 'Getting Started',
+    text: 'Chapter 1: Introduction to Programming',
     collapsed: false,
     items: [
-      { text: 'Learning Map', link: '/en/stage-1/learning-map/' },
+      { text: 'How to Learn This Course', link: '/en/stage-1/learning-map/' },
       {
-        text: 'AI Era: If You Can Speak, You Can Code',
+        text: 'First Programming Experience in the AI Era',
         link: '/en/stage-1/ai-capabilities-through-games/'
       }
     ]
   },
   {
-    text: 'Product Prototype Skills',
+    text: 'Chapter 2: Development Environment and Tools',
     collapsed: false,
     items: [
       {
-        text: 'Master AI Programming Tools',
+        text: 'Introduction to AI Programming Tools',
         link: '/en/stage-1/introduction-to-ai-ide/'
       },
       {
-        text: 'Find Great Ideas',
-        link: '/en/stage-1/finding-great-idea/'
-      },
-      {
-        text: 'Build Product Prototypes',
-        link: '/en/stage-1/building-prototype/'
-      },
-      {
-        text: 'Integrate AI Capabilities',
-        link: '/en/stage-1/integrating-ai-capabilities/'
-      },
-      {
-        text: 'Complete Project Practice',
-        link: '/en/stage-1/complete-project-practice/'
+        text: 'Clone from Screenshots: First Imitation Practice',
+        link: '/en/stage-1/clone-your-favorite-app/'
       }
     ]
   },
   {
-    text: 'Appendix: Business Thinking',
+    text: 'Chapter 3: Product Requirements and Direction',
     collapsed: false,
     items: [
       {
-        text: 'Product Thinking and Solution Design',
-        link: '/en/stage-1/appendix-a-product-thinking/'
-      },
-      {
-        text: 'AI Industry Application Scenarios (B-end)',
-        link: '/en/stage-1/appendix-industry-scenarios/'
-      },
-      {
-        text: 'AI Consumer Scenarios Inspiration (C-end)',
-        link: '/en/stage-1/appendix-c-consumer-scenarios/'
-      }
-    ]
-  },
-  {
-    text: 'Appendix: User Research and Validation',
-    collapsed: false,
-    items: [
-      {
-        text: 'Where to Find Ideas: 3 Reference Sources That Work Best for Beginners',
+        text: 'Sources of Creative Inspiration',
         link: '/en/stage-1/appendix-idea-sources/'
       },
       {
-        text: 'Double Diamond: First Do the Right Thing, Then Do It Right',
+        text: 'How to Identify a Great Idea',
+        link: '/en/stage-1/finding-great-idea/'
+      },
+      {
+        text: 'Double Diamond Design Model',
         link: '/en/stage-1/appendix-double-diamond/'
       },
       {
-        text: 'Use Jobs to Be Done to Find What Users Really Want to Get Done',
+        text: 'Jobs to Be Done Theory',
         link: '/en/stage-1/appendix-jobs-to-be-done/'
       },
       {
-        text: 'The Mom Test: A User Interview Method for Validating Demand',
+        text: 'The Mom Test: User Interview Method',
         link: '/en/stage-1/appendix-mom-test/'
       }
     ]
   },
   {
-    text: 'Appendix: Technical Solutions',
+    text: 'Chapter 4: Product Development and Implementation',
     collapsed: false,
     items: [
       {
-        text: 'What to do if you encounter errors',
+        text: 'Building Interactive Product Prototypes',
+        link: '/en/stage-1/building-prototype/'
+      },
+      {
+        text: 'Integrating AI Capabilities into Prototypes',
+        link: '/en/stage-1/integrating-ai-capabilities/'
+      },
+      {
+        text: 'Complete Project Practice: From Idea to Product',
+        link: '/en/stage-1/complete-project-practice/'
+      }
+    ]
+  },
+  {
+    text: 'Appendix',
+    collapsed: true,
+    items: [
+      {
+        text: 'Product Thinking Fundamentals',
+        link: '/en/stage-1/appendix-a-product-thinking/'
+      },
+      {
+        text: 'AI Application Scenario Reference',
+        link: '/en/stage-1/appendix-industry-scenarios/'
+      },
+      {
+        text: 'Common Issues and Troubleshooting',
         link: '/en/stage-1/appendix-b-common-errors/'
-      },
-      {
-        text: 'Comparison of Seven AI Programming Tools',
-        link: '/en/stage-1/appendix-articles/example0-1/vibe-coding-tools-snake-game-tutorial'
-      },
-      {
-        text: 'Design Websites with Agents',
-        link: '/en/stage-1/appendix-articles/example0-2/vibe-coding-tools-build-website-with-ai-coding-and-design-agents'
       }
     ]
   }
@@ -554,97 +546,89 @@ const productManagerSidebarEn = [
 
 const productManagerSidebarKo = [
   {
-    text: '시작하기',
+    text: '1장 프로그래밍 입문',
     collapsed: false,
     items: [
-      { text: '학습 지도', link: '/ko-kr/stage-1/learning-map/' },
+      { text: '이 과목 학습 방법', link: '/ko-kr/stage-1/learning-map/' },
       {
-        text: 'AI 시대, 말할 수 있으면 코딩할 수 있다',
+        text: 'AI 시대의 프로그래밍 첫 경험',
         link: '/ko-kr/stage-1/ai-capabilities-through-games/'
       }
     ]
   },
   {
-    text: '제품 프로토타입 역량',
+    text: '2장 개발 환경과 도구',
     collapsed: false,
     items: [
       {
-        text: 'AI IDE 도구 익히기',
+        text: 'AI 프로그래밍 도구 소개와 사용',
         link: '/ko-kr/stage-1/introduction-to-ai-ide/'
       },
       {
-        text: '좋은 아이디어 찾기',
-        link: '/ko-kr/stage-1/finding-great-idea/'
-      },
-      {
-        text: '프로토타입 만들기',
-        link: '/ko-kr/stage-1/building-prototype/'
-      },
-      {
-        text: 'AI 기능 통합하기',
-        link: '/ko-kr/stage-1/integrating-ai-capabilities/'
-      },
-      {
-        text: '완성 프로젝트 실습',
-        link: '/ko-kr/stage-1/complete-project-practice/'
+        text: '스크린샷으로 복제하기: 첫 모방 연습',
+        link: '/ko-kr/stage-1/clone-your-favorite-app/'
       }
     ]
   },
   {
-    text: '부록: 비즈니스 사고',
+    text: '3장 제품 요구사항과 방향',
     collapsed: false,
     items: [
       {
-        text: '제품 사고와 솔루션 설계',
-        link: '/ko-kr/stage-1/appendix-a-product-thinking/'
-      },
-      {
-        text: 'AI 산업 적용 시나리오',
-        link: '/ko-kr/stage-1/appendix-industry-scenarios/'
-      },
-      {
-        text: '소비자용 AI 제품 시나리오',
-        link: '/ko-kr/stage-1/appendix-c-consumer-scenarios/'
-      }
-    ]
-  },
-  {
-    text: '부록: 사용자 조사와 검증',
-    collapsed: false,
-    items: [
-      {
-        text: '아이디어는 어디서 찾을까',
+        text: '창의적 영감의 원천',
         link: '/ko-kr/stage-1/appendix-idea-sources/'
       },
       {
-        text: 'Double Diamond',
+        text: '좋은 아이디어 판별 방법',
+        link: '/ko-kr/stage-1/finding-great-idea/'
+      },
+      {
+        text: '더블 다이아몬드 디자인 모델',
         link: '/ko-kr/stage-1/appendix-double-diamond/'
       },
       {
-        text: 'Jobs to Be Done',
+        text: 'Jobs to Be Done 요구 이론',
         link: '/ko-kr/stage-1/appendix-jobs-to-be-done/'
       },
       {
-        text: 'The Mom Test',
+        text: 'The Mom Test: 사용자 인터뷰 방법',
         link: '/ko-kr/stage-1/appendix-mom-test/'
       }
     ]
   },
   {
-    text: '부록: 기술 문제 해결',
+    text: '4장 제품 개발과 구현',
     collapsed: false,
     items: [
       {
-        text: '오류가 났을 때 대처법',
+        text: '인터랙티브한 제품 프로토타입 구축',
+        link: '/ko-kr/stage-1/building-prototype/'
+      },
+      {
+        text: '프로토타입에 AI 기능 통합하기',
+        link: '/ko-kr/stage-1/integrating-ai-capabilities/'
+      },
+      {
+        text: '완성 프로젝트 실전: 아이디어에서 작품까지',
+        link: '/ko-kr/stage-1/complete-project-practice/'
+      }
+    ]
+  },
+  {
+    text: '부록',
+    collapsed: true,
+    items: [
+      {
+        text: '제품 사고 기초',
+        link: '/ko-kr/stage-1/appendix-a-product-thinking/'
+      },
+      {
+        text: 'AI 애플리케이션 시나리오 참고',
+        link: '/ko-kr/stage-1/appendix-industry-scenarios/'
+      },
+      {
+        text: '자주 묻는 질문과 문제 해결',
         link: '/ko-kr/stage-1/appendix-b-common-errors/'
-      },
-      {
-        text: 'AI 코딩 도구로 스네이크 게임 만들기',
-        link: '/ko-kr/stage-1/appendix-articles/example0-1/vibe-coding-tools-snake-game-tutorial'
-      },
-      {
-        text: '디자인 Agent와 코딩 Agent로 웹사이트 만들기',
-        link: '/ko-kr/stage-1/appendix-articles/example0-2/vibe-coding-tools-build-website-with-ai-coding-and-design-agents'
       }
     ]
   }
@@ -1482,99 +1466,268 @@ const appendixSidebarEn = [
   }
 ]
 
-const productManagerSidebar = [
+const vibeStoriesSidebar = [
   {
-    text: '新手入门',
-    collapsed: false,
-    items: [
-      { text: '学习地图', link: '/zh-cn/stage-1/learning-map/' },
-      {
-        text: 'AI 时代，会说话就会编程',
-        link: '/zh-cn/stage-1/ai-capabilities-through-games/'
-      }
-    ]
-  },
-  {
-    text: '产品原型实战',
+    text: 'Vibe 故事',
     collapsed: false,
     items: [
       {
-        text: '学会 AI 编程工具',
-        link: '/zh-cn/stage-1/introduction-to-ai-ide/'
+        text: '放弃月入过万，他在农村小学带孩子们"用AI赶苍蝇"',
+        link: '/zh-cn/vibe-stories/story-1'
       },
       {
-        text: '找到好点子',
-        link: '/zh-cn/stage-1/finding-great-idea/'
+        text: '期末考试周，我偷偷用AI造了个"校园闲鱼"',
+        link: '/zh-cn/vibe-stories/story-2'
       },
       {
-        text: '搭建产品原型',
-        link: '/zh-cn/stage-1/building-prototype/'
+        text: '我给每个学生，做了一个不会累的"学霸同桌"',
+        link: '/zh-cn/vibe-stories/story-3'
       },
       {
-        text: '接入 AI 能力',
-        link: '/zh-cn/stage-1/integrating-ai-capabilities/'
-      },
-      {
-        text: '完整项目实战',
-        link: '/zh-cn/stage-1/complete-project-practice/'
-      }
-    ]
-  },
-  {
-    text: '附录：业务思维',
-    collapsed: false,
-    items: [
-      {
-        text: '产品思维与方案设计',
-        link: '/zh-cn/stage-1/appendix-a-product-thinking/'
-      },
-      {
-        text: 'AI 行业应用场景参考 (B端)',
-        link: '/zh-cn/stage-1/appendix-industry-scenarios/'
-      },
-      {
-        text: 'AI 消费场景灵感参考 (C端)',
-        link: '/zh-cn/stage-1/appendix-c-consumer-scenarios/'
-      }
-    ]
-  },
-  {
-    text: '附录：用户研究与需求验证',
-    collapsed: false,
-    items: [
-      {
-        text: '从哪里找点子：3 种最适合新手的参考来源',
-        link: '/zh-cn/stage-1/appendix-idea-sources/'
-      },
-      {
-        text: '双钻模型：先做对的事，再把事做对',
-        link: '/zh-cn/stage-1/appendix-double-diamond/'
-      },
-      {
-        text: '用 Jobs to Be Done 找到用户真正想完成的事',
-        link: '/zh-cn/stage-1/appendix-jobs-to-be-done/'
-      },
-      {
-        text: 'The Mom Test 用户访谈法',
-        link: '/zh-cn/stage-1/appendix-mom-test/'
-      }
-    ]
-  },
-  {
-    text: '附录：技术方案',
-    collapsed: false,
-    items: [
-      {
-        text: '写代码时遇到错误怎么办',
-        link: '/zh-cn/stage-1/appendix-b-common-errors/'
+        text: '48岁货车司机，熬了几个通宵，硬是用AI磕出一个出海工具站',
+        link: '/zh-cn/vibe-stories/story-4'
       },
       {
         text: '七款 AI 编程工具对比',
         link: '/zh-cn/stage-1/appendix-articles/example0-1/vibe-coding-tools-snake-game-tutorial'
       },
       {
-        text: '用设计和编程 Agent 设计网站',
+        text: '用设计和编程 Agent 构建网站',
         link: '/zh-cn/stage-1/appendix-articles/example0-2/vibe-coding-tools-build-website-with-ai-coding-and-design-agents'
+      }
+    ]
+  }
+]
+
+const vibeStoriesLabels = {
+  en: {
+    groupText: 'Vibe Stories',
+    items: [
+      'He Left a Five-Figure Monthly Salary to Help Rural School Kids "Use AI to Block Flies"',
+      'During Finals Week, I Secretly Built a "Campus Xianyu" with AI',
+      'I Built Each Student a Tireless "Straight-A Study Buddy"',
+      'At 48, a Truck Driver Pulled Several All-Nighters and Used AI to Build an Overseas Tool Site',
+      'Comparison of Seven AI Programming Tools',
+      'Building Websites with Design and Programming Agents'
+    ]
+  },
+  'ja-jp': {
+    groupText: 'Vibe ストーリー',
+    items: [
+      '月収10万超えを捨て、田舎の小学校で子供たちと「AIでハエを追い払う」',
+      '期末試験期間中、こっそりAIで「キャンパスメルカリ」を作った',
+      'すべての生徒に、疲れ知らずの「秀才の隣人」を作ってあげた',
+      '48歳のトラック運転手、数夜の徹夜でAIを使って海外向けツールサイトを作り上げた',
+      '7つのAIプログラミングツール比較',
+      'デザインAgentとプログラミングAgentでウェブサイトを構築'
+    ]
+  },
+  'zh-tw': {
+    groupText: 'Vibe 故事',
+    items: [
+      '放棄月入過萬，他在農村小學帶孩子們"用AI趕蒼蠅"',
+      '期末考試週，我偷偷用AI造了個"校園閒魚"',
+      '我給每個學生，做了一個不會累的"學霸同桌"',
+      '48歲貨車司機，熬了幾個通宵，硬是用AI磕出一個出海工具站',
+      '七款 AI 程式設計工具對比',
+      '用設計和程式設計 Agent 構建網站'
+    ]
+  },
+  'ko-kr': {
+    groupText: 'Vibe 스토리',
+    items: [
+      '월수입 100만원 이상을 포기하고 시골 초등학교에서 아이들과 "AI로 파리 쫓기"',
+      '기말고사 기간, 몰래 AI로 "캠퍼스 중고나라"를 만들었다',
+      '모든 학생에게 지치지 않는 "모범생 짝꿍"을 만들어주었다',
+      '48세 트럭 운전사, 며칠 밤을 새워 AI로 해외 툴 사이트를 만들었다',
+      '7가지 AI 프로그래밍 도구 비교',
+      '디자인 Agent와 코딩 Agent로 웹사이트 구축하기'
+    ]
+  },
+  'es-es': {
+    groupText: 'Historias Vibe',
+    items: [
+      'Dejó un salario de cinco cifras para ayudar a niños de escuelas rurales a "usar IA para espantar moscas"',
+      'Durante la semana de exámenes finales, construí secretamente un "Xianyu del campus" con IA',
+      'Construí a cada estudiante un "compañero de estudios sobresaliente" incansable',
+      'A los 48, un camionero pasó varias noches en vela y usó IA para construir un sitio de herramientas para el extranjero',
+      'Comparación de siete herramientas de programación con IA',
+      'Construyendo sitios web con agentes de diseño y programación'
+    ]
+  },
+  'fr-fr': {
+    groupText: 'Histoires Vibe',
+    items: [
+      'Il a quitté un salaire à cinq chiffres pour aider des écoliers ruraux à "utiliser l\'IA pour chasser les mouches"',
+      'Pendant la semaine des examens, j\'ai secrètement construit un "Xianyu du campus" avec l\'IA',
+      "J'ai construit à chaque étudiant un « camarade d'études brillant » infatigable",
+      'À 48 ans, un camionneur a passé plusieurs nuits blanches et a utilisé l\'IA pour créer un site d\'outils à l\'international',
+      'Comparaison de sept outils de programmation IA',
+      'Construire des sites web avec des agents de design et de programmation'
+    ]
+  },
+  'de-de': {
+    groupText: 'Vibe-Geschichten',
+    items: [
+      'Er gab ein fünfstelliges Monatsgehalt auf, um Landschulkindern zu helfen, „mit KI Fliegen zu vertreiben"',
+      'Während der Abschlussprüfungswoche baute ich heimlich ein „Campus-Xianyu" mit KI',
+      'Ich baute jedem Schüler einen unermüdlichen „Einser-Schulkameraden"',
+      'Mit 48 zog ein LKW-Fahrer mehrere Nachtschichten durch und baute mit KI eine Übersee-Tool-Site',
+      'Vergleich von sieben KI-Programmierwerkzeugen',
+      'Erstellen von Websites mit Design- und Programmier-Agenten'
+    ]
+  },
+  'ar-sa': {
+    groupText: 'قصص Vibe',
+    items: [
+      'تخلى عن راتب بخمسة أرقام لمساعدة أطفال المدارس الريفية على "استخدام الذكاء الاصطناعي لطرد الذباب"',
+      'خلال أسبوع الامتحانات النهائية، بنيت سراً "شيان يو للحرم الجامعي" بالذكاء الاصطناعي',
+      'بنيت لكل طالب "رفيق دراسة متفوق" لا يكل',
+      'في سن 48، سائق شاحنة سهر عدة ليالي واستخدم الذكاء الاصطناعي لبناء موقع أدوات للخارج',
+      'مقارنة سبع أدوات برمجة بالذكاء الاصطناعي',
+      'بناء المواقع باستخدام وكلاء التصميم والبرمجة'
+    ]
+  },
+  'vi-vn': {
+    groupText: 'Câu chuyện Vibe',
+    items: [
+      'Từ bỏ thu nhập năm con số, anh ấy ở trường tiểu học nông thôn giúp trẻ em "dùng AI đuổi ruồi"',
+      'Tuần thi cuối kỳ, tôi bí mật dùng AI tạo ra "Campus Xianyu"',
+      'Tôi đã làm cho mỗi học sinh một "bạn cùng bàn học giỏi" không biết mệt',
+      'Ở tuổi 48, một tài xế xe tải đã thức nhiều đêm và dùng AI xây dựng một trang web công cụ ra nước ngoài',
+      'So sánh bảy công cụ lập trình AI',
+      'Xây dựng website bằng Agent thiết kế và lập trình'
+    ]
+  }
+}
+
+const getVibeStoriesSidebar = (locale) => {
+  if (locale === 'zh-cn') return vibeStoriesSidebar
+  const labels = vibeStoriesLabels[locale]
+  if (!labels) return vibeStoriesSidebar
+  return [
+    {
+      text: labels.groupText,
+      collapsed: false,
+      items: [
+        { text: labels.items[0], link: `/${locale}/vibe-stories/story-1` },
+        { text: labels.items[1], link: `/${locale}/vibe-stories/story-2` },
+        { text: labels.items[2], link: `/${locale}/vibe-stories/story-3` },
+        { text: labels.items[3], link: `/${locale}/vibe-stories/story-4` },
+        {
+          text: labels.items[4],
+          link: `/${locale}/stage-1/appendix-articles/example0-1/vibe-coding-tools-snake-game-tutorial`
+        },
+        {
+          text: labels.items[5],
+          link: `/${locale}/stage-1/appendix-articles/example0-2/vibe-coding-tools-build-website-with-ai-coding-and-design-agents`
+        }
+      ]
+    }
+  ]
+}
+
+const getVibeStoriesNavText = (locale) => {
+  const navTexts = {
+    'zh-cn': 'Vibe 故事',
+    en: 'Vibe Stories',
+    'ja-jp': 'Vibe ストーリー',
+    'zh-tw': 'Vibe 故事',
+    'ko-kr': 'Vibe 스토리',
+    'es-es': 'Historias Vibe',
+    'fr-fr': 'Histoires Vibe',
+    'de-de': 'Vibe-Geschichten',
+    'ar-sa': 'قصص Vibe',
+    'vi-vn': 'Câu chuyện Vibe'
+  }
+  return navTexts[locale] || 'Vibe Stories'
+}
+
+const productManagerSidebar = [
+  {
+    text: '第一章 编程入门',
+    collapsed: false,
+    items: [
+      { text: '如何学习本课程', link: '/zh-cn/stage-1/learning-map/' },
+      {
+        text: 'AI 时代的编程初体验',
+        link: '/zh-cn/stage-1/ai-capabilities-through-games/'
+      }
+    ]
+  },
+  {
+    text: '第二章 开发环境与工具',
+    collapsed: false,
+    items: [
+      {
+        text: 'AI 编程工具介绍与使用',
+        link: '/zh-cn/stage-1/introduction-to-ai-ide/'
+      },
+      {
+        text: '从截图复刻：第一次模仿练习',
+        link: '/zh-cn/stage-1/clone-your-favorite-app/'
+      }
+    ]
+  },
+  {
+    text: '第三章 产品需求与方向',
+    collapsed: false,
+    items: [
+      {
+        text: '创意灵感的来源',
+        link: '/zh-cn/stage-1/appendix-idea-sources/'
+      },
+      {
+        text: '如何判断一个好点子',
+        link: '/zh-cn/stage-1/finding-great-idea/'
+      },
+      {
+        text: '双钻设计模型',
+        link: '/zh-cn/stage-1/appendix-double-diamond/'
+      },
+      {
+        text: 'Jobs to Be Done 需求理论',
+        link: '/zh-cn/stage-1/appendix-jobs-to-be-done/'
+      },
+      {
+        text: 'The Mom Test：用户访谈方法',
+        link: '/zh-cn/stage-1/appendix-mom-test/'
+      }
+    ]
+  },
+  {
+    text: '第四章 产品开发与实现',
+    collapsed: false,
+    items: [
+      {
+        text: '构建可交互的产品原型',
+        link: '/zh-cn/stage-1/building-prototype/'
+      },
+      {
+        text: '为原型接入 AI 能力',
+        link: '/zh-cn/stage-1/integrating-ai-capabilities/'
+      },
+      {
+        text: '完整项目实战：从想法到作品',
+        link: '/zh-cn/stage-1/complete-project-practice/'
+      }
+    ]
+  },
+  {
+    text: '附录',
+    collapsed: true,
+    items: [
+      {
+        text: '产品思维基础',
+        link: '/zh-cn/stage-1/appendix-a-product-thinking/'
+      },
+      {
+        text: 'AI 应用场景参考',
+        link: '/zh-cn/stage-1/appendix-industry-scenarios/'
+      },
+      {
+        text: '常见问题与排错',
+        link: '/zh-cn/stage-1/appendix-b-common-errors/'
       }
     ]
   }
@@ -1765,294 +1918,274 @@ const localizeAppendixSidebar = (sidebar, locale) =>
 const stage1SidebarLabels = {
   'ja-jp': [
     {
-      text: 'はじめに',
-      items: ['学習ロードマップ', 'AI時代、話せればプログラミングできる']
+      text: '第1章 プログラミング入門',
+      items: ['このコースの学び方', 'AI時代のプログラミング初体験']
     },
     {
-      text: 'プロダクトプロトタイプ実践',
+      text: '第2章 開発環境とツール',
       items: [
-        'AIプログラミングツールを学ぶ',
-        '良いアイデアを見つける',
-        'プロトタイプを作る',
-        'AI能力を統合する',
-        '完全プロジェクト実践'
+        'AIプログラミングツールの紹介と使い方',
+        'スクリーンショットから複製：初めての模倣練習'
       ]
     },
     {
-      text: '付録：ビジネス思考',
+      text: '第3章 プロダクトの要件と方向性',
       items: [
-        'プロダクト思考とソリューション設計',
-        'AI業界応用シナリオ参考（B向け）',
-        'AI消費者シナリオの着想参考（C向け）'
+        'クリエイティブな発想の源',
+        '良いアイデアを見極める方法',
+        'ダブルダイヤモンドデザインモデル',
+        'Jobs to Be Done 要求理論',
+        'The Mom Test：ユーザーインタビュー手法'
       ]
     },
     {
-      text: '付録：ユーザー調査と需要検証',
+      text: '第4章 プロダクト開発と実装',
       items: [
-        'アイデアの見つけ方：初心者向けの3つの参考ソース',
-        'Double Diamond：正しいことを先に、次に正しく行う',
-        'Jobs to Be Doneでユーザーの本当の目的を見つける',
-        'The Mom Test：需要を検証するユーザーインタビュー法'
+        'インタラクティブなプロダクトプロトタイプの構築',
+        'プロトタイプへのAI機能の統合',
+        '完全プロジェクト実践：アイデアから作品まで'
       ]
     },
     {
-      text: '付録：技術的な解決策',
+      text: '付録',
       items: [
-        'コードでエラーが出たらどうするか',
-        '7つのAIプログラミングツール比較',
-        'デザインAgentとコーディングAgentでWebサイトを作る'
+        'プロダクト思考の基礎',
+        'AIアプリケーションシナリオ参考',
+        'よくある問題とトラブルシューティング'
       ]
     }
   ],
   'zh-tw': [
     {
-      text: '新手入門',
-      items: ['學習地圖', 'AI 時代，會說話就會程式設計']
+      text: '第一章 程式設計入門',
+      items: ['如何學習本課程', 'AI 時代的程式設計初體驗']
     },
     {
-      text: '產品原型實戰',
+      text: '第二章 開發環境與工具',
       items: [
-        '學會 AI 程式設計工具',
-        '找到好點子',
-        '搭建產品原型',
-        '接入 AI 能力',
-        '完整專案實戰'
+        'AI 程式設計工具介紹與使用',
+        '從截圖复刻：第一次模仿練習'
       ]
     },
     {
-      text: '附錄：業務思維',
+      text: '第三章 產品需求與方向',
       items: [
-        '產品思維與方案設計',
-        'AI 產業應用場景參考（B 端）',
-        'AI 消費場景靈感參考（C 端）'
+        '創意靈感的來源',
+        '如何判斷一個好點子',
+        '雙鑽設計模型',
+        'Jobs to Be Done 需求理論',
+        'The Mom Test：使用者訪談方法'
       ]
     },
     {
-      text: '附錄：使用者研究與需求驗證',
+      text: '第四章 產品開發與實現',
       items: [
-        '從哪裡找點子：3 種最適合新手的參考來源',
-        '雙鑽模型：先做對的事，再把事做對',
-        '用 Jobs to Be Done 找到使用者真正想完成的事',
-        'The Mom Test 使用者訪談法'
+        '構建可互動的產品原型',
+        '為原型接入 AI 能力',
+        '完整專案實戰：從想法到作品'
       ]
     },
     {
-      text: '附錄：技術方案',
+      text: '附錄',
       items: [
-        '寫程式碼時遇到錯誤怎麼辦',
-        '七款 AI 程式設計工具對比',
-        '用設計和程式設計 Agent 設計網站'
+        '產品思維基礎',
+        'AI 應用場景參考',
+        '常見問題與除錯'
       ]
     }
   ],
   'es-es': [
     {
-      text: 'Primeros pasos',
-      items: ['Ruta de aprendizaje', 'En la era de la IA, hablar es programar']
+      text: 'Capítulo 1: Introducción a la Programación',
+      items: ['Cómo aprender este curso', 'Primera experiencia de programación en la era de la IA']
     },
     {
-      text: 'Práctica de prototipos de producto',
+      text: 'Capítulo 2: Entorno de Desarrollo y Herramientas',
       items: [
-        'Aprender herramientas de programación con IA',
-        'Encontrar buenas ideas',
-        'Construir un prototipo',
-        'Integrar capacidades de IA',
-        'Práctica de proyecto completo'
+        'Introducción y uso de herramientas de programación con IA',
+        'Clonar desde capturas de pantalla: primer ejercicio de imitación'
       ]
     },
     {
-      text: 'Apéndice: pensamiento de negocio',
+      text: 'Capítulo 3: Requisitos y Dirección del Producto',
       items: [
-        'Pensamiento de producto y diseño de soluciones',
-        'Escenarios de aplicación industrial de IA (B2B)',
-        'Inspiración para escenarios de consumo con IA (B2C)'
+        'Fuentes de inspiración creativa',
+        'Cómo identificar una gran idea',
+        'Modelo de diseño Double Diamond',
+        'Teoría Jobs to Be Done',
+        'The Mom Test: método de entrevistas a usuarios'
       ]
     },
     {
-      text: 'Apéndice: investigación de usuarios y validación',
+      text: 'Capítulo 4: Desarrollo e Implementación del Producto',
       items: [
-        'Dónde encontrar ideas: 3 fuentes para principiantes',
-        'Double Diamond: primero lo correcto, luego hacerlo bien',
-        'Jobs to Be Done para descubrir lo que el usuario quiere lograr',
-        'The Mom Test: entrevistas para validar demanda'
+        'Construcción de prototipos de producto interactivos',
+        'Integración de capacidades de IA en prototipos',
+        'Práctica completa de proyecto: de idea a producto'
       ]
     },
     {
-      text: 'Apéndice: soluciones técnicas',
+      text: 'Apéndice',
       items: [
-        'Qué hacer si aparecen errores al programar',
-        'Comparación de siete herramientas de programación con IA',
-        'Diseñar sitios web con agentes de diseño y programación'
+        'Fundamentos del pensamiento de producto',
+        'Referencia de escenarios de aplicación de IA',
+        'Problemas comunes y solución de errores'
       ]
     }
   ],
   'fr-fr': [
     {
-      text: 'Bien démarrer',
+      text: 'Chapitre 1 : Introduction à la Programmation',
+      items: ["Comment apprendre ce cours", "Première expérience de programmation à l'ère de l'IA"]
+    },
+    {
+      text: 'Chapitre 2 : Environnement et Outils de Développement',
       items: [
-        "Parcours d'apprentissage",
-        "À l'ère de l'IA, savoir parler, c'est savoir programmer"
+        "Présentation et utilisation des outils de programmation IA",
+        "Cloner depuis des captures d'écran : premier exercice d'imitation"
       ]
     },
     {
-      text: 'Pratique de prototype produit',
+      text: 'Chapitre 3 : Exigences et Orientation Produit',
       items: [
-        'Apprendre les outils de programmation IA',
-        'Trouver une bonne idée',
-        'Créer un prototype produit',
-        'Intégrer des capacités IA',
-        'Projet complet en conditions réelles'
+        "Sources d'inspiration créative",
+        "Comment identifier une bonne idée",
+        "Modèle de conception Double Diamond",
+        "Théorie Jobs to Be Done",
+        "The Mom Test : méthode d'entretiens utilisateurs"
       ]
     },
     {
-      text: 'Annexe : pensée métier',
+      text: 'Chapitre 4 : Développement et Implémentation du Produit',
       items: [
-        'Pensée produit et conception de solutions',
-        "Scénarios d'application IA en entreprise (B2B)",
-        "Inspirations de scénarios consommateurs avec l'IA (B2C)"
+        "Construction de prototypes de produit interactifs",
+        "Intégration de capacités IA dans les prototypes",
+        "Projet complet pratique : de l'idée au produit"
       ]
     },
     {
-      text: 'Annexe : recherche utilisateur et validation',
+      text: 'Annexe',
       items: [
-        'Où trouver des idées : 3 sources pour débutants',
-        "Double Diamond : faire d'abord la bonne chose, puis bien la faire",
-        'Jobs to Be Done pour trouver ce que les utilisateurs veulent accomplir',
-        'The Mom Test : entretiens utilisateur pour valider la demande'
-      ]
-    },
-    {
-      text: 'Annexe : solutions techniques',
-      items: [
-        "Que faire en cas d'erreur de code",
-        'Comparaison de sept outils de programmation IA',
-        'Concevoir un site avec des agents de design et de programmation'
+        "Fondamentaux de la pensée produit",
+        "Référence des scénarios d'application IA",
+        "Problèmes courants et dépannage"
       ]
     }
   ],
   'de-de': [
     {
-      text: 'Einstieg',
-      items: ['Lernpfad', 'Im KI-Zeitalter reicht Reden zum Programmieren']
+      text: 'Kapitel 1: Einführung in die Programmierung',
+      items: ['Wie man diesen Kurs lernt', 'Erste Programmiererfahrung im KI-Zeitalter']
     },
     {
-      text: 'Produktprototyp-Praxis',
+      text: 'Kapitel 2: Entwicklungsumgebung und Werkzeuge',
       items: [
-        'KI-Programmierwerkzeuge lernen',
-        'Gute Ideen finden',
-        'Produktprototyp erstellen',
-        'KI-Fähigkeiten integrieren',
-        'Vollständiges Projektpraktikum'
+        'Einführung und Nutzung von KI-Programmierwerkzeugen',
+        'Klonen aus Screenshots: Erste Imitationsübung'
       ]
     },
     {
-      text: 'Anhang: Geschäftsdenken',
+      text: 'Kapitel 3: Produktanforderungen und -ausrichtung',
       items: [
-        'Produktdenken und Lösungsentwurf',
-        'KI-Anwendungsszenarien in Branchen (B2B)',
-        'Inspiration für KI-Konsumszenarien (B2C)'
+        'Quellen kreativer Inspiration',
+        'Wie man eine großartige Idee erkennt',
+        'Double Diamond Design-Modell',
+        'Jobs to Be Done-Theorie',
+        'The Mom Test: Benutzerinterviewmethode'
       ]
     },
     {
-      text: 'Anhang: Nutzerforschung und Validierung',
+      text: 'Kapitel 4: Produktentwicklung und -implementierung',
       items: [
-        'Wo findet man Ideen: 3 Quellen für Einsteiger',
-        'Double Diamond: Erst das Richtige tun, dann richtig tun',
-        'Mit Jobs to Be Done erkennen, was Nutzer wirklich erreichen wollen',
-        'The Mom Test: Nutzerinterviews zur Nachfragevalidierung'
+        'Erstellung interaktiver Produktprototypen',
+        'Integration von KI-Fähigkeiten in Prototypen',
+        'Vollständige Projektpraxis: Von der Idee zum Produkt'
       ]
     },
     {
-      text: 'Anhang: technische Lösungen',
+      text: 'Anhang',
       items: [
-        'Was tun bei Fehlern im Code',
-        'Vergleich von sieben KI-Programmierwerkzeugen',
-        'Websites mit Design- und Programmier-Agenten entwerfen'
+        'Grundlagen des Produktdenkens',
+        'Referenz für KI-Anwendungsszenarien',
+        'Häufige Probleme und Fehlerbehebung'
       ]
     }
   ],
   'ar-sa': [
     {
-      text: 'البدء',
+      text: 'الفصل الأول: مقدمة في البرمجة',
+      items: ['كيف تتعلم هذه الدورة', 'أول تجربة برمجة في عصر الذكاء الاصطناعي']
+    },
+    {
+      text: 'الفصل الثاني: بيئة التطوير والأدوات',
       items: [
-        'خريطة التعلم',
-        'في عصر الذكاء الاصطناعي، من يستطيع التحدث يستطيع البرمجة'
+        'مقدمة واستخدام أدوات البرمجة بالذكاء الاصطناعي',
+        'الاستنساخ من لقطات الشاشة: أول تمرين محاكاة'
       ]
     },
     {
-      text: 'تطبيق نموذج المنتج الأولي',
+      text: 'الفصل الثالث: متطلبات المنتج والتوجيه',
       items: [
-        'تعلم أدوات البرمجة بالذكاء الاصطناعي',
-        'إيجاد فكرة جيدة',
-        'بناء نموذج أولي للمنتج',
-        'دمج قدرات الذكاء الاصطناعي',
-        'مشروع عملي كامل'
+        'مصادر الإلهام الإبداعي',
+        'كيف تحدد فكرة رائعة',
+        'نموذج التصميم الماسي المزدوج',
+        'نظرية Jobs to Be Done',
+        'اختبار الأم: طريقة مقابلات المستخدم'
       ]
     },
     {
-      text: 'ملحق: التفكير التجاري',
+      text: 'الفصل الرابع: تطوير المنتج والتنفيذ',
       items: [
-        'التفكير المنتجي وتصميم الحلول',
-        'سيناريوهات تطبيق الذكاء الاصطناعي في الصناعة (B2B)',
-        'إلهام سيناريوهات المستهلك بالذكاء الاصطناعي (B2C)'
+        'بناء نماذج أولية تفاعلية للمنتج',
+        'دمج قدرات الذكاء الاصطناعي في النماذج الأولية',
+        'مشروع عملي كامل: من الفكرة إلى المنتج'
       ]
     },
     {
-      text: 'ملحق: بحث المستخدم والتحقق من الطلب',
+      text: 'الملحق',
       items: [
-        'من أين تجد الأفكار: 3 مصادر مناسبة للمبتدئين',
-        'نموذج الماس المزدوج: افعل الشيء الصحيح أولاً ثم افعله بشكل صحيح',
-        'استخدم Jobs to Be Done لمعرفة ما يريد المستخدم إنجازه',
-        'The Mom Test: مقابلات المستخدم للتحقق من الطلب'
-      ]
-    },
-    {
-      text: 'ملحق: حلول تقنية',
-      items: [
-        'ماذا تفعل عند ظهور أخطاء في الكود',
-        'مقارنة سبع أدوات برمجة بالذكاء الاصطناعي',
-        'تصميم المواقع باستخدام وكلاء التصميم والبرمجة'
+        'أساسيات التفكير المنتجي',
+        'مرجع سيناريوهات تطبيق الذكاء الاصطناعي',
+        'المشاكل الشائعة واستكشاف الأخطاء وإصلاحها'
       ]
     }
   ],
   'vi-vn': [
     {
-      text: 'Nhập môn',
-      items: ['Lộ trình học tập', 'Thời đại AI, biết nói là biết lập trình']
+      text: 'Chương 1: Giới thiệu Lập trình',
+      items: ['Cách học khóa học này', 'Trải nghiệm lập trình đầu tiên trong thời đại AI']
     },
     {
-      text: 'Thực hành nguyên mẫu sản phẩm',
+      text: 'Chương 2: Môi trường Phát triển và Công cụ',
       items: [
-        'Học công cụ lập trình AI',
-        'Tìm ý tưởng tốt',
-        'Xây dựng nguyên mẫu sản phẩm',
-        'Tích hợp năng lực AI',
-        'Thực chiến dự án hoàn chỉnh'
+        'Giới thiệu và sử dụng công cụ lập trình AI',
+        'Sao chép từ ảnh chụp màn hình: bài tập bắt chước đầu tiên'
       ]
     },
     {
-      text: 'Phụ lục: tư duy kinh doanh',
+      text: 'Chương 3: Yêu cầu và Định hướng Sản phẩm',
       items: [
-        'Tư duy sản phẩm và thiết kế giải pháp',
-        'Tham khảo kịch bản ứng dụng AI trong ngành (B2B)',
-        'Gợi ý kịch bản tiêu dùng với AI (B2C)'
+        'Nguồn cảm hứng sáng tạo',
+        'Cách xác định một ý tưởng hay',
+        'Mô hình thiết kế Double Diamond',
+        'Lý thuyết Jobs to Be Done',
+        'The Mom Test: phương pháp phỏng vấn người dùng'
       ]
     },
     {
-      text: 'Phụ lục: nghiên cứu người dùng và xác thực nhu cầu',
+      text: 'Chương 4: Phát triển và Triển khai Sản phẩm',
       items: [
-        'Tìm ý tưởng ở đâu: 3 nguồn phù hợp cho người mới',
-        'Double Diamond: làm đúng việc trước, rồi làm đúng cách',
-        'Dùng Jobs to Be Done để tìm điều người dùng thật sự muốn hoàn thành',
-        'The Mom Test: phỏng vấn người dùng để xác thực nhu cầu'
+        'Xây dựng nguyên mẫu sản phẩm tương tác',
+        'Tích hợp năng lực AI vào nguyên mẫu',
+        'Thực chiến dự án hoàn chỉnh: từ ý tưởng đến sản phẩm'
       ]
     },
     {
-      text: 'Phụ lục: giải pháp kỹ thuật',
+      text: 'Phụ lục',
       items: [
-        'Làm gì khi gặp lỗi trong code',
-        'So sánh bảy công cụ lập trình AI',
-        'Thiết kế website bằng agent thiết kế và agent lập trình'
+        'Nền tảng tư duy sản phẩm',
+        'Tham khảo kịch bản ứng dụng AI',
+        'Các vấn đề thường gặp và khắc phục lỗi'
       ]
     }
   ]
@@ -2487,6 +2620,10 @@ const zhCnStage3Sidebar = [
       {
         text: '从 Vibe Coding 到 Spec Coding',
         link: '/zh-cn/stage-3/core-skills/spec-coding/'
+      },
+      {
+        text: 'GitHub Issues 驱动开发实战',
+        link: '/zh-cn/stage-3/core-skills/github-iterative-development/'
       }
     ]
   },
@@ -3116,34 +3253,13 @@ Sitemap: ${siteUrl}/sitemap.xml
           {
             text: 'Vibe 故事',
             link: '/zh-cn/vibe-stories/story-1',
-            activeMatch: '/zh-cn/vibe-stories/'
+            activeMatch: '/zh-cn/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
-          '/zh-cn/vibe-stories/': [
-            {
-              text: 'Vibe 故事',
-              collapsed: false,
-              items: [
-                {
-                  text: '放弃月入过万，他在农村小学带孩子们“用AI赶苍蝇”',
-                  link: '/zh-cn/vibe-stories/story-1'
-                },
-                {
-                  text: '期末考试周，我偷偷用AI造了个“校园闲鱼”',
-                  link: '/zh-cn/vibe-stories/story-2'
-                },
-                {
-                  text: '我给每个学生，做了一个不会累的“学霸同桌”',
-                  link: '/zh-cn/vibe-stories/story-3'
-                },
-                {
-                  text: '48岁货车司机，熬了几个通宵，硬是用AI磕出一个出海工具站',
-                  link: '/zh-cn/vibe-stories/story-4'
-                }
-              ]
-            }
-          ],
+          '/zh-cn/vibe-stories/': vibeStoriesSidebar,
+          '/zh-cn/stage-1/appendix-articles/example0-1/': vibeStoriesSidebar,
+          '/zh-cn/stage-1/appendix-articles/example0-2/': vibeStoriesSidebar,
           '/zh-cn/stage-1/': productManagerSidebar,
           '/zh-cn/stage-2/': zhCnStage2Sidebar,
           '/zh-cn/stage-3/': zhCnStage3Sidebar,
@@ -3736,36 +3852,15 @@ Sitemap: ${siteUrl}/sitemap.xml
             activeMatch: '/en/appendix/'
           },
           {
-            text: 'Vibe Stories',
+            text: getVibeStoriesNavText('en'),
             link: '/en/vibe-stories/story-1',
-            activeMatch: '/en/vibe-stories/'
+            activeMatch: '/en/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
-          '/en/vibe-stories/': [
-            {
-              text: 'Vibe Stories',
-              collapsed: false,
-              items: [
-                {
-                  text: 'He Left a Five-Figure Monthly Salary to Help Rural School Kids "Use AI to Block Flies"',
-                  link: '/en/vibe-stories/story-1'
-                },
-                {
-                  text: 'During Finals Week, I Secretly Built a "Campus Xianyu" with AI',
-                  link: '/en/vibe-stories/story-2'
-                },
-                {
-                  text: 'I Built Each Student a Tireless "Straight-A Study Buddy"',
-                  link: '/en/vibe-stories/story-3'
-                },
-                {
-                  text: 'At 48, a Truck Driver Pulled Several All-Nighters and Used AI to Build an Overseas Tool Site',
-                  link: '/en/vibe-stories/story-4'
-                }
-              ]
-            }
-          ],
+          '/en/vibe-stories/': getVibeStoriesSidebar('en'),
+          '/en/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('en'),
+          '/en/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('en'),
           '/en/stage-1/': productManagerSidebarEn,
           '/en/stage-2/': stage2SidebarEn,
           '/en/stage-3/': stage3SidebarEn,
@@ -3821,9 +3916,17 @@ Sitemap: ${siteUrl}/sitemap.xml
             text: '付録',
             link: '/ja-jp/appendix/',
             activeMatch: '/ja-jp/appendix/'
+          },
+          {
+            text: getVibeStoriesNavText('ja-jp'),
+            link: '/ja-jp/vibe-stories/story-1',
+            activeMatch: '/ja-jp/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
+          '/ja-jp/vibe-stories/': getVibeStoriesSidebar('ja-jp'),
+          '/ja-jp/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('ja-jp'),
+          '/ja-jp/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('ja-jp'),
           '/ja-jp/stage-1/': getStage1Sidebar('ja-jp'),
           '/ja-jp/stage-2/': getStage2Sidebar('ja-jp'),
           '/ja-jp/stage-3/': getStage3Sidebar('ja-jp'),
@@ -3880,9 +3983,17 @@ Sitemap: ${siteUrl}/sitemap.xml
             text: '附錄',
             link: '/zh-tw/appendix/',
             activeMatch: '/zh-tw/appendix/'
+          },
+          {
+            text: getVibeStoriesNavText('zh-tw'),
+            link: '/zh-tw/vibe-stories/story-1',
+            activeMatch: '/zh-tw/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
+          '/zh-tw/vibe-stories/': getVibeStoriesSidebar('zh-tw'),
+          '/zh-tw/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('zh-tw'),
+          '/zh-tw/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('zh-tw'),
           '/zh-tw/stage-1/': getStage1Sidebar('zh-tw'),
           '/zh-tw/stage-2/': getStage2Sidebar('zh-tw'),
           '/zh-tw/stage-3/': getStage3Sidebar('zh-tw'),
@@ -3939,9 +4050,17 @@ Sitemap: ${siteUrl}/sitemap.xml
             text: '부록',
             link: '/ko-kr/appendix/',
             activeMatch: '/ko-kr/appendix/'
+          },
+          {
+            text: getVibeStoriesNavText('ko-kr'),
+            link: '/ko-kr/vibe-stories/story-1',
+            activeMatch: '/ko-kr/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
+          '/ko-kr/vibe-stories/': getVibeStoriesSidebar('ko-kr'),
+          '/ko-kr/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('ko-kr'),
+          '/ko-kr/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('ko-kr'),
           '/ko-kr/stage-1/': productManagerSidebarKo,
           '/ko-kr/stage-2/': getStage2Sidebar('ko-kr'),
           '/ko-kr/stage-3/': getStage3Sidebar('ko-kr'),
@@ -3998,9 +4117,17 @@ Sitemap: ${siteUrl}/sitemap.xml
             text: 'Apéndice',
             link: '/es-es/appendix/',
             activeMatch: '/es-es/appendix/'
+          },
+          {
+            text: getVibeStoriesNavText('es-es'),
+            link: '/es-es/vibe-stories/story-1',
+            activeMatch: '/es-es/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
+          '/es-es/vibe-stories/': getVibeStoriesSidebar('es-es'),
+          '/es-es/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('es-es'),
+          '/es-es/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('es-es'),
           '/es-es/stage-1/': getStage1Sidebar('es-es'),
           '/es-es/stage-2/': getStage2Sidebar('es-es'),
           '/es-es/stage-3/': getStage3Sidebar('es-es'),
@@ -4057,9 +4184,17 @@ Sitemap: ${siteUrl}/sitemap.xml
             text: 'Annexe',
             link: '/fr-fr/appendix/',
             activeMatch: '/fr-fr/appendix/'
+          },
+          {
+            text: getVibeStoriesNavText('fr-fr'),
+            link: '/fr-fr/vibe-stories/story-1',
+            activeMatch: '/fr-fr/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
+          '/fr-fr/vibe-stories/': getVibeStoriesSidebar('fr-fr'),
+          '/fr-fr/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('fr-fr'),
+          '/fr-fr/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('fr-fr'),
           '/fr-fr/stage-1/': getStage1Sidebar('fr-fr'),
           '/fr-fr/stage-2/': getStage2Sidebar('fr-fr'),
           '/fr-fr/stage-3/': getStage3Sidebar('fr-fr'),
@@ -4116,9 +4251,17 @@ Sitemap: ${siteUrl}/sitemap.xml
             text: 'Anhang',
             link: '/de-de/appendix/',
             activeMatch: '/de-de/appendix/'
+          },
+          {
+            text: getVibeStoriesNavText('de-de'),
+            link: '/de-de/vibe-stories/story-1',
+            activeMatch: '/de-de/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
+          '/de-de/vibe-stories/': getVibeStoriesSidebar('de-de'),
+          '/de-de/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('de-de'),
+          '/de-de/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('de-de'),
           '/de-de/stage-1/': getStage1Sidebar('de-de'),
           '/de-de/stage-2/': getStage2Sidebar('de-de'),
           '/de-de/stage-3/': getStage3Sidebar('de-de'),
@@ -4175,9 +4318,17 @@ Sitemap: ${siteUrl}/sitemap.xml
             text: 'ملحق',
             link: '/ar-sa/appendix/',
             activeMatch: '/ar-sa/appendix/'
+          },
+          {
+            text: getVibeStoriesNavText('ar-sa'),
+            link: '/ar-sa/vibe-stories/story-1',
+            activeMatch: '/ar-sa/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
+          '/ar-sa/vibe-stories/': getVibeStoriesSidebar('ar-sa'),
+          '/ar-sa/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('ar-sa'),
+          '/ar-sa/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('ar-sa'),
           '/ar-sa/stage-1/': getStage1Sidebar('ar-sa'),
           '/ar-sa/stage-2/': getStage2Sidebar('ar-sa'),
           '/ar-sa/stage-3/': getStage3Sidebar('ar-sa'),
@@ -4235,9 +4386,17 @@ Sitemap: ${siteUrl}/sitemap.xml
             text: 'Phụ lục',
             link: '/vi-vn/appendix/',
             activeMatch: '/vi-vn/appendix/'
+          },
+          {
+            text: getVibeStoriesNavText('vi-vn'),
+            link: '/vi-vn/vibe-stories/story-1',
+            activeMatch: '/vi-vn/(vibe-stories|stage-1/appendix-articles/example0-1|stage-1/appendix-articles/example0-2)/'
           }
         ],
         sidebar: {
+          '/vi-vn/vibe-stories/': getVibeStoriesSidebar('vi-vn'),
+          '/vi-vn/stage-1/appendix-articles/example0-1/': getVibeStoriesSidebar('vi-vn'),
+          '/vi-vn/stage-1/appendix-articles/example0-2/': getVibeStoriesSidebar('vi-vn'),
           '/vi-vn/stage-1/': getStage1Sidebar('vi-vn'),
           '/vi-vn/stage-2/': getStage2Sidebar('vi-vn'),
           '/vi-vn/stage-3/': getStage3Sidebar('vi-vn'),
