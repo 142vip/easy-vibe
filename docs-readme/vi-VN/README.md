@@ -247,8 +247,7 @@ Easy-Vibe giup ban bien dieu do thanh mot san pham that.
 | Phan | Noi dung chinh |
 | :------ | :---------- |
 | [Tu duy san pham va thiet ke phuong an](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-a-product-thinking/) | Khung tu duy co ban tu khong den mot voi san pham |
-| [Cac kich ban ung dung AI trong nganh (B2B)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | Hieu cach AI duoc ung dung trong cac nganh nghe |
-| [Cam hung kich ban tieu dung AI (B2C)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-c-consumer-scenarios/) | Kham pha co hoi san pham trong AI tieu dung |
+| [Tham chieu kich ban ung dung AI (B2B & B2C)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | Kich ban ung dung AI cong nghiep B2B va tieu dung B2C |
 
 #### Phu luc: Nghien cuu nguoi dung va Xac thuc yeu cau
 

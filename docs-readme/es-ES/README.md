@@ -247,8 +247,7 @@ Easy-Vibe te enseña a convertir eso en un producto real.
 | Sección | Contenido clave |
 | :------ | :---------- |
 | [Pensamiento de producto y diseño de soluciones](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-a-product-thinking/) | Marcos fundamentales para ir de cero a uno con un producto |
-| [Escenarios de aplicación de IA en la industria (B2B)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | Comprende cómo se aplica la IA en diferentes industrias |
-| [Inspiración de escenarios de IA para consumidores (B2C)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-c-consumer-scenarios/) | Explora oportunidades de productos en IA de consumo |
+| [Referencia de escenarios de aplicación de IA (B2B y B2C)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | Escenarios de aplicaciones de IA B2B industrial y B2C de consumo |
 
 #### Apéndice: Investigación de usuarios y validación de requisitos
 

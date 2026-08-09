@@ -249,8 +249,7 @@ Easy-Vibe 教你的，就是怎樣把它一步步做成真正的產品。
 | 章節                                                                                 | 關鍵內容                                   |
 | :----------------------------------------------------------------------------------- | :----------------------------------------- |
 | [產品思維與方案設計](https://datawhalechina.github.io/easy-vibe/zh-cn/stage-1/appendix-a-product-thinking/)        | 從零到一做產品需要考慮的思維框架           |
-| [AI 行業應用場景參考 (B 端)](https://datawhalechina.github.io/easy-vibe/zh-cn/stage-1/appendix-industry-scenarios/) | 了解 AI 在不同產業的應用場景               |
-| [AI 消費場景靈感參考 (C 端)](https://datawhalechina.github.io/easy-vibe/zh-cn/stage-1/appendix-c-consumer-scenarios/) | 探索 AI 在消費級產品中的應用場景           |
+| [AI 應用場景參考（B 端與 C 端）](https://datawhalechina.github.io/easy-vibe/zh-cn/stage-1/appendix-industry-scenarios/) | B 端產業應用與 C 端消費場景參考             |
 
 #### 附錄：使用者研究與需求驗證
 

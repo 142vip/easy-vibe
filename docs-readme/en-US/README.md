@@ -247,8 +247,7 @@ Easy-Vibe teaches you how to turn that into a real product.
 | Section | Key Content |
 | :------ | :---------- |
 | [Product Thinking and Solution Design](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-a-product-thinking/) | Core frameworks for going from zero to one with a product |
-| [AI Industry Application Scenarios (B-end)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | Understand how AI is applied across industries |
-| [AI Consumer Scenarios Inspiration (C-end)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-c-consumer-scenarios/) | Explore product opportunities in consumer AI |
+| [AI Application Scenario Reference (B2B & B2C)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | B2B industry and B2C consumer AI application scenarios |
 
 #### Appendix: User Research and Requirement Validation
 

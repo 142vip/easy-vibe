@@ -247,8 +247,7 @@ Easy-Vibe는 그것을 실제 제품으로 만드는 방법을 가르칩니다.
 | 섹션 | 핵심 내용 |
 | :------ | :---------- |
 | [제품 사고와 솔루션 설계](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-a-product-thinking/) | 제품을 0에서 1로 만들기 위한 핵심 프레임워크 |
-| [AI 산업 응용 시나리오 (B2B)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | 다양한 산업에서 AI가 어떻게 활용되는지 이해합니다 |
-| [AI 소비자 시나리오 인스피레이션 (B2C)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-c-consumer-scenarios/) | 소비자 AI에서의 제품 기회를 탐색합니다 |
+| [AI 애플리케이션 시나리오 참고 (B2B & B2C)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | B2B 산업 및 B2C 소비자 AI 애플리케이션 시나리오 |
 
 #### 부록: 사용자 연구 및 요구사항 검증
 

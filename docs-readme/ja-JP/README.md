@@ -247,8 +247,7 @@ Easy-Vibe は、それを本物のプロダクトにする方法を教えます�
 | セクション | 主要コンテンツ |
 | :------ | :---------- |
 | [プロダクト思考とソリューション設計](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-a-product-thinking/) | ゼロからイチのプロダクトを作るための核心フレームワーク |
-| [AI 業界アプリケーションシナリオ（BtoB）](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | 業界横断的な AI の活用方法を理解する |
-| [AI コンシューマーシナリオのインスピレーション（BtoC）](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-c-consumer-scenarios/) | コンシューマー AI におけるプロダクト機会を探る |
+| [AI アプリケーションシナリオ参考（BtoB・BtoC）](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | BtoB 業界と BtoC 消費者向け AI アプリケーションシナリオ |
 
 #### 附録：ユーザー調査と要件検証
 

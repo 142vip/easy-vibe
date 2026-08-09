@@ -247,8 +247,7 @@ Easy-Vibe يعلمك كيف تحول ذلك إلى منتج حقيقي.
 | القسم | المحتوى الرئيسي |
 | :------ | :---------- |
 | [التفكير في المنتج وتصميم الحلول](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-a-product-thinking/) | أطر أساسية للانتقال من الصفر إلى الواحد مع منتج |
-| [سيناريوهات تطبيق الذكاء الاصطناعي في الصناعة (B2B)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | فهم كيف يُطبَّق الذكاء الاصطناعي عبر مختلف الصناعات |
-| [إلهام سيناريوهات الذكاء الاصطناعي الاستهلاكية (B2C)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-c-consumer-scenarios/) | استكشف فرص المنتجات في الذكاء الاصطناعي الاستهلاكي |
+| [مرجع سيناريوهات تطبيق الذكاء الاصطناعي (B2B و B2C)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | سيناريوهات تطبيقات الذكاء الاصطناعي في الصناعة B2B والاستهلاك B2C |
 
 #### الملحق: بحث المستخدم والتحقق من المتطلبات
 

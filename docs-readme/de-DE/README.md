@@ -247,8 +247,7 @@ Easy-Vibe zeigt dir, wie du daraus ein echtes Produkt machst.
 | Abschnitt | Wichtiger Inhalt |
 | :------ | :---------- |
 | [Produktdenken und Loungsdesign](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-a-product-thinking/) | Kern-Frameworks fuer den Weg von Null zu Eins mit einem Produkt |
-| [KI-Branchen-Anwendungsszenarien (B2B)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | Verstheen, wie KI ueber Branchen hinweg angewendet wird |
-| [KI-Konsumentenszenarien-Inspiration (B2C)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-c-consumer-scenarios/) | Produktmoeglichkeiten in der Konsum-KI erkunden |
+| [AI-Anwendungsszenarien-Referenz (B2B & B2C)](https://datawhalechina.github.io/easy-vibe/en/stage-1/appendix-industry-scenarios/) | B2B-Branchen- und B2C-Konsum-KI-Anwendungsszenarien |
 
 #### Anhang: Nutzerforschung und Anforderungsvalidierung
 
