@@ -5,7 +5,9 @@ description: '把已经接入 AI 的原型完整用一遍，请别人来试试�
 
 <script setup>
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import ProductFinishMap from './ProductFinishMap.vue'
+import StageOneCompletion from './StageOneCompletion.vue'
 
 const duration = '约 <strong>2～3 天</strong>'
 const relatedArticles =
@@ -268,6 +270,36 @@ AI 返回内容不是流程的终点。用户通常还要检查事实、修改�
 
 如果使用了别人的图片、声音或文档，也记得先确认可以使用。
 
+## 6. 📚 本章作业
+
+<StageAssignmentCard title="完成并发布你的第一阶段作品">
+
+  <p>不要再添加新功能。把现在的作品整理好，真正交给一个人使用。</p>
+
+  <ol>
+    <li>
+      <strong>完整用一次</strong>
+      <ul>
+        <li>从打开页面开始，一直用到拿到、编辑或保存结果。</li>
+      </ul>
+    </li>
+    <li>
+      <strong>请一个人来试</strong>
+      <ul>
+        <li>先不教他怎么操作，观察他停在哪里，再改好其中一个问题。</li>
+      </ul>
+    </li>
+    <li>
+      <strong>把作品发出去</strong>
+      <ul>
+        <li>准备访问链接或启动方式、30～60 秒演示视频，以及一段简短介绍。</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>当别人能打开作品并独立完成一次使用，Stage 1 就真正完成了。</p>
+</StageAssignmentCard>
+
 ## 下一步
 
 完成这份作品后，你已经走过一条完整路径：从真实问题出发，收敛第一版方案，做出可交互原型，接入 AI，再把产品交给用户试用和修改。
@@ -279,3 +311,5 @@ AI 返回内容不是流程的终点。用户通常还要检查事实、修改�
   description="完成 Stage 1 后，可以继续学习下面的工程化内容。"
   :items="relatedArticles"
 />
+
+<StageOneCompletion />
