@@ -1,6 +1,6 @@
 ---
 title: '如何学习本课程'
-description: '从零开始学习发现问题、验证需求、构建 AI 产品并交付真实用户，逐步成长为能够对产品结果负责的产品工程师。'
+description: '从自己的想法和真实问题出发，借助 AI 构建软件、交付用户并持续改进，成为 AI 原生时代的软件创作者。'
 ---
 
 <script setup>
@@ -12,28 +12,28 @@ const relatedArticles = relatedArticlesMap['zh-cn/stage-1/learning-map'] ?? []
 # 如何学习本课程
 
 ::: info 特别感谢
-本教程的核心贡献者与测试者来自 **清华大学深圳国际研究生院**。感谢同学们在实际学习和操作中不断指出问题、提出建议并参与修改，让教程更清晰、更可靠，也更贴近初学者的真实需要。[**👉 查看完整贡献者名单**](https://github.com/datawhalechina/easy-vibe#-contributing--contributors)
+本教程的[核心贡献者与测试者](https://github.com/datawhalechina/easy-vibe#-contributing--contributors)来自 **清华大学深圳国际研究生院**。感谢同学们在实际学习和操作中不断指出问题、提出建议并参与修改，让教程更清晰、更可靠，也更贴近初学者的真实需要。
 :::
 
-以前做软件，门槛很高：你要学习编程语言、开发工具和大量技术知识，才能把一个想法变成可以运行的程序。大语言模型和 AI 编程工具改变了这件事——人开始可以直接用自然语言描述意图，让 AI 帮助生成代码、搭建界面和修改功能。
+以前想做软件，要先学编程语言和各种开发工具。现在不一样了。你可以直接告诉 AI 想做什么，让它帮你写代码、做界面、改功能。
 
 ## 从 Vibe Coding 到 Build Product
 
-**[Vibe Coding](https://www.merriam-webster.com/dictionary/vibe%20coding) 这个说法出现于 2025 年 2 月 2 日。** AI 研究者 Andrej Karpathy 用它描述一种新的编程方式：人主要通过自然语言告诉 AI 想要什么，观察运行结果，再继续对话和修改，而不必从头手写、理解和管理每一行代码。
+**[Vibe Coding](https://www.merriam-webster.com/dictionary/vibe%20coding) 这个说法出现于 2025 年 2 月 2 日。** AI 研究者 Andrej Karpathy 用它来形容一种新的编程方式：你告诉 AI 想做什么，运行看看，再继续和它对话、修改。很多代码不需要自己一行一行写。
 
 > **什么是 Vibe Coding？**
 > 简单说，就是“用说话来编程”：描述想法，让 AI 生成程序，运行看看，再通过对话不断调整。
 
-它最先带来的突破，是让更多人跨过了“不会写代码，所以无法开始”的门槛。一个没有编程经验的人，也可以在几分钟内做出小游戏、网页或可以演示的原型。
+它最大的变化是：不会写代码的人，也可以开始做东西。几分钟内，你就可能做出一个小游戏、网页或者简单原型。
 
 <figure class="concept-illustration">
   <img src="./images/vibe-coding-to-product.png" alt="一位创作者借助 AI 将自然语言想法变成产品原型，交给真实用户使用，并根据反馈继续迭代" loading="lazy">
-  <figcaption>Vibe Coding 帮助你跨过“做出来”的门槛；Build Product 要继续走向真实用户、反馈与价值。</figcaption>
+  <figcaption>Vibe Coding 帮你先做出来；Build Product 还要把它交给用户，看它是不是真的有用。</figcaption>
 </figure>
 
-这是一个巨大的变化：**人与计算机沟通的方式，正在从严格的编程语法延伸到自然语言。**
+简单说，以前主要靠代码和计算机沟通，现在也可以直接和 AI 说话。
 
-但当“做出一个能运行的 Demo”越来越容易，新的问题就出现了：
+不过，能做出 Demo，不等于能做出真正的产品。你还要想清楚：
 
 - 应该做什么，而不只是能做什么？
 - 它为谁解决问题，用户真的需要吗？
@@ -41,32 +41,39 @@ const relatedArticles = relatedArticlesMap['zh-cn/stage-1/learning-map'] ?? []
 - 怎样把产品交给用户，而不只是在自己的电脑上运行？
 - 怎样通过使用、反馈和付费，证明它确实创造了价值？
 
-因此，Vibe Coding 并没有消除学习要求，而是**改变并提高了要求**。
+所以，会让 AI 写代码只是开始。
 
-只看 Coding，目标是让代码运行；真正 Build Product，则要对从问题到结果的完整过程负责：
+Coding 是把东西做出来。Build Product 还要继续往后走：
 
 > **Coding：我能不能把它做出来？**<br>
 > **Build Product：它值不值得做，谁会使用，我怎样把它交付出去，又怎样知道它真的有效？**
 
-Vibe Coding 是这门课的起点，但不是终点。我们会先让你快速做出东西，再逐步学习怎样选择问题、验证需求、设计方案、构建产品、接触用户和根据结果迭代。
+Vibe Coding 是这门课的起点，但不是终点。我们会先做出东西，再去找用户、听反馈，一步一步把 Demo 变成真正能用的产品。
 
-::: tip 这门课真正想培养什么？
-这门课不只是教你使用 AI 编程工具，而是希望帮助你成为一名初步的**产品工程师（Product Engineer）**：能够发现问题、验证需求、亲手构建产品、交付真实用户，并根据结果继续迭代的人。
+::: tip 这门课想带你做什么？
+这门课不只教你怎么使用 AI 编程工具。我们更希望你能成为一名 **AI 原生时代的软件创作者**：从自己的想法和真实问题出发，借助 AI 做出软件，交给别人使用，再根据反馈把它慢慢变好。
+
+你不一定要先成为程序员，也不需要把自己限制在某个岗位里。重要的是，你能把脑中的想法变成真正可以运行、可以分享、可以帮助别人的东西。
 :::
 
-## 为什么现在需要产品工程师？
+## AI 让更多人可以成为软件创作者
 
-产品工程师并不是 2026 年突然出现的新职业。
+这种变化也在影响公司里的岗位。比如，一些团队把既理解用户、又亲手做产品的人称为产品工程师。早在 2018 年，Intercom 就提出：工程师不应该只等别人写好需求，再照着做功能。他也要了解用户，参与产品判断，并继续改进自己做出来的东西。
 
-早在 2018 年，Intercom 就用 Product Engineer 描述一种具有产品所有权的工程师：他不只是实现别人已经设计好的功能，也要理解客户、参与产品判断，并持续改进自己交付的产品。
+<figure class="source-evidence">
+  <a href="https://www.intercom.com/blog/making-the-transition-from-consultant-to-product-engineer/" target="_blank" rel="noopener noreferrer">
+    <div class="source-evidence-viewport">
+      <img src="./images/sources/intercom-product-engineer.png" alt="Intercom 2018 年文章 Making the transition from consultant to product engineer 的网页截图" loading="lazy">
+    </div>
+  </a>
+  <figcaption>Intercom 在 2018 年发布的 Product Engineer 文章。</figcaption>
+</figure>
 
-AI 带来的新变化，是大幅降低了“做出来”的成本，也让工程师有机会承担更多过去由不同角色分工完成的工作。借助大模型和编程 Agent，一个人更容易跨越原型、界面、前后端、AI 能力集成、测试和部署。于是，岗位要求也开始从“完成代码”继续向前延伸：直接理解用户、验证方案、推动采用，并对业务结果负责。
+AI 让做产品变快了。现在，一个人借助大模型和编程 Agent，就可以做原型、界面、前后端、测试和部署。因此，很多公司开始希望工程师多走一步：不只把功能做完，还要了解用户为什么需要它，以及做完以后有没有效果。
 
-### 从“参与产品”到“负责结果”
+下面这些真实岗位，也能看出这种变化：
 
-下面是这条变化的几个真实时间点：
-
-| 时间 | 公司与岗位 | 岗位释放的信号 |
+| 时间 | 公司与岗位 | 主要在做什么 |
 | --- | --- | --- |
 | 2018 年 5 月 | [Intercom：Product Engineer](https://www.intercom.com/blog/making-the-transition-from-consultant-to-product-engineer/) | 工程师同时也是产品人，要理解客户并参与决定产品应该怎样发展 |
 | 2026 年 2 月 | [Hamilton AI：Product Engineer](https://jobs.ashbyhq.com/hamilton-ai/78c69fe9-828d-44b3-abe6-af56a2badf76/) | 直接与客户交流，把一次客户对话变成可以使用的产品，再交给真实用户验证 |
@@ -74,6 +81,13 @@ AI 带来的新变化，是大幅降低了“做出来”的成本，也让工�
 | 2026 年 7 月 | [Harper：Product Engineer](https://jobs.ashbyhq.com/harperinsure/7d678dba-885a-4432-94c7-a9c20852db35) | 深入销售、客服和承保现场，对转化率等业务指标负责，而不只对功能上线负责 |
 | 2026 年 8 月 | [Paradigm：Product Engineer, Applied AI](https://jobs.ashbyhq.com/Paradigm/b85b9094-2467-4f49-9a36-ca93da34a3f5) | 进入投资、研究和业务团队发现问题，构建内部与开源产品，并用实践寻找新机会 |
 | 截至 2026 年 8 月 | [OpenAI：Forward Deployed Engineer](https://openai.com/careers/forward-deployed-engineer-%28fde%29-seattle-seattle/) | 从问题发现、技术规划、系统构建到生产部署全程负责，用采用率和工作流影响衡量成功 |
+
+<figure id="real-job-screenshots" class="source-evidence">
+  <a href="https://jobs.ashbyhq.com/hamilton-ai/78c69fe9-828d-44b3-abe6-af56a2badf76/" target="_blank" rel="noopener noreferrer">
+    <img src="./images/sources/hamilton-ai-product-engineer.png" alt="Hamilton AI Product Engineer 公开招聘页面截图，页面写明工程师需要直接和客户交流并快速做出产品" loading="lazy">
+  </a>
+  <figcaption><strong>Hamilton AI：</strong>直接和客户交流，把客户对话变成可以使用的产品。</figcaption>
+</figure>
 
 <details>
 <summary><strong>查看更多不同行业的真实岗位</strong></summary>
@@ -95,90 +109,50 @@ AI 带来的新变化，是大幅降低了“做出来”的成本，也让工�
 
 </details>
 
-::: details 调查的时间口径
-本页于 **2026 年 8 月 9 日** 整理。带具体日期的 Ashby 招聘岗位，时间取自其公开招聘接口中的 `publishedAt` 字段；未展示发布日期的公司页面以本页核查时间为准。招聘页面可能在岗位关闭后失效。
+虽然岗位名字不同，但做事的方法很像：
 
-以上内容是对一组真实岗位的观察，不是对整个就业市场的统计。它更适合说明 AI 原生公司和小型产品团队正在出现的能力方向，而不是说明所有公司都会取消产品、设计、工程和销售的专业分工。
-:::
+- 不再等别人把需求写好，而是自己去了解用户的问题
+- 不只做一个好看的 Demo，而是尽快拿给用户试
+- 不只写某一部分代码，还要关心界面、后端、AI、部署和使用体验
+- 不只看功能有没有上线，还要看有没有人用、有没有带来效果
 
-### 这些岗位正在发生什么变化？
+有些产品工程师还会参与 Demo、PoC 和客户上线。他们需要让客户看懂这个产品有什么用，也要确认客户是不是真的愿意用。
 
-- **工作的起点变了：** 不再等别人写好需求，而是直接进入用户和业务现场发现问题。
-- **原型的作用变了：** 不只是展示技术，而是尽快交给用户，用来验证判断。
-- **工程的边界变了：** 从单一技术模块扩展到界面、后端、AI、部署和用户体验。
-- **成功的标准变了：** 从“功能上线”转向采用率、效率提升、转化率、收入和真实影响。
-- **与销售的关系变了：** 一部分产品工程师开始参与 Demo、PoC 和客户上线，用技术证明产品价值。
+这里说的“销售”，不是让每个人都去当销售员。它只是说：你要找到需要这个产品的人，听懂他的问题，把产品演示给他看，再确认他愿不愿意继续使用或付费。
 
-这里的“会销售”，并不是要求每个人都成为传统销售。对产品工程师来说，它首先意味着：**能够找到可能需要产品的人，听懂他们的问题，演示解决方案，邀请他们使用，并验证他们是否愿意持续使用或付费。**
+当工程师开始直接进入客户的工作现场，这类岗位常被叫作 FDE。他们不会停在演示和安装软件这一步，而是先和客户一起找到问题，做出原型或 PoC，再把方案接入真实的数据和工作流程。很多客户反复遇到的问题，还会被带回产品，做成大家都能使用的功能。
 
-### Product Engineer、FDE 和 OPC 是什么关系？
+OpenAI 也在多个国家和城市招聘 FDE。这个岗位不只看产品有没有部署，还会看客户是不是真的在用、工作有没有因此变好。客户现场的反馈，也会继续影响产品和模型。
 
-这三个概念处在同一条能力链上，但并不是同一种东西。
+当一个人不只负责做产品，还要自己找市场、做营销、销售和客服时，就很接近这里说的 OPC，也就是由一个人主导经营的公司。它不是完全由 AI 自动运行的“无人公司”。人仍然要联系用户、判断方向，并承担最后的责任；AI Agent 和各种在线服务，则像一支可以随时安排工作的数字团队。
 
-| 概念 | 它是什么 | 主要工作场景 | 需要负责到哪里 |
-| --- | --- | --- | --- |
-| **Product Engineer** | 一种产品与工程融合的岗位 | 在产品团队内部工作 | 从问题和方案负责到产品上线、用户反馈与业务指标 |
-| **FDE（Forward Deployed Engineer）** | 产品工程能力向客户现场的延伸 | 深入企业客户、真实业务和生产环境 | 从客户发现、PoC 和集成负责到部署、采用、扩展，有时直接参与销售周期 |
-| **OPC（One-Person Company）** | 一种由个人主导的公司经营方式，不是职位名称 | 一个人借助 AI Agent、自动化平台和外部服务经营产品 | 从找市场、做产品负责到营销、销售、交付、客服和现金流 |
+一个人做产品，并不是 AI 出现以后才有的。独立开发者 [Pieter Levels](https://levels.io/projects/) 就长期独自经营 Nomads.com、Remote OK、Photo AI 和 Interior AI 等产品。现在，AI 又能帮忙做设计、编程、内容、分析和客服，但产品有没有价值，最后还是要交给市场验证。
 
-<div class="role-path-figure" role="img" aria-label="产品工程师、FDE 和 OPC 的能力范围逐步从做出产品扩展到客户现场和完整生意">
-  <div class="role-path-node">
-    <strong>Product Engineer</strong>
-    <span>做出正确的产品</span>
-  </div>
-  <div class="role-path-arrow" aria-hidden="true"></div>
-  <div class="role-path-node">
-    <strong>FDE</strong>
-    <span>让产品进入客户现场</span>
-  </div>
-  <div class="role-path-arrow" aria-hidden="true"></div>
-  <div class="role-path-node">
-    <strong>OPC</strong>
-    <span>经营一门完整生意</span>
-  </div>
-</div>
-<p class="role-path-caption">这不是必须依次晋升的职业阶梯，而是同一套产品工程能力可以覆盖的不同范围。</p>
+<figure class="source-evidence">
+  <a href="https://levels.io/projects/" target="_blank" rel="noopener noreferrer">
+    <img src="./images/sources/pieter-levels-projects.png" alt="Pieter Levels 公开项目列表网页截图，页面展示了他做过的项目及成功、失败等统计" loading="lazy">
+  </a>
+  <figcaption>Pieter Levels 公开记录了自己做过的项目，也保留了失败项目。</figcaption>
+</figure>
 
-可以把它们理解成三个逐渐扩大的圆：
+这种“一个人带着一支数字团队工作”的方式，也开始进入更多公司。2025 年，Microsoft 的 [Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born) 用 **Agent Boss** 来称呼那些会创建和管理 AI Agent 的人。报告调查了 31 个国家的 31,000 名工作者，其中 81% 的领导者认为，未来 12～18 个月会在工作中更多地使用 Agent。
 
-> **Product Engineer：把产品做对并做出来**<br>
-> **FDE：把产品带进客户现场并产生结果**<br>
-> **OPC：用同一套能力经营一门完整生意**
+<figure class="source-evidence source-evidence--report">
+  <a href="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-product-and-services/ai/pdf/executive-summary-work-trend-index-annual-report.pdf" target="_blank" rel="noopener noreferrer">
+    <img src="./images/sources/microsoft-agent-boss.png" alt="Microsoft 2025 Work Trend Index 官方摘要截图，其中包含 Agent Boss、人和 Agent 协作的三个阶段以及相关调查数据" loading="lazy">
+  </a>
+  <figcaption>Microsoft 2025 Work Trend Index 官方摘要：从 AI 助手、人机团队，到由人安排 Agent 工作。</figcaption>
+</figure>
 
-#### FDE：工程师开始进入客户现场
+2025 年 6 月，[Wix 以约 8,000 万美元收购了自然语言应用开发平台 Base44](https://www.wix.com/press-room/home/post/wix-further-expands-into-vibe-coding-with-acquisition-of-base44-a-hyper-growth-startup-that-simplif)。它让数据库、登录和部署这些原本需要多人完成的工作，变得更简单，也更容易自动完成。
 
-FDE 并不是只负责安装软件的实施人员，也不是只做演示的售前工程师。AI 公司的 FDE 通常要同时完成四件事：
+这些变化不是在说每个人都要成为 FDE，或者马上去开一家公司。它们只是让我们看到：一个人已经可以负责更多事情，但做事的顺序没有变。还是要先找到真实问题，做出产品，交给用户，再根据结果继续修改。
 
-1. 和客户一起找到最值得解决的问题。
-2. 快速做出原型或 PoC，证明技术与业务价值。
-3. 编写生产代码，把方案接入客户的真实数据和工作流。
-4. 观察采用效果，把重复出现的需求沉淀成通用产品。
-
-截至 2026 年 8 月，OpenAI 已经在多个国家和城市招聘 FDE，并把岗位成功标准写成生产采用率、可衡量的工作流影响，以及能够改变产品和模型路线图的现场反馈。这说明 FDE 正在从少数企业软件公司的特殊模式，扩展为 AI 落地的重要岗位形态。
-
-#### OPC：一个人也可以拥有一支“数字团队”
-
-这里说的 OPC，不特指法律意义上的“一人公司”，而是指 **One-Person Company：由一个人主导经营，尽可能利用软件、AI Agent 和外部基础设施完成过去需要多人协作的工作。**
-
-它也不是完全由 AI 自动运行的“无人公司”。创始人仍然需要判断市场、承担责任、接触用户并做关键决策；AI 更像是一支可以被调度的数字团队。
-
-这条趋势并非完全从 AI 开始。独立开发者 Pieter Levels 在自己的官网上介绍，他长期独自构建和经营 Nomads.com、Remote OK、Photo AI 和 Interior AI 等产品。AI 让这种模式能够进一步覆盖设计、编程、内容、分析和客服，但最终仍然要经过真实市场验证。[查看 Pieter Levels 的项目记录](https://levels.io/projects/)
-
-到了 2025 年，Microsoft 的 Work Trend Index 开始使用 **Agent Boss** 描述能够创建、委派和管理 AI Agent 的工作者。该报告基于 31 个国家的 31,000 名工作者调查，并显示 81% 的领导者预计未来 12～18 个月会把 Agent 中度或深度纳入 AI 战略。[查看 Microsoft 2025 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born)
-
-2025 年 6 月，Wix 以约 8,000 万美元收购自然语言应用开发平台 Base44。Base44 并不是严格意义上的 OPC，但它展示了一个重要基础条件：数据库、身份认证、部署等过去需要多种专业角色协作的工作，正在被对话式产品封装和自动化。[查看 Wix 收购公告](https://www.wix.com/press-room/home/post/wix-further-expands-into-vibe-coding-with-acquisition-of-base44-a-hyper-growth-startup-that-simplif)
-
-因此，“第一家一人独角兽什么时候出现”目前仍然是一种预测，不应该被写成已经发生的事实。更值得初学者关注的现实变化是：**一个人已经可以用更少的资金和团队，更快完成产品验证，并经营一门规模不大但真实赚钱的业务。**
-
-::: tip 为什么课程要同时讲这三条路径？
-无论你以后进入产品团队、成为 FDE，还是尝试经营自己的 OPC，起点都是同一套产品工程基本功：发现真实问题、做出最小产品、交给用户、说明价值，并根据使用和付费结果继续迭代。
-:::
-
-因此，这门课训练的不是几个彼此分开的职位，而是一次完整的产品循环：
+这也是这门课会带你走完的过程：
 
 > **发现问题 → 验证需求 → 设计方案 → 构建产品 → 交付用户 → 说明价值 → 观察结果 → 持续迭代**
 
-当然，让 AI 写出代码只是第一步。要做出一个真正能用的产品，你还会遇到这些问题：
+让 AI 写出代码只是第一步。后面你还会遇到很多问题：
 
 - 怎么让 AI 写出干净、能维护的代码？
 - 怎么把零散的代码拼成一个能跑的应用？
@@ -186,9 +160,9 @@ FDE 并不是只负责安装软件的实施人员，也不是只做演示的售�
 - 怎么把文本生成、图像识别这些 AI 能力装进你的产品？
 - 怎么判断用户是否真的需要它，甚至愿意为它付费？
 
-这些问题将在这门课中找到答案。
+这门课会带你一个一个解决。
 
-不管你是学生、老师、医生、工人，还是任何一位对技术一窍不通的普通人，你都不需要先学几年编程，才能开始制作和验证自己的第一个产品原型。
+不管你是学生、老师、医生、工人，还是完全不懂技术的普通人，都可以先开始做。你不需要学几年编程，才有资格做自己的第一个产品。
 
 | 你的身份 | 这门课能帮你 |
 |---------|-------------|
@@ -200,239 +174,13 @@ FDE 并不是只负责安装软件的实施人员，也不是只做演示的售�
 | 医生 / 律师 / 专业工作者 | 把专业流程自动化，打造自己的效率工具 |
 | 任何人 | 用 AI 解决生活/工作中的具体问题，让不可能变成可能 |
 
-AI 可以降低实现成本，但真正决定产品价值的，仍然是你能否发现真实问题，并把解决方案交到用户手里。
+AI 能帮你更快地做出来。但产品有没有价值，还是要看它能不能解决真实问题，有没有人愿意用。
 
-## 成长路径：从“会用 AI”到“成为产品工程师”
+## 学习路径：从体验 AI 编程到交付真实产品
 
-<div class="stage-intro">
-  <div class="stage-card">
-    <div class="stage-icon">🎮</div>
-    <h3>新手入门</h3>
-    <p class="stage-role">体验 AI 编程</p>
-    <div class="stage-tags">
-      <span>贪吃蛇小游戏</span>
-      <span>零基础上手</span>
-      <span>Vibecoding 初体验</span>
-      <span>几分钟生成</span>
-    </div>
-  </div>
-</div>
+<LearningPathCompact locale="zh-cn" />
 
-<div class="stage-grid">
-  <div class="stage-card">
-    <div class="stage-icon">🛠️</div>
-    <h3>第一阶段</h3>
-    <p class="stage-role">产品工程师入门</p>
-    <div class="stage-tags">
-      <span>AI IDE (Cursor/Claude)</span>
-      <span>需求验证 & 原型</span>
-      <span>接入 AI 能力</span>
-      <span>交付真实用户</span>
-    </div>
-  </div>
-  <div class="stage-card">
-    <div class="stage-icon">💻</div>
-    <h3>第二阶段</h3>
-    <p class="stage-role">全栈产品工程师</p>
-    <div class="stage-tags">
-      <span>Figma 到代码</span>
-      <span>Supabase 数据库</span>
-      <span>Stripe 支付集成</span>
-      <span>Dify 知识库</span>
-    </div>
-  </div>
-  <div class="stage-card">
-    <div class="stage-icon">🚀</div>
-    <h3>第三阶段</h3>
-    <p class="stage-role">AI 产品工程师 / 技术负责人</p>
-    <div class="stage-tags">
-      <span>Web/小程序/多端</span>
-      <span>MCP 高级工具</span>
-      <span>RAG & LangGraph</span>
-      <span>高级工程师思维</span>
-    </div>
-  </div>
-</div>
-
-<style>
-.concept-illustration {
-  margin: 24px 0 12px;
-}
-
-.concept-illustration img {
-  display: block;
-  width: 100%;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 16px;
-  background: var(--vp-c-bg-soft);
-}
-
-.concept-illustration figcaption,
-.role-path-caption {
-  margin: 8px 12px 0;
-  color: var(--vp-c-text-2);
-  font-size: 0.85rem;
-  line-height: 1.6;
-  text-align: center;
-}
-
-.role-path-figure {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
-  gap: 10px;
-  align-items: center;
-  margin: 24px 0 0;
-}
-
-.role-path-node {
-  display: flex;
-  min-height: 112px;
-  padding: 18px 14px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 14px;
-  background: linear-gradient(145deg, var(--vp-c-bg-soft), var(--vp-c-bg));
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.role-path-node strong {
-  color: var(--vp-c-brand-1);
-  font-size: 1rem;
-}
-
-.role-path-node span {
-  margin-top: 8px;
-  color: var(--vp-c-text-2);
-  font-size: 0.82rem;
-}
-
-.role-path-arrow::before {
-  color: var(--vp-c-brand-1);
-  content: '→';
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.stage-intro {
-  margin: 20px auto;
-  max-width: 400px;
-}
-
-.stage-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
-  margin: 16px 0;
-}
-
-.stage-card {
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
-  padding: 12px;
-  background-color: var(--vp-c-bg-soft);
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  height: 100%;
-}
-
-.stage-card:hover {
-  transform: translateY(-2px);
-  background-color: var(--vp-c-bg-mute);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  border-color: var(--vp-c-brand);
-}
-
-.stage-icon {
-  font-size: 2rem;
-  margin-bottom: 8px;
-  line-height: 1;
-}
-
-.stage-card h3 {
-  margin: 0 0 4px 0 !important;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.stage-role {
-  margin: 0 0 8px 0 !important;
-  font-size: 0.8rem;
-  color: var(--vp-c-text-2);
-  font-weight: 500;
-}
-
-.stage-tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4px;
-}
-
-.stage-tags span {
-  font-size: 0.7rem;
-  padding: 1px 6px;
-  border-radius: 3px;
-  background-color: var(--vp-c-bg-alt);
-  color: var(--vp-c-text-2);
-  border: 1px solid var(--vp-c-divider);
-}
-
-.stage-card:hover .stage-tags span {
-  background-color: var(--vp-c-bg);
-  border-color: var(--vp-c-brand-dimm);
-  color: var(--vp-c-brand-dark);
-}
-
-@media (max-width: 720px) {
-  .role-path-figure {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .role-path-node {
-    min-height: 88px;
-  }
-
-  .role-path-arrow {
-    text-align: center;
-  }
-
-  .role-path-arrow::before {
-    content: '↓';
-  }
-}
-</style>
-
-通过这个完整的学习路径，你将获得：
-
-- **Vibe Coding开发能力：** 熟练使用 vibecoding 思维和 AI 编码工具，将开发效率提升数倍。不再需要死记硬背语法，而是学会如何引导 AI 生成高质量代码。
-- **全栈开发技能：** 从 UI 设计到前端实现，从数据库设计到 API 开发，从本地开发到云端部署，掌握现代 Web 应用的完整技术栈。
-- **AI 能力集成：** 学会调用各类多模态 AI API，将文本、图像、语音等 AI 能力无缝集成到你的应用中，并通过 RAG 等技术构建智能化产品。
-- **产品思维与运营能力：** 从用户研究到需求拆解，从 MVP 设计到产品迭代，从支付集成到用户管理，形成完整的产品开发与运营闭环。
-
-# 学完能做什么？
-
-## 第一阶段：做出你的第一个产品原型
-
-这个阶段适合完全没编程基础，或者只会一点点但不太自信的同学。你不用先学一堆理论知识，而是直接跟着做，在做的过程中学会用 AI 工具写代码。
-
-**学完你能**：
-- 用 AI 编程工具独立完成一个网页应用
-- 把产品想法变成能点击、能交互的原型
-- 给原型加上 AI 功能（比如文生图、智能对话）
-- 遇到报错知道怎么排查和解决
-
-简单说，就是能做出一个"能跑、能给别人演示"的东西。
-
-我们可以先通过小游戏感受 AI 编程，然后学会用 AI 编程工具帮你写代码、改报错。接着从简单页面开始，逐步做出能交互的多页面应用，再加上文生图、智能对话这些 AI 功能。最后独立完成一个完整项目，让你的创意能够真正拥有落地的可能。
-
-# 为什么要用项目制来训练？
+## 为什么要用项目制来训练？
 
 > **现实世界的挑战**
 >
