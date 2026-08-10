@@ -526,14 +526,22 @@ AI 可能输出：
 
 这对新手特别有帮助，因为你很容易在“还没想清楚问题时就开始画原型”。
 
-## 📚 Assignments
+## 📚 本章作业
 
-请你根据上文内容，完成下列作业：
+<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
+  <template #header>
+    <div style="font-weight: bold; font-size: 16px;">🎯 用双钻模型整理你的点子</div>
+  </template>
 
-1. 选一个你最近想做的产品点子，写出它的 Discover、Define、Develop、Deliver 四步草稿
-2. 在 Define 阶段，强迫自己把问题缩成一句具体的话
-3. 在 Develop 阶段，至少列出 3 种不同方案，而不是只盯着第一个想到的做法
-4. 在 Deliver 阶段，写出一个一周内能交付的最小验证版本
+  <ol>
+    <li>选一个最近想做的点子，分别写下发现、定义、发展和交付四步。</li>
+    <li>把真正要解决的问题收成一句话。</li>
+    <li>想出三种不同做法，再选择其中一种。</li>
+    <li>写下一个可以在一周内做出来的最小版本。</li>
+  </ol>
+
+  <p>重点不是记住四个英文单词，而是先把问题想清楚，再决定做什么。</p>
+</el-card>
 
 ## 延伸阅读
 

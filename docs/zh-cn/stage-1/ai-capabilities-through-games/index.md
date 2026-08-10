@@ -438,7 +438,7 @@ z.ai 的回复将会是这样的：
 
 看完这些案例你会发现：**贪吃蛇只是 AI 编程能力的冰山一角**。无论是经典街机游戏、2048 拼图、3D 游戏、复刻《我的世界》和《超级马里奥》，还是上百款的游戏合集、甚至国产大模型官方的游戏平台，只要你能把想法说清楚，并愿意多轮对话去打磨，AI 都能帮你从 0 到 1 做出来。接下来，就轮到你啦！
 
-## 📚 Assignment
+## 📚 本章作业
 
 <el-card id="assignment-card" shadow="hover" style="margin: 20px 0; border-radius: 12px;">
   <template #header>
