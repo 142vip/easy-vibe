@@ -1,1407 +1,678 @@
 ---
-title: 'AI 应用场景参考'
-description: '本文档汇总了 LLM 大模型在 B 端企业场景与 C 端消费场景中的应用方向。B 端涵盖工业制造、智能客服、教育、医疗、金融等 19 个行业的落地应用；C 端涵盖生活方式、情感陪伴、娱乐休闲、个人成长等 16 个消费场景的创意灵感，为 AI 应用开发者提供全面参考。'
+title: '从真实工作流里找 AI 场景'
+description: '基于 60 余份咨询、券商、行业研究与产品案例，拆解已经发生在企业和消费者身边的 AI 应用场景。'
 ---
 
-<script setup>
-import { computed, ref } from 'vue'
+# 从真实工作流里找 AI 场景
 
-const duration = '约 <strong>6 小时</strong>'
+很多“AI 行业应用大全”看起来很热闹：金融、医疗、教育、制造，每个行业下面再列十几个点子。可真要动手时，你还是不知道该找谁、接什么数据、替掉哪一步，也不知道做完以后谁会愿意付钱。
 
-const interestPoint = ref('')
-const purpose = ref('')
+问题在于，**行业不是场景**。“AI + 医疗”只是一个范围；“医生看诊后要花十分钟补病历，系统先根据医患对话起草记录，再由医生确认”才是一段可以研究、设计和验证的工作流。
 
-// 每个行业的主题池
-const topicPool = {
-  'manufacturing': [
-    { title: '新能源客车外观 AI 辅助设计平台', desc: '基于图片生成模型进行外观概念设计' },
-    { title: '智能图纸设计与审查助手', desc: '利用 RAG 技术构建企业设计规范知识库' },
-    { title: '技术文档自动生成与管理', desc: '基于 LLM 自动生成产品规格书和操作手册' },
-    { title: '生产设备巡检报告自动生成助手', desc: '语音描述设备状态，结构化生成巡检报告' },
-    { title: '工业设备故障诊断知识问答助手', desc: '基于历史故障案例构建向量知识库' }
-  ],
-  'customer-service': [
-    { title: '多渠道智能客服自动回复与工单生成系统', desc: '接入多渠道消息，LLM 理解意图后生成回复' },
-    { title: '潜在客户挖掘与跟进建议助手', desc: '分析历史对话记录，识别高意向客户' },
-    { title: '企业内部知识智能检索与问答管家', desc: '基于内部文档构建向量知识库' },
-    { title: '客服对话智能小结与工单生成工具', desc: '自动生成会话小结并提取关键信息' },
-    { title: '客服金牌话术推荐知识库系统', desc: '分析优秀案例，提炼金牌话术模板' }
-  ],
-  'education': [
-    { title: '个性化语言学习路径规划与智能导学系统', desc: '评估学习者水平，规划每日学习任务' },
-    { title: '教案自动化编写与教学资源推送平台', desc: '根据课程大纲生成教案框架' },
-    { title: '作业自动化批阅与学情诊断分析系统', desc: '自动批改主观题并生成批改建议' },
-    { title: '人才岗位胜任力模型构建与学习地图', desc: '分析岗位 JD 提取能力要求' },
-    { title: '外语口语一对一情景化实战演练', desc: 'LLM 扮演不同角色进行口语对话' }
-  ],
-  'programming': [
-    { title: '智能代码补全与 Bug 自动修复助手', desc: 'IDE 插件实时提供代码补全建议' },
-    { title: '低代码应用构建与流程自动化平台', desc: '自然语言描述需求，转换为低代码配置' },
-    { title: '单元测试用例生成系统', desc: 'AST 解析源代码，生成边界条件测试用例' },
-    { title: '代码智能分析与语言迁移工具', desc: '分析代码质量并提供优化建议' },
-    { title: '前端界面（UI）代码自动生成工具', desc: '设计稿图片识别，生成响应式 CSS' }
-  ],
-  'healthcare': [
-    { title: '医学检验报告智能解读助手', desc: 'OCR 识别关键指标，解读异常值' },
-    { title: '基于知识检索技术的健康咨询专家', desc: '构建医学知识图谱，RAG 检索生成回答' },
-    { title: '临床科研数据决策分析平台', desc: '整合 EMR 数据，辅助生成统计分析代码' },
-    { title: '医学影像报告自动生成工具', desc: '描述影像特征，自动生成结构化报告' },
-    { title: '慢病管理用药提醒智能助手', desc: '生成个性化用药提醒，支持用药禁忌检查' }
-  ],
-  'security': [
-    { title: '代码安全漏洞检测与修复引擎', desc: 'SAST 扫描代码，分析漏洞原理' },
-    { title: 'AI 生成式钓鱼邮件智能识别与拦截系统', desc: '分析邮件内容，识别 AI 生成的钓鱼邮件' },
-    { title: '安全运营日报自动生成助手', desc: '日志汇总，自动提取关键事件' },
-    { title: '渗透测试报告智能生成助手', desc: '根据漏洞描述自动生成报告' },
-    { title: '威胁情报智能查询与分析助手', desc: '对接多源威胁情报，解读情报内容' }
-  ],
-  'finance': [
-    { title: '信贷尽调报告智能生成助手', desc: '输入财务数据，自动生成信贷尽调报告' },
-    { title: '私人银行财富管理智能顾问', desc: '分析客户风险偏好，生成资产配置建议' },
-    { title: 'IPO 招股书智能生成与合规校验助手', desc: '模块化模板，自动填充业务描述' },
-    { title: '企业财务报告自动生成与经营异常预警系统', desc: '自动生成财务分析和管理层讨论' },
-    { title: '保险代理人智能话术陪练', desc: '模拟对话，评估话术合规性和说服力' }
-  ],
-  'enterprise': [
-    { title: '企业合同全生命周期合规性审查与修改建议平台', desc: '条款比对法规库，生成合规性审查报告' },
-    { title: '销售会话语音转写与话术推荐', desc: 'ASR 转写，分析会话并推荐金牌话术' },
-    { title: '营销内容智能生成与设计系统', desc: '生成营销文案和卖点提炼' },
-    { title: '竞品广告投放分析平台', desc: '采集竞品广告，分析投放策略' },
-    { title: '全网热点选题智能分析与内容推荐系统', desc: '分析热点趋势并推荐选题角度' }
-  ],
-  'content': [
-    { title: '影视与小说内容创作辅助平台', desc: '提供故事大纲、角色设定、对白生成' },
-    { title: '企业品牌故事与公关软文智能撰写助手', desc: '输入品牌关键词，生成多风格文案' },
-    { title: '虚拟数字人直播互动与推流管理系统', desc: '数字人形象 + TTS 语音 + LLM 对话' },
-    { title: '短视频脚本生成与智能剪辑', desc: '生成短视频脚本和分镜' },
-    { title: '营销内容智能生成与设计系统', desc: '生成营销文案和卖点提炼' }
-  ],
-  'government': [
-    { title: '12345 政务热线智能语音导航与自动分派系统', desc: '语音识别，理解诉求并智能分派' },
-    { title: '政务服务大厅智能导办与政策问答机器人', desc: '政务知识库 RAG 检索' },
-    { title: '惠企政策智能匹配与精准推送平台', desc: '企业画像自动匹配适用政策' },
-    { title: '行政审批材料智能预审与合规校验助手', desc: 'OCR 识别和关键信息提取' },
-    { title: '城市网格化事件智能识别与调度管理平台', desc: '识别事件类型并分派' }
-  ],
-  'legal': [
-    { title: '合同风险漏洞一键"找茬"Agent', desc: '对照风险清单识别潜在问题' },
-    { title: '类似案件胜诉率 AI 智能评估顾问', desc: '案件特征提取，类案检索匹配' },
-    { title: '法律法规变更实时监测与业务影响分析雷达', desc: '解析变更内容并评估业务影响' },
-    { title: '律师函 AIGC 自动起草工具', desc: '事实陈述输入，生成规范律师函' },
-    { title: '复杂法律条款"翻译"为大白话的解释插件', desc: '生成通俗易懂的解释' }
-  ],
-  'travel': [
-    { title: '基于 AIGC 的懒人路书生成器', desc: '生成每日行程安排' },
-    { title: '全网机票酒店价格趋势预测与低价自动锁定机器人', desc: 'ML 模型预测价格趋势' },
-    { title: '签证材料智能预审与自动化填表辅助系统', desc: 'OCR 识别信息完整性检查' },
-    { title: '出境游实时语音翻译与菜单视觉汉化管家', desc: '离线语音翻译，菜单图片 OCR' },
-    { title: '旅行足迹自动生成精美游记与社交文案助手', desc: '照片信息提取，生成游记文案' }
-  ],
-  'emotion': [
-    { title: '基于 LLM 大模型的 24 小时深度陪伴虚拟伴侣', desc: '记忆系统存储对话历史' },
-    { title: '多模态情感识别与心理疏导 AI 顾问', desc: '语音语调分析 + 文字情感识别' },
-    { title: '阿尔茨海默症老人 AI 认知训练与记忆唤醒数字人', desc: '认知游戏训练，老照片触发记忆' },
-    { title: '社恐人士的 AIGC 模拟社交演练教练', desc: '虚拟社交场景模拟' },
-    { title: '全天候心情监测与 AI 正向情绪激励助手', desc: '分析心情趋势并生成激励内容' }
-  ],
-  'entertainment': [
-    { title: '基于 LLM 驱动的开放世界游戏 NPC 自主决策引擎', desc: 'NPC 行为树融合 LLM 决策' },
-    { title: '沉浸式剧本杀 AIGC 剧情推演与 DM 控场辅助工具', desc: '玩家选择触发剧情分支' },
-    { title: '互动小说结局生成式修改器', desc: '读者选择影响剧情走向' },
-    { title: '电竞战局 CV 视觉分析与 AI 智能解说员', desc: '游戏画面实时分析' },
-    { title: '多角色 TTS 语音合成有声书自动生成系统', desc: '文本角色分配，个性化音色生成' }
-  ],
-  'ecommerce': [
-    { title: '高转化率 AIGC 商品详情页批量生产工具', desc: '生成卖点文案和场景描述' },
-    { title: '服装虚拟模特 AI 智能试穿与展示视频生成工厂', desc: '虚拟模特试穿效果生成' },
-    { title: '跨境电商多语言 LLM 本地化翻译与润色助手', desc: '商品描述多语言翻译' },
-    { title: '24 小时全天候 AIGC 数字人直播带货系统', desc: '数字人形象 + 实时话术生成' },
-    { title: '市场流行趋势 AI 洞察与爆款预测引擎', desc: '洞察趋势热点，选品建议' }
-  ],
-  'energy': [
-    { title: '家庭用电行为 AI 分析与节能策略顾问', desc: '用电模式分析，生成节能建议' },
-    { title: '光伏组件缺陷无人机 CV 视觉识别系统', desc: '无人机巡检拍摄，热红外图像分析' },
-    { title: '电力现货交易价格 AI 趋势预测与自动获利策略 Agent', desc: '价格预测模型，策略生成' },
-    { title: '企业全链路碳排放 AI 自动核算与 ESG 报告生成助手', desc: '碳排放因子计算，ESG 报告生成' },
-    { title: '电网极端天气负荷 AI 预测与应急调度指挥系统', desc: '负荷预测模型，调度策略生成' }
-  ],
-  'av-media': [
-    { title: '长视频精彩片段 AI 识别与短视频自动剪辑工具', desc: '视频内容分析，关键帧识别' },
-    { title: '视频背景噪音 AI 智能分离与人声增强助手', desc: '音频分离模型，去除背景噪音' },
-    { title: '老旧影像 4K 超分修复与 AI 智能上色工作台', desc: '视频超分辨率模型，AI 自动上色' },
-    { title: '文字转真人级 TTS 配音与情感控制系统', desc: '多音色 TTS 模型，情感控制' },
-    { title: '会议录音 AI 智能转写与核心待办提取助手', desc: '多人会议语音分离转写' }
-  ],
-  'ai-marketing': [
-    { title: '小红书爆款文案 AIGC 自动撰写引擎', desc: '生成种草文案，emoji 优化' },
-    { title: '营销海报 AI 智能排版与多尺寸适配工具', desc: '海报模板智能匹配' },
-    { title: '品牌 LOGO 创意 AIGC 生成与 VI 体系构建平台', desc: 'LOGO 创意生成，VI 规范生成' },
-    { title: '全网热点 AI 追踪与借势营销创意生成助手', desc: '分析营销角度，创意方案生成' },
-    { title: '短视频脚本创意 AIGC 生成与分镜指导助手', desc: '脚本和分镜生成，拍摄建议' }
-  ],
-  'data-intelligence': [
-    { title: '自然语言转 SQL 语句自动生成工具', desc: '自然语言查询转换为 SQL' },
-    { title: '企业数据资产目录智能盘点与分类系统', desc: '元数据采集，自动分类' },
-    { title: '数据质量异常自动检测与修复建议引擎', desc: '规则引擎 + ML 模型检测异常' },
-    { title: '智能报表生成与可视化配置助手', desc: '对话式生成报表配置' },
-    { title: '数据指标口径智能问答助手', desc: '基于指标定义文档构建知识库' }
-  ]
+这篇附录换一种写法。我们查阅了 60 余份咨询公司、券商、研究机构报告和产品案例，不再追求把行业列全，而是挑出已经有人使用、也能看见价值落点的 B 端和 C 端场景。你可以把它当成一张地图，用来找到值得继续访谈的问题，不要把它当成现成的创业答案。
+
+<div class="research-note">
+  <div>
+    <span class="research-note__eyebrow">先记住这句话</span>
+    <strong>B 端从工作流里找阻塞，C 端从一天里找反复发生的时刻。</strong>
+  </div>
+  <p>前者要说清谁在工作、经过哪些系统、最后由谁负责；后者要说清用户为什么会回来，以及 AI 比搜索、模板或人工服务究竟少了哪一步。</p>
+</div>
+
+## 先分清：B 端和 C 端不是两套标题
+
+### B 端：企业为结果付钱
+
+企业很少为“能聊天”本身买单。它购买的通常是更短的处理时间、更少的返工、更稳定的合规质量，或者更多成交。一个可研究的 B 端场景，至少要能回答四件事：谁每天在做、材料从哪里来、结果写回哪个系统、出错后谁负责。
+
+这也是为什么不少企业试验迟迟没能扩大。Deloitte 对 2,773 名企业管理者的调查显示，很多组织仍只有少量生成式 AI 试验能进入规模化阶段；Accenture 对 2,000 多个项目的复盘也发现，真正产生企业级价值的组织仍是少数。难点往往不是模型能不能回答，而是它有没有进入完整流程。[Deloitte：State of Generative AI in the Enterprise](https://www2.deloitte.com/us/en/pages/about-deloitte/articles/press-releases/state-of-generative-ai.html) · [Accenture：Making Reinvention Real with Gen AI](https://www.accenture.com/us-en/insights/consulting/making-reinvention-real-with-gen-ai)
+
+### C 端：用户为一个更轻松的时刻付钱
+
+C 端产品不需要接入十套企业系统，但它要面对更直接的选择：用户随时可以关掉 App。好的消费场景通常贴着一个明确时刻出现——准备旅行、比较商品、练口语、做一张海报、整理账单。它先帮用户完成一件事，再慢慢记住偏好。
+
+Capgemini 对 12,000 名消费者的调查里，生成式 AI 已经进入商品发现和比较；QuestMobile 的国内数据也显示，AI 应用正在从独立聊天工具进入搜索、办公、影像、音乐等已有产品。机会不只在“再做一个聊天框”，而在把对话接到下一步动作。[Capgemini：What Matters to Today’s Consumer 2025](https://www.capgemini.com/insights/research-library/top-consumer-trends-in-2025/) · [QuestMobile：2025 中国移动互联网春季报告](https://www.questmobile.cn/research/report/1919961024158601218/)
+
+## B 端：八段已经在发生的工作
+
+下面每一节都从一个具体岗位开始。读的时候，别急着抄产品名，先看清楚：原来的工作为什么慢，AI 接住了哪一步，还有什么必须留给人。
+
+### 1. 客服不是“回答问题”，而是把一件事处理完
+
+<figure class="product-shot">
+  <a href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/" target="_blank" rel="noreferrer">
+    <img src="./images/products/klarna.jpg" alt="Klarna AI Assistant 的延期付款、多语言客服与退款解释界面" loading="lazy" />
+  </a>
+  <figcaption><strong>Klarna AI Assistant：</strong>左边不是一句“请联系人工”，而是直接给出延期付款入口；右边把退款金额逐项拆开。客服 AI 真正有用的地方，是能查到这笔订单并把动作接下去。</figcaption>
+</figure>
+
+**谁在做：** 一线客服、坐席主管和售后运营。
+
+客户说“我的退款怎么还没到”，客服要先确认身份，再去订单、支付和物流系统查状态，解释规则，必要时创建工单。真正耗时的不是写一句礼貌回复，而是在多个系统之间找齐上下文。
+
+Klarna 的 AI 助手已经能处理退款、退货和多语言客服；ResultsCX 的案例则把语音分流、账户查询和后台 API 连在一起。两者都说明，能产生价值的不是 FAQ，而是**查到状态—按规则处理—留下记录—必要时转人工**这一整段。[Klarna 客服案例](https://openai.com/index/klarna/) · [ResultsCX 客服案例](https://aws.amazon.com/solutions/case-studies/resultscx/) · [Salesforce：State of Service 2025](https://www.salesforce.com/news/stories/state-of-service-report-announcement-2025/)
+
+如果你第一次做，可以只接“人工接待之后”的部分：自动生成会话小结、识别客户诉求、带出相关规则和建议动作，由客服确认后写入工单。这样既能测出节省了多少时间，也不会一开始就把退款权限交给模型。
+
+<div class="scene-check">
+  <span>值得追问</span>
+  <p>客服最常切换哪几个页面？什么问题看似重复，实际要根据订单状态做不同处理？转人工时，下一位客服还要重新问一遍吗？</p>
+</div>
+
+### 2. 销售最缺的不是文案，是下一步该跟谁谈什么
+
+<figure class="product-shot">
+  <a href="https://openai.com/index/morgan-stanley/" target="_blank" rel="noreferrer">
+    <img src="./images/products/morgan-stanley.webp" alt="Morgan Stanley AI@MS Assistant 内部界面" loading="lazy" />
+  </a>
+  <figcaption><strong>Morgan Stanley AI@MS Assistant：</strong>顾问可以查询开户文件和案例状态；页面底部同时写明“仅限内部使用”和需要人工核验。它更像嵌进工作台的检索入口，而不是替顾问做决定的聊天机器人。</figcaption>
+</figure>
+
+**谁在做：** B2B 销售、客户经理、售前和销售主管。
+
+一次客户会议结束后，销售往往要补 CRM、整理决策人、回顾异议、找案例、写跟进邮件，再决定什么时候联系。记录散在会议录音、聊天、邮箱和个人笔记里，主管看到的 CRM 经常已经过时。
+
+McKinsey 对 B2B 销售的研究把应用拆到完整交易周期：寻找线索、准备会面、辅助沟通、生成方案、推进成交和续约。Morgan Stanley 的财富顾问工具也不是替顾问做投资决定，而是让他们快速检索内部知识，并把客户会议整理成笔记和待办。[McKinsey：Unlocking Gen AI in B2B Sales](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/unlocking-profitable-b2b-growth-through-gen-ai) · [Morgan Stanley 案例](https://openai.com/index/morgan-stanley/)
+
+第一版可以只解决“会后十五分钟”：从录音中提取客户目标、异议、承诺和下一步，生成一封可修改的跟进邮件，同时把字段补进 CRM。衡量它有没有用，不看生成了多少字，看 CRM 是否更完整、跟进是否更及时。
+
+### 3. 公司知识库真正要解决的是“这一次该按哪条办”
+
+<figure class="product-shot">
+  <a href="https://www.notion.com/help/guides/find-answers-and-generate-reports-with-enterprise-search" target="_blank" rel="noreferrer">
+    <img src="./images/products/notion-enterprise-search.png" alt="Notion Enterprise Search 企业搜索界面" loading="lazy" />
+  </a>
+  <figcaption><strong>Notion Enterprise Search：</strong>同一个问题可以跨 Notion 与 Slack 查找，用户还能在 Ask、Research 和 Build 之间切换。企业知识助手的产品形态，重点是接入现有资料和权限，而不只是上传一份 PDF。</figcaption>
+</figure>
+
+**谁在做：** 顾问、运营、人力、财务、IT 支持和新员工。
+
+企业里的答案往往并不缺，只是散在制度、产品手册、历史邮件、培训视频和旧项目中。员工问“这类客户能不能退款”，需要的不只是搜到含有“退款”的文档，而是拿到当前版本的规则、适用条件和出处。
+
+Sun Life 的内部助手每周处理一万多次员工查询；Morgan Stanley 把可检索的内部语料从有限问答扩展到约十万份文档；Notion 的产品也把企业搜索、会议记录和任务执行放进同一个工作空间。这类产品的核心不是“上传 PDF 就能问”，而是权限、版本、来源和反馈闭环。[Sun Life Asks](https://aws.amazon.com/solutions/case-studies/sun-life-case-study/) · [Notion AI 功能说明](https://www.notion.com/help/notion-ai-faqs)
+
+第一次不要接全公司。选一个问题密集、资料边界清楚的部门，例如售后政策或 IT 帮助台。回答必须带原文位置；找不到时明确说找不到，并把问题收进待补资料列表。
+
+### 4. 财务、法务与合规：先读材料，再起草，不替人签字
+
+<figure class="product-shot">
+  <a href="https://mena.thomsonreuters.com/en/products-services/legal/cocounsel.html" target="_blank" rel="noreferrer">
+    <img src="./images/products/cocounsel.jpg" alt="Thomson Reuters CoCounsel 合同起草与研究界面" loading="lazy" />
+  </a>
+  <figcaption><strong>Thomson Reuters CoCounsel：</strong>左侧显示“起草”和“研究”两项任务的进度，完成后再把草稿打开到 Word。AI 先读材料、找依据、起草，专业人员仍在熟悉的文档里复核和定稿。</figcaption>
+</figure>
+
+**谁在做：** 财务分析、税务、法务、采购和合规人员。
+
+这些岗位每天面对大量格式相近、内容各异的材料：合同、发票、报表、政策、审计底稿和尽调文件。AI 适合先做抽取、比对、归类、检索和初稿，但最终判断必须能回到原文，也必须有人负责。
+
+Thomson Reuters 的 2025 年调查显示，法律、税务、风控等专业服务的生成式 AI 使用正在上升，常见工作包括法律与税务研究、文档摘要、合同起草和申报准备。Moderna 的 Contract Companion 让员工先得到合同摘要；OpenAI 与 PwC 则把财务智能体放在对账、风险提示和跨系统流程里讨论。[Thomson Reuters：2025 Generative AI in Professional Services](https://www.thomsonreuters.com/en-us/posts/technology/genai-professional-services-report-2025/) · [Moderna 案例](https://openai.com/index/moderna/) · [OpenAI × PwC：CFO 工作流](https://openai.com/index/openai-pwc-finance-collaboration/)
+
+适合小团队验证的切口，是一种固定材料和一套明确规则：例如逐条核对供应商合同里的付款、续约、赔偿和数据条款，给出原文引用和风险说明。不要一上来承诺“AI 法务”，先证明漏检率、复核时间和引用准确率。
+
+### 5. 软件开发：价值出现在仓库里，不在单独的聊天窗口里
+
+<figure class="product-shot">
+  <a href="https://github.blog/changelog/2024-10-29-github-copilot-code-review-in-github-com-private-preview/" target="_blank" rel="noreferrer">
+    <img src="./images/products/github-copilot-review.png" alt="GitHub Copilot 在 Pull Request 中给出代码审查建议" loading="lazy" />
+  </a>
+  <figcaption><strong>GitHub Copilot Code Review：</strong>Copilot 被选为审查人后，会把问题落到具体代码行，并给出可提交的修改；开发者仍能查看差异、加入批次或拒绝建议。价值发生在 Pull Request 里，不在另一个聊天窗口里。</figcaption>
+</figure>
+
+**谁在做：** 开发、测试、运维和安全工程师。
+
+开发者真正花时间的地方包括理解旧代码、补测试、查日志、做代码评审和熟悉陌生项目。GitHub 的受控实验中，使用 Copilot 的参与者完成指定编程任务更快；但在真实团队里，能不能读懂仓库上下文、遵守规范、跑过测试，远比“能生成代码”重要。[GitHub Copilot 生产力研究](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/) · [GitHub 后续研究报告](https://github.blog/wp-content/uploads/2023/06/Sea-Change-in-Software-Dev.pdf)
+
+一个扎实的内部工具，可以从“失败的 CI”开始：读取报错和相关改动，定位可能原因，提出修复建议并生成待审补丁。它必须运行测试、展示差异、接受评审，而不是直接把代码推到生产环境。
+
+### 6. 制造与现场服务：让设备、手册和工单说同一种话
+
+<figure class="product-shot">
+  <a href="https://blog.siemens.com/2026/02/the-digital-enterprise-and-the-synthesis-of-industrial-ai-digital-twin-and-data/" target="_blank" rel="noreferrer">
+    <img src="./images/products/siemens-industrial-copilot.jpg" alt="Siemens Engineering Copilot 与 TIA Portal 并排运行" loading="lazy" />
+  </a>
+  <figcaption><strong>Siemens Engineering Copilot：</strong>右侧 Copilot 与左侧 TIA Portal 同时打开。工程师提问时，助手面对的是当前自动化项目、设备结构和工程文档，而不是脱离现场回答一个宽泛的“机器为什么坏了”。</figcaption>
+</figure>
+
+**谁在做：** 设备操作员、维修工程师、现场服务人员和工艺工程师。
+
+机器停下来时，操作员看到的可能是一串错误码。答案散在数百页手册、备件清单和历史维修记录中，真正的损失却按停机分钟计算。另一方面，现场人员修好设备后，还要补一份客户能看懂、公司能归档的服务报告。
+
+Siemens Industrial Copilot 已用于解释设备信息、查找维修依据和辅助自动化编程；Siemens 的另一项现场服务试验，则面向每年超过 140 万份工单报告，把工程师的简短记录整理成一致的客户报告。Deloitte 的制造业调查也提醒，数据质量和设备上下文仍是主要门槛。[Siemens Industrial Copilot](https://news.microsoft.com/source/emea/features/how-ai-is-helping-siemens-and-thyssenkrupp-bridge-skilling-gaps-in-manufacturing/) · [Siemens 现场报告案例](https://www.microsoft.com/en/customers/story/19736-siemens-ag-germany-dynamics-365-field-service) · [Deloitte：2025 Smart Manufacturing Survey](https://www2.deloitte.com/us/en/insights/industry/manufacturing/2025-smart-manufacturing-survey.html)
+
+小切口往往不是“预测整个工厂”，而是围绕一种设备：识别错误码，检索对应手册和历史工单，给出排查顺序；维修完成后，再把操作记录整理成报告。所有建议都要显示依据，并允许工程师标记“无效”。
+
+### 7. 医疗先做文书和协调，不要把诊断当成演示功能
+
+<figure class="product-shot">
+  <a href="https://www.abridge.com/product" target="_blank" rel="noreferrer">
+    <img src="./images/products/abridge-note.png" alt="Abridge 将临床记录与原始医患对话关联的界面" loading="lazy" />
+  </a>
+  <figcaption><strong>Abridge：</strong>上方是生成的病历段落，下方是对应的医患对话，点击 Linked Evidence 可以回到原话。这里最重要的不是“自动写得快”，而是医生能追溯、修改并确认每条记录。</figcaption>
+</figure>
+
+**谁在做：** 医生、护士、病案人员、保险审核和患者服务团队。
+
+医疗里最容易被忽略的负担，是看诊之外的记录、转诊、授权、理赔和患者沟通。McKinsey 总结的近端应用，大量集中在病历摘要、保险权益查询、拒赔原因整理、出院说明和后台运营，而不是让模型独立诊断。[McKinsey：Tackling Healthcare’s Biggest Burdens with Generative AI](https://www.mckinsey.com/industries/healthcare/our-insights/tackling-healthcares-biggest-burdens-with-generative-ai)
+
+Abridge 等环境式记录产品，会从医患对话生成结构化病历草稿，再由医生确认。这个“草稿—复核—写回病历”的边界很重要：它减少文书时间，但没有改变临床责任人。[Abridge 医疗系统案例](https://www.abridge.com/press-release/abridge-hartford-healthcare) · [McKinsey：Generative AI in Healthcare](https://www.mckinsey.com/industries/healthcare/our-insights/generative-ai-in-healthcare-current-trends-and-future-outlook)
+
+如果没有医疗合规、数据和临床伙伴，不要从诊断产品起步。可以先研究低风险的患者服务，例如把复杂的就诊准备说明改写成分步骤清单，或帮助工作人员整理来电，但仍要经过机构审核。
+
+### 8. 零售和内容运营：一份素材要走完十几个渠道
+
+<figure class="product-shot">
+  <a href="https://www.canva.com/newsroom/news/magic-studio/" target="_blank" rel="noreferrer">
+    <img src="./images/products/canva-magic-switch.png" alt="Canva Magic Switch 的改尺寸、翻译与转文档菜单" loading="lazy" />
+  </a>
+  <figcaption><strong>Canva Magic Switch：</strong>同一份设计可以继续改尺寸、翻译或转成文档。对内容团队来说，这正是“一份确认过的素材，接着做出多个渠道版本”的那段高频工作。</figcaption>
+</figure>
+
+**谁在做：** 电商运营、品牌市场、设计、商品和本地化团队。
+
+新品上线不是“写一段文案”这么简单。团队要理解商品资料，生成不同平台的标题和卖点，处理图片，适配尺寸，翻译本地语言，检查禁用词，再根据反馈更新。大量时间花在搬运、改版和核对一致性上。
+
+Deloitte 的零售展望把个性化、商品运营、供应链和营销列为 AI 正在进入的环节。Canva 的 Magic Switch 可以把同一内容改成不同尺寸和语言，Adobe Firefly 则把生成、编辑和生产素材放在同一工作流里。这些案例的共同点是：AI 没有替代品牌判断，而是减少一份素材变成多个版本时的机械劳动。[Deloitte：2025 Retail Industry Outlook](https://www.deloitte.com/us/en/insights/industry/retail-distribution/retail-distribution-industry-outlook-2025.html) · [Canva Magic Studio](https://www.canva.com/newsroom/news/magic-studio/) · [Adobe Firefly](https://news.adobe.com/news/2025/04/adobe-revolutionizes-ai-assisted-creativity-firefly)
+
+第一版可以服务一个渠道和一种商品：从结构化商品资料生成详情页草稿，自动检查必填项、尺寸和违禁表达，最终由运营发布。比“万能营销助手”更容易获得真实反馈。
+
+## C 端：七个用户会主动打开产品的时刻
+
+C 端应用最容易犯的错，是把同一个聊天框换七种提示词。下面这些产品之所以成立，是因为对话后面接着商品、课程、行程、画布、音乐或财务数据，用户可以继续完成事情。
+
+### 1. “帮我把选择变少”：搜索、比较与购买
+
+<figure class="product-shot product-shot--mobile">
+  <a href="https://www.aboutamazon.com/news/retail/amazon-rufus" target="_blank" rel="noreferrer">
+    <img src="./images/products/amazon-rufus.jpg" alt="Amazon Rufus 购物助手界面" loading="lazy" />
+  </a>
+  <figcaption><strong>Amazon Rufus：</strong>入口就在 Amazon 搜索框下面，问题也围绕购物展开：比较桌布、为 Prime Day 做准备、寻找适合睡眠监测的手表。它能继续接到真实商品，而不是只给一段泛泛建议。</figcaption>
+</figure>
+
+用户买相机、婴儿车或一双适合雨天通勤的鞋时，不缺商品页，缺的是把模糊条件变成可比较的选择。Amazon 的 Rufus 会结合商品目录、评价和问答回答购买问题；Capgemini 和 Adobe 的消费者研究也都看到，用户开始用 AI 做商品发现、比较和售前咨询。[Amazon Rufus](https://www.aboutamazon.com/news/retail/amazon-rufus) · [Adobe：2025 AI and Digital Trends](https://business.adobe.com/content/dam/dx/us/en/resources/digital-trends-report-2025/2025_Digital_Trends_Report.pdf)
+
+可以研究的不是“AI 导购”四个字，而是某一类难选商品。比如租房族买投影仪，需要同时考虑投射距离、白天亮度、噪声和预算。产品应展示比较依据、缺失信息和真实商品，而不是编一个看似专业的结论。
+
+### 2. “我不想开二十个网页”：旅行计划与临场调整
+
+<figure class="product-shot">
+  <a href="https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/" target="_blank" rel="noreferrer">
+    <img src="./images/products/expedia-chatgpt.jpg" alt="Expedia 对话式旅行规划界面" loading="lazy" />
+  </a>
+  <figcaption><strong>Expedia 对话式旅行规划：</strong>用户从“蜜月去 Maui 还是 Kauai”聊起，得到酒店建议后可以直接保存到 Trips。真正形成产品闭环的，是聊天结果进入了收藏、行程和预订。</figcaption>
+</figure>
+
+旅行规划要来回处理目的地、日期、交通、营业时间、预算和同行人偏好。Expedia 把开放式对话接到酒店收藏、价格和预订流程里，说明旅行 AI 的价值不是写一篇漂亮路书，而是把建议变成可保存、可核对、可购买的行程。[Expedia 对话式旅行规划](https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/) · [Expedia AI 服务案例](https://www.expedia.com/newsroom/expedia-group-sets-the-standard-with-ai-powered-service-agent/)
+
+更小的切口可以是“带孩子去某座城市的半日行程”或“演出散场后的夜间路线”。实时信息要来自可靠接口；天气、票价和营业时间必须标注更新时间。
+
+### 3. “我想练一遍，不只听一遍”：学习与反馈
+
+<figure class="product-shot product-shot--portrait">
+  <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
+    <img src="./images/products/duolingo-roleplay.png" alt="Duolingo Max 的巴黎咖啡馆角色扮演练习" loading="lazy" />
+  </a>
+  <figcaption><strong>Duolingo Max Roleplay：</strong>练习不是一句“和 AI 聊法语”，而是一个具体任务：在巴黎咖啡馆点餐。场景、角色、目标和奖励都已经设好，用户打开后马上就能练一轮。</figcaption>
+</figure>
+
+生成式 AI 最适合补上过去很贵的一环：随时练习并得到针对这一次表现的反馈。Duolingo Max 用角色扮演和视频对话练语言；Khanmigo 更强调通过提问和提示引导学生，而不是直接交答案。[Duolingo Max](https://blog.duolingo.com/duolingo-max/) · [Khan Academy：Khanmigo](https://2023-2024.annualreport.khanacademy.org/khanmigo)
+
+一个具体产品可以只服务一个练习动作：面试回答、英语口语、销售异议处理或答辩演练。用户说完以后，反馈要对应原句，并给出下一轮可执行的改进，而不是泛泛地夸“表达很清晰”。
+
+### 4. “先给我一个能改的初稿”：个人创作
+
+<figure class="product-shot">
+  <a href="https://firefly.adobe.com/" target="_blank" rel="noreferrer">
+    <img src="./images/products/adobe-firefly.png" alt="Adobe Firefly 文生图工作界面" loading="lazy" />
+  </a>
+  <figcaption><strong>Adobe Firefly：</strong>真实界面里不只有一个提示词框，还能选择模型、比例、内容类型、视觉强度和参考图，并比较多组结果。个人创作产品要给用户继续修改的控制，而不是只剩“再生成一次”。</figcaption>
+</figure>
+
+普通用户做生日邀请、二手商品图、短视频封面或社团海报时，最大的门槛常常是空白画布和复杂软件。Canva 把生成、抠图、扩图、改尺寸和翻译放进设计画布；Adobe Firefly 则让创作者在图像、视频、音频和矢量素材之间继续编辑。[Canva Magic Studio](https://www.canva.com/newsroom/news/magic-studio/) · [Adobe Firefly 发布](https://news.adobe.com/news/2025/04/adobe-revolutionizes-ai-assisted-creativity-firefly)
+
+这类产品要给用户控制，而不是只给“再生成一次”。好切口往往包含一个明确成品：一套房源图、一个播客封面、三种尺寸的活动海报。用户可以锁定文字、人物和品牌色，只让 AI 改局部。
+
+### 5. “这次错在哪”：个人化解释
+
+<figure class="product-shot">
+  <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
+    <img src="./images/products/duolingo-explain.jpg" alt="Duolingo Max Explain My Answer 的答错解释界面" loading="lazy" />
+  </a>
+  <figcaption><strong>Explain My Answer：</strong>中间这张界面直接引用用户刚才的答案，解释为什么复数 vestidos 要配 gustan，并允许继续要例子。它不是重新讲一节语法课，而是接住“我刚才到底错在哪”这一刻。</figcaption>
+</figure>
+
+同一个答案，对新手和熟练者需要不同解释。Duolingo 的 Explain My Answer 从用户刚刚做错的题出发；这比另开一个通用问答更自然，因为系统已经知道题目、答案和学习进度。[Duolingo：Explain My Answer](https://blog.duolingo.com/explain-my-answer-now-free/)
+
+类似思路也适用于健身动作、摄影参数、棋局复盘和乐器练习：先拿到一次真实表现，再指出一个最值得改的地方。没有输入数据的“个性化建议”，通常只是换了称呼的通用内容。
+
+### 6. “别只推荐，替我记住”：音乐和日常陪伴式体验
+
+<figure class="product-shot product-shot--mobile">
+  <a href="https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/" target="_blank" rel="noreferrer">
+    <img src="./images/products/spotify-ai-dj.jpg" alt="Spotify AI DJ 播放界面" loading="lazy" />
+  </a>
+  <figcaption><strong>Spotify AI DJ：</strong>DJ 是首页里的一个持续播放入口，下面直接接着曲目和播放控制。它依靠的是用户长期收听记录、Spotify 的内容库和下一首播放动作，而不只是生成一段像主持人的话。</figcaption>
+</figure>
+
+Spotify 的 AI DJ 不只是生成一句介绍，它基于用户长期的收听历史选歌，并用一个持续存在的声音串起体验。这里真正难复制的是偏好数据、内容版权和播放动作，不是 DJ 的语气。[Spotify AI DJ](https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/) · [Deloitte：2025 Digital Media Trends](https://www.deloitte.com/us/en/insights/industry/technology/digital-media-trends-consumption-habits-survey/2025.html)
+
+你也可以从别的“连续体验”里找机会，例如跑步、做饭或睡前阅读。关键是产品能根据过去的选择调整下一次内容，同时允许用户轻松纠正，而不是假装比用户更懂自己。
+
+### 7. “把复杂规定变成我的下一步”：个人财务与生活事务
+
+<figure class="product-shot product-shot--portrait">
+  <a href="https://turbotax.intuit.com/personal-taxes/mobile-apps/turbotax/" target="_blank" rel="noreferrer">
+    <img src="./images/products/intuit-assist.jpg" alt="TurboTax 中 Intuit Assist 比较两年税收抵免的界面" loading="lazy" />
+  </a>
+  <figcaption><strong>TurboTax 中的 Intuit Assist：</strong>它不是从零谈税务，而是拿用户今年与去年的抵免金额做比较，再给出“还能申请哪些抵免”等下一步问题。个人财务助手的基础，是用户自己的数据和当下任务。</figcaption>
+</figure>
+
+报税、信用、保险和账单的共同难点，是规则复杂、材料分散，而且每个人的下一步不同。Intuit Assist 把生成式 AI 放进 TurboTax、Credit Karma 和 QuickBooks，目标不是陪聊，而是结合用户已有的财务数据给出解释和行动建议。[Intuit Assist](https://www.intuit.com/intuitassist/)
+
+这类产品风险也更高。第一版更适合做材料清单、概念解释、账单分类和办理提醒，并清楚区分事实、估算和建议。涉及报税提交、投资交易或保险选择时，应让用户确认并提供专业支持入口。
+
+## 去哪里找自己的 B 端和 C 端方向
+
+上面的案例用来认识“场景长什么样”，不是让你照着换一个行业。真正属于你的方向，通常藏在你能接触到的人、资料和日常习惯里。B 端与 C 端的找法不一样。
+
+### 找 B 端：沿着一个岗位，把工作追到底
+
+B 端资料不会直接写“这里有一个创业机会”。它更常以招聘要求、采购文件、操作手册、软件评价和项目案例出现。先选一个具体岗位，例如外贸跟单、物业客服、诊所前台或设备维修员，再顺着他的工作找材料。
+
+<div class="idea-routes">
+  <div class="idea-route idea-route--b">
+    <span>B 端从这里找</span>
+    <ul>
+      <li><strong>招聘网站：</strong>看岗位每天负责什么，常用哪些系统，要交付哪些表格和报告。</li>
+      <li><strong>招标与采购公告：</strong>看企业正在花钱解决什么，验收标准和系统边界写得尤其具体。</li>
+      <li><strong>软件评价区：</strong>到 G2、Capterra、应用市场和行业论坛看差评，找“还要导出到 Excel”“每次都要手工补”的地方。</li>
+      <li><strong>公司案例与年报：</strong>搜索企业名加“数字化案例”“效率提升”“客户服务”，看已经进入预算的项目。</li>
+      <li><strong>真实工作材料：</strong>旧工单、报价单、检查表、群聊求助和培训文档，往往比行业报告更接近产品入口。</li>
+    </ul>
+  </div>
+  <div class="idea-route idea-route--c">
+    <span>可以直接这样搜</span>
+    <p><code>设备维修员 日常工作流程</code></p>
+    <p><code>物业客服 招标 智能化 filetype:pdf</code></p>
+    <p><code>site:g2.com field service software reviews</code></p>
+    <p><code>customer support workflow pain points report</code></p>
+    <p><code>某行业 数字化转型 案例 年报</code></p>
+  </div>
+</div>
+
+假设你对外贸感兴趣，不要只搜“AI + 外贸”。先看跟单员招聘信息，记下“询盘回复、报价、核对规格、催交期、准备报关材料”；再找一份真实报价单和几条跨境软件差评。你可能会发现，最值得做的不是万能外贸助手，而是“收到英文询盘后，从历史报价和产品参数里整理一份待确认报价”。
+
+### 找 C 端：沿着一天，找反复出现的麻烦
+
+C 端不从岗位出发，而从一个人什么时候会掏出手机开始。回想一天里的搜索、比较、记录、练习、等待和分享：哪些事情每周都会发生？用户现在用截图、备忘录、收藏夹或群聊勉强完成什么？
+
+<div class="idea-routes">
+  <div class="idea-route idea-route--c">
+    <span>C 端从这里找</span>
+    <ul>
+      <li><strong>App Store 与安卓商店：</strong>先看同类产品的一星到三星评价，关注缺失功能、收费节点和弃用原因。</li>
+      <li><strong>小红书、抖音、B 站与 Reddit：</strong>搜索“怎么做”“有没有工具”“求推荐”，评论区常有更具体的补充。</li>
+      <li><strong>Product Hunt 与榜单：</strong>看新产品解决了哪个小动作，再看评论里用户希望它接着完成什么。</li>
+      <li><strong>趋势与流量报告：</strong>用 Google Trends、QuestMobile、艾瑞和平台年度报告确认这是不是一群人的长期行为。</li>
+      <li><strong>自己的相册和收藏夹：</strong>大量截图、收藏后不再打开的攻略、反复复制的文字，都是没有被接好的流程。</li>
+    </ul>
+  </div>
+  <div class="idea-route idea-route--b">
+    <span>可以直接这样搜</span>
+    <p><code>site:reddit.com "I wish there was an app"</code></p>
+    <p><code>带孩子旅行 攻略 太累</code></p>
+    <p><code>记账 App 难用 评论</code></p>
+    <p><code>Product Hunt AI language learning</code></p>
+    <p><code>AI 应用 用户规模 QuestMobile</code></p>
+  </div>
+</div>
+
+假设你经常旅行，先别做“AI 路书”。去看用户为什么收藏十几篇攻略：有人是怕餐厅临时休息，有人要照顾老人少走路，有人需要在演出散场后安全回酒店。选中一个反复出现的时刻，产品才可能从“生成一篇文字”变成真正有人打开的工具。
+
+### 资料找到以后，别急着写代码
+
+一个方向至少要留下三类证据：一份能看懂流程的材料、三个人重复提到的麻烦、一个已经有人付费或花时间绕过去的替代办法。然后用 60 分钟把它写具体。
+
+<div class="fieldwork">
+  <div class="fieldwork__step"><b>01</b><span>圈定一个人</span><p>B 端写到岗位，C 端写到某类生活状态。不要只写“企业用户”或“年轻人”。</p></div>
+  <div class="fieldwork__step"><b>02</b><span>找到一次发生</span><p>拿到一张表、一段录屏、一条差评或一次真实操作，看看麻烦具体卡在哪里。</p></div>
+  <div class="fieldwork__step"><b>03</b><span>交叉找三次</span><p>同类问题至少来自三个人或三个来源，避免被一句有趣的抱怨带跑。</p></div>
+  <div class="fieldwork__step"><b>04</b><span>只接住一步</span><p>写清输入、输出、确认人和衡量指标，再决定 AI 是否真的合适。</p></div>
+</div>
+
+最后，把方向写成一句别人听完就能想象的描述：
+
+> 当 **谁** 遇到 **什么时刻**，他现在要用 **哪些材料或办法** 完成 **哪件事**。我先让 AI 接住 **其中一步**，结果由 **谁确认**，再用 **什么变化** 判断它有没有价值。
+
+一个 B 端方向可以这样写：
+
+> 当包装线操作员看到 E37 错误码时，他现在要翻纸质手册和旧工单。系统先根据设备型号找出相关章节和三个排查步骤，由维修工程师确认；试点看平均停机时间是否下降。
+
+一个 C 端方向可以这样写：
+
+> 当家长周末带孩子逛博物馆时，他现在要在公众号、地图和点评之间拼行程。产品先按孩子年龄和可用时间整理三小时路线，开放时间与票价保留来源，家长确认后加入日历。
+
+能写到这个程度，你才拥有一个可以继续访谈、做原型和小范围试用的 idea。
+
+## 参考资料
+
+下面共列出 **67 个信息源**。正文优先采用调查方法清楚的咨询报告、行业研究和产品一手案例；券商报告主要用来观察国内市场关注的商业化方向，不把投资判断当作用户需求。部分厂商案例带有营销立场，使用时应与访谈、真实业务数据交叉验证。
+
+<details class="source-group">
+<summary>一、总体采用与企业价值（15）</summary>
+
+1. [McKinsey：The Economic Potential of Generative AI](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier)
+2. [McKinsey：The State of AI 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)
+3. [PwC：2025 Global AI Jobs Barometer](https://www.pwc.com/gx/en/issues/c-suite-insights/the-leadership-agenda/AI-jobs-barometer.html)
+4. [PwC：Global Workforce Hopes and Fears Survey 2025](https://www.pwc.com/gr/en/publications/specific-to-all-industries-index/hopes-and-fears-2025.html)
+5. [Deloitte：State of Generative AI in the Enterprise](https://www2.deloitte.com/us/en/pages/about-deloitte/articles/press-releases/state-of-generative-ai.html)
+6. [Microsoft：2025 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born)
+7. [IBM：5 Trends for 2025](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/business-trends-2025)
+8. [IBM：2025 CDO Study](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/2025-cdo)
+9. [Cisco：2025 AI Readiness Index](https://www.cisco.com/c/m/en_us/solutions/ai/readiness-index/realizing-the-value-of-ai.html)
+10. [EY：2025 AI Pulse Survey](https://www.ey.com/en_us/insights/emerging-technologies/pulse-ai-survey)
+11. [Accenture：Reinventing Enterprise Models in the Age of Gen AI](https://www.accenture.com/us-en/insights/artificial-intelligence/ai-investments)
+12. [Accenture：Making Reinvention Real with Gen AI](https://www.accenture.com/us-en/insights/consulting/making-reinvention-real-with-gen-ai)
+13. [OpenAI：The State of Enterprise AI 2025](https://openai.com/business/guides-and-resources/the-state-of-enterprise-ai-2025-report/)
+14. [中国信通院：《人工智能发展报告（2024 年）》](https://hrssit.cn/Uploads/file/20241217/1734400434600250.pdf)
+15. [CNNIC：《生成式人工智能应用发展报告（2025）》](https://www3.cnnic.cn/n4/2025/1021/c88-11391.html)
+
+</details>
+
+<details class="source-group">
+<summary>二、B 端行业、岗位与工作流（24）</summary>
+
+16. [McKinsey：Unlocking Profitable B2B Growth Through Gen AI](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/unlocking-profitable-b2b-growth-through-gen-ai)
+17. [McKinsey：Capturing the Full Value of Generative AI in Banking](https://www.mckinsey.com/industries/financial-services/our-insights/capturing-the-full-value-of-generative-ai-in-banking)
+18. [McKinsey：The AI-powered Bank—Customer Care](https://www.mckinsey.com/industries/financial-services/our-insights/the-ai-powered-bank-rewiring-for-excellence-in-customer-care)
+19. [McKinsey：The Future of AI in Insurance](https://www.mckinsey.com/industries/financial-services/our-insights/the-future-of-ai-in-the-insurance-industry)
+20. [McKinsey：Tackling Healthcare’s Biggest Burdens with Generative AI](https://www.mckinsey.com/industries/healthcare/our-insights/tackling-healthcares-biggest-burdens-with-generative-ai)
+21. [McKinsey：Generative AI in Healthcare](https://www.mckinsey.com/industries/healthcare/our-insights/generative-ai-in-healthcare-current-trends-and-future-outlook)
+22. [Deloitte：2025 Manufacturing Industry Outlook](https://www.deloitte.com/us/en/insights/industry/manufacturing-industrial-products/manufacturing-industry-outlook/2025.html)
+23. [Deloitte：2025 Smart Manufacturing Survey](https://www2.deloitte.com/us/en/insights/industry/manufacturing/2025-smart-manufacturing-survey.html)
+24. [Deloitte：2025 Retail Industry Outlook](https://www.deloitte.com/us/en/insights/industry/retail-distribution/retail-distribution-industry-outlook-2025.html)
+25. [Deloitte：2025 Global Health Care Outlook](https://www.deloitte.com/content/dam/assets-zone1/tw/en/docs/industries/life-sciences-health-care/2025/2025-healthcare-outlook-en.pdf)
+26. [Accenture：Commercial Banking Trends 2024](https://www.accenture.com/content/dam/accenture/final/accenture-com/document-2/Accenture-Commercial-Banking-Trends-2024.pdf)
+27. [Accenture：Banking Trends 2026](https://www.accenture.com/us-en/insights/banking/accenture-banking-trends-2026)
+28. [Thomson Reuters：2025 Generative AI in Professional Services](https://www.thomsonreuters.com/en-us/posts/technology/genai-professional-services-report-2025/)
+29. [Salesforce：State of Service 2025](https://www.salesforce.com/news/stories/state-of-service-report-announcement-2025/)
+30. [Salesforce：State of Sales 2026](https://www.salesforce.com/en/wp-content/uploads/sites/4/documents/reports/sales/salesforce-state-of-sales-report-2026.pdf)
+31. [Adobe：2025 AI and Digital Trends](https://business.adobe.com/content/dam/dx/us/en/resources/digital-trends-report-2025/2025_Digital_Trends_Report.pdf)
+32. [Adobe：2025 Content Creation and Management](https://business.adobe.com/content/dam/dx/us/en/resources/reports/content-management-digital-trends/2025-ai-and-digital-trends-content-creation-and-management.pdf)
+33. [艾瑞咨询：《2025 年中国企业级 AI 应用行业研究报告》](https://www.bsia.org.cn/site/content/31686.html)
+34. [GitHub：Quantifying Copilot’s Impact on Developer Productivity](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/)
+35. [Siemens × Microsoft：Industrial Copilot](https://news.microsoft.com/source/2024/10/24/siemens-and-microsoft-scale-industrial-ai/)
+36. [Abridge：Hartford HealthCare Ambient AI 案例](https://www.abridge.com/press-release/abridge-hartford-healthcare)
+37. [AWS：Sun Life 内部知识助手](https://aws.amazon.com/solutions/case-studies/sun-life-case-study/)
+38. [AWS：ResultsCX 客服自动化](https://aws.amazon.com/solutions/case-studies/resultscx/)
+39. [AWS：Sanofi 企业 AI 助手](https://aws.amazon.com/solutions/case-studies/sanofi-bedrock-case-study/)
+
+</details>
+
+<details class="source-group">
+<summary>三、落地产品与企业案例（10）</summary>
+
+40. [OpenAI：Morgan Stanley](https://openai.com/index/morgan-stanley/)
+41. [OpenAI：Klarna](https://openai.com/index/klarna/)
+42. [OpenAI：Moderna](https://openai.com/index/moderna/)
+43. [OpenAI：BBVA](https://openai.com/index/bbva-2025/)
+44. [OpenAI × PwC：Reimagining the Office of the CFO](https://openai.com/index/openai-pwc-finance-collaboration/)
+45. [Microsoft：Siemens 现场服务报告](https://www.microsoft.com/en/customers/story/19736-siemens-ag-germany-dynamics-365-field-service)
+46. [AWS：Legal & General 文档处理](https://aws.amazon.com/solutions/case-studies/aws-innovator-legal-and-general/)
+47. [AWS × Infosys：医疗保险客服助手](https://aws.amazon.com/blogs/apn/how-infosys-built-aws-generative-ai-based-assistant-for-a-healthcare-payer-company/)
+48. [Notion：Notion AI 功能说明](https://www.notion.com/help/notion-ai-faqs)
+49. [Canva：Magic Studio](https://www.canva.com/newsroom/news/magic-studio/)
+
+</details>
+
+<details class="source-group">
+<summary>四、C 端消费者与产品（13）</summary>
+
+50. [Capgemini：What Matters to Today’s Consumer 2025](https://www.capgemini.com/insights/research-library/top-consumer-trends-in-2025/)
+51. [Accenture：Me, My Brand and AI](https://www.accenture.com/us-en/insights/consulting/me-my-brand-ai-new-world-consumer-engagement)
+52. [Deloitte：2025 Digital Media Trends](https://www.deloitte.com/us/en/insights/industry/technology/digital-media-trends-consumption-habits-survey/2025.html)
+53. [QuestMobile：2025 中国移动互联网春季报告](https://www.questmobile.cn/research/report/1919961024158601218/)
+54. [QuestMobile：2025 年 8 月 AI 应用行业报告](https://www.questmobile.com.cn/research/report/1967853261412208641/)
+55. [艾瑞咨询：《2025 年中国 AI 类 App 流量分析报告》](https://www.etc.org.cn/UserFiles/Article/file/6388341575962762472758248.pdf)
+56. [Amazon：Rufus 购物助手](https://www.aboutamazon.com/news/retail/amazon-rufus)
+57. [Expedia：对话式旅行规划](https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/)
+58. [Duolingo：Duolingo Max](https://blog.duolingo.com/duolingo-max/)
+59. [Khan Academy：Khanmigo](https://2023-2024.annualreport.khanacademy.org/khanmigo)
+60. [Spotify：AI DJ](https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/)
+61. [Intuit：Intuit Assist](https://www.intuit.com/intuitassist/)
+62. [Adobe：Firefly](https://news.adobe.com/news/2025/04/adobe-revolutionizes-ai-assisted-creativity-firefly)
+
+</details>
+
+<details class="source-group">
+<summary>五、国内券商视角（5）</summary>
+
+63. [华鑫证券：WAIC 大会强供给，AI 应用商业化如何解](https://pdf.dfcfw.com/pdf/H3_AP202507291717868704_1.pdf)
+64. [国信证券：人工智能专题——AI Agent](https://pdf.dfcfw.com/pdf/H3_AP202503121644302597_1.pdf)
+65. [东吴证券：2025 年 AI 应用渗透趋势](https://pdf.dfcfw.com/pdf/H301_AP202501021641518997_1.pdf)
+66. [中银证券：“人工智能+”应用与平台](https://pdf.dfcfw.com/pdf/H3_AP202510201765533690_1.pdf)
+67. [AIGC 行业深度：算力、模型与应用的创新融合](https://pdf.dfcfw.com/pdf/H3_AP202411151640914780_1.pdf)
+
+</details>
+
+<p class="source-footnote">资料检索与整理时间：2026 年 8 月。报告中的比例受样本、地区和厂商口径影响，不能直接代替你对目标用户的访谈与试用数据。</p>
+
+<style scoped>
+.research-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 24px;
+  margin: 32px 0 42px;
+  padding: 28px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 8% 12%, color-mix(in srgb, var(--vp-c-brand-1) 16%, transparent), transparent 34%),
+    var(--vp-c-bg-soft);
 }
 
-// 预定义的推荐链路映射表
-const recommendationMap = {
-  // 兴趣点: 创意内容
-  'creative-content': {
-    'increase-efficiency': ['content', 'av-media', 'ai-marketing', 'entertainment'],
-    'reduce-cost': ['content', 'ecommerce', 'ai-marketing'],
-    'improve-experience': ['entertainment', 'emotion', 'travel', 'content'],
-    'innovate-business': ['ai-marketing', 'content', 'av-media', 'entertainment']
-  },
-  // 兴趣点: 技术服务
-  'tech-service': {
-    'increase-efficiency': ['programming', 'enterprise', 'data-intelligence', 'customer-service'],
-    'reduce-cost': ['programming', 'enterprise', 'manufacturing'],
-    'improve-experience': ['customer-service', 'enterprise', 'programming'],
-    'innovate-business': ['data-intelligence', 'programming', 'security', 'enterprise']
-  },
-  // 兴趣点: 数据智能
-  'data-intel': {
-    'increase-efficiency': ['data-intelligence', 'finance', 'enterprise', 'manufacturing'],
-    'reduce-cost': ['data-intelligence', 'manufacturing', 'energy'],
-    'improve-experience': ['data-intelligence', 'customer-service', 'ecommerce'],
-    'innovate-business': ['data-intelligence', 'finance', 'security', 'ai-marketing']
-  },
-  // 兴趣点: 用户服务
-  'user-service': {
-    'increase-efficiency': ['customer-service', 'ecommerce', 'travel', 'enterprise'],
-    'reduce-cost': ['customer-service', 'ecommerce', 'enterprise'],
-    'improve-experience': ['customer-service', 'emotion', 'travel', 'ecommerce', 'entertainment'],
-    'innovate-business': ['ecommerce', 'travel', 'emotion', 'entertainment']
-  },
-  // 兴趣点: 行业解决方案
-  'industry-solution': {
-    'increase-efficiency': ['manufacturing', 'healthcare', 'finance', 'government'],
-    'reduce-cost': ['manufacturing', 'energy', 'enterprise', 'finance'],
-    'improve-experience': ['healthcare', 'education', 'government', 'travel'],
-    'innovate-business': ['finance', 'security', 'legal', 'healthcare', 'government']
+.research-note__eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--vp-c-brand-1);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.research-note strong {
+  display: block;
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+.research-note p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  line-height: 1.8;
+}
+
+.scene-check {
+  margin: 24px 0 38px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--vp-c-brand-1);
+  border-radius: 0 12px 12px 0;
+  background: var(--vp-c-bg-soft);
+}
+
+.scene-check span {
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.scene-check p {
+  margin: 6px 0 0;
+}
+
+.product-shot {
+  margin: 20px 0 30px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+  background: var(--vp-c-bg-soft);
+  box-shadow: 0 14px 38px color-mix(in srgb, var(--vp-c-text-1) 8%, transparent);
+}
+
+.product-shot a {
+  display: block;
+  background: #f5f5f3;
+}
+
+.product-shot img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
+
+.product-shot--portrait img {
+  max-height: 560px;
+}
+
+.product-shot--mobile img {
+  max-height: 520px;
+}
+
+.product-shot figcaption {
+  padding: 14px 17px 16px;
+  border-top: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.product-shot figcaption strong {
+  color: var(--vp-c-text-1);
+}
+
+.idea-routes {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(240px, .75fr);
+  gap: 14px;
+  margin: 24px 0 28px;
+}
+
+.idea-route {
+  padding: 22px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+}
+
+.idea-route--b {
+  background: color-mix(in srgb, var(--vp-c-brand-soft) 58%, var(--vp-c-bg));
+}
+
+.idea-route--c {
+  background: var(--vp-c-bg-soft);
+}
+
+.idea-route > span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.idea-route ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.idea-route li {
+  margin: 10px 0;
+}
+
+.idea-route p {
+  margin: 8px 0;
+}
+
+.idea-route code {
+  white-space: normal;
+  word-break: break-word;
+}
+
+.fieldwork {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 28px 0 34px;
+}
+
+.fieldwork__step {
+  min-height: 150px;
+  padding: 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 16px;
+  background: var(--vp-c-bg-soft);
+}
+
+.fieldwork__step b {
+  display: block;
+  color: var(--vp-c-brand-1);
+  font-size: 12px;
+  letter-spacing: .1em;
+}
+
+.fieldwork__step span {
+  display: block;
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fieldwork__step p {
+  margin: 8px 0 0;
+  color: var(--vp-c-text-2);
+}
+
+.source-group {
+  margin: 12px 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg-soft);
+}
+
+.source-group summary {
+  padding: 16px 18px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.source-group ol {
+  margin: 0;
+  padding: 0 22px 18px 44px;
+}
+
+.source-group li {
+  margin: 8px 0;
+}
+
+.source-footnote {
+  margin-top: 18px;
+  color: var(--vp-c-text-3);
+  font-size: 13px;
+}
+
+@media (max-width: 720px) {
+  .research-note,
+  .idea-routes,
+  .fieldwork {
+    grid-template-columns: 1fr;
+  }
+
+  .research-note {
+    padding: 22px;
+  }
+
+  .fieldwork__step {
+    min-height: auto;
   }
 }
-
-const interestOptions = [
-  { label: '创意内容生成', value: 'creative-content', desc: '文案、图片、视频等创意内容' },
-  { label: '技术服务工具', value: 'tech-service', desc: '开发工具、自动化、代码辅助' },
-  { label: '数据智能分析', value: 'data-intel', desc: '数据分析、预测、智能决策' },
-  { label: '用户服务体验', value: 'user-service', desc: '客服、营销、用户体验' },
-  { label: '行业解决方案', value: 'industry-solution', desc: '特定行业的深度应用' }
-]
-
-const purposeOptions = [
-  { label: '提升效率', value: 'increase-efficiency', desc: '自动化、加速流程' },
-  { label: '降低成本', value: 'reduce-cost', desc: '减少人力、优化资源' },
-  { label: '改善体验', value: 'improve-experience', desc: '用户满意度、服务质量' },
-  { label: '业务创新', value: 'innovate-business', desc: '新产品、新模式' }
-]
-
-const industries = [
-  { key: 'manufacturing', name: '工业制造业', anchor: '#_1-工业制造业' },
-  { key: 'customer-service', name: '智能客服', anchor: '#_2-智能客服' },
-  { key: 'education', name: '教育行业', anchor: '#_3-教育行业' },
-  { key: 'programming', name: '智能编程', anchor: '#_4-智能编程' },
-  { key: 'healthcare', name: '医疗方向', anchor: '#_5-医疗方向' },
-  { key: 'security', name: '网络安全', anchor: '#_6-网络安全' },
-  { key: 'finance', name: '金融管理、保险银行业', anchor: '#_7-金融管理、保险银行业' },
-  { key: 'enterprise', name: '企业服务', anchor: '#_8-企业服务' },
-  { key: 'content', name: '内容生产与运营', anchor: '#_9-内容生产与运营' },
-  { key: 'government', name: '智慧政务管理', anchor: '#_10-智慧政务管理' },
-  { key: 'legal', name: '法律事务与合同管理', anchor: '#_11-法律事务与合同管理' },
-  { key: 'travel', name: '旅游与出行服务', anchor: '#_12-旅游与出行服务' },
-  { key: 'emotion', name: '情感陪伴', anchor: '#_13-情感陪伴' },
-  { key: 'entertainment', name: '休闲娱乐', anchor: '#_14-休闲娱乐' },
-  { key: 'ecommerce', name: '电商服务', anchor: '#_15-电商服务' },
-  { key: 'energy', name: '能源', anchor: '#_16-能源' },
-  { key: 'av-media', name: '音视频', anchor: '#_17-音视频' },
-  { key: 'ai-marketing', name: 'AI 营销', anchor: '#_18-ai-营销' },
-  { key: 'data-intelligence', name: '数据智能', anchor: '#_19-数据智能' }
-]
-
-// 计算推荐结果 - 从主题池中随机抽取
-const recommendationTopics = computed(() => {
-  if (!interestPoint.value || !purpose.value) return []
-  
-  const keys = recommendationMap[interestPoint.value]?.[purpose.value] || []
-  const topics = []
-  
-  // 从每个推荐行业中随机抽取 1-2 个主题
-  keys.forEach(key => {
-    const industry = industries.find(item => item.key === key)
-    const industryTopics = topicPool[key] || []
-    
-    if (industry && industryTopics.length > 0) {
-      // 随机抽取 1-2 个主题
-      const count = Math.floor(Math.random() * 2) + 1
-      const shuffled = [...industryTopics].sort(() => Math.random() - 0.5)
-      const selected = shuffled.slice(0, Math.min(count, shuffled.length))
-      
-      selected.forEach(topic => {
-        topics.push({
-          ...topic,
-          industryKey: key,
-          industryName: industry.name,
-          industryAnchor: industry.anchor
-        })
-      })
-    }
-  })
-  
-  // 随机排序并限制总数
-  return topics.sort(() => Math.random() - 0.5).slice(0, 8)
-})
-
-// 获取当前选择的描述
-const currentSelection = computed(() => {
-  const interest = interestOptions.find(i => i.value === interestPoint.value)
-  const pur = purposeOptions.find(p => p.value === purpose.value)
-  return {
-    interest: interest?.label || '',
-    purpose: pur?.label || ''
-  }
-})
-
-const scrollToAnchor = (anchor) => {
-  // 延迟滚动确保DOM更新完成
-  setTimeout(() => {
-    // 尝试通过ID查找（支持多种格式）
-    let element = document.querySelector(anchor)
-    
-    // 如果找不到，尝试其他可能的ID格式
-    if (!element) {
-      // 尝试去掉下划线前缀
-      const altAnchor = anchor.replace('#_', '#')
-      element = document.querySelector(altAnchor)
-    }
-    
-    // 如果还是找不到，通过标题文本查找
-    if (!element) {
-      // 从锚点提取行业名称
-      const anchorText = decodeURIComponent(anchor.replace('#', '').replace(/^_/, ''))
-      const headings = document.querySelectorAll('h2, h3')
-      
-      for (let heading of headings) {
-        const headingText = heading.textContent.trim()
-        // 完全匹配或包含匹配
-        const cleanHeading = headingText.replace(/^\d+\.\s*/, '')
-        if (cleanHeading === anchorText || headingText.includes(anchorText)) {
-          element = heading
-          break
-        }
-      }
-    }
-    
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
-      // 高亮显示目标段落
-      element.style.backgroundColor = '#f0f9ff'
-      element.style.transition = 'background-color 0.3s'
-      element.style.padding = '8px'
-      element.style.borderRadius = '4px'
-      setTimeout(() => {
-        element.style.backgroundColor = ''
-        element.style.padding = ''
-      }, 2000)
-    }
-  }, 100)
-}
-
-const resetSelection = () => {
-  interestPoint.value = ''
-  purpose.value = ''
-}
-
-// ---- C 端场景变量 ----
-const cDuration = '约 <strong>4 小时</strong>'
-
-const vibePoint = ref('')
-const feeling = ref('')
-
-// 每个场景的主题池 - 强调感觉、氛围、心理暗示
-const cTopicPool = {
-  'lifestyle': [
-    { title: '晨间仪式感唤醒助手', desc: '根据天气、日程、心情生成专属晨间仪式，让每一天从美好开始' },
-    { title: '独居生活氛围营造师', desc: '为独居者设计居家氛围方案，灯光、音乐、香薰的智能搭配建议' },
-    { title: '周末宅家治愈计划生成器', desc: '根据当下心情推荐完美的宅家组合：电影+零食+氛围布置' },
-    { title: '睡前心灵安抚电台', desc: '生成温柔的故事、冥想引导，陪伴入睡的私人电台' },
-    { title: '生活美学灵感捕手', desc: '从日常小事中发现美，生成生活美学建议和仪式感指南' }
-  ],
-  'emotion': [
-    { title: '深夜树洞倾听者', desc: '24 小时在线的情绪垃圾桶，无评判地接纳所有心事' },
-    { title: '失恋疗愈陪伴师', desc: '在失恋低谷期提供温柔的陪伴、疗愈建议和情绪出口' },
-    { title: '焦虑缓解呼吸教练', desc: '感知焦虑情绪，引导呼吸练习和正念冥想' },
-    { title: '自信心重建导师', desc: '通过积极对话和心理暗示，帮助重建自我认同和价值感' },
-    { title: '情绪日记智能解读', desc: '分析情绪日记，发现情绪规律，给出温暖的洞察和建议' }
-  ],
-  'entertainment': [
-    { title: '沉浸式剧本杀 DM', desc: '扮演剧本杀主持人，营造悬疑氛围，推动剧情发展' },
-    { title: '开放世界游戏灵魂 NPC', desc: '有血有肉的 NPC，记住玩家故事，产生真实的情感羁绊' },
-    { title: '个性化播客内容生成', desc: '根据兴趣生成专属播客，像朋友聊天一样自然' },
-    { title: '虚拟演唱会氛围组', desc: '为线上演唱会营造现场感，实时互动、应援、氛围渲染' },
-    { title: '互动小说共创伙伴', desc: '与读者共同创作故事，每个选择都影响世界走向' }
-  ],
-  'growth': [
-    { title: '个人成长见证者', desc: '记录成长轨迹，在重要节点给予鼓励和回顾' },
-    { title: '习惯养成游戏化教练', desc: '将枯燥的习惯养成变成有趣的冒险游戏' },
-    { title: '技能学习搭子匹配', desc: '找到志同道合的学习伙伴，互相督促、分享进步' },
-    { title: '每日小确幸发现者', desc: '帮助发现生活中的小美好，培养感恩和积极心态' },
-    { title: '人生模拟体验器', desc: '模拟不同人生选择，体验平行时空的另一种可能' }
-  ],
-  'social': [
-    { title: '破冰话题生成器', desc: '在社交场合提供有趣的话题，化解尴尬、拉近距离' },
-    { title: '朋友圈文案氛围师', desc: '根据照片和心情，生成有格调的朋友圈文案' },
-    { title: '约会氛围策划师', desc: '为约会设计完整的氛围方案，从地点到话题到惊喜' },
-    { title: '远程聚会气氛担当', desc: '在线上聚会中活跃气氛，组织游戏、引导互动' },
-    { title: '社交能量管理助手', desc: '帮助内向者管理社交能量，找到舒适的社交节奏' }
-  ],
-  'creative': [
-    { title: '灵感枯竭急救包', desc: '在创意瓶颈时提供意想不到的灵感火花' },
-    { title: '个人风格探索向导', desc: '帮助发现独特的个人风格，从穿搭到表达' },
-    { title: '手账与日记美学顾问', desc: '提供手账排版、配色、内容创意的美学建议' },
-    { title: '摄影构图氛围指南', desc: '根据场景和想要的感觉，提供摄影和修图建议' },
-    { title: '音乐心情匹配师', desc: '根据当下心情和场景，推荐完美的音乐组合' }
-  ],
-  'travel': [
-    { title: '城市漫步探索向导', desc: '像本地人一样探索城市，发现隐藏的宝藏地点' },
-    { title: '旅行心情日记生成', desc: '将旅行照片和心情转化为优美的游记和回忆' },
-    { title: '独自旅行陪伴助手', desc: '为独自旅行者提供陪伴、建议和安全感' },
-    { title: '目的地氛围预览', desc: '在出发前沉浸式体验目的地氛围，提前进入状态' },
-    { title: '旅行摄影氛围指导', desc: '根据场景和光线，指导拍出有故事感的旅行照片' }
-  ],
-  'health': [
-    { title: '运动动力唤醒师', desc: '在不想动的时候给予恰到好处的鼓励和动力' },
-    { title: '健康饮食灵感厨房', desc: '根据心情和食材，生成治愈系的健康食谱' },
-    { title: '睡眠质量优化氛围师', desc: '从环境到心理，全方位营造优质睡眠氛围' },
-    { title: '身体感知引导师', desc: '引导关注身体信号，建立身心连接' },
-    { title: '自我关爱提醒助手', desc: '在忙碌中提醒你停下来，关爱自己' }
-  ],
-  'learning': [
-    { title: '知识探索游戏化向导', desc: '将枯燥的知识学习变成有趣的探索冒险' },
-    { title: '语言学习情景伙伴', desc: '扮演不同角色，在情景对话中自然习得语言' },
-    { title: '好奇心满足助手', desc: '回答各种奇思妙想，满足对世界的好奇心' },
-    { title: '读书笔记灵感激发', desc: '帮助整理读书心得，发现新的思考角度' },
-    { title: '知识分享氛围营造', desc: '将学到的知识转化为有趣的分享内容' }
-  ],
-  'relationship': [
-    { title: '亲密关系沟通教练', desc: '帮助表达难以启齿的情感，改善亲密关系' },
-    { title: '家人关怀提醒助手', desc: '提醒你关心家人，提供温馨的互动建议' },
-    { title: '友谊维护氛围师', desc: '帮助维护远距离友谊，创造共同话题' },
-    { title: '表白与惊喜策划师', desc: '为重要的人策划难忘的惊喜和浪漫时刻' },
-    { title: '冲突缓和氛围引导', desc: '在关系紧张时提供缓和氛围的建议和话术' }
-  ],
-  'pet': [
-    { title: '宠物拟人化日记', desc: '以宠物的视角生成日记，记录与主人的温馨日常' },
-    { title: '宠物行为解读师', desc: '解读宠物的行为语言，加深与宠物的连接' },
-    { title: '宠物陪伴时光策划', desc: '设计与宠物互动的创意活动，增进感情' },
-    { title: '宠物纪念故事生成', desc: '将宠物的照片和回忆转化为温馨的故事' },
-    { title: '新手铲屎官安心指南', desc: '为新手宠物主人提供温暖的陪伴和指导' }
-  ],
-  'finance': [
-    { title: '消费情绪觉察助手', desc: '觉察冲动消费背后的情绪，建立健康的消费观' },
-    { title: '储蓄目标可视化激励', desc: '将储蓄目标转化为可视化的梦想进度' },
-    { title: '理财知识轻松学', desc: '用轻松有趣的方式学习理财知识' },
-    { title: '财务焦虑舒缓师', desc: '在面对财务压力时提供情绪支持和实用建议' },
-    { title: '小额投资体验游戏', desc: '通过游戏化方式体验投资，降低入门门槛' }
-  ],
-  'career': [
-    { title: '职业迷茫陪伴者', desc: '在职业迷茫期提供倾听、探索和方向建议' },
-    { title: '工作成就感唤醒师', desc: '帮助发现工作中的价值和意义，重燃热情' },
-    { title: '职场社交氛围助手', desc: '提供职场社交的轻松话题和互动建议' },
-    { title: '副业灵感激发器', desc: '根据个人兴趣和技能，激发副业创意' },
-    { title: '面试前信心加油站', desc: '在面试前提供心理建设和信心鼓励' }
-  ],
-  'home': [
-    { title: '居家空间氛围设计师', desc: '根据心情和季节，设计居家氛围方案' },
-    { title: '四季家居变换指南', desc: '随季节变换家居布置，保持新鲜感' },
-    { title: '小户型空间魔法', desc: '让小空间也能有舒适温馨的氛围' },
-    { title: '居家仪式感创造者', desc: '为日常居家活动创造仪式感' },
-    { title: '断舍离心理陪伴', desc: '在整理物品时提供心理支持和决策建议' }
-  ],
-  'food': [
-    { title: '一人食治愈料理', desc: '为独居者设计简单治愈的料理方案' },
-    { title: '节日餐桌氛围设计', desc: '为特殊日子设计有仪式感的餐桌布置' },
-    { title: '料理心情匹配师', desc: '根据当下心情推荐适合的食物和做法' },
-    { title: '厨房小白信心建立', desc: '为零基础烹饪者提供温暖鼓励和简单食谱' },
-    { title: '美食摄影氛围指南', desc: '让家常料理也能拍出诱人的氛围感' }
-  ],
-  'fashion': [
-    { title: '今日穿搭心情板', desc: '根据天气、场合、心情生成穿搭灵感' },
-    { title: '胶囊衣橱搭配师', desc: '用有限的单品创造无限的搭配可能' },
-    { title: '个人风格探索之旅', desc: '帮助发现和建立独特的个人风格' },
-    { title: '旧衣新穿创意师', desc: '为旧衣服提供新的搭配灵感' },
-    { title: '特殊场合造型顾问', desc: '为重要场合设计令人自信的造型' }
-  ]
-}
-
-// 预定义的推荐链路映射表 - 基于氛围和感觉
-const cRecommendationMap = {
-  // 氛围点: 治愈系
-  'healing': {
-    'relax': ['emotion', 'lifestyle', 'health', 'home'],
-    'inspire': ['creative', 'growth', 'learning', 'entertainment'],
-    'connect': ['relationship', 'social', 'pet', 'emotion'],
-    'escape': ['travel', 'entertainment', 'creative', 'lifestyle']
-  },
-  // 氛围点: 成长系
-  'growth': {
-    'relax': ['growth', 'learning', 'creative', 'health'],
-    'inspire': ['career', 'learning', 'creative', 'growth'],
-    'connect': ['social', 'relationship', 'career', 'learning'],
-    'escape': ['travel', 'entertainment', 'creative', 'lifestyle']
-  },
-  // 氛围点: 社交系
-  'social': {
-    'relax': ['social', 'pet', 'food', 'home'],
-    'inspire': ['social', 'creative', 'entertainment', 'travel'],
-    'connect': ['relationship', 'social', 'pet', 'travel'],
-    'escape': ['social', 'travel', 'entertainment', 'creative']
-  },
-  // 氛围点: 探索系
-  'explore': {
-    'relax': ['travel', 'creative', 'lifestyle', 'food'],
-    'inspire': ['travel', 'creative', 'learning', 'entertainment'],
-    'connect': ['travel', 'social', 'relationship', 'pet'],
-    'escape': ['travel', 'entertainment', 'creative', 'lifestyle']
-  },
-  // 氛围点: 日常系
-  'daily': {
-    'relax': ['lifestyle', 'home', 'health', 'emotion'],
-    'inspire': ['creative', 'food', 'fashion', 'home'],
-    'connect': ['relationship', 'social', 'pet', 'lifestyle'],
-    'escape': ['entertainment', 'creative', 'travel', 'lifestyle']
-  }
-}
-
-const vibeOptions = [
-  { label: '治愈系', value: 'healing', desc: '温暖、安抚、疗愈' },
-  { label: '成长系', value: 'growth', desc: '进步、突破、蜕变' },
-  { label: '社交系', value: 'social', desc: '连接、分享、互动' },
-  { label: '探索系', value: 'explore', desc: '好奇、冒险、发现' },
-  { label: '日常系', value: 'daily', desc: '平凡、真实、当下' }
-]
-
-const feelingOptions = [
-  { label: '想要放松', value: 'relax', desc: '舒缓压力、放空自己' },
-  { label: '寻找灵感', value: 'inspire', desc: '激发创意、获得启发' },
-  { label: '渴望连接', value: 'connect', desc: '与人连接、情感共鸣' },
-  { label: '暂时逃离', value: 'escape', desc: '逃离现实、沉浸体验' }
-]
-
-const scenarios = [
-  { key: 'lifestyle', name: '生活方式', anchor: '#_1-生活方式' },
-  { key: 'emotion', name: '情感陪伴', anchor: '#_2-情感陪伴' },
-  { key: 'entertainment', name: '娱乐休闲', anchor: '#_3-娱乐休闲' },
-  { key: 'growth', name: '个人成长', anchor: '#_4-个人成长' },
-  { key: 'social', name: '社交互动', anchor: '#_5-社交互动' },
-  { key: 'creative', name: '创意表达', anchor: '#_6-创意表达' },
-  { key: 'travel', name: '旅行探索', anchor: '#_7-旅行探索' },
-  { key: 'health', name: '身心健康', anchor: '#_8-身心健康' },
-  { key: 'learning', name: '知识探索', anchor: '#_9-知识探索' },
-  { key: 'relationship', name: '关系经营', anchor: '#_10-关系经营' },
-  { key: 'pet', name: '宠物陪伴', anchor: '#_11-宠物陪伴' },
-  { key: 'finance', name: '财务健康', anchor: '#_12-财务健康' },
-  { key: 'career', name: '职业发展', anchor: '#_13-职业发展' },
-  { key: 'home', name: '居家空间', anchor: '#_14-居家空间' },
-  { key: 'food', name: '美食料理', anchor: '#_15-美食料理' },
-  { key: 'fashion', name: '穿搭风格', anchor: '#_16-穿搭风格' }
-]
-
-// 计算推荐结果 - 从主题池中随机抽取
-const cRecommendationTopics = computed(() => {
-  if (!vibePoint.value || !feeling.value) return []
-  
-  const keys = cRecommendationMap[vibePoint.value]?.[feeling.value] || []
-  const topics = []
-  
-  // 从每个推荐场景中随机抽取 1-2 个主题
-  keys.forEach(key => {
-    const scenario = scenarios.find(item => item.key === key)
-    const scenarioTopics = cTopicPool[key] || []
-    
-    if (scenario && scenarioTopics.length > 0) {
-      // 随机抽取 1-2 个主题
-      const count = Math.floor(Math.random() * 2) + 1
-      const shuffled = [...scenarioTopics].sort(() => Math.random() - 0.5)
-      const selected = shuffled.slice(0, Math.min(count, shuffled.length))
-      
-      selected.forEach(topic => {
-        topics.push({
-          ...topic,
-          scenarioKey: key,
-          scenarioName: scenario.name,
-          scenarioAnchor: scenario.anchor
-        })
-      })
-    }
-  })
-  
-  // 随机排序并限制总数
-  return topics.sort(() => Math.random() - 0.5).slice(0, 8)
-})
-
-// 获取当前选择的描述
-const cCurrentSelection = computed(() => {
-  const vibe = vibeOptions.find(i => i.value === vibePoint.value)
-  const feel = feelingOptions.find(p => p.value === feeling.value)
-  return {
-    vibe: vibe?.label || '',
-    feeling: feel?.label || ''
-  }
-})
-
-const cScrollToAnchor = (anchor) => {
-  // 延迟滚动确保DOM更新完成
-  setTimeout(() => {
-    // 尝试通过ID查找（支持多种格式）
-    let element = document.querySelector(anchor)
-    
-    // 如果找不到，尝试其他可能的ID格式
-    if (!element) {
-      // 尝试去掉下划线前缀
-      const altAnchor = anchor.replace('#_', '#')
-      element = document.querySelector(altAnchor)
-    }
-    
-    // 如果还是找不到，通过标题文本查找
-    if (!element) {
-      // 从锚点提取场景名称
-      const anchorText = decodeURIComponent(anchor.replace('#', '').replace(/^_/, ''))
-      const headings = document.querySelectorAll('h2, h3')
-      
-      for (let heading of headings) {
-        const headingText = heading.textContent.trim()
-        // 完全匹配或包含匹配
-        const cleanHeading = headingText.replace(/^\d+\.\s*/, '')
-        if (cleanHeading === anchorText || headingText.includes(anchorText)) {
-          element = heading
-          break
-        }
-      }
-    }
-    
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
-      // 高亮显示目标段落
-      element.style.backgroundColor = '#fdf2f8'
-      element.style.transition = 'background-color 0.3s'
-      element.style.padding = '8px'
-      element.style.borderRadius = '4px'
-      setTimeout(() => {
-        element.style.backgroundColor = ''
-        element.style.padding = ''
-      }, 2000)
-    }
-  }, 100)
-}
-
-const cResetSelection = () => {
-  vibePoint.value = ''
-  feeling.value = ''
-}
-</script>
-
-# AI 应用场景参考
-
-<Tabs>
-<TabItem label="B 端产业应用">
-
-## 章节导读
-
-<ChapterIntroduction :duration="duration" :tags="['B 端应用', '产业应用', 'AI 场景', '落地参考', '行业方案']" coreOutput="了解 15+ B 端行业应用场景" expectedOutput="找到适合企业客户的项目方向">
-
-本文档汇总了 <strong>LLM 大模型在 B 端企业场景中的落地应用</strong>。与 C 端关注用户体验和情感不同，B 端产品更注重<strong>解决实际业务需求、提升效率、降低成本</strong>。每个场景都具备<strong>实际落地的可行性</strong>，涵盖从<strong>需求分析到技术实现</strong>的完整思路，适合面向企业客户的 AI 应用开发者参考。
-
-</ChapterIntroduction>
-
-## 行业方向快速选择
-
-<el-card shadow="hover" style="margin-top: 16px; margin-bottom: 24px; border-left: 5px solid #409EFF;">
-  <div style="font-weight: 600; margin-bottom: 8px;">找到适合你的应用场景</div>
-  <div style="color: #606266; font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
-    选择你的兴趣方向和想要实现的目的，系统会推荐相关的行业场景，点击标签即可跳转到对应章节。
-  </div>
-  <el-row :gutter="16">
-    <el-col :span="12">
-      <el-select v-model="interestPoint" placeholder="选择兴趣方向" style="width: 100%;">
-        <el-option 
-          v-for="item in interestOptions" 
-          :key="item.value" 
-          :label="item.label" 
-          :value="item.value">
-          <div style="display: flex; flex-direction: column;">
-            <span>{{ item.label }}</span>
-            <span style="font-size: 12px; color: #909399;">{{ item.desc }}</span>
-          </div>
-        </el-option>
-      </el-select>
-    </el-col>
-    <el-col :span="12">
-      <el-select v-model="purpose" placeholder="选择实现目的" style="width: 100%;">
-        <el-option 
-          v-for="item in purposeOptions" 
-          :key="item.value" 
-          :label="item.label" 
-          :value="item.value">
-          <div style="display: flex; flex-direction: column;">
-            <span>{{ item.label }}</span>
-            <span style="font-size: 12px; color: #909399;">{{ item.desc }}</span>
-          </div>
-        </el-option>
-      </el-select>
-    </el-col>
-  </el-row>
-  
-  <!-- 推荐结果展示 - 表格形式 -->
-  <div v-if="recommendationTopics.length > 0" style="margin-top: 16px;">
-    <div style="font-weight: 600; margin-bottom: 10px; color: #409EFF;">
-      为你推荐 {{ recommendationTopics.length }} 个应用场景
-      <span style="font-weight: normal; color: #909399; font-size: 13px; margin-left: 8px;">
-        ({{ currentSelection.interest }} + {{ currentSelection.purpose }})
-      </span>
-    </div>
-    <el-table 
-      :data="recommendationTopics" 
-      style="width: 100%; cursor: pointer;"
-      @row-click="(row) => scrollToAnchor(row.industryAnchor)"
-      highlight-current-row>
-      <el-table-column prop="title" label="应用场景" min-width="300">
-        <template #default="scope">
-          <div style="font-weight: 500; color: #303133;">{{ scope.row.title }}</div>
-          <div style="font-size: 12px; color: #909399; margin-top: 4px;">{{ scope.row.desc }}</div>
-        </template>
-      </el-table-column>
-      <el-table-column prop="industryName" label="所属行业" width="180" align="center">
-        <template #default="scope">
-          <el-tag type="info" effect="light" size="small">{{ scope.row.industryName }}</el-tag>
-        </template>
-      </el-table-column>
-    </el-table>
-    <div style="margin-top: 10px; font-size: 12px; color: #909399;">
-      💡 点击表格任意行即可跳转到对应行业章节
-    </div>
-  </div>
-  
-  <!-- 未完全选择时的提示 -->
-  <div v-else-if="!interestPoint || !purpose" style="margin-top: 14px; color: #909399; font-size: 13px;">
-    <span v-if="!interestPoint && !purpose">💡 请选择兴趣方向和实现目的</span>
-    <span v-else-if="!interestPoint">💡 请选择兴趣方向</span>
-    <span v-else>💡 请选择实现目的</span>
-  </div>
-  
-  <!-- 重置按钮 -->
-  <div v-if="interestPoint || purpose" style="margin-top: 12px;">
-    <el-button size="small" @click="resetSelection">重新选择</el-button>
-  </div>
-</el-card>
-
-## 行业快速介绍
-
-### 主流技术选型
-
-在 AI 应用开发中，常见的技术方向包括：
-
-1. **LLM（大语言模型）**：擅长处理自然语言任务，如对话、文本生成、摘要、翻译等，适合构建智能客服、内容创作、知识问答类应用。
-2. **VLM（视觉语言模型）**：结合视觉理解与语言能力，可实现图像描述、视觉问答、多模态内容生成等功能，适用于医疗影像分析、工业质检、创意设计等场景。
-3. **GenAI（生成式 AI）**：包括文本生成、图像生成（如 Stable Diffusion、DALL·E）、视频生成等技术，能够快速生成创意内容，适用于设计辅助、营销素材制作、教育培训等领域。
-
-### 选择策略
-
-学习者可以根据以下维度选择适合自己的应用方向：
-
-1. **兴趣导向**：优先选择自己感兴趣的行业或技术方向，保持学习动力。例如：
-   - 对创意设计感兴趣：可尝试内容生产、工业设计类应用
-   - 对技术挑战感兴趣：可尝试网络安全、医疗方向的应用
-   - 对社会价值感兴趣：可尝试智慧政务、教育行业的应用
-
-2. **行业适配**：结合自身行业背景或资源优势选择场景：
-   - 制造业从业者：可优先考虑工业制造、企业服务类应用
-   - 教育工作者：可优先关注教育行业、内容生产类应用
-   - 医疗从业者：可探索医疗方向、健康管理类应用
-
-3. **技术难度**：根据自身技术基础选择合适的复杂度：
-   - 入门级：智能客服、内容创作、简单问答系统
-   - 进阶级：工业质检、医疗影像分析、代码智能助手
-   - 专业级：金融风控、网络安全、多模态复杂应用
-
-## 1. 工业制造业 
-
-工业制造业场景主要围绕设计辅助、生产优化、智能运维三大方向展开。常见应用包括利用 AI 辅助产品外观设计、自动化图纸审查、技术文档智能生成、工业设备故障诊断等，能够显著提升设计效率和降低运维成本。
-
-| 序号 | 应用场景名称                   | 实现参考                                                                                                        |
-| :--: | ------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-|  1   | 新能源客车外观 AI 辅助设计平台 | 基于图片生成模型进行外观概念设计，结合 LLM 进行设计规范检查和创意迭代；集成 Three.js 3D 渲染服务                 |
-|  2   | 智能图纸设计与审查助手         | 利用 RAG 技术构建企业设计规范知识库，DALL·E 生成参考图辅助理解；集成 CAD API 实现图纸自动化解析                  |
-|  3   | 技术文档自动生成与管理         | 基于 LLM 从产品数据库自动生成产品规格书和操作手册，ChromaDB 向量库存储历史文档支持智能检索                       |
-|  4   | 生产设备巡检报告自动生成助手   | 巡检人员语音描述设备状态，LLM 结构化生成巡检报告；自动关联历史故障记录                                           |
-|  5   | 工厂叉车智能调度与路径规划系统 | LLM 解析订单任务和仓库位置，结合地图 API 生成最优调度方案                                                        |
-|  6   | 基于 LLM 信息检索的数据仓库    | 采用 Text-to-SQL 技术将自然语言转换为数据库查询，Superset 可视化展示查询结果；Doris 或 ClickHouse 作为 OLAP 引擎 |
-|  7   | 工业设备故障诊断知识问答助手   | 基于历史故障案例构建向量知识库，LLM 根据故障描述提供诊断建议和解决方案                                           |
-|  8   | 生产质检报告智能生成与缺陷分类 | OCR 识别质检照片中的缺陷，LLM 生成结构化质检报告；自动分类缺陷类型和严重程度                                     |
-|  9   | 库存盘点智能助手与盘点报告生成 | 盘点数据录入，LLM 自动比对系统库存并生成差异报告；异常库存预警                                                   |
-|  10  | 工艺流程优化建议智能问答系统   | 基于生产工艺文档构建 RAG 知识库，LLM 根据生产问题提供优化建议                                                    |
-
-## 2. 智能客服
-
-智能客服场景聚焦于客户服务效率提升和用户体验优化。典型应用涵盖多渠道客服整合、智能回复生成、客户情绪分析、工单自动化处理等，帮助企业实现 7×24 小时客户服务。
-
-| 序号 | 应用场景名称                         | 实现参考                                                                                                               |
-| :--: | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-|  1   | 多渠道智能客服自动回复与工单生成系统 | 接入微信、APP、官网等多渠道消息，LLM 理解意图后生成回复并自动创建工单；使用 LangChain 构建对话流程，MySQL 存储工单数据 |
-|  2   | 潜在客户挖掘与跟进建议助手           | LLM 分析历史客服对话记录，识别高意向客户特征并打分；推荐系统结合协同过滤算法                                           |
-|  3   | 企业内部知识智能检索与问答管家       | 基于 Confluence 和内部文档构建向量知识库，LLM 结合 RAG 技术生成答案                                                    |
-|  4   | 客户满意度调查与服务改进管理系统     | LLM 自动分析客服对话内容进行情感分类和满意度评分；BI 报表展示分析结果                                                  |
-|  5   | 客服对话智能小结与工单生成工具       | 客服结束对话后，LLM 自动生成会话小结并提取关键信息；自动填充工单字段                                                   |
-|  6   | 客服话术合规性自动检测助手           | 客服输入回复内容，LLM 实时检测话术合规性和敏感词；给出修改建议                                                         |
-|  7   | 客服工单自动摘要与分类生成工具       | LLM 对长对话记录进行摘要生成和自动分类打标；Elasticsearch 支持工单全文检索                                             |
-|  8   | 客户情绪监测与异常预警工具           | 实时分析语音语调特征和文字情感，LLM 识别异常情绪并触发预警；WebSocket 推送预警消息                                     |
-|  9   | 客服金牌话术推荐知识库系统           | LLM 分析优秀客服对话案例，提炼金牌话术模板；推荐系统根据对话上下文实时推荐话术                                         |
-|  10  | 智能外呼对话内容分析与质检助手       | 外呼录音转写后，LLM 分析对话内容提取关键信息；自动生成质检报告和改进建议                                               |
-
-## 3. 教育行业
-
-教育行业场景致力于实现个性化教学和智慧教育管理。核心应用包括智能学习路径规划、作业自动批改、教案生成、学情分析等，推动教育资源的优化配置和因材施教的实现。
-
-| 序号 | 应用场景名称                             | 实现参考                                                                                   |
-| :--: | ---------------------------------------- | ------------------------------------------------------------------------------------------ |
-|  1   | 个性化语言学习路径规划与智能导学系统     | LLM 评估学习者当前水平，根据学习目标规划每日学习任务；推荐算法结合知识图谱推荐学习资源     |
-|  2   | 教案自动化编写与教学资源推送平台         | LLM 根据课程大纲生成教案框架和教学设计；向量库存储优质教案和课件，支持关键词检索和相似推荐 |
-|  3   | 作业自动化批阅与学情诊断分析系统         | LLM 自动批改主观题并生成批改建议，知识图谱定位学生薄弱知识点                               |
-|  4   | 人才岗位胜任力模型构建与学习地图         | LLM 分析岗位 JD 提取能力要求，构建岗位能力画像；根据差距生成个性化学习地图                 |
-|  5   | 校本课程体系构建与课件制作工具           | LLM 分析学校特色和学生需求，生成校本课程框架；集成 PPT 生成接口自动制作课件                |
-|  6   | 外语口语一对一情景化实战演练             | LLM 扮演不同角色进行口语对话，ASR 识别发音并评分；TTS 生成标准发音示范                     |
-|  7   | 高考志愿大数据推荐与生涯规划指导平台     | LLM 分析考生分数、位次、兴趣等信息，结合招录数据推荐院校和专业                             |
-|  8   | 少儿编程代码助手                         | LLM 解释代码逻辑和提供编程指导，支持块语言和 Python 切换                                   |
-|  9   | 知识点思维导图自动生成与学习路径推荐工具 | 输入课程主题，LLM 自动生成知识点思维导图；根据学习进度推荐下一步学习内容                   |
-|  10  | 中英文作文自动化评分与批改引擎           | LLM 从立意、结构、语言、多样性等多维度评分并生成批注；比对优秀范文                         |
-
-## 4. 智能编程
-
-智能编程场景旨在提升开发效率和代码质量。典型应用有智能代码补全、Bug 自动修复、自动化测试生成、代码转换等，让开发者能够专注于业务逻辑而非重复性编码工作。
-
-| 序号 | 应用场景名称                     | 实现参考                                                                                             |
-| :--: | -------------------------------- | ---------------------------------------------------------------------------------------------------- |
-|  1   | 智能代码补全与 Bug 自动修复助手  | 基于 CodeLlama 微调代码模型，IDE 插件实时提供代码补全建议；LLM 分析错误栈自动定位 Bug 并生成修复代码 |
-|  2   | 低代码应用构建与流程自动化平台   | 用户通过自然语言描述需求，LLM 转换为低代码配置或代码框架                                             |
-|  3   | 单元测试用例生成系统             | AST 解析源代码提取函数逻辑，LLM 生成边界条件和异常场景的测试用例；集成 Jest/Pytest 运行测试          |
-|  4   | 代码智能分析与语言迁移工具       | 基于 Tree-sitter 解析代码结构，LLM 分析代码质量并提供优化建议；结合规则引擎实现语言转换              |
-|  5   | 自然语言转 SQL 语句自动生成工具  | LLM 将自然语言查询转换为 SQL，支持复杂多表关联和聚合查询                                             |
-|  6   | API 接口自动化测试与文档生成平台 | LLM 分析代码注释和接口定义，自动生成测试用例和 API 文档；Postman 集成测试执行                        |
-|  7   | UI 测试脚本智能录制与维护工具    | 浏览器插件录制用户操作轨迹，LLM 分析操作意图生成测试脚本；AI 修复失效的定位器                        |
-|  8   | 系统日志分析与故障定位           | ELK Stack 采集日志数据，LLM 分析异常日志提取关键信息并定位根因；推荐修复方案                         |
-|  9   | 前端界面（UI）代码自动生成工具   | 设计稿图片经 OCR 识别布局结构，LLM 生成响应式 CSS 和组件代码；集成 TailwindCSS 支持多种样式框架      |
-|  10  | 数据库结构智能设计与建模助手     | 业务需求文档输入给 LLM，自动生成 ER 图和数据表结构；支持导出 MySQL/PostgreSQL 建表脚本               |
-
-## 5. 医疗方向
-
-医疗方向场景致力于提升诊疗效率和医疗服务质量。常见应用包括病历自动生成、医学知识问答、影像分析辅助、药物研发支持等，推动医疗行业的智能化转型。
-
-| 序号 | 应用场景名称                       | 实现参考                                                                              |
-| :--: | ---------------------------------- | ------------------------------------------------------------------------------------- |
-|  1   | 医学检验报告智能解读助手           | 上传检验报告图片，OCR 识别关键指标，LLM 解读异常值并生成通俗解释                      |
-|  2   | 基于知识检索技术的健康咨询专家     | 构建医学知识图谱（ICD-10、药品说明书、诊疗指南），RAG 检索生成回答                    |
-|  3   | 临床科研数据决策分析平台           | 整合 EMR 数据和检验结果，LLM 辅助生成统计分析代码和可视化图表；支持队列研究和生存分析 |
-|  4   | 医学考题智能生成与错题解析系统     | 输入教材章节和知识点，LLM 生成练习题和解析；自动收录错题并生成薄弱点分析              |
-|  5   | 药物研发全流程知识图谱智能问答专家 | 构建药物-靶点-疾病知识图谱，LLM 解答研发相关问题；支持文献检索和实验方案推荐          |
-|  6   | 药品说明书智能问答助手             | 上传药品说明书图片或输入药名，LLM 解答用法用量、不良反应、注意事项等问题              |
-|  7   | 疾病知识科普文章生成助手           | 输入疾病名称和受众，LLM 生成通俗易懂的科普文章；支持多版本（患者版/家属版）           |
-|  8   | 医学影像报告自动生成工具           | 影像科医生描述影像特征，LLM 自动生成结构化报告；支持常见检查类型模板                  |
-|  9   | 手术记录智能生成与归档助手         | 手术过程中语音录入关键步骤，LLM 结构化生成手术记录；自动关联手术编码                  |
-|  10  | 慢病管理用药提醒智能助手           | 患者输入用药清单，LLM 生成个性化用药提醒；支持用药禁忌检查和互动问答                  |
-
-## 6. 网络安全
-
-网络安全场景聚焦于安全防护和风险管控。核心应用涵盖漏洞检测、威胁情报分析、钓鱼邮件识别、安全事件响应等，为企业构建全方位的智能安全防护体系。
-
-| 序号 | 应用场景名称                        | 实现参考                                                                               |
-| :--: | ----------------------------------- | -------------------------------------------------------------------------------------- |
-|  1   | 代码安全漏洞检测与修复引擎          | 静态代码分析工具（SAST）扫描代码，LLM 分析漏洞原理并生成修复建议；集成 CI/CD 流水线    |
-|  2   | AI 生成式钓鱼邮件智能识别与拦截系统 | LLM 分析邮件内容、发送者特征和链接安全性，识别 AI 生成的钓鱼邮件；对接邮件网关实时拦截 |
-|  3   | 安全运营日报自动生成助手            | 安全设备日志汇总，LLM 自动提取关键事件并生成日报；异常事件highlight标记                |
-|  4   | 安全知识库智能问答助手              | 基于安全文档、CVE 库构建向量知识库，LLM 解答安全技术和处置建议问题                     |
-|  5   | 渗透测试报告智能生成助手            | 渗透测试完成后，LLM 根据漏洞描述自动生成报告；漏洞修复建议批量生成                     |
-|  6   | 恶意代码防护与隐私合规监控          | 沙箱分析可疑文件行为，LLM 识别恶意特征并生成签名；隐私数据识别扫描                     |
-|  7   | 安全配置合规性检查清单生成工具      | 输入目标系统类型，LLM 生成安全配置检查清单；支持等保 2.0、CIS 等标准                   |
-|  8   | 威胁情报智能查询与分析助手          | 对接多源威胁情报（开源、商业），LLM 解读情报并关联企业资产；推荐防护策略               |
-|  9   | 安全事件复盘报告生成助手            | 安全事件发生后，LLM 根据时间线自动生成复盘报告；根因分析和改进建议                     |
-|  10  | 全球威胁情报监测与预警中心          | 爬虫采集全球安全资讯和漏洞披露，LLM 提取关键信息并评估影响；邮件/短信预警通知          |
-
-## 7. 金融管理、保险银行业
-
-金融领域场景围绕风险控制和业务智能化展开。典型应用包括信贷风控评估、财富管理顾问、财务报告生成、反洗钱监测等，提升金融机构的运营效率和风险管控能力。
-
-| 序号 | 应用场景名称                           | 实现参考                                                                             |
-| :--: | -------------------------------------- | ------------------------------------------------------------------------------------ |
-|  1   | 信贷尽调报告智能生成助手               | 输入企业基本信息和财务数据，LLM 自动生成信贷尽调报告；风险点自动标注                 |
-|  2   | 私人银行财富管理智能顾问               | LLM 分析客户风险偏好和财务目标，生成资产配置建议；对接理财产品和基金库               |
-|  3   | IPO 招股书智能生成与合规校验助手       | 招股说明书模块化模板，LLM 自动填充业务描述和风险因素；合规校验规则引擎检查前后一致性 |
-|  4   | 企业财务报告自动生成与经营异常预警系统 | 财务系统数据自动采集，LLM 生成财务分析和管理层讨论部分；异常指标预警规则             |
-|  5   | 财务票据信息提取与问答助手             | 上传发票图片，OCR 识别信息，LLM 解答票据相关问题；支持增值税发票、火车票等           |
-|  6   | 合规案例智能检索与问答助手             | 基于监管处罚案例构建知识库，LLM 解答合规问题并提供案例参考                           |
-|  7   | 保险代理人智能话术陪练                 | LLM 扮演不同类型客户进行模拟对话，评估代理人话术合规性和说服力；录音转写分析         |
-|  8   | 保险产品条款分析与竞品对比平台         | 条款结构化解析，LLM 生成亮点摘要和注意事项                                           |
-|  9   | 客户话术情绪识别服务                   | 语音情绪识别结合话术合规检测，实时反馈代理人改进建议                                 |
-|  10  | 保险理赔进度智能查询与对话助手         | 用户输入保单号或报案号，LLM 查询理赔进度并解答理赔相关问题                           |
-
-## 8. 企业服务
-
-企业服务场景致力于提升组织运营效率和管理水平。常见应用包括客户关系管理、销售预测、舆情监测、HR 智能管理等，帮助企业实现数字化转型升级。
-
-| 序号 | 应用场景名称                       | 实现参考                                                                       |
-| :--: | ---------------------------------- | ------------------------------------------------------------------------------ |
-|  1   | 客户留存分析与流失预警平台         | 行为数据埋点采集用户操作，ML 模型预测流失概率，LLM 生成挽留建议                |
-|  2   | B2B 潜在客户触达与营销邮件平台     | 企业工商数据筛选目标客户，LLM 生成个性化营销内容；邮件群发平台对接             |
-|  3   | 销售管线监测与业绩预测平台         | CRM 数据自动采集，LLM 分析销售漏斗并预测业绩达成；异常预警推送管理者           |
-|  4   | 品牌舆情监测与危机预警雷达         | 全网舆情数据采集（社交媒体、新闻、论坛），LLM 分析情感和传播趋势；危机预警推送 |
-|  5   | 职场邮件智能撰写与沟通情绪管理助手 | 邮件上下文理解，LLM 生成专业邮件草稿；情绪分析反馈改进建议                     |
-|  6   | 简历智能解析与岗位匹配系统         | 简历 PDF 解析提取关键信息，LLM 匹配合适岗位并生成面试建议；ATS 系统对接        |
-|  7   | 企业员工入职指引与问答助手         | 入职文档知识库 RAG 检索，LLM 解答新员工常见问题                                |
-|  8   | 员工绩效反馈与 OKR 目标管理平台    | OKR 系统数据采集，LLM 分析目标完成情况并生成反馈建议；360 反馈收集             |
-|  9   | 智能会议记录与待办管理             | 会议录音转写，LLM 提取关键讨论点和待办事项；任务系统自动创建待办               |
-|  10  | 发票识别与费用报销自动处理         | OCR 识别发票信息，自动校验发票真伪和报销合规性；对接财务系统                   |
-
-## 9. 内容生产与运营
-
-内容生产与运营场景聚焦于创意生成和流量运营。核心应用包括文案创作、短视频制作、数字人直播、SEO 优化等，帮助企业提升内容产出效率和营销转化率。
-
-| 序号 | 应用场景名称                              | 实现参考                                                                   |
-| :--: | ----------------------------------------- | -------------------------------------------------------------------------- |
-|  1   | 影视与小说内容创作辅助平台                | LLM 提供故事大纲、角色设定、对白生成等创作辅助；思维导图可视化故事结构     |
-|  2   | 企业品牌故事与公关软文智能撰写助手        | 输入品牌关键词和产品信息，LLM 生成多风格文案版本；A/B 测试接口对接         |
-|  3   | 虚拟数字人直播互动与推流管理系统          | 数字人形象建模 + TTS 语音 + LLM 对话，实时响应观众弹幕；OBS 推流集成       |
-|  4   | 短视频脚本生成与智能剪辑                  | LLM 生成短视频脚本和分镜，Sora/Runway 生成视频片段；剪辑工具自动拼接       |
-|  5   | 销售会话语音转写与话术推荐                | 电话录音 ASR 转写，LLM 分析会话并推荐金牌话术；CRM 系统集成                |
-|  6   | 营销内容智能生成与设计系统                | 产品信息输入，LLM 生成营销文案和卖点提炼；集成 Canava/稿定设计模板         |
-|  7   | 多平台广告投放 ROI 实时监控与策略调优系统 | 广告平台 API 对接采集数据，LLM 分析投放效果并生成优化建议；异常预警推送    |
-|  8   | 搜索引擎关键词与流量分析                  | 百度指数、5118 数据采集，LLM 分析关键词趋势和竞争度；内容选题推荐          |
-|  9   | 竞品广告投放分析平台                      | 第三方数据平台 API 采集竞品广告，LLM 分析投放策略和创意特点                |
-|  10  | 全网热点选题智能分析与内容推荐系统        | 微博热搜、抖音热榜数据采集，LLM 分析热点趋势并推荐选题角度；日历化内容排期 |
-
-## 10. 智慧政务管理
-
-智慧政务场景致力于提升政府服务效能和治理能力。典型应用包括政务热线智能导航、政策智能问答、行政审批优化、城市事件管理等，推动数字政府建设。
-
-| 序号 | 应用场景名称                               | 实现参考                                                             |
-| :--: | ------------------------------------------ | -------------------------------------------------------------------- |
-|  1   | 12345 政务热线智能语音导航与自动分派系统   | 市民来电语音识别，LLM 理解诉求并智能分派到对应部门；工单系统自动流转 |
-|  2   | 政务服务大厅智能导办与政策问答机器人       | 政务知识库 RAG 检索，LLM 解答办事流程和政策问题；取号系统对接        |
-|  3   | 惠企政策智能匹配与精准推送平台             | 政策结构化解析，企业画像自动匹配适用政策；短信/邮件推送提醒          |
-|  4   | 行政审批材料智能预审与合规校验助手         | 材料 OCR 识别和关键信息提取，LLM 校验材料完整性和合规性              |
-|  5   | 公共安全视频监控异常行为检测系统           | 视频流实时分析，CV 模型检测异常行为（打架、跌倒等）；告警推送        |
-|  6   | 城市网格化事件智能识别与调度管理平台       | 城市感知数据（IoT、摄像头）采集，LLM 识别事件类型并分派              |
-|  7   | 社情民意大数据分析与风险预警系统           | 政务热线、网络舆情、社情走访等多源数据融合分析；LLM 识别风险热点     |
-|  8   | 政务档案数字化识别与智能归档管理平台       | OCR 识别档案文字内容，LLM 提取关键信息并自动分类；全文检索支持       |
-|  9   | 突发公共事件应急指挥与救援资源智能调度平台 | 事件信息采集，LLM 生成应急响应方案；资源调度优化算法                 |
-|  10  | 大气环境污染网格化监测与精准溯源系统       | 空气质量传感器数据采集，CV 模型识别污染源；LLM 分析污染趋势并溯源    |
-
-## 11. 法律事务与合同管理
-
-法律事务场景聚焦于法律服务效率提升和合规管理。常见应用包括合同审查、案件分析、法规监测、法律文书生成等，为法律从业者提供智能化工具支持。
-
-| 序号 | 应用场景名称                                             | 实现参考                                                         |
-| :--: | -------------------------------------------------------- | ---------------------------------------------------------------- |
-|  1   | 合同风险漏洞一键"找茬"Agent                              | 合同文本结构化解析，LLM 对照风险清单识别潜在问题；标注高风险条款 |
-|  2   | 企业合同全生命周期合规性审查与修改建议平台               | 合同条款比对法规库，LLM 生成合规性审查报告；修改建议跟踪         |
-|  3   | 类似案件胜诉率 AI 智能评估顾问                           | 案件特征提取，类案检索匹配；LLM 分析影响胜诉因素                 |
-|  4   | 法律法规变更实时监测与业务影响分析雷达                   | 法律法规数据库实时更新，LLM 解析变更内容并评估业务影响；预警推送 |
-|  5   | 律师函 AIGC 自动起草工具                                 | 事实陈述输入，LLM 生成规范律师函模板；要素检查和合规校验         |
-|  6   | 庭审录音实时转写与争议焦点自动化提取记录仪               | 法庭录音 ASR 转写，LLM 提取争议焦点和关键论点；时间戳标注        |
-|  7   | 全网知识产权侵权线索自动监测与区块链取证系统             | 电商平台、社交媒体侵权监测；侵权证据自动采集存证                 |
-|  8   | 基于 LLM 的 IPO 招股书关键数据一致性核查与风险预警 Agent | 招股书多章节数据比对，LLM 识别不一致和数据异常；风险标注         |
-|  9   | 复杂法律条款"翻译"为大白话的解释插件                     | 选中法律条文，LLM 生成通俗易懂的解释                             |
-|  10  | 案件证据链智能梳理与可视化展示系统                       | 证据材料上传，LLM 分析证据关系和时间线                           |
-
-## 12. 旅游与出行服务
-
-旅游出行场景致力于提升旅行体验和服务便捷性。核心应用包括智能行程规划、价格预测、虚拟导览、翻译服务等，让旅行更加轻松愉快。
-
-| 序号 | 应用场景名称                                 | 实现参考                                                                            |
-| :--: | -------------------------------------------- | ----------------------------------------------------------------------------------- |
-|  1   | 基于 AIGC 的懒人路书生成器                   | 用户偏好输入（天数、预算、兴趣），LLM 生成每日行程安排；景点 API 获取开放时间和门票 |
-|  2   | 全网机票酒店价格趋势预测与低价自动锁定机器人 | 采集 OTA 价格数据，ML 模型预测价格趋势；价格监控提醒                                |
-|  3   | 航班取消后的跨航司行程重组与应急方案推荐顾问 | 航班状态监控，LLM 分析替代行程方案；多航司比价                                      |
-|  4   | 签证材料智能预审与自动化填表辅助系统         | 材料拍照上传，OCR 识别信息完整性检查；表格自动填充                                  |
-|  5   | 出境游实时语音翻译与菜单视觉汉化管家         | 离线语音翻译模型，菜单图片 OCR 识别并翻译                                           |
-|  6   | 基于大数据真实评价的酒店"避雷"指南分析仪     | 酒店评论数据采集，LLM 提取正负面评价关键词                                          |
-|  7   | 目的地沉浸式 VR 预览与虚拟选房交互平台       | 360°全景图采集，VR 技术实现沉浸式预览；房间虚拟游览                                 |
-|  8   | 旅行足迹自动生成精美游记与社交文案助手       | 照片时间地点信息提取，LLM 生成游记文案；模板排版生成                                |
-|  9   | 企业差旅发票自动归集与合规报销管理平台       | 差旅平台 API 对接，发票信息自动采集；合规校验                                       |
-|  10  | 景区客流拥堵实时预测与错峰游览路线规划导航   | 景区客流数据采集，ML 模型预测拥堵时段；错峰推荐                                     |
-
-## 13. 情感陪伴
-
-情感陪伴场景聚焦于心理健康和情感慰藉。典型应用包括虚拟伴侣、情感咨询、认知训练、心理疏导等，为用户提供全天候的陪伴和支持。
-
-| 序号 | 应用场景名称                                 | 实现参考                                                    |
-| :--: | -------------------------------------------- | ----------------------------------------------------------- |
-|  1   | 基于 LLM 大模型的 24 小时深度陪伴虚拟伴侣    | 记忆系统存储对话历史，LLM 生成个性化回复；情感支持模块      |
-|  2   | 多模态情感识别与心理疏导 AI 顾问             | 语音语调分析 + 文字情感识别，LLM 生成疏导建议；危机干预预警 |
-|  3   | 阿尔茨海默症老人 AI 认知训练与记忆唤醒数字人 | 认知游戏（记忆、计算、语言）训练；老照片/老歌触发记忆回忆   |
-|  4   | 社恐人士的 AIGC 模拟社交演练教练             | 虚拟社交场景模拟，LLM 扮演不同角色；社交技巧建议            |
-|  5   | 生成式 AI 儿童睡前故事定制机                 | 家长输入主题和偏好，LLM 生成定制故事；背景音乐生成          |
-|  6   | 逝者数字生命复原与 LLM 跨时空对话系统        | 生前资料（语音、文字）训练个性化模型；记忆对话生成          |
-|  7   | 基于 MBTI 数据的 AI 性格镜像与共情聊天机器人 | MBTI 测试结果输入，LLM 生成性格分析和共情回复；性格匹配推荐 |
-|  8   | 全天候心情监测与 AI 正向情绪激励助手         | 日常记录心情状态，LLM 分析趋势并生成激励内容；正向提醒推送  |
-|  9   | 隐私保护级青少年 AI 倾诉树洞                 | 匿名倾诉入口，LLM 提供倾听和建议；敏感词预警                |
-|  10  | 具备自主进化能力的 AI 虚拟宠物养成系统       | 宠物性格模型训练，对话互动成长进化；虚拟装扮系统            |
-
-## 14. 休闲娱乐
-
-休闲娱乐场景致力于提供丰富的数字化娱乐体验。常见应用包括游戏 NPC 智能决策、剧本杀辅助、内容创作、音视频处理等，满足用户的多元化娱乐需求。
-
-| 序号 | 应用场景名称                                 | 实现参考                                                  |
-| :--: | -------------------------------------------- | --------------------------------------------------------- |
-|  1   | 基于 LLM 驱动的开放世界游戏 NPC 自主决策引擎 | NPC 行为树融合 LLM 决策，对话系统生成个性化交互；行为引擎 |
-|  2   | 沉浸式剧本杀 AIGC 剧情推演与 DM 控场辅助工具 | 玩家选择触发剧情分支，LLM 生成推理逻辑；线索卡自动生成    |
-|  3   | 互动小说结局生成式修改器                     | 读者选择影响剧情走向，LLM 生成多种结局分支                |
-|  4   | 二次元角色 3D 建模 AIGC 自动生成工作台       | 描述文本生成角色草图，3D 建模工具自动建模；材质贴图渲染   |
-|  5   | 电竞战局 CV 视觉分析与 AI 智能解说员         | 游戏画面实时分析，关键时刻识别；LLM 生成解说文案          |
-|  6   | 个性化幽默内容推荐算法引擎                   | 用户兴趣画像，幽默内容匹配推荐                            |
-|  7   | AI 智能修音与 KTV 人声美化软件               | 音频降噪和人声增强处理；AI 修音算法                       |
-|  8   | 影视剧角色专属剧情 AI 提取与剪辑工具         | 视频内容分析，角色相关片段提取；自动剪辑生成              |
-|  9   | 多角色 TTS 语音合成有声书自动生成系统        | 文本角色分配，个性化音色生成；背景音乐和音效添加          |
-|  10  | 棋牌类游戏强化学习对弈复盘教练               | 棋局分析，AI 对手模拟对弈；复盘建议生成                   |
-
-## 15. 电商服务
-
-电商服务场景聚焦于运营效率和转化提升。核心应用包括商品内容生成、直播带货、客户服务、价格分析等，帮助商家实现智能化运营。
-
-| 序号 | 应用场景名称                                  | 实现参考                                                   |
-| :--: | --------------------------------------------- | ---------------------------------------------------------- |
-|  1   | 高转化率 AIGC 商品详情页批量生产工具          | 商品信息输入，LLM 生成卖点文案和场景描述；背景图生成       |
-|  2   | 服装虚拟模特 AI 智能试穿与展示视频生成工厂    | 服装平铺图处理，虚拟模特试穿效果生成；多角度展示视频       |
-|  3   | 跨境电商多语言 LLM 本地化翻译与润色助手       | 商品描述多语言翻译，文化适配润色；多平台发布接口           |
-|  4   | 基于 NLP 的客户情感分析与智能回复机器人       | 咨询对话情感分析，自动生成安抚回复；好评差评分类           |
-|  5   | 24 小时全天候 AIGC 数字人直播带货系统         | 数字人形象 + 实时话术生成，商品信息实时调用；弹幕互动回复  |
-|  6   | 全网同款商品 AI 比价与趋势预测插件            | 电商平台价格爬取，比价图表展示；价格趋势预测               |
-|  7   | 买家秀图片 AI 智能筛选与短视频合成平台        | 买家秀图片质量评分，优质内容自动推荐；短视频模板合成       |
-|  8   | 基于 LLM 的实时销售对话语音分析与金牌话术推荐 | 通话 ASR 转写，实时话术合规检测；话术推荐                  |
-|  9   | 市场流行趋势 AI 洞察与爆款预测引擎            | 社交媒体和电商数据采集分析，LLM 洞察趋势热点；选品建议推荐 |
-|  10  | 私域流量用户画像 AI 聚类与精细化运营系统      | 用户行为数据聚类分析，画像标签生成；自动化营销触发         |
-
-## 16. 能源
-
-能源场景致力于实现能源行业的智能化管理和绿色转型。典型应用包括用电分析、设备检测、碳排放核算、调度优化等，推动能源系统的高效运行。
-
-| 序号 | 应用场景名称                                     | 实现参考                                               |
-| :--: | ------------------------------------------------ | ------------------------------------------------------ |
-|  1   | 家庭用电行为 AI 分析与节能策略顾问               | 智能电表数据采集，用电模式分析；LLM 生成节能建议       |
-|  2   | 光伏组件缺陷无人机 CV 视觉识别系统               | 无人机巡检拍摄，热红外图像分析；缺陷检测标注           |
-|  3   | 电力现货交易价格 AI 趋势预测与自动获利策略 Agent | 电力市场数据采集，价格预测模型；策略生成和交易执行     |
-|  4   | 储能电池健康度 AI 无损检测与热失控风险预警系统   | 电池运行数据监测，健康度评估模型；风险预警推送         |
-|  5   | 企业全链路碳排放 AI 自动核算与 ESG 报告生成助手  | 能源消耗数据采集，碳排放因子计算；ESG 报告自动生成     |
-|  6   | 电网极端天气负荷 AI 预测与应急调度指挥系统       | 气象数据对接，负荷预测模型；调度策略生成               |
-|  7   | 加油站违规行为 AI 视频识别与报警卫士             | 视频监控分析，违规行为检测（打电话、抽烟等）；告警推送 |
-|  8   | 长输油气管道泄漏声波 AI 监测与精准定位系统       | 声波传感器数据采集，泄漏检测模型；定位算法计算         |
-|  9   | 虚拟电厂资源聚合与 AI 电力交易决策系统           | 分布式资源接入，聚合优化调度；交易策略执行             |
-|  10  | 矿井人员位置 AI 追踪与危险区域入侵报警           | UWB/蓝牙定位，人员轨迹追踪；危险区域电子围栏           |
-
-## 17. 音视频
-
-音视频场景聚焦于内容生产和媒体处理。常见应用包括视频剪辑、语音合成、字幕生成、视频修复等，提升音视频内容的生产效率和质量。
-
-| 序号 | 应用场景名称                                 | 实现参考                                           |
-| :--: | -------------------------------------------- | -------------------------------------------------- |
-|  1   | 长视频精彩片段 AI 识别与短视频自动剪辑工具   | 视频内容分析，关键帧识别；精彩片段自动剪辑         |
-|  2   | 视频背景噪音 AI 智能分离与人声增强助手       | 音频分离模型，去除背景噪音；人声增强处理           |
-|  3   | 老旧影像 4K 超分修复与 AI 智能上色工作台     | 视频超分辨率模型，修复老旧画质；AI 自动上色        |
-|  4   | 文字转真人级 TTS 配音与情感控制系统          | 多音色 TTS 模型，情感控制生成；音频导出            |
-|  5   | 视频语音 ASR 自动识别与双语字幕生成工具      | 语音识别生成字幕，多语言翻译；双语字幕叠加         |
-|  6   | 视频画面多余物体 AI 智能擦除引擎             | 视频目标追踪，物体移除修复；帧间一致性处理         |
-|  7   | 无版权背景音乐 AIGC 自动作曲机               | 音乐生成模型，情绪风格可控；版权检测               |
-|  8   | 特定人物音色 AI 克隆与变声转换软件           | 少量语音样本训练音色模型；变声处理                 |
-|  9   | 剧本一键转分镜脚本与 AI 动态预演视频生成平台 | 剧本解析生成分镜，AI 生成预演视频                  |
-|  10  | 会议录音 AI 智能转写与核心待办提取助手       | 多人会议语音分离转写，LLM 提取待办事项；时间戳标注 |
-
-## 18. AI 营销
-
-AI 营销场景致力于提升营销效率和创意产出。核心应用包括文案生成、海报设计、热点追踪、竞品分析等，帮助企业实现精准营销和品牌传播。
-
-| 序号 | 应用场景名称                               | 实现参考                                         |
-| :--: | ------------------------------------------ | ------------------------------------------------ |
-|  1   | 小红书爆款文案 AIGC 自动撰写引擎           | 话题输入，LLM 生成种草文案；emoji 和话题标签优化 |
-|  2   | 营销海报 AI 智能排版与多尺寸适配工具       | 文案输入，海报模板智能匹配与多尺寸导出           |
-|  3   | 品牌 LOGO 创意 AIGC 生成与 VI 体系构建平台 | 品牌关键词输入，LOGO 创意生成；VI 规范生成       |
-|  4   | 全网热点 AI 追踪与借势营销创意生成助手     | 热点数据采集，LLM 分析营销角度；创意方案生成     |
-|  5   | 广告投放 ROI 实时监控与 AI 预算竞价管家    | 广告平台数据对接，效果分析模型；竞价策略优化     |
-|  6   | 竞品营销策略深度解析与 AI 周报生成器       | 竞品内容采集分析，策略提取；周报自动生成         |
-|  7   | 搜索引擎关键词 AI 布局与引流文章批量写作   | 关键词分析，文章批量生成；SEO 优化建议           |
-|  8   | 千人千面个性化营销邮件 AI 撰写专家         | 用户画像数据，个性化内容生成；A/B 测试           |
-|  9   | 品牌声誉全网监测与舆情危机 AI 预警雷达     | 全网舆情数据采集，情感分析；危机预警推送         |
-|  10  | 短视频脚本创意 AIGC 生成与分镜指导助手     | 主题输入，脚本和分镜生成；拍摄建议指导           |
-
-## 19. 数据智能
-
-数据智能场景聚焦于数据分析和价值挖掘。典型应用包括自然语言查询、可视化生成、数据治理、知识图谱构建等，帮助企业实现数据驱动的决策支持。
-
-| 序号 | 应用场景名称                           | 实现参考                                                     |
-| :--: | -------------------------------------- | ------------------------------------------------------------ |
-|  1   | 基于 Text-to-SQL 的自然语言查数引擎    | 自然语言转换为 SQL 查询，结果可视化展示                      |
-|  2   | 对话式 BI：一句话生成可视化图表        | 数据需求描述，图表自动生成；支持多图表类型切换               |
-|  3   | 截图一键转 Excel 表格识别工具          | 截图上传后，VLM 识别表格结构和数据；导出为 Excel 文件        |
-|  4   | 图片及截图转 Excel 表格 AI 识别神器    | 图片 OCR 识别表格结构，数据导出为 Excel                      |
-|  5   | 多源异构数据知识图谱自动化构建         | 多数据源接入，实体和关系抽取；图数据库存储                   |
-|  6   | 数据报表智能解读与趋势分析助手         | 上传数据报表图片或输入数据，VLM 解读图表内容并分析趋势       |
-|  7   | 数据库表结构智能解读与查询示例生成助手 | 输入表名或字段描述，LLM 生成建表说明和示例查询 SQL           |
-|  8   | 企业主数据智能对齐与 AI 去重治理       | 多源主数据匹配，重复记录识别；合并规则配置                   |
-|  9   | 数据需求文档智能转测试用例工具         | 输入数据需求描述，LLM 生成测试场景和验证用例                 |
-|  10  | 数据指标口径智能问答助手               | 基于指标定义文档构建知识库，LLM 解答指标口径、计算逻辑等问题 |
-
-</TabItem>
-<TabItem label="C 端消费灵感">
-
-## 章节导读
-
-<ChapterIntroduction :duration="cDuration" :tags="['C 端应用', '生活方式', '情感体验', '氛围营造']" coreOutput="发现 15+ 生活场景灵感" expectedOutput="找到打动用户的产品方向">
-
-本文档汇总了 <strong>LLM 大模型在 C 端消费场景中的创意应用方向</strong>。与 B 端关注效率和痛点不同，C 端产品更注重<strong>营造感觉、心理暗示和氛围</strong>，让用户在使用过程中获得情感共鸣和美好体验。
-
-</ChapterIntroduction>
-
-## 场景氛围快速选择
-
-<el-card shadow="hover" style="margin-top: 16px; margin-bottom: 24px; border-left: 5px solid #ec4899;">
-  <div style="font-weight: 600; margin-bottom: 8px;">找到触动你的场景灵感</div>
-  <div style="color: #606266; font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
-    选择你想要的氛围和当下的感觉，系统会推荐相关的场景方向，点击标签即可跳转到对应章节。
-  </div>
-  <el-row :gutter="16">
-    <el-col :span="12">
-      <el-select v-model="vibePoint" placeholder="选择氛围类型" style="width: 100%;">
-        <el-option
-          v-for="item in vibeOptions"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value"
-        >
-          <div style="font-weight: 500;">{{ item.label }}</div>
-          <div style="font-size: 12px; color: #909399;">{{ item.desc }}</div>
-        </el-option>
-      </el-select>
-    </el-col>
-    <el-col :span="12">
-      <el-select v-model="feeling" placeholder="选择当下感觉" style="width: 100%;">
-        <el-option
-          v-for="item in feelingOptions"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value"
-        >
-          <div style="font-weight: 500;">{{ item.label }}</div>
-          <div style="font-size: 12px; color: #909399;">{{ item.desc }}</div>
-        </el-option>
-      </el-select>
-    </el-col>
-  </el-row>
-  
-  <div v-if="cRecommendationTopics.length > 0" style="margin-top: 16px;">
-    <div style="font-weight: 600; margin-bottom: 12px; color: #ec4899;">
-      为你推荐的 {{ cCurrentSelection.vibe }} × {{ cCurrentSelection.feeling }} 场景：
-    </div>
-    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-      <el-tag
-        v-for="topic in cRecommendationTopics"
-        :key="topic.title"
-        type="danger"
-        effect="light"
-        style="cursor: pointer; margin-bottom: 4px;"
-        @click="cScrollToAnchor(topic.scenarioAnchor)"
-      >
-        {{ topic.title }}
-      </el-tag>
-    </div>
-    <el-button type="text" size="small" @click="cResetSelection" style="margin-top: 8px;">
-      重新选择
-    </el-button>
-  </div>
-</el-card>
-
----
-
-## 1. 生活方式
-
-> 💡 **核心理念**：让平凡的日常变得有仪式感，在细节中创造美好
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 晨间仪式感唤醒助手 | 集成天气 API、日历数据，LLM 生成个性化晨间方案；配合智能音响播放定制音乐，智能灯光渐亮 |
-| 2 | 独居生活氛围营造师 | 接入智能家居设备（灯光、音响、香薰机），LLM 根据时间/心情自动调节参数；学习用户偏好持续优化 |
-| 3 | 周末宅家治愈计划生成器 | 对接流媒体平台 API 获取片单，结合用户历史偏好生成电影+美食+布置的组合方案 |
-| 4 | 睡前心灵安抚电台 | TTS 语音合成生成温柔故事，白噪音混合算法，智能音量渐弱；根据睡眠数据调整内容 |
-| 5 | 生活美学灵感捕手 | 图像识别分析用户环境照片，LLM 生成美学建议；Pinterest/小红书风格内容推荐 |
-
----
-
-## 2. 情感陪伴
-
-> 💡 **核心理念**：无条件的接纳和陪伴，成为情绪的温柔容器
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 深夜树洞倾听者 | 端到端加密确保隐私，LLM 情感分析理解情绪，长期记忆存储用户故事，多轮对话持续陪伴 |
-| 2 | 失恋疗愈陪伴师 | 情感阶段识别算法，分阶段提供不同支持（倾诉期→宣泄期→重建期）；心理学知识库 RAG 检索 |
-| 3 | 焦虑缓解呼吸教练 | 生物传感器数据接入（心率/呼吸），实时监测焦虑水平；语音引导呼吸节奏，渐进式肌肉放松指导 |
-| 4 | 自信心重建导师 | 积极心理学对话框架，记录并反馈用户的小成就；认知重构技术帮助改变负面自我对话 |
-| 5 | 情绪日记智能解读 | 情绪识别 NLP 模型，时间序列分析发现情绪规律；可视化情绪图谱，预测性情绪预警 |
-
----
-
-## 3. 娱乐休闲
-
-> 💡 **核心理念**：创造沉浸式的体验，让娱乐成为心灵的栖息地
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 沉浸式剧本杀 DM | LLM 实时生成剧情分支，语音合成扮演 NPC，根据玩家反应动态调整难度和节奏；AR/VR 场景渲染 |
-| 2 | 开放世界游戏灵魂 NPC | 长期记忆数据库存储玩家交互历史，LLM 生成个性化对话；情感计算让 NPC 有真实情绪反应 |
-| 3 | 个性化播客内容生成 | 根据用户兴趣图谱生成专属内容，TTS 克隆用户喜欢的声音；实时互动回答听众问题 |
-| 4 | 虚拟演唱会氛围组 | 虚拟形象渲染，实时弹幕互动，虚拟荧光棒/应援道具；空间音频技术营造现场感 |
-| 5 | 互动小说共创伙伴 | LLM 实时生成剧情，用户选择影响故事走向；多结局设计，角色关系动态发展 |
-
----
-
-## 4. 个人成长
-
-> 💡 **核心理念**：成长不是苦行，而是一场有趣的自我发现之旅
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 个人成长见证者 | 时间轴可视化展示成长轨迹，里程碑自动标记；对比图展示"过去的我"vs"现在的我" |
-| 2 | 习惯养成游戏化教练 | 游戏化机制（经验值、等级、徽章），社交排行榜，AI 教练角色扮演（如"冒险导师"） |
-| 3 | 技能学习搭子匹配 | 基于兴趣和学习目标的匹配算法，学习小组社群，互相监督打卡机制 |
-| 4 | 每日小确幸发现者 | 图像识别发现生活中的美好瞬间， gratitude journal 引导，每周美好瞬间回顾 |
-| 5 | 人生模拟体验器 | 多分支剧情模拟不同选择的结果，平行人生对比；决策后果的可视化呈现 |
-
----
-
-## 5. 社交互动
-
-> 💡 **核心理念**：让社交变得轻松自然，找到舒适的连接方式
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 破冰话题生成器 | 基于场合和参与者的智能话题推荐，实时对话分析提供延续话题建议；尴尬时刻救场提示 |
-| 2 | 朋友圈文案氛围师 | 图像内容分析，LLM 生成多风格文案（文艺/幽默/深沉）；emoji 和排版智能推荐 |
-| 3 | 约会氛围策划师 | 基于双方兴趣的约会方案生成，餐厅/活动推荐，对话话题建议；实时天气和交通提醒 |
-| 4 | 远程聚会气氛担当 | 在线游戏库，破冰活动生成器，话题轮盘；虚拟背景和滤镜增强氛围 |
-| 5 | 社交能量管理助手 | 社交活动后的能量消耗评估，恢复建议（独处活动推荐）；社交日历智能规划 |
-
----
-
-## 6. 创意表达
-
-> 💡 **核心理念**：每个人都有创造力，只是需要被唤醒
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 灵感枯竭急救包 | 跨领域联想算法，随机刺激词生成，创意 prompt 库；脑图式灵感发散工具 |
-| 2 | 个人风格探索向导 | 图像分析识别用户现有风格，风格趋势推荐，虚拟试衣/试妆；风格进化时间轴 |
-| 3 | 手账与日记美学顾问 | 排版模板推荐，配色方案生成，装饰元素建议；手写体识别和内容美化 |
-| 4 | 摄影构图氛围指南 | 场景识别和构图建议，滤镜风格推荐，修图参数智能调整；摄影技巧学习路径 |
-| 5 | 音乐心情匹配师 | 音乐情感分析算法，用户心情识别，个性化歌单生成；音乐故事和背景介绍 |
-
----
-
-## 7. 旅行探索
-
-> 💡 **核心理念**：旅行不仅是看风景，更是感受不同的生活方式
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 城市漫步探索向导 | 本地达人内容聚合，小众地点推荐，AR 导航指引；实时翻译和语音讲解 |
-| 2 | 旅行心情日记生成 | 照片自动分类和精选，LLM 生成优美游记，地理位置标记时间轴；一键生成旅行视频 |
-| 3 | 独自旅行陪伴助手 | 实时位置共享和安全提醒，当地紧急联系人，AI 导游语音陪伴；独行社区交流 |
-| 4 | 目的地氛围预览 | VR/360° 全景预览，当地声音和气味模拟，文化背景介绍；虚拟"试住"体验 |
-| 5 | 旅行摄影氛围指导 | 黄金时刻提醒，构图辅助线，当地特色拍摄点推荐；后期调色风格建议 |
-
----
-
-## 8. 身心健康
-
-> 💡 **核心理念**：健康不是目标，而是一种温柔的自我关爱
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 运动动力唤醒师 | 根据用户状态智能推荐运动类型，微运动（5分钟）选项，游戏化运动挑战；社交运动打卡 |
-| 2 | 健康饮食灵感厨房 | 冰箱食材识别，个性化食谱推荐，营养搭配分析； step-by-step 烹饪指导 |
-| 3 | 睡眠质量优化氛围师 | 睡眠监测数据分析，睡前仪式生成，环境优化建议（温度/湿度/光线）；智能唤醒 |
-| 4 | 身体感知引导师 | 身体扫描冥想引导，身体部位情绪关联，身心连接练习；生物反馈可视化 |
-| 5 | 自我关爱提醒助手 | 工作强度监测，定期提醒休息，微关爱活动建议（喝水/伸展/深呼吸）；自我关爱记录 |
-
----
-
-## 9. 知识探索
-
-> 💡 **核心理念**：学习是一场永无止境的冒险，好奇是最好的老师
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 知识探索游戏化向导 | 知识点地图可视化，闯关式学习路径，成就徽章系统；AI 导师角色扮演 |
-| 2 | 语言学习情景伙伴 | LLM 扮演不同角色进行对话，发音纠正，文化背景介绍；沉浸式情景模拟 |
-| 3 | 好奇心满足助手 | 维基百科/知识图谱接入，复杂概念通俗化解释，相关知识推荐；好奇心记录 |
-| 4 | 读书笔记灵感激发 | 书籍内容分析，观点提取和关联，思考角度推荐；读书笔记模板和美化 |
-| 5 | 知识分享氛围营造 | 知识卡片自动生成，分享文案优化，视觉美化；社交分享数据反馈 |
-
----
-
-## 10. 关系经营
-
-> 💡 **核心理念**：好的关系需要用心经营，而用心不需要很复杂
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 亲密关系沟通教练 | 情感表达模板生成，非暴力沟通技巧指导，冲突化解话术；关系健康度评估 |
-| 2 | 家人关怀提醒助手 | 重要日期提醒（生日/纪念日），关怀话术建议，家庭活动推荐；家庭相册生成 |
-| 3 | 友谊维护氛围师 | 朋友互动记录，共同话题推荐，远程聚会组织；友谊时间轴和回忆生成 |
-| 4 | 表白与惊喜策划师 | 个性化惊喜方案生成，礼物推荐，浪漫话术建议；执行时间表和提醒 |
-| 5 | 冲突缓和氛围引导 | 情绪降温话术，换位思考引导，和解步骤建议；关系修复跟踪 |
-
----
-
-## 11. 宠物陪伴
-
-> 💡 **核心理念**：宠物是家人，它们的陪伴值得被记录和珍惜
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 宠物拟人化日记 | 宠物行为分析，第一人称日记生成，照片自动配图；宠物"朋友圈" |
-| 2 | 宠物行为解读师 | 宠物行为视频分析，健康预警，训练建议；品种特性知识库 |
-| 3 | 宠物陪伴时光策划 | 宠物活动推荐，DIY 玩具教程，宠物友好地点推荐；宠物社交匹配 |
-| 4 | 宠物纪念故事生成 | 照片和视频精选，时间轴故事生成，音乐配搭；纪念册/视频自动生成 |
-| 5 | 新手铲屎官安心指南 | 分阶段养护指南，常见问题解答，紧急情况处理；新手社区支持 |
-
----
-
-## 12. 财务健康
-
-> 💡 **核心理念**：财务自由不是目标，财务健康才是
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 消费情绪觉察助手 | 消费记录分析，情绪-消费关联分析，冲动消费预警；替代性满足建议 |
-| 2 | 储蓄目标可视化激励 | 目标进度可视化，梦想场景渲染，里程碑庆祝；储蓄习惯养成游戏 |
-| 3 | 理财知识轻松学 | 碎片化知识推送，场景化案例教学，互动问答；知识检测和证书 |
-| 4 | 财务焦虑舒缓师 | 财务状况健康评估，压力管理技巧，小步行动计划；财务心理咨询 |
-| 5 | 小额投资体验游戏 | 虚拟投资模拟，风险教育，投资组合游戏；真实小额投资引导 |
-
----
-
-## 13. 职业发展
-
-> 💡 **核心理念**：职业不是轨道，而是可以探索的旷野
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 职业迷茫陪伴者 | 职业兴趣测评，能力盘点，行业信息推荐；职业导师对话 |
-| 2 | 工作成就感唤醒师 | 工作成果记录，价值提炼，成就可视化；同事/客户正向反馈收集 |
-| 3 | 职场社交氛围助手 | 职场话题推荐， networking 技巧，行业活动推荐；LinkedIn 内容优化 |
-| 4 | 副业灵感激发器 | 技能-兴趣-市场需求匹配，副业案例库，启动指南；副业社区交流 |
-| 5 | 面试前信心加油站 | 模拟面试，常见问题准备，自信提升技巧；形象建议 |
-
----
-
-## 14. 居家空间
-
-> 💡 **核心理念**：家不只是居住的地方，更是心灵的栖息地
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 居家空间氛围设计师 | 空间照片分析，风格推荐，家具/装饰推荐；AR 预览效果 |
-| 2 | 四季家居变换指南 | 季节主题推荐，收纳和展示建议，节日装饰方案；购物清单生成 |
-| 3 | 小户型空间魔法 | 空间优化算法，多功能家具推荐，收纳技巧；视觉扩容技巧 |
-| 4 | 居家仪式感创造者 | 日常仪式设计（晨间/晚间/周末），仪式执行提醒；仪式效果反馈 |
-| 5 | 断舍离心理陪伴 | 物品情感价值评估，断舍离步骤指导，心理支持；捐赠/回收渠道推荐 |
-
----
-
-## 15. 美食料理
-
-> 💡 **核心理念**：食物是爱的语言，烹饪是表达爱的方式
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 一人食治愈料理 | 冰箱食材识别，简单食谱推荐， step-by-step 指导；一人食摆盘美学 |
-| 2 | 节日餐桌氛围设计 | 节日主题菜单，餐桌布置方案，氛围营造技巧；宾客体验优化 |
-| 3 | 料理心情匹配师 | 心情-食物关联算法，情绪调节食谱， comfort food 推荐；烹饪疗愈引导 |
-| 4 | 厨房小白信心建立 | 超简单食谱，失败挽救技巧，信心建设话术；渐进式难度提升 |
-| 5 | 美食摄影氛围指南 | 食物摆盘建议，自然光利用，拍摄角度指导；滤镜和后期建议 |
-
----
-
-## 16. 穿搭风格
-
-> 💡 **核心理念**：穿搭是自我表达，风格是内在的外显
-
-| 序号 | 应用场景名称 | 应用场景功能 |
-| :--: | ------------ | ------------ |
-| 1 | 今日穿搭心情板 | 天气/场合/心情综合推荐，虚拟试衣，搭配灵感；衣橱管理 |
-| 2 | 胶囊衣橱搭配师 | 衣橱盘点，单品搭配组合，一衣多穿方案；购物建议（填补空缺） |
-| 3 | 个人风格探索之旅 | 风格测试，参考 icon 推荐，风格进化路径；自信建设 |
-| 4 | 旧衣新穿创意师 | 旧衣改造灵感，新搭配方式，配饰点缀技巧；可持续时尚理念 |
-| 5 | 特殊场合造型顾问 | 场合 dress code 解读，造型方案生成，妆容发型建议；整体造型协调 |
-
----
-
-## 设计 C 端产品的核心心法
-
-### 1. 从"功能"到"感受"
-
-B 端产品关注"这个功能能解决什么问题"，C 端产品关注"这个功能能带来什么感觉"。
-
-| B 端思维 | C 端思维 |
-|---------|---------|
-| 提高效率 | 节省时间去做喜欢的事 |
-| 降低成本 | 让每一分钱花得值得 |
-| 解决痛点 | 创造美好体验 |
-| 功能完备 | 感觉到位 |
-
-### 2. 营造氛围的三个层次
-
-**感官层**：视觉、听觉、触觉的设计
-- 温暖的颜色
-- 舒缓的声音
-- 流畅的动效
-
-**情感层**：情绪的共鸣和引导
-- 理解用户的心情
-- 提供情感支持
-- 创造正向情绪
-
-**意义层**：价值的认同和归属
-- 让用户感到被理解
-- 创造归属感
-- 赋予行动意义
-
-### 3. 心理暗示的力量
-
-C 端产品的文案和设计都在传递心理暗示：
-
-- **正向暗示**："你已经做得很好了"、"慢慢来，没关系"
-- **归属暗示**："很多人和你一样"、"你并不孤单"
-- **成长暗示**："每一次尝试都是进步"、"你在变得更好"
-
-### 4. 让用户成为更好的自己
-
-最好的 C 端产品不是改变用户，而是帮助用户成为他们想成为的自己。
-
-- 不是"你应该..."，而是"你可以..."
-- 不是"你必须..."，而是"如果你想要..."
-- 不是"你还不够..."，而是"你已经..."
-
----
-
-> 🌟 **记住**：C 端用户买的不是功能，是感觉；不是工具，是陪伴；不是服务，是理解。
-
-</TabItem>
-</Tabs>
+</style>

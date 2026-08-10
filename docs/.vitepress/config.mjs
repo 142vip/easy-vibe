@@ -1729,7 +1729,7 @@ const productManagerSidebar = [
         link: '/zh-cn/stage-1/appendix-a-product-thinking/'
       },
       {
-        text: 'AI 应用场景参考',
+        text: '从真实工作流里找 AI 场景',
         link: '/zh-cn/stage-1/appendix-industry-scenarios/'
       },
       {
