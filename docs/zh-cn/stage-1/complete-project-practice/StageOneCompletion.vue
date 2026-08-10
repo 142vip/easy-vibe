@@ -3,14 +3,29 @@ import { onBeforeUnmount, ref } from 'vue'
 
 const isCelebrating = ref(false)
 const celebrationRound = ref(0)
-const confettiColors = ['#ffd166', '#7ce8c3', '#8eb8ff', '#ff8fab', '#ffffff']
-const confetti = Array.from({ length: 24 }, (_, index) => ({
+const confettiColors = ['#ffd166', '#7ce8c3', '#8eb8ff', '#ff8fab', '#ffffff', '#c7a6ff']
+const confetti = Array.from({ length: 56 }, (_, index) => ({
   id: index,
   color: confettiColors[index % confettiColors.length],
-  left: `${8 + ((index * 37) % 84)}%`,
-  drift: `${-72 + ((index * 53) % 145)}px`,
-  delay: `${(index % 6) * 0.055}s`,
-  duration: `${1.15 + (index % 5) * 0.12}s`,
+  left: `${2 + ((index * 37) % 96)}%`,
+  drift: `${-90 + ((index * 53) % 181)}px`,
+  delay: `${(index % 14) * 0.07}s`,
+  duration: `${1.75 + (index % 7) * 0.13}s`,
+  width: `${6 + (index % 3) * 2}px`,
+}))
+
+const fireworkBursts = [
+  { id: 1, left: '16%', top: '24%', color: '#ffd166', delay: '0.05s', distance: '116px' },
+  { id: 2, left: '82%', top: '22%', color: '#7ce8c3', delay: '0.26s', distance: '125px' },
+  { id: 3, left: '10%', top: '63%', color: '#ff8fab', delay: '0.48s', distance: '105px' },
+  { id: 4, left: '89%', top: '66%', color: '#8eb8ff', delay: '0.67s', distance: '112px' },
+  { id: 5, left: '34%', top: '14%', color: '#c7a6ff', delay: '0.82s', distance: '92px' },
+  { id: 6, left: '67%', top: '79%', color: '#ffd166', delay: '0.98s', distance: '98px' },
+]
+
+const fireworkRays = Array.from({ length: 14 }, (_, index) => ({
+  id: index,
+  angle: `${index * (360 / 14)}deg`,
 }))
 
 let celebrationTimer
@@ -21,46 +36,75 @@ function celebrate() {
   isCelebrating.value = true
   celebrationTimer = window.setTimeout(() => {
     isCelebrating.value = false
-  }, 1900)
+  }, 2800)
 }
 
 onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
 </script>
 
 <template>
-  <section class="stage-completion" aria-label="第一阶段已完成">
+  <Teleport to="body">
     <div
       v-if="isCelebrating"
       :key="celebrationRound"
-      class="confetti-field"
+      class="celebration-overlay"
       aria-hidden="true"
     >
-      <i
-        v-for="piece in confetti"
-        :key="piece.id"
+      <div class="overlay-glow" />
+
+      <div
+        v-for="burst in fireworkBursts"
+        :key="burst.id"
+        class="firework"
         :style="{
-          left: piece.left,
-          background: piece.color,
-          '--confetti-drift': piece.drift,
-          '--confetti-delay': piece.delay,
-          '--confetti-duration': piece.duration,
+          left: burst.left,
+          top: burst.top,
+          '--firework-color': burst.color,
+          '--firework-delay': burst.delay,
+          '--firework-distance': burst.distance,
         }"
-      />
+      >
+        <i
+          v-for="ray in fireworkRays"
+          :key="ray.id"
+          :style="{ '--firework-angle': ray.angle }"
+        />
+      </div>
+
+      <div class="fullscreen-confetti">
+        <i
+          v-for="piece in confetti"
+          :key="piece.id"
+          :style="{
+            left: piece.left,
+            width: piece.width,
+            background: piece.color,
+            '--confetti-drift': piece.drift,
+            '--confetti-delay': piece.delay,
+            '--confetti-duration': piece.duration,
+          }"
+        />
+      </div>
+
+      <div class="celebration-toast">
+        <span>🥂</span>
+        <strong>干杯！第一阶段完成</strong>
+        <small>这是你的第一件真实作品</small>
+      </div>
     </div>
+  </Teleport>
 
-    <div class="completion-badge">第一阶段 · 已完成</div>
-
-    <button
-      class="celebration-button"
-      :class="{ 'is-celebrating': isCelebrating }"
-      type="button"
-      aria-label="碰个杯，庆祝完成第一阶段"
-      @click="celebrate"
-    >
-      <span :key="celebrationRound" class="celebration-icon" aria-hidden="true">🥂</span>
-      <span class="celebration-copy">
-        <strong>{{ isCelebrating ? '干杯！第一阶段完成' : '碰个杯，庆祝一下' }}</strong>
-        <small>{{ isCelebrating ? '这是你的第一件真实作品' : '点一下' }}</small>
+  <div class="stage-finale">
+    <button class="celebration-launch" type="button" @click="celebrate">
+      <span class="launch-icon" aria-hidden="true">🥂</span>
+      <span class="launch-copy">
+        <small>STAGE 1 完成礼</small>
+        <strong>完成了，碰个杯！</strong>
+        <em>点击放一场全屏礼花</em>
+      </span>
+      <span class="launch-action">
+        {{ isCelebrating ? '正在庆祝' : '开始庆祝' }}
+        <i aria-hidden="true">→</i>
       </span>
     </button>
 
@@ -68,38 +112,176 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
       {{ isCelebrating ? '干杯！你完成了第一阶段。' : '' }}
     </p>
 
-    <h2>你完成了第一阶段</h2>
-    <p class="completion-lead">
-      从第一次让 AI 写出一个小游戏，到把自己的产品交给别人使用，你已经走完了一次真正的软件创作。
-    </p>
+    <section class="stage-completion" aria-label="第一阶段已完成">
+      <div class="completion-badge">第一阶段 · 已完成</div>
+      <div class="completion-icon" aria-hidden="true">🏆</div>
 
-    <div class="completion-route" aria-label="第一阶段学习路径">
-      <span>找到问题</span>
-      <i aria-hidden="true">→</i>
-      <span>做出原型</span>
-      <i aria-hidden="true">→</i>
-      <span>接入 AI</span>
-      <i aria-hidden="true">→</i>
-      <span>交给用户</span>
-    </div>
+      <h2>你完成了第一阶段</h2>
+      <p class="completion-lead">
+        从第一次让 AI 写出一个小游戏，到把自己的产品交给别人使用，你已经走完了一次真正的软件创作。
+      </p>
 
-    <div class="completion-message">
-      <strong>你的第一件作品已经可以出发了。</strong>
-      <span>它不只是本地 Demo，而是一个被真实的人打开、使用和改进过的产品。</span>
-    </div>
+      <div class="completion-route" aria-label="第一阶段学习路径">
+        <span>找到问题</span>
+        <i aria-hidden="true">→</i>
+        <span>做出原型</span>
+        <i aria-hidden="true">→</i>
+        <span>接入 AI</span>
+        <i aria-hidden="true">→</i>
+        <span>交给用户</span>
+      </div>
 
-    <a class="completion-next" href="../../stage-2/frontend/lovart-assets/">
-      继续进入 Stage 2
-      <span aria-hidden="true">→</span>
-    </a>
-  </section>
+      <div class="completion-message">
+        <strong>你的第一件作品已经可以出发了。</strong>
+        <span>它不只是本地 Demo，而是一个被真实的人打开、使用和改进过的产品。</span>
+      </div>
+
+      <a class="completion-next" href="../../stage-2/frontend/lovart-assets/">
+        继续进入 Stage 2
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+  </div>
 </template>
 
 <style scoped>
+.stage-finale {
+  margin: 56px 0 22px;
+}
+
+.celebration-launch {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 16px;
+  padding: 17px 19px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 206, 92, 0.92);
+  border-radius: 22px;
+  color: #2f2450;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 255, 255, 0.8), transparent 28%),
+    linear-gradient(120deg, #ffe58a 0%, #ffc868 48%, #ff9b72 100%);
+  box-shadow:
+    0 18px 38px rgba(209, 117, 49, 0.23),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.celebration-launch::after {
+  position: absolute;
+  right: -28px;
+  bottom: -48px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 22px rgba(255, 255, 255, 0.1),
+    0 0 0 44px rgba(255, 255, 255, 0.06);
+  content: '';
+  pointer-events: none;
+}
+
+.celebration-launch:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 24px 48px rgba(209, 117, 49, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.celebration-launch:focus-visible {
+  outline: 4px solid rgba(255, 157, 68, 0.28);
+  outline-offset: 4px;
+}
+
+.launch-icon {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 62px;
+  height: 62px;
+  flex: 0 0 62px;
+  place-items: center;
+  border: 1px solid rgba(80, 47, 77, 0.13);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.48);
+  box-shadow: 0 10px 22px rgba(132, 75, 50, 0.12);
+  font-size: 32px;
+}
+
+.launch-copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.launch-copy small {
+  color: rgba(64, 40, 73, 0.65);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.launch-copy strong {
+  margin-top: 2px;
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+.launch-copy em {
+  margin-top: 2px;
+  color: rgba(64, 40, 73, 0.65);
+  font-size: 13px;
+  font-style: normal;
+}
+
+.launch-action {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  padding: 10px 14px;
+  border: 1px solid rgba(64, 40, 73, 0.15);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.58);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.launch-action i {
+  font-style: normal;
+  transition: transform 0.2s ease;
+}
+
+.celebration-launch:hover .launch-action i {
+  transform: translateX(3px);
+}
+
+.celebration-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
 .stage-completion {
   position: relative;
   overflow: hidden;
-  margin: 56px 0 22px;
+  margin-top: 16px;
   padding: 42px 34px 38px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 26px;
@@ -118,25 +300,6 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   color: rgba(255, 255, 255, 0.2);
   content: '✦';
   font-size: 25px;
-}
-
-.confetti-field {
-  position: absolute;
-  z-index: 3;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.confetti-field i {
-  position: absolute;
-  top: 24%;
-  width: 8px;
-  height: 13px;
-  border-radius: 2px;
-  opacity: 0;
-  animation: confetti-fall var(--confetti-duration) cubic-bezier(0.2, 0.7, 0.35, 1)
-    var(--confetti-delay) forwards;
 }
 
 .stage-completion::before {
@@ -163,91 +326,17 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   letter-spacing: 0.08em;
 }
 
-.celebration-button {
-  position: relative;
-  z-index: 4;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  margin: 20px auto 14px;
-  padding: 8px 15px 8px 9px;
+.completion-icon {
+  display: grid;
+  width: 68px;
+  height: 68px;
+  margin: 20px auto 12px;
+  place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 18px;
-  color: #fff;
+  border-radius: 22px;
   background: rgba(255, 255, 255, 0.12);
   box-shadow: 0 15px 32px rgba(7, 13, 36, 0.24);
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    background 0.2s ease;
-}
-
-.celebration-button:hover {
-  border-color: rgba(255, 255, 255, 0.38);
-  background: rgba(255, 255, 255, 0.18);
-  transform: translateY(-2px);
-}
-
-.celebration-button:focus-visible {
-  outline: 3px solid rgba(255, 214, 102, 0.7);
-  outline-offset: 4px;
-}
-
-.celebration-icon {
-  display: grid;
-  width: 52px;
-  height: 52px;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.1);
-  font-size: 29px;
-  transform-origin: 50% 70%;
-}
-
-.celebration-button.is-celebrating .celebration-icon {
-  animation: glasses-clink 0.72s cubic-bezier(0.2, 0.85, 0.3, 1.25) both;
-}
-
-.celebration-button.is-celebrating::after {
-  position: absolute;
-  top: 23px;
-  left: 33px;
-  width: 24px;
-  height: 24px;
-  border: 2px solid rgba(255, 223, 128, 0.9);
-  border-radius: 50%;
-  content: '';
-  animation: clink-ring 0.75s ease-out both;
-  pointer-events: none;
-}
-
-.celebration-copy {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.celebration-copy strong {
-  font-size: 14px;
-  line-height: 1.35;
-}
-
-.celebration-copy small {
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 11px;
-}
-
-.celebration-status {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+  font-size: 34px;
 }
 
 .stage-completion h2 {
@@ -334,29 +423,161 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   box-shadow: 0 14px 28px rgba(7, 13, 36, 0.28);
 }
 
-@keyframes glasses-clink {
+.celebration-overlay {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at center, rgba(68, 45, 118, 0.26), transparent 44%),
+    rgba(8, 12, 32, 0.18);
+  pointer-events: none;
+  animation: overlay-fade 2.8s ease both;
+}
+
+.overlay-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(78vw, 820px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 217, 119, 0.2), transparent 64%);
+  transform: translate(-50%, -50%);
+  animation: glow-pulse 1.2s ease-out both;
+}
+
+.firework {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+}
+
+.firework::after {
+  position: absolute;
+  inset: -9px;
+  border: 2px solid var(--firework-color);
+  border-radius: 50%;
+  content: '';
+  opacity: 0;
+  animation: firework-ring 1.15s ease-out var(--firework-delay) both;
+}
+
+.firework i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--firework-color);
+  box-shadow: 0 0 12px var(--firework-color);
+  opacity: 0;
+  animation: firework-spark 1.25s cubic-bezier(0.15, 0.7, 0.25, 1)
+    var(--firework-delay) both;
+}
+
+.fullscreen-confetti {
+  position: absolute;
+  inset: 0;
+}
+
+.fullscreen-confetti i {
+  position: absolute;
+  top: -24px;
+  height: 15px;
+  border-radius: 2px;
+  opacity: 0;
+  animation: fullscreen-confetti-fall var(--confetti-duration) linear var(--confetti-delay)
+    forwards;
+}
+
+.celebration-toast {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  width: min(88vw, 430px);
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 28px 23px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 26px;
+  color: #fff;
+  background: rgba(26, 29, 65, 0.84);
+  box-shadow:
+    0 28px 80px rgba(4, 6, 24, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-align: center;
+  backdrop-filter: blur(16px);
+  transform: translate(-50%, -50%);
+  animation: toast-pop 2.7s cubic-bezier(0.2, 0.8, 0.25, 1) both;
+}
+
+.celebration-toast span {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.celebration-toast strong {
+  margin-top: 13px;
+  font-size: 24px;
+}
+
+.celebration-toast small {
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+}
+
+@keyframes overlay-fade {
   0% {
-    transform: scale(1) rotate(0deg);
+    opacity: 0;
   }
 
-  35% {
-    transform: scale(1.24) rotate(-12deg);
-  }
-
-  55% {
-    transform: scale(1.32) rotate(10deg);
-  }
-
-  75% {
-    transform: scale(1.18) rotate(-5deg);
+  10%,
+  82% {
+    opacity: 1;
   }
 
   100% {
-    transform: scale(1) rotate(0deg);
+    opacity: 0;
   }
 }
 
-@keyframes clink-ring {
+@keyframes glow-pulse {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes firework-spark {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--firework-angle)) translateX(0) scale(0.2);
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(var(--firework-angle)) translateX(var(--firework-distance)) scale(0.25);
+  }
+}
+
+@keyframes firework-ring {
   0% {
     opacity: 0.9;
     transform: scale(0.25);
@@ -364,29 +585,79 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
 
   100% {
     opacity: 0;
-    transform: scale(3.2);
+    transform: scale(8);
   }
 }
 
-@keyframes confetti-fall {
+@keyframes fullscreen-confetti-fall {
   0% {
     opacity: 0;
-    transform: translate3d(0, -18px, 0) rotate(0deg);
+    transform: translate3d(0, -4vh, 0) rotate(0deg);
   }
 
-  12% {
+  10% {
     opacity: 1;
   }
 
   100% {
+    opacity: 0.85;
+    transform: translate3d(var(--confetti-drift), 108vh, 0) rotate(680deg);
+  }
+}
+
+@keyframes toast-pop {
+  0% {
     opacity: 0;
-    transform: translate3d(var(--confetti-drift), 370px, 0) rotate(560deg);
+    transform: translate(-50%, -50%) scale(0.56);
+  }
+
+  15% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.04);
+  }
+
+  22%,
+  82% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.06);
   }
 }
 
 @media (max-width: 640px) {
-  .stage-completion {
+  .stage-finale {
     margin-top: 40px;
+  }
+
+  .celebration-launch {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .launch-icon {
+    width: 56px;
+    height: 56px;
+    flex-basis: 56px;
+    font-size: 29px;
+  }
+
+  .launch-copy strong {
+    font-size: 19px;
+  }
+
+  .launch-action {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .stage-completion {
     padding: 34px 20px 30px;
     border-radius: 21px;
   }
@@ -412,19 +683,43 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
     flex: 1 1 calc(50% - 8px);
   }
 
-  .celebration-button {
-    max-width: 100%;
+  .celebration-toast {
+    padding: 22px 18px 20px;
+    border-radius: 22px;
+  }
+
+  .celebration-toast strong {
+    font-size: 21px;
+  }
+
+  .firework:nth-of-type(5),
+  .firework:nth-of-type(6) {
+    display: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .celebration-button,
+  .celebration-launch,
   .completion-next,
-  .celebration-icon,
-  .confetti-field i,
-  .celebration-button::after {
+  .launch-action i,
+  .celebration-overlay,
+  .overlay-glow,
+  .firework::after,
+  .firework i,
+  .fullscreen-confetti i,
+  .celebration-toast {
     animation: none !important;
     transition: none !important;
+  }
+
+  .firework,
+  .fullscreen-confetti {
+    display: none;
+  }
+
+  .celebration-overlay,
+  .celebration-toast {
+    opacity: 1;
   }
 }
 </style>
