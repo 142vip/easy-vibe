@@ -4,28 +4,40 @@ import { onBeforeUnmount, ref } from 'vue'
 const isCelebrating = ref(false)
 const celebrationRound = ref(0)
 const confettiColors = ['#ffd166', '#7ce8c3', '#8eb8ff', '#ff8fab', '#ffffff', '#c7a6ff']
-const confetti = Array.from({ length: 56 }, (_, index) => ({
+const confetti = Array.from({ length: 88 }, (_, index) => ({
   id: index,
   color: confettiColors[index % confettiColors.length],
   left: `${2 + ((index * 37) % 96)}%`,
   drift: `${-90 + ((index * 53) % 181)}px`,
-  delay: `${(index % 14) * 0.07}s`,
-  duration: `${1.75 + (index % 7) * 0.13}s`,
+  delay: `${(index % 18) * 0.055}s`,
+  duration: `${2.05 + (index % 7) * 0.1}s`,
   width: `${6 + (index % 3) * 2}px`,
 }))
 
 const fireworkBursts = [
-  { id: 1, left: '16%', top: '24%', color: '#ffd166', delay: '0.05s', distance: '116px' },
-  { id: 2, left: '82%', top: '22%', color: '#7ce8c3', delay: '0.26s', distance: '125px' },
-  { id: 3, left: '10%', top: '63%', color: '#ff8fab', delay: '0.48s', distance: '105px' },
-  { id: 4, left: '89%', top: '66%', color: '#8eb8ff', delay: '0.67s', distance: '112px' },
-  { id: 5, left: '34%', top: '14%', color: '#c7a6ff', delay: '0.82s', distance: '92px' },
-  { id: 6, left: '67%', top: '79%', color: '#ffd166', delay: '0.98s', distance: '98px' },
+  { id: 1, left: '9%', top: '22%', color: '#ffd166', delay: '0.04s', distance: '142px' },
+  { id: 2, left: '28%', top: '12%', color: '#c7a6ff', delay: '0.18s', distance: '124px' },
+  { id: 3, left: '74%', top: '14%', color: '#7ce8c3', delay: '0.31s', distance: '138px' },
+  { id: 4, left: '92%', top: '28%', color: '#8eb8ff', delay: '0.46s', distance: '152px' },
+  { id: 5, left: '12%', top: '68%', color: '#ff8fab', delay: '0.63s', distance: '132px' },
+  { id: 6, left: '31%', top: '83%', color: '#ffd166', delay: '0.78s', distance: '118px' },
+  { id: 7, left: '72%', top: '84%', color: '#ff8fab', delay: '0.93s', distance: '128px' },
+  { id: 8, left: '91%', top: '68%', color: '#7ce8c3', delay: '1.08s', distance: '142px' },
+  { id: 9, left: '48%', top: '10%', color: '#ffffff', delay: '1.22s', distance: '116px' },
+  { id: 10, left: '54%', top: '88%', color: '#8eb8ff', delay: '1.38s', distance: '124px' },
 ]
 
-const fireworkRays = Array.from({ length: 14 }, (_, index) => ({
+const fireworkRays = Array.from({ length: 18 }, (_, index) => ({
   id: index,
-  angle: `${index * (360 / 14)}deg`,
+  angle: `${index * 20}deg`,
+}))
+
+const stars = Array.from({ length: 34 }, (_, index) => ({
+  id: index,
+  left: `${3 + ((index * 47) % 94)}%`,
+  top: `${5 + ((index * 31) % 88)}%`,
+  size: `${3 + (index % 4) * 2}px`,
+  delay: `${(index % 12) * 0.11}s`,
 }))
 
 let celebrationTimer
@@ -36,7 +48,7 @@ function celebrate() {
   isCelebrating.value = true
   celebrationTimer = window.setTimeout(() => {
     isCelebrating.value = false
-  }, 2800)
+  }, 3600)
 }
 
 onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
@@ -50,7 +62,9 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
       class="celebration-overlay"
       aria-hidden="true"
     >
+      <div class="celebration-flash" />
       <div class="overlay-glow" />
+      <div class="celebration-rays" />
 
       <div
         v-for="burst in fireworkBursts"
@@ -71,6 +85,35 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
         />
       </div>
 
+      <div
+        class="firework hero-firework"
+        :style="{
+          '--firework-color': '#ffd166',
+          '--firework-delay': '0.16s',
+          '--firework-distance': '210px',
+        }"
+      >
+        <i
+          v-for="ray in fireworkRays"
+          :key="ray.id"
+          :style="{ '--firework-angle': ray.angle }"
+        />
+      </div>
+
+      <div class="starfield">
+        <i
+          v-for="star in stars"
+          :key="star.id"
+          :style="{
+            left: star.left,
+            top: star.top,
+            width: star.size,
+            height: star.size,
+            '--star-delay': star.delay,
+          }"
+        />
+      </div>
+
       <div class="fullscreen-confetti">
         <i
           v-for="piece in confetti"
@@ -87,15 +130,21 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
       </div>
 
       <div class="celebration-toast">
+        <b>第一阶段 · 通关</b>
         <span>🥂</span>
-        <strong>干杯！第一阶段完成</strong>
-        <small>这是你的第一件真实作品</small>
+        <strong>干杯！第一件作品完成</strong>
+        <small>从想法出发，你真的把它交给了用户</small>
       </div>
     </div>
   </Teleport>
 
   <div class="stage-finale">
-    <button class="celebration-launch" type="button" @click="celebrate">
+    <button
+      class="celebration-launch"
+      :class="{ 'is-celebrating': isCelebrating }"
+      type="button"
+      @click="celebrate"
+    >
       <span class="launch-icon" aria-hidden="true">🥂</span>
       <span class="launch-copy">
         <small>STAGE 1 完成礼</small>
@@ -169,9 +218,14 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   font: inherit;
   text-align: left;
   cursor: pointer;
+  animation: launch-glow 2.4s ease-in-out infinite;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+}
+
+.celebration-launch.is-celebrating {
+  animation: none;
 }
 
 .celebration-launch::after {
@@ -429,28 +483,71 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   inset: 0;
   overflow: hidden;
   background:
-    radial-gradient(circle at center, rgba(68, 45, 118, 0.26), transparent 44%),
-    rgba(8, 12, 32, 0.18);
+    radial-gradient(circle at center, rgba(79, 50, 145, 0.42), transparent 48%),
+    rgba(4, 7, 28, 0.44);
+  backdrop-filter: blur(1.5px) saturate(1.12);
   pointer-events: none;
-  animation: overlay-fade 2.8s ease both;
+  animation: overlay-fade 3.6s ease both;
+}
+
+.celebration-flash {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, #fffbd8 0%, #ffd98b 18%, transparent 62%);
+  animation: celebration-flash 0.82s ease-out both;
 }
 
 .overlay-glow {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: min(78vw, 820px);
+  width: min(92vw, 980px);
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 217, 119, 0.2), transparent 64%);
+  background:
+    radial-gradient(circle, rgba(255, 239, 170, 0.3), transparent 56%),
+    radial-gradient(circle, rgba(151, 112, 255, 0.24), transparent 70%);
   transform: translate(-50%, -50%);
   animation: glow-pulse 1.2s ease-out both;
 }
 
+.celebration-rays {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 125vmax;
+  height: 125vmax;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    from 8deg,
+    rgba(255, 233, 154, 0.18) 0deg 2deg,
+    transparent 2deg 14deg
+  );
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: celebration-rays 3.4s ease-out 0.12s both;
+  mask-image: radial-gradient(circle, transparent 0 11%, #000 26%, transparent 74%);
+}
+
 .firework {
   position: absolute;
+  z-index: 2;
   width: 6px;
   height: 6px;
+}
+
+.hero-firework {
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
+
+.hero-firework i {
+  width: 10px;
+  height: 10px;
+  box-shadow:
+    0 0 12px #fff7ca,
+    0 0 24px var(--firework-color);
 }
 
 .firework::after {
@@ -479,6 +576,7 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
 
 .fullscreen-confetti {
   position: absolute;
+  z-index: 5;
   inset: 0;
 }
 
@@ -492,8 +590,26 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
     forwards;
 }
 
+.starfield {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+}
+
+.starfield i {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff8c9;
+  box-shadow:
+    0 0 8px #fff,
+    0 0 18px #ffd166;
+  opacity: 0;
+  animation: star-twinkle 1.35s ease-in-out var(--star-delay) both;
+}
+
 .celebration-toast {
   position: absolute;
+  z-index: 6;
   top: 50%;
   left: 50%;
   display: flex;
@@ -504,17 +620,32 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   border: 1px solid rgba(255, 255, 255, 0.34);
   border-radius: 26px;
   color: #fff;
-  background: rgba(26, 29, 65, 0.84);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(122, 84, 196, 0.42), transparent 55%),
+    rgba(20, 24, 61, 0.9);
   box-shadow:
-    0 28px 80px rgba(4, 6, 24, 0.45),
+    0 0 0 1px rgba(255, 211, 102, 0.12),
+    0 0 80px rgba(255, 199, 83, 0.22),
+    0 32px 100px rgba(4, 6, 24, 0.62),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   text-align: center;
   backdrop-filter: blur(16px);
   transform: translate(-50%, -50%);
-  animation: toast-pop 2.7s cubic-bezier(0.2, 0.8, 0.25, 1) both;
+  animation: toast-pop 3.45s cubic-bezier(0.2, 0.8, 0.25, 1) both;
+}
+
+.celebration-toast b {
+  padding: 5px 11px;
+  border: 1px solid rgba(255, 218, 119, 0.35);
+  border-radius: 999px;
+  color: #ffe9a9;
+  background: rgba(255, 214, 104, 0.1);
+  font-size: 11px;
+  letter-spacing: 0.12em;
 }
 
 .celebration-toast span {
+  margin-top: 13px;
   font-size: 48px;
   line-height: 1;
 }
@@ -530,6 +661,23 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   font-size: 14px;
 }
 
+@keyframes launch-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 18px 38px rgba(209, 117, 49, 0.23),
+      0 0 0 0 rgba(255, 184, 74, 0.32),
+      inset 0 1px 0 rgba(255, 255, 255, 0.72);
+  }
+
+  50% {
+    box-shadow:
+      0 22px 46px rgba(209, 117, 49, 0.32),
+      0 0 0 7px rgba(255, 184, 74, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.72);
+  }
+}
+
 @keyframes overlay-fade {
   0% {
     opacity: 0;
@@ -542,6 +690,39 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
 
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes celebration-flash {
+  0% {
+    opacity: 0.92;
+    transform: scale(0.1);
+  }
+
+  28% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes celebration-rays {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(0deg) scale(0.4);
+  }
+
+  20% {
+    opacity: 0.72;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(22deg) scale(1);
   }
 }
 
@@ -602,6 +783,28 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   100% {
     opacity: 0.85;
     transform: translate3d(var(--confetti-drift), 108vh, 0) rotate(680deg);
+  }
+}
+
+@keyframes star-twinkle {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+
+  38% {
+    opacity: 1;
+    transform: scale(1.7);
+  }
+
+  70% {
+    opacity: 0.9;
+    transform: scale(0.72);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.1);
   }
 }
 
@@ -692,9 +895,8 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
     font-size: 21px;
   }
 
-  .firework:nth-of-type(5),
-  .firework:nth-of-type(6) {
-    display: none;
+  .hero-firework i {
+    --firework-distance: 145px !important;
   }
 }
 
@@ -703,17 +905,23 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   .completion-next,
   .launch-action i,
   .celebration-overlay,
+  .celebration-flash,
   .overlay-glow,
+  .celebration-rays,
   .firework::after,
   .firework i,
   .fullscreen-confetti i,
+  .starfield i,
   .celebration-toast {
     animation: none !important;
     transition: none !important;
   }
 
   .firework,
-  .fullscreen-confetti {
+  .fullscreen-confetti,
+  .starfield,
+  .celebration-rays,
+  .celebration-flash {
     display: none;
   }
 
