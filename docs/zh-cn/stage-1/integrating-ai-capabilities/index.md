@@ -5,6 +5,7 @@ description: '从提示词设计、官方文档阅读和服务台配置开始，
 
 <script setup>
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
+import AiCapabilityGuide from './AiCapabilityGuide.vue'
 
 const duration = '约 <strong>1～2 天</strong>'
 const relatedArticles =
@@ -54,6 +55,8 @@ const relatedArticles =
 
 所以，接入前可以先看一遍页面：用户会提交什么，最后希望在页面上看到什么。把这两件事说清楚，通常就能判断该去找文本、图片、语音还是视频模型。
 
+<AiCapabilityGuide />
+
 ### 1.1 一个功能有时需要分成几步
 
 并不是每个功能都能交给一个模型一次完成。比如“上传商品照片并生成卖点”，要先读懂照片中的商品，再根据识别结果写文案；“根据公司资料回答问题”，也要先从文档中找到相关内容，再组织答案。
@@ -61,6 +64,10 @@ const relatedArticles =
 拆解时不用从模型名称出发，只要顺着用户的操作往下看：哪一步是在理解现有内容，哪一步是在生成新内容，哪一步只是查找资料。需要时，可以把两三种能力依次接起来。
 
 AI 只负责其中适合它的部分。登录、支付、保存文件和页面跳转都有明确规则，仍然使用普通程序来完成。
+
+![商品图片经过图片理解后生成商品描述的实际页面](images/index-2026-01-20-15-35-41.png)
+
+*在这个原型中，用户先上传商品图片，页面识别出商品信息，再生成可以继续编辑的描述和卖点。*
 
 ### 1.2 打开服务台以后要找什么
 
@@ -297,7 +304,7 @@ response = client.chat.completions.create(
 )
 ```
 
-![图片理解能力接入产品后的效果](images/index-2026-01-20-15-34-36.png)
+![在 AI IDE 中接入图片理解接口](images/index-2026-01-20-15-34-36.png)
 
 *先让用户确认模型识别出的商品信息，再生成文案，通常比直接从图片生成最终文案更容易发现错误。*
 
