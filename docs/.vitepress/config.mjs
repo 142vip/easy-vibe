@@ -527,7 +527,7 @@ const productManagerSidebarEn = [
   },
   {
     text: 'Appendix',
-    collapsed: true,
+    collapsed: false,
     items: [
       {
         text: 'Product Thinking Fundamentals',
@@ -617,7 +617,7 @@ const productManagerSidebarKo = [
   },
   {
     text: '부록',
-    collapsed: true,
+    collapsed: false,
     items: [
       {
         text: '제품 사고 기초',
@@ -1720,7 +1720,7 @@ const productManagerSidebar = [
   },
   {
     text: '附录',
-    collapsed: true,
+    collapsed: false,
     items: [
       {
         text: '产品思维基础',
