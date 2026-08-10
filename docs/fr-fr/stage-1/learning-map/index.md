@@ -13,6 +13,8 @@ const relatedArticles = relatedArticlesMap['fr-fr/stage-1/learning-map'] ?? []
 
 ::: info Remerciements spéciaux
 Un grand merci aux étudiants de l'**Université Tsinghua, Campus international de Shenzhen** pour leurs tests, retours et soutien de ce cours ! Vos avis et contributions ont permis d'améliorer ce cours. [👉 Voir la liste complète des contributeurs](https://github.com/datawhalechina/easy-vibe#-contributing--contributors)
+
+Nous remercions également OpenAI d'avoir fourni les ressources de calcul nécessaires au développement de ce cours.
 :::
 
 Autrefois, créer un logiciel était un processus très exigeant : il fallait connaître la programmation, comprendre les algorithmes et avoir des années d'expérience en projet.

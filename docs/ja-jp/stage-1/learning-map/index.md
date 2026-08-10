@@ -13,6 +13,8 @@ const relatedArticles = relatedArticlesMap['ja-jp/stage-1/learning-map'] ?? []
 
 ::: info 特別感謝
 **清華大学深セン国際大学院**の学生の皆様に、本コースのテスト・フィードバック・サポートにご協力いただきましたこと、心より感謝申し上げます！皆様のご意見とご貢献により、このコースはさらに良くなりました。[👉 完全な貢献者リストを見る](https://github.com/datawhalechina/easy-vibe#-contributing--contributors)
+
+また、本コースの開発に計算資源をご支援いただいた OpenAI に感謝いたします。
 :::
 
 昔はソフトウェアを作るハードルが非常に高くて、プログラミングもアルゴリズムも理解し、数年のプロジェクト経験も必要でした。

@@ -13,6 +13,8 @@ const relatedArticles = relatedArticlesMap['es-es/stage-1/learning-map'] ?? []
 
 ::: info Agradecimiento especial
 ¡Un agradecimiento especial a los estudiantes de la **Universidad de Tsinghua, Campus de Shenzhen** por sus pruebas, retroalimentación y apoyo a este curso! Sus opiniones y contribuciones han hecho que este curso sea mejor. [👉 Ver lista completa de contribuyentes](https://github.com/datawhlechina/easy-vibe#-contributing--contributors)
+
+También agradecemos a OpenAI por proporcionar recursos de cómputo para el desarrollo de este curso.
 :::
 
 Antes, crear software tenía una barrera muy alta: necesitabas saber programar, entender algoritmos y tener años de experiencia en proyectos.

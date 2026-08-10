@@ -13,6 +13,8 @@ const relatedArticles = relatedArticlesMap['de-de/stage-1/learning-map'] ?? []
 
 ::: info Besonderer Dank
 Besonderer Dank an die Studierenden der **Tsinghua Universit&auml;t Shenzhen International Graduate School** f&uuml;r das Testen, Feedback und die Unterst&uuml;tzung dieses Kurses! Eure Meinungen und Beitr&auml;ge haben diesen Kurs besser gemacht. [Zur vollst&auml;ndigen Beitr&auml;gerliste](https://github.com/datawhalechina/easy-vibe#-contributing--contributors)
+
+Wir danken auch OpenAI f&uuml;r die Bereitstellung von Rechenressourcen zur Entwicklung dieses Kurses.
 :::
 
 Fr&uuml;her war die H&uuml;rde f&uuml;r Softwareentwicklung sehr hoch: Man musste Programmierung und Algorithmen verstehen und &uuml;ber Jahre von Projekterfahrung verf&uuml;gen.

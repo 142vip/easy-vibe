@@ -13,6 +13,8 @@ const relatedArticles = relatedArticlesMap['ko-kr/stage-1/learning-map'] ?? []
 
 ::: info 특별 감사
 **칭화대학교 선전 국제대학원** 학생 여러분의 본 과정 테스트, 피드백, 지원에 특별히 감사드립니다! 여러분의 의견과 기여가 이 과정을 더 나은 곳으로 만들었습니다. [👉 전체 기여자 목록 보기](https://github.com/datawhalechina/easy-vibe#-contributing--contributors)
+
+또한 본 과정 개발을 위한 컴퓨팅 자원을 지원해 주신 OpenAI에 감사드립니다.
 :::
 
 예전에는 소프트웨어를 만드는 진입 장벽이 매우 높았습니다: 프로그래밍을 알아야 하고, 알고리즘을 이해해야 하며, 몇 년의 프로젝트 경험도 필요했습니다.

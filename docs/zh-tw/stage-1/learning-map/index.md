@@ -13,6 +13,8 @@ const relatedArticles = relatedArticlesMap['zh-tw/stage-1/learning-map'] ?? []
 
 ::: info 特別感謝
 特別感謝來自 **清華大學深圳國際研究生院** 的同學們對本課程的測試、反饋和支援！你們的意見和貢獻讓這門課程變得更好。[👉 檢視完整貢獻者名單](https://github.com/datawhalechina/easy-vibe#-contributing--contributors)
+
+同時感謝 OpenAI 為本課程開發提供的算力支援。
 :::
 
 以前做軟體，門檻很高：你要懂程式設計、懂演算法，還得有幾年的專案經驗。

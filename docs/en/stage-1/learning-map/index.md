@@ -7,6 +7,8 @@ description: 'Complete roadmap for learning AI programming: from zero basics to 
 
 ::: info Special Thanks
 Special thanks to the students from **Tsinghua University Shenzhen International Graduate School** for their testing, feedback, and support for this course! Your contributions and suggestions have made this course better. [👉 View full contributors list](https://github.com/datawhalechina/easy-vibe#-contributing--contributors)
+
+We also thank OpenAI for providing compute support for the development of this course.
 :::
 
 In the past, building software had a high barrier: you had to understand programming and algorithms and have years of project experience.

@@ -13,6 +13,8 @@ const relatedArticles = relatedArticlesMap['zh-cn/stage-1/learning-map'] ?? []
 
 ::: info 特别感谢
 本教程的[核心贡献者与测试者](https://github.com/datawhalechina/easy-vibe#-contributing--contributors)来自 **清华大学深圳国际研究生院**。感谢同学们在实际学习和操作中不断指出问题、提出建议并参与修改，让教程更清晰、更可靠，也更贴近初学者的真实需要。
+
+同时感谢 OpenAI 为本教程开发提供的算力支持。
 :::
 
 以前想做软件，要先学编程语言和各种开发工具。现在不一样了。你可以直接告诉 AI 想做什么，让它帮你写代码、做界面、改功能。
