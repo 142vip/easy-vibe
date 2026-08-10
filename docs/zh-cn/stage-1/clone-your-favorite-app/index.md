@@ -4,6 +4,8 @@ description: '像上课一样，跟着老师把一张产品截图变成可以打
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
+
 const duration = '约 <strong>2 小时</strong>'
 </script>
 
@@ -298,10 +300,7 @@ AI 第一次做得不够像，或者按钮暂时没有反应，都很正常。�
 
 ## 📚 本章作业
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 用一张截图做出自己的页面</div>
-  </template>
+<StageAssignmentCard title="用一张截图做出自己的页面">
 
   <p>找一个你喜欢的网页或游戏画面，把截图交给 AI，只复刻一个页面。</p>
 
@@ -312,7 +311,7 @@ AI 第一次做得不够像，或者按钮暂时没有反应，都很正常。�
   </ol>
 
   <p>展示时，把参考图和作品图放在一起，再说一句你改了什么。</p>
-</el-card>
+</StageAssignmentCard>
 
 ## 本章小结
 

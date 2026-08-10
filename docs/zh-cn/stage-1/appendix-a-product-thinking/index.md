@@ -4,6 +4,8 @@ description: '学习如何从会搭 AI 工具过渡到会想、会判断、会�
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
+
 const duration = '约 <strong>6 小时</strong>'
 </script>
 
@@ -215,10 +217,7 @@ AI 在这里的价值，并不在于替你做决定，而是在于帮你把本�
 
 ## 📚 本章作业
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 找到三个值得继续了解的点子</div>
-  </template>
+<StageAssignmentCard title="找到三个值得继续了解的点子">
 
   <ol>
     <li>从自己的兴趣、经历或身边人的麻烦中，写下一批产品点子。</li>
@@ -226,7 +225,7 @@ AI 在这里的价值，并不在于替你做决定，而是在于帮你把本�
     <li>选出最想继续了解的三个点子。</li>
     <li>分别用一句话写清楚：给谁用、在什么情况下用、能带来什么结果。</li>
   </ol>
-</el-card>
+</StageAssignmentCard>
 
 # 2. 有了点子，怎样拆成可以做出来的应用
 
@@ -504,10 +503,7 @@ AI 在这里的价值，并不在于替你做决定，而是在于帮你把本�
 
 ## 📚 本章作业
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 把点子画成可以动手做的方案</div>
-  </template>
+<StageAssignmentCard title="把点子画成可以动手做的方案">
 
   <ol>
     <li>从上一份作业的三个点子中选一个。</li>
@@ -517,7 +513,7 @@ AI 在这里的价值，并不在于替你做决定，而是在于帮你把本�
   </ol>
 
   <p>不用把所有功能都画进去。只要别人能顺着图看懂一次完整使用，就可以开始做原型。</p>
-</el-card>
+</StageAssignmentCard>
 
 # 3. 做出来后，怎样判断和打磨成好应用
 

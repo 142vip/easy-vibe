@@ -4,6 +4,8 @@ description: '面向零基础读者的 Jobs to Be Done 入门文章。理解用�
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
+
 const duration = '约 <strong>1.5 小时</strong>'
 </script>
 
@@ -481,10 +483,7 @@ AI 可能输出：
 
 ## 📚 本章作业
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 写清用户真正想完成的事</div>
-  </template>
+<StageAssignmentCard title="写清用户真正想完成的事">
 
   <ol>
     <li>选一个产品点子，写下用户在什么情况下会需要它。</li>
@@ -494,7 +493,7 @@ AI 可能输出：
   </ol>
 
   <p>最后得到一句普通人能读懂的话就够了，不需要为了套公式把句子写得很复杂。</p>
-</el-card>
+</StageAssignmentCard>
 
 ## 延伸阅读
 

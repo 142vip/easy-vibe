@@ -16,6 +16,7 @@ description: '用对话式方式让 AI 帮你写代码：从 0 到 1 做出 AI �
 
 <script setup>
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 
 const duration = '约 <strong>4 小时</strong>，可分多次完成'
 const relatedArticles =
@@ -440,10 +441,7 @@ z.ai 的回复将会是这样的：
 
 ## 📚 本章作业
 
-<el-card id="assignment-card" shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 本章作业：完成你的第一批 AI 原生小游戏</div>
-  </template>
+<StageAssignmentCard title="完成你的第一批 AI 原生小游戏">
 
   <p>
     这一节，你已经跟着步骤体验了从“对话生成贪吃蛇”到“理解 AI 原生小游戏设计思路”的完整流程。下面的作业帮助你把这些理解真正变成自己的能力。
@@ -469,7 +467,7 @@ z.ai 的回复将会是这样的：
   <p>
     这就是完整的教程！你可能需要 <strong>4 小时</strong> 才能完成所有内容并构建你自己的贪吃蛇游戏。不要着急——探索、实验并享受这个过程。如果在过程中遇到概念不太理解，推荐你顺手查看下方附录中的相关部分。
   </p>
-</el-card>
+</StageAssignmentCard>
 
 ## 附录
 

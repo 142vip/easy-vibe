@@ -4,6 +4,8 @@ description: '面向零基础读者的 Double Diamond 入门文章。理解 Disc
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
+
 const duration = '约 <strong>1.5 小时</strong>'
 </script>
 
@@ -528,10 +530,7 @@ AI 可能输出：
 
 ## 📚 本章作业
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 用双钻模型整理你的点子</div>
-  </template>
+<StageAssignmentCard title="用双钻模型整理你的点子">
 
   <ol>
     <li>选一个最近想做的点子，分别写下发现、定义、发展和交付四步。</li>
@@ -541,7 +540,7 @@ AI 可能输出：
   </ol>
 
   <p>重点不是记住四个英文单词，而是先把问题想清楚，再决定做什么。</p>
-</el-card>
+</StageAssignmentCard>
 
 ## 延伸阅读
 

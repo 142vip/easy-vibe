@@ -4,6 +4,8 @@ description: '学习如何从日常痛点中发现商业机会，掌握需求分
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
+
 const duration = '约 <strong>3 小时</strong>'
 </script>
 
@@ -639,10 +641,7 @@ AI 回复说："产后妈妈这个群体其实很好找，推广成本可以很�
 
 ## 📚 本章作业
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 把一个小麻烦变成产品点子</div>
-  </template>
+<StageAssignmentCard title="把一个小麻烦变成产品点子">
 
   <p>从最近遇到的一件小麻烦开始，不用另外编一个宏大的题目。</p>
 
@@ -654,7 +653,7 @@ AI 回复说："产后妈妈这个群体其实很好找，推广成本可以很�
   </ol>
 
   <p>完成后，把这段话拿给一位朋友看，听听他是否能马上理解。</p>
-</el-card>
+</StageAssignmentCard>
 
 ---
 

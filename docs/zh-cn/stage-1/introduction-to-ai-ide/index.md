@@ -9,6 +9,7 @@ description: '从网页 AI 编程走向本地：理解 IDE 与 AI IDE，使用 T
 
 <script setup>
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 
 const duration = '约 <strong>1 天</strong>，可分多次完成'
 const relatedArticles =
@@ -711,10 +712,7 @@ AI 很认真地给了你一段代码，你也老老实实地复制进去了，�
 
 ## 8. 📚 本章作业
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🚀 挑战任务：打造你的专属游戏</div>
-  </template>
+<StageAssignmentCard title="用 AI IDE 打造你的专属游戏">
 
   <p>
     你已经用本地 AI IDE 做过一个贪吃蛇。现在请你再挑战一个更复杂一点的小游戏，完整走一遍“描述需求 →
@@ -754,7 +752,7 @@ AI 很认真地给了你一段代码，你也老老实实地复制进去了，�
       </ul>
     </li>
   </ol>
-</el-card>
+</StageAssignmentCard>
 
 <RelatedArticlesSection
   title="继续学习"

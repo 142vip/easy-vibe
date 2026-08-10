@@ -4,6 +4,8 @@ description: '面向零基础读者的 The Mom Test 入门文章。学会避免�
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
+
 const duration = '约 <strong>1.5 小时</strong>'
 </script>
 
@@ -580,10 +582,7 @@ AI 可能输出：
 
 ## 📚 本章作业
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 做一次不推销想法的用户访谈</div>
-  </template>
+<StageAssignmentCard title="做一次不推销想法的用户访谈">
 
   <ol>
     <li>选一个你最近想做的产品方向，写下五个准备询问的问题。</li>
@@ -593,7 +592,7 @@ AI 可能输出：
   </ol>
 
   <p>访谈时先听，不急着介绍自己的方案。一次认真访谈，比收集很多句“这个想法不错”更有用。</p>
-</el-card>
+</StageAssignmentCard>
 
 ## 延伸阅读
 

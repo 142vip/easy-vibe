@@ -6,6 +6,7 @@ description: '从提示词设计、官方文档阅读和服务台配置开始，
 <script setup>
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 import AiCapabilityGuide from './AiCapabilityGuide.vue'
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 
 const duration = '约 <strong>1～2 天</strong>'
 const relatedArticles =
@@ -454,10 +455,7 @@ curl --request GET \
 
 ## 12. 📚 本章作业
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 为你的原型接入一种 AI 能力</div>
-  </template>
+<StageAssignmentCard title="为你的原型接入一种 AI 能力">
 
   <p>从页面里选一个真正需要 AI 的按钮。第一版只接一种能力，不必把文本、图片、语音和视频全部做完。</p>
 
@@ -469,7 +467,7 @@ curl --request GET \
   </ol>
 
   <p>完成后，保存一张运行截图，并用一句话说明 AI 在这个页面里帮用户做了什么。使用别人的图片、声音或真人素材时，先确认可以使用。</p>
-</el-card>
+</StageAssignmentCard>
 
 ## 下一步
 
