@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="540" viewBox="0 0 1280 540">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#4f46e5"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+  <rect width="1280" height="540" rx="28" fill="#0d1020"/>
+  <text x="64" y="72" fill="#f6f4ff" font-size="32" font-family="Arial, sans-serif" font-weight="700">一枚 NFT 实际上由三部分组成</text>
+  <text x="64" y="108" fill="#aaa9c4" font-size="18" font-family="Arial, sans-serif">图片不是直接塞进合约；合约记录归属，metadata 描述内容</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="64" y="158" width="320" height="250" rx="22" fill="#191c32" stroke="#343957"/><circle cx="224" cy="222" r="35" fill="url(#g)"/><text x="224" y="233" text-anchor="middle" fill="#fff" font-size="30">1</text><text x="224" y="292" text-anchor="middle" fill="#f2f0ff" font-size="23" font-weight="700">ERC-721 合约</text><text x="224" y="330" text-anchor="middle" fill="#aaa9c4" font-size="16">谁拥有 Token</text><text x="224" y="358" text-anchor="middle" fill="#aaa9c4" font-size="16">谁有权铸造</text><text x="224" y="386" text-anchor="middle" fill="#aaa9c4" font-size="16">Token 指向哪里</text>
+    <path d="M402 283h72" stroke="#7876a2" stroke-width="4"/><path d="m474 283-14-10v20z" fill="#7876a2"/>
+    <rect x="492" y="158" width="296" height="250" rx="22" fill="#191c32" stroke="#343957"/><circle cx="640" cy="222" r="35" fill="url(#g)"/><text x="640" y="233" text-anchor="middle" fill="#fff" font-size="30">2</text><text x="640" y="292" text-anchor="middle" fill="#f2f0ff" font-size="23" font-weight="700">Metadata</text><text x="640" y="330" text-anchor="middle" fill="#aaa9c4" font-size="16">名称与说明</text><text x="640" y="358" text-anchor="middle" fill="#aaa9c4" font-size="16">图片地址</text><text x="640" y="386" text-anchor="middle" fill="#aaa9c4" font-size="16">业务属性</text>
+    <path d="M806 283h72" stroke="#7876a2" stroke-width="4"/><path d="m878 283-14-10v20z" fill="#7876a2"/>
+    <rect x="896" y="158" width="320" height="250" rx="22" fill="#191c32" stroke="#343957"/><circle cx="1056" cy="222" r="35" fill="url(#g)"/><text x="1056" y="233" text-anchor="middle" fill="#fff" font-size="30">3</text><text x="1056" y="292" text-anchor="middle" fill="#f2f0ff" font-size="23" font-weight="700">应用界面</text><text x="1056" y="330" text-anchor="middle" fill="#aaa9c4" font-size="16">证书、门票、会员权益</text><text x="1056" y="358" text-anchor="middle" fill="#aaa9c4" font-size="16">游戏道具、数字藏品</text><text x="1056" y="386" text-anchor="middle" fill="#aaa9c4" font-size="16">查询和转移入口</text>
+  </g>
+  <rect x="64" y="448" width="1152" height="50" rx="14" fill="#211b45"/><text x="640" y="480" text-anchor="middle" fill="#c7bfff" font-size="18" font-family="Arial, sans-serif" font-weight="700">这篇只验证合约闭环，不做售卖、炒作、支付或主网发行</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="500" viewBox="0 0 1280 500">
+  <rect width="1280" height="500" rx="28" fill="#f6f5fb"/>
+  <text x="64" y="70" fill="#252334" font-size="32" font-family="Arial, sans-serif" font-weight="700">不用钱包，先在 Remix VM 跑通</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(64 142)"><rect width="200" height="210" rx="20" fill="#fff" stroke="#ddd9ec"/><circle cx="100" cy="58" r="28" fill="#5a4be7"/><text x="100" y="67" text-anchor="middle" fill="#fff" font-size="26">1</text><text x="100" y="116" text-anchor="middle" fill="#2c2938" font-size="20" font-weight="700">创建合约</text><text x="100" y="151" text-anchor="middle" fill="#777287" font-size="15">新建 .sol 文件</text><text x="100" y="177" text-anchor="middle" fill="#777287" font-size="15">粘贴 AI 结果</text></g>
+    <path d="M278 246h44" stroke="#89849c" stroke-width="4"/><path d="m322 246-12-9v18z" fill="#89849c"/>
+    <g transform="translate(336 142)"><rect width="200" height="210" rx="20" fill="#fff" stroke="#ddd9ec"/><circle cx="100" cy="58" r="28" fill="#5a4be7"/><text x="100" y="67" text-anchor="middle" fill="#fff" font-size="26">2</text><text x="100" y="116" text-anchor="middle" fill="#2c2938" font-size="20" font-weight="700">编译</text><text x="100" y="151" text-anchor="middle" fill="#777287" font-size="15">选择匹配版本</text><text x="100" y="177" text-anchor="middle" fill="#777287" font-size="15">处理全部错误</text></g>
+    <path d="M550 246h44" stroke="#89849c" stroke-width="4"/><path d="m594 246-12-9v18z" fill="#89849c"/>
+    <g transform="translate(608 142)"><rect width="200" height="210" rx="20" fill="#fff" stroke="#ddd9ec"/><circle cx="100" cy="58" r="28" fill="#5a4be7"/><text x="100" y="67" text-anchor="middle" fill="#fff" font-size="26">3</text><text x="100" y="116" text-anchor="middle" fill="#2c2938" font-size="20" font-weight="700">部署</text><text x="100" y="151" text-anchor="middle" fill="#777287" font-size="15">Environment</text><text x="100" y="177" text-anchor="middle" fill="#777287" font-size="15">选择 Remix VM</text></g>
+    <path d="M822 246h44" stroke="#89849c" stroke-width="4"/><path d="m866 246-12-9v18z" fill="#89849c"/>
+    <g transform="translate(880 142)"><rect width="336" height="210" rx="20" fill="#fff" stroke="#ddd9ec"/><circle cx="168" cy="58" r="28" fill="#5a4be7"/><text x="168" y="67" text-anchor="middle" fill="#fff" font-size="26">4</text><text x="168" y="116" text-anchor="middle" fill="#2c2938" font-size="20" font-weight="700">铸造并查询</text><text x="168" y="151" text-anchor="middle" fill="#777287" font-size="15">mint → ownerOf</text><text x="168" y="177" text-anchor="middle" fill="#777287" font-size="15">balanceOf → tokenURI</text></g>
+  </g>
+  <text x="64" y="430" fill="#4b4758" font-size="18" font-family="Arial, sans-serif">成功标准：部署后出现合约实例；铸造一次后，三个查询结果都与输入一致。</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <rect width="1280" height="640" rx="28" fill="#f4f7fa"/>
+  <text x="64" y="70" fill="#17202a" font-size="32" font-family="Arial, sans-serif" font-weight="700">在 Qt Creator 里新建项目</text>
+  <text x="64" y="108" fill="#647482" font-size="18" font-family="Arial, sans-serif">菜单名可能随版本略有变化，关键是选择 Qt Quick 与 CMake</text>
+  <rect x="64" y="146" width="1152" height="420" rx="20" fill="#ffffff" stroke="#d3dce5"/>
+  <rect x="64" y="146" width="1152" height="54" rx="20" fill="#24313d"/><circle cx="96" cy="173" r="7" fill="#ff6b6b"/><circle cx="120" cy="173" r="7" fill="#ffd166"/><circle cx="144" cy="173" r="7" fill="#55d6a7"/>
+  <g font-family="Arial, sans-serif">
+    <rect x="96" y="232" width="210" height="286" rx="14" fill="#eff4f7"/><text x="120" y="274" fill="#23303b" font-size="20" font-weight="700">Application</text><rect x="112" y="300" width="178" height="52" rx="10" fill="#d7f5e9"/><text x="201" y="333" text-anchor="middle" fill="#107453" font-size="18" font-weight="700">Qt Quick</text><text x="120" y="390" fill="#72808c" font-size="16">Desktop</text><text x="120" y="426" fill="#72808c" font-size="16">Library</text>
+    <text x="354" y="254" fill="#23303b" font-size="24" font-weight="700">Qt Quick Application</text><text x="354" y="290" fill="#72808c" font-size="17">构建系统：CMake</text>
+    <rect x="354" y="332" width="750" height="68" rx="12" fill="#f7f9fb" stroke="#d7e0e8"/><text x="380" y="360" fill="#7c8994" font-size="14">项目名称</text><text x="380" y="385" fill="#1d2831" font-size="19">PlantOperationsConsole</text>
+    <rect x="354" y="420" width="750" height="68" rx="12" fill="#f7f9fb" stroke="#d7e0e8"/><text x="380" y="448" fill="#7c8994" font-size="14">Kit</text><text x="380" y="473" fill="#1d2831" font-size="19">Desktop Qt 6.x</text>
+    <rect x="985" y="506" width="119" height="42" rx="10" fill="#16a176"/><text x="1045" y="533" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">下一步</text>
+  </g>
+  <text x="64" y="610" fill="#3b4a56" font-size="18" font-family="Arial, sans-serif">成功时：左下角运行按钮可用，空白窗口能正常启动。</text>
+</svg>

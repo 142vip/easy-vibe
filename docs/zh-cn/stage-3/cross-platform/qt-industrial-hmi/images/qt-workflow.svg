@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520">
+  <rect width="1280" height="520" rx="28" fill="#07131f"/>
+  <text x="64" y="72" fill="#eef7ff" font-size="32" font-family="Arial, sans-serif" font-weight="700">这次要跑通的完整链路</text>
+  <text x="64" y="110" fill="#8ca4b8" font-size="18" font-family="Arial, sans-serif">先用模拟数据，不接真实设备；界面稳定后再接 Modbus TCP</text>
+  <g font-family="Arial, sans-serif">
+    <g transform="translate(64 168)"><rect width="200" height="190" rx="22" fill="#102433" stroke="#2f5165"/><circle cx="100" cy="62" r="28" fill="#143f38"/><text x="100" y="70" text-anchor="middle" fill="#55e6ad" font-size="26">1</text><text x="100" y="118" text-anchor="middle" fill="#f2f7fa" font-size="22" font-weight="700">模拟设备</text><text x="100" y="150" text-anchor="middle" fill="#91a8b9" font-size="16">每秒产生压力、</text><text x="100" y="174" text-anchor="middle" fill="#91a8b9" font-size="16">温度和振动数据</text></g>
+    <path d="M278 263h55" stroke="#4c758c" stroke-width="4"/><path d="m333 263-13-9v18z" fill="#4c758c"/>
+    <g transform="translate(347 168)"><rect width="200" height="190" rx="22" fill="#102433" stroke="#2f5165"/><circle cx="100" cy="62" r="28" fill="#143f38"/><text x="100" y="70" text-anchor="middle" fill="#55e6ad" font-size="26">2</text><text x="100" y="118" text-anchor="middle" fill="#f2f7fa" font-size="22" font-weight="700">Qt 客户端</text><text x="100" y="150" text-anchor="middle" fill="#91a8b9" font-size="16">显示指标、趋势、</text><text x="100" y="174" text-anchor="middle" fill="#91a8b9" font-size="16">报警和连接状态</text></g>
+    <path d="M561 263h55" stroke="#4c758c" stroke-width="4"/><path d="m616 263-13-9v18z" fill="#4c758c"/>
+    <g transform="translate(630 168)"><rect width="200" height="190" rx="22" fill="#102433" stroke="#2f5165"/><circle cx="100" cy="62" r="28" fill="#143f38"/><text x="100" y="70" text-anchor="middle" fill="#55e6ad" font-size="26">3</text><text x="100" y="118" text-anchor="middle" fill="#f2f7fa" font-size="22" font-weight="700">本地记录</text><text x="100" y="150" text-anchor="middle" fill="#91a8b9" font-size="16">报警写入 SQLite，</text><text x="100" y="174" text-anchor="middle" fill="#91a8b9" font-size="16">重启后仍能查询</text></g>
+    <path d="M844 263h55" stroke="#4c758c" stroke-width="4"/><path d="m899 263-13-9v18z" fill="#4c758c"/>
+    <g transform="translate(913 168)"><rect width="300" height="190" rx="22" fill="#102433" stroke="#2f5165"/><circle cx="150" cy="62" r="28" fill="#143f38"/><text x="150" y="70" text-anchor="middle" fill="#55e6ad" font-size="26">4</text><text x="150" y="118" text-anchor="middle" fill="#f2f7fa" font-size="22" font-weight="700">独立安装包</text><text x="150" y="150" text-anchor="middle" fill="#91a8b9" font-size="16">Windows 用 windeployqt</text><text x="150" y="174" text-anchor="middle" fill="#91a8b9" font-size="16">macOS 用 macdeployqt</text></g>
+  </g>
+  <rect x="64" y="408" width="1149" height="58" rx="16" fill="#0e2b27"/><text x="638" y="444" text-anchor="middle" fill="#66e1b1" font-size="20" font-family="Arial, sans-serif" font-weight="700">验收：换一台没有安装 Qt 的电脑，仍然能启动、显示数据并读取报警记录</text>
+</svg>

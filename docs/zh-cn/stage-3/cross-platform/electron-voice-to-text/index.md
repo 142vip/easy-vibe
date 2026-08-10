@@ -1,536 +1,180 @@
-# 如何开发跨平台 Electron 桌面程序——语音转文字应用
+# 用 Electron 做一个企业语音记录工具
 
-# 第 1 章：什么是 Electron 和桌面应用开发
+这一篇做一个能在 Windows、macOS 和 Linux 运行的桌面应用：**Field Voice Log**。
 
-在这篇教程中，我们将完整跑通一条闭环：从零开始用 Electron 构建一个语音转文字的桌面应用，支持云端 API 和本地模型两种识别方式，最终打包成可以在 Windows、macOS、Linux 上安装运行的真实桌面程序。
+用户录一段现场说明，应用生成文字，再整理成问题、处理过程、风险和后续动作。企业里类似的软件会用在维修工单、保险查勘、物业巡检、客户拜访和护理记录中。
 
-本次教程，你至少需要具备：
+![Field Voice Log 将现场语音整理成业务记录](images/electron-field-voice-log.jpg)
 
-- 一台电脑（Windows 或 Mac，推荐 Mac，因为 Apple Silicon 跑本地模型非常快）
-- Node.js 环境（18.0 以上版本）
-- 你的 AI 编程助手（Cursor / Trae / Claude Code）
-- （可选）OpenAI API Key（如果使用云端模式）
-- 一个麦克风（笔记本自带的就行）
+我们先用演示文本跑通桌面界面，再接麦克风和识别服务，最后制作安装包。共享密钥不会写进桌面客户端。
 
-## 真实企业场景：别人把语音转文字做成了什么软件？
+## 1. Electron 的三个部分
 
-企业购买的通常不是一个孤立的“转写按钮”，而是一条完整业务链：**采集语音 → 识别 → 结构化 → 写回业务系统 → 权限与审计**。国外产品已经形成几类典型形态：
+Electron 把网页界面和桌面系统能力放在同一个应用中，但两者不能随便混在一起。
 
-- [Otter Enterprise](https://otter.ai/enterprise)：把会议变成可检索的组织知识，生成摘要和跟进项，并可同步 CRM、Jira、Asana、Zendesk、ServiceNow 等系统，属于“会议智能 + 工作流自动化”软件。
-- [Nuance Dragon Professional](https://dragon.nuance.com/en-us/dragon-professional)：面向金融、教育、健康与公共服务等文档密集行业，支持实时口述、录音文件转写、语音命令、批量部署和集中管理，属于“专业口述 + 企业文档生产”软件。
-- 本章的 **Field Voice Log**：把一线员工的语音记录转换成结构化服务报告，再写回 CMMS/工单系统，属于“现场服务 + 业务系统录入”软件。同样的架构也能换成保险查勘、物业巡检、售后维修、护理记录和客户拜访日志。
+![Electron 由 Chromium 界面和 Node.js 系统能力组成](images/image1.png)
 
-### 可直接使用的提示词
+- Main Process 管理窗口、文件和应用生命周期；
+- Renderer Process 显示页面，不直接开放 Node.js；
+- Preload 只暴露页面真正需要的少量能力。
 
-```text
-请帮我设计一个跨平台 Electron 企业语音工作台，产品名为 Field Voice Log。
+![Main、Preload 和 Renderer 之间通过 IPC 通信](images/image2.png)
 
-它面向现场服务人员，把录音或音频文件转成文字，再生成结构化服务报告，包括：客户与地点、问题描述、处理过程、使用物料、风险、后续动作和工单状态。
+录音按钮在页面里，保存临时文件和调用本地模型放在主进程里，中间通过 Preload 传递有限的数据。
 
-要求：
-1. 支持 Windows、macOS、Linux，界面包含录音、文件导入、转写进度、原始文本和结构化报告。
-2. 提供云端识别、本地 whisper.cpp 和无需密钥的离线演示模式。
-3. API Key 只能由 Electron 主进程读取，通过安全的 preload IPC 暴露有限能力；渲染进程禁止直接访问 Node.js。
-4. 本地识别前用 FFmpeg 真正转码为 16 kHz、单声道 PCM WAV。
-5. 为 CMMS/CRM 写回、失败重试、审计日志、数据留存和敏感信息脱敏预留接口。
-6. 界面使用适合一线员工的清晰大按钮，并展示录音、处理中、成功和失败状态。
+## 2. 创建项目
 
-请先给出文件结构和安全边界，再逐步生成代码；最后告诉我如何运行、调试并截取成品界面。
+确认电脑已经安装当前 LTS 版本的 Node.js，然后新建空目录，用 AI 工具打开：
+
+> 请在当前目录创建 Electron Forge 项目，使用 Vite 模板。先保留默认窗口，完成后告诉我怎样启动。
+
+依赖安装完成后运行项目。看到 Electron 默认窗口，并且终端没有红色错误，说明基础环境正常。
+
+![Electron Forge 项目第一次启动](images/image4.png)
+
+如果启动失败：
+
+> Electron 启动失败，错误是【粘贴错误】。请只修复启动问题，不增加业务功能。
+
+## 3. 先做静态界面
+
+> 请把当前窗口改成 Field Voice Log。页面包含录音按钮、录音时长、原始文字、结构化报告和保存状态，先用演示文本，不接麦克风。
+
+这一轮只看布局。窗口缩窄以后，按钮和文字不能重叠；空白状态要告诉用户下一步做什么。
+
+![语音记录工具的首页布局](images/image3.png)
+
+如果界面太复杂：
+
+> 请简化首页，只保留录音、原始文字和结构化报告三个区域，保持现有配色。
+
+## 4. 接入麦克风
+
+录音由 Renderer 里的 `getUserMedia` 和 `MediaRecorder` 完成。不要让页面直接访问文件系统。
+
+> 请给录音按钮接入麦克风。开始后显示时长和录音状态，停止后把音频交给 Preload，不要在 Renderer 开启 Node 集成。
+
+![录音中状态和实时计时](images/image6.png)
+
+第一次点击时，系统会询问麦克风权限。拒绝后应用应显示“没有麦克风权限”，不能一直停在加载中。
+
+验证四种情况：
+
+1. 允许权限后可以开始和停止。
+2. 拒绝权限后能再次说明如何开启。
+3. 连续点击不会同时创建两段录音。
+4. 关闭窗口时会释放麦克风。
+
+遇到问题时：
+
+> 麦克风操作失败，系统是【系统】，错误是【错误】。请只修复权限或录音状态问题。
+
+## 5. 先跑通假的识别结果
+
+真实模型会增加网络、格式和模型依赖。先让主进程收到音频后返回一段固定文本：
+
+> 请增加演示识别模式。主进程收到音频后返回一段固定的现场记录，让我先验证 IPC、加载状态和报告页面。
+
+![IPC 把音频请求交给主进程，再把结果返回页面](images/image5.png)
+
+成功时，停止录音后先显示“处理中”，随后出现演示文字；快速开始第二次录音时，第一次结果不能覆盖新任务。
+
+## 6. 选择识别方式
+
+演示链路稳定后，再选本地识别或企业后端。第一版不要两条同时做。
+
+### 6.1 本地 whisper.cpp
+
+本地模式适合离线和隐私要求高的场景，但需要下载模型，也要处理不同操作系统的原生依赖。
+
+> 请把演示识别替换为本地 whisper.cpp。录音先转成 16 kHz、单声道 PCM WAV，再交给模型；失败时保留原音频和错误提示。
+
+![本地模型在离线状态下返回文字](images/image9.png)
+
+先用小模型验证流程，再根据电脑性能选择更大的模型。模型大小、速度和硬件加速会随绑定库变化，不要把某个速度写成固定承诺。
+
+验证时关闭网络，再录一段十秒中文：能生成文字、临时目录会清理、应用重启后没有残留录音，才算通过。
+
+### 6.2 企业识别后端
+
+企业版本应由受控后端调用云端转写服务。桌面应用只拿短期登录凭证，不保存组织共享密钥。
+
+> 请把音频发送到企业后端完成转写。客户端不保存模型密钥，要有上传进度、取消、超时和重试。
+
+![云端识别完成后显示原始文字](images/image7.png)
+
+不要把 API Key 放在 Renderer、`localStorage`、配置页或打包产物里。即使放在主进程，桌面安装包仍然能被用户读取；组织共享密钥必须留在服务器。
+
+## 7. 生成结构化报告
+
+转写稳定后，再把文字整理成业务字段：
+
+> 请把转写结果整理成问题、处理过程、使用物料、风险和后续动作。保留原始文字，任何字段都允许人工修改。
+
+模型整理结果不能直接覆盖真实工单。保存前让用户确认，并记录谁修改了哪些字段。
+
+设置页只保存语言、识别方式和下载目录等非敏感选项。
+
+![设置页切换识别方式和语言](images/image8.png)
+
+## 8. 调试时看三个地方
+
+- Renderer 错误：打开窗口开发者工具；
+- Main Process 错误：看启动 Electron 的终端；
+- IPC 问题：给每次录音生成请求编号，两边日志都记录编号。
+
+日志可以记录状态、耗时和错误码，不能记录完整音频、报告正文、Token 和联系方式。
+
+> 录音请求编号【编号】一直处理中。Renderer 日志是【内容】，主进程日志是【内容】。请只找出没有返回的原因。
+
+## 9. 完整验收
+
+1. 允许和拒绝麦克风权限各测试一次。
+2. 连续录两段，确认结果不会串任务。
+3. 本地模式下断网测试，或企业模式下测试取消与超时。
+4. 修改结构化字段，确认原始文字没有被覆盖。
+5. 重启应用，确认非敏感设置还在。
+6. 检查日志中没有音频、密钥和完整业务正文。
+
+一项失败时：
+
+> 验收第【几】步失败，现象是【描述】。请只修复这一项，不改已经通过的功能。
+
+## 10. 打包
+
+先确认 Forge 配置里存在当前系统需要的 Maker，再执行：
+
+```bash
+npm run make
 ```
 
-![真实 Electron 窗口：Field Voice Log 将语音记录生成业务报告](images/electron-field-voice-log.jpg)
+Forge 只会生成已经配置、并且当前操作系统支持的格式。一次命令不会自动在任意电脑上同时生成所有平台安装包。
 
-## 1.1 什么是 Electron？
+![Electron Forge 的安装包输出目录](images/image10.png)
 
-你每天都在用的 **VS Code、Slack、Discord、Notion**，它们有一个共同点：都是用 **Electron** 构建的桌面应用。
+拿生成物到一台没有 Node.js、没有项目源码的干净电脑测试：
 
-Electron 是一个开源框架，它让你可以用 **HTML + CSS + JavaScript**（也就是做网页的那套技术）来构建 **Windows、macOS、Linux** 三个平台通用的桌面程序。它的原理很简单——把 Chromium 浏览器和 Node.js 打包在一起，你的网页就变成了一个独立的桌面 App。
+- 能否安装和启动；
+- 麦克风权限是否正常；
+- 模型或后端不可用时是否有提示；
+- 卸载后是否留下敏感临时文件。
 
-**一句话理解**：Electron = 一个"隐形的 Chrome 浏览器" + Node.js 的系统能力。
+macOS 面向外部用户分发时需要签名和公证；Windows 正式分发也建议代码签名。能生成安装文件，不等于已经可以公开发布。
 
-![placeholder: 一张示意图，展示 Electron 的架构：Chromium（负责 UI 渲染）+ Node.js（负责系统访问）= 桌面应用](images/image1.png)
+## 11. 最后检查
 
-<!-- ![placeholder: 一张示意图，展示 Electron 的架构：Chromium（负责 UI 渲染）+ Node.js（负责系统访问）= 桌面应用](images/image1.png) -->
+- Renderer 没有开启 Node 集成；
+- Preload 只暴露有限方法；
+- 麦克风拒绝、录音中、处理中、成功和失败状态齐全；
+- 音频经过真实转码，而不是只改扩展名；
+- 共享密钥不在客户端；
+- 用户能修改并确认结构化结果；
+- 安装包在干净电脑上通过测试。
 
-## 1.2 Electron 的核心架构
+## 参考资料
 
-Electron 应用由两种进程组成，理解它们是开发的关键：
-
-**主进程（Main Process）**
-
-* 相当于 App 的"总管"
-* 负责创建窗口、管理应用生命周期、访问文件系统等原生能力
-* 运行在 Node.js 环境中，可以使用所有 Node.js 模块
-* 整个应用只有一个主进程
-
-**渲染进程（Renderer Process）**
-
-* 相当于 App 的"门面"
-* 就是一个 Chromium 网页，负责展示 UI
-* 每个窗口对应一个渲染进程
-* 出于安全考虑，渲染进程不能直接访问 Node.js API
-
-**预加载脚本（Preload Script）**
-
-* 主进程和渲染进程之间的"桥梁"
-* 通过 `contextBridge` 安全地暴露特定的 API 给渲染进程
-
-它们之间通过 **IPC（进程间通信）** 来传递消息，就像打电话一样：渲染进程说"我要录音"，主进程收到后去调用系统麦克风。
-
-![placeholder: 一张 Electron 进程架构图，展示 Main Process、Renderer Process、Preload Script 之间的关系和 IPC 通信](images/image2.png)
-<!-- ![placeholder: 一张 Electron 进程架构图，展示 Main Process、Renderer Process、Preload Script 之间的关系和 IPC 通信](images/image2.png) -->
-
-## 1.3 我们要做什么？
-
-在这篇教程中，我们将构建一个 **语音转文字（Speech-to-Text）** 桌面应用。它的功能很直观：
-
-1. 点击"开始录音"按钮，App 开始监听麦克风
-2. 说完话后点击"停止"，App 将语音发送给 AI 进行识别
-3. 识别结果以文字形式展示在界面上，可以一键复制
-
-**两种识别模式可选：**
-
-| 对比维度 | 云端 API 模式 | 本地模型模式 |
-|---------|-------------|------------|
-| 代表方案 | OpenAI Transcription API | whisper.cpp |
-| 是否需要联网 | 是 | 否 |
-| 识别速度 | 取决于网络 | 取决于硬件（Apple Silicon 上极快） |
-| 中文识别质量 | 优秀 | 优秀（large-v3 模型） |
-| 使用成本 | 按所选模型的当前价格计费 | 模型运行本身不产生 API 费用 |
-| 模型体积 | 无需下载 | tiny 模型 75MB，large 模型 3GB |
-| 适合场景 | 快速上手、轻量使用 | 注重隐私、离线使用、长期高频使用 |
-
-![placeholder: 一张应用效果预览图，展示语音转文字应用的 UI：顶部有录音按钮和波形动画，下方是识别出的文字，右上角有模式切换开关](images/image3.png)
-<!-- ![placeholder: 一张应用效果预览图，展示语音转文字应用的 UI：顶部有录音按钮和波形动画，下方是识别出的文字，右上角有模式切换开关](images/image3.png) -->
-
-## 1.4 重要提醒：Web Speech API 在 Electron 中不可用
-
-如果你搜索过"Electron 语音识别"，可能会看到有人推荐使用浏览器自带的 `Web Speech API`。**请注意：这个方案在 Electron 中行不通。**
-
-Google 已经关闭了对非 Chrome/Edge 浏览器壳的语音 API 支持。Electron 虽然基于 Chromium，但它不是 Chrome 本身，所以 `window.SpeechRecognition` 会直接报错。
-
-这就是为什么我们需要使用 OpenAI Whisper API 或 whisper.cpp 这样的独立方案。
-
-## 1.5 本教程的路线图
-
-我们将按以下步骤完成整个流程：
-
-1. **创建 Electron 项目**：用 Electron Forge 搭建项目骨架，理解进程间通信
-2. **实现录音功能**：在渲染进程中捕获麦克风，处理音频数据
-3. **云端识别（方案 A）**：调用 OpenAI Whisper API 进行语音转文字
-4. **本地识别（方案 B）**：使用 whisper.cpp 在本地运行模型，无需联网
-5. **打包与分发**：将应用打包成可安装的桌面程序
-
-# 第 2 章：创建 Electron 项目
-
-## 2.1 用 AI 初始化项目
-
-打开你的 AI 编程助手，在对话框中输入以下 Prompt：
-
-```
-帮我用 Electron Forge 创建一个新的 Electron 项目，项目名称叫 voice-to-text，使用 Vite 模板。命令参考：npx create-electron-app voice-to-text --template=vite创建完后进入项目目录，安装依赖并帮我把基础环境搭好。
-```
-
-
-Electron Forge 是 Electron 官方推荐的脚手架工具，它帮你处理了项目初始化、打包、分发等繁琐的事情。
-
-创建完成后，项目结构大致如下：
-
-```
-voice-to-text/
-├── src/
-│   ├── main.js            # 主进程入口
-│   ├── preload.js         # 预加载脚本（桥梁）
-│   ├── renderer.js        # 渲染进程入口
-│   └── index.html         # 应用的 HTML 页面
-├── forge.config.js        # Electron Forge 配置
-├── vite.main.config.mjs   # 主进程 Vite 配置
-├── vite.preload.config.mjs # 预加载脚本 Vite 配置
-├── vite.renderer.config.mjs # 渲染进程 Vite 配置
-└── package.json
-```
-
-## 2.2 启动并预览
-
-让 AI 帮你启动开发服务器：
-
-```
-帮我把 voice-to-text 项目的 Electron 开发服务器启动，用 npm start 启动
-```
-
-几秒钟后，一个桌面窗口会弹出来——这就是你的 Electron 应用！虽然现在只有一个默认的欢迎页面，但它已经是一个真正的桌面程序了。
-
-![placeholder: Electron 应用首次启动的截图，展示默认的欢迎页面窗口](images/image4.png)
-<!-- ![placeholder: Electron 应用首次启动的截图，展示默认的欢迎页面窗口](images/image4.png) -->
-
-## 2.3 理解进程间通信（IPC）
-
-在开始写语音功能之前，我们需要理解 Electron 最核心的概念——**IPC（Inter-Process Communication，进程间通信）**。
-
-因为渲染进程（UI 界面）和主进程（系统能力）是隔离的，它们之间需要通过 IPC "打电话"来协作：
-
-```
-渲染进程（UI）                    主进程（系统）
-    │                                │
-    │── "我要开始录音" ──────────→    │
-    │                                │── 调用麦克风
-    │                                │── 处理音频
-    │    ←──── "这是识别结果" ────────│
-    │                                │
-    │── 显示文字到界面                │
-```
-
-在代码中，这个通信通过 `preload.js` 来桥接：
-
-```javascript
-// preload.js - 安全地暴露 API 给渲染进程
-const { contextBridge, ipcRenderer } = require('electron')
-
-contextBridge.exposeInMainWorld('electronAPI', {
-  // 渲染进程 → 主进程
-  sendAudio: (audioData) => ipcRenderer.invoke('transcribe-audio', audioData),
-  // 主进程 → 渲染进程
-  onResult: (callback) => ipcRenderer.on('transcription-result', callback)
-})
-```
-
-```javascript
-// main.js - 主进程监听消息
-const { ipcMain } = require('electron')
-
-ipcMain.handle('transcribe-audio', async (event, audioData) => {
-  // 在这里调用 Whisper API 或 whisper.cpp
-  const text = await transcribe(audioData)
-  return text
-})
-```
-
-![placeholder: 一张 IPC 通信流程图，展示 Renderer → Preload → Main 的消息传递过程](images/image5.png)
-<!-- ![placeholder: 一张 IPC 通信流程图，展示 Renderer → Preload → Main 的消息传递过程](images/image5.png) -->
-
-# 第 3 章：实现录音功能
-
-## 3.1 在渲染进程中捕获麦克风
-
-浏览器（也就是 Electron 的渲染进程）提供了 `navigator.mediaDevices.getUserMedia` API 来访问麦克风。让 AI 帮你实现录音功能：
-
-```
-麻烦帮我修改一下项目里的 src/index.html 和 src/renderer.js 这两个文件，帮我实现完整的语音录制 + 语音识别功能，具体要求我整理好了：
-界面设计：
-1. 做一个大尺寸的圆形按钮，默认显示“开始录音”；点击后按钮变成红色，文字切换成“停止录音”
-2. 录音过程中，按钮要带一个简单的脉冲动画，让用户能直观看到正在录音
-3. 按钮下方放一块文字展示区，用来显示语音识别出来的文本内容
-4. 页面底部配置 “复制文字” 和 “清空” 两个功能按钮，分别实现识别结果复制、结果区域清空的功能
-5. 页面右上角增加设置图标，点击可切换识别模式（云端识别 / 本地识别）
-录音逻辑要求（需要在 renderer.js 中实现）
-1. 点击录音按钮后，调用 navigator.mediaDevices.getUserMedia 获取麦克风权限
-2. 用 MediaRecorder 实现音频录制，录制格式固定为 webm
-3. 停止录音后，把录制好的音频 Blob 对象转成 ArrayBuffer 格式
-4. 调用 window.electronAPI.sendAudio 方法，把音频数据发送给主进程
-5. 还需要监听主进程返回的识别结果，并将结果展示在文字显示区域中
-```
-
-核心录音代码：
-
-```javascript
-// renderer.js
-let mediaRecorder = null
-let audioChunks = []
-
-async function startRecording() {
-  const stream = await navigator.mediaDevices.getUserMedia({
-    audio: {
-      channelCount: 1,
-      sampleRate: 16000,
-      echoCancellation: true,
-      noiseSuppression: true
-    }
-  })
-
-  mediaRecorder = new MediaRecorder(stream, {
-    mimeType: 'audio/webm;codecs=opus'
-  })
-
-  audioChunks = []
-  mediaRecorder.ondataavailable = (e) => audioChunks.push(e.data)
-
-  mediaRecorder.onstop = async () => {
-    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' })
-    const arrayBuffer = await audioBlob.arrayBuffer()
-
-    // 发送给主进程进行识别
-    const result = await window.electronAPI.sendAudio(arrayBuffer)
-    document.getElementById('result').textContent = result
-  }
-
-  mediaRecorder.start()
-}
-```
-![placeholder: 应用录音界面的截图，展示录音按钮（录音中状态，红色脉冲动画）和下方的文字显示区域](images/image6.png)
-<!-- ![placeholder: 应用录音界面的截图，展示录音按钮（录音中状态，红色脉冲动画）和下方的文字显示区域](images/image6.png) -->
-
-## 3.2 处理麦克风权限
-
-Electron 默认会拦截权限请求。我们需要在主进程中明确允许麦克风访问：
-
-```
-请帮我在 main.js 中添加麦克风权限处理：
-1. 用 session.defaultSession.setPermissionRequestHandler 来处理权限请求
-2. 当请求类型是 media 麦克风权限时，直接自动允许
-3. 如果是 macOS 系统，记得在 package.json 或者 entitlements 里加上麦克风使用说明，保证权限能正常生效
-```
-
-```javascript
-// main.js 中添加
-const { session } = require('electron')
-
-session.defaultSession.setPermissionRequestHandler(
-  (webContents, permission, callback) => {
-    if (permission === 'media') {
-      callback(true)
-    } else {
-      callback(false)
-    }
-  }
-)
-```
-
-> **macOS 用户注意**：macOS 会弹出系统级的麦克风权限请求对话框，这是正常的，点击"允许"即可。
-
-# 第 4 章：方案 A——云端识别（OpenAI Transcription API）
-
-这是最简单的方案，只需要一个 API Key 和少量主进程代码。模型与价格会更新，实施时应以官方模型页为准，本例使用 `gpt-4o-mini-transcribe`。
-
-## 4.1 获取 OpenAI API Key
-
-1. 访问 [OpenAI Platform](https://platform.openai.com/)，注册并登录
-2. 进入 API Keys 页面，点击 **"Create new secret key"**
-3. 复制生成的 Key（以 `sk-` 开头），妥善保存
-
-> **密钥原则**：不要把企业共享 API Key 放进渲染进程、`localStorage` 或打包产物。个人本地开发可使用主进程环境变量；正式产品应由受控后端代调，并加入用户鉴权、配额、日志和数据保留策略。
-
-## 4.2 在主进程中调用 Whisper API
-
-让 AI 帮你在主进程中实现语音识别：
-
-```
-请帮我在 main.js 中实现 OpenAI Whisper API 的调用：
-1. 安装 node-fetch（如果项目需要），或者直接用 Node.js 自带的 fetch
-2. 写一个 transcribeWithWhisper 函数，参数传入音频的 ArrayBuffer
-3. 把传入的 ArrayBuffer 转换成 Blob 或 File，然后组装成 FormData 格式
-4. 调用 https://api.openai.com/v1/audio/transcriptions
-5. 模型指定用 gpt-4o-mini-transcribe，语言设置为中文 zh
-6. 接口调用完成后，返回识别出来的文本内容
-7. API Key 从环境变量或配置文件读取
-```
-
-核心代码：
-
-```javascript
-// main.js
-async function transcribeWithOpenAI(audioBuffer) {
-  const apiKey = process.env.OPENAI_API_KEY
-  if (!apiKey) throw new Error('缺少 OPENAI_API_KEY 环境变量')
-
-  const blob = new Blob([audioBuffer], { type: 'audio/webm' })
-  const formData = new FormData()
-  formData.append('file', blob, 'audio.webm')
-  formData.append('model', 'gpt-4o-mini-transcribe')
-  formData.append('language', 'zh')
-
-  const response = await fetch(
-    'https://api.openai.com/v1/audio/transcriptions',
-    {
-      method: 'POST',
-      headers: { Authorization: `Bearer ${apiKey}` },
-      body: formData
-    }
-  )
-
-  const data = await response.json()
-  return data.text
-}
-```
-![placeholder: 应用运行截图，展示用户说了一段中文后，Whisper API 返回的识别结果](images/image7.png)
-<!-- ![placeholder: 应用运行截图，展示用户说了一段中文后，Whisper API 返回的识别结果](images/image7.png) -->
-
-## 4.3 添加设置界面
-
-让 AI 帮你在渲染进程中添加一个简单的设置面板，用于切换识别模式和语言；密钥仍只由主进程或企业后端管理：
-
-```
-请帮我在 index.html 中添加一个设置面板：
-1. 页面右上角加一个齿轮样式的设置图标，点击后弹出设置面板
-2. 面板里包含识别模式切换（云端 API / 本地模型）和语言选择（中文、英文、自动检测）
-3. 非敏感偏好可保存到 localStorage；API Key 不得进入渲染进程
-4. 点击面板外面的区域就能关闭面板
-```
-设置页只保存模式、语言等非敏感偏好；企业密钥由主进程环境或后端密钥管理系统提供。
-
-# 第 5 章：方案 B——本地识别（whisper.cpp）
-
-如果你不想依赖云端 API，或者需要离线使用，whisper.cpp 是最佳选择。它是 OpenAI Whisper 模型的 C++ 移植版本，可以完全在本地运行，不需要联网。
-
-## 5.1 安装 whisper.cpp 的 Node.js 绑定
-
-让 AI 帮你安装和配置：
-
-```
-请帮我在项目中安装 nodejs-whisper 包：
-npm install nodejs-whisper
-
-安装完成后，请帮我下载 whisper 的 tiny 模型（用于测试，体积小速度快）。
-nodejs-whisper 本身会自动完成模型下载，不用额外处理。
-```
-
-> **模型选择指南**：
-> * `tiny`（75MB）：速度最快，适合测试和轻量使用，准确率一般
-> * `base`（142MB）：速度和准确率的平衡点
-> * `small`（466MB）：中文识别质量明显提升
-> * `large-v3-turbo`（1.5GB）：推荐！速度是 large 的 5-8 倍，准确率仅差 1-2%
-> * `large-v3`（3GB）：最高准确率，但速度较慢，需要较好的硬件
-
-## 5.2 在主进程中集成 whisper.cpp
-
-让 AI 帮你实现本地识别功能：
-
-```
-请帮我在main.js里添加 whisper.cpp 本地语音识别功能：
-先引入 nodejs-whisper 和 ffmpeg-static，然后写一个 transcribeWithLocal 函数。函数接收 MediaRecorder 的音频 ArrayBuffer，先保存原始 WebM，再用 FFmpeg 转成 16kHz、单声道、PCM 16-bit WAV，之后调用 nodejs-whisper，最后删除整个临时目录
-```
-
-核心代码：
-
-```javascript
-// main.js
-const { nodewhisper } = require('nodejs-whisper')
-const path = require('path')
-const fs = require('fs')
-const os = require('os')
-const ffmpegPath = require('ffmpeg-static')
-const { execFile } = require('child_process')
-const { promisify } = require('util')
-const run = promisify(execFile)
-
-async function transcribeWithLocal(audioBuffer) {
-  const workDir = fs.mkdtempSync(path.join(os.tmpdir(), 'voice-log-'))
-  const webmPath = path.join(workDir, 'recording.webm')
-  const wavPath = path.join(workDir, 'recording-16k-mono.wav')
-  fs.writeFileSync(webmPath, Buffer.from(audioBuffer))
-
-  try {
-    // MediaRecorder 产出的是 WebM。改扩展名不会改变编码，必须先真正转码。
-    await run(ffmpegPath, [
-      '-y', '-i', webmPath,
-      '-ar', '16000', '-ac', '1', '-c:a', 'pcm_s16le', wavPath
-    ])
-
-    const result = await nodewhisper(wavPath, {
-      modelName: 'base',
-      autoDownloadModelName: 'base',
-      whisperOptions: {
-        language: 'zh',
-        word_timestamps: true
-      }
-    })
-    return result.map(r => r.speech).join('')
-  } finally {
-    fs.rmSync(workDir, { recursive: true, force: true })
-  }
-}
-```
-![placeholder: 本地模型识别的运行截图，展示离线状态下依然能正常识别中文语音](images/image9.png)
-<!-- ![placeholder: 本地模型识别的运行截图，展示离线状态下依然能正常识别中文语音](images/image9.png) -->
-
-## 5.3 Apple Silicon 用户的福音
-
-如果你使用的是 M1/M2/M3/M4 芯片的 Mac，whisper.cpp 会自动利用 **Metal GPU 加速** 和 **Apple Neural Engine**，识别速度可以达到 **比实时更快**——也就是说，1 分钟的语音可能只需要几秒钟就能识别完。
-
-对于 NVIDIA 显卡用户，whisper.cpp 也支持 **CUDA 加速**，同样能获得很好的性能。
-
-# 第 6 章：打包与分发
-
-开发完成后，我们需要把应用打包成可以分发的安装包。
-
-## 6.1 使用 Electron Forge 打包
-
-Electron Forge 已经内置在我们的项目中，打包非常简单：
-
-```
-麻烦帮我运行一下 Electron Forge 的打包命令，执行以下指令就行：
-npx electron-forge make
-```
-
-这个命令会根据你当前的操作系统自动生成对应的安装包：
-
-* **macOS**：生成 `.dmg` 安装镜像和 `.zip` 压缩包
-* **Windows**：生成 `.exe` 安装程序（Squirrel 格式）
-* **Linux**：生成 `.deb`（Debian/Ubuntu）和 `.rpm`（Fedora）包
-
-打包产物在 `out/make/` 目录下。
-![placeholder: out/make 目录的文件列表截图，展示生成的 .dmg 或 .exe 安装包](images/image10.png)
-<!-- ![placeholder: out/make 目录的文件列表截图，展示生成的 .dmg 或 .exe 安装包](images/image10.png) -->
-
-## 6.2 应用体积优化
-
-Electron 应用的一个"痛点"是体积较大（因为打包了整个 Chromium）。一些优化建议：
-
-* 确保只有 `dependencies` 中的包会被打包，开发依赖放在 `devDependencies`
-* 使用 Vite 的 tree-shaking 减少 JS 体积
-* 如果使用本地模型，考虑让用户首次启动时下载，而不是打包在安装包里
-
-| 配置 | 预估体积 |
-|------|---------|
-| 纯 Electron 应用（无模型） | ~150-200 MB |
-| + whisper tiny 模型 | ~250 MB |
-| + whisper large-v3-turbo 模型 | ~1.7 GB |
-
-## 6.3 跨平台注意事项
-
-**macOS：**
-* 发布到 App Store 或分发给其他用户需要 **代码签名**（Apple Developer ID，$99/年）
-* 还需要经过 Apple 的 **公证（Notarization）** 流程
-* 麦克风权限需要在 `Info.plist` 中声明 `NSMicrophoneUsageDescription`
-* 建议构建 Universal Binary 以同时支持 Intel 和 Apple Silicon
-
-**Windows：**
-* 建议进行代码签名，否则 Windows SmartScreen 会弹出安全警告
-* 用户仍然可以选择"仍要运行"来使用未签名的应用
-
-**Linux：**
-* 不需要代码签名
-* 推荐同时提供 `.deb` 和 `.AppImage` 格式
-
-> **提示**：对于个人项目或小范围分发，可以暂时跳过代码签名，直接把打包好的文件发给朋友使用。
-
-# 第 7 章：写在最后
-
-恭喜你！你已经从零构建了一个跨平台的语音转文字桌面应用。回顾一下我们做了什么：
-
-1. 用 Electron Forge 搭建了跨平台桌面应用骨架
-2. 理解了主进程、渲染进程和 IPC 通信机制
-3. 实现了麦克风录音和音频捕获
-4. 集成了两种语音识别方案：云端 Whisper API 和本地 whisper.cpp
-5. 学会了打包和分发 Electron 应用
-
-Electron 的强大之处在于——你用做网页的技术栈，就能构建出 VS Code、Slack 这样级别的桌面应用。而 AI 语音识别技术的成熟，让"语音转文字"这个曾经需要专业团队才能做的功能，现在一个人就能搞定。
-
-**进阶方向：**
-
-* **实时字幕**：使用 AudioWorklet 实现流式音频传输，配合支持流式识别的 API，实现边说边出字
-* **会议记录助手**：录制整场会议，自动生成带时间戳的文字记录，再用 AI 总结要点
-* **多语言翻译**：识别语音后，调用翻译 API 实时翻译成其他语言
-* **语音笔记本**：结合本地数据库（如 SQLite），构建一个可搜索的语音笔记应用
-
-***用你的声音，让代码替你记录一切。***
-
-# 参考文献
-
-* [Electron 官方文档](https://www.electronjs.org/docs/latest/)
-* [Electron Forge 官方文档](https://www.electronforge.io/)
-* [OpenAI gpt-4o-mini-transcribe 模型](https://developers.openai.com/api/docs/models/gpt-4o-mini-transcribe)
-* [whisper.cpp GitHub 仓库](https://github.com/ggml-org/whisper.cpp)
-* [nodejs-whisper npm 包](https://www.npmjs.com/package/nodejs-whisper)
-* [MDN MediaDevices.getUserMedia()](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)
-* [Otter Enterprise](https://otter.ai/enterprise)
-* [Nuance Dragon Professional](https://dragon.nuance.com/en-us/dragon-professional)
+- [Electron 官方文档](https://www.electronjs.org/docs/latest/)
+- [Electron 安全建议](https://www.electronjs.org/docs/latest/tutorial/security)
+- [Electron Forge Makers](https://www.electronforge.io/config/makers)
+- [MDN getUserMedia](https://developer.mozilla.org/docs/Web/API/MediaDevices/getUserMedia)
+- [whisper.cpp](https://github.com/ggml-org/whisper.cpp)

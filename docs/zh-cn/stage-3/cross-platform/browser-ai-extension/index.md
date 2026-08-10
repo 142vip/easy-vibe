@@ -1,541 +1,174 @@
-# 如何开发浏览器 AI 助手插件——一键总结任意网页
+# 做一个浏览器侧边栏知识助手
 
-# 第 1 章：什么是浏览器插件和 Chrome 插件开发
+这一篇做一个 Chrome 扩展：打开制度、帮助中心或项目文档时，点击一次就能在侧边栏看到标题、关键规则、风险和下一步动作。
 
-在这篇教程中，我们将完整跑通一条闭环：从零开始开发一个 AI 驱动的 Chrome 浏览器插件，它能读取你正在浏览的任意网页内容，然后用 AI 帮你一键生成摘要。你会亲手完成插件的开发、调试，并学会如何发布到 Chrome Web Store。
+企业常把这类扩展做成客服坐席助手、内部知识检索、销售情报侧栏、合规提醒和流程录制工具。浏览器扩展离员工正在处理的网页最近，适合提供“看完当前页面，马上给出下一步”的能力。
 
-本次教程，你至少需要具备：
+这次先完成不联网的本地版本，再按需要接 Chrome 内置 AI 或企业后端。
 
-- Chrome 浏览器（建议 138 以上版本，如果要用内置 AI）
-- 一个代码编辑器（VS Code / Cursor / Trae）
-- （可选）OpenAI API Key 或企业 AI 代理地址
+![Enterprise Knowledge Copilot 在侧边栏整理客户支持文档](images/extension-enterprise-preview.png)
 
-## 真实企业场景：企业知识助手与流程文档软件
+## 1. 先看懂扩展的结构
 
-这里的“工业界场景”指企业真正会采购、部署和持续运营的软件，而不是狭义的工厂场景。本章把普通的“网页总结器”做成 **Enterprise Knowledge Copilot**：员工浏览制度、客户支持手册、项目文档或内部知识库时，侧边栏提取适用范围、SLA、风险、负责人和下一步动作。
+这个扩展只有三个核心部分：
 
-国外已经把同类能力做成多种成熟产品形态：
+- Content Script 读取当前页面可见文字；
+- Service Worker 负责接收事件和组织处理流程；
+- Side Panel 展示按钮、加载状态和摘要结果。
 
-- [Glean Enterprise Search](https://www.glean.com/enterprise-search)：连接企业内多个应用，在原有权限约束下检索和回答内部知识，属于“企业搜索 + 知识助手”产品。
-- [Scribe 浏览器扩展](https://get.scribehow.com/install-extension/)：记录员工在网页中的操作，自动生成带截图的分步操作指南，属于“流程捕获 + 培训文档”产品。
+![Content Script、Service Worker 和 Side Panel 的消息流](images/image2.png)
 
-因此，浏览器插件在企业里通常会被做成：内部知识助手、客服坐席助手、销售情报侧栏、合规提醒器、流程录制器，而不只是“总结一篇新闻”。生产版本还应接入 SSO、文档权限、审计日志、敏感信息脱敏和企业后端代理。
+Service Worker 会在需要时启动，空闲后可能被浏览器回收，所以不能把必须保留的状态只放在内存里。
 
-### 可直接使用的提示词
+## 2. 创建第一版
 
-```text
-请帮我设计一个 Chrome Manifest V3 企业知识助手插件，产品名为 Enterprise Knowledge Copilot。
+新建空文件夹 `enterprise-knowledge-copilot`，用 Trae 或 Cursor 打开，然后说：
 
-它需要在浏览器侧边栏中读取当前网页内容，并把制度、客户支持手册、项目文档或内部知识库整理为：适用范围、关键规则、SLA、风险、负责人和下一步动作。
+> 请在当前文件夹创建一个 Chrome Manifest V3 扩展。点击扩展图标后打开侧边栏，侧边栏先显示“读取当前页面”按钮。完成后告诉我怎样加载到 Chrome。
 
-要求：
-1. 使用 Side Panel、Content Script 和 Service Worker，说明三者的消息流。
-2. 提供“总结当前页面”、复制结果、错误提示和设置页。
-3. 支持离线演示、浏览器内置 AI、个人 API 和企业后端代理四种模式。
-4. 默认不上传源码或敏感页面；共享密钥只能放在企业后端，不能分发到浏览器客户端。
-5. 为权限最小化、SSO、文档权限、审计日志和敏感信息脱敏预留接口。
-6. 界面采用克制的企业软件风格，并提供加载中、成功、空内容和失败状态。
+AI 完成后，项目里至少应有 manifest、service worker、content script 和 side panel 页面。不要手工复制一整套陌生代码，先让它解释每个文件负责什么。
 
-请先列出实施计划和文件结构，再逐步生成代码；最后告诉我如何在 chrome://extensions 中加载、调试并截图验证。
-```
+## 3. 加载到 Chrome
 
-下面是按照这组提示词生成的效果参考：
+在地址栏打开 `chrome://extensions`，打开右上角“开发者模式”，点击“加载已解压的扩展程序”，选择刚才的项目文件夹。
 
-![Enterprise Knowledge Copilot 将客户支持 SLA 文档整理成执行要点](images/extension-enterprise-preview.png)
+![在 Chrome 扩展管理页加载未打包扩展](images/image3.png)
 
-## 1.1 什么是浏览器插件？
+成功时，卡片上能看到扩展名称和版本，没有红色错误。把扩展固定到工具栏，点击图标，确认右侧能打开空白侧边栏。
 
-你一定用过浏览器插件（Extension）——广告拦截器、翻译工具、密码管理器……它们就像浏览器的"外挂装备"，能在你浏览网页时提供额外的超能力。
+如果加载失败，把卡片上的第一条错误交给 AI：
 
-想象一下：你打开一篇 5000 字的技术博客，点一下插件按钮，几秒钟后，一份精炼的中文摘要就出现在侧边栏里。这就是我们要构建的东西。
+> Chrome 加载扩展失败，错误是【粘贴错误】。请只修复这一项，并告诉我重新加载的位置。
 
-![placeholder: 一张效果预览图，左边是一个长文章网页，右边是 Chrome 侧边栏中显示的 AI 生成的摘要](images/image1.png)
+## 4. 读取当前页面
 
-<!-- ![placeholder: 一张效果预览图，左边是一个长文章网页，右边是 Chrome 侧边栏中显示的 AI 生成的摘要](images/image1.png) -->
+现在只做页面读取：
 
-## 1.2 Chrome 插件的基本架构
+> 请让“读取当前页面”按钮取得当前标签页的标题、网址和正文可见文字，并显示在侧边栏。不要读取密码框、表单输入和隐藏内容。
 
-Chrome 插件（基于 Manifest V3）由几个核心部分组成，它们各司其职：
+修改完成后，在扩展管理页点击该扩展的“重新加载”，再打开一篇普通文章测试。
 
-* **Manifest 文件（manifest.json）**：插件的"身份证"，声明插件的名称、权限、入口文件等。
-* **Service Worker（后台脚本）**：插件的"大脑"，在后台处理事件、调用 API。它不是一直运行的，而是按需启动。
-* **Content Script（内容脚本）**：插件的"眼睛"，注入到网页中，能读取页面的 DOM 内容。
-* **Side Panel（侧边栏）**：插件的"脸面"，在浏览器右侧展示 UI，用户在这里看到 AI 的总结结果。
-* **Options Page（设置页）**：让用户配置 API Key 等参数。
+成功标准：
 
-它们之间的协作流程是这样的：
+- 标题与当前网页一致；
+- 正文不是整页 HTML；
+- 切换标签页以后读取的是新页面；
+- `chrome://` 页面或无权限页面会显示清楚的提示。
 
-``` 
-用户点击插件图标
-    → 侧边栏打开
-    → 用户点击"总结"按钮
-    → 侧边栏通知 Service Worker
-    → Service Worker 让 Content Script 去读取页面文字
-    → Content Script 返回页面内容
-    → Service Worker 把内容发给 AI API
-    → AI 返回摘要
-    → Service Worker 把摘要发回侧边栏显示
-```
-![placeholder: 一张架构流程图，展示 Content Script、Service Worker、Side Panel 之间的消息传递关系](images/image2.png)
-<!-- ![placeholder: 一张架构流程图，展示 Content Script、Service Worker、Side Panel 之间的消息传递关系](images/image2.png) -->
+## 5. 做一个不联网的摘要
 
-## 1.3 四种运行方案：先跑通，再接生产能力
+第一版不接模型。用固定规则提取页面标题、前几段和列表项，这样任何电脑都能验证消息链路。
 
-你可以让 AI 生成四种运行模式：
+> 请把读取结果整理成“页面主题、关键要点、数字与时间、下一步”四部分。先使用本地规则，不调用网络 API。
 
-1. **本地演示**：确定性提取页面要点，零配置跑通全部消息链路。
-2. **Chrome 内置 AI**：运行时检测 `Summarizer` 是否可用，不写死浏览器版本。
-3. **企业后端代理（推荐）**：浏览器只发正文，组织密钥留在服务端。
-4. **OpenAI 直连**：仅用于个人本地调试，采用 Responses API；不要用于共享部署。
+![侧边栏的按钮、加载状态和摘要结果](images/image5.png)
 
-**方案 A：调用云端 AI API（企业代理 / OpenAI）**
+摘要不需要像模型一样聪明，但必须稳定。找一篇有标题、列表和日期的页面，确认每个区域都有内容；再打开空白页，确认不会一直显示加载中。
 
-* 优点：模型能力强大，支持所有设备
-* 缺点：需要 API Key，需要联网，有使用成本
-* 适合：追求高质量摘要、需要处理复杂内容
+## 6. 加上复制和错误状态
 
-**方案 B：使用 Chrome 内置 AI（Summarizer API）**
+> 请增加复制摘要按钮，并补齐加载中、空内容和失败三种状态。重复点击时只处理最后一次请求。
 
-从 Chrome 138 开始，Google 在浏览器中内置了基于 Gemini Nano 的 AI 能力，其中就包括 **Summarizer API**——完全在本地运行，不需要 API Key，不需要联网，完全免费。
+验证时连续点击两次，侧边栏不能出现两份结果。故意在 `chrome://extensions` 页面点击读取，应该显示“当前页面不能读取”，而不是控制台异常。
 
-* 优点：免费、隐私安全、无需 API Key
-* 缺点：需要 Chrome 138+、需要较好的硬件（4GB+ 显存或 16GB+ 内存）、模型能力不如云端
-* 适合：注重隐私、不想花钱、硬件条件允许
-
-**本教程将完整实现上述路径**，没有可用模型时也能先用本地模式验证插件本身。
-
-## 1.4 本教程的路线图
-
-我们将从零构建一个名为 **"AI Page Summarizer"** 的 Chrome 插件，按以下步骤完成：
-
-1. **搭建插件骨架**：创建 Manifest V3 项目结构，加载到 Chrome 中
-2. **实现核心功能**：Content Script 读取页面 + Service Worker 调用 AI API + 侧边栏展示结果
-3. **接入 Chrome 内置 AI**：使用 Summarizer API 实现免费本地总结
-4. **测试与调试**：掌握 Chrome 插件的调试技巧
-5. **发布到 Chrome Web Store**：打包并提交审核
-
-# 第 2 章：搭建插件骨架
-
-## 2.1 创建项目结构
-
-打开你的 AI 编程助手（Cursor / Trae / Claude Code），新建一个空文件夹 `ai-page-summarizer`，然后在对话框中输入：
-
-```
-请帮我创建一个 Chrome 浏览器插件项目，使用 Manifest V3。
-项目名叫 ai-page-summarizer，功能是用 AI 总结网页内容。
-请创建以下文件结构：
+## 7. 选择真正的 AI 方式
 
-ai-page-summarizer/
-├── manifest.json          # MV3 清单文件
-├── background.js          # Service Worker 后台脚本
-├── content.js             # 内容脚本（读取页面文字）
-├── sidepanel.html         # 侧边栏 HTML
-├── sidepanel.js           # 侧边栏逻辑
-├── sidepanel.css          # 侧边栏样式
-├── options.html           # 设置页面
-├── options.js             # 设置页面逻辑
-└── icons/                 # 图标文件夹
-
-manifest.json 的要求：
-1. manifest_version: 3
-2. 权限：storage, activeTab, scripting, sidePanel
-3. 后台使用 service_worker: "background.js"
-4. 配置 side_panel，默认路径为 sidepanel.html
-5. action 配置默认图标和标题
-```
-
-AI 会帮你生成完整的项目骨架。让我们逐个看看每个文件的作用。
-
-## 2.2 manifest.json——插件的"身份证"
-
-这是 Chrome 插件最重要的文件，它告诉浏览器这个插件是什么、需要什么权限、有哪些组件：
-
-```json
-{
-  "manifest_version": 3,
-  "name": "AI Page Summarizer",
-  "version": "1.0",
-  "description": "用 AI 一键总结任意网页内容",
-  "permissions": ["activeTab", "sidePanel", "storage"],
-  "host_permissions": ["http://*/*", "https://*/*"],
-  "background": {
-    "service_worker": "background.js",
-    "type": "module"
-  },
-  "action": {
-    "default_title": "AI Page Summarizer"
-  },
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
-    }
-  ],
-  "side_panel": {
-    "default_path": "sidepanel.html"
-  },
-  "options_page": "options.html"
-}
-```
-
-这里必须声明 `content_scripts`。仅申请 `scripting` 权限不会自动加载 `content.js`；如果没有这段配置，Service Worker 向页面发消息时会收到“Receiving end does not exist”。
-
-**权限解读：**
-
-* `storage`：允许插件存储数据（比如用户的 API Key）
-* `activeTab`：允许插件访问用户当前正在看的标签页（仅在用户点击插件时生效，非常安全）
-* `host_permissions`：限定内容脚本可以工作的网页范围；正式发布时应继续按业务域名收窄
-* `sidePanel`：允许使用 Chrome 侧边栏 API
-
-![placeholder: manifest.json 文件在编辑器中的截图](images/image2b.png)
-<!-- ![placeholder: manifest.json 文件在编辑器中的截图](images/image2b.png) -->
-
-## 2.3 准备图标
-
-Chrome 插件需要三个尺寸的图标：16x16、48x48、128x128。你可以让 AI 帮你生成：
-
-```
-请帮我生成三个简单的 Chrome 插件图标（16x16、48x48、128x128），
-设计风格：圆角矩形，渐变紫色背景，中间一个白色的 AI 闪电符号。
-保存到 icons/ 目录下，分别命名为 icon-16.png、icon-48.png、icon-128.png。
-```
-
-## 2.4 加载插件到 Chrome
-
-在写代码之前，我们先把这个"空壳"插件加载到 Chrome 里，这样后续每次修改都能实时看到效果：
-
-1. 打开 Chrome，地址栏输入 `chrome://extensions/`
-2. 打开右上角的 **"开发者模式"** 开关
-3. 点击 **"加载已解压的扩展程序"**
-4. 选择你的 `ai-page-summarizer` 文件夹
-
-你会看到插件出现在列表中，右上角的工具栏也会多出一个图标。
-
-![placeholder: Chrome 扩展管理页面的截图，展示如何开启开发者模式并加载插件](images/image3.png)
-
-<!-- ![placeholder: Chrome 扩展管理页面的截图，展示如何开启开发者模式并加载插件](images/image3.png) -->
-
-> **提示**：每次修改代码后，回到 `chrome://extensions/` 页面，点击插件卡片上的 **刷新按钮（🔄）** 即可更新。
-
-# 第 3 章：实现核心功能——读取页面 + AI 总结
-
-## 3.1 Content Script：读取页面文字
-
-Content Script 是注入到网页中的脚本，它能直接访问页面的 DOM。我们用它来提取页面的文字内容。
-
-让 AI 帮你编写 `content.js`：
-
-```
-请帮我编写 content.js，功能是：
-1. 监听来自 Service Worker 的消息
-2. 当收到 "getPageContent" 消息时，提取当前页面的文字内容
-3. 提取逻辑：获取 document.body.innerText，同时获取页面标题和 URL
-4. 将提取的内容通过 sendResponse 返回
-```
-
-AI 会生成类似这样的代码：
-
-```javascript
-// content.js
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.action === 'getPageContent') {
-    const content = document.body.innerText || document.body.textContent
-    sendResponse({
-      content: content.trim(),
-      title: document.title,
-      url: window.location.href
-    })
-  }
-  return true // 保持消息通道开放
-})
-```
-
-## 3.2 Service Worker：调用 AI API
-
-Service Worker 是插件的"大脑"，负责协调各个组件之间的通信，以及调用外部 AI API。
-
-让 AI 生成 `background.js` 时要特别提醒它：`chrome.tabs.sendMessage()` 返回的是响应对象，不是数组；同时所有异常都要转成结构化结果返回侧边栏。
-
-```
-请帮我编写 background.js，功能是：
-1. 当用户点击插件图标时，打开侧边栏
-2. 监听来自侧边栏的 "summarize" 消息
-3. 收到消息后，向当前标签页的 content script 发送 "getPageContent" 消息获取页面内容
-4. 拿到页面内容后，从 chrome.storage.local 读取用户配置的 API Key 和模型选择
-5. 根据配置调用对应的 AI API（支持 OpenAI 和 Claude）
-6. 将 AI 返回的摘要发送回侧边栏
-
-OpenAI 路径使用官方当前推荐的 Responses API：`POST https://api.openai.com/v1/responses`。
-系统提示词需要优先提取安全风险、操作步骤、阈值和待办事项。
-```
-
-核心代码片段如下：
-
-```javascript
-// background.js
-
-// 点击图标时打开侧边栏
-chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true })
-
-// 监听来自侧边栏的消息
-chrome.runtime.onMessage.addListener((request, _sender, sendResponse) => {
-  if (request.action !== 'summarize') return false
-
-  handleSummarize(request.tabId)
-    .then((result) => sendResponse({ ok: true, ...result }))
-    .catch((error) => sendResponse({ ok: false, error: error.message }))
-  return true
-})
-
-async function handleSummarize(requestedTabId) {
-  // 1. 获取页面内容
-  const tabId = requestedTabId || (await getActiveTabId())
-  const page = await chrome.tabs.sendMessage(tabId, {
-    action: 'getPageContent'
-  })
-
-  // 2. 读取用户配置
-  const settings = await chrome.storage.local.get([
-    'provider', 'openaiApiKey', 'openaiModel', 'proxyUrl'
-  ])
-
-  // 3. 根据模式调用本地、Chrome、企业代理或 OpenAI Provider
-  const summary = await summarizeWithProvider({
-    provider: settings.provider || 'local',
-    text: page.content,
-    settings
-  })
-
-  return { summary, title: page.title, sourceCharacters: page.content.length }
-}
-```
-
-你可以继续要求 AI 把不同提供商封装为 `summarizeWithProvider`，并补充 OpenAI Responses API 返回解析、企业代理、离线摘要器、错误处理和本地验证步骤。
-
-![](images/image4.png)
-<!-- ![placeholder: background.js 代码在编辑器中的截图](images/image4.png) -->
-
-## 3.3 侧边栏 UI：展示总结结果
-
-侧边栏是用户与插件交互的主界面。让 AI 帮你编写侧边栏的 HTML、CSS 和 JS：
-
-```
-请帮我编写侧边栏的三个文件：
-
-sidepanel.html：
-- 顶部显示插件名称 "AI Page Summarizer"
-- 一个蓝色的 "总结当前页面" 按钮
-- 一个加载动画区域（默认隐藏）
-- 一个结果展示区域，显示页面标题和 AI 摘要
-- 底部有一个 "复制摘要" 按钮
-
-sidepanel.css：
-- 简洁现代的设计风格，类似 Notion 的排版
-- 宽度自适应侧边栏
-- 按钮有 hover 效果
-- 加载动画用 CSS 实现
-
-sidepanel.js：
-- 点击 "总结" 按钮时，获取当前标签页 ID
-- 向 background.js 发送 summarize 消息
-- 显示加载动画
-- 收到结果后隐藏加载动画，展示摘要
-- "复制" 按钮使用 navigator.clipboard.writeText 复制文字
-```
-![placeholder: 侧边栏 UI 效果截图，展示总结按钮、加载状态和摘要结果三种状态](images/image5.png)
-
-<!-- ![placeholder: 侧边栏 UI 效果截图，展示总结按钮、加载状态和摘要结果三种状态](images/image5.png) -->
-
-## 3.4 设置页面：配置 API Key
-
-用户需要一个地方来输入自己的 API Key。让 AI 帮你编写设置页面：
-
-```
-请帮我编写 options.html 和 options.js：
-- 一个下拉选择框，选择 AI 提供商（OpenAI / Claude）
-- 一个密码输入框，输入 API Key（type="password"）
-- 一个 "保存" 按钮
-- 保存时使用 chrome.storage.local.set 存储配置
-- 页面加载时从 storage 读取已保存的配置并回填
-- 保存成功后显示 "设置已保存" 的提示
-```
-
-> **安全提醒**：API Key 存储在 `chrome.storage.local` 中，仅在本地设备上保存。但如果你要发布到 Chrome Web Store 供他人使用，更安全的做法是搭建一个后端代理服务器，避免 API Key 直接暴露在客户端。
-
-![placeholder: 设置页面的截图，展示 AI 提供商选择和 API Key 输入框 p1](images/image6-1.png)
-![placeholder: 设置页面的截图，展示 AI 提供商选择和 API Key 输入框 p2](images/image6-2.png)
-![placeholder: 设置页面的截图，展示 AI 提供商选择和 API Key 输入框 p3](images/image6-3.png)
-<!-- ![placeholder: 设置页面的截图，展示 AI 提供商选择和 API Key 输入框](images/image6.png) -->
-
-# 第 4 章：使用 Chrome 内置 AI（无需 API Key）
-
-从 Chrome 138 开始，Google 在浏览器中内置了基于 **Gemini Nano** 的 AI 能力，其中最适合我们场景的就是 **Summarizer API**——完全在本地运行，不需要 API Key，不需要联网，完全免费。
-
-## 4.1 检查浏览器是否支持
-
-内置 AI 有硬件要求：
-
-* 桌面端 Chrome 138+（Windows 10+、macOS 13+、Linux、ChromeOS）
-* 22 GB 可用存储空间（需要下载模型）
-* GPU 显存 4GB 以上，或 CPU 内存 16GB 以上且 4 核以上
-
-在 Chrome 地址栏输入 `chrome://flags`，搜索对应关联Summarization的flag，确保它是 **Enabled** 状态。
-* 在 Chrome 131–137 版本中，该开关为 Summarization API。
-* 在 Chrome 138–144 版本中，该开关更名为 Summarization API for Gemini Nano。
-* 在 Chrome 145+ 版本中，Summarization API for Gemini Nano 已被移除，其总结功能已整合到 Prompt API for Gemini Nano
-
-![placeholder: chrome://flags 页面截图，展示 Summarization API 的开关位置](images/image7.png)
-<!-- ![placeholder: chrome://flags 页面截图，展示 Summarization API 的开关位置](images/image7.png) -->
-
-## 4.2 使用 Summarizer API
-
-让 AI 帮你在 `background.js` 中添加内置 AI 的支持：
-
-```
-请帮我在 background.js 中添加 Chrome 内置 Summarizer API 的支持：
-1. 添加一个 summarizeWithBuiltinAI 函数
-2. 先检查 Summarizer.availability() 是否返回 'readily-available'
-3. 如果可用，创建 summarizer 实例，配置 type 为 'key-points'，format 为 'markdown'，length 为 'medium'
-4. 调用 summarizer.summarize() 进行总结
-5. 在 handleSummarize 函数中，增加一个 provider === 'builtin' 的分支
-```
-
-核心代码：
-
-```javascript
-async function summarizeWithBuiltinAI(text) {
-  // 检查是否可用
-  const availability = await Summarizer.availability()
-  if (availability !== 'readily-available') {
-    throw new Error('Chrome 内置 AI 不可用，请检查浏览器版本和硬件要求')
-  }
+本地规则跑通以后，再从下面两条里选一条。
 
-  // 创建总结器
-  const summarizer = await Summarizer.create({
-    type: 'key-points',
-    format: 'markdown',
-    length: 'medium'
-  })
+### 7.1 Chrome 内置 Summarizer
 
-  // 执行总结
-  const summary = await summarizer.summarize(text, {
-    context: '这是一篇网页文章'
-  })
+Chrome 的 Summarizer API 需要先做功能检测，模型也可能处于待下载状态。不要只根据版本号假定它一定可用。
 
-  return summary
-}
-```
+> 请增加 Chrome Summarizer 模式。先检测是否支持并显示模型下载进度；不可用或语言不支持时自动回到本地摘要。
 
-## 4.3 更新设置页面
+Chrome 官方目前要求由用户操作触发模型创建。首次下载需要网络，下载完成后的处理在本机进行。不同语言的支持范围会变化，实际结果以运行时检测为准。
 
-在 `options.html` 的 AI 提供商下拉框中，增加一个 **"Chrome 内置 AI（免费）"** 选项。当用户选择这个选项时，隐藏 API Key 输入框（因为不需要）。
+### 7.2 企业后端
 
-```
-请帮我修改 options.html 和 options.js：
-1. 在 AI 提供商下拉框中增加选项 "Chrome 内置 AI（免费，无需 API Key）"，value 为 "builtin"
-2. 当选择 builtin 时，隐藏 API Key 输入框
-3. 当选择 OpenAI 或 Claude 时，显示 API Key 输入框
-```
+团队共用时，不要把共享密钥放进扩展或 `chrome.storage.local`。让扩展把经过限制和脱敏的正文发给企业后端，由后端完成身份、配额和模型调用。
 
-![placeholder: 更新后的设置页面截图，展示三个 AI 提供商选项，选中 Chrome 内置 AI 时 API Key 输入框隐藏](images/image8.png)
-<!-- ![placeholder: 更新后的设置页面截图，展示三个 AI 提供商选项，选中 Chrome 内置 AI 时 API Key 输入框隐藏](images/image8.png) -->
+> 请增加企业后端模式。扩展只发送当前页面标题和用户确认过的正文；密钥留在服务端，失败时保留本地摘要。
 
-# 第 5 章：测试与调试
+如果只是个人本机实验，也可以允许用户填写自己的密钥，但设置页必须明确说明风险，不能把它当成组织部署方案。
 
-## 5.1 本地测试流程
+![设置页选择摘要方式](images/image6-1.png)
 
-开发 Chrome 插件的调试方式和普通网页略有不同：
+![设置页填写个人测试配置](images/image6-2.png)
 
-**调试 Service Worker：**
-1. 打开 `chrome://extensions/`
-2. 找到你的插件，点击 **"Service Worker"** 链接
-3. 会打开一个专门的 DevTools 窗口，可以看到 console.log 输出和网络请求
+![设置页保存配置后的状态](images/image6-3.png)
 
-**调试侧边栏：**
-1. 打开侧边栏后，右键点击侧边栏内容
-2. 选择 **"检查"**（Inspect）
-3. 会打开侧边栏的 DevTools
+## 8. 检查权限
 
-**调试 Content Script：**
-1. 在任意网页上按 F12 打开 DevTools
-2. 在 Console 面板中，点击左上角的下拉框，选择你的插件名称
-3. 就能看到 Content Script 的 console 输出
+回到 manifest，确认只申请当前功能需要的权限。能用 `activeTab` 完成的事情，不要直接申请读取所有网站。
 
-![placeholder: Chrome DevTools 调试插件的截图，展示如何选择不同的执行上下文来调试不同组件](images/image9.png)
-<!-- ![placeholder: Chrome DevTools 调试插件的截图，展示如何选择不同的执行上下文来调试不同组件](images/image9.png) -->
+> 请检查 manifest 权限，只保留当前功能需要的项目，并解释每一项为什么存在。
 
-## 5.2 常见问题排查
+发布前至少检查：
 
-| 问题 | 可能原因 | 解决方法 |
-|------|---------|---------|
-| 点击图标没反应 | Service Worker 报错 | 检查 Service Worker 的 DevTools Console |
-| 获取不到页面内容 | Content Script 未注入 | 刷新页面后重试，检查 manifest 中的 matches 配置 |
-| API 调用失败 | API Key 错误或过期 | 在设置页面重新输入 API Key |
-| 侧边栏空白 | sidepanel.html 路径错误 | 检查 manifest 中的 side_panel.default_path |
+- 没有把密钥写进源码或安装包；
+- 不读取密码框、表单输入和隐藏内容；
+- 用户点击后才读取页面；
+- 日志不记录完整网页正文；
+- 企业模式经过登录和文档权限校验。
 
+## 9. 调试三个位置
 
-# 第 6 章：发布到 Chrome Web Store（可选）
+浏览器扩展有三个不同的调试位置：
 
-如果你想把插件分享给其他人使用，可以发布到 Chrome Web Store。
+1. 侧边栏界面：在侧边栏中打开开发者工具。
+2. Service Worker：在扩展管理页点击“Service Worker”。
+3. Content Script：在当前网页的开发者工具里查看。
 
-## 6.1 发布准备
+![在 Chrome DevTools 中选择扩展执行上下文](images/image9.png)
 
-1. **注册开发者账号**：访问 [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole)，支付一次性 $5 美元注册费
-2. **开启两步验证**：Google 账号必须开启两步验证才能发布插件
-3. **准备素材**：
-   * 插件图标：128x128 PNG
-   * 至少一张截图：推荐 1280x800 像素
-   * 详细的功能描述
-   * 隐私政策说明（如果你的插件处理用户数据）
+报错时先确认错误来自哪一层，再交给 AI：
 
-## 6.2 打包与上传
+> 点击摘要后没有结果。侧边栏错误是【内容】，Service Worker 错误是【内容】。请只修复消息没有返回的问题。
 
-1. 将插件文件夹打包为 `.zip` 文件（不是 `.crx`）
-2. 在 Developer Dashboard 中点击 **"New Item"**
-3. 上传 `.zip` 文件
-4. 填写商店信息（名称、描述、截图、分类等）
-5. 填写隐私实践（声明你的插件收集了哪些数据）
-6. 点击 **"Submit for Review"**
+## 10. 完整验收
 
-Google 会对提交的插件进行审核，通常需要几个工作日。权限越少、描述越清晰，审核通过越快。
+按下面顺序操作一次：
 
-![placeholder: Chrome Web Store Developer Dashboard 的截图，展示插件上传和信息填写界面](images/image10.png)
-![placeholder: Chrome Web Store Developer Dashboard 的截图，展示插件上传和信息填写界面p2](images/image10-1.png)
+1. 在扩展管理页重新加载项目。
+2. 打开一篇有标题、列表和日期的文章。
+3. 打开侧边栏并生成本地摘要。
+4. 复制结果，确认格式完整。
+5. 切换到另一篇文章，再生成一次。
+6. 打开无权限页面，确认错误提示清楚。
+7. 重启浏览器，确认非敏感设置仍在。
 
-<!-- ![placeholder: Chrome Web Store Developer Dashboard 的截图，展示插件上传和信息填写界面](images/image10.png) -->
+一项失败时，不要让 AI 重写项目：
 
-# 第 7 章：写在最后
+> 验收第【几】步失败，现象是【描述】。请只修复这一项，不改已经通过的功能。
 
-恭喜你！你已经从零构建了一个 AI 驱动的浏览器插件。回顾一下我们做了什么：
+## 11. 打包和发布
 
-1. 理解了 Chrome 插件的 Manifest V3 架构
-2. 用 Content Script 读取网页内容
-3. 用 Service Worker 调用 AI API 生成摘要
-4. 用 Side Panel 展示总结结果
-5. 还学会了使用 Chrome 内置 AI（无需 API Key）
+本地使用时，在项目文件夹外复制一份干净版本，删除日志、测试数据和本地配置，再压缩为 ZIP。
 
-浏览器插件是一个非常有趣的开发领域——它让你能够"增强"互联网上的任何网页。除了总结页面，你还可以用类似的架构做很多事情：
+发布到 Chrome Web Store 前，准备图标、说明、隐私政策、权限用途和真实截图。商店规则会更新，提交时以 Chrome Web Store 后台的当前要求为准。
 
-**进阶方向：**
+![Chrome Web Store 后台填写扩展资料](images/image10.png)
 
-* **翻译助手**：一键将外文网页翻译成中文
-* **阅读标注**：在网页上高亮和批注，保存到云端
-* **价格追踪**：监控电商网页的价格变化并提醒
-* **代码解释器**：在 GitHub 上选中代码，AI 自动解释
+![Chrome Web Store 后台上传截图和发布资料](images/image10-1.png)
 
-Chrome 内置 AI 的出现更是降低了门槛——你甚至不需要 API Key 就能构建 AI 驱动的插件。随着浏览器 AI 能力的不断增强，这个领域的想象空间会越来越大。
+发布前再做一次隐私检查：
 
-***去给你的浏览器装上超能力吧！***
+> 请检查当前扩展是否上传网页内容、保存密钥或申请了多余权限。只列风险和必须修改项。
 
-# 参考文献
+## 12. 最后检查
 
-* [Chrome Extension 官方文档 - Manifest V3](https://developer.chrome.com/docs/extensions/develop/)
-* [Chrome Extension 在 Chrome 应用商店中发布](https://developer.chrome.com/docs/webstore/publish?hl=zh-cn)
-* [Chrome Side Panel API](https://developer.chrome.com/docs/extensions/reference/api/sidePanel)
-* [Chrome 内置 AI - Summarizer API](https://developer.chrome.com/docs/ai/summarizer-api)
-* [Chrome 内置 AI - Prompt API](https://developer.chrome.com/docs/ai/prompt-api)
-* [OpenAI 文本生成与 Responses API](https://developers.openai.com/api/docs/guides/text)
-* [Glean Enterprise Search](https://www.glean.com/enterprise-search)
-* [Scribe 浏览器扩展](https://get.scribehow.com/install-extension/)
-* [Scribe：使用 Chrome 或 Edge 创建流程文档](https://support.scribehow.com/hc/en-us/articles/9008025006749-Basics-How-to-create-a-Scribe-using-Chrome-or-Edge)
+- 扩展能在开发者模式下加载；
+- 侧边栏可以读取当前页面；
+- 本地摘要不联网也能工作；
+- 加载、成功、空内容和失败状态齐全；
+- Chrome 内置 AI 不可用时有回退；
+- 企业密钥不进入浏览器客户端；
+- 三个调试位置都知道从哪里打开；
+- ZIP 中没有密钥、日志和测试数据。
+
+## 参考资料
+
+- [Chrome Extensions 文档](https://developer.chrome.com/docs/extensions/)
+- [Manifest V3 Service Worker](https://developer.chrome.com/docs/extensions/develop/concepts/service-workers)
+- [Chrome Summarizer API](https://developer.chrome.com/docs/ai/summarizer-api)
+- [Chrome Web Store 发布文档](https://developer.chrome.com/docs/webstore/publish/)
