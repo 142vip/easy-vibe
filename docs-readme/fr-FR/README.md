@@ -407,6 +407,7 @@ Notre equipe a aussi cree d'autres cours ! Decouvrez-les :
 
 ### Remerciements speciaux
 
+- Merci a OpenAI pour son soutien au developpement de ce projet
 - Merci a [@Sm1les](https://github.com/Sm1les) pour l'aide et le soutien sur ce projet
 - Merci a chaque contributeur et a tous ceux qui ont soutenu le projet avec des commentaires et des etoiles ❤️
 

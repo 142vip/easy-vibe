@@ -407,6 +407,7 @@ Por favor, ayúdame a ejecutar este proyecto localmente.
 
 ### Agradecimientos especiales
 
+- Gracias a OpenAI por apoyar el desarrollo de este proyecto
 - Gracias a [@Sm1les](https://github.com/Sm1les) por la ayuda y el apoyo en este proyecto
 - Gracias a cada colaborador y a todos los que apoyaron el proyecto con comentarios y estrellas ❤️
 

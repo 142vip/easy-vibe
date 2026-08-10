@@ -491,6 +491,7 @@ Our team has also created other courses! Check them out:
 
 ### 特別感謝
 
+- 感謝 OpenAI 對本專案開發的支援
 - 感謝 [@Sm1les](https://github.com/Sm1les) 對本專案的幫助與支援
 - 感謝所有為本專案做出貢獻的開發者們和支援點讚的朋友們 ❤️
 

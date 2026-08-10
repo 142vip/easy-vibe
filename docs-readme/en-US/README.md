@@ -407,6 +407,7 @@ Our team has also created other courses! Check them out:
 
 ### Special Thanks
 
+- Thanks to OpenAI for supporting the development of this project
 - Thanks to [@Sm1les](https://github.com/Sm1les) for the help and support on this project
 - Thanks to every contributor and everyone who supported the project with feedback and stars ❤️
 
