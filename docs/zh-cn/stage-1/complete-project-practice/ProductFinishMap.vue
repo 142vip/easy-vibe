@@ -1,8 +1,8 @@
 <template>
   <figure class="finish-map" aria-labelledby="finish-map-title">
     <figcaption class="map-heading">
-      <span>本章要完成的变化</span>
-      <strong id="finish-map-title">从“我能演示”，走到“别人能完成”</strong>
+      <span>这一章要做什么</span>
+      <strong id="finish-map-title">让别人不用你在旁边帮忙，也能把产品用完</strong>
     </figcaption>
 
     <div class="comparison">
@@ -11,7 +11,7 @@
           <span aria-hidden="true">🧪</span>
           <div>
             <small>现在</small>
-            <strong>能跑的原型</strong>
+            <strong>只有自己熟悉的原型</strong>
           </div>
         </div>
         <ul>
@@ -28,7 +28,7 @@
           <span aria-hidden="true">🚀</span>
           <div>
             <small>完成后</small>
-            <strong>可以交给别人体验的作品</strong>
+            <strong>别人也能上手的作品</strong>
           </div>
         </div>
         <ul>
@@ -39,14 +39,14 @@
       </section>
     </div>
 
-    <div class="finish-route" aria-label="完成阶段作品的四个步骤">
-      <span><b>1</b> 走通任务</span>
+    <div class="finish-route" aria-label="把作品整理好的四个步骤">
+      <span><b>1</b> 自己用一遍</span>
       <i aria-hidden="true">→</i>
-      <span><b>2</b> 补齐体验</span>
+      <span><b>2</b> 把卡点补好</span>
       <i aria-hidden="true">→</i>
-      <span><b>3</b> 真实试用</span>
+      <span><b>3</b> 请别人来试</span>
       <i aria-hidden="true">→</i>
-      <span><b>4</b> 整理作品</span>
+      <span><b>4</b> 整理并分享</span>
     </div>
   </figure>
 </template>
