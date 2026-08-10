@@ -1,8 +1,8 @@
-# 如何开发 VS Code 插件——打造你的 AI 项目助手
+# 如何开发 VS Code 插件——打造企业开发者助手
 
 # 第 1 章：什么是 VS Code 插件开发
 
-在这篇教程中，我们将完整跑通一条闭环：从零开始开发一个 VS Code 插件，它能作为你的 AI 项目助手——内置项目模板一键生成、支持选中文件或代码段与 AI 对话、多文件问答梳理，还有自定义快捷键。你会亲手完成插件的开发、调试，并学会如何发布到 VS Code 插件市场。
+在这篇教程中，我们将完整跑通一条闭环：从零开始开发 VS Code 插件，并理解企业为什么会把代码搜索、智能问答、规则检查、审查证据和工作流入口放进编辑器。教程中的 API 练习使用 AI Project Bot，企业案例效果则以 **Engineering Guard** 为参考。
 
 本次教程，你至少需要具备：
 
@@ -12,6 +12,36 @@
 - （可选）GitHub Copilot 订阅（用于调用 Language Model API）
 
 > **全程 Vibe Coding**：我们会用 AI 编程助手帮你生成大部分代码，你只需要理解核心概念和架构，然后用自然语言描述需求即可。
+
+## 真实企业场景：开发者平台与代码治理软件
+
+企业里的 VS Code 插件通常不是“给编辑器加一个按钮”，而是把开发者每天需要的组织能力嵌进 IDE：代码库上下文、内部规范、安全检查、工单、发布门禁和审计证据。
+
+- [GitHub Copilot](https://docs.github.com/en/enterprise-cloud@latest/copilot/get-started/what-is-github-copilot) 已被做成覆盖补全、对话、命令行、代码变更和 Pull Request 的企业开发助手。GitHub 的 [Accenture 客户案例](https://github.com/customer-stories/accenture) 展示了从小规模试点扩展到 12,000 名开发者的企业部署。
+- [Sourcegraph Cody Enterprise](https://sourcegraph.com/docs/cody/clients/enable-cody-enterprise) 把跨代码库搜索、权限约束下的上下文检索、模型选择和 IDE 助手组合起来，支持云服务与自托管部署。
+- 本章参考案例 **Engineering Guard** 属于“代码治理工作台”：在提交合并前执行组织策略检查，把问题、负责人和修复建议整理成审查包。真实产品还会对接 SSO、仓库权限、策略中心、漏洞平台、CI 门禁和审计存储。
+
+### 可直接使用的提示词
+
+```text
+请帮我设计一个 VS Code 企业代码治理插件，产品名为 Engineering Guard。
+
+它需要在开发者提交代码前执行组织策略检查，并把风险、负责人、修复建议和审查证据整理成可导出的 Review Packet。
+
+要求：
+1. 在活动栏提供独立侧栏，展示当前 Policy Pack、检查范围和最近结果。
+2. 提供 Review Active File、Open Review Dashboard、Export Review Packet 三个命令及对应菜单入口。
+3. 默认使用本地规则检查硬编码凭证、动态 SQL、网络请求超时和结构化日志问题，不上传源码、不需要 API Key。
+4. Webview 仪表盘展示风险评分、Merge Gate、问题列表、负责人和修复建议。
+5. 为 SSO、仓库权限、组织策略中心、漏洞平台、CI 门禁和审计存储预留接口。
+6. 支持按 F5 在 Extension Development Host 中调试，并覆盖空文件、无问题和发现问题三种状态。
+
+请先列出 package.json 的贡献点、文件结构和数据流，再逐步生成代码；最后给出调试、验证和截图步骤。
+```
+
+下面是按照这组提示词生成并在 VS Code Extension Development Host 中调试的效果参考：
+
+![Engineering Guard 在 VS Code 中展示企业代码风险、合并门禁和审查负责人](images/engineering-guard-vscode.jpg)
 
 ## 1.1 VS Code 插件能做什么？
 
@@ -902,3 +932,6 @@ VS Code 插件开发的想象空间非常大——你每天使用的那些好用
 * [Webview API 指南](https://code.visualstudio.com/api/extension-guides/webview)
 * [VS Code 插件发布指南](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)
 * [Codicon 图标库](https://microsoft.github.io/vscode-codicons/dist/codicon.html)
+* [GitHub Copilot 企业版说明](https://docs.github.com/en/enterprise-cloud@latest/copilot/get-started/what-is-github-copilot)
+* [GitHub：Accenture Copilot 企业客户案例](https://github.com/customer-stories/accenture)
+* [Sourcegraph Cody Enterprise](https://sourcegraph.com/docs/cody/clients/enable-cody-enterprise)

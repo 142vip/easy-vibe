@@ -13,6 +13,36 @@
 
 > **零硬件、零成本**：全程用 PC 上的免费模拟软件（Modbus Slave）模拟下位机，不用买任何工控设备；代码直接用 Qt 官方的 QModbusTcpClient + Qt Charts 模块，不用手写协议解析；运行后能看到实时压力趋势图、超阈值弹窗报警、故障日志记录，和真实工厂现场效果一致。
 
+## 真实企业场景：Qt 一般被做成什么软件？
+
+Qt 是开发框架，不是现成 HMI 产品。企业会用它构建需要跨平台、高性能图形、硬件接入和长期维护的软件，例如 SCADA/DCS 操作台、PLC 可视化、CNC 控制面板、机器人示教器、车队监控、数字孪生、医疗设备界面和车载座舱。
+
+海外真实产品可以参考 [Siemens SIMATIC Unified Comfort Panels 的 Qt 客户案例](https://www.qt.io/development/resources/videos/customer-case-siemens)：Siemens 使用 Qt 构建自动化产线的人机交互面板。Qt 官方的[工业自动化产品页](https://www.qt.io/development/qt-in-automation)还列出了 ABB、Bosch、Liebherr、Parker、Agile Robots 等企业，并明确列出 SCADA、机器人控制、车队监控和数字孪生等产品形态。
+
+本章案例 **Plant Operations Console** 对应“企业设施/能源运营工作台”：它把实时遥测、报警、交接班、工单和受控操作放在同一界面。生产版还需要角色权限、双人复核、操作审计、断网策略、数据留存和安全认证，不能把演示按钮直接接到关键设备。
+
+### 可直接使用的提示词
+
+```text
+请帮我设计一个 Qt 6.5 + QML 的企业设施运营工作台，产品名为 Plant Operations Console。
+
+它面向能源站或园区运营人员，在一个桌面界面中展示实时遥测、趋势、报警、交接班、工单和受控操作。
+
+要求：
+1. 使用 QML/Qt Quick Controls 构建适合 16:9 大屏和普通桌面的深色运营界面。
+2. 首屏展示关键指标、设备状态、当前事件、趋势图、待处理工单和交接班摘要。
+3. 没有 PLC 时使用可重复的演示数据；生产数据源可替换为 QModbusTcpClient、Qt OPC UA 或 MQTT。
+4. 报警必须有等级、时间、设备、确认状态和处置建议。
+5. 停机等关键操作只做受控流程演示，并明确加入角色权限、双人复核、操作审计和失败回滚。
+6. 考虑断网、数据留存、可访问性和安全认证，不把界面按钮直接连接关键设备。
+
+请先给出信息架构、页面布局和数据模型，再逐步生成 QML/C++ 代码；最后说明如何在 Qt Creator 中运行并截图验证。
+```
+
+下面是按照这组提示词生成的界面效果参考：
+
+![Plant Operations Console 企业运营工作台：实时遥测、报警与交接班](images/qt-plant-operations-console.png)
+
 ## 1.1 什么是上位机和下位机？
 
 在工业自动化领域，有两个你必须理解的概念：**上位机**和**下位机**。
@@ -671,7 +701,7 @@ macdeployqt PumpHMI.app -dmg
 5. 实现了超阈值报警弹窗和 SQLite 故障日志记录
 6. 实现了远程启停水泵的控制功能
 
-整个过程没有用到任何真实工控设备，但开发出的程序和真实工厂现场使用的 HMI 系统在架构和功能上完全一致。当你把 Modbus Slave 换成真实的 PLC，这个程序就能直接用在生产环境中。
+整个过程没有用到真实工控设备，但已经覆盖 HMI 常见的数据采集、趋势、报警与控制链路。接入真实 PLC 前，还必须完成权限模型、安全联锁、失败保护、通信恢复、操作审计、硬件在环测试和适用的行业认证，不能把教学代码直接用于生产控制。
 
 **进阶方向：**
 
@@ -691,4 +721,5 @@ macdeployqt PumpHMI.app -dmg
 * [Modbus 协议规范](https://modbus.org/specs.php)
 * [Modbus Slave 模拟工具](https://www.modbustools.com/modbus_slave.html)
 * [Qt Installer Framework 文档](https://doc.qt.io/qtinstallerframework/)
-```
+* [Qt 工业自动化：HMI、SCADA 与企业产品形态](https://www.qt.io/development/qt-in-automation)
+* [Qt 客户案例：Siemens SIMATIC Unified Comfort Panels](https://www.qt.io/development/resources/videos/customer-case-siemens)

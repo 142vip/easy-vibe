@@ -8,7 +8,40 @@
 
 - Chrome 浏览器（建议 138 以上版本，如果要用内置 AI）
 - 一个代码编辑器（VS Code / Cursor / Trae）
-- （可选）OpenAI 或 Claude 的 API Key
+- （可选）OpenAI API Key 或企业 AI 代理地址
+
+## 真实企业场景：企业知识助手与流程文档软件
+
+这里的“工业界场景”指企业真正会采购、部署和持续运营的软件，而不是狭义的工厂场景。本章把普通的“网页总结器”做成 **Enterprise Knowledge Copilot**：员工浏览制度、客户支持手册、项目文档或内部知识库时，侧边栏提取适用范围、SLA、风险、负责人和下一步动作。
+
+国外已经把同类能力做成多种成熟产品形态：
+
+- [Glean Enterprise Search](https://www.glean.com/enterprise-search)：连接企业内多个应用，在原有权限约束下检索和回答内部知识，属于“企业搜索 + 知识助手”产品。
+- [Scribe 浏览器扩展](https://get.scribehow.com/install-extension/)：记录员工在网页中的操作，自动生成带截图的分步操作指南，属于“流程捕获 + 培训文档”产品。
+
+因此，浏览器插件在企业里通常会被做成：内部知识助手、客服坐席助手、销售情报侧栏、合规提醒器、流程录制器，而不只是“总结一篇新闻”。生产版本还应接入 SSO、文档权限、审计日志、敏感信息脱敏和企业后端代理。
+
+### 可直接使用的提示词
+
+```text
+请帮我设计一个 Chrome Manifest V3 企业知识助手插件，产品名为 Enterprise Knowledge Copilot。
+
+它需要在浏览器侧边栏中读取当前网页内容，并把制度、客户支持手册、项目文档或内部知识库整理为：适用范围、关键规则、SLA、风险、负责人和下一步动作。
+
+要求：
+1. 使用 Side Panel、Content Script 和 Service Worker，说明三者的消息流。
+2. 提供“总结当前页面”、复制结果、错误提示和设置页。
+3. 支持离线演示、浏览器内置 AI、个人 API 和企业后端代理四种模式。
+4. 默认不上传源码或敏感页面；共享密钥只能放在企业后端，不能分发到浏览器客户端。
+5. 为权限最小化、SSO、文档权限、审计日志和敏感信息脱敏预留接口。
+6. 界面采用克制的企业软件风格，并提供加载中、成功、空内容和失败状态。
+
+请先列出实施计划和文件结构，再逐步生成代码；最后告诉我如何在 chrome://extensions 中加载、调试并截图验证。
+```
+
+下面是按照这组提示词生成的效果参考：
+
+![Enterprise Knowledge Copilot 将客户支持 SLA 文档整理成执行要点](images/extension-enterprise-preview.png)
 
 ## 1.1 什么是浏览器插件？
 
@@ -46,11 +79,16 @@ Chrome 插件（基于 Manifest V3）由几个核心部分组成，它们各司�
 ![placeholder: 一张架构流程图，展示 Content Script、Service Worker、Side Panel 之间的消息传递关系](images/image2.png)
 <!-- ![placeholder: 一张架构流程图，展示 Content Script、Service Worker、Side Panel 之间的消息传递关系](images/image2.png) -->
 
-## 1.3 两种 AI 方案：云端 API vs 浏览器内置 AI
+## 1.3 四种运行方案：先跑通，再接生产能力
 
-我们的插件有两种获取 AI 能力的方式：
+你可以让 AI 生成四种运行模式：
 
-**方案 A：调用云端 AI API（OpenAI / Claude）**
+1. **本地演示**：确定性提取页面要点，零配置跑通全部消息链路。
+2. **Chrome 内置 AI**：运行时检测 `Summarizer` 是否可用，不写死浏览器版本。
+3. **企业后端代理（推荐）**：浏览器只发正文，组织密钥留在服务端。
+4. **OpenAI 直连**：仅用于个人本地调试，采用 Responses API；不要用于共享部署。
+
+**方案 A：调用云端 AI API（企业代理 / OpenAI）**
 
 * 优点：模型能力强大，支持所有设备
 * 缺点：需要 API Key，需要联网，有使用成本
@@ -64,7 +102,7 @@ Chrome 插件（基于 Manifest V3）由几个核心部分组成，它们各司�
 * 缺点：需要 Chrome 138+、需要较好的硬件（4GB+ 显存或 16GB+ 内存）、模型能力不如云端
 * 适合：注重隐私、不想花钱、硬件条件允许
 
-**本教程将同时实现两种方案**，你可以根据自己的情况选择。
+**本教程将完整实现上述路径**，没有可用模型时也能先用本地模式验证插件本身。
 
 ## 1.4 本教程的路线图
 
@@ -118,35 +156,36 @@ AI 会帮你生成完整的项目骨架。让我们逐个看看每个文件的�
   "name": "AI Page Summarizer",
   "version": "1.0",
   "description": "用 AI 一键总结任意网页内容",
-  "permissions": ["storage", "activeTab", "scripting", "sidePanel"],
+  "permissions": ["activeTab", "sidePanel", "storage"],
+  "host_permissions": ["http://*/*", "https://*/*"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "action": {
-    "default_title": "AI Page Summarizer",
-    "default_icon": {
-      "16": "icons/icon-16.png",
-      "48": "icons/icon-48.png",
-      "128": "icons/icon-128.png"
-    }
+    "default_title": "AI Page Summarizer"
   },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
   "side_panel": {
     "default_path": "sidepanel.html"
   },
-  "options_page": "options.html",
-  "icons": {
-    "16": "icons/icon-16.png",
-    "48": "icons/icon-48.png",
-    "128": "icons/icon-128.png"
-  }
+  "options_page": "options.html"
 }
 ```
+
+这里必须声明 `content_scripts`。仅申请 `scripting` 权限不会自动加载 `content.js`；如果没有这段配置，Service Worker 向页面发消息时会收到“Receiving end does not exist”。
 
 **权限解读：**
 
 * `storage`：允许插件存储数据（比如用户的 API Key）
 * `activeTab`：允许插件访问用户当前正在看的标签页（仅在用户点击插件时生效，非常安全）
-* `scripting`：允许插件向页面注入脚本来读取内容
+* `host_permissions`：限定内容脚本可以工作的网页范围；正式发布时应继续按业务域名收窄
 * `sidePanel`：允许使用 Chrome 侧边栏 API
 
 ![placeholder: manifest.json 文件在编辑器中的截图](images/image2b.png)
@@ -216,7 +255,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 Service Worker 是插件的"大脑"，负责协调各个组件之间的通信，以及调用外部 AI API。
 
-让 AI 帮你编写 `background.js`：
+让 AI 生成 `background.js` 时要特别提醒它：`chrome.tabs.sendMessage()` 返回的是响应对象，不是数组；同时所有异常都要转成结构化结果返回侧边栏。
 
 ```
 请帮我编写 background.js，功能是：
@@ -227,9 +266,8 @@ Service Worker 是插件的"大脑"，负责协调各个组件之间的通信，
 5. 根据配置调用对应的 AI API（支持 OpenAI 和 Claude）
 6. 将 AI 返回的摘要发送回侧边栏
 
-对于 OpenAI，调用 https://api.openai.com/v1/chat/completions，模型用 gpt-4o-mini
-对于 Claude，调用 https://api.anthropic.com/v1/messages，模型用 claude-sonnet-4-20250514
-系统提示词：请用中文总结以下网页内容，提取核心要点，控制在 300 字以内。
+OpenAI 路径使用官方当前推荐的 Responses API：`POST https://api.openai.com/v1/responses`。
+系统提示词需要优先提取安全风险、操作步骤、阈值和待办事项。
 ```
 
 核心代码片段如下：
@@ -241,36 +279,39 @@ Service Worker 是插件的"大脑"，负责协调各个组件之间的通信，
 chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true })
 
 // 监听来自侧边栏的消息
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.action === 'summarize') {
-    handleSummarize(request.tabId).then(sendResponse)
-    return true // 异步响应
-  }
+chrome.runtime.onMessage.addListener((request, _sender, sendResponse) => {
+  if (request.action !== 'summarize') return false
+
+  handleSummarize(request.tabId)
+    .then((result) => sendResponse({ ok: true, ...result }))
+    .catch((error) => sendResponse({ ok: false, error: error.message }))
+  return true
 })
 
-async function handleSummarize(tabId) {
+async function handleSummarize(requestedTabId) {
   // 1. 获取页面内容
-  const [response] = await chrome.tabs.sendMessage(tabId, {
+  const tabId = requestedTabId || (await getActiveTabId())
+  const page = await chrome.tabs.sendMessage(tabId, {
     action: 'getPageContent'
   })
 
   // 2. 读取用户配置
-  const { apiKey, provider } = await chrome.storage.local.get([
-    'apiKey', 'provider'
+  const settings = await chrome.storage.local.get([
+    'provider', 'openaiApiKey', 'openaiModel', 'proxyUrl'
   ])
 
-  if (!apiKey) {
-    return { error: '请先在设置页面配置 API Key' }
-  }
+  // 3. 根据模式调用本地、Chrome、企业代理或 OpenAI Provider
+  const summary = await summarizeWithProvider({
+    provider: settings.provider || 'local',
+    text: page.content,
+    settings
+  })
 
-  // 3. 调用 AI API
-  const summary = provider === 'claude'
-    ? await callClaude(response.content, apiKey)
-    : await callOpenAI(response.content, apiKey)
-
-  return { summary, title: response.title }
+  return { summary, title: page.title, sourceCharacters: page.content.length }
 }
 ```
+
+你可以继续要求 AI 把不同提供商封装为 `summarizeWithProvider`，并补充 OpenAI Responses API 返回解析、企业代理、离线摘要器、错误处理和本地验证步骤。
 
 ![](images/image4.png)
 <!-- ![placeholder: background.js 代码在编辑器中的截图](images/image4.png) -->
@@ -494,7 +535,7 @@ Chrome 内置 AI 的出现更是降低了门槛——你甚至不需要 API Key 
 * [Chrome Side Panel API](https://developer.chrome.com/docs/extensions/reference/api/sidePanel)
 * [Chrome 内置 AI - Summarizer API](https://developer.chrome.com/docs/ai/summarizer-api)
 * [Chrome 内置 AI - Prompt API](https://developer.chrome.com/docs/ai/prompt-api)
-* [OpenAI API 文档](https://platform.openai.com/docs/api-reference)
-* [Anthropic Claude API 文档](https://docs.anthropic.com/en/docs/)
-* [Anthropic Claude API 文档](https://developer.chrome.com/docs/webstore/publish?hl=zh-cn)
-
+* [OpenAI 文本生成与 Responses API](https://developers.openai.com/api/docs/guides/text)
+* [Glean Enterprise Search](https://www.glean.com/enterprise-search)
+* [Scribe 浏览器扩展](https://get.scribehow.com/install-extension/)
+* [Scribe：使用 Chrome 或 Edge 创建流程文档](https://support.scribehow.com/hc/en-us/articles/9008025006749-Basics-How-to-create-a-Scribe-using-Chrome-or-Edge)

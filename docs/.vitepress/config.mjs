@@ -113,7 +113,9 @@ const localeBuildExcludes = activeSupportedBuildLocales.length
   : []
 const srcExclude = ['plans/**', ...localeBuildExcludes]
 const buildConcurrency = Number.parseInt(
-  process.env.VITEPRESS_BUILD_CONCURRENCY || '',
+  // VitePress 2 alpha may hash a page before a concurrent render writes it.
+  // Default to deterministic rendering; CI can opt into higher concurrency.
+  process.env.VITEPRESS_BUILD_CONCURRENCY || '1',
   10
 )
 

@@ -12,6 +12,34 @@
 - （可选）OpenAI API Key（如果使用云端模式）
 - 一个麦克风（笔记本自带的就行）
 
+## 真实企业场景：别人把语音转文字做成了什么软件？
+
+企业购买的通常不是一个孤立的“转写按钮”，而是一条完整业务链：**采集语音 → 识别 → 结构化 → 写回业务系统 → 权限与审计**。国外产品已经形成几类典型形态：
+
+- [Otter Enterprise](https://otter.ai/enterprise)：把会议变成可检索的组织知识，生成摘要和跟进项，并可同步 CRM、Jira、Asana、Zendesk、ServiceNow 等系统，属于“会议智能 + 工作流自动化”软件。
+- [Nuance Dragon Professional](https://dragon.nuance.com/en-us/dragon-professional)：面向金融、教育、健康与公共服务等文档密集行业，支持实时口述、录音文件转写、语音命令、批量部署和集中管理，属于“专业口述 + 企业文档生产”软件。
+- 本章的 **Field Voice Log**：把一线员工的语音记录转换成结构化服务报告，再写回 CMMS/工单系统，属于“现场服务 + 业务系统录入”软件。同样的架构也能换成保险查勘、物业巡检、售后维修、护理记录和客户拜访日志。
+
+### 可直接使用的提示词
+
+```text
+请帮我设计一个跨平台 Electron 企业语音工作台，产品名为 Field Voice Log。
+
+它面向现场服务人员，把录音或音频文件转成文字，再生成结构化服务报告，包括：客户与地点、问题描述、处理过程、使用物料、风险、后续动作和工单状态。
+
+要求：
+1. 支持 Windows、macOS、Linux，界面包含录音、文件导入、转写进度、原始文本和结构化报告。
+2. 提供云端识别、本地 whisper.cpp 和无需密钥的离线演示模式。
+3. API Key 只能由 Electron 主进程读取，通过安全的 preload IPC 暴露有限能力；渲染进程禁止直接访问 Node.js。
+4. 本地识别前用 FFmpeg 真正转码为 16 kHz、单声道 PCM WAV。
+5. 为 CMMS/CRM 写回、失败重试、审计日志、数据留存和敏感信息脱敏预留接口。
+6. 界面使用适合一线员工的清晰大按钮，并展示录音、处理中、成功和失败状态。
+
+请先给出文件结构和安全边界，再逐步生成代码；最后告诉我如何运行、调试并截取成品界面。
+```
+
+![真实 Electron 窗口：Field Voice Log 将语音记录生成业务报告](images/electron-field-voice-log.jpg)
+
 ## 1.1 什么是 Electron？
 
 你每天都在用的 **VS Code、Slack、Discord、Notion**，它们有一个共同点：都是用 **Electron** 构建的桌面应用。
@@ -64,11 +92,11 @@ Electron 应用由两种进程组成，理解它们是开发的关键：
 
 | 对比维度 | 云端 API 模式 | 本地模型模式 |
 |---------|-------------|------------|
-| 代表方案 | OpenAI Whisper API | whisper.cpp |
+| 代表方案 | OpenAI Transcription API | whisper.cpp |
 | 是否需要联网 | 是 | 否 |
 | 识别速度 | 取决于网络 | 取决于硬件（Apple Silicon 上极快） |
 | 中文识别质量 | 优秀 | 优秀（large-v3 模型） |
-| 使用成本 | $0.006/分钟 | 免费 |
+| 使用成本 | 按所选模型的当前价格计费 | 模型运行本身不产生 API 费用 |
 | 模型体积 | 无需下载 | tiny 模型 75MB，large 模型 3GB |
 | 适合场景 | 快速上手、轻量使用 | 注重隐私、离线使用、长期高频使用 |
 
@@ -269,9 +297,9 @@ session.defaultSession.setPermissionRequestHandler(
 
 > **macOS 用户注意**：macOS 会弹出系统级的麦克风权限请求对话框，这是正常的，点击"允许"即可。
 
-# 第 4 章：方案 A——云端识别（OpenAI Whisper API）
+# 第 4 章：方案 A——云端识别（OpenAI Transcription API）
 
-这是最简单的方案，只需要一个 API Key 和几行代码。
+这是最简单的方案，只需要一个 API Key 和少量主进程代码。模型与价格会更新，实施时应以官方模型页为准，本例使用 `gpt-4o-mini-transcribe`。
 
 ## 4.1 获取 OpenAI API Key
 
@@ -279,7 +307,7 @@ session.defaultSession.setPermissionRequestHandler(
 2. 进入 API Keys 页面，点击 **"Create new secret key"**
 3. 复制生成的 Key（以 `sk-` 开头），妥善保存
 
-> **费用参考**：Whisper API 的价格是 **$0.006/分钟**，也就是说识别 1 小时的语音只需要 $0.36（约 2.5 元人民币），非常便宜。
+> **密钥原则**：不要把企业共享 API Key 放进渲染进程、`localStorage` 或打包产物。个人本地开发可使用主进程环境变量；正式产品应由受控后端代调，并加入用户鉴权、配额、日志和数据保留策略。
 
 ## 4.2 在主进程中调用 Whisper API
 
@@ -291,7 +319,7 @@ session.defaultSession.setPermissionRequestHandler(
 2. 写一个 transcribeWithWhisper 函数，参数传入音频的 ArrayBuffer
 3. 把传入的 ArrayBuffer 转换成 Blob 或 File，然后组装成 FormData 格式
 4. 调用 https://api.openai.com/v1/audio/transcriptions
-5. 模型指定用 whisper-1，语言设置为中文 zh
+5. 模型指定用 gpt-4o-mini-transcribe，语言设置为中文 zh
 6. 接口调用完成后，返回识别出来的文本内容
 7. API Key 从环境变量或配置文件读取
 ```
@@ -300,11 +328,14 @@ session.defaultSession.setPermissionRequestHandler(
 
 ```javascript
 // main.js
-async function transcribeWithWhisper(audioBuffer, apiKey) {
+async function transcribeWithOpenAI(audioBuffer) {
+  const apiKey = process.env.OPENAI_API_KEY
+  if (!apiKey) throw new Error('缺少 OPENAI_API_KEY 环境变量')
+
   const blob = new Blob([audioBuffer], { type: 'audio/webm' })
   const formData = new FormData()
   formData.append('file', blob, 'audio.webm')
-  formData.append('model', 'whisper-1')
+  formData.append('model', 'gpt-4o-mini-transcribe')
   formData.append('language', 'zh')
 
   const response = await fetch(
@@ -325,17 +356,16 @@ async function transcribeWithWhisper(audioBuffer, apiKey) {
 
 ## 4.3 添加设置界面
 
-让 AI 帮你在渲染进程中添加一个简单的设置面板，用于输入 API Key 和切换识别模式：
+让 AI 帮你在渲染进程中添加一个简单的设置面板，用于切换识别模式和语言；密钥仍只由主进程或企业后端管理：
 
 ```
 请帮我在 index.html 中添加一个设置面板：
 1. 页面右上角加一个齿轮样式的设置图标，点击后弹出设置面板
-2. 面板里要包含这几项：识别模式切换（云端 API / 本地模型）、API Key 输入框（只有云端模式下才显示）、语言选择下拉菜单（中文、英文、自动检测可选）
-3. 所有设置内容自动保存到 localStorage
+2. 面板里包含识别模式切换（云端 API / 本地模型）和语言选择（中文、英文、自动检测）
+3. 非敏感偏好可保存到 localStorage；API Key 不得进入渲染进程
 4. 点击面板外面的区域就能关闭面板
 ```
-![placeholder: 设置面板展开的截图，展示模式切换开关和 API Key 输入框](images/image8.png)
-<!-- ![placeholder: 设置面板展开的截图，展示模式切换开关和 API Key 输入框](images/image8.png) -->
+设置页只保存模式、语言等非敏感偏好；企业密钥由主进程环境或后端密钥管理系统提供。
 
 # 第 5 章：方案 B——本地识别（whisper.cpp）
 
@@ -366,7 +396,7 @@ nodejs-whisper 本身会自动完成模型下载，不用额外处理。
 
 ```
 请帮我在main.js里添加 whisper.cpp 本地语音识别功能：
-先引入 nodejs-whisper 包，然后写一个 transcribeWithLocal 函数。函数接收音频 ArrayBuffer，先把它保存成临时的 WAV 文件（要求 16kHz、单声道），再调用 nodejs-whisper 做识别，识别完成后返回文字结果，最后把临时文件删掉就行
+先引入 nodejs-whisper 和 ffmpeg-static，然后写一个 transcribeWithLocal 函数。函数接收 MediaRecorder 的音频 ArrayBuffer，先保存原始 WebM，再用 FFmpeg 转成 16kHz、单声道、PCM 16-bit WAV，之后调用 nodejs-whisper，最后删除整个临时目录
 ```
 
 核心代码：
@@ -377,14 +407,25 @@ const { nodewhisper } = require('nodejs-whisper')
 const path = require('path')
 const fs = require('fs')
 const os = require('os')
+const ffmpegPath = require('ffmpeg-static')
+const { execFile } = require('child_process')
+const { promisify } = require('util')
+const run = promisify(execFile)
 
 async function transcribeWithLocal(audioBuffer) {
-  // 保存为临时文件
-  const tempPath = path.join(os.tmpdir(), `recording-${Date.now()}.wav`)
-  fs.writeFileSync(tempPath, Buffer.from(audioBuffer))
+  const workDir = fs.mkdtempSync(path.join(os.tmpdir(), 'voice-log-'))
+  const webmPath = path.join(workDir, 'recording.webm')
+  const wavPath = path.join(workDir, 'recording-16k-mono.wav')
+  fs.writeFileSync(webmPath, Buffer.from(audioBuffer))
 
   try {
-    const result = await nodewhisper(tempPath, {
+    // MediaRecorder 产出的是 WebM。改扩展名不会改变编码，必须先真正转码。
+    await run(ffmpegPath, [
+      '-y', '-i', webmPath,
+      '-ar', '16000', '-ac', '1', '-c:a', 'pcm_s16le', wavPath
+    ])
+
+    const result = await nodewhisper(wavPath, {
       modelName: 'base',
       autoDownloadModelName: 'base',
       whisperOptions: {
@@ -394,8 +435,7 @@ async function transcribeWithLocal(audioBuffer) {
     })
     return result.map(r => r.speech).join('')
   } finally {
-    // 清理临时文件
-    fs.unlinkSync(tempPath)
+    fs.rmSync(workDir, { recursive: true, force: true })
   }
 }
 ```
@@ -488,8 +528,9 @@ Electron 的强大之处在于——你用做网页的技术栈，就能构建�
 
 * [Electron 官方文档](https://www.electronjs.org/docs/latest/)
 * [Electron Forge 官方文档](https://www.electronforge.io/)
-* [OpenAI Whisper API 文档](https://platform.openai.com/docs/guides/speech-to-text)
+* [OpenAI gpt-4o-mini-transcribe 模型](https://developers.openai.com/api/docs/models/gpt-4o-mini-transcribe)
 * [whisper.cpp GitHub 仓库](https://github.com/ggml-org/whisper.cpp)
 * [nodejs-whisper npm 包](https://www.npmjs.com/package/nodejs-whisper)
 * [MDN MediaDevices.getUserMedia()](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)
-
+* [Otter Enterprise](https://otter.ai/enterprise)
+* [Nuance Dragon Professional](https://dragon.nuance.com/en-us/dragon-professional)
