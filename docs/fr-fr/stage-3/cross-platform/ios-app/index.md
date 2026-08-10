@@ -195,11 +195,11 @@ Sur l'écran des informations du projet, remplissez simplement les paramètres d
 6. Stockage : choisissez Core Data (pour sauvegarder l'historique des recettes plus tard)
 7. Laissez les autres options par défaut
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16-private-redacted.png)
 
 Cliquez sur **Next** et choisissez l'emplacement de stockage du projet.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17-cropped.png)
 
 ### 3.4 Reconnaître la structure du projet après création
 
@@ -289,7 +289,7 @@ Please help me organize this into a clear, structured REQUIREMENTS.md document f
 
 Après la génération, lisez rapidement le document et confirmez si les points de fonctionnalité correspondent à vos attentes.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23-terminal-cropped.png)
 
 ### 4.2 Étape deux : Prototype visuel
 

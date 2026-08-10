@@ -195,11 +195,11 @@ Trae 是本教學中進行開發工作的主要環境。你會將整個 iOS 專�
 6. Storage：選擇 Core Data（用於後續儲存食譜歷史）
 7. 其他選項保持預設
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16-private-redacted.png)
 
 點擊 **Next** 並選擇專案儲存位置。
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17-cropped.png)
 
 ### 3.4 認識建立後的專案結構
 
@@ -289,7 +289,7 @@ Trae 是本教學中進行開發工作的主要環境。你會將整個 iOS 專�
 
 生成後，快速瀏覽文件並確認功能點是否符合你的預期。
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23-terminal-cropped.png)
 
 ### 4.2 第二階段：視覺原型
 

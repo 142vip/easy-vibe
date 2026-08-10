@@ -195,11 +195,11 @@ Xcode を開きます。ウェルカム画面で、新規プロジェクトの�
 6. ストレージ：Core Data を選択（後でレシピ履歴を保存するため）
 7. その他のオプションはデフォルトのまま
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16-private-redacted.png)
 
 **Next** をクリックし、プロジェクトの保存場所を選択します。
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17-cropped.png)
 
 ### 3.4 作成後のプロジェクト構造の認識
 
@@ -289,7 +289,7 @@ Trae のチャットウィンドウに次の指示を入力します。Trae は�
 
 生成後、ドキュメントをざっと読み、機能ポイントが期待と一致するか確認します。
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23-terminal-cropped.png)
 
 ### 4.2 ステージ2：ビジュアルプロトタイプ
 

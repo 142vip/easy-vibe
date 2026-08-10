@@ -195,11 +195,11 @@ Xcode를 엽니다. 환영 화면에서 새 프로젝트 만들기를 선택합�
 6. 저장소: Core Data 선택 (나중에 레시피 기록 저장용)
 7. 다른 옵션은 기본값 유지
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16-private-redacted.png)
 
 **Next**를 클릭하고 프로젝트 저장 위치를 선택합니다.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17-cropped.png)
 
 ### 3.4 생성 후 프로젝트 구조 파악
 
@@ -289,7 +289,7 @@ Trae의 채팅 창에 다음 지시를 입력합니다. Trae는 프로젝트 루
 
 생성 후 문서를 빠르게 읽고 기능 포인트가 기대와 일치하는지 확인합니다.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23-terminal-cropped.png)
 
 ### 4.2 2단계: 시각적 프로토타입
 

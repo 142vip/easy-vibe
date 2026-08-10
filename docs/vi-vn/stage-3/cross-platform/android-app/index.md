@@ -498,7 +498,7 @@ Bạn có thể gửi trực tiếp qua WeChat hoặc QQ đến bất kỳ đi�
 
 ![](/zh-cn/stage-3/cross-platform/android-app/images/image48.png)
 
-![](/zh-cn/stage-3/cross-platform/android-app/images/image49.png)
+![](/zh-cn/stage-3/cross-platform/android-app/images/image49-sidebar-cropped.png)
 
 ## 5.2 Đóng gói Phiên bản Release
 

@@ -498,7 +498,7 @@ You can directly send it through WeChat or QQ to any Android phone, and the reci
 
 ![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image48.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image49.png)
+![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image49-sidebar-cropped.png)
 
 ## 5.2 Package the Release Version
 

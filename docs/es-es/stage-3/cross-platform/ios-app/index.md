@@ -195,11 +195,11 @@ En la pantalla de informacion del proyecto, solo completa las configuraciones ba
 6. Almacenamiento: elegir Core Data (para guardar historial de recetas mas tarde)
 7. Dejar las otras opciones en predeterminado
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16-private-redacted.png)
 
 Haz clic en **Next** y elige la ubicacion de almacenamiento del proyecto.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17-cropped.png)
 
 ### 3.4 Reconocer la Estructura del Proyecto Despues de la Creacion
 
@@ -289,7 +289,7 @@ Por favor ayudame a organizar esto en un documento REQUIREMENTS.md claro y estru
 
 Despues de la generacion, lee rapidamente el documento y confirma si los puntos de funcion coinciden con tus expectativas.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23-terminal-cropped.png)
 
 ### 4.2 Etapa Dos: Prototipo Visual
 

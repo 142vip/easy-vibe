@@ -195,11 +195,11 @@ Trae هو البيئة الرئيسية التي يتم فيها تنفيذ عم
 6. التخزين: اختر Core Data (لحفظ سجل الوصفات لاحقًا)
 7. اترك الخيارات الأخرى على الوضع الافتراضي
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16-private-redacted.png)
 
 انقر **Next** واختر موقع تخزين المشروع.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17-cropped.png)
 
 ### 3.4 التعرف على هيكل المشروع بعد الإنشاء
 
@@ -289,7 +289,7 @@ Please help me organize this into a clear, structured REQUIREMENTS.md document f
 
 بعد التوليد، اقرأ المستند بسرعة وتأكد مما إذا كانت نقاط الوظائف تتطابق مع توقعاتك.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23-terminal-cropped.png)
 
 ### 4.2 المرحلة الثانية: النموذج الأولي المرئي
 

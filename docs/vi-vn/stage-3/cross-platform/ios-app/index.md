@@ -195,11 +195,11 @@ Trên màn hình thông tin dự án, chỉ cần điền các cài đặt cơ b
 6. Lưu trữ: chọn Core Data (để lưu lịch sử công thức sau này)
 7. Để các tùy chọn khác ở mặc định
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16-private-redacted.png)
 
 Nhấp vào **Next** và chọn vị trí lưu trữ dự án.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17-cropped.png)
 
 ### 3.4 Nhận Biết Cấu Trúc Dự Án Sau Khi Tạo
 
@@ -289,7 +289,7 @@ Vui lòng giúp tôi tổ chức điều này thành một tài liệu REQUIREME
 
 Sau khi tạo, đọc nhanh qua tài liệu và xác nhận liệu các điểm chức năng có khớp với kỳ vọng của bạn.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23-terminal-cropped.png)
 
 ### 4.2 Giai Đoạn Hai: Nguyên Mẫu Hình Ảnh
 

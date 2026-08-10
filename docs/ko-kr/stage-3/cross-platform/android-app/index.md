@@ -498,7 +498,7 @@ WeChat이나 QQ를 통해 모든 Android 폰으로 직접 보낼 수 있으며, 
 
 ![](/zh-cn/stage-3/cross-platform/android-app/images/image48.png)
 
-![](/zh-cn/stage-3/cross-platform/android-app/images/image49.png)
+![](/zh-cn/stage-3/cross-platform/android-app/images/image49-sidebar-cropped.png)
 
 ## 5.2 릴리스 버전 패키징
 

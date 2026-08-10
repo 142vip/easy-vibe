@@ -195,11 +195,11 @@ On the project information screen, just fill in the basic settings:
 6. Storage: choose Core Data (for later saving recipe history)
 7. Leave the other options at default
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image16-private-redacted.png)
 
 Click **Next** and choose the project storage location.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image17-cropped.png)
 
 ### 3.4 Recognize the Project Structure After Creation
 
@@ -289,7 +289,7 @@ Please help me organize this into a clear, structured REQUIREMENTS.md document f
 
 After generation, quickly read through the document and confirm whether the function points match your expectations.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image23-terminal-cropped.png)
 
 ### 4.2 Stage Two: Visual Prototype
 

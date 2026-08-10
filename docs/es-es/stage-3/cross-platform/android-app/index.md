@@ -498,7 +498,7 @@ Puedes enviarlo directamente a traves de WeChat o QQ a cualquier telefono Androi
 
 ![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image48.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image49.png)
+![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image49-sidebar-cropped.png)
 
 ## 5.2 Empaquetar la Version de Lanzamiento
 

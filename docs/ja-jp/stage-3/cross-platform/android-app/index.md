@@ -498,7 +498,7 @@ WeChatやQQ経由で任意のAndroidスマホに直接送信でき、受信者�
 
 ![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image48.png)
 
-![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image49.png)
+![](../../../../zh-cn/stage-3/cross-platform/android-app/images/image49-sidebar-cropped.png)
 
 ## 5.2 リリース版のパッケージング
 
