@@ -407,7 +407,7 @@ Unser Team hat auch weitere Kurse erstellt! Schau dir an:
 
 ### Besonderer Dank
 
-- Danke an OpenAI fuer die Unterstuetzung bei der Entwicklung dieses Projekts
+- Danke an OpenAI fuer die Bereitstellung von Rechenressourcen zur Entwicklung dieses Projekts
 - Danke an [@Sm1les](https://github.com/Sm1les) fuer die Hilfe und Unterstuetzung bei diesem Projekt
 - Danke an alle Mitwirkenden und alle, die das Projekt mit Feedback und Sternen unterstuetzt haben ❤️
 

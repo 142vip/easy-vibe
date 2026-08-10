@@ -478,7 +478,7 @@ Our team has also created other courses! Check them out:
 
 ### 特别感谢
 
-- 感谢 OpenAI 对本项目开发的支持
+- 感谢 OpenAI 为本项目开发提供的算力支持
 - 感谢 [@Sm1les](https://github.com/Sm1les) 对本项目的帮助与支持
 - 感谢所有为本项目做出贡献的开发者们和支持点赞的朋友们 ❤️
 

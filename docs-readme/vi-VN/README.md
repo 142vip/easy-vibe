@@ -407,7 +407,7 @@ Nhom chung toi cung da tao cac khoa hoc khac! Kham pha ngay:
 
 ### Cam on dac biet
 
-- Cam on OpenAI da ho tro qua trinh phat trien du an nay
+- Cam on OpenAI da cung cap tai nguyen tinh toan de ho tro phat trien du an nay
 - Cam on [@Sm1les](https://github.com/Sm1les) da giup do va ho tro du an nay
 - Cam on moi nguoi dong gop va tat ca nhung nguoi da ho tro du an bang phan hoi va star ❤️
 
