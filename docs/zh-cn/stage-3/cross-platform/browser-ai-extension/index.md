@@ -8,6 +8,42 @@
 
 ![Enterprise Knowledge Copilot 在侧边栏整理客户支持文档](images/extension-enterprise-preview.png)
 
+## 真正的浏览器助手长什么样
+
+浏览器助手不是把一个聊天框缩小以后塞到右边。它真正有用的地方，是离用户正在处理的网页足够近：读者不需要复制网址、切换窗口，再向另一个工具解释“我刚才在看什么”。
+
+不同产品选择的入口不一样。有的理解当前页面，有的直接出现在输入框旁边，还有的连接公司的文档、聊天记录和人员目录。先看三个已经在真实工作中使用的产品，再回来看这一篇为什么选择侧边栏。
+
+### Glean：一边看网页，一边查公司的资料
+
+Glean 做的是企业知识助手。员工打开制度、项目文档或客户页面时，可以在浏览器侧栏继续提问。回答不只参考当前网页，也会查公司已经接入的文档、对话和人员信息。
+
+![Glean 在浏览器侧栏结合当前页面和企业知识回答问题](images/browser-real-glean.webp)
+
+它的[官方产品页](https://www.glean.com/platform/browser-extension)展示了四个主要入口：发现相关内容、对当前页面提问、搜索公司资料和生成内容。搜索结果仍然遵守原系统的权限，不是装上扩展以后就能看到全公司的文件。
+
+这和本篇要做的知识助手最接近。真正落到企业里时，侧边栏只是入口；后面还要有员工身份、文档权限、搜索服务和日志审计。扩展不能自己决定用户有权看到什么。
+
+### Grammarly：建议直接出现在正在写的句子旁边
+
+Grammarly 没有要求用户每写一句话都打开聊天窗口。它先在 Gmail、在线文档等输入区域旁边工作：发现问题时画出下划线，用户停在文字上方时再显示修改建议。
+
+![Grammarly 在网页输入框里给出局部修改建议](images/browser-real-grammarly.png)
+
+从这张 [Grammarly 官方帮助页](https://support.grammarly.com/hc/en-us/articles/115000091592-Grammarly-s-browser-extension-user-guide)的真实截图可以看出，建议卡片很小，用户可以接受，也可以忽略。需要生成或重写时，再主动打开生成式 AI。
+
+这个设计很值得借鉴：简单问题就在原位置解决，复杂任务才进入侧边栏。浏览器扩展不是越显眼越好，平时安静、需要时马上出现，反而更像一个成熟工具。
+
+### Copilot in Edge：浏览器本身也在做“理解当前页面”
+
+Microsoft 把 Copilot 放进了 Edge 侧边栏。用户可以让它总结网页、视频或 PDF，也可以根据打开的标签页比较信息。它和普通聊天网页的区别，就是浏览器可以在用户允许时提供当前页面标题、页面内容和标签页上下文。
+
+Microsoft 的[使用说明](https://support.microsoft.com/en-us/microsoft-copilot/getting-started-with-copilot-in-microsoft-edge)还专门提供了关闭页面上下文的设置；企业账号则有对应的[数据保护和管理说明](https://learn.microsoft.com/en-us/copilot/edge)。这说明“能读当前页面”只是第一步，用户是否知情、管理员能否管理、哪些页面不能读，同样属于产品功能。
+
+把这三个产品放在一起看，会发现浏览器助手通常都在做四件事：取得当前上下文、在最顺手的位置显示结果、连接原来已经存在的服务、把权限交还给用户和企业系统。
+
+本篇先做其中最小的一圈：用户点击以后读取公开页面，在侧边栏生成本地摘要。这个闭环跑通以后，再决定是否接浏览器内置 AI 或企业后端。
+
 ## 1. 先看懂扩展的结构
 
 这个扩展只有三个核心部分：
@@ -168,6 +204,10 @@ Chrome 官方目前要求由用户操作触发模型创建。首次下载需要�
 
 ## 参考资料
 
+- [Glean Browser Extension](https://www.glean.com/platform/browser-extension)
+- [Grammarly 浏览器扩展使用说明](https://support.grammarly.com/hc/en-us/articles/115000091592-Grammarly-s-browser-extension-user-guide)
+- [Microsoft：在 Edge 中使用 Copilot](https://support.microsoft.com/en-us/microsoft-copilot/getting-started-with-copilot-in-microsoft-edge)
+- [Microsoft 365 Copilot Chat in Edge](https://learn.microsoft.com/en-us/copilot/edge)
 - [Chrome Extensions 文档](https://developer.chrome.com/docs/extensions/)
 - [Manifest V3 Service Worker](https://developer.chrome.com/docs/extensions/develop/concepts/service-workers)
 - [Chrome Summarizer API](https://developer.chrome.com/docs/ai/summarizer-api)

@@ -8,17 +8,93 @@
 
 ## 企业里的 VS Code 插件都在做什么
 
-先看几个真实产品。
+VS Code 插件并不只是代码补全。成熟产品经常把原本散落在网页、命令行和管理后台里的工作，搬到开发者正在编辑的文件旁边。
 
-[GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) 可以在 VS Code 里查看 Pull Request、评论代码、切换分支和处理 Issue；[Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) 会按照项目配置启动统一的容器开发环境；[ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) 则把规则检查结果直接显示在代码和 Problems 面板里。
+下面这些都是真实发布并持续使用的产品。它们解决的问题不同，但都没有要求开发者离开 VS Code 重新学习一套操作方式。
+
+### GitHub Pull Requests：把代码评审放回代码旁边
+
+团队在 GitHub 上协作时，开发者通常要打开网页查看 Pull Request，再回到编辑器切换分支和修改代码。GitHub 的 [Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) 插件把这段流程接进了 VS Code。
+
+安装以后，侧边栏会列出“等待我评审”“分配给我”和“我创建的”Pull Request。开发者可以检出对方的分支、查看修改文件、在差异代码旁评论、指定评审人，最后批准或合并。Issue 也能直接创建分支并进入开发状态。它同时支持 GitHub.com 和 GitHub Enterprise。
+
+下面是 VS Code 官方文档展示的真实评审页面。左边是待评审 PR 和改动文件，右边是 PR 描述、评审人、负责人和讨论：
+
+![GitHub Pull Requests 插件在 VS Code 中展示真实评审信息](images/vscode-real-github-pr.png)
+
+图片与功能说明来源：[VS Code 官方 GitHub 协作指南](https://code.visualstudio.com/docs/sourcecontrol/github)。
+
+这个产品没有在编辑器里重做一个完整 GitHub。它只把“当前 PR、当前分支、当前文件和当前行”连接起来，让评审意见紧挨着代码出现。
+
+### Dev Containers：把开发环境也放进项目
+
+另一个常见问题是环境不一致：老同事的项目能启动，新同事却要花一天安装语言、数据库客户端和系统依赖；Windows、macOS 和 Linux 上的版本还可能不同。
+
+[Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) 允许团队在项目里保存一份开发容器配置。开发者选择“在容器中重新打开”以后，VS Code 会连接到包含指定运行时和工具的容器，终端、代码补全、跳转和调试仍然留在熟悉的编辑器里。
 
 下面是微软 Dev Containers 插件的真实命令面板。它没有重新设计一套窗口，而是把“在容器中重新打开项目”做成普通 VS Code 命令：
 
 ![Dev Containers 插件在 VS Code 命令面板中的真实入口](images/vscode-real-dev-containers.png)
 
-图片来源：[Visual Studio Code Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)。
+图片与功能说明来源：[VS Code 官方 Dev Containers 文档](https://code.visualstudio.com/docs/devcontainers/containers)。
 
-公司内部常见的插件也很具体：创建符合规范的新项目、检查依赖版本、查询当前服务负责人、打开内部文档、提交工单，或者在发布前确认代码是否满足安全规则。它们不一定需要 AI，先把重复流程做得稳定，通常就已经很有价值。
+对企业来说，这类插件解决的不是“少敲一条 Docker 命令”，而是让项目自己携带开发环境说明。新人拿到仓库后，不必依靠一份很快过期的安装文档。
+
+### Salesforce Extension Pack：把企业平台变成开发工作台
+
+Salesforce 的例子更完整。[Salesforce Extension Pack](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode) 不是单一语法插件，而是一组面向 Salesforce 平台开发的工具。
+
+开发者可以连接开发组织、Sandbox（沙盒）或 Scratch Org（临时开发环境），在本地编写 Apex、Lightning Web Components、Aura 和 Visualforce，使用 Salesforce 的 SOQL 查询数据，运行 Apex 测试，再把代码取回或部署到 Salesforce 环境。也就是说，VS Code 在这里已经变成了 Salesforce 平台的桌面开发客户端。
+
+下面是 Salesforce 官方文档提供的真实运行录屏。左侧是 Salesforce 项目和 Org Browser，底部可以看到 Salesforce CLI 正在读取组织中的对象定义：
+
+![Salesforce Extension Pack 在 VS Code 中连接组织并读取对象](images/vscode-real-salesforce.gif)
+
+图片与功能说明来源：[Salesforce Extensions for Visual Studio Code](https://developer.salesforce.com/docs/platform/sfvscode-extensions/guide/vscode-overview.html)。
+
+这个案例很适合企业内部参考：插件不需要把后台系统复制一遍，只要把身份认证、对象浏览、开发命令、测试和部署入口接到编辑器里，就能形成一套完整工作流。
+
+### Red Hat Ansible：写自动化脚本时就发现问题
+
+Ansible Playbook 是描述服务器自动化任务的配置文件，会用来安装软件、修改配置和发布服务。一个缩进、模块名或参数写错，影响的可能不只是当前文件。
+
+Red Hat 的 [Ansible VS Code Extension](https://marketplace.visualstudio.com/items?itemName=redhat.ansible) 提供语法高亮、自动补全、实时校验、`ansible-lint` 和模块文档提示，也支持多根工作区和容器化执行环境。开发者不用先切到浏览器搜索模块参数，鼠标停在模块上就能看到它的作用和注意事项。
+
+![Ansible 插件在 Playbook 代码旁显示官方模块说明](images/vscode-real-ansible.png)
+
+图片来源：[Ansible VS Code Extension 官方仓库](https://github.com/ansible/vscode-ansible)；功能说明可参考 [Red Hat Ansible VS Code 指南](https://docs.ansible.com/projects/vscode-ansible/)。
+
+它说明代码检查插件不能只报“第 12 行错了”。越靠近业务和基础设施，越要把规则来源、修改建议和相关文档一起交给用户。
+
+### Container Tools：从 Dockerfile 一直看到镜像仓库
+
+微软的 [Container Tools](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-containers) 覆盖的是另一段流程：编写 Dockerfile 和 Compose、生成容器配置、启动调试、查看容器与日志，以及管理镜像、网络、数据卷和镜像仓库。
+
+下面的真实界面来自 VS Code 官方文档。开发者在 Container Explorer 中找到仓库镜像以后，可以从右键菜单拉取、复制摘要、查看清单，或者部署到 Azure 服务：
+
+![Container Tools 在 VS Code 中管理镜像仓库](images/vscode-real-container-tools.png)
+
+图片与功能说明来源：[VS Code Container Tools 文档](https://code.visualstudio.com/docs/containers/overview)。
+
+它没有替代 Docker 或云平台，而是把当前项目最常用的容器动作整理成命令和树形视图。复杂能力仍在后端工具中，插件负责提供上下文和操作入口。
+
+### ESLint：功能很窄，也可以成为团队基础设施
+
+不是每个插件都要连接一整套平台。[ESLint for VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) 会读取当前项目安装的 ESLint 和规则配置，把错误直接标在代码里，并提供“修复所有可自动修复问题”等命令。
+
+它的价值来自一致性：规则随项目提交，编辑器按照同一份配置提醒，持续集成仍然可以在提交后再次检查。插件负责尽早反馈，CI 负责最后把关。
+
+### 这些真实产品有什么共同点
+
+看完这些产品，再回头想企业自己的插件，会发现它们大多遵循几条很朴素的做法：
+
+- 使用命令面板、侧边栏、Problems、测试视图和状态栏等原生位置；
+- 连接已有的 GitHub、Salesforce、Ansible、Docker 或内部平台，而不是重做后端；
+- 根据当前仓库、文件、选中代码和登录身份提供操作；
+- 成功时少打扰，失败时给出位置、原因和下一步；
+- 明确说明会读取哪些文件、连接哪个系统、使用什么权限。
+
+所以公司内部常见的插件也很具体：创建符合规范的新项目、检查依赖版本、查询当前服务负责人、打开内部文档、提交工单，或者在发布前确认代码是否满足安全规则。它们不一定需要 AI，先把重复流程做得稳定，通常就已经很有价值。
 
 ## 这次做什么
 
@@ -176,7 +252,11 @@ VS Code 的原生菜单可以出现在视图标题、列表项和右键菜单中
 - [Extension Anatomy](https://code.visualstudio.com/api/get-started/extension-anatomy)
 - [Tree View API](https://code.visualstudio.com/api/extension-guides/tree-view)
 - [VS Code UX Guidelines：Views](https://code.visualstudio.com/api/ux-guidelines/views)
+- [VS Code 官方 GitHub 协作指南](https://code.visualstudio.com/docs/sourcecontrol/github)
 - [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
-- [Visual Studio Code Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers)
+- [Salesforce Extensions for Visual Studio Code](https://developer.salesforce.com/docs/platform/sfvscode-extensions/guide/vscode-overview.html)
+- [Red Hat Ansible VS Code Extension](https://docs.ansible.com/projects/vscode-ansible/)
+- [VS Code Container Tools](https://code.visualstudio.com/docs/containers/overview)
 - [ESLint for VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [发布 VS Code 插件](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)

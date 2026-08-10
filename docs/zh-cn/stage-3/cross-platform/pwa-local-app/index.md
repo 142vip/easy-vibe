@@ -6,6 +6,46 @@ PWA 适合轻量工具、门店表单、活动应用、内部门户和离线采�
 
 ![番茄农场 PWA 成品界面](images/image0.png)
 
+## 别人把 PWA 做成了什么
+
+PWA 这个名字听起来像一种新的 App，其实它首先还是网页。用户可以先点开链接，用过以后再决定要不要安装到桌面；开发团队仍然用 HTML、CSS 和 JavaScript 维护同一套前端。
+
+这套做法最适合这样的产品：用户想马上打开，网络偶尔会断，又没有必要为了一个轻量功能先安装几十兆的客户端。
+
+### Starbucks：先点单，不先装 App
+
+Starbucks 把点单、菜单、会员入口和门店选择放进了 PWA。用户在手机浏览器里就能打开，也可以把它加到主屏幕。下面这张真实界面里，地址栏显示的是网页地址，底部已经出现“添加到主屏幕”的入口。
+
+![Starbucks PWA 的主屏幕安装入口](images/pwa-real-starbucks.jpg)
+
+它适合咖啡点单，是因为用户的目标很短：看菜单、选门店、下单，然后离开。菜单和购物车可以尽量在弱网时继续使用，真正提交订单和付款时再明确要求联网。
+
+Microsoft 的 [PWA 企业案例汇总](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/#success-stories)也把 Starbucks 列为代表案例。界面图来自 [MobiLoud 的 PWA 案例整理](https://www.mobiloud.com/fr/blog/progressive-web-app-examples)。
+
+这种思路也常见于门店会员中心、预约排队、活动签到和临时服务页：先让用户完成眼前的事，再考虑是否长期安装。
+
+### Pinterest：网页也能成为桌面应用
+
+Pinterest 的情况不一样。它本来就有成熟的网站，希望 Windows 用户能从开始菜单和任务栏直接打开，同时继续复用网页团队已经维护的功能。
+
+![Pinterest PWA 在桌面和手机上的界面](images/pwa-real-pinterest.jpg)
+
+Pinterest 工程团队在[发布 Windows 应用时](https://medium.com/pinterest-engineering/building-the-pinterest-app-for-windows-10-5e29f2146f7d)明确说明，这个应用建立在 PWA 之上，并使用 Manifest、Service Worker、缓存和通知能力。这样既保留了熟悉的网页体验，也能进入 Microsoft Store，像普通桌面应用一样启动。界面图来自 [Codica 的 PWA 产品展示](https://www.codica.com/blog/codica-named-top-pwa-development-firm/)。
+
+这类方案适合内容平台、知识库、报表中心和内部工作台：主体本来就是网页，桌面端需要的是独立窗口、固定入口和通知，不是重新做一套完全不同的客户端。
+
+### PWABuilder：把现有网站检查并打包
+
+微软还做了一个真实工具 [PWABuilder](https://www.pwabuilder.com/)。输入网站地址后，它会检查 Manifest、Service Worker、安全配置和应用信息，告诉你还缺什么。
+
+![PWABuilder 对真实网站给出的检查报告](images/pwa-real-pwabuilder-report.png)
+
+报告通过以后，还可以继续生成不同应用商店需要的包。它不是把任何网站一键变成优秀 App，而是把“检查配置、补资料、生成商店包”这段重复工作做成了工具。微软官方的 [PWA 打包说明](https://learn.microsoft.com/en-us/windows/apps/publish/publish-your-app/pwa/turn-your-website-pwa)给出了完整流程。
+
+企业门户也在这样使用 PWA。比如 Microsoft Power Pages 可以把客户门户或内部站点安装到手机和电脑，并选择一部分页面离线只读。它的[官方说明](https://learn.microsoft.com/en-us/power-pages/configure/progressive-web-apps)同时提醒：离线不是把整套后端搬到手机里，表单提交和实时查询仍然要看网络与数据规则。
+
+所以，决定要不要做 PWA 时，不要先问“它像不像原生 App”，先问三个问题：用户是不是经常从链接进入？断网时有没有一小部分功能仍然有价值？团队是否希望网页、手机和桌面共用主要代码？如果三个答案大多是“是”，PWA 就很合适。
+
 ## 1. 先看懂 PWA 的结构
 
 普通网页加上 Web App Manifest 和 Service Worker 后，才具备安装入口、图标和离线缓存能力。
@@ -175,6 +215,10 @@ Service Worker 在生产环境需要安全上下文，常见托管平台会提�
 
 ## 参考资料
 
+- [Microsoft Edge：PWA 概览与企业案例](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/)
+- [Pinterest Engineering：Windows 应用如何建立在 PWA 上](https://medium.com/pinterest-engineering/building-the-pinterest-app-for-windows-10-5e29f2146f7d)
+- [Microsoft Power Pages：把企业门户做成 PWA](https://learn.microsoft.com/en-us/power-pages/configure/progressive-web-apps)
+- [Microsoft：使用 PWABuilder 检查和打包 PWA](https://learn.microsoft.com/en-us/windows/apps/publish/publish-your-app/pwa/turn-your-website-pwa)
 - [Web App Manifest](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Manifest)
 - [Service Worker API](https://developer.mozilla.org/docs/Web/API/Service_Worker_API)
 - [让 PWA 可以安装](https://developer.mozilla.org/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
