@@ -149,8 +149,4 @@ const t = inject('t')
   object-position: center;
 }
 
-.prod-visual img.prod-image--personal-brand {
-  transform: scale(1.18) translateY(-10px);
-  transform-origin: center top;
-}
 </style>

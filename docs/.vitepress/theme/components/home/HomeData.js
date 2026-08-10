@@ -1,13 +1,13 @@
-import stage2LovartCover from '../../../../zh-cn/stage-2/frontend/lovart-assets/images/image1.png'
-import stage2FigmaCover from '../../../../zh-cn/stage-2/frontend/figma-mastergo/images/image8.png'
-import stage2DesignToCodeCover from '../../../../zh-cn/stage-2/frontend/design-to-code/images/image42.png'
-import stage2SupabaseCover from '../../../../zh-cn/stage-2/backend/database-supabase/images/image1.png'
-import stage2ZeaburCover from '../../../../zh-cn/stage-2/backend/zeabur-deployment/images/image1.png'
-import stage2DifyCover from '../../../../zh-cn/stage-2/ai-capabilities/dify-knowledge-base/images/image1.png'
-import stage3ElectronCover from '../../../../zh-cn/stage-3/cross-platform/electron-voice-to-text/images/image3.png'
-import stage3AgentTeamsCover from '../../../../zh-cn/stage-3/core-skills/agent-teams/images/home-cover.svg'
-import stage3LongRunningCover from '../../../../zh-cn/stage-3/core-skills/long-running-tasks/images/home-cover.svg'
-import stage3PersonalBrandCover from '../../../../zh-cn/stage-3/personal-brand/personal-website-blog/images/image1.png'
+import stage2LovartCover from '../../assets/home/cards/stage2-asset-generation.webp'
+import stage2FigmaCover from '../../assets/home/cards/stage2-interface-design.webp'
+import stage2DesignToCodeCover from '../../assets/home/cards/stage2-design-to-code.webp'
+import stage2SupabaseCover from '../../assets/home/cards/stage2-database.webp'
+import stage2ZeaburCover from '../../assets/home/cards/stage2-deployment.webp'
+import stage2DifyCover from '../../assets/home/cards/stage2-knowledge-base.webp'
+import stage3ElectronCover from '../../assets/home/cards/stage3-desktop-voice.webp'
+import stage3AgentTeamsCover from '../../assets/home/cards/stage3-agent-team.webp'
+import stage3LongRunningCover from '../../assets/home/cards/stage3-long-running.webp'
+import stage3PersonalBrandCover from '../../assets/home/cards/stage3-personal-brand.webp'
 
 export const locales = [
   { code: 'zh-cn', text: '简体中文' },
@@ -53,37 +53,37 @@ export const stage2Cards = [
   {
     imageColor: '#E0C3FC',
     image: stage2LovartCover,
-    imageAlt: 'Lovart 素材生产 Agent 界面截图',
+    imageAlt: 'AI 素材生产工作流概念插画',
     link: '/zh-cn/stage-2/frontend/lovart-assets/'
   },
   {
     imageColor: '#D8C4F8',
     image: stage2FigmaCover,
-    imageAlt: 'Figma 与 MasterGo 设计工具截图',
+    imageAlt: '界面设计与布局概念插画',
     link: '/zh-cn/stage-2/frontend/figma-mastergo/'
   },
   {
     imageColor: '#C7DDFB',
     image: stage2DesignToCodeCover,
-    imageAlt: '设计稿转代码示意截图',
+    imageAlt: '设计稿转代码概念插画',
     link: '/zh-cn/stage-2/frontend/design-to-code/'
   },
   {
     imageColor: '#8EC5FC',
     image: stage2SupabaseCover,
-    imageAlt: 'Supabase 数据库控制台截图',
+    imageAlt: '数据库与权限概念插画',
     link: '/zh-cn/stage-2/backend/database-supabase/'
   },
   {
     imageColor: '#96E6A1',
     image: stage2ZeaburCover,
-    imageAlt: 'Zeabur 部署流程截图',
+    imageAlt: '应用部署上线概念插画',
     link: '/zh-cn/stage-2/backend/zeabur-deployment/'
   },
   {
     imageColor: '#A7F3D0',
     image: stage2DifyCover,
-    imageAlt: 'Dify 知识库工作台截图',
+    imageAlt: 'AI 知识库概念插画',
     link: '/zh-cn/stage-2/ai-capabilities/dify-knowledge-base/'
   }
 ]
@@ -95,7 +95,7 @@ export const stage3Cards = [
     tag: 'Stage 3',
     visualType: 'phone',
     image: stage3ElectronCover,
-    imageAlt: 'Electron 语音转文字桌面应用预览图',
+    imageAlt: '跨平台语音转文字应用概念插画',
     link: '/zh-cn/stage-3/cross-platform/electron-voice-to-text/'
   },
   {
@@ -104,7 +104,7 @@ export const stage3Cards = [
     tag: 'Advanced',
     visualType: 'ai',
     image: stage3AgentTeamsCover,
-    imageAlt: 'Claude Agent Teams 协作流程封面图',
+    imageAlt: 'AI 智能体团队协作概念插画',
     link: '/zh-cn/stage-3/core-skills/agent-teams/'
   },
   {
@@ -113,7 +113,7 @@ export const stage3Cards = [
     tag: 'Architecture',
     visualType: 'arch',
     image: stage3LongRunningCover,
-    imageAlt: 'Claude Code 长时间执行与循环任务封面图',
+    imageAlt: '长时间循环任务概念插画',
     link: '/zh-cn/stage-3/core-skills/long-running-tasks/'
   },
   {
@@ -122,8 +122,7 @@ export const stage3Cards = [
     tag: 'Brand',
     visualType: 'brand',
     image: stage3PersonalBrandCover,
-    imageAlt: '个人网站与学术博客示例截图',
-    imageClass: 'prod-image--personal-brand',
+    imageAlt: '个人网站与作品集概念插画',
     link: '/zh-cn/stage-3/personal-brand/personal-website-blog/'
   }
 ]
