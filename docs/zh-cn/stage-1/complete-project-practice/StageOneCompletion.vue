@@ -2,6 +2,7 @@
 import { onBeforeUnmount, ref } from 'vue'
 
 const isCelebrating = ref(false)
+const hasCelebrated = ref(false)
 const celebrationRound = ref(0)
 const confettiColors = ['#ffd166', '#7ce8c3', '#8eb8ff', '#ff8fab', '#ffffff', '#c7a6ff']
 const confetti = Array.from({ length: 88 }, (_, index) => ({
@@ -46,9 +47,10 @@ function celebrate() {
   window.clearTimeout(celebrationTimer)
   celebrationRound.value += 1
   isCelebrating.value = true
+  hasCelebrated.value = true
   celebrationTimer = window.setTimeout(() => {
     isCelebrating.value = false
-  }, 3600)
+  }, 4200)
 }
 
 onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
@@ -65,6 +67,8 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
       <div class="celebration-flash" />
       <div class="overlay-glow" />
       <div class="celebration-rays" />
+      <i class="ceremony-spotlight spotlight-left" />
+      <i class="ceremony-spotlight spotlight-right" />
 
       <div
         v-for="burst in fireworkBursts"
@@ -130,10 +134,18 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
       </div>
 
       <div class="celebration-toast">
-        <b>第一阶段 · 通关</b>
-        <span>🥂</span>
-        <strong>干杯！第一件作品完成</strong>
-        <small>从想法出发，你真的把它交给了用户</small>
+        <b>EASY VIBE · STAGE 1</b>
+        <div class="ceremony-emblem" aria-hidden="true">
+          <span>🏆</span>
+        </div>
+        <div class="ceremony-divider" aria-hidden="true">
+          <i />
+          <span>✦</span>
+          <i />
+        </div>
+        <strong>第一阶段，正式完成</strong>
+        <p>你完成了从一个想法到第一件真实作品的旅程</p>
+        <small><span aria-hidden="true">🥂</span> 为你的第一件作品干杯</small>
       </div>
     </div>
   </Teleport>
@@ -145,20 +157,20 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
       type="button"
       @click="celebrate"
     >
-      <span class="launch-icon" aria-hidden="true">🥂</span>
+      <span class="launch-icon" aria-hidden="true">🎉</span>
       <span class="launch-copy">
-        <small>STAGE 1 完成礼</small>
-        <strong>完成了，碰个杯！</strong>
-        <em>点击放一场全屏礼花</em>
+        <small>STAGE 1 · COMPLETION CEREMONY</small>
+        <strong>{{ hasCelebrated ? '再庆祝一次！' : '第一阶段，正式完成' }}</strong>
+        <em>{{ hasCelebrated ? '礼花可以再放一次' : '点击开启你的完成仪式' }}</em>
       </span>
       <span class="launch-action">
-        {{ isCelebrating ? '正在庆祝' : '开始庆祝' }}
+        {{ isCelebrating ? '仪式进行中' : hasCelebrated ? '再来一次' : '开启仪式' }}
         <i aria-hidden="true">→</i>
       </span>
     </button>
 
     <p class="celebration-status" aria-live="polite">
-      {{ isCelebrating ? '干杯！你完成了第一阶段。' : '' }}
+      {{ isCelebrating ? '第一阶段完成，庆祝仪式开始。' : '' }}
     </p>
 
     <section class="stage-completion" aria-label="第一阶段已完成">
@@ -487,7 +499,32 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
     rgba(4, 7, 28, 0.44);
   backdrop-filter: blur(1.5px) saturate(1.12);
   pointer-events: none;
-  animation: overlay-fade 3.6s ease both;
+  animation: overlay-fade 4.2s ease both;
+}
+
+.celebration-overlay::before,
+.celebration-overlay::after {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  bottom: 0;
+  width: min(17vw, 220px);
+  content: '';
+  opacity: 0;
+  animation: curtain-open 1.1s cubic-bezier(0.2, 0.78, 0.25, 1) both;
+  pointer-events: none;
+}
+
+.celebration-overlay::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(74, 22, 64, 0.82), rgba(120, 46, 83, 0.34), transparent);
+  transform-origin: left center;
+}
+
+.celebration-overlay::after {
+  right: 0;
+  background: linear-gradient(-90deg, rgba(74, 22, 64, 0.82), rgba(120, 46, 83, 0.34), transparent);
+  transform-origin: right center;
 }
 
 .celebration-flash {
@@ -527,6 +564,29 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   transform: translate(-50%, -50%);
   animation: celebration-rays 3.4s ease-out 0.12s both;
   mask-image: radial-gradient(circle, transparent 0 11%, #000 26%, transparent 74%);
+}
+
+.ceremony-spotlight {
+  position: absolute;
+  z-index: 1;
+  top: -16vh;
+  width: 34vw;
+  height: 108vh;
+  background: linear-gradient(180deg, rgba(255, 238, 174, 0.26), transparent 78%);
+  clip-path: polygon(45% 0, 55% 0, 100% 100%, 0 100%);
+  opacity: 0;
+  transform-origin: top center;
+  animation: spotlight-enter 3.7s ease-out 0.18s both;
+}
+
+.spotlight-left {
+  left: 4vw;
+  transform: rotate(-17deg);
+}
+
+.spotlight-right {
+  right: 4vw;
+  transform: rotate(17deg);
 }
 
 .firework {
@@ -613,25 +673,35 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   top: 50%;
   left: 50%;
   display: flex;
-  width: min(88vw, 430px);
+  width: min(90vw, 510px);
   flex-direction: column;
   align-items: center;
-  padding: 25px 28px 23px;
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  border-radius: 26px;
+  padding: 26px 34px 27px;
+  border: 1px solid rgba(255, 218, 119, 0.55);
+  border-radius: 28px;
   color: #fff;
   background:
-    radial-gradient(circle at 50% 0%, rgba(122, 84, 196, 0.42), transparent 55%),
-    rgba(20, 24, 61, 0.9);
+    radial-gradient(circle at 50% 0%, rgba(152, 105, 224, 0.44), transparent 53%),
+    linear-gradient(155deg, rgba(40, 30, 87, 0.96), rgba(16, 31, 67, 0.96));
   box-shadow:
-    0 0 0 1px rgba(255, 211, 102, 0.12),
-    0 0 80px rgba(255, 199, 83, 0.22),
+    0 0 0 5px rgba(255, 218, 119, 0.07),
+    0 0 0 6px rgba(255, 218, 119, 0.18),
+    0 0 100px rgba(255, 199, 83, 0.3),
     0 32px 100px rgba(4, 6, 24, 0.62),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   text-align: center;
   backdrop-filter: blur(16px);
   transform: translate(-50%, -50%);
-  animation: toast-pop 3.45s cubic-bezier(0.2, 0.8, 0.25, 1) both;
+  animation: toast-pop 4.05s cubic-bezier(0.2, 0.8, 0.25, 1) both;
+}
+
+.celebration-toast::before {
+  position: absolute;
+  inset: 9px;
+  border: 1px solid rgba(255, 231, 162, 0.16);
+  border-radius: 20px;
+  content: '';
+  pointer-events: none;
 }
 
 .celebration-toast b {
@@ -640,25 +710,115 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   border-radius: 999px;
   color: #ffe9a9;
   background: rgba(255, 214, 104, 0.1);
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  font-size: 10px;
+  letter-spacing: 0.16em;
 }
 
-.celebration-toast span {
-  margin-top: 13px;
+.ceremony-emblem {
+  position: relative;
+  display: grid;
+  width: 104px;
+  height: 104px;
+  margin-top: 16px;
+  place-items: center;
+  border: 1px solid rgba(255, 221, 128, 0.35);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(255, 223, 135, 0.2), transparent 64%),
+    rgba(255, 255, 255, 0.06);
+  box-shadow:
+    0 0 0 7px rgba(255, 217, 116, 0.05),
+    0 14px 36px rgba(4, 8, 30, 0.34);
+  animation: emblem-arrive 1s cubic-bezier(0.18, 0.86, 0.3, 1.18) 0.15s both;
+}
+
+.ceremony-emblem::before,
+.ceremony-emblem::after {
+  position: absolute;
+  top: 14px;
+  width: 34px;
+  height: 70px;
+  border: 3px solid rgba(255, 218, 114, 0.78);
+  content: '';
+}
+
+.ceremony-emblem::before {
+  left: -20px;
+  border-top-color: transparent;
+  border-right: 0;
+  border-radius: 50% 0 0 50%;
+  transform: rotate(-13deg);
+}
+
+.ceremony-emblem::after {
+  right: -20px;
+  border-top-color: transparent;
+  border-left: 0;
+  border-radius: 0 50% 50% 0;
+  transform: rotate(13deg);
+}
+
+.ceremony-emblem > span {
   font-size: 48px;
   line-height: 1;
+  filter: drop-shadow(0 8px 12px rgba(7, 10, 32, 0.35));
+}
+
+.ceremony-divider {
+  display: flex;
+  width: min(78%, 300px);
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  color: #ffe39a;
+}
+
+.ceremony-divider i {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, rgba(255, 224, 143, 0.72));
+}
+
+.ceremony-divider i:last-child {
+  background: linear-gradient(-90deg, transparent, rgba(255, 224, 143, 0.72));
+}
+
+.ceremony-divider span {
+  font-size: 13px;
 }
 
 .celebration-toast strong {
-  margin-top: 13px;
-  font-size: 24px;
+  margin-top: 14px;
+  color: #fff;
+  font-size: 28px;
+  letter-spacing: 0.03em;
+  animation: ceremony-copy-enter 0.75s ease-out 0.55s both;
+}
+
+.celebration-toast p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+  line-height: 1.65;
+  animation: ceremony-copy-enter 0.75s ease-out 0.76s both;
 }
 
 .celebration-toast small {
-  margin-top: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 18px;
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 221, 130, 0.24);
+  border-radius: 999px;
   color: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.06);
   font-size: 14px;
+  animation: ceremony-copy-enter 0.75s ease-out 0.94s both;
+}
+
+.celebration-toast small span {
+  font-size: 18px;
 }
 
 @keyframes launch-glow {
@@ -675,6 +835,65 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
       0 22px 46px rgba(209, 117, 49, 0.32),
       0 0 0 7px rgba(255, 184, 74, 0.08),
       inset 0 1px 0 rgba(255, 255, 255, 0.72);
+  }
+}
+
+@keyframes curtain-open {
+  0% {
+    opacity: 0.9;
+    transform: scaleX(1.65);
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes spotlight-enter {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+  }
+
+  22%,
+  82% {
+    opacity: 0.78;
+    filter: blur(3px);
+  }
+
+  100% {
+    opacity: 0;
+    filter: blur(8px);
+  }
+}
+
+@keyframes emblem-arrive {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.45) rotate(-8deg);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.06) rotate(2deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes ceremony-copy-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -887,12 +1106,31 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   }
 
   .celebration-toast {
-    padding: 22px 18px 20px;
+    padding: 22px 18px 23px;
     border-radius: 22px;
   }
 
   .celebration-toast strong {
-    font-size: 21px;
+    font-size: 23px;
+  }
+
+  .ceremony-emblem {
+    width: 88px;
+    height: 88px;
+  }
+
+  .ceremony-emblem > span {
+    font-size: 41px;
+  }
+
+  .ceremony-emblem::before,
+  .ceremony-emblem::after {
+    top: 11px;
+    height: 61px;
+  }
+
+  .ceremony-spotlight {
+    width: 48vw;
   }
 
   .hero-firework i {
@@ -905,14 +1143,21 @@ onBeforeUnmount(() => window.clearTimeout(celebrationTimer))
   .completion-next,
   .launch-action i,
   .celebration-overlay,
+  .celebration-overlay::before,
+  .celebration-overlay::after,
   .celebration-flash,
   .overlay-glow,
   .celebration-rays,
+  .ceremony-spotlight,
   .firework::after,
   .firework i,
   .fullscreen-confetti i,
   .starfield i,
-  .celebration-toast {
+  .celebration-toast,
+  .ceremony-emblem,
+  .celebration-toast strong,
+  .celebration-toast p,
+  .celebration-toast small {
     animation: none !important;
     transition: none !important;
   }
