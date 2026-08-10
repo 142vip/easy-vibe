@@ -139,9 +139,7 @@ API Key 不要放在前端。等待和失败时，也请在页面上给出提示
 
 ### 3.1 让 AI 帮你读长文档
 
-许多文档站提供 `llms.txt` 或 `llms-full.txt`。例如 [SiliconFlow 的文档使用说明](https://docs.siliconflow.cn/cn/userguide/use-docs-with-cursor)就介绍了怎样把文档索引交给编程工具。
-
-如果文档没有这类入口，也可以把正在阅读的页面交给 AI IDE：
+官方文档太长时，不用从头到尾读完。把正在看的文档链接交给 AI IDE，让它先帮你找到第一次调用需要的内容：
 
 ```text
 帮我看一下这个 API 文档：<文档链接>
