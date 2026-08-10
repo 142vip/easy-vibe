@@ -1677,45 +1677,45 @@ const productManagerSidebar = [
     ]
   },
   {
-    text: '第三章 产品需求与方向',
+    text: '第三章 从问题到方案',
     collapsed: false,
     items: [
       {
-        text: '创意灵感的来源',
+        text: '1. 寻找真实问题',
         link: '/zh-cn/stage-1/appendix-idea-sources/'
       },
       {
-        text: '如何判断一个好点子',
+        text: '2. 筛选值得做的方向',
         link: '/zh-cn/stage-1/finding-great-idea/'
       },
       {
-        text: '双钻设计模型',
-        link: '/zh-cn/stage-1/appendix-double-diamond/'
-      },
-      {
-        text: 'Jobs to Be Done 需求理论',
+        text: '3. 看懂真实需求（JTBD）',
         link: '/zh-cn/stage-1/appendix-jobs-to-be-done/'
       },
       {
-        text: 'The Mom Test：用户访谈方法',
+        text: '4. 用访谈验证需求',
         link: '/zh-cn/stage-1/appendix-mom-test/'
+      },
+      {
+        text: '5. 收敛方案（双钻模型）',
+        link: '/zh-cn/stage-1/appendix-double-diamond/'
       }
     ]
   },
   {
-    text: '第四章 产品开发与实现',
+    text: '第四章 从方案到作品',
     collapsed: false,
     items: [
       {
-        text: '构建可交互的产品原型',
+        text: '6. 做出可交互原型',
         link: '/zh-cn/stage-1/building-prototype/'
       },
       {
-        text: '为原型接入 AI 能力',
+        text: '7. 接入真实 AI 能力',
         link: '/zh-cn/stage-1/integrating-ai-capabilities/'
       },
       {
-        text: '完整项目实战：从想法到作品',
+        text: '8. 打磨并交付完整作品',
         link: '/zh-cn/stage-1/complete-project-practice/'
       }
     ]

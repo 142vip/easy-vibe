@@ -1,6 +1,6 @@
 ---
 title: '为原型接入 AI 能力'
-description: '在已有 Web 原型中接入真实的 AI 能力：理解 API 的核心概念，学会找到 API Key 和官方示例；实战集成 DeepSeek 文本模型与多种图像生成服务（SiliconFlow Qwen-Image、Recraft、Seedream），并掌握常用的模型选型方法。'
+description: '在已有 Web 原型中接入真实的 AI 能力：理解 API 的核心概念与密钥安全，学会阅读官方示例，并完成文本、图像理解或图像生成能力的接入。'
 ---
 
 <script setup>
@@ -13,17 +13,17 @@ const relatedArticles =
 
 # 为原型接入 AI 能力
 
+<ProductJourney current="ai" />
+
 ## 章节导读
 
 <ChapterIntroduction :duration="duration" :tags="['API', '文本模型', '文生图', '原型集成']" coreOutput="原型接入 1 个文本模型 + 1 个图像模型（可选）" expectedOutput="可调用真实 API 的 AI 原型">
 
-在前面的章节中，我们完成了从<strong>找到好点子</strong>到<strong>做出产品原型</strong>的完整流程。但现在的原型还只是一个"壳子"——点击按钮不会真的生成内容，页面上的数据都是写死的。
+上一章完成的原型已经能够验证页面结构和操作流程，但生成结果仍然来自模拟数据。本章将把其中一个核心按钮接到真实的 AI 服务上。
 
-还记得我们前面强调的吗？<strong>我们要做"有人愿意买单的产品"，而不是"看起来像样的原型"。</strong> 真正的价值来自于产品能<strong>解决真实问题</strong>，而要做到这一点，原型必须能<strong>真正运行</strong>。
+我们先理解 API Key、服务地址、模型名称和请求参数，再以文本生成为例走完一次完整调用。随后，你可以选择继续接入图像理解或图像生成能力。
 
-这一章要让原型<strong>"活"起来</strong>：我们会接入<strong>真实的 AI 能力</strong>，从拿到 API Key 开始，到读懂官方文档、让 AI IDE 帮你把接口集成进代码里。你会以 <strong>DeepSeek 文本模型</strong>为例，学会怎么让应用<strong>真正调用大模型生成内容</strong>；如果感兴趣，还可以<strong>选做图像生成的接入</strong>。
-
-学完这章，你的原型就<strong>不再是静态演示</strong>，而是<strong>能调用真实 AI 能力、能解决真实问题的应用</strong>。
+模型名称和控制台界面会持续更新，因此本章更关注一套可以迁移的方法：阅读官方文档、运行最小示例、接入现有页面，并为失败情况提供清楚反馈。完成后，你会得到一个能够调用真实 AI 服务的原型。
 
 </ChapterIntroduction>
 
@@ -60,16 +60,18 @@ API 是计算机领域的一个重要抽象概念，我们可以简单理解为�
 ::: info ℹ️ 什么是 API
 对于 API 的更深入的解释，请看附录：[API 入门](/zh-cn/appendix/4-server-and-backend/api-intro)。
 
-::: warning 🔐 **API 安全注意事项**
+::: warning 🔐 API Key 安全
 API Key 是你请求 AI 服务的「通行证」，它是一串密码字符串，用于身份验证和计费。
 
 由于 API Key 直接关联账户和费用，务必注意：
 
-- 绝对**不要分享到群聊、截图上传网络**或发布在公开论坛
-- **不要硬编码到代码中**并提交到 Git 仓库（尤其是公开仓库）
-- 如怀疑 Key 已泄露，**立即更换新 Key**
+- 不要把 Key 发到聊天窗口、群聊、截图或公开论坛；
+- 不要把 Key 直接写进前端代码，也不要提交到 Git 仓库；
+- 本地练习时，把 Key 放在 `.env.local` 等不会提交的环境文件中；
+- 准备公开部署时，应由后端或 Serverless 接口代为调用模型，避免浏览器直接暴露 Key；
+- 如果怀疑 Key 已泄露，立即在服务平台撤销并重新创建。
 
-我们会在下面的内容中**直接把 API KEY 粘贴到 AI IDE 中进行操作**，**在正规的项目里不要这么做！！**，由于我们是练习可以这么做。（等你更加熟练后，你能够让 AI 生成一个配置文件，你只需要把 API KEY 放入配置文件即可）
+后面的提示词和代码都使用环境变量占位符。你只需要在自己的本地环境中填写真实 Key。
 :::
 
 <div style="margin: 50px 0;">
@@ -84,7 +86,7 @@ API Key 是你请求 AI 服务的「通行证」，它是一串密码字符串�
 
 # 2. 接入文本生成 API：DeepSeek
 
-虽然 API 涉及这些技术概念，但在原型开发阶段，实际操作可以非常简单高效。核心思路就是：
+虽然 API 涉及一些新概念，但接入过程可以先压缩成三件事：
 
 > **找到官方示例、拿到 API Key、让 AI IDE 帮你接到按钮上。**
 
@@ -96,110 +98,82 @@ API Key 是你请求 AI 服务的「通行证」，它是一串密码字符串�
 如果你想了解更多原理相关的内容，请查看附录：[大语言模型（LLM）入门](/zh-cn/appendix/8-artificial-intelligence/llm-principles)。
 ::: details 了解更多：DeepSeek 是什么？
 
-**杭州深度求索人工智能基础技术研究有限公司**（Hangzhou DeepSeek Artificial Intelligence Basic Technology Research Co., Ltd.），以 DeepSeek 为商号，是一家**开发大语言模型（LLMs）的中国人工智能（AI）公司**。DeepSeek 总部位于浙江杭州，由中国对冲基金幻方量化（High-Flyer）拥有并资助。DeepSeek 由幻方量化的联合创始人梁文锋于 2023 年 7 月创立，他也同时担任这两家公司的 CEO。该公司于 2025 年 1 月推出了同名聊天机器人及其 DeepSeek-R1 模型。
+DeepSeek 提供与 OpenAI 和 Anthropic 格式兼容的 API，可以用常见 SDK 接入。模型名称会随版本更新；编写本章时，官方文档列出的文本模型包括 `deepseek-v4-flash` 和 `deepseek-v4-pro`。
 
-让我们看看 DeepSeek 在 GPQA 基准排名中与其他顶级模型的表现对比。值得注意的是，DeepSeek 是一个开源（每个人都可以从互联网下载模型）模型，而其他常见模型如 Grok、Google Gemini 和 ChatGPT 都是闭源的。正如我们所见，DeepSeek 已经很大程度上接近了第一梯队的模型。
-
-![](images/index-2026-01-20-14-16-48.png)
-
-GPQA 是“研究生级 Google-Proof 问答基准”的缩写，这是一个用于科学问答任务的研究生级基准。以下是详细介绍。
-
-GPQA 包含 448 个多项选择题，涵盖生物学、物理学和化学的子领域，如量子力学、有机化学、分子生物学等。这些问题由 61 位持有博士学位或正在攻读博士学位的专家编写，并经过了严格的验证过程。
+不要依赖教程中长期不变的模型名。开始接入前，先查看 DeepSeek 的[首次调用 API](https://api-docs.deepseek.com/zh-cn/)和[模型列表](https://api-docs.deepseek.com/api/list-models)，再把当前模型 ID 填进请求。
 :::
 
-跟着这 3 步走，就能实现大模型生成 API 的快速集成：
+可以按照下面三步完成第一次调用：
 
-1. **在 DeepSeek 平台创建一个 API Key**
-2. **在 DeepSeek 文档中找到文本生成示例**（通常有现成代码可直接复制）
-3. **打开 AI IDE，把 API Key + 官方示例粘贴进去**，告诉 AI 要实现什么功能：
-   > 帮我接入这个大模型的 API ，支持这个应用的文案生成任务
+1. **在 DeepSeek 平台创建一个 API Key**，并把它保存到本地环境变量；
+2. **在 DeepSeek 文档中找到当前调用示例和模型名称**；
+3. **把不含真实 Key 的官方示例交给 AI IDE**，说明要把返回结果接到哪个页面和按钮上。
 
-接下来我们进行演示，你可以跟随操作走一遍全流程。首先注册 [DeepSeek](https://platform.deepseek.com/usage) 账号并创建一个 API Key，并且充值少量费用进行验证。
+先注册 [DeepSeek 开放平台](https://platform.deepseek.com/usage)账号，按需准备测试额度，并在“API Keys”页面创建密钥。密钥通常只会完整显示一次，请直接保存到本地环境文件，不要放进聊天记录或截图。
 
-![](images/index-2026-01-20-13-57-41.png)
-
-![](images/index-2026-01-20-13-58-13.png)
-
-点击“API KEYS”并在屏幕下方找到“create new API key”。你最终会得到一个像 sk-8573341c39fc44315aadc071c53rh7d2 这样的 API key。
-
-![](images/index-2026-01-20-13-58-32.png)
-
-一旦你获得了密钥，你就拥有了调用模型的权限。
-
-此时，你可以直接阅读 [API](https://api-docs.deepseek.com/) 文档，它通常提供 curl 或 Python 的调用示例。
-
-![](images/index-2026-01-20-13-58-56.png)
-
-找到示例后，你可以将文档中的所有内容以及密钥复制到 AI IDE 的对话框中，要求它帮你集成大语言模型到之前已经开发的原型中。
-
-![](images/index-2026-01-20-13-59-31.png)
+随后打开 [DeepSeek API 文档](https://api-docs.deepseek.com/)，找到当前的 curl 或 SDK 示例。把调用方式和功能需求交给 AI IDE，真实密钥仍然留在本地环境变量中。控制台界面容易变化，因此这里不再逐个展示按钮截图。
 
 使用提示词参考如下：
 
 ```
-参考这个调用方法，帮我支持文案生成功能，可以基于商品信息点击后生成对应抖音电商文案，多种风格。
+参考这个调用方法，为商品信息页面增加文案生成功能。
+
+要求：
+1. 从环境变量读取 DEEPSEEK_API_KEY，不要把密钥写进源代码；
+2. 用户点击“生成文案”后再发送请求；
+3. 显示加载、成功和失败状态；
+4. 把生成结果填写到可编辑的文案区域。
 
 以下参考资料：
-api key：sk-8573341c39aefa1efe
 api 请求参考：
-curl  \
+curl https://api.deepseek.com/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${DEEPSEEK_API_KEY}" \
   -d '{
-        "model": "deepseek-chat",
+        "model": "deepseek-v4-flash",
         "messages": [
-          {"role": "system", "content": "You are a helpful assistant."},
-          {"role": "user", "content": "Hello!"}
+          {"role": "system", "content": "你是一名电商内容编辑。"},
+          {"role": "user", "content": "请根据商品信息生成一版简洁文案。"}
         ],
         "stream": false
       }'
 ```
 
-经过一段时间的 AI 代码生成，我们很容易得到对应的文案生成按钮进行测试，如果你找不到入口，可以让 AI IDE 告诉你从什么页面可以点到该页面，如果实在找不到，可以让 AI IDE 直接基于你的想法重构改进，得到最后的文案生成结果。
+代码生成完成后，先确认入口位置和请求逻辑，再用一条具体商品信息测试结果。如果入口不清楚，可以让 AI IDE 列出访问路径和相关文件，而不是立即重构整个项目。
 
 ![](images/index-2026-01-20-14-23-23.png)
 
 ![](images/index-2026-01-20-14-26-35.png)
 
-当然，此处你可能想问，我怎么知道真正调用了大模型而不只是内置了固定的回复？你可以输入自定义的文案，让大模型根据你及时指定的自定义分析，生成对应的文案。
-
-如果发现每次不一样并且合乎逻辑，你可以放心认为此时已经正常调用 API 生成。你也可以在 [API 使用管理平台](https://platform.deepseek.com/usage)查看是否成功调用（虽然可能需要等几分钟才能看到）。
+要确认应用确实调用了模型，可以输入两组差异明显的商品信息，检查结果是否随输入变化；同时在浏览器网络面板和 [API 使用记录](https://platform.deepseek.com/usage)中查看请求。仅凭“每次文字不同”还不足以判断接入是否正确。
 
 ## 更多文本生成模型选型
 
-除了 DeepSeek 之外，你也可以尝试其他大语言模型。由于大多数模型都提供了 **OpenAI 兼容接口**，切换起来非常简单——只需要更换 API Key、基础 URL 和模型名称即可。
+除了 DeepSeek 之外，你也可以尝试其他文本模型。许多服务提供 **OpenAI 兼容接口**，切换时通常要检查 API Key、基础 URL、模型名称和参数差异。
 
 ### MiniMax 集成
 
 ::: details 了解更多：MiniMax 是什么？
 
-**MiniMax** 是一家中国人工智能公司，致力于通用人工智能技术的研发。MiniMax 已陆续推出 MiniMax-M3 与 MiniMax-M2.7 大语言模型系列，在多项基准测试中表现优异，具有极高的性价比。
+**MiniMax** 提供文本、语音、视频等模型服务。这里使用它的文本模型，是为了练习如何在相似的接口之间切换。
 
-**MiniMax 系列的主要特点：**
-
-- **超长上下文**：M3 支持高达 1,000,000 tokens 的上下文窗口（M2.7 为 204,800 tokens），适合处理长文档、多轮对话
-- **高性价比**：价格极具竞争力
-- **OpenAI 兼容接口**：可以直接使用 OpenAI SDK 调用，无需额外学习新的 API 格式
-- **可用模型**：
-  - `MiniMax-M3`：最新旗舰模型，1,000,000 tokens 上下文、128K 最大输出，并支持文本、图像和视频输入
-  - `MiniMax-M2.7`：上一代旗舰模型，仍然可用
-  - `MiniMax-M2.7-highspeed`：高速版本，保持同样的性能但更快
+截至本页更新时，开放平台文档列出的文本模型包括 `MiniMax-M2.7` 和 `MiniMax-M2.7-highspeed`。模型名称会继续变化，实际接入时应以 [MiniMax 模型列表](https://platform.minimax.io/docs/api-reference/models/openai/list-models)为准。
 :::
 
-接入方式与 DeepSeek 一致，只需要三步：
+接入方式与 DeepSeek 相似，可以从三步开始：
 
 1. 前往 [MiniMax 开放平台](https://platform.minimax.io/) 注册账号并创建 API Key
 2. 在 MiniMax 文档中找到调用示例
-3. 把 API Key + 示例粘贴到 AI IDE 中
+3. 把示例和环境变量名称交给 AI IDE，不要发送真实 API Key
 
-由于 MiniMax 提供了 OpenAI 兼容接口，你可以直接复制下面的 curl 示例和你的 API Key，发给 AI IDE 进行集成：
+下面的 curl 示例使用环境变量表示 API Key。可以把它交给 AI IDE 作为请求结构参考，不要附上真实密钥：
 
 ```bash
 curl https://api.minimax.io/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${MINIMAX_API_KEY}" \
   -d '{
-        "model": "MiniMax-M3",
+        "model": "MiniMax-M2.7",
         "messages": [
           {"role": "system", "content": "You are a helpful assistant."},
           {"role": "user", "content": "Hello!"}
@@ -209,10 +183,10 @@ curl https://api.minimax.io/v1/chat/completions \
 ```
 
 ::: tip ✅ 提示
-MiniMax 的 API 格式与 DeepSeek 几乎完全一致（都是 OpenAI 兼容格式），所以如果你已经成功接入了 DeepSeek，切换到 MiniMax 只需要修改三个地方：
+MiniMax 也提供 OpenAI 兼容格式。如果已经接入 DeepSeek，切换时重点检查下面三个地方，并以服务返回的错误信息为准：
 1. **基础 URL**：改为 `https://api.minimax.io/v1`
 2. **API Key**：使用 MiniMax 的 API Key
-3. **模型名称**：改为 `MiniMax-M3`（新旗舰）、`MiniMax-M2.7` 或 `MiniMax-M2.7-highspeed`
+3. **模型名称**：从当前模型列表中选择，例如 `MiniMax-M2.7` 或 `MiniMax-M2.7-highspeed`
 
 更多信息请参考 [MiniMax OpenAI 兼容接口文档](https://platform.minimax.io/docs/api-reference/text-openai-api)。
 :::
@@ -224,7 +198,7 @@ MiniMax 的 API 格式与 DeepSeek 几乎完全一致（都是 OpenAI 兼容格�
 
 ::: details 了解更多：Qwen3 VL 是什么？
 
-**Qwen3 VL** 是阿里云通义千问团队推出的多模态视觉语言模型系列中的最新版本。VL 代表「Vision-Language」，即视觉语言模型。它能够理解图像内容，并根据图像生成文字描述、回答关于图像的问题、提取图像信息等。
+**Qwen3 VL** 是通义千问团队推出的视觉语言模型系列。VL 代表「Vision-Language」。这类模型可以同时接收图片和文字，并根据图片生成描述、回答问题或提取信息。
 
 ![](images/index-2026-01-20-14-48-27.png)
 ![](images/index-2026-01-20-14-48-41.png)
@@ -237,10 +211,6 @@ MiniMax 的 API 格式与 DeepSeek 几乎完全一致（都是 OpenAI 兼容格�
 - **多图理解**：支持同时处理多张图像，进行对比分析
 - **文本提取**：从图像中提取文字内容（OCR 能力）
 
-**为什么选择 Qwen3 VL？**
-
-相比上一代模型，Qwen3 VL 在图像理解准确性上有显著提升，支持更长、更复杂的图像分析任务。它在中文理解方面表现优异，API 调用成本相对较低，性价比较高。此外，它的上下文窗口更大，能处理更复杂的视觉推理任务。
-
 **典型应用场景：**
 
 - 电商：商品图片自动生成标题、描述、卖点
@@ -250,36 +220,29 @@ MiniMax 的 API 格式与 DeepSeek 几乎完全一致（都是 OpenAI 兼容格�
 
 :::
 
-在前面的部分我们说明了如何接入文字生成 API， 但对于前面的应用场景我们会发现一个问题，我们上传的是一张图片，如果只用大语言模型，它没办法很好的理解图片中的内容，生成的结果很可能会有差别。
+前面接入的是文本生成 API，但这个案例还允许用户上传商品图片。只把商品名称交给文本模型，往往会遗漏图片中的材质、颜色和结构等信息。
 
-我们希望有一个模型能够帮助我们把一个图片变成文字描述，这就需要用到视觉语言模型（VLM）。在案例中，我们将会使用视觉语言模型生成商品的卖点描述，提升用户体验。
+这时可以加入视觉语言模型（VLM），让它根据图片提取可见信息，再生成商品描述或关键词。
 
 为了方便，我们使用[云平台 SiliconFlow](https://cloud.siliconflow.cn/me) 提供的 API 接口进行图生文 API 的接入。
 
 ::: details 了解更多：什么是 Siliconflow
-**硅基流动（SiliconFlow）** 是国内知名的 AI 模型聚合平台，提供多种主流大语言模型和视觉语言模型的 API 接口服务。
+**硅基流动（SiliconFlow）** 是一个模型 API 平台，可以通过相似的接口调用不同厂商的文本、视觉和图像模型。
 
 **平台特点：**
 
 - **多模型支持**：集成多种主流 AI 模型，包括 DeepSeek、Qwen、Llama 系列等开源模型
-- **技术优化**：针对开源模型进行推理优化，提供低延迟、高并发的 API 服务
 - **接口兼容**：提供兼容 OpenAI 格式的 API 接口，便于现有应用集成
 - **按需付费**：支持按调用量计费的方式使用
-
-SiliconFlow 在开源大模型的推理服务方面较为成熟，是使用国产开源 AI 模型的常见选择之一。
 :::
 
-进入到 SiliconFlow 平台的首页，我们可以看到有很多模型可以选择，左上角找到筛选器，点击展开筛选器，选择视觉标签，我们能看到很多图片转文本模型，比如智谱 GLM-4.6V，或者是 Qwen3-VL。
+进入 SiliconFlow 的模型广场后，可以通过视觉标签筛选图片理解模型。平台上的模型和入口可能调整，不需要逐个寻找教程中的相同按钮。
 
-![](images/index-2026-01-20-15-05-04.png)
+这里以 `Qwen/Qwen3-VL-8B-Instruct` 为例。运行前请在控制台确认它仍然可用；如果模型 ID 已变化，复制控制台当前显示的 ID 即可。
 
-我们可以选择任意一个进行测试，这里以 `Qwen/Qwen3-VL-8B-Instruct` 为例。
+进入 [SiliconFlow API 密钥页面](https://cloud.siliconflow.cn/me/account/ak)，创建一个新的 API Key。
 
-![](images/index-2026-01-20-15-07-44.png)
-
-进入 [ SiliconFlow 平台](https://cloud.siliconflow.cn/me/account/ak)，在 API 密钥中点击「新建 API 密钥」，创建一个新的 API Key。
-
-你可以直接使用下面的代码作为参考代码，和生成的 API Key 一起，发送给 AI IDE ，进行功能集成。
+你可以把下面的参考代码交给 AI IDE，并告诉它从环境变量读取密钥。真实 API Key 仍然只保存在本地。
 
 ::: details 图片转文字参考代码
 
@@ -288,7 +251,7 @@ from openai import OpenAI
 from typing import Dict, Any, List
 import base64
 import os
-SILICONFLOW_API_KEY: str = ""
+SILICONFLOW_API_KEY: str = os.environ["SILICONFLOW_API_KEY"]
 SILICONFLOW_BASE_URL: str = "https://api.siliconflow.cn/v1/"
 MODEL_NAME: str = "Qwen/Qwen3-VL-8B-Instruct"
 
@@ -347,7 +310,7 @@ caption = caption_image(image_path)
 ```
 基于下面的图生文接口 API ，帮我们实现将上传的图片，自动生成电商卖点文本、关键词的功能
 
-<此处省略代码，你需要自行粘贴密钥和参考代码>
+<此处粘贴参考代码，并说明密钥保存在 SILICONFLOW_API_KEY 环境变量中>
 ```
 
 最后得到生成结果：
@@ -365,18 +328,18 @@ caption = caption_image(image_path)
   </ClientOnly>
 </div>
 
-# 4. 接入图像生成 API：Seedream 即梦
+# 4. 接入图像生成 API：以 Seedream 为例
 
 在前面的部分我们主要和文本相关的任务打交道，接下来我们将尝试接入图片生成的功能，支持从文字描述生成图片，或者对图片进行修改。
 
 ::: info ℹ️ 原理延伸
 如果你想了解更多原理相关的内容，请查看附录：[图像生成入门](/zh-cn/appendix/8-artificial-intelligence/image-generation)。
 
-::: details 了解更多：什么是 [Seedream 即梦](https://seed.bytedance.com/en/seedream4_5)？
+::: details 了解更多：什么是 [Seedream](https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite)？
 
 ![](images/index-2026-01-20-23-15-17.png)
 
-> 也许你已经知道 Nano Banana（Google 开发），但你最好不要错过 Seedream。Seedream 4.5 是字节跳动打造的新一代图像创作模型。它将图像生成和图像编辑能力集成到一个统一的架构中。这使得它能够灵活处理复杂的多模态任务，如基于知识的生成、复杂推理和参考一致性。此外，它的推理速度比前代产品快得多，并且可以生成分辨率高达 4K 的令人惊叹的高清图像。
+> Seedream 是字节跳动推出的图像生成与编辑模型系列，可以根据文字或参考图生成新图片。模型版本更新较快，本节关注的是接入流程，而不是某个固定版本的参数。
 >
 > ![](images/index-2026-01-20-23-15-38.png)
 > ![](images/index-2026-01-20-23-15-50.png)
@@ -388,14 +351,6 @@ caption = caption_image(image_path)
 - **图像变体**：基于参考图生成相似风格的新图
 - **分辨率提升**：增强图片清晰度和细节
 - **图像编辑**：在现有图片上进行编辑和修改，通过自然语言指令
-
-**为什么选择 Seedream？**
-
-- **国内网络稳定**：国内访问速度快，延迟低
-- **效果优秀**：在电商、素材场景下表现稳定可靠
-- **中文优化**：对中文提示词理解更准确，适合国内用户
-- **速度快**：生成效率高，响应时间短
-- **质量稳定**：生成分辨率高达 4K 的高清图像
 
 **典型应用场景：**
 
@@ -409,79 +364,53 @@ caption = caption_image(image_path)
 这两个 API 可以串联使用：先用 Qwen3 VL 分析参考图，理解画面内容；再用 Seedream 基于分析参考图的提示词内容生成新图片。
 :::
 
-你可能在抖音、B 站或 YouTube 上看到的很多 "AI 海报 / AI 主图 / AI 角色图"，本质上都是用到这部分介绍的技术。你需要做的事情很简单：把用户输入整理成一句话，请求图片 API，然后把返回的图片展示出来。此时用到的模型叫做图片生成 / 图片编辑模型。
+许多 AI 海报、商品主图和角色图，都使用了图片生成或图片编辑模型。应用需要把用户输入整理成请求，等待服务返回图片，再把生成状态和结果展示出来。
 
-我们将逐步演示如何将 Seedream API 集成到你的项目中（通过 AI IDE 辅助完成）。
+接入时可以按照下面的顺序进行：
 
-[访问首页页面](https://www.volcengine.com/experience/ark?launch=seedream)后，点击登录。
+1. 在[火山方舟控制台](https://www.volcengine.com/experience/ark?launch=seedream)开通服务并创建 API Key。
+2. 根据原型需要选择文生图或参考图编辑。
+3. 从控制台复制当前模型 ID 和最小调用示例。
+4. 把密钥保存在本地环境变量中，再让 AI IDE 把示例接入页面。
 
-![](images/index-2026-01-20-23-12-07.png)
-
-登录后，找到页面右上角的充值选项。
-
-![](images/index-2026-01-20-23-12-22.png)
-
-进行充值需要实名认证。
-
-![](images/index-2026-01-20-23-12-30.png)
-
-认证成功后，你可以[充值 1 元用于测试](https://console.volcengine.com/finance/fund/recharge)。
-
-返回[初始界面](https://www.volcengine.com/experience/ark?launch=seedream)并点击 API 访问。
-
-![](images/index-2026-01-20-23-12-43.png)
-
-首先，创建一个 API key，然后点击选择选项。
-
-![](images/index-2026-01-20-23-13-01.png)
-
-这将带你进入第 2 步。在这里，你需要确认调用的服务是 Seedream 4.5，并复制提供的调用示例。（此处截图时间比较早起，故而模型版本仍然是 4.0）
-
-![](images/index-2026-01-20-23-13-11.png)
-
-准备好 API Key 和调用示例后，你可以直接将它们粘贴到 AI IDE 中，让它生成前端交互演示或把能力接入现有原型。注意到在图片中可以选择是文生图还是多张图片生成单张图，你需要根据当前的需求进行选择参考代码。
-
-::: warning ⚠️ 重要提示
-这里的默认示例相对复杂。记得禁用 **"添加水印"** 和 **"流式响应"**，以确保不生成水印且不会发生请求失败。
-:::
-
-由于我们之后使用的是参考图生成模式，我们先去的是多张图生成单张图的功能。参考代码复制如下：
+控制台界面、模型 ID 和可选参数都会变化。先运行官方提供的最小示例，确认请求成功后，再逐项加入尺寸、参考图、水印等参数。下面用参考图编辑说明请求的大致结构：
 
 ```
 curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer xxxxxxx" \
+  -H "Authorization: Bearer ${ARK_API_KEY}" \
   -d '{
-    "model": "doubao-seedream-4-5-251128",
+    "model": "<从控制台复制当前模型 ID>",
     "prompt": "将图1的服装换为图2的服装",
     "image": ["https://ark-project.tos-cn-beijing.volces.com/doc_image/seedream4_imagesToimage_1.png", "https://ark-project.tos-cn-beijing.volces.com/doc_image/seedream4_imagesToimage_2.png"],
     "sequential_image_generation": "disabled",
     "response_format": "url",
     "size": "2K",
     "stream": false,
-    "watermark": true
+    "watermark": false
 }'
 ```
 
 有了图像参考代码后，我们让 AI IDE 支持电商中常用的图像任务功能：
 
 ```
-请你基于下面 API，帮我实现这个工程中，电商业务的常见功能（例如海报生成、抖音电商首图生成等等）
+请基于下面的图片生成 API，为当前工程加入商品海报生成功能。
+密钥从 ARK_API_KEY 环境变量读取，不要写入前端代码。
 
-<此处粘贴 API KEY以及图像编辑代码>
+<此处粘贴官方图像编辑示例>
 ```
 
 实现效果如下:
 
 ![](images/index-2026-01-20-23-21-13.png)
 
-值得注意的是，由于生成图片可能会经常遇到一些奇怪的问题，建议你需要让 AI IDE 能够显示完整的报错信息，方便复制粘贴进行修改（否则可能会反复显示生成失败但是不知道为什么），例如你可以说：
+图片生成请求耗时较长，也可能因为参数、图片格式或额度不足而失败。调试阶段应保留服务返回的错误信息，同时在用户界面中显示简短、可理解的提示。例如：
 
 ```
-不要只显示图片生成失败，每次都显示完整的失败原因，比如图片不匹配、请求错误、超时等等！
+请在开发日志中记录接口返回的错误类型和信息；页面上显示“生成失败，请检查图片格式或稍后重试”，并提供重试按钮。
 ```
 
-有时候修改后更新并不会应用到网页中，如果你发现修改后网页一直还在报错（反复多次），也可以试试直接对 AI IDE 说：请你重启这个项目。
+如果代码已经修改但页面仍显示旧结果，可以先确认文件是否保存、浏览器是否刷新，再重启开发服务器。
 
 在电商的业务中，我们可能会想让用户上传的衣服能够自动穿在人物身上，又或者是自动生成商品吸引人的售卖图、海报。这里我们尝试的提示词是让它生成一个电商海报：
 
@@ -499,16 +428,12 @@ curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
 
 ::: details 了解更多：什么是 Recraft？
 
-> Recraft 是一款面向设计师、插画师和营销人员的 AI 工具——于 2022 年在美国成立，总部位于伦敦。它帮助生成/迭代视觉效果（图像、矢量艺术、3D 图形），具有高质量输出（任何文本大小/长度）、精确元素定位和品牌一致性设计等优势。受到 200 个国家/地区 300 多万用户（包括奥美、Netflix）的信任，并已创建了 3.5 亿多张图像，其团队旨在使其成为必备的设计师工具，确保创作者能够控制他们的 AI 辅助工作流程。
+> Recraft 是面向设计、插画和营销素材的图像生成工具，也提供 API。它适合需要反复调整构图、风格或品牌素材的原型。
 >
 > ![](images/index-2026-01-20-23-23-34.png)
 > ![](images/index-2026-01-20-23-23-42.png)
 
-首先，我们仍然需要找到[ API 入口](https://www.recraft.ai/profile/api)以获取 API Key。
-
-由于这里没有提供免费额度，我们需要自己充值 1,000 积分。这个网站支持支付宝和微信支付，所以很容易获得 1,000 积分（注意：不要充值超过必要的金额）。
-
-![](images/image40.png)
+首先，在 [Recraft API 页面](https://www.recraft.ai/profile/api)查看当前的开通方式、额度和价格。这些信息可能变化，只准备完成测试所需的最小额度即可。
 
 之后，我们仍然遵循同样的方法：去官方文档找到相应的请求示例：
 
@@ -557,14 +482,6 @@ curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
 
 ![](images/index-2026-01-20-14-46-33.png)
 
-**为什么选择 Qwen Image 系列？**
-
-- **中文优化**：对中文提示词理解更准确，适合国内用户
-- **成本低**：相比国际竞品，价格更实惠
-- **速度快**：生成效率高，响应时间短
-- **质量稳定**：在电商、素材场景下表现稳定可靠
-- **风格多样**：支持多种艺术风格和创意效果
-
 **典型应用场景：**
 
 - 电商：生成主图、详情页配图、促销海报
@@ -573,43 +490,41 @@ curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
 - 营销：制作广告图、活动 banner、节日海报
   :::
 
-查看 [SiliconFlow](https://siliconflow.cn/) 的官网。左侧有一个"Playground"部分，你可以在不进行 API 调用的情况下试用不同的模型。在网页顶部有一个"Filters"按钮；点击它可以筛选右侧的模型列表。
+在 [SiliconFlow](https://siliconflow.cn/) 的模型广场中，可以先试用当前可用的图像模型，再决定接入哪一个。模型列表与界面会更新，应以当前页面为准。
 
-如果你选择"Image"，你将只看到当前支持的所有文生图模型。在这种情况下，我们将使用 Qwen/Qwen-Image。
-
-![](images/index-2026-01-20-15-52-56.png)
+筛选图像模型后，从当前列表中选择一个适合文生图或图片编辑任务的模型。
 
 一切设置好后，我们需要参考相应的图像生成 API 文档。你可以在官方文档页面找到任何标记为"API Reference"的部分。点击它，然后导航到[图像生成的 API 部分](https://docs.siliconflow.cn/cn/api-reference/images/images-generations)并找到相关的请求示例。
 
-你可以把下列请求示例和 API KEY 一起发给 AI IDE， 即可实现图像生成的功能。
+你可以把下面的请求结构交给 AI IDE，并让它从环境变量读取 API Key。模型 ID 请从当前控制台复制。
 
 ```bash
 curl --request POST \
   --url https://api.siliconflow.cn/v1/images/generations \
-  --header 'Authorization: Bearer <token>' \
+  --header "Authorization: Bearer ${SILICONFLOW_API_KEY}" \
   --header 'Content-Type: application/json' \
   --data '
 {
-  "model": "Qwen/Qwen-Image-Edit-2509",
+  "model": "<从控制台复制当前图像模型 ID>",
   "prompt": "an island near sea, with seagulls, moon shining over the sea, light house, boats int he background, fish flying over the sea"
 }
 '
 ```
 
-这里的模型可以使用 Qwen/Qwen-Image 或者 Qwen/Qwen-Image-Edit-2509。
+文生图和图片编辑使用的模型不同。接入前先确认当前任务，再从模型页面复制对应的 ID。
 
 ::: details 图像编辑参考代码
 
-复制下列代码和 key，一起发送给 AI IDE：
+把下列代码交给 AI IDE，并让它继续从环境变量读取密钥和当前模型 ID：
 
 ```python
 import requests
 import os
 from typing import Dict, Any, Optional
 
-SILICONFLOW_API_KEY: str = ""
+SILICONFLOW_API_KEY: str = os.environ["SILICONFLOW_API_KEY"]
 SILICONFLOW_BASE_URL: str = "https://api.siliconflow.cn/v1/images/generations"
-QWEN_IMAGE_EDIT_MODEL: str = "Qwen/Qwen-Image-Edit-2509"
+QWEN_IMAGE_EDIT_MODEL: str = os.environ["QWEN_IMAGE_EDIT_MODEL"]
 
 def generate_image_edit(
     prompt: str,
@@ -713,11 +628,11 @@ else:
 
 # 附录：如何找到“当前更强”的 AI 模型
 
-文字模型（也常被叫作“大语言模型”）的发展速度非常快，我们总是需要确保我们用的是表现更好的模型之一。通过以下两个网站，你可以很方便地看到“现在大家常用、评价也更好的模型”。
+文字模型更新很快，单篇教程很难长期给出固定答案。下面两个网站可以作为比较候选模型的补充信息。
 
 一般来说，这类网站可以理解为 **“模型竞技场”**：它会把两个模型的输出放在一起，你投票选你更喜欢的那个。票数高的模型，通常意味着更多人觉得它“更好用”。
 
-此外，你偶尔可能会在这些大模型竞技场中看到神秘的匿名模型（“Unknown Model”）。这通常意味着：有人把“内部测试模型”悄悄放进来做盲测，你可能有机会提前体验到更强的能力。
+有些竞技场会出现匿名模型（“Unknown Model”），它们用于盲测。匿名结果适合观察体验，不适合作为需要稳定模型 ID 的产品依赖。
 
 ## LMArena
 
@@ -753,19 +668,19 @@ Artificial Analysis 更适合把“效果 / 价格 / 速度”放在同一张表
 
 在接入各类 AI 服务时，不必把 API 想象得太复杂。把握住以下几个核心概念，基本就能应对大多数场景：
 
-**API 的本质是通信桥梁**。它做的事情很简单：把你的请求发送出去，再把模型的响应带回来。你不需要关心背后发生了什么，只需要正确地组织请求格式。
+**API 的本质是通信桥梁**。应用把请求发送给模型服务，再接收结果或错误。理解请求、响应和错误信息，能帮助你判断问题发生在哪一层。
 
-**SDK 是对 API 的封装**。如果说 API 是 raw 接口，SDK 就是一套现成的工具箱——它把请求签名、错误处理、参数校验这些繁琐的细节都替你做好了。日常开发中，优先选择 SDK 而不是直接调 API，能省去不少麻烦。
+**SDK 是对 API 的封装**。它通常会处理请求格式、参数校验等重复工作。先用官方最小示例跑通，再根据项目语言选择合适的 SDK。
 
-**阅读文档时，盯住三样东西就够了**：服务地址（endpoint）、身份凭证（API key）以及调用参数怎么填。把这三点弄清楚，调通只是时间问题。
+**阅读文档时，先找到四样东西**：服务地址（endpoint）、身份凭证（API key）、当前模型 ID，以及最小调用示例。请求失败时，再查看状态码和错误信息。
 
-剩下的工作，IDE 和现代化的开发工具会帮你完成。专注于你的业务逻辑，底层调用的事交给这些成熟的 SDK 和工具链。
+AI IDE 可以帮助你改写示例和定位代码，但模型选择、密钥安全和最终效果仍需要你自己检查。用同一组真实输入比较两三个候选模型，通常比只看榜单更可靠。
 
-# 5. 📚 作业：集成你的第一个 AI 能力
+# 5. 作业：接入一个 AI 能力
 
 <el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
   <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🚀 挑战任务：集成 AI 能力到你的工作台</div>
+    <div style="font-weight: bold; font-size: 16px;">练习：把 AI 能力接入工作台</div>
   </template>
 
   <p>
@@ -788,7 +703,7 @@ Artificial Analysis 更适合把“效果 / 价格 / 速度”放在同一张表
     <li>
       <strong>思考题</strong>
       <ul>
-        <li>为下一节"完整项目实践"预留空间，提前思考：你打算如何把这些 AI 能力组合起来，做出什么有意思的功能？</li>
+        <li>为下一节“完整项目实践”预留空间，提前思考：你准备把哪些 AI 能力放进同一条用户流程？</li>
       </ul>
     </li>
   </ul>
@@ -800,7 +715,7 @@ Artificial Analysis 更适合把“效果 / 价格 / 速度”放在同一张表
 
 - 把内容策划、商品上架、数据分析等环节串联成一条完整的业务流程
 - 将本节课学到的 AI 能力（LLM 文案生成、文生图、图像编辑等）嵌入到实际业务节点中
-- 实现一个真正可用的"电商 AI 工作台"，而不是孤立的 demo
+- 把孤立的功能整理成可以连续操作的“电商 AI 工作台”原型
 
 <RelatedArticlesSection
   title="相关文章"
