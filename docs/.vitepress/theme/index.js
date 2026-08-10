@@ -704,7 +704,9 @@ const appendixComponentModules = {
   './components/appendix/neural-networks/NeuronDemo.vue': () => import('./components/appendix/neural-networks/NeuronDemo.vue'),
   './components/appendix/neural-networks/NetworkLayersDemo.vue': () => import('./components/appendix/neural-networks/NetworkLayersDemo.vue'),
   './components/appendix/neural-networks/NetworkArchitectureDemo.vue': () => import('./components/appendix/neural-networks/NetworkArchitectureDemo.vue'),
-  './components/appendix/project-architecture/ArchitectureComparisonDemo.vue': () => import('./components/appendix/project-architecture/ArchitectureComparisonDemo.vue')
+  './components/appendix/project-architecture/ArchitectureComparisonDemo.vue': () => import('./components/appendix/project-architecture/ArchitectureComparisonDemo.vue'),
+  './components/appendix/idea-sources/IdeaSprint.vue': () => import('./components/appendix/idea-sources/IdeaSprint.vue'),
+  './components/appendix/idea-sources/IdeaSourceMap.vue': () => import('./components/appendix/idea-sources/IdeaSourceMap.vue')
 }
 const appendixComponentRegistrations = [
   ['TerminalGrid', './components/appendix/terminal-intro/TerminalGrid.vue'],
@@ -1233,7 +1235,9 @@ const appendixComponentRegistrations = [
   ['NeuronDemo', './components/appendix/neural-networks/NeuronDemo.vue'],
   ['NetworkLayersDemo', './components/appendix/neural-networks/NetworkLayersDemo.vue'],
   ['NetworkArchitectureDemo', './components/appendix/neural-networks/NetworkArchitectureDemo.vue'],
-  ['ProjectArchitectureComparisonDemo', './components/appendix/project-architecture/ArchitectureComparisonDemo.vue']
+  ['ProjectArchitectureComparisonDemo', './components/appendix/project-architecture/ArchitectureComparisonDemo.vue'],
+  ['IdeaSprint', './components/appendix/idea-sources/IdeaSprint.vue'],
+  ['IdeaSourceMap', './components/appendix/idea-sources/IdeaSourceMap.vue']
 ]
 
 function registerAppendixComponents(app) {
