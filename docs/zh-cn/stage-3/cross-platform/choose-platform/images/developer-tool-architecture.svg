@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">VS Code 插件与 CLI 架构</title>
+  <desc id="desc">编辑器或终端触发插件和命令行工具，再连接代码仓库、构建系统与服务 API。</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#0284c7"/></marker></defs>
+  <rect width="1200" height="500" rx="28" fill="#f4fbff"/>
+  <text x="60" y="65" font-size="30" font-weight="700" fill="#0c4a6e" font-family="Inter, PingFang SC, sans-serif">VS Code 插件 / CLI：交互留在编辑器，自动化进入流水线</text>
+  <g font-family="Inter, PingFang SC, sans-serif" text-anchor="middle">
+    <rect x="55" y="115" width="215" height="120" rx="22" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3"/><text x="162" y="165" font-size="26" font-weight="700" fill="#075985">VS Code</text><text x="162" y="202" font-size="18" fill="#475569">命令 · 诊断 · 面板</text>
+    <rect x="55" y="270" width="215" height="120" rx="22" fill="#ffffff" stroke="#7dd3fc" stroke-width="3"/><text x="162" y="320" font-size="26" font-weight="700" fill="#075985">终端 / CI</text><text x="162" y="357" font-size="18" fill="#475569">脚本 · 批处理 · 发布</text>
+    <rect x="385" y="145" width="235" height="190" rx="24" fill="#bae6fd" stroke="#38bdf8" stroke-width="3"/><text x="502" y="205" font-size="27" font-weight="700" fill="#075985">插件与 CLI</text><text x="502" y="250" font-size="20" fill="#475569">共享核心能力</text><text x="502" y="288" font-size="18" fill="#64748b">交互 + 自动化</text>
+    <rect x="735" y="115" width="205" height="120" rx="22" fill="#ffffff" stroke="#a5b4fc" stroke-width="3"/><text x="837" y="165" font-size="25" font-weight="700" fill="#3730a3">代码仓库</text><text x="837" y="202" font-size="18" fill="#475569">文件 · Git · 配置</text>
+    <rect x="735" y="270" width="205" height="120" rx="22" fill="#ffffff" stroke="#86efac" stroke-width="3"/><text x="837" y="320" font-size="25" font-weight="700" fill="#166534">构建系统</text><text x="837" y="357" font-size="18" fill="#475569">测试 · 打包 · 部署</text>
+    <rect x="1040" y="145" width="115" height="190" rx="24" fill="#ecfeff" stroke="#22d3ee" stroke-width="3"/><text x="1097" y="215" font-size="23" font-weight="700" fill="#155e75">服务</text><text x="1097" y="255" font-size="18" fill="#475569">API</text><text x="1097" y="288" font-size="18" fill="#475569">AI</text>
+  </g>
+  <g stroke="#0284c7" stroke-width="5" fill="none" marker-end="url(#arrow)"><path d="M270 175 C320 175 325 210 375 210"/><path d="M270 330 C320 330 325 270 375 270"/><path d="M620 210 C670 210 675 175 725 175"/><path d="M620 270 C670 270 675 330 725 330"/><path d="M940 240 H1030"/></g>
+  <text x="60" y="445" font-size="22" fill="#475569" font-family="Inter, PingFang SC, sans-serif">常见软件：代码规范、依赖升级、脚手架、发布检查、迁移工具、内部平台接入</text>
+</svg>

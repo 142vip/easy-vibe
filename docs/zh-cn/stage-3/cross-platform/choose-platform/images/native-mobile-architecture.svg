@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">iOS 与 Android 原生架构</title>
+  <desc id="desc">iOS 和 Android 使用各自界面与系统 API，并共同连接业务 API。</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#6366f1"/></marker></defs>
+  <rect width="1200" height="500" rx="28" fill="#f7f7ff"/>
+  <text x="60" y="65" font-size="30" font-weight="700" fill="#312e81" font-family="Inter, PingFang SC, sans-serif">原生移动端：两套客户端，直接使用系统能力</text>
+  <g font-family="Inter, PingFang SC, sans-serif" text-anchor="middle">
+    <rect x="55" y="120" width="235" height="115" rx="22" fill="#ffffff" stroke="#a5b4fc" stroke-width="3"/><text x="172" y="168" font-size="27" font-weight="700" fill="#3730a3">iOS App</text><text x="172" y="205" font-size="19" fill="#475569">SwiftUI · UIKit</text>
+    <rect x="55" y="275" width="235" height="115" rx="22" fill="#ffffff" stroke="#86efac" stroke-width="3"/><text x="172" y="323" font-size="27" font-weight="700" fill="#166534">Android App</text><text x="172" y="360" font-size="19" fill="#475569">Compose · Android API</text>
+    <rect x="405" y="135" width="250" height="240" rx="24" fill="#eef2ff" stroke="#818cf8" stroke-width="3"/><text x="530" y="200" font-size="27" font-weight="700" fill="#3730a3">平台系统能力</text><text x="530" y="250" font-size="20" fill="#475569">后台任务 · 蓝牙</text><text x="530" y="288" font-size="20" fill="#475569">相机 · 定位 · 健康</text><text x="530" y="326" font-size="20" fill="#475569">本地安全与通知</text>
+    <rect x="775" y="170" width="180" height="170" rx="22" fill="#ffffff" stroke="#67e8f9" stroke-width="3"/><text x="865" y="235" font-size="28" font-weight="700" fill="#155e75">业务 API</text><text x="865" y="278" font-size="20" fill="#475569">两端共享规则</text>
+    <rect x="1040" y="170" width="120" height="170" rx="22" fill="#ecfeff" stroke="#22d3ee" stroke-width="3"/><text x="1100" y="235" font-size="24" font-weight="700" fill="#155e75">数据</text><text x="1100" y="278" font-size="18" fill="#475569">云端</text>
+  </g>
+  <g stroke="#6366f1" stroke-width="5" fill="none" marker-end="url(#arrow)"><path d="M290 178 H395"/><path d="M290 332 H395"/><path d="M655 255 H765"/><path d="M955 255 H1030"/></g>
+  <text x="60" y="445" font-size="22" fill="#475569" font-family="Inter, PingFang SC, sans-serif">常见软件：运动健康、导航、金融、相机剪辑、蓝牙设备控制、高频消费 App</text>
+</svg>

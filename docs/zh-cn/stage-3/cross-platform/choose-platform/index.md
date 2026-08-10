@@ -1,550 +1,255 @@
-# 如何选择你的应用该开发的平台
+# 应用应该做成什么平台
 
-你有一个想法，想把它变成一个真实的产品。但面对这么多平台选择——微信小程序、iOS App、Android App、网站、浏览器插件、桌面程序……你应该从哪里开始？
+很多人一有想法，就先问：“该用 Flutter、Electron，还是微信小程序？”
 
-::: tip 💡 快速导航
-如果你已经知道各个平台的特点，可以直接跳到 [第 2 节](#2-先问自己三个问题) 开始决策流程，或者查看 [第 7 节的决策流程图](#7-总结-选择平台的决策流程)。
+这个顺序反了。平台不是一道技术偏好题，它取决于用户在哪里打开软件、任务发生在什么设备上，以及软件需要多深的系统权限。
+
+比如，同样是“售后服务”：消费者入口适合放在微信小程序，客服和运营人员需要网页管理后台，维修工程师可能还要一个能拍照、扫码、离线填写的移动端。业务只有一个，入口却可以不止一个。
+
+::: tip 先记住这句话
+能用链接解决的，先做 Web；用户就在微信里，先做小程序；需要后台运行、硬件或系统权限，再考虑原生；同一业务有多种角色，就让多个客户端共用一个后端。
 :::
 
-这篇文章会帮你理清思路，根据你的具体场景，找到最适合的开发平台。
+## 1. 先问三个问题
 
-## 1 先认识这些平台
+### 用户会从哪里打开它？
 
-在讨论"选哪个"之前，先搞清楚"有哪些"。下面是目前主流的开发平台分类：
+- 从搜索、链接或企业门户进入：优先考虑网站或 PWA。
+- 从微信群、公众号或线下二维码进入：优先考虑微信小程序。
+- 每天长时间使用，窗口需要一直开着：优先考虑桌面端。
+- 工作本来就在浏览器或编辑器里完成：优先考虑浏览器插件或 IDE 插件。
 
-### 1.1 移动端平台
+### 它需要哪些设备能力？
 
-#### iOS 原生 App
+相机、扫码和定位不一定非要原生 App；真正拉开差距的是长时间后台运行、蓝牙和串口通信、本地大文件处理、系统级快捷键、设备驱动与严格的性能要求。
 
-你 iPhone 上那些从 App Store 下载的软件，就是 iOS 原生 App。它们的特点是：打开速度快、用起来丝滑、能调用手机的所有功能（相机、定位、健康数据等）。但开发它必须用苹果电脑，而且要经过苹果审核才能上架。
+需要的权限越深，越应该靠近操作系统；只是填表、查数据、看报表，就没必要一开始承担原生开发的成本。
 
-**常见案例**：微信、抖音、小红书、Keep、美团、支付宝
+### 谁来长期维护？
 
-#### Android 原生 App
+“一套代码发布多个平台”可以减少重复工作，但不会消除平台差异。应用商店审核、登录、支付、通知、权限、文件系统和窗口行为，最后仍然要分别测试。
 
-安卓手机上从应用商店下载的软件，或者朋友发给你一个 APK 文件安装的，都是 Android 原生 App。它和 iOS App 类似，但安卓用户更多、分发渠道更多样。缺点是安卓手机型号太多，开发者要适配各种屏幕和系统版本。
+先做最重要的一个入口，确认业务有人用，再扩展第二个平台，通常比第一天就同时做五端更稳。
 
-**常见案例**：Tasker（自动化工具）、MX Player（视频播放器）、AirDroid（手机管理）、绿色守护（省电工具）、Xposed 框架（系统定制）
+## 2. 九条常见架构路线
 
-#### 微信小程序
+### 2.1 网站 / PWA：先让用户点开就能用
 
-你在微信里扫个码、搜个名字就能直接用的"小应用"，不用下载安装。它的好处是用户门槛低——大家都有微信，点开就能用。坏处是功能有限，而且只能在微信里跑，离开微信就用不了。
+![网站与 PWA 架构：浏览器通过 Web 前端访问 API，Service Worker 负责缓存和离线能力](images/web-pwa-architecture.svg)
 
-**常见案例**：拼多多（拼团电商）、美团外卖（本地生活）、摩拜单车（扫码骑车）、跳一跳（小游戏）、周黑鸭（点餐购物）
+如果用户只是想打开链接完成一件事，Web 往往是第一版最省力的选择。PWA 仍然是网站，只是增加了安装到桌面、离线缓存等能力。
 
-#### PWA（渐进式 Web 应用）
+企业通常用它做 SaaS 后台、CRM、数据看板、知识库、在线教育、预约系统和内容网站。它最擅长公开访问、快速更新和多设备覆盖。
 
-听起来很技术，其实就是"能像 App 一样安装的网页"。你在手机浏览器里打开某个网站，它会弹出一个"添加到主屏幕"的提示，点一下，桌面上就多了一个图标，点开看起来就像一个 App。它的好处是一套代码手机电脑都能用，坏处是很多人不知道还能这么用。
+如果产品必须长期在后台运行，或者要深度访问蓝牙、系统文件与设备驱动，就不要硬把网页包装成原生软件。
 
-**常见案例**：Twitter Lite、星巴克、Pinterest、Uber、Spotify Web Player
+相关教程：[开发 PWA 本地应用](../pwa-local-app/)
 
-### 1.2 桌面端平台
+### 2.2 微信小程序：用户本来就在微信里
 
-#### Electron 桌面程序
+![微信小程序架构：微信客户端加载小程序，小程序调用云函数或企业 API，再访问数据库与文件存储](images/wechat-mini-program-architecture.svg)
 
-你可能每天都在用：VS Code、Slack、Discord、Notion、Figma——这些软件都是用 Electron 开发的。它的特点是：用写网页的技术（HTML、CSS、JavaScript）来写桌面软件，一套代码就能在 Windows、Mac、Linux 上运行。缺点是安装包比较大，运行时占内存多一些。
+小程序的优势不是“比 App 高级”，而是用户不用安装。扫码、群分享、公众号和门店入口都能把用户直接带进业务流程。
 
-**常见案例**：VS Code、Slack、Discord、Notion、Figma、微信开发者工具
+企业通常用它做会员中心、门店点单、活动报名、预约、售后工单、物流查询和轻量商城。用户侧流程很短、使用频率不高时，小程序尤其合适。
 
-#### Qt 桌面应用
+它受微信运行环境和审核规则约束。需要长时间后台任务、复杂本地计算或离开微信独立运营时，应当考虑 App 或 Web。
 
-如果你用过 WPS、VirtualBox、OBS，那很可能就是 Qt 开发的。它用 C++ 语言编写，性能好、稳定性高，特别适合工业场景。但学习门槛高，需要懂 C++。
+相关教程：[开发微信小程序](../wechat-miniprogram/) · [开发带后端的微信小程序](../wechat-miniprogram-backend/)
 
-**常见案例**：WPS Office、VirtualBox、Autodesk Maya、Telegram Desktop、OBS Studio
+### 2.3 iOS / Android 原生：直接使用系统能力
 
-#### 原生桌面应用
+![原生移动端架构：iOS 与 Android 分别使用平台 UI 和系统 API，共同连接业务 API](images/native-mobile-architecture.svg)
 
-这些"重量级"软件通常是用原生技术开发的。Windows 用 C# 或 C++，Mac 用 Swift。它们的性能最好、体验最流畅，但 Windows 版和 Mac 版要分开开发，成本很高。
+原生开发离操作系统最近。后台定位、蓝牙、健康数据、音视频、复杂动画和系统级安全能力，原生通常拥有最完整的支持。
 
-**常见案例**：Microsoft Office、Adobe Photoshop、Final Cut Pro、微信（Windows/Mac 版）、QQ 音乐
+企业通常用它做运动健康、导航、金融客户端、相机与剪辑工具、车机配套应用、蓝牙设备控制和高频消费类 App。
 
-### 1.3 Web 相关平台
+代价也很直接：iOS 和 Android 有各自的工程、发布流程和测试成本。只有一个人做第一版，而且核心功能只是表单与列表时，原生往往太重。
 
-#### 网站
+相关教程：[开发 iOS 应用](../ios-app/) · [开发 Android 应用](../android-app/)
 
-就是你在浏览器里输入网址打开的那些页面。它的好处是：任何设备都能访问（手机、电脑、平板）、不用安装、搜索引擎能搜到。坏处是必须联网，离线就用不了。
+### 2.4 Flutter / React Native：共享业务，分别落到两端
 
-**常见案例**：淘宝网、知乎、GitHub、B站、掘金、CSDN
+![跨端移动架构：共享代码生成 iOS 与 Android 应用，平台差异通过插件或原生模块补齐](images/cross-platform-mobile-architecture.svg)
 
-#### 浏览器插件
+团队明确需要 iOS 和 Android，又不想维护两套完整业务代码时，可以选择 Flutter 或 React Native。大部分界面和业务逻辑共享，平台能力再通过插件或原生模块接入。
 
-你有没有装过广告拦截器、翻译工具、密码管理器？这些就是浏览器插件。它们住在浏览器里，能读取和修改你正在看的网页内容。比如，装个翻译插件，打开英文网页就能一键翻译。它的好处是轻量、随浏览器启动；坏处是只能在浏览器里工作，而且不同浏览器（Chrome、Edge、Firefox）的插件还不通用。
+企业通常用它做电商、会员、销售拜访、现场服务、内部办公和内容社区。它适合“两个移动平台的业务大体相同”这种情况。
 
-**常见案例**：AdBlock Plus、沉浸式翻译、1Password、Grammarly、Tampermonkey、Dark Reader
+跨端不是按一下按钮就自动适配。通知、支付、地图、权限和商店发布仍然要在两端分别验证；重度 3D、复杂音视频或大量平台专属能力，也可能需要回到原生。
 
-### 1.4 其他平台
+### 2.5 Electron / Tauri：用 Web 技术做桌面软件
 
-#### VS Code 插件
+![Web 技术桌面端架构：Web 界面通过安全桥接调用桌面进程，再访问文件、通知与系统能力](images/web-desktop-architecture.svg)
 
-如果你是程序员，大概率用过 VS Code 编辑器。VS Code 插件就是给它"加装功能"的小程序。它的好处是开发者用户精准，坏处是只对程序员有用。
+如果团队熟悉 Vue、React 或普通前端，又需要独立窗口、托盘、文件读写和桌面通知，Electron 或 Tauri 会比从头学习原生桌面开发更快。
 
-**常见案例**：Prettier、GitLens、GitHub Copilot、ESLint、Live Server、Chinese Language Pack
+企业通常用它做协作客户端、AI 桌面助手、知识库、数据导入工具、客服工作台和内部运营工具。Electron 自带 Chromium 与 Node.js，生态成熟；Tauri 使用系统 WebView，并通过 Rust 等能力连接系统，安装包通常更轻。
 
-#### NFT 智能合约
+如果软件需要极低内存、复杂图形、设备驱动或严格实时响应，仅靠 Web 桌面方案可能不合适。
 
-NFT 你可能听说过——那些卖几百万美元的"数字头像"。NFT 本质上是区块链上的一张"所有权证书"，证明某个数字物品属于你。智能合约就是运行在区块链上的程序，用来创建和管理这些 NFT。它的好处是不可篡改、可交易；坏处是技术门槛高，而且市场波动大。
+相关教程：[开发 Electron 桌面程序](../electron-voice-to-text/)
 
-**常见案例**：无聊猿 BAYC、CryptoPunks、NBA Top Shot、Azuki、Moonbirds
+### 2.6 Qt / 原生桌面端：业务软件直接连接设备与系统
 
-### 1.5 还有其他选择吗？
+![Qt 与原生桌面架构：桌面界面连接 C++ 业务层，再访问设备协议、本地数据和企业服务](images/qt-native-desktop-architecture.svg)
 
-除了上面说的这些，还有一些"中间路线"和更多可能性：
+Qt 不只是“工厂大屏”。在工业界和企业软件中，它常被用于设备控制台、医疗影像、汽车诊断、实验室软件、交易终端、工程设计工具和长期运行的桌面客户端。
 
-#### 跨平台开发框架
+这类软件通常需要连接串口、Modbus、CAN、仪器或本地数据库，还要在 Windows、Linux 与嵌入式设备上稳定运行。Qt 的价值在这里，不在于页面看起来像不像网页。
 
-::: details 点击查看跨平台框架详情
+如果产品只是一个普通信息管理后台，Web 会更容易部署和维护；只有真的需要本地设备、离线运行或长期桌面交互时，才值得选择更重的桌面架构。
 
-**React Native / Flutter**：想同时做 iOS 和 Android App，但不想写两套代码？这两个框架可以让你写一套代码，然后自动生成两个平台的 App。很多公司都在用，比如 Airbnb、Instagram。
+相关教程：[开发 Qt 企业设备与运营客户端](../qt-industrial-hmi/)
 
-**Tauri**：Electron 的"轻量版"。同样是用网页技术开发桌面软件，但安装包更小、运行更快。缺点是生态还不够成熟。
+### 2.7 浏览器插件：功能就发生在网页旁边
 
-**uni-app**：国内很流行的框架，写一套代码可以同时发布到微信小程序、iOS App、Android App、H5 网页。适合想"一次开发，到处运行"的团队。
+![浏览器插件架构：内容脚本读取当前网页，后台服务协调任务，侧边栏展示结果并调用企业 API](images/browser-extension-architecture.svg)
 
-**Capacitor / Ionic**：已经有一个网站了，想快速变成 App？这两个工具可以把你的网站"包装"成一个 App，用户从应用商店下载安装。
+如果用户的工作本来就在网页里，就别再让他复制内容、打开另一个系统、粘贴并提交。浏览器插件可以直接读取当前页面，在侧边栏或右键菜单里完成下一步。
 
-这些框架本质上是在"原生开发"和"Web 开发"之间找平衡——开发效率高一些，但性能和体验会打一些折扣。
-:::
+企业通常用它做网页翻译、密码填充、销售线索补全、客服知识助手、合规检查、网页数据采集和内部流程快捷入口。
 
-#### 国内小程序生态
+插件权限很敏感。只申请真正需要的站点和能力，并把共享密钥放在企业后端；需要脱离浏览器独立运行时，插件也不是合适的容器。
 
-::: details 点击查看国内小程序详情
+相关教程：[开发浏览器 AI 插件](../browser-ai-extension/)
 
-**支付宝小程序**：金融场景、生活服务。你的用户在用支付宝交水电费、点外卖、坐公交？那就做支付宝小程序。信用分、芝麻认证这些能力，只有支付宝有。
+### 2.8 VS Code 插件 / CLI：把工具放进开发流程
 
-**抖音小程序**：内容电商、直播带货。你在抖音上卖货？小程序可以直接挂在视频下方，用户刷到就能买。
+![开发者工具架构：编辑器或终端触发插件与命令行工具，再连接代码仓库、构建系统和服务 API](images/developer-tool-architecture.svg)
 
-**快手小程序**：下沉市场、老铁经济。快手用户粘性强，适合社区团购、本地服务。
+面向开发者的工具，最好出现在他们已经工作的地方。需要读取当前文件、展示诊断和提供编辑器交互时做 VS Code 插件；需要进入脚本、CI 和批处理流程时做 CLI。
 
-**百度小程序**：搜索流量入口。用户百度搜"附近的餐厅"，你的小程序可以直接出现在搜索结果里。
-:::
+企业通常用它做代码规范、依赖升级、项目脚手架、发布检查、数据库迁移、内部平台接入和 AI 编程助手。很多工具最后会同时提供插件和 CLI：一个负责交互，一个负责自动化。
 
-#### 鸿蒙生态
+相关教程：[开发 VS Code 插件](../vscode-extension/)
 
-**鸿蒙应用（HarmonyOS）**：华为手机、平板、手表、智能家居设备都能跑。用 ArkTS 开发（类似 TypeScript），一套代码多设备运行。如果你的用户是华为生态用户，或者想做 IoT 设备联动，鸿蒙是必选项。
+### 2.9 多端企业系统：不同角色使用不同入口
 
-#### 更多开发者工具
+![多端企业系统架构：用户小程序、员工移动端、运营后台和桌面客户端共享统一身份、API 与数据](images/multi-client-enterprise-architecture.svg)
 
-::: details 点击查看更多开发者工具
+企业业务很少永远停在单个平台。消费者、现场员工、运营人员和管理者的工作环境不同，强迫所有人使用同一种客户端，体验通常会很差。
 
-**命令行工具（CLI）**：开发者每天都在用终端。做一个命令行工具，可以自动化重复工作、生成代码模板、部署项目。比如 `create-react-app`、`git`、`npm` 都是命令行工具。适合做开发者效率工具、DevOps 自动化。
+常见组合是：小程序服务消费者，移动端服务现场人员，Web 后台服务运营，桌面端连接本地文件或设备；下面共用统一身份、业务 API、数据库、文件存储和审计日志。
 
-**JetBrains 插件**：除了 VS Code，很多开发者用 IntelliJ IDEA、PyCharm、WebStorm。如果你的工具面向 Java、Python、前端开发者，JetBrains 插件市场也值得考虑。
+这里真正需要共享的是业务规则和数据，不是强求每个端的界面代码完全相同。第一版仍然应该只做最关键的入口，后端边界稳定后再扩展其他客户端。
 
-**Cursor / Windsurf 插件**：AI 编程工具的新生态。如果你想做 AI 辅助编程相关的功能，这些新兴 IDE 的插件生态正在快速成长。
-:::
+## 3. 一张表先选出第一版
 
-#### 社群机器人
+| 你的第一版要解决什么 | 优先选择 | 企业里常见的软件 | 最大代价 |
+| --- | --- | --- | --- |
+| 打开链接就能办事、需要搜索流量 | 网站 / PWA | SaaS、后台、知识库、门户 | 系统权限有限 |
+| 用户主要从微信进入 | 微信小程序 | 会员、预约、工单、零售服务 | 受微信环境与审核约束 |
+| 深度使用手机硬件或后台任务 | iOS / Android 原生 | 健康、导航、金融、设备控制 | 两端开发与发布成本高 |
+| 同时覆盖 iOS 和 Android | Flutter / React Native | 电商、销售、现场服务 | 平台差异仍要单独处理 |
+| 长时间在电脑上使用，团队熟悉 Web | Electron / Tauri | 协作、AI 客户端、内部工具 | 资源占用或系统适配成本 |
+| 连接设备、协议或复杂本地数据 | Qt / 原生桌面 | 医疗、汽车、实验室、工程软件 | 技术和交付门槛较高 |
+| 功能需要读取或改变当前网页 | 浏览器插件 | 翻译、客服、销售、合规工具 | 权限与浏览器兼容性 |
+| 用户是开发者，需要进入编辑器或 CI | VS Code 插件 / CLI | 代码检查、脚手架、发布工具 | 用户范围集中在开发团队 |
+| 多种角色、多个工作现场 | 多端组合 | CRM、售后、零售、运营平台 | 后端治理和产品协调更复杂 |
 
-::: details 点击查看社群机器人详情
+## 4. 企业里通常怎么组合
 
-**Telegram Bot**：海外用户群体大，API 友好。适合做通知推送、自动化任务、社群管理。很多加密货币项目、开发者社区都在用 Telegram。
+### 零售与会员服务
 
-**Discord Bot**：游戏社区、开发者社区的主阵地。可以做音乐播放、游戏数据查询、服务器管理。如果你的用户是游戏玩家或海外开发者，Discord Bot 是刚需。
-:::
+消费者用微信小程序查积分、领券和申请售后；店员用移动端核销；总部在 Web 后台配置活动和看数据。三个入口共用会员、订单和权限系统。
 
-#### 设计与生产力工具
+### 现场服务与售后
 
-::: details 点击查看设计工具详情
+客户从小程序报修，工程师在移动端接单、拍照和离线记录，调度人员在 Web 后台安排任务。如果还要连接检测仪器，再给工程师增加 Qt 或原生桌面工具。
 
-**Figma 插件**：设计师每天都在用 Figma。做一个插件可以自动化设计流程、生成代码、管理设计系统。适合做设计工具、前端开发辅助。
+### 企业知识与 AI 助手
 
-**Notion 插件**：通过 Notion API 可以自动化工作流、同步数据、生成报表。适合做知识管理、项目管理相关的工具。
-:::
+知识库和权限放在企业后端。员工在浏览器里工作，就提供侧边栏插件；在 VS Code 中工作，就提供 IDE 插件；需要批量处理时，再提供 CLI。
 
-#### 空间计算
+### 设备、医疗与工程软件
 
-**visionOS 应用（Apple Vision Pro）**：空间计算的新时代。适合做 3D 内容展示、沉浸式体验、教育培训、虚拟协作。技术门槛高，但如果你想做前沿探索，这是未来方向。
+本地 Qt 或原生客户端负责设备通信、实时数据和安全操作，Web 平台负责远程配置、报表与管理。这里是工业界常见的软件组合，但它只是企业软件的一部分，不代表所有企业系统都需要 Qt。
 
----
+## 5. 决策时按这个顺序走
 
-## 2 先问自己三个问题
+![平台选型流程：先判断入口，再判断系统权限、工作时长与是否需要多个角色](images/platform-decision-map.svg)
 
-在选择平台之前，先回答这三个核心问题：
+如果几个答案同时成立，不必硬选唯一平台。先确定最重要的用户和最频繁的任务，把第一条完整链路做通，再决定第二个入口。
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px; border-left: 4px solid #409EFF;">
-  <template #header>
-    <div style="display: flex; align-items: center; gap: 8px;">
-      <span style="font-size: 20px;">🎯</span>
-      <span style="font-weight: bold; font-size: 16px;">问题一：你的用户在哪里？</span>
-    </div>
-  </template>
-  <div style="line-height: 1.8; color: #606266;">
-    <ul>
-      <li>用户是否需要随时随地使用？（移动端优先）</li>
-      <li>用户是否习惯在微信里完成操作？（小程序）</li>
-      <li>用户是否会在办公场景长时间使用？（桌面程序）</li>
-      <li>用户是否需要通过搜索引擎找到你？（网站）</li>
-    </ul>
-  </div>
-</el-card>
+## 6. 几个常见误区
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px; border-left: 4px solid #67C23A;">
-  <template #header>
-    <div style="display: flex; align-items: center; gap: 8px;">
-      <span style="font-size: 20px;">⚡</span>
-      <span style="font-weight: bold; font-size: 16px;">问题二：你的应用需要什么能力？</span>
-    </div>
-  </template>
-  <div style="line-height: 1.8; color: #606266;">
-    <ul>
-      <li>是否需要调用摄像头、麦克风、GPS 等硬件？</li>
-      <li>是否需要离线使用？</li>
-      <li>是否需要推送通知？</li>
-      <li>是否需要处理大量本地数据？</li>
-    </ul>
-  </div>
-</el-card>
+### “一套代码”不等于“一次测试”
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px; border-left: 4px solid #E6A23C;">
-  <template #header>
-    <div style="display: flex; align-items: center; gap: 8px;">
-      <span style="font-size: 20px;">💰</span>
-      <span style="font-weight: bold; font-size: 16px;">问题三：你的资源有多少？</span>
-    </div>
-  </template>
-  <div style="line-height: 1.8; color: #606266;">
-    <ul>
-      <li>开发时间预算？</li>
-      <li>是否有 Mac 设备（iOS 开发必需）？</li>
-      <li>是否需要同时覆盖多个平台？</li>
-    </ul>
-  </div>
-</el-card>
+跨端框架能共享代码，但不能替你完成权限、支付、通知、窗口、应用商店和真机兼容测试。选跨端是为了减少重复，不是消灭平台差异。
 
----
+### 企业软件不等于工控软件
 
-## 3 平台选择决策图
+CRM、审批、排班、售后、知识库和零售会员都属于企业使用场景。只有真的连接设备、协议、实时数据或本地大文件时，Qt 与原生桌面端才会自然地成为优先选项。
 
-下面这张表，帮你快速定位：
+### 不要第一天就做全平台
 
-| 你的使用场景 | 推荐平台 | 原因 |
-|---------|---------|------|
-| 用户在微信生态，想快速获客 | <el-tag type="success">微信小程序</el-tag> | 无需下载，微信内传播，获客成本低 |
-| 需要后台持续记录 GPS 轨迹、读取健康数据 | <el-tag type="primary">iOS / Android 原生</el-tag> | 直接调用系统 API，性能最优 |
-| 想要一套代码覆盖多平台 | <el-tag type="warning">PWA / Electron</el-tag> | 开发效率高，维护成本低 |
-| 用户需要长时间在电脑上使用 | <el-tag type="primary">桌面程序</el-tag>（Electron / Qt） | 独立窗口，可离线，系统集成度高 |
-| 想在看网页时自动总结、翻译或管理密码 | <el-tag type="info">浏览器插件</el-tag> | 可读取和修改网页内容，随浏览器启动 |
-| 想让技术文章、项目展示被 Google 搜到 | <el-tag type="warning">网站 / 个人博客</el-tag> | SEO 友好，内容可被搜索到 |
-| 想发行可交易的数字会员卡或收藏品 | <el-tag type="danger">NFT 智能合约</el-tag> | 链上确权，可交易转让 |
+同时做 Web、小程序、iOS、Android 和桌面端，很容易得到五个都不完整的版本。先选一个最短入口验证业务，再扩展其他端。
 
----
+### 客户端不同，后端仍应当统一
 
-## 4 具体场景举例
+多端产品最怕每个客户端各写一套会员、订单和权限规则。界面可以不同，核心身份、业务规则、数据与审计应该从同一套后端提供。
 
-### 场景一：我想做一个社区团购工具
-
-**💡 推荐：微信小程序**
-
-为什么选小程序？
-
-- **用户就在微信里**：社区大妈、家庭主妇都在微信群活跃，小程序可以直接分享到群里
-- **用完即走**：下单买菜这种事，没人愿意专门下载一个 App
-- **支付无缝**：微信支付一键完成，不需要跳转
-- **获客成本低**：一个群接龙就能带来几十个新用户
-
-::: tip 💡 适用场景
-如果你做的是类似的事情——拼团、预约、问卷调查、活动报名——小程序都是首选。
-:::
-
----
-
-### 场景二：我想做一个跑步记录 App
-
-**⚡ 推荐：iOS / Android 原生开发**
-
-为什么选原生 App？
-
-- **后台运行**：跑步时 App 需要在后台持续记录轨迹，小程序和网页都做不到
-- **GPS 精度**：原生 App 可以访问高精度定位，误差在几米内
-- **健康数据**：想读取步数、心率？只有原生 App 能调用 Apple HealthKit 和 Google Fit
-- **推送提醒**：每天定时提醒用户"该跑步了"，原生推送最可靠
-
-::: warning ⚠️ 重要提示
-任何需要**长时间后台运行**或**深度调用硬件**的应用，都应该选原生开发。
-:::
-
----
-
-### 场景三：我想做一个记账软件
-
-**⚡ 推荐：iOS / Android 原生开发**
-
-为什么？
-
-- **启动速度快**：记账场景需要快速打开、快速记录、快速关闭，原生 App 的启动速度是最佳体验保障
-- **使用频率高但单次时间短**：每天记一笔，30 秒就完事，原生 App 的流畅体验让用户更愿意坚持
-- **推送提醒**：每天定时提醒用户记账，养成习惯，原生推送最可靠
-- **数据安全**：原生 App 可以使用设备级加密，保护用户的财务隐私
-
-虽然 PWA 和小程序也能实现基本功能，但对于高频、快速、注重体验的记账场景，原生开发的启动速度和流畅度是无可替代的。
-
----
-
-### 场景四：我想做一个活动报名小程序
-
-**📝 推荐：微信小程序 或 PWA**
-
-为什么？
-
-- **即用即走**：用户扫码报名，填完信息就走，不需要常驻手机
-- **社交传播**：活动天然适合分享，微信生态传播效果最好
-- **开发成本低**：一套代码覆盖 iOS 和 Android，开发周期短
-- **无需审核发布**：PWA 可以直接部署，即时更新
-
-小程序适合依赖微信社交的场景，PWA 适合需要跨平台、快速迭代的场景。
-
----
-
-### 场景五：我想做一个在线教育平台
-
-**📚 推荐：网站 + 小程序组合**
-
-为什么？
-
-- **网站负责获客**：课程介绍、师资展示、SEO 优化，让用户在搜索引擎找到你
-- **小程序负责转化**：用户扫码试听、报名支付、加入学习群
-- **网站负责交付**：视频课程在网页端播放，大屏体验更好
-- **小程序负责触达**：上课提醒、作业通知通过小程序推送
-
-::: tip 💡 组合策略
-复杂业务往往需要**多平台组合**，而不是只选一个。
-:::
-
----
-
-### 场景六：我想做一个团队协作工具
-
-**🤝 推荐：Electron 桌面程序 + 网页版**
-
-为什么？
-
-- **桌面端**：用户上班开着电脑，桌面程序可以常驻后台，随时接收消息
-- **网页端**：临时在其他电脑上用，打开浏览器就行，不用安装
-- **系统集成**：桌面程序可以访问本地文件、系统通知、快捷键
-- **一套代码**：Electron 用 Web 技术开发，桌面版和网页版可以复用 80% 代码
-
-Slack、Notion、Discord 都是这么做的。
-
----
-
-### 场景七：我想做一个密码管理器
-
-**🔐 推荐：桌面程序 + 浏览器插件**
-
-为什么？
-
-- **桌面程序**：安全存储密码数据库，支持指纹/面容解锁
-- **浏览器插件**：在网页登录时自动填充，用户不用切换窗口
-- **离线可用**：密码数据存在本地，不依赖网络
-- **安全可控**：用户知道数据在哪，不用担心云端泄露
-
-1Password、Bitwarden 都是桌面程序 + 浏览器插件的组合。
-
----
-
-### 场景八：我想做一个内容创作平台
-
-**✍️ 推荐：网站 + 个人博客**
-
-为什么？
-
-- **SEO 是生命线**：用户通过搜索找到你的内容，这是最大的流量来源
-- **内容即产品**：文章、教程、视频，这些内容本身就是价值
-- **长期资产**：网站可以运营 10 年，社交账号随时可能被封
-- **变现灵活**：广告、付费订阅、知识付费，网站都能承载
-
-Medium、知乎专栏、个人技术博客，本质都是内容平台。
-
----
-
-### 场景九：我想做一个开发者效率工具
-
-**🛠️ 推荐：VS Code 插件 或 命令行工具**
-
-为什么？
-
-- **用户就在编辑器里**：开发者不想切换窗口，工具要融入他们的工作流
-- **上下文感知**：可以读取当前代码，提供精准建议
-- **分发简单**：发布到插件市场，用户一键安装
-- **迭代快速**：不用等应用商店审核，当天发布当天更新
-
-Prettier、ESLint、GitHub Copilot 都是 VS Code 插件。
-
----
-
-### 场景十：我想做一个工业监控大屏
-
-**🏭 推荐：Qt 桌面应用**
-
-为什么？
-
-- **稳定压倒一切**：工厂 24 小时运行，软件不能崩溃
-- **硬件通信**：需要通过串口、Modbus 协议读取传感器数据
-- **实时图表**：压力、温度、流量，需要毫秒级刷新
-- **工控环境**：工控机通常跑 Windows，Qt 兼容性最好
-
-::: warning ⚠️ 工业场景
-工业场景对稳定性和硬件接口的要求，是 Web 技术无法满足的。
-:::
-
----
-
-### 场景十一：我想发行一个数字会员卡
-
-**🎫 推荐：NFT 智能合约**
-
-为什么？
-
-- **不可伪造**：区块链上的记录无法篡改，会员身份真实可信
-- **可转让**：会员卡可以转赠或二级市场交易
-- **可编程**：智能合约可以自动执行权益，比如持有满一年自动升级
-- **全球化**：没有国界限制，全球用户都能参与
-
-星巴克 Odyssey、NBA Top Shot 都在用 NFT 做会员体系
-
----
-
-## 5 平台能力对比速查
-
-### 5.1 移动端方案对比
-
-| 能力 | 微信小程序 | iOS 原生 | Android 原生 | PWA |
-|-----|----------|---------|-------------|-----|
-| 获取用户成本 | <el-tag type="success">低</el-tag>（微信传播） | <el-tag type="danger">高</el-tag>（应用商店） | <el-tag type="danger">高</el-tag>（应用商店） | <el-tag type="warning">中</el-tag>（搜索引擎） |
-| 离线使用 | <el-tag type="warning">有限支持</el-tag> | <el-tag type="success">完全支持</el-tag> | <el-tag type="success">完全支持</el-tag> | <el-tag type="success">支持</el-tag> |
-| 推送通知 | <el-tag type="success">支持</el-tag> | <el-tag type="success">支持</el-tag> | <el-tag type="success">支持</el-tag> | <el-tag type="warning">部分支持</el-tag> |
-| 硬件访问 | <el-tag type="warning">受限</el-tag> | <el-tag type="success">完全访问</el-tag> | <el-tag type="success">完全访问</el-tag> | <el-tag type="warning">受限</el-tag> |
-| 后台运行 | <el-tag type="warning">受限</el-tag> | <el-tag type="success">支持</el-tag> | <el-tag type="success">支持</el-tag> | <el-tag type="warning">受限</el-tag> |
-| 开发成本 | <el-tag type="success">低</el-tag> | <el-tag type="danger">高</el-tag> | <el-tag type="danger">高</el-tag> | <el-tag type="success">低</el-tag> |
-| 需要审核 | <el-tag type="warning">是</el-tag> | <el-tag type="warning">是</el-tag> | <el-tag type="warning">是</el-tag> | <el-tag type="success">否</el-tag> |
-
-### 5.2 桌面端方案对比
-
-| 能力 | Electron | Qt | 浏览器插件 |
-|-----|----------|-----|-----------|
-| 跨平台 | Win/Mac/Linux | Win/Mac/Linux | Chrome/Edge/Firefox |
-| 系统集成 | <el-tag type="warning">中等</el-tag> | <el-tag type="success">高</el-tag> | <el-tag type="warning">低</el-tag> |
-| 离线使用 | <el-tag type="success">支持</el-tag> | <el-tag type="success">支持</el-tag> | <el-tag type="warning">部分支持</el-tag> |
-| 硬件访问 | <el-tag type="warning">通过 Node.js</el-tag> | <el-tag type="success">完全访问</el-tag> | <el-tag type="warning">受限</el-tag> |
-| 安装方式 | 安装包 | 安装包 | 浏览器扩展商店 |
-| 开发技术栈 | Web 技术 | C++/QML | JavaScript |
-
----
-
-## 6 常见误区
-
-<el-collapse accordion style="margin: 20px 0;">
-  <el-collapse-item name="1">
-    <template #title>
-      <span style="font-weight: bold; color: #F56C6C;">❌ 误区一："我要做一个 App，所以必须开发 iOS 和 Android"</span>
-    </template>
-    <div style="padding: 10px; color: #606266; line-height: 1.8;">
-      不一定。如果你的应用是轻量级的、用完即走的，小程序或 PWA 可能更合适。只有当你需要深度调用系统能力、追求极致性能时，才值得投入原生开发。
-    </div>
-  </el-collapse-item>
-  
-  <el-collapse-item name="2">
-    <template #title>
-      <span style="font-weight: bold; color: #F56C6C;">❌ 误区二："网站已经过时了，没人看了"</span>
-    </template>
-    <div style="padding: 10px; color: #606266; line-height: 1.8;">
-      恰恰相反。网站是唯一能被搜索引擎收录的平台。如果你想通过内容获客，网站和个人博客是最好的选择。你的技术文章、项目展示，都可以通过 SEO 带来持续流量。
-    </div>
-  </el-collapse-item>
-  
-  <el-collapse-item name="3">
-    <template #title>
-      <span style="font-weight: bold; color: #F56C6C;">❌ 误区三："桌面程序没人用了"</span>
-    </template>
-    <div style="padding: 10px; color: #606266; line-height: 1.8;">
-      在办公场景，桌面程序依然是主流。VS Code、Slack、Notion 都是桌面程序。如果你的应用需要长时间使用、处理大量数据、或需要系统集成，桌面程序是最佳选择。
-    </div>
-  </el-collapse-item>
-  
-  <el-collapse-item name="4">
-    <template #title>
-      <span style="font-weight: bold; color: #F56C6C;">❌ 误区四："PWA 体验不如原生"</span>
-    </template>
-    <div style="padding: 10px; color: #606266; line-height: 1.8;">
-      现代 PWA 已经非常接近原生体验。星巴克、Pinterest、Uber 都有 PWA 版本。如果你的应用不需要复杂的硬件调用，PWA 是性价比最高的跨平台方案。
-    </div>
-  </el-collapse-item>
-</el-collapse>
-
----
-
-## 7 总结：选择平台的决策流程
-
-```
-开始
-  │
-  ├─ 用户在微信生态？ ───────────────────→ 微信小程序
-  │
-  ├─ 需要最佳性能和硬件访问？ ────────────→ iOS / Android 原生
-  │
-  ├─ 需要在电脑上长时间使用？ ────────────→ 桌面程序
-  │     │
-  │     ├─ 工业场景？ ────────────────────→ Qt
-  │     └─ 通用场景？ ────────────────────→ Electron
-  │
-  ├─ 需要处理浏览器内容？ ────────────────→ 浏览器插件
-  │
-  ├─ 轻量工具 + 跨平台 + 离线？ ───────────→ PWA
-  │
-  ├─ 需要被搜索到？ ──────────────────────→ 网站 / 博客
-  │
-  ├─ 开发者工具？ ────────────────────────→ VS Code 插件
-  │
-  └─ 区块链资产？ ────────────────────────→ NFT 智能合约
-```
-
----
-
-## 8 下一步
-
-::: tip 🎯 开始行动
-根据上面的分析，你应该已经对"选择哪个平台"有了初步答案。接下来，点击对应的教程开始学习：
-:::
+## 7. 接下来选一篇开始做
 
 <NavGrid>
   <NavCard
     href="/zh-cn/stage-3/cross-platform/wechat-miniprogram/"
-    title="如何构建微信小程序"
-    description="从零开始开发微信小程序，掌握小程序开发的核心流程"
+    title="微信小程序"
+    description="适合会员、预约、活动和轻量服务入口"
+  />
+  <NavCard
+    href="/zh-cn/stage-3/cross-platform/wechat-miniprogram-backend/"
+    title="带后端的微信小程序"
+    description="把身份、工单、数据库和权限真正接起来"
   />
   <NavCard
     href="/zh-cn/stage-3/cross-platform/android-app/"
-    title="如何构建安卓程序"
-    description="使用现代跨平台框架构建 Android 原生应用"
+    title="Android 应用"
+    description="需要移动端硬件与系统能力时从这里开始"
   />
   <NavCard
     href="/zh-cn/stage-3/cross-platform/ios-app/"
-    title="如何构建 iOS 程序"
-    description="开发并发布 iOS 应用，掌握 iOS 生态的开发规范"
+    title="iOS 应用"
+    description="学习 Apple 平台的开发与发布流程"
   />
   <NavCard
     href="/zh-cn/stage-3/cross-platform/pwa-local-app/"
-    title="如何开发 PWA 本地应用"
-    description="让网页变成真正的 App，支持离线使用和桌面安装"
-  />
-  <NavCard
-    href="/zh-cn/stage-3/cross-platform/browser-ai-extension/"
-    title="如何开发浏览器 AI 助手插件"
-    description="一键总结任意网页，打造你的浏览器 AI 助手"
+    title="PWA"
+    description="让网站支持安装和离线使用"
   />
   <NavCard
     href="/zh-cn/stage-3/cross-platform/electron-voice-to-text/"
-    title="如何开发跨平台 Electron 桌面程序"
-    description="构建语音转文字的桌面应用，支持 Windows、macOS、Linux"
+    title="Electron 桌面端"
+    description="用 Web 技术构建跨平台桌面软件"
+  />
+  <NavCard
+    href="/zh-cn/stage-3/cross-platform/browser-ai-extension/"
+    title="浏览器插件"
+    description="让工具直接出现在用户正在看的网页旁边"
   />
   <NavCard
     href="/zh-cn/stage-3/cross-platform/vscode-extension/"
-    title="如何开发 VS Code 插件"
-    description="打造你的 AI 项目助手，支持多文件问答和自定义快捷键"
+    title="VS Code 插件"
+    description="把开发者工具放进编辑器工作流"
   />
   <NavCard
     href="/zh-cn/stage-3/cross-platform/qt-industrial-hmi/"
-    title="如何开发 Qt 工业 HMI"
-    description="构建工业级人机交互界面，连接真实硬件设备"
+    title="Qt 桌面与设备软件"
+    description="连接设备、协议、本地数据和长期运行的业务"
   />
 </NavGrid>
+
+## 参考资料
+
+- [Apple SwiftUI 官方文档](https://developer.apple.com/swiftui/)
+- [Android 应用架构指南](https://developer.android.com/topic/architecture)
+- [PWA 官方学习指南](https://web.dev/learn/pwa/welcome)
+- [Flutter 官方介绍](https://flutter.dev/)
+- [React Native 官方入门](https://reactnative.dev/docs/environment-setup)
+- [Electron 进程模型](https://www.electronjs.org/docs/latest/tutorial/process-model)
+- [Tauri 架构](https://v2.tauri.app/concept/architecture/)
+- [Qt 官方介绍](https://doc.qt.io/qt-6/qt-intro.html)
+- [Chrome 扩展开发文档](https://developer.chrome.com/docs/extensions/develop)
+- [VS Code Extension Host](https://code.visualstudio.com/api/advanced-topics/extension-host)

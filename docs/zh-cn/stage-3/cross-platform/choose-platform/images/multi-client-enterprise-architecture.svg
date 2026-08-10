@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">多端企业系统架构</title>
+  <desc id="desc">小程序、移动端、Web 后台和桌面客户端共享统一身份、业务 API 与数据平台。</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker></defs>
+  <rect width="1200" height="560" rx="28" fill="#f7faff"/>
+  <text x="60" y="62" font-size="30" font-weight="700" fill="#172554" font-family="Inter, PingFang SC, sans-serif">多端企业系统：入口各自合适，身份和业务规则保持统一</text>
+  <g font-family="Inter, PingFang SC, sans-serif" text-anchor="middle">
+    <rect x="45" y="115" width="215" height="105" rx="20" fill="#dcfce7" stroke="#4ade80" stroke-width="3"/><text x="152" y="160" font-size="24" font-weight="700" fill="#166534">用户小程序</text><text x="152" y="195" font-size="18" fill="#475569">会员 · 预约 · 售后</text>
+    <rect x="330" y="115" width="215" height="105" rx="20" fill="#eef2ff" stroke="#818cf8" stroke-width="3"/><text x="437" y="160" font-size="24" font-weight="700" fill="#3730a3">员工移动端</text><text x="437" y="195" font-size="18" fill="#475569">接单 · 拍照 · 离线</text>
+    <rect x="615" y="115" width="215" height="105" rx="20" fill="#e0f2fe" stroke="#38bdf8" stroke-width="3"/><text x="722" y="160" font-size="24" font-weight="700" fill="#075985">运营后台</text><text x="722" y="195" font-size="18" fill="#475569">配置 · 调度 · 报表</text>
+    <rect x="900" y="115" width="255" height="105" rx="20" fill="#fff7ed" stroke="#fb923c" stroke-width="3"/><text x="1027" y="160" font-size="24" font-weight="700" fill="#9a3412">桌面 / 设备端</text><text x="1027" y="195" font-size="18" fill="#475569">文件 · 协议 · 本地任务</text>
+    <rect x="160" y="310" width="220" height="115" rx="22" fill="#ffffff" stroke="#93c5fd" stroke-width="3"/><text x="270" y="360" font-size="25" font-weight="700" fill="#1e3a8a">统一身份</text><text x="270" y="397" font-size="18" fill="#475569">账号 · 角色 · 权限</text>
+    <rect x="490" y="285" width="270" height="165" rx="24" fill="#dbeafe" stroke="#60a5fa" stroke-width="3"/><text x="625" y="345" font-size="28" font-weight="700" fill="#1e3a8a">业务 API</text><text x="625" y="388" font-size="20" fill="#475569">订单 · 工单 · 会员</text><text x="625" y="422" font-size="18" fill="#64748b">唯一业务规则</text>
+    <rect x="870" y="310" width="220" height="115" rx="22" fill="#ecfeff" stroke="#22d3ee" stroke-width="3"/><text x="980" y="360" font-size="25" font-weight="700" fill="#155e75">数据平台</text><text x="980" y="397" font-size="18" fill="#475569">数据库 · 文件 · 审计</text>
+  </g>
+  <g stroke="#2563eb" stroke-width="4" fill="none" marker-end="url(#arrow)"><path d="M152 220 C152 260 540 255 570 285"/><path d="M437 220 C437 255 575 255 590 285"/><path d="M722 220 C722 255 675 255 660 285"/><path d="M1027 220 C1027 260 710 255 680 285"/><path d="M490 367 H390"/><path d="M760 367 H860"/></g>
+  <text x="60" y="515" font-size="22" fill="#475569" font-family="Inter, PingFang SC, sans-serif">核心原则：不同角色使用不同入口，但不要复制会员、订单、权限和审计规则</text>
+</svg>

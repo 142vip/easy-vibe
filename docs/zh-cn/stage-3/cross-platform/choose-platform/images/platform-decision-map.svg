@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">平台选型流程</title>
+  <desc id="desc">先判断用户入口，再判断是否需要系统权限、长期桌面使用、处理网页或代码，以及是否有多个角色。</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
+  <rect width="1200" height="720" rx="28" fill="#f8fafc"/>
+  <text x="60" y="62" font-size="30" font-weight="700" fill="#0f172a" font-family="Inter, PingFang SC, sans-serif">先找入口，再决定需要多深的系统能力</text>
+  <g font-family="Inter, PingFang SC, sans-serif" text-anchor="middle">
+    <rect x="460" y="100" width="280" height="85" rx="42" fill="#1d4ed8"/><text x="600" y="153" font-size="26" font-weight="700" fill="#ffffff">用户最常在哪里工作？</text>
+    <rect x="55" y="270" width="190" height="95" rx="22" fill="#dbeafe" stroke="#60a5fa" stroke-width="3"/><text x="150" y="310" font-size="23" font-weight="700" fill="#1e3a8a">链接 / 搜索</text><text x="150" y="342" font-size="18" fill="#475569">网站 / PWA</text>
+    <rect x="280" y="270" width="190" height="95" rx="22" fill="#dcfce7" stroke="#4ade80" stroke-width="3"/><text x="375" y="310" font-size="23" font-weight="700" fill="#166534">微信</text><text x="375" y="342" font-size="18" fill="#475569">微信小程序</text>
+    <rect x="505" y="270" width="190" height="95" rx="22" fill="#eef2ff" stroke="#818cf8" stroke-width="3"/><text x="600" y="310" font-size="23" font-weight="700" fill="#3730a3">手机</text><text x="600" y="342" font-size="18" fill="#475569">原生 / 跨端</text>
+    <rect x="730" y="270" width="190" height="95" rx="22" fill="#fff7ed" stroke="#fb923c" stroke-width="3"/><text x="825" y="310" font-size="23" font-weight="700" fill="#9a3412">电脑桌面</text><text x="825" y="342" font-size="18" fill="#475569">Electron / Qt</text>
+    <rect x="955" y="270" width="190" height="95" rx="22" fill="#f3e8ff" stroke="#c084fc" stroke-width="3"/><text x="1050" y="310" font-size="23" font-weight="700" fill="#6b21a8">网页 / 代码</text><text x="1050" y="342" font-size="18" fill="#475569">浏览器 / IDE 插件</text>
+    <rect x="80" y="480" width="300" height="115" rx="24" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/><text x="230" y="525" font-size="23" font-weight="700" fill="#0f172a">只需要表单、列表和内容？</text><text x="230" y="562" font-size="19" fill="#475569">优先选择更轻的 Web 或小程序</text>
+    <rect x="450" y="480" width="300" height="115" rx="24" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/><text x="600" y="525" font-size="23" font-weight="700" fill="#0f172a">需要后台、硬件或本地设备？</text><text x="600" y="562" font-size="19" fill="#475569">靠近原生、Qt 或桌面进程</text>
+    <rect x="820" y="480" width="300" height="115" rx="24" fill="#ffffff" stroke="#94a3b8" stroke-width="3"/><text x="970" y="525" font-size="23" font-weight="700" fill="#0f172a">有消费者、员工和运营多种角色？</text><text x="970" y="562" font-size="19" fill="#475569">多端入口，共用统一后端</text>
+  </g>
+  <g stroke="#475569" stroke-width="4" fill="none" marker-end="url(#arrow)"><path d="M600 185 V235 H150 V260"/><path d="M600 185 V235 H375 V260"/><path d="M600 185 V260"/><path d="M600 185 V235 H825 V260"/><path d="M600 185 V235 H1050 V260"/><path d="M375 365 C375 420 230 420 230 470"/><path d="M600 365 V470"/><path d="M825 365 C825 420 970 420 970 470"/></g>
+  <text x="600" y="665" text-anchor="middle" font-size="24" font-weight="700" fill="#1d4ed8" font-family="Inter, PingFang SC, sans-serif">先做最重要的一端，业务跑通后再扩展</text>
+</svg>

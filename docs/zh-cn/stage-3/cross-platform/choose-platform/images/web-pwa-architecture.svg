@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">网站与 PWA 架构</title>
+  <desc id="desc">用户通过浏览器访问 Web 前端，前端调用业务 API，Service Worker 提供缓存与离线能力。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#3b82f6"/></marker>
+  </defs>
+  <rect width="1200" height="500" rx="28" fill="#f6f9ff"/>
+  <text x="60" y="65" font-size="30" font-weight="700" fill="#172554" font-family="Inter, PingFang SC, sans-serif">网站 / PWA：一个地址，所有设备都能打开</text>
+  <g font-family="Inter, PingFang SC, sans-serif" text-anchor="middle">
+    <rect x="60" y="150" width="220" height="170" rx="22" fill="#ffffff" stroke="#93c5fd" stroke-width="3"/>
+    <text x="170" y="215" font-size="28" font-weight="700" fill="#1e3a8a">浏览器</text><text x="170" y="258" font-size="21" fill="#475569">手机 · 电脑 · 平板</text>
+    <rect x="380" y="120" width="250" height="230" rx="22" fill="#dbeafe" stroke="#60a5fa" stroke-width="3"/>
+    <text x="505" y="190" font-size="28" font-weight="700" fill="#1e3a8a">Web 前端</text><text x="505" y="235" font-size="21" fill="#475569">页面与交互</text><text x="505" y="278" font-size="21" fill="#475569">Service Worker</text><text x="505" y="315" font-size="18" fill="#64748b">缓存 · 离线 · 安装</text>
+    <rect x="730" y="150" width="190" height="170" rx="22" fill="#ffffff" stroke="#5eead4" stroke-width="3"/>
+    <text x="825" y="215" font-size="28" font-weight="700" fill="#115e59">业务 API</text><text x="825" y="258" font-size="21" fill="#475569">身份 · 规则</text>
+    <rect x="1000" y="150" width="150" height="170" rx="22" fill="#ecfeff" stroke="#22d3ee" stroke-width="3"/>
+    <text x="1075" y="215" font-size="26" font-weight="700" fill="#155e75">数据</text><text x="1075" y="258" font-size="20" fill="#475569">数据库</text><text x="1075" y="290" font-size="20" fill="#475569">文件</text>
+  </g>
+  <g stroke="#3b82f6" stroke-width="5" fill="none" marker-end="url(#arrow)"><path d="M280 235 H370"/><path d="M630 235 H720"/><path d="M920 235 H990"/></g>
+  <text x="60" y="430" font-size="22" fill="#475569" font-family="Inter, PingFang SC, sans-serif">常见软件：SaaS 后台、CRM、门户、知识库、数据看板、内容网站</text>
+</svg>
