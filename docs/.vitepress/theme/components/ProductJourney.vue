@@ -49,38 +49,46 @@ const currentIndex = computed(() => steps.findIndex((step) => step.id === props.
 .product-journey {
   margin: 14px 0 26px;
   padding: 6px 2px 10px;
-  overflow-x: auto;
-  scrollbar-width: thin;
+  max-width: 100%;
 }
 
 .journey-track {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(8, minmax(78px, 1fr));
-  min-width: 700px;
-}
-
-.journey-track::before {
-  position: absolute;
-  top: 15px;
-  right: 6%;
-  left: 6%;
-  height: 2px;
-  background: var(--vp-c-divider);
-  content: '';
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  width: 100%;
+  min-width: 0;
 }
 
 .journey-step {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   display: flex;
   align-items: center;
+  min-width: 0;
   color: var(--vp-c-text-3) !important;
   text-decoration: none !important;
   flex-direction: column;
 }
 
+.journey-step::before {
+  position: absolute;
+  z-index: 0;
+  top: 15px;
+  right: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--vp-c-divider);
+  content: '';
+}
+
+.journey-step:first-child::before {
+  display: none;
+}
+
 .journey-node {
+  position: relative;
+  z-index: 1;
   display: grid;
   width: 30px;
   height: 30px;
@@ -93,10 +101,17 @@ const currentIndex = computed(() => steps.findIndex((step) => step.id === props.
 }
 
 .journey-label {
+  position: relative;
+  z-index: 1;
   margin-top: 8px;
   font-size: 0.76rem;
   font-weight: 600;
   white-space: nowrap;
+}
+
+.journey-step.is-complete::before,
+.journey-step.is-active::before {
+  background: var(--vp-c-brand-soft);
 }
 
 .journey-step.is-complete .journey-node {
@@ -126,6 +141,15 @@ const currentIndex = computed(() => steps.findIndex((step) => step.id === props.
     margin-left: -8px;
     padding-right: 8px;
     padding-left: 8px;
+  }
+
+  .journey-track {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    row-gap: 20px;
+  }
+
+  .journey-step:nth-child(5)::before {
+    display: none;
   }
 }
 </style>

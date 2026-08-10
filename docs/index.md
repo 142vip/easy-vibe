@@ -1,5 +1,7 @@
 ---
 layout: home
+title: Easy Vibe
+description: 从零开始，用 AI 把想法变成真正可用的产品
 ---
 
 <script setup>

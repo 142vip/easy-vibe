@@ -1,15 +1,17 @@
 <template>
-  <el-steps
-    :active="active"
-    align-center
-  >
-    <el-step
-      v-for="(item, index) in items"
-      :key="index"
-      :title="item.title"
-      :description="item.description"
-    />
-  </el-steps>
+  <div class="step-bar">
+    <el-steps
+      :active="active"
+      align-center
+    >
+      <el-step
+        v-for="(item, index) in items"
+        :key="index"
+        :title="item.title"
+        :description="item.description"
+      />
+    </el-steps>
+  </div>
 </template>
 
 <script setup>
@@ -29,3 +31,44 @@ defineProps({
   }
 })
 </script>
+
+<style scoped>
+.step-bar {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.step-bar :deep(.el-steps),
+.step-bar :deep(.el-step),
+.step-bar :deep(.el-step__main) {
+  min-width: 0;
+}
+
+.step-bar :deep(.el-step__main) {
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.step-bar :deep(.el-step__title),
+.step-bar :deep(.el-step__description) {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 720px) {
+  .step-bar :deep(.el-step__title) {
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .step-bar :deep(.el-step__description) {
+    padding-right: 2px;
+    padding-left: 2px;
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+}
+</style>
