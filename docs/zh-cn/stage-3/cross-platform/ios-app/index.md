@@ -32,11 +32,11 @@ iOS 应用需要一台能运行当前 Xcode 的 Mac。真机测试还需要 iPho
 
 项目名填写 `FridgeChef`，Organization Identifier 使用自己的反向域名。需要本地历史记录时，可以选择 SwiftData；如果模板提供的选项不同，也可以稍后再增加。
 
-![填写项目名称、团队和 Bundle Identifier](images/image16.png)
+![填写项目名称、团队和 Bundle Identifier](images/image16-private-redacted.png)
 
 选择保存位置并创建项目。
 
-![选择 Xcode 项目保存位置](images/image17.png)
+![选择 Xcode 项目保存位置](images/image17-cropped.png)
 
 先不要改代码。顶部选择一台 iPhone 模拟器，点击 Run。
 
@@ -54,7 +54,7 @@ iOS 应用需要一台能运行当前 Xcode 的 Mac。真机测试还需要 iPho
 
 > 请把当前 SwiftUI 首页改成冰箱大厨。首页显示食材输入框、生成菜谱按钮和历史记录空状态，先使用演示数据。
 
-![AI 读取 iOS 项目并开始修改](images/image23.png)
+![AI 读取 iOS 项目并开始修改](images/image23-terminal-cropped.png)
 
 回到 Xcode 重新运行。第一轮只看输入框、按钮和空状态，不接网络。
 

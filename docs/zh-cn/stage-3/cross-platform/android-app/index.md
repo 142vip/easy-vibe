@@ -118,7 +118,7 @@ Android Studio 顶部设备列表出现手机后，选择它并运行。
 
 ![Android Studio 识别到真机](images/image47.png)
 
-![应用成功安装到 Android 手机](images/image49.png)
+![应用成功安装到 Android 手机](images/image49-sidebar-cropped.png)
 
 真机至少测试：
 

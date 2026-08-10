@@ -2676,7 +2676,7 @@ const zhCnStage3Sidebar = [
         link: '/zh-cn/stage-3/cross-platform/electron-voice-to-text/'
       },
       {
-        text: '如何快速开发并铸造 NFT',
+        text: '如何在本地模拟链铸造 NFT',
         link: '/zh-cn/stage-3/cross-platform/nft-minting/'
       },
       {
@@ -2684,7 +2684,7 @@ const zhCnStage3Sidebar = [
         link: '/zh-cn/stage-3/cross-platform/vscode-extension/'
       },
       {
-        text: '如何开发工业级 Qt 桌面应用',
+        text: '如何开发企业 Qt 设备客户端',
         link: '/zh-cn/stage-3/cross-platform/qt-industrial-hmi/'
       },
       {
