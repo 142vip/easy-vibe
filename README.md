@@ -3,11 +3,11 @@
 
 <img src="assets/easy-vibe-logo-hd.svg" alt="Easy-Vibe Logo" width="300">
 
-<img src="assets/banner.png" alt="Easy-Vibe Banner" width="100%">
+<img src="assets/banner.png" alt="Easy-Vibe — Think it. Build it. From first idea to real product." width="100%">
 
 <p align="center" style="font-size: 1.2em; color: #666; margin: 20px 0;">
-  Jump right in and vibe together — if you can talk, you can build apps.<br>
-  <span style="font-size: 0.9em; color: #888;">直接上手，一起 vibe！会说话就会做应用。</span>
+  Learn AI coding from zero by shipping real products.<br>
+  <span style="font-size: 0.9em; color: #888;">从零开始学 AI 编程，把想法真正做成产品。</span>
 </p>
 
 <a href="https://trendshift.io/repositories/22079" target="_blank"><img src="https://trendshift.io/api/badge/repositories/22079" alt="datawhalechina/easy-vibe | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
