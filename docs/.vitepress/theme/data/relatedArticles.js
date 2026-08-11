@@ -26,31 +26,49 @@ const rawRelatedArticlesMap = {
     },
     {
       href: '/zh-cn/stage-1/appendix-idea-sources/',
-      title: '创意灵感的来源',
-      description: '了解从哪些渠道可以找到靠谱的产品灵感，为自己的方向做准备。',
+      title: '1. 寻找真实问题',
+      description: '从真实工作和生活场景出发，找到值得继续研究的问题。',
       icon: '💡'
     },
     {
       href: '/zh-cn/stage-1/finding-great-idea/',
-      title: '如何判断一个好点子',
+      title: '2. 筛选值得做的方向',
       description: '学会挖掘真实用户需求，判断什么方向值得投入时间去做。',
       icon: '🎯'
     },
     {
+      href: '/zh-cn/stage-1/appendix-jobs-to-be-done/',
+      title: '3. 看懂真实需求（JTBD）',
+      description: '从用户想完成的任务出发，理解表面需求背后的真实动机。',
+      icon: '🔍'
+    },
+    {
+      href: '/zh-cn/stage-1/appendix-mom-test/',
+      title: '4. 用访谈验证需求',
+      description: '用正确的提问方式获取真实信息，避免把客套话当成需求。',
+      icon: '🎤'
+    },
+    {
+      href: '/zh-cn/stage-1/appendix-double-diamond/',
+      title: '5. 收敛方案（双钻模型）',
+      description: '把发散得到的问题和方案逐步收敛，确定接下来要做的产品。',
+      icon: '💎'
+    },
+    {
       href: '/zh-cn/stage-1/building-prototype/',
-      title: '构建可交互的产品原型',
+      title: '6. 做出可交互原型',
       description: '从需求拆解到页面落地，用 AI IDE 生成多页面应用，完成第一版可交互 Demo。',
       icon: '🧩'
     },
     {
       href: '/zh-cn/stage-1/integrating-ai-capabilities/',
-      title: '为原型接入 AI 能力',
+      title: '7. 接入真实 AI 能力',
       description: '接入真实 API（文本模型、文生图），让原型从"可看"变"可用"。',
       icon: '🤖'
     },
     {
       href: '/zh-cn/stage-1/complete-project-practice/',
-      title: '完整项目实战：从想法到作品',
+      title: '8. 打磨并交付完整作品',
       description: '补齐数据、交互、异常处理，做出可展示、可交互的完整 AI 产品原型。',
       icon: '🚀'
     }
