@@ -1,0 +1,74 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#11182C"/>
+      <stop offset="1" stop-color="#17243B"/>
+    </linearGradient>
+    <linearGradient id="line" x1="190" y1="0" x2="1010" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7482FF"/>
+      <stop offset="0.5" stop-color="#31C493"/>
+      <stop offset="1" stop-color="#FF995B"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#050916" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="520" rx="30" fill="url(#bg)"/>
+  <circle cx="84" cy="58" r="150" fill="#5867FF" fill-opacity="0.08"/>
+  <circle cx="1110" cy="472" r="184" fill="#FF8D4C" fill-opacity="0.07"/>
+
+  <text x="600" y="55" fill="#F6F8FF" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle">一次创作，三次成长</text>
+  <text x="600" y="86" fill="#A9B3C8" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">从“把想法展示出来”，到“让软件参与完成任务”</text>
+
+  <path d="M221 275H979" stroke="url(#line)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M967 264L984 275L967 286" stroke="#FF995B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="132" width="300" height="284" rx="22" fill="#1D2740" stroke="#6675FF" stroke-opacity="0.72"/>
+    <rect x="104" y="158" width="252" height="142" rx="12" fill="#F7F8FC"/>
+    <circle cx="120" cy="174" r="4" fill="#FF7B7B"/>
+    <circle cx="134" cy="174" r="4" fill="#FFD166"/>
+    <circle cx="148" cy="174" r="4" fill="#5DD39E"/>
+    <rect x="124" y="199" width="118" height="14" rx="7" fill="#6E7CFF"/>
+    <rect x="124" y="223" width="188" height="7" rx="3.5" fill="#CCD2E0"/>
+    <rect x="124" y="239" width="166" height="7" rx="3.5" fill="#DDE1EA"/>
+    <rect x="124" y="265" width="72" height="20" rx="10" fill="#6E7CFF"/>
+    <circle cx="230" cy="327" r="25" fill="#6573FF" fill-opacity="0.18"/>
+    <text x="230" y="336" fill="#8490FF" font-family="Arial, sans-serif" font-size="25" text-anchor="middle">1</text>
+    <text x="230" y="370" fill="#F6F8FF" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">一个网页</text>
+    <text x="230" y="395" fill="#A9B3C8" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">想法可以被看见和分享</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="450" y="112" width="300" height="324" rx="22" fill="#1D2B38" stroke="#31C493" stroke-opacity="0.74"/>
+    <rect x="474" y="138" width="252" height="162" rx="12" fill="#F7F8FC"/>
+    <rect x="490" y="156" width="52" height="126" rx="7" fill="#16213A"/>
+    <rect x="557" y="156" width="70" height="42" rx="8" fill="#DDF7ED"/>
+    <rect x="638" y="156" width="70" height="42" rx="8" fill="#E4E7FF"/>
+    <rect x="557" y="211" width="151" height="71" rx="8" fill="#EEF1F6"/>
+    <path d="M570 263L589 246L608 253L632 229L650 240L674 218L695 234" stroke="#24AF82" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="600" cy="327" r="25" fill="#31C493" fill-opacity="0.17"/>
+    <text x="600" y="336" fill="#47D3A4" font-family="Arial, sans-serif" font-size="25" text-anchor="middle">2</text>
+    <text x="600" y="370" fill="#F6F8FF" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">真正的程序</text>
+    <text x="600" y="395" fill="#A9B3C8" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">数据、服务与任务形成闭环</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="820" y="132" width="300" height="284" rx="22" fill="#302639" stroke="#FF995B" stroke-opacity="0.76"/>
+    <circle cx="970" cy="216" r="68" fill="#FF995B" fill-opacity="0.09" stroke="#FF995B" stroke-opacity="0.28"/>
+    <circle cx="970" cy="216" r="34" fill="#FF995B" fill-opacity="0.2"/>
+    <path d="M970 194L976 208L991 210L979 220L982 235L970 227L958 235L961 220L949 210L964 208L970 194Z" fill="#FFB27F"/>
+    <circle cx="878" cy="180" r="16" fill="#7381FF"/>
+    <circle cx="1062" cy="180" r="16" fill="#31C493"/>
+    <circle cx="878" cy="258" r="16" fill="#FF718B"/>
+    <circle cx="1062" cy="258" r="16" fill="#FFD166"/>
+    <path d="M894 184L936 204M1046 184L1004 204M894 254L936 228M1046 254L1004 228" stroke="#8B95AA" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="970" cy="327" r="25" fill="#FF995B" fill-opacity="0.18"/>
+    <text x="970" y="336" fill="#FFAA76" font-family="Arial, sans-serif" font-size="25" text-anchor="middle">3</text>
+    <text x="970" y="370" fill="#F6F8FF" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">AI 原生产品</text>
+    <text x="970" y="395" fill="#A9B3C8" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">理解目标，并在边界内行动</text>
+  </g>
+
+  <text x="600" y="480" fill="#7F8AA2" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">网页没有消失，程序也没有被替代；每一层都成为下一层的基础。</text>
+</svg>

@@ -1,6 +1,6 @@
-# 用 AI 做一个 SwiftUI iOS App
+# 如何用 SwiftUI 开发 iOS 原生应用
 
-你好，这一节换到 iPhone，从 Xcode 里的空白项目做一个原生应用。
+iOS 原生开发从 Xcode 开始。下面从一个空白项目出发，做出可以在模拟器和 iPhone 上运行的应用。
 
 iOS 原生 App 是安装在 iPhone 或 iPad 上的应用。它可以使用相机、照片、定位、通知、健康、Wallet、NFC、Face ID 和本地数据，也能继续扩展到 Apple Watch、Mac、Widget、Live Activity 和 CarPlay。
 
@@ -40,11 +40,11 @@ Apple 的[企业开发入口](https://developer.apple.com/business/get-started/)
 
 如果只是简单表单、活动页或内容查询，手机网页和 PWA 可能已经足够；如果必须同时覆盖 iOS 与 Android，而且两端功能几乎完全一致，可以先比较 Flutter、React Native 或双端原生的长期成本。无论选哪一种，都不能跳过真实设备测试。
 
-## 这次做什么
+## 要做的应用：冰箱大厨
 
-这一篇做一个原生 iPhone 应用：**冰箱大厨 FridgeChef**。
+接下来做一个原生 iPhone 应用：**冰箱大厨 FridgeChef**。
 
-用户输入现有食材，应用生成一份菜谱，并把确认过的结果保存在本机。我们会走完 Xcode 项目、模拟器、AI 修改、后端接口、本地存储、真机测试和 App Store 发布准备。
+用户输入现有食材，应用生成一份菜谱，并把确认过的结果保存在本机。教程从 Xcode 空项目开始，依次完成模拟器运行、AI 修改、后端接口、本地存储、真机测试和 App Store 发布准备。
 
 ![冰箱大厨 iOS 应用成品](images/image47.png)
 

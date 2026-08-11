@@ -1,46 +1,42 @@
+---
+title: '如何把开发好的程序发布上架'
+description: '从生成正式安装包到应用商店审核，了解 Android、iOS、Windows、macOS、Linux 和 Web 的发布方法。'
+---
+
+<script setup>
+import ReleasePipeline from './ReleasePipeline.vue'
+import PublishChannels from './PublishChannels.vue'
+</script>
+
 # 如何把开发好的程序发布上架
 
-程序在自己的电脑和手机上运行，只能算“开发完成”；用户能安全地下载、安装、付费并持续收到更新，才算真正发布。
+程序在自己的电脑和手机上能运行，和真正发布给用户，是两回事。
 
-这一篇不绑定 Flutter、React Native、Electron、Qt 或某一种语言。无论你用什么技术，发布流程都可以拆成同一条链路：
+无论使用 Flutter、React Native、Electron、Qt 还是原生开发，最后都要走过下面这段路：
 
 > 确定渠道 → 固定应用身份 → 构建 Release 包 → 签名 → 内测 → 准备商店资料 → 提交审核 → 灰度发布 → 监控与更新
 
-下面会分别覆盖 Android、iOS、Windows、macOS、Linux 和 Web/PWA，并补充中国大陆应用市场、浏览器插件与企业内部发布。
+下面分别介绍 Android、iOS、Windows、macOS、Linux 和 Web/PWA 的发布方式，同时补充国内 Android 商店、小程序和浏览器插件。
 
 ::: warning 规则会变化
-商店支持的 SDK、目标系统版本、截图尺寸、账号验证和审核规则会持续更新。本文讲的是稳定的发布方法；真正提交前，请再查看对应后台的最新提示和文末链接的官方文档。
+商店支持的 SDK、目标系统版本、截图尺寸、账号验证和审核规则会持续更新。这里讲的是稳定的发布方法；真正提交前，请再查看对应后台的最新提示和文末链接的官方文档。
 :::
 
 ## 1. 先分清四件事
 
-### 打包
+打包、签名、分发和审核经常被混在一起说成“上架”，其实它们解决的是四个不同问题。
 
-把源码和资源编译成可交付文件，例如 Android 的 `.aab`、Windows 的 `.msix`，或者 macOS 的 `.app`。
-
-### 签名
-
-用证书或密钥证明“这个安装包确实由你发布，而且没有被篡改”。签名身份还决定旧用户能不能直接升级到新版本。
-
-### 分发
-
-让用户拿到程序。应用商店只是其中一种方式，还可以通过官网、企业设备管理、TestFlight 或封闭测试渠道分发。
-
-### 上架审核
-
-平台检查程序、商店资料、隐私声明、支付方式和内容是否符合规则。能生成安装包，不代表一定能通过审核。
+<ClientOnly>
+  <ReleasePipeline />
+</ClientOnly>
 
 ## 2. 一张表选发布渠道
 
-| 平台 | 推荐的公开渠道 | 常见提交物 | 其他分发方式 |
-| --- | --- | --- | --- |
-| Android 海外 | Google Play | 已签名的 `.aab` | 官网 APK、企业 MDM、其他商店 |
-| Android 中国大陆 | 手机厂商应用市场、第三方市场 | 按市场要求提供 APK/AAB、备案与合规资料 | 企业 MDM、官网 APK |
-| iOS / iPadOS | App Store | Xcode Archive 上传的构建 | TestFlight、Custom Apps、企业分发 |
-| Windows | Microsoft Store | MSIX，或符合要求的 MSI/EXE | 官网下载、企业软件中心、包管理器 |
-| macOS | Mac App Store | Xcode Archive 上传的构建 | 官网分发已签名并公证的 DMG/PKG |
-| Linux | Flathub、Snap Store | Flatpak manifest 或 `.snap` | AppImage、`.deb`、`.rpm`、软件源 |
-| Web / PWA | 自己的域名和服务器 | HTTPS 网站、Manifest、Service Worker | 部分应用商店也接收 PWA |
+手机、电脑和网页的发布入口并不相同。点击下面的平台，可以直接查看它最常见的公开渠道、需要准备的文件和其他分发方式。
+
+<ClientOnly>
+  <PublishChannels />
+</ClientOnly>
 
 如果是第一款作品，不必第一天同时上六个平台。先选择用户最集中的一个渠道，把一次完整发布做通，再复用商店资料和自动化流程扩展其他平台。
 
@@ -344,7 +340,11 @@ Chrome Web Store、Microsoft Edge Add-ons 和 Firefox AMO 都有自己的开发�
 
 可以使用这个提示词：
 
-> 这是本次应用商店审核反馈：【粘贴原文】。当前版本的相关行为是：【说明操作路径】。请先对应具体条款，再给出可复现步骤、最小修改方案、需要更新的商店资料和复测清单。不要猜测未提供的信息。
+> 这是商店的审核反馈：【粘贴原文】。请指出对应规则和需要修改的功能，不要猜测。
+
+修改完成后，再问一次：
+
+> 请列出重新提交前要复测的操作，以及需要更新的商店资料。
 
 ## 12. 不要直接全量发布
 

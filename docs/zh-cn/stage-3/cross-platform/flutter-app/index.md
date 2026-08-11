@@ -1,10 +1,10 @@
-# 用 Flutter 做一个同时运行在 Android 和 iOS 的应用
+# 如何开发 Flutter 跨平台应用
 
-你好，这一篇继续做手机应用，但不再分别写 Kotlin 和 Swift。我们换成 Flutter，用一套 Dart 代码做一个 Android、iOS 和 Web 都能运行的门店费用簿。
+Flutter 可以用一套 Dart 代码制作 Android、iOS 和 Web 应用。下面以门店费用簿为例，从空项目开始把录入、校验和本机保存真正跑通。
 
 Flutter 最吸引人的地方当然是少写一套界面，不过这还不是选它的全部理由。一个产品如果两端的流程基本相同，又希望颜色、间距、动画和组件保持一致，Flutter 会让团队更容易共用设计和业务实现。反过来，如果应用长期依赖大量 Android 或 Apple 独有能力，两端的交互本来就差得很大，原生 Compose 和 SwiftUI 往往更直接。
 
-这篇不会把“能编译”说成“已经能上架”。我们会真的创建并运行一个费用记录原型，补上表单报错、本机保存和自动测试；Android、iOS 的签名、真机和商店发布则分别说明怎样继续验证。
+“能编译”和“已经能上架”是两回事。费用记录原型会实际完成表单报错、本机保存和自动测试；Android、iOS 的签名、真机与商店发布，则分别说明还要怎样验证。
 
 ## Flutter 和 Dart 分别是什么
 
@@ -25,11 +25,11 @@ Flutter 不是把网页套进手机外壳。发布到 Android 或 iOS 时，应�
 
 如果产品只是已有网站的简单包装，可以先看 PWA 或 Capacitor；如果最重要的是蓝牙、车机、系统扩展、后台音视频或最新平台 API，先用一个关键功能原型比较 Flutter 和原生方案。不要只凭“一套代码”决定长期架构。
 
-## 先看三个真正上线的 Flutter 产品
+## 三个已经上线的 Flutter 应用
 
-看生产案例不是为了证明“大公司用了，所以我们也要用”。更有用的是看它们遇到了什么问题，又怎样把风险拆小。下面三个官方案例正好对应这篇原型里的状态、表单、架构和测试。
+BMW、Google Pay 和 Nubank 面向的用户完全不同，却都在正式产品中使用了 Flutter。它们怎样安排页面状态、迁移已有功能和组织测试，也能给后面的费用簿提供直接参考。
 
-### BMW：先解决两端功能不一致，再谈共用代码
+### My BMW：一个连接车主与车辆服务的应用
 
 BMW 曾经发现 iOS 和 Android 车主应用之间的功能与设计差距越来越大，同时还要维护不同品牌、系统和四十多个市场的版本。团队后来用 Flutter 建立统一移动平台，My BMW App 于 2020 年发布，并扩展到 47 个国家。它的流水线每天会自动构建、测试和部署多个变体，而不是让一套源码替代发布工程。
 
@@ -39,9 +39,9 @@ BMW 曾经发现 iOS 和 Android 车主应用之间的功能与设计差距越�
 
 这件事最值得借鉴的不是汽车界面，而是两个做法：用户先看见当前状态，再决定下一步操作；团队按业务领域拆模块，同时自动验证不同市场和平台的构建。
 
-本文的费用簿也先显示本月金额、备用金、最后同步时间和待同步数量，然后才是明细和“记一笔”。页面没有把“同步成功”藏在日志里。代码扩展到真实项目时，可以按照 Flutter 的[应用架构指南](https://docs.flutter.dev/app-architecture/guide)把 View、ViewModel、Repository 和 Service 分开，再按[自适应布局方法](https://docs.flutter.dev/ui/adaptive-responsive/general)处理手机、平板和桌面宽度。
+门店费用簿也先显示本月金额、备用金、最后同步时间和待同步数量，然后才是明细和“记一笔”。页面没有把“同步成功”藏在日志里。代码扩展到真实项目时，可以按照 Flutter 的[应用架构指南](https://docs.flutter.dev/app-architecture/guide)把 View、ViewModel、Repository 和 Service 分开，再按[自适应布局方法](https://docs.flutter.dev/ui/adaptive-responsive/general)处理手机、平板和桌面宽度。
 
-### Google Pay：先做一条完整链路，不要一开始重写全部功能
+### Google Pay：一个管理付款、奖励和账户的数字钱包
 
 Google Pay 原来的 Android 和 iOS 实现合计约 170 万行代码。迁移前，团队先让三名资深工程师做首页、聊天和支付的纵向原型，把关键原生插件也放进去验证；得到团队反馈以后，才逐步扩大到正式重写。官方案例记录的新代码库约 110 万行，工程投入减少约 60% 到 70%，但安全审查和平台接入并没有因此消失。
 
@@ -49,11 +49,11 @@ Google Pay 原来的 Android 和 iOS 实现合计约 170 万行代码。迁移�
 
 图片与数据来源：[Flutter 官方 Google Pay 案例](https://flutter.dev/showcase/google-pay)。
 
-对我们最实用的提醒是：先跑通一条真正可以验收的流程。费用簿第一版只做“看汇总 → 录入费用 → 看到错误或成功反馈 → 刷新后恢复”，没有顺手加入审批、报销、角色和云同步。这样一条小链路已经能暴露表单、状态和存储问题。
+这个案例给费用簿的直接提醒，是先跑通一条可以验收的流程。第一版只做“看汇总 → 录入费用 → 看到错误或成功反馈 → 刷新后恢复”，没有顺手加入审批、报销、角色和云同步。这样一条小链路已经能暴露表单、状态和存储问题。
 
-涉及付款、工单或费用时，点击按钮以后不能毫无反应，也不能因为重试生成两条相同记录。本文用字段旁边的错误文字、保存成功提示和“待同步”状态把结果说清楚。继续接后端时，可以参考 Flutter 的[离线优先架构](https://docs.flutter.dev/app-architecture/design-patterns/offline-first)和[分层测试案例](https://docs.flutter.dev/app-architecture/case-study/testing)，再为上传请求增加唯一业务编号和幂等处理。
+涉及付款、工单或费用时，点击按钮以后不能毫无反应，也不能因为重试生成两条相同记录。费用簿用字段旁边的错误文字、保存成功提示和“待同步”状态把结果说清楚。继续接后端时，可以参考 Flutter 的[离线优先架构](https://docs.flutter.dev/app-architecture/design-patterns/offline-first)和[分层测试案例](https://docs.flutter.dev/app-architecture/case-study/testing)，再为上传请求增加唯一业务编号和幂等处理。
 
-### Nubank：跨平台之后，更需要统一组件和测试边界
+### Nubank：一个面向巴西用户的数字银行
 
 巴西数字银行 Nubank 没有因为 Flutter 热门就直接迁移。官方案例介绍，团队先用 11 项标准比较 Kotlin Native、React Native 和 Flutter，还让不同经验的开发者完成一小时任务并收集反馈。选定 Flutter 后，新功能逐步采用，旧功能再按计划迁移。团队随后建立了自己的设计系统，并把单元、组件和端到端测试纳入开发方式。
 
@@ -61,13 +61,13 @@ Google Pay 原来的 Android 和 iOS 实现合计约 170 万行代码。迁移�
 
 图片与数据来源：[Flutter 官方 Nubank 案例](https://flutter.dev/showcase/nubank)。案例还记录了合并成功率、合并时间和新人上手速度等实际指标。
 
-本文没有照着 Nubank 画一个紫色银行 App，而是借了它的工程做法：整页颜色由主题统一，汇总卡、预算、费用行和同步提示拆成小组件；表单规则有单独的可见反馈；最常用的“打开首页和录入表单”写成 Widget Test。想继续整理设计系统，可以看 Flutter 官方的[主题教程](https://docs.flutter.dev/cookbook/design/themes)；项目开始多人维护时，再按[可扩展应用架构建议](https://docs.flutter.dev/app-architecture/recommendations)调整目录和测试边界。
+费用簿没有照着 Nubank 画一个紫色银行 App，而是借了它的工程做法：整页颜色由主题统一，汇总卡、预算、费用行和同步提示拆成小组件；表单规则有单独的可见反馈；最常用的“打开首页和录入表单”写成 Widget Test。想继续整理设计系统，可以看 Flutter 官方的[主题教程](https://docs.flutter.dev/cookbook/design/themes)；项目开始多人维护时，再按[可扩展应用架构建议](https://docs.flutter.dev/app-architecture/recommendations)调整目录和测试边界。
 
 这三个案例放在一起，方向就比较明确了：Flutter 省下的是重复实现，不是产品判断、平台适配、测试和发布流程。
 
-## 这次做一个门店费用簿
+## 要做的应用：门店费用簿
 
-我们做的成品叫 **门店费用簿**。店长可以看本月已记录金额和备用金，新增一笔临时费用；网络不好时先存在本机，并明确显示哪些记录还没有同步。
+成品叫 **门店费用簿**。店长可以看本月已记录金额和备用金，新增一笔临时费用；网络不好时先存在本机，并明确显示哪些记录还没有同步。
 
 这个题目看起来不复杂，却包含企业应用经常遇到的几件小事：
 
@@ -78,7 +78,7 @@ Google Pay 原来的 Android 和 iOS 实现合计约 170 万行代码。迁移�
 - 离线记录和服务器同步要分成两个状态；
 - 同一个页面要能适应窄屏手机和较宽窗口。
 
-下面不会贴一大段生成好的 Dart 源码。你只需要在当前项目里一次给 AI 一个任务，运行、看结果，再继续下一步。
+后面的操作每次只给 AI 一个任务。完成后立即运行、查看结果，再继续下一步。
 
 ## 1. 装好 Flutter，再看本机缺什么
 
@@ -96,7 +96,7 @@ flutter doctor -v
 
 修完一项再重新检查。Web 旁边出现对勾，不代表 Android SDK 和 iOS 签名也已经准备好。
 
-本文实际使用的是 Flutter 3.44.9、Dart 3.12.2 和 Chrome 151。`flutter doctor -v` 当时显示：Chrome 可以使用，但本机没有 Android SDK；Xcode 已安装，却没有可用的 iOS Simulator Runtime，CocoaPods 也没有安装。因此后面的截图是实际运行的 Flutter Web 构建，不冒充 Android 模拟器或 iPhone 真机。
+实际验证使用的是 Flutter 3.44.9、Dart 3.12.2 和 Chrome 151。`flutter doctor -v` 当时显示：Chrome 可以使用，但本机没有 Android SDK；Xcode 已安装，却没有可用的 iOS Simulator Runtime，CocoaPods 也没有安装。因此后面的截图是实际运行的 Flutter Web 构建，不冒充 Android 模拟器或 iPhone 真机。
 
 ## 2. 创建项目，先跑空白页
 
@@ -283,7 +283,7 @@ flutter run -d <iPhone 模拟器编号>
 
 Flutter 会自动处理一部分滚动、文本选择等平台习惯，但不会替你决定所有 Android 和 iOS 交互。官方的[平台自适应说明](https://docs.flutter.dev/ui/adaptive-responsive/platform-adaptations)列出了哪些行为会自动变化、哪些仍要产品自己选择。
 
-本文没有完成这一步：当时 `flutter doctor` 找不到 Android SDK；Xcode 没有安装可用的 iOS Simulator Runtime，项目又使用了需要 CocoaPods 的插件。上面的两张移动端图不能用 Web 截图替代。准备好对应环境后，应把 Android 模拟器、iOS 模拟器和至少一台真机的运行截图补进来。
+这一步尚未完成：当时 `flutter doctor` 找不到 Android SDK；Xcode 没有安装可用的 iOS Simulator Runtime，项目又使用了需要 CocoaPods 的插件。上面的两张移动端图不能用 Web 截图替代。准备好对应环境后，应把 Android 模拟器、iOS 模拟器和至少一台真机的运行截图补进来。
 
 ## 13. 构建和发布是两条独立流水线
 
@@ -313,7 +313,7 @@ flutter build ipa
 
 两个商店的隐私说明、截图、审核规则和账号都不同；推送、内购和登录也有平台政策差异。“一套 Dart 代码”不会生成一个同时提交给两个商店的万能安装包。
 
-## 做到这里，你已经有了一条可以继续扩展的链路
+## 一笔费用能够保存和恢复，原型才算跑通
 
 现在回头看这个小费用簿，它已经不只是几张静态卡片：空表单会告诉用户哪里不对，保存以后汇总和列表一起更新，页面也明确区分本机保存与服务器同步；刷新整个应用以后，新记录还在。
 

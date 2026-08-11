@@ -2676,19 +2676,15 @@ const zhCnStage3Sidebar = [
         link: '/zh-cn/stage-3/cross-platform/wechat-miniprogram-backend/'
       },
       {
-        text: '如何构建安卓程序-compose 原生开发',
+        text: '如何用 Jetpack Compose 开发 Android 原生应用',
         link: '/zh-cn/stage-3/cross-platform/android-app/'
       },
       {
-        text: '如何构建 iOS 程序-swiftUI原生开发',
+        text: '如何用 SwiftUI 开发 iOS 原生应用',
         link: '/zh-cn/stage-3/cross-platform/ios-app/'
       },
       {
-        text: '如何把开发好的程序发布上架',
-        link: '/zh-cn/stage-3/cross-platform/app-publishing/'
-      },
-      {
-        text: '如何开发 React Native + Expo 跨平台应用',
+        text: '从零开始用 React Native + Expo 做一个门店巡检应用',
         link: '/zh-cn/stage-3/cross-platform/react-native-expo/'
       },
       {
@@ -2726,6 +2722,10 @@ const zhCnStage3Sidebar = [
       {
         text: '如何构建属于自己的个人网页与学术博客',
         link: '/zh-cn/stage-3/personal-brand/personal-website-blog/'
+      },
+      {
+        text: '如何把开发好的程序发布上架',
+        link: '/zh-cn/stage-3/cross-platform/app-publishing/'
       }
     ]
   },
