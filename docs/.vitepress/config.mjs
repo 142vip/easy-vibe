@@ -945,6 +945,10 @@ const stage3SidebarEn = [
     collapsed: false,
     items: [
       {
+        text: 'From a Web Page to Real Software and an AI-Native Product',
+        link: '/en/stage-3/cross-platform/ai-native-creator/'
+      },
+      {
         text: 'How to Choose the Right Platform for Your App',
         link: '/en/stage-3/cross-platform/choose-platform/'
       },
@@ -965,6 +969,14 @@ const stage3SidebarEn = [
         link: '/en/stage-3/cross-platform/ios-app/'
       },
       {
+        text: 'Build a Store Inspection App with React Native and Expo',
+        link: '/en/stage-3/cross-platform/react-native-expo/'
+      },
+      {
+        text: 'How to Build a Cross-Platform App with Flutter',
+        link: '/en/stage-3/cross-platform/flutter-app/'
+      },
+      {
         text: 'How to Build a PWA Local App',
         link: '/en/stage-3/cross-platform/pwa-local-app/'
       },
@@ -975,6 +987,10 @@ const stage3SidebarEn = [
       {
         text: 'How to Build a Cross-Platform Electron Desktop App',
         link: '/en/stage-3/cross-platform/electron-voice-to-text/'
+      },
+      {
+        text: 'How to Build Platform, Pixel-Art, and 3D Games with Godot',
+        link: '/en/stage-3/cross-platform/godot-game-development/'
       },
       {
         text: 'How to Quickly Build and Mint an NFT',
@@ -991,6 +1007,10 @@ const stage3SidebarEn = [
       {
         text: 'How to Build Your Personal Website and Academic Blog',
         link: '/en/stage-3/personal-brand/personal-website-blog/'
+      },
+      {
+        text: 'How to Publish the Application You Built',
+        link: '/en/stage-3/cross-platform/app-publishing/'
       }
     ]
   },
@@ -2771,18 +2791,23 @@ const stage3SidebarLabels = {
     {
       text: 'マルチプラットフォーム開発',
       items: [
+        'Web ページから実用ソフトウェア、そして AI ネイティブ製品へ',
         'アプリ開発プラットフォームの選び方',
         'WeChat ミニプログラムの構築',
         'WeChat ミニプログラム（バックエンド付き）',
         'Android アプリ開発（Jetpack Compose）',
         'iOS アプリ開発（SwiftUI）',
+        'React Native + Expo で店舗点検アプリを作る',
+        'Flutter クロスプラットフォームアプリの開発',
         'PWA ローカルアプリの開発',
         'ブラウザ AI アシスタント拡張機能の開発',
         'クロスプラットフォーム Electron デスクトップアプリ',
+        'Godot で横スクロール・ピクセル・3D ゲームを作る',
         'NFT の迅速開発とミント',
         'VS Code 拡張機能の開発',
         '産業用 Qt デスクトップアプリの開発',
-        '個人ウェブサイトと学術ブログの構築'
+        '個人ウェブサイトと学術ブログの構築',
+        '完成したアプリを公開・ストア配信する'
       ]
     },
     {
@@ -2818,18 +2843,23 @@ const stage3SidebarLabels = {
     {
       text: '多平台開發',
       items: [
+        '從網頁到完整程式，再到 AI 原生產品',
         '如何選擇應用開發平台',
         '如何構建微信小程式',
         '如何構建微信小程式（包含後端）',
         '如何構建安卓程式 - Compose 原生開發',
         '如何構建 iOS 程式 - SwiftUI 原生開發',
+        '用 React Native + Expo 建立門市巡檢 App',
+        '如何用 Flutter 開發跨平台 App',
         '如何開發 PWA 本地應用',
         '如何開發瀏覽器 AI 助手插件',
         '如何開發跨平台 Electron 桌面程式',
+        '如何用 Godot 開發橫向、像素與 3D 遊戲',
         '如何快速開發並鑄造 NFT',
         '如何開發 VS Code 插件',
         '如何開發工業級 Qt 桌面應用',
-        '如何構建個人網頁與學術部落格'
+        '如何構建個人網頁與學術部落格',
+        '如何把做好的程式發布上架'
       ]
     },
     {
@@ -2865,18 +2895,23 @@ const stage3SidebarLabels = {
     {
       text: '멀티플랫폼 개발',
       items: [
+        '웹페이지에서 실제 프로그램, AI 네이티브 제품으로',
         '앱 개발 플랫폼 선택 방법',
         'WeChat 미니프로그램 구축',
         'WeChat 미니프로그램 (백엔드 포함)',
         'Android 앱 개발 (Jetpack Compose)',
         'iOS 앱 개발 (SwiftUI)',
+        'React Native + Expo로 매장 점검 앱 만들기',
+        'Flutter 크로스 플랫폼 앱 개발',
         'PWA 로컬 앱 개발',
         '브라우저 AI 어시스턴트 확장 프로그램 개발',
         '크로스 플랫폼 Electron 데스크톱 앱',
+        'Godot로 횡스크롤·픽셀·3D 게임 만들기',
         'NFT 빠른 개발 및 민팅',
         'VS Code 확장 프로그램 개발',
         '산업용 Qt 데스크톱 앱 개발',
-        '개인 웹사이트 및 학술 블로그 구축'
+        '개인 웹사이트 및 학술 블로그 구축',
+        '완성한 앱을 배포하고 스토어에 출시하기'
       ]
     },
     {
@@ -2912,18 +2947,23 @@ const stage3SidebarLabels = {
     {
       text: 'Desarrollo Multiplataforma',
       items: [
+        'De una página web a un programa real y un producto nativo de IA',
         'Cómo elegir la plataforma para tu aplicación',
         'Cómo construir un Mini Programa de WeChat',
         'Cómo construir un Mini Programa de WeChat (con Backend)',
         'Cómo construir una app Android (Jetpack Compose)',
         'Cómo construir una app iOS (SwiftUI)',
+        'Crear una app de inspección con React Native y Expo',
+        'Desarrollar una aplicación multiplataforma con Flutter',
         'Cómo desarrollar una aplicación PWA local',
         'Cómo desarrollar una extensión de navegador AI',
         'Cómo desarrollar una app de escritorio Electron',
+        'Crear juegos de plataformas, pixel art y 3D con Godot',
         'Cómo desarrollar y acuñar NFTs rápidamente',
         'Cómo desarrollar una extensión de VS Code',
         'Cómo desarrollar una app Qt industrial',
-        'Cómo construir tu sitio web personal y blog académico'
+        'Cómo construir tu sitio web personal y blog académico',
+        'Cómo publicar la aplicación terminada'
       ]
     },
     {
@@ -2959,18 +2999,23 @@ const stage3SidebarLabels = {
     {
       text: 'Développement Multiplateforme',
       items: [
+        'De la page web au logiciel, puis au produit natif IA',
         'Comment choisir la plateforme pour votre application',
         'Comment construire un Mini Programme WeChat',
         'Comment construire un Mini Programme WeChat (avec Backend)',
         'Comment construire une app Android (Jetpack Compose)',
         'Comment construire une app iOS (SwiftUI)',
+        'Créer une application d’inspection avec React Native et Expo',
+        'Développer une application multiplateforme avec Flutter',
         'Comment développer une application PWA locale',
         'Comment développer une extension de navigateur AI',
         'Comment développer une app bureau Electron',
+        'Créer des jeux de plateforme, pixel art et 3D avec Godot',
         'Comment développer et minter des NFTs rapidement',
         'Comment développer une extension VS Code',
         'Comment développer une app Qt industrielle',
-        'Comment construire votre site personnel et blog académique'
+        'Comment construire votre site personnel et blog académique',
+        'Publier et distribuer l’application terminée'
       ]
     },
     {
@@ -3006,18 +3051,23 @@ const stage3SidebarLabels = {
     {
       text: 'Plattformübergreifende Entwicklung',
       items: [
+        'Von der Webseite zur Software und zum KI-nativen Produkt',
         'Wie man die richtige Plattform für seine App wählt',
         'Wie man ein WeChat Mini-Programm erstellt',
         'Wie man ein WeChat Mini-Programm (mit Backend) erstellt',
         'Wie man eine Android-App erstellt (Jetpack Compose)',
         'Wie man eine iOS-App erstellt (SwiftUI)',
+        'Eine Filialprüfungs-App mit React Native und Expo bauen',
+        'Eine plattformübergreifende App mit Flutter entwickeln',
         'Wie man eine lokale PWA-App entwickelt',
         'Wie man eine Browser-KI-Assistenten-Erweiterung entwickelt',
         'Wie man eine plattformübergreifende Electron-Desktop-App entwickelt',
+        'Plattform-, Pixel- und 3D-Spiele mit Godot bauen',
         'Wie man schnell NFTs entwickelt und mintet',
         'Wie man eine VS Code-Erweiterung entwickelt',
         'Wie man eine industrielle Qt-Desktop-App entwickelt',
-        'Wie man eine persönliche Website und einen akademischen Blog erstellt'
+        'Wie man eine persönliche Website und einen akademischen Blog erstellt',
+        'Die fertige Anwendung veröffentlichen'
       ]
     },
     {
@@ -3053,18 +3103,23 @@ const stage3SidebarLabels = {
     {
       text: 'التطوير متعدد المنصات',
       items: [
+        'من صفحة ويب إلى برنامج حقيقي ومنتج أصلي للذكاء الاصطناعي',
         'كيفية اختيار المنصة المناسبة لتطبيقك',
         'كيفية بناء برنامج WeChat المصغر',
         'كيفية بناء برنامج WeChat المصغر (مع خلفية)',
         'كيفية بناء تطبيق Android (Jetpack Compose)',
         'كيفية بناء تطبيق iOS (SwiftUI)',
+        'إنشاء تطبيق تفتيش متجر باستخدام React Native وExpo',
+        'تطوير تطبيق متعدد المنصات باستخدام Flutter',
         'كيفية تطوير تطبيق PWA محلي',
         'كيفية تطوير إضافة مساعد ذكاء اصطناعي للمتصفح',
         'كيفية تطوير تطبيق سطح مكتب Electron',
+        'إنشاء ألعاب منصات وPixel Art و3D باستخدام Godot',
         'كيفية تطوير وسك NFTs بسرعة',
         'كيفية تطوير إضافة VS Code',
         'كيفية تطوير تطبيق Qt صناعي',
-        'كيفية بناء موقعك الشخصي ومدونتك الأكاديمية'
+        'كيفية بناء موقعك الشخصي ومدونتك الأكاديمية',
+        'نشر التطبيق المكتمل في المتاجر'
       ]
     },
     {
@@ -3100,18 +3155,23 @@ const stage3SidebarLabels = {
     {
       text: 'Phát triển Đa nền tảng',
       items: [
+        'Từ trang web đến phần mềm và sản phẩm AI-native',
         'Cách chọn nền tảng phù hợp cho ứng dụng của bạn',
         'Cách xây dựng WeChat Mini Program',
         'Cách xây dựng WeChat Mini Program (có Backend)',
         'Cách xây dựng ứng dụng Android (Jetpack Compose)',
         'Cách xây dựng ứng dụng iOS (SwiftUI)',
+        'Xây dựng ứng dụng kiểm tra bằng React Native và Expo',
+        'Phát triển ứng dụng đa nền tảng với Flutter',
         'Cách phát triển ứng dụng PWA cục bộ',
         'Cách phát triển tiện ích trợ lý AI cho trình duyệt',
         'Cách phát triển ứng dụng desktop Electron đa nền tảng',
+        'Làm game platform, pixel art và 3D bằng Godot',
         'Cách phát triển và đúc NFT nhanh chóng',
         'Cách phát triển tiện ích mở rộng VS Code',
         'Cách phát triển ứng dụng desktop Qt công nghiệp',
-        'Cách xây dựng trang web cá nhân và blog học thuật'
+        'Cách xây dựng trang web cá nhân và blog học thuật',
+        'Phát hành ứng dụng đã hoàn thành'
       ]
     },
     {
