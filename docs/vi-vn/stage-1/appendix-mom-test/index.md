@@ -4,6 +4,7 @@ description: 'Bài viết The Mom Test dành cho người mới. Học cách tr�
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Khoảng <strong>1.5 giờ</strong>'
 </script>
 
@@ -576,12 +577,16 @@ Xin giúp tôi tổng kết từ góc nhìn The Mom Test:
 
 ## 📚 Bài tập
 
+<StageAssignmentCard title="Thực hiện một cuộc phỏng vấn không chào bán ý tưởng">
+
 Xin bạn dựa vào nội dung bài viết, hoàn thành bài tập sau:
 
 1. Chọn một hướng sản phẩm bạn muốn làm gần đây, trước viết ra 5 câu hỏi "dễ hỏi hỏng" bạn sẽ hỏi
 2. Viết lại 5 câu hỏi này thành câu hỏi phù hợp hơn với phong cách The Mom Test
 3. Tìm 3 người dùng tiềm năng, ít nhất hỏi được một lần "lần gần nhất bạn gặp vấn đề này là khi nào"
 4. Sau khi phỏng vấn xong sắp xếp 4 loại thông tin: Hành vi thực tế, giải pháp thay thế, chi phí đã trả, khó khăn xuất hiện lặp đi lặp lại
+
+</StageAssignmentCard>
 
 ## Đọc thêm
 

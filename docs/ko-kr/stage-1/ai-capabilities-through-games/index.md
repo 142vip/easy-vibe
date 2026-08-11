@@ -10,6 +10,7 @@
 </div>
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = '약 <strong>4시간</strong>, 여러 번에 나누어 완료 가능'
@@ -435,12 +436,9 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 ## 📚 과제
 
-<el-card id="assignment-card" shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 이 장의 과제: 첫 번째 AI 네이티브 미니게임 묶음 완성하기</div>
-  </template>
+<StageAssignmentCard title="첫 AI 네이티브 미니게임 완성하기">
 
-  <p>
+<p>
     이 절에서 당신은 “대화로 스네이크 생성하기”부터 “AI 네이티브 미니게임 설계 사고 이해하기”까지의 전체 흐름을 단계별로 경험했습니다. 아래 과제는 이러한 이해를 진짜 자신의 능력으로 바꾸도록 돕습니다.
   </p>
 
@@ -464,7 +462,8 @@ z.ai의 답변은 다음과 같을 것입니다.
   <p>
     이것이 전체 튜토리얼입니다! 모든 내용을 완료하고 자신만의 스네이크 게임을 만들려면 <strong>4시간</strong>이 필요할 수 있습니다. 서두르지 마세요. 탐색하고, 실험하고, 이 과정을 즐기세요. 진행 중 이해하기 어려운 개념을 만나면 아래 부록의 관련 부분을 바로 확인하는 것을 추천합니다.
   </p>
-</el-card>
+
+</StageAssignmentCard>
 
 ## 부록
 

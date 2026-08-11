@@ -4,6 +4,7 @@ description: "Article d'introduction au Double Diamond pour les lecteurs débuta
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Environ <strong>1,5 heure</strong>'
 </script>
 
@@ -526,12 +527,16 @@ C'est particulièrement utile pour les débutants, car il est facile de « comme
 
 ## 📚 Exercices
 
+<StageAssignmentCard title="Organiser votre idée avec le Double Diamant">
+
 En vous basant sur le contenu ci-dessus, veuillez réaliser les exercices suivants :
 
 1. Choisissez une idée produit que vous avez récemment, et rédigez le brouillon des quatre étapes Discover, Define, Develop, Deliver
 2. En phase Define, forcez-vous à réduire le problème à une phrase spécifique
 3. En phase Develop, listez au moins 3 solutions différentes, au lieu de ne vous concentrer que sur la première idée venue
 4. En phase Deliver, écrivez une version minimale validable livrable en une semaine
+
+</StageAssignmentCard>
 
 ## Lectures complémentaires
 

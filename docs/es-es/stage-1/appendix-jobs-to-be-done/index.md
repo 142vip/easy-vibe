@@ -4,6 +4,7 @@ description: 'Comprende que los usuarios no compran funciones, sino que "contrat
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Aproximadamente <strong>1.5 horas</strong>'
 </script>
 
@@ -481,12 +482,16 @@ La ventaja de hacer esto es que descubriras mas rapidamente si estas mirando nec
 
 ## 📚 Tareas
 
+<StageAssignmentCard title="Explica qué intenta conseguir realmente el usuario">
+
 Por favor completa las siguientes tareas basandote en el contenido anterior:
 
 1. Elige una idea de producto que quieras hacer recientemente, y escribela claramente usando la formula JTBD
 2. Completa los 5 elementos para esta idea: escenario, disparador, progreso, solucion alternativa, criterio de exito
 3. Encuentra 3 usuarios potenciales, y al menos una vez logra preguntar "cuando fue la ultima vez que encontraste este problema"
 4. Pasa las citas textuales de las entrevistas a la IA, y organiza en 3 hipotesis JTBD que mas valga la pena verificar primero
+
+</StageAssignmentCard>
 
 ## Lectura adicional
 

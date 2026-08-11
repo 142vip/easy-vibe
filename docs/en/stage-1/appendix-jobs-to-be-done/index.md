@@ -4,6 +4,7 @@ description: 'A beginner-friendly introduction to Jobs to Be Done. Learn how to 
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'About <strong>1.5 hours</strong>'
 </script>
 
@@ -475,10 +476,14 @@ That kind of challenge helps you see whether you are really looking at user need
 
 ## Assignments
 
+<StageAssignmentCard title="Describe the Job the User Is Really Trying to Get Done">
+
 1. Pick one product idea and rewrite it into one JTBD sentence
 2. Add the five parts: situation, trigger, progress, workaround, success condition
 3. Talk to 3 potential users about the last time they faced this problem
 4. Give the interview notes to AI and ask it to summarize 3 possible JTBD hypotheses
+
+</StageAssignmentCard>
 
 ## Further Reading
 

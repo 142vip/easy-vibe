@@ -1,113 +1,326 @@
 ---
 title: '從截圖復刻：第一次模仿練習'
-description: '跟著課堂步驟，把一張產品截圖做成可以開啟、可以操作的網頁或小遊戲。'
+description: '像上課一樣跟著老師，把一張產品截圖變成可以開啟、可以操作的網頁或小遊戲。'
 ---
+
+<script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
+
+const duration = '約 <strong>2 小時</strong>'
+</script>
 
 # 從截圖復刻：第一次模仿練習
 
-上一課，我們試過用一句話讓 AI 寫程式。這一課換一個更直觀的起點：**先找一張喜歡的截圖，再請 AI 看著它做。**
+前面我們試過用一句話讓 AI 寫程式。這一課換一個更直觀的做法：<strong>先找一張喜歡的截圖，再讓 AI 看著它做。</strong>
 
-截圖已經呈現了顏色、間距、按鈕和版面。你只需要說清楚，想把它做成哪一種可以操作的作品。
+這很像小時候照著圖片搭積木。你不用先說清楚顏色、間距和每個按鈕的位置，截圖已經替你說明了大半。
 
-## 1. 先選一個小目標
+<div style="text-align: center;">
+<div style="display: inline-block; padding: 8px 20px; border-radius: 8px; border: 1px dashed #FFB6C1; background: linear-gradient(135deg, #FFF0F5 0%, #FFE4EC 100%); margin: 12px 0;">
+  <span style="font-size: 15px; font-weight: 500; color: #666;">先照著做出來，再慢慢變成自己的作品 🧱</span>
+</div>
+</div>
 
-第一次只做一個畫面。你可以選產品首頁、SaaS 資料看板，或只有一種玩法的小遊戲。保留原始截圖，完成後才能把兩張圖放在一起比較。
+## 本章導讀
 
-## 2. 跟著做第一個網頁
+<ChapterIntroduction :duration="duration" :tags="['截圖復刻', 'AI 程式設計', '新手練習']" coreOutput="1 個小專案" expectedOutput="可以開啟、可以點擊的網頁或小遊戲">
 
-下面是課堂使用的 Framer 參考圖。導覽列、大標題、紫色山景和按鈕都能在一張圖裡看清楚。
+這一課會從一張真實產品截圖出發，做出一個能在瀏覽器開啟的小專案。你可以選產品官網、資料看板，也可以做簡單小遊戲。
 
-![Framer 網頁參考圖](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.jpg)
+整節課只練習一件事：<strong>找一張喜歡的截圖，把它交給 AI，再用自己的話說一句想做什麼。</strong>
 
-_參考：[Framer Website Builder](https://www.framer.com/solutions/website-builder/)_
+你不用會寫程式，也不用先準備完整需求文件。先讓 AI 做出第一版，看到結果後，再告訴它哪裡要調整。
 
-建立一個空資料夾，用 Trae 開啟，再把圖片拖進對話框。接著說：
+</ChapterIntroduction>
+
+<div style="margin: 50px 0;">
+  <ClientOnly>
+    <StepBar :active="0" :items="[
+      { title: '選截圖', description: '找一個喜歡的頁面' },
+      { title: '交給 AI', description: '拖進對話框' },
+      { title: '說一句話', description: '讓 AI 照著做' },
+      { title: '繼續修改', description: '哪裡不像就改哪裡' }
+    ]" />
+  </ClientOnly>
+</div>
+
+## 1. 先選一個想做的作品
+
+動手前先想一想：今天最想做哪一種東西？
+
+目標不是做功能齊全的大產品，而是完成<strong>一個能開啟、看得懂、能簡單操作的頁面</strong>。範圍越小，第一次越容易成功。
+
+可以從下面三種作品選一個：
+
+- <strong>產品官網</strong>：有標題、介紹、圖片和按鈕
+- <strong>SaaS 資料看板</strong>：有側邊欄、資料卡片和圖表
+- <strong>簡單小遊戲</strong>：可以移動、點擊或完成一個小目標
+
+找參考圖時，看三點：
+
+1. 一張截圖能不能看清主要內容？
+2. 頁面裡有沒有你真正喜歡的地方？
+3. 做完後能不能馬上看出像不像？
+
+例如喜歡官網的大標題和配色，就截下第一個畫面；喜歡方塊世界，就保存最有代表性的遊戲畫面。
+
+::: tip 看看能做到幾成像
+越接近參考圖，越表示你能看出畫面細節，也越會告訴 AI 哪裡要修改。做完後把兩張圖放在一起，看看像五成、七成，還是九成。
+:::
+
+::: tip 先做一個頁面
+第一次不要同時做登入、付款、聊天、後台和手機 App。先把眼前這一張圖做出來。
+:::
+
+## 2. 跟著老師做一個網頁
+
+下面先完整做一遍。看懂後，再換成自己的截圖操作。
+
+老師在電腦裡建立空資料夾，用 Trae 開啟。專案叫 `trae-screenshot-demo`，一開始裡面沒有網頁和程式碼。
+
+### 2.1 把參考圖交給 Trae
+
+這次選的是 Framer 官網展示的一張頁面。大標題、導覽列、紫色山景和小按鈕都很清楚。
+
+![老師放進 Trae 的網頁截圖](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.jpg)
+
+_截圖來源：[Framer Website Builder](https://www.framer.com/solutions/website-builder/)_
+
+把圖片拖進 Trae 對話框後，老師只說：
 
 ```text
 照著這張圖幫我做一個網頁。做好後幫我開啟看看。
 ```
 
-等 Trae 建立並啟動檔案。這是課堂實際產生的結果：
+圖片告訴 Trae 頁面大致長什麼樣，文字則告訴它要把圖片變成網頁。
 
-![依照參考圖產生並執行的網頁](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.gif)
+傳送後，Trae 開始建立檔案。先等它完成，不要連續傳送很多新訊息。
 
-先不要研究每一行程式碼。只檢查網頁能不能開啟、主要內容有沒有出現，以及版面是否像參考圖。
+### 2.2 先看第一版
 
-如果標題太小，只改一件事：
+Trae 建立了 `index.html`、`styles.css` 和 `script.js`，接著在瀏覽器開啟網頁。下面是這次實際產生的結果：
 
-```text
-把中間的標題放大一點。
-```
+![Trae 依截圖實際產生並執行的 Wishlabs 網頁](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.gif)
 
-## 3. 換成自己的截圖
+先不用研究程式碼，只看頁面。對照參考圖，可以看到：
 
-再建立一個空資料夾，放入你選的圖片，然後說：
+- 紫色天空和山景保留下來了
+- 頁面中央仍有醒目的大標題
+- 頂部有導覽，底部也有一排操作入口
+- 文字、按鈕和圖片組成完整第一個畫面
 
-```text
-參考這張圖做一個網頁。做好後幫我開啟。
-```
+它和原圖不完全一樣，但抓住了最明顯的結構和氣氛，這就是合格的第一版。
 
-如果只想參考風格，可以補一句：
+### 2.3 第一版先做到「能看」
 
-```text
-樣式參考這張圖，名稱和內容換成新的。
-```
+第一次產生時，不要因為字型差一點、按鈕偏一點就全部重做。先確認網頁能開啟，再找最明顯的一個問題。
 
-第一版出現後，自己點一次主要按鈕，並把視窗縮窄看看排版。
-
-## 4. 看板和遊戲也能這樣做
-
-Linear 的看板左邊是導覽，右邊是卡片和圖表，很適合練習頁面結構。
-
-![Linear Dashboard 參考圖](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.png)
-
-_參考：[Linear Dashboards](https://linear.app/docs/dashboards)_
+例如標題不夠大，可以說：
 
 ```text
-幫我做一個像這樣的資料看板，先使用範例資料。
+中間的標題再大一點。
 ```
 
-![課堂實際產生的資料看板](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.gif)
+修改後重新看頁面。只要比上一版更接近想法，這一輪就有用。
 
-也可以用 Minecraft 畫面練習小遊戲：
+::: tip 用平常的話就可以
+你是在和 Trae 一起做東西，不是在參加提示詞考試。想到什麼，就用平常說話的方式告訴它。
+:::
 
-![Minecraft Creative Mode 參考圖](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.png)
+## 3. 自己動手試一遍
 
-_參考：[Microsoft Learn 的 Minecraft 範例](https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/108)_
+開啟 Trae，建立空資料夾，再用 Trae 開啟它。名稱可以很簡單，例如 `my-first-page`。
+
+準備後依序操作：
+
+1. 找一張喜歡的網頁或遊戲截圖
+2. 點選對話框旁的圖片按鈕，選擇截圖
+3. 確認圖片已出現在輸入框
+4. 輸入一句簡單的話並傳送
 
 ```text
-幫我做一個像這樣的方塊小遊戲。角色可以走動，也可以放方塊。
+照著這張圖幫我做一個網頁。
+做好後幫我開啟看看。
 ```
 
-![課堂實際產生的 2D 方塊遊戲](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.gif)
+第一次練習不用補充框架、檔案怎麼分、程式碼寫在哪裡，先讓 Trae 自己處理。
 
-想做第一人稱世界時，要明確說「3D」：
+如果只想參考樣子，不想使用原來的名稱和文案，可以再說：
 
 ```text
-幫我做一個像這樣的 3D 方塊遊戲。可以走動、轉動視角和放方塊。
+樣子參考這張圖，名稱和內容換成新的。
 ```
 
-![課堂實際產生的 3D 方塊遊戲](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.gif)
+傳送後耐心等它完成。Trae 若詢問是否建立檔案或執行專案，確認即可。網頁沒有自動開啟時就說：
 
-## 5. 一次只改一個問題
+```text
+幫我把這個專案啟動起來，我想看看效果。
+```
 
-第一版不好看很正常。找到最明顯的問題，用平常的話說：
+看到網頁後，用十秒快速檢查：頁面有沒有開啟、主要內容有沒有出現、按鈕能不能點。暫時不要同時改五六個地方。
+
+## 4. 換個方向也能做
+
+同樣的方法不只能做產品官網。老師又建立兩個空專案，分別做資料看板和方塊小遊戲。
+
+### 例子一：SaaS 資料看板
+
+SaaS 產品常用資料看板呈現專案進度、銷售或使用者資料。Linear 頁面左邊是導覽，右邊是看板內容，結構很清楚。
+
+![Linear 官方 Dashboard 介面](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.png)
+
+_課堂參考圖：[Linear Dashboards](https://linear.app/docs/dashboards)_
+
+老師把截圖放進 Trae，輸入：
+
+```text
+幫我做一個像這樣的資料看板。
+資料可以先使用範例。
+```
+
+Trae 做出側邊欄、資料卡片和圖表。下面是實際執行畫面：
+
+![Trae 依截圖產生並執行的資料看板](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.gif)
+
+這些不是真實業務資料，沒有關係。第一次重點是做出看板結構，頁面穩定後再換成自己的標題和數字。
+
+### 例子二：方塊小遊戲
+
+如果對普通網頁沒興趣，也可以用遊戲畫面練習。老師選了一張 Minecraft 方塊世界截圖。
+
+![Minecraft Creative Mode 真實介面](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.png)
+
+_課堂參考圖：[Microsoft Learn 的 Minecraft 範例](https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/108)_
+
+這次仍只說：
+
+```text
+幫我做一個像這樣的方塊小遊戲。
+角色可以走動，也可以放方塊。
+```
+
+Trae 做出可以玩的瀏覽器遊戲，角色能移動，也能放置和破壞方塊：
+
+![Trae 依截圖產生並執行的 2D 方塊遊戲](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.gif)
+
+注意，上面是 <strong>2D 橫向遊戲</strong>。角色只在平面移動，畫面沒有前後遠近。因為提示詞只說「方塊遊戲」，沒有要求 3D，所以 Trae 選了比較簡單的做法。
+
+頁面開啟後，按方向鍵走動，再點一下畫面看看能不能放方塊。人物能走、方塊能放，第一版就完成了。
+
+### 再做一個 3D 版本
+
+如果想要更接近 Minecraft 的第一人稱畫面，要在提示詞裡加上「3D」。老師又建立空專案，放入同一張截圖，然後說：
+
+```text
+幫我做一個像這樣的 3D 方塊小遊戲。
+角色可以走動、轉動視角，也可以放方塊。
+```
+
+這次 Trae 做出了真正的 3D 方塊世界：
+
+![Trae 依截圖產生並執行的 3D 方塊遊戲](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.gif)
+
+點選「開始遊戲」後，用 `WASD` 走動、滑鼠轉視角。左鍵破壞方塊、右鍵放置方塊，數字鍵更換方塊。
+
+2D 和 3D 沒有誰一定比較好。第一次做遊戲，2D 比較容易完成；如果就是想在方塊世界裡前後走動，就要直接告訴 Trae「我要 3D」。
+
+::: tip 做出不一樣的版本
+參考圖只是一個起點。可以換顏色、主題，也可以加入自己的文字、圖片和玩法，讓它慢慢變成你的作品。
+:::
+
+## 5. 第一版不好看怎麼辦
+
+AI 第一次做得不夠像，或按鈕暫時沒有反應，都很正常。做專案不是一句話結束，而是看一遍、改一點，再看一遍。
+
+新手常見錯誤，是一次把所有問題塞進一則訊息。要求太多時，你也很難判斷到底改好了哪一項。
+
+更簡單的規則是：<strong>每一輪只找一個最明顯的問題。</strong>
+
+### 頁面看起來不對
+
+卡片太高，就說：
 
 ```text
 上面的卡片太高了，矮一點。
 ```
 
+中間圖片太小，就說：
+
+```text
+中間的圖片太小了，放大一點。
+```
+
+背景太暗，也可以說：
+
+```text
+背景太暗了，換成淺一點的顏色。
+```
+
+### 頁面操作不對
+
+按鈕沒有反應，就說：
+
 ```text
 這個按鈕點了沒有反應，幫我修好。
 ```
 
-每改一次就重新開啟、點擊和比較。不要把五個不相干的要求塞在同一句話裡。
+遊戲不能移動，就說：
 
-## 6. 交作業前自己檢查
+```text
+方向鍵按了沒有反應，幫我修好移動。
+```
 
-- 重新整理後仍然能開啟；
-- 別人看得出這是官網、看板還是遊戲；
-- 主要按鈕或遊戲操作可以使用；
-- 視窗縮窄後，文字和圖片沒有嚴重重疊。
+### 不知道問題怎麼說
 
-最後把參考圖和作品圖並排，說明你主動修改了哪一處。這次練習的順序很好記：選截圖、交給 AI、說一句想做什麼，再針對眼前的結果慢慢修改。
+把目前頁面再截一張圖，然後說：
+
+```text
+這是現在的效果。請比較參考圖，先幫我改最明顯的差異。
+```
+
+你不用知道「邊距」「響應式版面」這些專業詞。說「太擠了」「字看不清」「手機上亂了」也能表達問題。改好一個，再繼續下一個。
+
+## 6. 課堂檢查
+
+作品產生後，不要只看一張截圖。請真正開啟頁面，自己點一遍、玩一遍。
+
+檢查四項：
+
+- <strong>能開啟</strong>：重新整理後不會空白或報錯
+- <strong>看得懂</strong>：別人一眼知道這是官網、看板還是遊戲
+- <strong>能操作</strong>：主要按鈕能點，遊戲基本操作能用
+- <strong>不混亂</strong>：視窗縮窄後，文字和圖片沒有嚴重擠在一起
+
+其中一項沒通過，就把看到的現象告訴 Trae，請它只修這個問題。四項都通過，今天的作品就完成了。
+
+::: tip 先完成一個小作品
+登入、付款、多人聊天、連線對戰都不是今天的內容。完整做完一個小頁面，比開十個頭卻一個都沒完成更重要。
+:::
+
+## 📚 本章作業
+
+<StageAssignmentCard title="用一張截圖做出自己的頁面">
+
+  <p>找一個喜歡的網頁或遊戲畫面，把截圖交給 AI，只復刻一個頁面。</p>
+
+  <ol>
+    <li>保留使用的參考截圖。</li>
+    <li>讓 AI 做出頁面，再針對一處不滿意的地方修改。</li>
+    <li>保存修改後的作品截圖。</li>
+  </ol>
+
+  <p>展示時，把參考圖和作品圖放在一起，再說明你改了什麼。</p>
+</StageAssignmentCard>
+
+## 本章小結
+
+今天沒有從程式碼開始，而是從一張截圖開始。整個過程可以記成四步：
+
+1. 截圖
+2. 交給 AI
+3. 說一句話
+4. 哪裡不像就改哪裡
+
+截圖負責告訴 AI「看起來是什麼樣」，你的話負責告訴 AI「想把它做成什麼」。第一版出現後，再透過點擊、觀察和截圖，一點點把問題說清楚。
+
+提示詞不用像說明書。先說一句簡單的話，讓作品跑起來，再根據眼前結果繼續聊。你會慢慢發現，做專案沒有想像中那麼遙遠。

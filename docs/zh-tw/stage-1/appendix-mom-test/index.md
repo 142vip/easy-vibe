@@ -4,6 +4,7 @@ description: '面向零基礎讀者的 The Mom Test 入門文章。學會避免�
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = '約 <strong>1.5 小時</strong>'
 </script>
 
@@ -576,12 +577,16 @@ AI 可能輸出：
 
 ## 📚 Assignments
 
+<StageAssignmentCard title="做一次不推銷想法的使用者訪談">
+
 請你根據上文內容，完成下列作業：
 
 1. 選一個你最近想做的產品方向，先寫出 5 個你原本會問的“容易問廢”的問題
 2. 把這 5 個問題改寫成更符合 The Mom Test 風格的提問
 3. 找 3 個潛在使用者，至少問出一次“最近一次你遇到這個問題是什麼時候”
 4. 訪談結束後整理 4 類資訊：真實行為、替代方案、已付成本、反覆出現的困難
+
+</StageAssignmentCard>
 
 ## 延伸閱讀
 

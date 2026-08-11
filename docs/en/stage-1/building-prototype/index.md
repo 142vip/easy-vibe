@@ -4,6 +4,7 @@ description: 'Experience the complete loop from business analysis to multi-page 
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = 'About <strong>8 hours</strong>'
@@ -359,12 +360,9 @@ If you are not yet familiar with AI IDEs (Cursor, Trae, Windsurf, etc.), read th
 
 Now you already have the initial prompt. Using the first prompt style as an example, let AI help generate the project. Create/open a folder and initialize a new project:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-28-44.png)
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-30-00.png)
 
 In the sidebar, choose a model you like (for example Gemini, GPT, GLM, Kimi, MiniMax), then paste the prompt from step one:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-31-41.png)
 
 After generation starts, AI will plan the folder structure, create needed files, and fill initial code.
 
@@ -380,11 +378,9 @@ Many beginners think AI is "thinking," but it is actually paused for input.
 
 Do not forget to press Enter for confirmation where needed (some IDEs behave differently):
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-33-03.png)
 
 If you encounter the screen below, it usually means the local service has already started. Click skip if needed, otherwise you may stay stuck there. (If generation is done but no preview appears, ask AI directly: "Please start this project.")
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-38-11.png)
 
 ::: info 💡 Scenario explanation
 **Scenario**: you used `npm create vite@latest` to initialize a React + TypeScript project (`easy-vibe-web`). After creation, your computer starts a local web service so you can preview immediately.
@@ -407,7 +403,6 @@ After confirmation, wait briefly, and you should see the initial result:
 
 The base function appears, but UI is rough. Now talk to AI directly to improve visual quality:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-01-16.png)
 
 After refinement, you can get a cleaner interface:
 
@@ -420,7 +415,6 @@ Then keep iterating by need, for example:
 
 You can even ask AI to reference established websites by attaching screenshots:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-13-12.png)
 
 Result example:
 
@@ -590,12 +584,9 @@ AI will usually return a checklist. Use it to decide whether to continue iterati
 
 ## 5. 📚 Assignment: Recreate Your Own Douyin E-commerce Workbench
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🚀 Challenge Task: Recreate an E-commerce Asset Workbench</div>
-  </template>
+<StageAssignmentCard title="Complete Your E-commerce Content Workbench">
 
-  <p>
+<p>
     Follow this chapter's approach and complete one full loop:
   </p>
 
@@ -619,7 +610,8 @@ AI will usually return a checklist. Use it to decide whether to continue iterati
       </ul>
     </li>
   </ul>
-</el-card>
+
+</StageAssignmentCard>
 
 ## Next Step
 

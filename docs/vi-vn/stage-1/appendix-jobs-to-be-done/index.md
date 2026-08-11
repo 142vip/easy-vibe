@@ -4,6 +4,7 @@ description: 'Bài viết Jobs to Be Done dành cho người mới. Hiểu ngư�
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Khoảng <strong>1.5 giờ</strong>'
 </script>
 
@@ -481,12 +482,16 @@ Lợi ích của việc này là, bạn nhanh hơn phát hiện mình đang nhì
 
 ## 📚 Bài tập
 
+<StageAssignmentCard title="Viết rõ việc người dùng thật sự muốn hoàn thành">
+
 Xin bạn dựa vào nội dung bài viết, hoàn thành bài tập sau:
 
 1. Chọn một ý tưởng sản phẩm bạn muốn làm gần đây, dùng một công thức JTBD viết rõ nó
 2. Bổ sung 5 yếu tố cho ý tưởng này: Kịch bản, kích hoạt, tiến triển, giải pháp thay thế, tiêu chuẩn thành công
 3. Tìm 3 người dùng tiềm năng, ít nhất hỏi được một lần "lần gần nhất bạn gặp vấn đề này là khi nào"
 4. Giao lời gốc phỏng vấn cho AI, sắp xếp thành 3 giả định JTBD đáng ưu tiên xác minh nhất
+
+</StageAssignmentCard>
 
 ## Đọc thêm
 

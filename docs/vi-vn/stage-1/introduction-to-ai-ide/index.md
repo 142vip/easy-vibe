@@ -1,9 +1,53 @@
 
 # Sơ cấp 2: Học dùng công cụ lập trình AI
 
+## Học chủ động cùng AI
+
+::: tip 💡 Nguyên tắc quan trọng nhất: có câu hỏi thì hỏi AI trước
+Từ bây giờ, hãy coi AI là **nơi đầu tiên bạn tìm đến khi cần trợ giúp**. Dù bạn chưa hiểu khái niệm, không biết cài công cụ hay viết lệnh, chương trình báo lỗi hoặc không biết phải làm gì tiếp theo, hãy **hỏi AI trước rồi tự tay thử câu trả lời**.
+
+Những câu trước đây bạn sẽ hỏi giáo viên, bạn học hoặc nhóm trò chuyện đều có thể hỏi AI trước. AI phản hồi nhanh, cho phép hỏi tiếp bất cứ lúc nào và có thể dựa vào lỗi cùng bối cảnh dự án để đề xuất bước kế tiếp. Đừng đợi đến khi mắc kẹt quá lâu mới nhớ tới AI, và cũng đừng chỉ dùng AI khi muốn nó viết mã.
+
+**Học theo cách AI-native không chỉ là hoàn thành nhiệm vụ bằng AI. Đó là để AI tham gia toàn bộ quá trình học: gặp vấn đề thì hỏi, có câu trả lời thì thử, phát sinh vấn đề mới thì tiếp tục hỏi.**
+:::
+
+### Vòng lặp học tập AI-native
+
+Học chủ động cùng AI không phải là giao việc rồi ngồi chờ. AI giúp rút ngắn thời gian tìm câu trả lời để bạn dành nhiều sức hơn cho **thực hành, kiểm tra và thấu hiểu**. Bạn có thể dùng vòng lặp này trong mọi chương:
+
+```mermaid
+flowchart LR
+  A["① Gặp vấn đề<br/>Nói rõ mục tiêu và hiện tượng"] --> B["② Hỏi AI ngay<br/>Kèm theo bối cảnh"]
+  B --> C["③ Tự tay thực hiện<br/>Thử theo gợi ý"]
+  C --> D{"Kết quả đúng như dự kiến?"}
+  D -- "Chưa" --> E["④ Gửi kết quả hoặc<br/>toàn bộ lỗi cho AI"]
+  E --> B
+  D -- "Đúng" --> F["⑤ Tự diễn đạt lại<br/>vì sao cách đó hiệu quả"]
+  F --> G["Tạo năng lực có thể dùng<br/>cho vấn đề mới"]
+```
+
+### Những câu hỏi có thể dùng ngay
+
+| Tình huống | Điều bạn có thể nói với AI |
+| --- | --- |
+| **Không hiểu khái niệm** | “Tôi chưa biết lập trình. Hãy giải thích API bằng một phép so sánh trong đời sống, rồi cho tôi ví dụ nhỏ nhất.” |
+| **Không biết cài môi trường** | “Tôi dùng macOS và muốn chạy dự án này. Trước tiên hãy kiểm tra các môi trường cần có, sau đó mỗi lần chỉ hướng dẫn một bước và giải thích tác dụng của bước đó.” |
+| **Lệnh chạy bị lỗi** | “Đây là lệnh và toàn bộ lỗi. Hãy xác định nguyên nhân có khả năng nhất trước, rồi đưa ra thay đổi nhỏ nhất. Nếu chưa đủ thông tin, hãy nói tôi cần cung cấp gì.” |
+| **Không biết làm gì tiếp** | “Mục tiêu của tôi là làm trò Rắn săn mồi và màn hình trò chơi đã hiện ra. Hãy cho biết bước nhỏ nhất tiếp theo và tiêu chí hoàn thành.” |
+| **Không hiểu mã AI đã viết** | “Chưa sửa thêm mã. Hãy giải thích thay đổi vừa rồi theo từng mô-đun và mỗi phần giải quyết vấn đề gì.” |
+| **Không biết chọn phương án** | “Tôi là người mới và muốn nhanh chóng có bản chạy được. Hãy so sánh A với B theo hai điều kiện đó và đề xuất rõ một phương án.” |
+| **Kết quả khác mong đợi** | “Tôi muốn trang như thế này: …; hiện tại lại như thế này: …. Hãy so sánh khác biệt và trước mắt chỉ sửa điểm rõ nhất.” |
+
+::: info Một mẫu câu hỏi có thể dùng lại
+**Mục tiêu của tôi là …; hiện tôi đã làm tới …; tôi đã thử …; kết quả thực tế hoặc toàn bộ lỗi là …; hãy giải thích nguyên nhân trước, rồi cho tôi biết thao tác nhỏ nhất tiếp theo.**
+
+Thông tin càng cụ thể, AI càng dễ đưa ra câu trả lời phù hợp. Lần trả lời đầu chưa giải quyết được vấn đề cũng là chuyện bình thường; hãy gửi kết quả mới cho AI, vì đó chính là một phần của cách học này.
+:::
+
 ## Dẫn nhập chương
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = 'Khoảng <strong>1 ngày</strong>, có thể chia thành nhiều lần học'
@@ -707,6 +751,8 @@ Chương tiếp theo, chúng ta sẽ chuyển trọng tâm từ "biết dùng c�
 
 ## 8. 📚 Bài tập: dùng AI IDE local làm một trò chơi phức tạp hơn
 
+<StageAssignmentCard title="Tạo trò chơi của riêng bạn bằng AI IDE">
+
 <el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
   <template #header>
     <div style="font-weight: bold; font-size: 16px;">🚀 Thử thách: tạo trò chơi riêng của bạn</div>
@@ -823,6 +869,8 @@ Chương tiếp theo, chúng ta sẽ chuyển trọng tâm từ "biết dùng c�
 </el-card>
 
 Phần này không cần cố học thuộc; điều quan trọng hơn là tạo trước một ấn tượng trong đầu.
+
+</StageAssignmentCard>
 
 ## <span id="term-tool-ui">[1. Các từ liên quan đến "giao diện công cụ"](#appendix-1-map)</span>
 

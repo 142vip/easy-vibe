@@ -1,1401 +1,678 @@
 ---
-title: 'AI Application Scenario Reference (B2B & B2C)'
-description: 'This document summarizes LLM applications in both B2B enterprise and B2C consumer scenarios. B2B covers 19 industries including manufacturing, customer service, education, healthcare, and finance; B2C covers 16 consumer scenarios including lifestyle, emotional companionship, entertainment, and personal growth, providing a comprehensive reference for AI application developers.'
+title: 'Find AI Opportunities in Real Workflows'
+description: 'Use more than sixty consulting, industry-research, and product cases to examine AI applications already appearing in business and everyday life.'
 ---
 
-<script setup>
-import { computed, ref } from 'vue'
+# Find AI Opportunities in Real Workflows
 
-const duration = 'Approx. <strong>6 hours</strong>'
+Many “AI industry use-case collections” look impressive: finance, healthcare, education, manufacturing, then a dozen ideas under each heading. Yet when it is time to build, they do not tell you whom to interview, which data to connect, which step to replace, or who would pay for the result.
 
-const interestPoint = ref('')
-const purpose = ref('')
+The problem is that **an industry is not a use case**. “AI + healthcare” is only a territory. “After a consultation, a physician spends ten minutes finishing the clinical note; the system drafts it from the conversation and the physician approves it” is a workflow that can be researched, designed, and tested.
 
-const topicPool = {
-  'manufacturing': [
-    { title: 'AI-Assisted Design Platform for New Energy Bus Exterior', desc: 'Image generation model-based exterior concept design' },
-    { title: 'Intelligent Drawing Design & Review Assistant', desc: 'Build enterprise design specification knowledge base using RAG technology' },
-    { title: 'Automatic Technical Documentation Generation & Management', desc: 'Auto-generate product specifications and operation manuals based on LLM' },
-    { title: 'Production Equipment Inspection Report Auto-Generation Assistant', desc: 'Voice description of equipment status, structured inspection report generation' },
-    { title: 'Industrial Equipment Fault Diagnosis Q&A Assistant', desc: 'Build vector knowledge base from historical fault cases' }
-  ],
-  'customer-service': [
-    { title: 'Multi-Channel Intelligent Customer Service Auto-Reply & Ticket Generation System', desc: 'Connect multi-channel messages, LLM understands intent and generates responses' },
-    { title: 'Potential Customer Mining & Follow-up Suggestion Assistant', desc: 'Analyze historical conversation records, identify high-intent customers' },
-    { title: 'Enterprise Internal Knowledge Intelligent Retrieval & Q&A Butler', desc: 'Build vector knowledge base from internal documents' },
-    { title: 'Customer Service Conversation Smart Summary & Ticket Generation Tool', desc: 'Auto-generate conversation summaries and extract key information' },
-    { title: 'Golden Script Recommendation Knowledge Base System for Customer Service', desc: 'Analyze excellent cases, extract golden script templates' }
-  ],
-  'education': [
-    { title: 'Personalized Language Learning Path Planning & Intelligent Tutoring System', desc: 'Assess learner level, plan daily learning tasks' },
-    { title: 'Lesson Plan Auto-Writing & Teaching Resource Push Platform', desc: 'Generate lesson plan framework based on course outline' },
-    { title: 'Homework Auto-Grading & Learning Diagnosis Analysis System', desc: 'Auto-grade subjective questions and generate grading suggestions' },
-    { title: 'Job Competency Model Construction & Learning Map', desc: 'Analyze job JD to extract capability requirements' },
-    { title: 'Foreign Language One-on-One Scenario-Based Practical Practice', desc: 'LLM plays different roles for oral dialogue practice' }
-  ],
-  'programming': [
-    { title: 'Intelligent Code Completion & Bug Auto-Fix Assistant', desc: 'IDE plugin provides real-time code completion suggestions' },
-    { title: 'Low-Code Application Building & Process Automation Platform', desc: 'Natural language requirements converted to low-code configuration' },
-    { title: 'Unit Test Case Generation System', desc: 'AST parses source code, generates boundary condition test cases' },
-    { title: 'Code Intelligent Analysis & Language Migration Tool', desc: 'Analyze code quality and provide optimization suggestions' },
-    { title: 'Frontend UI Code Auto-Generation Tool', desc: 'Design draft image recognition, generate responsive CSS' }
-  ],
-  'healthcare': [
-    { title: 'Medical Test Report Intelligent Interpretation Assistant', desc: 'OCR recognizes key indicators, interpret abnormal values' },
-    { title: 'Knowledge Retrieval-Based Health Consultation Expert', desc: 'Build medical knowledge graph, RAG retrieval for answers' },
-    { title: 'Clinical Research Data Decision Analysis Platform', desc: 'Integrate EMR data, assist generating statistical analysis code' },
-    { title: 'Medical Imaging Report Auto-Generation Tool', desc: 'Describe imaging features, auto-generate structured reports' },
-    { title: 'Chronic Disease Management Medication Reminder Intelligent Assistant', desc: 'Generate personalized medication reminders, support contraindication checks' }
-  ],
-  'security': [
-    { title: 'Code Security Vulnerability Detection & Fix Engine', desc: 'SAST scans code, analyzes vulnerability principles' },
-    { title: 'AI-Generated Phishing Email Intelligent Identification & Blocking System', desc: 'Analyze email content, identify AI-generated phishing emails' },
-    { title: 'Security Operations Daily Report Auto-Generation Assistant', desc: 'Log aggregation, auto-extract key events' },
-    { title: 'Penetration Test Report Intelligent Generation Assistant', desc: 'Auto-generate reports from vulnerability descriptions' },
-    { title: 'Threat Intelligence Intelligent Query & Analysis Assistant', desc: 'Connect multi-source threat intelligence, interpret intelligence content' }
-  ],
-  'finance': [
-    { title: 'Credit Due Diligence Report Intelligent Generation Assistant', desc: 'Input financial data, auto-generate credit due diligence report' },
-    { title: 'Private Bank Wealth Management Intelligent Advisor', desc: 'Analyze client risk preference, generate asset allocation suggestions' },
-    { title: 'IPO Prospectus Intelligent Generation & Compliance Verification Assistant', desc: 'Modular templates, auto-fill business descriptions' },
-    { title: 'Enterprise Financial Report Auto-Generation & Business Anomaly Early Warning System', desc: 'Auto-generate financial analysis and management discussion' },
-    { title: 'Insurance Agent Intelligent Script Practice Coach', desc: 'Simulate dialogue, evaluate script compliance and persuasiveness' }
-  ],
-  'enterprise': [
-    { title: 'Enterprise Contract Full Lifecycle Compliance Review & Modification Suggestion Platform', desc: 'Compare clauses with regulation database, generate compliance review report' },
-    { title: 'Sales Conversation Speech-to-Text & Script Recommendation', desc: 'ASR transcription, analyze conversation and recommend golden scripts' },
-    { title: 'Marketing Content Intelligent Generation & Design System', desc: 'Generate marketing copy and selling point extraction' },
-    { title: 'Competitor Ad Placement Analysis Platform', desc: 'Collect competitor ads, analyze placement strategies' },
-    { title: 'Network-Wide Hot Topic Intelligent Analysis & Content Recommendation System', desc: 'Analyze hot trends and recommend topic angles' }
-  ],
-  'content': [
-    { title: 'Film & Novel Content Creation Assistance Platform', desc: 'Provide story outlines, character settings, dialogue generation' },
-    { title: 'Enterprise Brand Story & PR Soft Article Intelligent Writing Assistant', desc: 'Input brand keywords, generate multi-style copy' },
-    { title: 'Virtual Digital Human Live Streaming Interaction & Streaming Management System', desc: 'Digital human + TTS voice + LLM dialogue' },
-    { title: 'Short Video Script Generation & Intelligent Editing', desc: 'Generate short video scripts and storyboards' },
-    { title: 'Marketing Content Intelligent Generation & Design System', desc: 'Generate marketing copy and selling point extraction' }
-  ],
-  'government': [
-    { title: '12345 Government Service Hotline Intelligent Voice Navigation & Auto-Dispatch System', desc: 'Speech recognition, understand requests and intelligently dispatch' },
-    { title: 'Government Service Hall Intelligent Guidance & Policy Q&A Robot', desc: 'Government knowledge base RAG retrieval' },
-    { title: 'Enterprise Policy Intelligent Matching & Precision Push Platform', desc: 'Enterprise profile auto-match applicable policies' },
-    { title: 'Administrative Approval Materials Intelligent Pre-Review & Compliance Verification Assistant', desc: 'OCR recognition and key information extraction' },
-    { title: 'City Grid Event Intelligent Identification & Dispatch Management Platform', desc: 'Identify event types and dispatch' }
-  ],
-  'legal': [
-    { title: 'Contract Risk Vulnerability One-Click "Bug Hunter" Agent', desc: 'Identify potential issues against risk checklist' },
-    { title: 'Similar Case Win Rate AI Intelligent Assessment Consultant', desc: 'Case feature extraction, similar case retrieval matching' },
-    { title: 'Legal Regulation Change Real-Time Monitoring & Business Impact Analysis Radar', desc: 'Parse change content and assess business impact' },
-    { title: 'Legal Letter AIGC Auto-Drafting Tool', desc: 'Input factual statements, generate standard legal letters' },
-    { title: 'Complex Legal Terms "Translation" to Plain Language Explanation Plugin', desc: 'Generate easy-to-understand explanations' }
-  ],
-  'travel': [
-    { title: 'AIGC-Based Lazy Travel Guide Generator', desc: 'Generate daily itinerary arrangements' },
-    { title: 'Network-Wide Flight & Hotel Price Trend Prediction & Low-Price Auto-Lock Robot', desc: 'ML model predicts price trends' },
-    { title: 'Visa Materials Intelligent Pre-Review & Auto-Fill Form Assistant', desc: 'OCR recognize information completeness check' },
-    { title: 'Outbound Travel Real-Time Voice Translation & Menu Visual Translation Butler', desc: 'Offline voice translation, menu image OCR' },
-    { title: 'Travel Footprint Auto-Generate Beautiful Travel Notes & Social Copy Assistant', desc: 'Photo information extraction, generate travel note copy' }
-  ],
-  'emotion': [
-    { title: 'LLM-Based 24-Hour Deep Companion Virtual Partner', desc: 'Memory system stores conversation history' },
-    { title: 'Multimodal Emotion Recognition & Psychological Counseling AI Consultant', desc: 'Voice tone analysis + text emotion recognition' },
-    { title: 'Alzheimer Elderly AI Cognitive Training & Memory Wake-Up Digital Human', desc: 'Cognitive game training, old photos trigger memory' },
-    { title: 'AIGC Simulated Social Practice Coach for Social Anxiety People', desc: 'Virtual social scenario simulation' },
-    { title: 'All-Day Mood Monitoring & AI Positive Emotion Incentive Assistant', desc: 'Analyze mood trends and generate incentive content' }
-  ],
-  'entertainment': [
-    { title: 'LLM-Driven Open World Game NPC Autonomous Decision Engine', desc: 'NPC behavior tree fused with LLM decisions' },
-    { title: 'Immersive Script Murder AIGC Story Deduction & DM Control Assistance Tool', desc: 'Player choices trigger story branches' },
-    { title: 'Interactive Novel Ending Generative Modifier', desc: 'Reader choices affect story direction' },
-    { title: 'Esports Game CV Visual Analysis & AI Intelligent Commentator', desc: 'Real-time game footage analysis' },
-    { title: 'Multi-Role TTS Voice Synthesis Audiobook Auto-Generation System', desc: 'Text role allocation, personalized voice generation' }
-  ],
-  'ecommerce': [
-    { title: 'High Conversion AIGC Product Detail Page Batch Production Tool', desc: 'Generate selling point copy and scene descriptions' },
-    { title: 'Clothing Virtual Model AI Intelligent Try-On & Display Video Generation Factory', desc: 'Virtual model try-on effect generation' },
-    { title: 'Cross-Border Ecommerce Multi-Language LLM Localization Translation & Polishing Assistant', desc: 'Product description multi-language translation' },
-    { title: '24/7 AIGC Digital Human Live Streaming Sales System', desc: 'Digital human + real-time script generation' },
-    { title: 'Market Trend AI Insight & Hit Product Prediction Engine', desc: 'Insight trend hotspots, product selection suggestions' }
-  ],
-  'energy': [
-    { title: 'Household Electricity Behavior AI Analysis & Energy Saving Strategy Consultant', desc: 'Electricity usage pattern analysis, generate energy saving suggestions' },
-    { title: 'Photovoltaic Component Defect Drone CV Visual Recognition System', desc: 'Drone inspection shooting, thermal infrared image analysis' },
-    { title: 'Electricity Spot Trading Price AI Trend Prediction & Auto-Profit Strategy Agent', desc: 'Price prediction model, strategy generation' },
-    { title: 'Enterprise Full-Link Carbon Emission AI Auto-Calculation & ESG Report Generation Assistant', desc: 'Carbon emission factor calculation, ESG report generation' },
-    { title: 'Power Grid Extreme Weather Load AI Prediction & Emergency Dispatch Command System', desc: 'Load prediction model, dispatch strategy generation' }
-  ],
-  'av-media': [
-    { title: 'Long Video Highlight AI Identification & Short Video Auto-Clipping Tool', desc: 'Video content analysis, keyframe recognition' },
-    { title: 'Video Background Noise AI Intelligent Separation & Voice Enhancement Assistant', desc: 'Audio separation model, remove background noise' },
-    { title: 'Old Image 4K Super-Resolution Repair & AI Intelligent Colorization Workstation', desc: 'Video super-resolution model, AI auto-colorization' },
-    { title: 'Text to Realistic TTS Voice & Emotion Control System', desc: 'Multi-voice TTS model, emotion control' },
-    { title: 'Meeting Recording AI Intelligent Transcription & Action Item Extraction Assistant', desc: 'Multi-person meeting voice separation transcription' }
-  ],
-  'ai-marketing': [
-    { title: 'Xiaohongshu Hit Copy AIGC Auto-Writing Engine', desc: 'Generate planting copy, emoji optimization' },
-    { title: 'Marketing Poster AI Intelligent Layout & Multi-Size Adaptation Tool', desc: 'Poster template intelligent matching' },
-    { title: 'Brand LOGO Creative AIGC Generation & VI System Building Platform', desc: 'LOGO creative generation, VI specification generation' },
-    { title: 'Network-Wide Hot Topic AI Tracking & Trend Marketing Creative Generation Assistant', desc: 'Analyze marketing angles, creative solution generation' },
-    { title: 'Short Video Script Creative AIGC Generation & Storyboard Guidance Assistant', desc: 'Script and storyboard generation, shooting suggestions' }
-  ],
-  'data-intelligence': [
-    { title: 'Natural Language to SQL Statement Auto-Generation Tool', desc: 'Natural language query converted to SQL' },
-    { title: 'Enterprise Data Asset Catalog Intelligent Inventory & Classification System', desc: 'Metadata collection, auto-classification' },
-    { title: 'Data Quality Anomaly Auto-Detection & Repair Suggestion Engine', desc: 'Rule engine + ML model detect anomalies' },
-    { title: 'Intelligent Report Generation & Visualization Configuration Assistant', desc: 'Conversational report configuration generation' },
-    { title: 'Data Metric Definition Intelligent Q&A Assistant', desc: 'Build knowledge base from metric definition documents' }
-  ]
+This appendix takes that second approach. We reviewed more than sixty reports and first-party product cases. Rather than listing every industry, we selected business and consumer workflows that are already in use and whose value can be located. Treat this as a map for finding questions worth interviewing about—not as a ready-made startup answer.
+
+<div class="research-note">
+  <div>
+    <span class="research-note__eyebrow">Keep this sentence in mind</span>
+    <strong>For businesses, look for a blockage in a workflow. For consumers, look for a moment that keeps returning during the day.</strong>
+  </div>
+  <p>The first requires a clear worker, systems, handoffs, and owner. The second requires a reason to return and one step that AI removes compared with search, templates, or a human service.</p>
+</div>
+
+## First, distinguish business and consumer products
+
+### Business: a company pays for an outcome
+
+A company rarely buys “a chatbot” by itself. It buys shorter handling time, less rework, steadier compliance, or more sales. A researchable business workflow should answer at least four questions: who performs it every day, where the material comes from, which system receives the result, and who owns a mistake.
+
+This is why many pilots never expand. Deloitte's survey of 2,773 business leaders found that only a limited share of generative-AI experiments reach scale, and Accenture's review of more than 2,000 projects found that relatively few organizations produce enterprise-wide value. The difficulty is often not whether a model can answer, but whether it participates in a complete workflow. [Deloitte: State of Generative AI in the Enterprise](https://www2.deloitte.com/us/en/pages/about-deloitte/articles/press-releases/state-of-generative-ai.html) · [Accenture: Making Reinvention Real with Gen AI](https://www.accenture.com/us-en/insights/consulting/making-reinvention-real-with-gen-ai)
+
+### Consumer: a person pays for an easier moment
+
+A consumer product does not need ten enterprise integrations, but the person can close it at any time. Strong consumer uses appear at a recognizable moment: preparing a trip, comparing products, practising speech, making a poster, or sorting bills. They complete one task first and learn preferences over time.
+
+In Capgemini's survey of 12,000 consumers, generative AI had already entered product discovery and comparison. QuestMobile likewise found that AI in China was moving from standalone chat products into search, productivity, imaging, and music. The opportunity is not only another chat box, but a conversation connected to the next action. [Capgemini: What Matters to Today's Consumer 2025](https://www.capgemini.com/insights/research-library/top-consumer-trends-in-2025/) · [QuestMobile: 2025 China Mobile Internet Spring Report](https://www.questmobile.cn/research/report/1919961024158601218/)
+
+## Business: eight workflows already happening
+
+Each section begins with a specific role. Do not copy the product name first. Ask why the old work was slow, which step AI took over, and what still had to remain with a person.
+
+### 1. Customer service is not answering a question; it is finishing the case
+
+<figure class="product-shot">
+  <a href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.jpg" alt="Klarna AI Assistant interfaces for payment extension, multilingual support, and refund explanation" loading="lazy" />
+  </a>
+  <figcaption><strong>Klarna AI Assistant:</strong> the left side does not merely say “contact an agent”; it opens the payment-extension action. The right side itemizes a refund. Useful service AI finds the order and carries the action forward.</figcaption>
+</figure>
+
+**Who does the work:** frontline agents, team leads, and after-sales operations.
+
+When a customer asks why a refund has not arrived, an agent verifies identity, checks order, payment, and logistics systems, explains the rule, and may create a ticket. The slow part is not the polite sentence; it is collecting context across systems.
+
+Klarna's assistant handles refunds, returns, and multilingual support. ResultsCX connects voice routing, account lookup, and backend APIs. Both show that value comes from **finding status → applying the rule → recording the action → escalating when necessary**, not from an FAQ. [Klarna case](https://openai.com/index/klarna/) · [ResultsCX case](https://aws.amazon.com/solutions/case-studies/resultscx/) · [Salesforce: State of Service 2025](https://www.salesforce.com/news/stories/state-of-service-report-announcement-2025/)
+
+A first version can begin after the human conversation: draft a summary, identify intent, retrieve the relevant policy and suggest the next action, then let the agent approve it before writing the ticket. This reveals time saved without giving refund authority to a model.
+
+<div class="scene-check">
+  <span>Questions worth asking</span>
+  <p>Which pages do agents switch between most? Which repeated questions require different actions for different order states? When a case is transferred, does the next agent ask everything again?</p>
+</div>
+
+### 2. Sales does not lack copy; it lacks the right next conversation
+
+<figure class="product-shot">
+  <a href="https://openai.com/index/morgan-stanley/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/morgan-stanley.webp" alt="Internal Morgan Stanley AI@MS Assistant interface" loading="lazy" />
+  </a>
+  <figcaption><strong>Morgan Stanley AI@MS Assistant:</strong> advisers can look up account-opening documents and case status. The page also says “internal use only” and requires human verification. It is a retrieval entry embedded in the workstation, not a chatbot making decisions for an adviser.</figcaption>
+</figure>
+
+**Who does the work:** B2B salespeople, account managers, solution consultants, and sales leaders.
+
+After a meeting, a salesperson updates the CRM, identifies decision-makers and objections, finds a relevant case, writes a follow-up email, and decides when to contact the customer. The evidence is scattered across recordings, chat, email, and private notes, so the CRM is often stale.
+
+McKinsey maps generative AI across the B2B sales cycle: prospecting, meeting preparation, communication, proposal, closing, and renewal. Morgan Stanley's adviser tools do not make investment decisions; they retrieve internal knowledge and turn meetings into notes and tasks. [McKinsey: Unlocking Gen AI in B2B Sales](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/unlocking-profitable-b2b-growth-through-gen-ai) · [Morgan Stanley case](https://openai.com/index/morgan-stanley/)
+
+A first version can handle the fifteen minutes after a meeting: extract goals, objections, commitments, and next steps, draft an editable email, and fill the CRM fields. Measure CRM completeness and follow-up time, not the number of generated words.
+
+### 3. A company knowledge base must answer which rule applies this time
+
+<figure class="product-shot">
+  <a href="https://www.notion.com/help/guides/find-answers-and-generate-reports-with-enterprise-search" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.png" alt="Notion Enterprise Search interface" loading="lazy" />
+  </a>
+  <figcaption><strong>Notion Enterprise Search:</strong> one question can search Notion and Slack, and the user can switch among Ask, Research, and Build. An enterprise assistant connects existing sources and permissions; it is not merely a place to upload one PDF.</figcaption>
+</figure>
+
+**Who does the work:** consultants, operations, HR, finance, IT support, and new employees.
+
+Answers already exist inside most companies, but are scattered across policies, manuals, old email, training videos, and previous projects. “Can this customer receive a refund?” requires the current rule, its conditions, and its source—not any document containing the word refund.
+
+Sun Life's internal assistant handles more than ten thousand employee queries a week. Morgan Stanley expanded searchable internal material to about one hundred thousand documents. Notion brings enterprise search, meeting notes, and action into the same workspace. The core is permission, version, citation, and feedback, not “upload a PDF and chat.” [Sun Life Asks](https://aws.amazon.com/solutions/case-studies/sun-life-case-study/) · [Notion AI overview](https://www.notion.com/help/notion-ai-faqs)
+
+Do not connect the whole company first. Select a team with many questions and a clear boundary, such as returns policy or IT support. Every answer should cite its source; missing answers should be admitted and added to a material backlog.
+
+### 4. Finance, legal, and compliance: read and draft, but do not sign
+
+<figure class="product-shot">
+  <a href="https://mena.thomsonreuters.com/en/products-services/legal/cocounsel.html" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.jpg" alt="Thomson Reuters CoCounsel contract drafting and research interface" loading="lazy" />
+  </a>
+  <figcaption><strong>Thomson Reuters CoCounsel:</strong> progress for drafting and research appears on the left, then the draft opens in Word. AI reads, finds support, and drafts; professionals review and finish the work in a familiar document.</figcaption>
+</figure>
+
+**Who does the work:** financial analysts, tax, legal, procurement, and compliance teams.
+
+These roles see many similar-looking but different contracts, invoices, statements, policies, audit papers, and due-diligence files. AI can extract, compare, classify, retrieve, and draft, but a final judgment must return to the source and have a responsible reviewer.
+
+Thomson Reuters' 2025 survey reports rising generative-AI use in legal, tax, and risk work, including research, document summaries, contract drafting, and filing preparation. Moderna's Contract Companion gives employees a contract summary; OpenAI and PwC discuss finance agents for reconciliation, risk signals, and cross-system workflows. [Thomson Reuters: 2025 Generative AI in Professional Services](https://www.thomsonreuters.com/en-us/posts/technology/genai-professional-services-report-2025/) · [Moderna case](https://openai.com/index/moderna/) · [OpenAI × PwC: CFO workflows](https://openai.com/index/openai-pwc-finance-collaboration/)
+
+A small team can start with one document and one rule set: check payment, renewal, indemnity, and data clauses in supplier contracts, with quotations and risk explanations. Prove omission rate, review time, and citation accuracy before claiming to offer an “AI legal department.”
+
+### 5. Software development: value appears in the repository
+
+<figure class="product-shot">
+  <a href="https://github.blog/changelog/2024-10-29-github-copilot-code-review-in-github-com-private-preview/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.png" alt="GitHub Copilot reviewing code in a pull request" loading="lazy" />
+  </a>
+  <figcaption><strong>GitHub Copilot Code Review:</strong> when Copilot is assigned as a reviewer, comments attach to exact lines and can include a proposed change. A developer still inspects the diff, batches, or rejects it. The value is inside the pull request, not another chat window.</figcaption>
+</figure>
+
+**Who does the work:** developers, testers, operations, and security engineers.
+
+Time is spent understanding old code, adding tests, reading logs, reviewing changes, and learning unfamiliar repositories. In GitHub's controlled experiment, participants using Copilot completed a specified task faster. In a real team, however, repository context, engineering rules, and passing tests matter much more than the ability to produce code. [GitHub Copilot productivity study](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/) · [GitHub follow-up report](https://github.blog/wp-content/uploads/2023/06/Sea-Change-in-Software-Dev.pdf)
+
+A useful internal tool can begin with a failed CI run: read the error and relevant changes, locate likely causes, suggest a fix, and prepare a patch for review. It must run tests, show the diff, and accept review rather than pushing directly to production.
+
+### 6. Manufacturing and field service: make equipment, manuals, and work orders speak together
+
+<figure class="product-shot">
+  <a href="https://blog.siemens.com/2026/02/the-digital-enterprise-and-the-synthesis-of-industrial-ai-digital-twin-and-data/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.jpg" alt="Siemens Engineering Copilot beside TIA Portal" loading="lazy" />
+  </a>
+  <figcaption><strong>Siemens Engineering Copilot:</strong> Copilot and TIA Portal are open side by side. The assistant sees the current automation project, equipment structure, and engineering documents instead of answering a context-free question about why a machine failed.</figcaption>
+</figure>
+
+**Who does the work:** equipment operators, maintenance engineers, field-service staff, and process engineers.
+
+When a machine stops, the operator may see only an error code. The answer is buried in hundreds of pages of manuals, parts lists, and repair history while losses accumulate by the minute. After the repair, the field engineer still has to write a report that the customer can read and the company can archive.
+
+Siemens Industrial Copilot is used to explain equipment, retrieve maintenance support, and assist automation programming. Another Siemens trial turns brief engineer notes from more than 1.4 million annual work orders into consistent customer reports. Deloitte's manufacturing survey also identifies data quality and equipment context as major barriers. [Siemens Industrial Copilot](https://news.microsoft.com/source/emea/features/how-ai-is-helping-siemens-and-thyssenkrupp-bridge-skilling-gaps-in-manufacturing/) · [Siemens field-report case](https://www.microsoft.com/en/customers/story/19736-siemens-ag-germany-dynamics-365-field-service) · [Deloitte: 2025 Smart Manufacturing Survey](https://www2.deloitte.com/us/en/insights/industry/manufacturing/2025-smart-manufacturing-survey.html)
+
+A good starting point is one equipment type, not “predict the whole factory”: identify an error code, retrieve its manual pages and previous work orders, and propose a diagnostic sequence. After repair, turn the notes into a report. Show evidence for every suggestion and let the engineer mark it unhelpful.
+
+### 7. In healthcare, start with documentation and coordination—not a diagnostic demo
+
+<figure class="product-shot">
+  <a href="https://www.abridge.com/product" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.png" alt="Abridge linking a clinical note to its original conversation" loading="lazy" />
+  </a>
+  <figcaption><strong>Abridge:</strong> the generated clinical note appears above the matching clinician-patient conversation. Linked Evidence returns to the original words. The important part is not fast writing, but a physician who can trace, edit, and approve every entry.</figcaption>
+</figure>
+
+**Who does the work:** physicians, nurses, records teams, insurance reviewers, and patient-service staff.
+
+Much of healthcare's burden lies outside diagnosis: documentation, referral, authorization, claims, and patient communication. McKinsey's near-term examples focus heavily on summaries, benefit questions, denial explanations, discharge instructions, and back-office work rather than autonomous diagnosis. [McKinsey: Tackling Healthcare's Biggest Burdens with Generative AI](https://www.mckinsey.com/industries/healthcare/our-insights/tackling-healthcares-biggest-burdens-with-generative-ai)
+
+Ambient systems such as Abridge draft structured notes from the consultation and let the physician approve them. This draft–review–write-back boundary reduces paperwork without changing clinical accountability. [Abridge health-system case](https://www.abridge.com/press-release/abridge-hartford-healthcare) · [McKinsey: Generative AI in Healthcare](https://www.mckinsey.com/industries/healthcare/our-insights/generative-ai-in-healthcare-current-trends-and-future-outlook)
+
+Without a clinical partner, suitable data, and compliance expertise, do not start with diagnosis. Study lower-risk patient service, such as converting preparation instructions into a step-by-step checklist or helping staff organize calls, subject to institutional review.
+
+### 8. Retail and content operations: one asset must travel through many channels
+
+<figure class="product-shot">
+  <a href="https://www.canva.com/newsroom/news/magic-studio/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.png" alt="Canva Magic Switch menu for resizing, translation, and document conversion" loading="lazy" />
+  </a>
+  <figcaption><strong>Canva Magic Switch:</strong> the same approved design can be resized, translated, or turned into a document. This is the frequent content-team task of turning one accepted asset into versions for many channels.</figcaption>
+</figure>
+
+**Who does the work:** e-commerce operations, brand marketing, design, merchandising, and localization teams.
+
+A product launch is not just one paragraph. Teams interpret product data, write titles and selling points for different channels, process images, adapt dimensions, translate, check prohibited terms, and update after feedback. Much time goes to moving material and checking consistency.
+
+Deloitte's retail outlook lists personalization, merchandising, supply chain, and marketing among AI applications. Canva Magic Switch adapts content to sizes and languages, while Adobe Firefly combines generation, editing, and production assets. AI does not replace brand judgment; it reduces the mechanical work of producing versions. [Deloitte: 2025 Retail Industry Outlook](https://www.deloitte.com/us/en/insights/industry/retail-distribution/retail-distribution-industry-outlook-2025.html) · [Canva Magic Studio](https://www.canva.com/newsroom/news/magic-studio/) · [Adobe Firefly](https://news.adobe.com/news/2025/04/adobe-revolutionizes-ai-assisted-creativity-firefly)
+
+A first version can serve one channel and one product type: draft a detail page from structured data, check required fields, dimensions, and prohibited claims, then let an operator publish. It will receive more useful feedback than a “universal marketing assistant.”
+
+## Consumer: seven moments when people open the product themselves
+
+The easiest consumer mistake is to put seven prompts behind the same chat box. The products below work because the conversation connects to products, courses, trips, a canvas, music, or financial data, letting the person continue the task.
+
+### 1. “Reduce my choices”: search, comparison, and purchase
+
+<figure class="product-shot product-shot--mobile">
+  <a href="https://www.aboutamazon.com/news/retail/amazon-rufus" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.jpg" alt="Amazon Rufus shopping assistant" loading="lazy" />
+  </a>
+  <figcaption><strong>Amazon Rufus:</strong> the entry point sits beneath Amazon search, and the sample questions are shopping tasks: compare tablecloths, prepare for Prime Day, and find a watch for sleep tracking. It connects the answer to real products rather than offering generic advice.</figcaption>
+</figure>
+
+Someone buying a camera, stroller, or rainy-day commuter shoe does not lack product pages; they lack a way to turn vague conditions into comparable choices. Rufus combines the catalog, reviews, and Q&A, while Capgemini and Adobe both observe consumers using AI for discovery, comparison, and pre-sale advice. [Amazon Rufus](https://www.aboutamazon.com/news/retail/amazon-rufus) · [Adobe: 2025 AI and Digital Trends](https://business.adobe.com/content/dam/dx/us/en/resources/digital-trends-report-2025/2025_Digital_Trends_Report.pdf)
+
+Research a difficult product category, not the phrase “AI shopping assistant.” A renter choosing a projector must combine throw distance, daylight brightness, noise, and budget. Show comparison evidence, missing information, and real products instead of an invented expert conclusion.
+
+### 2. “I do not want twenty tabs”: travel planning and live changes
+
+<figure class="product-shot">
+  <a href="https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.jpg" alt="Expedia conversational trip-planning interface" loading="lazy" />
+  </a>
+  <figcaption><strong>Expedia conversational planning:</strong> a user begins by comparing Maui and Kauai for a honeymoon, then saves hotel suggestions directly to Trips. The loop closes when conversation becomes a saved itinerary and booking action.</figcaption>
+</figure>
+
+Trip planning repeatedly combines destination, dates, transport, opening hours, budget, and companion preferences. Expedia connects open conversation to saved hotels, prices, and booking. Travel AI is valuable when advice becomes an itinerary that can be saved, checked, and purchased—not when it writes a pretty guide. [Expedia conversational planning](https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/) · [Expedia AI service case](https://www.expedia.com/newsroom/expedia-group-sets-the-standard-with-ai-powered-service-agent/)
+
+A smaller opening might be “half a day in one city with children” or “a safe route after a concert.” Live facts need reliable APIs, and weather, prices, and opening hours need update timestamps.
+
+### 3. “Let me practise, not just listen”: learning and feedback
+
+<figure class="product-shot product-shot--portrait">
+  <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.png" alt="Duolingo Max role-play exercise in a Paris café" loading="lazy" />
+  </a>
+  <figcaption><strong>Duolingo Max Roleplay:</strong> the exercise is not “chat in French” but the concrete job of ordering in a Paris café. Scene, role, goal, and reward are prepared, so the learner can practise immediately.</figcaption>
+</figure>
+
+Generative AI makes a formerly expensive step available at any time: practise and receive feedback on this attempt. Duolingo Max uses role-play and video calls for language practice; Khanmigo emphasizes questions and hints rather than handing over the answer. [Duolingo Max](https://blog.duolingo.com/duolingo-max/) · [Khan Academy: Khanmigo](https://2023-2024.annualreport.khanacademy.org/khanmigo)
+
+A product can serve one practice action: an interview answer, spoken English, a sales objection, or a thesis defense. Feedback should quote the actual answer and propose one executable change for the next attempt, not offer generic praise.
+
+### 4. “Give me a first draft I can change”: personal creation
+
+<figure class="product-shot">
+  <a href="https://firefly.adobe.com/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.png" alt="Adobe Firefly text-to-image workspace" loading="lazy" />
+  </a>
+  <figcaption><strong>Adobe Firefly:</strong> the real interface contains model, aspect ratio, content type, visual intensity, references, and several results—not only a prompt box. A creative product gives people controls for the next edit instead of one “generate again” button.</figcaption>
+</figure>
+
+For a birthday invitation, second-hand product photo, short-video cover, or club poster, the blank canvas and complex software are often the largest barrier. Canva places generation, background removal, expansion, resizing, and translation in the canvas; Firefly lets creators continue among image, video, audio, and vector assets. [Canva Magic Studio](https://www.canva.com/newsroom/news/magic-studio/) · [Adobe Firefly launch](https://news.adobe.com/news/2025/04/adobe-revolutionizes-ai-assisted-creativity-firefly)
+
+Offer control, not only “generate again.” A useful opening has a defined artifact: property photos, a podcast cover, or three sizes of an event poster. Let the user lock text, people, and brand colors while AI changes one area.
+
+### 5. “What was wrong this time?”: personalized explanation
+
+<figure class="product-shot">
+  <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.jpg" alt="Duolingo Max Explain My Answer interface" loading="lazy" />
+  </a>
+  <figcaption><strong>Explain My Answer:</strong> the screen quotes the learner's answer, explains why plural vestidos takes gustan, and allows another example. It meets the exact moment “why was my answer wrong?” instead of restarting a general grammar lesson.</figcaption>
+</figure>
+
+The same answer needs a different explanation for a beginner and an expert. Explain My Answer starts from the mistake just made. This feels more natural than a separate general Q&A because the system already knows the question, answer, and learning progress. [Duolingo: Explain My Answer](https://blog.duolingo.com/explain-my-answer-now-free/)
+
+The same pattern applies to exercise form, camera settings, a chess review, or music practice: capture one real performance, then identify the most valuable correction. “Personalized advice” without personal input is usually generic content with a name added.
+
+### 6. “Do not just recommend—remember”: music and continuing experiences
+
+<figure class="product-shot product-shot--mobile">
+  <a href="https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.jpg" alt="Spotify AI DJ player" loading="lazy" />
+  </a>
+  <figcaption><strong>Spotify AI DJ:</strong> DJ is a persistent home-screen playback entry connected directly to tracks and controls. It relies on listening history, Spotify's catalog, and the next playback action—not just a generated presenter voice.</figcaption>
+</figure>
+
+Spotify AI DJ does more than generate an introduction. It selects music from long-term listening history and joins the experience with a continuing voice. Preference data, content rights, and the playback action are harder to copy than the DJ's tone. [Spotify AI DJ](https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/) · [Deloitte: 2025 Digital Media Trends](https://www.deloitte.com/us/en/insights/industry/technology/digital-media-trends-consumption-habits-survey/2025.html)
+
+Other continuing moments include running, cooking, and bedtime reading. The product should adjust the next session from past choices and make correction easy rather than pretending to know the person better than they do.
+
+### 7. “Turn a complex rule into my next step”: personal finance and life administration
+
+<figure class="product-shot product-shot--portrait">
+  <a href="https://turbotax.intuit.com/personal-taxes/mobile-apps/turbotax/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/intuit-assist.jpg" alt="Intuit Assist comparing two years of tax credits in TurboTax" loading="lazy" />
+  </a>
+  <figcaption><strong>Intuit Assist in TurboTax:</strong> rather than discussing tax from nothing, it compares this year's and last year's credit amounts and offers next questions such as other credits the person may claim. The foundation is personal data and the current task.</figcaption>
+</figure>
+
+Tax, credit, insurance, and bills share complex rules, scattered documents, and different next steps for each person. Intuit Assist appears inside TurboTax, Credit Karma, and QuickBooks to combine existing financial data with explanations and actions—not to provide companionship. [Intuit Assist](https://www.intuit.com/intuitassist/)
+
+These products also carry more risk. A first version is better suited to document checklists, concept explanations, bill classification, and reminders, with facts, estimates, and suggestions clearly distinguished. Tax filing, investments, or insurance choices require user confirmation and access to professional support.
+
+## Where to find your own business or consumer direction
+
+The cases above teach what a use case looks like; they are not instructions to swap the industry name. Your direction is usually hidden among people, materials, and habits you can reach. Business and consumer research begin differently.
+
+### Business: follow one role through the whole job
+
+Business material rarely says “this is a startup opportunity.” It appears as job descriptions, procurement documents, operating manuals, software reviews, and project cases. Choose a specific role—export coordinator, property-service agent, clinic receptionist, or maintenance technician—and follow the work.
+
+<div class="idea-routes">
+  <div class="idea-route idea-route--b">
+    <span>Where to look for business workflows</span>
+    <ul>
+      <li><strong>Job sites:</strong> learn daily responsibilities, systems, forms, and reports.</li>
+      <li><strong>Tenders and procurement notices:</strong> see what companies pay to solve; acceptance criteria and boundaries are often explicit.</li>
+      <li><strong>Software reviews:</strong> read low ratings on G2, Capterra, app stores, and forums for “still export to Excel” and “manually fill this every time.”</li>
+      <li><strong>Company cases and annual reports:</strong> search a company with digital transformation, efficiency, or customer service to find funded projects.</li>
+      <li><strong>Real work material:</strong> old tickets, quotations, checklists, help messages, and training files are often closer to a product entry point than an industry report.</li>
+    </ul>
+  </div>
+  <div class="idea-route idea-route--c">
+    <span>Queries you can use directly</span>
+    <p><code>maintenance technician daily workflow</code></p>
+    <p><code>property customer service tender automation filetype:pdf</code></p>
+    <p><code>site:g2.com field service software reviews</code></p>
+    <p><code>customer support workflow pain points report</code></p>
+    <p><code>industry digital transformation case annual report</code></p>
+  </div>
+</div>
+
+If export trade interests you, do not search only “AI + export.” Read coordinator vacancies and record inquiry response, quotation, specification checks, delivery reminders, and customs paperwork. Then inspect a real quotation and poor reviews of cross-border software. The strongest opening may be “after an English inquiry arrives, draft a quotation for confirmation from historical prices and product parameters,” not a universal export assistant.
+
+### Consumer: follow a day and find repeated friction
+
+Consumer research begins when someone reaches for a phone. Think through searching, comparing, recording, practising, waiting, and sharing. What happens every week? What is currently patched together with screenshots, notes, bookmarks, or group chat?
+
+<div class="idea-routes">
+  <div class="idea-route idea-route--c">
+    <span>Where to look for consumer moments</span>
+    <ul>
+      <li><strong>App Store and Android stores:</strong> read one- to three-star reviews for missing features, payment drop-offs, and reasons for abandonment.</li>
+      <li><strong>Social platforms and Reddit:</strong> search “how do I,” “is there a tool,” and “recommendation”; comments often add the real constraint.</li>
+      <li><strong>Product Hunt and rankings:</strong> see which small action a new product solves and what reviewers want it to do next.</li>
+      <li><strong>Trend and traffic reports:</strong> use Google Trends, QuestMobile, iResearch, and annual reports to confirm a durable group behavior.</li>
+      <li><strong>Your own photos and bookmarks:</strong> repeated screenshots, unopened guides, and copied text are unfinished workflows.</li>
+    </ul>
+  </div>
+  <div class="idea-route idea-route--b">
+    <span>Queries you can use directly</span>
+    <p><code>site:reddit.com "I wish there was an app"</code></p>
+    <p><code>travel with children planning too hard</code></p>
+    <p><code>budgeting app difficult reviews</code></p>
+    <p><code>Product Hunt AI language learning</code></p>
+    <p><code>AI application user growth report</code></p>
+  </div>
+</div>
+
+If you travel often, do not immediately build an “AI itinerary.” Find why people save ten guides: a restaurant may close unexpectedly, an older companion needs fewer steps, or a concert ends late. Select one recurring moment so the product becomes a tool people open rather than a generated article.
+
+### Do not write code as soon as you find material
+
+Keep at least three kinds of evidence: a document that reveals the workflow, the same difficulty mentioned by three people, and an alternative for which someone already pays or spends time. Then spend sixty minutes making the idea concrete.
+
+<div class="fieldwork">
+  <div class="fieldwork__step"><b>01</b><span>Name one person</span><p>For business, state a role. For consumer, state a life situation. “Enterprise users” and “young people” are too broad.</p></div>
+  <div class="fieldwork__step"><b>02</b><span>Observe one occurrence</span><p>Obtain a form, screen recording, poor review, or real operation and locate the exact blockage.</p></div>
+  <div class="fieldwork__step"><b>03</b><span>Find it three times</span><p>The same problem should come from three people or sources, not one entertaining complaint.</p></div>
+  <div class="fieldwork__step"><b>04</b><span>Take one step only</span><p>Define input, output, reviewer, and metric before deciding whether AI is suitable.</p></div>
+</div>
+
+Finally, describe the direction in one sentence that another person can picture:
+
+> When **who** encounters **which moment**, they currently use **which materials or workaround** to complete **which job**. I will first let AI handle **one step**, have **whom** approve the result, and use **which change** to judge its value.
+
+A business example:
+
+> When a packaging-line operator sees error E37, they search a paper manual and old work orders. The system retrieves the relevant section and three diagnostic steps for that equipment model, and a maintenance engineer approves them. The pilot measures average downtime.
+
+A consumer example:
+
+> When a parent visits a museum with a child at the weekend, they currently assemble a route from public posts, maps, and reviews. The product creates a three-hour plan for the child's age and available time, cites opening hours and prices, and adds it to the calendar after the parent approves it.
+
+Once your idea is this concrete, you have something that can be interviewed, prototyped, and tried with a small group.
+
+## Sources
+
+The list contains **67 sources**. The main text prioritizes reports with clear research methods and first-party cases. Brokerage reports are used to observe commercial themes in China, not as proof of user demand. Vendor cases may have a marketing perspective and should be checked against interviews and real operating data.
+
+<details class="source-group">
+<summary>1. Overall adoption and enterprise value (15)</summary>
+
+1. [McKinsey：The Economic Potential of Generative AI](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier)
+2. [McKinsey：The State of AI 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)
+3. [PwC：2025 Global AI Jobs Barometer](https://www.pwc.com/gx/en/issues/c-suite-insights/the-leadership-agenda/AI-jobs-barometer.html)
+4. [PwC：Global Workforce Hopes and Fears Survey 2025](https://www.pwc.com/gr/en/publications/specific-to-all-industries-index/hopes-and-fears-2025.html)
+5. [Deloitte：State of Generative AI in the Enterprise](https://www2.deloitte.com/us/en/pages/about-deloitte/articles/press-releases/state-of-generative-ai.html)
+6. [Microsoft：2025 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born)
+7. [IBM：5 Trends for 2025](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/business-trends-2025)
+8. [IBM：2025 CDO Study](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/2025-cdo)
+9. [Cisco：2025 AI Readiness Index](https://www.cisco.com/c/m/en_us/solutions/ai/readiness-index/realizing-the-value-of-ai.html)
+10. [EY：2025 AI Pulse Survey](https://www.ey.com/en_us/insights/emerging-technologies/pulse-ai-survey)
+11. [Accenture：Reinventing Enterprise Models in the Age of Gen AI](https://www.accenture.com/us-en/insights/artificial-intelligence/ai-investments)
+12. [Accenture：Making Reinvention Real with Gen AI](https://www.accenture.com/us-en/insights/consulting/making-reinvention-real-with-gen-ai)
+13. [OpenAI：The State of Enterprise AI 2025](https://openai.com/business/guides-and-resources/the-state-of-enterprise-ai-2025-report/)
+14. [中国信通院：《人工智能发展报告（2024 年）》](https://hrssit.cn/Uploads/file/20241217/1734400434600250.pdf)
+15. [CNNIC：《生成式人工智能应用发展报告（2025）》](https://www3.cnnic.cn/n4/2025/1021/c88-11391.html)
+
+</details>
+
+<details class="source-group">
+<summary>2. Business industries, roles, and workflows (24)</summary>
+
+16. [McKinsey：Unlocking Profitable B2B Growth Through Gen AI](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/unlocking-profitable-b2b-growth-through-gen-ai)
+17. [McKinsey：Capturing the Full Value of Generative AI in Banking](https://www.mckinsey.com/industries/financial-services/our-insights/capturing-the-full-value-of-generative-ai-in-banking)
+18. [McKinsey：The AI-powered Bank—Customer Care](https://www.mckinsey.com/industries/financial-services/our-insights/the-ai-powered-bank-rewiring-for-excellence-in-customer-care)
+19. [McKinsey：The Future of AI in Insurance](https://www.mckinsey.com/industries/financial-services/our-insights/the-future-of-ai-in-the-insurance-industry)
+20. [McKinsey：Tackling Healthcare’s Biggest Burdens with Generative AI](https://www.mckinsey.com/industries/healthcare/our-insights/tackling-healthcares-biggest-burdens-with-generative-ai)
+21. [McKinsey：Generative AI in Healthcare](https://www.mckinsey.com/industries/healthcare/our-insights/generative-ai-in-healthcare-current-trends-and-future-outlook)
+22. [Deloitte：2025 Manufacturing Industry Outlook](https://www.deloitte.com/us/en/insights/industry/manufacturing-industrial-products/manufacturing-industry-outlook/2025.html)
+23. [Deloitte：2025 Smart Manufacturing Survey](https://www2.deloitte.com/us/en/insights/industry/manufacturing/2025-smart-manufacturing-survey.html)
+24. [Deloitte：2025 Retail Industry Outlook](https://www.deloitte.com/us/en/insights/industry/retail-distribution/retail-distribution-industry-outlook-2025.html)
+25. [Deloitte：2025 Global Health Care Outlook](https://www.deloitte.com/content/dam/assets-zone1/tw/en/docs/industries/life-sciences-health-care/2025/2025-healthcare-outlook-en.pdf)
+26. [Accenture：Commercial Banking Trends 2024](https://www.accenture.com/content/dam/accenture/final/accenture-com/document-2/Accenture-Commercial-Banking-Trends-2024.pdf)
+27. [Accenture：Banking Trends 2026](https://www.accenture.com/us-en/insights/banking/accenture-banking-trends-2026)
+28. [Thomson Reuters：2025 Generative AI in Professional Services](https://www.thomsonreuters.com/en-us/posts/technology/genai-professional-services-report-2025/)
+29. [Salesforce：State of Service 2025](https://www.salesforce.com/news/stories/state-of-service-report-announcement-2025/)
+30. [Salesforce：State of Sales 2026](https://www.salesforce.com/en/wp-content/uploads/sites/4/documents/reports/sales/salesforce-state-of-sales-report-2026.pdf)
+31. [Adobe：2025 AI and Digital Trends](https://business.adobe.com/content/dam/dx/us/en/resources/digital-trends-report-2025/2025_Digital_Trends_Report.pdf)
+32. [Adobe：2025 Content Creation and Management](https://business.adobe.com/content/dam/dx/us/en/resources/reports/content-management-digital-trends/2025-ai-and-digital-trends-content-creation-and-management.pdf)
+33. [艾瑞咨询：《2025 年中国企业级 AI 应用行业研究报告》](https://www.bsia.org.cn/site/content/31686.html)
+34. [GitHub：Quantifying Copilot’s Impact on Developer Productivity](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/)
+35. [Siemens × Microsoft：Industrial Copilot](https://news.microsoft.com/source/2024/10/24/siemens-and-microsoft-scale-industrial-ai/)
+36. [Abridge：Hartford HealthCare Ambient AI 案例](https://www.abridge.com/press-release/abridge-hartford-healthcare)
+37. [AWS：Sun Life 内部知识助手](https://aws.amazon.com/solutions/case-studies/sun-life-case-study/)
+38. [AWS：ResultsCX 客服自动化](https://aws.amazon.com/solutions/case-studies/resultscx/)
+39. [AWS：Sanofi 企业 AI 助手](https://aws.amazon.com/solutions/case-studies/sanofi-bedrock-case-study/)
+
+</details>
+
+<details class="source-group">
+<summary>3. Deployed products and enterprise cases (10)</summary>
+
+40. [OpenAI：Morgan Stanley](https://openai.com/index/morgan-stanley/)
+41. [OpenAI：Klarna](https://openai.com/index/klarna/)
+42. [OpenAI：Moderna](https://openai.com/index/moderna/)
+43. [OpenAI：BBVA](https://openai.com/index/bbva-2025/)
+44. [OpenAI × PwC：Reimagining the Office of the CFO](https://openai.com/index/openai-pwc-finance-collaboration/)
+45. [Microsoft：Siemens 现场服务报告](https://www.microsoft.com/en/customers/story/19736-siemens-ag-germany-dynamics-365-field-service)
+46. [AWS：Legal & General 文档处理](https://aws.amazon.com/solutions/case-studies/aws-innovator-legal-and-general/)
+47. [AWS × Infosys：医疗保险客服助手](https://aws.amazon.com/blogs/apn/how-infosys-built-aws-generative-ai-based-assistant-for-a-healthcare-payer-company/)
+48. [Notion：Notion AI 功能说明](https://www.notion.com/help/notion-ai-faqs)
+49. [Canva：Magic Studio](https://www.canva.com/newsroom/news/magic-studio/)
+
+</details>
+
+<details class="source-group">
+<summary>4. Consumer products and behavior (13)</summary>
+
+50. [Capgemini：What Matters to Today’s Consumer 2025](https://www.capgemini.com/insights/research-library/top-consumer-trends-in-2025/)
+51. [Accenture：Me, My Brand and AI](https://www.accenture.com/us-en/insights/consulting/me-my-brand-ai-new-world-consumer-engagement)
+52. [Deloitte：2025 Digital Media Trends](https://www.deloitte.com/us/en/insights/industry/technology/digital-media-trends-consumption-habits-survey/2025.html)
+53. [QuestMobile：2025 中国移动互联网春季报告](https://www.questmobile.cn/research/report/1919961024158601218/)
+54. [QuestMobile：2025 年 8 月 AI 应用行业报告](https://www.questmobile.com.cn/research/report/1967853261412208641/)
+55. [艾瑞咨询：《2025 年中国 AI 类 App 流量分析报告》](https://www.etc.org.cn/UserFiles/Article/file/6388341575962762472758248.pdf)
+56. [Amazon：Rufus 购物助手](https://www.aboutamazon.com/news/retail/amazon-rufus)
+57. [Expedia：对话式旅行规划](https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/)
+58. [Duolingo：Duolingo Max](https://blog.duolingo.com/duolingo-max/)
+59. [Khan Academy：Khanmigo](https://2023-2024.annualreport.khanacademy.org/khanmigo)
+60. [Spotify：AI DJ](https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/)
+61. [Intuit：Intuit Assist](https://www.intuit.com/intuitassist/)
+62. [Adobe：Firefly](https://news.adobe.com/news/2025/04/adobe-revolutionizes-ai-assisted-creativity-firefly)
+
+</details>
+
+<details class="source-group">
+<summary>5. Chinese brokerage research (5)</summary>
+
+63. [华鑫证券：WAIC 大会强供给，AI 应用商业化如何解](https://pdf.dfcfw.com/pdf/H3_AP202507291717868704_1.pdf)
+64. [国信证券：人工智能专题——AI Agent](https://pdf.dfcfw.com/pdf/H3_AP202503121644302597_1.pdf)
+65. [东吴证券：2025 年 AI 应用渗透趋势](https://pdf.dfcfw.com/pdf/H301_AP202501021641518997_1.pdf)
+66. [中银证券：“人工智能+”应用与平台](https://pdf.dfcfw.com/pdf/H3_AP202510201765533690_1.pdf)
+67. [AIGC 行业深度：算力、模型与应用的创新融合](https://pdf.dfcfw.com/pdf/H3_AP202411151640914780_1.pdf)
+
+</details>
+
+<p class="source-footnote">Sources were retrieved and organized in August 2026. Percentages depend on samples, regions, and vendor definitions and cannot replace interviews and trial data from your target users.</p>
+
+<style scoped>
+.research-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 24px;
+  margin: 32px 0 42px;
+  padding: 28px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 8% 12%, color-mix(in srgb, var(--vp-c-brand-1) 16%, transparent), transparent 34%),
+    var(--vp-c-bg-soft);
 }
 
-const recommendationMap = {
-  'creative-content': {
-    'increase-efficiency': ['content', 'av-media', 'ai-marketing', 'entertainment'],
-    'reduce-cost': ['content', 'ecommerce', 'ai-marketing'],
-    'improve-experience': ['entertainment', 'emotion', 'travel', 'content'],
-    'innovate-business': ['ai-marketing', 'content', 'av-media', 'entertainment']
-  },
-  'tech-service': {
-    'increase-efficiency': ['programming', 'enterprise', 'data-intelligence', 'customer-service'],
-    'reduce-cost': ['programming', 'enterprise', 'manufacturing'],
-    'improve-experience': ['customer-service', 'enterprise', 'programming'],
-    'innovate-business': ['data-intelligence', 'programming', 'security', 'enterprise']
-  },
-  'data-intel': {
-    'increase-efficiency': ['data-intelligence', 'finance', 'enterprise', 'manufacturing'],
-    'reduce-cost': ['data-intelligence', 'manufacturing', 'energy'],
-    'improve-experience': ['data-intelligence', 'customer-service', 'ecommerce'],
-    'innovate-business': ['data-intelligence', 'finance', 'security', 'ai-marketing']
-  },
-  'user-service': {
-    'increase-efficiency': ['customer-service', 'ecommerce', 'travel', 'enterprise'],
-    'reduce-cost': ['customer-service', 'ecommerce', 'enterprise'],
-    'improve-experience': ['customer-service', 'emotion', 'travel', 'ecommerce', 'entertainment'],
-    'innovate-business': ['ecommerce', 'travel', 'emotion', 'entertainment']
-  },
-  'industry-solution': {
-    'increase-efficiency': ['manufacturing', 'healthcare', 'finance', 'government'],
-    'reduce-cost': ['manufacturing', 'energy', 'enterprise', 'finance'],
-    'improve-experience': ['healthcare', 'education', 'government', 'travel'],
-    'innovate-business': ['finance', 'security', 'legal', 'healthcare', 'government']
+.research-note__eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--vp-c-brand-1);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.research-note strong {
+  display: block;
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+.research-note p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  line-height: 1.8;
+}
+
+.scene-check {
+  margin: 24px 0 38px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--vp-c-brand-1);
+  border-radius: 0 12px 12px 0;
+  background: var(--vp-c-bg-soft);
+}
+
+.scene-check span {
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.scene-check p {
+  margin: 6px 0 0;
+}
+
+.product-shot {
+  margin: 20px 0 30px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+  background: var(--vp-c-bg-soft);
+  box-shadow: 0 14px 38px color-mix(in srgb, var(--vp-c-text-1) 8%, transparent);
+}
+
+.product-shot a {
+  display: block;
+  background: #f5f5f3;
+}
+
+.product-shot img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
+
+.product-shot--portrait img {
+  max-height: 560px;
+}
+
+.product-shot--mobile img {
+  max-height: 520px;
+}
+
+.product-shot figcaption {
+  padding: 14px 17px 16px;
+  border-top: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.product-shot figcaption strong {
+  color: var(--vp-c-text-1);
+}
+
+.idea-routes {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(240px, .75fr);
+  gap: 14px;
+  margin: 24px 0 28px;
+}
+
+.idea-route {
+  padding: 22px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+}
+
+.idea-route--b {
+  background: color-mix(in srgb, var(--vp-c-brand-soft) 58%, var(--vp-c-bg));
+}
+
+.idea-route--c {
+  background: var(--vp-c-bg-soft);
+}
+
+.idea-route > span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.idea-route ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.idea-route li {
+  margin: 10px 0;
+}
+
+.idea-route p {
+  margin: 8px 0;
+}
+
+.idea-route code {
+  white-space: normal;
+  word-break: break-word;
+}
+
+.fieldwork {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 28px 0 34px;
+}
+
+.fieldwork__step {
+  min-height: 150px;
+  padding: 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 16px;
+  background: var(--vp-c-bg-soft);
+}
+
+.fieldwork__step b {
+  display: block;
+  color: var(--vp-c-brand-1);
+  font-size: 12px;
+  letter-spacing: .1em;
+}
+
+.fieldwork__step span {
+  display: block;
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fieldwork__step p {
+  margin: 8px 0 0;
+  color: var(--vp-c-text-2);
+}
+
+.source-group {
+  margin: 12px 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg-soft);
+}
+
+.source-group summary {
+  padding: 16px 18px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.source-group ol {
+  margin: 0;
+  padding: 0 22px 18px 44px;
+}
+
+.source-group li {
+  margin: 8px 0;
+}
+
+.source-footnote {
+  margin-top: 18px;
+  color: var(--vp-c-text-3);
+  font-size: 13px;
+}
+
+@media (max-width: 720px) {
+  .research-note,
+  .idea-routes,
+  .fieldwork {
+    grid-template-columns: 1fr;
+  }
+
+  .research-note {
+    padding: 22px;
+  }
+
+  .fieldwork__step {
+    min-height: auto;
   }
 }
-
-const interestOptions = [
-  { label: 'Creative Content Generation', value: 'creative-content', desc: 'Copy, images, video and other creative content' },
-  { label: 'Technical Service Tools', value: 'tech-service', desc: 'Development tools, automation, code assistance' },
-  { label: 'Data Intelligence Analysis', value: 'data-intel', desc: 'Data analysis, prediction, intelligent decision making' },
-  { label: 'User Service Experience', value: 'user-service', desc: 'Customer service, marketing, user experience' },
-  { label: 'Industry Solutions', value: 'industry-solution', desc: 'Deep applications for specific industries' }
-]
-
-const purposeOptions = [
-  { label: 'Increase Efficiency', value: 'increase-efficiency', desc: 'Automation, accelerate process' },
-  { label: 'Reduce Cost', value: 'reduce-cost', desc: 'Reduce manpower, optimize resources' },
-  { label: 'Improve Experience', value: 'improve-experience', desc: 'User satisfaction, service quality' },
-  { label: 'Business Innovation', value: 'innovate-business', desc: 'New products, new models' }
-]
-
-const industries = [
-  { key: 'manufacturing', name: 'Manufacturing Industry', anchor: '#_1-manufacturing-industry' },
-  { key: 'customer-service', name: 'Intelligent Customer Service', anchor: '#_2-intelligent-customer-service' },
-  { key: 'education', name: 'Education Industry', anchor: '#_3-education-industry' },
-  { key: 'programming', name: 'Intelligent Programming', anchor: '#_4-intelligent-programming' },
-  { key: 'healthcare', name: 'Healthcare', anchor: '#_5-healthcare' },
-  { key: 'security', name: 'Network Security', anchor: '#_6-network-security' },
-  { key: 'finance', name: 'Finance & Insurance', anchor: '#_7-finance-insurance' },
-  { key: 'enterprise', name: 'Enterprise Services', anchor: '#_8-enterprise-services' },
-  { key: 'content', name: 'Content Production & Operations', anchor: '#_9-content-production-operations' },
-  { key: 'government', name: 'Smart Government Management', anchor: '#_10-smart-government-management' },
-  { key: 'legal', name: 'Legal Affairs & Contract Management', anchor: '#_11-legal-affairs-contract-management' },
-  { key: 'travel', name: 'Travel & Transportation Services', anchor: '#_12-travel-transportation-services' },
-  { key: 'emotion', name: 'Emotional Companionship', anchor: '#_13-emotional-companionship' },
-  { key: 'entertainment', name: 'Leisure & Entertainment', anchor: '#_14-leisure-entertainment' },
-  { key: 'ecommerce', name: 'Ecommerce Services', anchor: '#_15-ecommerce-services' },
-  { key: 'energy', name: 'Energy', anchor: '#_16-energy' },
-  { key: 'av-media', name: 'Audio & Video', anchor: '#_17-audio-video' },
-  { key: 'ai-marketing', name: 'AI Marketing', anchor: '#_18-ai-marketing' },
-  { key: 'data-intelligence', name: 'Data Intelligence', anchor: '#_19-data-intelligence' }
-]
-
-const recommendationTopics = computed(() => {
-  if (!interestPoint.value || !purpose.value) return []
-  
-  const keys = recommendationMap[interestPoint.value]?.[purpose.value] || []
-  const topics = []
-  
-  keys.forEach(key => {
-    const industry = industries.find(item => item.key === key)
-    const industryTopics = topicPool[key] || []
-    
-    if (industry && industryTopics.length > 0) {
-      const count = Math.floor(Math.random() * 2) + 1
-      const shuffled = [...industryTopics].sort(() => Math.random() - 0.5)
-      const selected = shuffled.slice(0, Math.min(count, shuffled.length))
-      
-      selected.forEach(topic => {
-        topics.push({
-          ...topic,
-          industryKey: key,
-          industryName: industry.name,
-          industryAnchor: industry.anchor
-        })
-      })
-    }
-  })
-  
-  return topics.sort(() => Math.random() - 0.5).slice(0, 8)
-})
-
-const currentSelection = computed(() => {
-  const interest = interestOptions.find(i => i.value === interestPoint.value)
-  const pur = purposeOptions.find(p => p.value === purpose.value)
-  return {
-    interest: interest?.label || '',
-    purpose: pur?.label || ''
-  }
-})
-
-const scrollToAnchor = (anchor) => {
-  setTimeout(() => {
-    let element = document.querySelector(anchor)
-    
-    if (!element) {
-      const altAnchor = anchor.replace('#_', '#')
-      element = document.querySelector(altAnchor)
-    }
-    
-    if (!element) {
-      const anchorText = decodeURIComponent(anchor.replace('#', '').replace(/^_/, ''))
-      const headings = document.querySelectorAll('h2, h3')
-      
-      for (let heading of headings) {
-        const headingText = heading.textContent.trim()
-        const cleanHeading = headingText.replace(/^\d+\.\s*/, '')
-        if (cleanHeading === anchorText || headingText.includes(anchorText)) {
-          element = heading
-          break
-        }
-      }
-    }
-    
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
-      element.style.backgroundColor = '#f0f9ff'
-      element.style.transition = 'background-color 0.3s'
-      element.style.padding = '8px'
-      element.style.borderRadius = '4px'
-      setTimeout(() => {
-        element.style.backgroundColor = ''
-        element.style.padding = ''
-      }, 2000)
-    }
-  }, 100)
-}
-
-const resetSelection = () => {
-  interestPoint.value = ''
-  purpose.value = ''
-}
-
-// ---- C 端场景变量 ----
-const cDuration = 'Approx. <strong>4 hours</strong>'
-
-const vibePoint = ref('')
-const feeling = ref('')
-
-const cTopicPool = {
-  'lifestyle': [
-    { title: 'Morning Ritual Awakening Assistant', desc: 'Generates exclusive morning rituals based on weather, schedule, and mood, making every day start beautifully' },
-    { title: 'Solo Living Atmosphere Creator', desc: 'Designs home atmosphere solutions for solo dwellers, smart suggestions for lighting, music, and aromatherapy' },
-    { title: 'Weekend Stay-Home Healing Plan Generator', desc: 'Recommends perfect stay-home combinations based on current mood: movies + snacks + atmosphere setup' },
-    { title: 'Bedtime Soul-Soothing Radio Station', desc: 'Generates gentle stories and meditation guidance, a private radio station to accompany sleep' },
-    { title: 'Life Aesthetics Inspiration Hunter', desc: 'Discovers beauty in everyday moments, generates life aesthetics suggestions and ritual guides' }
-  ],
-  'emotion': [
-    { title: 'Late-Night Tree Hole Listener', desc: '24/7 online emotional trash can, non-judgmentally accepts all worries' },
-    { title: 'Heartbreak Healing Companion', desc: 'Provides gentle companionship, healing suggestions, and emotional outlets during heartbreak recovery' },
-    { title: 'Anxiety Relief Breathing Coach', desc: 'Perceives anxiety, guides breathing exercises and mindfulness meditation' },
-    { title: 'Self-Confidence Rebuilding Mentor', desc: 'Helps rebuild self-identification and sense of worth through positive dialogue and psychological suggestions' },
-    { title: 'Emotional Journal Intelligent Interpretation', desc: 'Analyzes emotional journals, discovers patterns, provides warm insights and suggestions' }
-  ],
-  'entertainment': [
-    { title: 'Immersive Script Murder DM', desc: 'Plays the role of a script murder game host, creates suspense atmosphere, drives story forward' },
-    { title: 'Open World Game Soul NPC', desc: 'NPCs with flesh and blood, remember player stories, create real emotional bonds' },
-    { title: 'Personalized Podcast Content Generation', desc: 'Generates exclusive podcasts based on interests, natural like chatting with friends' },
-    { title: 'Virtual Concert Atmosphere Team', desc: 'Creates live atmosphere for online concerts, real-time interaction, support, atmosphere rendering' },
-    { title: 'Interactive Novel Co-Creation Partner', desc: 'Co-creates stories with readers, every choice affects the world direction' }
-  ],
-  'growth': [
-    { title: 'Personal Growth Witness', desc: 'Records growth trajectory, provides encouragement and review at important moments' },
-    { title: 'Habit Formation Gamified Coach', desc: 'Transforms boring habit formation into interesting adventure games' },
-    { title: 'Skill Learning Partner Matching', desc: 'Finds like-minded study partners, mutually encouraging, sharing progress' },
-    { title: 'Daily Little Happiness Discoverer', desc: 'Helps discover small beauties in life, cultivates gratitude and positive mindset' },
-    { title: 'Life Simulation Experience Device', desc: 'Simulates different life choices, experiences parallel universe possibilities' }
-  ],
-  'social': [
-    { title: 'Ice-Breaking Topic Generator', desc: 'Provides interesting topics in social situations, breaks awkwardness, draws closer' },
-    { title: 'Moments Copywriting Atmosphere Artist', desc: 'Generates stylish Moments captions based on photos and mood' },
-    { title: 'Date Atmosphere Planner', desc: 'Designs complete atmosphere solutions for dates, from location to topics to surprises' },
-    { title: 'Remote Party Atmosphere Leader', desc: 'Liven up atmosphere in online gatherings, organize games, guide interactions' },
-    { title: 'Social Energy Management Assistant', desc: 'Helps introverts manage social energy, find comfortable social rhythm' },
-  ],
-  'creative': [
-    { title: 'Inspiration Burnout First Aid Kit', desc: 'Provides unexpected inspiration sparks during creative bottlenecks' },
-    { title: 'Personal Style Exploration Guide', desc: 'Helps discover unique personal style, from fashion to expression' },
-    { title: 'Journal & Diary Aesthetics Consultant', desc: 'Provides layout, color matching, content creation suggestions for journals' },
-    { title: 'Photography Composition Atmosphere Guide', desc: 'Provides photography and editing suggestions based on scene and desired mood' },
-    { title: 'Music Mood Matcher', desc: 'Recommends perfect music combinations based on current mood and scenario' }
-  ],
-  'travel': [
-    { title: 'City Walk Exploration Guide', desc: 'Explores the city like a local, discovers hidden gem locations' },
-    { title: 'Travel Mood Journal Generation', desc: 'Transforms travel photos and moods into beautiful travel journals and memories' },
-    { title: 'Solo Travel Companion Assistant', desc: 'Provides companionship, suggestions, and safety for solo travelers' },
-    { title: 'Destination Atmosphere Preview', desc: 'Immersively experience destination atmosphere before departure, get in the mood early' },
-    { title: 'Travel Photography Atmosphere Guidance', desc: 'Guides taking storytelling travel photos based on scene and lighting' }
-  ],
-  'health': [
-    { title: 'Exercise Motivation Awakener', desc: 'Provides just-right encouragement and motivation when not wanting to exercise' },
-    { title: 'Healthy Diet Inspiration Kitchen', desc: 'Generates healing healthy recipes based on mood and ingredients' },
-    { title: 'Sleep Quality Optimization Atmosphere Artist', desc: 'Creates quality sleep atmosphere from environment to psychology' },
-    { title: 'Body Perception Guide', desc: 'Guides attention to body signals, builds mind-body connection' },
-    { title: 'Self-Care Reminder Assistant', desc: 'Reminds you to stop and care for yourself amid busyness' }
-  ],
-  'learning': [
-    { title: 'Knowledge Exploration Gamified Guide', desc: 'Transforms boring knowledge learning into interesting exploration adventures' },
-    { title: 'Language Learning Scenario Partner', desc: 'Plays different roles, naturally acquires language through scenario dialogue' },
-    { title: 'Curiosity Satisfaction Assistant', desc: 'Answers all kinds of whimsical thoughts, satisfies curiosity about the world' },
-    { title: 'Book Notes Inspiration Stimulation', desc: 'Helps organize reading insights, discovers new thinking angles' },
-    { title: 'Knowledge Sharing Atmosphere Creation', desc: 'Transforms learned knowledge into interesting sharing content' }
-  ],
-  'relationship': [
-    { title: 'Intimate Relationship Communication Coach', desc: 'Helps express hard-to-speak emotions, improves intimate relationships' },
-    { title: 'Family Care Reminder Assistant', desc: 'Reminds you to care for family, provides warm interaction suggestions' },
-    { title: 'Friendship Maintenance Atmosphere Artist', desc: 'Helps maintain long-distance friendships, creates common topics' },
-    { title: 'Confession & Surprise Planner', desc: 'Plans unforgettable surprises and romantic moments for important people' },
-    { title: 'Conflict De-escalation Atmosphere Guidance', desc: 'Provides suggestions and scripts for de-escalating tense relationships' }
-  ],
-  'pet': [
-    { title: 'Pet Humanized Diary', desc: 'Generates diaries from pets perspective, recording warm daily moments with owners' },
-    { title: 'Pet Behavior Interpreter', desc: 'Interprets pet body language, deepens connection with pets' },
-    { title: 'Pet Companion Time Planner', desc: 'Designs creative activities for pet interaction, enhances bond' },
-    { title: 'Pet Memorial Story Generation', desc: 'Transforms pet photos and memories into warm stories' },
-    { title: 'New Pet Owner Comfort Guide', desc: 'Provides warm companionship and guidance for new pet owners' }
-  ],
-  'finance': [
-    { title: 'Consumption Emotion Awareness Assistant', desc: 'Awareness of emotions behind impulse buying, builds healthy consumption view' },
-    { title: 'Savings Goal Visualization Incentive', desc: 'Transforms savings goals into visualized dream progress' },
-    { title: 'Fun Finance Learning', desc: 'Learn financial knowledge in a fun and interesting way' },
-    { title: 'Financial Anxiety Soothing Specialist', desc: 'Provides emotional support and practical suggestions when facing financial stress' },
-    { title: 'Small Investment Experience Game', desc: 'Experience investment through gamification, lower entry barriers' }
-  ],
-  'career': [
-    { title: 'Career Confusion Companion', desc: 'Provides listening, exploration, and direction suggestions during career confusion' },
-    { title: 'Work Achievement Awakening Specialist', desc: 'Helps discover value and meaning in work, rekindle passion' },
-    { title: 'Workplace Social Atmosphere Assistant', desc: 'Provides relaxed topics and interaction suggestions for workplace socializing' },
-    { title: 'Side Hustle Inspiration Generator', desc: 'Inspires side business ideas based on personal interests and skills' },
-    { title: 'Pre-Interview Confidence Fuel Station', desc: 'Provides psychological preparation and confidence encouragement before interviews' }
-  ],
-  'home': [
-    { title: 'Home Space Atmosphere Designer', desc: 'Designs home atmosphere solutions based on mood and season' },
-    { title: 'Seasonal Home Change Guide', desc: 'Changes home decor with seasons, maintains freshness' },
-    { title: 'Small Space Magic', desc: 'Makes small spaces comfortable and cozy' },
-    { title: 'Home Ritual Creator', desc: 'Creates rituals for everyday home activities' },
-    { title: 'Decluttering Psychological Companion', desc: 'Provides psychological support and decision suggestions during organizing' }
-  ],
-  'food': [
-    { title: 'One-Person Healing Cuisine', desc: 'Designs simple healing cuisine solutions for solo dwellers' },
-    { title: 'Festival Table Atmosphere Design', desc: 'Designs ritualistic table settings for special occasions' },
-    { title: 'Cooking Mood Matcher', desc: 'Recommends suitable food and cooking methods based on current mood' },
-    { title: 'Kitchen Beginner Confidence Building', desc: 'Provides warm encouragement and simple recipes for zero-basis cooks' },
-    { title: 'Food Photography Atmosphere Guide', desc: 'Makes home-cooked food look enticing with atmosphere' }
-  ],
-  'fashion': [
-    { title: 'Today\'s Outfit Mood Board', desc: 'Generates outfit inspiration based on weather, occasion, mood' },
-    { title: 'Capsule Wardrobe Stylist', desc: 'Creates endless combinations from limited pieces' },
-    { title: 'Personal Style Exploration Journey', desc: 'Helps discover and build unique personal style' },
-    { title: 'Old Clothes New Wear Creative Specialist', desc: 'Provides new styling inspiration for old clothes' },
-    { title: 'Special Occasion Styling Consultant', desc: 'Designs confident looks for important occasions' }
-  ]
-}
-
-const cRecommendationMap = {
-  'healing': {
-    'relax': ['emotion', 'lifestyle', 'health', 'home'],
-    'inspire': ['creative', 'growth', 'learning', 'entertainment'],
-    'connect': ['relationship', 'social', 'pet', 'emotion'],
-    'escape': ['travel', 'entertainment', 'creative', 'lifestyle']
-  },
-  'growth': {
-    'relax': ['growth', 'learning', 'creative', 'health'],
-    'inspire': ['career', 'learning', 'creative', 'growth'],
-    'connect': ['social', 'relationship', 'career', 'learning'],
-    'escape': ['travel', 'entertainment', 'creative', 'lifestyle']
-  },
-  'social': {
-    'relax': ['social', 'pet', 'food', 'home'],
-    'inspire': ['social', 'creative', 'entertainment', 'travel'],
-    'connect': ['relationship', 'social', 'pet', 'travel'],
-    'escape': ['social', 'travel', 'entertainment', 'creative']
-  },
-  'explore': {
-    'relax': ['travel', 'creative', 'lifestyle', 'food'],
-    'inspire': ['travel', 'creative', 'learning', 'entertainment'],
-    'connect': ['travel', 'social', 'relationship', 'pet'],
-    'escape': ['travel', 'entertainment', 'creative', 'lifestyle']
-  },
-  'daily': {
-    'relax': ['lifestyle', 'home', 'health', 'emotion'],
-    'inspire': ['creative', 'food', 'fashion', 'home'],
-    'connect': ['relationship', 'social', 'pet', 'lifestyle'],
-    'escape': ['entertainment', 'creative', 'travel', 'lifestyle']
-  }
-}
-
-const vibeOptions = [
-  { label: 'Healing Type', value: 'healing', desc: 'Warm, soothing, therapeutic' },
-  { label: 'Growth Type', value: 'growth', desc: 'Progress, breakthrough, transformation' },
-  { label: 'Social Type', value: 'social', desc: 'Connection, sharing, interaction' },
-  { label: 'Explore Type', value: 'explore', desc: 'Curiosity, adventure, discovery' },
-  { label: 'Daily Type', value: 'daily', desc: 'Ordinary, authentic, present' }
-]
-
-const feelingOptions = [
-  { label: 'Want to Relax', value: 'relax', desc: 'Relieve pressure, clear mind' },
-  { label: 'Seek Inspiration', value: 'inspire', desc: 'Spark creativity, gain insight' },
-  { label: 'Craving Connection', value: 'connect', desc: 'Connect with others, emotional resonance' },
-  { label: 'Temporary Escape', value: 'escape', desc: 'Escape reality, immersive experience' }
-]
-
-const scenarios = [
-  { key: 'lifestyle', name: 'Lifestyle', anchor: '#_1-lifestyle' },
-  { key: 'emotion', name: 'Emotional Companionship', anchor: '#_2-emotional-companionship' },
-  { key: 'entertainment', name: 'Entertainment & Leisure', anchor: '#_3-entertainment-leisure' },
-  { key: 'growth', name: 'Personal Growth', anchor: '#_4-personal-growth' },
-  { key: 'social', name: 'Social Interaction', anchor: '#_5-social-interaction' },
-  { key: 'creative', name: 'Creative Expression', anchor: '#_6-creative-expression' },
-  { key: 'travel', name: 'Travel Exploration', anchor: '#_7-travel-exploration' },
-  { key: 'health', name: 'Physical & Mental Health', anchor: '#_8-physical-mental-health' },
-  { key: 'learning', name: 'Knowledge Exploration', anchor: '#_9-knowledge-exploration' },
-  { key: 'relationship', name: 'Relationship Management', anchor: '#_10-relationship-management' },
-  { key: 'pet', name: 'Pet Companionship', anchor: '#_11-pet-companionship' },
-  { key: 'finance', name: 'Financial Health', anchor: '#_12-financial-health' },
-  { key: 'career', name: 'Career Development', anchor: '#_13-career-development' },
-  { key: 'home', name: 'Home Space', anchor: '#_14-home-space' },
-  { key: 'food', name: 'Food & Cooking', anchor: '#_15-food-cooking' },
-  { key: 'fashion', name: 'Fashion & Style', anchor: '#_16-fashion-style' }
-]
-
-const cRecommendationTopics = computed(() => {
-  if (!vibePoint.value || !feeling.value) return []
-  
-  const keys = cRecommendationMap[vibePoint.value]?.[feeling.value] || []
-  const topics = []
-  
-  keys.forEach(key => {
-    const scenario = scenarios.find(item => item.key === key)
-    const scenarioTopics = cTopicPool[key] || []
-    
-    if (scenario && scenarioTopics.length > 0) {
-      const count = Math.floor(Math.random() * 2) + 1
-      const shuffled = [...scenarioTopics].sort(() => Math.random() - 0.5)
-      const selected = shuffled.slice(0, Math.min(count, shuffled.length))
-      
-      selected.forEach(topic => {
-        topics.push({
-          ...topic,
-          scenarioKey: key,
-          scenarioName: scenario.name,
-          scenarioAnchor: scenario.anchor
-        })
-      })
-    }
-  })
-  
-  return topics.sort(() => Math.random() - 0.5).slice(0, 8)
-})
-
-const cCurrentSelection = computed(() => {
-  const vibe = vibeOptions.find(v => v.value === vibePoint.value)
-  const feel = feelingOptions.find(f => f.value === feeling.value)
-  return {
-    vibe: vibe?.label || '',
-    feeling: feel?.label || ''
-  }
-})
-
-const cScrollToAnchor = (anchor) => {
-  setTimeout(() => {
-    let element = document.querySelector(anchor)
-    
-    if (!element) {
-      const altAnchor = anchor.replace('#_', '#')
-      element = document.querySelector(altAnchor)
-    }
-    
-    if (!element) {
-      const anchorText = decodeURIComponent(anchor.replace('#', '').replace(/^_/, ''))
-      const headings = document.querySelectorAll('h2, h3')
-      
-      for (let heading of headings) {
-        const headingText = heading.textContent.trim()
-        const cleanHeading = headingText.replace(/^\d+\.\s*/, '')
-        if (cleanHeading === anchorText || headingText.includes(anchorText)) {
-          element = heading
-          break
-        }
-      }
-    }
-    
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
-      element.style.backgroundColor = '#f0f9ff'
-      element.style.transition = 'background-color 0.3s'
-      element.style.padding = '8px'
-      element.style.borderRadius = '4px'
-      setTimeout(() => {
-        element.style.backgroundColor = ''
-        element.style.padding = ''
-      }, 2000)
-    }
-  }, 100)
-}
-
-const cResetSelection = () => {
-  vibePoint.value = ''
-  feeling.value = ''
-}
-</script>
-
-# AI Application Scenario Reference (B2B & B2C)
-
-<Tabs>
-<TabItem label="B2B Industry">
-
-## Chapter Overview
-
-<ChapterIntroduction :duration="duration" :tags="['B-End Applications', 'Industry Applications', 'AI Scenarios', 'Landing Reference', 'Industry Solutions']" coreOutput="Understand 15+ B-End industry application scenarios" expectedOutput="Find project directions suitable for enterprise customers">
-
-This document summarizes **LLM large model applications in B-End enterprise scenarios**. Unlike C-End which focuses on user experience and emotions, B-End products focus more on **solving actual business needs, improving efficiency, and reducing costs**. Each scenario has **actual landing feasibility**, covering the complete thinking from **requirement analysis to technical implementation**, suitable for AI application developers targeting enterprise customers.
-
-</ChapterIntroduction>
-
-## Industry Direction Quick Selection
-
-<el-card shadow="hover" style="margin-top: 16px; margin-bottom: 24px; border-left: 5px solid #409EFF;">
-  <div style="font-weight: 600; margin-bottom: 8px;">Find the application scenario suitable for you</div>
-  <div style="color: #606266; font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
-    Select your interest direction and target purpose. The system recommends related industry scenarios. Click a row to jump to the corresponding chapter.
-  </div>
-  <el-row :gutter="16">
-    <el-col :span="12">
-      <el-select v-model="interestPoint" placeholder="Select interest direction" style="width: 100%;">
-        <el-option
-          v-for="item in interestOptions"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value"
-        >
-          <div style="font-weight: 500;">{{ item.label }}</div>
-          <div style="font-size: 12px; color: #909399;">{{ item.desc }}</div>
-        </el-option>
-      </el-select>
-    </el-col>
-    <el-col :span="12">
-      <el-select v-model="purpose" placeholder="Select purpose" style="width: 100%;">
-        <el-option
-          v-for="item in purposeOptions"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value"
-        >
-          <div style="font-weight: 500;">{{ item.label }}</div>
-          <div style="font-size: 12px; color: #909399;">{{ item.desc }}</div>
-        </el-option>
-      </el-select>
-    </el-col>
-  </el-row>
-  
-  <div v-if="recommendationTopics.length > 0" style="margin-top: 16px;">
-    <div style="font-weight: 600; margin-bottom: 10px; color: #409EFF;">
-      {{ recommendationTopics.length }} recommended scenarios for you
-      <span style="font-weight: normal; color: #909399; font-size: 13px; margin-left: 8px;">
-        ({{ currentSelection.interest }} + {{ currentSelection.purpose }})
-      </span>
-    </div>
-    <el-table
-      :data="recommendationTopics"
-      style="width: 100%; cursor: pointer;"
-      @row-click="(row) => scrollToAnchor(row.industryAnchor)"
-      highlight-current-row
-    >
-      <el-table-column prop="title" label="Application Scenario" min-width="300">
-        <template #default="scope">
-          <div style="font-weight: 500; color: #303133;">{{ scope.row.title }}</div>
-          <div style="font-size: 12px; color: #909399; margin-top: 4px;">{{ scope.row.desc }}</div>
-        </template>
-      </el-table-column>
-      <el-table-column prop="industryName" label="Industry" width="180" align="center">
-        <template #default="scope">
-          <el-tag type="info" effect="light" size="small">{{ scope.row.industryName }}</el-tag>
-        </template>
-      </el-table-column>
-    </el-table>
-    <div style="margin-top: 10px; font-size: 12px; color: #909399;">
-      💡 Click any row in the table to jump to the corresponding industry section
-    </div>
-  </div>
-
-  <div v-else-if="!interestPoint || !purpose" style="margin-top: 14px; color: #909399; font-size: 13px;">
-    <span v-if="!interestPoint && !purpose">💡 Please select both interest direction and purpose</span>
-    <span v-else-if="!interestPoint">💡 Please select an interest direction</span>
-    <span v-else>💡 Please select a purpose</span>
-  </div>
-
-  <div v-if="interestPoint || purpose" style="margin-top: 12px;">
-    <el-button size="small" @click="resetSelection">Reset Selection</el-button>
-  </div>
-</el-card>
-
----
-
-## Industry Quick Overview
-
-### Mainstream Technology Choices
-
-In AI application development, common technical directions include:
-
-1. **LLM (Large Language Models)**: Strong in natural language tasks such as dialogue, text generation, summarization, and translation. Suitable for intelligent customer service, content creation, and knowledge Q&A applications.
-2. **VLM (Vision-Language Models)**: Combines visual understanding and language reasoning to support image description, visual Q&A, and multimodal generation. Useful for medical imaging analysis, industrial inspection, and creative design scenarios.
-3. **GenAI (Generative AI)**: Covers text generation, image generation (for example Stable Diffusion, DALL-E), video generation, and more. It rapidly produces creative outputs for design support, marketing asset creation, and training content.
-
-### Selection Strategy
-
-Learners can choose directions based on these dimensions:
-
-1. **Interest-first**: Start from industries or technologies you are personally interested in to keep momentum.
-   - Interested in creative design: Try content production or industrial design applications
-   - Interested in technical challenge: Try cybersecurity or healthcare applications
-   - Interested in social value: Try smart government or education applications
-2. **Industry fit**: Match your background and resource advantages.
-   - Manufacturing practitioners: Prioritize manufacturing and enterprise-service applications
-   - Educators: Prioritize education and content production applications
-   - Healthcare practitioners: Explore healthcare and health management applications
-3. **Technical difficulty**: Pick complexity based on your current foundation.
-   - Beginner: Intelligent customer service, content creation, basic Q&A systems
-   - Intermediate: Industrial quality inspection, medical image analysis, coding assistants
-   - Advanced: Financial risk control, cybersecurity, complex multimodal systems
-
----
-
-## 1. Manufacturing Industry
-
-> 💡 **Core Concept**: AI empowers traditional manufacturing to achieve intelligent transformation
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | New Energy Bus Exterior AI-Assisted Design Platform | Integrates image generation models for exterior concept design; generates multiple design schemes based on requirements |
-| 2 | Intelligent Drawing Design & Review Assistant | Builds enterprise design specification knowledge base using RAG; provides intelligent review suggestions |
-| 3 | Technical Documentation Auto-Generation System | LLM auto-generates product specifications, operation manuals; supports multi-format export |
-| 4 | Production Equipment Inspection Report Auto-Generation | Voice input describes equipment status; structured inspection report auto-generated |
-| 5 | Industrial Equipment Fault Diagnosis Q&A | Builds vector knowledge base from historical fault cases; provides intelligent diagnosis suggestions |
-| 6 | LLM Information-Retrieval Data Warehouse | Uses Text-to-SQL to convert natural-language queries into database queries; Superset visualizes results; Doris or ClickHouse as OLAP engine |
-| 7 | Industrial Equipment Fault-Diagnosis Knowledge Q&A Assistant | Builds a vector knowledge base from historical fault cases; LLM provides diagnosis suggestions and solution plans based on fault descriptions |
-| 8 | Production Quality Inspection Report Generation and Defect Classification | OCR identifies defects in inspection photos; LLM generates structured quality reports and classifies defect type and severity |
-| 9 | Inventory Counting Assistant and Inventory Report Generation | Inputs stocktaking data; LLM compares with system inventory and generates discrepancy reports with abnormal-inventory alerts |
-| 10 | Process Optimization Suggestion Intelligent Q&A System | Builds a RAG knowledge base from process documents; LLM provides optimization suggestions based on production issues |
-
----
-
-## 2. Intelligent Customer Service
-
-> 💡 **Core Concept**: Empowers customer service with AI to achieve 24/7 intelligent response
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Multi-Channel Intelligent Customer Service Auto-Reply | Connects to website, APP, WeChat, and other channels; LLM understands intent and generates responses |
-| 2 | Potential Customer Mining & Follow-up Assistant | Analyzes historical conversation records; identifies high-intent leads for sales follow-up |
-| 3 | Enterprise Internal Knowledge Intelligent Q&A | Builds vector knowledge base from internal documents; provides precise Q&A service for employees |
-| 4 | Customer Service Conversation Smart Summary | Automatically generates conversation summaries; extracts key information and creates follow-up tickets |
-| 5 | Golden Script Recommendation Knowledge Base | Analyzes excellent service cases; extracts golden scripts for team sharing and training |
-| 6 | Customer Service Script Compliance Auto-Check Assistant | Customer-service staff input reply drafts; LLM checks script compliance and sensitive words in real time and provides revision suggestions |
-| 7 | Customer Service Ticket Auto-Summary and Classification Tool | LLM summarizes long conversations and auto-classifies tags; Elasticsearch supports full-text ticket search |
-| 8 | Customer Emotion Monitoring and Abnormality Alert Tool | Real-time analysis of voice tone and text sentiment; LLM identifies abnormal emotions and triggers alerts with WebSocket push |
-| 9 | Golden Script Recommendation Knowledge-Base System for Customer Service | LLM analyzes excellent customer-service conversations, refines high-performing templates, and recommends scripts based on context |
-| 10 | Intelligent Outbound-Call Conversation Analysis and QA Assistant | After outbound-call recording transcription, LLM extracts key information; automatically generates QA reports and improvement suggestions |
-
----
-
-## 3. Education Industry
-
-> 💡 **Core Concept**: Personalized learning powered by AI to achieve adaptive education
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Personalized Language Learning Path Planning | Evaluates learner level; generates personalized daily/weekly learning task plans |
-| 2 | Lesson Plan Auto-Generation Platform | Inputs course outline; AI generates complete lesson plans including teaching objectives and processes |
-| 3 | Homework Auto-Grading & Learning Diagnosis | OCR recognizes handwritten answers; AI provides grading and improvement suggestions |
-| 4 | Job Competency Model & Learning Map | Analyzes job requirements; generates competency models and corresponding learning paths |
-| 5 | Foreign Language Oral Practice with AI | LLM plays role-play partners; simulates various real-life scenarios for speaking practice |
-| 6 | School-Based Curriculum Construction and Courseware Production Tool | LLM analyzes school characteristics and student needs to generate curriculum frameworks; integrates PPT generation APIs for automatic courseware creation |
-| 7 | College-Application Recommendation and Career Planning Platform | LLM analyzes candidate scores, ranking, interests, and other factors, then combines admissions data to recommend schools and majors |
-| 8 | Youth Programming Code Assistant | LLM explains code logic and provides coding guidance; supports switching between block languages and Python |
-| 9 | Knowledge-Point Mind Map Auto-Generation and Learning-Path Recommendation Tool | Input course topics; LLM automatically generates knowledge maps and recommends next-step learning content based on progress |
-| 10 | Chinese/English Essay Auto-Scoring and Correction Engine | LLM scores from dimensions such as idea, structure, language, and diversity, and generates annotations with high-quality sample comparison |
-
----
-
-## 4. Intelligent Programming
-
-> 💡 **Core Concept**: AI assists development to improve programmer productivity
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Intelligent Code Completion & Bug Fix | IDE plugin provides real-time code completion suggestions; automatically fixes simple bugs |
-| 2 | Low-Code Application Builder | Natural language describes requirements; AI converts to low-code visual configurations |
-| 3 | Unit Test Auto-Generation | Analyzes source code structure; generates boundary condition test cases automatically |
-| 4 | Code Quality Analysis Tool | Analyzes code complexity, security vulnerabilities; provides optimization recommendations |
-| 5 | UI Code Auto-Generation from Design | Uploads design draft images; AI generates responsive HTML/CSS code |
-| 6 | Natural Language to SQL Auto-Generation Tool | LLM converts natural-language data requests to SQL and supports complex multi-table joins and aggregation queries |
-| 7 | API Automated Testing and Documentation Generation Platform | LLM analyzes code comments and API definitions, auto-generates test cases and API docs, and integrates Postman for test execution |
-| 8 | System Log Analysis and Fault Localization | ELK Stack collects log data; LLM extracts key anomaly information and locates root causes, then recommends fixes |
-| 9 | Frontend UI Code Auto-Generation Tool | OCR recognizes layout structures from design images; LLM generates responsive CSS and component code with TailwindCSS integration |
-| 10 | Intelligent Database Schema Design and Modeling Assistant | Input business requirement docs to LLM to auto-generate ER diagrams and schema definitions; supports exporting MySQL/PostgreSQL DDL scripts |
-
----
-
-## 5. Healthcare
-
-> 💡 **Core Concept**: AI assists medical diagnosis to improve healthcare service efficiency
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Medical Test Report Interpretation | OCR recognizes test indicators; intelligently interprets abnormal values and gives suggestions |
-| 2 | Health Consultation Expert | Builds medical knowledge graph; provides professional health Q&A based on user symptoms |
-| 3 | Clinical Research Data Analysis Platform | Integrates EMR data; assists in generating statistical analysis code for research |
-| 4 | Medical Imaging Report Auto-Generation | Describes imaging features; generates structured medical imaging reports |
-| 5 | Chronic Disease Medication Reminder | Generates personalized medication plans; supports drug interaction and contraindication checks |
-| 6 | Drug Package-Insert Intelligent Q&A Assistant | Upload package-insert images or input drug names; LLM answers dosage, side effects, and precautions |
-| 7 | Disease Knowledge Popular-Science Article Generator | Input disease name and audience type; LLM generates easy-to-understand educational content and supports multiple versions |
-| 8 | Medical Imaging Report Auto-Generation Tool | Radiologists describe imaging features; LLM auto-generates structured report content and supports common exam templates |
-| 9 | Surgical Record Intelligent Generation and Archiving Assistant | Voice input records key surgical steps; LLM generates structured surgical records and auto-links surgery codes |
-| 10 | Chronic Disease Medication Reminder Intelligent Assistant | Patients input medication lists; LLM generates personalized reminders and supports contraindication checking and interactive Q&A |
-
----
-
-## 6. Network Security
-
-> 💡 **Core Concept**: AI empowers security operations to achieve intelligent threat detection and response
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Code Security Vulnerability Detection | Static analysis scans code; identifies and suggests fixes for security vulnerabilities |
-| 2 | AI Phishing Email Detection | Analyzes email content; identifies AI-generated phishing emails |
-| 3 | Security Operations Daily Report | Aggregates security logs; automatically extracts and generates daily reports |
-| 4 | Penetration Test Report Generation | Inputs vulnerability descriptions; AI generates complete penetration test reports |
-| 5 | Threat Intelligence Analysis Assistant | Connects to threat intelligence sources; interprets and analyzes potential threats |
-| 6 | Malicious Code Protection and Privacy Compliance Monitoring | Sandboxes suspicious-file behavior; LLM identifies malicious features and generates signatures; scans sensitive data exposure |
-| 7 | Security Configuration Compliance Checklist Generation Tool | Input target system type; LLM generates configuration checklists supporting standards such as MLPS 2.0 and CIS |
-| 8 | Threat Intelligence Intelligent Query and Analysis Assistant | Connects multi-source threat intelligence (open-source/commercial); LLM interprets intelligence and links it with enterprise assets |
-| 9 | Security Incident Postmortem Report Generation Assistant | After incidents, LLM auto-generates timeline-based postmortem reports with root-cause analysis and remediation suggestions |
-| 10 | Global Threat Intelligence Monitoring and Alert Center | Crawlers collect global security news and vulnerability disclosures; LLM extracts key information, assesses impact, and sends alerts |
-
----
-
-## 7. Finance & Insurance
-
-> 💡 **Core Concept**: AI empowers financial services to achieve intelligent risk control and wealth management
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Credit Due Diligence Report Generation | Inputs enterprise financial data; AI generates comprehensive credit due diligence reports |
-| 2 | Private Bank Wealth Management Advisor | Analyzes client risk preference; generates personalized asset allocation strategies |
-| 3 | IPO Prospectus Generation & Compliance Check | Uses modular templates; auto-fills business descriptions with compliance verification |
-| 4 | Financial Report & Anomaly Warning | Auto-generates financial analysis reports; monitors business anomalies in real-time |
-| 5 | Insurance Agent Practice Coach | Simulates customer scenarios; evaluates script compliance and persuasion skills |
-| 6 | Compliance Case Intelligent Retrieval and Q&A Assistant | Builds knowledge bases from regulatory penalty cases; LLM answers compliance questions and provides relevant case references |
-| 7 | Insurance Agent Intelligent Script Practice | LLM plays different customer personas for simulation and evaluates script compliance and persuasion with transcription analysis |
-| 8 | Insurance Product Clause Analysis and Competitor Comparison Platform | Parses clauses structurally; LLM generates feature summaries and key cautions |
-| 9 | Customer Script Emotion Recognition Service | Combines voice-emotion recognition with script-compliance checks and gives real-time coaching suggestions |
-| 10 | Insurance Claim Progress Intelligent Query and Dialogue Assistant | Users input policy or case numbers; LLM queries claim status and answers claim-related questions |
-
----
-
-## 8. Enterprise Services
-
-> 💡 **Core Concept**: AI empowers enterprise operations to achieve efficiency improvement and cost reduction
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Contract Compliance Review Platform | Compares contract clauses with regulations; generates compliance review reports |
-| 2 | Sales Conversation Analysis & Script Recommendation | Transcribes sales calls; analyzes conversation and recommends improvement strategies |
-| 3 | Marketing Content Auto-Generation | Generates marketing copy, social media posts, and advertising scripts |
-| 4 | Competitor Ad Analysis Platform | Collects and analyzes competitor advertising strategies |
-| 5 | Hot Topic Analysis & Content Recommendation | Analyzes trending topics; recommends content creation angles |
-| 6 | Resume Intelligent Parsing and Job Matching System | Parses resume PDFs to extract key information; LLM matches suitable roles and generates interview suggestions; integrates with ATS systems |
-| 7 | Employee Onboarding Guidance and Q&A Assistant | Uses RAG retrieval over onboarding docs; LLM answers common new-hire questions |
-| 8 | Employee Performance Feedback and OKR Management Platform | Collects OKR data; LLM analyzes goal completion and generates feedback suggestions with 360-feedback integration |
-| 9 | Intelligent Meeting Minutes and To-Do Management | Transcribes meeting recordings; LLM extracts key points and action items; auto-creates tasks in task systems |
-| 10 | Invoice Recognition and Expense Reimbursement Auto-Processing | OCR recognizes invoice fields and automatically checks authenticity and reimbursement compliance; integrates with finance systems |
-
----
-
-## 9. Content Production & Operations
-
-> 💡 **Core Concept**: AI empowers content creation to achieve efficient and high-quality output
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Film & Novel Creation Assistant | Generates story outlines, character settings, and dialogue scripts |
-| 2 | Brand Story & PR Writing Assistant | Inputs brand keywords; generates multi-style PR articles |
-| 3 | Digital Human Live Streaming System | Creates digital human anchors; generates real-time dialogue for live streaming |
-| 4 | Short Video Script & Editing | Generates short video scripts; provides intelligent editing suggestions |
-| 5 | Marketing Content Design System | Generates advertising copy and designs marketing materials |
-| 6 | Intelligent Marketing Content Generation and Design System | Input product information; LLM generates marketing copy and selling-point extraction; integrates with template-design tools |
-| 7 | Multi-Platform Ad ROI Real-Time Monitoring and Strategy Optimization System | Connect ad-platform APIs for data collection; LLM analyzes performance and generates optimization suggestions with anomaly alerts |
-| 8 | Search-Engine Keyword and Traffic Analysis | Collect keyword-tool data; LLM analyzes trend and competition and recommends topic direction |
-| 9 | Competitor Ad Placement Analysis Platform | Uses third-party data APIs to collect competitor ads; LLM analyzes placement strategy and creative patterns |
-| 10 | Full-Network Hot Topic Analysis and Content Recommendation System | Collects trending data; LLM analyzes trend shifts and recommends content angles with calendar scheduling |
-
----
-
-## 10. Smart Government
-
-> 💡 **Core Concept**: AI empowers government services to achieve intelligent governance
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | 12345 Hotline Intelligent Routing | Voice recognition understands citizen requests; intelligently routes to departments |
-| 2 | Government Service Q&A Robot | Builds government knowledge base; provides policy consultation services |
-| 3 | Enterprise Policy Matching Platform | Analyzes enterprise profiles; intelligently matches applicable support policies |
-| 4 | Approval Materials Pre-Review | OCR recognizes application materials; automatically checks completeness |
-| 5 | City Grid Event Management | Identifies event types from reports; intelligently dispatches to responsible departments |
-| 6 | Social Sentiment Big-Data Analysis and Risk Early Warning System | Fuses multiple sources such as hotlines, online sentiment, and field visits; LLM identifies risk hotspots |
-| 7 | Government Archive Digitization Recognition and Intelligent Filing Platform | OCR recognizes archive text; LLM extracts key information and auto-classifies; supports full-text retrieval |
-| 8 | Emergency Command and Rescue Resource Intelligent Dispatch Platform | Collects emergency-event data; LLM generates emergency response plans with resource-dispatch optimization |
-| 9 | Grid-Based Atmospheric Pollution Monitoring and Precision Traceability System | Collects air-quality sensor data; CV identifies pollution sources; LLM analyzes trends and traces causes |
-| 10 | Public-Safety Incident Intelligent Risk Warning Assistant | Integrates historical events and real-time reports; LLM estimates risk levels and outputs warning recommendations |
-
----
-
-## 11. Legal Affairs
-
-> 💡 **Core Concept**: AI empowers legal services to achieve intelligent contract review and case analysis
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Contract Risk Vulnerability Detection | Compares contracts against risk checklists; identifies potential legal risks |
-| 2 | Case Win Rate Analysis | Analyzes case features; retrieves similar cases and predicts outcomes |
-| 3 | Legal Regulation Change Monitoring | Monitors regulatory updates; analyzes impact on business operations |
-| 4 | Legal Letter Auto-Drafting | Inputs case facts; AI generates standard legal letters |
-| 5 | Legal Terms Plain Language Explanation | Translates complex legal terms into easy-to-understand language |
-| 6 | Courtroom Recording Real-Time Transcription and Dispute-Focus Extraction Recorder | ASR transcribes hearing audio; LLM extracts dispute focuses and key arguments with timestamps |
-| 7 | Full-Network IP Infringement Clue Monitoring and Blockchain Evidence Preservation System | Monitors e-commerce and social media infringement; automatically collects and preserves evidence |
-| 8 | LLM-Based IPO Prospectus Key-Data Consistency Check and Risk Alert Agent | Compares data across prospectus sections; LLM identifies inconsistencies and abnormal values with risk tags |
-| 9 | Complex Legal Clause "Translation" Plugin in Plain Language | Users select legal clauses and LLM outputs understandable explanations |
-| 10 | Case Evidence-Chain Intelligent Structuring and Visualization System | Upload evidence materials; LLM analyzes evidence relationships and timelines |
-
----
-
-## 12. Travel & Transportation
-
-> 💡 **Core Concept**: AI empowers travel services to achieve personalized travel planning
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Lazy Travel Guide Generator | Inputs travel preferences; AI generates daily itinerary with recommendations |
-| 2 | Flight & Hotel Price Prediction | Uses ML models to predict price trends; suggests optimal booking timing |
-| 3 | Visa Materials Pre-Review | OCR recognizes visa materials; automatically checks for completeness |
-| 4 | Real-Time Translation for Travel | Offline voice translation; recognizes and translates menu images abroad |
-| 5 | Travel Notes Auto-Generation | Extracts information from travel photos; generates shareable travel journals |
-| 6 | Data-Driven Hotel "Pitfall Avoidance" Analyzer Based on Real Reviews | Collects hotel review data; LLM extracts positive and negative keyword patterns |
-| 7 | Immersive Destination VR Preview and Virtual Room Selection Platform | Collects 360-degree panoramas; VR enables immersive previews and virtual room tours |
-| 8 | Travel Footprint Auto-Generated Travel Notes and Social Copy Assistant | Extracts time/location metadata from photos; LLM generates travel notes with template-based layout |
-| 9 | Enterprise Travel Invoice Aggregation and Compliance Reimbursement Management Platform | Connects travel-platform APIs for automatic invoice collection and compliance checks |
-| 10 | Scenic-Area Crowd Congestion Prediction and Off-Peak Route Navigation | Collects scenic-area crowd data; ML predicts congestion windows and recommends off-peak routes |
-
----
-
-## 13. Emotional Companionship
-
-> 💡 **Core Concept**: AI provides 24/7 emotional support and psychological companionship
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Virtual Companion | LLM-based AI companion with memory system; provides emotional support |
-| 2 | Emotional Recognition & Counseling | Analyzes voice tone and text emotion; provides professional psychological suggestions |
-| 3 | Cognitive Training for Elderly | Provides cognitive games; uses old photos to trigger memory for dementia patients |
-| 4 | Social Anxiety Practice Coach | Creates virtual social scenarios; helps practice social interactions |
-| 5 | Mood Monitoring & Incentive Assistant | Analyzes mood patterns; generates positive encouragement content |
-| 6 | Generative AI Customized Bedtime Story Machine for Children | Parents input themes/preferences; LLM generates customized stories with background music support |
-| 7 | Deceased Digital-Life Reconstruction and LLM Cross-Time Dialogue System | Trains personalized models from pre-death voice/text data and generates memory-based conversations |
-| 8 | MBTI-Based AI Personality Mirror and Empathetic Chatbot | Inputs MBTI results; LLM outputs personality analysis and empathetic responses with match suggestions |
-| 9 | Privacy-Protected AI Confession Tree-Hole for Teenagers | Anonymous channel for emotional expression; LLM provides listening/suggestions with sensitive-word alerts |
-| 10 | Self-Evolving AI Virtual Pet Growth System | Trains pet personality models and supports interaction-driven growth and virtual customization |
-
----
-
-## 14. Leisure & Entertainment
-
-> 💡 **Core Concept**: AI creates immersive entertainment experiences
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Game NPC Autonomous Decision Engine | LLM-driven NPCs with autonomous decision-making capabilities |
-| 2 | Script Murder Story Deduction | AI generates story branches based on player choices |
-| 3 | Interactive Novel Story Generator | Reader choices affect story development |
-| 4 | Esports Game Analysis & Commentary | Real-time game analysis with AI-powered commentary |
-| 5 | Audiobook Auto-Generation | Converts text to audio with character-specific voices |
-| 6 | Personalized Humor Content Recommendation Algorithm Engine | Builds user-interest profiles and recommends matching humor content |
-| 7 | AI Smart Vocal Tuning and KTV Voice Enhancement Software | Performs denoising and vocal enhancement with AI tuning algorithms |
-| 8 | Film/TV Character-Centric Plot Extraction and Editing Tool | Analyzes video content, extracts character-related clips, and auto-generates edited cuts |
-| 9 | Multi-Role TTS Audiobook Auto-Generation System | Assigns text roles and generates personalized voices with background music/effects |
-| 10 | Board-Game Reinforcement-Learning Review Coach | Analyzes game records, simulates AI opponents, and generates review suggestions |
-
----
-
-## 15. Ecommerce Services
-
-> 💡 **Core Concept**: AI empowers ecommerce to achieve intelligent operations
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Product Detail Page Generator | Generates high-converting product descriptions and marketing copy |
-| 2 | Virtual Try-On | AI generates virtual model try-on effects |
-| 3 | Multi-Language Translation | Localizes product descriptions for international markets |
-| 4 | Digital Human Live Streaming | AI-powered virtual streamers for 24/7 live commerce |
-| 5 | Trend Analysis & Product Selection | Analyzes market trends; suggests trending products to sell |
-| 6 | Full-Network Same-Product AI Price Comparison and Trend Prediction Plugin | Crawls e-commerce prices, displays comparison charts, and predicts price trends |
-| 7 | Buyer-Show Image AI Selection and Short-Video Synthesis Platform | Scores buyer-show images, auto-recommends high-quality content, and synthesizes short videos from templates |
-| 8 | LLM-Based Real-Time Sales Dialogue Voice Analysis and Golden-Script Recommendation | ASR transcribes calls and performs real-time script compliance checks with recommendation output |
-| 9 | Market Trend AI Insight and Best-Seller Prediction Engine | Collects and analyzes social media and e-commerce data; LLM identifies trend hotspots and recommends product choices |
-| 10 | Private-Domain User Profiling AI Clustering and Precision Operations System | Clusters user behavior data, generates profile tags, and triggers automated marketing flows |
-
----
-
-## 16. Energy
-
-> 💡 **Core Concept**: AI empowers energy management for intelligent grid operations
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Home Energy Analysis | Analyzes household electricity usage patterns; provides energy-saving suggestions |
-| 2 | Solar Panel Defect Detection | Drone-captured images analyzed by CV for defect identification |
-| 3 | Electricity Price Prediction | ML predicts spot prices; generates trading strategies |
-| 4 | Carbon Emission Calculation | Auto-calculates enterprise carbon footprint; generates ESG reports |
-| 5 | Grid Load Prediction | Predicts grid load under extreme weather; generates dispatch plans |
-| 6 | Gas-Station Violation AI Video Recognition and Alert Guard | Analyzes surveillance video and detects violations (calling/smoking, etc.) with alert pushes |
-| 7 | Long-Distance Oil/Gas Pipeline Leak Acoustic AI Monitoring and Precision Positioning System | Collects acoustic-sensor data for leak detection and localization algorithms |
-| 8 | Virtual Power Plant Resource Aggregation and AI Power-Trading Decision System | Connects distributed resources for aggregated optimization dispatch and strategy execution |
-| 9 | Mine Personnel AI Position Tracking and Dangerous-Area Intrusion Alarm | Uses UWB/Bluetooth positioning for trajectory tracking and geofenced danger-zone alerts |
-| 10 | Energy-Storage Battery Health AI Assessment and Thermal-Runaway Warning | Monitors battery runtime data, evaluates health status, and triggers thermal-risk alerts |
-
----
-
-## 17. Audio & Video
-
-> 💡 **Core Concept**: AI empowers audio/video production for efficient content creation
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Video Highlight Detection | AI identifies highlights from long videos; auto-generates short clips |
-| 2 | Audio Noise Reduction | Separates vocals from background noise; enhances audio quality |
-| 3 | Video Restoration & Colorization | 4K super-resolution; AI adds color to black and white footage |
-| 4 | Text-to-Speech with Emotion | Generates natural-sounding speech with emotional expression |
-| 5 | Meeting Transcription | Multi-speaker voice separation; generates meeting transcripts with action items |
-| 6 | Video Object Removal AI Engine | Uses object tracking and inpainting to remove unwanted objects with frame-level consistency |
-| 7 | Copyright-Safe Background Music AIGC Auto-Composer | Uses music-generation models with controllable emotional style and copyright checks |
-| 8 | Specific-Person Voice Clone and Voice Conversion Software | Trains timbre models from small voice samples and supports voice conversion |
-| 9 | One-Click Script-to-Storyboard and AI Dynamic Preview Video Platform | Parses scripts into storyboards and auto-generates previsualization videos |
-| 10 | Meeting Recording AI Smart Transcription and Core To-Do Extraction Assistant | Performs multi-speaker transcription and LLM-based to-do extraction with timestamps |
-
----
-
-## 18. AI Marketing
-
-> 💡 **Core Concept**: AI empowers marketing to achieve data-driven creative campaigns
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Social Media Viral Copy Generator | Generates Xiaohongshu-style posts with optimized emojis |
-| 2 | Marketing Poster Designer | AI designs posters with multi-size adaptation |
-| 3 | Logo & Brand Design | Generates brand logos; creates complete VI systems |
-| 4 | Trend Analysis & Content Ideas | Tracks trending topics; suggests marketing angles |
-| 5 | Video Script Generator | Generates short video scripts with shooting suggestions |
-| 6 | Competitor Marketing Strategy Deep Analysis and AI Weekly Report Generator | Collects/analyzes competitor content, extracts strategy insights, and auto-generates weekly reports |
-| 7 | Search-Engine Keyword AI Layout and Traffic Article Batch Writing | Analyzes keywords, generates articles at scale, and gives SEO optimization recommendations |
-| 8 | Personalized Marketing Email AI Writing Expert | Uses user-profile data for personalized content generation with A/B testing |
-| 9 | Brand Reputation Full-Network Monitoring and Crisis AI Alert Radar | Collects network sentiment data, runs sentiment analysis, and pushes crisis alerts |
-| 10 | Short-Video Script Creative AIGC Generation and Storyboard Guidance Assistant | Inputs themes and outputs scripts, storyboards, and practical shooting guidance |
-
----
-
-## 19. Data Intelligence
-
-> 💡 **Core Concept**: AI makes data accessible to everyone through natural language
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Natural Language to SQL | Converts natural language queries to SQL statements |
-| 2 | Data Asset Catalog | Auto-catalogs and classifies enterprise data assets |
-| 3 | Data Quality Monitoring | Detects data anomalies; suggests fixes |
-| 4 | Report Generator | Creates reports and dashboards through conversation |
-| 5 | Metric Q&A Assistant | Answers questions about data metric definitions and calculations |
-| 6 | Intelligent Data-Report Interpretation and Trend Analysis Assistant | Upload report images or input data; VLM interprets chart content and analyzes trends |
-| 7 | Intelligent DB-Schema Interpretation and Query-Example Generation Assistant | Input table names or field descriptions; LLM generates schema explanations and sample SQL |
-| 8 | Enterprise Master-Data Intelligent Alignment and AI Dedup Governance | Matches master data across sources, identifies duplicates, and supports merge-rule configuration |
-| 9 | Data Requirement Doc to Test-Case Intelligent Conversion Tool | Input data requirement descriptions; LLM generates test scenarios and validation test cases |
-| 10 | Data Metric-Definition Intelligent Q&A Assistant | Builds a knowledge base from metric-definition docs; LLM answers definition and calculation logic questions |
-
-</TabItem>
-<TabItem label="B2C Consumer">
-
-## Chapter Overview
-
-<ChapterIntroduction :duration="cDuration" :tags="['C-End Applications', 'Consumer Scenarios', 'AI Inspiration', 'Creative Applications', 'Lifestyle']" coreOutput="Understand 15+ C-End consumer scenario directions" expectedOutput="Find project directions suitable for individual consumers">
-
-This document summarizes **LLM large model creative applications in C-End consumer scenarios**. Different from B-End which focuses on efficiency and cost reduction, C-End products place greater emphasis on **emotional value, personal experience, and psychological satisfaction**. Each scenario focuses on creating **"feelings" and "atmosphere"**, suitable for AI application developers targeting individual consumers.
-
-</ChapterIntroduction>
-
-## Vibe Direction Quick Selection
-
-<el-card shadow="hover" style="margin-top: 16px; margin-bottom: 24px; border-left: 5px solid #E6A23C;">
-  <div style="font-weight: 600; margin-bottom: 8px;">Find the scenario that resonates with you</div>
-  <div style="color: #606266; font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
-    Select your desired vibe and feeling, the system will recommend related scenarios. Click on tags to jump to corresponding chapters.
-  </div>
-  <el-row :gutter="16">
-    <el-col :span="12">
-      <el-select v-model="vibePoint" placeholder="Select vibe type" style="width: 100%;">
-        <el-option
-          v-for="item in vibeOptions"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value"
-        >
-          <div style="font-weight: 500;">{{ item.label }}</div>
-          <div style="font-size: 12px; color: #909399;">{{ item.desc }}</div>
-        </el-option>
-      </el-select>
-    </el-col>
-    <el-col :span="12">
-      <el-select v-model="feeling" placeholder="Select feeling" style="width: 100%;">
-        <el-option
-          v-for="item in feelingOptions"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value"
-        >
-          <div style="font-weight: 500;">{{ item.label }}</div>
-          <div style="font-size: 12px; color: #909399;">{{ item.desc }}</div>
-        </el-option>
-      </el-select>
-    </el-col>
-  </el-row>
-  
-  <div v-if="cRecommendationTopics.length > 0" style="margin-top: 16px;">
-    <div style="font-weight: 600; margin-bottom: 12px; color: #E6A23C;">
-      Recommended {{ cCurrentSelection.vibe }} × {{ cCurrentSelection.feeling }} scenarios:
-    </div>
-    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-      <el-tag
-        v-for="topic in cRecommendationTopics"
-        :key="topic.title"
-        type="warning"
-        effect="light"
-        style="cursor: pointer; margin-bottom: 4px;"
-        @click="cScrollToAnchor(topic.scenarioAnchor)"
-      >
-        {{ topic.title }}
-      </el-tag>
-    </div>
-    <el-button type="text" size="small" @click="cResetSelection" style="margin-top: 8px;">
-      Reset Selection
-    </el-button>
-  </div>
-</el-card>
-
----
-
-## 1. Lifestyle
-
-> 💡 **Core Concept**: Infusing everyday life with meaning and aesthetics
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Morning Ritual Awakening | Generates exclusive morning rituals based on weather, schedule, and mood |
-| 2 | Solo Living Atmosphere Creator | Designs home atmosphere with smart lighting, music, and aromatherapy |
-| 3 | Weekend Stay-Home Healing Plan | Recommends perfect combinations of movies, snacks, and atmosphere |
-| 4 | Bedtime Soul-Soothing Radio | Generates gentle stories and meditation for sleep |
-| 5 | Life Aesthetics Inspiration | Discovers beauty in everyday moments |
-
----
-
-## 2. Emotional Companionship
-
-> 💡 **Core Concept**: Providing 24/7 emotional support and psychological companionship
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Late-Night Tree Hole Listener | Non-judgmental emotional support anytime |
-| 2 | Heartbreak Healing Companion | Gentle companionship during recovery |
-| 3 | Anxiety Relief Breathing Coach | Guides breathing and mindfulness |
-| 4 | Self-Confidence Rebuilding | Positive dialogue to rebuild self-worth |
-| 5 | Emotional Journal Interpreter | Analyzes patterns and provides insights |
-
----
-
-## 3. Entertainment & Leisure
-
-> 💡 **Core Concept**: Creating immersive entertainment experiences
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Script Murder DM | Hosts immersive mystery games |
-| 2 | Game Soul NPC | Characters with memory and personality |
-| 3 | Personalized Podcast | Generates content matching interests |
-| 4 | Virtual Concert Atmosphere | Creates live experiences online |
-| 5 | Interactive Novel Co-Creation | Stories that evolve with choices |
-
----
-
-## 4. Personal Growth
-
-> 💡 **Core Concept**: Making self-improvement engaging and rewarding
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Growth Witness | Records and celebrates progress |
-| 2 | Gamified Habit Coach | Turns habits into adventures |
-| 3 | Learning Partner Matching | Finds accountability buddies |
-| 4 | Daily Happiness Discoverer | Finds joy in small moments |
-| 5 | Life Simulation | Explores alternate life paths |
-
----
-
-## 5. Social Interaction
-
-> 💡 **Core Concept**: Making social connections easier and more meaningful
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Ice-Breaking Generator | Provides conversation starters |
-| 2 | Moments Copywriting | Creates perfect social posts |
-| 3 | Date Planner | Designs romantic experiences |
-| 4 | Online Party Host | Liven up virtual gatherings |
-| 5 | Social Energy Manager | Helps introverts navigate social life |
-
----
-
-## 6. Creative Expression
-
-> 💡 **Core Concept**: Unlocking creative potential
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Inspiration First Aid | Sparks ideas when blocked |
-| 2 | Style Explorer | Discovers personal aesthetic |
-| 3 | Journal Aesthetics | Creative journaling guidance |
-| 4 | Photo Atmosphere Guide | Composes perfect shots |
-| 5 | Music Mood Matcher | Perfect playlists for moments |
-
----
-
-## 7. Travel Exploration
-
-> 💡 **Core Concept**: Making every journey meaningful
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | City Walk Guide | Local-hidden gems discovery |
-| 2 | Travel Journal Generator | Transforms photos to stories |
-| 3 | Solo Travel Companion | Safety and companionship |
-| 4 | Destination Preview | Pre-trip immersion |
-| 5 | Travel Photography | Story-telling photo guidance |
-
----
-
-## 8. Physical & Mental Health
-
-> 💡 **Core Concept**: Holistic well-being support
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Exercise Motivation | Encouragement when needed |
-| 2 | Healing Kitchen | Mood-based healthy recipes |
-| 3 | Sleep Atmosphere | Environment for quality rest |
-| 4 | Body Awareness | Mind-body connection |
-| 5 | Self-Care Reminder | Gentle prompts to pause |
-
----
-
-## 9. Knowledge Exploration
-
-> 💡 **Core Concept**: Making learning delightful
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Knowledge Adventure | Gamified learning journeys |
-| 2 | Language Partner | Immersive conversation practice |
-| 3 | Curiosity Satisfier | Answers wonders big and small |
-| 4 | Book Insights | Deeper understanding of reads |
-| 5 | Knowledge Share Prep | Turns learning into teaching |
-
----
-
-## 10. Relationship Management
-
-> 💡 **Core Concept**: Deepening human connections
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Communication Coach | Helps express deep feelings |
-| 2 | Family Care Tips | Timely reminders to connect |
-| 3 | Friendship Keeper | Maintains long-distance bonds |
-| 4 | Surprise Planner | Creates memorable moments |
-| 5 | Conflict De-escalator | Peace-making suggestions |
-
----
-
-## 11. Pet Companionship
-
-> 💡 **Core Concept**: Enriching the bond with pets
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Pet Diary | Adorable pet-perspective stories |
-| 2 | Behavior Interpreter | Understanding pet language |
-| 3 | Playtime Planner | Creative bonding activities |
-| 4 | Pet Memorial | Cherishing memories forever |
-| 5 | New Owner Guide | First-time parent support |
-
----
-
-## 12. Financial Health
-
-> 💡 **Core Concept**: Building healthy money mindsets
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Spending Emotion Audit | Understands spending triggers |
-| 2 | Savings Visualization | Dreams become concrete goals |
-| 3 | Fun Finance | Learning money skills playfully |
-| 4 | Money Anxiety Soother | Emotional support for finances |
-| 5 | Investment Game | Risk-free practice investing |
-
----
-
-## 13. Career Development
-
-> 💡 **Core Concept**: Navigating professional journeys
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Career Confidant | Exploration during uncertainty |
-| 2 | Achievement Rekindler | Finds meaning in work |
-| 3 | Workplace Social Guide | Networking made comfortable |
-| 4 | Side Hustle Spark | Ideation for extra income |
-| 5 | Interview Confidence | Pre-game mental prep |
-
----
-
-## 14. Home Space
-
-> 💡 **Core Concept**: Creating sanctuaries
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Atmosphere Designer | Mood-matching environments |
-| 2 | Seasonal Updates | Fresh looks through the year |
-| 3 | Small Space Magic | Cozy compact living |
-| 4 | Ritual Creator | Meaning in daily routines |
-| 5 | Declutter Support | Emotional organizing help |
-
----
-
-## 15. Food & Cooking
-
-> 💡 **Core Concept**: Culinary joy for everyone
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Solo Healing Meals | Simple comfort food for one |
-| 2 | Festive Tables | Special occasion presentations |
-| 3 | Mood Menu | Food matching feelings |
-| 4 | Beginner Confidence | Kitchen courage building |
-| 5 | Food Photography | Instagram-worthy plates |
-
----
-
-## 16. Fashion & Style
-
-> 💡 **Core Concept**: Expressing identity through appearance
-
-| No. | Application Scenario Name | Application Scenario Function |
-| :--: | ------------ | ------------ |
-| 1 | Outfit Mood Board | Daily inspiration picker |
-| 2 | Capsule Wardrobe | More from less |
-| 3 | Style Journey | Personal brand discovery |
-| 4 | Old Favorites Refresh | New life for old pieces |
-| 5 | Occasion Stylist | Perfect looks for events |
-
----
-
-## Core Principles for Designing Consumer (C-End) Products
-
-### 1. Shift from "Features" to "Feelings"
-
-B-end products focus on "what problem this function solves." C-end products focus on "what feeling this function creates."
-
-| B-End Thinking | C-End Thinking |
-|---------|---------|
-| Improve efficiency | Free up time for things users love |
-| Reduce cost | Make every dollar feel worthwhile |
-| Solve pain points | Create delightful experiences |
-| Functional completeness | Emotional resonance |
-
-### 2. Three Layers of Atmosphere Design
-
-**Sensory Layer**: Design for sight, sound, and interaction feel
-- Warm color palettes
-- Calming sound cues
-- Smooth and natural transitions
-
-**Emotional Layer**: Emotional resonance and guidance
-- Understand the user's mood
-- Offer emotional support
-- Create positive emotional feedback
-
-**Meaning Layer**: Identity and belonging
-- Make users feel understood
-- Build a sense of belonging
-- Give actions personal meaning
-
-### 3. The Power of Psychological Cues
-
-Copy and design in C-end products always carry psychological cues:
-
-- **Positive cues**: "You're already doing great", "Take your time, it's okay"
-- **Belonging cues**: "Many people feel the same way", "You're not alone"
-- **Growth cues**: "Every attempt is progress", "You're getting better"
-
-### 4. Help Users Become a Better Version of Themselves
-
-The best C-end products do not force users to change; they help users become who they want to be.
-
-- Not "You should...", but "You can..."
-- Not "You must...", but "If you want to..."
-- Not "You're still not enough...", but "You're already on your way..."
-
----
-
-> 🌟 **Remember**: C-end users don't buy functions, they buy feelings; not tools, but companionship; not service, but understanding.
-
-</TabItem>
-</Tabs>
+</style>

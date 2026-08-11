@@ -4,6 +4,7 @@ description: 'Ein Einf&uuml;hrungsartikel zu Jobs to Be Done f&uuml;r Einsteiger
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Etwa <strong>1,5 Stunden</strong>'
 </script>
 
@@ -481,12 +482,16 @@ Der Vorteil: Sie erkennen schneller, ob Sie sich auf den Bedarf oder nur auf Ihr
 
 ## Assignments
 
+<StageAssignmentCard title="Beschreibe, was der Nutzer wirklich erledigen möchte">
+
 Bitte bearbeiten Sie die folgenden Aufgaben basierend auf dem obigen Inhalt:
 
 1. W&auml;hlen Sie eine Produktidee, an die Sie k&uuml;rzlich gedacht haben, und formulieren Sie sie mit einer JTBD-Formel klar
 2. Erg&auml;nzen Sie diese Idee mit den 5 Elementen: Szenario, Ausl&ouml;ser, Fortschritt, Alternativl&ouml;sung, Erfolgskriterium
 3. Finden Sie 3 potenzielle Nutzer und fragen Sie mindestens einmal: "Wann hatten Sie das letzte Mal dieses Problem?"
 4. &Uuml;bergeben Sie die Interview-Originalzitate an AI und fassen Sie sie in 3 priorisierte JTBD-Hypothesen zusammen
+
+</StageAssignmentCard>
 
 ## Weiterf&uuml;hrende Literatur
 

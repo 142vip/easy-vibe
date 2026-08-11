@@ -4,6 +4,7 @@ description: 'Experimenta el ciclo completo desde el analisis de negocio hasta l
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = 'Aproximadamente <strong>8 horas</strong>'
@@ -352,11 +353,8 @@ Si aun no estas familiarizado con el uso basico del AI IDE (como Cursor, Trae, W
 #### 2.2.2 Empezar a generar codigo
 
 Ya tienes el prompt inicial; usemos el primer estilo de prompt como ejemplo para que la IA nos ayude a generar codigo. Primero crea una ventana y la carpeta correspondiente, abre la carpeta (inicializa un nuevo proyecto en la direccion de carpeta que prefieras):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-28-44.png)
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-30-00.png)
 
 En la barra lateral, elige el modelo que prefieras (se recomiendan gemini, gpt, glm, kimi, minimax, etc.), e introduce el prompt obtenido en el primer paso:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-31-41.png)
 
 Despues de hacer clic en generar, veremos la etapa familiar: la IA planificara la estructura de directorios del proyecto, los archivos necesarios y dara el contenido inicial de cada archivo.
 
@@ -370,10 +368,8 @@ Durante el proceso de generacion, el AI Agent frecuentemente **se detendra esper
 :::
 
 Tambien recuerda presionar Enter para confirmar la informacion (de lo contrario se quedara esperando; algunos AI IDE no tienen este problema):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-33-03.png)
 
 Si te encuentras con la siguiente situacion, significa que ya se ha iniciado un servicio local; necesitas hacer clic para saltar, de lo contrario te quedaras en esta pantalla (si despues de generar el codigo no aparece nada, necesitas decir activamente "ayudame a iniciar este proyecto"):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-38-11.png)
 
 ::: info Explicacion del escenario
 **Explicacion del escenario**: usaste `npm create vite@latest` para crear un proyecto React + TypeScript (easy-vibe-web). Una vez completada la creacion, la computadora automaticamente "ejecutara" esta pagina web, para que puedas ver el efecto inmediatamente.
@@ -395,13 +391,11 @@ Despues de confirmar todo, espera un momento a que el agente termine de ejecutar
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
 
 Podemos ver que ya hay una vista preliminar de las funcionalidades, pero la pagina frontend se ve muy fea. En este momento podemos intentar hablar directamente con la IA para optimizar la visualizacion de la interfaz:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-01-16.png)
 
 Despues de optimizar, podemos obtener una interfaz mas bonita:
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
 
 Puedes modificar las funcionalidades de la pagina web segun tus necesidades; puedes adjuntar capturas de pantalla y preguntar libremente, por ejemplo: "Todavia no necesito la funcion de importacion en lote, ayudame a quitarla", "Hay demasiadas cosas que rellenar a la izquierda, ayudame a dejar solo xxxxx". Incluso puedes referenciar otros sitios web maduros; por ejemplo, aqui podemos referirnos directamente a un producto de diseno de Google (puedes pegar una captura de pantalla de un sitio web maduro que te guste):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-13-12.png)
 
 Finalmente podemos obtener:
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
@@ -559,12 +553,9 @@ La IA generalmente generara un checklist, y puedes pensar si necesitas seguir me
 
 ## 5. Asignacion: replica tu propio espacio de trabajo de e-commerce de TikTok
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">Mision de desafio: replica el espacio de trabajo de materiales de e-commerce</div>
-  </template>
+<StageAssignmentCard title="Completa tu mesa de trabajo de contenidos para comercio electrónico">
 
-  <p>
+<p>
     Referenciando los prompts y el contenido de esta leccion, completa un ciclo cerrado:
   </p>
 
@@ -588,7 +579,8 @@ La IA generalmente generara un checklist, y puedes pensar si necesitas seguir me
       </ul>
     </li>
   </ul>
-</el-card>
+
+</StageAssignmentCard>
 
 ## Proximo paso
 

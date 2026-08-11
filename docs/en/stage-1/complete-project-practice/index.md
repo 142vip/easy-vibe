@@ -1,291 +1,313 @@
 ---
-title: 'Complete Project Practice - From Demo to Production-Grade Prototype'
-description: 'Move beyond the Demo stage, learn how to complete product flows, build realistic simulated data, iterate quickly through feedback, and finally complete a presentable, interactive AI product prototype.'
+title: 'Complete Project Practice: From an Idea to a Finished Work'
+description: 'Use your AI-enabled prototype from beginning to end, ask someone else to try it, and fix the problems you observe.'
 ---
 
 <script setup>
-const duration = 'About <strong>3 days</strong>'
+import { relatedArticlesMap } from '@theme/data/relatedArticles'
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
+import ProductFinishMap from '../../../zh-cn/stage-1/complete-project-practice/ProductFinishMap.vue'
+import StageOneCompletion from '../../../zh-cn/stage-1/complete-project-practice/StageOneCompletion.vue'
+
+const duration = 'About <strong>2–3 days</strong>'
+const relatedArticles =
+  relatedArticlesMap['en/stage-1/complete-project-practice'] ?? []
 </script>
 
-# Beginner Level 5: Complete Project Practice
+# Complete Project Practice: From an Idea to a Finished Work
 
-## Chapter Overview
+<ProductJourney current="finish" />
 
-<ChapterIntroduction :duration="duration" :tags="['Product Thinking', 'Mock Data', 'Interaction Improvement', 'LocalStorage']" coreOutput="1 fully functional AI product prototype" expectedOutput="Web application with complete flows and real data">
+## What this chapter is for
 
-In the previous chapter, we integrated AI capabilities. The Demo runs, but it's still <strong>far from a real "product"</strong>: Refresh the page and <strong>data is gone</strong>, errors cause <strong>white screens</strong>, the list only has "test data 1, test data 2", users can't <strong>undo</strong> mistakes...
+<ChapterIntroduction :duration="duration" :tags="['Complete use', 'Product experience', 'User trial', 'Project presentation']" coreOutput="One AI product that another person can use without guidance" expectedOutput="A web project improved through a real user trial">
 
-This chapter will <strong>fill all these gaps</strong>: We'll <strong>complete the product's full flow</strong>, use AI to generate <strong>realistic business data</strong> to replace fake data, add <strong>error handling and user feedback</strong>, and finally polish a <strong>presentable prototype that can be demonstrated to others</strong>.
+In the previous chapters, we started from an idea, built an interactive prototype, and made the AI feature on the page work.
 
-This is the <strong>final chapter of the beginner stage</strong>. After completing this step, you'll have transformed from "can't program at all" to "<strong>can independently build AI product prototypes</strong>".
+You already know what to enter and where to click. A person opening the page for the first time may not even find the first step. If nothing appears immediately after a click, they may think the page is broken.
+
+We will not add new features in this chapter. We will use the product from beginning to end, fix the places where people are likely to get stuck, and then ask someone else to try it. The result will be a project you can confidently share.
 
 </ChapterIntroduction>
 
 <div style="margin: 50px 0;">
   <ClientOnly>
     <StepBar :active="0" :items="[
-      { title: 'Complete Flows', description: 'From single feature to complete loop' },
-      { title: 'Inject Soul', description: 'Simulate real business data' },
-      { title: 'Feedback Iteration', description: 'Fix experience based on real feedback' },
-      { title: 'Final Project', description: 'Your graduation design' }
+      { title: 'Use it yourself', description: 'Go from the beginning to the result' },
+      { title: 'Fix the blockers', description: 'Waiting, results, and failures' },
+      { title: 'Ask someone to try', description: 'Observe before helping' },
+      { title: 'Prepare and share', description: 'Help others understand the project' }
     ]" />
   </ClientOnly>
 </div>
 
-## 1. Reject "Happy Path": Complete Core Flows
+<ProductFinishMap />
 
-Many beginners building prototypes often only do the "Happy Path" (the ideal path): User clicks -> API responds successfully -> Display result.
-But in the real world, things often don't go that smoothly. To make your prototype look like a real product, you need to consider these "hidden" elements.
+## 1. Use your product from beginning to end
 
-### 1.1 Add "Waiting" and "Feedback"
+Do not rush to add login, team collaboration, or analytics. Open the product as it is and use it like a user, from the first page until you obtain a result. Any step that still requires you to explain it is a step that needs improvement.
 
-When users click "Generate Copy", AI often needs several seconds to respond. If the interface shows no reaction, users will think the program is broken.
-**You need to let AI IDE help you add Loading states:**
+For our ecommerce content workspace, one complete use looks like this:
 
-> Prompt example:
-> "When I click the generate button, please change the button to 'Generating...' and make it unclickable, while showing a loading animation in the right area. Only restore to normal after the API returns results."
+> An ecommerce operator uploads a product image, adds the necessary information, generates a first text-and-image draft, checks it, and then copies or saves it for editing and publishing.
 
-### 1.2 Handle "Failures" and "Exceptions"
+Making this short journey work is enough for now. Login, team permissions, and a formal launch can wait until the product truly needs them.
 
-API Keys can expire, networks can disconnect.
-**You need to let AI IDE help you handle errors:**
+### 1.1 Follow the real order of use
 
-> Prompt example:
-> "If the API request fails, don't just log an error in the console. Please pop up a red notification (Toast) at the top of the page telling the user 'Generation failed, please try again later', and allow users to click generate again."
+Ignore the code and components for a moment. Follow the actions a user would take:
 
-### 1.3 Conversation History Persistence
+1. Open the page and understand what the tool can help with.
+2. Upload a product image and fill in necessary information such as its name and material.
+3. Select “Generate copy” and see that the page is processing the request.
+4. Check the title and selling points returned by AI; edit or regenerate when needed.
+5. Copy, download, or temporarily save the result and finish the task.
 
-During interaction with AI, we need to save conversation content so users can review history and continue previous conversations. At this stage, we won't introduce a database yet. We can choose from these lightweight solutions:
+When you reach the end, ask: would someone get stuck if I were not standing beside them? Record features such as team management and complex dashboards, but do not build them now if they do not affect this use.
 
-**Storage Options:**
+::: tip How large should this version be?
+If you can tell someone the task in one sentence and they can begin within a few minutes, the scope is usually suitable.
+:::
 
-| Option | Use Case | Characteristics |
-| ------ | -------- | --------------- |
-| **LocalStorage** | Pure frontend projects, user data saved in browser | Simple implementation, survives refresh, can't sync across devices |
-| **JSON Files** | Local prototypes, data stored as files | Clear structure, easy debugging, manually editable |
-| **TXT Files** | Simplest solution, quickly record text content | Free format, good compatibility |
+### 1.2 Try again from a blank page
 
-**Conversation Content Example:**
-Saved conversation history typically includes:
+After working on a product for a while, the page often contains test data and an old result. It is easy to forget that a first-time user sees none of that. Open a private window or clear the local data and begin again.
 
-```json
-[
-  {
-    "role": "user",
-    "content": "Help me generate Douyin e-commerce copy for a Bluetooth headset",
-    "timestamp": "2026-01-20 10:30:00"
-  },
-  {
-    "role": "assistant",
-    "content": "【Bluetooth Headset Product Copy】\n\n🎧 Say goodbye to lag, immersive music experience\n\nLadies! This Bluetooth headset is absolutely amazing👇\n\n✅ 40dB active noise cancellation, instantly enter music world\n✅ 30 hours ultra-long battery life, one week commute without charging\n✅ Crystal clear calls like face-to-face, can chat even on noisy subway\n✅ Semi-in-ear design, comfortable for long wear\n\n💰 Limited time offer, click the link below to get yours!",
-    "timestamp": "2026-01-20 10:30:05"
-  }
-]
+You only need to try three situations:
+
+1. **Open it blank:** click without entering anything and see whether the page explains what is missing.
+2. **Generate normally:** upload an image and generate content; confirm that waiting is visible and that the result has a clear next step.
+3. **Cause one failure:** upload an unsupported file or make the request fail; confirm that the entered content remains and the user can try again.
+
+Write down where you get stuck. We will fix those places in the next section.
+
+An AI IDE can inspect the code, but it cannot replace actually using the page:
+
+```text
+Do not change the code yet.
+
+Inspect the current project around this user task:
+the user uploads a product image, enters the required information,
+generates copy, checks the result, and then copies or saves it.
+
+Tell me which pages and files this journey uses,
+and list the places where it may currently stop.
 ```
 
-**Implementation Prompt:**
+The AI IDE can point to suspicious code. You still have to click through the page to know whether it is usable.
 
-> "Please help me implement conversation history saving functionality. Support saving user and AI conversation records as JSON files (or use LocalStorage). Automatically load historical conversations when entering the page, support viewing and deleting individual conversation records."
+## 2. Fix the places where users usually get stuck
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="1" :items="[
-      { title: 'Complete Flows', description: 'From single feature to complete loop' },
-      { title: 'Inject Soul', description: 'Simulate real business data' },
-      { title: 'Feedback Iteration', description: 'Fix experience based on real feedback' },
-      { title: 'Final Project', description: 'Your graduation design' }
-    ]" />
-  </ClientOnly>
-</div>
+After one complete run, problems usually appear at four moments: first opening, waiting for AI, receiving a result, and handling a failed request. You do not need an elaborate design. The user only needs to know what is happening and what they can do next.
 
-## 2. Inject Soul: Simulate Real Data (Mock Data)
+### 2.1 Is the first action clear?
 
-An empty page can't impress anyone. Imagine showing your "E-commerce Material Workbench" to others, but the history is empty, or just has one line "test / test / test".
-To make the demo effect best, we need to "fake" some realistic data to make your prototype look like a real product that's been running for six months.
+A blank page should not contain only an input field. Add one short explanation, some example content, or a note about supported image formats and size near the upload area.
 
-### 2.1 Let AI Help You Design Data Structures
+If the form has many fields, keep only those required to generate a useful result. Product name, image, and main characteristics may be required; brand, reference link, and detailed style settings can sit under “More settings.” A new user should not have to complete a long registration form before trying the product.
 
-We don't need to think about what each field should be called ourselves (like whether it's `name` or `title`). This can be completely left to AI.
+### 2.2 Does the page respond after a click?
 
-You just need to tell AI your **business scenario**:
+An AI request may take several seconds or longer. After the click, the button should display “Generating” and temporarily prevent repeated submission. Existing input should not suddenly disappear, and the page should not jump to an empty result panel.
 
-> **Prompt Example:**
-> "I'm building a **Douyin e-commerce material workbench** prototype.
-> Please help me design a JSON data structure to describe a 'product task'.
-> This task should include: product basic info (name, category), input materials (image links), and AI generated results (title, copy, poster image).
-> Please give me a JSON example directly."
+![Waiting state while product content is generated](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
 
-AI will automatically help you conceive fields like `productName`, `generatedContent` based on your description.
+*A waiting state does not need a complicated animation. Showing that work has started while preserving the original input and position already prevents most confusion.*
 
-### 2.2 Let AI Batch Produce "Realistic" Data
+For queued image or video work, you may show stages such as “Queued” and “Generating.” Do not invent a precise percentage unless the API actually supplies progress.
 
-After having the data structure, the next step is letting AI help you "fill in the blanks" and generate a batch of realistic-looking data.
+### 2.3 What happens after the result appears?
 
-**Prompt Techniques:**
-You can't just tell AI "help me generate data". You need to tell it **business background** and **content requirements** like assigning tasks to an intern:
+AI output is not the end of the journey. Users usually need to verify facts, revise wording, and carry the result into another step. The result panel should therefore offer at least one useful action: edit, copy, download, or regenerate.
 
-- **Business Background**: Tell AI we're doing "Douyin e-commerce", so product titles should be eye-catching (like "slimming miracle", "students must-have"), copy should be conversational.
-- **Image Requirements**: To make the prototype look good, images shouldn't be black-and-white placeholders. Best to use random colorful landscapes or product photos.
+![Result page after image understanding and copy generation are connected](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
 
-> **Prompt Example:**
-> "Based on the structure just designed, please help me generate 10 realistic mock data entries.
-> (Note: Doesn't have to be JSON format. If you're writing frontend, have it generate JavaScript arrays directly; if using Python, have it generate Lists.)
->
-> **Business Scenario Requirements:**
->
-> 1. Assume this is a general merchandise store, products cover 'women's clothing', 'electronics', 'beauty' three categories.
-> 2. **Generated titles and copy should be very 'Douyin style'**: Like titles should include Emoji (🔥, ✨), copy should use phrases like 'absolutely amazing', 'tested and works great'.
-> 3. **Image fields**: Please uniformly use the format `https://picsum.photos/seed/{random_id}/300/400` to ensure each image is different."
+*This page keeps the uploaded product image above the recognition and generation result. The user can compare the text with the original image instead of having to accept one model answer.*
 
-**Generated Mock Data Example:**
+If the model cannot confirm some information, mark it and let the user add or delete it. That is more useful than presenting a paragraph as a final answer.
 
-```javascript
-export const mockProductTasks = [
-  {
-    id: 'task_001',
-    name: 'Summer French Vintage Floral Dress',
-    status: 'completed',
-    input: {
-      category: 'Women\'s Clothing',
-      features: ['Waist-cinching', 'Slimming', 'Elegant'],
-      originalImage: 'https://picsum.photos/seed/dress_input/300/400'
-    },
-    output: {
-      generatedTitle: '✨Looks great on everyone! This French floral dress is absolutely amazing🔥',
-      generatedCopy:
-        'Ladies! This dress is so slimming! The waist design is incredible, put it on and instantly have a waistline. Fabric is very breathable, not stuffy at all in summer. Perfect for dates and shopping! 👗',
-      generatedPosterImage: 'https://picsum.photos/seed/dress_output/300/400'
-    },
-    createdAt: '2026-01-20T10:00:00Z'
-  },
-  {
-    id: 'task_002',
-    name: 'Super Strong Noise Cancelling Bluetooth Headset Pro',
-    status: 'completed',
-    input: {
-      category: 'Electronics',
-      features: ['Noise cancelling', 'Ultra-long battery', 'Low latency'],
-      originalImage: 'https://picsum.photos/seed/tech_input/300/400'
-    },
-    output: {
-      generatedTitle: '🎧 Finally found it! This headset\'s noise cancelling is so strong! 🔇',
-      generatedCopy:
-        'Put it on and the world instantly goes quiet. Sound quality is excellent, listening to music is like being there live. Battery life is impressive too, charge once use for a week! Students must-have!',
-      generatedPosterImage: 'https://picsum.photos/seed/tech_output/300/400'
-    },
-    createdAt: '2026-01-21T14:30:00Z'
-  }
-  // ... more data
-]
+### 2.4 Can the user continue after a failure?
+
+Network interruptions, exhausted quotas, and unsupported files can all fail a request. An ordinary user does not need the full technical error, but the page should say that this attempt did not finish and provide a way to retry or edit the input.
+
+For example:
+
+- **Unsupported image format:** list the supported formats and allow another file to be chosen.
+- **Required information is missing:** show the message beside the relevant field rather than only saying “Invalid parameters.”
+- **AI service is temporarily unavailable:** preserve the input and offer “Generate again.”
+- **The result is not suitable:** let the user revise the input and retry without starting over.
+
+If refreshing the page would lose a long form, use LocalStorage to keep a temporary draft. Store only ordinary data needed to resume the task; never store an API key, real customer information, or sensitive files in browser storage.
+
+Give the problems you found to the AI IDE in one focused request:
+
+```text
+Check the “upload a product image and generate copy” journey
+at four moments: start, waiting, success, and failure.
+
+Fix the problems that prevent the user from continuing first:
+- required fields have no clear message;
+- the request button can be clicked repeatedly;
+- a failed request clears the input;
+- the result has no edit, copy, or regenerate action.
+
+Before editing, tell me which files you will change.
+When finished, give me manual test steps.
 ```
 
-### 2.3 (Advanced) Use LocalStorage for "Fake CRUD"
+## 3. Ask another person to use it
 
-If you want the "mock data" just generated to not only be viewable but also deletable and editable, and even have newly created tasks persist after page refresh, you can combine with `LocalStorage`.
+After looking at your own page for a long time, every action feels obvious. Someone who did not build it can reveal overlooked problems in a few minutes.
 
-> **Prompt Example:**
-> "Please help me implement a data storage feature.
->
-> 1. Prioritize reading data from `localStorage`.
-> 2. If `localStorage` is empty, initialize with the mock data just generated and store them in `localStorage`.
-> 3. Also help me write `addProductTask` and `deleteProductTask` functions, each operation should synchronously update `localStorage`."
+Whenever possible, invite a likely user. An ecommerce content tool could be tested by someone who has run a shop or prepared product listings. If that person is unavailable, a friend who has never seen the page is still useful.
 
-Through this step, your prototype has "memory", and user experience is almost indistinguishable from a real product.
+### 3.1 Tell them only the task
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="2" :items="[
-      { title: 'Complete Flows', description: 'From single feature to complete loop' },
-      { title: 'Inject Soul', description: 'Simulate real business data' },
-      { title: 'Feedback Iteration', description: 'Fix experience based on real feedback' },
-      { title: 'Final Project', description: 'Your graduation design' }
-    ]" />
-  </ClientOnly>
-</div>
+At the start, explain only the goal:
 
-## 3. Collect Feedback and Quick Iteration
+> Use this tool to generate a title and selling points from this product image. Check the content, then copy the version that you would continue editing.
 
-Building behind closed doors won't produce good products. Now your prototype has "core functionality" + "complete flows" + "demo data", it's time to show it to others.
+Observe before telling them where to click. Record pauses, backtracking, repeated clicks, and questions. If you explain immediately, you hide a problem that the page should solve.
 
-### 3.1 Who to Test? How to Test?
+Even one or two people can expose obvious issues. You do not need a formal report; note where they stopped.
 
-- **Find friends/colleagues**: They don't need to understand technology, just let them try using it.
-- **Observe, don't guide**: Don't say "click here", instead watch where they would click. If they can't find a button, the design has problems.
-- **"Wizard of Oz" Method**: If your AI isn't connected yet, you can manually modify data in the backend (or database) to simulate AI returns, first validating whether users need this feature.
+If they open the page and do nothing, add a short explanation. If they repeatedly click “Generate,” make the waiting state clearer. If they do not know what to do with the result, add edit or copy actions. If a failure forces them to re-enter everything, preserve the content and add retry.
 
-### 3.2 Facing Bugs and Complaints
+### 3.2 Talk after they finish
 
-- **Layout issues**: Might be messy at different screen sizes.
-  - **Action**: Screenshot and send to AI IDE -> "It's messed up at this screen width, help me fix it."
-- **Awkward operations**: "This flow is too complicated."
-  - **Action**: Tell the suggestion to AI IDE -> "Users think upload-then-generate is too slow, can we change to one-click generate?"
-- **New requirements**: "If only it had this feature."
-  - **Action**: Evaluate if it's core. If yes, have AI quickly implement a simplified version.
+When the user completes or abandons the task, ask:
 
-**Remember: At this stage, AI is your best modification assistant. You just need to discover problems; leave code modifications to it.**
+1. Which step felt most uncertain?
+2. Which parts of the generated result would you use directly, and which would you always change?
+3. If you had the same task next time, would you use this again? Why?
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="3" :items="[
-      { title: 'Complete Flows', description: 'From single feature to complete loop' },
-      { title: 'Inject Soul', description: 'Simulate real business data' },
-      { title: 'Feedback Iteration', description: 'Fix experience based on real feedback' },
-      { title: 'Final Project', description: 'Your graduation design' }
-    ]" />
-  </ClientOnly>
-</div>
+Do not ask only “Was it easy to use?” A polite “It was fine” gives little direction. Specific actions and examples are much more valuable.
 
-## 4. Graduation Project: Complete Your "Final Design"
+::: warning When using real material
+A tester’s product images, recordings, or documents may contain real business information. Explain what kind of AI service receives the material, avoid unapproved customer data, and delete files that are no longer needed after the trial.
+:::
 
-Congratulations! You've completed the entire process from "requirements" to "prototype" to "AI integration". Now it's time to showcase your final results.
+## 4. Fix what blocked the user, then try again
 
-**This final project is no longer limited to the "E-commerce Material Workbench"**. You need to combine your own interests or industry background to create a unique AI product prototype.
+The trial may produce a long list of problems. Do not fix all of them at once. Start with issues that prevent completion or make the result untrustworthy.
 
-### Topic Selection and Requirements
+Use this order:
 
-You need to choose a scenario closest to your interests from **Industry Scenario References**, or conceive a completely new scenario based on your own ideas.
+1. **The task cannot be completed:** a button is broken, the request fails, or the result cannot be taken away.
+2. **The result is clearly untrustworthy:** facts are invented, evidence is missing, or necessary sources cannot be checked.
+3. **The interaction is easy to misunderstand:** the starting point or current state is unclear.
+4. **The effort is too high:** steps repeat, input disappears, or waiting has no feedback.
+5. **Style and new features:** visual polish and wishes that do not block the core task.
 
-**The project must comprehensively apply everything learned in previous lessons:**
+Choose the most important one to three items. After fixing them, try the whole flow yourself. If possible, invite the same person to try again. A change is useful only when the original blocker has actually disappeared.
 
-1. **Prototype Construction**: Use frontend technology to build beautiful, easy-to-use interfaces.
-2. **Requirement Control**: Don't aim for comprehensive, but ensure core functionality logic is complete.
-3. **API Integration**: Connect to real AI models (LLM/VLM, etc.), giving the application real intelligence.
-4. **Implement a Playable Application**: Not just static pages, but a dynamic application with data flow and interactive feedback.
+### 4.1 Give the AI IDE a specific observation
 
-### Project Deliverables
+Do not say only “Please optimize it.” Include what you observed so the AI IDE knows what to change:
 
-Finally, you need to submit two things:
+```text
+User task: upload a product image and generate three selling points.
 
-1. **A Complete Prototype Application**: Deployed online or runnable locally, with complete usage flows.
-2. **30-Second Demo Video**: Record a video briefly introducing your application scenario and demonstrating core functionality in action.
+Observed problem:
+Two testers clicked “Generate” repeatedly because the page did not
+clearly show that the request had started. This created duplicate jobs.
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">Final Challenge Checklist</div>
-  </template>
+Change the current page:
+1. Disable the button after the request starts and show “Generating.”
+2. Restore it after success or failure.
+3. Keep the information the user already entered.
+4. Tell me how to test repeated clicks and a failed request manually.
+```
 
-  <p>
-    This is Stage 1's final battle. Please check your work against this list:
-  </p>
+A request this specific is less likely to produce unrelated changes, and it tells you exactly what to verify afterward.
 
-  <div style="font-weight: bold; margin-bottom: 10px;">Core Functionality Self-Check</div>
-  <ul style="list-style-type: none; padding-left: 0;">
-    <li><label><input type="checkbox" disabled /> <strong>Clear Scenario</strong>: Selected a specific industry or application scenario</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Complete Logic</strong>: Core flow works end-to-end, not just Happy Path</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>AI Driven</strong>: Actually calls large model APIs, not preset responses</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Complete Experience</strong>: Includes Loading, error handling, and mock data</label></li>
-  </ul>
+### 4.2 Run the full journey again
 
-  <div style="font-weight: bold; margin: 20px 0 10px;">Deliverables Preparation</div>
-  <ul style="list-style-type: none; padding-left: 0;">
-    <li><label><input type="checkbox" disabled /> <strong>Prototype Application</strong>: Code is complete and runnable</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Demo Video</strong>: About 30 seconds, clearly showing core highlights</label></li>
-  </ul>
-</el-card>
+Fixing one part can affect another. Before sharing the project, try these four situations:
 
-## Next Steps
+- a normal input with all required information;
+- one missing required field;
+- a failed or timed-out API request;
+- editing, copying, or regenerating after receiving a result.
 
-After completing the final project, you now have the ability to "independently develop AI application prototypes."
-In the upcoming Stage 2, we'll dive into more complex full-stack development, learning how to turn this prototype into a truly deployable commercial-grade application with database and user systems.
+If the product saves drafts, refresh the page once as well. Confirm that the new behavior works and that the original core journey still works.
 
-See you in the next stage!
+## 5. Prepare the work for sharing
+
+The project now does more than “run on your computer.” Another person has used it, and you have improved it based on a real problem. Prepare the entry point and explanation so more people can understand it.
+
+### 5.1 Explain it in one minute
+
+Use this order:
+
+1. **Who has which problem:** for example, ecommerce operators repeatedly organize images and selling points when preparing a first listing draft.
+2. **How the product helps:** upload a product image and information to obtain an editable first draft.
+3. **Which AI capabilities it uses:** image understanding and text generation.
+4. **How a user completes the task:** upload, generate, check, edit, and copy.
+5. **What changed after the trial:** for example, a visible waiting state and preserved input after a failure.
+
+Help people understand the product before listing frameworks and model names. The result is much easier to follow.
+
+### 5.2 Prepare what another person needs
+
+Before sharing, prepare three things:
+
+1. **A runnable application:** provide a link; if it is not deployed, explain the start command and local address.
+2. **A 30–60 second demonstration:** show the core task from input to result rather than rapidly switching between pages.
+3. **A one-page project note:** include the target user, core problem, main journey, AI capability, one piece of user feedback, and the resulting change.
+
+If remote access is not yet possible, a local run and a demonstration video are acceptable Stage 1 evidence. The important point is that another person can understand the work and see the complete core journey.
+
+### 5.3 Continue this project or start another one?
+
+You can continue the ecommerce content workspace used throughout the chapter, or apply the same process to meeting notes, audio content, learning support, or an industry tool. The [AI application scenario guide](../appendix-industry-scenarios/index.md) can help you explore directions.
+
+Do not start an unfamiliar topic merely to appear original. A small problem from your own study, work, or life is more convincing when real people have tried the solution than a page with many features that nobody has used.
+
+### Before you send it out
+
+Open the shared link one last time and complete the whole journey. Confirm that other people can open it, AI returns a result, and no API key appears on the page or in a screenshot. If you used someone else’s image, audio, or document, confirm that you have permission.
+
+## 6. 📚 Assignment
+
+<StageAssignmentCard title="Complete and publish your Stage 1 project">
+
+  <p>Do not add another feature. Prepare the current work and put it in the hands of one real person.</p>
+
+  <ol>
+    <li>
+      <strong>Use it completely once</strong>
+      <ul>
+        <li>Begin by opening the page and continue until the result is obtained, edited, or saved.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Ask one person to try it</strong>
+      <ul>
+        <li>Do not teach them the interface first. Observe where they stop and fix one problem.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Share the work</strong>
+      <ul>
+        <li>Prepare an access link or start instructions, a 30–60 second video, and a short introduction.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>Stage 1 is truly complete when another person can open the project and complete one use independently.</p>
+</StageAssignmentCard>
+
+## Next step
+
+You have now followed a complete path: begin with a real problem, narrow the first version, build an interactive prototype, connect AI, and then let a user try the product and improve it.
+
+In Stage 2, we will add databases, user accounts, payments, deployment, and more complete frontend and backend engineering. Those capabilities let a product serve more users and real data, but the starting point remains what you learned here: finish one valuable user task first.
+
+<RelatedArticlesSection
+  title="Continue learning"
+  description="After Stage 1, continue with the engineering topics below."
+  :items="relatedArticles"
+/>
+
+<StageOneCompletion />

@@ -4,6 +4,7 @@ description: 'Trải nghiệm vòng khép kín từ phân tích nghiệp vụ đ
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = 'khoảng <strong>8 giờ</strong>'
@@ -246,7 +247,7 @@ dùng để sinh prototype ứng dụng một trang.
 
 AI thường sẽ bổ sung các chi tiết bạn chưa nghĩ tới. Bạn cần đọc lại, bỏ những chức năng chưa cần, rồi mới dùng prompt đó để sinh code.
 
-### 2.2 Có tài liệu rồi thì gửi thẳng cho AI IDE
+#### 2.1.2 Nếu đã có tài liệu, hãy gửi thẳng cho AI IDE
 
 Nếu bạn đã tự viết tài liệu nghiệp vụ, có thể dùng mẫu sau:
 
@@ -271,7 +272,7 @@ Logic nghiệp vụ:
 Trước tiên chỉ làm chức năng thứ nhất. Thư viện mẫu để thêm sau.
 ```
 
-### 2.3 Cách nâng cao: để AI viết "prompt cho prompt"
+#### 2.1.3 Cách nâng cao: để AI viết "prompt cho prompt"
 
 Bạn cũng có thể yêu cầu một AI khác viết prompt dành riêng cho coding Agent:
 
@@ -289,18 +290,15 @@ Yêu cầu:
 
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.png)
 
-### 2.4 Để AI IDE sinh code
+### 2.2 Bước hai: để AI IDE sinh code
 
 Nếu chưa quen AI IDE như Cursor, Trae hoặc Windsurf, hãy xem trước [IDE cơ bản](/vi-vn/appendix/2-development-tools/ide-basics): cách tạo dự án, nói chuyện với Agent và đọc quá trình sinh code.
 
 Tạo một thư mục mới rồi mở trong AI IDE:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-28-44.png)
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-30-00.png)
 
 Trong thanh bên, chọn mô hình bạn muốn dùng, ví dụ Gemini, GPT, GLM, Kimi hoặc MiniMax, rồi dán prompt đã chuẩn bị:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-31-41.png)
 
 Sau khi gửi, AI sẽ lập kế hoạch thư mục, tạo file và viết nội dung ban đầu.
 
@@ -308,11 +306,9 @@ Sau khi gửi, AI sẽ lập kế hoạch thư mục, tạo file và viết nộ
 Trong quá trình sinh code, Agent thường dừng lại để chờ bạn xác nhận: nhấn Enter, chọn phương án, hoặc cho phép chạy lệnh. Nếu thấy AI không chạy tiếp, hãy kiểm tra khung chat xem nó đang chờ phản hồi hay không.
 :::
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-33-03.png)
 
 Nếu xuất hiện một dịch vụ local, bạn cần mở đường dẫn trong trình duyệt hoặc bấm bỏ qua bước chờ trong IDE:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-38-11.png)
 
 ::: info Giải thích nhanh về localhost
 Khi tạo dự án React bằng Vite, máy tính sẽ chạy một server local để bạn xem trang. `localhost` nghĩa là "chính máy tính này". Cổng như `5174` là số để phân biệt các dịch vụ khác nhau. Nếu `5173` bị chiếm, hệ thống tự đổi sang cổng khác là bình thường.
@@ -324,7 +320,6 @@ Sau khi xác nhận xong, chờ Agent chạy một lúc, bạn sẽ có phiên b
 
 Nếu giao diện còn xấu, hãy nói thẳng với AI:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-01-16.png)
 
 Sau khi tối ưu có thể nhận được giao diện đẹp hơn:
 
@@ -336,13 +331,12 @@ Bạn có thể tiếp tục điều chỉnh bằng yêu cầu cụ thể:
 - "Bên trái có quá nhiều trường, chỉ giữ lại các trường quan trọng."
 - "Hãy tham khảo bố cục trong ảnh này, không cần giống hoàn toàn."
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-13-12.png)
 
 Kết quả cuối có thể tiến gần hơn đến một prototype chuyên nghiệp:
 
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
 
-### 2.5 Gặp lỗi thì làm gì?
+### 2.3 Gặp lỗi thì làm gì?
 
 Gặp lỗi là bình thường. Người mới không cần hiểu toàn bộ lỗi, chỉ cần đưa đầy đủ hiện tượng cho AI.
 
@@ -397,6 +391,21 @@ Lúc này bạn cần tự bấm thử những nút quan trọng. Nếu phần n
 
 Sau khi có nhiều trang, bước cuối là để prototype từ "chạy được" thành "dễ dùng và nhìn chuyên nghiệp". Hãy đi lại toàn bộ quy trình như một người dùng mới: nhập dữ liệu, tạo kết quả, lưu mẫu, mở thư viện, áp dụng lại mẫu.
 
+Trước hết, hãy đọc lại yêu cầu ban đầu để kiểm tra xem các trang hiện có đã nối thành một quy trình hoàn chỉnh hay chưa:
+
+```txt
+1. Giúp nhân viên vận hành tạo hàng loạt bản nháp hình ảnh và nội dung sản phẩm:
+- Đầu vào gồm thông tin cơ bản, ảnh sản phẩm, ảnh hoặc liên kết tham khảo;
+- Có thể nhập trực tiếp hoặc nhập theo lô;
+- Đầu ra gồm ảnh chính nháp, tiêu đề và một đến hai câu nêu điểm bán;
+- Nhân viên chọn kết quả phù hợp rồi chỉnh sửa nhẹ để sử dụng.
+
+2. Lưu những kết quả tốt thành thư viện mẫu:
+- Có thể lưu cả bộ ảnh, tiêu đề và nội dung, hoặc chỉ lưu một phần;
+- Mẫu đã lưu có thể đặt tên, gắn nhãn, chỉnh sửa và áp dụng cho sản phẩm mới;
+- Khi nhập sản phẩm mới, người dùng có thể chọn logic mặc định hoặc một mẫu đã lưu.
+```
+
 Nếu mỗi lần kiểm thử đều phải nhập dữ liệu mới, rất tốn thời gian. Hãy yêu cầu AI tạo lối vào dữ liệu thử:
 
 ```txt
@@ -443,12 +452,9 @@ Checklist này giúp bạn quyết định nên tiếp tục chỉnh gì.
 
 ## 5. Bài tập: làm lại bàn làm việc thương mại điện tử của riêng bạn
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">Nhiệm vụ thử thách: làm lại bàn làm việc nội dung thương mại điện tử</div>
-  </template>
+<StageAssignmentCard title="Hoàn thành bàn làm việc nội dung thương mại điện tử">
 
-  <p>
+<p>
     Hãy tham khảo prompt và quy trình của bài này để hoàn thành một vòng khép kín:
   </p>
 
@@ -472,7 +478,8 @@ Checklist này giúp bạn quyết định nên tiếp tục chỉnh gì.
       </ul>
     </li>
   </ul>
-</el-card>
+
+</StageAssignmentCard>
 
 ## Bước tiếp theo
 

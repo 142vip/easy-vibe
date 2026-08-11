@@ -4,6 +4,7 @@ description: '學習如何從日常痛點中發現商業機會，掌握需求分
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = '約 <strong>3 小時</strong>'
 </script>
 
@@ -639,7 +640,9 @@ AI 回覆說："產後媽媽這個羣體其實很好找，推廣成本可以很�
 
 ---
 
-### 課後練習
+## 📚 本章作業
+
+<StageAssignmentCard title="把一個小麻煩變成產品點子">
 
 選擇一個你日常生活中的小麻煩，用本章的方法進行擴充套件：
 
@@ -664,6 +667,8 @@ AI 回覆說："產後媽媽這個羣體其實很好找，推廣成本可以很�
 :::
 
 ---
+
+</StageAssignmentCard>
 
 ## 附錄：SOP 方法論
 

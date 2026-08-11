@@ -4,6 +4,7 @@ description: "Apprenez à passer de la construction d'outils IA au fait de pense
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Environ <strong>6 heures</strong>'
 </script>
 
@@ -219,6 +220,8 @@ Et si l’idée est encore brute ? C’est parfaitement normal. **Être brouillo
 
 ## 📚 Assignments
 
+<StageAssignmentCard title="Trouver trois idées qui méritent d’être explorées">
+
 Veuillez réaliser les exercices suivants à partir du contenu ci-dessus :
 
 1. En partant de vos centres d’intérêt, utilisez l’IA pour générer plusieurs « idées » d’application.
@@ -237,6 +240,8 @@ Le vrai défi commence ici. Beaucoup de gens tombent précisément à cette éta
 ![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image5.png)
 
 N’y pensez plus : c’est maintenant qu’il faut commencer. Ce chapitre va vous aider à apprendre une méthode pour passer d’une idée à une version réalisable. Vous verrez que créer quelque chose à partir de rien ne dépend pas du génie, mais d’une série d’actions concrètes que l’on peut pratiquer encore et encore : **diverger, converger, découper, affiner, s’inspirer, questionner**. En suivant cet ordre, même sans équipe et sans beaucoup de temps, vous pouvez transformer une idée en demo d’application qui fonctionne.
+
+</StageAssignmentCard>
 
 ## 2.1 De l’idée à la solution : le modèle du double diamant, de la divergence à la convergence
 
@@ -503,6 +508,8 @@ Parlons donc maintenant de ce qu’est une bonne application, et de la manière 
 
 ## 📚 Assignments
 
+<StageAssignmentCard title="Transformer une idée en plan réalisable">
+
 Veuillez réaliser les exercices suivants à partir du contenu ci-dessus :
 
 1. Utilisez le LLM de votre choix pour demander, à partir de votre idée précédente, une divergence selon le modèle du double diamant ; sélectionnez ensuite une solution réalisable à partir des résultats.
@@ -514,6 +521,8 @@ Veuillez réaliser les exercices suivants à partir du contenu ci-dessus :
 Quand vous avez enfin construit la première version et que vous la mettez dans le monde réel entre les mains d’utilisateurs, vous entrez dans une étape totalement différente. Tout ce qui précédait restait au niveau des idées et du design ; maintenant, le produit est testé pour la première fois par de vrais scénarios d’usage. Vous verrez où les utilisateurs cliquent mal, où ils hésitent, où ils restent bloqués, mais aussi les étapes où ils avancent de manière étonnamment fluide, ou les zones où ils s’arrêtent quelques secondes de plus que prévu. Ces détails sont beaucoup plus honnêtes que toutes les idées que vous vous faites du produit.
 
 La question centrale de ce chapitre est donc : lorsque l’application existe déjà, et qu’un premier groupe d’utilisateurs l’utilise, comment juger à quelle distance elle se trouve d’une bonne application, et comment utiliser les informations issues de l’usage réel pour la peaufiner progressivement ?
+
+</StageAssignmentCard>
 
 ## 3.1 Qu’est-ce qu’une bonne application : 4 caractéristiques essentielles
 

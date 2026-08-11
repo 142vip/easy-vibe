@@ -4,6 +4,7 @@ description: 'Comprende las cuatro etapas de Discover, Define, Develop, Deliver 
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Aproximadamente <strong>1.5 horas</strong>'
 </script>
 
@@ -528,12 +529,16 @@ Esto es especialmente util para principiantes, porque es facil "empezar a dibuja
 
 ## 📚 Tareas
 
+<StageAssignmentCard title="Organiza tu idea con el Doble Diamante">
+
 Por favor completa las siguientes tareas basandote en el contenido anterior:
 
 1. Elige una idea de producto que quieras hacer recientemente, y escribe un borrador de sus cuatro pasos: Discover, Define, Develop, Deliver
 2. En la fase Define, obligate a comprimir el problema en una frase concreta
 3. En la fase Develop, lista al menos 3 soluciones diferentes, en lugar de fijarte solo en la primera que se te ocurra
 4. En la fase Deliver, escribe una version minima de verificacion que puedas entregar en una semana
+
+</StageAssignmentCard>
 
 ## Lectura adicional
 

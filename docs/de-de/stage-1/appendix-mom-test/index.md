@@ -4,6 +4,7 @@ description: 'Ein Einf&uuml;hrungsartikel zu The Mom Test f&uuml;r Einsteiger. L
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Etwa <strong>1,5 Stunden</strong>'
 </script>
 
@@ -576,12 +577,16 @@ Das ist besonders hilfreich f&uuml;r Einsteiger, denn Sie entwickeln schneller e
 
 ## Assignments
 
+<StageAssignmentCard title="Ein Nutzerinterview führen, ohne die Idee zu verkaufen">
+
 Bitte bearbeiten Sie die folgenden Aufgaben basierend auf dem obigen Inhalt:
 
 1. W&auml;hlen Sie eine Produktrichtung, an der Sie k&uuml;rzlich denken, und schreiben Sie zun&auml;chst 5 "leicht nutzlose" Fragen, die Sie urspr&uuml;nglich gestellt h&auml;tten
 2. Schreiben Sie diese 5 Fragen im Stil von The Mom Test um
 3. Finden Sie 3 potenzielle Nutzer und fragen Sie mindestens einmal: "Wann hatten Sie das letzte Mal dieses Problem?"
 4. Nach dem Interview ordnen Sie 4 Arten von Informationen: Echtes Verhalten, Alternativl&ouml;sungen, bereits aufgewendete Kosten, wiederkehrende Schwierigkeiten
+
+</StageAssignmentCard>
 
 ## Weiterf&uuml;hrende Literatur
 

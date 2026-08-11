@@ -10,6 +10,7 @@ Keine Sorge vor Fehlern oder Änderungen – wir glauben immer an dich. Bitte be
 </div>
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = 'Etwa <strong>4 Stunden</strong>, in mehreren Sitzungen abschließbar'
@@ -269,6 +270,7 @@ Du kannst auch Spezialeffekte für den „Fress"-Vorgang hinzufügen oder magisc
 
 Wenn das zu anspruchsvoll klingt, kannst du das Sprachmoduell direkt um Hilfe bitten! Es kann kreative Vorschläge machen, um dein Spiel interessanter zu gestalten. Probier es aus!
 
+```
 1. „Wörter erschließen Welten"-Mechanismus
    Funktion: Nachdem die Schlange ein Wort gefressen hat, generiert das Bildmodell sofort ein kleines Kunstwerk für dieses Wort, das sich nach und nach zu einer einzigartigen, vom Spieler geschaffenen Panoramaansicht zusammensetzt – „malend und dichtend" beim Spielen.
 
@@ -292,6 +294,8 @@ Wenn das zu anspruchsvoll klingt, kannst du das Sprachmoduell direkt um Hilfe bi
 
 8. „Wachsende Geschichte"
    Funktion: Während die Schlange weiter wächst, schreibt das LLM das Geschichtsgedicht fort, und das Bildmodell generiert ein langes Panorama-Bild, sodass der Spieler „Schreiben, Malen und Spielen" gleichzeitig erlebt.
+
+```
 
 Darüber hinaus können wir das LLM bitten, projektweite Prompts für uns zu generieren. Im vorherigen Abschnitt haben wir nur selbst den Prompt für das Snake-Spiel geschrieben. Lass uns jetzt versuchen, das Modell einen Prompt mit einem Gesamtframework und Implementierungspfad generieren zu lassen (du kannst das direkt mit z.ai machen).
 
@@ -434,12 +438,9 @@ Wenn du dir diese Fälle anschaust, wirst du feststellen: **Snake ist nur die Sp
 
 ## 📚 Assignment
 
-<el-card id="assignment-card" shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 Kapitelaufgabe: Erstelle deine erste AI-native Mini-Spiele</div>
-  </template>
+<StageAssignmentCard title="Deine ersten KI-nativen Minispiele fertigstellen">
 
-  <p>
+<p>
     In diesem Abschnitt hast du den kompletten Prozess von „Gespräch-generiertes Snake" bis zum „Verständnis des AI-native Mini-Spiel-Design-Gedankens" durchlaufen. Die folgende Aufgabe hilft dir, dieses Verständnis in echte Fähigkeiten umzuwandeln.
   </p>
 
@@ -463,7 +464,8 @@ Wenn du dir diese Fälle anschaust, wirst du feststellen: **Snake ist nur die Sp
   <p>
     Das ist das komplette Tutorial! Du brauchst möglicherweise <strong>4 Stunden</strong>, um alle Inhalte abzuschließen und dein eigenes Snake-Spiel zu bauen. Keine Eile – erkunde, experimentiere und genieße den Prozess. Wenn du auf Konzepte stößt, die du nicht verstehst, schau in den Anhang unten.
   </p>
-</el-card>
+
+</StageAssignmentCard>
 
 ## Anhang
 

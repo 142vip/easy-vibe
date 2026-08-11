@@ -15,6 +15,7 @@ Don't worry about making mistakes or modifying the content. We always believe yo
 </div>
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Approx. <strong>4 hours</strong>, can be completed in multiple sessions'
 </script>
 
@@ -424,12 +425,9 @@ After seeing these cases, you'll realize: **Snake is just the tip of the iceberg
 
 ## 📚 Assignment
 
-<el-card id="assignment-card" shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 Chapter Assignment: Build Your First AI-Native Mini-Games</div>
-  </template>
+<StageAssignmentCard title="Complete Your First AI-Native Mini Games">
 
-  <p>
+<p>
     In this section, you've followed the steps to experience the complete process from "conversational Snake generation" to "understanding AI-native game design thinking." The following assignments will help you turn this understanding into real skills.
   </p>
 
@@ -453,7 +451,8 @@ After seeing these cases, you'll realize: **Snake is just the tip of the iceberg
   <p>
     That's the complete tutorial! You may need about <strong>4 hours</strong> to finish all the content and build your own Snake game. Don't rush—explore, experiment, and enjoy the process. If you encounter concepts you don't quite understand along the way, we recommend checking the relevant sections in the appendix below.
   </p>
-</el-card>
+
+</StageAssignmentCard>
 
 ## Appendix
 

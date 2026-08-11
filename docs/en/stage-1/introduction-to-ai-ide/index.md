@@ -5,9 +5,53 @@ description: 'Move from web-based AI coding to local development: understand IDE
 
 # Beginner Level 2: Learn AI Programming Tools
 
+## Learn Actively with AI
+
+::: tip 💡 The most important learning rule: when you have a question, ask AI first
+From now on, treat AI as your **first place to ask for help**. Whether a concept is unclear, a tool will not install, you do not know a command, your program reports an error, or you simply do not know what to do next, **ask AI first and then try the answer yourself**.
+
+Questions you would once have taken to a teacher, classmate, or group chat can usually go to AI first. It responds quickly, accepts follow-up questions, and can use your error message and project context to suggest the next step. Do not wait until you have been stuck for a long time, and do not use AI only when you want it to write code.
+
+**AI-native learning is not merely completing work with AI. It means involving AI throughout the learning process: ask when a problem appears, try the answer, and ask again when the result raises a new question.**
+:::
+
+### The AI-Native Learning Loop
+
+Active learning with AI does not mean handing over the task and waiting. AI shortens the time needed to find an answer, so you can spend more time **trying, checking, and understanding**. Use this loop throughout the course:
+
+```mermaid
+flowchart LR
+  A["① Meet a problem<br/>State the goal and what happened"] --> B["② Ask AI immediately<br/>Include the context"]
+  B --> C["③ Try it yourself<br/>Follow the suggestion"]
+  C --> D{"Did it work as expected?"}
+  D -- "Not yet" --> E["④ Give AI the result<br/>or the complete error"]
+  E --> B
+  D -- "Yes" --> F["⑤ Explain in your own words<br/>why it worked"]
+  F --> G["Build a skill you can apply<br/>to a new problem"]
+```
+
+### Questions You Can Ask Directly
+
+| What happened | What you can say to AI |
+| --- | --- |
+| **A concept is unclear** | “I have no programming background. Explain an API with an everyday analogy, then give me the smallest example.” |
+| **You cannot install the environment** | “I use macOS and want to run this project. First check what I need, then guide me through one step at a time and explain what each step does.” |
+| **A command reports an error** | “Here are the command and the complete error. First identify the most likely cause, then give me the smallest fix. If you need more information, tell me what to provide.” |
+| **You do not know what comes next** | “My goal is to build Snake, and the game screen already appears. Tell me the smallest next step and how I will know it is finished.” |
+| **AI wrote code you do not understand** | “Do not change more code yet. Explain the last change module by module and what problem each part solves.” |
+| **You cannot choose between two options** | “I am a beginner and want a runnable version quickly. Compare options A and B under those conditions and recommend one clearly.” |
+| **The result differs from your expectation** | “I expected the page to look like this: …; it currently looks like this: …. Compare them and fix only the most obvious difference first.” |
+
+::: info A reusable question template
+**My goal is …; I have completed …; I tried …; the actual result or full error is …; please explain the cause first, then give me the smallest next action.**
+
+The more concrete the information, the more useful the answer will be. It is normal if the first answer does not solve the problem. Send the new result back to AI—that follow-up is part of AI-native learning.
+:::
+
 ## Chapter Overview
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'About <strong>1 day</strong>, can be completed in multiple sessions'
 </script>
 
@@ -704,6 +748,8 @@ In the next chapter, we'll shift focus from "knowing how to use tools" to "makin
 
 ## 8. 📚 Assignment: Make a More Complex Game with Local AI IDE
 
+<StageAssignmentCard title="Build Your Own Game with an AI IDE">
+
 <el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
   <template #header>
     <div style="font-weight: bold; font-size: 16px;">🚀 Challenge Task: Build Your Own Game</div>
@@ -813,6 +859,8 @@ In the next chapter, we'll shift focus from "knowing how to use tools" to "makin
 </el-card>
 
 You don't need to deliberately memorize this section. What's more important is to first establish an impression in your mind.
+
+</StageAssignmentCard>
 
 ## <span id="term-tool-ui">[1. Words Related to "Tool Interface"](#appendix-1-map)</span>
 

@@ -10,6 +10,7 @@
 </div>
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = '約 <strong>4 小時</strong>，可分多次完成'
@@ -435,12 +436,9 @@ z.ai 的回覆將會是這樣的：
 
 ## 📚 Assignment
 
-<el-card id="assignment-card" shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 本章作業：完成你的第一批 AI 原生小遊戲</div>
-  </template>
+<StageAssignmentCard title="完成你的第一批 AI 原生小遊戲">
 
-  <p>
+<p>
     這一節，你已經跟著步驟體驗了從“對話生成貪喫蛇”到“理解 AI 原生小遊戲設計思路”的完整流程。下面的作業幫助你把這些理解真正變成自己的能力。
   </p>
 
@@ -464,7 +462,8 @@ z.ai 的回覆將會是這樣的：
   <p>
     這就是完整的教程！你可能需要 <strong>4 小時</strong> 才能完成所有內容並構建你自己的貪喫蛇遊戲。不要著急——探索、實驗並享受這個過程。如果在過程中遇到概念不太理解，推薦你順手檢視下方附錄中的相關部分。
   </p>
-</el-card>
+
+</StageAssignmentCard>
 
 ## 附錄
 

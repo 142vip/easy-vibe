@@ -4,6 +4,7 @@ description: 'Learn how to discover business opportunities from daily pain point
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'About <strong>3 hours</strong>'
 </script>
 
@@ -639,7 +640,9 @@ Through Act 3, Xiao Ming understood three things.
 
 ---
 
-### Post-class exercise
+## 📚 Chapter Assignment
+
+<StageAssignmentCard title="Turn One Small Frustration into a Product Idea">
 
 Choose one small annoyance from your daily life and expand it using this chapter's method:
 
@@ -664,6 +667,8 @@ Choose one small annoyance from your daily life and expand it using this chapter
 :::
 
 ---
+
+</StageAssignmentCard>
 
 ## Appendix: SOP Methodology
 

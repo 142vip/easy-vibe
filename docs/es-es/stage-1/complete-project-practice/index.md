@@ -1,301 +1,314 @@
 ---
-title: 'Practica de proyecto completo - De Demo a prototipo de nivel de producto'
-description: 'Sal de la fase de Demo, aprende a mejorar los enlaces del producto, construye datos de simulacion realistas, e itera rapidamente con retroalimentacion.'
+title: 'Proyecto completo: de una idea a una obra terminada'
+description: 'Usa tu prototipo con IA de principio a fin, pide a otra persona que lo pruebe y corrige los problemas que observes.'
 ---
 
 <script setup>
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
+import ProductFinishMap from '../../../zh-cn/stage-1/complete-project-practice/ProductFinishMap.vue'
+import StageOneCompletion from '../../../zh-cn/stage-1/complete-project-practice/StageOneCompletion.vue'
 
-const duration = 'Aproximadamente <strong>3 dias</strong>'
+const duration = 'Aproximadamente <strong>2–3 días</strong>'
 const relatedArticles =
   relatedArticlesMap['es-es/stage-1/complete-project-practice'] ?? []
 </script>
 
-# Practica de proyecto completo
+# Proyecto completo: de una idea a una obra terminada
 
-## Resumen del capitulo
+<ProductJourney current="finish" />
 
-<ChapterIntroduction :duration="duration" :tags="['Pensamiento de producto', 'Datos de simulacion', 'Mejora de interaccion', 'LocalStorage']" coreOutput="1 prototipo de producto IA con funcionalidad completa" expectedOutput="Aplicacion web con flujo completo y datos realistas">
+## Qué haremos en este capítulo
 
-En el capitulo anterior integramos capacidades de IA y el Demo ya funciona, pero aun esta <strong>lejos</strong> de ser un verdadero "producto": al actualizar la pagina los <strong>datos desaparecen</strong>, un error causa <strong>pantalla en blanco</strong>, la lista solo tiene "dato de prueba 1, dato de prueba 2", y si el usuario hace clic en el lugar equivocado <strong>no puede deshacer</strong>...
+<ChapterIntroduction :duration="duration" :tags="['Uso completo', 'Experiencia de producto', 'Prueba con usuarios', 'Presentación']" coreOutput="Un producto de IA que otra persona pueda usar sin instrucciones" expectedOutput="Una aplicación web probada y mejorada con una persona real">
 
-Este capitulo va a <strong>llenar todos estos huecos</strong>: vamos a <strong>completar el flujo completo del producto</strong>, usar IA para generar <strong>datos de negocio realistas</strong> en lugar de datos falsos, anadir <strong>manejo de errores y retroalimentacion al usuario</strong>, y finalmente pulir un prototipo completo que <strong>se pueda mostrar a otros</strong>.
+En los capítulos anteriores partimos de una idea, construimos un prototipo interactivo y conseguimos que la función de IA de la página funcionara de verdad.
 
-Este es el <strong>ultimo capitulo</strong> de la etapa inicial. Despues de completar este paso, habras logrado la transformacion de "no saber programar en absoluto" a "<strong>poder crear independientemente un prototipo de producto IA</strong>".
+Tú sabes qué escribir y dónde pulsar. Alguien que abre la página por primera vez quizá no encuentre ni el primer paso. Si después de pulsar no aparece nada enseguida, también puede pensar que la página está rota.
+
+En este capítulo no añadiremos funciones nuevas. Usaremos el producto de principio a fin, corregiremos los lugares donde una persona puede quedarse bloqueada y pediremos a alguien que lo pruebe. Al terminar tendrás una obra que puedes compartir con tranquilidad.
 
 </ChapterIntroduction>
 
 <div style="margin: 50px 0;">
   <ClientOnly>
     <StepBar :active="0" :items="[
-      { title: 'Completar el flujo', description: 'De funcionalidad aislada a ciclo completo' },
-      { title: 'Inyectar el alma', description: 'Datos de negocio realistas simulados' },
-      { title: 'Iterar con retroalimentacion', description: 'Mejorar la experiencia con retroalimentacion real' },
-      { title: 'Proyecto final', description: 'Tu proyecto de graduacion' }
+      { title: 'Úsalo tú', description: 'Ve desde el inicio hasta el resultado' },
+      { title: 'Corrige los bloqueos', description: 'Espera, resultado y error' },
+      { title: 'Pide una prueba', description: 'Observa antes de ayudar' },
+      { title: 'Ordena y comparte', description: 'Haz que la obra se entienda' }
     ]" />
   </ClientOnly>
 </div>
 
-## 1. Rechaza el "Happy Path": completa el flujo central
+<ProductFinishMap />
 
-Muchos principiantes que hacen prototipos suelen limitarse al "Happy Path" (el camino ideal): el usuario hace clic -> la API responde con exito -> se muestra el resultado.
-Pero en el mundo real, las cosas rara vez son tan simples. Para que tu prototipo parezca un producto real, necesitas considerar los siguientes eslabones "invisibles".
+## 1. Usa el producto de principio a fin
 
-### 1.1 Anadir "espera" y "retroalimentacion"
+No corras a añadir inicio de sesión, trabajo en equipo o paneles de datos. Abre el producto actual y úsalo como una persona nueva, desde la primera página hasta obtener un resultado. Cada paso que todavía exige una explicación a tu lado es un lugar que debes corregir.
 
-Cuando el usuario hace clic en "generar texto", la IA suele tardar varios segundos en responder. Si la interfaz no muestra ninguna reaccion, el usuario pensara que el programa se ha roto.
-**Necesitas que tu AI IDE te ayude a anadir estados de Loading:**
+En nuestro espacio de contenidos para comercio electrónico, un uso completo se parece a esto:
 
-> Ejemplo de prompt:
-> "Cuando haga clic en el boton de generar, cambialo a 'Generando...' y desactivalo, y al mismo tiempo muestra una animacion de carga en el area derecha. Solo restaura el estado normal despues de que la API devuelva el resultado."
+> Una persona de operaciones sube la imagen de un producto, completa la información necesaria, genera un primer borrador de imagen y texto, comprueba el resultado y lo copia o guarda para editarlo y publicarlo después.
 
-### 1.2 Manejar "fallos" y "excepciones"
+Por ahora basta con que funcione este recorrido breve. El acceso, los permisos de equipo y el lanzamiento formal pueden esperar hasta que el producto los necesite.
 
-La API Key puede caducar, la red puede desconectarse.
-**Necesitas que tu AI IDE te ayude a manejar los errores:**
+### 1.1 Sigue el orden real de uso
 
-> Ejemplo de prompt:
-> "Si la peticion a la API falla, no muestres el error directamente en la consola. En su lugar, muestra una notificacion roja (Toast) en la parte superior de la pagina que diga 'Generacion fallida, por favor intenta de nuevo mas tarde', y permite que el usuario vuelva a hacer clic en generar."
+Deja a un lado el código y los componentes. Haz lo mismo que haría un usuario:
 
-### 1.3 Persistencia del historial de conversacion
+1. Abrir la página y entender para qué sirve la herramienta.
+2. Subir una imagen y completar datos necesarios como nombre y material.
+3. Pulsar «Generar texto» y ver que la página está trabajando.
+4. Revisar el título y los puntos de venta devueltos por la IA; editar o volver a generar cuando sea necesario.
+5. Copiar, descargar o guardar de forma temporal el resultado y terminar la tarea.
 
-En el proceso de interaccion con la IA, necesitamos guardar el contenido de las conversaciones para que el usuario pueda revisar el historial y continuar intercambios anteriores. En esta etapa aun no introducimos una base de datos; puedes elegir entre las siguientes soluciones ligeras:
+Cuando llegues al final, pregúntate: ¿podría hacerlo otra persona si yo no estuviera al lado? Anota funciones como gestión de equipos o paneles complejos, pero no las construyas ahora si no afectan a este uso.
 
-**Opciones de almacenamiento:**
+::: tip ¿Qué tamaño debe tener esta versión?
+Si puedes explicar la tarea en una frase y la otra persona puede empezar en pocos minutos, el alcance suele ser adecuado.
+:::
 
-| Opcion | Escenario aplicable | Caracteristicas |
-| ---------------- | -------------------------------- | ------------------------------------ |
-| **LocalStorage** | Proyecto puramente frontend, datos del usuario guardados en el navegador | Implementacion simple, no se pierde al actualizar, no se sincroniza entre dispositivos |
-| **Archivo JSON** | Prototipo local, datos almacenados en formato archivo | Estructura clara, facil de depurar, editable manualmente |
-| **Archivo TXT** | Solucion mas simple, registro rapido de contenido de texto | Formato libre, buena compatibilidad |
+### 1.2 Vuelve a probar desde una página vacía
 
-**Ejemplo de contenido de conversacion:**
-El historial de conversacion guardado suele incluir el siguiente contenido:
+Después de desarrollar durante un tiempo, la página suele conservar datos de prueba y el último resultado. Es fácil olvidar que una persona nueva no verá nada de eso. Abre una ventana privada o borra los datos locales y comienza otra vez.
 
-```json
-[
-  {
-    "role": "user",
-    "content": "Ayudame a generar un texto de venta para unos auriculares Bluetooth en TikTok",
-    "timestamp": "2026-01-20 10:30:00"
-  },
-  {
-    "role": "assistant",
-    "content": "[Texto recomendacion de auriculares Bluetooth]\n\n🎧 Adios al retraso, experiencia de escucha inmersiva\n\n chicas! Estos auriculares Bluetooth son increibles\n\n 40dB de cancelacion activa de ruido, entra instantaneamente al mundo de la musica\n 30 horas de bateria super larga, una semana de viaje sin cargar\n llamadas claras como en persona, incluso en el metro ruidoso\n diseno semi-in-ear, comodos de usar durante horas\n\n Oferta por tiempo limitado, haz clic en el enlace de abajo para conseguirlos!",
-    "timestamp": "2026-01-20 10:30:05"
-  }
-]
+Solo necesitas probar tres situaciones:
+
+1. **Abrir en blanco:** pulsa sin rellenar nada y comprueba que la página indica qué falta.
+2. **Generar con normalidad:** sube una imagen y genera contenido; confirma que se ve la espera y que, al aparecer el resultado, hay un siguiente paso claro.
+3. **Provocar un error:** sube un archivo no admitido o haz que falle la petición; confirma que los datos siguen allí y que se puede reintentar.
+
+Anota dónde te detienes. En la siguiente sección corregiremos esos puntos.
+
+Puedes pedir a un IDE con IA que inspeccione el código, pero no sustituye una prueba real:
+
+```text
+Todavía no cambies el código.
+
+Revisa el proyecto actual siguiendo esta tarea:
+el usuario sube una imagen de producto, introduce los datos necesarios,
+genera el texto, revisa el resultado y lo copia o guarda.
+
+Dime qué páginas y archivos participan en el recorrido
+y en qué puntos podría interrumpirse ahora.
 ```
 
-**Prompt de implementacion:**
+El IDE puede localizar código sospechoso. Para saber si la página se usa bien, tienes que pulsarla tú mismo.
 
-> "Por favor ayudame a implementar la funcion de guardado del historial de conversacion. Soporta guardar los registros de conversacion entre el usuario y la IA como un archivo JSON (o usando LocalStorage). Cada vez que se entra a la pagina, carga automaticamente el historial de conversacion, y permite ver y eliminar registros individuales."
+## 2. Corrige los lugares donde es fácil quedarse bloqueado
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="1" :items="[
-      { title: 'Completar el flujo', description: 'De funcionalidad aislada a ciclo completo' },
-      { title: 'Inyectar el alma', description: 'Datos de negocio realistas simulados' },
-      { title: 'Iterar con retroalimentacion', description: 'Mejorar la experiencia con retroalimentacion real' },
-      { title: 'Proyecto final', description: 'Tu proyecto de graduacion' }
-    ]" />
-  </ClientOnly>
-</div>
+Después de un recorrido completo, los problemas suelen aparecer en cuatro momentos: al abrir la página, mientras se espera a la IA, después de recibir el resultado y cuando la petición falla. No hace falta un diseño complicado. La persona debe saber qué ocurre y qué puede hacer después.
 
-## 2. Inyectar el alma: datos realistas simulados (Mock Data)
+### 2.1 ¿Se entiende qué hacer al abrir?
 
-Una pagina vacia no puede convencer a nadie. Imagina que le muestras a alguien un "espacio de trabajo de materiales de e-commerce", y el historial esta completamente vacio, o solo tiene una linea "test / test / test".
-Para lograr el mejor efecto de demostracion, necesitamos "falsificar" algunos datos realistas que hagan que tu prototipo parezca un producto real que ha estado operando durante medio ano.
+Una página vacía no debería contener solo un campo. Añade una explicación breve, algún ejemplo o una nota con el formato y tamaño de imagen admitidos cerca de la zona de carga.
 
-### 2.1 Deja que la IA te ayude a disenar la estructura de datos
+Si el formulario tiene muchos campos, conserva los que necesita un buen resultado. El nombre, la imagen y las características principales pueden ser obligatorios; la marca, el enlace de referencia y los ajustes de estilo pueden ir en «Más opciones». Una persona nueva no debería completar un formulario largo antes de probar el producto.
 
-No necesitamos pensar por nosotros mismos como deberia llamarse cada campo (por ejemplo, si debe ser `name` o `title`); esto se lo podemos dejar completamente a la IA.
+### 2.2 ¿La página responde después de pulsar?
 
-Solo necesitas decirle a la IA tu **escenario de negocio**:
+Una petición a la IA puede tardar varios segundos. Después del clic, el botón debe mostrar «Generando» y evitar temporalmente envíos repetidos. Los datos introducidos no deben desaparecer y la página no debería saltar a un resultado vacío.
 
-> **Ejemplo de prompt:**
-> "Estoy haciendo un prototipo de un **espacio de trabajo de materiales de e-commerce para TikTok**.
-> Por favor ayudame a disenar una estructura de datos JSON para describir una 'tarea de producto'.
-> Esta tarea deberia incluir: informacion basica del producto (nombre, categoria), materiales de entrada (enlaces de imagenes), y resultados generados por IA (titulo, texto, imagen de poster).
-> Por favor dame directamente un ejemplo JSON."
+![Estado de espera durante la generación del contenido](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
 
-La IA automaticamente concebira campos como `productName`, `generatedContent` basandose en tu descripcion.
+*La espera no necesita una animación complicada. Mostrar que el trabajo ha empezado y conservar el contenido y la posición ya evita la mayor parte de la confusión.*
 
-### 2.2 Deja que la IA produzca en lote datos "realistas"
+Si una imagen o un vídeo entra en una cola, puedes mostrar fases como «En cola» y «Generando». No inventes un porcentaje exacto si la API no proporciona el progreso.
 
-Con la estructura de datos lista, el siguiente paso es hacer que la IA te ayude a "rellenar los huecos" y generar un conjunto de datos que parezcan reales.
+### 2.3 ¿Qué puede hacer la persona con el resultado?
 
-**Tecnicas de prompt:**
-No puedes simplemente decirle a la IA "generame datos"; necesitas, como si le asignaras una tarea a un pasante, decirle el **contexto de negocio** y los **requisitos de contenido**:
+La respuesta de la IA no termina el recorrido. Normalmente hay que verificar datos, corregir palabras y llevar el resultado al siguiente paso. La zona de resultado debe ofrecer al menos una acción útil: editar, copiar, descargar o volver a generar.
 
-- **Contexto de negocio**: dile a la IA que hacemos "e-commerce para TikTok", asi que los titulos de productos deben ser llamativos (por ejemplo "el arma secreta para verse mas delgado/a", "imprescindible para estudiantes"), y los textos deben ser coloquiales.
-- **Requisitos de imagen**: para que el prototipo se vea bien, las imagenes no deben ser marcadores de posicion en blanco y negro; es mejor usar imagenes aleatorias coloridas de paisajes u objetos reales.
+![Página de resultado con comprensión de imagen y generación de texto](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
 
-> **Ejemplo de prompt:**
-> "Basandote en la estructura disenada anteriormente, generame 10 datos de simulacion realistas.
-> (Nota: no necesariamente en formato JSON. Si estas escribiendo frontend, puedes hacer que genere directamente un array JavaScript; si usas Python, puedes hacer que genere una List.)
->
-> **Requisitos del escenario de negocio**:
->
-> 1. Supongamos que esta es una tienda departamental general, con productos en las categorias de 'moda femenina', 'tecnologia' y 'cosmetica'.
-> 2. **Los titulos y textos generados deben ser muy 'estilo TikTok'**: por ejemplo, los titulos deben incluir emojis (, ), y los textos deben usar un tono como 'increible', 'probado y comprobado'.
-> 3. **Campo de imagen**: usa uniformemente el formato `https://picsum.photos/seed/{random_id}/300/400`, asegurando que cada imagen sea diferente."
+*La imagen subida permanece encima del resultado. Así se puede comparar el texto con el original, en lugar de aceptar sin más una respuesta del modelo.*
 
-**Ejemplo de Mock Data generado:**
+Si el modelo no puede confirmar algún dato, señálalo para que la persona lo complete o borre. Es más realista que presentar un párrafo como «respuesta final».
 
-```javascript
-export const mockProductTasks = [
-  {
-    id: 'task_001',
-    name: 'Vestido retro floral frances de verano',
-    status: 'completed',
-    input: {
-      category: 'Moda femenina',
-      features: ['cintura ajustada', 'efecto adelgazante', 'elegante'],
-      originalImage: 'https://picsum.photos/seed/dress_input/300/400'
-    },
-    output: {
-      generatedTitle: ' Quien se lo ponga se vera genial! Este vestido floral frances es realmente increible ',
-      generatedCopy:
-        ' Chicas! Este vestido realmente estiliza muchisimo! El diseno de cintura ajustada es increible, te da forma al instante. La tela es muy transpirable, no sofoca en verano. Primera opcion para citas y paseos!',
-      generatedPosterImage: 'https://picsum.photos/seed/dress_output/300/400'
-    },
-    createdAt: '2026-01-20T10:00:00Z'
-  },
-  {
-    id: 'task_002',
-    name: 'Auriculares Bluetooth Pro con cancelacion de ruido superpotente',
-    status: 'completed',
-    input: {
-      category: 'Tecnologia',
-      features: ['cancelacion de ruido', 'bateria extralarga', 'baja latencia'],
-      originalImage: 'https://picsum.photos/seed/tech_input/300/400'
-    },
-    output: {
-      generatedTitle: ' Finalmente los encontre! La cancelacion de ruido de estos auriculares es brutal! ',
-      generatedCopy:
-        'Ponetelos y el mundo se silencia al instante. Calidad de sonido increible, escuchar musica es como estar en vivo. La bateria tambien es impresionante, una carga dura una semana! Imprescindible para estudiantes!',
-      generatedPosterImage: 'https://picsum.photos/seed/tech_output/300/400'
-    },
-    createdAt: '2026-01-21T14:30:00Z'
-  }
-  // ... mas datos
-]
+### 2.4 ¿Se puede continuar después de un error?
+
+La red, el límite de uso o un archivo no admitido pueden hacer fallar la petición. No hace falta mostrar todo el error técnico, pero sí decir que la operación no terminó y permitir reintentar o cambiar la entrada.
+
+Por ejemplo:
+
+- **Formato no admitido:** explica los formatos aceptados y permite elegir otro archivo.
+- **Falta un dato obligatorio:** muestra el aviso junto al campo, no solo «Parámetros incorrectos».
+- **Servicio de IA no disponible:** conserva los datos y ofrece «Volver a generar».
+- **Resultado poco útil:** permite cambiar la entrada y probar de nuevo sin empezar desde cero.
+
+Si al actualizar se pierde un formulario largo, puedes guardar temporalmente el borrador con LocalStorage. Conserva solo datos normales necesarios para seguir; nunca guardes una API Key, datos reales de clientes ni archivos sensibles en el navegador.
+
+Entrega los problemas al IDE con una petición centrada:
+
+```text
+Revisa el recorrido “subir una imagen y generar texto”
+en cuatro momentos: inicio, espera, éxito y error.
+
+Corrige primero lo que impide continuar:
+- los campos obligatorios no tienen aviso;
+- el botón se puede pulsar varias veces durante la petición;
+- un error borra los datos;
+- el resultado no permite editar, copiar o volver a generar.
+
+Antes de cambiar nada, dime qué archivos modificarás.
+Al terminar, dame pasos de prueba manual.
 ```
 
-### 2.3 (Avanzado) Usar LocalStorage para implementar "falsas operaciones CRUD"
+## 3. Pide a otra persona que lo use
 
-Si deseas que los "datos de simulacion" generados no solo se puedan ver, sino que tambien se puedan eliminar y modificar, e incluso que las tareas recien generadas persistan despues de actualizar la pagina, puedes combinarlo con `LocalStorage`.
+Después de mirar mucho una página propia, todo parece evidente. Una persona que no participó en el desarrollo puede encontrar en pocos minutos problemas que llevas tiempo sin ver.
 
-> **Ejemplo de prompt:**
-> "Por favor ayudame a implementar una funcion de almacenamiento de datos.
->
-> 1. Lee primero los datos desde `localStorage`.
-> 2. Si `localStorage` esta vacio, inicializa con los datos Mock generados anteriormente y guardalos en `localStorage`.
-> 3. Al mismo tiempo ayudame a escribir las funciones `addProductTask` y `deleteProductTask`, que deben sincronizar los cambios con `localStorage` en cada operacion."
+Busca, si puedes, a alguien que realmente usaría el producto. Para esta herramienta puede ser una persona que haya gestionado una tienda o creado fichas de producto. Si no la encuentras, también sirve un amigo que nunca haya visto la página.
 
-Con este paso, tu prototipo tendra "memoria", y la experiencia del usuario sera practicamente identica a la de un producto real.
+### 3.1 Explica solo la tarea
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="2" :items="[
-      { title: 'Completar el flujo', description: 'De funcionalidad aislada a ciclo completo' },
-      { title: 'Inyectar el alma', description: 'Datos de negocio realistas simulados' },
-      { title: 'Iterar con retroalimentacion', description: 'Mejorar la experiencia con retroalimentacion real' },
-      { title: 'Proyecto final', description: 'Tu proyecto de graduacion' }
-    ]" />
-  </ClientOnly>
-</div>
+Al comenzar, indica únicamente el objetivo:
 
-## 3. Recopilar retroalimentacion e iterar rapidamente
+> Usa esta herramienta para generar un título y varios puntos de venta a partir de la imagen. Revisa el contenido y copia la versión que seguirías editando.
 
-No se pueden hacer buenos productos a puerta cerrada. Ahora tu prototipo ya tiene "funcionalidad central" + "flujo completo" + "datos de demostracion"; es hora de mostrarselo a otros.
+Primero observa; no digas enseguida dónde pulsar. Anota las pausas, los pasos atrás, los clics repetidos y las preguntas. Si explicas en el momento, ocultas un problema que debería resolver la propia página.
 
-### 3.1 Con quien probar? Como probar?
+Una o dos personas ya pueden descubrir muchos fallos claros. No hace falta un informe formal: apunta dónde se detuvieron.
 
-- **Busca amigos/colegas**: no necesitan entender de tecnologia, solo necesitan intentar usarlo.
-- **Observa en lugar de guiar**: no digas "haz clic aqui", sino mira adonde hacen clic ellos. Si no encuentran un boton, es que el diseno tiene un problema.
-- **Metodo "Wizard of Oz"**: si tu IA aun no esta bien conectada, puedes modificar manualmente los datos en segundo plano (o en la base de datos) para simular la respuesta de la IA, verificando primero si el usuario realmente necesita esta funcionalidad.
+Si abren la página y no se mueven, añade una frase de propósito. Si pulsan muchas veces «Generar», aclara la espera. Si no saben qué hacer con el resultado, añade edición o copia. Si después de un error deben rellenar todo otra vez, conserva los datos y ofrece reintento.
 
-### 3.2 Ante bugs y criticas
+### 3.2 Habla cuando termine la prueba
 
-- **Estilos desordenados**: pueden desordenarse en diferentes tamanos de pantalla.
-  - **Accion**: haz una captura de pantalla y enviala al AI IDE -> "En este ancho de pantalla esta desordenado, ayudame a arreglarlo."
-- **Operacion incomoda**: "Este flujo es demasiado complicado".
-  - **Accion**: dile la sugerencia al AI IDE -> "El usuario cree que subir primero y luego generar es muy lento, se puede cambiar a generacion con un solo clic?"
-- **Nuevas necesidades**: "Si tuviera esta funcionalidad seria genial".
-  - **Accion**: evalua si es esencial; si lo es, haz que la IA implemente rapidamente una version simplificada.
+Después de completar o abandonar la tarea, pregunta:
 
-**Recuerda: en esta etapa, la IA es tu mejor asistente de modificaciones. Tu solo necesitas encargarte de descubrir los problemas; las modificaciones de codigo dejaselas a ella.**
+1. ¿En qué paso dudaste más?
+2. ¿Qué partes del resultado usarías directamente y cuáles cambiarías siempre?
+3. Si tuvieras que hacer lo mismo otra vez, ¿volverías a usar esta herramienta? ¿Por qué?
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="3" :items="[
-      { title: 'Completar el flujo', description: 'De funcionalidad aislada a ciclo completo' },
-      { title: 'Inyectar el alma', description: 'Datos de negocio realistas simulados' },
-      { title: 'Iterar con retroalimentacion', description: 'Mejorar la experiencia con retroalimentacion real' },
-      { title: 'Proyecto final', description: 'Tu proyecto de graduacion' }
-    ]" />
-  </ClientOnly>
-</div>
+No preguntes solo «¿te pareció fácil?». Un «está bien» por cortesía ayuda poco. Los comportamientos y ejemplos concretos son más útiles.
 
-## 4. Proyecto final de la etapa: completa tu "proyecto de graduacion"
+::: warning Cuando uses material real
+Las imágenes, grabaciones o documentos de la persona pueden contener información de negocio. Explica a qué tipo de servicio de IA se enviarán, evita datos de clientes sin permiso y borra después los archivos que ya no hagan falta.
+:::
 
-Felicidades! Has completado todo el proceso desde los "requisitos" hasta el "prototipo" y despues la "integracion de IA". Ahora es el momento de mostrar tu resultado final.
+## 4. Corrige el bloqueo y vuelve a probar
 
-**Este proyecto final no se limita al "espacio de trabajo de materiales de e-commerce".** Necesitas combinar tus propios intereses o experiencia profesional para crear un prototipo de producto IA unico.
+La prueba puede producir una lista larga. No hace falta resolverla completa. Empieza por lo que impide terminar la tarea o hace que el resultado no sea fiable.
 
-### Seleccion de tema y requisitos
+Usa este orden:
 
-Necesitas elegir el escenario mas cercano de la **[referencia de escenarios por categoria de industria](../appendix-industry-scenarios/index.md)**, o concebir un escenario completamente nuevo basandote en tus propias ideas.
+1. **No se puede completar la tarea:** el botón no funciona, la petición falla o no se puede sacar el resultado.
+2. **El resultado no es fiable:** inventa información, no se puede comprobar o carece de fuentes necesarias.
+3. **La operación se presta a confusión:** no está claro dónde empezar ni cuál es el estado actual.
+4. **El esfuerzo es demasiado alto:** hay pasos repetidos, se pierden datos o no hay respuesta durante la espera.
+5. **Estilo y nuevas funciones:** mejoras visuales y deseos que no impiden la tarea principal.
 
-**El proyecto debe utilizar de manera integral todo lo aprendido en las lecciones anteriores:**
+Elige de uno a tres puntos importantes. Después de corregirlos, repite el recorrido. Si es posible, pide a la misma persona que vuelva. El cambio sirve cuando el bloqueo original ha desaparecido.
 
-1.  **Construccion del prototipo**: usa tecnologia frontend para construir una interfaz bonita y facil de usar.
-2.  **Control de requisitos**: no busques algo exhaustivo, pero si que la funcionalidad central forme un ciclo logico cerrado.
-3.  **Integracion de API**: integra modelos de IA reales (LLM/VLM, etc.), dotando a la aplicacion de verdadera inteligencia.
-4.  **Implementar una aplicacion funcional**: no solo paginas estaticas, sino una aplicacion dinamica con flujo de datos y retroalimentacion interactiva.
+### 4.1 Cuenta al IDE un problema concreto
 
-### Entregables
+No digas solo «optimiza la página». Incluye lo que has observado:
 
-Al final necesitas entregar los dos siguientes elementos:
+```text
+Tarea: subir una imagen de producto y generar tres puntos de venta.
 
-1.  **Una aplicacion de prototipo completa**: desplegada en linea o ejecutable localmente, con un flujo de uso completo.
-2.  **Un video de demostracion de 30 segundos**: graba un video presentando brevemente el escenario de tu aplicacion y demostrando la operacion real de la funcionalidad central.
+Problema observado:
+Dos personas pulsaron “Generar” varias veces porque la página
+no mostraba con claridad que la petición había empezado.
+Esto creó tareas duplicadas.
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">Lista de verificacion del desafio final</div>
-  </template>
+Modifica la página:
+1. Desactiva el botón al empezar y muestra “Generando”.
+2. Actívalo de nuevo después del éxito o el error.
+3. Conserva los datos que ya había escrito el usuario.
+4. Dime cómo probar manualmente los clics repetidos y el error.
+```
 
-  <p>
-    Esta es la ultima batalla del Stage 1. Por favor revisa tu proyecto segun la siguiente lista:
-  </p>
+Una petición concreta evita cambios que no vienen al caso y te dice qué comprobar después.
 
-  <div style="font-weight: bold; margin-bottom: 10px;">Autoverificacion de funcionalidad central</div>
-  <ul style="list-style-type: none; padding-left: 0;">
-    <li><label><input type="checkbox" disabled /> <strong>Escenario claro</strong>: has seleccionado una industria o escenario de aplicacion concreto</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Ciclo logico cerrado</strong>: el flujo central funciona, no solo el Happy Path</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Impulsado por IA</strong>: se ha llamado realmente a la API de un modelo grande, no respuestas predefinidas</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Experiencia completa</strong>: incluye Loading, manejo de errores y datos de simulacion</label></li>
-  </ul>
+### 4.2 Repite todo el recorrido
 
-  <div style="font-weight: bold; margin: 20px 0 10px;">Preparacion de entregables</div>
-  <ul style="list-style-type: none; padding-left: 0;">
-    <li><label><input type="checkbox" disabled /> <strong>Aplicacion de prototipo</strong>: el codigo esta completo y puede ejecutarse</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Video de demostracion</strong>: unos 30 segundos, mostrando claramente los puntos destacados centrales</label></li>
-  </ul>
-</el-card>
+Corregir un lugar puede afectar a otro. Antes de compartir, prueba cuatro casos:
 
-## Proximo paso
+- una entrada normal con todos los datos;
+- un campo obligatorio vacío;
+- una petición fallida o agotada por tiempo;
+- editar, copiar o volver a generar después del resultado.
 
-Despues de completar el proyecto final, ya tienes la capacidad de "desarrollar independientemente un prototipo de aplicacion IA".
-En el siguiente Stage 2, profundizaremos en el desarrollo fullstack mas complejo, aprendiendo como convertir este prototipo en una aplicacion de nivel comercial que realmente pueda ponerse en linea, con base de datos y sistema de usuarios.
+Si guardas borradores, actualiza también la página. Comprueba la función nueva y que el recorrido original no se haya roto.
 
-Nos vemos en la siguiente etapa!
+## 5. Prepara la obra para compartirla
+
+La obra ya no solo «funciona en tu ordenador». Otra persona la ha usado y tú has corregido un problema real. Ordena el acceso y la explicación para enseñarla a más gente.
+
+### 5.1 Explícala en un minuto
+
+Puedes seguir este orden:
+
+1. **Quién tiene qué problema:** una persona de comercio electrónico organiza imágenes y argumentos cada vez que prepara un borrador.
+2. **Cómo ayuda el producto:** sube una imagen y algunos datos y obtiene contenido que puede seguir editando.
+3. **Qué capacidades de IA usa:** comprensión de imágenes y generación de texto.
+4. **Cómo termina la tarea:** subir, generar, revisar, editar y copiar.
+5. **Qué cambiaste tras la prueba:** por ejemplo, una espera visible y datos conservados después de un error.
+
+Haz que entiendan el producto antes de enumerar frameworks y modelos.
+
+### 5.2 Prepara lo que necesita otra persona
+
+Antes de compartir, reúne tres cosas:
+
+1. **Una aplicación ejecutable:** ofrece el enlace; si no está desplegada, escribe el comando de inicio y la dirección.
+2. **Un vídeo de 30–60 segundos:** muestra una tarea completa desde la entrada hasta el resultado, no un cambio rápido de pantallas.
+3. **Una página de explicación:** usuario objetivo, problema, recorrido, capacidad de IA, una opinión real y la mejora que hiciste.
+
+Si todavía no puedes dar acceso remoto, una ejecución local y el vídeo sirven como resultado de Stage 1. Lo importante es que otra persona entienda la obra y vea que el recorrido se completa.
+
+### 5.3 ¿Continuar esta obra o empezar otra?
+
+Puedes seguir con el espacio de contenidos del curso o aplicar el mismo método a reuniones, audio, apoyo al aprendizaje o herramientas profesionales. La [guía de escenarios de IA](../appendix-industry-scenarios/index.md) te ayudará a explorar opciones.
+
+No cambies a un tema desconocido solo para parecer original. Un problema pequeño de tu estudio, trabajo o vida, probado y corregido con una persona real, convence más que una página con muchas funciones que nadie ha usado.
+
+### Antes de enviarla
+
+Abre por última vez el enlace y completa el recorrido. Confirma que otra persona puede abrirlo, que la IA devuelve el resultado y que no aparece ninguna API Key en la página o las capturas. Si usaste imágenes, audio o documentos ajenos, confirma también el permiso.
+
+## 6. 📚 Tarea
+
+<StageAssignmentCard title="Termina y publica tu obra de Stage 1">
+
+  <p>No añadas funciones nuevas. Prepara la obra actual y entrégasela de verdad a una persona.</p>
+
+  <ol>
+    <li>
+      <strong>Úsala una vez de principio a fin</strong>
+      <ul>
+        <li>Empieza al abrir la página y continúa hasta obtener, editar o guardar el resultado.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Pide a una persona que la pruebe</strong>
+      <ul>
+        <li>No expliques primero la interfaz. Observa dónde se detiene y corrige un problema.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Comparte la obra</strong>
+      <ul>
+        <li>Prepara un enlace o instrucciones, un vídeo de 30–60 segundos y una presentación breve.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>Stage 1 termina de verdad cuando otra persona puede abrir la obra y completar un uso sin ayuda.</p>
+</StageAssignmentCard>
+
+## Siguiente paso
+
+Has recorrido un camino completo: partir de un problema real, limitar la primera versión, construir un prototipo, conectar la IA y mejorar el producto después de que alguien lo use.
+
+En Stage 2 aprenderemos bases de datos, cuentas, pagos, despliegue y una ingeniería de frontend y backend más completa. Todo eso permitirá servir a más personas y datos reales, pero el punto de partida seguirá siendo el mismo: completar primero una tarea valiosa.
 
 <RelatedArticlesSection
-  title="Sigue avanzando"
-  description="Felicidades por completar el Stage 1. Estos capitulos pueden ayudarte a entrar en el desarrollo de ingenieria."
+  title="Continúa aprendiendo"
+  description="Después de Stage 1, sigue con los contenidos de ingeniería que aparecen abajo."
   :items="relatedArticles"
 />
+
+<StageOneCompletion />

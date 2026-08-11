@@ -4,6 +4,7 @@ description: 'تجربة الدورة الكاملة من تحليل الأعم�
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = 'حوالي <strong>8 ساعات</strong>'
@@ -351,11 +352,8 @@ const relatedArticles =
 #### 2.2.2 ابدأ توليد الكود
 
 الآن حصلت على prompt الأولي، لنأخذ أسلوب prompt الأول كمثال، ودع AI يساعدنا في توليد الكود. أولًا أنشئ نافذة ومجلدًا مقابلًا، وافتح المجلد (أنشئ مشروعًا جديدًا في عنوان المجلد المفضل لديك):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-28-44.png)
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-30-00.png)
 
 في الشريط الجانبي اختر نموذجًا تفضله (يوصى بـ gemini أو gpt أو glm أو kimi أو minimax، إلخ)، وأدخل prompt الذي حصلت عليه في الخطوة الأولى:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-31-41.png)
 
 بعد النقر على توليد، سنرى الجزء المألوف، سيقوم AI بناءً على prompt بتخطيط هيكل المشروع والملفات الضرورية وإعطاء المحتوى الأولي لكل ملف.
 
@@ -369,10 +367,8 @@ const relatedArticles =
 :::
 
 في هذه اللحظة لا تنسَ الضغط على Enter لتأكيد المعلومات (وإلا ستعلق في الانتظار، بعض AI IDE لا تواجه هذه المشكلة):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-33-03.png)
 
 إذا واجهت السيناريو التالي، هذا يعني أنه تم تشغيل خدمة محليًا، تحتاج إلى النقر على تخطي، وإلا ستعلق على هذه الواجهة (إذا لم يظهر شيء بعد اكتمال توليد الكود، تحتاج إلى قول بنشاط "ساعدني في تشغيل هذا المشروع"):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-38-11.png)
 
 ::: info 💡 شرح السيناريو
 **شرح السيناريو**: أنشأت مشروع React + TypeScript باستخدام `npm create vite@latest` (easy-vibe-web)، وبعد الإنشاء سيقوم الكمبيوتر تلقائيًا بتشغيل هذه صفحة الويب "لتسهيل رؤية التأثير فورًا".
@@ -394,13 +390,11 @@ const relatedArticles =
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
 
 يمكننا رؤية أن هناك بالفعل رسم وظيفي أولي، لكن واجهة الواجهة الأمامية قبيحة جدًا، في هذه اللحظة يمكننا محاولة التحدث مع AI مباشرة لتحسين عرض الواجهة:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-01-16.png)
 
 بعد التحسين يمكننا الحصول على واجهة أجمل:
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
 
 يمكنك تعديل وظائف صفحة الويب حسب احتياجاتك، ويمكنك إرفاق لقطات شاشة والسؤال بحرية، مثل: "أنا لا أحتاج وظيفة الاستيراد الجماعي حاليًا، ساعدني في إلغائها"، "الأشياء التي يجب إدخالها على اليسار كثيرة جدًا، ساعدني في الاحتفاظ بـ xxxxx فقط". حتى يمكنك الرجوع إلى مواقع ويب ناضجة أخرى، مثل هنا يمكننا الرجوع مباشرة إلى منتج تصميم من Google كـ "مرجع" (يمكنك لصق لقطة شاشة لأي موقع ويب ناضج تحبه):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-13-12.png)
 
 أخيرًا يمكننا الحصول على:
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
@@ -558,12 +552,9 @@ const relatedArticles =
 
 ## 5. 📚 الواجب: أعد إنشاء منصة التجارة الإلكترونية الخاصة بك
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🚀 مهمة التحدي: أعد إنشاء منصة مواد التجارة الإلكترونية</div>
-  </template>
+<StageAssignmentCard title="أكمل مساحة عمل محتوى التجارة الإلكترونية">
 
-  <p>
+<p>
     بالرجوع إلى prompt ومحتوى هذا الدرس، أكمل دورة كاملة:
   </p>
 
@@ -587,7 +578,8 @@ const relatedArticles =
       </ul>
     </li>
   </ul>
-</el-card>
+
+</StageAssignmentCard>
 
 ## الخطوة التالية
 

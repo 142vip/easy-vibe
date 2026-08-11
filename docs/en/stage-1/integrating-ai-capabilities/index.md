@@ -1,799 +1,481 @@
 ---
-title: 'Adding AI Capabilities to Your Prototype - Integrating Text and Image APIs'
-description: 'Integrate real AI capabilities into your existing web prototype: understand the core concepts of APIs, learn how to find API Keys and official examples; hands-on integration of DeepSeek text model and various image generation services (SiliconFlow Qwen-Image, Recraft, Seedream), and master common model selection methods.'
+title: 'Add AI Capabilities to a Prototype'
+description: 'Start with prompt design, official documentation, and service-console setup, then add text, vision, image, speech, and video capabilities to a web prototype.'
 ---
 
 <script setup>
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
+import AiCapabilityGuide from '../../../zh-cn/stage-1/integrating-ai-capabilities/AiCapabilityGuide.vue'
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 
-const duration = 'About <strong>1 day</strong>'
+const duration = 'About <strong>1–2 days</strong>'
 const relatedArticles =
   relatedArticlesMap['en/stage-1/integrating-ai-capabilities'] ?? []
 </script>
 
-# Beginner Level 4: Injecting AI Capabilities into Your Prototype
+# Add AI Capabilities to a Prototype
 
-## Chapter Introduction
+<ProductJourney current="ai" />
 
-<ChapterIntroduction :duration="duration" :tags="['API', 'Text Model', 'Text-to-Image', 'Prototype Integration']" coreOutput="Prototype integrated with 1 text model + 1 image model (optional)" expectedOutput="AI prototype capable of calling real APIs">
+## Chapter overview
 
-In the previous chapters, we completed the entire process from **finding a great idea** to **building a product prototype**. But the current prototype is still just a "shell" — clicking buttons won't actually generate content, and all the data on the page is hardcoded.
+<ChapterIntroduction :duration="duration" :tags="['Prompts', 'API documentation', 'Service consoles', 'Multimodal AI']" coreOutput="Add one or two real AI capabilities to a prototype" expectedOutput="A web prototype that can call a text, image, speech, or video service">
 
-Remember what we emphasized in the first chapter? **We want to build "products people are willing to pay for," not "prototypes that just look good."** Real value comes from a product that can **solve real problems**, and to achieve that, the prototype must be able to **actually run**.
+The prototype from the previous chapter can already test its page structure and interaction flow, but its generated results still come from mock data. In this chapter, we will connect one of its core actions to a real AI service.
 
-This chapter will bring your prototype **"to life"**: we'll integrate **real AI capabilities**, starting from obtaining an API Key, reading official documentation, and having the AI IDE help you integrate the interface into your code. Using **DeepSeek's text model** as an example, you'll learn how to make your application **actually call a large language model to generate content**; if you're interested, you can also **optionally integrate image generation**.
+Adding AI is not simply a matter of copying some API code. We must deal with three things at the same time: **how to describe the task, how to read the official documentation, and how to place the call safely inside the product flow.**
 
-After completing this chapter, your prototype will **no longer be a static demo**, but rather **an application that can call real AI capabilities and solve real problems**.
+We will first establish a general method, then look at text, image understanding, image generation, speech, and video. Model names and console interfaces keep changing, so the examples here explain the structure. When you build your own version, copy the current model ID and parameters from the service's official documentation.
 
 </ChapterIntroduction>
 
 <div style="margin: 50px 0;">
   <ClientOnly>
     <StepBar :active="0" :items="[
-      { title: 'API Basics', description: 'Understand core concepts and security practices' },
-      { title: 'Text Integration', description: 'DeepSeek text generation hands-on' },
-      { title: 'Image Integration', description: 'VLM image understanding and generation' }
+      { title: 'Define the task', description: 'Prepare a business prompt' },
+      { title: 'Read the docs', description: 'Find the endpoint and parameters' },
+      { title: 'Connect the service', description: 'Complete a safe API call' },
+      { title: 'Add more modalities', description: 'Images, speech, and video' }
     ]" />
   </ClientOnly>
 </div>
 
-# 1. API Fundamentals
+## 1. Decide which feature to connect
 
-As mentioned earlier, our goal is to "integrate AI capabilities" so that the prototype is no longer a static demo but a tool that can call real AI services. The key to achieving this lies in understanding and using APIs (Application Programming Interfaces).
+The e-commerce content workspace from the previous chapter already has product information and a “Generate copy” button. Its result still comes from mock data, so our first job is to make that button actually work.
 
-API is an important abstraction concept in computer science. Simply put: **you send a request in the format the other party requires, and they send back a result in the same format**.
+The flow is straightforward: the user enters a product name, material, and selling points, clicks the button, and receives a piece of product copy. Both the input and the result are text, so we need a model that can generate text.
 
-- **What you send out**: Usually includes a "key (API Key)" and "what you want to generate"
-- **What they send back**: If successful, you get the result; if it fails, they tell you why (e.g., "invalid key," "insufficient balance," "incorrect parameters")
+If your page has a different feature, it will need a different capability. For example:
 
-Specifically, you need to master the following core elements:
+- Uploading a product photo and identifying its color and style requires image understanding.
+- Making a poster from product information requires image generation.
+- Turning a recording into meeting notes first requires speech-to-text, followed by a text model that organizes the transcript.
+- Turning an article into playable audio requires text-to-speech.
+- Making a product photo move requires image-to-video generation.
 
-1. **API Key**: Your "pass" and also your "wallet key." Anyone who gets it can make API calls on your behalf and incur charges.
-2. **Endpoint**: The specific path for the API request, telling the server which function you want to access. The full request URL is typically composed of "Base URL + Endpoint path." For example:
-   - Text generation: Base URL (`https://api.service.com`) + Endpoint (`/v1/chat/completions`) = Full URL `https://api.service.com/v1/chat/completions`
-   - Image generation: Base URL (`https://api.service.com`) + Endpoint (`/v1/images/generations`) = Full URL `https://api.service.com/v1/images/generations`
-3. **Call/Request**: The process of sending a task to the AI service and getting results back
-4. **Request Content**: The specific content you send to the AI, such as the topic you want the AI to write about, the description of the image to generate, etc.
-5. **Response**: The content the AI returns after processing, such as the generated article, image, etc.
-6. **Error Handling**: Knowing how to troubleshoot when problems occur (such as incorrect API Key, too many requests, etc.)
+Before choosing a service, look at the page once more: what will the user submit, and what do they expect to see at the end? Once those two points are clear, it is usually easy to tell whether you need a text, image, speech, or video model.
 
-::: info ℹ️ What is an API
-For a more in-depth explanation of APIs, see the appendix: [Introduction to APIs](/zh-cn/appendix/4-server-and-backend/api-intro).
+<AiCapabilityGuide />
 
-::: warning 🔐 **API Security Notes**
-The API Key is your "pass" for requesting AI services — it's a secret string used for authentication and billing.
+### 1.1 One feature may need several steps
 
-Since the API Key is directly linked to your account and charges, be sure to:
+Not every feature can be completed by one model in one call. “Upload a product photo and generate selling points,” for example, first requires the application to understand the product in the image and then write copy from that result. “Answer questions from company files” similarly requires the application to find relevant material before it composes an answer.
 
-- **Never share it** in group chats, screenshots uploaded online, or public forums
-- **Never hardcode it** into your code and commit it to a Git repository (especially public repositories)
-- If you suspect your Key has been leaked, **replace it with a new Key immediately**
+You do not need to start with model names when breaking down the task. Follow the user's flow instead: which step understands existing content, which step creates new content, and which step only retrieves information? When necessary, connect two or three capabilities in sequence.
 
-In the content below, we will **paste the API KEY directly into the AI IDE for operations**. **Don't do this in real projects!!** Since we're just practicing, it's fine for now. (Once you're more experienced, you can have the AI generate a configuration file and simply put the API KEY in the config file.)
-:::
+AI should handle only the parts for which it is suitable. Login, payment, file storage, and page navigation follow explicit rules and should still be implemented with ordinary program logic.
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="1" :items="[
-      { title: 'API Basics', description: 'Understand core concepts and security practices' },
-      { title: 'Text Integration', description: 'DeepSeek text generation hands-on' },
-      { title: 'Image Integration', description: 'VLM image understanding and generation' }
-    ]" />
-  </ClientOnly>
-</div>
+![A working page in which a product image is understood before its description is generated](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
 
-# 2. Integrating the Text Generation API: DeepSeek
+*In this prototype, the user first uploads a product image. The page identifies the product information, then creates a description and selling points that the user can continue editing.*
 
-Although APIs involve these technical concepts, the actual operation during the prototyping phase can be very simple and efficient. The core approach is:
+### 1.2 What to look for in a service console
 
-> **Find the official example, get the API Key, and have the AI IDE help you wire it to a button.**
+Once we have decided to generate text, we can open a service platform such as DeepSeek, SiliconFlow, Volcengine Ark, or MiniMax. The platform provides the account, billing, and API entry point; the model we select handles the actual request.
 
-Once you've grasped these concepts, you'll find that whether you're integrating a text model or an image model, the underlying process is the same: when the user clicks a button, the frontend organizes the input and sends a request; after the API returns a result, it displays the result on the page. Let's verify this through hands-on practice.
+You do not need to study every console menu for your first integration. Find these four things:
 
-In `1.2 Building Your Prototype`, you already created an interactive prototype. What we need to do next is turn the "AI-like features" in the prototype into real, working capabilities: **when the user clicks a button, the prototype sends a request to an external AI service and displays the returned text.**
+1. Create an **API key** that the application can use to call the service.
+2. Record the **model ID** you plan to use.
+3. Find the smallest curl or JavaScript example in the official documentation.
+4. Check the quota, price, and request limits.
 
-::: info ℹ️ Further Reading on Principles
-If you want to learn more about the underlying principles, check out the appendix: [Introduction to Large Language Models (LLM)](/zh-cn/appendix/8-artificial-intelligence/llm-principles).
-::: details Learn More: What is DeepSeek?
+The application sends the product data to the model through an **API**. If the documentation provides a JavaScript or Python **SDK**, you can use that instead; it is simply a convenient wrapper around the request code. The sentence “Write a title and selling points from this product information” inside the request is the prompt sent to the model.
 
-**Hangzhou DeepSeek Artificial Intelligence Basic Technology Research Co., Ltd.**, operating under the brand name DeepSeek, is a **Chinese artificial intelligence (AI) company that develops large language models (LLMs)**. DeepSeek is headquartered in Hangzhou, Zhejiang, and is owned and funded by the Chinese hedge fund High-Flyer. DeepSeek was founded in July 2023 by Liang Wenfeng, co-founder of High-Flyer, who also serves as CEO of both companies. The company launched its eponymous chatbot and its DeepSeek-R1 model in January 2025.
+The platform name, model ID, and API address are not the same thing. Use the address and model ID from the official code example. Do not paste the URL of the platform's online playground into your program.
 
-Let's look at how DeepSeek compares with other top models in the GPQA benchmark rankings. Notably, DeepSeek is an open-source model (anyone can download the model from the internet), while other common models like Grok, Google Gemini, and ChatGPT are closed-source. As we can see, DeepSeek has largely caught up with the first tier of models.
+### 1.3 Leave unfamiliar APIs for later
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-16-48.png)
+The console may also list Embedding, Rerank, Function Calling, OCR, and content-moderation endpoints. Embedding and Rerank are useful for a knowledge base; OCR is useful for reading PDFs and receipts; Function Calling lets a model use external tools such as search or a database.
 
-GPQA stands for "Graduate-Level Google-Proof Q&A Benchmark," a graduate-level benchmark for scientific question-answering tasks. Here's a detailed introduction.
+You do not need to learn all of them now. First connect one API that directly supports a feature on your page. Return to the appropriate documentation when the product actually needs another capability.
 
-GPQA contains 448 multiple-choice questions covering subfields of biology, physics, and chemistry, such as quantum mechanics, organic chemistry, molecular biology, and more. These questions were written by 61 experts who hold or are pursuing doctoral degrees and have undergone a rigorous validation process.
-:::
+## 2. Try the generated result first
 
-Follow these 3 steps to quickly integrate a large model generation API:
+Before writing API code, test the model in the platform's online playground. We are not merely checking whether it “can write product copy.” We need to know whether it can return a result in the format our page requires.
 
-1. **Create an API Key on the DeepSeek platform**
-2. **Find the text generation example in the DeepSeek documentation** (there's usually ready-made code you can copy directly)
-3. **Open the AI IDE, paste in the API Key + official example**, and tell the AI what functionality to implement:
-   > Help me integrate this large model's API to support the copywriting generation task for this application
+### 2.1 The user only needs to describe the goal
 
-Next, we'll walk through a demo. You can follow along with the entire process. First, register a [DeepSeek](https://platform.deepseek.com/usage) account, create an API Key, and top up a small amount for testing.
+In the online playground, begin as a real user would:
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-13.png)
-
-Click "API KEYS" and find "create new API key" at the bottom of the screen. You'll end up with an API key that looks something like sk-8573341c39fc44315aadc071c53rh7d2.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-32.png)
-
-Once you have the key, you have permission to call the model.
-
-At this point, you can directly read the [API](https://api-docs.deepseek.com/) documentation, which typically provides curl or Python call examples.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-56.png)
-
-After finding the example, you can copy all the content from the documentation along with your key into the AI IDE's chat box, asking it to help you integrate the large language model into the prototype you've already developed.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-59-31.png)
-
-Here's a reference prompt:
-
+```text
+I want to list a lightweight commuter backpack made from black nylon.
+It is mainly for everyday commuting.
+Please write a short product title and three selling points.
 ```
-Based on this API call method, help me implement a copywriting generation feature that can generate Douyin (TikTok) e-commerce copy in various styles based on product information when clicked.
 
-Reference materials:
-api key: sk-8573341c39aefa1efe
-api request reference:
-curl  \
+Once this becomes a page, the user may not even need to organize that paragraph. They can fill in the product name, material, and color, then click “Generate copy.” The program reads those fields and adds fixed instructions to the request: do not invent prices or sales figures, keep the title short, and return the result in a specified format.
+
+Each user should not have to repeat these rules. If the page displays a title, summary, and selling points separately, the program can ask the model to return three JSON fields: `title`, `summary`, and `selling_points`. The user's input remains natural while the page can read the result reliably.
+
+For the first test, try several products and deliberately omit one field. Check whether the model invents missing information. If the format is unstable, adjust the fixed instructions added by the program instead of asking users to learn prompt engineering.
+
+### 2.2 Connect the API to the page
+
+The official documentation usually provides a curl, JavaScript, or Python example. Give that example to your AI IDE together with the feature you want, and ask it to connect the request to your existing page.
+
+```text
+Add a “Generate copy” button to the product details page.
+
+When the user clicks it, send the current product information to the API below,
+then show the generated copy on the page.
+
+Do not put the API key in the browser. Show a message while waiting and when the request fails.
+When it is ready, tell me what to configure and how to start and test it.
+
+Here is the official API example:
+<paste a curl or SDK example without a real key>
+```
+
+With the page location and official example in front of it, the AI IDE does not need to guess the API format. First make sure one request returns normally. When you later add image, speech, or video support, you can replace the feature description and the official example.
+
+## 3. Send the first request from the official example
+
+After the prompt works, send it from code. Open the official documentation and look for “Quick Start” or “API Reference.” Service documentation varies in appearance, but your first call only requires four facts: the request address, where to put the API key, the value of `model`, and the smallest official example.
+
+Copy the official curl, JavaScript, or Python example first, changing only the model ID and test content. Run it in the terminal and obtain one normal response before putting it into the project. If the page integration later fails, you will at least know that the account, key, and model are working.
+
+Also inspect the returned value. Text usually sits inside a JSON field, an image may return a URL, speech may return binary data directly, and video often returns a task number first. The page you build next depends on what the endpoint actually returns.
+
+### 3.1 Ask AI to help read long documentation
+
+You do not have to read a long API document from beginning to end. Give the page you are reading to the AI IDE and ask it to find only what is needed for the first call:
+
+```text
+Read this API documentation: <documentation link>
+
+I want to call it with JavaScript. Show me the simplest example,
+where to put the API key and model, and how to read the generated result.
+Use only parameters documented on this page.
+```
+
+## 4. Your first visit to the service console
+
+Creating a key, selecting a model, and viewing usage normally happen in the service console. Menu names differ, but the work is much the same.
+
+### 4.1 Create a key and confirm that the request reached the platform
+
+An API key is the credential your application uses to call the model. Store it in a local environment variable after creating it. Do not paste it into screenshots, chat messages, or browser code. If you think it has leaked, revoke it in the console immediately and create a new one.
+
+After sending the first request, open the Usage or Billing page and look for a new record. This page also shows your balance and quota. When a request fails, first determine whether the code sent nothing, the platform rejected the call, or the account has no remaining quota.
+
+![DeepSeek Usage page showing the balance, monthly spending, and request trend](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
+
+*DeepSeek's Usage page shows request volume, cost, and the remaining balance.*
+
+If the error contains a Request ID or Trace ID, save it. Many calls may occur at the same time; this identifier helps you find the failed call in the logs.
+
+### 4.2 Select a model and copy its exact calling name
+
+The model catalog or Models page shows which text, image, speech, and video models the platform currently offers. Open the details and copy the model ID used in code; it may differ from the display name on the page.
+
+![SiliconFlow model catalog with filters for text, image, video, and speech capabilities](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
+
+*SiliconFlow's catalog can be filtered by text, image, video, and speech.*
+
+Some platforms also require you to select a region or create a deployment before they provide a base URL and endpoint. Follow the platform's quick-start guide in that case. Do not use the console page URL as the API address.
+
+![Volcengine Ark quick API access page showing the API key and quick-test steps](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
+
+*Volcengine Ark places key creation, model selection, and a runnable example in the same quick-start flow.*
+
+### 4.3 Usage limits and long-running tasks
+
+Text endpoints often list RPM and TPM: the number of requests and tokens allowed per minute. Image, speech, and video services may also limit concurrency, meaning the number of jobs that can run at the same time. Exceeding a limit normally produces a `429` response. Wait and retry later instead of repeatedly clicking the button.
+
+Long-running tasks such as video generation do not return the file immediately. They first return a task ID. The application can use it to query progress, or provide a callback or webhook so the platform can notify the server when the job finishes. A final file ID or temporary download URL may expire, so a production application must decide whether to copy the file into its own storage.
+
+The documentation will also mention parameters such as `max_tokens`, `temperature`, and `stream`. Keep the official defaults for the first version. Increase `max_tokens` only if the output is cut off, and enable `stream` only if you need to display content as it arrives. Look up an individual parameter in the model's documentation when you need it; there is no reason to change everything at once.
+
+## 5. Move from the official example to the page
+
+Once the smallest terminal example returns a result, connect it to the prototype in this order:
+
+1. Put the key in an environment file such as `.env.local` that will not be committed to Git.
+2. Call the model from a server or Serverless Function.
+3. Let the page call your own `/api/...` endpoint instead of carrying a third-party key.
+4. Add waiting, success, and failure states to the button.
+5. Return to the Usage page and confirm that the operation produced a real request.
+
+```text
+Browser page
+    │ sends only business input
+    ▼
+Your /api endpoint ── reads the API key from a server environment variable
+    │
+    ▼
+AI service ── returns text, JSON, a file, or a task_id
+```
+
+::: warning Keep API keys safe
+Do not place an API key in Vue, React, or ordinary front-end HTML code. Even a variable whose name starts with `VITE_` or `NEXT_PUBLIC_` may be bundled into the browser. For a public deployment, call the model from a backend, Serverless Function, or protected gateway.
+:::
+
+### 5.1 Some endpoints do not return immediately
+
+Short text, image understanding, and short audio transcription usually return in a single request, so the page can show “Generating.” Conversations and live speech may stream their response, letting the page display each piece as it arrives.
+
+Image and video generation often run asynchronously. The first request returns only a `task_id`; later requests check whether the job is queued, processing, successful, or failed. These jobs can take tens of seconds, so the page should not remain on an unchanging loading message.
+
+## 6. Connect text generation first
+
+The [DeepSeek API documentation](https://api-docs.deepseek.com/) provides a text endpoint compatible with widely used SDKs. Models change over time, so copy the current ID from the [model list](https://api-docs.deepseek.com/api/list-models) before integrating it.
+
+Begin by sending one request with curl. It uses the same product details as the online-playground test, which makes the two results easier to compare.
+
+```bash
+curl https://api.deepseek.com/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${DEEPSEEK_API_KEY}" \
   -d '{
-        "model": "deepseek-chat",
-        "messages": [
-          {"role": "system", "content": "You are a helpful assistant."},
-          {"role": "user", "content": "Hello!"}
-        ],
-        "stream": false
-      }'
+    "model": "deepseek-v4-flash",
+    "messages": [
+      {"role": "system", "content": "Return JSON with title, summary, and selling_points. selling_points must contain three items. Do not invent prices, sales figures, or product effects."},
+      {"role": "user", "content": "I want to list a black nylon commuter backpack. Write a short title, one introduction, and three selling points."}
+    ],
+    "stream": false
+  }'
 ```
 
-After some AI code generation, you'll easily get a corresponding copywriting generation button to test. If you can't find the entry point, you can ask the AI IDE to tell you which page leads to it. If you really can't find it, you can ask the AI IDE to directly refactor and improve based on your ideas to get the final copywriting generation result.
+Set the key in an environment variable, then run the command in the terminal. Once it returns normally, give the same official example and the integration prompt from Section 2 to the AI IDE. Keep just one button and one fixed product in the first version. Connect the full form only after the page can display a real result.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-23-23.png)
+### Test with two products
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-26-35.png)
+Change the product name, material, and color, then generate again. If both results match their respective input and the page displays them correctly, the smallest integration is working. Next, remove one field and check whether the model invents a price, effect, or sales figure. You can also temporarily use a wrong key to make sure the page displays an error.
 
-Of course, you might be wondering: how do I know it's actually calling the large model and not just returning hardcoded responses? You can enter custom copy and have the large model generate corresponding content based on your custom analysis specified on the spot.
+Finally, open the Usage page and confirm that these calls appear. Text on the page does not by itself prove that it came from the API; leftover mock data can look just as convincing.
 
-If you find that the results are different each time and logically coherent, you can be confident that the API is being called correctly. You can also check the [API usage management platform](https://platform.deepseek.com/usage) to see if the calls were successful (though it may take a few minutes to show up).
+## 7. Image understanding with Qwen3-VL
 
-## More Text Generation Model Options
+A vision model receives an image and a question. Ask for the information the page actually needs. A vague question such as “What is in this picture?” usually produces a broad description that is difficult to use.
 
-In addition to DeepSeek, you can also try other large language models. Since most models provide an **OpenAI-compatible API**, switching is very simple — you only need to change the API Key, base URL, and model name.
+```text
+Look at this product photo. Tell me what the item is, its main color,
+and any visible material and structural details. Copy any text in the image.
 
-### MiniMax Integration
-
-::: details Learn More: What is MiniMax?
-
-**MiniMax** is a Chinese AI company dedicated to general artificial intelligence research. MiniMax has released the MiniMax-M3 and MiniMax-M2.7 series of large language models, which perform well in multiple benchmarks with excellent cost-effectiveness.
-
-**Key Features of the MiniMax Series:**
-
-- **Ultra-long context**: M3 supports up to a 1,000,000-token context window (M2.7 supports 204,800 tokens), suitable for processing long documents and multi-turn conversations
-- **Cost-effective**: Extremely competitive pricing
-- **OpenAI-compatible API**: Can be called directly using the OpenAI SDK, no need to learn a new API format
-- **Available models**:
-  - `MiniMax-M3`: Latest flagship model with a 1,000,000-token context, 128K max output, and text/image/video input support
-  - `MiniMax-M2.7`: Previous flagship model, still available
-  - `MiniMax-M2.7-highspeed`: High-speed version with same performance but faster response
-:::
-
-The integration process is the same as DeepSeek, just three steps:
-
-1. Go to [MiniMax Platform](https://platform.minimax.io/) to register and create an API Key
-2. Find the API call examples in MiniMax documentation
-3. Paste the API Key + example into your AI IDE
-
-Since MiniMax provides an OpenAI-compatible API, you can copy the following curl example along with your API Key and send it to your AI IDE for integration:
-
-```bash
-curl https://api.minimax.io/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer ${MINIMAX_API_KEY}" \
-  -d '{
-        "model": "MiniMax-M3",
-        "messages": [
-          {"role": "system", "content": "You are a helpful assistant."},
-          {"role": "user", "content": "Hello!"}
-        ],
-        "stream": false
-      }'
+Say when something is unclear. Do not guess the brand, price, or sales figures.
+Return JSON so I can display the result on the page.
 ```
 
-::: tip ✅ Tip
-MiniMax's API format is almost identical to DeepSeek (both are OpenAI-compatible), so if you've already successfully integrated DeepSeek, switching to MiniMax only requires changing three things:
-1. **Base URL**: Change to `https://api.minimax.io/v1`
-2. **API Key**: Use your MiniMax API Key
-3. **Model name**: Change to `MiniMax-M3` (new flagship), `MiniMax-M2.7`, or `MiniMax-M2.7-highspeed`
-
-For more details, refer to the [MiniMax OpenAI Compatible API Documentation](https://platform.minimax.io/docs/api-reference/text-openai-api).
-:::
-
-# 3. Integrating the Image-to-Text API: Qwen3 VL
-
-::: info ℹ️ Further Reading on Principles
-If you want to learn more about the underlying principles, check out the appendix: [Introduction to Vision Language Models (VLM)](/zh-cn/appendix/8-artificial-intelligence/multimodal-models).
-
-::: details Learn More: What is Qwen3 VL?
-
-**Qwen3 VL** is the latest version in the multimodal vision-language model series developed by Alibaba Cloud's Tongyi Qianwen team. VL stands for "Vision-Language," meaning it's a vision-language model. It can understand image content and generate text descriptions based on images, answer questions about images, extract information from images, and more.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-48-27.png)
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-48-41.png)
-
-**Key capabilities of Qwen3 VL include:**
-
-- **Image Understanding**: Can recognize objects, scenes, people, text, and other content in images
-- **Visual Q&A**: Accurately answers questions about images based on user queries
-- **Image Captioning**: Generates detailed or concise text descriptions of images
-- **Multi-image Understanding**: Supports processing multiple images simultaneously for comparative analysis
-- **Text Extraction**: Extracts text content from images (OCR capability)
-
-**Why choose Qwen3 VL?**
-
-Compared to the previous generation, Qwen3 VL has significantly improved image understanding accuracy and supports longer, more complex image analysis tasks. It excels in Chinese language understanding, has relatively low API call costs, and offers good value for money. Additionally, its larger context window enables it to handle more complex visual reasoning tasks.
-
-**Typical use cases:**
-
-- E-commerce: Automatically generate titles, descriptions, and selling points from product images
-- Content creation: Automatically generate copy or image suggestions based on reference images
-- Office: Image content extraction, automatic report recognition
-- Education: Automatic parsing of image-based questions, knowledge point extraction
-
-:::
-
-In the previous section, we explained how to integrate a text generation API. But for the application scenario above, we'll notice a problem: we're uploading an image, and if we only use a large language model, it can't understand the content of the image very well, so the generated results may be off.
-
-We want a model that can help us turn an image into a text description — this requires a Vision Language Model (VLM). In our case, we'll use a vision language model to generate product selling point descriptions, improving the user experience.
-
-For convenience, we'll use the API provided by [SiliconFlow cloud platform](https://cloud.siliconflow.cn/me) to integrate the image-to-text API.
-
-::: details Learn More: What is SiliconFlow?
-**SiliconFlow** is a well-known AI model aggregation platform in China, providing API services for various mainstream large language models and vision language models.
-
-**Platform features:**
-
-- **Multi-model support**: Integrates various mainstream AI models, including DeepSeek, Qwen, Llama series, and other open-source models
-- **Technical optimization**: Optimized inference for open-source models, providing low-latency, high-concurrency API services
-- **Interface compatibility**: Provides OpenAI-compatible API interfaces for easy integration with existing applications
-- **Pay-as-you-go**: Supports usage-based billing
-
-SiliconFlow is relatively mature in inference services for open-source large models and is a common choice for using domestic open-source AI models.
-:::
-
-Go to the SiliconFlow platform homepage, where you'll see many models to choose from. Find the filter in the upper left corner, click to expand it, select the "Vision" tag, and you'll see many image-to-text models, such as Zhipu GLM-4.6V or Qwen3-VL.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
-
-You can choose any one to test. Here we'll use `Qwen/Qwen3-VL-8B-Instruct` as an example.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-07-44.png)
-
-Go to the [SiliconFlow platform](https://cloud.siliconflow.cn/me/account/ak), click "Create New API Key" in the API Keys section to create a new API Key.
-
-You can directly use the code below as reference code, and send it along with the generated API Key to the AI IDE for feature integration.
-
-::: details Image-to-Text Reference Code
+The [SiliconFlow model catalog](https://cloud.siliconflow.cn/models) can be filtered to show currently available vision models. This section uses `Qwen/Qwen3-VL-8B-Instruct` to illustrate the input structure; confirm the current model ID before running it.
 
 ```python
-from openai import OpenAI
-from typing import Dict, Any, List
 import base64
 import os
-SILICONFLOW_API_KEY: str = ""
-SILICONFLOW_BASE_URL: str = "https://api.siliconflow.cn/v1/"
-MODEL_NAME: str = "Qwen/Qwen3-VL-8B-Instruct"
+from openai import OpenAI
 
-def encode_image(image_path: str) -> str:
-    with open(image_path, "rb") as image_file:
-        return base64.b64encode(image_file.read()).decode('utf-8')
+client = OpenAI(
+    api_key=os.environ["SILICONFLOW_API_KEY"],
+    base_url="https://api.siliconflow.cn/v1"
+)
 
-def get_vlm_completion(client: OpenAI, messages: List[Dict[str, Any]]) -> str:
-    response = client.chat.completions.create(
-        model=MODEL_NAME,
-        messages=messages,
-        max_tokens=512,
-        temperature=0.7,
-        top_p=0.7,
-        frequency_penalty=0.5,
-        stream=False,
-        n=1
-    )
-    return response.choices[0].message.content
+with open("product.jpg", "rb") as image_file:
+    image_data = base64.b64encode(image_file.read()).decode("utf-8")
 
-def caption_image(image_path: str) -> str:
-    base64_image = encode_image(image_path)
-    messages = [
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Please describe this image in detail."
-                },
-                {
-                    "type": "image_url",
-                    "image_url": {
-                        "url": f"data:image/jpeg;base64,{base64_image}"
-                    }
-                }
-            ]
-        }
-    ]
-
-    client = OpenAI(
-        api_key=SILICONFLOW_API_KEY,
-        base_url=SILICONFLOW_BASE_URL
-    )
-
-    return get_vlm_completion(client, messages)
-
-image_path = "images.jpg"
-caption = caption_image(image_path)
+response = client.chat.completions.create(
+    model="Qwen/Qwen3-VL-8B-Instruct",
+    messages=[{
+        "role": "user",
+        "content": [
+            {"type": "text", "text": "Look at this product photo. Return JSON with its category, color, visible material and structure, and text in the image. Do not guess anything that is unclear."},
+            {"type": "image_url", "image_url": {
+                "url": f"data:image/jpeg;base64,{image_data}"
+            }}
+        ]
+    }]
+)
 ```
 
-:::
+![Connecting an image-understanding API in an AI IDE](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
 
-In this scenario, we directly try asking the AI IDE to implement a feature that automatically generates ecommerce selling-point text and keywords from uploaded images, as shown below:
+*Letting the user confirm the identified product information before generating copy usually makes errors easier to spot than generating the final copy directly from the image.*
+
+## 8. Generate and edit product images
+
+[Seedream](https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite) can generate an image from text or edit a reference image. The biggest risk in product photography is an attractive result in which the product itself has changed. In addition to the background, composition, and lighting, state explicitly which parts must remain unchanged.
 
 ```text
-Based on the image-to-text API below, help us implement a feature that automatically generates ecommerce selling points and keywords from uploaded images.
-
-<code omitted here; you need to paste your key and the reference code yourself>
+Turn the black backpack in the reference image into a vertical product poster.
+Place it in the center of a light-gray surface with soft lighting,
+and leave some room above it for a title.
+Do not add text, a logo, or a price. Do not change the zippers, straps, or pockets.
 ```
 
-Final generated result:
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
+This prompt explains the image's purpose, product position, visual style, and protected details. After the first generation, check the backpack for distortion before judging the background and composition. Do not begin by piling many style terms into the prompt.
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+Copy the current image model ID and smallest request from the [Volcengine Ark console](https://www.volcengine.com/experience/ark?launch=seedream). Do not keep an old tutorial version number in production code.
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="2" :items="[
-      { title: 'API Basics', description: 'Understand core concepts and security practices' },
-      { title: 'Text Integration', description: 'DeepSeek text generation hands-on' },
-      { title: 'Image Integration', description: 'VLM image understanding and generation' }
-    ]" />
-  </ClientOnly>
-</div>
-
-# 4. Integrating the Image Generation API: Seedream
-
-In the previous section, we mainly handled text-related tasks. Next, we will try integrating image generation capabilities to support generating images from text descriptions, or editing images.
-
-::: info ℹ️ Further Reading on Principles
-If you want to learn more about the underlying principles, check out the appendix: [Introduction to Image Generation](/zh-cn/appendix/8-artificial-intelligence/image-generation).
-
-::: details Learn More: What is [Seedream](https://seed.bytedance.com/en/seedream4_5)?
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-17.png)
-
-> You may already know Nano Banana (developed by Google), but you should not miss Seedream. Seedream 4.5 is a next-generation image creation model built by ByteDance. It integrates image generation and image editing capabilities into one unified architecture. This enables it to handle complex multimodal tasks such as knowledge-based generation, complex reasoning, and reference consistency. In addition, its inference speed is much faster than the previous generation and it can generate stunning high-definition images up to 4K resolution.
->
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-38.png)
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-50.png)
-
-**Main capabilities:**
-
-- **Text-to-image**: Generate images from text prompts, supporting many styles (realistic, cartoon, ink, cyberpunk, etc.)
-- **Style transfer**: Convert an image into a specified artistic style
-- **Image variants**: Generate new images in similar styles from reference images
-- **Resolution enhancement**: Improve image clarity and detail
-- **Image editing**: Edit existing images through natural-language instructions
-
-**Why choose Seedream?**
-
-- **Stable domestic network access**: Fast access and low latency in China
-- **Excellent output quality**: Reliable performance in ecommerce and asset-generation scenarios
-- **Chinese-optimized understanding**: Better understanding of Chinese prompts for domestic users
-- **Fast speed**: High generation efficiency and short response times
-- **Stable quality**: Can generate high-definition images up to 4K
-
-**Typical use cases:**
-
-- Ecommerce: Generate main images, detail-page assets, and promotional posters
-- Social media: Generate avatars, stickers, and supporting visuals
-- Design: Quickly produce concept images, assets, and backgrounds
-- Marketing: Create ad images, campaign banners, and holiday posters
-
-**How it works with Qwen3 VL:**
-
-These two APIs can be chained together: first use Qwen3 VL to analyze a reference image and understand scene content, then use Seedream to generate new images based on prompts derived from that analysis.
-:::
-
-Many "AI posters / AI product main images / AI character images" you see on Douyin, Bilibili, or YouTube are fundamentally built with this kind of technology. What you need to do is simple: organize user input into one sentence, request the image API, and display the returned image. The model used here is an image generation / image editing model.
-
-We will demonstrate step by step how to integrate the Seedream API into your project (with AI IDE assistance).
-
-After visiting the [homepage](https://www.volcengine.com/experience/ark?launch=seedream), click login.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-07.png)
-
-After logging in, find the top-right recharge option.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-22.png)
-
-Real-name verification is required before recharge.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-30.png)
-
-After verification succeeds, you can [recharge 1 RMB for testing](https://console.volcengine.com/finance/fund/recharge).
-
-Return to the [initial page](https://www.volcengine.com/experience/ark?launch=seedream) and click API Access.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-43.png)
-
-First, create an API key, then click the model selection option.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
-
-This takes you to step 2. Here, confirm the service model is Seedream 4.5 and copy the provided call example. (The screenshot was taken earlier, so the model version shown there is still 4.0.)
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-11.png)
-
-Once the API Key and call example are ready, you can paste them directly into the AI IDE and ask it to generate a frontend interactive demo or integrate the capability into your current prototype. Notice that in the screenshot you can choose text-to-image or multi-image-to-single-image mode. Select the reference code according to your specific requirement.
-
-::: warning ⚠️ Important note
-The default example here is relatively complex. Remember to disable **"Add watermark"** and **"Streaming response"** to ensure no watermark is generated and requests do not fail.
-:::
-
-Since we later use reference-image generation mode, we first use the multi-image-to-single-image feature. The reference code is copied as follows:
-
-```text
+```bash
 curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer xxxxxxx" \
+  -H "Authorization: Bearer ${ARK_API_KEY}" \
   -d '{
-    "model": "doubao-seedream-4-5-251128",
-    "prompt": "Replace the outfit in image 1 with the outfit in image 2",
-    "image": ["https://ark-project.tos-cn-beijing.volces.com/doc_image/seedream4_imagesToimage_1.png", "https://ark-project.tos-cn-beijing.volces.com/doc_image/seedream4_imagesToimage_2.png"],
-    "sequential_image_generation": "disabled",
+    "model": "<copy the current image model ID from the console>",
+    "prompt": "Turn the black backpack in the reference image into a clean vertical product poster. Do not add text, a logo, or a price, and do not change the structure of the backpack.",
+    "image": ["https://example.com/product-reference.png"],
     "response_format": "url",
-    "size": "2K",
     "stream": false,
-    "watermark": true
-}'
+    "watermark": false
+  }'
 ```
 
-With the image reference code prepared, we ask the AI IDE to support common image-task features in ecommerce:
+![Image generation integrated into the product](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
 
-```text
-Please help me implement common ecommerce features in this project based on the API below (for example, poster generation, Douyin ecommerce hero-image generation, etc.)
+Image URLs often expire. A prototype can display one directly, but a production application should decide whether to copy the image into its own storage under the service's terms, and should record the prompt, model version, and generation time.
 
-<paste the API KEY and the image-editing code here>
-```
+## 9. Speech recognition and synthesis are different APIs
 
-Implementation result:
+“Add speech” covers at least two directions:
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
+- **ASR / STT** turns a user's speech or audio file into text.
+- **TTS** turns text into playable speech.
 
-It is worth noting that image generation often encounters odd failures. It is recommended that AI IDE always shows full error details so you can copy and debug effectively. For example, you can say:
+They have different inputs, outputs, and page interactions. Do not combine them behind one vague “Speech API” button.
 
-```text
-Don't only show "image generation failed." Please always display the full failure reason, such as model mismatch, request errors, or timeout details.
-```
+### 9.1 Speech-to-text: upload audio and return a transcript
 
-Sometimes updates after edits may still not be reflected on the page. If you keep seeing errors after multiple rounds, you can also try telling the AI IDE directly: please restart this project.
-
-In ecommerce scenarios, we may want clothes uploaded by users to be automatically worn by a model, or automatically generate attractive product sales images and posters. Here we try a prompt that asks for an ecommerce poster:
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-14-10.png)
-
-You can combine text-to-image and image-to-image APIs based on your own business scenario ideas.
-
-## More Different Image Service Options
-
-Below are additional choices. It's recommended to first run through a working Qwen image generation result, then replace with another service based on quality and cost.
-
-### Recraft Integration
-
-If your prototype is more design-production oriented (for example brand-style illustrations, marketing posters, vector-style assets), Recraft is often a better fit. The integration method is exactly the same: **get a Key + find official examples + let AI IDE wire them into your page/button**.
-
-::: details Learn More: What is Recraft?
-
-> Recraft is an AI tool for designers, illustrators, and marketers, founded in 2022 (US) with headquarters in London. It supports generating and iterating visual content (images, vector art, and 3D graphics), with strengths in output quality, element-level control, and brand-consistent design.
->
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-23-34.png)
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-23-42.png)
-
-First, go to the [API entry](https://www.recraft.ai/profile/api) to obtain an API Key.
-
-Recraft currently does not provide a free quota in this workflow, so you'll need to top up credits yourself.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/image40.png)
-
-Then follow the same process and use official documentation examples:
-
-- <https://www.recraft.ai/docs/api-reference/getting-started>
-- <https://www.recraft.ai/docs/api-reference/usage>
-- <https://www.recraft.ai/docs/api-reference/guides>
-
-:::
-
-### Qwen Image / Qwen Image Edit Integration
-
-If you want a relatively simple way to integrate image generation, Qwen Image is also a good choice. The approach is unchanged: treat it as an image API and connect it to your prototype button.
-
-::: details Learn More: What are Qwen Image and Qwen Image Edit?
-
-**Qwen Image** is Alibaba Tongyi's image generation model family, mainly including two model types:
-
-**1. Qwen Image: Text-to-Image**
-
-Generate a brand-new image from text prompts. You provide a description, the model interprets it and generates matching visuals.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-43-30.png)
-
-Main capabilities:
-
-- **Text-to-image**: Supports multiple styles (realistic, cartoon, ink, cyberpunk, etc.)
-- **Style transfer**: Convert an image into a target artistic style
-- **Image variation**: Generate new images with similar style from references
-- **Resolution enhancement**: Improve clarity and details
-
-**2. Qwen Image Edit: Image-to-Image**
-
-Edit existing images through natural language instructions.
-
-Main capabilities:
-
-- **Local replacement**: Replace specific objects/characters (e.g. "change the background to a beach")
-- **Element removal**: Remove unwanted elements
-- **Style conversion**: Apply filters or artistic effects
-- **Image expansion**: Extend the image boundary and generate new content
-- **Smart retouching**: Auto-enhance quality, lighting, and defects
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-17.png)
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-29.png)
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-33.png)
-
-Why choose the Qwen Image series:
-
-- Better Chinese prompt understanding
-- Lower cost compared with many global alternatives
-- Fast generation speed
-- Stable output quality in ecommerce and content scenarios
-- Rich style diversity
-
-Typical use cases:
-
-- Ecommerce: main images, detail-page images, promo posters
-- Social media: avatars, stickers, visual assets
-- Design: quick concept assets, background assets
-- Marketing: ad visuals, event banners, holiday posters
-:::
-
-Open [SiliconFlow](https://siliconflow.cn/) and use the Playground (without calling APIs) to test model effects. Use the top "Filters" option to narrow to image-generation models and choose `Qwen/Qwen-Image`.
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-52-56.png)
-
-After confirming the model, check the official API reference and open the [image generation API section](https://docs.siliconflow.cn/cn/api-reference/images/images-generations). Then send the example request plus your API key to AI IDE.
+The [SiliconFlow transcription documentation](https://docs.siliconflow.cn/cn/api-reference/audio/create-audio-transcriptions) uploads a file as `multipart/form-data`, unlike the JSON requests above.
 
 ```bash
 curl --request POST \
-  --url https://api.siliconflow.cn/v1/images/generations \
-  --header 'Authorization: Bearer <token>' \
-  --header 'Content-Type: application/json' \
-  --data '
-{
-  "model": "Qwen/Qwen-Image-Edit-2509",
-  "prompt": "an island near sea, with seagulls, moon shining over the sea, light house, boats in the background, fish flying over the sea"
-}
-'
+  --url https://api.siliconflow.cn/v1/audio/transcriptions \
+  -H "Authorization: Bearer ${SILICONFLOW_API_KEY}" \
+  -F "file=@meeting.mp3" \
+  -F "model=FunAudioLLM/SenseVoiceSmall"
 ```
 
-You can use either `Qwen/Qwen-Image` or `Qwen/Qwen-Image-Edit-2509`.
+When you give the official example to the AI IDE, describe the page feature like this:
 
-::: details Image Edit Reference Code
+```text
+Add an “Upload and transcribe” button to the current page.
 
-Copy the code below plus your key into AI IDE:
+After the user uploads an mp3, m4a, or wav file, call the API below from the server,
+then put the returned transcript in an editable text box.
+Keep the API key in an environment variable and let the user retry after an upload or transcription error.
 
-```python
-import requests
-import os
-from typing import Dict, Any, Optional
-
-SILICONFLOW_API_KEY: str = ""
-SILICONFLOW_BASE_URL: str = "https://api.siliconflow.cn/v1/images/generations"
-QWEN_IMAGE_EDIT_MODEL: str = "Qwen/Qwen-Image-Edit-2509"
-
-def generate_image_edit(
-    prompt: str,
-    image: Optional[str] = None,
-    image2: Optional[str] = None,
-    image3: Optional[str] = None,
-    negative_prompt: Optional[str] = None,
-    cfg: Optional[float] = 4.0,
-    seed: Optional[int] = None
-) -> Optional[Dict[str, Any]]:
-    payload: Dict[str, Any] = {
-        "model": QWEN_IMAGE_EDIT_MODEL,
-        "prompt": prompt,
-    }
-    if image:
-        payload["image"] = image
-    if image2:
-        payload["image2"] = image2
-    if image3:
-        payload["image3"] = image3
-    if negative_prompt:
-        payload["negative_prompt"] = negative_prompt
-    if cfg is not None:
-        payload["cfg"] = cfg
-    if seed is not None:
-        payload["seed"] = seed
-
-    headers: Dict[str, str] = {
-        "Authorization": f"Bearer {SILICONFLOW_API_KEY}",
-        "Content-Type": "application/json"
-    }
-
-    try:
-        response = requests.post(SILICONFLOW_BASE_URL, json=payload, headers=headers)
-        response.raise_for_status()
-        return response.json()
-    except requests.exceptions.RequestException as e:
-        print(f"Error generating image: {e}")
-        return None
-
-def save_image_from_url(image_url: str, output_path: str = "image.png") -> bool:
-    try:
-        response = requests.get(image_url)
-        response.raise_for_status()
-        os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else ".", exist_ok=True)
-        with open(output_path, "wb") as f:
-            f.write(response.content)
-        print(f"Image saved successfully to: {output_path}")
-        return True
-    except requests.exceptions.RequestException as e:
-        print(f"Error downloading image: {e}")
-        return False
-    except Exception as e:
-        print(f"Error saving image: {e}")
-        return False
-
-prompt: str = "Change the sky to dusk, add moon and stars, dreamy style"
-negative_prompt: str = "blur, low quality, distortion"
-image_url: str = "https://inews.gtimg.com/om_bt/Os3eJ8u3SgB3Kd-zrRRhgfR5hUvdwcVPKUTNO6O7sZfUwAA/641"
-image2_url: Optional[str] = None
-image3_url: Optional[str] = None
-
-cfg: float = 4.0
-seed: int = 12345
-output_path: str = "edited_image.png"
-
-print(f"Generating edited image with prompt: {prompt}")
-print(f"Input image: {image_url}")
-print(f"CFG: {cfg}, Seed: {seed}")
-print("-" * 50)
-
-result = generate_image_edit(
-    prompt=prompt,
-    image=image_url,
-    image2=image2_url,
-    image3=image3_url,
-    negative_prompt=negative_prompt,
-    cfg=cfg,
-    seed=seed
-)
-
-if result and "images" in result:
-    images = result["images"]
-    if images and len(images) > 0:
-        image_url_result = images[0]["url"]
-        print(f"Image edit generated successfully. URL: {image_url_result}")
-        success = save_image_from_url(image_url_result, output_path)
-        if success:
-            print(f"Image saved to: {output_path}")
-        else:
-            print("Failed to save image to local file")
-    else:
-        print("No images found in response")
-else:
-    print("Image generation failed")
-    if result:
-        print(f"Response: {result}")
+Here is the official example:
+<paste the curl example above>
 ```
 
+### 9.2 Text-to-speech may return audio rather than JSON
+
+The [MiniMax T2A HTTP documentation](https://platform.minimax.io/docs/api-reference/speech-t2a-http) provides synchronous speech synthesis. Its current example uses `speech-2.8-hd`; always confirm the model and voice on the platform.
+
+For speech synthesis, the “prompt” mainly consists of the spoken script and voice settings. Rewrite numbers, English abbreviations, and pauses for speech before selecting the voice, speed, volume, emotion, and output format. Do not send a whole page of Markdown, URLs, and button labels to the narrator.
+
+```bash
+curl --request POST \
+  --url https://api.minimax.io/v1/t2a_v2 \
+  --header "Authorization: Bearer ${MINIMAX_API_KEY}" \
+  --header "Content-Type: application/json" \
+  --data '{
+    "model": "speech-2.8-hd",
+    "text": "This is a preview of the product introduction.",
+    "stream": false,
+    "output_format": "hex",
+    "language_boost": "auto",
+    "voice_setting": {
+      "voice_id": "<copy the voice_id from the voice list>",
+      "speed": 1,
+      "vol": 1,
+      "pitch": 0
+    },
+    "audio_setting": {
+      "sample_rate": 32000,
+      "bitrate": 128000,
+      "format": "mp3",
+      "channel": 1
+    }
+  }'
+```
+
+A speech page normally also needs Preview, Stop, Generate again, and Download controls. Streaming TTS uses WebSocket or streaming HTTP and plays each audio segment as it arrives.
+
+::: warning Voice and privacy
+Before uploading a recording, explain its purpose, retention period, and deletion method. Voice cloning requires the explicit permission of the voice owner. Do not use recordings of public figures or other people when their source and permission are unclear.
 :::
 
-# Appendix: How to Find Stronger AI Models Today
+## 10. Video generation: create a task, then wait for the result
 
-Text model development moves quickly, so you should regularly verify whether your chosen model is still competitive. The two websites below are useful for tracking model quality, popularity, and cost-performance.
+Video generation usually uses an asynchronous API. The [MiniMax video generation guide](https://platform.minimax.io/docs/guides/video-generation) divides the process into three steps: create a job and receive a `task_id`, query its status to obtain a `file_id`, then request the download address.
 
-You can think of them as model arenas: they compare outputs from different models and let people vote or inspect benchmark dimensions.
+### 10.1 Explain how the scene changes
 
-## LMArena
+An image describes one frame; a video prompt must also say what happens during the next few seconds. State the product's starting position, order of movement, camera direction, and duration:
 
-Website: <https://lmarena.ai/>
+```text
+Show this black backpack on a light-gray display stand for six seconds.
+Move the camera slowly from the front toward the right, then move slightly closer.
+Keep the video vertical. Do not change the backpack or add people, text, or a logo.
+```
 
-LMArena is useful for seeing which model responses users generally prefer. More votes and higher scores usually suggest more stable quality in real usage.
+If the prompt contains many actions, begin with one shot and one main movement. Asking for rotation, opening, zooming, and scene changes in a short video makes it harder to keep the product consistent.
 
-A practical workflow:
+### 10.2 Creation and status checking are separate requests
 
-1. Check the leaderboard
-2. Filter by your target task (general chat / coding / vision)
-3. Pick one model from the top candidates that meets your access, latency, and budget constraints
+```bash
+# Step 1: create the task
+curl --request POST \
+  --url https://api.minimax.io/v1/video_generation \
+  --header "Authorization: Bearer ${MINIMAX_API_KEY}" \
+  --header "Content-Type: application/json" \
+  --data '{
+    "model": "MiniMax-Hailuo-2.3",
+    "prompt": "Show this black backpack on a light-gray display stand. Move the camera slowly from the front toward the right, then move slightly closer. Do not change the backpack or add people, text, or a logo.",
+    "duration": 6,
+    "resolution": "1080P"
+  }'
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/image.png)
+# Step 2: query status with the task_id returned above
+curl --request GET \
+  --url "https://api.minimax.io/v1/query/video_generation?task_id=<TASK_ID>" \
+  --header "Authorization: Bearer ${MINIMAX_API_KEY}"
+```
 
-## Artificial Analysis
+The page should display at least `Preparing`, `Queueing`, `Processing`, `Success`, and `Fail`. Poll at intervals and define when to stop. A production service can use the documented `callback_url` so the platform notifies your server when the state changes.
 
-Website: <https://artificialanalysis.ai/>
-
-Artificial Analysis is useful when you want to compare quality, price, and speed on one dashboard.
-
-Common workflow:
-
-1. Choose the model category you care about (text / image generation / etc.)
-2. Compare Quality + Price + Latency/Throughput
-3. Select the model with the best overall fit for your product constraints
-
-::: tip ✅ Recommendation
-Do not argue model quality by feeling. A more reliable method is to test the same input set against 2-3 models, then decide with ranking and pricing data.
+::: warning Video and real-person assets
+When generating video from a real person's photo or voice, a trademark, or copyrighted material, confirm the permission and platform rules. Some services also require face verification, asset registration, or content moderation. These are not technical steps that should be bypassed in the browser.
 :::
 
-## Summary
+## 11. Diagnose common problems
 
-When integrating AI services, you don't need to overcomplicate API concepts. Most scenarios can be solved if you lock onto these essentials:
+| Symptom | Check first |
+| --- | --- |
+| `401 / 403` | Whether the key is correct, has permission, and is in the correct request header |
+| `404` | Whether the base URL, endpoint, or model ID has changed |
+| `429` | RPM, TPM, concurrency, or the account's usage tier |
+| `400` | Required parameters, file type, JSON structure, and size limits |
+| `5xx / timeout` | Service status, timeout settings, and retry strategy |
+| The task stays queued | Concurrency, task-status query, quota, and service load |
+| The page reports success but shows nothing | Response field path, binary handling, and an expired temporary URL |
+| It works locally but fails online | Environment variables, CORS, Serverless timeout, and regional network access |
 
-- **API is a communication bridge**: you send requests, receive model responses
-- **SDK is an API wrapper**: it handles boilerplate (auth, request signing, error handling) and usually saves time
-- **When reading docs, focus on three things**: endpoint, API key, and required parameters
+Keep four pieces of information while debugging: the time, request type, HTTP status, and Request ID or Trace ID. Never write the API key, a complete user recording, or sensitive business data into logs.
 
-Once these are clear, modern IDEs and tooling can handle most implementation details while you focus on business logic.
+## 12. 📚 Chapter assignment
 
-# 5. 📚 Assignment: Integrate Your First AI Capability
+<StageAssignmentCard title="Add one AI capability to your prototype">
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🚀 Challenge: Integrate AI Capability into Your Workbench</div>
-  </template>
+  <p>Choose one button on the page that genuinely needs AI. The first version only needs one capability; you do not have to add text, image, speech, and video all at once.</p>
 
-  <p>
-    Follow this chapter's prompts and complete one full loop:
-  </p>
+  <ol>
+    <li>Find the current model ID and smallest example in the official documentation.</li>
+    <li>Give the example to the AI IDE and connect it to the button on the page.</li>
+    <li>Store the API key in a server environment variable and add waiting and failure messages.</li>
+    <li>Make a real call, then confirm in Usage or the logs that it reached the service.</li>
+  </ol>
 
-  <ul>
-    <li>
-      <strong>Full Loop Practice</strong>
-      <ul>
-        <li>Choose and integrate one AI service (LLM / text-to-image / image-to-image) → complete frontend/backend interaction → integrate into your prototype</li>
-      </ul>
-    </li>
-    <li>
-      <strong>Share Results</strong>
-      <ul>
-        <li>Take a screenshot of your feature page and share it</li>
-      </ul>
-    </li>
-    <li>
-      <strong>Thinking Exercise</strong>
-      <ul>
-        <li>For the next "Complete Project Practice" chapter, think ahead: how will you combine these AI capabilities into one practical and interesting workflow?</li>
-      </ul>
-    </li>
-  </ul>
-</el-card>
+  <p>When it works, save one screenshot and explain in one sentence what AI helps the user do on this page. Confirm permission before using someone else's image, voice, or real-person material.</p>
+</StageAssignmentCard>
 
-## Next Step
+## Next step
 
-In the next chapter, we will connect these separate AI capabilities into one complete product based on a real business scenario:
-
-- Connect content planning, product listing, and data analysis into one end-to-end workflow
-- Embed this chapter's AI capabilities (LLM copywriting, text-to-image, image editing) into concrete business nodes
-- Build a truly usable "Ecommerce AI Workbench" instead of isolated demos
+The next chapter places these capabilities back into a complete product flow. We will add data, states, and user feedback so that a single API call becomes a prototype people can use repeatedly.
 
 <RelatedArticlesSection
-  title="Related Articles"
-  description="A recommended learning path from single-point AI capabilities to complete product workflows."
+  title="Related articles"
+  description="Move from one AI capability to a complete product flow."
   :items="relatedArticles"
 />

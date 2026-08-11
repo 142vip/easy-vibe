@@ -1,809 +1,480 @@
 ---
-title: 'プロトタイプに AI 能力を追加 - テキストと画像 API の統合'
-description: '既存の Web プロトタイプに本物の AI 能力を統合する：API の核心概念を理解し、API Key と公式サンプルの見つけ方を習得。DeepSeek テキストモデルと各種画像生成サービス（SiliconFlow Qwen-Image、Recraft、Seedream）の実践的統合、およびモデル選定の一般的な方法を習得します。'
+title: 'プロトタイプに AI 機能を組み込む'
+description: 'プロンプト設計、公式ドキュメント、サービスコンソールの確認から始め、Web プロトタイプにテキスト・画像・音声・動画の AI 機能を組み込みます。'
 ---
 
 <script setup>
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
+import AiCapabilityGuide from '../../../zh-cn/stage-1/integrating-ai-capabilities/AiCapabilityGuide.vue'
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 
-const duration = '約 <strong>1 日</strong>'
+const duration = '約 <strong>1〜2 日</strong>'
 const relatedArticles =
   relatedArticlesMap['ja-jp/stage-1/integrating-ai-capabilities'] ?? []
 </script>
 
-# 初級四：プロトタイプに AI 能力を注入する
+# プロトタイプに AI 機能を組み込む
 
-## 章節ガイド
+<ProductJourney current="ai" />
 
-<ChapterIntroduction :duration="duration" :tags="['API', 'テキストモデル', 'テキストから画像', 'プロトタイプ統合']" coreOutput="プロトタイプに1つのテキストモデル＋1つの画像モデルを統合（画像はオプション）" expectedOutput="実際の API を呼び出せる AI プロトタイプ">
+## この章で学ぶこと
 
-前の章では、<strong>良いアイデアを見つける</strong>ことから<strong>プロダクトプロトタイプを作る</strong>ことまでの完全なフローを完了しました。しかし、現在のプロトタイプはまだ「空っぽの殻」です——ボタンをクリックしてもコンテンツは本当に生成されず、ページ上のデータはすべて固定値です。
+<ChapterIntroduction :duration="duration" :tags="['プロンプト', 'API ドキュメント', 'サービスコンソール', 'マルチモーダル']" coreOutput="プロトタイプに 1〜2 種類の実際の AI 機能を組み込む" expectedOutput="テキスト・画像・音声・動画サービスを呼び出せる Web プロトタイプ">
 
-第1章で強調したことを覚えていますか？<strong>私たちは「人が支払うプロダクト」を作りたいのであって、「見た目がまともなプロトタイプ」を作りたいのではない。</strong> 本当の価値はプロダクトが<strong>本当の問題を解決</strong>することから生まれ、そのためにはプロトタイプが<strong>本当に動く</strong>必要があります。
+前章で作ったプロトタイプは、画面構成と操作の流れを確認できるようになりました。ただし、生成結果はまだダミーデータです。この章では、その中の中心的な操作を実際の AI サービスにつなぎます。
 
-この章では、プロトタイプを<strong>「生きたもの」</strong>にします：<strong>実際の AI 能力</strong>を統合し、API Key の取得から、公式ドキュメントの読解、AI IDE にインターフェースの統合を任せるまでをカバーします。<strong>DeepSeek テキストモデル</strong>を例に、アプリケーションが<strong>実際に大規模モデルを呼び出してコンテンツを生成</strong>する方法を学びます。興味があれば、<strong>画像生成の統合（オプション）</strong>にも挑戦できます。
+AI の組み込みは、API コードをコピーするだけでは終わりません。**仕事をどう説明するか、公式ドキュメントをどう読むか、呼び出しを製品の流れにどう安全に置くか**を同時に考えます。
 
-この章を学び終えると、プロトタイプは<strong>静的なデモではなくなります</strong>。それは<strong>実際の AI 能力を呼び出し、本当の問題を解決できるアプリケーション</strong>になります。
+まず共通の進め方を身につけ、その後でテキスト、画像理解、画像生成、音声、動画を順に見ます。モデル名やコンソール画面は更新されるため、ここでの例は構造を理解するためのものです。実際に接続するときは、各サービスの最新公式ドキュメントからモデル ID とパラメータを確認してください。
 
 </ChapterIntroduction>
 
 <div style="margin: 50px 0;">
   <ClientOnly>
     <StepBar :active="0" :items="[
-      { title: 'API 基礎', description: '核心概念とセキュリティ規範を理解' },
-      { title: 'テキスト統合', description: 'DeepSeek テキスト生成実践' },
-      { title: '画像統合', description: 'VLM 画像理解と生成' }
+      { title: '仕事を明確にする', description: '業務用プロンプトを用意する' },
+      { title: 'ドキュメントを読む', description: 'API とパラメータを見つける' },
+      { title: '接続する', description: '安全な呼び出しを動かす' },
+      { title: '種類を広げる', description: '画像・音声・動画へ進む' }
     ]" />
   </ClientOnly>
 </div>
 
-# 1. API の基礎概念
+## 1. どの機能を接続するか決める
 
-前述の通り、私たちの目標は「AI 能力を組み込む」ことで、プロトタイプを静的なデモではなく、実際の AI サービスを呼び出せるツールにすることです。これを実現する鍵は、API（Application Programming Interface）を理解し、使用することです。
+前章の EC コンテンツ作業画面には、商品情報と「商品文を生成」ボタンがあります。しかし結果はまだダミーです。まず、このボタンを本当に動かします。
 
-API はコンピュータサイエンスにおける重要な抽象概念で、簡単に理解できます：**相手が指定した形式で「質問」を送ると、相手も同じ形式で「結果」を返す**。
+流れは単純です。利用者が商品名、素材、特徴を入力してボタンを押すと、商品紹介文が返ります。入力も結果も文字なので、必要なのはテキストを生成できるモデルです。
 
-- **あなたが送る内容**：通常は「API Key」と「何を生成したいか」
-- **相手が返す内容**：成功すれば結果を返す。失敗すれば理由を伝える（「Key が間違っている」「残高不足」「パラメータエラー」など）
+画面の機能が違えば、必要な AI も変わります。たとえば次のように考えます。
 
-具体的には、以下の核心的な要素を把握する必要があります：
+- 商品写真から色や形を読み取るなら画像理解。
+- 商品情報からポスターを作るなら画像生成。
+- 録音を議事録にするなら、最初に音声を文字へ変換し、その後にテキストモデルで整理。
+- 記事を聞ける音声にするならテキスト読み上げ。
+- 商品写真を動かすなら画像から動画を生成する機能。
 
-1. **API Key**：あなたの「通行証」であり「財布の鍵」。他人に渡されると、あなたの代わりに API を呼び出して費用が発生します。
-2. **Endpoint（エンドポイント）**：API リクエストの具体的なパスで、どの機能にアクセスするかをサーバーに伝えます。完全なリクエスト URL は通常「ベース URL ＋ Endpoint パス」で構成されます。例：
-   - テキスト生成：ベースURL (`https://api.service.com`) ＋ Endpoint (`/v1/chat/completions`) ＝ 完全URL `https://api.service.com/v1/chat/completions`
-   - 画像生成：ベースURL (`https://api.service.com`) ＋ Endpoint (`/v1/images/generations`) ＝ 完全URL `https://api.service.com/v1/images/generations`
-3. **呼び出し/リクエスト**：AI サービスにタスクを送信し、結果を取得するプロセス
-4. **リクエスト内容**：AI に送信する具体的な内容。AI に書かせたい記事のテーマ、生成したい画像の説明など。
-5. **レスポンス結果**：AI が処理完了後に返す内容。生成された記事、画像など。
-6. **エラーハンドリング**：問題が発生した時（API Key エラー、リクエスト過多など）、どのようにトラブルシューティングするか。
+接続前に画面を見直し、「利用者は何を渡し、最後に何を見たいのか」を確認します。この二つが分かれば、テキスト・画像・音声・動画のどれを探せばよいか判断できます。
 
-::: info ℹ️ API とは
-API についてのより深い解説は、付録の [API 入門](/zh-cn/appendix/4-server-and-backend/api-intro) をご覧ください。
+<AiCapabilityGuide />
 
-::: warning 🔐 **API セキュリティに関する注意事項**
-API Key は AI サービスにリクエストするための「通行証」であり、認証と課金に使用されるパスワード文字列です。
+### 1.1 一つの機能を数段階に分けることもある
 
-API Key はアカウントと課金に直接関連しているため、以下の点に注意してください：
+すべての機能を一つのモデルで一度に終えられるわけではありません。「商品写真をアップロードして特徴を書く」なら、最初に写真の商品を読み取り、その結果から文章を作ります。「社内資料をもとに質問へ答える」場合も、関連資料を探してから回答を組み立てます。
 
-- 絶対に<strong>グループチャット、スクリーンショットのネット投稿</strong>、公開フォーラムへの投稿はしない
-- <strong>コードにハードコードして Git リポジトリにコミットしない</strong>（特に公開リポジトリ）
-- Key の漏洩が疑われる場合は、<strong>直ちに新しい Key に変更する</strong>
+分解するときはモデル名から考えません。利用者の操作を追い、既存の内容を理解する段階、新しい内容を作る段階、資料を探すだけの段階に分けます。必要なら二つ、三つの機能を順につなぎます。
 
-以下の内容では、<strong>API KEY を AI IDE に直接貼り付けて操作</strong>します。<strong>正式なプロジェクトでは絶対にこの方法を使わないでください！！</strong>練習なのでこの方法を使います。（より熟练になったら、AI に設定ファイルを生成させ、API KEY を設定ファイルに配置するだけで済みます）
-:::
+AI に任せるのは、AI が得意な部分だけです。ログイン、決済、ファイル保存、画面遷移のようにルールが決まっている処理は、通常のプログラムで実装します。
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="1" :items="[
-      { title: 'API 基礎', description: '核心概念とセキュリティ規範を理解' },
-      { title: 'テキスト統合', description: 'DeepSeek テキスト生成実践' },
-      { title: '画像統合', description: 'VLM 画像理解と生成' }
-    ]" />
-  </ClientOnly>
-</div>
+![商品画像を理解してから商品説明を生成する実際の画面](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
 
-# 2. テキスト生成 API の統合：DeepSeek
+*このプロトタイプでは、商品画像を読み取って情報を表示し、利用者が確認した後に編集可能な説明と特徴を生成します。*
 
-API にはこれらの技術概念が含まれますが、プロトタイプ開発段階では、実際の操作は非常にシンプルで効率的です。核心的なアプローチは：
+### 1.2 サービスコンソールで探すもの
 
-> **公式サンプルを見つけ、API Key を取得し、AI IDE にボタンに統合させる。**
+テキスト生成を使うと決めたら、DeepSeek、SiliconFlow、火山方舟、MiniMax などのサービスを開きます。サービス側はアカウント、課金、呼び出し口を提供し、選択したモデルが要求を処理します。
 
-これらの概念を習得すると、テキストモデルでも画像モデルでも、本質的なフローは同じことがわかります：ユーザーがボタンをクリックすると、フロントエンドが入力を整理してリクエストを送信し、インターフェースが結果を返したら、ページに結果を表示する。次に、実際の操作でこれを確認します。
+初回から全メニューを読む必要はありません。次の四つを見つけます。
 
-`1.2 プロトタイプを作る` で、あなたはすでにインタラクティブなプロトタイプを作りました。次にやることは、プロトタイプの中の「AI のように見える機能」を本当に使える能力に変えることです：**ユーザーがボタンをクリックすると、プロトタイプが外部の AI サービスにリクエストを送信し、返されたテキストを表示する。**
+1. API 呼び出しに使う **API Key** を作る。
+2. 使用する **Model ID** を控える。
+3. 公式ドキュメントから最小の curl または JavaScript 例を探す。
+4. 利用枠、料金、呼び出し制限を確認する。
 
-::: info ℹ️ 原理の詳細
-原理に関する詳細を知りたい場合は、付録の [大規模言語モデル（LLM）入門](/zh-cn/appendix/8-artificial-intelligence/llm-principles) をご覧ください。
-::: details 詳細：DeepSeek とは？
+アプリは **API** を通じて商品情報をモデルへ送ります。JavaScript や Python の **SDK** があれば、それを使ってもかまいません。SDK はリクエスト処理を使いやすくまとめたものです。リクエスト内の「商品情報からタイトルと特徴を書いてください」という文章が、モデルへ渡すプロンプトです。
 
-**杭州深度求索人工知能基礎技術研究有限公司**（Hangzhou DeepSeek Artificial Intelligence Basic Technology Research Co., Ltd.）、DeepSeek を商号とする、<strong>大規模言語モデル（LLMs）を開発する中国の人工知能（AI）企業</strong>です。DeepSeek は本社を浙江省杭州に置き、中国のヘッジファンド幻方量化（High-Flyer）に所有・資金提供されています。DeepSeek は幻方量化の共同創業者である梁文鋒氏によって2023年7月に設立され、彼は両社の CEO も務めています。同社は2025年1月に同名のチャットボットと DeepSeek-R1 モデルをリリースしました。
+サービス名、Model ID、API アドレスは別物です。コードには公式例に記載されたアドレスと Model ID を使い、オンライン体験画面の URL を貼らないでください。
 
-DeepSeek の GPQA ベンチマークランキングにおける他のトップモデルとのパフォーマンス比較を見てみましょう。注目すべきは、DeepSeek はオープンソース（誰でもインターネットからモデルをダウンロード可能）モデルですが、Grok、Google Gemini、ChatGPT などの一般的なモデルはクローズドソースです。ご覧の通り、DeepSeek はすでに第一陣のモデルに大きく迫っています。
+### 1.3 今は分からない API を後回しにする
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-16-48.png)
+コンソールには Embedding、Rerank、Function Calling、OCR、コンテンツ審査なども並びます。Embedding と Rerank は知識ベース、OCR は PDF や伝票の読み取り、Function Calling は検索やデータベースなど外部ツールの利用で使います。
 
-GPQA は「大学院レベル Google-Proof Q&A ベンチマーク」の略で、科学 Q&A タスクのための大学院レベルのベンチマークです。詳細は以下の通りです。
+今すべてを覚える必要はありません。画面の機能に直接必要な API を一つ接続し、必要になった時点で該当ドキュメントへ戻ります。
 
-GPQA は448の多肢選択問題を含み、生物学、物理学、化学のサブ分野（量子力学、有機化学、分子生物学など）をカバーしています。これらの問題は61人の博士号取得者または博士課程在籍中の専門家によって作成され、厳格な検証プロセスを経ています。
-:::
+## 2. まず生成結果を試す
 
-この3ステップに従えば、大規模モデル生成 API の迅速な統合が可能です：
+API コードを書く前に、サービスのオンライン体験画面で試します。「文章を書けるか」だけでなく、画面が必要とする形式で結果を返せるか確認するためです。
 
-1. **DeepSeek プラットフォームで API Key を作成する**
-2. **DeepSeek ドキュメントでテキスト生成サンプルを見つける**（通常はコピペで使えるサンプルコードがある）
-3. **AI IDE を開き、API Key ＋公式サンプルを貼り付け**、AI に実現したい機能を伝える：
-   > この大規模モデルの API を統合して、このアプリのコピーライティング生成タスクをサポートしてください
+### 2.1 利用者は目的を自然に伝えればよい
 
-次にデモを行います。以下の全フローに沿って操作できます。まず [DeepSeek](https://platform.deepseek.com/usage) にアカウントを登録し、API Key を作成して、少額をチャージして検証します。
+オンライン画面では、実際の利用者と同じように入力します。
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-13.png)
-
-「API KEYS」をクリックし、画面下部の「create new API key」を見つけます。最終的に `sk-8573341c39fc44315aadc071c53rh7d2` のような API key が得られます。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-32.png)
-
-Key を取得すると、モデルを呼び出す権限を持てます。
-
-ここで、[API](https://api-docs.deepseek.com/) ドキュメントを直接読むことができます。通常、curl または Python の呼び出しサンプルが提供されています。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-58-56.png)
-
-サンプルを見つけたら、ドキュメントの内容と Key をすべて AI IDE のチャットボックスにコピーし、大規模言語モデルを既存のプロトタイプに統合するよう依頼できます。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-59-31.png)
-
-プロンプトの参考：
-
+```text
+軽量な通勤用リュックを販売したいです。黒いナイロン製で、
+主に日常の通勤に使います。
+短い商品名と、三つの特徴を書いてください。
 ```
-この呼び出し方法を参考に、コピーライティング生成機能をサポートしてください。商品情報に基づいてクリックすると対応する Douyin EC 用のキャッチコピーを生成し、複数のスタイルをサポートするようにしてください。
 
-以下の参考資料：
-api key：sk-8573341c39aefa1efe
-api リクエスト参考：
-curl  \
+画面に組み込んだ後は、この文章を利用者が毎回作る必要はありません。商品名、素材、色を入力して「商品文を生成」を押せば、プログラムが固定ルールを追加します。価格や売上を作らない、タイトルを長くしない、指定形式で返す、といったルールです。
+
+タイトル、概要、特徴を別々に表示するなら、プログラムから `title`、`summary`、`selling_points` の JSON を返すよう指定できます。利用者の入力は自然なまま、画面は結果を安定して読み取れます。
+
+最初は商品情報を数種類試し、わざと一項目抜いてみます。モデルが不足情報を勝手に作らないか確認します。形式が安定しない場合は、利用者にプロンプトの書き方を覚えさせるのではなく、プログラム側の固定指示を直します。
+
+### 2.2 API を画面へつなぐ
+
+公式ドキュメントには、多くの場合 curl、JavaScript、Python の例があります。その例と実現したい機能を AI IDE に渡し、現在の画面へ接続してもらいます。
+
+```text
+商品詳細ページに「商品文を生成」ボタンを追加してください。
+
+クリックしたら、現在の商品情報を下の API へ送り、
+返ってきた文章をページに表示してください。
+
+API Key はブラウザに置かないでください。待機中と失敗時の表示も付けてください。
+完成したら、必要な設定と起動・確認方法を教えてください。
+
+公式 API の例：
+<実際の Key を含まない curl または SDK の例を貼る>
+```
+
+画面の場所と公式例があれば、AI IDE が API 形式を推測せずに済みます。まず一回のリクエストが正常に返ることを確認します。画像、音声、動画を追加するときは、機能説明と公式例を差し替えます。
+
+## 3. 公式例から最初のリクエストを送る
+
+プロンプトを試したら、次はコードから送ります。公式ドキュメントの Quick Start または API Reference を開き、送信先、API Key の場所、`model` の値、最小例の四点を確認します。
+
+公式の curl、JavaScript、Python 例をコピーし、Model ID とテスト内容だけを変えます。まず端末で正常な応答を一回得てから、プロジェクトへ入れます。画面へつないだ後で失敗しても、アカウント、Key、モデルが使えることは切り分けられます。
+
+返り値も確認します。テキストは JSON 内のフィールド、画像は URL、音声はバイナリ、動画は最初にタスク番号を返す場合があります。画面の実装は、実際の返り値に合わせます。
+
+### 3.1 長いドキュメントは AI と読む
+
+長い API ドキュメントを最初から最後まで読む必要はありません。今見ているリンクを AI IDE に渡し、初回呼び出しに必要な箇所を探してもらいます。
+
+```text
+この API ドキュメントを読んでください：<ドキュメントの URL>
+
+JavaScript から呼び出したいです。最も簡単な例、
+API Key と model を書く場所、生成結果の取得方法を教えてください。
+このページに書かれているパラメータだけを使ってください。
+```
+
+## 4. 初めてサービスコンソールを開く
+
+Key の作成、モデルの選択、使用量の確認は通常コンソールで行います。メニュー名が違っても、作業内容はほぼ同じです。
+
+### 4.1 Key を作り、リクエストが届いたか確認する
+
+API Key は、アプリがモデルを呼び出すための認証情報です。作成後はローカルの環境変数に保存し、スクリーンショット、チャット、フロントエンドコードへ貼りません。漏れた可能性があれば、すぐに失効させて作り直します。
+
+初回リクエスト後に Usage または Billing を開き、新しい記録があるか確認します。残高や Quota もここで分かります。失敗時は、コードから送られていないのか、サービスに拒否されたのか、利用枠がないのかを分けて調べます。
+
+![残高、月間支出、呼び出し傾向を表示する DeepSeek の Usage 画面](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
+
+*DeepSeek の Usage 画面では、呼び出し量、消費額、残高を確認できます。*
+
+エラーに Request ID または Trace ID があれば控えます。同時に多くのリクエストがあっても、この番号で失敗した一件をログから探せます。
+
+### 4.2 モデルを選び、正確な呼び出し名をコピーする
+
+モデル一覧では、現在使えるテキスト、画像、音声、動画モデルを確認できます。詳細画面で、コードに使う Model ID をコピーします。画面上の表示名と異なることがあります。
+
+![テキスト、画像、動画、音声で絞り込める SiliconFlow のモデル一覧](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
+
+*SiliconFlow のモデル一覧は、テキスト、画像、動画、音声の種類で絞り込めます。*
+
+Region を選び、Deployment を作ってから Base URL と Endpoint が発行されるサービスもあります。その場合はクイックスタートに従います。コンソール画面の URL を API アドレスとして使わないでください。
+
+![API Key 作成、モデル選択、テスト手順をまとめた火山方舟のクイック接続画面](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
+
+*火山方舟では、Key 作成、モデル選択、実行例を一つの流れで確認できます。*
+
+### 4.3 使用制限と時間のかかる処理
+
+テキスト API の RPM と TPM は、1 分間に許可されるリクエスト数とトークン数です。画像、音声、動画では Concurrency、つまり同時に実行できる件数も制限されます。上限を超えると通常は `429` が返るため、連打せず時間を置いて再試行します。
+
+動画のような長い処理は、すぐにファイルを返さず Task ID を返します。プログラムから進行状況を照会するか、Callback や Webhook で完了をサーバーへ通知させます。File ID や一時 URL は期限切れになることがあるため、公開前に自分のストレージへ保存するか決めます。
+
+`max_tokens`、`temperature`、`stream` などの値は、最初は公式例のままにします。出力が途中で切れたら `max_tokens`、逐次表示が必要なら `stream` を調整します。必要になるまで、すべてを一度に変更しません。
+
+## 5. 公式例をページへ組み込む
+
+端末の最小例が動いたら、次の順にプロトタイプへ接続します。
+
+1. Key を `.env.local` など Git に入れない環境ファイルへ書く。
+2. サーバーまたは Serverless Function からモデルを呼び出す。
+3. 画面からは第三者の Key を持たず、自分の `/api/...` を呼ぶ。
+4. ボタンに待機、成功、失敗の状態を追加する。
+5. Usage へ戻り、実際の呼び出しが記録されたか確認する。
+
+```text
+ブラウザ画面
+    │ 業務入力だけを送る
+    ▼
+自分の /api ── サーバー環境変数から API Key を読む
+    │
+    ▼
+AI サービス ── 文字、JSON、ファイル、task_id を返す
+```
+
+::: warning API Key を守る
+Vue、React、通常の HTML のフロントエンドコードへ API Key を書かないでください。名前に `VITE_` や `NEXT_PUBLIC_` が付いていても、ブラウザ用ファイルへ含まれる可能性があります。公開時はバックエンド、Serverless Function、保護されたゲートウェイからモデルを呼び出します。
+:::
+
+### 5.1 すぐに結果が返らない API もある
+
+短いテキスト、画像理解、短い音声認識は一回のリクエストで返ることが多く、画面には「生成中」と表示できます。会話やリアルタイム音声はストリーミングで少しずつ届くため、受信しながら表示できます。
+
+画像・動画生成は非同期処理が多く、最初は `task_id` だけを返します。その後、待機中、処理中、成功、失敗を照会します。数十秒かかることもあるため、変化しないローディング表示のままにしません。
+
+## 6. まずテキスト生成を接続する
+
+[DeepSeek API ドキュメント](https://api-docs.deepseek.com/)には、一般的な SDK と互換性のあるテキスト API があります。モデルは更新されるため、接続前に[モデル一覧](https://api-docs.deepseek.com/api/list-models)から現在の ID をコピーします。
+
+最初は curl で一回送ります。オンライン体験と同じ商品情報を使うと結果を比べやすくなります。
+
+```bash
+curl https://api.deepseek.com/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer ${DEEPSEEK_API_KEY}" \
   -d '{
-        "model": "deepseek-chat",
-        "messages": [
-          {"role": "system", "content": "You are a helpful assistant."},
-          {"role": "user", "content": "Hello!"}
-        ],
-        "stream": false
-      }'
-```
-
-AI のコード生成をしばらく待つと、対応するコピーライティング生成ボタンを簡単にテストできます。入口が見つからない場合は、AI IDE にどのページからそのページにアクセスできるか聞いてください。どうしても見つからない場合は、AI IDE に直接アイデアに基づいてリファクタリングと改良を依頼して、最終的なコピーライティング生成結果を得てください。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-23-23.png)
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-26-35.png)
-
-もちろん、ここで「本当に大規模モデルを呼び出しているのか、固定のレスポンスを内蔵しているだけなのか、どうやって確認するの？」と思うかもしれません。カスタムのテキストを入力して、大規模モデルがあなたが即座に指定したカスタム分析に基づいて対応するコピーライティングを生成させることで確認できます。
-
-毎回結果が異なり、論理的であれば、API が正常に呼び出されていると安心できます。[API 使用管理プラットフォーム](https://platform.deepseek.com/usage)で呼び出しが成功したかどうかも確認できます（数分待つ必要がある場合があります）。
-
-## さらに多くのテキスト生成モデルの選択
-
-DeepSeek 以外にも、他の大規模言語モデルも試せます。ほとんどのモデルは **OpenAI 互換インターフェース** を提供しているため、切り替えは非常に簡単です——API Key、ベース URL、モデル名を変更するだけです。
-
-### MiniMax 統合
-
-::: details 詳細：MiniMax とは？
-
-**MiniMax** は中国の人工知能企業で、汎用人工知能技術の研究開発に取り組んでいます。MiniMax は MiniMax-M3 と MiniMax-M2.7 の大規模言語モデルシリーズを順次リリースしており、多くのベンチマークテストで優れたパフォーマンスを示し、非常に高いコストパフォーマンスを誇ります。
-
-**MiniMax シリーズの主な特徴：**
-
-- **超長いコンテキスト**：M3 は最大 1,000,000 トークンのコンテキストウィンドウをサポート（M2.7 は 204,800 トークン）。長文書、多ラウンド対話に適している
-- **高コストパフォーマンス**：非常に競争力のある価格
-- **OpenAI 互換インターフェース**：OpenAI SDK を直接使用して呼び出し可能。新しい API 形式を学ぶ必要がない
-- **利用可能なモデル**：
-  - `MiniMax-M3`：最新のフラグシップモデル。1,000,000 トークンのコンテキスト、最大 128K 出力、テキスト・画像・動画入力をサポート
-  - `MiniMax-M2.7`：前世代のフラグシップモデル、引き続き利用可能
-  - `MiniMax-M2.7-highspeed`：高速版、同じパフォーマンスを維持しながらより高速
-:::
-
-統合方法は DeepSeek と同じで、3ステップだけです：
-
-1. [MiniMax オープンプラットフォーム](https://platform.minimax.io/) にアクセスしてアカウントを登録し、API Key を作成
-2. MiniMax ドキュメントで呼び出しサンプルを見つける
-3. API Key ＋サンプルを AI IDE に貼り付ける
-
-MiniMax は OpenAI 互換インターフェースを提供しているため、以下の curl サンプルとあなたの API Key をコピーして、AI IDE に統合を依頼できます：
-
-```bash
-curl https://api.minimax.io/v1/chat/completions \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer ${MINIMAX_API_KEY}" \
-  -d '{
-        "model": "MiniMax-M3",
-        "messages": [
-          {"role": "system", "content": "You are a helpful assistant."},
-          {"role": "user", "content": "Hello!"}
-        ],
-        "stream": false
-      }'
-```
-
-::: tip ✅ ヒント
-MiniMax の API 形式は DeepSeek とほぼ完全に同じです（どちらも OpenAI 互換形式）。したがって、DeepSeek の統合がすでに成功していれば、MiniMax に切り替えるには3つの箇所を変更するだけです：
-1. **ベース URL**：`https://api.minimax.io/v1` に変更
-2. **API Key**：MiniMax の API Key を使用
-3. **モデル名**：`MiniMax-M3`（新フラグシップ）、`MiniMax-M2.7` または `MiniMax-M2.7-highspeed` に変更
-
-詳細は [MiniMax OpenAI 互換インターフェースドキュメント](https://platform.minimax.io/docs/api-reference/text-openai-api) を参照してください。
-:::
-
-# 3. 画像からテキスト API の統合：Qwen3 VL
-
-::: info ℹ️ 原理の詳細
-原理に関する詳細を知りたい場合は、付録の [視覚言語モデル（VLM）入門](/zh-cn/appendix/8-artificial-intelligence/multimodal-models) をご覧ください。
-
-::: details 詳細：Qwen3 VL とは？
-
-**Qwen3 VL** はアリババクラウドの通義千問チームがリリースしたマルチモーダル視覚言語モデルシリーズの最新版です。VL は「Vision-Language」、つまり視覚言語モデルを表します。画像内容を理解し、画像に基づいてテキストの説明を生成、画像に関する質問に回答、画像情報の抽出などができます。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-48-27.png)
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-48-41.png)
-
-**Qwen3 VL の主な機能：**
-
-- **画像理解**：画像中の物体、シーン、人物、テキストなどを認識
-- **視覚 QA**：ユーザーの質問に基づき、画像に関する質問に正確に回答
-- **画像説明**：詳細または簡潔な画像のテキスト説明を生成
-- **複数画像理解**：複数の画像を同時に処理し、比較分析をサポート
-- **テキスト抽出**：画像からテキスト内容を抽出（OCR 機能）
-
-**なぜ Qwen3 VL を選ぶのか？**
-
-前世代モデルと比較して、Qwen3 VL は画像理解の正確さが大幅に向上し、より長く複雑な画像分析タスクをサポートしています。中国語理解で優れたパフォーマンスを示し、API 呼び出しコストが比較的低く、コストパフォーマンスが高いです。また、コンテキストウィンドウが大きく、より複雑な視覚推論タスクを処理できます。
-
-**典型的な応用シーン：**
-
-- EC：商品画像から自動的にタイトル、説明、セールスポイントを生成
-- コンテンツ制作：素材画像に基づいて自動的にコピーや画像提案を生成
-- オフィス：画像内容の抽出、帳票の自動認識
-- 教育：画像問題の自動解析、知識ポイントの抽出
-
-:::
-
-前のパートではテキスト生成 API の統合方法について説明しましたが、前のアプリケーションシーンでは一つの問題に気づきます。アップロードするのは画像ですが、大規模言語モデルだけでは画像の内容をうまく理解できず、生成結果に差が出る可能性があります。
-
-画像をテキストの説明に変換してくれるモデルが欲しい。これには視覚言語モデル（VLM）が必要です。このケースでは、視覚言語モデルを使って商品のセールスポイント説明を生成し、ユーザー体験を向上させます。
-
-利便性のため、[クラウドプラットフォーム SiliconFlow](https://cloud.siliconflow.cn/me) が提供する API インターフェースを使用して、画像からテキストへの API を統合します。
-
-::: details 詳細：SiliconFlow とは？
-**硅基流動（SiliconFlow）** は中国国内で有名な AI モデル集約プラットフォームで、各種主流の大規模言語モデルと視覚言語モデルの API インターフェースサービスを提供しています。
-
-**プラットフォームの特徴：**
-
-- **多モデルサポート**：DeepSeek、Qwen、Llama シリーズなどのオープンソースモデルを含む各種主流 AI モデルを統合
-- **技術最適化**：オープンソースモデルの推論を最適化し、低遅延・高並行の API サービスを提供
-- **インターフェース互換**：OpenAI 形式と互換性のある API インターフェースを提供。既存のアプリケーション統合に便利
-- **従量課金**：呼び出し量に応じた課金に対応
-
-SiliconFlow はオープンソース大規模モデルの推論サービスで比較的成熟しており、中国産オープンソース AI モデルを使用する際の一般的な選択肢の一つです。
-:::
-
-SiliconFlow プラットフォームのホームページに入ると、多くのモデルが選択できることがわかります。左上のフィルターを見つけて展開し、視覚タグを選択すると、智譜 GLM-4.6V や Qwen3-VL など、多くの画像からテキストへのモデルが表示されます。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
-
-どれでも選んでテストできます。ここでは `Qwen/Qwen3-VL-8B-Instruct` を例にします。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-07-44.png)
-
-[SiliconFlow プラットフォーム](https://cloud.siliconflow.cn/me/account/ak) に入り、API キーで「新建 API 密钥」をクリックして、新しい API Key を作成します。
-
-以下のコードを参考コードとして、生成した API Key と一緒に AI IDE に送信し、機能統合を行えます。
-
-::: details 画像からテキストへの参考コード
-
-```python
-from openai import OpenAI
-from typing import Dict, Any, List
-import base64
-import os
-SILICONFLOW_API_KEY: str = ""
-SILICONFLOW_BASE_URL: str = "https://api.siliconflow.cn/v1/"
-MODEL_NAME: str = "Qwen/Qwen3-VL-8B-Instruct"
-
-def encode_image(image_path: str) -> str:
-    with open(image_path, "rb") as image_file:
-        return base64.b64encode(image_file.read()).decode('utf-8')
-
-def get_vlm_completion(client: OpenAI, messages: List[Dict[str, Any]]) -> str:
-    response = client.chat.completions.create(
-        model=MODEL_NAME,
-        messages=messages,
-        max_tokens=512,
-        temperature=0.7,
-        top_p=0.7,
-        frequency_penalty=0.5,
-        stream=False,
-        n=1
-    )
-    return response.choices[0].message.content
-
-def caption_image(image_path: str) -> str:
-    base64_image = encode_image(image_path)
-    messages = [
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "text",
-                    "text": "Please describe this image in detail."
-                },
-                {
-                    "type": "image_url",
-                    "image_url": {
-                        "url": f"data:image/jpeg;base64,{base64_image}"
-                    }
-                }
-            ]
-        }
-    ]
-
-    client = OpenAI(
-        api_key=SILICONFLOW_API_KEY,
-        base_url=SILICONFLOW_BASE_URL
-    )
-
-    return get_vlm_completion(client, messages)
-
-image_path = "images.jpg"
-caption = caption_image(image_path)
-```
-
-:::
-
-このシーンでは、AI IDE にアップロードされた画像から EC のセールスポイントテキストやキーワードを自動生成する機能を実装させます。以下のように指示します：
-
-```
-以下の画像からテキストへの API を基に、アップロードされた画像から EC のセールスポイントテキストとキーワードを自動生成する機能を実装してください。
-
-<ここにコードを省略、キーと参考コードを自分で貼り付ける必要があります>
-```
-
-最終的に生成結果が得られます：
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
-
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="2" :items="[
-      { title: 'API 基礎', description: '核心概念とセキュリティ規範を理解' },
-      { title: 'テキスト統合', description: 'DeepSeek テキスト生成実践' },
-      { title: '画像統合', description: 'VLM 画像理解と生成' }
-    ]" />
-  </ClientOnly>
-</div>
-
-# 4. 画像生成 API の統合：Seedream 即梦
-
-前のパートでは主にテキスト関連のタスクを扱いました。次は画像生成機能の統合に挑戦し、テキストの説明から画像を生成したり、画像を編集したりできるようにします。
-
-::: info ℹ️ 原理の詳細
-原理に関する詳細を知りたい場合は、付録の [画像生成入門](/zh-cn/appendix/8-artificial-intelligence/image-generation) をご覧ください。
-
-::: details 詳細：[Seedream 即梦](https://seed.bytedance.com/en/seedream4_5) とは？
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-17.png)
-
-> Google が開発した Nano Banana は知っているかもしれませんが、Seedream も見逃せません。Seedream 4.5 は ByteDance が開発した次世代画像クリエイティブモデルです。画像生成と画像編集の機能を統一アーキテクチャに統合しています。これにより、知識に基づく生成、複雑な推論、参照の一貫性などの複雑なマルチモーダルタスクを柔軟に処理できます。さらに、推論速度は前世代より大幅に高速で、最大4K解像度の驚くべき高画質画像を生成できます。
->
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-38.png)
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-15-50.png)
-
-**主な機能：**
-
-- **テキストから画像（文生图）**：テキストの説明から画像を生成。複数のスタイル（リアル、カートゥーン、水墨、サイバーパンクなど）をサポート
-- **スタイル変換**：画像を指定したアートスタイルに変換
-- **画像バリエーション**：参照画像に基づいて類似スタイルの新しい画像を生成
-- **解像度向上**：画像の鮮明さとディテールを向上
-- **画像編集**：自然言語の指示で既存の画像を編集・修正
-
-**なぜ Seedream を選ぶのか？**
-
-- **国内ネットワークが安定**：国内からのアクセスが速く、遅延が低い
-- **効果が優秀**：EC、素材シーンで安定した信頼性
-- **中国語最適化**：中国語プロンプトの理解がより正確。国内ユーザーに適している
-- **速度が速い**：生成効率が高く、レスポンスタイムが短い
-- **品質が安定**：最大4K解像度の高画質画像を生成
-
-**典型的な応用シーン：**
-
-- EC：メイン画像、詳細ページ画像、プロモーションポスターの生成
-- SNS：アバター、スタンプ、画像の生成
-- デザイン：コンセプトアート、素材画像、背景画像の迅速な制作
-- マーケティング：広告画像、イベントバナー、祝日ポスターの制作
-
-**Qwen3 VL との連携：**
-
-これら2つの API は直列で使用できます：まず Qwen3 VL で参照画像を分析し、画面内容を理解。次に Seedream で分析結果を基にプロンプトを生成し、新しい画像を作成します。
-:::
-
-Douyin、Bilibili、YouTube で見かける「AI ポスター / AI メイン画像 / AI キャラクター画像」は、本質的にここで紹介する技術を使っています。あなたがやるべきことは非常にシンプルです：ユーザーの入力を一文に整理し、画像 API にリクエストを送り、返された画像を表示する。ここで使うモデルを画像生成 / 画像編集モデルと呼びます。
-
-Seedream API をプロジェクトに統合する手順を順番にデモします（AI IDE のサポートを活用）。
-
-[ホームページ](https://www.volcengine.com/experience/ark?launch=seedream)にアクセスし、ログインをクリックします。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-07.png)
-
-ログイン後、右上のチャージオプションを見つけます。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-22.png)
-
-チャージには本人確認が必要です。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-30.png)
-
-認証成功後、[1元をチャージしてテスト](https://console.volcengine.com/finance/fund/recharge)できます。
-
-[初期画面](https://www.volcengine.com/experience/ark?launch=seedream)に戻り、API アクセスをクリックします。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-12-43.png)
-
-まず、API key を作成し、オプション選択をクリックします。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
-
-これでステップ2に進みます。ここで、呼び出すサービスが Seedream 4.5 であることを確認し、提供された呼び出しサンプルをコピーします。（スクリーンショットが比較的早い時期のものなので、モデルバージョンはまだ4.0です）
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-11.png)
-
-API Key と呼び出しサンプルの準備ができたら、AI IDE に直接貼り付けて、フロントエンドのインタラクティブデモを生成させるか、既存のプロトタイプに機能を統合させます。画像でテキストから画像か複数画像から単一画像かを選択できることに注意してください。現在のニーズに応じて参考コードを選択してください。
-
-::: warning ⚠️ 重要なヒント
-ここでのデフォルトのサンプルは比較的複雑です。**「ウォーターマーク追加」** と **「ストリーミングレスポンス」** を無効にすることを忘れないでください。ウォーターマークが生成されず、リクエスト失敗が発生しないようにするためです。
-:::
-
-後で参照画像生成モードを使用するため、まずは複数画像から単一画像への機能に行きます。参考コードは以下の通り：
-
-```
-curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer xxxxxxx" \
-  -d '{
-    "model": "doubao-seedream-4-5-251128",
-    "prompt": "将图1的服装换为图2的服装",
-    "image": ["https://ark-project.tos-cn-beijing.volces.com/doc_image/seedream4_imagesToimage_1.png", "https://ark-project.tos-cn-beijing.volces.com/doc_image/seedream4_imagesToimage_2.png"],
-    "sequential_image_generation": "disabled",
-    "response_format": "url",
-    "size": "2K",
-    "stream": false,
-    "watermark": true
+    "model": "deepseek-v4-flash",
+    "messages": [
+      {"role": "system", "content": "title、summary、selling_points を含む JSON を返してください。selling_points は 3 件とし、価格、売上、効果を作らないでください。"},
+      {"role": "user", "content": "黒いナイロン製の通勤リュックを販売します。短いタイトル、紹介文、三つの特徴を書いてください。"}
+    ],
+    "stream": false
   }'
 ```
 
-画像参照コードが得られたら、AI IDE に EC で一般的に使われる画像タスク機能をサポートさせます：
+環境変数に Key を設定してから端末で実行します。正常な結果を得たら、同じ公式例と第 2 節の依頼文を AI IDE へ渡します。最初はボタン一つと固定の商品情報だけにし、ページで結果を確認してから完全な入力フォームへつなぎます。
 
+### 二種類の商品で試す
+
+商品名、素材、色を変えてもう一度生成します。二つの結果がそれぞれの入力に合い、画面で正しく表示されれば最小接続は成功です。次に項目を一つ消し、価格、効果、売上を作らないか確認します。わざと誤った Key を設定し、失敗表示も確認できます。
+
+最後に Usage 画面で呼び出し記録を確認します。ページに文章が出ただけでは API の証明になりません。古いダミーデータでも似た表示になるからです。
+
+## 7. 画像理解：Qwen3-VL の例
+
+視覚モデルには画像と質問を渡します。画面で必要な情報を直接尋ねます。「この画像には何がありますか」だけでは、用途の広すぎる説明が返りがちです。
+
+```text
+この商品写真を見て、商品名の種類、主な色、見える素材と構造、
+画像内の文字を教えてください。
+
+分からない箇所は分からないと答え、ブランド、価格、売上を推測しないでください。
+ページに表示できるよう JSON で返してください。
 ```
-以下の API を基に、このプロジェクトの EC ビジネスの一般的な機能（ポスター生成、Douyin EC メイン画像生成など）を実装してください。
 
-<ここに API KEY と画像編集コードを貼り付けてください>
+[SiliconFlow のモデル一覧](https://cloud.siliconflow.cn/models)で現在の視覚モデルを絞り込めます。ここでは入力構造の例として `Qwen/Qwen3-VL-8B-Instruct` を使いますが、実行前に現行の Model ID を確認します。
+
+```python
+import base64
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    api_key=os.environ["SILICONFLOW_API_KEY"],
+    base_url="https://api.siliconflow.cn/v1"
+)
+
+with open("product.jpg", "rb") as image_file:
+    image_data = base64.b64encode(image_file.read()).decode("utf-8")
+
+response = client.chat.completions.create(
+    model="Qwen/Qwen3-VL-8B-Instruct",
+    messages=[{
+        "role": "user",
+        "content": [
+            {"type": "text", "text": "この商品写真から、種類、色、見える素材と構造、画像内の文字を JSON で返してください。分からない内容は推測しないでください。"},
+            {"type": "image_url", "image_url": {
+                "url": f"data:image/jpeg;base64,{image_data}"
+            }}
+        ]
+    }]
+)
 ```
 
-実装効果は以下の通り：
+![AI IDE で画像理解 API を接続する](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
+*写真からすぐ最終文章を作るより、認識した商品情報を利用者が確認してから文章を生成する方が、間違いを見つけやすくなります。*
 
-注目すべき点として、画像生成では奇妙な問題に頻繁に遭遇する可能性があるため、AI IDE に完全なエラーメッセージを表示させることをお勧めします。コピー＆ペーストで修正しやすくするためです（そうしないと、「生成に失敗しました」と何度も表示されるが、理由が分からないという状況になる可能性があります）。例えば、次のように言えます：
+## 8. 商品画像を生成・修正する
 
+[Seedream](https://seed.bytedance.com/en/blog/deeper-thinking-more-accurate-generation-introducing-seedream-5-0-lite)は、文章からの画像生成と、参照画像を使った修正に対応します。商品画像では「きれいだが商品自体が変わった」という失敗を避けるため、背景、構図、光だけでなく、変えてはいけない部分も明記します。
+
+```text
+参照画像の黒いリュックを、縦長の商品ポスターにしてください。
+薄いグレーの台の中央に置き、柔らかい光にして、上部にタイトル用の余白を残します。
+文字、Logo、価格を追加せず、ファスナー、肩ひも、ポケットを変えないでください。
 ```
-画像生成失敗とだけ表示せず、毎回完全な失敗理由（画像不一致、リクエストエラー、タイムアウトなど）を表示してください！
+
+用途、位置、見た目、保持する構造が伝わる指示です。最初の画像では背景より先にリュックの変形を確認します。初めから多くのスタイル語を重ねません。
+
+[火山方舟コンソール](https://www.volcengine.com/experience/ark?launch=seedream)から現在の画像 Model ID と最小リクエストをコピーします。古いチュートリアルの番号をそのまま使い続けないでください。
+
+```bash
+curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer ${ARK_API_KEY}" \
+  -d '{
+    "model": "<コンソールから現在の画像 Model ID をコピー>",
+    "prompt": "参照画像の黒いリュックを簡潔な縦長の商品ポスターにしてください。文字、Logo、価格を追加せず、リュックの構造を変えないでください。",
+    "image": ["https://example.com/product-reference.png"],
+    "response_format": "url",
+    "stream": false,
+    "watermark": false
+  }'
 ```
 
-修正後に更新がウェブページに反映されないことがあります。修正後もウェブページでエラーが出続ける場合（何度も）、AI IDE に直接「このプロジェクトを再起動してください」と言ってみてください。
+![商品に組み込んだ画像生成の結果](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
 
-EC ビジネスでは、ユーザーがアップロードした服を自動的にキャラクターに着せたり、商品の魅力的な販売画像やポスターを自動生成したりしたい場合があります。ここでは、EC ポスターを生成させるプロンプトを試します：
+画像 URL には有効期限がある場合があります。プロトタイプでは直接表示できますが、公開時は利用規約を確認して自分のストレージへ保存するか決め、プロンプト、モデル版、生成時刻も記録します。
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-14-10.png)
+## 9. 音声認識と音声合成は別の API
 
-自分の想像するビジネスシーンに応じて、テキストから画像または画像から画像 API を使って異なる機能を実装できます。
+「音声を追加する」には少なくとも二つの方向があります。
 
-## さらに多くの画像サービスの選択
+- **ASR / STT**：利用者の発話や音声ファイルを文字にする。
+- **TTS**：文章を再生できる音声にする。
 
-以下に他の選択肢を示します。まず Qwen 画像生成の結果を動かし、効果とコストに応じて以下のサービスで差し替えることをお勧めします（実際の使用感に基づいて選択）。
+入力、出力、画面操作が異なるため、曖昧な「音声 API」ボタン一つにまとめません。
 
-### Recraft 統合
+### 9.1 音声から文字へ：ファイルをアップロードして文章を返す
 
-プロトタイプが「デザイン制作」寄りの場合（ブランドスタイルのイラスト、マーケティングポスター、ベクタースタイル素材の生成など）、Recraft の方が使いやすいことが多いです。統合方法は前のセクションと完全に同じです：<strong>Key を取得 ＋ 公式サンプルを見つける ＋ AI IDE にサンプルをボタン/ページに落とし込ませる</strong>。
-
-::: details 詳細：Recraft とは？
-
-> Recraft はデザイナー、イラストレーター、マーケター向けの AI ツールで、2022年に米国で設立され、本社はロンドンにあります。ビジュアル効果（画像、ベクターアート、3D グラフィックス）の生成・イテレーションを支援し、高品質な出力（任意のテキストサイズ/長さ）、正確な要素の配置、ブランドの一貫性のあるデザインなどの利点があります。200カ国/地域の300万人以上のユーザー（Ogilvy、Netflix など含む）に信頼され、3.5億枚以上の画像が作成されています。チームはこれをデザイナーの必須ツールにすることを目指し、クリエイターが AI 補助ワークフローをコントロールできるようにしています。
->
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-23-34.png)
-> ![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-23-42.png)
-
-まず、[API エントリ](https://www.recraft.ai/profile/api) を見つけて API Key を取得する必要があります。
-
-ここでは無料枠が提供されていないため、1,000 クレジットを自分でチャージする必要があります。このサイトは Alipay と WeChat Pay に対応しているため、1,000 クレジットは簡単に取得できます（注意：必要以上にチャージしないでください）。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/image40.png)
-
-その後も同じ方法に従います：公式ドキュメントで対応するリクエストサンプルを見つけます：
-
-- <https://www.recraft.ai/docs/api-reference/getting-started>
-- <https://www.recraft.ai/docs/api-reference/usage>
-- <https://www.recraft.ai/docs/api-reference/guides>
-
-:::
-
-### Qwen Image / Qwen Image Edit 統合
-
-画像生成サービスをよりシンプルな方法で統合したい場合は、Qwen Image（通義万相）を検討できます。アプローチは同じです：「画像生成 API」として扱い、プロトタイプのボタンに接続するだけです。
-
-::: details 詳細：Qwen Image / Qwen Image Edit とは？
-
-**Qwen Image**（通義万相とも呼ばれる）は、アリババクラウドの通義チームがリリースした画像生成モデルシリーズで、主に2つのモデルを含みます：
-
-**1. Qwen Image——テキストから画像（Text-to-Image）モデル**
-
-テキストの説明から全く新しい画像を生成します。プロンプトを入力すると、モデルがあなたの意図を理解し、説明に合った画像を生成します。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-43-30.png)
-
-**主な機能：**
-
-- **テキストから画像（文生图）**：テキストの説明から画像を生成。複数のスタイル（リアル、カートゥーン、水墨、サイバーパンクなど）をサポート
-- **スタイル変換**：画像を指定したアートスタイルに変換
-- **画像バリエーション**：参照画像に基づいて類似スタイルの新しい画像を生成
-- **解像度向上**：画像の鮮明さとディテールを向上
-
-**2. Qwen Image Edit——画像から画像（Image-to-Image）モデル**
-
-既存の画像を編集・修正します。自然言語の指示で、モデルに修正の意図を理解させ、結果を生成させます。
-
-**主な機能：**
-
-- **部分置換**：画像中の特定の物体や人物を置換（「背景を海辺に変えて」など）
-- **要素削除**：画像から不要な要素を削除
-- **スタイル変換**：画像にフィルターやアート効果を追加
-- **画像拡張**：画像の境界を拡張し、新しいコンテンツを生成
-- **スマートレタッチ**：自動美化、光影調整、欠陥修正
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-17.png)
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-29.png)
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-14-46-33.png)
-
-**なぜ Qwen Image シリーズを選ぶのか？**
-
-- **中国語最適化**：中国語プロンプトの理解がより正確。国内ユーザーに適している
-- **低コスト**：海外競合と比較して価格が手頃
-- **高速**：生成効率が高く、レスポンスタイムが短い
-- **安定した品質**：EC、素材シーンで安定した信頼性
-- **多様なスタイル**：様々なアートスタイルとクリエイティブ効果をサポート
-
-**典型的な応用シーン：**
-
-- EC：メイン画像、詳細ページ画像、プロモーションポスターの生成
-- SNS：アバター、スタンプ、画像の生成
-- デザイン：コンセプトアート、素材画像、背景画像の迅速な制作
-- マーケティング：広告画像、イベントバナー、祝日ポスターの制作
-  :::
-
-[SiliconFlow](https://siliconflow.cn/) の公式サイトを確認してください。左側に「Playground」セクションがあり、API 呼び出しなしで様々なモデルを試せます。ページ上部に「Filters」ボタンがあります。クリックすると右側のモデルリストをフィルタリングできます。
-
-「Image」を選択すると、現在サポートされているすべてのテキストから画像へのモデルだけが表示されます。ここでは Qwen/Qwen-Image を使用します。
-
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-52-56.png)
-
-すべての設定が完了したら、対応する画像生成 API ドキュメントを参照する必要があります。公式ドキュメントページで「API Reference」とマークされたセクションを見つけてください。クリックして [画像生成の API セクション](https://docs.siliconflow.cn/cn/api-reference/images/images-generations) にナビゲートし、関連するリクエストサンプルを見つけます。
-
-以下のリクエストサンプルと API KEY を AI IDE に送信するだけで、画像生成機能を実装できます。
+[SiliconFlow の音声認識ドキュメント](https://docs.siliconflow.cn/cn/api-reference/audio/create-audio-transcriptions)では、前節の JSON と違い、`multipart/form-data` でファイルを送ります。
 
 ```bash
 curl --request POST \
-  --url https://api.siliconflow.cn/v1/images/generations \
-  --header 'Authorization: Bearer <token>' \
-  --header 'Content-Type: application/json' \
-  --data '
-{
-  "model": "Qwen/Qwen-Image-Edit-2509",
-  "prompt": "an island near sea, with seagulls, moon shining over the sea, light house, boats int he background, fish flying over the sea"
-}
-'
+  --url https://api.siliconflow.cn/v1/audio/transcriptions \
+  -H "Authorization: Bearer ${SILICONFLOW_API_KEY}" \
+  -F "file=@meeting.mp3" \
+  -F "model=FunAudioLLM/SenseVoiceSmall"
 ```
 
-ここでのモデルは Qwen/Qwen-Image または Qwen/Qwen-Image-Edit-2509 を使用できます。
+公式例を AI IDE に渡すときは、画面の機能も伝えます。
 
-::: details 画像編集参考コード
+```text
+現在のページに「録音をアップロードして文字にする」ボタンを追加してください。
 
-以下のコードと Key をコピーして、AI IDE に送信します：
+mp3、m4a、wav をアップロードしたら、サーバーから下の API を呼び、
+返った文章を編集できる入力欄に表示してください。
+API Key は環境変数へ置き、アップロードや認識に失敗したら再試行できるようにしてください。
 
-```python
-import requests
-import os
-from typing import Dict, Any, Optional
-
-SILICONFLOW_API_KEY: str = ""
-SILICONFLOW_BASE_URL: str = "https://api.siliconflow.cn/v1/images/generations"
-QWEN_IMAGE_EDIT_MODEL: str = "Qwen/Qwen-Image-Edit-2509"
-
-def generate_image_edit(
-    prompt: str,
-    image: Optional[str] = None,
-    image2: Optional[str] = None,
-    image3: Optional[str] = None,
-    negative_prompt: Optional[str] = None,
-    cfg: Optional[float] = 4.0,
-    seed: Optional[int] = None
-) -> Optional[Dict[str, Any]]:
-    payload: Dict[str, Any] = {
-        "model": QWEN_IMAGE_EDIT_MODEL,
-        "prompt": prompt,
-    }
-    if image:
-        payload["image"] = image
-    if image2:
-        payload["image2"] = image2
-    if image3:
-        payload["image3"] = image3
-    if negative_prompt:
-        payload["negative_prompt"] = negative_prompt
-    if cfg is not None:
-        payload["cfg"] = cfg
-    if seed is not None:
-        payload["seed"] = seed
-
-    headers: Dict[str, str] = {
-        "Authorization": f"Bearer {SILICONFLOW_API_KEY}",
-        "Content-Type": "application/json"
-    }
-
-    try:
-        response = requests.post(SILICONFLOW_BASE_URL, json=payload, headers=headers)
-        response.raise_for_status()
-        return response.json()
-    except requests.exceptions.RequestException as e:
-        print(f"Error generating image: {e}")
-        return None
-
-def save_image_from_url(image_url: str, output_path: str = "image.png") -> bool:
-    try:
-        response = requests.get(image_url)
-        response.raise_for_status()
-        os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else ".", exist_ok=True)
-        with open(output_path, "wb") as f:
-            f.write(response.content)
-        print(f"Image saved successfully to: {output_path}")
-        return True
-    except requests.exceptions.RequestException as e:
-        print(f"Error downloading image: {e}")
-        return False
-    except Exception as e:
-        print(f"Error saving image: {e}")
-        return False
-
-prompt: str = "让天空变成傍晚，有月亮和星星，梦幻风格"
-negative_prompt: str = "模糊, 低质量, 扭曲"
-image_url: str = "https://inews.gtimg.com/om_bt/Os3eJ8u3SgB3Kd-zrRRhgfR5hUvdwcVPKUTNO6O7sZfUwAA/641"
-image2_url: Optional[str] = None
-image3_url: Optional[str] = None
-
-cfg: float = 4.0
-seed: int = 12345
-output_path: str = "edited_image.png"
-
-print(f"Generating edited image with prompt: {prompt}")
-print(f"Input image: {image_url}")
-print(f"CFG: {cfg}, Seed: {seed}")
-print("-" * 50)
-
-result = generate_image_edit(
-    prompt=prompt,
-    image=image_url,
-    image2=image2_url,
-    image3=image3_url,
-    negative_prompt=negative_prompt,
-    cfg=cfg,
-    seed=seed
-)
-
-if result and "images" in result:
-    images = result["images"]
-    if images and len(images) > 0:
-        image_url_result = images[0]["url"]
-        print(f"Image edit generated successfully. URL: {image_url_result}")
-        success = save_image_from_url(image_url_result, output_path)
-        if success:
-            print(f"Image saved to: {output_path}")
-        else:
-            print("Failed to save image to local file")
-    else:
-        print("No images found in response")
-else:
-    print("Image generation failed")
-    if result:
-        print(f"Response: {result}")
+公式例：
+<上の curl 例を貼る>
 ```
 
+### 9.2 テキスト読み上げは JSON ではなく音声を返すことがある
+
+[MiniMax T2A HTTP ドキュメント](https://platform.minimax.io/docs/api-reference/speech-t2a-http)には同期音声合成 API があります。現在の例は `speech-2.8-hd` ですが、モデルと声はサービス画面で確認します。
+
+音声合成では、読み上げ文と音声設定がプロンプトに相当します。数字、英語略語、間を読みやすく直してから、声、速度、音量、感情、形式を選びます。Markdown、URL、ボタン文言を含むページ全体をそのまま読ませません。
+
+```bash
+curl --request POST \
+  --url https://api.minimax.io/v1/t2a_v2 \
+  --header "Authorization: Bearer ${MINIMAX_API_KEY}" \
+  --header "Content-Type: application/json" \
+  --data '{
+    "model": "speech-2.8-hd",
+    "text": "これは商品紹介の試聴用音声です。",
+    "stream": false,
+    "output_format": "hex",
+    "language_boost": "auto",
+    "voice_setting": {
+      "voice_id": "<音声一覧から voice_id をコピー>",
+      "speed": 1,
+      "vol": 1,
+      "pitch": 0
+    },
+    "audio_setting": {
+      "sample_rate": 32000,
+      "bitrate": 128000,
+      "format": "mp3",
+      "channel": 1
+    }
+  }'
+```
+
+音声画面には試聴、停止、再生成、ダウンロードも必要です。ストリーミング TTS は WebSocket またはストリーミング HTTP で受け取りながら再生します。
+
+::: warning 音声とプライバシー
+録音を送る前に、用途、保存期間、削除方法を伝えます。音声クローンには声の所有者の明確な許可が必要です。出所の分からない著名人や他人の録音を使わないでください。
 :::
 
-# 付録：「現在より強力な」AI モデルを見つける方法
+## 10. 動画生成：タスクを作成して結果を待つ
 
-テキストモデル（大規模言語モデルとも呼ばれる）の発展は非常に速く、常により良いパフォーマンスを示すモデルを使用していることを確認する必要があります。以下の2つのウェブサイトで、「現在よく使われ、評価も高いモデル」を簡単に確認できます。
+動画生成は通常、非同期 API です。[MiniMax の動画生成ドキュメント](https://platform.minimax.io/docs/guides/video-generation)では、`task_id` を受け取る、状態から `file_id` を得る、ダウンロード URL を取得する、という三段階になっています。
 
-一般的に、この種のウェブサイトは **「モデルアリーナ」** と理解できます：2つのモデルの出力を並べて表示し、より好きな方に投票します。票が多いモデルは、より多くの人が「使いやすい」と思っていることを意味します。
+### 10.1 画面がどう変化するかも書く
 
-また、これらの大規模モデルアリーナで謎の匿名モデル（「Unknown Model」）が表示されることがあります。これは通常、「内部テストモデル」がこっそりブラインドテストに参加していることを意味し、より強力な能力に先取りして体験できるチャンスがあるかもしれません。
+画像は一場面ですが、動画では数秒間に何が起きるかも必要です。商品の初期位置、動きの順序、カメラ方向、長さを伝えます。
 
-## LMArena
+```text
+黒いリュックを薄いグレーの展示台で 6 秒間見せてください。
+カメラは正面から右へゆっくり回り、最後に少し近づきます。縦長の画面にします。
+リュックの形を変えず、人物、文字、Logo を追加しないでください。
+```
 
-ウェブサイト：<https://lmarena.ai/>
+動作が多い場合は、一つのショットと一つの主な動きから始めます。短い動画で回転、開閉、ズーム、場面転換を同時に求めると、商品の形を保つのが難しくなります。
 
-LMArena は「より多くの人がどのモデルの回答を好むか」を判断するのに適しています。投票数が多く、スコアが高いほど、実際の使用シーンでより安定していることを意味します。
+### 10.2 作成と状態確認は別のリクエスト
 
-簡単な使い方：
+```bash
+# 手順 1：タスクを作成
+curl --request POST \
+  --url https://api.minimax.io/v1/video_generation \
+  --header "Authorization: Bearer ${MINIMAX_API_KEY}" \
+  --header "Content-Type: application/json" \
+  --data '{
+    "model": "MiniMax-Hailuo-2.3",
+    "prompt": "黒いリュックを薄いグレーの展示台で見せます。カメラは正面から右へゆっくり回り、最後に少し近づきます。リュックの形を変えず、人物、文字、Logo を追加しないでください。",
+    "duration": 6,
+    "resolution": "1080P"
+  }'
 
-1. リーダーボード（Leaderboard）を直接見る
-2. 目的の方向（一般対話 / プログラミング / ビジョンなど）を選ぶ
-3. トップ3の中で使えるもの（アクセス可能、価格が受け入れられる、遅延が受け入れられる）を選ぶ
+# 手順 2：返された task_id で状態を確認
+curl --request GET \
+  --url "https://api.minimax.io/v1/query/video_generation?task_id=<TASK_ID>" \
+  --header "Authorization: Bearer ${MINIMAX_API_KEY}"
+```
 
-![](../../../zh-cn/stage-1/integrating-ai-capabilities/images/image.png)
+画面には少なくとも `Preparing`、`Queueing`、`Processing`、`Success`、`Fail` を表示します。一定間隔で確認し、停止条件も決めます。公開サービスでは `callback_url` を使い、状態が変わったときにサーバーへ通知できます。
 
-## Artificial Analysis
-
-ウェブサイト：<https://artificialanalysis.ai/>
-
-Artificial Analysis は「効果 / 価格 / 速度」を同じ表で比較するのに適しています。モデル選定のパラメータシートとして使えます。
-
-一般的な使い方：
-
-1. 関心のあるモデルカテゴリ（テキスト / 画像生成など）を見つける
-2. 品質指標（Quality）＋価格（Price）＋遅延/スループット（Latency/Throughput）を見る
-3. 「総合的なコストパフォーマンス」がプロダクトに最も合うものを選ぶ
-
-::: tip ✅ 推奨
-「どちらが強いか」を感覚で議論しないでください。より信頼性のある方法は：同じ入力で2〜3つのモデルを同時にテストし、ランキングと価格を組み合わせて決定することです。
+::: warning 動画と実在人物の素材
+実在人物の写真や声、商標、著作物から動画を作る場合は、許可範囲とサービスの規則を確認します。顔認証、素材登録、コンテンツ審査が必要なサービスもあります。ブラウザから回避してよい手順ではありません。
 :::
 
-## まとめ
+## 11. よくある問題を切り分ける
 
-各種 AI サービスを統合する際、API を複雑に想像する必要はありません。以下の核心的な概念を把握すれば、ほとんどのシーンに対応できます：
+| 症状 | 最初に確認すること |
+| --- | --- |
+| `401 / 403` | Key が正しいか、権限があるか、正しいヘッダーに入っているか |
+| `404` | Base URL、Endpoint、Model ID が変わっていないか |
+| `429` | RPM、TPM、同時実行数、アカウントの利用段階 |
+| `400` | 必須値、ファイル形式、JSON 構造、サイズ制限 |
+| `5xx / timeout` | サービス状態、タイムアウト、再試行方法 |
+| 待機中のまま | 同時実行数、タスク照会、利用枠、混雑状況 |
+| 成功表示だが内容がない | 応答フィールド、バイナリ処理、一時 URL の期限 |
+| ローカルでは動くが公開先で失敗 | 環境変数、CORS、Serverless の時間制限、地域ネットワーク |
 
-**API の本質は通信の橋渡し**です。やっていることはシンプル：あなたのリクエストを送信し、モデルのレスポンスを持ち帰る。背後で何が起きているかを気にする必要はなく、リクエスト形式を正しく組織するだけで済みます。
+調査時は発生時刻、リクエストの種類、HTTP ステータス、Request ID または Trace ID を残します。API Key、利用者の完全な音声、機密業務データはログへ書きません。
 
-**SDK は API のラッパー**です。API が raw インターフェースだとすれば、SDK は既成のツールキットです——リクエスト署名、エラーハンドリング、パラメータ検証などの面倒な詳細をすべて処理してくれます。日常の開発では、直接 API を呼び出すより SDK を優先して使うと、多くの手間が省けます。
+## 12. 📚 この章の課題
 
-**ドキュメントを読むときは、3つのことに注目するだけで十分**です：サービスアドレス（endpoint）、認証情報（API key）、呼び出しパラメータの書き方。この3点を明確にすれば、統合は時間の問題です。
+<StageAssignmentCard title="プロトタイプに一つの AI 機能を組み込む">
 
-残りの作業は、IDE とモダンな開発ツールがやってくれます。ビジネスロジックに集中し、低レベルの呼び出しはこれらの成熟した SDK とツールチェーンに任せましょう。
+  <p>画面から、本当に AI が必要なボタンを一つ選びます。最初は一種類だけでよく、テキスト、画像、音声、動画をすべて完成させる必要はありません。</p>
 
-# 5. 📚 課題：最初の AI 能力を統合する
+  <ol>
+    <li>公式ドキュメントで現在の Model ID と最小例を探す。</li>
+    <li>例を AI IDE に渡し、画面のボタンへ接続する。</li>
+    <li>API Key をサーバー環境変数へ置き、待機と失敗の表示を付ける。</li>
+    <li>実際に一回呼び出し、Usage またはログでサービスに届いたことを確認する。</li>
+  </ol>
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🚀 チャレンジタスク：AI 能力をあなたのワークスペースに統合する</div>
-  </template>
-
-  <p>
-    この授業のプロンプトと内容を参考に、完全なクローズドループを完了してください：
-  </p>
-
-  <ul>
-    <li>
-      <strong>完全なクローズドループの実践</strong>
-      <ul>
-        <li>一つの AI サービス（LLM / テキストから画像 / 画像から画像）を選択し統合 → フロントエンドとバックエンドのインタラクションを実装 → プロトタイプに統合</li>
-      </ul>
-    </li>
-    <li>
-      <strong>成果の共有</strong>
-      <ul>
-        <li>機能ページのスクリーンショットをみんなにシェアする</li>
-      </ul>
-    </li>
-    <li>
-      <strong>思考問題</strong>
-      <ul>
-        <li>次の「完全なプロジェクト実践」のために空間を確保し、事前に考える：これらの AI 能力をどのように組み合わせて、面白い機能を作るか？</li>
-      </ul>
-    </li>
-  </ul>
-</el-card>
+  <p>完成したら実行画面を一枚保存し、AI がこのページで何を手伝うか一文で説明します。他人の画像、声、実在人物の素材を使う前に、利用できることを確認してください。</p>
+</StageAssignmentCard>
 
 ## 次のステップ
 
-次のセクションでは、これらの分散した AI 能力を繋ぎ合わせ、実際のビジネスシーンに基づいた完全なプロダクトを作ります：
-
-- コンテンツ企画、商品出品、データ分析などのプロセスを一つの完全なビジネスフローに繋げる
-- この授業で学んだ AI 能力（LLM コピーライティング生成、テキストから画像、画像編集など）を実際のビジネスノードに組み込む
-- 孤立したデモではなく、本当に使える「EC AI ワークスペース」を実装する
+次章では、これらの機能を製品全体の流れへ戻します。データ、状態、利用者への反応を加え、一回の API 呼び出しを繰り返し使える製品プロトタイプへ育てます。
 
 <RelatedArticlesSection
   title="関連記事"
-  description="「単一の AI 能力」から「完全なプロダクトフロー」への推奨学習パス。"
+  description="一つの AI 機能から、製品全体の流れへ進みます。"
   :items="relatedArticles"
 />

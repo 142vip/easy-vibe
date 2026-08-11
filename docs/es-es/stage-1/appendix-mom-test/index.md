@@ -4,6 +4,7 @@ description: 'Aprende a evitar retroalimentacion educada, y haz entrevistas cent
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Aproximadamente <strong>1.5 horas</strong>'
 </script>
 
@@ -576,12 +577,16 @@ Esto es especialmente util para principiantes, porque desarrollaras mas rapidame
 
 ## 📚 Tareas
 
+<StageAssignmentCard title="Haz una entrevista sin intentar vender tu idea">
+
 Por favor completa las siguientes tareas basandote en el contenido anterior:
 
 1. Elige una direccion de producto que quieras hacer recientemente, y primero escribe 5 preguntas "que se desperdician facilmente" que hubieras hecho originalmente
 2. Reescribe estas 5 preguntas en un estilo mas acorde con The Mom Test
 3. Encuentra 3 usuarios potenciales, y al menos una vez logra preguntar "cuando fue la ultima vez que encontraste este problema"
 4. Despues de la entrevista, organiza 4 tipos de informacion: comportamientos reales, soluciones alternativas, costos incurridos, dificultades que se repiten
+
+</StageAssignmentCard>
 
 ## Lectura adicional
 

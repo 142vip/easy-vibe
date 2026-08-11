@@ -1,9 +1,53 @@
 
 # Module 2 : Apprendre les outils de programmation IA
 
+## Apprendre activement avec l’IA
+
+::: tip 💡 La règle la plus importante : en cas de question, demandez d’abord à l’IA
+Désormais, faites de l’IA votre **premier recours**. Qu’un concept reste obscur, qu’un outil refuse de s’installer, qu’une commande vous échappe, que le programme affiche une erreur ou que vous ignoriez la suite, **interrogez d’abord l’IA, puis essayez vous-même sa réponse**.
+
+Les questions autrefois posées au professeur, à un camarade ou dans un groupe de discussion peuvent d’abord être adressées à l’IA. Elle répond vite, accepte les relances et peut s’appuyer sur le message d’erreur et le contexte du projet pour proposer l’étape suivante. N’attendez pas d’être bloqué depuis longtemps et ne l’utilisez pas uniquement pour lui faire écrire du code.
+
+**Un apprentissage natif avec l’IA ne consiste pas seulement à terminer une tâche grâce à elle. Il fait intervenir l’IA tout au long du parcours : poser une question, essayer la réponse, puis revenir avec le nouveau résultat.**
+:::
+
+### La boucle d’apprentissage native avec l’IA
+
+Apprendre activement avec l’IA ne signifie pas lui confier le travail et attendre. L’IA réduit le temps passé à chercher une réponse, afin que vous puissiez consacrer davantage d’énergie à **essayer, vérifier et comprendre**. Cette boucle s’applique à chaque chapitre :
+
+```mermaid
+flowchart LR
+  A["① Un problème apparaît<br/>Décrire le but et le résultat"] --> B["② Interroger aussitôt l’IA<br/>Ajouter le contexte"]
+  B --> C["③ Essayer soi-même<br/>Suivre la suggestion"]
+  C --> D{"Résultat conforme ?"}
+  D -- "Pas encore" --> E["④ Redonner le résultat ou<br/>l’erreur complète à l’IA"]
+  E --> B
+  D -- "Oui" --> F["⑤ Reformuler avec ses mots<br/>pourquoi cela fonctionne"]
+  F --> G["Construire une compétence<br/>réutilisable ailleurs"]
+```
+
+### Des questions que vous pouvez poser telles quelles
+
+| Votre situation | Ce que vous pouvez dire à l’IA |
+| --- | --- |
+| **Un concept reste incompris** | « Je débute en programmation. Explique ce qu’est une API avec une analogie du quotidien, puis donne un exemple minimal. » |
+| **Vous ne savez pas installer l’environnement** | « J’utilise macOS et je veux exécuter ce projet. Vérifie d’abord les prérequis, puis guide-moi une étape à la fois en expliquant son rôle. » |
+| **Une commande produit une erreur** | « Voici la commande et l’erreur complète. Identifie d’abord la cause la plus probable, puis propose la correction minimale. S’il manque des informations, dis-moi lesquelles. » |
+| **Vous ignorez l’étape suivante** | « Mon objectif est de créer Snake et l’écran du jeu s’affiche déjà. Indique-moi la plus petite étape suivante et son critère de réussite. » |
+| **Le code de l’IA est incompréhensible** | « Ne modifie plus le code pour l’instant. Explique le dernier changement module par module et le problème résolu par chaque partie. » |
+| **Vous hésitez entre plusieurs solutions** | « Je débute et je veux rapidement une version exécutable. Compare A et B selon ces deux critères et recommande clairement l’une des deux. » |
+| **Le résultat diffère de l’attente** | « Je voulais une page comme ceci : … ; j’obtiens ceci : …. Compare les deux et corrige d’abord uniquement la différence la plus visible. » |
+
+::: info Un modèle de question réutilisable
+**Mon objectif est … ; j’en suis à … ; j’ai essayé … ; le résultat réel ou l’erreur complète est … ; explique d’abord la cause, puis indique la plus petite action suivante.**
+
+Plus les informations sont précises, plus la réponse sera adaptée. Il est normal que la première réponse ne suffise pas. Renvoyer le nouveau résultat à l’IA fait partie de l’apprentissage.
+:::
+
 ## Introduction au chapitre
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = 'environ <strong>1 jour</strong>, réalisable en plusieurs sessions'
@@ -704,6 +748,8 @@ Le chapitre suivant va déplacer le focus de « savoir utiliser les outils » ve
 
 ## 8. 📚 Devoir : Créer un jeu plus complexe avec un AI IDE local
 
+<StageAssignmentCard title="Créer votre propre jeu avec un AI IDE">
+
 <el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
   <template #header>
     <div style="font-weight: bold; font-size: 16px;">Défi : Créez votre jeu personnel</div>
@@ -819,6 +865,8 @@ Le chapitre suivant va déplacer le focus de « savoir utiliser les outils » ve
 </el-card>
 
 Cette section n'a pas besoin d'être mémorisée, il est plus important de se faire d'abord une impression mentale.
+
+</StageAssignmentCard>
 
 ## <span id="term-tool-ui">[I. Termes liés à « l'interface des outils »](#appendix-1-map)</span>
 

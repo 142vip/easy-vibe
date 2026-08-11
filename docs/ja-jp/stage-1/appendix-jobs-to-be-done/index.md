@@ -4,6 +4,7 @@ description: 'ゼロベースの読者向けの Jobs to Be Done 入門記事。�
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = '約 <strong>1.5 時間</strong>'
 </script>
 
@@ -481,12 +482,16 @@ AI は次のように出力するかもしれません：
 
 ## 📚 課題
 
+<StageAssignmentCard title="ユーザーが本当に成し遂げたいことを書く">
+
 上記の内容に基づいて、次の課題を完了してください：
 
 1. 最近やりたいプロダクトアイデアを一つ選び、JTBD 公式の一文で明確に書く
 2. このアイデアに 5 つの要素を補完する：シーン、トリガー、進捗、代替ソリューション、成功基準
 3. 潜在ユーザー 3 人に聞き、「前回この問題に直面したのはいつですか」を少なくとも 1 回は聞き出す
 4. インタビューの生の言葉を AI に渡し、最も優先的に検証すべき 3 つの JTBD 仮説に整理する
+
+</StageAssignmentCard>
 
 ## さらに学ぶために
 

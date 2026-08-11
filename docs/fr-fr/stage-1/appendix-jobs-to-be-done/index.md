@@ -4,6 +4,7 @@ description: "Article d'introduction à Jobs to Be Done pour les lecteurs début
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Environ <strong>1,5 heure</strong>'
 </script>
 
@@ -481,12 +482,16 @@ L'avantage de cette approche est que vous découvrirez plus vite si vous regarde
 
 ## 📚 Exercices
 
+<StageAssignmentCard title="Décrire ce que l’utilisateur cherche réellement à accomplir">
+
 En vous basant sur le contenu ci-dessus, veuillez réaliser les exercices suivants :
 
 1. Choisissez une idée produit que vous avez récemment, et écrivez-la clairement avec une phrase JTBD
 2. Complétez les 5 éléments pour cette idée : contexte, déclencheur, progression, alternative, critère de succès
 3. Trouvez 3 utilisateurs potentiels, et demandez au moins une fois « quand est la dernière fois que vous avez rencontré ce problème »
 4. Confiez les notes d'entretien à l'IA et organisez-les en 3 hypothèses JTBD prioritaires pour validation
+
+</StageAssignmentCard>
 
 ## Lectures complémentaires
 

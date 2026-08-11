@@ -4,6 +4,7 @@ description: '面向零基礎讀者的 Double Diamond 入門文章。理解 Disc
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = '約 <strong>1.5 小時</strong>'
 </script>
 
@@ -528,12 +529,16 @@ AI 可能輸出：
 
 ## 📚 Assignments
 
+<StageAssignmentCard title="用雙鑽模型整理你的點子">
+
 請你根據上文內容，完成下列作業：
 
 1. 選一個你最近想做的產品點子，寫出它的 Discover、Define、Develop、Deliver 四步草稿
 2. 在 Define 階段，強迫自己把問題縮成一句具體的話
 3. 在 Develop 階段，至少列出 3 種不同方案，而不是隻盯著第一個想到的做法
 4. 在 Deliver 階段，寫出一個一週內能交付的最小驗證版本
+
+</StageAssignmentCard>
 
 ## 延伸閱讀
 

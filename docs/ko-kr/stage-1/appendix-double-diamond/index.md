@@ -4,6 +4,7 @@ description: '제로 베이스 독자를 위한 Double Diamond 입문 글입니�
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = '약 <strong>1.5시간</strong>'
 </script>
 
@@ -528,12 +529,16 @@ Double Diamond 모델의 가장 흔한 문제는 단계를 건너뛰는 것입�
 
 ## 📚 과제
 
+<StageAssignmentCard title="더블 다이아몬드로 아이디어 정리하기">
+
 위 내용을 바탕으로 다음 과제를 완료해 주세요:
 
 1. 최근에 만들고 싶은 제품 아이디어를 하나 골라, Discover, Define, Develop, Deliver 4단계의 초안을 작성하세요
 2. Define 단계에서, 문제를 구체적인 한 문장으로 줄이도록 강제하세요
 3. Develop 단계에서, 최소 3가지 다른 솔루션을 나열하고, 가장 먼저 떠오른 방법만 바라보지 마세요
 4. Deliver 단계에서, 1주일 이내에 전달할 수 있는 최소 검증 버전을 하나 작성하세요
+
+</StageAssignmentCard>
 
 ## 더 읽어볼 만한 자료
 

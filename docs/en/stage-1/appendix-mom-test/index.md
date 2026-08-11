@@ -4,6 +4,7 @@ description: 'A beginner-friendly introduction to The Mom Test. Learn how to avo
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'About <strong>1.5 hours</strong>'
 </script>
 
@@ -572,10 +573,14 @@ That is especially helpful for beginners because it trains the instinct to ask:
 
 ## Assignments
 
+<StageAssignmentCard title="Run a User Interview Without Pitching Your Idea">
+
 1. Write 5 weak interview questions you might normally ask
 2. Rewrite them in The Mom Test style
 3. Interview 3 potential users about the last time the problem happened
 4. Sort your notes into facts, workarounds, costs, and repeated pain points
+
+</StageAssignmentCard>
 
 ## Further Reading
 

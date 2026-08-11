@@ -4,6 +4,7 @@ description: 'Learn how to transition from building AI tools to thinking, judgin
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Approx. <strong>6 hours</strong>'
 </script>
 
@@ -220,6 +221,8 @@ What if the idea is rough? That is fine. Rough at the beginning is normal. **Don
 
 ## 📚 Assignments
 
+<StageAssignmentCard title="Find Three Ideas Worth Exploring">
+
 Please complete the following based on the above content:
 
 1. Combine your own interests and use AI to generate several app ideas.
@@ -238,6 +241,8 @@ The real challenge starts now. Many people fail here: in their minds the bluepri
 ![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image5.png)
 
 Don’t delay. Start now. This chapter teaches a practical decomposition method from idea to buildable version. You will see that going from zero to one does not depend on genius, but on a repeatable action sequence: **diverge, converge, decompose, refine, benchmark, ask.** Following this order, even without a team or abundant time, you can turn an idea into a runnable app demo.
+
+</StageAssignmentCard>
 
 ## 2.1 From Idea to Solution: Use the Double Diamond from Divergence to Convergence
 
@@ -544,6 +549,8 @@ Next we discuss exactly that: what makes a good application, and after the first
 
 ## 📚 Assignments
 
+<StageAssignmentCard title="Turn an Idea into a Plan You Can Build">
+
 Please complete the following assignments based on the above content:
 
 1. Use any large language model. For your previous idea, ask AI to generate divergent outcomes with the Double Diamond model, then select one feasible solution.
@@ -554,6 +561,8 @@ Please complete the following assignments based on the above content:
 When you finally build the first version and put it into the real world for people to use, you'll enter a completely different stage. All previous discussions were still at the idea and design level, and now, the product will be tested by real usage scenarios for the first time. You'll see where users click wrong, where they hesitate, where they get stuck, and also see where they proceed surprisingly smoothly, even unexpectedly lingering a few extra seconds in some corner. These details are far more honest than all your imaginations about the product in your mind.
 
 This chapter wants to solve a core problem: when an application has already been built, and even has a batch of early users using it, how to judge how far it is from a good application, and how to use this information from real usage to polish it step by step.
+
+</StageAssignmentCard>
 
 ## 3.1 What is a Good Application: 4 Core Characteristics
 

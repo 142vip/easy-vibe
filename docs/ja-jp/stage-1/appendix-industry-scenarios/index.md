@@ -1,1329 +1,678 @@
 ---
-title: 'AIアプリケーションシーン参考（Bエンド・Cエンド）'
-description: '本文書は、LLM大規模言語モデルのBエンド企業シーンとCエンド消費シーンにおける応用方向をまとめています。Bエンドは製造業、スマートカスタマーサポート、教育、医療、金融など19業界の実装アプリケーションを網羅し、Cエンドはライフスタイル、感情コンパニオン、エンターテイメント、自己成長など16の消費シーンのインスピレーションをカバーし、AIアプリ開発者に包括的な参考を提供します。'
+title: '実際の仕事の流れから AI の用途を探す'
+description: '60 件を超える調査報告と製品事例から、企業や生活の中ですでに使われている AI の場面を読み解きます。'
 ---
 
-<script setup>
-import { computed, ref } from 'vue'
+# 実際の仕事の流れから AI の用途を探す
 
-const duration = '約 <strong>6 時間</strong>'
+「業界別 AI 活用集」には、金融、医療、教育、製造と多くの案が並びます。しかし作り始めようとすると、誰に話を聞き、どのデータをつなぎ、どの作業を置き換え、誰がお金を払うのかが分かりません。
 
-const interestPoint = ref('')
-const purpose = ref('')
+原因は、**業界そのものは利用場面ではない**からです。「AI × 医療」は範囲にすぎません。「診察後に医師が十分かけて記録を補う。システムが会話から下書きを作り、医師が確認する」なら、調査・設計・検証できる仕事の流れになります。
 
-// 各業界のトピックプール
-const topicPool = {
-  'manufacturing': [
-    { title: '新エネルギーバス外観AI補助設計プラットフォーム', desc: '画像生成モデルによる外観コンセプト設計' },
-    { title: 'スマート図面設計・審査アシスタント', desc: 'RAG技術で企業設計規範ナレッジベースを構築' },
-    { title: '技術文書自動生成・管理', desc: 'LLMに基づく製品仕様書と操作マニュアルの自動生成' },
-    { title: '生産設備巡回点検レポート自動生成アシスタント', desc: '音声による設備状態記述、構造化巡回点検レポートの自動生成' },
-    { title: '工業設備故障診断ナレッジQAアシスタント', desc: '過去の故障ケースに基づくベクトルナレッジベースの構築' }
-  ],
-  'customer-service': [
-    { title: 'マルチチャネルスマートカスタマーサポート自動応答・チケット生成システム', desc: 'マルチチャネルメッセージ受信、LLMによる意図理解後の応答生成' },
-    { title: '見込み客発掘・フォローアップ提案アシスタント', desc: '過去の対話記録を分析し、高意向顧客を識別' },
-    { title: '企業内部ナレッジスマート検索・QAマネージャー', desc: '内部文書に基づくベクトルナレッジベースの構築' },
-    { title: 'カスタマーサポート対話スマートサマリー・チケット生成ツール', desc: '会話終了後の自動サマリー生成とキー情報抽出' },
-    { title: 'カスタマーサポート金牌トーク推薦ナレッジシステム', desc: '優秀な事例を分析し、金牌トークテンプレートを抽出' }
-  ],
-  'education': [
-    { title: 'パーソナライズ言語学習パス計画・スマート導学システム', desc: '学習者レベルを評価し、毎日の学習タスクを計画' },
-    { title: '授業案自動作成・教育リソース配信プラットフォーム', desc: 'カリキュラムに基づく授業案フレームワークの自動生成' },
-    { title: '宿題自動採点・学習状況診断分析システム', desc: '記述式問題の自動採点と添削アドバイスの自動生成' },
-    { title: '人材ポジションコンピテンシーモデル構築・学習マップ', desc: '求人JDを分析して能力要件を抽出' },
-    { title: '外国語スピーキング1対1シチュエーション実践演習', desc: 'LLMが異なる役割を演じ、スピーキング会話を実施' }
-  ],
-  'programming': [
-    { title: 'スマートコード補完・Bug自動修正アシスタント', desc: 'IDEプラグインによるリアルタイムコード補完提案' },
-    { title: 'ローコードアプリ構築・プロセス自動化プラットフォーム', desc: '自然言語による要件記述をローコード設定に変換' },
-    { title: 'ユニットテストケース生成システム', desc: 'AST解析によるソースコード解析、境界条件テストケースの生成' },
-    { title: 'コードスマート分析・言語移行ツール', desc: 'コード品質の分析と最適化提案' },
-    { title: 'フロントエンドUIコード自動生成ツール', desc: 'デザイン画像認識によるレスポンシブCSSの生成' }
-  ],
-  'healthcare': [
-    { title: '医学検査レポートスマート解読アシスタント', desc: 'OCRによる主要指標の認識、異常値の解読' },
-    { title: 'ナレッジ検索技術ベースの健康相談エキスパート', desc: '医学ナレッジグラフの構築、RAG検索による回答生成' },
-    { title: '臨床研究データ意思決定分析プラットフォーム', desc: 'EMRデータの統合、統計分析コードの補助生成' },
-    { title: '医学画像レポート自動生成ツール', desc: '画像特徴の記述による構造化レポートの自動生成' },
-    { title: '慢性疾患管理服薬リマインダースマートアシスタント', desc: 'パーソナライズ服薬リマインダの生成、服薬禁忌チェック対応' }
-  ],
-  'security': [
-    { title: 'コードセキュリティ脆弱性検出・修正エンジン', desc: 'SASTによるコードスキャン、脆弱性原理の分析' },
-    { title: 'AI生成フィッシングメールスマート識別・ブロックシステム', desc: 'メール内容の分析によるAI生成フィッシングメールの識別' },
-    { title: 'セキュリティ運用日報自動生成アシスタント', desc: 'ログ集約、キーイベントの自動抽出' },
-    { title: 'ペネトレーションテストレポートスマート生成アシスタント', desc: '脆弱性記述に基づくレポートの自動生成' },
-    { title: '脅威インテリジェンススマート検索・分析アシスタント', desc: 'マルチソース脅威インテリジェンスの照会、コンテンツの解読' }
-  ],
-  'finance': [
-    { title: '与信審査レポートスマート生成アシスタント', desc: '財務データ入力による与信審査レポートの自動生成' },
-    { title: 'プライベートバンクウェルスマートコンサルタント', desc: '顧客リスク許容度の分析による資産配分提案の生成' },
-    { title: 'IPO目論見書スマート生成・コンプライアンス検証アシスタント', desc: 'モジュール化テンプレートによる事業記述の自動入力' },
-    { title: '企業財務レポート自動生成・経営異常早期警戒システム', desc: '財務分析と経営層討論の自動生成' },
-    { title: '保険代理店スマートトーク練習', desc: 'シミュレーション対話によるトークのコンプライアンス性と説得力の評価' }
-  ],
-  'enterprise': [
-    { title: '企業契約ライフサイクルコンプライアンス審査・修正提案プラットフォーム', desc: '条項の法規データベースとの照合、コンプライアンス審査レポートの生成' },
-    { title: '営業通話音声書き起こし・トーク推薦', desc: 'ASR書き起こし、会話分析と金牌トークの推薦' },
-    { title: 'マーケティングコンテンツスマート生成・デザインシステム', desc: 'マーケティングコピーとセールスポイントの抽出' },
-    { title: '競合広告出稿分析プラットフォーム', desc: '競合広告の収集、出稿戦略の分析' },
-    { title: '全网トレンドトピックスマート分析・コンテンツ推薦システム', desc: 'トレンド分析とトピック提案の推薦' }
-  ],
-  'content': [
-    { title: '映像・小説コンテンツ制作補助プラットフォーム', desc: 'ストーリー概要、キャラクター設定、セリフ生成の提供' },
-    { title: '企業ブランドストーリー・PR記事スマート執筆アシスタント', desc: 'ブランドキーワード入力による複数スタイルコピーの生成' },
-    { title: 'バーチャルデジタルヒューマンライブ配信・配信管理システム', desc: 'デジタルヒューマン像 + TTS音声 + LLM対話' },
-    { title: 'ショートビデオスクリプト生成・スマート編集', desc: 'ショートビデオスクリプトと絵コンテの生成' },
-    { title: 'マーケティングコンテンツスマート生成・デザインシステム', desc: 'マーケティングコピーとセールスポイントの抽出' }
-  ],
-  'government': [
-    { title: '12345行政窓口スマート音声ナビ・自動振り分けシステム', desc: '音声認識による要望の理解とスマート振り分け' },
-    { title: '行政サービスホールスマート案内・政策QAロボット', desc: '行政ナレッジベースのRAG検索' },
-    { title: '企業支援政策スマートマッチング・精密配信プラットフォーム', desc: '企業プロファイルによる適用政策の自動マッチング' },
-    { title: '行政審査書類スマート事前審査・コンプライアンス検証アシスタント', desc: 'OCR認識とキー情報抽出' },
-    { title: '都市グリッドイベントスマート識別・配車管理プラットフォーム', desc: 'イベントタイプの識別と振り分け' }
-  ],
-  'legal': [
-    { title: '契約リスク脆弱性ワンクリック「間違い探し」Agent', desc: 'リスクチェックリストとの照合による潜在的問題の識別' },
-    { title: '類似案件勝訴率AIスマート評価コンサルタント', desc: '案件特徴抽出、類似案件の検索マッチング' },
-    { title: '法規変更リアルタイム監視・業務影響分析レーダー', desc: '変更内容の解析と業務影響の評価' },
-    { title: '弁護士レターAIGC自動起案ツール', desc: '事実陳述入力による規範的な弁護士レターの生成' },
-    { title: '複雑な法律条項「翻訳」を平易な言葉にする解説プラグイン', desc: '分かりやすい解説の生成' }
-  ],
-  'travel': [
-    { title: 'AIGCベースのラク旅ガイドジェネレーター', desc: '毎日の旅程スケジュールの自動生成' },
-    { title: '全网航空券・ホテル価格トレンド予測・低価格自動ロックボット', desc: 'MLモデルによる価格トレンド予測' },
-    { title: 'ビザ書類スマート事前審査・自動フォーム記入補助システム', desc: 'OCR認識による情報完全性チェック' },
-    { title: '海外旅行リアルタイム音声翻訳・メニュー視覚中国語化マネージャー', desc: 'オフライン音声翻訳、メニュー画像OCR' },
-    { title: '旅行足迹自動生成精美旅行記・SNS投稿アシスタント', desc: '写真情報抽出による旅行記文案の生成' }
-  ],
-  'emotion': [
-    { title: 'LLMベースの24時間深層コンパニオン仮想パートナー', desc: '記憶システムによる対話履歴の保存' },
-    { title: 'マルチモーダル感情認識・心理カウンセリングAIコンサルタント', desc: '音声トーン分析 + テキスト感情認識' },
-    { title: 'アルツハイマー老人AI認知訓練・記憶想起デジタルヒューマン', desc: '認知ゲーム訓練、古い写真による記憶トリガー' },
-    { title: '社交不安のAIGCシミュレーション社交練習コーチ', desc: 'バーチャル社交シーンのシミュレーション' },
-    { title: '全天候気分監視・AIポジティブ感情モチベーションアシスタント', desc: '気分トレンドの分析とモチベーションコンテンツの生成' }
-  ],
-  'entertainment': [
-    { title: 'LLM駆動のオープンワールドゲームNPC自律意思決定エンジン', desc: 'NPC行動木とLLM意思決定の融合' },
-    { title: '没入型マーダーミステリーAIGCストーリー推演・DMコントロール補助ツール', desc: 'プレイヤーの選択によるストーリー分岐のトリガー' },
-    { title: 'インタラクティブ小説エンディング生成式修飾器', desc: '読者の選択がストーリーの方向性に影響' },
-    { title: 'eスポーツ戦局CVビジュアル分析・AIスマート実況アナウンサー', desc: 'ゲーム画面のリアルタイム分析' },
-    { title: 'マルチキャラTTS音声合成オーディオブック自動生成システム', desc: 'テキストのキャラクター割り当て、パーソナライズ音色の生成' }
-  ],
-  'ecommerce': [
-    { title: '高コンバージョンAIGC商品詳細ページ一括生産ツール', desc: 'セールスポイントコピーとシーン記述の生成' },
-    { title: 'アパレルバーチャルモデルAIスマート試着・展示動画生成ファクトリー', desc: 'バーチャルモデル試着効果の生成' },
-    { title: '越境EC多言語LLMローカライズ翻訳・ブラッシュアップアシスタント', desc: '商品説明の多言語翻訳' },
-    { title: '24時間全天候AIGCデジタルヒューマンライブ配信システム', desc: 'デジタルヒューマン像 + リアルタイムトーク生成' },
-    { title: '市場トレンドAIインサイト・爆売り予測エンジン', desc: 'トレンドホットスポットの洞察、品揃え提案' }
-  ],
-  'energy': [
-    { title: '家庭電力使用行動AI分析・省エネ戦略コンサルタント', desc: '電力使用パターンの分析、省エネ提案の生成' },
-    { title: '太陽光パネル欠陥ドローンCVビジュアル識別システム', desc: 'ドローン巡回撮影、熱赤外画像分析' },
-    { title: '電力スポット取引価格AIトレンド予測・自動利益戦略Agent', desc: '価格予測モデル、戦略生成' },
-    { title: '企業全チェーンカーボン排出AI自動算定・ESGレポート生成アシスタント', desc: 'カーボン排出因子の計算、ESGレポートの自動生成' },
-    { title: '電網異常気象負荷AI予測・緊急配車指揮システム', desc: '気象データ連携、負荷予測モデル、配車戦略生成' }
-  ],
-  'av-media': [
-    { title: '長編動画ハイライトAI識別・ショートビデオ自動編集ツール', desc: 'ビデオコンテンツ分析、キーフレーム識別' },
-    { title: 'ビデオ背景ノイズAIスマート分離・音声強調アシスタント', desc: 'オーディオ分離モデル、背景ノイズ除去' },
-    { title: '古い映像4Kアップスケーリング修復・AIスマート着色ワークベンチ', desc: 'ビデオ超解像度モデル、AI自動着色' },
-    { title: 'テキストからリアルレベルTTS吹き替え・感情制御システム', desc: 'マルチ音色TTSモデル、感情制御生成' },
-    { title: '会議録音AIスマート書き起こし・コアToDo抽出アシスタント', desc: '複数人会議の音声分離書き起こし' }
-  ],
-  'ai-marketing': [
-    { title: 'RED爆売りコピーAIGC自動執筆エンジン', desc: '種草コピーの生成、emoji最適化' },
-    { title: 'マーケティングポスターAIスマートレイアウト・マルチサイズ適応ツール', desc: 'ポスターテンプレートのスマートマッチング' },
-    { title: 'ブランドLOGOクリエイティブAIGC生成・VI体系構築プラットフォーム', desc: 'LOGOクリエイティブ生成、VI規範生成' },
-    { title: '全网ホットAI追跡・トレンドマーケティングクリエイティブ生成アシスタント', desc: 'マーケティング角度の分析、クリエイティブプランの生成' },
-    { title: 'ショートビデオスクリプトクリエイティブAIGC生成・絵コンテガイダンスアシスタント', desc: 'スクリプトと絵コンテの生成、撮影アドバイス' }
-  ],
-  'data-intelligence': [
-    { title: '自然言語からSQL文への自動生成ツール', desc: '自然言語クエリのSQLへの変換' },
-    { title: '企業データアセットカタログスマート棚卸・分類システム', desc: 'メタデータ収集、自動分類' },
-    { title: 'データ品質異常自動検出・修正提案エンジン', desc: 'ルールエンジン + MLモデルによる異常検出' },
-    { title: 'スマートレポート生成・ビジュアル設定アシスタント', desc: '対話式レポート設定の生成' },
-    { title: 'データ指標定義スマートQAアシスタント', desc: '指標定義ドキュメントに基づくナレッジベースの構築' }
-  ]
+この付録では、60 件を超えるコンサルティング、業界調査、製品の一次事例を読み、網羅ではなく、すでに使われ価値の置き場所が見える企業向けと個人向けの場面を選びました。これはインタビューする問題を探す地図であり、完成済みの起業案ではありません。
+
+<div class="research-note">
+  <div>
+    <span class="research-note__eyebrow">最初に覚えること</span>
+    <strong>企業向けでは仕事の詰まりを、個人向けでは一日の中で繰り返す瞬間を探す。</strong>
+  </div>
+  <p>前者では担当者、システム、引き継ぎ、責任者を説明します。後者では利用者が戻る理由と、検索・テンプレート・人のサービスより AI が一手減らす場所を説明します。</p>
+</div>
+
+## まず企業向けと個人向けを区別する
+
+### 企業向け：会社は結果に対して支払う
+
+企業は「会話できること」だけを買いません。処理時間、手戻り、コンプライアンス品質、成約などの結果を買います。調査できる場面には、毎日誰が作業し、資料がどこから来て、結果をどのシステムへ戻し、失敗時に誰が責任を持つかが必要です。
+
+Deloitte が 2,773 人の経営者を調査したところ、規模拡大できた生成 AI 実験はまだ少数でした。Accenture が 2,000 件以上の案件を振り返っても、企業全体の価値を生んだ組織は少数です。難所はモデルの回答力より、完全な業務へ入っているかどうかです。[Deloitte: State of Generative AI in the Enterprise](https://www2.deloitte.com/us/en/pages/about-deloitte/articles/press-releases/state-of-generative-ai.html) · [Accenture: Making Reinvention Real with Gen AI](https://www.accenture.com/us-en/insights/consulting/making-reinvention-real-with-gen-ai)
+
+### 個人向け：利用者は少し楽になる瞬間に支払う
+
+個人向け製品は十個の社内システムをつなぐ必要はありませんが、利用者はすぐにアプリを閉じられます。旅行準備、商品比較、会話練習、ポスター作成、請求整理のような明確な瞬間で一つの仕事を終え、少しずつ好みを覚える製品が強くなります。
+
+Capgemini が 12,000 人を調べると、生成 AI は商品発見と比較へ入っていました。QuestMobile の中国データでも、AI は単独のチャットから検索、仕事、画像、音楽へ広がっています。機会は新しい会話欄だけでなく、会話を次の行動へつなぐことにあります。[Capgemini: What Matters to Today's Consumer 2025](https://www.capgemini.com/insights/research-library/top-consumer-trends-in-2025/) · [QuestMobile: 2025 中国モバイルインターネット春季報告](https://www.questmobile.cn/research/report/1919961024158601218/)
+
+## 企業向け：すでに起きている八つの仕事
+
+各節は具体的な担当者から始まります。製品名をまねる前に、なぜ遅かったのか、AI がどの一手を受け、何を人に残したかを見てください。
+
+### 1. 顧客対応は質問への返事ではなく、案件を終わらせる仕事
+
+<figure class="product-shot">
+  <a href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.jpg" alt="Klarna AI Assistant の支払延長、多言語対応、返金説明画面" loading="lazy" />
+  </a>
+  <figcaption><strong>Klarna AI Assistant：</strong>「担当者へ連絡」だけでなく、支払延長の操作を開き、返金額を項目別に示します。役立つ顧客対応 AI は注文を見つけ、次の操作へ進みます。</figcaption>
+</figure>
+
+**担当者：** 一次対応、チーム責任者、アフターサービス運営。
+
+「返金が届かない」という相談では、本人確認、注文、支払、配送の確認、規則説明、必要ならチケット作成が続きます。礼儀正しい一文より、複数システムから状況を集める方が時間を使います。
+
+Klarna は返金、返品、多言語対応を扱い、ResultsCX は音声振り分け、口座照会、バックエンド API を結びます。価値は FAQ ではなく、**状態確認→規則に沿う処理→記録→必要時に人へ引き継ぐ**流れです。[Klarna の事例](https://openai.com/index/klarna/) · [ResultsCX の事例](https://aws.amazon.com/solutions/case-studies/resultscx/) · [Salesforce: State of Service 2025](https://www.salesforce.com/news/stories/state-of-service-report-announcement-2025/)
+
+最初は人の応対後だけを扱えます。会話要約、意図、関連規則、次の操作を作り、担当者の確認後にチケットへ書きます。返金権限をモデルへ渡さず、時間短縮を測れます。
+
+<div class="scene-check">
+  <span>聞くべきこと</span>
+  <p>担当者はどの画面を頻繁に行き来するか。同じ質問でも注文状態で処理が変わるものは何か。引き継ぎ後に同じ説明を最初から求めていないか。</p>
+</div>
+
+### 2. 営業に足りないのは文章ではなく、次に誰と何を話すか
+
+<figure class="product-shot">
+  <a href="https://openai.com/index/morgan-stanley/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/morgan-stanley.webp" alt="Morgan Stanley AI@MS Assistant の社内画面" loading="lazy" />
+  </a>
+  <figcaption><strong>Morgan Stanley AI@MS Assistant：</strong>アドバイザーは口座開設資料や案件状態を検索できます。「社内利用のみ」と人の検証も表示され、判断を代行するチャットではなく業務画面内の検索入口です。</figcaption>
+</figure>
+
+**担当者：** B2B 営業、顧客担当、プリセールス、営業責任者。
+
+商談後には CRM 更新、意思決定者と反論の整理、事例検索、メール作成、次の連絡時期の判断があります。録音、チャット、メール、個人メモに散らばるため CRM は古くなりがちです。
+
+McKinsey は見込み客、商談準備、会話、提案、成約、更新までを整理しています。Morgan Stanley の道具も投資判断ではなく、社内知識の検索と会議からのメモ・タスク作成を助けます。[McKinsey: Unlocking Gen AI in B2B Sales](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/unlocking-profitable-b2b-growth-through-gen-ai) · [Morgan Stanley の事例](https://openai.com/index/morgan-stanley/)
+
+初版は「会議後の十五分」に絞れます。目標、反論、約束、次の一手を抽出し、編集可能なメールと CRM 項目を作ります。文字数ではなく CRM の完全さと連絡の速さを測ります。
+
+### 3. 社内知識は「今回どの規則を使うか」に答える
+
+<figure class="product-shot">
+  <a href="https://www.notion.com/help/guides/find-answers-and-generate-reports-with-enterprise-search" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.png" alt="Notion Enterprise Search の画面" loading="lazy" />
+  </a>
+  <figcaption><strong>Notion Enterprise Search：</strong>一つの質問で Notion と Slack を検索し、Ask、Research、Build を切り替えます。企業向け支援は一つの PDF より、既存資料と権限につながることが重要です。</figcaption>
+</figure>
+
+**担当者：** コンサルタント、運営、人事、財務、IT 支援、新入社員。
+
+答えは制度、手順書、古いメール、研修動画、過去案件に散らばっています。「この顧客は返金できるか」には、返金を含む文書ではなく、現行規則、適用条件、出典が必要です。
+
+Sun Life の社内支援は週一万件以上を処理し、Morgan Stanley は約十万件の資料を検索対象にしました。Notion は企業検索、会議記録、実行を一つの空間へ置きます。中核は権限、版、出典、改善の循環です。[Sun Life Asks](https://aws.amazon.com/solutions/case-studies/sun-life-case-study/) · [Notion AI の説明](https://www.notion.com/help/notion-ai-faqs)
+
+全社から始めず、返品規則や IT 窓口など資料範囲が明確な一部署を選びます。回答は原文を示し、見つからなければそう伝えて不足資料の一覧へ入れます。
+
+### 4. 財務・法務・コンプライアンス：読んで下書きし、署名はしない
+
+<figure class="product-shot">
+  <a href="https://mena.thomsonreuters.com/en/products-services/legal/cocounsel.html" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.jpg" alt="Thomson Reuters CoCounsel の契約作成と調査画面" loading="lazy" />
+  </a>
+  <figcaption><strong>Thomson Reuters CoCounsel：</strong>作成と調査の進行を示し、完成後に Word で開きます。AI が資料を読み、根拠を探して下書きし、専門家が慣れた文書で確認します。</figcaption>
+</figure>
+
+**担当者：** 財務分析、税務、法務、調達、コンプライアンス。
+
+契約、請求書、報告書、規則、監査資料、デューデリジェンスは形式が似ても内容が違います。AI は抽出、比較、分類、検索、下書きに向きますが、最終判断は原文へ戻れ、担当者が責任を持つ必要があります。
+
+Thomson Reuters の 2025 年調査では、法務、税務、リスクで調査、要約、契約作成、申告準備が増えています。Moderna は契約要約、OpenAI と PwC は照合、リスク通知、システム横断の財務エージェントを扱います。[Thomson Reuters: 2025 Generative AI in Professional Services](https://www.thomsonreuters.com/en-us/posts/technology/genai-professional-services-report-2025/) · [Moderna の事例](https://openai.com/index/moderna/) · [OpenAI × PwC: CFO の流れ](https://openai.com/index/openai-pwc-finance-collaboration/)
+
+小さく始めるなら、仕入先契約の支払、更新、補償、データ条項を原文引用つきで調べます。「AI 法務」を名乗る前に見逃し率、確認時間、引用精度を証明します。
+
+### 5. ソフトウェア開発：価値は別の会話欄でなくリポジトリに現れる
+
+<figure class="product-shot">
+  <a href="https://github.blog/changelog/2024-10-29-github-copilot-code-review-in-github-com-private-preview/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.png" alt="Pull Request でコードを確認する GitHub Copilot" loading="lazy" />
+  </a>
+  <figcaption><strong>GitHub Copilot Code Review：</strong>指摘は具体的な行につき、変更案も出ます。開発者は差分を読み、まとめるか拒否できます。価値は Pull Request の中にあります。</figcaption>
+</figure>
+
+**担当者：** 開発、テスト、運用、セキュリティのエンジニア。
+
+時間は古いコードの理解、テスト追加、ログ調査、レビュー、知らないリポジトリの学習に使われます。GitHub の統制実験では Copilot 利用者が指定課題を速く終えましたが、実際の組織では文脈、規則、テスト合格の方がコード生成力より重要です。[GitHub Copilot 生産性調査](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/) · [GitHub の追加報告](https://github.blog/wp-content/uploads/2023/06/Sea-Change-in-Software-Dev.pdf)
+
+社内道具は失敗した CI から始められます。エラーと変更を読み、原因候補と修正案を示し、確認用の差分を作ります。テストを実行し、差分を見せ、レビューを受け、直接本番へ送らないことが必要です。
+
+### 6. 製造と現場サービス：設備、手順書、作業票を同じ文脈に置く
+
+<figure class="product-shot">
+  <a href="https://blog.siemens.com/2026/02/the-digital-enterprise-and-the-synthesis-of-industrial-ai-digital-twin-and-data/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.jpg" alt="TIA Portal と並ぶ Siemens Engineering Copilot" loading="lazy" />
+  </a>
+  <figcaption><strong>Siemens Engineering Copilot：</strong>TIA Portal と Copilot が並びます。支援側は現在の自動化案件、設備構造、技術文書を見ており、文脈なしに「機械はなぜ壊れたか」と答えるものではありません。</figcaption>
+</figure>
+
+**担当者：** 設備操作、保守、現場サービス、工程の各エンジニア。
+
+機械が止まると、操作員に見えるのはエラーコードだけかもしれません。答えは何百ページもの手順書、部品表、修理履歴に散らばり、損失は分単位で増えます。修理後には顧客向けで社内保存できる報告も必要です。
+
+Siemens Industrial Copilot は設備説明、保守根拠の検索、自動化プログラミングに使われます。別の試験は年間 140 万件超の作業票から一貫した顧客報告を作ります。Deloitte もデータ品質と設備文脈を壁として挙げます。[Siemens Industrial Copilot](https://news.microsoft.com/source/emea/features/how-ai-is-helping-siemens-and-thyssenkrupp-bridge-skilling-gaps-in-manufacturing/) · [Siemens 現場報告の事例](https://www.microsoft.com/en/customers/story/19736-siemens-ag-germany-dynamics-365-field-service) · [Deloitte: 2025 Smart Manufacturing Survey](https://www2.deloitte.com/us/en/insights/industry/manufacturing/2025-smart-manufacturing-survey.html)
+
+「工場全体を予測」ではなく一種類の設備から始めます。エラーコードから手順書と過去作業票を探し、確認順を示し、修理後は記録を報告へ変えます。すべてに根拠を示し、技術者が「役に立たない」と記録できるようにします。
+
+### 7. 医療では診断デモより、文書と調整から始める
+
+<figure class="product-shot">
+  <a href="https://www.abridge.com/product" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.png" alt="診療記録と医師・患者の会話を結びつける Abridge" loading="lazy" />
+  </a>
+  <figcaption><strong>Abridge：</strong>生成した診療記録から元の会話へ戻れます。重要なのは自動作成の速さより、医師が各記録を追跡、修正、確認できることです。</figcaption>
+</figure>
+
+**担当者：** 医師、看護師、診療情報、保険審査、患者支援。
+
+医療の負担には、診断以外の記録、紹介、承認、請求、患者連絡があります。McKinsey の近い用途も、記録要約、保険給付、拒否理由、退院説明、事務へ集中し、モデル単独診断ではありません。[McKinsey: Tackling Healthcare's Biggest Burdens with Generative AI](https://www.mckinsey.com/industries/healthcare/our-insights/tackling-healthcares-biggest-burdens-with-generative-ai)
+
+Abridge のような環境記録は会話から構造化下書きを作り、医師が確認します。「下書き→確認→記録へ戻す」という境界は文書時間を減らし、臨床責任を変えません。[Abridge の医療機関事例](https://www.abridge.com/press-release/abridge-hartford-healthcare) · [McKinsey: Generative AI in Healthcare](https://www.mckinsey.com/industries/healthcare/our-insights/generative-ai-in-healthcare-current-trends-and-future-outlook)
+
+医療パートナー、データ、規制知識がなければ診断から始めません。受診準備を手順一覧へ直す、電話内容を整理するなど低リスクの患者支援を機関の確認つきで研究できます。
+
+### 8. 小売とコンテンツ運営：一つの素材を多くの販路へ届ける
+
+<figure class="product-shot">
+  <a href="https://www.canva.com/newsroom/news/magic-studio/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.png" alt="サイズ変更、翻訳、文書変換を行う Canva Magic Switch" loading="lazy" />
+  </a>
+  <figcaption><strong>Canva Magic Switch：</strong>確認済みのデザインを別寸法、別言語、文書へ変えられます。一つの素材から多販路版を作る高頻度の仕事です。</figcaption>
+</figure>
+
+**担当者：** EC 運営、ブランドマーケティング、デザイン、商品、ローカライズ。
+
+新商品公開では、資料理解、販路別のタイトル、画像処理、寸法変更、翻訳、禁止表現確認、反応後の更新が続きます。多くの時間は移し替えと一貫性確認に使われます。
+
+Deloitte は個別化、商品運営、供給網、マーケティングを AI の領域に挙げます。Canva は寸法と言語を変え、Adobe Firefly は生成、編集、制作素材を一つの流れに置きます。AI はブランド判断を置き換えず、版を作る機械作業を減らします。[Deloitte: 2025 Retail Industry Outlook](https://www.deloitte.com/us/en/insights/industry/retail-distribution/retail-distribution-industry-outlook-2025.html) · [Canva Magic Studio](https://www.canva.com/newsroom/news/magic-studio/) · [Adobe Firefly](https://news.adobe.com/news/2025/04/adobe-revolutionizes-ai-assisted-creativity-firefly)
+
+初版は一販路・一商品種でよいでしょう。構造化資料から詳細ページを下書きし、必須項目、寸法、禁止表現を検査して運営者が公開します。「万能マーケティング支援」より具体的な反応を得られます。
+
+## 個人向け：利用者が自分から開く七つの瞬間
+
+同じ会話欄に七種類のプロンプトを置くのは典型的な失敗です。以下の製品では会話の後ろに商品、講座、旅程、キャンバス、音楽、財務データがあり、利用者が仕事を続けられます。
+
+### 1. 「選択肢を減らして」：検索、比較、購入
+
+<figure class="product-shot product-shot--mobile">
+  <a href="https://www.aboutamazon.com/news/retail/amazon-rufus" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.jpg" alt="Amazon Rufus の買い物支援画面" loading="lazy" />
+  </a>
+  <figcaption><strong>Amazon Rufus：</strong>入口は検索欄の下にあり、質問は商品比較や Prime Day、睡眠計測の時計など買い物に直結します。一般的な助言で終わらず、実商品へ進めます。</figcaption>
+</figure>
+
+カメラ、ベビーカー、雨天通勤の靴を買う人に足りないのは商品ページではなく、曖昧な条件を比較可能にすることです。Rufus は商品一覧、評価、Q&A を合わせ、Capgemini と Adobe も AI による発見、比較、購入前相談を報告します。[Amazon Rufus](https://www.aboutamazon.com/news/retail/amazon-rufus) · [Adobe: 2025 AI and Digital Trends](https://business.adobe.com/content/dam/dx/us/en/resources/digital-trends-report-2025/2025_Digital_Trends_Report.pdf)
+
+「AI 買い物支援」ではなく選びにくい商品を研究します。賃貸住宅のプロジェクターなら投射距離、昼の明るさ、騒音、予算が同時に必要です。根拠、不足情報、実商品を示し、専門家らしい結論を作りません。
+
+### 2. 「二十個のページを開きたくない」：旅行計画と現地変更
+
+<figure class="product-shot">
+  <a href="https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.jpg" alt="Expedia の会話型旅行計画画面" loading="lazy" />
+  </a>
+  <figcaption><strong>Expedia の会話型旅行計画：</strong>新婚旅行で Maui と Kauai を比べ、ホテル案を Trips へ直接保存します。会話が保存、旅程、予約へ入ることで製品の循環が閉じます。</figcaption>
+</figure>
+
+旅行では目的地、日付、交通、営業時間、予算、同行者の希望を何度も調整します。Expedia は会話をホテル保存、価格、予約へつなぎます。価値は美しい旅行記ではなく、保存、確認、購入できる旅程です。[Expedia の会話型計画](https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/) · [Expedia AI サービス事例](https://www.expedia.com/newsroom/expedia-group-sets-the-standard-with-ai-powered-service-agent/)
+
+「子どもと半日」や「公演後の夜間経路」まで絞れます。天気、料金、営業時間は信頼できる API から取り、更新時刻を示します。
+
+### 3. 「聞くだけでなく一度練習したい」：学習とフィードバック
+
+<figure class="product-shot product-shot--portrait">
+  <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.png" alt="パリのカフェで注文する Duolingo Max の練習" loading="lazy" />
+  </a>
+  <figcaption><strong>Duolingo Max Roleplay：</strong>「フランス語で話す」ではなく、パリのカフェで注文する課題です。場面、役、目標、報酬が用意され、すぐ一回練習できます。</figcaption>
+</figure>
+
+生成 AI は、いつでも練習して今回の出来へ助言を得るという、以前は高価だった部分を補えます。Duolingo Max は役割練習と映像会話を使い、Khanmigo は答えを渡すより質問とヒントで導きます。[Duolingo Max](https://blog.duolingo.com/duolingo-max/) · [Khan Academy: Khanmigo](https://2023-2024.annualreport.khanacademy.org/khanmigo)
+
+面接回答、英会話、営業の反論対応、発表練習など一動作に絞れます。フィードバックは実際の発言を引用し、次回実行できる一つの改善を示します。
+
+### 4. 「直せる下書きがほしい」：個人の制作
+
+<figure class="product-shot">
+  <a href="https://firefly.adobe.com/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.png" alt="Adobe Firefly の画像生成画面" loading="lazy" />
+  </a>
+  <figcaption><strong>Adobe Firefly：</strong>プロンプト欄だけでなく、モデル、比率、内容種別、強度、参照画像、複数結果があります。制作製品には「もう一度生成」以外の編集手段が必要です。</figcaption>
+</figure>
+
+誕生日招待、中古商品写真、短編動画表紙、サークルのポスターでは、空白のキャンバスと複雑なソフトが壁になります。Canva は生成、背景除去、拡張、寸法変更、翻訳をキャンバスに置き、Firefly は画像、動画、音声、ベクターを続けて編集できます。[Canva Magic Studio](https://www.canva.com/newsroom/news/magic-studio/) · [Adobe Firefly 発表](https://news.adobe.com/news/2025/04/adobe-revolutionizes-ai-assisted-creativity-firefly)
+
+「もう一度」だけでなく操作を渡します。物件写真、ポッドキャスト表紙、三寸法の催事ポスターなど完成物を決め、文字、人物、ブランド色を固定して一部だけ変えます。
+
+### 5. 「今回はどこを間違えた？」：個別の説明
+
+<figure class="product-shot">
+  <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.jpg" alt="Duolingo Max Explain My Answer の説明画面" loading="lazy" />
+  </a>
+  <figcaption><strong>Explain My Answer：</strong>直前の回答を引用し、複数形 vestidos に gustan が必要な理由を説明して追加例へ進めます。一般文法ではなく「今の間違い」に答えます。</figcaption>
+</figure>
+
+同じ答えでも初心者と熟練者には別の説明が必要です。Explain My Answer は直前の誤答から始まるので、問題、回答、進度を知らない一般 Q&A より自然です。[Duolingo: Explain My Answer](https://blog.duolingo.com/explain-my-answer-now-free/)
+
+運動姿勢、撮影設定、棋譜、楽器練習にも使えます。実際の一回を入力し、一番直す価値のある点を示します。個人データのない「個別助言」は名前だけを変えた一般論です。
+
+### 6. 「推薦だけでなく覚えて」：音楽と継続体験
+
+<figure class="product-shot product-shot--mobile">
+  <a href="https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.jpg" alt="Spotify AI DJ の再生画面" loading="lazy" />
+  </a>
+  <figcaption><strong>Spotify AI DJ：</strong>ホームに継続的な再生入口があり、曲と操作へ直結します。長期の聴取履歴、楽曲庫、次の再生操作に支えられ、司会の一文だけではありません。</figcaption>
+</figure>
+
+Spotify AI DJ は紹介文だけでなく長期履歴から選曲し、継続する声で体験をつなぎます。複製しにくいのは口調より好みデータ、権利、再生操作です。[Spotify AI DJ](https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/) · [Deloitte: 2025 Digital Media Trends](https://www.deloitte.com/us/en/insights/industry/technology/digital-media-trends-consumption-habits-survey/2025.html)
+
+ランニング、料理、就寝前読書にも継続体験があります。過去の選択から次回を変え、利用者が簡単に修正できるようにします。本人以上に理解したふりは不要です。
+
+### 7. 「複雑な規則を次の一手へ」：個人財務と生活手続き
+
+<figure class="product-shot product-shot--portrait">
+  <a href="https://turbotax.intuit.com/personal-taxes/mobile-apps/turbotax/" target="_blank" rel="noreferrer">
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/intuit-assist.jpg" alt="TurboTax で二年の税額控除を比べる Intuit Assist" loading="lazy" />
+  </a>
+  <figcaption><strong>TurboTax の Intuit Assist：</strong>今年と前年の控除額を比べ、「他に申請できる控除」などの次の質問を出します。個人財務支援の土台は本人のデータと現在の仕事です。</figcaption>
+</figure>
+
+税、信用、保険、請求は規則が複雑で資料が散らばり、次の行動が人ごとに違います。Intuit Assist は TurboTax、Credit Karma、QuickBooks の既存財務データを説明と行動へつなぎます。[Intuit Assist](https://www.intuit.com/intuitassist/)
+
+リスクも高い領域です。初版は資料一覧、用語説明、請求分類、手続き通知に向き、事実、推定、提案を区別します。税申告、投資取引、保険選択では本人の確認と専門家への入口が必要です。
+
+## 自分の企業向け・個人向け方向を探す場所
+
+上の事例は「場面の形」を学ぶもので、業界名を交換する型ではありません。自分の方向は、接触できる人、資料、習慣の中にあります。企業向けと個人向けでは探し方が違います。
+
+### 企業向け：一つの職種を最後まで追う
+
+企業資料に「起業機会」とは書かれません。求人、調達文書、作業手順、ソフト評価、導入事例として現れます。貿易担当、物件窓口、診療所受付、保守技術者など一職種を選び、仕事を追います。
+
+<div class="idea-routes">
+  <div class="idea-route idea-route--b">
+    <span>企業向けを探す場所</span>
+    <ul>
+      <li><strong>求人サイト：</strong>毎日の責任、使用システム、提出表、報告を読む。</li>
+      <li><strong>入札と調達：</strong>企業がお金を払う問題、受入基準、システム境界を見る。</li>
+      <li><strong>ソフト評価：</strong>G2、Capterra、アプリ市場、論壇の低評価から「Excel へ出す」「毎回手で補う」を探す。</li>
+      <li><strong>企業事例と年次報告：</strong>会社名とデジタル化、効率、顧客対応を検索して予算のある案件を見る。</li>
+      <li><strong>実作業の資料：</strong>古い作業票、見積書、検査表、助けを求める会話、研修文書は製品入口に近い。</li>
+    </ul>
+  </div>
+  <div class="idea-route idea-route--c">
+    <span>そのまま使える検索語</span>
+    <p><code>設備保守 担当者 日常 業務フロー</code></p>
+    <p><code>物件 顧客対応 入札 自動化 filetype:pdf</code></p>
+    <p><code>site:g2.com field service software reviews</code></p>
+    <p><code>customer support workflow pain points report</code></p>
+    <p><code>業界 デジタル変革 事例 年次報告</code></p>
+  </div>
+</div>
+
+貿易に関心があっても「AI × 貿易」だけを探しません。求人から問い合わせ返信、見積、仕様確認、納期催促、通関資料を記録し、実際の見積と低評価を見ます。万能支援より「英語問い合わせ後、過去価格と製品情報から確認用見積を作る」方が強いかもしれません。
+
+### 個人向け：一日を追い、繰り返す面倒を探す
+
+個人向けは、いつ人が携帯を取り出すかから始めます。検索、比較、記録、練習、待ち、共有のうち毎週起きるものは何か。スクリーンショット、メモ、お気に入り、グループ会話で無理に終えているものは何かを探します。
+
+<div class="idea-routes">
+  <div class="idea-route idea-route--c">
+    <span>個人向けを探す場所</span>
+    <ul>
+      <li><strong>App Store と Android 市場：</strong>一〜三星評価から不足機能、課金での離脱、利用中止理由を見る。</li>
+      <li><strong>SNS と Reddit：</strong>「やり方」「道具はあるか」「おすすめ」を検索し、コメントの制約を読む。</li>
+      <li><strong>Product Hunt とランキング：</strong>新製品が解いた小さな動作と、利用者が次に望むことを見る。</li>
+      <li><strong>傾向・流量報告：</strong>Google Trends、QuestMobile、iResearch、年次報告で長期行動か確認する。</li>
+      <li><strong>自分の写真とお気に入り：</strong>大量の画像、再読しない案内、繰り返しコピーする文は未接続の流れ。</li>
+    </ul>
+  </div>
+  <div class="idea-route idea-route--b">
+    <span>そのまま使える検索語</span>
+    <p><code>site:reddit.com "I wish there was an app"</code></p>
+    <p><code>子どもと旅行 計画 大変</code></p>
+    <p><code>家計簿 App 使いにくい 評価</code></p>
+    <p><code>Product Hunt AI language learning</code></p>
+    <p><code>AI アプリ 利用者規模 報告</code></p>
+  </div>
+</div>
+
+旅行が好きでもすぐ「AI 旅程」を作りません。なぜ案内を十件保存するかを見ます。店の臨時休業、年長者の歩行、公演後の安全な帰路など、繰り返す一瞬を選ぶと生成記事ではなく開かれる道具になります。
+
+### 資料を見つけても、すぐコードを書かない
+
+方向には三種類の証拠を残します。流れが分かる一資料、三人が繰り返す面倒、すでにお金または時間を払う代替手段です。その後六十分で具体化します。
+
+<div class="fieldwork">
+  <div class="fieldwork__step"><b>01</b><span>一人を決める</span><p>企業向けは職種、個人向けは生活状態まで書く。「企業利用者」「若者」だけにしない。</p></div>
+  <div class="fieldwork__step"><b>02</b><span>一回の発生を見る</span><p>表、画面録画、低評価、実操作から、具体的に止まる場所を探す。</p></div>
+  <div class="fieldwork__step"><b>03</b><span>三回交差確認する</span><p>同じ問題を三人または三資料で確認し、一つの面白い不満だけで進まない。</p></div>
+  <div class="fieldwork__step"><b>04</b><span>一手だけ受ける</span><p>入力、出力、確認者、指標を決め、AI が本当に合うか判断する。</p></div>
+</div>
+
+最後に、他人が想像できる一文へします。
+
+> **誰**が**どの瞬間**に、今は**どの資料・方法**で**何を完了**しているか。まず AI に**一手**を任せ、**誰**が確認し、**どの変化**で価値を判断するか。
+
+企業向けの例：
+
+> 包装ライン操作員が E37 を見ると、紙の手順書と古い作業票を探す。システムは設備型式から該当節と三つの確認手順を出し、保守技術者が確認する。試験では平均停止時間を測る。
+
+個人向けの例：
+
+> 親が週末に子どもと博物館へ行くとき、投稿、地図、評価から旅程を組む。製品は年齢と時間から三時間の経路を作り、営業時間と料金の出典を残し、親の確認後に予定へ追加する。
+
+ここまで具体的なら、インタビュー、試作、小規模試用へ進める idea です。
+
+## 参考資料
+
+以下には **67 件の情報源**があります。本文は調査方法の明確な報告と一次事例を優先し、中国の証券会社資料は商用化の関心を観察するために使い、投資判断を需要の証明にしません。販売側の事例はインタビューと実データで交差確認してください。
+
+<details class="source-group">
+<summary>一、全体的な導入と企業価値（15）</summary>
+
+1. [McKinsey：The Economic Potential of Generative AI](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier)
+2. [McKinsey：The State of AI 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)
+3. [PwC：2025 Global AI Jobs Barometer](https://www.pwc.com/gx/en/issues/c-suite-insights/the-leadership-agenda/AI-jobs-barometer.html)
+4. [PwC：Global Workforce Hopes and Fears Survey 2025](https://www.pwc.com/gr/en/publications/specific-to-all-industries-index/hopes-and-fears-2025.html)
+5. [Deloitte：State of Generative AI in the Enterprise](https://www2.deloitte.com/us/en/pages/about-deloitte/articles/press-releases/state-of-generative-ai.html)
+6. [Microsoft：2025 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born)
+7. [IBM：5 Trends for 2025](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/business-trends-2025)
+8. [IBM：2025 CDO Study](https://www.ibm.com/thought-leadership/institute-business-value/en-us/report/2025-cdo)
+9. [Cisco：2025 AI Readiness Index](https://www.cisco.com/c/m/en_us/solutions/ai/readiness-index/realizing-the-value-of-ai.html)
+10. [EY：2025 AI Pulse Survey](https://www.ey.com/en_us/insights/emerging-technologies/pulse-ai-survey)
+11. [Accenture：Reinventing Enterprise Models in the Age of Gen AI](https://www.accenture.com/us-en/insights/artificial-intelligence/ai-investments)
+12. [Accenture：Making Reinvention Real with Gen AI](https://www.accenture.com/us-en/insights/consulting/making-reinvention-real-with-gen-ai)
+13. [OpenAI：The State of Enterprise AI 2025](https://openai.com/business/guides-and-resources/the-state-of-enterprise-ai-2025-report/)
+14. [中国信通院：《人工智能发展报告（2024 年）》](https://hrssit.cn/Uploads/file/20241217/1734400434600250.pdf)
+15. [CNNIC：《生成式人工智能应用发展报告（2025）》](https://www3.cnnic.cn/n4/2025/1021/c88-11391.html)
+
+</details>
+
+<details class="source-group">
+<summary>二、企業向けの業界・職種・業務フロー（24）</summary>
+
+16. [McKinsey：Unlocking Profitable B2B Growth Through Gen AI](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/unlocking-profitable-b2b-growth-through-gen-ai)
+17. [McKinsey：Capturing the Full Value of Generative AI in Banking](https://www.mckinsey.com/industries/financial-services/our-insights/capturing-the-full-value-of-generative-ai-in-banking)
+18. [McKinsey：The AI-powered Bank—Customer Care](https://www.mckinsey.com/industries/financial-services/our-insights/the-ai-powered-bank-rewiring-for-excellence-in-customer-care)
+19. [McKinsey：The Future of AI in Insurance](https://www.mckinsey.com/industries/financial-services/our-insights/the-future-of-ai-in-the-insurance-industry)
+20. [McKinsey：Tackling Healthcare’s Biggest Burdens with Generative AI](https://www.mckinsey.com/industries/healthcare/our-insights/tackling-healthcares-biggest-burdens-with-generative-ai)
+21. [McKinsey：Generative AI in Healthcare](https://www.mckinsey.com/industries/healthcare/our-insights/generative-ai-in-healthcare-current-trends-and-future-outlook)
+22. [Deloitte：2025 Manufacturing Industry Outlook](https://www.deloitte.com/us/en/insights/industry/manufacturing-industrial-products/manufacturing-industry-outlook/2025.html)
+23. [Deloitte：2025 Smart Manufacturing Survey](https://www2.deloitte.com/us/en/insights/industry/manufacturing/2025-smart-manufacturing-survey.html)
+24. [Deloitte：2025 Retail Industry Outlook](https://www.deloitte.com/us/en/insights/industry/retail-distribution/retail-distribution-industry-outlook-2025.html)
+25. [Deloitte：2025 Global Health Care Outlook](https://www.deloitte.com/content/dam/assets-zone1/tw/en/docs/industries/life-sciences-health-care/2025/2025-healthcare-outlook-en.pdf)
+26. [Accenture：Commercial Banking Trends 2024](https://www.accenture.com/content/dam/accenture/final/accenture-com/document-2/Accenture-Commercial-Banking-Trends-2024.pdf)
+27. [Accenture：Banking Trends 2026](https://www.accenture.com/us-en/insights/banking/accenture-banking-trends-2026)
+28. [Thomson Reuters：2025 Generative AI in Professional Services](https://www.thomsonreuters.com/en-us/posts/technology/genai-professional-services-report-2025/)
+29. [Salesforce：State of Service 2025](https://www.salesforce.com/news/stories/state-of-service-report-announcement-2025/)
+30. [Salesforce：State of Sales 2026](https://www.salesforce.com/en/wp-content/uploads/sites/4/documents/reports/sales/salesforce-state-of-sales-report-2026.pdf)
+31. [Adobe：2025 AI and Digital Trends](https://business.adobe.com/content/dam/dx/us/en/resources/digital-trends-report-2025/2025_Digital_Trends_Report.pdf)
+32. [Adobe：2025 Content Creation and Management](https://business.adobe.com/content/dam/dx/us/en/resources/reports/content-management-digital-trends/2025-ai-and-digital-trends-content-creation-and-management.pdf)
+33. [艾瑞咨询：《2025 年中国企业级 AI 应用行业研究报告》](https://www.bsia.org.cn/site/content/31686.html)
+34. [GitHub：Quantifying Copilot’s Impact on Developer Productivity](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/)
+35. [Siemens × Microsoft：Industrial Copilot](https://news.microsoft.com/source/2024/10/24/siemens-and-microsoft-scale-industrial-ai/)
+36. [Abridge：Hartford HealthCare Ambient AI 案例](https://www.abridge.com/press-release/abridge-hartford-healthcare)
+37. [AWS：Sun Life 内部知识助手](https://aws.amazon.com/solutions/case-studies/sun-life-case-study/)
+38. [AWS：ResultsCX 客服自动化](https://aws.amazon.com/solutions/case-studies/resultscx/)
+39. [AWS：Sanofi 企业 AI 助手](https://aws.amazon.com/solutions/case-studies/sanofi-bedrock-case-study/)
+
+</details>
+
+<details class="source-group">
+<summary>三、導入製品と企業事例（10）</summary>
+
+40. [OpenAI：Morgan Stanley](https://openai.com/index/morgan-stanley/)
+41. [OpenAI：Klarna](https://openai.com/index/klarna/)
+42. [OpenAI：Moderna](https://openai.com/index/moderna/)
+43. [OpenAI：BBVA](https://openai.com/index/bbva-2025/)
+44. [OpenAI × PwC：Reimagining the Office of the CFO](https://openai.com/index/openai-pwc-finance-collaboration/)
+45. [Microsoft：Siemens 现场服务报告](https://www.microsoft.com/en/customers/story/19736-siemens-ag-germany-dynamics-365-field-service)
+46. [AWS：Legal & General 文档处理](https://aws.amazon.com/solutions/case-studies/aws-innovator-legal-and-general/)
+47. [AWS × Infosys：医疗保险客服助手](https://aws.amazon.com/blogs/apn/how-infosys-built-aws-generative-ai-based-assistant-for-a-healthcare-payer-company/)
+48. [Notion：Notion AI 功能说明](https://www.notion.com/help/notion-ai-faqs)
+49. [Canva：Magic Studio](https://www.canva.com/newsroom/news/magic-studio/)
+
+</details>
+
+<details class="source-group">
+<summary>四、個人向け利用者と製品（13）</summary>
+
+50. [Capgemini：What Matters to Today’s Consumer 2025](https://www.capgemini.com/insights/research-library/top-consumer-trends-in-2025/)
+51. [Accenture：Me, My Brand and AI](https://www.accenture.com/us-en/insights/consulting/me-my-brand-ai-new-world-consumer-engagement)
+52. [Deloitte：2025 Digital Media Trends](https://www.deloitte.com/us/en/insights/industry/technology/digital-media-trends-consumption-habits-survey/2025.html)
+53. [QuestMobile：2025 中国移动互联网春季报告](https://www.questmobile.cn/research/report/1919961024158601218/)
+54. [QuestMobile：2025 年 8 月 AI 应用行业报告](https://www.questmobile.com.cn/research/report/1967853261412208641/)
+55. [艾瑞咨询：《2025 年中国 AI 类 App 流量分析报告》](https://www.etc.org.cn/UserFiles/Article/file/6388341575962762472758248.pdf)
+56. [Amazon：Rufus 购物助手](https://www.aboutamazon.com/news/retail/amazon-rufus)
+57. [Expedia：对话式旅行规划](https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/)
+58. [Duolingo：Duolingo Max](https://blog.duolingo.com/duolingo-max/)
+59. [Khan Academy：Khanmigo](https://2023-2024.annualreport.khanacademy.org/khanmigo)
+60. [Spotify：AI DJ](https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/)
+61. [Intuit：Intuit Assist](https://www.intuit.com/intuitassist/)
+62. [Adobe：Firefly](https://news.adobe.com/news/2025/04/adobe-revolutionizes-ai-assisted-creativity-firefly)
+
+</details>
+
+<details class="source-group">
+<summary>五、中国証券会社の視点（5）</summary>
+
+63. [华鑫证券：WAIC 大会强供给，AI 应用商业化如何解](https://pdf.dfcfw.com/pdf/H3_AP202507291717868704_1.pdf)
+64. [国信证券：人工智能专题——AI Agent](https://pdf.dfcfw.com/pdf/H3_AP202503121644302597_1.pdf)
+65. [东吴证券：2025 年 AI 应用渗透趋势](https://pdf.dfcfw.com/pdf/H301_AP202501021641518997_1.pdf)
+66. [中银证券：“人工智能+”应用与平台](https://pdf.dfcfw.com/pdf/H3_AP202510201765533690_1.pdf)
+67. [AIGC 行业深度：算力、模型与应用的创新融合](https://pdf.dfcfw.com/pdf/H3_AP202411151640914780_1.pdf)
+
+</details>
+
+<p class="source-footnote">資料の検索・整理時期：2026 年 8 月。報告の比率は標本、地域、提供企業の定義に左右されるため、対象利用者へのインタビューと試用データの代わりにはなりません。</p>
+
+<style scoped>
+.research-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 24px;
+  margin: 32px 0 42px;
+  padding: 28px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 8% 12%, color-mix(in srgb, var(--vp-c-brand-1) 16%, transparent), transparent 34%),
+    var(--vp-c-bg-soft);
 }
 
-// 推薦リンクマッピングテーブル
-const recommendationMap = {
-  'creative-content': {
-    'increase-efficiency': ['content', 'av-media', 'ai-marketing', 'entertainment'],
-    'reduce-cost': ['content', 'ecommerce', 'ai-marketing'],
-    'improve-experience': ['entertainment', 'emotion', 'travel', 'content'],
-    'innovate-business': ['ai-marketing', 'content', 'av-media', 'entertainment']
-  },
-  'tech-service': {
-    'increase-efficiency': ['programming', 'enterprise', 'data-intelligence', 'customer-service'],
-    'reduce-cost': ['programming', 'enterprise', 'manufacturing'],
-    'improve-experience': ['customer-service', 'enterprise', 'programming'],
-    'innovate-business': ['data-intelligence', 'programming', 'security', 'enterprise']
-  },
-  'data-intel': {
-    'increase-efficiency': ['data-intelligence', 'finance', 'enterprise', 'manufacturing'],
-    'reduce-cost': ['data-intelligence', 'manufacturing', 'energy'],
-    'improve-experience': ['data-intelligence', 'customer-service', 'ecommerce'],
-    'innovate-business': ['data-intelligence', 'finance', 'security', 'ai-marketing']
-  },
-  'user-service': {
-    'increase-efficiency': ['customer-service', 'ecommerce', 'travel', 'enterprise'],
-    'reduce-cost': ['customer-service', 'ecommerce', 'enterprise'],
-    'improve-experience': ['customer-service', 'emotion', 'travel', 'ecommerce', 'entertainment'],
-    'innovate-business': ['ecommerce', 'travel', 'emotion', 'entertainment']
-  },
-  'industry-solution': {
-    'increase-efficiency': ['manufacturing', 'healthcare', 'finance', 'government'],
-    'reduce-cost': ['manufacturing', 'energy', 'enterprise', 'finance'],
-    'improve-experience': ['healthcare', 'education', 'government', 'travel'],
-    'innovate-business': ['finance', 'security', 'legal', 'healthcare', 'government']
+.research-note__eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--vp-c-brand-1);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.research-note strong {
+  display: block;
+  font-size: 21px;
+  line-height: 1.5;
+}
+
+.research-note p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  line-height: 1.8;
+}
+
+.scene-check {
+  margin: 24px 0 38px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--vp-c-brand-1);
+  border-radius: 0 12px 12px 0;
+  background: var(--vp-c-bg-soft);
+}
+
+.scene-check span {
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.scene-check p {
+  margin: 6px 0 0;
+}
+
+.product-shot {
+  margin: 20px 0 30px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+  background: var(--vp-c-bg-soft);
+  box-shadow: 0 14px 38px color-mix(in srgb, var(--vp-c-text-1) 8%, transparent);
+}
+
+.product-shot a {
+  display: block;
+  background: #f5f5f3;
+}
+
+.product-shot img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
+
+.product-shot--portrait img {
+  max-height: 560px;
+}
+
+.product-shot--mobile img {
+  max-height: 520px;
+}
+
+.product-shot figcaption {
+  padding: 14px 17px 16px;
+  border-top: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.product-shot figcaption strong {
+  color: var(--vp-c-text-1);
+}
+
+.idea-routes {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(240px, .75fr);
+  gap: 14px;
+  margin: 24px 0 28px;
+}
+
+.idea-route {
+  padding: 22px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 18px;
+}
+
+.idea-route--b {
+  background: color-mix(in srgb, var(--vp-c-brand-soft) 58%, var(--vp-c-bg));
+}
+
+.idea-route--c {
+  background: var(--vp-c-bg-soft);
+}
+
+.idea-route > span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.idea-route ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.idea-route li {
+  margin: 10px 0;
+}
+
+.idea-route p {
+  margin: 8px 0;
+}
+
+.idea-route code {
+  white-space: normal;
+  word-break: break-word;
+}
+
+.fieldwork {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 28px 0 34px;
+}
+
+.fieldwork__step {
+  min-height: 150px;
+  padding: 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 16px;
+  background: var(--vp-c-bg-soft);
+}
+
+.fieldwork__step b {
+  display: block;
+  color: var(--vp-c-brand-1);
+  font-size: 12px;
+  letter-spacing: .1em;
+}
+
+.fieldwork__step span {
+  display: block;
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fieldwork__step p {
+  margin: 8px 0 0;
+  color: var(--vp-c-text-2);
+}
+
+.source-group {
+  margin: 12px 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg-soft);
+}
+
+.source-group summary {
+  padding: 16px 18px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.source-group ol {
+  margin: 0;
+  padding: 0 22px 18px 44px;
+}
+
+.source-group li {
+  margin: 8px 0;
+}
+
+.source-footnote {
+  margin-top: 18px;
+  color: var(--vp-c-text-3);
+  font-size: 13px;
+}
+
+@media (max-width: 720px) {
+  .research-note,
+  .idea-routes,
+  .fieldwork {
+    grid-template-columns: 1fr;
+  }
+
+  .research-note {
+    padding: 22px;
+  }
+
+  .fieldwork__step {
+    min-height: auto;
   }
 }
-
-const interestOptions = [
-  { label: 'クリエイティブコンテンツ生成', value: 'creative-content', desc: 'コピー、画像、動画などのクリエイティブコンテンツ' },
-  { label: 'テクニカルサービスツール', value: 'tech-service', desc: '開発ツール、自動化、コード補助' },
-  { label: 'データインテリジェンス分析', value: 'data-intel', desc: 'データ分析、予測、スマート意思決定' },
-  { label: 'ユーザーサービス体験', value: 'user-service', desc: 'カスタマーサポート、マーケティング、ユーザー体験' },
-  { label: '業界ソリューション', value: 'industry-solution', desc: '特定業界のディープアプリケーション' }
-]
-
-const purposeOptions = [
-  { label: '効率向上', value: 'increase-efficiency', desc: '自動化、プロセス高速化' },
-  { label: 'コスト削減', value: 'reduce-cost', desc: '人件費削減、リソース最適化' },
-  { label: '体験改善', value: 'improve-experience', desc: 'ユーザー満足度、サービス品質' },
-  { label: 'ビジネスイノベーション', value: 'innovate-business', desc: '新製品、新モデル' }
-]
-
-const industries = [
-  { key: 'manufacturing', name: '工業製造業', anchor: '#_1-工業製造業' },
-  { key: 'customer-service', name: 'スマートカスタマーサポート', anchor: '#_2-スマートカスタマーサポート' },
-  { key: 'education', name: '教育業界', anchor: '#_3-教育業界' },
-  { key: 'programming', name: 'スマートプログラミング', anchor: '#_4-スマートプログラミング' },
-  { key: 'healthcare', name: '医療方向', anchor: '#_5-医療方向' },
-  { key: 'security', name: 'ネットワークセキュリティ', anchor: '#_6-ネットワークセキュリティ' },
-  { key: 'finance', name: '金融管理・保険銀行業', anchor: '#_7-金融管理・保険銀行業' },
-  { key: 'enterprise', name: '企業サービス', anchor: '#_8-企業サービス' },
-  { key: 'content', name: 'コンテンツ制作・運営', anchor: '#_9-コンテンツ制作・運営' },
-  { key: 'government', name: 'スマート行政', anchor: '#_10-スマート行政' },
-  { key: 'legal', name: '法律事務・契約管理', anchor: '#_11-法律事務・契約管理' },
-  { key: 'travel', name: '旅行・外出サービス', anchor: '#_12-旅行・外出サービス' },
-  { key: 'emotion', name: 'エモーショナルコンパニオン', anchor: '#_13-エモーショナルコンパニオン' },
-  { key: 'entertainment', name: 'レジャー・エンターテインメント', anchor: '#_14-レジャー・エンターテインメント' },
-  { key: 'ecommerce', name: 'ECサービス', anchor: '#_15-ECサービス' },
-  { key: 'energy', name: 'エネルギー', anchor: '#_16-エネルギー' },
-  { key: 'av-media', name: '音声・動画', anchor: '#_17-音声・動画' },
-  { key: 'ai-marketing', name: 'AIマーケティング', anchor: '#_18-AIマーケティング' },
-  { key: 'data-intelligence', name: 'データインテリジェンス', anchor: '#_19-データインテリジェンス' }
-]
-
-// 推薦結果を計算
-const recommendationTopics = computed(() => {
-  if (!interestPoint.value || !purpose.value) return []
-  
-  const keys = recommendationMap[interestPoint.value]?.[purpose.value] || []
-  const topics = []
-  
-  keys.forEach(key => {
-    const industry = industries.find(item => item.key === key)
-    const industryTopics = topicPool[key] || []
-    
-    if (industry && industryTopics.length > 0) {
-      const count = Math.floor(Math.random() * 2) + 1
-      const shuffled = [...industryTopics].sort(() => Math.random() - 0.5)
-      const selected = shuffled.slice(0, Math.min(count, shuffled.length))
-      
-      selected.forEach(topic => {
-        topics.push({
-          ...topic,
-          industryKey: key,
-          industryName: industry.name,
-          industryAnchor: industry.anchor
-        })
-      })
-    }
-  })
-  
-  return topics.sort(() => Math.random() - 0.5).slice(0, 8)
-})
-
-const currentSelection = computed(() => {
-  const interest = interestOptions.find(i => i.value === interestPoint.value)
-  const pur = purposeOptions.find(p => p.value === purpose.value)
-  return {
-    interest: interest?.label || '',
-    purpose: pur?.label || ''
-  }
-})
-
-const scrollToAnchor = (anchor) => {
-  setTimeout(() => {
-    let element = document.querySelector(anchor)
-    
-    if (!element) {
-      const altAnchor = anchor.replace('#_', '#')
-      element = document.querySelector(altAnchor)
-    }
-    
-    if (!element) {
-      const anchorText = decodeURIComponent(anchor.replace('#', '').replace(/^_/, ''))
-      const headings = document.querySelectorAll('h2, h3')
-      
-      for (let heading of headings) {
-        const headingText = heading.textContent.trim()
-        const cleanHeading = headingText.replace(/^\d+\.\s*/, '')
-        if (cleanHeading === anchorText || headingText.includes(anchorText)) {
-          element = heading
-          break
-        }
-      }
-    }
-    
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
-      element.style.backgroundColor = '#f0f9ff'
-      element.style.transition = 'background-color 0.3s'
-      element.style.padding = '8px'
-      element.style.borderRadius = '4px'
-      setTimeout(() => {
-        element.style.backgroundColor = ''
-        element.style.padding = ''
-      }, 2000)
-    }
-  }, 100)
-}
-
-const resetSelection = () => {
-  interestPoint.value = ''
-  purpose.value = ''
-}
-
-// ---- C 端场景变量 ----
-const cDuration = '約 <strong>4 時間</strong>'
-
-const vibePoint = ref('')
-const feeling = ref('')
-
-// 各シーンのトピックプール - 雰囲気、感覚、心理的暗示を強調
-const cTopicPool = {
-  'lifestyle': [
-    { title: '朝の儀式感アラームアシスタント', desc: '天気、スケジュール、気分に基づいて専用の朝の儀式を生成し、毎日を素晴らしいスタートから始める' },
-    { title: '一人暮らしの雰囲気クリエイター', desc: '一人暮らしの方に居家の雰囲気プランを設計、照明、音楽、アロマのスマートな組み合わせアドバイス' },
-    { title: '週末のおうちデート回復プランジェネレーター', desc: '今の気分に基づいて完璧なおうちコンボを推奨：映画＋おやつ＋雰囲気コーディネート' },
-    { title: '就寝前の心の癒しラジオ', desc: '優しい物語、瞑想ガイドを生成し、眠りをサポートするプライベートラジオ' },
-    { title: '暮らしの美学インスピレーションキャッチャー', desc: '日常の小さなことから美を発見し、暮らしの美学提案と儀式感ガイドを生成' }
-  ],
-  'emotion': [
-    { title: '深夜のツリーくり聞き手', desc: '24 時間オンラインの感情のゴミ箱、判断せずにすべての悩みを受け止める' },
-    { title: '失恋回復コンパニオン', desc: '失恋のどん底期に優しい寄り添い、回復アドバイスと感情の出口を提供' },
-    { title: '不安緩和呼吸コーチ', desc: '不安感情を感知し、呼吸練習とマインドフルネス瞑想をガイド' },
-    { title: '自信再構築メンター', desc: 'ポジティブな対話と心理的暗示を通じて、自己肯定感と価値観の再構築をサポート' },
-    { title: '感情日記スマート分析', desc: '感情日記を分析し、感情パターンを発見、温かいインサイトとアドバイスを提供' }
-  ],
-  'entertainment': [
-    { title: '没入型マーダーミステリー DM', desc: 'マーダーミステリーのゲームマスターを演じ、サスペンスの雰囲気を作り出し、ストーリーを進行' },
-    { title: 'オープンワールドゲームの魂の NPC', desc: '血の通った NPC がプレイヤーのストーリーを記憶し、リアルな感情的絆を生み出す' },
-    { title: 'パーソナライズドポッドキャスト生成', desc: '興味に基づいて専用ポッドキャストを生成、友達とのおしゃべりのように自然' },
-    { title: 'バーチャルコンサートの盛り上げ役', desc: 'オンラインコンサートにライブ感を演出、リアルタイムインタラクション、応援、雰囲気レンダリング' },
-    { title: 'インタラクティブ小説共創パートナー', desc: '読者と一緒にストーリーを共創、すべての選択が世界の行方に影響' }
-  ],
-  'growth': [
-    { title: '個人の成長の証人', desc: '成長の軌跡を記録し、重要な節目で励ましと振り返りを提供' },
-    { title: '習慣形成ゲーム化コーチ', desc: '退屈な習慣形成を面白い冒険ゲームに変える' },
-    { title: 'スキル学習パートナーマッチング', desc: '志を同じくする学習仲間を見つけ、お互いに励まし合い、進歩を共有' },
-    { title: '毎日の小さな幸せ発見者', desc: '生活の中の小さな美しい瞬間を見つける手助け、感謝とポジティブなマインドを育む' },
-    { title: '人生シミュレーション体験器', desc: '異なる人生の選択肢をシミュレートし、パラレルワールドのもう一つの可能性を体験' }
-  ],
-  'social': [
-    { title: 'アイスブレイクトピックジェネレーター', desc: 'ソーシャルシーンで面白いトピックを提供し、気まずさを解消、距離を縮める' },
-    { title: 'SNS投稿文雰囲気クリエイター', desc: '写真と気分に基づいて、おしゃれな SNS 投稿文を生成' },
-    { title: 'デート雰囲気プランナー', desc: 'デートに完全な雰囲気プランを設計、場所からトピック、サプライズまで' },
-    { title: 'オンライン飲み会の盛り上げ役', desc: 'オンラインパーティーで盛り上げ、ゲームの企画、インタラクションをガイド' },
-    { title: 'ソーシャルエネルギー管理アシスタント', desc: '内向的な方のソーシャルエネルギー管理をサポート、快適なソーシャルペースを見つける' }
-  ],
-  'creative': [
-    { title: 'インスピレーション枯渇応急キット', desc: 'クリエイティブの行き詰まり時に予想外のインスピレーションスパークを提供' },
-    { title: '個人スタイル探索ガイド', desc: 'ユニークな個人スタイルの発見をサポート、ファッションから表現まで' },
-    { title: '手帳＆日記美学アドバイザー', desc: '手帳のレイアウト、配色、コンテンツアイデアの美学アドバイスを提供' },
-    { title: '写真構図雰囲気ガイド', desc: 'シーンと表現したい感覚に基づいて、写真とレタッチのアドバイスを提供' },
-    { title: '音楽気分マッチング', desc: '今の気分とシーンに基づいて、完璧な音楽コンボを推奨' }
-  ],
-  'travel': [
-    { title: '街歩き探索ガイド', desc: '地元の人のように街を探索し、隠れた宝スポットを発見' },
-    { title: '旅行気分日記生成', desc: '旅行の写真と気分を美しい旅行記と思い出に変換' },
-    { title: '一人旅コンパニオンアシスタント', desc: '一人旅の方に寄り添い、アドバイスと安心感を提供' },
-    { title: '目的地雰囲気プレビュー', desc: '出発前に目的地の雰囲気を没入的に体験、事前に入り込める' },
-    { title: '旅行写真雰囲気ガイド', desc: 'シーンと光に基づいて、ストーリー性のある旅行写真の撮り方をガイド' }
-  ],
-  'health': [
-    { title: '運動モチベーション覚醒師', desc: '動きたくない時にちょうどいい励ましとモチベーションを与える' },
-    { title: 'ヘルシー食インスピレーションキッチン', desc: '気分と食材に基づいて、癒されるヘルシーレシピを生成' },
-    { title: '睡眠の質向上雰囲気クリエイター', desc: '環境から心理まで、全方位に質の高い睡眠雰囲気を作り出す' },
-    { title: 'ボディセンシングガイド', desc: '体のシグナルに注意を向け、心身のつながりを構築' },
-    { title: 'セルフケアリマインダー', desc: '忙しい中で立ち止まり、自分を大切にするようリマインド' }
-  ],
-  'learning': [
-    { title: '知識探索ゲーム化ガイド', desc: '退屈な知識学習を面白い探検アドベンチャーに変える' },
-    { title: '語学学習シーンパートナー', desc: '異なる役を演じ、シチュエーション会話の中で自然に言語を習得' },
-    { title: '好奇心満足アシスタント', desc: 'あらゆる奇想天外な疑問に答え、世界への好奇心を満たす' },
-    { title: '読書ノートインスピレーション', desc: '読書感想の整理をサポート、新しい思考の角度を発見' },
-    { title: '知識共有雰囲気クリエイター', desc: '学んだ知識を面白い共有コンテンツに変換' }
-  ],
-  'relationship': [
-    { title: '親密な関係コミュニケーションコーチ', desc: '言いにくい感情の表現をサポートし、親密な関係を改善' },
-    { title: '家族ケアリマインダー', desc: '家族を気遣うことをリマインド、温かいインタラクションのアイデアを提供' },
-    { title: '友情維持雰囲気クリエイター', desc: '遠距離の友情の維持をサポート、共通の話題を創造' },
-    { title: '告白＆サプライズプランナー', desc: '大切な人に忘れられないサプライズとロマンチックな瞬間を企画' },
-    { title: '対立緩和雰囲気ガイド', desc: '関係が緊張した時に雰囲気を和らげるアドバイスと話術を提供' }
-  ],
-  'pet': [
-    { title: 'ペット擬人化日記', desc: 'ペットの視点で日記を生成、飼い主との温かい日常を記録' },
-    { title: 'ペット行動分析師', desc: 'ペットの行動言語を読み解き、ペットとの絆を深める' },
-    { title: 'ペットとの時間企画', desc: 'ペットとインタラクションするクリエイティブな活動をデザイン、絆を深める' },
-    { title: 'ペット記念ストーリー生成', desc: 'ペットの写真と思い出を温かいストーリーに変換' },
-    { title: '初心者ペット飼い主安心ガイド', desc: '初心者のペットオーナーに温かい寄り添いと指導を提供' }
-  ],
-  'finance': [
-    { title: '消費感情覺察アシスタント', desc: '衝動買いの背後にある感情に気づき、健全な消費観を確立' },
-    { title: '貯蓄目標ビジュアルモチベーション', desc: '貯蓄目標をビジュアル化された夢の進捗に変換' },
-    { title: '資産管理知識カジュアル学習', desc: '気軽で面白い方法で資産管理の知識を学ぶ' },
-    { title: '財務不安緩和師', desc: '財務ストレスに直面した時に感情サポートと実用的アドバイスを提供' },
-    { title: '少額投資体験ゲーム', desc: 'ゲーム化された方法で投資を体験し、参入のハードルを下げる' }
-  ],
-  'career': [
-    { title: 'キャリア迷いコンパニオン', desc: 'キャリアの迷い期に傾聴、探索、方向性のアドバイスを提供' },
-    { title: '仕事の達成感覚醒師', desc: '仕事の中の価値と意義を見つけ、情熱を再燃させる' },
-    { title: '職場ソーシャル雰囲気アシスタント', desc: '職場ソーシャルの気軽なトピックとインタラクションアイデアを提供' },
-    { title: '副業インスピレーション発掘器', desc: '個人の興味とスキルに基づいて、副業のアイデアを刺激' },
-    { title: '面接前の自信加油站', desc: '面接前に心理的な準備と自信の励ましを提供' }
-  ],
-  'home': [
-    { title: '居家空間雰囲気デザイナー', desc: '気分と季節に基づいて居家の雰囲気プランを設計' },
-    { title: '四季インテリアチェンジガイド', desc: '季節に合わせてインテリアを変え、新鮮さを保つ' },
-    { title: '小スペース空間マジック', desc: '小さなスペースでも快適で温かい雰囲気を作り出す' },
-    { title: '居家儀式感クリエイター', desc: '日常の居家活動に儀式感を創造' },
-    { title: '断捨離心理コンパニオン', desc: '片付け時に心理的サポートと意思決定アドバイスを提供' }
-  ],
-  'food': [
-    { title: '一人飯癒しレシピ', desc: '一人暮らしの方にシンプルで癒される料理プランを設計' },
-    { title: 'イベント食卓雰囲気デザイン', desc: '特別な日に儀式感のある食卓コーディネートを設計' },
-    { title: '料理気分マッチング', desc: '今の気分に基づいて適した食べ物と作り方を推奨' },
-    { title: '料理初心者自信ビルダー', desc: 'ゼロベースの料理初心者に温かい励ましとシンプルなレシピを提供' },
-    { title: 'フードフォトグラフィー雰囲気ガイド', desc: '家庭料理でも魅力的な雰囲気写真に撮る方法をガイド' }
-  ],
-  'fashion': [
-    { title: '今日のコーデ気分ボード', desc: '天気、シーン、気分に基づいてコーデインスピレーションを生成' },
-    { title: 'カプセルワードローブコーディネーター', desc: '限られたアイテムで無限のコーデの可能性を創造' },
-    { title: '個人スタイル探索の旅', desc: 'ユニークな個人スタイルの発見と確立をサポート' },
-    { title: '古着の新しい着こなしクリエイター', desc: '古い服に新しいコーデインスピレーションを提供' },
-    { title: '特別シーンスタイリングアドバイザー', desc: '重要なシーンに自信を持てるスタイリングをデザイン' }
-  ]
-}
-
-// 事前定義の推薦ルートマッピングテーブル - 雰囲気と感覚に基づく
-const cRecommendationMap = {
-  // 雰囲気: 癒し系
-  'healing': {
-    'relax': ['emotion', 'lifestyle', 'health', 'home'],
-    'inspire': ['creative', 'growth', 'learning', 'entertainment'],
-    'connect': ['relationship', 'social', 'pet', 'emotion'],
-    'escape': ['travel', 'entertainment', 'creative', 'lifestyle']
-  },
-  // 雰囲気: 成長系
-  'growth': {
-    'relax': ['growth', 'learning', 'creative', 'health'],
-    'inspire': ['career', 'learning', 'creative', 'growth'],
-    'connect': ['social', 'relationship', 'career', 'learning'],
-    'escape': ['travel', 'entertainment', 'creative', 'lifestyle']
-  },
-  // 雰囲気: ソーシャル系
-  'social': {
-    'relax': ['social', 'pet', 'food', 'home'],
-    'inspire': ['social', 'creative', 'entertainment', 'travel'],
-    'connect': ['relationship', 'social', 'pet', 'travel'],
-    'escape': ['social', 'travel', 'entertainment', 'creative']
-  },
-  // 雰囲気: 探索系
-  'explore': {
-    'relax': ['travel', 'creative', 'lifestyle', 'food'],
-    'inspire': ['travel', 'creative', 'learning', 'entertainment'],
-    'connect': ['travel', 'social', 'relationship', 'pet'],
-    'escape': ['travel', 'entertainment', 'creative', 'lifestyle']
-  },
-  // 雰囲気: 日常系
-  'daily': {
-    'relax': ['lifestyle', 'home', 'health', 'emotion'],
-    'inspire': ['creative', 'food', 'fashion', 'home'],
-    'connect': ['relationship', 'social', 'pet', 'lifestyle'],
-    'escape': ['entertainment', 'creative', 'travel', 'lifestyle']
-  }
-}
-
-const vibeOptions = [
-  { label: '癒し系', value: 'healing', desc: '温かい、安らぎ、癒し' },
-  { label: '成長系', value: 'growth', desc: '進歩、ブレイクスルー、変容' },
-  { label: 'ソーシャル系', value: 'social', desc: 'つながり、シェア、インタラクション' },
-  { label: '探索系', value: 'explore', desc: '好奇心、冒険、発見' },
-  { label: '日常系', value: 'daily', desc: '日常、リアル、今この瞬間' }
-]
-
-const feelingOptions = [
-  { label: 'リラックスしたい', value: 'relax', desc: 'ストレス解消、頭を空っぽに' },
-  { label: 'インスピレーションを得たい', value: 'inspire', desc: 'クリエイティブの刺激、気づき' },
-  { label: 'つながりが欲しい', value: 'connect', desc: '人とのつながり、感情の共鳴' },
-  { label: '現実から逃れたい', value: 'escape', desc: '現実逃避、没入体験' }
-]
-
-const scenarios = [
-  { key: 'lifestyle', name: 'ライフスタイル', anchor: '#_1-ライフスタイル' },
-  { key: 'emotion', name: '感情コンパニオン', anchor: '#_2-感情コンパニオン' },
-  { key: 'entertainment', name: 'エンターテインメント', anchor: '#_3-エンターテインメント' },
-  { key: 'growth', name: '自己成長', anchor: '#_4-自己成長' },
-  { key: 'social', name: 'ソーシャルインタラクション', anchor: '#_5-ソーシャルインタラクション' },
-  { key: 'creative', name: 'クリエイティブ表現', anchor: '#_6-クリエイティブ表現' },
-  { key: 'travel', name: '旅行探索', anchor: '#_7-旅行探索' },
-  { key: 'health', name: '心身の健康', anchor: '#_8-心身の健康' },
-  { key: 'learning', name: '知識探索', anchor: '#_9-知識探索' },
-  { key: 'relationship', name: '関係マネジメント', anchor: '#_10-関係マネジメント' },
-  { key: 'pet', name: 'ペットコンパニオン', anchor: '#_11-ペットコンパニオン' },
-  { key: 'finance', name: '財務の健康', anchor: '#_12-財務の健康' },
-  { key: 'career', name: 'キャリア開発', anchor: '#_13-キャリア開発' },
-  { key: 'home', name: '居家空間', anchor: '#_14-居家空間' },
-  { key: 'food', name: 'グルメ料理', anchor: '#_15-グルメ料理' },
-  { key: 'fashion', name: 'ファッションスタイル', anchor: '#_16-ファッションスタイル' }
-]
-
-// 推薦結果の計算 - トピックプールからランダムに抽出
-const cRecommendationTopics = computed(() => {
-  if (!vibePoint.value || !feeling.value) return []
-  
-  const keys = cRecommendationMap[vibePoint.value]?.[feeling.value] || []
-  const topics = []
-  
-  // 各推薦シーンから 1〜2 トピックをランダムに抽出
-  keys.forEach(key => {
-    const scenario = scenarios.find(item => item.key === key)
-    const scenarioTopics = cTopicPool[key] || []
-    
-    if (scenario && scenarioTopics.length > 0) {
-      const count = Math.floor(Math.random() * 2) + 1
-      const shuffled = [...scenarioTopics].sort(() => Math.random() - 0.5)
-      const selected = shuffled.slice(0, Math.min(count, shuffled.length))
-      
-      selected.forEach(topic => {
-        topics.push({
-          ...topic,
-          scenarioKey: key,
-          scenarioName: scenario.name,
-          scenarioAnchor: scenario.anchor
-        })
-      })
-    }
-  })
-  
-  // ランダムソートして総数を制限
-  return topics.sort(() => Math.random() - 0.5).slice(0, 8)
-})
-
-// 現在の選択の説明を取得
-const cCurrentSelection = computed(() => {
-  const vibe = vibeOptions.find(i => i.value === vibePoint.value)
-  const feel = feelingOptions.find(p => p.value === feeling.value)
-  return {
-    vibe: vibe?.label || '',
-    feeling: feel?.label || ''
-  }
-})
-
-const cScrollToAnchor = (anchor) => {
-  setTimeout(() => {
-    let element = document.querySelector(anchor)
-    
-    if (!element) {
-      const altAnchor = anchor.replace('#_', '#')
-      element = document.querySelector(altAnchor)
-    }
-    
-    if (!element) {
-      const anchorText = decodeURIComponent(anchor.replace('#', '').replace(/^_/, ''))
-      const headings = document.querySelectorAll('h2, h3')
-      
-      for (let heading of headings) {
-        const headingText = heading.textContent.trim()
-        const cleanHeading = headingText.replace(/^\d+\.\s*/, '')
-        if (cleanHeading === anchorText || headingText.includes(anchorText)) {
-          element = heading
-          break
-        }
-      }
-    }
-    
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
-      element.style.backgroundColor = '#fdf2f8'
-      element.style.transition = 'background-color 0.3s'
-      element.style.padding = '8px'
-      element.style.borderRadius = '4px'
-      setTimeout(() => {
-        element.style.backgroundColor = ''
-        element.style.padding = ''
-      }, 2000)
-    }
-  }, 100)
-}
-
-const cResetSelection = () => {
-  vibePoint.value = ''
-  feeling.value = ''
-}
-</script>
-
-# AIアプリケーションシーン参考（Bエンド・Cエンド）
-
-<Tabs>
-<TabItem label="Bエンド産業">
-
-## 章節のガイド
-
-<ChapterIntroduction :duration="duration" :tags="['Bエンドアプリ', '産業アプリケーション', 'AIシーン', '実装参考', '業界ソリューション']" coreOutput="15以上のBエンド業界アプリケーションシーンを理解" expectedOutput="企業顧客に適したプロジェクト方向を見つける">
-
-本ドキュメントは <strong>LLM大規模言語モデルのBエンド企業シーンにおける実装アプリケーション</strong>をまとめたものです。Cエンドがユーザー体験と感情に注目するのとは異なり、Bエンドプロダクトは<strong>実際のビジネスニーズの解決、効率向上、コスト削減</strong>を重視します。各シーンは<strong>実際の実装の可能性</strong>を持ち、<strong>ニーズ分析から技術実装</strong>までの完全なアプローチをカバーしています。
-
-</ChapterIntroduction>
-
-## 業界方向クイック選択
-
-<el-card shadow="hover" style="margin-top: 16px; margin-bottom: 24px; border-left: 5px solid #409EFF;">
-  <div style="font-weight: 600; margin-bottom: 8px;">あなたに合ったアプリケーションシーンを見つける</div>
-  <div style="color: #606266; font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
-    興味の方向と実現したい目的を選択すると、システムが関連する業界シーンを推薦します。タグをクリックすると対応する章にジャンプします。
-  </div>
-  <el-row :gutter="16">
-    <el-col :span="12">
-      <el-select v-model="interestPoint" placeholder="興味方向を選択" style="width: 100%;">
-        <el-option 
-          v-for="item in interestOptions" 
-          :key="item.value" 
-          :label="item.label" 
-          :value="item.value">
-          <div style="display: flex; flex-direction: column;">
-            <span>{{ item.label }}</span>
-            <span style="font-size: 12px; color: #909399;">{{ item.desc }}</span>
-          </div>
-        </el-option>
-      </el-select>
-    </el-col>
-    <el-col :span="12">
-      <el-select v-model="purpose" placeholder="実現目的を選択" style="width: 100%;">
-        <el-option 
-          v-for="item in purposeOptions" 
-          :key="item.value" 
-          :label="item.label" 
-          :value="item.value">
-          <div style="display: flex; flex-direction: column;">
-            <span>{{ item.label }}</span>
-            <span style="font-size: 12px; color: #909399;">{{ item.desc }}</span>
-          </div>
-        </el-option>
-      </el-select>
-    </el-col>
-  </el-row>
-  
-  <div v-if="recommendationTopics.length > 0" style="margin-top: 16px;">
-    <div style="font-weight: 600; margin-bottom: 10px; color: #409EFF;">
-      おすすめ {{ recommendationTopics.length }} 個のアプリケーションシーン
-      <span style="font-weight: normal; color: #909399; font-size: 13px; margin-left: 8px;">
-        ({{ currentSelection.interest }} + {{ currentSelection.purpose }})
-      </span>
-    </div>
-    <el-table 
-      :data="recommendationTopics" 
-      style="width: 100%; cursor: pointer;"
-      @row-click="(row) => scrollToAnchor(row.industryAnchor)"
-      highlight-current-row>
-      <el-table-column prop="title" label="アプリケーションシーン" min-width="300">
-        <template #default="scope">
-          <div style="font-weight: 500; color: #303133;">{{ scope.row.title }}</div>
-          <div style="font-size: 12px; color: #909399; margin-top: 4px;">{{ scope.row.desc }}</div>
-        </template>
-      </el-table-column>
-      <el-table-column prop="industryName" label="所属業界" width="180" align="center">
-        <template #default="scope">
-          <el-tag type="info" effect="light" size="small">{{ scope.row.industryName }}</el-tag>
-        </template>
-      </el-table-column>
-    </el-table>
-    <div style="margin-top: 10px; font-size: 12px; color: #909399;">
-      テーブルの任意の行をクリックすると対応する業界の章にジャンプします
-    </div>
-  </div>
-  
-  <div v-else-if="!interestPoint || !purpose" style="margin-top: 14px; color: #909399; font-size: 13px;">
-    <span v-if="!interestPoint && !purpose">興味方向と実現目的を選択してください</span>
-    <span v-else-if="!interestPoint">興味方向を選択してください</span>
-    <span v-else>実現目的を選択してください</span>
-  </div>
-  
-  <div v-if="interestPoint || purpose" style="margin-top: 12px;">
-    <el-button size="small" @click="resetSelection">再選択</el-button>
-  </div>
-</el-card>
-
-## 業界クイック紹介
-
-### 主要技術選択
-
-AIアプリ開発では、一般的な技術方向として以下があります：
-
-1. **LLM（大規模言語モデル）**：自然言語タスクの処理に得意。対話、テキスト生成、要約、翻訳などに適用。
-2. **VLM（視覚言語モデル）**：視覚理解と言語能力を組み合わせ、画像記述、視覚QA、マルチモーダルコンテンツ生成を実現。
-3. **GenAI（生成式AI）**：テキスト生成、画像生成、動画生成などを含む。
-
-### 選択戦略
-
-1. **興味志向**：自分が興味のある業界や技術方向を優先選択。
-2. **業界適合**：自身の業界背景やリソースの優位性に合わせてシーンを選択。
-3. **技術難易度**：自身の技術基盤に合わせて適切な複雑さを選択。
-
-## 1. 工業製造業
-
-工業製造業シーンは主に設計補助、生産最適化、スマートメンテナンスの3つの方向に展開します。
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | 新エネルギーバス外観AI補助設計プラットフォーム | 画像生成モデルによる外観コンセプト設計、LLMによる設計規範チェック |
-| 2 | スマート図面設計・審査アシスタント | RAG技術による企業設計規範ナレッジベース構築 |
-| 3 | 技術文書自動生成・管理 | LLMによる製品仕様書と操作マニュアルの自動生成 |
-| 4 | 生産設備巡回点検レポート自動生成アシスタント | 音声による設備状態記述、構造化巡回点検レポートの自動生成 |
-| 5 | 工場フォークリフトスマート配車・経路計画システム | LLMによる注文タスクと倉庫位置の解析、地図APIによる最適配車方案 |
-| 6 | LLM情報検索ベースのデータウェアハウス | Text-to-SQL技術による自然言語からデータベースクエリへの変換 |
-| 7 | 工業設備故障診断ナレッジQAアシスタント | 過去の故障ケースに基づくベクトルナレッジベース構築 |
-| 8 | 生産品質検査レポートスマート生成・欠陥分類 | OCRによる検査写真の欠陥認識、LLMによる構造化品質検査レポートの生成 |
-| 9 | 在庫棚卸スマートアシスタント・棚卸レポート生成 | 棚卸データ入力、LLMによるシステム在庫との自動照合・差異レポート生成 |
-| 10 | 工芸プロセス最適化提案スマートQAシステム | 生産工芸ドキュメントに基づくRAGナレッジベースの構築 |
-
-## 2. スマートカスタマーサポート
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | マルチチャネルスマートカスタマーサポート自動応答・チケット生成システム | マルチチャネルメッセージ受信、LLMによる意図理解後の応答生成とチケット自動作成 |
-| 2 | 見込み客発掘・フォローアップ提案アシスタント | LLMによる過去のカスタマーサポート対話記録の分析、高意向顧客の識別 |
-| 3 | 企業内部ナレッジスマート検索・QAマネージャー | Confluenceと内部文書に基づくベクトルナレッジベース構築 |
-| 4 | カスタマー満足度調査・サービス改善管理システム | LLMによるカスタマーサポート対話の自動感情分類と満足度スコアリング |
-| 5 | カスタマーサポート対話スマートサマリー・チケット生成ツール | 会話終了後の自動サマリー生成とキー情報抽出 |
-| 6 | カスタマーサポートトークコンプライアンス自動検出アシスタント | カスタマーサポートの返信内容のリアルタイムコンプライアンス性検出 |
-| 7 | カスタマーサポートチケット自動要約・分類生成ツール | 長い対話記録の要約生成と自動分類タグ付け |
-| 8 | カスタマー感情監視・異常早期警告ツール | リアルタイムでの音声トーン特徴とテキスト感情の分析 |
-| 9 | カスタマーサポート金牌トーク推薦ナレッジシステム | 優秀なカスタマーサポート対話事例の分析、金牌トークテンプレートの抽出 |
-| 10 | スマート外線通話対話内容分析・品質検査アシスタント | 外線通話録音の書き起こし、LLMによる対話内容の分析 |
-
-## 3. 教育業界
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | パーソナライズ言語学習パス計画・スマート導学システム | LLMによる学習者レベル評価、毎日の学習タスクの計画 |
-| 2 | 授業案自動作成・教育リソース配信プラットフォーム | LLMによるカリキュラムに基づく授業案フレームワークの生成 |
-| 3 | 宿題自動採点・学習状況診断分析システム | LLMによる記述式問題の自動採点と学習弱点の特定 |
-| 4 | 人材ポジションコンピテンシーモデル構築・学習マップ | LLMによる求人JDの分析、ポジション能力プロファイリングの構築 |
-| 5 | 校本カリキュラム体系構築・スライド制作ツール | LLMによる学校特色と学生ニーズの分析、校本カリキュラムフレームワークの生成 |
-| 6 | 外国語スピーキング1対1シチュエーション実践演習 | LLMが異なる役割を演じるスピーキング会話、ASRによる発音の認識と採点 |
-| 7 | 大学受験大数据推薦・キャリアプランニング指導プラットフォーム | LLMによる受験生のスコア・順位・興味情報の分析 |
-| 8 | 児童プログラミングコードアシスタント | LLMによるコードロジックの解説とプログラミング指導 |
-| 9 | 知識ポイントマインドマップ自動生成・学習パス推薦ツール | コーストピック入力によるLLMの知識ポイントマインドマップの自動生成 |
-| 10 | 中英作文自動採点・添削エンジン | LLMによる立意、構造、言語、多様性などの多次元採点 |
-
-## 4. スマートプログラミング
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | スマートコード補完・Bug自動修正アシスタント | CodeLlama微調整コードモデル、IDEプラグインによるリアルタイムコード補完提案 |
-| 2 | ローコードアプリ構築・プロセス自動化プラットフォーム | 自然言語による要件記述のLLMによるローコード設定への変換 |
-| 3 | ユニットテストケース生成システム | AST解析による関数ロジックの抽出、LLMによる境界条件テストケースの生成 |
-| 4 | コードスマート分析・言語移行ツール | Tree-sitterによるコード構造の解析、LLMによるコード品質分析と最適化提案 |
-| 5 | 自然言語からSQL文への自動生成ツール | LLMによる自然言語クエリのSQLへの変換 |
-| 6 | APIインターフェース自動テスト・ドキュメント生成プラットフォーム | LLMによるコードコメントとインターフェース定義の分析 |
-| 7 | UIテストスクリプトスマート録画・保守ツール | ブラウザプラグインによるユーザー操作軌跡の録画 |
-| 8 | システムログ分析・故障特定 | ELK Stackによるログデータの収集、LLMによる異常ログの分析 |
-| 9 | フロントエンドUIコード自動生成ツール | デザイン画像OCR認識によるレスポンシブCSSとコンポーネントコードの生成 |
-| 10 | データベース構造スマート設計・モデリングアシスタント | 業務要件ドキュメント入力によるER図とデータテーブル構造の自動生成 |
-
-## 5. 医療方向
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | 医学検査レポートスマート解読アシスタント | 検査レポート画像のアップロード、OCRによる主要指標の認識、LLMによる異常値の解読 |
-| 2 | ナレッジ検索技術ベースの健康相談エキスパート | 医学ナレッジグラフ（ICD-10、薬品説明書、診療ガイドライン）の構築 |
-| 3 | 臨床研究データ意思決定分析プラットフォーム | EMRデータと検査結果の統合、LLMによる統計分析コードの補助生成 |
-| 4 | 医学試験問題スマート生成・間違い解析システム | 教材の章と知識ポイントの入力による練習問題と解説の生成 |
-| 5 | 薬物研究全プロセスナレッジグラフスマートQAエキスパート | 薬物-ターゲット-疾患ナレッジグラフの構築 |
-| 6 | 薬品説明書スマートQAアシスタント | 薬品説明書画像のアップロードまたは薬名入力による用法用量等のQA |
-| 7 | 疾病知識科普記事生成アシスタント | 疾病名と受診者の入力による分かりやすい科普記事の生成 |
-| 8 | 医学画像レポート自動生成ツール | 放射線科医師の画像特徴記述による構造化レポートの自動生成 |
-| 9 | 手術記録スマート生成・アーカイブアシスタント | 手術中の音声入力による構造化手術記録の生成 |
-| 10 | 慢性疾患管理服薬リマインダースマートアシスタント | 患者の服薬リスト入力によるパーソナライズ服薬リマインダの生成 |
-
-## 6. ネットワークセキュリティ
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | コードセキュリティ脆弱性検出・修正エンジン | SASTツールによるコードスキャン、LLMによる脆弱性原理の分析 |
-| 2 | AI生成フィッシングメールスマート識別・ブロックシステム | LLMによるメール内容・送信者特徴・リンク安全性の分析 |
-| 3 | セキュリティ運用日報自動生成アシスタント | セキュリティデバイスログの集約、キーイベントの自動抽出 |
-| 4 | セキュリティナレッジベーススマートQAアシスタント | セキュリティドキュメント、CVEライブラリに基づくベクトルナレッジベースの構築 |
-| 5 | ペネトレーションテストレポートスマート生成アシスタント | ペネトレーションテスト完了後の脆弱性記述に基づくレポートの自動生成 |
-| 6 | 悪意コード防护・プライバシーコンプライアンス監視 | サンドボックスによる不審査ファイルの動作分析、LLMによる悪意特徴の識別 |
-| 7 | セキュリティ設定コンプライアンスチェックリスト生成ツール | 対象システムタイプの入力によるセキュリティ設定チェックリストの生成 |
-| 8 | 脅威インテリジェンススマート検索・分析アシスタント | マルチソース脅威インテリジェンスの照会、LLMによるインテリジェンスの解読 |
-| 9 | セキュリティインシデント振り返りレポート生成アシスタント | セキュリティインシデント発生後のタイムラインに基づく振り返りレポートの自動生成 |
-| 10 | グローバル脅威インテリジェンス監視・早期警戒センター | グローバルセキュリティニュースと脆弱性開示のクローリング |
-
-## 7. 金融管理・保険銀行業
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | 与信審査レポートスマート生成アシスタント | 企業基本情報と財務データの入力による与信審査レポートの自動生成 |
-| 2 | プライベートバンクウェルスマートコンサルタント | 顧客リスク許容度と財務目標の分析による資産配分提案の生成 |
-| 3 | IPO目論見書スマート生成・コンプライアンス検証アシスタント | 目論見書のモジュール化テンプレート、LLMによる事業記述の自動入力 |
-| 4 | 企業財務レポート自動生成・経営異常早期警戒システム | 財務システムデータの自動収集、LLMによる財務分析の生成 |
-| 5 | 財務票券情報抽出・QAアシスタント | 請求書画像のアップロード、OCR認識、LLMによる関連QA |
-| 6 | コンプライアンスケーススマート検索・QAアシスタント | 規制処罰ケースに基づくナレッジベースの構築 |
-| 7 | 保険代理店スマートトーク練習 | LLMが異なるタイプの顧客を演じるシミュレーション対話 |
-| 8 | 保険商品条項分析・競合比較プラットフォーム | 条項の構造化解析、LLMによるハイライトサマリーと注意事項の生成 |
-| 9 | 顧客トーク感情識別サービス | 音声感情認識とトークコンプライアンス検出のリアルタイムフィードバック |
-| 10 | 保険理赔進捗スマート照会・対話アシスタント | ユーザーの保険証番号または案件番号の入力による理赔進捗の照会 |
-
-## 8. 企業サービス
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | 顧客維持分析・解約早期警戒プラットフォーム | 行動データのトラッキング収集、MLモデルによる解約確率の予測 |
-| 2 | B2B見込み客アプローチ・マーケティングメールプラットフォーム | 企業工商データによるターゲット顧客のフィルタリング、LLMによるパーソナライズマーケティングコンテンツの生成 |
-| 3 | 営業パイプライン監視・業績予測プラットフォーム | CRMデータの自動収集、LLMによる営業ファネルの分析と業績達成の予測 |
-| 4 | ブランドレピュテーション監視・危機早期警戒レーダー | 全网レピュテーションデータの収集（ソーシャルメディア、ニュース、フォーラム）、LLMによる感情と伝播トレンドの分析 |
-| 5 | 職場メールスマート執筆・コミュニケーション感情管理アシスタント | メールコンテキストの理解、LLMによるプロフェッショナルメール草案の生成 |
-| 6 | 履歴書スマート解析・ポジションマッチングシステム | 履歴書PDFの解析によるキー情報の抽出、LLMによる適合ポジションのマッチング |
-| 7 | 企業従業員入社ガイド・QAアシスタント | 入社ドキュメントナレッジベースのRAG検索、新入社員のよくある質問への回答 |
-| 8 | 従業員パフォーマンスフィードバック・OKR目標管理プラットフォーム | OKRシステムデータの収集、LLMによる目標達成状況の分析 |
-| 9 | スマート会議記録・ToDo管理 | 会議録音の書き起こし、LLMによる主要議論点とToDo項目の抽出 |
-| 10 | 請求書識別・経費精算自動処理 | OCRによる請求書情報の認識、請求書の真贋検証と精算コンプライアンスの自動確認 |
-
-## 9. コンテンツ制作・運営
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | 映像・小説コンテンツ制作補助プラットフォーム | LLMによるストーリー概要、キャラクター設定、セリフ生成 |
-| 2 | 企業ブランドストーリー・PR記事スマート執筆アシスタント | ブランドキーワードと製品情報の入力による複数スタイルコピーの生成 |
-| 3 | バーチャルデジタルヒューマンライブ配信・配信管理システム | デジタルヒューマン像モデリング + TTS音声 + LLM対話 |
-| 4 | ショートビデオスクリプト生成・スマート編集 | LLMによるショートビデオスクリプトと絵コンテの生成 |
-| 5 | 営業会話音声書き起こし・トーク推薦 | 通話ASR書き起こし、LLMによる会話分析と金牌トークの推薦 |
-| 6 | マーケティングコンテンツスマート生成・デザインシステム | 製品情報入力によるマーケティングコピーとセールスポイントの抽出 |
-| 7 | マルチプラットフォーム広告出稿ROIリアルタイム監視・戦略最適化システム | 広告プラットフォームAPI連携によるデータ収集、LLMによる出稿効果の分析 |
-| 8 | 検索エンジンキーワード・トラフィック分析 | Baidu指数、5118データ収集、LLMによるキーワードトレンドと競合度の分析 |
-| 9 | 競合広告出稿分析プラットフォーム | サードパーティデータプラットフォームAPIによる競合広告の収集 |
-| 10 | 全网ホットトピックスマート分析・コンテンツ推薦システム | Weiboホット検索、抖音トレンドデータ収集、LLMによるトレンド分析 |
-
-## 10. スマート行政
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | 12345行政窓口スマート音声ナビ・自動振り分けシステム | 市民からの通話音声認識、LLMによる要望の理解と対応部門へのスマート振り分け |
-| 2 | 行政サービスホールスマート案内・政策QAロボット | 行政ナレッジベースのRAG検索、LLMによる手続きと政策問題への回答 |
-| 3 | 企業支援政策スマートマッチング・精密配信プラットフォーム | 政策の構造化解析、企業プロファイルによる適用政策の自動マッチング |
-| 4 | 行政審査書類スマート事前審査・コンプライアンス検証アシスタント | 書類OCR認識とキー情報抽出、LLMによる完全性とコンプライアンスの検証 |
-| 5 | 公共安全ビデオ監視異常行動検出システム | ビデオストリームのリアルタイム分析、CVモデルによる異常行動（喧嘩、転倒など）の検出 |
-| 6 | 都市グリッドイベントスマート識別・配車管理プラットフォーム | 都市センシングデータ（IoT、カメラ）の収集、LLMによるイベントタイプの識別と配車 |
-| 7 | 世論民意大数据分析・リスク早期警戒システム | 行政窓口、ネットレピュテーション、世論訪問等多ソースデータの融合分析 |
-| 8 | 行政アーカイブデジタル化識別・スマート分類管理プラットフォーム | OCRによるアーカイブ文字内容の認識、LLMによるキー情報の抽出と自動分類 |
-| 9 | 突発公共イベント緊急指揮・救援資源スマート配車プラットフォーム | イベント情報の収集、LLMによる緊急対応策の生成 |
-| 10 | 大気環境汚染グリッド化監視・精密発生源特定システム | 空気質量センサーデーデータの収集、CVモデルによる汚染源の識別 |
-
-## 11. 法律事務・契約管理
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | 契約リスク脆弱性ワンクリック「間違い探し」Agent | 契約テキストの構造化解析、リスクチェックリストとの照合による潜在的問題の識別 |
-| 2 | 企業契約ライフサイクルコンプライアンス審査・修正提案プラットフォーム | 契約条項と法規データベースの照合、コンプライアンス審査レポートの生成 |
-| 3 | 類似案件勝訴率AIスマート評価コンサルタント | 案件特徴抽出、類似案件の検索マッチング |
-| 4 | 法規変更リアルタイム監視・業務影響分析レーダー | 法規データベースのリアルタイム更新、変更内容の解析と業務影響の評価 |
-| 5 | 弁護士レターAIGC自動起案ツール | 事実陳述入力による規範的な弁護士レターの生成 |
-| 6 | 法廷録音リアルタイム書き起こし・争点焦点自動抽出記録儀 | 法廷録音ASR書き起こし、LLMによる争点焦点とキー論点の抽出 |
-| 7 | 全网知的財産権侵害手がかり自動監視・ブロックチェーン証拠システム | ECプラットフォーム、ソーシャルメディアの侵害監視 |
-| 8 | LLMベースのIPO目論見書キーデータ一貫性チェック・リスク早期警戒Agent | 目論見書複数章節のデータ照合、不一致とデータ異常の識別 |
-| 9 | 複雑な法律条項「翻訳」を平易な言葉にする解説プラグイン | 選択した法律条文に対する分かりやすい解説の生成 |
-| 10 | 案件証拠チェーンスマート整理・ビジュアル表示システム | 証拠資料のアップロード、LLMによる証拠関係とタイムラインの分析 |
-
-## 12. 旅行・外出サービス
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | AIGCベースのラク旅ガイドジェネレーター | ユーザー設定（日数、予算、興味）の入力、毎日の旅程スケジュールの生成 |
-| 2 | 全网航空券・ホテル価格トレンド予測・低価格自動ロックボット | OTA価格データの収集、MLモデルによる価格トレンド予測 |
-| 3 | 航班欠航後のクロス航空会社旅程再構成・緊急方案推薦コンサルタント | 航班ステータス監視、LLMによる代替旅程方案の分析 |
-| 4 | ビザ書類スマート事前審査・自動フォーム記入補助システム | 書類写真のアップロード、OCR認識による情報完全性チェック |
-| 5 | 海外旅行リアルタイム音声翻訳・メニュー視覚中国語化マネージャー | オフライン音声翻訳モデル、メニュー画像OCR認識と翻訳 |
-| 6 | 大データ実評価に基づくホテル「避雷」ガイド分析儀 | ホテルレビューデータの収集、LLMによるポジネガティブ評価キーワードの抽出 |
-| 7 | 目的地没入型VRプレビュー・バーチャル部屋選択インタラクティブプラットフォーム | 360度パノラマ写真の収集、VR技術による没入型プレビュー |
-| 8 | 旅行足迹自動生成精美旅行記・SNS投稿アシスタント | 写真の時間・場所情報の抽出、LLMによる旅行記文案の生成 |
-| 9 | 企業出張請求書自動集約・コンプライアンス精算管理プラットフォーム | 出張プラットフォームAPI連携、請求書情報の自動収集 |
-| 10 | 景区混雑リアルタイム予測・時間差観光ルート計画ナビ | 景区混雑データの収集、MLモデルによる混雑時間帯の予測 |
-
-## 13. エモーショナルコンパニオン
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | LLMベースの24時間深層コンパニオン仮想パートナー | 記憶システムによる対話履歴の保存、LLMによるパーソナライズ返信の生成 |
-| 2 | マルチモーダル感情認識・心理カウンセリングAIコンサルタント | 音声トーン分析 + テキスト感情認識、LLMによるカウンセリング提案の生成 |
-| 3 | アルツハイマー老人AI認知訓練・記憶想起デジタルヒューマン | 認知ゲーム（記憶、計算、言語）訓練；古い写真/古い曲による記憶想起 |
-| 4 | 社交不安のAIGCシミュレーション社交練習コーチ | バーチャル社交シーンのシミュレーション、LLMが異なる役割を演じる |
-| 5 | 生成式AI児童就寝前物語カスタマイズ機 | 親のテーマと好みの入力によるカスタマイズ物語の生成 |
-| 6 | 逝者デジタルライフ復元・LLM時空間対話システム | 生前の資料（音声、テキスト）によるパーソナライズモデルの訓練 |
-| 7 | MBTIデータベースのAI性格ミラー・共感チャットボット | MBTIテスト結果入力、LLMによる性格分析と共感返信の生成 |
-| 8 | 全天候気分監視・AIポジティブ感情モチベーションアシスタント | 日常の気分状態の記録、LLMによるトレンドの分析とモチベーションコンテンツの生成 |
-| 9 | プライバシー保護級青少年AI悩みポスト | 匿名で悩みを吐き出す入口、LLMによる傾聴とアドバイス |
-| 10 | 自律進化能力を持つAI仮想ペット育成システム | ペット性格モデルの訓練、対話インタラクションによる成長進化 |
-
-## 14. レジャー・エンターテインメント
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | LLM駆動のオープンワールドゲームNPC自律意思決定エンジン | NPC行動木とLLM意思決定の融合、対話システムによるパーソナライズインタラクション |
-| 2 | 没入型マーダーミステリーAIGCストーリー推演・DMコントロール補助ツール | プレイヤーの選択によるストーリー分岐のトリガー、LLMによる推理ロジックの生成 |
-| 3 | インタラクティブ小説エンディング生成式修飾器 | 読者の選択がストーリーの方向性に影響 |
-| 4 | 二次元キャラクター3DモデリングAIGC自動生成ワークベンチ | テキスト記述によるキャラクターのスケッチ生成、3Dモデリングツールによる自動モデリング |
-| 5 | eスポーツ戦局CVビジュアル分析・AIスマート実況アナウンサー | ゲーム画面のリアルタイム分析、キーモメントの識別 |
-| 6 | パーソナライズユーモアコンテンツ推薦アルゴリズムエンジン | ユーザー興味プロファイリング、ユーモアコンテンツのマッチング推薦 |
-| 7 | AIスマート音調・KTV人声美化ソフトウェア | オーディオノイズ除去と人声強調処理 |
-| 8 | 映画ドラマキャラクター専用ストーリーAI抽出・編集ツール | ビデオコンテンツ分析、キャラクター関連シーンの抽出 |
-| 9 | マルチキャラTTS音声合成オーディオブック自動生成システム | テキストのキャラクター割り当て、パーソナライズ音色の生成 |
-| 10 | ボードゲーム強化学習対局リプレイコーチ | 棋局分析、AI対手によるシミレーション対局 |
-
-## 15. ECサービス
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | 高コンバージョンAIGC商品詳細ページ一括生産ツール | 商品情報入力によるセールスポイントコピーとシーン記述の生成 |
-| 2 | アパレルバーチャルモデルAIスマート試着・展示動画生成ファクトリー | アパレル平置き画像処理、バーチャルモデル試着効果の生成 |
-| 3 | 越境EC多言語LLMローカライズ翻訳・ブラッシュアップアシスタント | 商品説明の多言語翻訳、文化的適応ブラッシュアップ |
-| 4 | NLPベースの顧客感情分析・スマート返信ロボット | コンサルティング対話の感情分析、自動返信の生成 |
-| 5 | 24時間全天候AIGCデジタルヒューマンライブ配信システム | デジタルヒューマン像 + リアルタイムトーク生成 |
-| 6 | 全网同種商品AI比価・トレンド予測プラグイン | ECプラットフォーム価格クローリング、比価チャート表示 |
-| 7 | 買い者レビュー画像AIスマート選別・ショートビデオ合成プラットフォーム | 買い者レビュー画像の品質スコアリング |
-| 8 | LLMベースのリアルタイム販売対話音声分析・金牌トーク推薦 | 通話ASR書き起こし、リアルタイムトークコンプライアンス検出 |
-| 9 | 市場トレンドAIインサイト・爆売り予測エンジン | ソーシャルメディアとECデータの収集分析、LLMによるトレンドホットの洞察 |
-| 10 | 私域トラフィックユーザープロファイルAIクラスタリング・精密運営システム | ユーザー行動データクラスタリング分析、プロファイルタグの生成 |
-
-## 16. エネルギー
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | 家庭電力使用行動AI分析・省エネ戦略コンサルタント | スマート電力メーターデータの収集、電力使用パターンの分析 |
-| 2 | 太陽光パネル欠陥ドローンCVビジュアル識別システム | ドローン巡回撮影、熱赤外画像分析 |
-| 3 | 電力スポット取引価格AIトレンド予測・自動利益戦略Agent | 電力市場データ収集、価格予測モデル |
-| 4 | 蓄電池健康度AI非破壊検出・熱暴走リスク早期警戒システム | バッテリー運行データの監視、健康度評価モデル |
-| 5 | 企業全チェーンカーボン排出AI自動算定・ESGレポート生成アシスタント | エネルギー消費データの収集、カーボン排出因子の計算 |
-| 6 | 電網異常気象負荷AI予測・緊急配車指揮システム | 気象データ連携、負荷予測モデル |
-| 7 | ガソリンスタンド違反行為AIビデオ識別・アラームガードマン | ビデオ監視分析、違反行為（電話、喫煙など）の検出 |
-| 8 | 長距離石油ガスパイプライン漏洩音波AI監視・精密位置特定システム | 音波センサーデーデータの収集、漏洩検出モデル |
-| 9 | バーチャル発電所リソース統合・AI電力取引意思決定システム | 分散型リソースの接続、統合最適化配車 |
-| 10 | 鉱山人员位置AI追跡・危険エリア侵入アラーム | UWB/Bluetooth位置測定、人员軌跡の追跡 |
-
-## 17. 音声・動画
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | 長編動画ハイライトAI識別・ショートビデオ自動編集ツール | ビデオコンテンツ分析、キーフレーム識別 |
-| 2 | ビデオ背景ノイズAIスマート分離・音声強調アシスタント | オーディオ分離モデル、背景ノイズ除去 |
-| 3 | 古い映像4Kアップスケーリング修復・AIスマート着色ワークベンチ | ビデオ超解像度モデル、古い画質の修復 |
-| 4 | テキストからリアルレベルTTS吹き替え・感情制御システム | マルチ音色TTSモデル、感情制御生成 |
-| 5 | ビデオ音声ASR自動認識・バイリンガル字幕生成ツール | 音声認識による字幕生成、多言語翻訳 |
-| 6 | ビデオ画面余分物体AIスマート消去エンジン | ビデオターゲット追跡、物体除去修復 |
-| 7 | 著作権フリーバックグラウンドAIGC自動作曲機 | 音楽生成モデル、感情スタイル制御可能 |
-| 8 | 特定人物音色AIクローン・変声変換ソフトウェア | 少量音声サンプルによる音色モデルの訓練 |
-| 9 | 脚本ワンクリック絵コンテスクリプト・AI動的プレビデオ生成プラットフォーム | 脚本解析による絵コンテ生成、AIプレビデオの生成 |
-| 10 | 会議録音AIスマート書き起こし・コアToDo抽出アシスタント | 複数人会議の音声分離書き起こし |
-
-## 18. AIマーケティング
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | RED爆売りコピーAIGC自動執筆エンジン | トピック入力、LLMによる種草コピーの生成 |
-| 2 | マーケティングポスターAIスマートレイアウト・マルチサイズ適応ツール | コピー入力、ポスターテンプレートのスマートマッチング |
-| 3 | ブランドLOGOクリエイティブAIGC生成・VI体系構築プラットフォーム | ブランドキーワード入力、LOGOクリエイティブ生成 |
-| 4 | 全网ホットAI追跡・トレンドマーケティングクリエイティブ生成アシスタント | ホットデータ収集、LLMによるマーケティング角度の分析 |
-| 5 | 広告出稿ROIリアルタイム監視・AI予算入札マネージャー | 広告プラットフォームデータ連携、効果分析モデル |
-| 6 | 競合マーケティング戦略深層解析・AI週報生成器 | 競合コンテンツ収集分析、戦略の抽出 |
-| 7 | 検索エンジンキーワードAI配置・集客記事一括執筆 | キーワード分析、記事の一括生成 |
-| 8 | 千人千面パーソナライズマーケティングメールAI執筆エキスパート | ユーザープロファイルデータ、パーソナライズコンテンツ生成 |
-| 9 | ブランド評判全网監視・レピュテーション危機AI早期警戒レーダー | 全网レピュテーションデータ収集、感情分析 |
-| 10 | ショートビデオスクリプトクリエイティブAIGC生成・絵コンテガイダンスアシスタント | テーマ入力、スクリプトと絵コンテの生成 |
-
-## 19. データインテリジェンス
-
-| 番号 | アプリケーションシーン名 | 実装参考 |
-| :--: | --- | --- |
-| 1 | Text-to-SQLベースの自然言語データ検索エンジン | 自然言語のSQLクエリへの変換、結果のビジュアル表示 |
-| 2 | 対話式BI：一言でビジュアルチャートを生成 | データ要件の記述、チャートの自動生成 |
-| 3 | スクリーンショットワンクリックExcelテーブル識別ツール | スクリーンショットのアップロード後、VLMによるテーブル構造とデータの認識 |
-| 4 | 画像・スクリーンショットからExcelテーブルAI識別ツール | 画像OCRによるテーブル構造の認識、データのExcel出力 |
-| 5 | マルチソース異種構造データナレッジグラフ自動構築 | マルチデータソースの接続、エンティティと関係の抽出 |
-| 6 | データレポートスマート解読・トレンド分析アシスタント | データレポート画像またはデータ入力、VLMによるチャート内容の解読とトレンド分析 |
-| 7 | データベーステーブル構造スマート解読・クエリ例生成アシスタント | テーブル名またはフィールド記述の入力、建テーブル説明とサンプルクエリSQLの生成 |
-| 8 | 企業マスターデータスマート対合・AI重複排除ガバナンス | マルチソースマスターデータのマッチング、重複レコードの識別 |
-| 9 | データ要件ドキュメントスマートテストケース変換ツール | データ要件記述の入力、LLMによるテストシナリオと検証ケースの生成 |
-| 10 | データ指標定義スマートQAアシスタント | 指標定義ドキュメントに基づくナレッジベース構築 |
-
-</TabItem>
-<TabItem label="Cエンド消費">
-
-## 本章のガイド
-
-<ChapterIntroduction :duration="cDuration" :tags="['C 誌アプリ', 'ライフスタイル', '感情体験', '雰囲気演出']" coreOutput="15+ の生活シーンインスピレーションの発見" expectedOutput="ユーザーの心を打つプロダクト方向を見つける">
-
-本文書は <strong>LLM 大規模モデルの C 誌消費シーンにおけるクリエイティブな応用方向</strong>をまとめています。B 誌が効率やペインポイントに関心を持つのとは異なり、C 誌プロダクトは<strong>感覚の演出、心理的暗示、雰囲気</strong>を重視し、ユーザーが使用プロセスで感情の共鳴と素晴らしい体験を得るようにします。
-
-</ChapterIntroduction>
-
-## シーン雰囲気クイック選択
-
-<el-card shadow="hover" style="margin-top: 16px; margin-bottom: 24px; border-left: 5px solid #ec4899;">
-  <div style="font-weight: 600; margin-bottom: 8px;">あなたの心を打つシーンインスピレーションを見つける</div>
-  <div style="color: #606266; font-size: 14px; line-height: 1.6; margin-bottom: 12px;">
-    求める雰囲気と今の感覚を選択すると、システムが関連するシーン方向を推奨します。タグをクリックすると該当セクションにジャンプします。
-  </div>
-  <el-row :gutter="16">
-    <el-col :span="12">
-      <el-select v-model="vibePoint" placeholder="雰囲気タイプを選択" style="width: 100%;">
-        <el-option
-          v-for="item in vibeOptions"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value"
-        >
-          <div style="font-weight: 500;">{{ item.label }}</div>
-          <div style="font-size: 12px; color: #909399;">{{ item.desc }}</div>
-        </el-option>
-      </el-select>
-    </el-col>
-    <el-col :span="12">
-      <el-select v-model="feeling" placeholder="今の感覚を選択" style="width: 100%;">
-        <el-option
-          v-for="item in feelingOptions"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value"
-        >
-          <div style="font-weight: 500;">{{ item.label }}</div>
-          <div style="font-size: 12px; color: #909399;">{{ item.desc }}</div>
-        </el-option>
-      </el-select>
-    </el-col>
-  </el-row>
-  
-  <div v-if="cRecommendationTopics.length > 0" style="margin-top: 16px;">
-    <div style="font-weight: 600; margin-bottom: 12px; color: #ec4899;">
-      おすすめの {{ cCurrentSelection.vibe }} × {{ cCurrentSelection.feeling }} シーン：
-    </div>
-    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-      <el-tag
-        v-for="topic in cRecommendationTopics"
-        :key="topic.title"
-        type="danger"
-        effect="light"
-        style="cursor: pointer; margin-bottom: 4px;"
-        @click="cScrollToAnchor(topic.scenarioAnchor)"
-      >
-        {{ topic.title }}
-      </el-tag>
-    </div>
-    <el-button type="text" size="small" @click="cResetSelection" style="margin-top: 8px;">
-      選び直す
-    </el-button>
-  </div>
-</el-card>
-
----
-
-## 1. ライフスタイル
-
-> 💡 **コアコンセプト**：平凡な日常に儀式感を与え、ディテールの中に美しさを創造
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | 朝の儀式感アラームアシスタント | 天気 API、カレンダーデータを統合し、LLM がパーソナライズされた朝のプランを生成；スマートスピーカーでカスタム音楽を再生、スマート照明の段階的点灯 |
-| 2 | 一人暮らしの雰囲気クリエイター | スマートホームデバイス（照明、スピーカー、アロマディフューザー）に接続し、LLM が時間/気分に応じて自動的にパラメータ調整；ユーザーの好みを学習し継続的に最適化 |
-| 3 | 週末のおうちデート回復プランジェネレーター | 動画配信プラットフォーム API と連携して作品リストを取得し、ユーザーの視聴履歴の好みに基づいて映画＋グルメ＋コーディネートのコンボプランを生成 |
-| 4 | 就寝前の心の癒しラジオ | TTS 音声合成で優しい物語を生成、ホワイトノイズミックスアルゴリズム、スマート音量フェードアウト；睡眠データに基づいてコンテンツを調整 |
-| 5 | 暮らしの美学インスピレーションキャッチャー | 画像認識でユーザーの環境写真を分析し、LLM が美学提案を生成；Pinterest/Instagram スタイルのコンテンツ推奨 |
-
----
-
-## 2. 感情コンパニオン
-
-> 💡 **コアコンセプト**：無条件の受容と寄り添い、感情の優しい器になる
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | 深夜のツリー聞き手 | エンドツーエンド暗号化でプライバシーを確保、LLM 感情分析で感情を理解、長期記憶でユーザーのストーリーを保存、複数ターンの対話で継続的なサポート |
-| 2 | 失恋回復コンパニオン | 感情段階認識アルゴリズム、段階ごとに異なるサポート（吐露期→発散期→再構築期）；心理学ナレッジベース RAG 検索 |
-| 3 | 不安緩和呼吸コーチ | 生体センサーデータ入力（心拍数/呼吸）、リアルタイムで不安レベルをモニタリング；音声ガイドで呼吸リズム、漸進的筋弛緩法の指導 |
-| 4 | 自信再構築メンター | ポジティブ心理学対話フレームワーク、ユーザーの小さな達成を記録してフィードバック；認知再構築技術でネガティブな自己対話の変革をサポート |
-| 5 | 感情日記スマート分析 | 感情認識 NLP モデル、時系列分析で感情パターンを発見；感情グラフの可視化、予測的アラート |
-
----
-
-## 3. エンターテインメント
-
-> 💡 **コアコンセプト**：没入型体験の創造、エンターテインメントを心の居場所に
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | 没入型マーダーミステリー DM | LLM がリアルタイムでストーリー分岐を生成、音声合成で NPC を演じ、プレイヤーの反応に応じて難易度とテンポを動的に調整；AR/VR シーンレンダリング |
-| 2 | オープンワールドゲームの魂の NPC | 長期記憶データベースがプレイヤーとのインタラクション履歴を保存、LLM がパーソナライズされた対話を生成；感情コンピューティングで NPC にリアルな感情反応を持たせる |
-| 3 | パーソナライズドポッドキャスト生成 | ユーザーの興味グラフに基づいて専用コンテンツを生成、TTS でユーザーの好きな声をクローン；リアルタイムインタラクションでリスナーの質問に回答 |
-| 4 | バーチャルコンサート盛り上げ役 | バーチャルアバターレンダリング、リアルタイムコメントインタラクション、バーチャルペンライト/応援アイテム；空間オーディオ技術でライブ感を演出 |
-| 5 | インタラクティブ小説共創パートナー | LLM がリアルタイムでストーリーを生成、ユーザーの選択が物語の行方に影響；マルチエンディング設計、キャラクター関係の動的発展 |
-
----
-
-## 4. 自己成長
-
-> 💡 **コアコンセプト**：成長は苦行ではなく、楽しい自己発見の旅
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | 個人の成長の証人 | タイムライン可視化で成長軌跡を表示、マイルストーンの自動マーク；「過去の私」vs「今の私」の比較表示 |
-| 2 | 習慣形成ゲーム化コーチ | ゲーム化メカニズム（経験値、レベル、バッジ）、ソーシャルランキング、AI コーチのキャラクター演じ（例：「冒険メンター」） |
-| 3 | スキル学習パートナーマッチング | 興味と学習目標に基づくマッチングアルゴリズム、学習グループコミュニティ、お互いのチェックインメカニズム |
-| 4 | 毎日の小さな幸せ発見者 | 画像認識で生活の中の素敵な瞬間を発見、感謝ジャーナルのガイド、毎週の素敵な瞬間の振り返り |
-| 5 | 人生シミュレーション体験器 | マルチブランチストーリーで異なる選択の結果をシミュレート、パラレル人生の比較；意思決定の結果の可視化表示 |
-
----
-
-## 5. ソーシャルインタラクション
-
-> 💡 **コアコンセプト**：ソーシャルを気軽で自然に、快適なつながりを見つける
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | アイスブレイクトピックジェネレーター | 場面と参加者に基づくスマートトピック推奨、リアルタイム会話分析で話題継続の提案；気まずい瞬間のフォローアップヒント |
-| 2 | SNS投稿文雰囲気クリエイター | 画像コンテンツ分析、LLM が複数スタイルの文案を生成（文芸/ユーモア/シリアス）；emoji とレイアウトのスマート推奨 |
-| 3 | デート雰囲気プランナー | 双方の興味に基づくデートプラン生成、レストラン/アクティビティ推奨、会話トピック提案；リアルタイム天気と交通情報 |
-| 4 | オンライン飲み会盛り上げ役 | オンラインゲームライブラリ、アイスブレイクアクティビティジェネレーター、トピックルーレット；バーチャル背景とフィルターで雰囲気を強化 |
-| 5 | ソーシャルエネルギー管理アシスタント | ソーシャル活動後のエネルギー消費評価、回復アドバイス（一人の時間のアクティビティ推奨）；ソーシャルカレンダーのスマートプランニング |
-
----
-
-## 6. クリエイティブ表現
-
-> 💡 **コアコンセプト**：誰にでも创造力がある、ただ目覚める必要があるだけ
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | インスピレーション枯渇応急キット | クロスドメイン連想アルゴリズム、ランダム刺激語生成、クリエイティブプロンプトライブラリ；マインドマップ式インスピレーション発散ツール |
-| 2 | 個人スタイル探索ガイド | 画像分析でユーザーの既存スタイルを識別、スタイルトレンド推奨、バーチャル試着/メイク；スタイル進化タイムライン |
-| 3 | 手帳＆日記美学アドバイザー | レイアウトテンプレート推奨、カラースキーム生成、装飾エレメント提案；手書き文字認識とコンテンツ美化 |
-| 4 | 写真構図雰囲気ガイド | シーン認識と構図アドバイス、フィルタースタイル推奨、レタッチパラメータのスマート調整；写真技法の学習パス |
-| 5 | 音楽気分マッチング | 音楽感情分析アルゴリズム、ユーザーの気分認識、パーソナライズドプレイリスト生成；音楽ストーリーと背景紹介 |
-
----
-
-## 7. 旅行探索
-
-> 💡 **コアコンセプト**：旅行は景色を見るだけでなく、異なるライフスタイルを感じること
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | 街歩き探索ガイド | 地元通コンテンツの集約、穴場スポット推奨、AR ナビゲーション；リアルタイム翻訳と音声ガイド |
-| 2 | 旅行気分日記生成 | 写真の自動分類と厳選、LLM が美しい旅行記を生成、位置情報マーク付きタイムライン；ワンクリックで旅行動画生成 |
-| 3 | 一人旅コンパニオンアシスタント | リアルタイム位置共有と安全リマインド、現地の緊急連絡先、AI ガイドの音声コンパニオン；一人旅コミュニティ交流 |
-| 4 | 目的地雰囲気プレビュー | VR/360° パノラマプレビュー、現地の音と香りのシミュレーション、文化背景紹介；バーチャル「試住」体験 |
-| 5 | 旅行写真雰囲気ガイド | ゴールデンアワー通知、構図補助線、現地名所撮影スポット推奨；後処理カラースタイル提案 |
-
----
-
-## 8. 心身の健康
-
-> 💡 **コアコンセプト**：健康は目標ではなく、優しいセルフケア
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | 運動モチベーション覚醒師 | ユーザーの状態に応じて運動タイプをスマート推奨、マイクロエクササイズ（5分）オプション、ゲーム化運動チャレンジ；ソーシャル運動チェックイン |
-| 2 | ヘルシー食インスピレーションキッチン | 冷蔵庫の食材認識、パーソナライズドレシピ推奨、栄養バランス分析；ステップバイステップの料理ガイド |
-| 3 | 睡眠の質向上雰囲気クリエイター | 睡眠モニタリングデータ分析、就寝前儀式生成、環境最適化提案（温度/湿度/照明）；スマートウェイクアップ |
-| 4 | ボディセンシングガイド | ボディスキャン瞑想ガイド、身体部位と感情の関連付け、心身接続エクササイズ；バイオフィードバック可視化 |
-| 5 | セルフケアリマインダー | 仕事の強度モニタリング、定期的な休憩リマインド、マイクロケアアクティビティ提案（水分補給/ストレッチ/深呼吸）；セルフケア記録 |
-
----
-
-## 9. 知識探索
-
-> 💡 **コアコンセプト**：学習は終わりのない冒険、好奇心が最良の教師
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | 知識探索ゲーム化ガイド | 知識ポイントマップ可視化、クリア形式の学習パス、アチーブメントバッジシステム；AI メンターのキャラクター演じ |
-| 2 | 語学学習シーンパートナー | LLM が異なるキャラクターを演じて会話、発音矯正、文化背景紹介；没入型シチュエーションシミュレーション |
-| 3 | 好奇心満足アシスタント | Wikipedia/ナレッジグラフ接続、複雑な概念のわかりやすい説明、関連知識推奨；好奇心記録 |
-| 4 | 読書ノートインスピレーション | 書籍内容分析、観点の抽出と関連付け、思考の角度の推奨；読書ノートテンプレートと美化 |
-| 5 | 知識共有雰囲気クリエイター | 知識カード自動生成、共有文案の最適化、ビジュアル美化；ソーシャル共有データフィードバック |
-
----
-
-## 10. 関係マネジメント
-
-> 💡 **コアコンセプト**：良い関係には心を込めたお手入れが必要、でも心を込めるのは複雑じゃなくていい
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | 親密な関係コミュニケーションコーチ | 感情表現テンプレート生成、非暴力コミュニケーション技法指導、対立解決話術；関係健康度評価 |
-| 2 | 家族ケアリマインダー | 重要日付のリマインド（誕生日/記念日）、ケアの話術提案、家族アクティビティ推奨；家族アルバム生成 |
-| 3 | 友情維持雰囲気クリエイター | 友人とのインタラクション記録、共通話題推奨、遠隔集会企画；友情タイムラインと思い出生成 |
-| 4 | 告白＆サプライズプランナー | パーソナライズドサプライズプラン生成、ギフト推奨、ロマンチック話術提案；実行スケジュールとリマインド |
-| 5 | 対立緩和雰囲気ガイド | 感情冷却話術、相手の立場に立つ思考のガイド、和解ステップ提案；関係修復トラッキング |
-
----
-
-## 11. ペットコンパニオン
-
-> 💡 **コアコンセプト**：ペットは家族、彼らの寄り添いは記録し大切にする価値がある
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | ペット擬人化日記 | ペット行動分析、一人称日記生成、写真自動添付；ペットの「SNS」 |
-| 2 | ペット行動分析師 | ペット行動動画分析、健康アラート、トレーニング提案；品種特性ナレッジベース |
-| 3 | ペットとの時間企画 | ペットアクティビティ推奨、DIY おもちゃチュートリアル、ペットフレンドリースポット推奨；ペットソーシャルマッチング |
-| 4 | ペット記念ストーリー生成 | 写真と動画の厳選、タイムラインストーリー生成、音楽コーディネート；記念アルバム/動画の自動生成 |
-| 5 | 初心者ペット飼い主安心ガイド | 段階別ケアガイド、よくある質問への回答、緊急時の対応；初心者コミュニティサポート |
-
----
-
-## 12. 財務の健康
-
-> 💡 **コアコンセプト**：財務的自由は目標ではない、財務の健康こそが目標
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | 消費感情覺察アシスタント | 消費記録分析、感情-消費関連分析、衝動買いアラート；代替的満足感の提案 |
-| 2 | 貯蓄目標ビジュアルモチベーション | 目標進捗の可視化、夢シーンレンダリング、マイルストーンのお祝い；貯蓄習慣形成ゲーム |
-| 3 | 資産管理知識カジュアル学習 | 断片的な知識プッシュ、シチュエーション型ケーススタディ、インタラクティブクイズ；知識テストと証明書 |
-| 4 | 財務不安緩和師 | 財務状況の健康評価、ストレスマネジメントスキル、小さなステップのアクションプラン；財務心理カウンセリング |
-| 5 | 少額投資体験ゲーム | バーチャル投資シミュレーション、リスク教育、投資ポートフォリオゲーム；リアル少額投資のガイド |
-
----
-
-## 13. キャリア開発
-
-> 💡 **コアコンセプト**：キャリアはレールではなく、探索できる荒野
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | キャリア迷いコンパニオン | キャリア興味診断、スキル棚卸し、業界情報推奨；キャリアメンターとの対話 |
-| 2 | 仕事の達成感覚醒師 | 業績記録、価値の抽出、達成の可視化；同僚/顧客からのポジティブフィードバック収集 |
-| 3 | 職場ソーシャル雰囲気アシスタント | 職場トピック推奨、ネットワーキングスキル、業界イベント推奨；LinkedIn コンテンツ最適化 |
-| 4 | 副業インスピレーション発掘器 | スキル-興味-市場ニーズのマッチング、副業事例集、スタートアップガイド；副業コミュニティ交流 |
-| 5 | 面接前自信加油站 | 模擬面接、よくある質問の準備、自信向上テクニック；身だしなみアドバイス |
-
----
-
-## 14. 居家空間
-
-> 💡 **コアコンセプト**：家は住む場所ではなく、心の居場所
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | 居家空間雰囲気デザイナー | 空間写真分析、スタイル推奨、家具/インテリア推奨；AR プレビュー効果 |
-| 2 | 四季インテリアチェンジガイド | 季節テーマ推奨、収納とディスプレイの提案、イベントデコレーションプラン；買い物リスト生成 |
-| 3 | 小スペース空間マジック | 空間最適化アルゴリズム、多機能家具推奨、収納テクニック；視覚的広がりのテクニック |
-| 4 | 居家儀式感クリエイター | 日常儀式のデザイン（朝/夜/週末）、儀式実行リマインド；儀式効果フィードバック |
-| 5 | 断捨離心理コンパニオン | アイテムの感情価値評価、断捨離ステップガイド、心理的サポート；寄付/リサイクルルート推奨 |
-
----
-
-## 15. グルメ料理
-
-> 💡 **コアコンセプト**：食べ物は愛の言語、料理は愛を表現する方法
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | 一人飯癒しレシピ | 冷蔵庫の食材認識、シンプルレシピ推奨、ステップバイステップガイド；一人飯の盛り付け美学 |
-| 2 | イベント食卓雰囲気デザイン | イベントテーマメニュー、食卓コーディネートプラン、雰囲気演出テクニック；ゲスト体験最適化 |
-| 3 | 料理気分マッチング | 気分-食べ物関連アルゴリズム、感情調整レシピ、コンフォートフード推奨；料理セラピーガイド |
-| 4 | 料理初心者自信ビルダー | 超シンプルレシピ、失敗挽回テクニック、自信構築の声かけ；段階的難易度アップ |
-| 5 | フードフォトグラフィー雰囲気ガイド | 料理の盛り付け提案、自然光の活用、撮影アングルのガイド；フィルターと後処理の提案 |
-
----
-
-## 16. ファッションスタイル
-
-> 💡 **コアコンセプト**：ファッションは自己表現、スタイルは内面の外在表現
-
-| 番号 | アプリケーションシーン名 | アプリケーションシーン機能 |
-| :--: | ------------ | ------------ |
-| 1 | 今日のコーデ気分ボード | 天気/シーン/気分の総合推奨、バーチャル試着、コーデインスピレーション；ワードローブ管理 |
-| 2 | カプセルワードローブコーディネーター | ワードローブ棚卸し、アイテム別コーデ組み合わせ、1着多コーデプラン；買い物アドバイス（空欄を補完） |
-| 3 | 個人スタイル探索の旅 | スタイルテスト、参考アイコン推奨、スタイル進化パス；自信構築 |
-| 4 | 古着の新しい着こなしクリエイター | 古着リメイクインスピレーション、新しいコーデ方法、アクセサリーのポイントテクニック；サステナブルファッションの理念 |
-| 5 | 特別シーンスタイリングアドバイザー | シーンのドレスコード読み解き、スタイリングプラン生成、メイク・ヘアアドバイス；全体スタイリングの調和 |
-
----
-
-## C 誌プロダクトを設計するコアの心得
-
-### 1. 「機能」から「感覚」へ
-
-B 誌プロダクトは「この機能がどんな問題を解決できるか」に関心を持ち、C 誌プロダクトは「この機能がどんな感覚をもたらせるか」に関心を持ちます。
-
-| B 誌の考え方 | C 誌の考え方 |
-|---------|---------|
-| 効率向上 | 好きなことにもっと時間を使える |
-| コスト削減 | 使うお金の価値を最大化 |
-| ペインポイント解決 | 素晴らしい体験の創造 |
-| 機能の充実 | 感覚が届いているか |
-
-### 2. 雰囲気を演出する 3 つのレイヤー
-
-**感覚レイヤー**：視覚、聴覚、触覚のデザイン
-- 温かい色調
-- リラックスできる音
-- スムーズなアニメーション
-
-**感情レイヤー**：感情の共鳴とガイド
-- ユーザーの気持ちを理解する
-- 感情的サポートを提供する
-- ポジティブな感情を創造する
-
-**意味レイヤー**：価値の共感と帰属感
-- ユーザーが理解されていると感じる
-- 帰属感を創造する
-- 行動に意味を与える
-
-### 3. 心理的暗示の力
-
-C 誌プロダクトの文案とデザインはすべて心理的暗示を伝えています：
-
-- **ポジティブ暗示**：「あなたはもう十分頑張っています」「ゆっくりでいいんです」
-- **帰属暗示**：「あなたと同じ人がたくさんいます」「一人じゃないんです」
-- **成長暗示**：「毎回の試みは進歩です」「あなたはもっと良くなっています」
-
-### 4. ユーザーをより良い自分にする
-
-最高の C 誌プロダクトはユーザーを変えるものではなく、ユーザーがなりたい自分をサポートするものです。
-
-- 「〜すべき」ではなく、「〜できます」
-- 「〜しなければ」ではなく、「〜したいなら」
-- 「まだ足りない」ではなく、「あなたはもう〜」
-
----
-
-> 🌟 **覚えておいてください**：C 誌ユーザーが買っているのは機能ではなく、感覚です。ツールではなく、寄り添いです。サービスではなく、理解です。
-
-</TabItem>
-</Tabs>
+</style>

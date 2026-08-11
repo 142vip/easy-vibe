@@ -4,6 +4,7 @@ description: '業務分析からマルチページプロダクトプロトタイ
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = '約 <strong>8 時間</strong>'
@@ -351,11 +352,8 @@ AI は構造化されたニーズと対応するプロンプトを返してく�
 #### 2.2.2 コード生成を開始
 
 この時点で初期プロンプトが得られています。最初のプロンプトスタイルを例にして、AI にコードの生成を手伝ってもらいましょう。まずウィンドウと対応するフォルダーを作成し、フォルダーを開きます（お気に入りのフォルダーの場所で新規プロジェクトを初期化）：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-28-44.png)
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-30-00.png)
 
 サイドバーで好きなモデル（gemini、gpt、glm、kimi、minimax などを推奨）を選択し、第一歩で得たプロンプトを入力：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-31-41.png)
 
 生成をクリックすると、おなじみのプロセスが始まります。AI はプロンプトに基づいてプロジェクトのディレクトリ構造、必要なファイルを計画し、各ファイルの初期内容を与えます。
 
@@ -369,10 +367,8 @@ AI は構造化されたニーズと対応するプロンプトを返してく�
 :::
 
 この時、エンターキーを押して情報を確認することを忘れないでください（さもないと待機状態に陥ります。一部の AI IDE ではこの問題は起こりません）：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-33-03.png)
 
 次のようなシーンに遭遇した場合、これはローカルでサービスがすでに起動していることを意味し、クリックしてスキップする必要があります。さもないとこの画面に留まり続けます（コード生成が完了しても何も表示されない場合、「このプロジェクトを起動して」と自発的に言う必要があります）：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-38-11.png)
 
 ::: info 💡 シーンの説明
 **シーンの説明**：`npm create vite@latest` で React + TypeScript プロジェクト（easy-vibe-web）を作成した後、コンピュータが自動的にこの Web ページを「起動」し、すぐに効果を確認できるようにします。
@@ -394,13 +390,11 @@ AI は構造化されたニーズと対応するプロンプトを返してく�
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
 
 初步的な機能画面がすでにありますが、フロントエンドページがあまりにもシンプルです。この時、AI と直接対話して画面表示を最適化できます：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-01-16.png)
 
 最適化後、より美しい画面が得られます：
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
 
 自分のニーズに合わせて Web ページの機能を変更できます。スクリーンショットを添えて自由に質問できます。例えば：「バッチインポート機能はまだ不要だから、削除して」「左側の入力項目が多すぎるから、xxxxx だけ残して」。さらに、他の成熟した Web サイトを参考にすることもできます。例えば、Google のあるデザインプロダクトを直接「参考」にできます（好きな成熟した Web サイトのスクリーンショットを貼り付けることもできます）：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-13-12.png)
 
 最終的に得られる結果：
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
@@ -559,12 +553,9 @@ AI は通常チェックリストを出力してくれます。結果に基づ�
 
 ## 5. 📚 課題：あなた独自の TikTok EC ワークベンチを複製する
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🚀 チャレンジタスク：EC素材ワークベンチを複製</div>
-  </template>
+<StageAssignmentCard title="ECコンテンツ制作ワークベンチを完成させる">
 
-  <p>
+<p>
     この章のプロンプトと内容を参考に、完全なループを一回完了してください：
   </p>
 
@@ -588,7 +579,8 @@ AI は通常チェックリストを出力してくれます。結果に基づ�
       </ul>
     </li>
   </ul>
-</el-card>
+
+</StageAssignmentCard>
 
 ## 次のステップ
 

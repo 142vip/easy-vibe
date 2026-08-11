@@ -4,6 +4,7 @@ description: "Apprenez à découvrir des opportunités commerciales dans les fru
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'environ <strong>3 heures</strong>'
 </script>
 
@@ -625,7 +626,9 @@ Grâce à cette troisième partie, Xiaoming a compris trois choses.
 
 ---
 
-### Exercice post-chapitre
+## 📚 Travail de fin de chapitre
+
+<StageAssignmentCard title="Transformer un petit problème en idée de produit">
 
 Choisissez un petit problème de votre vie quotidienne et développez-le avec la méthode de ce chapitre :
 
@@ -650,6 +653,8 @@ Choisissez un petit problème de votre vie quotidienne et développez-le avec la
 :::
 
 ---
+
+</StageAssignmentCard>
 
 ## Annexe : Méthodologie SOP
 

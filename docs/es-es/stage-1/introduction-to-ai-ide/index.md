@@ -1,9 +1,53 @@
 
 # Nivel basico 2: aprende herramientas de programacion con IA
 
+## Cómo aprender de forma activa con la IA
+
+::: tip 💡 La regla más importante: si tienes una duda, pregunta primero a la IA
+A partir de ahora, considera la IA tu **primer lugar al que pedir ayuda**. Si no entiendes un concepto, no sabes instalar una herramienta o escribir un comando, el programa da un error o no sabes qué hacer después, **pregunta primero a la IA y prueba tú mismo la respuesta**.
+
+Las preguntas que antes llevarías al profesor, a un compañero o a un grupo de chat pueden ir primero a la IA. Responde rápido, admite todas las repreguntas que necesites y puede usar el error y el contexto del proyecto para proponer el paso siguiente. No esperes a llevar mucho tiempo bloqueado y no la uses solo para pedirle que escriba código.
+
+**Aprender de forma nativa con IA no consiste únicamente en terminar una tarea con ella. Significa incluirla en todo el aprendizaje: preguntar cuando aparece un problema, probar la respuesta y volver a preguntar cuando surge una duda nueva.**
+:::
+
+### El ciclo de aprendizaje nativo con IA
+
+Aprender activamente con IA no es entregarle el trabajo y esperar. La IA acorta el tiempo que tardas en encontrar una respuesta, para que puedas dedicar más tiempo a **practicar, comprobar y comprender**. Puedes usar este ciclo en todos los capítulos:
+
+```mermaid
+flowchart LR
+  A["① Aparece un problema<br/>Explica el objetivo y lo ocurrido"] --> B["② Pregunta enseguida<br/>Incluye el contexto"]
+  B --> C["③ Pruébalo tú mismo<br/>Sigue la sugerencia"]
+  C --> D{"¿El resultado es el esperado?"}
+  D -- "Todavía no" --> E["④ Envía el resultado o<br/>el error completo"]
+  E --> B
+  D -- "Sí" --> F["⑤ Explica con tus palabras<br/>por qué funcionó"]
+  F --> G["Convierte lo aprendido en una<br/>habilidad para otros problemas"]
+```
+
+### Preguntas que puedes formular tal cual
+
+| Lo que te ocurre | Lo que puedes decirle a la IA |
+| --- | --- |
+| **No entiendes un concepto** | «No tengo experiencia programando. Explica qué es una API con una comparación cotidiana y dame después un ejemplo mínimo». |
+| **No sabes instalar el entorno** | «Uso macOS y quiero ejecutar este proyecto. Comprueba primero qué entorno necesito; luego guíame de un paso en un paso y explica para qué sirve cada uno». |
+| **Un comando da error** | «Este es el comando y el error completo. Identifica primero la causa más probable y dame el cambio mínimo. Si falta información, dime qué debo aportar». |
+| **No sabes qué hacer después** | «Quiero crear Snake y la pantalla del juego ya aparece. Dime cuál es el siguiente paso más pequeño y cómo sé que está terminado». |
+| **No entiendes el código de la IA** | «No cambies más código todavía. Explica por módulos el último cambio y qué problema resuelve cada parte». |
+| **No sabes elegir entre dos opciones** | «Soy principiante y quiero obtener pronto una versión ejecutable. Compara A y B con esas condiciones y recomienda una con claridad». |
+| **El resultado no coincide con lo esperado** | «Quería que la página se viera así: …; ahora se ve así: …. Compara las diferencias y corrige primero solo la más evidente». |
+
+::: info Una plantilla que sirve para casi cualquier pregunta
+**Mi objetivo es …; he llegado hasta …; he probado …; el resultado real o el error completo es …; explica primero la causa y después indícame la acción siguiente más pequeña.**
+
+Cuanto más concreta sea la información, más útil será la respuesta. Es normal que la primera no resuelva el problema. Enviar el nuevo resultado a la IA también forma parte de este aprendizaje.
+:::
+
 ## Introduccion del capitulo
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = 'Aprox. <strong>1 dia</strong>, se puede completar en varias sesiones'
@@ -708,6 +752,8 @@ En el proximo capitulo cambiaremos el foco de "saber usar herramientas" a "hacer
 
 ## 8. 📚 Tarea: crear un juego mas complejo con un AI IDE local
 
+<StageAssignmentCard title="Crea tu propio juego con un AI IDE">
+
 <el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
   <template #header>
     <div style="font-weight: bold; font-size: 16px;">🚀 Reto: crea tu propio juego</div>
@@ -824,6 +870,8 @@ En el proximo capitulo cambiaremos el foco de "saber usar herramientas" a "hacer
 </el-card>
 
 No necesitas memorizar esta parte. Lo mas importante es formar primero una impresion general.
+
+</StageAssignmentCard>
 
 ## <span id="term-tool-ui">[1. Terminos relacionados con la interfaz de herramientas](#appendix-1-map)</span>
 

@@ -10,6 +10,7 @@ Ne craignez pas de faire des erreurs ou de modifier le contenu, nous croyons tou
 </div>
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = 'Environ <strong>4 heures</strong>, réalisables en plusieurs sessions'
@@ -267,6 +268,7 @@ Vous pouvez également ajouter des effets spéciaux au processus de « mangeage 
 
 Si cela vous semble trop difficile, vous pouvez demander directement au modèle de langage de l'aide ! Il peut fournir des suggestions créatives pour rendre votre jeu plus amusant. Essayez !
 
+```
 1. Mécanisme « Les mots débloquent des mondes »
    Fonction : après que le serpent a mangé un mot, le modèle d'image génère instantanément une petite œuvre d'art pour ce mot ; ces œuvres s'assemblent peu à peu en un panorama unique créé par le joueur — on « peint » tout en jouant.
 
@@ -290,6 +292,8 @@ Si cela vous semble trop difficile, vous pouvez demander directement au modèle 
 
 8. « L'histoire qui grandit »
    Fonction : au fur et à mesure que le serpent grandit, le LLM poursuit en continu le poème narratif et le modèle d'image génère un long panorama en rouleau, pour que le joueur vive en même temps « l'écriture, le dessin et le jeu ».
+
+```
 
 De plus, nous pouvons demander au LLM de générer directement un prompt de niveau projet. Dans la section précédente, nous n'avons écrit nous-mêmes que le prompt du Snake. Maintenant, essayons de demander au modèle de générer un prompt avec un cadre d'ensemble et un chemin de réalisation (vous pouvez utiliser z.ai directement).
 
@@ -432,12 +436,9 @@ En découvrant ces cas, vous vous rendrez compte que **le Snake n'est que la par
 
 ## 📚 Devoir
 
-<el-card id="assignment-card" shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 Devoir du chapitre : réaliser vos premiers mini-jeux IA-native</div>
-  </template>
+<StageAssignmentCard title="Terminer vos premiers mini-jeux natifs de l’IA">
 
-  <p>
+<p>
     Dans cette section, vous avez suivi les étapes du processus complet : de la « génération conversationnelle d'un Snake » à la « compréhension des principes de conception d'un mini-jeu IA-native ». Le devoir ci-dessous vous aide à transformer cette compréhension en compétence réelle.
   </p>
 
@@ -461,7 +462,8 @@ En découvrant ces cas, vous vous rendrez compte que **le Snake n'est que la par
   <p>
     Voilà pour le tutoriel complet ! Il vous faudra peut-être <strong>4 heures</strong> pour terminer tout le contenu et construire votre propre jeu de Snake. Ne vous pressez pas — explorez, expérimentez et profitez du processus. Si vous rencontrez des concepts difficiles à comprendre, n'hésitez pas à consulter les annexes ci-dessous.
   </p>
-</el-card>
+
+</StageAssignmentCard>
 
 ## Annexes
 

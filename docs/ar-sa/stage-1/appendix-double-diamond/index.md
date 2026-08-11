@@ -4,6 +4,7 @@ description: 'مقالة تمهيدية عن نموذج الألماس المز�
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'حوالي <strong>1.5 ساعة</strong>'
 </script>
 
@@ -528,12 +529,16 @@ AI قد يخرج:
 
 ## 📚 الواجبات
 
+<StageAssignmentCard title="رتّب فكرتك باستخدام نموذج الماسة المزدوجة">
+
 يرجى إكمال الواجبات التالية بناءً على المحتوى أعلاه:
 
 1. اختر فكرة منتج تريد صنعها مؤخرًا، واكتب مسودتها في أربع خطوات Discover و Define و Develop و Deliver
 2. في مرحلة Define، أجبر نفسك على تقليص المشكلة إلى جملة واحدة محددة
 3. في مرحلة Develop، اذكر 3 حلول مختلفة على الأقل، بدلاً من التركيز فقط على أول فكرة تتبادر إلى الذهن
 4. في مرحلة Deliver، اكتب أصغر نسخة تحقق يمكن تسليمها في غضون أسبوع
+
+</StageAssignmentCard>
 
 ## قراءة إضافية
 

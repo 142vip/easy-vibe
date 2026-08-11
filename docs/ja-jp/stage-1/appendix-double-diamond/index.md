@@ -4,6 +4,7 @@ description: 'ゼロベースの読者向け Double Diamond 入門記事。Disco
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = '約 <strong>1.5 時間</strong>'
 </script>
 
@@ -528,12 +529,16 @@ AIは次のような出力をするかもしれません：
 
 ## 📚 課題
 
+<StageAssignmentCard title="ダブルダイヤモンドでアイデアを整理する">
+
 上記の内容に基づいて、次の課題を完了してください：
 
 1. 最近作りたいプロダクトのアイデアを1つ選び、Discover、Define、Develop、Deliverの4ステップのドラフトを書く
 2. Define段階で、問題を強制的に一文に圧縮する
 3. Develop段階で、少なくとも3種類の異なるソリューションをリストアップし、最初に思いついた方法だけに固執しない
 4. Deliver段階で、1週間以内に納品可能な最小検証バージョンを書き出す
+
+</StageAssignmentCard>
 
 ## 参考文献
 

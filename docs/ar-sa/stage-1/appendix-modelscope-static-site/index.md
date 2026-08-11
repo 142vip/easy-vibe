@@ -1,74 +1,245 @@
 ---
 title: نشر موقعك على ModelScope
-description: انشر مواقع HTML وVue وReact وVite الثابتة عبر ModelScope Studio وSkill النشر الرسمي.
+description: دليل كامل لنشر HTML أو نواتج Vue وReact وVite باستخدام Skill الرسمي وStatic Studio.
 ---
 
 # نشر موقعك على ModelScope
 
-بعد أن تعمل الصفحة على جهازك، تحتاج إلى رابط يستطيع الآخرون فتحه. في هذا الملحق سنستخدم **ModelScope Studio** بدل إعداد خادم كامل من الصفر.
+بعد أن تعمل الصفحة على جهازك، تحتاج إلى عنوان يستطيع الأصدقاء أو الزملاء أو المستخدمون الحقيقيون فتحه.
 
-## 1. حدد ما ستنشره
+يمكنك استئجار خادم وإعداد النطاق وHTTPS والنشر بنفسك. في هذا الدرس سنقلل أعمال التشغيل وننشر الموقع في **ModelScope Studio**.
 
-| المشروع | نوع Studio | ما يجب تجهيزه |
+توفر ModelScope النماذج ومجموعات البيانات، كما توفر **Studios** لعرض التطبيقات. وينظم المجتمع أيضًا [لقاءات للمطورين](https://community.modelscope.cn/683562c6870cef7360622f7f.html). يمنحك Studio عنوانًا قابلًا للمشاركة دون أن تتعلم إدارة الخوادم أولًا.
+
+> راجعنا هذا الدليل مع الواجهة الحالية وSkills الرسمية ووثائق الأوامر في **11 أغسطس 2026**. قد تتغير أماكن الأزرار، لكن المسار يبقى: إنشاء Static Studio، رفع ناتج البناء، النشر، ثم اختبار الرابط.
+
+إلى جانب Gradio وStreamlit وDocker، يدعم Studio نوع `static` للمواقع المبنية مسبقًا. إذا كان الناتج `index.html` وCSS وJavaScript وصورًا، فاختر هذا النوع.
+
+سيكون العنوان المنشور قريبًا من:
+
+```text
+https://modelscope.cn/studios/اسمك/اسم-studio
+```
+
+## اختر طريقة النشر المناسبة
+
+| المشروع | نوع Studio | التحضير |
 | --- | --- | --- |
-| HTML وCSS وJavaScript | Static | ملفات الموقع و`index.html` في الجذر |
-| Vue أو React أو Vite أو Svelte | Static | محتويات `dist` أو `build` بعد البناء |
-| Gradio أو Streamlit | النوع الموافق | ملف بدء Python والاعتماديات |
-| خلفية أو حزم نظام خاصة | Docker | Dockerfile وخدمة قابلة للتشغيل |
+| HTML وCSS وJavaScript | **Static** | جهز الملفات، ولا حاجة إلى بناء |
+| Vue أو React أو Vite أو Svelte | **Static** | ابنِ محليًا وانشر محتويات `dist` أو `build` فقط |
+| Gradio | Gradio | جهز `app.py` و`requirements.txt` |
+| Streamlit | Streamlit | جهز ملف البدء والاعتماديات |
+| خلفية أو حزم نظام خاصة | Docker | اكتب Dockerfile واجعل الخدمة تستمع إلى المنفذ المطلوب |
 
-في مشاريع أطر الواجهة، انشر **ناتج البناء** لا مجلد الشيفرة المصدرية.
+يركز هذا الفصل على الخيارين الأولين. **لا ترفع مصدر Vue أو React بوصفه موقع Static.** متصفح الزائر لن يشغّل `npm install` أو `npm run build`.
 
-## 2. استخدم Skill النشر الرسمي
+## الطريقة الموصى بها: Skill الرسمي
 
-تتضمن [ModelScope Skills الرسمية](https://github.com/modelscope/modelscope-skills) الأداة `ms-studio-deploy` التي تتعرف على المشروع وتنشئ Studio وتزامن الملفات وتنشرها وتراجع السجلات.
+تحافظ ModelScope على [Skills رسمية](https://github.com/modelscope/modelscope-skills).
+
+| Skill | الوظيفة | وقت الاستخدام |
+| --- | --- | --- |
+| `ms-hub` | مدخل موحد للمستودعات والنماذج والبيانات وStudios وMCP وSkills Center | أول اتصال والعمليات العامة |
+| `ms-studio-deploy` | كشف المشروع وإنشاء Studio ومزامنة Git والنشر والسجلات وتشخيص الأخطاء | **الخيار الأول لنشر موقع محلي أو تحديثه** |
+
+يتعرف `ms-studio-deploy` إلى `static` عندما يوجد `index.html` في الجذر. لا يشغّل Static Studio الأمر `npm run build`، لذلك ابنِ مشاريع الأطر محليًا.
+
+### ثبّت Skills
 
 ```bash
 python -m pip install -U modelscope
 modelscope skills add @ModelScope/ms-hub @ModelScope/ms-studio-deploy
 ```
 
-احصل على رمز من صفحة [Access Tokens](https://modelscope.cn/my/myaccesstoken) واحتفظ به محليًا فقط. لا تكتبه في الموقع أو README أو صورة مشتركة.
+إذا لم يتضمن الأمر `skills`، استخدم المثبت الرسمي:
 
-في مشروع Vite، ابنِ المشروع أولًا:
+```bash
+curl -fsSL https://modelscope.cn/skills/install.sh | bash -s -- @ModelScope/ms-hub
+curl -fsSL https://modelscope.cn/skills/install.sh | bash -s -- @ModelScope/ms-studio-deploy
+```
+
+تثبّت Skills عادة في `~/.agents/skills/`. افتح بعدها جلسة جديدة في Codex أو Cursor أو Claude Code أو أداة متوافقة لتحديث القائمة.
+
+### انشر باستخدام Skill
+
+بحسب [دليل `ms-studio-deploy` الرسمي](https://github.com/modelscope/modelscope-skills/blob/main/skills/ms-studio-deploy/SKILL.md)، جهز ثلاثة أشياء:
+
+1. ثبّت Skill وافتح جلسة Agent جديدة.
+2. افتح مجلد النشر، وضع `index.html` مباشرة في الجذر.
+3. اضبط ModelScope Access Token على الجهاز.
+
+احصل على الرمز من صفحة [Access Tokens](https://modelscope.cn/my/myaccesstoken) واضبطه في الطرفية:
+
+```bash
+export MODELSCOPE_API_KEY="رمزك"
+```
+
+في HTML البسيط افتح مجلد الموقع مباشرة. في Vue أو React أو Vite ابنِ أولًا ثم ادخل إلى الناتج:
 
 ```bash
 npm run build
 cd dist
 ```
 
-افتح مجلد الناتج في أداة الذكاء الاصطناعي وقل:
+ينشئ Vite عادة `dist`. إذا أنشأت أداتك `build` فافتحه بدلًا منه، ثم افتح المجلد في أداة تدعم Agent Skills.
+
+#### أقصر طلب
 
 ```text
-استخدم Skill باسم ms-studio-deploy لنشر هذا المجلد في Static Studio على ModelScope. أرسل لي الرابط بعد نجاحه.
+استخدم Skill باسم ms-studio-deploy لنشر هذا الموقع في Static Studio على ModelScope. أرسل لي العنوان بعد أن يعمل.
 ```
 
-## 3. انشر يدويًا من الموقع
+يفحص Skill ملف `index.html` وتسجيل الدخول. وإذا احتاج إلى Studio جديد سيسأل عن الاسم والظهور. ابدأ بالوضع الخاص.
 
-افتح [ModelScope Studio](https://modelscope.cn/studios) وسجّل الدخول.
+ويمكنك تقديم الشروط دفعة واحدة:
 
-![الصفحة الرئيسية لـ ModelScope Studio](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.jpg)
+```text
+استخدم Skill باسم ms-studio-deploy لنشر هذا المجلد في Static Studio على موقع ModelScope الصيني.
+سمِّ Studio باسم my-portfolio واجعله خاصًا أولًا. افحص الحالة والسجلات بعد النشر.
+إذا فشل، أصلح السبب الوارد في السجلات، وانشر من جديد، ثم أعد العنوان العامل.
+```
 
-في صفحة [إنشاء Studio](https://modelscope.cn/studios/create)، أدخل المالك والاسم والوصف ومستوى الظهور.
+#### ما الذي ستفعله أداة AI؟
 
-![نموذج إنشاء Studio](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/02-create-studio.jpg)
+```text
+كشف المشروع → اختيار الموقع الصيني أو الدولي → قراءة الحساب
+→ إنشاء Studio أو إعادة استخدامه → فحص الملفات الحساسة → المزامنة إلى master
+→ بدء النشر → فحص الحالة والسجلات → التشخيص والإصلاح → إعادة العنوان
+```
 
-اختر **Static** لنوع SDK.
+اختبر في الوضع الخاص أولًا ثم اجعله عامًا. لا يحتاج الموقع Static إلى عتاد مدفوع. وإذا احتاج نوع آخر إلى مورد مدفوع، فعلى Skill طلب موافقتك الصريحة.
 
-![اختيار نوع Static](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+يُستخدم الرمز للـAPI وGit push. لا تضعه في الواجهة أو README أو الطلب أو لقطة مشتركة.
 
-بعد الإنشاء افتح صفحة الملفات وارفع `index.html` وCSS وJavaScript والصور. يجب أن يوجد `index.html` مباشرة في الجذر، لا داخل مجلد `dist` إضافي.
+## المسار اليدوي: الخطوة 0 — جهز الموقع
 
-![صفحة ملفات Static Studio](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/04-studio-files.jpg)
+استخدام Skill أسهل، لكن المسار اليدوي يشرح واجهة Studio ويفيد عندما لا تتوفر أداة Agent.
 
-احفظ وانتظر اكتمال النشر. افحص الرابط النهائي: الصفحة الرئيسية والأنماط والصور وعرض الهاتف ووحدة تحكم المتصفح. وإذا كان Studio عامًا فاختبره أيضًا بعد تسجيل الخروج.
+### الحالة A: HTML بسيط
 
-## 4. التحديث وحل المشكلات
+يجب أن يكون `index.html` في جذر المحتوى المنشور:
 
-بعد تعديل المصدر، اختبر محليًا وابنِ من جديد واستبدل الملفات المنشورة ثم أعد النشر.
+```text
+my-site/
+├── index.html
+├── styles.css
+├── app.js
+└── images/
+    └── cover.jpg
+```
 
-- اختفاء الأنماط أو الصور: راجع المسارات وإعداد `base` في Vite؛
-- ظهور 404 عند تحديث مسار: فكّر في موجه يعتمد على Hash؛
-- ظهور قائمة ملفات فقط: تحقق من `index.html` في الجذر؛
-- الحاجة إلى مفتاح سري: لا تضعه في الواجهة، بل استخدم خدمة خلفية.
+اختبر عبر HTTP قبل النشر:
 
-المراجع الرسمية: [ModelScope Studio](https://modelscope.cn/studios)، و[ModelScope Skills](https://github.com/modelscope/modelscope-skills)، و[`ms-studio-deploy`](https://github.com/modelscope/modelscope-skills/blob/main/skills/ms-studio-deploy/SKILL.md).
+```bash
+cd my-site
+python3 -m http.server 8000
+```
+
+افتح `http://localhost:8000`. النقر المزدوج على `index.html` لا يكفي؛ إذ يتعامل `file://` وHTTP بطريقة مختلفة مع الوحدات وCORS والمسارات.
+
+### الحالة B: Vue وReact وVite وما شابه
+
+```bash
+npm install
+npm run build
+```
+
+| الأداة | مجلد الناتج المعتاد |
+| --- | --- |
+| Vite / Vue + Vite / React + Vite | `dist/` |
+| Create React App | `build/` |
+| Vue CLI | `dist/` |
+
+انشر **محتوى** الناتج حتى يظهر `index.html` مباشرة في جذر Studio.
+
+```text
+صحيح: index.html
+خطأ: dist/index.html
+```
+
+إذا أعادت ملفات CSS أو JavaScript أو الصور خطأ 404، جرّب قاعدة نسبية في Vite:
+
+```js
+// vite.config.js / vite.config.ts
+export default {
+  base: './'
+}
+```
+
+ابنِ من جديد. قد لا يعيد المضيف الثابت جميع المسارات إلى `index.html`؛ ويمكن لتطبيق SPA استخدام مسار Hash مثل `/#/about`.
+
+## المسار اليدوي: الخطوة 1 — افتح Studio وسجّل الدخول
+
+افتح [ModelScope Studio](https://modelscope.cn/studios). يعرض أعلى الصفحة مسار الإنشاء والبناء والنشر والمشاركة.
+
+![صفحة ModelScope Studio مع مراحل الإنشاء والنشر](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.jpg)
+
+اختر الإنشاء أو افتح [إنشاء Studio](https://modelscope.cn/studios/create). لا يشارك الموقع الصيني `modelscope.cn` والدولي `modelscope.ai` الحساب أو الرمز أو المحتوى.
+
+## المسار اليدوي: الخطوة 2 — أنشئ Static Studio
+
+![نموذج المالك والاسم والترخيص والظهور والوصف](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/02-create-studio.jpg)
+
+1. **المالك أو المنظمة:** يحدد جزء المالك في العنوان.
+2. **الاسم:** استخدم أحرفًا صغيرة وأرقامًا وشرطات مثل `my-portfolio`.
+3. **اسم العرض والوصف:** اكتبهما بلغة يفهمها الزائر.
+4. **الظهور:** ابدأ خاصًا ثم اجعله عامًا بعد الاختبار.
+5. **الترخيص:** اختره وفق المشروع.
+
+اختر **Static** لنوع SDK. يعرض النموذج الحالي Gradio وStreamlit وStatic وDocker.
+
+![اختيار Static في نموذج Studio](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+
+> إذا احتاج الموقع إلى قاعدة بيانات أو مفتاح سري أو حسابات خادمية، فليس ثابتًا بحتًا. استخدم Gradio أو Streamlit أو Docker أو خلفية منفصلة. المفتاح المكتوب في JavaScript الأمامي لا يبقى سريًا.
+
+أكد المعلومات وانتظر فتح Studio.
+
+## المسار اليدوي: الخطوة 3 — ارفع الملفات
+
+في Static Studio يعمل، يظهر `index.html` و`README.md` مباشرة في الجذر.
+
+![صفحة ملفات Static Studio وindex.html في الجذر](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/04-studio-files.jpg)
+
+ارفع `index.html` وCSS وJavaScript والصور من **Files**. لا تضعها داخل مجلد إضافي باسم `dist` أو `build` أو المشروع.
+
+الرفع اليدوي مناسب للملفات القليلة. عند كثرة الملفات أو التحديثات استخدم `ms-studio-deploy` لمزامنة Git.
+
+## المسار اليدوي: الخطوة 4 — انشر واختبر
+
+يبدأ النشر عادة بعد الحفظ. إن لم يبدأ، اختر النشر أو إعادة التشغيل. عندما يصبح عاملًا افتح:
+
+```text
+https://modelscope.cn/studios/اسمك/اسم-studio
+```
+
+- هل تفتح الصفحة الرئيسية؟
+- هل تعمل CSS وJavaScript والصور؟
+- هل تظهر أخطاء 404 أو CORS أو JavaScript في وحدة التحكم؟
+- هل يعمل الموقع بعرض الهاتف؟
+- هل يفتح Studio العام في نافذة غير مسجلة الدخول؟
+
+اختبره خاصًا أولًا، ثم اجعله عامًا وكرر الاختبار دون تسجيل الدخول.
+
+## المسار اليدوي: الخطوة 5 — حدّث الموقع
+
+بعد تعديل المصدر، اختبر محليًا وابنِ من جديد. استبدل في **Files** الملفات القديمة بمحتوى `dist` أو `build` الجديد ثم أعد النشر.
+
+```text
+تعديل المصدر → اختبار محلي → إعادة البناء → استبدال ملفات Studio
+→ إعادة النشر → فحص العنوان النهائي
+```
+
+لا ترفع `node_modules` أو إعدادات التطوير أو المشروع المصدري الكامل. مع التحديثات الكثيرة ارجع إلى Skill.
+
+## استخدم Skill أيضًا لحل الأخطاء
+
+<ModelScopeTroubleshooter />
+
+## المصادر
+
+- [ModelScope Studio](https://modelscope.cn/studios) (الواجهة والصور راجعت في 2026-08-11)
+- [لقاء مطوري ModelScope](https://community.modelscope.cn/683562c6870cef7360622f7f.html)
+- [تعليمات `ms-hub` الرسمية](https://github.com/modelscope/modelscope-skills/blob/main/skills/ms-hub/SKILL.md)
+- [Skill الرسمي `ms-studio-deploy`](https://github.com/modelscope/modelscope-skills/blob/main/skills/ms-studio-deploy/SKILL.md)
+- [عميل ModelScope Hub](https://github.com/modelscope/modelscope_hub)
+- [مثال Static Studio عام](https://modelscope.cn/studios/studio-demo-station/funasr-demo-static-multiple/summary)

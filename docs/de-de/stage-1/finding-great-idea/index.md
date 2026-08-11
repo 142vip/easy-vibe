@@ -4,6 +4,7 @@ description: 'Lernen Sie, wie Sie aus alltäglichen Schmerzpunkten Geschäftscha
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Etwa <strong>3 Stunden</strong>'
 </script>
 
@@ -636,7 +637,9 @@ Durch Akt 3 verstand Xiao Ming drei Dinge.
 
 ---
 
-### Übung nach dem Kapitel
+## 📚 Kapitelaufgabe
+
+<StageAssignmentCard title="Ein kleines Ärgernis in eine Produktidee verwandeln">
 
 Wählen Sie ein kleines Ärgernis aus Ihrem Alltag und erweitern Sie es mit der Methode dieses Kapitels:
 
@@ -660,6 +663,8 @@ Wählen Sie ein kleines Ärgernis aus Ihrem Alltag und erweitern Sie es mit der 
 
 :::
 ---
+
+</StageAssignmentCard>
 
 ## Anhang: SOP-Methodik
 

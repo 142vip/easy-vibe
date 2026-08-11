@@ -4,6 +4,7 @@ description: '비즈니스 분석부터 다중 페이지 제품 프로토타입 
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = '약 <strong>8시간</strong>'
@@ -354,11 +355,8 @@ AI IDE(Cursor, Trae, Windsurf 등)의 기본 사용 방식이 아직 익숙하�
 #### 2.2.2 코드 생성 시작하기
 
 이제 초기 프롬프트를 얻었습니다. 첫 번째 프롬프트 스타일을 예로 들어 AI가 코드를 생성하도록 해 보겠습니다. 먼저 창과 해당 폴더를 만들고, 폴더를 엽니다. 원하는 폴더 위치에서 새 프로젝트를 초기화하면 됩니다.
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-28-44.png)
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-30-00.png)
 
 사이드바에서 원하는 모델을 하나 선택합니다. gemini, gpt, glm, kimi, minimax 등을 추천합니다. 그런 다음 첫 번째 단계에서 얻은 프롬프트를 입력합니다.
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-31-41.png)
 
 생성을 클릭하면 익숙한 과정을 보게 됩니다. AI는 프롬프트에 따라 프로젝트의 디렉터리 구조, 필요한 파일, 각 파일의 초기 내용을 계획합니다.
 
@@ -372,10 +370,8 @@ AI IDE(Cursor, Trae, Windsurf 등)의 기본 사용 방식이 아직 익숙하�
 :::
 
 이때도 마찬가지로 Enter를 눌러 정보를 확인하는 것을 잊지 마세요. 그렇지 않으면 대기 상태에 빠질 수 있습니다. 일부 AI IDE는 이 문제에 빠지지 않을 수도 있습니다.
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-33-03.png)
 
 아래와 같은 장면을 만났다면, 이미 로컬에서 서비스가 시작되었다는 뜻입니다. 건너뛰기를 클릭해야 합니다. 그렇지 않으면 이 화면에 머무를 수 있습니다. 코드 생성이 끝났는데 아무것도 나타나지 않으면, 직접 “이 프로젝트를 시작해 줘”라고 말해야 합니다.
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-38-11.png)
 
 ::: info 💡 상황 설명
 **상황 설명**: `npm create vite@latest`로 React + TypeScript 프로젝트(easy-vibe-web)를 만들었습니다. 생성이 끝나면 컴퓨터가 이 웹페이지를 자동으로 “실행”하여 즉시 결과를 볼 수 있게 합니다.
@@ -397,13 +393,11 @@ AI IDE(Cursor, Trae, Windsurf 등)의 기본 사용 방식이 아직 익숙하�
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
 
 초기 기능 화면은 생겼지만 프론트엔드 페이지가 너무 못생겼다는 것을 볼 수 있습니다. 이때 AI와 직접 대화하며 인터페이스 표시를 최적화할 수 있습니다.
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-01-16.png)
 
 최적화 후에는 아래와 같은 더 보기 좋은 인터페이스를 얻을 수 있습니다.
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
 
 자신의 필요에 따라 웹페이지 기능을 수정할 수 있습니다. 스크린샷을 첨부하고 자유롭게 질문해도 됩니다. 예를 들어 “지금은 일괄 가져오기 기능이 필요 없으니 제거해 줘”, “왼쪽 입력 항목이 너무 많으니 xxxxx만 남겨 줘”라고 할 수 있습니다. 더 나아가 다른 성숙한 웹사이트를 참고할 수도 있습니다. 예를 들어 여기서는 Google의 어떤 디자인 제품을 직접 참고해 “참고”할 수 있습니다. 마음에 드는 성숙한 웹사이트의 스크린샷을 붙여 넣어도 됩니다.
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-13-12.png)
 
 마지막으로 다음과 같은 결과를 얻을 수 있습니다.
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
@@ -561,12 +555,9 @@ AI는 보통 checklist를 출력합니다. 그 결과를 바탕으로 계속 개
 
 ## 5. 📚 과제: 나만의 Douyin 이커머스 워크벤치 복제하기
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🚀 도전 과제: 이커머스 소재 워크벤치 복제하기</div>
-  </template>
+<StageAssignmentCard title="이커머스 콘텐츠 작업대 완성하기">
 
-  <p>
+<p>
     이번 수업의 프롬프트와 내용을 참고해 한 번의 완전한 폐쇄 루프를 완성하세요.
   </p>
 
@@ -590,7 +581,8 @@ AI는 보통 checklist를 출력합니다. 그 결과를 바탕으로 계속 개
       </ul>
     </li>
   </ul>
-</el-card>
+
+</StageAssignmentCard>
 
 ## 다음 단계
 

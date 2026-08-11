@@ -4,6 +4,7 @@ description: 'Bài viết Double Diamond dành cho người mới. Hiểu 4 giai
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Khoảng <strong>1.5 giờ</strong>'
 </script>
 
@@ -528,12 +529,16 @@ Và cho tôi biết:
 
 ## 📚 Bài tập
 
+<StageAssignmentCard title="Sắp xếp ý tưởng bằng mô hình Double Diamond">
+
 Xin bạn dựa vào nội dung bài viết, hoàn thành bài tập sau:
 
 1. Chọn một ý tưởng sản phẩm bạn muốn làm gần đây, viết bản nháp 4 bước Discover, Define, Develop, Deliver của nó
 2. Ở giai đoạn Define, ép mình nén vấn đề thành một câu cụ thể
 3. Ở giai đoạn Develop, ít nhất liệt kê 3 giải pháp khác nhau, thay vì chỉ chăm chăm vào cách đầu tiên nghĩ ra
 4. Ở giai đoạn Deliver, viết ra một phiên bản xác minh tối thiểu có thể giao phó trong một tuần
+
+</StageAssignmentCard>
 
 ## Đọc thêm
 

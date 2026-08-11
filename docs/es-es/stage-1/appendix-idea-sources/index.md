@@ -1,301 +1,130 @@
 ---
-title: 'De donde sacar ideas: 3 fuentes de referencia mas adecuadas para principiantes'
-description: 'Articulo introductorio de ideas de producto para lectores sin experiencia. Lista sitios web, fuentes de tendencias y listas de VC para encontrar direcciones especificas.'
+title: 'De dónde salen las ideas creativas'
+description: 'Recoge pistas originales de experiencias cotidianas, peticiones cercanas y conversaciones públicas para analizarlas después.'
 ---
 
 <script setup>
-const duration = 'Aproximadamente <strong>1.5 horas</strong>'
+const duration = 'Unos <strong>20 minutos</strong>'
 </script>
 
-# De donde sacar ideas: 3 fuentes de referencia mas adecuadas para principiantes
+# De dónde salen las ideas creativas
 
-<a id="top-idea-sources"></a>
+<ProductJourney current="find" />
 
-## Resumen del capitulo
+## Qué haremos en este capítulo
 
 <ChapterIntroduction
   :duration="duration"
-  :tags="['Buscar ideas', 'Direccion de producto', 'Descubrimiento de necesidades', 'Observacion de la industria']"
-  coreOutput="1 direccion de producto mas concreta y que valga la pena investigar"
-  expectedOutput="Saber donde buscar, como analizar y que mirar primero, sin quedarse solo con ideas vagas como 'AI + cierto sector'"
+  :tags="['Fuentes de ideas', 'Recogida de pistas']"
+  coreOutput="Una página de pistas con sus fuentes"
+  expectedOutput="Saber dónde buscar y conservar las palabras originales, el contexto y el enlace"
 >
 
-Muchas personas se quedan atascadas en el primer paso, no porque no tengan ninguna inspiracion, sino porque despues de ver mucho contenido, lo que les queda en la cabeza son palabras grandes:
+Aquí todavía no decidimos qué es una necesidad real ni elegimos una dirección de producto. Solo hacemos el paso anterior: recoger material de la vida real.
 
-- AI for education
-- AI for healthcare
-- AI for finance
-- AI agent for business
-
-Todas estas aun no son ideas. Solo te dicen que "la direccion es muy grande", pero no te dicen:
-
-- Quien las usa
-- En que escenario se usan
-- Como se las arreglan ahora
-- Que paso vale la pena atacar primero
-
-Este articulo no habla de metodologias abstractas, directamente te ofrece un conjunto de fuentes mas utiles.
+Cuando alguien se queja, pide ayuda o repite una tarea incómoda, guarda la escena. En el siguiente capítulo usaremos ese material para decidir qué problemas merecen investigarse.
 
 </ChapterIntroduction>
 
-::: info SOP minimo
-**Objetivo**: Despues de leer, sabras a donde ir cuando no tengas ideas, cuales enlaces son buenos para ver "necesidades concretas", cuales para ver "tendencias" y cuales para ver "negocios reales".
+## 1. Empieza por tu propia vida
 
-**Accion**: Primero revisa una ronda de listas de ideas, luego una ronda de pequenos productos que ya generan dinero, despues mira tendencias y fuentes mas orientadas a negocios, y finalmente quedate con 1 direccion que estes dispuesto a seguir investigando.
+Piensa en la última semana. ¿Qué te obligó a copiar y pegar muchas veces, pasar de una aplicación a otra o pensar «la próxima vez buscaré una forma mejor»?
 
-**Resultado**: Obtendras 1 direccion mas concreta y que valga la pena verificar, en lugar de quedarte con palabras grandes.
+Al buscar vivienda, por ejemplo, puedes tener tres portales abiertos y copiar a una tabla el alquiler y el trayecto. Después de las visitas, las fotos del teléfono pueden dejar de coincidir con el anuncio correcto.
 
-**Enlaces rapidos**: [Lista de aplicaciones de referencia](#idea-apps) · [Fuentes de tendencias](#idea-trends) · [Fuentes mas orientadas a negocios](#idea-business) · [Fuentes de VC / aceleradoras](#idea-vc) · [Camino mas corto](#idea-path) · [Como te ayuda la IA](#idea-ai)
-:::
+![Fotos dispersas de viviendas reunidas con ubicación y rutas de transporte](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.jpg)
 
-## Aprenderas lo siguiente
+_Primero registra la experiencia; no hace falta convertirla ya en un producto._
 
-1. Que sitios web son adecuados para buscar ideas directamente
-2. Que sitios web son adecuados para ver pequenos productos que ya generan dinero
-3. Que fuentes son adecuadas para ver tendencias y cambios en la industria
-4. Que fuentes estan mas cerca de negocios reales y pagos reales
-5. Un camino minimo adecuado para personas sin experiencia
+Una o dos frases sobre lo sucedido, junto con una captura o archivo relacionado, ya forman una pista útil.
 
-<a id="idea-apps"></a>
-## [1. Lista de aplicaciones de referencia: primero mira lo que otros ya estan haciendo](#top-idea-sources)
+## 2. Observa las peticiones que se repiten
 
-Este es el mejor punto de partida para principiantes, porque es lo mas concreto.
+En los chats del trabajo, la clase o una comunidad aparecen conversaciones muy normales:
 
-### Primer nivel: abres y ya tienes una lista de ideas, solo elige
+> «¿Alguien tiene la plantilla anterior?» «¿Cómo exporto este tamaño?» «¿Por qué volvió a recortarse al publicarlo?»
 
-- [Reddit — r/SomebodyMakeThis](https://www.reddit.com/r/SomebodyMakeThis/)
-  El uso principal de este subreddit es: usuarios reales publican directamente "Ojala alguien hiciera un XX". Cada post suele ser una necesidad de producto concreta, con algo de descripcion del escenario. Entra y ordena por `Top -> Past Month` o `Top -> Past Year`, en 20 minutos puedes escanear un lote de necesidades reales.
-- [Reddit — r/AppIdeas](https://www.reddit.com/r/AppIdeas/)
-  Similar al anterior, pero mas orientado a software / Apps. El formato comun de los posts es "Necesito una aplicacion que pueda hacer XX", con mayor granularidad, muchos son nichos pequenos y atractivos.
-- [Reddit — r/Startup_Ideas](https://www.reddit.com/r/Startup_Ideas/)
-  Mas completo que los dos anteriores. Muchos posts no son solo una necesidad de una linea, sino que incluyen un poco de analisis de mercado, modelo de negocio y por que vale la pena hacerlo ahora.
-- [Unvalidated Ideas](https://unvalidatedideas.com/)
-  Publica semanalmente ideas de startup no validadas. Los campos comunes incluyen usuario objetivo, forma de monetizacion y enfoque de validacion inicial. Formato uniforme, ideal para escaneo rapido.
-- [IdeasAI](https://ideasai.com/)
-  Usa IA para generar ideas de startup, puedes seguir navegando. La calidad es variable, pero es muy util para estimular la inspiracion cuando "no tienes ninguna sensacion", y luego profundizar por tu cuenta en escenarios mas especificos.
+Antes de lanzar un evento, un cartel puede tener que convertirse en cabecera, publicación vertical y portada de vídeo. Cada cambio de tamaño obliga a recolocar el título, el elemento principal y el área segura.
 
-### Segundo nivel: mira los pequenos productos rentables que otros ya hacen, e infiere ideas
+![El mismo contenido visual adaptado a formatos horizontal, cuadrado, vertical y estrecho](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.jpg)
 
-La logica de este tipo de plataformas es: otros ya han validado la necesidad, e incluso ya estan ganando dinero. Tu los miras no para copiar, sino para ver "que problemas pequenos ya tienen clientes dispuestos a pagar".
+_Si la misma petición vuelve pocos días después, conviene guardarla._
 
-- [Starter Story](https://www.starterstory.com/)
-  Recopila muchos casos reales de pequenos negocios, generalmente con entrevistas a fundadores, datos de ingresos y proceso de inicio. Enfocate en los pequenos productos con ingresos mensuales de 10 mil a 100 mil dolares; suelen ser mas de nicho y mas cercanos a la escala de productos que una persona comun puede entender.
-- [Indie Hackers — Products](https://www.indiehackers.com/products)
-  Donde los desarrolladores independientes muestran sus productos; muchos publican sus ingresos y crecimiento. Ordena por ingresos y mira que problemas concretos resuelven los productos que ganan de miles a decenas de miles de dolares al mes.
-- [MicroConf Blog](https://microconf.com/blog)
-  Orientado a Micro SaaS. Ideal para ver cortes de productos "suficientemente pequenos, pero donde alguien esta dispuesto a pagar".
-- [1000 Tools](https://1000.tools/)
-  Sitio de agregacion de herramientas de IA. Ideal para ver que categorias ya tienen competidores, pero con calidad mediocre, o que direcciones aun no estan bien cubiertas en ciertos mercados verticales.
-- [Product Hunt](https://www.producthunt.com/)
-  Mira los tipos de productos que aparecen repetidamente. No te fijes solo en el numero uno, enfocate en que categorias tienen actividad continua pero aun sin un ganador claro.
-- [BetaList](https://betalist.com/)
-  Ideal para ver productos en etapa temprana y equipos que aun estan probando direcciones.
+Conserva las palabras originales y el lugar donde aparecieron. En el siguiente capítulo veremos si es una molestia aislada o una dirección que merece la pena.
 
-### Al mirar productos, no mires solo el producto en si; mira tambien las malas resenas y los "servicios de reemplazo"
+## 3. Recorre uno de estos lugares
 
-- [G2](https://www.g2.com/)
-  Modo de uso: mira las resenas de 1 y 2 estrellas. Las malas resenas suelen esconder "que parte del producto existente no esta bien hecha".
-- [Capterra](https://www.capterra.com/)
-  Modo de uso: similar a G2, ideal para ver quejas reales sobre productos SaaS.
-- Taobao / Xianyu / [Fiverr](https://www.fiverr.com/) / [Upwork](https://www.upwork.com/) / Zhubajie
-  Modo de uso: busca "hacer por ti", "organizar por ti", "transcribir por ti". Si cierto servicio manual se vende bien, detras suele haber un proceso repetible y susceptible de ser convertido en producto.
+Si aún no tienes ideas, elige un grupo del mapa. Para ver qué echa en falta la gente, entra en comunidades de ideas; para entender cómo empieza un producto pequeño, estudia casos de creadores independientes; para acercarte a negocios reales, lee malas reseñas de software, compras y servicios manuales. Las tendencias y los textos de inversores resultan más útiles cuando ya tienes un interés aproximado.
 
-La senal de juicio es simple:
+No abras todo a la vez. Leer con atención unas pocas publicaciones concretas ayuda más que abrir veinte portadas.
 
-- Los usuarios ya se estan quejando de las herramientas existentes
-- Los usuarios ya estan pagando para que alguien haga el trabajo por ellos
-- Los usuarios ya estan invirtiendo mucho trabajo manual y tiempo en este proceso
+<ClientOnly>
+  <IdeaSourceMap />
+</ClientOnly>
 
-### Cuarto nivel: mira videos, hay quien directamente te desglosa ideas
+### También puedes crear para usuarios de otros países
 
-Si no te gusta navegar foros ni rankings, y prefieres "alguien que me desglose las ideas", entonces los videos y podcasts tambien son muy utiles.
+Un producto de Internet no tiene que limitarse al mercado local. Una persona puede crear una web en inglés, una extensión, una aplicación de Shopify, un complemento de Figma o un pequeño SaaS y encontrar usuarios en Product Hunt, Reddit y otras comunidades.
 
-- Busca `Greg Isenberg startup ideas`
-  Ideal para ver a alguien desglosando directamente 2 o 3 ideas concretas, incluyendo tamano de mercado, analisis de competencia y punto de entrada.
-- Busca `My First Million podcast`
-  Los dos presentadores suelen dedicar episodios enteros a hacer brainstorming de ideas de negocio; alta densidad y a menudo surgen nichos muy concretos.
-- Busca `YC startup ideas` o `Michael Seibel startup ideas`
-  Adecuado para principiantes, contenido directo, muchos explican explicitamente como elegir una direccion.
+Observa por qué ya paga la gente. Los vendedores internacionales ordenan información de productos, los agentes inmobiliarios convierten notas de visitas en anuncios y los creadores independientes gestionan correo de soporte e ingresos de suscripciones. Después de buscar en tu idioma, prueba `vendor quote comparison`, `real estate listing generator` o `Shopify product description`.
 
-<a id="idea-trends"></a>
-## [2. Fuentes de tendencias: mira que direcciones estan emergiendo](#top-idea-sources)
+Crear para otro mercado no consiste solo en traducir la pantalla. Pueden cambiar los hábitos, plataformas, pagos y normas. Empieza por una situación pequeña que entiendas y habla con usuarios reales.
 
-La funcion de los sitios de tendencias no es darte ideas directamente, sino ayudarte a juzgar: si cierta direccion esta ganando traccion y si vale la pena seguir investigando.
-
-- [Exploding Topics](https://explodingtopics.com/)
-  Usa datos para rastrear temas y categorias de productos que crecen rapidamente pero que aun no han entrado en el mainstream. Ideal para ver direcciones "que estan emergiendo pero que aun no estan especialmente saturadas".
-- [Google Trends](https://trends.google.com/)
-  Busca palabras clave, mira la linea de tendencias del ultimo ano, y luego revisa las "consultas relacionadas" con "terminos en alza".
-- [Glimpse](https://meetglimpse.com/)
-  Similar a Google Trends.
-- Paginas de resumenes de informes de la industria
-  Adecuadas cuando ya tienes una direccion y quieres ver rapidamente su posicion en la industria.
-- Contenido de tendencias de McKinsey / BCG / Gartner
-  Mas orientado a la perspectiva empresarial y de grandes industrias; adecuado para B2B, industria y sectores tradicionales.
-- [State of AI Report](https://www.stateof.ai/)
-  Si tu direccion esta relacionada con la tecnologia de IA en si, este tipo de informes anuales son ideales para construir una vision general.
-
-Al mirar tendencias, enfocate solo en tres cosas:
-
-- Si el termino esta en calentamiento continuo
-- En que escenario concreto se enmarca
-- Quien seria el primero en invertir tiempo, costos de cambio o presupuesto en ello
-
-<a id="idea-business"></a>
-## [3. Fuentes mas orientadas a negocios: mira quien esta gastando dinero, quien se esta quejando, quien esta vendiendo servicios manuales](#top-idea-sources)
-
-Si lo que buscas no es una direccion que "suena genial", sino una mas cercana a "negocios reales", entonces debes mirar fuentes mas proximas a los flujos de trabajo.
-
-### Mira quien esta gastando dinero real en que
-
-- [China Government Procurement Network](https://www.ccgp.gov.cn/)
-  Modo de uso: busca terminos como "construccion inteligente", "sistema de gestion de laboratorio", "recopilacion de datos", "gestion de clinicas", "sistema de presupuestos", y mira los presupuestos, requisitos tecnicos y escenarios de uso.
-- Centros de transaccion de recursos publicos de cada provincia y ciudad
-  Modo de uso: mira que sistemas estan comprando realmente los gobiernos locales y las empresas publicas.
-- Bibiao / Qianlima / Biaoshitong
-  Modo de uso: mira las necesidades de compra del lado empresarial y los tipos de sistemas de alta frecuencia.
-
-La senal fuerte de estas fuentes es: no se esta hablando del futuro, sino exponiendo "hoy alguien ya esta dispuesto a pagar por esto".
-
-### Mira quien se esta quejando de que
-
-- Manufactura: comunidades de maquinaria, foros de control industrial
-- Salud: Dingxiangyuan, Yimaitong
-- Construccion / Ingenieria: Tumuzai Xianxi, Glodon Community
-- Finanzas / Contabilidad: Foro de China Accounting Vision
-- Comercio exterior: Fubu Foreign Trade Forum, Mikiquan
-- Hosteleria / Retail: Zhiye Canyin Wang, Lianshang Wang Forum
-- [Reddit](https://www.reddit.com/) en secciones verticales: `r/smallbusiness`, `r/Entrepreneur`, `r/SaaS`, `r/healthcare`, `r/manufacturing`
-- [V2EX](https://www.v2ex.com/)
-- Jike
-- Xiaohongshu
-
-Al buscar, no busques solo "AI" o "innovacion"; es mas efectivo buscar:
-
-- demasiado engorroso
-- hay alguna mejor manera
-- recomienden herramientas
-- ya no puedo gestionarlo con Excel
-- I wish there was
-- is there a tool for
-- I hate
-
-### Mira quien esta vendiendo servicios manuales repetitivos
-
-- [Fiverr](https://www.fiverr.com/)
-- [Upwork](https://www.upwork.com/)
-- Zhubajie Wang
-- Taobao
-- Xianyu
-
-Si ves que estos servicios se venden bien, vale la pena investigar mas:
-
-- Te organizan los presupuestos en PDF a Excel
-- Te organizan masivamente los datos de clientes
-- Te revisan el CV / redactan textos / hacen transcripciones / archivan documentos
-
-Detras de estos servicios normalmente no hay necesidades de un solo uso, sino flujos de trabajo que se repiten.
-
-### Mira flujos de trabajo completos, no solo listas de ideas
-
-A veces el metodo mas directo es elegir una industria, revisar todo el proceso y encontrar los pasos que aun dependen de WeChat, Excel, papel y lapiz, o telefono.
-
-- Comercio exterior: buscar proveedores, solicitar cotizaciones, comparar precios, hacer presupuestos, enviar a clientes, hacer seguimiento de respuestas, organizar inspecciones, reservar transporte, despacho de aduanas.
-  Corte digno de analizar: organizar presupuestos de proveedores en presupuestos para clientes.
-- Clinicas dentales: recepcion, radiografias, lectura de radiografias, comunicacion del plan, seguimiento, tratamiento, revisita.
-  Corte digno de analizar: explicar el plan al paciente y hacer seguimiento continuo.
-- Obras de construccion: inspeccion, fotos, envio al grupo, elaboracion de informes, entrega al cliente.
-  Corte digno de analizar: de fotos en sitio a informes de cumplimiento.
-
-<a id="idea-vc"></a>
-## [4. Fuentes de VC / aceleradoras: mira "hacia donde sopla la corriente"](#top-idea-sources)
-
-Este tipo de fuentes son adecuadas para encontrar direcciones generales, no para reemplazar directamente la validacion.
-
-- [Y Combinator — Requests for Startups](https://www.ycombinator.com/rfs)
-  Modo de uso: ideal para encontrar cortes, porque a menudo dice directamente "queremos ver a alguien haciendo esto".
-- [a16z — Big Ideas](https://a16z.com/big-ideas-2025/)
-  Modo de uso: mas orientado a grandes tendencias y evaluacion de sectores, ideal para construir sensibilidad a la industria.
-- [NFX](https://www.nfx.com/)
-  Modo de uso: ideal para escanear rapidamente un conjunto de temas de startup.
-- [Sequoia Capital](https://www.sequoiacap.com/article/)
-  Modo de uso: no necesariamente lista ideas directamente, pero a menudo habla sobre ciertos tipos de cambios de plataforma y oportunidades.
-- [First Round Review](https://review.firstround.com/)
-  Modo de uso: ideal para profundizar en una direccion; no necesariamente es una lista de ideas, pero la calidad de los articulos suele ser muy alta.
-
-Ventajas de este tipo de fuentes:
-
-- Pueden decirte que direcciones futuras valen la pena explorar
-- Pueden decirte que sectores probablemente seguiran recibiendo impulso
-- Pueden hacerte entrar rapidamente en el lenguaje de un sector
-
-Limitaciones de este tipo de fuentes:
-
-- Suele ser desde la perspectiva de inversores
-- No necesariamente te dice que rol es el que mas sufre
-- No necesariamente te dice que paso del proceso es el mas bloqueado
-- No necesariamente te dice quien ya esta pagando por esto hoy
-
-Por lo tanto, un mejor uso es: primero usa estas fuentes para encontrar una direccion, y luego vuelve a los productos de referencia, foros de la industria, informacion de compras y flujos de trabajo reales para encontrar cortes mas especificos.
-
-<a id="idea-path"></a>
-## [5. El camino mas corto para quienes "no tienen ideas y solo saben hacer asistentes"]( #top-idea-sources)
-
-Si solo quieres seguir un camino minimo, puedes hacerlo asi:
-
-1. Primer paso, 30 minutos.
-   Abre [r/SomebodyMakeThis](https://www.reddit.com/r/SomebodyMakeThis/), ordena por `Top -> Past Year`, escanea rapidamente 50 posts y guarda todas las direcciones que pienses "esto creo que podria hacerlo".
-2. Segundo paso, 30 minutos.
-   Abre [Starter Story](https://www.starterstory.com/) o [Indie Hackers Products](https://www.indiehackers.com/products), ordena por ingresos, mira los productos de ingresos medios, no solo los mas exitosos. Encuentra direcciones relacionadas con el primer paso y mira especificamente a quien venden y que paso resuelven.
-3. Tercer paso, 20 minutos.
-   Ve a [Google Trends](https://trends.google.com/) y busca palabras clave relacionadas, mira si la tendencia esta creciendo, y luego revisa los "terminos en alza" en "consultas relacionadas".
-4. Cuarto paso, 20 minutos.
-   Ve a G2 / Capterra / foros de la industria / plataformas de licitacion / Fiverr y similares, y mira en esta direccion que es exactamente lo que mas molesta hoy y donde aun se depende del trabajo manual.
-
-Despues de ver todo, te basta con poder expresar claramente esta frase:
-
-- Cierta tipo de persona, en cierto escenario, esta bloqueada por cierto paso del proceso, y actualmente depende principalmente de cierto metodo torpe para sobrevivir.
-
-<a id="idea-ai"></a>
-## [6. Como te ayuda la IA](#top-idea-sources)
-
-El foco de este articulo no es la IA, pero la IA es muy util para organizar.
-
-Los usos mas practicos son solo dos:
-
-- Pega a la IA los enlaces, titulos de posts y palabras textuales de usuarios que has encontrado, y dejala que te los clasifique en "publico / escenario / punto de dolor / solucion alternativa".
-- Deja que la IA te ayude a condensar un monton de informacion dispersa en 3 direcciones candidatas, en lugar de seguir divergiendo en 50 funcionalidades.
-
-Puedes preguntar directamente asi:
+Busca en foros y reseñas con las palabras que usaría alguien en la situación:
 
 ```text
-He encontrado estas fuentes recientemente:
-1. [pega titulo o cita textual]
-2. [pega titulo o cita textual]
-3. [pega titulo o cita textual]
-
-Por favor no me des una lista de funcionalidades.
-Por favor haz solo tres cosas:
-1. Clasifica por publico y escenario
-2. Identifica los pasos problematicos que se repiten
-3. Ayudame a organizarlo en 3 direcciones candidatas mas concretas
+comparar presupuestos Excel es demasiado lento
+profesor sin tiempo para preparar clases
+inventario de tienda pequeña no coincide
+site:reddit.com is there a tool for
 ```
 
-## Lectura adicional
+Guarda la frase original, el enlace y la fecha. No guardes solo la portada ni conviertas inmediatamente una queja en una función.
 
-- [Y Combinator - Requests for Startups](https://www.ycombinator.com/rfs)
-- [a16z - Big Ideas](https://a16z.com/big-ideas-2025/)
-- [NFX](https://www.nfx.com/)
-- [Reddit - r/SomebodyMakeThis](https://www.reddit.com/r/SomebodyMakeThis/)
-- [Reddit - r/AppIdeas](https://www.reddit.com/r/AppIdeas/)
-- [Reddit - r/Startup_Ideas](https://www.reddit.com/r/Startup_Ideas/)
-- [Starter Story](https://www.starterstory.com/)
-- [Indie Hackers - Products](https://www.indiehackers.com/products)
-- [Product Hunt](https://www.producthunt.com/)
-- [BetaList](https://betalist.com/)
-- [IdeasAI](https://ideasai.com/)
-- [Unvalidated Ideas](https://unvalidatedideas.com/)
-- [Google Trends](https://trends.google.com/)
-- [Exploding Topics](https://explodingtopics.com/)
-- [G2](https://www.g2.com/)
-- [Capterra](https://www.capterra.com/)
+## 4. Conoce cuatro sitios habituales
+
+El mapa contiene muchas entradas. Estas cuatro representan lanzamientos, negocios independientes, reseñas de software y tendencias de búsqueda.
+
+### [Product Hunt](https://www.producthunt.com/): donde se lanzan nuevos productos
+
+Product Hunt concentra lanzamientos tecnológicos. Los creadores preparan una descripción, capturas y una demostración, y el día del lanzamiento reciben votos y comentarios.
+
+![Portada de Product Hunt con productos, votos y debates](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.png)
+
+Los productos cambian cada día. Abre uno y mira cómo se describe en una frase, qué destaca la primera captura y qué pregunta la gente. No observes solo al ganador; varios días muestran qué categorías se repiten.
+
+### [Indie Hackers](https://www.indiehackers.com/products): cómo se gestionan productos pequeños
+
+Product Hunt se parece a un escenario de lanzamiento. Indie Hackers es una comunidad donde los creadores comparten progreso, ingresos, captación de clientes y fracasos durante más tiempo.
+
+![Página Products de Indie Hackers con productos y avances](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.png)
+
+No busques solo el proyecto con mayores ingresos. Un producto llevado por una persona y con ingresos modestos pero estables suele mostrar mejor el pequeño problema inicial y el origen de sus primeros clientes.
+
+### [Capterra](https://www.capterra.com/): busca software por categoría y lee opiniones
+
+Capterra es un directorio y sitio de reseñas de software empresarial. Permite comparar CRM, gestión de proyectos, soporte, turnos y otras herramientas.
+
+![Portada de Capterra con búsqueda, categorías y comparación](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.png)
+
+Si te interesa una categoría, abre varias herramientas conocidas y lee las valoraciones bajas. Las quejas repetidas —mala versión móvil, exportación incorrecta o configuración compleja— suelen ser más útiles que la lista de funciones oficial.
+
+### [Google Trends](https://trends.google.com/): compara cambios en búsquedas
+
+Google Trends muestra interés relativo por una palabra a lo largo del tiempo y por región, junto con consultas relacionadas y crecientes.
+
+![Portada de Google Trends con tendencias y exploración de palabras](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.png)
+
+Úsalo cuando tengas varias expresiones posibles. Compara «AI meeting notes», «AI transcription» y «voice notes» para ver qué busca más la gente. Una curva ascendente no demuestra que exista un mercado; solo muestra un cambio de atención.
+
+## 5. Crea una página de pistas en 20 minutos
+
+<ClientOnly>
+  <IdeaSprint />
+</ClientOnly>
+
+## 6. Lleva el material al siguiente capítulo
+
+Solo necesitas una página de material original cuya fuente puedas volver a encontrar. Puede estar desordenado y no tiene que parecer una idea madura.
+
+Lee ahora [Cómo identificar una gran idea](../finding-great-idea/) y analiza si las pistas esconden necesidades reales, cuánto importan y cuál merece una validación adicional.

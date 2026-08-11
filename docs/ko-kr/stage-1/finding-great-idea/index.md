@@ -4,6 +4,7 @@ description: '일상의 문제점에서 비즈니스 기회를 발견하는 법�
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = '약 <strong>3시간</strong>'
 </script>
 
@@ -639,7 +640,9 @@ AI가 답했습니다. “산후 엄마라는 집단은 사실 찾기 매우 쉽
 
 ---
 
-### 과후 연습
+## 📚 이번 장의 과제
+
+<StageAssignmentCard title="작은 불편 하나를 제품 아이디어로 바꾸기">
 
 일상생활의 작은 불편 하나를 선택하고, 이번 장의 방법으로 확장해 보세요.
 
@@ -664,6 +667,8 @@ AI가 답했습니다. “산후 엄마라는 집단은 사실 찾기 매우 쉽
 :::
 
 ---
+
+</StageAssignmentCard>
 
 ## 부록: SOP 방법론
 

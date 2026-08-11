@@ -4,6 +4,7 @@ description: 'ゼロベースの読者向けの The Mom Test 入門記事。礼�
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = '約 <strong>1.5 時間</strong>'
 </script>
 
@@ -576,12 +577,16 @@ The Mom Test の観点から振り返りを行ってください：
 
 ## 📚 課題
 
+<StageAssignmentCard title="アイデアを売り込まないユーザーインタビューを行う">
+
 上記の内容に基づいて、次の課題を完了してください：
 
 1. 最近やりたいプロダクトの方向性を一つ選び、本来聞こうとしていた「聞きづらい」質問を 5 つ書く
 2. この 5 つの質問を The Mom Test スタイルに合わせて書き直す
 3. 潜在ユーザー 3 人に聞き、「前回この問題に直面したのはいつですか」を少なくとも 1 回は聞き出す
 4. インタビュー終了後、4 種類の情報を整理する：リアルな行動、代替ソリューション、すでに払ったコスト、繰り返し出現した困難
+
+</StageAssignmentCard>
 
 ## さらに学ぶために
 

@@ -10,6 +10,7 @@
 </div>
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = '約 <strong>4 時間</strong>、複数回に分けて完了可能'
@@ -435,12 +436,9 @@ z.ai の回答は次のようになります：
 
 ## 📚 Assignment
 
-<el-card id="assignment-card" shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 本章の課題：最初の AI ネイティブミニゲームを完成させる</div>
-  </template>
+<StageAssignmentCard title="最初の AI ネイティブ・ミニゲームを完成させる">
 
-  <p>
+<p>
     このセクションでは、「対話でスネークゲームを生成」から「AI ネイティブミニゲームの設計思考の理解」までの完全なプロセスを体験しました。以下の課題は、この理解を自分の能力にするのに役立ちます。
   </p>
 
@@ -464,7 +462,8 @@ z.ai の回答は次のようになります：
   <p>
     これが完全なチュートリアルです！すべての内容を完了し、自分のスネークゲームを構築するには <strong>4 時間</strong>かかるかもしれません。急ぐ必要はありません——探索、実験、そしてプロセスを楽しんでください。途中で理解できない概念に遭遇した場合は、以下の付録の関連部分を参照してください。
   </p>
-</el-card>
+
+</StageAssignmentCard>
 
 ## 付録
 

@@ -4,6 +4,7 @@ description: '日常生活のペインポイントからビジネスチャンス
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = '約 <strong>3 時間</strong>'
 </script>
 
@@ -639,7 +640,9 @@ AI はこう返答しました：「産後ママという層は実は見つけ�
 
 ---
 
-### 課後練習
+## 📚 この章の課題
+
+<StageAssignmentCard title="小さな困りごとをプロダクトのアイデアに変える">
 
 日常生活の小さな悩みを一つ選び、この章の方法で展開してみましょう：
 
@@ -664,6 +667,8 @@ AI はこう返答しました：「産後ママという層は実は見つけ�
 :::
 
 ---
+
+</StageAssignmentCard>
 
 ## 付録：SOP 方法論
 

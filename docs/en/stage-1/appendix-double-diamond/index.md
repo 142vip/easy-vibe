@@ -4,6 +4,7 @@ description: 'A beginner-friendly introduction to the Double Diamond. Understand
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'About <strong>1.5 hours</strong>'
 </script>
 
@@ -535,10 +536,14 @@ That is especially helpful for beginners because it is very easy to start protot
 
 ## Assignments
 
+<StageAssignmentCard title="Organize Your Idea with the Double Diamond">
+
 1. Pick one product idea you have been thinking about and write a draft for its Discover, Define, Develop, and Deliver stages
 2. In Define, force yourself to compress the problem into one concrete sentence
 3. In Develop, list at least 3 different solution directions instead of clinging to the first one
 4. In Deliver, write down one smallest validation version you could ship within a week
+
+</StageAssignmentCard>
 
 ## Further Reading
 

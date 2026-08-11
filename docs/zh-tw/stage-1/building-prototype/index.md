@@ -4,6 +4,7 @@ description: '體驗從業務分析到多頁面產品原型實現的完整閉環
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = '約 <strong>8 小時</strong>'
@@ -352,11 +353,8 @@ AI 會返回一份結構化的需求和對應的提示詞。你自己檢查一�
 #### 2.2.2 開始生成程式碼
 
 此時你已經獲得了初始提示詞，我們以第一種提示詞風格為例，讓 AI 協助我們生成程式碼。首先建立一個視窗和對應的資料夾，開啟資料夾（在你喜歡的資料夾地址下初始化一個新專案）：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-28-44.png)
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-30-00.png)
 
 在側邊欄中選擇一個你喜歡的模型（推薦 gemini、gpt、glm、kimi、minimax 等），輸入第一步中得到的提示詞：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-31-41.png)
 
 點選生成後，我們會看到熟悉的環節，AI 會根據提示詞，規劃出專案的目錄結構、必要的檔案，並給出每個檔案的初始內容。
 
@@ -370,10 +368,8 @@ AI 會返回一份結構化的需求和對應的提示詞。你自己檢查一�
 :::
 
 此時同樣別忘記按回車確認資訊（否則會陷入等待，有些 AI IDE 不會陷入這個問題）：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-33-03.png)
 
 如果遇到如下場景，這個意思是已經在本地啟動了一個服務，你需要點選跳過，否則會停留在這個介面（如果程式碼生成完沒有東西出下，你就需要主動說“幫我啟動這個專案”）：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-38-11.png)
 
 ::: info 💡 場景說明
 **場景說明**：你用 `npm create vite@latest` 建立了一個 React + TypeScript 專案（easy-vibe-web），建立完成後，電腦會自動把這個網頁“跑起來”，方便你立刻看到效果。
@@ -395,13 +391,11 @@ AI 會返回一份結構化的需求和對應的提示詞。你自己檢查一�
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
 
 可以看到已經有了初步功能圖，但前端頁面顯示太醜了，此時我們可以嘗試這樣和 AI 進行直接對話，最佳化介面顯示：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-01-16.png)
 
 最佳化後我們能夠得到如下更美觀的介面：
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
 
 你可以根據自己的需求修改網頁功能，可以附上截圖自由進行提問，比如：“我現在還不需要批次匯入功能，幫我取消”，“左邊要輸入的東西太多了，幫我只留下 xxxxx”。甚至，你還可以參考其他成熟的網站，比如這裡我們可以直接參考谷歌的某設計產品進行“參考”（你可以貼上自己喜歡的某個成熟網站的截圖）：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-13-12.png)
 
 最後可以得到：
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
@@ -559,12 +553,9 @@ AI 一般會輸出一個 checklist，你可以根據結果思考是否需要繼�
 
 ## 5. 📚 作業：復刻屬於你自己的抖音電商工作臺
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🚀 挑戰任務：復刻電商素材工作臺</div>
-  </template>
+<StageAssignmentCard title="完成你的電商內容工作臺">
 
-  <p>
+<p>
     參考本節課的提示詞和內容，完成一次完整閉環：
   </p>
 
@@ -588,7 +579,8 @@ AI 一般會輸出一個 checklist，你可以根據結果思考是否需要繼�
       </ul>
     </li>
   </ul>
-</el-card>
+
+</StageAssignmentCard>
 
 ## 下一步
 

@@ -4,6 +4,7 @@ description: '제로 베이스 독자를 위한 The Mom Test 입문 글입니다
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = '약 <strong>1.5시간</strong>'
 </script>
 
@@ -576,12 +577,16 @@ The Mom Test 관점에서 복기해 주세요:
 
 ## 📚 과제
 
+<StageAssignmentCard title="아이디어를 권하지 않는 사용자 인터뷰 해보기">
+
 위 내용을 바탕으로 다음 과제를 완성해 주세요:
 
 1. 최근에 만들고 싶은 제품 방향을 하나 골라, 원래 물어볼 "망가지기 쉬운" 질문 5개를 먼저 작성하세요
 2. 이 5개의 질문을 The Mom Test 스타일에 더 부합하는 질문으로 재작성하세요
 3. 잠재 사용자 3명을 찾아, 적어도 한 번은 "최근에 이 문제를 만난 것이 언제였나요"라고 물어보세요
 4. 인터뷰가 끝난 후 4가지 정보를 정리하세요: 실제 행동, 대체 솔루션, 이미 지불한 비용, 반복적으로 등장한 어려움
+
+</StageAssignmentCard>
 
 ## 더 읽어볼 만한 자료
 

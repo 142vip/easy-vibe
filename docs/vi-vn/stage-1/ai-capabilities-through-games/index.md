@@ -15,6 +15,7 @@ description: 'Làm game rắn AI-native bằng đối thoại, sau đó áp dụ
 </div>
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = 'khoảng <strong>4 giờ</strong> (có thể chia nhiều lần)'
@@ -466,12 +467,9 @@ Xem xong những case này bạn sẽ nhận ra: **Snake chỉ là phần nổi 
 
 ## 📚 Bài tập
 
-<el-card id="assignment-card" shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 Bài tập chương: hoàn thành những mini game AI-native đầu tiên của bạn</div>
-  </template>
+<StageAssignmentCard title="Hoàn thành những trò chơi nhỏ AI-native đầu tiên">
 
-  <p>
+<p>
     Ở phần này, bạn đã theo các bước trải nghiệm trọn vẹn quy trình từ "đối thoại sinh ra Snake" đến "hiểu tư duy thiết kế mini game AI-native". Bài tập dưới đây giúp bạn biến những hiểu biết đó thành năng lực thực sự của mình.
   </p>
 
@@ -495,7 +493,8 @@ Xem xong những case này bạn sẽ nhận ra: **Snake chỉ là phần nổi 
   <p>
     Đây chính là bài học hoàn chỉnh! Bạn có thể cần <strong>4 giờ</strong> để hoàn thành tất cả nội dung và dựng game Snake của riêng mình. Đừng vội — hãy khám phá, thử nghiệm và tận hưởng quá trình. Nếu gặp khái niệm nào chưa hiểu rõ, khuyên bạn tiện tay xem phần liên quan trong phụ lục bên dưới.
   </p>
-</el-card>
+
+</StageAssignmentCard>
 
 ## Phụ lục
 

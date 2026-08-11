@@ -4,6 +4,7 @@ description: 'تعلم كيفية اكتشاف الفرص التجارية من 
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'حوالي <strong>3 ساعات</strong>'
 </script>
 
@@ -636,7 +637,9 @@ const duration = 'حوالي <strong>3 ساعات</strong>'
 
 ---
 
-### تمرين بعد الفصل
+## 📚 واجب هذا الفصل
+
+<StageAssignmentCard title="حوّل مشكلة صغيرة إلى فكرة منتج">
 
 اختر مشكلة صغيرة تواجهها في حياتك اليومية، وقم بتوسيعها باستخدام طريقة هذا الفصل:
 
@@ -661,6 +664,8 @@ const duration = 'حوالي <strong>3 ساعات</strong>'
 :::
 
 ---
+
+</StageAssignmentCard>
 
 ## الملحق: منهجية SOP
 

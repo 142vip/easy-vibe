@@ -4,6 +4,7 @@ description: "Article d'introduction à The Mom Test pour les lecteurs débutant
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Environ <strong>1,5 heure</strong>'
 </script>
 
@@ -576,12 +577,16 @@ C'est particulièrement utile pour les débutants, car vous développerez plus r
 
 ## 📚 Exercices
 
+<StageAssignmentCard title="Mener un entretien sans chercher à vendre votre idée">
+
 En vous basant sur le contenu ci-dessus, veuillez réaliser les exercices suivants :
 
 1. Choisissez un produit que vous voulez créer récemment, et écrivez d'abord 5 questions « faciles à rater » que vous auriez posées
 2. Réécrivez ces 5 questions dans un style plus conforme à The Mom Test
 3. Trouvez 3 utilisateurs potentiels, et posez au moins une fois « quand est la dernière fois que vous avez rencontré ce problème »
 4. Après l'entretien, organisez 4 types d'informations : comportements réels, alternatives, coûts engagés, difficultés récurrentes
+
+</StageAssignmentCard>
 
 ## Lectures complémentaires
 

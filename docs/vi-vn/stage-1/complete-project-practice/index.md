@@ -1,301 +1,313 @@
 ---
-title: 'Thực chiến dự án hoàn chỉnh - Từ Demo đến nguyên mẫu cấp sản phẩm'
-description: 'Vượt qua giai đoạn Demo, học cách hoàn thiện chuỗi sản phẩm, xây dựng dữ liệu mô phỏng chân thực, lặp lại nhanh chóng thông qua phản hồi, cuối cùng hoàn thành một nguyên mẫu AI hoàn chỉnh có thể trình diễn và tương tác.'
+title: 'Thực hành dự án hoàn chỉnh: từ ý tưởng đến sản phẩm'
+description: 'Dùng nguyên mẫu có AI từ đầu đến cuối, nhờ người khác thử và sửa các vấn đề bạn quan sát được.'
 ---
 
 <script setup>
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
+import ProductFinishMap from '../../../zh-cn/stage-1/complete-project-practice/ProductFinishMap.vue'
+import StageOneCompletion from '../../../zh-cn/stage-1/complete-project-practice/StageOneCompletion.vue'
 
-const duration = 'Khoảng <strong>3 ngày</strong>'
+const duration = 'Khoảng <strong>2–3 ngày</strong>'
 const relatedArticles =
   relatedArticlesMap['vi-vn/stage-1/complete-project-practice'] ?? []
 </script>
 
-# Cơ bản 5: Thực chiến dự án hoàn chỉnh
+# Thực hành dự án hoàn chỉnh: từ ý tưởng đến sản phẩm
 
-## Hướng dẫn chương này
+<ProductJourney current="finish" />
 
-<ChapterIntroduction :duration="duration" :tags="['Tư duy sản phẩm', 'Dữ liệu mô phỏng', 'Hoàn thiện tương tác', 'LocalStorage']" coreOutput="1 nguyên mẫu AI sản phẩm đầy đủ chức năng" expectedOutput="Ứng dụng Web với chuỗi hoàn chỉnh và dữ liệu chân thực">
+## Bài này sẽ làm gì?
 
-Chương trước đã tích hợp khả năng AI, Demo đã chạy được, nhưng so với "sản phẩm" thực sự còn <strong>xa lắm</strong>: trang vừa refresh là <strong>dữ liệu mất sạch</strong>, báo lỗi là <strong>trang trắng</strong>, danh sách chỉ có "dữ liệu thử 1, dữ liệu thử 2", người dùng bấm nhầm cũng <strong>không thể hoàn tác</strong>...
+<ChapterIntroduction :duration="duration" :tags="['Dùng trọn quy trình', 'Trải nghiệm sản phẩm', 'Người dùng thử', 'Giới thiệu sản phẩm']" coreOutput="Một sản phẩm AI người khác có thể dùng mà không cần hướng dẫn" expectedOutput="Một ứng dụng web đã được người thật dùng thử và chỉnh sửa">
 
-Chương này sẽ <strong>lấp đầy tất cả những khoảng trống này</strong>: chúng ta sẽ <strong>hoàn thiện chuỗi sản phẩm đầy đủ</strong>, dùng AI tạo <strong>dữ liệu nghiệp vụ chân thực</strong> thay thế dữ liệu giả, thêm <strong>xử lý lỗi và phản hồi người dùng</strong>, cuối cùng hoàn thiện một nguyên mẫu <strong>đẹp mắt, có thể trình diễn cho người khác</strong>.
+Trong các bài trước, chúng ta bắt đầu từ một ý tưởng, làm nguyên mẫu có thể tương tác và đưa tính năng AI trên trang vào hoạt động.
 
-Đây là <strong>chương cuối cùng</strong> của giai đoạn cơ bản, hoàn thành bước này, bạn đã hoàn thành sự chuyển đổi từ "hoàn toàn không biết lập trình" đến "<strong>có thể tự làm nguyên mẫu AI sản phẩm</strong>".
+Bạn biết cần điền gì và nhấn ở đâu. Nhưng người mở trang lần đầu có thể không tìm thấy bước đầu tiên. Nếu nhấn nút mà chưa thấy kết quả ngay, họ cũng có thể nghĩ trang đã hỏng.
+
+Bài này không thêm tính năng mới. Ta sẽ dùng sản phẩm từ đầu đến cuối, sửa những chỗ dễ mắc kẹt rồi nhờ người khác thử. Sau cùng, bạn sẽ có một sản phẩm có thể yên tâm gửi cho người khác.
 
 </ChapterIntroduction>
 
 <div style="margin: 50px 0;">
   <ClientOnly>
     <StepBar :active="0" :items="[
-      { title: 'Hoàn thiện chuỗi', description: 'Từ tính năng đơn lẻ đến vòng lặp hoàn chỉnh' },
-      { title: 'Tiêm linh hồn', description: 'Mô phỏng dữ liệu nghiệp vụ thực tế' },
-      { title: 'Lặp lại phản hồi', description: 'Sửa chữa trải nghiệm dựa trên phản hồi thực tế' },
-      { title: 'Bài tập lớn cuối kỳ', description: 'Thiết kế tốt nghiệp của bạn' }
+      { title: 'Tự dùng một lượt', description: 'Đi từ đầu đến kết quả' },
+      { title: 'Sửa chỗ mắc kẹt', description: 'Chờ, kết quả và lỗi' },
+      { title: 'Nhờ người khác thử', description: 'Quan sát trước khi giúp' },
+      { title: 'Sắp xếp và chia sẻ', description: 'Để người khác hiểu sản phẩm' }
     ]" />
   </ClientOnly>
 </div>
 
-## 1. Từ chối "Happy Path": Hoàn thiện chuỗi cốt lõi
+<ProductFinishMap />
 
-Rất nhiều người mới làm nguyên mẫu, thường chỉ làm "Happy Path" (con đường lý tưởng nhất): người dùng click -> API phản hồi thành công -> hiển thị kết quả.
-Nhưng trong thế giới thực, mọi thứ thường không suôn sẻ như vậy. Để nguyên mẫu của bạn trông giống một sản phẩm thực sự, bạn cần cân nhắc các khâu "vô hình" sau đây.
+## 1. Dùng sản phẩm một lần từ đầu đến cuối
 
-### 1.1 Thêm "chờ đợi" và "phản hồi"
+Đừng vội thêm đăng nhập, làm việc nhóm và bảng dữ liệu. Hãy mở sản phẩm hiện tại và dùng như một người mới, từ trang đầu đến khi nhận được kết quả. Bước nào vẫn cần bạn đứng bên cạnh giải thích thì bước đó cần được sửa.
 
-Khi người dùng click "tạo văn bản", AI thường mất vài giây để phản hồi. Nếu giao diện không có phản ứng gì, người dùng sẽ tưởng chương trình bị lỗi.
-**Bạn cần để AI IDE thêm trạng thái Loading:**
+Với bàn làm việc nội dung thương mại điện tử trong khóa học, một lượt dùng đầy đủ sẽ như sau:
 
-> Ví dụ prompt:
-> "Khi tôi click nút tạo, hãy đổi nút thành 'Đang tạo...' và không cho click, đồng thời hiển thị hoạt ảnh tải ở khu vực bên phải. Cho đến khi API trả về kết quả, mới khôi phục bình thường."
+> Nhân viên vận hành tải ảnh sản phẩm lên, bổ sung thông tin cần thiết, tạo bản nháp hình và chữ, kiểm tra rồi sao chép hoặc lưu để tiếp tục sửa và đăng bán.
 
-### 1.2 Xử lý "thất bại" và "ngoại lệ"
+Trước mắt chỉ cần làm tốt hành trình ngắn này. Đăng nhập, quyền nhóm và phát hành chính thức có thể chờ đến khi sản phẩm thật sự cần.
 
-API Key có thể hết hạn, mạng có thể bị ngắt.
-**Bạn cần để AI IDE xử lý lỗi:**
+### 1.1 Đi theo đúng thứ tự sử dụng
 
-> Ví dụ prompt:
-> "Nếu API request thất bại, đừng báo lỗi trong console, hãy hiện một hộp thoại màu đỏ (Toast) ở đầu trang, báo người dùng 'Tạo thất bại, vui lòng thử lại sau', và cho phép người dùng click lại nút tạo."
+Tạm thời đừng nhìn mã và component. Hãy làm theo việc người dùng sẽ làm:
 
-### 1.3 Lưu trữ lịch sử hội thoại
+1. Mở trang và hiểu công cụ có thể giúp gì.
+2. Tải ảnh sản phẩm lên và điền thông tin cần thiết như tên và chất liệu.
+3. Nhấn “Tạo nội dung” và thấy trang đang xử lý.
+4. Kiểm tra tiêu đề và điểm bán hàng AI trả về; sửa hoặc tạo lại khi cần.
+5. Sao chép, tải xuống hoặc tạm lưu kết quả rồi hoàn tất công việc.
 
-Trong quá trình tương tác với AI, chúng ta cần lưu nội dung hội thoại, để người dùng có thể xem lại lịch sử, tiếp tục trao đổi trước đó. Hiện tại chưa cần cơ sở dữ liệu, có thể chọn các giải pháp nhẹ sau:
+Khi đi hết, hãy hỏi: nếu mình không đứng cạnh thì họ có bị kẹt không? Ghi lại quản lý thành viên hoặc bảng dữ liệu phức tạp, nhưng chưa cần làm nếu chúng không ảnh hưởng lần sử dụng này.
 
-**Lựa chọn phương án lưu trữ:**
+::: tip Phiên bản này nên lớn đến đâu?
+Nếu bạn có thể nói nhiệm vụ trong một câu và người kia bắt đầu trong vài phút, phạm vi thường đã vừa phải.
+:::
 
-| Phương án | Kịch bản sử dụng | Đặc điểm |
-| ---------------- | -------------------------------- | ------------------------------------ |
-| **LocalStorage** | Dự án thuần frontend, dữ liệu người dùng lưu trên trình duyệt | Dễ triển khai, refresh không mất, không đồng bộ được giữa các thiết bị |
-| **File JSON** | Nguyên mẫu cục bộ, dữ liệu lưu dạng file | Cấu trúc rõ ràng, dễ debug, có thể chỉnh sửa thủ công |
-| **File TXT** | Phương án đơn giản nhất, ghi nhanh nội dung văn bản | Định dạng tự do, khả năng tương thích tốt |
+### 1.2 Thử lại từ một trang trống
 
-**Ví dụ nội dung hội thoại:**
-Lịch sử hội thoại đã lưu thường bao gồm:
+Sau khi phát triển một thời gian, trang thường còn dữ liệu thử và kết quả cũ. Ta dễ quên người mới sẽ không có gì. Hãy mở cửa sổ riêng tư hoặc xóa dữ liệu cục bộ rồi bắt đầu lại.
 
-```json
-[
-  {
-    "role": "user",
-    "content": "Giúp tôi tạo văn bản livestream bán tai nghe bluetooth",
-    "timestamp": "2026-01-20 10:30:00"
-  },
-  {
-    "role": "assistant",
-    "content": "[Văn bản gợi ý tai nghe bluetooth]\n\n🎧 Tạm biệt độ trễ, trải nghiệm nghe nhạc chìm đắm\n\nChị em ơi! Chiếc tai nghe bluetooth này thực sự quá tuyệt 👇\n\n✅ Chống ồn chủ động 40dB, ngay lập tức bước vào thế giới âm nhạc\n✅ Thời lượng pin siêu dài 30 giờ, cả tuần đi làm không cần sạc\n✅ Gọi điện rõ như đối thoại, tàu điện ngầm ồn ào cũng trò chuyện được\n✅ Thiết kế nửa lọt tai, đeo lâu không đau không bí\n\n💰 Ưu đãi có hạn, click vào link bên dưới để mua ngay!",
-    "timestamp": "2026-01-20 10:30:05"
-  }
-]
+Chỉ cần thử ba tình huống:
+
+1. **Mở khi trống:** không nhập gì mà nhấn, xem trang có nói rõ còn thiếu gì không.
+2. **Tạo bình thường:** tải ảnh và tạo nội dung; kiểm tra trạng thái chờ và bước tiếp theo sau kết quả.
+3. **Cố ý gây lỗi:** tải tệp không hỗ trợ hoặc làm yêu cầu thất bại; thông tin đã nhập phải còn và có thể thử lại.
+
+Ghi lại chỗ bị kẹt. Phần tiếp theo sẽ sửa từng điểm.
+
+Bạn có thể nhờ AI IDE kiểm tra mã, nhưng nó không thay cho thao tác thực tế:
+
+```text
+Chưa sửa mã.
+
+Hãy kiểm tra dự án theo nhiệm vụ này:
+người dùng tải ảnh sản phẩm, nhập thông tin cần thiết,
+tạo nội dung, kiểm tra rồi sao chép hoặc lưu kết quả.
+
+Cho tôi biết các trang và tệp liên quan,
+cùng những chỗ hành trình hiện có thể bị ngắt.
 ```
 
-**Prompt triển khai:**
+AI IDE có thể tìm đoạn mã đáng ngờ. Trang có dễ dùng không thì bạn vẫn phải tự nhấn mới biết.
 
-> "Hãy giúp tôi triển khai tính năng lưu lịch sử hội thoại. Hỗ trợ lưu bản ghi hội thoại giữa người dùng và AI dưới dạng file JSON (hoặc sử dụng LocalStorage). Tự động tải lịch sử hội thoại mỗi khi vào trang, hỗ trợ xem và xóa từng bản ghi hội thoại."
+## 2. Sửa những chỗ người dùng dễ mắc kẹt
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="1" :items="[
-      { title: 'Hoàn thiện chuỗi', description: 'Từ tính năng đơn lẻ đến vòng lặp hoàn chỉnh' },
-      { title: 'Tiêm linh hồn', description: 'Mô phỏng dữ liệu nghiệp vụ thực tế' },
-      { title: 'Lặp lại phản hồi', description: 'Sửa chữa trải nghiệm dựa trên phản hồi thực tế' },
-      { title: 'Bài tập lớn cuối kỳ', description: 'Thiết kế tốt nghiệp của bạn' }
-    ]" />
-  </ClientOnly>
-</div>
+Sau một lượt đầy đủ, vấn đề thường xuất hiện ở bốn thời điểm: lần đầu mở trang, lúc chờ AI, sau khi có kết quả và khi yêu cầu thất bại. Không cần thiết kế phức tạp. Người dùng chỉ cần biết đang xảy ra gì và tiếp theo có thể làm gì.
 
-## 2. Tiêm linh hồn: Mô phỏng dữ liệu thực tế (Mock Data)
+### 2.1 Lần đầu mở có biết làm gì không?
 
-Một trang trống rỗng không thể thuyết phục ai. Tưởng tượng, bạn giới thiệu "bàn làm việc tư liệu thương mại điện tử" cho người khác, kết quả lịch sử trống không, hoặc chỉ có một dòng "test / test / test".
-Để hiệu quả trình diễn tốt nhất, chúng ta cần "giả" một số dữ liệu chân thực, để nguyên mẫu trông giống một sản phẩm thực tế đã vận hành nửa năm.
+Trang trống không nên chỉ có một ô nhập. Hãy thêm lời giải thích ngắn, nội dung mẫu hoặc ghi chú về định dạng và kích thước ảnh gần vùng tải lên.
 
-### 2.1 Để AI giúp bạn thiết kế cấu trúc dữ liệu
+Nếu biểu mẫu có nhiều trường, giữ lại phần kết quả thật sự cần. Tên, ảnh và đặc điểm chính có thể bắt buộc; thương hiệu, liên kết tham khảo và lựa chọn phong cách có thể nằm trong “Cài đặt thêm”. Người mới không nên phải điền một biểu mẫu dài trước khi thử sản phẩm.
 
-Chúng ta không cần tự nghĩ xem mỗi trường nên đặt tên gì (ví dụ nên gọi `name` hay `title`), việc này hoàn toàn có thể giao cho AI.
+### 2.2 Trang có phản hồi sau khi nhấn không?
 
-Bạn chỉ cần cho AI biết **kịch bản nghiệp vụ** của bạn:
+Yêu cầu AI có thể mất vài giây hoặc lâu hơn. Sau khi nhấn, nút nên hiển thị “Đang tạo” và tạm ngăn gửi nhiều lần. Nội dung đã nhập không được biến mất và trang không nên nhảy sang vùng kết quả trống.
 
-> **Ví dụ prompt:**
-> "Tôi đang làm nguyên mẫu **bàn làm việc tư liệu thương mại điện tử TikTok**.
-> Hãy giúp tôi thiết kế một cấu trúc dữ liệu JSON, để mô tả một 'nhiệm vụ sản phẩm'.
-> Nhiệm vụ này nên bao gồm: thông tin cơ bản sản phẩm (tên, danh mục), tư liệu đầu vào (link hình ảnh), và kết quả AI tạo ra (tiêu đề, văn bản, ảnh poster).
-> Hãy cho tôi trực tiếp một ví dụ JSON."
+![Trạng thái chờ khi tạo nội dung sản phẩm](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
 
-AI sẽ dựa trên mô tả của bạn, tự động giúp bạn nghĩ ra các trường như `productName`, `generatedContent`.
+*Không cần hiệu ứng phức tạp. Chỉ cần cho thấy công việc đã bắt đầu, đồng thời giữ nội dung và vị trí trang, đã tránh được phần lớn nhầm lẫn.*
 
-### 2.2 Để AI sản xuất loạt dữ liệu "chân thực"
+Nếu ảnh hoặc video phải xếp hàng, có thể hiển thị “Đang xếp hàng”, “Đang tạo”. Đừng tự đặt phần trăm chính xác nếu API không thật sự cung cấp tiến độ.
 
-Có cấu trúc dữ liệu rồi, bước tiếp theo là để AI giúp bạn "điền vào", tạo ra một loạt dữ liệu trông thật.
+### 2.3 Có kết quả rồi thì làm gì tiếp?
 
-**Kỹ thuật prompt:**
-Bạn không thể chỉ nói AI "giúp tôi tạo dữ liệu", bạn cần như giao việc cho thực tập sinh, cho nó biết **bối cảnh nghiệp vụ** và **yêu cầu nội dung**:
+Kết quả AI không phải điểm cuối. Người dùng thường phải kiểm tra sự thật, sửa cách viết và đưa nội dung sang bước khác. Vùng kết quả phải có ít nhất một thao tác: sửa, sao chép, tải xuống hoặc tạo lại.
 
-- **Bối cảnh nghiệp vụ**: Cho AI biết chúng ta làm "thương mại điện tử TikTok", nên tiêu đề sản phẩm phải thu hút (như "bí quyết thon dáng", "sinh viên phải có"), văn bản phải khẩu ngữ hóa.
-- **Yêu cầu hình ảnh**: Để nguyên mẫu đẹp, hình ảnh không phải placeholder đen trắng, tốt nhất là ảnh phong cảnh hoặc vật thật nhiều màu ngẫu nhiên.
+![Trang kết quả sau khi kết nối hiểu ảnh và tạo nội dung](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
 
-> **Ví dụ prompt:**
-> "Dựa trên cấu trúc vừa thiết kế, giúp tôi tạo 10 bản ghi dữ liệu mô phỏng chân thực.
-> (Ghi chú: không nhất thiết phải là JSON. Nếu bạn đang làm frontend, có thể yêu cầu tạo mảng JavaScript; nếu dùng Python, có thể tạo List.)
->
-> **Yêu cầu kịch bản nghiệp vụ**:
->
-> 1. Giả sử đây là một cửa hàng bách hóa tổng hợp, sản phẩm bao gồm 3 danh mục: 'thời trang nữ', 'kỹ thuật số', 'mỹ phẩm'.
-> 2. **Tiêu đề và văn bản tạo ra phải mang phong cách TikTok**: ví dụ tiêu đề phải chứa Emoji (🔥, ✨), văn bản phải dùng giọng điệu 'cực phẩm', 'trải nghiệm thực'.
-> 3. **Trường hình ảnh**: Sử dụng thống nhất định dạng `https://picsum.photos/seed/{random_id}/300/400`, đảm bảo mỗi ảnh đều khác nhau."
+*Ảnh sản phẩm đã tải vẫn nằm trên kết quả. Người dùng có thể đối chiếu nội dung với ảnh gốc thay vì chỉ chấp nhận một câu trả lời của mô hình.*
 
-**Ví dụ Mock Data đã tạo:**
+Nếu mô hình không thể xác nhận thông tin, hãy đánh dấu để người dùng bổ sung hoặc xóa. Cách này gần với công việc thật hơn việc coi một đoạn văn là “đáp án cuối”.
 
-```javascript
-export const mockProductTasks = [
-  {
-    id: 'task_001',
-    name: 'Đầm vintage hoa Pháp mùa hè',
-    status: 'completed',
-    input: {
-      category: 'Thời trang nữ',
-      features: ['Eo thon', 'Giảm cân', 'Phong cách'],
-      originalImage: 'https://picsum.photos/seed/dress_input/300/400'
-    },
-    output: {
-      generatedTitle: '✨Ai mặc cũng đẹp! Chiếc đầm hoa Pháp này thực sự cực phẩm🔥',
-      generatedCopy:
-        'Chị em ơi! Chiếc váy này thực sự quá thon dáng! Thiết kế vòng eo cực phẩm, mặc vào ngay lập tức có eo. Vải rất thoáng khí, mùa hè mặc hoàn toàn không bí. Lựa chọn hàng đầu cho hẹn hò và dạo phố!👗',
-      generatedPosterImage: 'https://picsum.photos/seed/dress_output/300/400'
-    },
-    createdAt: '2026-01-20T10:00:00Z'
-  },
-  {
-    id: 'task_002',
-    name: 'Tai nghe chống ồn siêu mạnh Pro',
-    status: 'completed',
-    input: {
-      category: 'Kỹ thuật số',
-      features: ['Chống ồn', 'Pin siêu dài', 'Độ trễ thấp'],
-      originalImage: 'https://picsum.photos/seed/tech_input/300/400'
-    },
-    output: {
-      generatedTitle: '🎧 Cuối cùng cũng tìm được! Chiếc tai nghe chống ồn này quá mạnh!🔇',
-      generatedCopy:
-        'Đeo vào, thế giới ngay lập tức yên tĩnh. Chất âm tuyệt vời, nghe nhạc như đang ở hiện trường. Pin cũng rất bền, sạc một lần dùng cả tuần! Sinh viên phải có!',
-      generatedPosterImage: 'https://picsum.photos/seed/tech_output/300/400'
-    },
-    createdAt: '2026-01-21T14:30:00Z'
-  }
-  // ... thêm dữ liệu
-]
+### 2.4 Sau khi lỗi có thể tiếp tục không?
+
+Mạng ngắt, hết hạn mức hoặc tệp không hỗ trợ đều có thể làm yêu cầu thất bại. Không cần cho người dùng phổ thông xem toàn bộ lỗi kỹ thuật, nhưng phải nói thao tác chưa hoàn tất và cho phép thử lại hoặc sửa đầu vào.
+
+Ví dụ:
+
+- **Định dạng ảnh không hỗ trợ:** nói rõ định dạng được chấp nhận và cho chọn lại.
+- **Thiếu thông tin bắt buộc:** báo gần trường liên quan, không chỉ hiện “Tham số sai”.
+- **Dịch vụ AI tạm không dùng được:** giữ nội dung và đưa nút “Tạo lại”.
+- **Kết quả chưa phù hợp:** cho sửa đầu vào và thử lại mà không phải bắt đầu từ đầu.
+
+Nếu tải lại trang làm mất biểu mẫu dài, có thể tạm lưu bản nháp bằng LocalStorage. Chỉ lưu dữ liệu thông thường cần để tiếp tục; không lưu API Key, dữ liệu khách hàng thật hay tệp nhạy cảm trong trình duyệt.
+
+Đưa các vấn đề cho AI IDE bằng một yêu cầu tập trung:
+
+```text
+Kiểm tra hành trình “tải ảnh sản phẩm và tạo nội dung”
+tại bốn thời điểm: bắt đầu, chờ, thành công và thất bại.
+
+Ưu tiên sửa phần khiến người dùng không thể tiếp tục:
+- trường bắt buộc không có lời nhắc;
+- có thể nhấn nút nhiều lần khi đang yêu cầu;
+- thất bại làm mất nội dung đã nhập;
+- kết quả không có sửa, sao chép hoặc tạo lại.
+
+Trước khi sửa, cho tôi biết sẽ thay đổi tệp nào.
+Sau khi xong, đưa ra các bước kiểm tra thủ công.
 ```
 
-### 2.3 (Nâng cao) Sử dụng LocalStorage để "giả" thêm/xóa/sửa
+## 3. Nhờ người khác dùng thử
 
-Nếu bạn muốn "dữ liệu mô phỏng" vừa tạo không chỉ xem được mà còn xóa được, sửa được, thậm chí nhiệm vụ mới tạo sau khi refresh trang vẫn còn, bạn có thể kết hợp `LocalStorage`.
+Nhìn trang của mình lâu ngày, ta thấy mọi thao tác đều rõ. Người không tham gia phát triển thường chỉ mất vài phút để tìm ra điều ta đã bỏ sót.
 
-> **Ví dụ prompt:**
-> "Hãy giúp tôi triển khai tính năng lưu trữ dữ liệu.
->
-> 1. Ưu tiên đọc dữ liệu từ `localStorage`.
-> 2. Nếu `localStorage` trống, sử dụng Mock data vừa tạo để khởi tạo, và lưu chúng vào `localStorage`.
-> 3. Đồng thời giúp tôi viết các hàm `addProductTask` và `deleteProductTask`, mỗi thao tác đều cập nhật `localStorage` đồng bộ."
+Nếu có thể, hãy chọn người thật sự có khả năng sử dụng. Với công cụ này, người từng vận hành cửa hàng hoặc làm nội dung sản phẩm sẽ phù hợp. Nếu chưa tìm được, một người bạn chưa từng thấy trang cũng hữu ích.
 
-Qua bước này, nguyên mẫu của bạn đã có "bộ nhớ", trải nghiệm người dùng gần như không khác gì sản phẩm thực.
+### 3.1 Chỉ nói nhiệm vụ cần hoàn thành
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="2" :items="[
-      { title: 'Hoàn thiện chuỗi', description: 'Từ tính năng đơn lẻ đến vòng lặp hoàn chỉnh' },
-      { title: 'Tiêm linh hồn', description: 'Mô phỏng dữ liệu nghiệp vụ thực tế' },
-      { title: 'Lặp lại phản hồi', description: 'Sửa chữa trải nghiệm dựa trên phản hồi thực tế' },
-      { title: 'Bài tập lớn cuối kỳ', description: 'Thiết kế tốt nghiệp của bạn' }
-    ]" />
-  </ClientOnly>
-</div>
+Khi bắt đầu, chỉ nói mục tiêu:
 
-## 3. Thu thập phản hồi và lặp lại nhanh chóng
+> Dùng công cụ này để tạo tiêu đề và điểm bán hàng từ ảnh sản phẩm. Kiểm tra nội dung rồi sao chép phiên bản bạn muốn tiếp tục chỉnh sửa.
 
-Làm sản phẩm trong phòng kín thì không thể tốt. Bây giờ nguyên mẫu đã có "chức năng cốt lõi" + "chuỗi hoàn chỉnh" + "dữ liệu trình diễn", đã đến lúc cho người khác xem.
+Hãy quan sát trước, đừng lập tức chỉ nơi cần nhấn. Ghi lại lúc họ dừng, quay lại, nhấn lặp và đặt câu hỏi. Nếu bạn giải thích ngay, vấn đề lẽ ra trang phải giải quyết sẽ bị che đi.
 
-### 3.1 Tìm ai test? Test như thế nào?
+Chỉ một hoặc hai người cũng tìm được nhiều vấn đề rõ. Không cần báo cáo chính thức, chỉ cần ghi nơi họ dừng.
 
-- **Tìm bạn bè/đồng nghiệp**: Không cần họ hiểu kỹ thuật, chỉ cần để họ thử dùng.
-- **Quan sát thay vì hướng dẫn**: Đừng nói "click vào đây", mà xem họ sẽ click vào đâu. Nếu họ không tìm thấy nút, nghĩa là thiết kế có vấn đề.
-- **Phương pháp "Wizard of Oz"**: Nếu AI của bạn chưa kết nối xong, bạn có thể thủ công sửa dữ liệu ở backend (hoặc database) để mô phỏng phản hồi của AI, xác minh trước người dùng có cần tính năng này không.
+Nếu họ mở trang rồi không làm gì, thêm một câu nói rõ mục đích. Nếu liên tục nhấn “Tạo”, làm trạng thái chờ rõ hơn. Nếu không biết làm gì với kết quả, thêm sửa hoặc sao chép. Nếu sau lỗi phải nhập lại toàn bộ, giữ nội dung và thêm thử lại.
 
-### 3.2 Đối mặt với Bug và phàn nàn
+### 3.2 Trao đổi sau khi dùng xong
 
-- **Style bị lỗi**: Có thể bị lỗi ở các kích thước màn hình khác nhau.
-  - **Hành động**: Chụp màn hình gửi cho AI IDE -> "Bị lỗi ở độ rộng màn hình này, giúp tôi sửa."
-- **Thao tác gượng gạo**: "Quy trình này quá phiền phức".
-  - **Hành động**: Cho AI IDE biết đề xuất -> "Người dùng thấy upload rồi mới tạo quá chậm, có thể đổi thành tạo một lần không?"
-- **Yêu cầu mới**: "Nếu có tính năng này thì tốt quá."
-  - **Hành động**: Đánh giá xem có phải cốt lõi không, nếu có, để AI nhanh chóng triển khai phiên bản đơn giản.
+Khi họ hoàn thành hoặc bỏ cuộc, hãy hỏi:
 
-**Nhớ: Trong giai đoạn này, AI là trợ lý sửa chữa tốt nhất của bạn. Bạn chỉ cần chịu trách nhiệm phát hiện vấn đề, sửa code giao cho nó.**
+1. Bước nào làm bạn không chắc nhất?
+2. Phần nào trong kết quả bạn dùng ngay, phần nào luôn phải sửa?
+3. Lần sau có cùng công việc, bạn có dùng lại không? Vì sao?
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="3" :items="[
-      { title: 'Hoàn thiện chuỗi', description: 'Từ tính năng đơn lẻ đến vòng lặp hoàn chỉnh' },
-      { title: 'Tiêm linh hồn', description: 'Mô phỏng dữ liệu nghiệp vụ thực tế' },
-      { title: 'Lặp lại phản hồi', description: 'Sửa chữa trải nghiệm dựa trên phản hồi thực tế' },
-      { title: 'Bài tập lớn cuối kỳ', description: 'Thiết kế tốt nghiệp của bạn' }
-    ]" />
-  </ClientOnly>
-</div>
+Đừng chỉ hỏi “Có dễ dùng không?”. Một câu “cũng ổn” vì lịch sự rất khó định hướng. Hành vi và ví dụ cụ thể có giá trị hơn.
 
-## 4. 🎓 Bài tập lớn: Hoàn thành "thiết kế tốt nghiệp" của bạn
+::: warning Khi dùng tài liệu thật
+Ảnh sản phẩm, bản ghi âm hoặc tài liệu của người thử có thể chứa thông tin kinh doanh. Trước khi bắt đầu, hãy giải thích loại dịch vụ AI sẽ nhận dữ liệu, tránh tài liệu khách hàng chưa được phép và xóa tệp không còn cần sau buổi thử.
+:::
 
-Chúc mừng bạn! Bạn đã hoàn thành toàn bộ quá trình từ "nhu cầu" đến "nguyên mẫu" rồi đến "tích hợp AI". Bây giờ, đã đến lúc trình bày kết quả cuối cùng.
+## 4. Sửa chỗ mắc kẹt rồi thử lại
 
-**Bài tập lớn này không giới hạn ở "bàn làm việc tư liệu thương mại điện tử"**. Bạn cần kết hợp sở thích hoặc bối cảnh ngành nghề của mình, tạo ra một nguyên mẫu AI sản phẩm độc nhất vô nhị.
+Buổi thử có thể cho một danh sách dài. Không cần sửa hết. Bắt đầu từ vấn đề khiến nhiệm vụ không hoàn thành hoặc kết quả không đáng tin.
 
-### Lựa chọn đề tài và yêu cầu
+Theo thứ tự này:
 
-Bạn cần chọn một kịch bản phù hợp nhất từ **[Tham khảo hướng kịch bản đa ngành](../appendix-industry-scenarios/index.md)**, hoặc tự lên ý tưởng một kịch hoàn toàn mới.
+1. **Không thể hoàn thành:** nút không hoạt động, yêu cầu thất bại hoặc không lấy được kết quả.
+2. **Kết quả rõ ràng không đáng tin:** bịa thông tin, không kiểm tra được hoặc thiếu nguồn cần thiết.
+3. **Thao tác dễ hiểu nhầm:** không rõ bắt đầu ở đâu hay đang ở trạng thái nào.
+4. **Tốn quá nhiều công:** bước lặp, mất nội dung hoặc chờ không có phản hồi.
+5. **Kiểu dáng và tính năng mới:** làm đẹp và mong muốn không cản nhiệm vụ chính.
 
-**Dự án phải sử dụng tổng hợp tất cả nội dung đã học ở các bài trước:**
+Chọn một đến ba điểm quan trọng. Sau khi sửa, tự dùng lại; nếu có thể, nhờ người vừa thử quay lại. Chỉ khi chỗ mắc kẹt cũ thật sự biến mất thì thay đổi mới có ích.
 
-1.  **Xây dựng nguyên mẫu**: Sử dụng công nghệ frontend để xây dựng giao diện đẹp, dễ sử dụng.
-2.  **Kiểm soát nhu cầu**: Không cầu toàn diện, nhưng logic chức năng cốt lõi phải khép kín.
-3.  **Tích hợp API**: Kết nối mô hình AI thực tế (LLM/VLM, v.v.), trao cho ứng dụng trí thông minh thực sự.
-4.  **Triển khai ứng dụng có thể chơi**: Không chỉ là trang tĩnh, mà là ứng dụng động có luồng dữ liệu và phản hồi tương tác.
+### 4.1 Nói vấn đề cụ thể với AI IDE
 
-### Sản phẩm nộp bài
+Đừng chỉ nói “hãy tối ưu”. Hãy ghi điều đã quan sát:
 
-Cuối cùng bạn cần nộp hai nội dung sau:
+```text
+Nhiệm vụ: tải ảnh sản phẩm và tạo ba điểm bán hàng.
 
-1.  **Một ứng dụng nguyên mẫu hoàn chỉnh**: Triển khai lên mạng hoặc chạy được cục bộ, có chuỗi sử dụng hoàn chỉnh.
-2.  **Video trình diễn 30 giây**: Quay một video, giới thiệu ngắn gọn kịch bản ứng dụng của bạn, và trình diễn thao tác thực tế của các chức năng cốt lõi.
+Vấn đề quan sát được:
+Hai người thử đã nhấn “Tạo” nhiều lần vì trang không cho thấy rõ
+yêu cầu đã bắt đầu. Kết quả là có các tác vụ trùng lặp.
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🚀 Danh sách kiểm tra thử thách cuối cùng</div>
-  </template>
+Hãy sửa trang hiện tại:
+1. Khi bắt đầu, vô hiệu hóa nút và hiển thị “Đang tạo”.
+2. Khôi phục nút sau khi thành công hoặc thất bại.
+3. Không xóa nội dung người dùng đã nhập.
+4. Cho tôi cách kiểm tra thủ công nhấn lặp và lỗi.
+```
 
-  <p>
-    Đây là trận chiến cuối cùng của Stage 1. Hãy kiểm tra tác phẩm của bạn theo danh sách dưới đây:
-  </p>
+Yêu cầu cụ thể giúp tránh thay đổi lạc đề và cho bạn biết phải kiểm tra gì sau đó.
 
-  <div style="font-weight: bold; margin-bottom: 10px;">Tự kiểm tra chức năng cốt lõi</div>
-  <ul style="list-style-type: none; padding-left: 0;">
-    <li><label><input type="checkbox" disabled /> <strong>Kịch bản rõ ràng</strong>: Đã chọn một ngành hoặc kịch bản ứng dụng cụ thể</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Logic khép kín</strong>: Quy trình cốt lõi chạy thông suốt, không chỉ Happy Path</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Lái bởi AI</strong>: Đã gọi API mô hình lớn thực sự, không phải phản hồi định sẵn</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Trải nghiệm hoàn chỉnh</strong>: Bao gồm Loading, xử lý lỗi và dữ liệu mô phỏng</label></li>
-  </ul>
+### 4.2 Sửa xong hãy làm lại từ đầu
 
-  <div style="font-weight: bold; margin: 20px 0 10px;">Chuẩn bị sản phẩm bàn giao</div>
-  <ul style="list-style-type: none; padding-left: 0;">
-    <li><label><input type="checkbox" disabled /> <strong>Ứng dụng nguyên mẫu</strong>: Code đã hoàn thành và có thể chạy</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Video trình diễn</strong>: Khoảng 30 giây, thể hiện rõ điểm nổi bật cốt lõi</label></li>
-  </ul>
-</el-card>
+Sửa một chỗ có thể ảnh hưởng chỗ khác. Trước khi chia sẻ, thử bốn trường hợp:
+
+- đầu vào bình thường với đủ thông tin;
+- thiếu một trường bắt buộc;
+- yêu cầu API thất bại hoặc hết thời gian;
+- sửa, sao chép hoặc tạo lại sau khi có kết quả.
+
+Nếu sản phẩm lưu bản nháp, hãy thử cả sau khi tải lại trang. Xác nhận tính năng mới và hành trình cũ đều hoạt động.
+
+## 5. Sắp xếp sản phẩm để chia sẻ
+
+Sản phẩm giờ không chỉ “chạy trên máy bạn”. Người khác đã dùng và bạn đã sửa theo một vấn đề thật. Hãy chuẩn bị lối vào và lời giải thích để nhiều người có thể hiểu.
+
+### 5.1 Giải thích trong một phút
+
+Có thể theo thứ tự:
+
+1. **Ai gặp vấn đề gì:** nhân viên thương mại điện tử phải sắp xếp ảnh và điểm bán hàng mỗi lần làm bản nháp.
+2. **Sản phẩm giúp thế nào:** tải ảnh và thông tin để có bản nháp tiếp tục chỉnh sửa.
+3. **Dùng khả năng AI nào:** hiểu hình ảnh và tạo văn bản.
+4. **Hoàn thành ra sao:** tải lên, tạo, kiểm tra, sửa, sao chép.
+5. **Đã sửa gì sau khi thử:** trạng thái chờ rõ và giữ nội dung sau lỗi.
+
+Hãy để người khác hiểu sản phẩm trước khi liệt kê framework và tên mô hình.
+
+### 5.2 Chuẩn bị thứ người khác cần
+
+Trước khi chia sẻ, chuẩn bị ba thứ:
+
+1. **Ứng dụng chạy được:** đưa liên kết; nếu chưa triển khai, ghi lệnh khởi động và địa chỉ.
+2. **Video 30–60 giây:** trình bày một nhiệm vụ từ đầu vào đến kết quả, không chỉ đổi nhanh giữa các trang.
+3. **Một trang giới thiệu:** người dùng mục tiêu, vấn đề, hành trình, khả năng AI, một phản hồi và thay đổi từ phản hồi đó.
+
+Nếu chưa thể truy cập từ xa, chạy cục bộ và video cũng là kết quả Stage 1. Quan trọng là người khác hiểu sản phẩm và thấy hành trình chính hoàn tất.
+
+### 5.3 Tiếp tục sản phẩm này hay làm sản phẩm khác?
+
+Bạn có thể tiếp tục bàn làm việc thương mại điện tử hoặc áp dụng cùng cách cho ghi chép cuộc họp, âm thanh, hỗ trợ học tập hay công cụ chuyên môn. [Tài liệu về các tình huống AI](../appendix-industry-scenarios/index.md) giúp bạn mở rộng hướng.
+
+Đừng đổi sang chủ đề xa lạ chỉ để trông mới. Một vấn đề nhỏ trong học tập, công việc hoặc cuộc sống, đã được người thật dùng và chỉnh sửa, thuyết phục hơn một trang nhiều tính năng chưa ai thử.
+
+### Trước khi gửi
+
+Mở liên kết một lần cuối và làm trọn hành trình. Xác nhận người khác mở được, AI trả kết quả và trang hoặc ảnh chụp không lộ API Key. Nếu dùng ảnh, âm thanh hoặc tài liệu của người khác, hãy xác nhận quyền sử dụng.
+
+## 6. 📚 Bài tập
+
+<StageAssignmentCard title="Hoàn thiện và công bố sản phẩm Stage 1">
+
+  <p>Không thêm tính năng mới. Hãy chuẩn bị sản phẩm hiện tại và thật sự đưa cho một người sử dụng.</p>
+
+  <ol>
+    <li>
+      <strong>Dùng trọn một lần</strong>
+      <ul>
+        <li>Bắt đầu từ khi mở trang, tiếp tục đến lúc nhận, sửa hoặc lưu kết quả.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Nhờ một người thử</strong>
+      <ul>
+        <li>Đừng dạy giao diện trước; quan sát nơi họ dừng và sửa một vấn đề.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Chia sẻ sản phẩm</strong>
+      <ul>
+        <li>Chuẩn bị liên kết hoặc hướng dẫn, video 30–60 giây và lời giới thiệu ngắn.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>Stage 1 thật sự hoàn tất khi người khác có thể mở sản phẩm và tự mình hoàn thành một lượt dùng.</p>
+</StageAssignmentCard>
 
 ## Bước tiếp theo
 
-Sau khi hoàn thành bài tập lớn, bạn đã có khả năng "độc lập phát triển nguyên mẫu ứng dụng AI".
-Trong Stage 2 tiếp theo, chúng ta sẽ đi sâu vào phát triển fullstack phức tạp hơn, học cách biến nguyên mẫu này thành một ứng dụng thương mại thực sự có thể lên mạng, có database, có hệ thống người dùng.
+Bạn đã đi trọn một con đường: bắt đầu từ vấn đề thật, thu hẹp phiên bản đầu, làm nguyên mẫu tương tác, kết nối AI rồi cải thiện sau khi người dùng thử.
 
-Hẹn gặp lại ở giai đoạn tiếp theo!
+Trong Stage 2, ta sẽ học cơ sở dữ liệu, tài khoản, thanh toán, triển khai và kỹ thuật frontend/backend hoàn chỉnh hơn. Chúng giúp phục vụ nhiều người và dữ liệu thật, nhưng điểm bắt đầu vẫn vậy: trước hết hoàn thành một nhiệm vụ có giá trị.
 
 <RelatedArticlesSection
-  title="Tiếp tục nâng cao"
-  description="Chúc mừng hoàn thành Stage 1, các chương dưới đây có thể giúp bạn bước vào phát triển kỹ thuật."
+  title="Tiếp tục học"
+  description="Sau Stage 1, hãy tiếp tục với các nội dung kỹ thuật bên dưới."
   :items="relatedArticles"
 />
+
+<StageOneCompletion />

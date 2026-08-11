@@ -1,301 +1,314 @@
 ---
-title: 'Vollst&auml;ndiges Projektpraktikum - Vom Demo zum produktionsreifen Prototyp'
-description: 'Verlassen Sie die Demo-Phase und lernen Sie, die Produktkette zu vervollst&auml;ndigen, realistische Simulationsdaten zu erstellen, durch Feedback schnell zu iterieren und schlie&szlig;lich einen pr&auml;sentierbaren, interaktiven vollst&auml;ndigen AI-Produktprototyp fertigzustellen.'
+title: 'Vollständige Projektpraxis: Von der Idee zum fertigen Werk'
+description: 'Nutze deinen KI-Prototyp von Anfang bis Ende, lass ihn von einer anderen Person ausprobieren und behebe die beobachteten Probleme.'
 ---
 
 <script setup>
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
+import ProductFinishMap from '../../../zh-cn/stage-1/complete-project-practice/ProductFinishMap.vue'
+import StageOneCompletion from '../../../zh-cn/stage-1/complete-project-practice/StageOneCompletion.vue'
 
-const duration = 'Etwa <strong>3 Tage</strong>'
+const duration = 'Etwa <strong>2–3 Tage</strong>'
 const relatedArticles =
   relatedArticlesMap['de-de/stage-1/complete-project-practice'] ?? []
 </script>
 
-# Anf&auml;nger V: Vollst&auml;ndiges Projektpraktikum
+# Vollständige Projektpraxis: Von der Idee zum fertigen Werk
 
-## Kapitel&uuml;bersicht
+<ProductJourney current="finish" />
 
-<ChapterIntroduction :duration="duration" :tags="['Produktdenken', 'Simulationsdaten', 'Interaktionsvervollst&auml;ndigung', 'LocalStorage']" coreOutput="1 vollst&auml;ndiger AI-Produktprototyp" expectedOutput="Eine Web-Anwendung mit vollst&auml;ndiger Kette und realen Daten">
+## Darum geht es in diesem Kapitel
 
-Im letzten Kapitel haben wir AI-F&auml;higkeiten integriert und das Demo l&auml;uft. Aber es ist von einem echten "Produkt" noch <strong>weit entfernt</strong>: Sobald die Seite aktualisiert wird, <strong>sind die Daten weg</strong>, bei Fehlern gibt es eine <strong>wei&szlig;e Seite</strong>, die Liste zeigt nur "Testdaten 1, Testdaten 2", und wenn der Nutzer falsch klickt, <strong>kann er es nicht r&uuml;ckg&auml;ngig machen</strong>...
+<ChapterIntroduction :duration="duration" :tags="['Vollständige Nutzung', 'Produkterlebnis', 'Nutzertest', 'Präsentation']" coreOutput="Ein KI-Produkt, das eine andere Person ohne Anleitung verwenden kann" expectedOutput="Eine mit echten Nutzern getestete und verbesserte Webanwendung">
 
-In diesem Kapitel werden wir <strong>alle diese L&uuml;cken f&uuml;llen</strong>: Wir werden die <strong>vollst&auml;ndige Kette des Produkts erg&auml;nzen</strong>, mit AI <strong>realistische Gesch&auml;ftsdaten</strong> generieren, anstelle von Platzhalterdaten, <strong>Fehlerbehandlung und Nutzer-Feedback</strong> hinzuf&uuml;gen und schlie&szlig;lich einen <strong>vollst&auml;ndigen Prototyp polieren, den man vorf&uuml;hren kann</strong>.
+In den vorherigen Kapiteln haben wir aus einer Idee einen bedienbaren Prototyp gebaut und die KI-Funktion auf der Seite zum Laufen gebracht.
 
-Dies ist das <strong>letzte Kapitel der Anf&auml;ngerphase</strong>. Wenn Sie diesen Schritt abgeschlossen haben, haben Sie die Verwandlung von "kann &uuml;berhaupt nicht programmieren" zu "<strong>kann unabh&auml;ngig AI-Produktprototypen erstellen</strong>" vollzogen.
+Du weißt inzwischen, was du eingeben und wo du klicken musst. Eine Person, die die Seite zum ersten Mal öffnet, findet vielleicht nicht einmal den ersten Schritt. Wenn nach einem Klick nicht sofort etwas erscheint, hält sie die Seite womöglich für kaputt.
+
+In diesem Kapitel fügen wir keine neue Funktion hinzu. Wir verwenden das Produkt von Anfang bis Ende, verbessern die Stellen, an denen Menschen hängen bleiben, und lassen es von einer anderen Person testen. Danach hast du ein Werk, das du guten Gewissens teilen kannst.
 
 </ChapterIntroduction>
 
 <div style="margin: 50px 0;">
   <ClientOnly>
     <StepBar :active="0" :items="[
-      { title: 'Kette vervollst&auml;ndigen', description: 'Von Einzelfunktion zum vollst&auml;ndigen Kreislauf' },
-      { title: 'Seele einhauchen', description: 'Echte Gesch&auml;ftsdaten simulieren' },
-      { title: 'Feedback-Iteration', description: 'Basierend auf echtem Feedback verbessern' },
-      { title: 'Abschlussprojekt', description: 'Ihre Abschlussarbeit' }
+      { title: 'Selbst benutzen', description: 'Vom Start bis zum Ergebnis' },
+      { title: 'Hindernisse beheben', description: 'Warten, Ergebnis und Fehler' },
+      { title: 'Testen lassen', description: 'Erst beobachten, dann helfen' },
+      { title: 'Vorbereiten und teilen', description: 'Das Werk verständlich machen' }
     ]" />
   </ClientOnly>
 </div>
 
-## 1. "Happy Path" ablehnen: Die Kernkette vervollst&auml;ndigen
+<ProductFinishMap />
 
-Viele Einsteiger erstellen Prototypen oft nur f&uuml;r den "Happy Path" (den Idealfall): Nutzer klickt &rarr; API antwortet erfolgreich &rarr; Ergebnis wird angezeigt.
-In der realen Welt l&auml;uft aber oft nicht alles so glatt. Damit Ihr Prototyp wie ein echtes Produkt aussieht, m&uuml;ssen Sie folgende "unsichtbare" Aspekte ber&uuml;cksichtigen.
+## 1. Verwende dein Produkt einmal vollständig
 
-### 1.1 "Warten" und "Feedback" hinzuf&uuml;gen
+Füge nicht vorschnell Anmeldung, Teamarbeit oder Daten-Dashboards hinzu. Öffne das aktuelle Produkt und benutze es wie ein neuer Nutzer – von der ersten Seite bis zum Ergebnis. Jeder Schritt, den du noch daneben erklären musst, ist eine Stelle für die nächste Verbesserung.
 
-Wenn der Nutzer auf "Copywriting generieren" klickt, ben&ouml;tigt AI oft mehrere Sekunden, um zu antworten. Wenn die Oberfl&auml;che nicht reagiert, denkt der Nutzer, das Programm sei kaputt.
-**Lassen Sie die AI IDE einen Loading-Status hinzuf&uuml;gen:**
+In unserem Arbeitsbereich für E-Commerce-Inhalte sieht ein vollständiger Ablauf ungefähr so aus:
 
-> Prompt-Beispiel:
-> "Wenn ich auf den Generieren-Button klicke, &auml;ndere den Button in 'Generiere...' und deaktiviere ihn. Zeige gleichzeitig im rechten Bereich eine Lade-Animation. Erst wenn die API ein Ergebnis zur&uuml;ckgibt, kehre zum Normalzustand zur&uuml;ck."
+> Ein E-Commerce-Mitarbeiter lädt ein Produktbild hoch, ergänzt die nötigen Angaben, erzeugt einen ersten Entwurf aus Bild und Text, prüft ihn und kopiert oder speichert ihn zur späteren Bearbeitung und Veröffentlichung.
 
-### 1.2 "Fehler" und "Ausnahmen" behandeln
+Zunächst reicht es, diesen kurzen Weg gut umzusetzen. Anmeldung, Teamrechte und ein öffentlicher Start können warten, bis das Produkt sie wirklich braucht.
 
-API Keys k&ouml;nnen ablaufen, Netzwerke k&ouml;nnen unterbrochen werden.
-**Lassen Sie die AI IDE Fehler behandeln:**
+### 1.1 Gehe in der echten Nutzungsreihenfolge vor
 
-> Prompt-Beispiel:
-> "Wenn die API-Anfrage feh schl&auml;gt, zeige nicht einfach einen Fehler in der Konsole, sondern zeige oben auf der Seite eine rote Benachrichtigung (Toast), die dem Nutzer sagt: 'Generierung fehlgeschlagen, bitte sp&auml;ter erneut versuchen', und erlaube dem Nutzer, erneut auf Generieren zu klicken."
+Ignoriere zunächst Code und Komponenten. Folge den Handlungen eines Nutzers:
 
-### 1.3 Chat-Verlauf persistieren
+1. Die Seite öffnen und verstehen, wobei das Werkzeug hilft.
+2. Ein Produktbild hochladen und notwendige Angaben wie Name und Material eintragen.
+3. „Text erzeugen“ wählen und sehen, dass die Seite arbeitet.
+4. Titel und Verkaufsargumente der KI prüfen und bei Bedarf bearbeiten oder neu erzeugen.
+5. Das Ergebnis kopieren, herunterladen oder vorläufig speichern und die Aufgabe abschließen.
 
-Bei der Interaktion mit AI m&uuml;ssen wir den Konversationsinhalt speichern, damit Nutzer den Verlauf &uuml;berpr&uuml;fen und fr&uuml;here Gespr&auml;che fortsetzen k&ouml;nnen. Aktuell f&uuml;hren wir noch keine Datenbank ein; Sie k&ouml;nnen eine der folgenden leichtgewichtigen L&ouml;sungen w&auml;hlen:
+Frage dich am Ende: Würde jemand ohne mich weiterkommen? Teamverwaltung und komplexe Dashboards kannst du notieren, aber jetzt weglassen, wenn sie diesen Ablauf nicht unterstützen.
 
-**Speicherl&ouml;sung-Auswahl:**
+::: tip Wie groß sollte diese Version sein?
+Wenn du die Aufgabe in einem Satz erklären kannst und die andere Person innerhalb weniger Minuten beginnt, ist der Umfang meist passend.
+:::
 
-| L&ouml;sung | Anwendungsbereich | Eigenschaften |
-| --- | --- | --- |
-| **LocalStorage** | Reines Frontend-Projekt, Nutzerdaten im Browser gespeichert | Einfache Implementierung, geht bei Aktualisierung nicht verloren, keine ger&auml;te&uuml;bergreifende Synchronisierung |
-| **JSON-Datei** | Lokaler Prototyp, Daten als Datei gespeichert | Klare Struktur, leicht zu debuggen, manuell bearbeitbar |
-| **TXT-Datei** | Einfachste L&ouml;sung, schnelle Textaufzeichnung | Freies Format, gute Kompatibilit&auml;t |
+### 1.2 Probiere es erneut mit einer leeren Seite
 
-**Beispiel f&uuml;r Konversationsinhalt:**
-Der gespeicherte Chat-Verlauf enth&auml;lt normalerweise folgende Inhalte:
+Nach längerer Entwicklung enthält die Seite oft Testdaten und ein altes Ergebnis. Man vergisst leicht, dass neue Nutzer nichts davon sehen. Öffne ein privates Fenster oder lösche lokale Daten und beginne erneut.
 
-```json
-[
-  {
-    "role": "user",
-    "content": "Hilf mir, einen Douyin-Verkaufstext f&uuml;r Bluetooth-Kopfh&ouml;rer zu generieren",
-    "timestamp": "2026-01-20 10:30:00"
-  },
-  {
-    "role": "assistant",
-    "content": "[Bluetooth-Kopfh&ouml;rer Empfehlungstext]\n\nTsch&uuml;ss Verz&ouml;gerung, immersives H&ouml;rerlebnis\n\nHey! Diese Bluetooth-Kopfh&ouml;rer sind wirklich unglaublich\n\n40dB aktive Ger&auml;uschunterdr&uuml;ckung, sofort in die Musikwelt eintauchen\n30 Stunden Akkulaufzeit, eine Woche Pendeln ohne Aufladen\nKristallklare Anrufe wie von Angesicht zu Angesicht\nHalb-In-Ear-Design, langes Tragen ohne Schmerzen\n\nZeitlich begrenztes Angebot, klicken Sie auf den Link unten!",
-    "timestamp": "2026-01-20 10:30:05"
-  }
-]
+Teste nur drei Situationen:
+
+1. **Leer öffnen:** Klicke ohne Eingaben und prüfe, ob die Seite fehlende Angaben erklärt.
+2. **Normal erzeugen:** Lade ein Bild hoch, erzeuge Inhalt und prüfe die Warteanzeige sowie den nächsten Schritt nach dem Ergebnis.
+3. **Einen Fehler auslösen:** Lade eine nicht unterstützte Datei hoch oder lass die Anfrage scheitern. Eingaben müssen erhalten bleiben und ein neuer Versuch möglich sein.
+
+Notiere die Hindernisse. Im nächsten Abschnitt beheben wir sie.
+
+Eine KI-IDE kann den Code untersuchen, ersetzt aber nicht die tatsächliche Bedienung:
+
+```text
+Ändere den Code noch nicht.
+
+Prüfe das aktuelle Projekt anhand dieser Nutzeraufgabe:
+Ein Produktbild hochladen, die nötigen Angaben eintragen,
+Text erzeugen, das Ergebnis prüfen und kopieren oder speichern.
+
+Nenne die beteiligten Seiten und Dateien
+und die Stellen, an denen der Ablauf derzeit abbrechen könnte.
 ```
 
-**Implementierungs-Prompt:**
+Die KI-IDE kann verdächtigen Code finden. Ob die Seite verständlich ist, weißt du erst nach dem eigenen Test.
 
-> "Bitte implementiere eine Chat-Verlauf-Speicherfunktion. Unterst&uuml;tze das Speichern von Nutzer- und AI-Konversationsaufzeichnungen als JSON-Datei (oder verwende LocalStorage). Lade beim &Ouml;ffnen der Seite automatisch den Verlauf und unterst&uuml;tze das Anzeigen und L&ouml;schen einzelner Konversationsaufzeichnungen."
+## 2. Behebe die Stellen, an denen Nutzer häufig hängen bleiben
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="1" :items="[
-      { title: 'Kette vervollst&auml;ndigen', description: 'Von Einzelfunktion zum vollst&auml;ndigen Kreislauf' },
-      { title: 'Seele einhauchen', description: 'Echte Gesch&auml;ftsdaten simulieren' },
-      { title: 'Feedback-Iteration', description: 'Basierend auf echtem Feedback verbessern' },
-      { title: 'Abschlussprojekt', description: 'Ihre Abschlussarbeit' }
-    ]" />
-  </ClientOnly>
-</div>
+Nach einem vollständigen Durchlauf erscheinen Probleme meistens zu vier Zeitpunkten: beim ersten Öffnen, während des Wartens, nach dem Ergebnis und bei einer fehlgeschlagenen Anfrage. Eine komplizierte Gestaltung ist nicht nötig. Die Person muss nur wissen, was geschieht und was sie als Nächstes tun kann.
 
-## 2. Seele einhauchen: Echte Daten simulieren (Mock Data)
+### 2.1 Ist die erste Handlung klar?
 
-Eine leere Seite kann niemanden &uuml;berzeugen. Stellen Sie sich vor, Sie pr&auml;sentieren einen "E-Commerce-Material-Workspace", aber der Verlauf ist v&ouml;llig leer oder zeigt nur eine Zeile "test / test / test".
-F&uuml;r die bestm&ouml;gliche Demo-Wirkung m&uuml;ssen wir "realistische Daten f&auml;lschen", damit Ihr Prototyp wie ein echtes Produkt aussieht, das seit einem halben Jahr in Betrieb ist.
+Eine leere Seite sollte nicht nur aus einem Eingabefeld bestehen. Ergänze eine kurze Erklärung, ein Beispiel oder einen Hinweis zu unterstützten Bildformaten und Dateigrößen in der Nähe des Uploads.
 
-### 2.1 AI beim Entwerfen der Datenstruktur helfen lassen
+Hat das Formular viele Felder, behalte nur die für ein gutes Ergebnis nötigen Angaben. Produktname, Bild und Hauptmerkmale können Pflicht sein; Marke, Referenzlink und genaue Stileinstellungen gehören unter „Weitere Einstellungen“. Neue Nutzer sollten nicht erst ein langes Formular ausfüllen müssen.
 
-Wir m&uuml;ssen nicht selbst &uuml;berlegen, wie jedes Feld hei&szlig;en soll (z.B. `name` oder `title`). Das k&ouml;nnen wir komplett AI &uuml;berlassen.
+### 2.2 Reagiert die Seite nach dem Klick?
 
-Sie m&uuml;ssen AI nur Ihr **Gesch&auml;ftsszenario** mitteilen:
+Eine KI-Anfrage kann mehrere Sekunden dauern. Nach dem Klick sollte der Button „Wird erzeugt“ anzeigen und weitere Klicks vorübergehend verhindern. Eingaben dürfen nicht plötzlich verschwinden und die Seite sollte nicht zu einem leeren Ergebnis springen.
 
-> **Prompt-Beispiel:**
-> "Ich arbeite an einem Prototyp f&uuml;r einen **Douyin E-Commerce Material-Workspace**.
-> Bitte entwerfe eine JSON-Datenstruktur, die eine 'Produktaufgabe' beschreibt.
-> Diese Aufgabe sollte enthalten: Produktbasisinformationen (Name, Kategorie), Eingabematerialien (Bild-Links) sowie AI-generierte Ergebnisse (Titel, Copywriting, Poster-Bild).
-> Bitte gib mir direkt ein JSON-Beispiel."
+![Wartezustand während der Erzeugung von Produktinhalten](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
 
-AI wird basierend auf Ihrer Beschreibung automatisch Felder wie `productName`, `generatedContent` usw. vorschlagen.
+*Ein Wartezustand braucht keine aufwendige Animation. Zeige, dass die Arbeit begonnen hat, und erhalte Eingaben und Seitenposition – das verhindert bereits die meiste Verwirrung.*
 
-### 2.2 AI "realistische" Daten in Batch produzieren lassen
+Bei Bild- oder Videoaufträgen mit Warteschlange kannst du „In Warteschlange“ und „Wird erzeugt“ anzeigen. Erfinde keinen genauen Prozentwert, wenn die API keinen Fortschritt liefert.
 
-Nachdem die Datenstruktur steht, ist der n&auml;chste Schritt, AI beim "Ausf&uuml;llen" zu helfen und einen Satz realistisch aussehender Daten zu generieren.
+### 2.3 Was kann man nach dem Ergebnis tun?
 
-**Prompt-Techniken:**
-Sie k&ouml;nnen AI nicht einfach sagen "Generiere Daten f&uuml;r mich". Sie m&uuml;ssen es wie einem Praktikanten eine Aufgabe stellen und ihm **Gesch&auml;ftskontext** und **Inhaltsanforderungen** mitteilen:
+Die KI-Antwort ist nicht das Ende des Ablaufs. Nutzer prüfen Fakten, ändern Formulierungen und übernehmen das Ergebnis in den nächsten Arbeitsschritt. Der Ergebnisbereich braucht daher mindestens eine Aktion: Bearbeiten, Kopieren, Herunterladen oder Neu erzeugen.
 
-- **Gesch&auml;ftskontext**: Erkl&auml;ren Sie AI, dass wir im "Douyin E-Commerce" t&auml;tig sind, also sollten Produkttitel aufmerksamkeitsstark sein (z.B. "Figur-schmeichelndes Wunder", "Studierenden-Must-have") und das Copywriting umgangssprachlich sein.
-- **Bildanforderungen**: Damit der Prototyp gut aussieht, sollten die Bilder keine schwarz-wei&szlig;en Platzhalter sein, sondern am besten zuf&auml;llige bunte Landschafts- oder Produktfotos.
+![Ergebnisseite nach der Verbindung von Bilderkennung und Texterzeugung](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
 
-> **Prompt-Beispiel:**
-> "Bitte generiere basierend auf der soeben erstellten Struktur 10 realistische Simulationsdaten.
-> (Hinweis: Nicht zwingend im JSON-Format. Wenn Sie Frontend schreiben, k&ouml;nnen Sie direkt JavaScript-Arrays generieren; bei Python Listen.)
->
-> **Gesch&auml;ftsszenario-Anforderungen**:
->
-> 1. Angenommen, dies ist ein Kaufhaus, das Produkte in den Kategorien 'Damenmode', 'Elektronik' und 'Kosmetik' umfasst.
-> 2. **Generierte Titel und Copywriting sollten sehr 'Douyin-Stil' sein**: Titel sollten Emojis enthalten, Copywriting im umgangssprachlichen 'Unglaublich!'-Stil verfasst sein.
-> 3. **Bildfeld**: Bitte einheitlich das Format `https://picsum.photos/seed/{random_id}/300/400` verwenden, um sicherzustellen, dass jedes Bild anders ist."
+*Das hochgeladene Bild bleibt über dem Ergebnis sichtbar. Nutzer können den Text mit dem Original vergleichen, statt nur eine Modellantwort anzunehmen.*
 
-**Generiertes Mock-Data-Beispiel:**
+Kann das Modell eine Angabe nicht bestätigen, markiere sie, damit die Person sie ergänzt oder entfernt. Das passt besser zur echten Arbeit als ein Absatz, der als „endgültige Antwort“ erscheint.
 
-```javascript
-export const mockProductTasks = [
-  {
-    id: 'task_001',
-    name: 'Sommerkleid im franz&ouml;sischen Vintage-Blumenstil',
-    status: 'completed',
-    input: {
-      category: 'Damenmode',
-      features: ['Taillenbetonung', 'Figurschmeichelnd', 'Elegant'],
-      originalImage: 'https://picsum.photos/seed/dress_input/300/400'
-    },
-    output: {
-      generatedTitle: 'Wer es tr&auml;gt sieht toll aus! Dieses franz&ouml;sische Blumenkleid ist wirklich unglaublich',
-      generatedCopy:
-        'M&auml;dels! Dieses Kleid ist wirklich figurschmeichelnd! Die taillenbetonende Design ist genial, sofort hat man eine Taille. Der Stoff ist sehr atmungsaktiv, im Sommer tr&auml;gt man es gar nicht schw&uuml;l. Perfekt f&uuml;r Dates und Shopping! ',
-      generatedPosterImage: 'https://picsum.photos/seed/dress_output/300/400'
-    },
-    createdAt: '2026-01-20T10:00:00Z'
-  },
-  {
-    id: 'task_002',
-    name: 'Super Noise-Cancelling Bluetooth Kopfh&ouml;rer Pro',
-    status: 'completed',
-    input: {
-      category: 'Elektronik',
-      features: ['Noise-Cancelling', 'Ultra-Lange Akkulaufzeit', 'Niedrige Latenz'],
-      originalImage: 'https://picsum.photos/seed/tech_input/300/400'
-    },
-    output: {
-      generatedTitle: ' Endlich gefunden! Die Noise-Cancelling dieser Kopfh&ouml;rer ist unglaublich stark!',
-      generatedCopy:
-        'Aufsetzen und die Welt wird sofort leise. Unglaubliche Klangqualit&auml;t, Musik h&ouml;ren wie live. Die Akkulaufzeit ist auch beeindruckend, einmal aufladen reicht f&uuml;r eine Woche! Ein Must-have f&uuml;r Studierende!',
-      generatedPosterImage: 'https://picsum.photos/seed/tech_output/300/400'
-    },
-    createdAt: '2026-01-21T14:30:00Z'
-  }
-  // ... weitere Daten
-]
+### 2.4 Kann man nach einem Fehler fortfahren?
+
+Netzwerkunterbrechung, verbrauchtes Kontingent oder ein ungeeignetes Dateiformat können eine Anfrage scheitern lassen. Der vollständige technische Fehler ist für normale Nutzer unnötig; die Seite muss aber sagen, dass der Vorgang nicht abgeschlossen wurde, und einen neuen Versuch oder eine Änderung erlauben.
+
+Zum Beispiel:
+
+- **Nicht unterstütztes Bildformat:** Unterstützte Formate nennen und neue Auswahl erlauben.
+- **Pflichtangabe fehlt:** Hinweis am zugehörigen Feld statt nur „Ungültige Parameter“.
+- **KI-Dienst vorübergehend nicht verfügbar:** Eingaben erhalten und „Erneut erzeugen“ anbieten.
+- **Ergebnis ungeeignet:** Eingabe anpassen und erneut versuchen, ohne von vorn zu beginnen.
+
+Wenn eine Aktualisierung ein langes Formular löschen würde, kannst du den Entwurf vorübergehend in LocalStorage speichern. Speichere nur gewöhnliche Daten zum Fortsetzen, niemals API Key, echte Kundendaten oder sensible Dateien im Browser.
+
+Übergib die gefundenen Probleme mit einer konzentrierten Anfrage an die KI-IDE:
+
+```text
+Prüfe den Ablauf „Produktbild hochladen und Text erzeugen“
+zu vier Zeitpunkten: Start, Warten, Erfolg und Fehler.
+
+Behebe zuerst Probleme, die das Fortsetzen verhindern:
+- Pflichtfelder haben keinen klaren Hinweis;
+- der Button kann während der Anfrage mehrfach geklickt werden;
+- nach einem Fehler verschwinden Eingaben;
+- im Ergebnis fehlen Bearbeiten, Kopieren und Neu erzeugen.
+
+Nenne vor der Änderung die betroffenen Dateien.
+Gib nach Abschluss Schritte für einen manuellen Test an.
 ```
 
-### 2.3 (Fortgeschritten) Mit LocalStorage "Pseudo-CRUD" implementieren
+## 3. Lass das Produkt von einer anderen Person benutzen
 
-Wenn Sie m&ouml;chten, dass die generierten "Simulationsdaten" nicht nur angezeigt, sondern auch gel&ouml;scht, ge&auml;ndert und sogar nach dem Aktualisieren der Seite noch vorhanden sind, k&ouml;nnen Sie `LocalStorage` verwenden.
+Wenn du deine eigene Seite lange ansiehst, wirken alle Schritte selbstverständlich. Eine Person, die nicht an der Entwicklung beteiligt war, findet oft innerhalb weniger Minuten übersehene Probleme.
 
-> **Prompt-Beispiel:**
-> "Bitte implementiere eine Datenspeicherfunktion.
->
-> 1. Priorit&auml;t: Zun&auml;chst Daten aus `localStorage` lesen.
-> 2. Wenn `localStorage` leer ist, mit den generierten Mock-Daten initialisieren und in `localStorage` speichern.
-> 3. Schreibe zus&auml;tzlich `addProductTask` und `deleteProductTask` Funktionen, die bei jeder Operation `localStorage` synchron aktualisieren."
+Wähle möglichst jemanden, der das Werkzeug wirklich verwenden würde. Für unser Beispiel eignet sich eine Person mit Erfahrung in Shopbetrieb oder Produktinhalten. Wenn du niemanden findest, hilft auch ein Freund, der die Seite noch nie gesehen hat.
 
-Durch diesen Schritt erh&auml;lt Ihr Prototyp "Ged&auml;chtnis" und die Nutzererfahrung ist nahezu identisch mit einem echten Produkt.
+### 3.1 Nenne nur die Aufgabe
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="2" :items="[
-      { title: 'Kette vervollst&auml;ndigen', description: 'Von Einzelfunktion zum vollst&auml;ndigen Kreislauf' },
-      { title: 'Seele einhauchen', description: 'Echte Gesch&auml;ftsdaten simulieren' },
-      { title: 'Feedback-Iteration', description: 'Basierend auf echtem Feedback verbessern' },
-      { title: 'Abschlussprojekt', description: 'Ihre Abschlussarbeit' }
-    ]" />
-  </ClientOnly>
-</div>
+Erkläre zu Beginn nur das Ziel:
 
-## 3. Feedback sammeln und schnell iterieren
+> Erzeuge mit diesem Werkzeug aus dem Produktbild einen Titel und Verkaufsargumente. Prüfe den Inhalt und kopiere die Version, die du weiterbearbeiten würdest.
 
-Man kann kein gutes Produkt hinter verschlossenen T&uuml;ren entwickeln. Jetzt hat Ihr Prototyp "Kernfunktionen" + "vollst&auml;ndige Kette" + "Demo-Daten" und es ist Zeit, ihn anderen zu zeigen.
+Beobachte zuerst und sage nicht sofort, wo geklickt werden muss. Notiere Pausen, Rücksprünge, wiederholte Klicks und Fragen. Eine sofortige Erklärung verdeckt ein Problem, das die Seite selbst lösen sollte.
 
-### 3.1 Wen zum Testen einladen? Wie testen?
+Schon ein oder zwei Personen entdecken viele offensichtliche Schwierigkeiten. Ein formaler Bericht ist unnötig; notiere einfach, wo sie anhielten.
 
-- **Freunde/Kollegen finden**: Sie m&uuml;ssen nicht technikversiert sein, sie m&uuml;ssen es nur einmal ausprobieren.
-- **Beobachten statt leiten**: Nicht "Klick hier" sagen, sondern sehen, wohin sie klicken w&uuml;rden. Wenn sie den Button nicht finden, liegt ein Designproblem vor.
-- **"Wizard of Oz"-Methode**: Wenn Ihre AI noch nicht angeschlossen ist, k&ouml;nnen Sie manuell im Hintergrund (oder in der Datenbank) Daten &auml;ndern, um die AI-R&uuml;ckgabe zu simulieren und zun&auml;chst zu validieren, ob Nutzer diese Funktion ben&ouml;tigen.
+Wenn nach dem Öffnen nichts geschieht, ergänze eine kurze Zweckbeschreibung. Bei wiederholtem „Erzeugen“ machst du die Warteanzeige deutlicher. Wenn nach dem Ergebnis unklar ist, was folgt, ergänzt du Bearbeiten oder Kopieren. Wenn nach einem Fehler alles neu eingetragen werden muss, bewahrst du die Daten und bietest einen neuen Versuch an.
 
-### 3.2 Mit Bugs und Kritik umgehen
+### 3.2 Sprich nach dem Test
 
-- **Layout-Probleme**: Auf verschiedenen Bildschirmgr&ouml;&szlig;en kann es chaotisch aussehen.
-  - **Aktion**: Screenshot an AI IDE senden &rarr; "Bei dieser Bildschirmbreite ist es verschoben, bitte reparieren."
-- **Ungeschickte Bedienung**: "Dieser Prozess ist zu umst&auml;ndlich".
-  - **Aktion**: Den Vorschlag an AI IDE weitergeben &rarr; "Nutzer finden Hochladen und dann Generieren zu langsam, kann man es zu einem Klick zusammenfassen?"
-- **Neue Anforderungen**: "Wenn es diese Funktion g&auml;be, w&auml;re es toll."
-  - **Aktion**: Pr&uuml;fen, ob es zum Kern geh&ouml;rt; wenn ja, AI eine vereinfachte Version schnell implementieren lassen.
+Wenn die Person die Aufgabe beendet oder aufgegeben hat, frage:
 
-**Merken: In dieser Phase ist AI Ihr bester Modifikationsassistent. Sie sind nur f&uuml;r die Problemerkennung verantwortlich, die Code-&Auml;nderung &uuml;bernimmt AI.**
+1. Welcher Schritt war am unsichersten?
+2. Welche Teile des Ergebnisses würdest du direkt verwenden und welche immer ändern?
+3. Würdest du das Werkzeug bei derselben Aufgabe erneut nutzen? Warum?
 
-<div style="margin: 50px 0;">
-  <ClientOnly>
-    <StepBar :active="3" :items="[
-      { title: 'Kette vervollst&auml;ndigen', description: 'Von Einzelfunktion zum vollst&auml;ndigen Kreislauf' },
-      { title: 'Seele einhauchen', description: 'Echte Gesch&auml;ftsdaten simulieren' },
-      { title: 'Feedback-Iteration', description: 'Basierend auf echtem Feedback verbessern' },
-      { title: 'Abschlussprojekt', description: 'Ihre Abschlussarbeit' }
-    ]" />
-  </ClientOnly>
-</div>
+Frage nicht nur „War es einfach?“. Ein höfliches „War gut“ hilft wenig. Konkrete Handlungen und Beispiele sind wertvoller.
 
-## 4. Abschlussprojekt: Vervollst&auml;ndigen Sie Ihre "Abschlussarbeit"
+::: warning Bei echten Materialien
+Produktbilder, Aufnahmen oder Dokumente einer Testperson können echte Geschäftsdaten enthalten. Erkläre vorab, an welche Art KI-Dienst sie gesendet werden, nutze keine nicht freigegebenen Kundendaten und lösche anschließend nicht mehr benötigte Dateien.
+:::
 
-Herzlichen Gl&uuml;ckwunsch! Sie haben den gesamten Prozess von "Anforderungen" &uuml;ber "Prototyp" bis "AI-Integration" durchlaufen. Jetzt ist es Zeit, Ihr finales Ergebnis zu pr&auml;sentieren.
+## 4. Behebe die Blockade und teste erneut
 
-**Dieses Abschlussprojekt ist nicht mehr auf den "E-Commerce Material-Workspace" beschr&auml;nkt.** Sie m&uuml;ssen basierend auf Ihren Interessen oder Branchenhintergrund einen einzigartigen AI-Produktprototyp entwickeln.
+Der Test kann eine lange Problemliste erzeugen. Du musst nicht alles beheben. Beginne mit Punkten, die den Abschluss verhindern oder das Ergebnis unglaubwürdig machen.
 
-### Themenauswahl und Anforderungen
+Nutze diese Reihenfolge:
 
-Sie m&uuml;ssen das Szenario w&auml;hlen, das Ihnen am ehesten entspricht, aus der **[Mehrbranchen-Szenarioreferenz](../appendix-industry-scenarios/index.md)**, oder ein v&ouml;llig neues Szenario basierend auf Ihren eigenen Ideen entwerfen.
+1. **Aufgabe kann nicht beendet werden:** Button defekt, Anfrage fehlgeschlagen oder Ergebnis nicht weiterverwendbar.
+2. **Ergebnis offensichtlich unglaubwürdig:** erfundene Angaben, keine Prüfung oder fehlende Quellen.
+3. **Bedienung leicht missverständlich:** Startpunkt oder aktueller Zustand unklar.
+4. **Aufwand zu hoch:** Schritte wiederholen sich, Eingaben verschwinden oder Warten bleibt ohne Rückmeldung.
+5. **Stil und neue Funktionen:** Gestaltung und Wünsche, die die Kernaufgabe nicht blockieren.
 
-**Das Projekt muss alle Inhalte aus den vorherigen Lektionen integriert nutzen:**
+Wähle die wichtigsten ein bis drei Punkte. Teste danach erneut. Wenn möglich, lade dieselbe Person wieder ein. Eine Änderung hilft erst, wenn das ursprüngliche Hindernis wirklich verschwunden ist.
 
-1. **Prototyp-Erstellung**: Frontend-Technologie verwenden, um eine &auml;sthetische, benutzerfreundliche Oberfl&auml;che zu erstellen.
-2. **Anforderungskontrolle**: Nicht alles auf einmal, aber die Kernfunktionslogik muss geschlossen sein.
-3. **API-Integration**: Echte AI-Modelle (LLM/VLM etc.) integrieren, um der Anwendung echte Intelligenz zu verleihen.
-4. **Eine spielbare Anwendung erstellen**: Nicht nur statische Seiten, sondern eine dynamische Anwendung mit Datenfluss und Interaktions-Feedback.
+### 4.1 Teile der KI-IDE eine konkrete Beobachtung mit
 
-### Projekt-Outputs
+Sage nicht nur „Optimiere die Seite“. Beschreibe, was du gesehen hast:
 
-Am Ende m&uuml;ssen Sie Folgendes einreichen:
+```text
+Nutzeraufgabe: ein Produktbild hochladen und drei Verkaufsargumente erzeugen.
 
-1. **Eine vollst&auml;ndige Prototyp-Anwendung**: Online bereitgestellt oder lokal ausf&uuml;hrbar, mit vollst&auml;ndiger Nutzungskette.
-2. **Ein 30-Sekunden-Demo-Video**: Ein Video aufnehmen, das kurz Ihr Anwendungsszenario vorstellt und die Kernfunktionen in Aktion zeigt.
+Beobachtetes Problem:
+Zwei Testpersonen klickten mehrfach auf „Erzeugen“, weil die Seite
+nicht deutlich zeigte, dass die Anfrage begonnen hatte.
+Dadurch entstanden doppelte Aufträge.
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">Abschlussherausforderung-Checkliste</div>
-  </template>
+Ändere die aktuelle Seite:
+1. Deaktiviere den Button nach dem Start und zeige „Wird erzeugt“.
+2. Stelle ihn nach Erfolg oder Fehler wieder her.
+3. Lösche bereits eingegebene Informationen nicht.
+4. Erkläre den manuellen Test für Mehrfachklicks und Fehler.
+```
 
-  <p>
-    Dies ist die letzte Herausforderung von Stage 1. Bitte &uuml;berpr&uuml;fen Sie Ihr Werk anhand der folgenden Checkliste:
-  </p>
+Eine genaue Anfrage vermeidet unpassende Änderungen und zeigt dir, was du anschließend prüfen musst.
 
-  <div style="font-weight: bold; margin-bottom: 10px;">Kernfunktionen-Selbstpr&uuml;fung</div>
-  <ul style="list-style-type: none; padding-left: 0;">
-    <li><label><input type="checkbox" disabled /> <strong>Klares Szenario</strong>: Ein konkretes Branchen- oder Anwendungsszenario ausgew&auml;hlt</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Geschlossene Logik</strong>: Kernprozess funktioniert, nicht nur der Happy Path</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>AI-getrieben</strong>: Echte LLM-API aufgerufen, keine vordefinierten Antworten</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Vollst&auml;ndige Erfahrung</strong>: Loading, Fehlerbehandlung und Simulationsdaten enthalten</label></li>
-  </ul>
+### 4.2 Teste danach erneut von Anfang an
 
-  <div style="font-weight: bold; margin: 20px 0 10px;">Liefergegenst&auml;nde</div>
-  <ul style="list-style-type: none; padding-left: 0;">
-    <li><label><input type="checkbox" disabled /> <strong>Prototyp-Anwendung</strong>: Code ist fertiggestellt und ausf&uuml;hrbar</label></li>
-    <li><label><input type="checkbox" disabled /> <strong>Demo-Video</strong>: Etwa 30 Sekunden, zeigt klar die Kern-Highlights</label></li>
-  </ul>
-</el-card>
+Die Korrektur an einer Stelle kann eine andere beeinflussen. Probiere vor dem Teilen vier Situationen:
 
-## N&auml;chste Schritte
+- eine normale Eingabe mit allen Informationen;
+- ein fehlendes Pflichtfeld;
+- eine fehlgeschlagene oder abgelaufene API-Anfrage;
+- Bearbeiten, Kopieren oder Neu erzeugen nach dem Ergebnis.
 
-Nach Abschluss des Abschlussprojekts verf&uuml;gen Sie &uuml;ber die F&auml;higkeit, "unabh&auml;ngig AI-Anwendungsprototypen zu entwickeln".
-In Stage 2 werden wir uns mit komplexerer Full-Stack-Entwicklung befassen und lernen, wie man diesen Prototypen in eine echte, online-f&auml;hige, datenbankgest&uuml;tzte Anwendung mit Benutzersystem verwandelt.
+Speichert das Produkt Entwürfe, aktualisiere auch die Seite. Prüfe die neue Funktion und stelle sicher, dass der ursprüngliche Kernablauf nicht beschädigt wurde.
 
-Wir sehen uns im n&auml;chsten Stage!
+## 5. Bereite das Werk zum Teilen vor
+
+Das Werk „läuft“ nun nicht nur auf deinem Computer. Eine andere Person hat es benutzt und du hast ein echtes Problem verbessert. Bereite Zugang und Erklärung vor, damit mehr Menschen es verstehen.
+
+### 5.1 Erkläre es in einer Minute
+
+Gehe in dieser Reihenfolge vor:
+
+1. **Wer hat welches Problem:** E-Commerce-Mitarbeiter ordnen für jeden ersten Entwurf erneut Bilder und Verkaufsargumente.
+2. **Wie hilft das Produkt:** Bild und Angaben hochladen und einen weiter bearbeitbaren Entwurf erhalten.
+3. **Welche KI-Fähigkeiten nutzt es:** Bildverständnis und Texterzeugung.
+4. **Wie endet die Aufgabe:** Hochladen, Erzeugen, Prüfen, Bearbeiten und Kopieren.
+5. **Was änderte sich nach dem Test:** etwa sichtbares Warten und erhaltene Eingaben nach einem Fehler.
+
+Lass andere zuerst das Produkt verstehen, bevor du Frameworks und Modellnamen aufzählst.
+
+### 5.2 Bereite alles Nötige vor
+
+Stelle vor dem Teilen drei Dinge bereit:
+
+1. **Eine ausführbare Anwendung:** Gib einen Link an; ohne Deployment erklärst du Startbefehl und Adresse.
+2. **Ein 30–60 Sekunden langes Demo-Video:** Zeige die Kernaufgabe von der Eingabe bis zum Ergebnis, nicht nur schnelle Seitenwechsel.
+3. **Eine einseitige Beschreibung:** Zielgruppe, Problem, Ablauf, KI-Fähigkeit, eine echte Rückmeldung und die daraus entstandene Änderung.
+
+Ist Fernzugriff noch nicht möglich, reichen lokale Ausführung und Demo-Video als Stage-1-Ergebnis. Wichtig ist, dass jemand das Werk versteht und den vollständigen Kernablauf sieht.
+
+### 5.3 Dieses Werk fortsetzen oder ein neues beginnen?
+
+Du kannst den E-Commerce-Arbeitsbereich weiterführen oder denselben Prozess für Besprechungen, Audioinhalte, Lernhilfe oder ein Branchenwerkzeug nutzen. Der [Leitfaden zu KI-Anwendungsszenarien](../appendix-industry-scenarios/index.md) hilft bei der Suche.
+
+Wechsle nicht nur aus dem Wunsch nach Originalität zu einem fremden Thema. Ein kleines Problem aus Studium, Arbeit oder Alltag, das echte Menschen getestet haben, überzeugt mehr als eine funktionsreiche Seite, die niemand benutzt hat.
+
+### Vor dem Versenden
+
+Öffne den Link ein letztes Mal und schließe den Ablauf ab. Prüfe, dass andere ihn öffnen können, die KI ein Ergebnis zurückgibt und weder Seite noch Screenshots einen API Key zeigen. Kläre bei fremden Bildern, Tönen oder Dokumenten auch die Nutzungserlaubnis.
+
+## 6. 📚 Aufgabe
+
+<StageAssignmentCard title="Schließe dein Stage-1-Werk ab und veröffentliche es">
+
+  <p>Füge keine neue Funktion hinzu. Bereite das aktuelle Werk vor und gib es wirklich einer Person zum Testen.</p>
+
+  <ol>
+    <li>
+      <strong>Einmal vollständig benutzen</strong>
+      <ul>
+        <li>Mit dem Öffnen beginnen und bis zum Erhalten, Bearbeiten oder Speichern des Ergebnisses fortfahren.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Eine Person testen lassen</strong>
+      <ul>
+        <li>Die Oberfläche nicht zuerst erklären, den Stillstand beobachten und ein Problem beheben.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Das Werk teilen</strong>
+      <ul>
+        <li>Link oder Startanleitung, ein 30–60-Sekunden-Video und eine kurze Einführung vorbereiten.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>Stage 1 ist wirklich abgeschlossen, wenn eine andere Person das Werk öffnen und einen Durchlauf ohne Hilfe beenden kann.</p>
+</StageAssignmentCard>
+
+## Nächster Schritt
+
+Du hast nun einen vollständigen Weg zurückgelegt: von einem echten Problem über eine begrenzte erste Version und einen interaktiven Prototyp bis zur KI-Integration, einem Nutzertest und einer Verbesserung.
+
+In Stage 2 lernen wir Datenbanken, Konten, Zahlungen, Deployment sowie vollständigere Frontend- und Backend-Entwicklung. Damit kann das Produkt mehr Nutzer und echte Daten bedienen. Der Ausgangspunkt bleibt jedoch gleich: zuerst eine wertvolle Nutzeraufgabe vollständig lösen.
 
 <RelatedArticlesSection
-  title="Weiter fortgeschritten"
-  description="Herzlichen Gl&uuml;ckwunsch zum Abschluss von Stage 1. Diese Kapitel helfen Ihnen, in die professionelle Entwicklung &uuml;berzugehen."
+  title="Weiterlernen"
+  description="Nach Stage 1 kannst du mit den folgenden Engineering-Themen fortfahren."
   :items="relatedArticles"
 />
+
+<StageOneCompletion />

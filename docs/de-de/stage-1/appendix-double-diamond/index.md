@@ -4,6 +4,7 @@ description: 'Ein Einf&uuml;hrungsartikel zum Double-Diamond-Modell f&uuml;r Ein
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = 'Etwa <strong>1,5 Stunden</strong>'
 </script>
 
@@ -528,12 +529,16 @@ Das ist besonders hilfreich f&uuml;r Einsteiger, da man leicht dazu neigt, "Prot
 
 ## Assignments
 
+<StageAssignmentCard title="Deine Idee mit dem Double Diamond ordnen">
+
 Bitte bearbeiten Sie die folgenden Aufgaben basierend auf dem obigen Inhalt:
 
 1. W&auml;hlen Sie eine Produktidee, an der Sie k&uuml;rzlich gedacht haben, und erstellen Sie einen Entwurf f&uuml;r die vier Schritte Discover, Define, Develop, Deliver
 2. In der Define-Phase: Zwingen Sie sich, das Problem auf einen konkreten Satz zu verdichten
 3. In der Develop-Phase: Listen Sie mindestens 3 verschiedene L&ouml;sungsans&auml;tze auf, anstatt nur den ersten Gedanken zu verfolgen
 4. In der Deliver-Phase: Beschreiben Sie eine minimale validierbare Version, die Sie innerhalb einer Woche liefern k&ouml;nnen
+
+</StageAssignmentCard>
 
 ## Weiterf&uuml;hrende Literatur
 

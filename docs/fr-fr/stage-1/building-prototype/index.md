@@ -4,6 +4,7 @@ description: "Vivre le cycle complet de l'analyse métier à la réalisation d'u
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = 'Environ <strong>8 heures</strong>'
@@ -352,11 +353,8 @@ Si vous n'êtes pas encore familier avec l'utilisation basique de l'IDE AI (comm
 #### 2.2.2 Commencer à générer le code
 
 Vous avez maintenant obtenu le prompt initial. Prenons le premier style de prompt comme exemple, et laissons l'IA nous aider à générer le code. Créez d'abord une fenêtre et le dossier correspondant, et ouvrez le dossier (initialisez un nouveau projet à l'emplacement de votre choix) :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-28-44.png)
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-30-00.png)
 
 Dans la barre latérale, choisissez un modèle que vous aimez (recommandé : gemini, gpt, glm, kimi, minimax, etc.), et saisissez le prompt obtenu à la première étape :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-31-41.png)
 
 Après avoir cliqué sur Générer, nous verrons une séquence familière : l'IA va planifier la structure de répertoires du projet, les fichiers nécessaires, et donner le contenu initial de chaque fichier.
 
@@ -370,10 +368,8 @@ Pendant la génération, l'AI Agent **s'arrête souvent pour attendre votre sais
 :::
 
 N'oubliez pas non plus d'appuyer sur Entrée pour confirmer (sinon vous resterez bloqué en attente — certains IDE AI ne rencontrent pas ce problème) :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-33-03.png)
 
 Si vous rencontrez le scénario suivant, cela signifie qu'un service local a déjà été démarré. Vous devez cliquer pour passer, sinon vous resterez sur cet écran (si rien ne s'affiche après la génération du code, vous devrez dire activement « aide-moi à démarrer ce projet ») :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-38-11.png)
 
 ::: info 💡 Explication du scénario
 **Explication du scénario** : vous avez créé un projet React + TypeScript avec `npm create vite@latest` (easy-vibe-web). Une fois la création terminée, l'ordinateur va automatiquement « lancer » la page web, pour que vous puissiez voir le résultat immédiatement.
@@ -395,13 +391,11 @@ Une fois toutes les confirmations terminées, attendez que l'agent s'exécute qu
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
 
 On peut voir qu'il y a déjà une première version fonctionnelle, mais la page frontend est vraiment laide. À ce stade, vous pouvez essayer de dialoguer directement avec l'IA pour optimiser l'affichage de l'interface :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-01-16.png)
 
 Après optimisation, nous obtenons une interface plus esthétique :
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
 
 Vous pouvez modifier les fonctionnalités de la page selon vos besoins, joindre des captures d'écran et poser des questions librement, par exemple : « Je n'ai pas besoin de la fonctionnalité d'import par lot pour l'instant, aide-moi à la supprimer », « Il y a trop de champs à remplir à gauche, garde uniquement xxxxx ». Vous pouvez même vous référer à d'autres sites matures — par exemple, vous pouvez directement « vous inspirer » d'un produit de design de Google (vous pouvez coller une capture d'écran d'un site mature que vous aimez) :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-13-12.png)
 
 Et finalement obtenir :
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
@@ -561,12 +555,9 @@ L'IA générera généralement un checklist, à partir duquel vous pouvez décid
 
 ## 5. 📚 Exercice : reproduisez votre propre atelier de contenus TikTok e-commerce
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🚀 Défi : reproduire l'atelier de contenus e-commerce</div>
-  </template>
+<StageAssignmentCard title="Terminer votre atelier de contenu e-commerce">
 
-  <p>
+<p>
     En vous référant aux prompts et au contenu de ce cours, réalisez un cycle complet :
   </p>
 
@@ -590,7 +581,8 @@ L'IA générera généralement un checklist, à partir duquel vous pouvez décid
       </ul>
     </li>
   </ul>
-</el-card>
+
+</StageAssignmentCard>
 
 ## Prochaine étape
 

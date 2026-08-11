@@ -15,6 +15,7 @@ No tengas miedo de equivocarte o de cambiar cosas. Recuerda:
 </div>
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = 'aprox. <strong>4 horas</strong> (puede hacerse en varias sesiones)'
@@ -441,12 +442,9 @@ Despues de ver estos casos te daras cuenta: **Snake es solo la punta del iceberg
 
 ## 📚 Tarea
 
-<el-card id="assignment-card" shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">🎯 Tarea del capitulo: construye tus primeros mini-juegos nativos de IA</div>
-  </template>
+<StageAssignmentCard title="Completa tus primeros minijuegos nativos de IA">
 
-  <p>
+<p>
     En esta seccion, has seguido los pasos para experimentar el proceso completo, desde "generar Snake conversacionalmente" hasta "comprender el pensamiento de diseno de los mini-juegos nativos de IA". Las siguientes tareas te ayudaran a convertir esa comprension en habilidades reales.
   </p>
 
@@ -470,7 +468,8 @@ Despues de ver estos casos te daras cuenta: **Snake es solo la punta del iceberg
   <p>
     Ese es el tutorial completo! Puede que necesites unas <strong>4 horas</strong> para completar todo el contenido y construir tu propio juego de Snake. No tengas prisa: explora, experimenta y disfruta del proceso. Si encuentras conceptos que no entiendes del todo en el camino, te recomendamos consultar las secciones correspondientes del apendice a continuacion.
   </p>
-</el-card>
+
+</StageAssignmentCard>
 
 ## Apendice
 

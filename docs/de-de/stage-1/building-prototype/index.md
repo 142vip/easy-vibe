@@ -4,6 +4,7 @@ description: 'Den vollständigen Kreislauf von der Geschäftsanalyse zur Multi-P
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 import { relatedArticlesMap } from '@theme/data/relatedArticles'
 
 const duration = 'Etwa <strong>8 Stunden</strong>'
@@ -368,11 +369,8 @@ Wenn Sie mit AI IDE (wie Cursor, Trae, Windsurf etc.) noch nicht vertraut sind, 
 #### 2.2.2 Mit der Code-Generierung beginnen
 
 Jetzt haben Sie den initialen Prompt erhalten. Wir nehmen den ersten Prompt-Stil als Beispiel und lassen AI uns beim Generieren von Code helfen. Erstellen Sie zuerst ein Fenster und den entsprechenden Ordner, öffnen Sie den Ordner (initialisieren Sie ein neues Projekt in Ihrem bevorzugten Ordner):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-28-44.png)
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-30-00.png)
 
 Wählen Sie in der Seitenleiste ein Modell Ihrer Wahl (empfohlen: gemini, gpt, glm, kimi, minimax etc.) und geben Sie den Prompt aus dem ersten Schritt ein:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-31-41.png)
 
 Nach dem Klick auf Generieren sehen wir den vertrauten Vorgang: AI plant basierend auf dem Prompt die Verzeichnisstruktur des Projekts, die notwendigen Dateien und gibt den ursprünglichen Inhalt jeder Datei an.
 
@@ -386,10 +384,8 @@ Während des Generierungsprozesses hält der **AI Agent oft an und wartet auf Ih
 :::
 
 Vergessen Sie auch hier nicht, die Eingabetaste zu drücken, um die Informationen zu bestätigen (andernfalls geraten Sie in eine Warteschleife; einige AI IDEs haben dieses Problem nicht):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-33-03.png)
 
 Wenn Sie die folgende Szene sehen, bedeutet das, dass bereits ein lokaler Dienst gestartet wurde. Sie müssen auf Überspringen klicken, sonst bleiben Sie auf dieser Oberfläche (wenn nach der Code-Generierung nichts erscheint, müssen Sie aktiv sagen: "Hilf mir, dieses Projekt zu starten"):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-38-11.png)
 
 ::: info Szenario-Erklärung
 **Szenario-Beschreibung**: Sie haben mit `npm create vite@latest` ein React + TypeScript-Projekt (easy-vibe-web) erstellt. Nach Abschluss der Erstellung startet Ihr Computer automatisch die Webseite, damit Sie das Ergebnis sofort sehen können.
@@ -411,13 +407,11 @@ Nachdem alles bestätigt ist, warten Sie einen Moment, bis der Agent seine Arbei
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
 
 Man sieht bereits eine erste funktionale Ansicht, aber das Frontend sieht noch sehr unschön aus. Jetzt können wir versuchen, direkt mit AI zu dialogieren und die Oberfläche zu optimieren:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-01-16.png)
 
 Nach der Optimierung erhalten wir eine deutlich ansprechendere Oberfläche:
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
 
 Sie können die Webseiten-Funktionen nach Ihren eigenen Bedürfnissen anpassen, Screenshots anhängen und frei Fragen stellen, wie zum Beispiel: "Ich brauche die Batch-Import-Funktion derzeit nicht, bitte entfernen", "Links muss zu viel eingegeben werden, behalte nur xxxxx". Sie können sogar andere ausgereifte Websites als Referenz heranziehen &ndash; hier können wir direkt ein Design-Produkt von Google als "Referenz" verwenden (Sie können einen Screenshot einer ausgereiften Website einfügen, die Ihnen gefällt):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-13-12.png)
 
 Schließlich erhalten wir:
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
@@ -604,12 +598,9 @@ AI gibt normalerweise eine Checkliste aus. Basierend auf den Ergebnissen können
 
 ## 5. Hausaufgabe: Erstellen Sie Ihren eigenen Douyin E-Commerce-Workspace
 
-<el-card shadow="hover" style="margin: 20px 0; border-radius: 12px;">
-  <template #header>
-    <div style="font-weight: bold; font-size: 16px;">Herausforderung: E-Commerce-Material-Workspace nachbauen</div>
-  </template>
+<StageAssignmentCard title="Deinen E-Commerce-Content-Arbeitsplatz fertigstellen">
 
-  <p>
+<p>
     Referenzieren Sie die Prompts und Inhalte dieser Lektion und schließen Sie einen vollständigen Kreislauf ab:
   </p>
 
@@ -633,7 +624,8 @@ AI gibt normalerweise eine Checkliste aus. Basierend auf den Ergebnissen können
       </ul>
     </li>
   </ul>
-</el-card>
+
+</StageAssignmentCard>
 
 ## Nächste Schritte
 

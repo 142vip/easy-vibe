@@ -4,6 +4,7 @@ description: '제로 베이스 독자를 위한 Jobs to Be Done 입문 글입니
 ---
 
 <script setup>
+import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
 const duration = '약 <strong>1.5시간</strong>'
 </script>
 
@@ -481,12 +482,16 @@ AI의 출력은 다음과 같을 수 있습니다:
 
 ## 📚 과제
 
+<StageAssignmentCard title="사용자가 정말 끝내고 싶은 일을 분명히 쓰기">
+
 위 내용을 바탕으로 다음 과제를 완료해 주세요:
 
 1. 최근에 만들고 싶은 제품 아이디어를 하나 골라, JTBD 공식 한 문장으로 명확하게 작성하세요
 2. 이 아이디어에 대해 5가지 요소를 보완하세요: 시나리오, 트리거, 진전, 대체 솔루션, 성공 기준
 3. 잠재 사용자 3명을 찾아, 적어도 한 번은 "최근에 이 문제를 만난 것이 언제였나요"라고 물어보세요
 4. 인터뷰 원래 말을 AI에게 전달하여, 우선적으로 검증할 가치가 있는 JTBD 가설 3개로 정리하세요
+
+</StageAssignmentCard>
 
 ## 더 읽어볼 만한 자료
 
