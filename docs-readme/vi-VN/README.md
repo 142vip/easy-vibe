@@ -3,19 +3,19 @@
 
 <img src="../../assets/easy-vibe-logo-hd.svg" alt="Easy-Vibe Logo" width="300">
 
-<img src="../../assets/banner.png" alt="Easy-Vibe Banner" width="100%">
+<img src="../../assets/banner.png" alt="Easy-Vibe — Nghĩ ra. Xây nên. Từ ý tưởng đầu tiên đến sản phẩm thực tế." width="100%">
 
 <p align="center" style="font-size: 1.2em; color: #666; margin: 20px 0;">
-  Bat dau ngay va cung vibe nao. Chi can ban noi duoc, ban da co the lam app.<br>
-  <span style="font-size: 0.9em; color: #888;">直接上手，一起 vibe！会说话就会做应用。</span>
+  Học lập trình với AI từ con số 0 bằng cách xây dựng và ra mắt những sản phẩm thực tế.<br>
+  <span style="font-size: 0.9em; color: #888;">Learn AI coding from scratch by shipping real products.</span>
 </p>
 
 <a href="https://trendshift.io/repositories/22079" target="_blank"><img src="https://trendshift.io/api/badge/repositories/22079" alt="datawhalechina/easy-vibe | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 <p align="center" style="font-size: 1.05em; color: #666; margin: 16px 0;">
   你好 · Hello · 哈囉 · こんにちは · 안녕하세요 · Hola · Bonjour · Hallo · مرحبا · Xin chào<br>
-  Phần 1 của tutorial hiện đã hỗ trợ 10 ngôn ngữ. Chào mừng bạn bè khắp thế giới cùng bắt đầu coding!<br>
-  <span style="font-size: 0.9em; color: #888;">我们的教程（第一部分）已经支持 10 种语言，欢迎世界各地的朋友一起 coding！</span>
+  Từ tạo mẫu sản phẩm và phát triển full-stack đến quy trình làm việc AI-native, toàn bộ lộ trình cốt lõi hiện có bằng 10 ngôn ngữ. Hãy biến ý tưởng thành sản phẩm cùng cộng đồng học viên toàn cầu.<br>
+  <span style="font-size: 0.9em; color: #888;">From product prototyping and full-stack development to AI-native workflows, the full core curriculum is available in 10 languages.</span>
 </p>
 
 <p align="center">

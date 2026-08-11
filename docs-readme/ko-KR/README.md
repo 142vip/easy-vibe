@@ -3,19 +3,19 @@
 
 <img src="../../assets/easy-vibe-logo-hd.svg" alt="Easy-Vibe Logo" width="300">
 
-<img src="../../assets/banner.png" alt="Easy-Vibe Banner" width="100%">
+<img src="../../assets/banner.png" alt="Easy-Vibe — 생각하고, 만들어 보세요. 첫 아이디어에서 실제 제품까지." width="100%">
 
 <p align="center" style="font-size: 1.2em; color: #666; margin: 20px 0;">
-  바로 시작해서 함께 vibe 해봐요. 말할 수 있으면 앱도 만들 수 있어요.<br>
-  <span style="font-size: 0.9em; color: #888;">直接上手，一起 vibe！会说话就会做应用。</span>
+  AI 코딩을 처음부터 배우고, 실제로 사용할 수 있는 제품을 직접 출시해 보세요.<br>
+  <span style="font-size: 0.9em; color: #888;">Learn AI coding from scratch by shipping real products.</span>
 </p>
 
 <a href="https://trendshift.io/repositories/22079" target="_blank"><img src="https://trendshift.io/api/badge/repositories/22079" alt="datawhalechina/easy-vibe | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 
 <p align="center" style="font-size: 1.05em; color: #666; margin: 16px 0;">
   你好 · Hello · 哈囉 · こんにちは · 안녕하세요 · Hola · Bonjour · Hallo · مرحبا · Xin chào<br>
-  튜토리얼 1부가 이제 10개 언어를 지원합니다. 전 세계의 친구들과 함께 coding을 시작해요!<br>
-  <span style="font-size: 0.9em; color: #888;">我们的教程（第一部分）已经支持 10 种语言，欢迎世界各地的朋友一起 coding！</span>
+  제품 프로토타이핑부터 풀스택 개발, AI 네이티브 워크플로까지 핵심 커리큘럼 전체를 10개 언어로 제공합니다. 전 세계의 학습자들과 함께 아이디어를 제품으로 만들어 보세요.<br>
+  <span style="font-size: 0.9em; color: #888;">From product prototyping and full-stack development to AI-native workflows, the full core curriculum is available in 10 languages.</span>
 </p>
 
 <p align="center">
