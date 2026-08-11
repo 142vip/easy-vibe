@@ -706,7 +706,8 @@ const appendixComponentModules = {
   './components/appendix/neural-networks/NetworkArchitectureDemo.vue': () => import('./components/appendix/neural-networks/NetworkArchitectureDemo.vue'),
   './components/appendix/project-architecture/ArchitectureComparisonDemo.vue': () => import('./components/appendix/project-architecture/ArchitectureComparisonDemo.vue'),
   './components/appendix/idea-sources/IdeaSprint.vue': () => import('./components/appendix/idea-sources/IdeaSprint.vue'),
-  './components/appendix/idea-sources/IdeaSourceMap.vue': () => import('./components/appendix/idea-sources/IdeaSourceMap.vue')
+  './components/appendix/idea-sources/IdeaSourceMap.vue': () => import('./components/appendix/idea-sources/IdeaSourceMap.vue'),
+  './components/appendix/modelscope-static-site/ModelScopeTroubleshooter.vue': () => import('./components/appendix/modelscope-static-site/ModelScopeTroubleshooter.vue')
 }
 const appendixComponentRegistrations = [
   ['TerminalGrid', './components/appendix/terminal-intro/TerminalGrid.vue'],
@@ -1237,7 +1238,8 @@ const appendixComponentRegistrations = [
   ['NetworkArchitectureDemo', './components/appendix/neural-networks/NetworkArchitectureDemo.vue'],
   ['ProjectArchitectureComparisonDemo', './components/appendix/project-architecture/ArchitectureComparisonDemo.vue'],
   ['IdeaSprint', './components/appendix/idea-sources/IdeaSprint.vue'],
-  ['IdeaSourceMap', './components/appendix/idea-sources/IdeaSourceMap.vue']
+  ['IdeaSourceMap', './components/appendix/idea-sources/IdeaSourceMap.vue'],
+  ['ModelScopeTroubleshooter', './components/appendix/modelscope-static-site/ModelScopeTroubleshooter.vue']
 ]
 
 function registerAppendixComponents(app) {

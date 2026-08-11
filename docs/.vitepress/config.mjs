@@ -1731,6 +1731,10 @@ const productManagerSidebar = [
     collapsed: false,
     items: [
       {
+        text: '在魔搭社区发布你的网页',
+        link: '/zh-cn/stage-1/appendix-modelscope-static-site/'
+      },
+      {
         text: '产品思维基础',
         link: '/zh-cn/stage-1/appendix-a-product-thinking/'
       },

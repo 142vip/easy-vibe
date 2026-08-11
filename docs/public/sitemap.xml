@@ -1298,6 +1298,13 @@
     <xhtml:link rel="alternate" hreflang="vi" href="https://datawhalechina.github.io/easy-vibe/vi-vn/appendix/7-infrastructure-and-operations/load-balancing-gateway"/>
   </url>
   <url>
+    <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/stage-1/appendix-modelscope-static-site/</loc>
+    <lastmod>2026-08-11T08:07:22.483Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://datawhalechina.github.io/easy-vibe/zh-cn/stage-1/appendix-modelscope-static-site/"/>
+  </url>
+  <url>
     <loc>https://datawhalechina.github.io/easy-vibe/zh-cn/appendix/7-infrastructure-and-operations/monitoring-logging</loc>
     <lastmod>2026-08-06T17:20:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
