@@ -541,7 +541,7 @@ Xcode 왼쪽 상단에서 실행 기기를 선택하고 기본 iPhone 시뮬레�
 
 처음 연결할 때 휴대전화에 **이 컴퓨터를 신뢰하시겠습니까?**가 표시됩니다. 신뢰를 누르고 잠금 해제 암호를 입력합니다.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40-device-redacted.png)
 
 Xcode의 기기 목록에서 iPhone을 선택한 다음 **Run**을 다시 클릭합니다.
 

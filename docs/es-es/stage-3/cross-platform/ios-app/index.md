@@ -541,7 +541,7 @@ Conecta tu iPhone a la Mac usando un cable.
 
 Al conectar por primera vez, el telefono mostrara **Confiar en Este Equipo?** Toca confiar e introduce el codigo de desbloqueo.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40-device-redacted.png)
 
 En la lista de dispositivos de Xcode, selecciona tu iPhone, luego haz clic en **Run** de nuevo.
 

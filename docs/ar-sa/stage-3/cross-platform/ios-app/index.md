@@ -541,7 +541,7 @@ Please provide the full modified code.
 
 عند التوصيل لأول مرة، سيُظهر الهاتف **Trust This Computer?** اضغط ثق به وأدخل رمز إلغاء القفل.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40-device-redacted.png)
 
 في قائمة أجهزة Xcode، حدد iPhone الخاص بك، ثم انقر **Run** مرة أخرى.
 

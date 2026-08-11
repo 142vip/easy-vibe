@@ -31,7 +31,7 @@
 
 先做最重要的一个入口，确认业务有人用，再扩展第二个平台，通常比第一天就同时做五端更稳。
 
-## 2. 九条常见架构路线
+## 2. 十条常见架构路线
 
 ### 2.1 网站 / PWA：先让用户点开就能用
 
@@ -78,6 +78,8 @@
 企业通常用它做电商、会员、销售拜访、现场服务、内部办公和内容社区。它适合“两个移动平台的业务大体相同”这种情况。
 
 跨端不是按一下按钮就自动适配。通知、支付、地图、权限和商店发布仍然要在两端分别验证；重度 3D、复杂音视频或大量平台专属能力，也可能需要回到原生。
+
+相关教程：[开发 React Native + Expo 跨平台应用](../react-native-expo/) · [开发 Flutter 跨平台应用](../flutter-app/)
 
 ### 2.5 Electron / Tauri：用 Web 技术做桌面软件
 
@@ -135,6 +137,16 @@ Qt 不只是“工厂大屏”。在工业界和企业软件中，它常被用�
 
 这里真正需要共享的是业务规则和数据，不是强求每个端的界面代码完全相同。第一版仍然应该只做最关键的入口，后端边界稳定后再扩展其他客户端。
 
+### 2.10 Godot 等游戏引擎：场景、角色和交互围绕实时画面组织
+
+![游戏引擎架构：场景与节点组织玩法，脚本和物理系统驱动实时画面，再导出到桌面、移动端或 Web](images/game-engine-architecture.svg)
+
+横版动作、像素游戏和 3D 游戏都需要持续更新画面、处理输入、碰撞、动画、声音和关卡。Godot 这类游戏引擎已经把这些常用能力放进同一个编辑器，比从普通网页或原生 UI 框架里重新搭一套游戏循环更合适。
+
+独立游戏、教学游戏、互动展览、产品演示和轻量 3D 体验都可以使用这条路线。真正准备发布时，桌面、Android、iOS 和 Web 仍然要分别导出并在目标设备上测试；选择游戏引擎也不代表像素美术、关卡设计和性能优化会自动完成。
+
+相关教程：[用 Godot 开发横版、像素与 3D 游戏](../godot-game-development/)
+
 ## 3. 一张表先选出第一版
 
 | 你的第一版要解决什么 | 优先选择 | 企业里常见的软件 | 最大代价 |
@@ -147,6 +159,7 @@ Qt 不只是“工厂大屏”。在工业界和企业软件中，它常被用�
 | 连接设备、协议或复杂本地数据 | Qt / 原生桌面 | 医疗、汽车、实验室、工程软件 | 技术和交付门槛较高 |
 | 功能需要读取或改变当前网页 | 浏览器插件 | 翻译、客服、销售、合规工具 | 权限与浏览器兼容性 |
 | 用户是开发者，需要进入编辑器或 CI | VS Code 插件 / CLI | 代码检查、脚手架、发布工具 | 用户范围集中在开发团队 |
+| 需要实时画面、角色、碰撞和关卡 | Godot 等游戏引擎 | 横版游戏、像素游戏、3D 互动体验 | 美术、玩法与各平台性能仍要实测 |
 | 多种角色、多个工作现场 | 多端组合 | CRM、售后、零售、运营平台 | 后端治理和产品协调更复杂 |
 
 ## 4. 企业里通常怎么组合
@@ -191,7 +204,9 @@ CRM、审批、排班、售后、知识库和零售会员都属于企业使用�
 
 多端产品最怕每个客户端各写一套会员、订单和权限规则。界面可以不同，核心身份、业务规则、数据与审计应该从同一套后端提供。
 
-## 7. 接下来选一篇开始做
+## 7. 选好第一站，就开始做
+
+平台选型不需要一次决定产品未来五年的样子。先选一个最容易接触到用户、也最能验证核心流程的入口，把第一版做出来。真实反馈出现以后，再决定要不要增加第二个平台。
 
 <NavGrid>
   <NavCard
@@ -213,6 +228,16 @@ CRM、审批、排班、售后、知识库和零售会员都属于企业使用�
     href="/zh-cn/stage-3/cross-platform/ios-app/"
     title="iOS 应用"
     description="学习 Apple 平台的开发与发布流程"
+  />
+  <NavCard
+    href="/zh-cn/stage-3/cross-platform/react-native-expo/"
+    title="React Native + Expo"
+    description="用 TypeScript 同时开发 Android、iOS 和 Web"
+  />
+  <NavCard
+    href="/zh-cn/stage-3/cross-platform/flutter-app/"
+    title="Flutter"
+    description="用 Dart 让 Android 和 iOS 共用界面与业务代码"
   />
   <NavCard
     href="/zh-cn/stage-3/cross-platform/pwa-local-app/"
@@ -239,7 +264,14 @@ CRM、审批、排班、售后、知识库和零售会员都属于企业使用�
     title="Qt 桌面与设备软件"
     description="连接设备、协议、本地数据和长期运行的业务"
   />
+  <NavCard
+    href="/zh-cn/stage-3/cross-platform/godot-game-development/"
+    title="Godot 游戏开发"
+    description="实际运行横版、像素和 3D 三种游戏场景"
+  />
 </NavGrid>
+
+如果还是拿不准，就回到开头那三个问题：用户现在在哪里、任务需要什么系统能力、谁来维护。答案指向哪一端，就先从对应的教程开始。做完一条完整链路，比停在架构图里反复比较更有用。
 
 ## 参考资料
 
@@ -248,6 +280,7 @@ CRM、审批、排班、售后、知识库和零售会员都属于企业使用�
 - [PWA 官方学习指南](https://web.dev/learn/pwa/welcome)
 - [Flutter 官方介绍](https://flutter.dev/)
 - [React Native 官方入门](https://reactnative.dev/docs/environment-setup)
+- [Godot 官方文档](https://docs.godotengine.org/)
 - [Electron 进程模型](https://www.electronjs.org/docs/latest/tutorial/process-model)
 - [Tauri 架构](https://v2.tauri.app/concept/architecture/)
 - [Qt 官方介绍](https://doc.qt.io/qt-6/qt-intro.html)

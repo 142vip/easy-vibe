@@ -541,7 +541,7 @@ Connect your iPhone to the Mac using a cable.
 
 When connecting for the first time, the phone will show **Trust This Computer?** Tap trust and enter the unlock passcode.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40-device-redacted.png)
 
 In Xcode's device list, select your iPhone, then click **Run** again.
 

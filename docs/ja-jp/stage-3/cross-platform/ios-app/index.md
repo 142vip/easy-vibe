@@ -541,7 +541,7 @@ Xcode の左上で、実行デバイスを選択し、デフォルトの iPhone 
 
 初めて接続する際、電話に**このコンピュータを信頼しますか？**と表示されます。信頼をタップし、ロック解除コードを入力します。
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40-device-redacted.png)
 
 Xcode のデバイスリストで iPhone を選択し、再度 **Run** をクリックします。
 

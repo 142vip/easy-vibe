@@ -541,7 +541,7 @@ Kết nối iPhone với Mac bằng cáp.
 
 Khi kết nối lần đầu, điện thoại sẽ hiển thị **Tin tưởng Máy tính Này?** Nhấn tin tưởng và nhập mã mở khóa.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40-device-redacted.png)
 
 Trong danh sách thiết bị của Xcode, chọn iPhone của bạn, sau đó nhấp **Run** lại.
 

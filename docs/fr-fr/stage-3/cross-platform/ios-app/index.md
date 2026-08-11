@@ -541,7 +541,7 @@ Connectez votre iPhone au Mac en utilisant un câble.
 
 Lors de la première connexion, le téléphone affichera **Faire confiance à cet ordinateur ?** Appuyez sur Faire confiance et entrez le code de déverrouillage.
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40-device-redacted.png)
 
 Dans la liste des appareils d'Xcode, sélectionnez votre iPhone, puis cliquez à nouveau sur **Run**.
 

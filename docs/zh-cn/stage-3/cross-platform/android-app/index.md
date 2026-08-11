@@ -1,5 +1,43 @@
 # 用 AI 做一个 Android 原生 App
 
+你好，这一节我们离开浏览器，做一个真正装进 Android 手机的应用。
+
+前面做过网页和小程序以后，你可能会问：为什么还要单独做 Android App？最直接的区别是，原生 App 真正安装在手机上，可以更完整地使用通知、相机、蓝牙、NFC、定位、传感器、后台任务和本地文件，也更容易适配手机、平板、折叠屏、车机和手表。
+
+企业里的配送、仓储、巡检、收银、门店、客服和设备管理软件，经常需要这些能力。比如仓库人员用相机扫条码，维修工程师通过蓝牙读取设备，外勤人员在断网时先保存记录，恢复网络后再同步。这些都比“显示一个网页”更接近原生 App 的优势。
+
+## Kotlin、Compose 和 Android Studio 是什么
+
+这篇会同时出现三个名字，先把它们分开：
+
+- **Kotlin** 是编写 Android 业务逻辑的语言；
+- **Jetpack Compose** 是用 Kotlin 编写界面的工具；
+- **Android Studio** 是创建项目、运行模拟器、调试和打包的开发软件。
+
+可以把它们理解成“语言、界面工具和工作台”。Google 把 Compose 定义为 Android 推荐的现代原生界面工具，并提供 Material Design、深色模式、动画和多尺寸适配。它可以直接使用 Android 平台能力，也能和以前的 View 界面逐步混用，不需要把老项目一次全部推倒。
+
+## 真实产品怎样使用 Compose
+
+Compose 不是只给教学项目使用。Android Developers 的[团队采用页面](https://developer.android.com/develop/ui/compose/adopt)列出了 Airbnb、Lyft、Reddit、Dropbox、SoundCloud、Mercari 和 Play Store 等真实团队。
+
+![Android Developers 面向团队介绍 Compose，并展示 SoundCloud 案例](images/android-compose-official-cases.jpg)
+
+图片来源：[在团队中使用 Compose](https://developer.android.com/develop/ui/compose/adopt)。页面里的案例重点不是“界面看起来像 Google”，而是团队怎样把 Compose 加进已有的大型 Android 产品。
+
+另一个很直观的例子是 Threads。Android Developers 的官方案例介绍，Meta 团队使用 Jetpack Compose，在五个月内完成了第一版 Android 应用；同一期案例还介绍了 Reddit 用 Compose 重做功能，并减少重复代码。
+
+![Android Developers 展示 Threads 的真实开发案例](images/android-threads-reddit-official.jpg)
+
+图片与案例来源：[Android Developers 2023 年 11 月案例](https://developer.android.com/newsletter/android-dev/2023/content/november?hl=en)。同类案例还有 Dropbox 的首页、文件预览和搜索，以及 SoundCloud 面向更多屏幕尺寸的改造。
+
+## 什么时候适合做 Android 原生 App
+
+如果业务以 Android 为主，或者要深入使用相机、蓝牙、NFC、通知、后台任务、离线数据和各种 Android 设备，原生方案通常最稳妥。团队已经有大型 Android 项目时，也可以逐个页面采用 Compose，不必为了追新技术整套重写。
+
+如果只是一个简单表单、活动页或内容查询，而且手机浏览器已经够用，PWA 会更省开发和发布成本；如果第一天就必须同时提供 iOS 和 Android，还要先比较 Flutter、React Native 或分别开发两套原生应用。选原生不是因为它一定“更高级”，而是因为项目确实需要平台能力、长期维护或更细的体验控制。
+
+## 这次做什么
+
 这一篇做一个可以在模拟器和真机运行的 Android 应用：**电子木鱼**。
 
 它会记录点击次数、播放音效、显示动画，并把数据保存在本机。这个案例简单，但会走完企业 Android 项目也必须经历的流程：创建项目、AI 修改、模拟器验证、真机测试、签名打包和发布前检查。
@@ -170,20 +208,17 @@ Android Studio 顶部设备列表出现手机后，选择它并运行。
 
 ![在发布后台填写应用资料](images/image62.png)
 
-## 12. 最后检查
+## 12. 把电子木鱼装到另一台手机
 
-- 空白 Compose 项目能运行；
-- 电子木鱼在模拟器和真机都能使用；
-- 快速点击不会卡死或丢失大量操作；
-- 音频资源会正确释放；
-- 点击次数在重启后仍然存在；
-- Debug APK 在另一台手机验证；
-- Release 签名材料没有进入源码；
-- 商用素材已经确认授权。
+到了这里，不要只看 Android Studio 里的模拟器。把 Debug APK 发到另一台没有开发环境的 Android 手机上，从桌面图标启动，连续快速点击几次，再锁屏、切回应用并彻底关闭重开。声音还能正常播放，次数也没有丢，这个练习才真正离开了开发电脑。
+
+准备继续发布时，再生成签名版本，并确认密钥文件、密码和没有授权的图片或音效都不在源码里。电子木鱼很小，但创建工程、适配状态、真机测试和签名打包这条路，换成仓储扫描、门店巡检或蓝牙设备应用时仍然要重新走一遍。
 
 ## 参考资料
 
 - [Android Studio](https://developer.android.com/studio)
 - [Jetpack Compose](https://developer.android.com/compose)
+- [在团队中使用 Compose](https://developer.android.com/develop/ui/compose/adopt)
+- [Threads 与 Reddit 的 Compose 案例](https://developer.android.com/newsletter/android-dev/2023/content/november?hl=en)
 - [在硬件设备上运行应用](https://developer.android.com/studio/run/device)
 - [准备和发布 Android 应用](https://developer.android.com/studio/publish)

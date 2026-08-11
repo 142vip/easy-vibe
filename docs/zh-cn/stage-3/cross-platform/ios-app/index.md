@@ -1,5 +1,47 @@
 # 用 AI 做一个 SwiftUI iOS App
 
+你好，这一节换到 iPhone，从 Xcode 里的空白项目做一个原生应用。
+
+iOS 原生 App 是安装在 iPhone 或 iPad 上的应用。它可以使用相机、照片、定位、通知、健康、Wallet、NFC、Face ID 和本地数据，也能继续扩展到 Apple Watch、Mac、Widget、Live Activity 和 CarPlay。
+
+企业会用它做移动银行、门店服务、销售工具、现场巡检、医疗健康和员工应用。选择原生 iOS 往往不是为了“看起来更像苹果”，而是需要稳定接入 Apple 的系统能力、无障碍、隐私权限和设备管理。
+
+## Swift、SwiftUI 和 Xcode 是什么
+
+第一次接触 iOS 开发，最容易把这三个名字混在一起：
+
+- **Swift** 是编写业务逻辑的语言；
+- **SwiftUI** 是用 Swift 描述界面的工具；
+- **Xcode** 是创建项目、运行模拟器、连接真机、签名和上传 App 的开发软件。
+
+SwiftUI 可以同时服务 iPhone、iPad、Mac、Apple Watch 和 Vision Pro，但“可以共享界面代码”不等于所有设备会自动得到合适的体验。手机、平板和桌面的窗口、导航和输入方式不同，仍然要分别检查。
+
+## 真实产品里的 SwiftUI
+
+Apple Developer 的团队文章很适合看真实产品怎样采用 SwiftUI，而不是只看教学 Demo。
+
+Tiimo 是一款面向神经多样性人群的计划工具，提供 iPhone、iPad 和 Apple Watch 版本。团队没有为了追新技术一次重写全部应用，而是结合产品路线逐步迁移，让无障碍、动画和多设备支持更容易维护。
+
+![Apple Developer 展示 Tiimo 在 iPhone 上的真实界面](images/apple-tiimo-swiftui-case.jpg)
+
+图片与案例来源：[Tiimo 团队为什么迁移到 SwiftUI](https://developer.apple.com/articles/tiimo/)。Apple 的文章还列出了团队规模、支持设备和实际迁移考虑，很适合小团队参考。
+
+Copilot Money 是另一个完全不同的产品：它会整理账户、交易和现金流。这个应用最初使用 Swift 和 UIKit，后来把新的 Cash Flow 功能用 SwiftUI 与 Swift Charts 做出来，并让 iOS 和 macOS 版本共享更多实现。
+
+![Copilot Money 用 Swift Charts 展示真实现金流数据](images/apple-copilot-money-case.jpg)
+
+图片与案例来源：[Copilot Money 如何采用 Swift Charts](https://developer.apple.com/articles/copilot-money/)。它说明成熟 App 不必在 UIKit 和 SwiftUI 之间二选一，新页面和新功能可以逐步采用 SwiftUI。
+
+Apple 的[企业开发入口](https://developer.apple.com/business/get-started/)还把地图、扫码、NFC、单点登录、后台任务和受管配置列为常见企业能力。真正的企业 App 往往不只是几个页面，还要连接公司账号、后端 API、权限和设备管理。
+
+## 什么时候适合做 iOS 原生 App
+
+如果产品主要服务 iPhone 用户，需要深度使用 Apple 平台能力，或者对隐私、无障碍、性能和长期维护要求较高，SwiftUI 原生方案很合适。已有 UIKit 项目也可以逐页加入 SwiftUI，不必一开始就重写。
+
+如果只是简单表单、活动页或内容查询，手机网页和 PWA 可能已经足够；如果必须同时覆盖 iOS 与 Android，而且两端功能几乎完全一致，可以先比较 Flutter、React Native 或双端原生的长期成本。无论选哪一种，都不能跳过真实设备测试。
+
+## 这次做什么
+
 这一篇做一个原生 iPhone 应用：**冰箱大厨 FridgeChef**。
 
 用户输入现有食材，应用生成一份菜谱，并把确认过的结果保存在本机。我们会走完 Xcode 项目、模拟器、AI 修改、后端接口、本地存储、真机测试和 App Store 发布准备。
@@ -144,7 +186,7 @@ iOS 应用需要一台能运行当前 Xcode 的 Mac。真机测试还需要 iPho
 
 ![将 iPhone 连接到 Mac](images/image39.png)
 
-![在 iPhone 上信任这台电脑](images/image40.png)
+![在 iPhone 上信任这台电脑](images/image40-device-redacted.png)
 
 回到 Xcode，在顶部设备列表选择自己的 iPhone，确认 Signing & Capabilities 中选择了正确团队，再点击 Run。
 
@@ -173,20 +215,18 @@ iOS 应用需要一台能运行当前 Xcode 的 Mac。真机测试还需要 iPho
 - Release 真机测试；
 - 图片、字体和内容的授权证明。
 
-## 11. 最后检查
+## 11. 在自己的 iPhone 上吃完最后一顿“测试餐”
 
-- 空白项目能在模拟器运行；
-- 首页、演示菜谱和历史记录有完整状态；
-- 真实模型密钥不在 iOS 客户端；
-- 后端超时、断网和异常返回有提示；
-- 本地记录在重启后仍然存在；
-- 深色模式、大字体和小屏幕通过测试；
-- App 能安装到真实 iPhone；
-- 发布资料和隐私说明已经准备。
+模拟器里的页面都正常以后，把冰箱大厨装到真实 iPhone，再完整走一遍：输入食材、等待菜谱、保存结果、关闭应用后重新打开。顺手切换深色模式和大字体，再断一次网络，看看按钮、提示和历史记录是不是仍然说得清楚。
+
+如果这几步都能完成，你做出的就不再只是一张 SwiftUI 界面。它已经有了前端、后端、本机记录和真机运行这条完整链路。准备上架时，最后守住两件事：模型密钥只能留在后端，商店里的截图、隐私说明和实际功能必须对得上。
 
 ## 参考资料
 
 - [SwiftUI](https://developer.apple.com/xcode/swiftui/)
+- [Apple 企业应用开发入口](https://developer.apple.com/business/get-started/)
+- [Tiimo 的 SwiftUI 迁移案例](https://developer.apple.com/articles/tiimo/)
+- [Copilot Money 的 Swift Charts 案例](https://developer.apple.com/articles/copilot-money/)
 - [在 Xcode 中运行应用](https://developer.apple.com/documentation/xcode/running-your-app-in-simulator-or-on-a-device)
 - [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)
 - [上传 App 构建](https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds/)

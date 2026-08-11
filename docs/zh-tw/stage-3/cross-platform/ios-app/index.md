@@ -541,7 +541,7 @@ HTML 版本確認後，你就可以開始修改 iOS 專案了。
 
 首次連接時，手機會顯示**信任此電腦？**。點擊信任並輸入解鎖密碼。
 
-![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40.png)
+![](../../../../zh-cn/stage-3/cross-platform/ios-app/images/image40-device-redacted.png)
 
 在 Xcode 的裝置列表中，選擇你的 iPhone，然後再次點擊 **Run**。
 

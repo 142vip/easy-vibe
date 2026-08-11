@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+  <title id="title">Godot 等游戏引擎的常见架构</title>
+  <desc id="desc">场景和节点组织关卡与角色，脚本、物理、动画和声音驱动实时画面，再分别导出到桌面、移动端与 Web。</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#7c3aed"/></marker></defs>
+  <rect width="1200" height="500" rx="28" fill="#fbf7ff"/>
+  <text x="60" y="65" font-size="30" font-weight="700" fill="#4c1d95" font-family="Inter, PingFang SC, sans-serif">游戏引擎：把玩法、美术和实时运行放进同一个项目</text>
+  <g font-family="Inter, PingFang SC, sans-serif" text-anchor="middle">
+    <rect x="55" y="135" width="230" height="210" rx="24" fill="#f3e8ff" stroke="#c084fc" stroke-width="3"/><text x="170" y="200" font-size="28" font-weight="700" fill="#6b21a8">场景与节点</text><text x="170" y="247" font-size="20" fill="#475569">角色 · 关卡 · UI</text><text x="170" y="286" font-size="19" fill="#64748b">2D · 像素 · 3D</text>
+    <rect x="370" y="135" width="250" height="210" rx="24" fill="#ffffff" stroke="#a5b4fc" stroke-width="3"/><text x="495" y="190" font-size="28" font-weight="700" fill="#3730a3">实时系统</text><text x="495" y="237" font-size="20" fill="#475569">脚本 · 输入 · 碰撞</text><text x="495" y="276" font-size="19" fill="#64748b">动画 · 声音 · 物理</text><text x="495" y="312" font-size="18" fill="#64748b">每一帧持续更新</text>
+    <rect x="730" y="100" width="205" height="95" rx="21" fill="#eff6ff" stroke="#60a5fa" stroke-width="3"/><text x="832" y="143" font-size="24" font-weight="700" fill="#1e3a8a">桌面</text><text x="832" y="174" font-size="18" fill="#475569">Windows · macOS · Linux</text>
+    <rect x="730" y="220" width="205" height="95" rx="21" fill="#f0fdf4" stroke="#4ade80" stroke-width="3"/><text x="832" y="263" font-size="24" font-weight="700" fill="#166534">移动端</text><text x="832" y="294" font-size="18" fill="#475569">Android · iOS</text>
+    <rect x="730" y="340" width="205" height="80" rx="21" fill="#ecfeff" stroke="#22d3ee" stroke-width="3"/><text x="832" y="389" font-size="24" font-weight="700" fill="#155e75">Web</text>
+    <rect x="1015" y="145" width="135" height="190" rx="22" fill="#fff7ed" stroke="#fb923c" stroke-width="3"/><text x="1082" y="202" font-size="24" font-weight="700" fill="#9a3412">目标设备</text><text x="1082" y="245" font-size="18" fill="#475569">输入方式</text><text x="1082" y="278" font-size="18" fill="#475569">性能</text><text x="1082" y="311" font-size="18" fill="#475569">发布测试</text>
+  </g>
+  <g stroke="#7c3aed" stroke-width="5" fill="none" marker-end="url(#arrow)"><path d="M285 240 H360"/><path d="M620 205 C670 205 675 147 720 147"/><path d="M620 240 H720"/><path d="M620 278 C670 278 675 380 720 380"/><path d="M935 240 H1005"/></g>
+  <text x="60" y="460" font-size="22" fill="#475569" font-family="Inter, PingFang SC, sans-serif">常见成品：横版动作、像素冒险、3D 游戏、互动展览、教学模拟与产品演示</text>
+</svg>

@@ -909,10 +909,6 @@ const stage3SidebarEn = [
         link: '/en/stage-3/core-skills/agent-teams/'
       },
       {
-        text: 'Claude Code Superpowers for Production-Grade Development',
-        link: '/en/stage-3/core-skills/superpowers/'
-      },
-      {
         text: 'AI-Assisted Development Workflow',
         link: '/en/stage-3/core-skills/workflow/'
       },
@@ -923,6 +919,16 @@ const stage3SidebarEn = [
       {
         text: 'Claude Agent SDK Complete Guide',
         link: '/en/stage-3/core-skills/claude-agent-sdk/'
+      }
+    ]
+  },
+  {
+    text: 'Specification-Driven Development',
+    collapsed: false,
+    items: [
+      {
+        text: 'Claude Code Superpowers for Production-Grade Development',
+        link: '/en/stage-3/core-skills/superpowers/'
       },
       {
         text: 'From Vibe Coding to Spec Coding',
@@ -2614,10 +2620,6 @@ const zhCnStage3Sidebar = [
         link: '/zh-cn/stage-3/core-skills/agent-teams/'
       },
       {
-        text: 'Claude Code Superpowers 工程级开发',
-        link: '/zh-cn/stage-3/core-skills/superpowers/'
-      },
-      {
         text: 'Claude Code 工作流最佳实践',
         link: '/zh-cn/stage-3/core-skills/workflow/'
       },
@@ -2628,6 +2630,16 @@ const zhCnStage3Sidebar = [
       {
         text: 'Claude Agent SDK 完全指南',
         link: '/zh-cn/stage-3/core-skills/claude-agent-sdk/'
+      }
+    ]
+  },
+  {
+    text: '规范驱动开发',
+    collapsed: false,
+    items: [
+      {
+        text: 'Claude Code Superpowers 工程级开发',
+        link: '/zh-cn/stage-3/core-skills/superpowers/'
       },
       {
         text: '从 Vibe Coding 到 Spec Coding',
@@ -2643,6 +2655,10 @@ const zhCnStage3Sidebar = [
     text: '多平台开发',
     collapsed: false,
     items: [
+      {
+        text: '从开发一个网页，到真正的程序，再到 AI 原生创作者',
+        link: '/zh-cn/stage-3/cross-platform/ai-native-creator/'
+      },
       {
         text: '如何选择你的应用该开发的平台',
         link: '/zh-cn/stage-3/cross-platform/choose-platform/'
@@ -2664,6 +2680,18 @@ const zhCnStage3Sidebar = [
         link: '/zh-cn/stage-3/cross-platform/ios-app/'
       },
       {
+        text: '如何把开发好的程序发布上架',
+        link: '/zh-cn/stage-3/cross-platform/app-publishing/'
+      },
+      {
+        text: '如何开发 React Native + Expo 跨平台应用',
+        link: '/zh-cn/stage-3/cross-platform/react-native-expo/'
+      },
+      {
+        text: '如何开发 Flutter 跨平台应用',
+        link: '/zh-cn/stage-3/cross-platform/flutter-app/'
+      },
+      {
         text: '如何开发 PWA 本地应用',
         link: '/zh-cn/stage-3/cross-platform/pwa-local-app/'
       },
@@ -2674,6 +2702,10 @@ const zhCnStage3Sidebar = [
       {
         text: '如何开发跨平台 Electron 桌面程序',
         link: '/zh-cn/stage-3/cross-platform/electron-voice-to-text/'
+      },
+      {
+        text: '如何用 Godot 开发横版、像素与 3D 游戏',
+        link: '/zh-cn/stage-3/cross-platform/godot-game-development/'
       },
       {
         text: '如何在本地模拟链铸造 NFT',
@@ -2719,10 +2751,15 @@ const stage3SidebarLabels = {
         'Claude Code Skills 完全ガイド',
         'Coding Tools を長時間稼働させる方法',
         'Claude Agent Teams 完全ガイド',
-        'Claude Code Superpowers 実践開発',
         'Claude Code ワークフロー最佳实践',
         'Claude Code モバイルリモート開発',
-        'Claude Agent SDK 完全ガイド',
+        'Claude Agent SDK 完全ガイド'
+      ]
+    },
+    {
+      text: '仕様駆動開発',
+      items: [
+        'Claude Code Superpowers 実践開発',
         'Vibe Coding から Spec Coding へ',
         'GitHub Issues で AI 開発を最後まで進める'
       ]
@@ -2761,10 +2798,15 @@ const stage3SidebarLabels = {
         'Claude Code Skills 完全指南',
         '如何讓 Coding Tools 長時間工作',
         'Claude Agent Teams 完全指南',
-        'Claude Code Superpowers 工程級開發',
         'Claude Code 工作流最佳實踐',
         'Claude Code 手機遠端開發',
-        'Claude Agent SDK 完全指南',
+        'Claude Agent SDK 完全指南'
+      ]
+    },
+    {
+      text: '規範驅動開發',
+      items: [
+        'Claude Code Superpowers 工程級開發',
         '從 Vibe Coding 到 Spec Coding',
         '用 GitHub Issues 推進 AI 全流程開發'
       ]
@@ -2803,10 +2845,15 @@ const stage3SidebarLabels = {
         'Claude Code Skills 완전 가이드',
         'Coding Tools를 장시간 작동시키는 방법',
         'Claude Agent Teams 완전 가이드',
-        'Claude Code Superpowers 엔지니어링 개발',
         'Claude Code 워크플로우 모범 사례',
         'Claude Code 모바일 원격 개발',
-        'Claude Agent SDK 완전 가이드',
+        'Claude Agent SDK 완전 가이드'
+      ]
+    },
+    {
+      text: '명세 주도 개발',
+      items: [
+        'Claude Code Superpowers 엔지니어링 개발',
         'Vibe Coding에서 Spec Coding으로',
         'GitHub Issues로 AI 개발을 끝까지 진행하기'
       ]
@@ -2845,10 +2892,15 @@ const stage3SidebarLabels = {
         'Guía Completa de Claude Code Skills',
         'Cómo hacer que Coding Tools trabajen largas horas',
         'Guía Completa de Claude Agent Teams',
-        'Claude Code Superpowers para Desarrollo de Producción',
         'Mejores Prácticas de Flujo de Trabajo con Claude Code',
         'Desarrollo Remoto Móvil con Claude Code',
-        'Guía Completa de Claude Agent SDK',
+        'Guía Completa de Claude Agent SDK'
+      ]
+    },
+    {
+      text: 'Desarrollo guiado por especificaciones',
+      items: [
+        'Claude Code Superpowers para Desarrollo de Producción',
         'De Vibe Coding a Spec Coding',
         'Desarrollo integral con IA y GitHub Issues'
       ]
@@ -2887,10 +2939,15 @@ const stage3SidebarLabels = {
         'Guide Complet Claude Code Skills',
         'Comment faire travailler les Coding Tools sur de longues périodes',
         'Guide Complet Claude Agent Teams',
-        'Claude Code Superpowers pour le Développement Production',
         'Meilleures Pratiques de Workflow Claude Code',
         'Développement à Distance sur Mobile avec Claude Code',
-        'Guide Complet Claude Agent SDK',
+        'Guide Complet Claude Agent SDK'
+      ]
+    },
+    {
+      text: 'Développement piloté par les spécifications',
+      items: [
+        'Claude Code Superpowers pour le Développement Production',
         'Du Vibe Coding au Spec Coding',
         'Développer de bout en bout avec GitHub Issues'
       ]
@@ -2929,10 +2986,15 @@ const stage3SidebarLabels = {
         'Claude Code Skills Vollständiger Leitfaden',
         'Wie man Coding Tools über lange Zeiträume arbeiten lässt',
         'Claude Agent Teams Vollständiger Leitfaden',
-        'Claude Code Superpowers für Produktionsentwicklung',
         'Claude Code Workflow Best Practices',
         'Claude Code Mobile Remote-Entwicklung',
-        'Claude Agent SDK Vollständiger Leitfaden',
+        'Claude Agent SDK Vollständiger Leitfaden'
+      ]
+    },
+    {
+      text: 'Spezifikationsgetriebene Entwicklung',
+      items: [
+        'Claude Code Superpowers für Produktionsentwicklung',
         'Vom Vibe Coding zum Spec Coding',
         'KI-Softwareentwicklung mit GitHub Issues'
       ]
@@ -2971,10 +3033,15 @@ const stage3SidebarLabels = {
         'الدليل الشامل لـ Claude Code Skills',
         'كيف تجعل أدوات البرمجة تعمل لفترات طويلة',
         'الدليل الشامل لـ Claude Agent Teams',
-        'Claude Code Superpowers للتطوير على مستوى الإنتاج',
         'أفضل ممارسات سير عمل Claude Code',
         'التطوير عن بُعد عبر الهاتف مع Claude Code',
-        'الدليل الشامل لـ Claude Agent SDK',
+        'الدليل الشامل لـ Claude Agent SDK'
+      ]
+    },
+    {
+      text: 'التطوير الموجّه بالمواصفات',
+      items: [
+        'Claude Code Superpowers للتطوير على مستوى الإنتاج',
         'من Vibe Coding إلى Spec Coding',
         'تطوير البرمجيات بالذكاء الاصطناعي عبر GitHub Issues'
       ]
@@ -3013,10 +3080,15 @@ const stage3SidebarLabels = {
         'Hướng dẫn Toàn diện Claude Code Skills',
         'Cách làm cho Coding Tools hoạt động trong thời gian dài',
         'Hướng dẫn Toàn diện Claude Agent Teams',
-        'Claude Code Superpowers cho Phát triển Cấp Production',
         'Thực hành Tốt nhất Workflow Claude Code',
         'Phát triển Từ xa trên Mobile với Claude Code',
-        'Hướng dẫn Toàn diện Claude Agent SDK',
+        'Hướng dẫn Toàn diện Claude Agent SDK'
+      ]
+    },
+    {
+      text: 'Phát triển theo đặc tả',
+      items: [
+        'Claude Code Superpowers cho Phát triển Cấp Production',
         'Từ Vibe Coding đến Spec Coding',
         'Phát triển phần mềm trọn quy trình với GitHub Issues'
       ]

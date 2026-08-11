@@ -1,5 +1,37 @@
 # 用 Electron 做一个企业语音记录工具
 
+你好，这一节我们把网页技术搬到桌面，做一个能录音、整理并保存现场记录的应用。
+
+如果一家公司已经有 Web 前端团队，又想把产品做成 Windows、macOS 和 Linux 都能安装的桌面软件，Electron 往往是最容易想到的方案。界面继续使用 HTML、CSS 和 JavaScript，Electron 再补上窗口、菜单、文件、托盘、通知和本地进程这些浏览器里没有的能力。
+
+它不是把网页随便套进一个窗口。一个能长期使用的 Electron 产品还要处理自动更新、离线状态、安装包、系统权限、进程隔离和本地数据安全。做好以后，用户看到的是普通桌面软件，不需要先打开浏览器。
+
+## 企业里哪些软件在用 Electron
+
+Electron 官网有一个很大的 [Showcase](https://www.electronjs.org/apps)，收录了数百个已经发布的产品。里面既有 Asana、Notion 和 Microsoft Teams 这类协作工具，也有 Figma、Visual Studio Code、GitHub Desktop、Postman 和 Docker Desktop 这类设计与开发工具。
+
+![Electron 官网展示的真实生产应用](images/electron-official-showcase.jpg)
+
+图片来源：[Electron Showcase](https://www.electronjs.org/apps)。这张图里的 Asana、Discord 和 Figma 只是第一页的一小部分。
+
+Electron 官方在“[为什么选择 Electron](https://www.electronjs.org/docs/latest/why-electron)”中还列出了 Slack、Discord、Signal、ChatGPT、Claude、Canva、Loom 和 Notion。把这些产品放在一起看，会发现 Electron 特别常见于几类软件：
+
+- 团队聊天、会议和协作客户端；
+- 代码编辑器、API 工具和数据库客户端；
+- 设计、笔记、知识库和项目管理工具；
+- 需要本地文件、通知、快捷键或离线能力的 AI 客户端；
+- 企业内部需要同时支持 Windows 和 macOS 的工作台。
+
+这些软件并不是因为“网页做不了”才选择 Electron。更常见的原因是已有 Web 技术和前端团队，希望一套主要代码同时服务多个桌面系统，同时又需要浏览器之外的系统能力。
+
+## 什么时候适合用 Electron
+
+如果产品的主要复杂度在界面和业务流程，而且团队熟悉 Web 开发，Electron 很合适。聊天工具、知识库、编辑器、运营工作台和桌面 AI 助手通常都符合这个特点。
+
+它也不是所有桌面软件的默认答案。安装包通常不小，运行时还要带上 Chromium；对内存、启动速度和安装体积极其敏感的小工具，可以比较 Tauri 或系统原生方案。需要大量实时 3D、专业音视频处理或强依赖原生控件时，也要先验证性能和系统集成，不要只因为会写网页就直接决定。
+
+## 这次做什么
+
 这一篇做一个能在 Windows、macOS 和 Linux 运行的桌面应用：**Field Voice Log**。
 
 用户录一段现场说明，应用生成文字，再整理成问题、处理过程、风险和后续动作。企业里类似的软件会用在维修工单、保险查勘、物业巡检、客户拜访和护理记录中。
@@ -161,18 +193,16 @@ Forge 只会生成已经配置、并且当前操作系统支持的格式。一�
 
 macOS 面向外部用户分发时需要签名和公证；Windows 正式分发也建议代码签名。能生成安装文件，不等于已经可以公开发布。
 
-## 11. 最后检查
+## 11. 安装包能在另一台电脑打开，才算做完
 
-- Renderer 没有开启 Node 集成；
-- Preload 只暴露有限方法；
-- 麦克风拒绝、录音中、处理中、成功和失败状态齐全；
-- 音频经过真实转码，而不是只改扩展名；
-- 共享密钥不在客户端；
-- 用户能修改并确认结构化结果；
-- 安装包在干净电脑上通过测试。
+开发窗口里录音成功，只能说明项目在你的电脑上能跑。把安装包拿到一台没有 Node.js、也没有项目源码的电脑上，重新允许或拒绝麦克风，再连续录两段现场说明。录音状态不能卡住，两次结果不能串在一起，识别失败时也要让用户知道下一步怎么办。
+
+这一步通过以后，Field Voice Log 才像一件可以交给同事试用的桌面软件。以后无论接本地模型还是企业识别服务，都别破坏前面已经做好的边界：页面不能直接拿到 Node.js，Preload 只开放必要能力，共享密钥留在后端，用户永远可以修改机器整理出来的记录。
 
 ## 参考资料
 
+- [为什么选择 Electron](https://www.electronjs.org/docs/latest/why-electron)
+- [Electron Showcase](https://www.electronjs.org/apps)
 - [Electron 官方文档](https://www.electronjs.org/docs/latest/)
 - [Electron 安全建议](https://www.electronjs.org/docs/latest/tutorial/security)
 - [Electron Forge Makers](https://www.electronforge.io/config/makers)
