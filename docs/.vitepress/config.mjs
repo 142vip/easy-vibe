@@ -484,45 +484,45 @@ const productManagerSidebarEn = [
     ]
   },
   {
-    text: 'Chapter 3: Product Requirements and Direction',
+    text: 'Chapter 3: From Problems to Solutions',
     collapsed: false,
     items: [
       {
-        text: 'Sources of Creative Inspiration',
+        text: '1. Find Real Problems',
         link: '/en/stage-1/appendix-idea-sources/'
       },
       {
-        text: 'How to Identify a Great Idea',
+        text: '2. Select a Direction Worth Building',
         link: '/en/stage-1/finding-great-idea/'
       },
       {
-        text: 'Double Diamond Design Model',
-        link: '/en/stage-1/appendix-double-diamond/'
-      },
-      {
-        text: 'Jobs to Be Done Theory',
+        text: '3. Understand Real Needs (JTBD)',
         link: '/en/stage-1/appendix-jobs-to-be-done/'
       },
       {
-        text: 'The Mom Test: User Interview Method',
+        text: '4. Validate Needs Through Interviews',
         link: '/en/stage-1/appendix-mom-test/'
+      },
+      {
+        text: '5. Narrow the Solution (Double Diamond)',
+        link: '/en/stage-1/appendix-double-diamond/'
       }
     ]
   },
   {
-    text: 'Chapter 4: Product Development and Implementation',
+    text: 'Chapter 4: From Solution to Product',
     collapsed: false,
     items: [
       {
-        text: 'Building Interactive Product Prototypes',
+        text: '6. Build an Interactive Prototype',
         link: '/en/stage-1/building-prototype/'
       },
       {
-        text: 'Integrating AI Capabilities into Prototypes',
+        text: '7. Connect Real AI Capabilities',
         link: '/en/stage-1/integrating-ai-capabilities/'
       },
       {
-        text: 'Complete Project Practice: From Idea to Product',
+        text: '8. Polish and Deliver a Complete Product',
         link: '/en/stage-1/complete-project-practice/'
       }
     ]
@@ -532,11 +532,15 @@ const productManagerSidebarEn = [
     collapsed: false,
     items: [
       {
+        text: 'Publish Your Website on ModelScope',
+        link: '/en/stage-1/appendix-modelscope-static-site/'
+      },
+      {
         text: 'Product Thinking Fundamentals',
         link: '/en/stage-1/appendix-a-product-thinking/'
       },
       {
-        text: 'AI Application Scenario Reference',
+        text: 'Find AI Scenarios in Real Workflows',
         link: '/en/stage-1/appendix-industry-scenarios/'
       },
       {
@@ -574,45 +578,45 @@ const productManagerSidebarKo = [
     ]
   },
   {
-    text: '3장 제품 요구사항과 방향',
+    text: '3장 문제에서 해결책까지',
     collapsed: false,
     items: [
       {
-        text: '창의적 영감의 원천',
+        text: '1. 실제 문제 찾기',
         link: '/ko-kr/stage-1/appendix-idea-sources/'
       },
       {
-        text: '좋은 아이디어 판별 방법',
+        text: '2. 만들 가치가 있는 방향 고르기',
         link: '/ko-kr/stage-1/finding-great-idea/'
       },
       {
-        text: '더블 다이아몬드 디자인 모델',
-        link: '/ko-kr/stage-1/appendix-double-diamond/'
-      },
-      {
-        text: 'Jobs to Be Done 요구 이론',
+        text: '3. 실제 요구 이해하기(JTBD)',
         link: '/ko-kr/stage-1/appendix-jobs-to-be-done/'
       },
       {
-        text: 'The Mom Test: 사용자 인터뷰 방법',
+        text: '4. 인터뷰로 요구 검증하기',
         link: '/ko-kr/stage-1/appendix-mom-test/'
+      },
+      {
+        text: '5. 해결책 좁히기(더블 다이아몬드)',
+        link: '/ko-kr/stage-1/appendix-double-diamond/'
       }
     ]
   },
   {
-    text: '4장 제품 개발과 구현',
+    text: '4장 해결책에서 작품까지',
     collapsed: false,
     items: [
       {
-        text: '인터랙티브한 제품 프로토타입 구축',
+        text: '6. 인터랙티브 프로토타입 만들기',
         link: '/ko-kr/stage-1/building-prototype/'
       },
       {
-        text: '프로토타입에 AI 기능 통합하기',
+        text: '7. 실제 AI 기능 연결하기',
         link: '/ko-kr/stage-1/integrating-ai-capabilities/'
       },
       {
-        text: '완성 프로젝트 실전: 아이디어에서 작품까지',
+        text: '8. 다듬고 완성된 작품으로 제출하기',
         link: '/ko-kr/stage-1/complete-project-practice/'
       }
     ]
@@ -622,11 +626,15 @@ const productManagerSidebarKo = [
     collapsed: false,
     items: [
       {
+        text: 'ModelScope에 웹사이트 게시하기',
+        link: '/ko-kr/stage-1/appendix-modelscope-static-site/'
+      },
+      {
         text: '제품 사고 기초',
         link: '/ko-kr/stage-1/appendix-a-product-thinking/'
       },
       {
-        text: 'AI 애플리케이션 시나리오 참고',
+        text: '실제 업무 흐름에서 AI 장면 찾기',
         link: '/ko-kr/stage-1/appendix-industry-scenarios/'
       },
       {
@@ -1966,28 +1974,29 @@ const stage1SidebarLabels = {
       ]
     },
     {
-      text: '第3章 プロダクトの要件と方向性',
+      text: '第3章 問題から解決策へ',
       items: [
-        'クリエイティブな発想の源',
-        '良いアイデアを見極める方法',
-        'ダブルダイヤモンドデザインモデル',
-        'Jobs to Be Done 要求理論',
-        'The Mom Test：ユーザーインタビュー手法'
+        '1. 本当の問題を見つける',
+        '2. 作る価値のある方向を選ぶ',
+        '3. 本当のニーズを理解する（JTBD）',
+        '4. インタビューでニーズを検証する',
+        '5. 解決策を絞り込む（ダブルダイヤモンド）'
       ]
     },
     {
-      text: '第4章 プロダクト開発と実装',
+      text: '第4章 解決策から作品へ',
       items: [
-        'インタラクティブなプロダクトプロトタイプの構築',
-        'プロトタイプへのAI機能の統合',
-        '完全プロジェクト実践：アイデアから作品まで'
+        '6. 操作できるプロトタイプを作る',
+        '7. 実際のAI機能を接続する',
+        '8. 磨き上げて完成作品を提出する'
       ]
     },
     {
       text: '付録',
       items: [
+        'ModelScopeでウェブサイトを公開する',
         'プロダクト思考の基礎',
-        'AIアプリケーションシナリオ参考',
+        '実際の業務フローからAI活用場面を探す',
         'よくある問題とトラブルシューティング'
       ]
     }
@@ -2002,26 +2011,31 @@ const stage1SidebarLabels = {
       items: ['AI 程式設計工具介紹與使用', '從截圖复刻：第一次模仿練習']
     },
     {
-      text: '第三章 產品需求與方向',
+      text: '第三章 從問題到方案',
       items: [
-        '創意靈感的來源',
-        '如何判斷一個好點子',
-        '雙鑽設計模型',
-        'Jobs to Be Done 需求理論',
-        'The Mom Test：使用者訪談方法'
+        '1. 尋找真實問題',
+        '2. 篩選值得做的方向',
+        '3. 看懂真實需求（JTBD）',
+        '4. 用訪談驗證需求',
+        '5. 收斂方案（雙鑽模型）'
       ]
     },
     {
-      text: '第四章 產品開發與實現',
+      text: '第四章 從方案到作品',
       items: [
-        '構建可互動的產品原型',
-        '為原型接入 AI 能力',
-        '完整專案實戰：從想法到作品'
+        '6. 做出可互動原型',
+        '7. 接入真實 AI 能力',
+        '8. 打磨並交付完整作品'
       ]
     },
     {
       text: '附錄',
-      items: ['產品思維基礎', 'AI 應用場景參考', '常見問題與除錯']
+      items: [
+        '在魔搭社群發布你的網頁',
+        '產品思維基礎',
+        '從真實工作流程中找 AI 場景',
+        '常見問題與除錯'
+      ]
     }
   ],
   'es-es': [
@@ -2040,28 +2054,29 @@ const stage1SidebarLabels = {
       ]
     },
     {
-      text: 'Capítulo 3: Requisitos y Dirección del Producto',
+      text: 'Capítulo 3: Del problema a la solución',
       items: [
-        'Fuentes de inspiración creativa',
-        'Cómo identificar una gran idea',
-        'Modelo de diseño Double Diamond',
-        'Teoría Jobs to Be Done',
-        'The Mom Test: método de entrevistas a usuarios'
+        '1. Encontrar problemas reales',
+        '2. Elegir una dirección que merezca la pena',
+        '3. Entender necesidades reales (JTBD)',
+        '4. Validar necesidades con entrevistas',
+        '5. Concretar la solución (Double Diamond)'
       ]
     },
     {
-      text: 'Capítulo 4: Desarrollo e Implementación del Producto',
+      text: 'Capítulo 4: De la solución al producto',
       items: [
-        'Construcción de prototipos de producto interactivos',
-        'Integración de capacidades de IA en prototipos',
-        'Práctica completa de proyecto: de idea a producto'
+        '6. Crear un prototipo interactivo',
+        '7. Conectar capacidades reales de IA',
+        '8. Pulir y entregar un producto completo'
       ]
     },
     {
       text: 'Apéndice',
       items: [
+        'Publica tu sitio web en ModelScope',
         'Fundamentos del pensamiento de producto',
-        'Referencia de escenarios de aplicación de IA',
+        'Encontrar escenarios de IA en flujos de trabajo reales',
         'Problemas comunes y solución de errores'
       ]
     }
@@ -2082,28 +2097,29 @@ const stage1SidebarLabels = {
       ]
     },
     {
-      text: 'Chapitre 3 : Exigences et Orientation Produit',
+      text: 'Chapitre 3 : Du problème à la solution',
       items: [
-        "Sources d'inspiration créative",
-        'Comment identifier une bonne idée',
-        'Modèle de conception Double Diamond',
-        'Théorie Jobs to Be Done',
-        "The Mom Test : méthode d'entretiens utilisateurs"
+        '1. Trouver des problèmes réels',
+        '2. Choisir une direction qui mérite d’être construite',
+        '3. Comprendre les besoins réels (JTBD)',
+        '4. Valider les besoins par des entretiens',
+        '5. Resserrer la solution (Double Diamond)'
       ]
     },
     {
-      text: 'Chapitre 4 : Développement et Implémentation du Produit',
+      text: 'Chapitre 4 : De la solution au produit',
       items: [
-        'Construction de prototypes de produit interactifs',
-        'Intégration de capacités IA dans les prototypes',
-        "Projet complet pratique : de l'idée au produit"
+        '6. Construire un prototype interactif',
+        '7. Connecter de véritables capacités IA',
+        '8. Finaliser et livrer un produit complet'
       ]
     },
     {
       text: 'Annexe',
       items: [
+        'Publier votre site web sur ModelScope',
         'Fondamentaux de la pensée produit',
-        "Référence des scénarios d'application IA",
+        'Trouver des usages IA dans les flux de travail réels',
         'Problèmes courants et dépannage'
       ]
     }
@@ -2124,28 +2140,29 @@ const stage1SidebarLabels = {
       ]
     },
     {
-      text: 'Kapitel 3: Produktanforderungen und -ausrichtung',
+      text: 'Kapitel 3: Vom Problem zur Lösung',
       items: [
-        'Quellen kreativer Inspiration',
-        'Wie man eine großartige Idee erkennt',
-        'Double Diamond Design-Modell',
-        'Jobs to Be Done-Theorie',
-        'The Mom Test: Benutzerinterviewmethode'
+        '1. Echte Probleme finden',
+        '2. Eine lohnende Richtung auswählen',
+        '3. Echte Bedürfnisse verstehen (JTBD)',
+        '4. Bedürfnisse durch Interviews prüfen',
+        '5. Die Lösung eingrenzen (Double Diamond)'
       ]
     },
     {
-      text: 'Kapitel 4: Produktentwicklung und -implementierung',
+      text: 'Kapitel 4: Von der Lösung zum Produkt',
       items: [
-        'Erstellung interaktiver Produktprototypen',
-        'Integration von KI-Fähigkeiten in Prototypen',
-        'Vollständige Projektpraxis: Von der Idee zum Produkt'
+        '6. Einen interaktiven Prototyp bauen',
+        '7. Echte KI-Funktionen anbinden',
+        '8. Ein vollständiges Produkt ausarbeiten und abgeben'
       ]
     },
     {
       text: 'Anhang',
       items: [
+        'Website auf ModelScope veröffentlichen',
         'Grundlagen des Produktdenkens',
-        'Referenz für KI-Anwendungsszenarien',
+        'KI-Szenarien in echten Arbeitsabläufen finden',
         'Häufige Probleme und Fehlerbehebung'
       ]
     }
@@ -2163,28 +2180,29 @@ const stage1SidebarLabels = {
       ]
     },
     {
-      text: 'الفصل الثالث: متطلبات المنتج والتوجيه',
+      text: 'الفصل الثالث: من المشكلة إلى الحل',
       items: [
-        'مصادر الإلهام الإبداعي',
-        'كيف تحدد فكرة رائعة',
-        'نموذج التصميم الماسي المزدوج',
-        'نظرية Jobs to Be Done',
-        'اختبار الأم: طريقة مقابلات المستخدم'
+        '1. العثور على مشكلات حقيقية',
+        '2. اختيار اتجاه يستحق البناء',
+        '3. فهم الاحتياجات الحقيقية (JTBD)',
+        '4. التحقق من الاحتياجات بالمقابلات',
+        '5. تضييق الحل (الماسة المزدوجة)'
       ]
     },
     {
-      text: 'الفصل الرابع: تطوير المنتج والتنفيذ',
+      text: 'الفصل الرابع: من الحل إلى المنتج',
       items: [
-        'بناء نماذج أولية تفاعلية للمنتج',
-        'دمج قدرات الذكاء الاصطناعي في النماذج الأولية',
-        'مشروع عملي كامل: من الفكرة إلى المنتج'
+        '6. بناء نموذج أولي تفاعلي',
+        '7. ربط قدرات ذكاء اصطناعي حقيقية',
+        '8. صقل منتج كامل وتسليمه'
       ]
     },
     {
       text: 'الملحق',
       items: [
+        'نشر موقعك على ModelScope',
         'أساسيات التفكير المنتجي',
-        'مرجع سيناريوهات تطبيق الذكاء الاصطناعي',
+        'العثور على سيناريوهات الذكاء الاصطناعي في سير العمل الحقيقي',
         'المشاكل الشائعة واستكشاف الأخطاء وإصلاحها'
       ]
     }
@@ -2205,28 +2223,29 @@ const stage1SidebarLabels = {
       ]
     },
     {
-      text: 'Chương 3: Yêu cầu và Định hướng Sản phẩm',
+      text: 'Chương 3: Từ vấn đề đến giải pháp',
       items: [
-        'Nguồn cảm hứng sáng tạo',
-        'Cách xác định một ý tưởng hay',
-        'Mô hình thiết kế Double Diamond',
-        'Lý thuyết Jobs to Be Done',
-        'The Mom Test: phương pháp phỏng vấn người dùng'
+        '1. Tìm vấn đề thật',
+        '2. Chọn hướng đáng để làm',
+        '3. Hiểu nhu cầu thật (JTBD)',
+        '4. Kiểm chứng nhu cầu bằng phỏng vấn',
+        '5. Thu hẹp giải pháp (Double Diamond)'
       ]
     },
     {
-      text: 'Chương 4: Phát triển và Triển khai Sản phẩm',
+      text: 'Chương 4: Từ giải pháp đến sản phẩm',
       items: [
-        'Xây dựng nguyên mẫu sản phẩm tương tác',
-        'Tích hợp năng lực AI vào nguyên mẫu',
-        'Thực chiến dự án hoàn chỉnh: từ ý tưởng đến sản phẩm'
+        '6. Làm nguyên mẫu có thể tương tác',
+        '7. Kết nối năng lực AI thật',
+        '8. Hoàn thiện và bàn giao sản phẩm đầy đủ'
       ]
     },
     {
       text: 'Phụ lục',
       items: [
+        'Đăng trang web lên ModelScope',
         'Nền tảng tư duy sản phẩm',
-        'Tham khảo kịch bản ứng dụng AI',
+        'Tìm kịch bản AI trong quy trình làm việc thật',
         'Các vấn đề thường gặp và khắc phục lỗi'
       ]
     }
