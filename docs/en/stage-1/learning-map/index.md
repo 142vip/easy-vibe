@@ -3,6 +3,12 @@ title: 'From Idea to AI Product - Easy-Vibe Learning Roadmap'
 description: 'Complete roadmap for learning AI programming: from zero basics to full-stack development. Master AI IDE tools like Vibe Coding, Claude Code, and Cursor, and learn product thinking, full-stack development, and AI capability integration.'
 ---
 
+<script setup>
+import { relatedArticlesMap } from '@theme/data/relatedArticles'
+
+const relatedArticles = relatedArticlesMap['en/stage-1/learning-map'] ?? []
+</script>
+
 # From Idea to AI Product
 
 ::: info Special Thanks
@@ -116,3 +122,9 @@ You are welcome to contact the author at any time, submit an issue, or give feed
 # Reference
 
 - [Nanjing University Computer Science and Technology Department Computer System Fundamentals Course Experiment](https://nju-projectn.github.io/ics-pa-gitbook/ics2025/)
+
+<RelatedArticlesSection
+  title="What to learn next"
+  description="Follow the course sidebar from AI coding basics to a complete product."
+  :items="relatedArticles"
+/>

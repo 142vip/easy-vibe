@@ -9,13 +9,15 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-1/ai-capabilities-through-games/',
       title: 'AI 时代的编程初体验',
-      description: '先用小游戏感受 AI 编程，快速建立手感，理解"什么问题适合交给 AI"。',
+      description:
+        '先用小游戏感受 AI 编程，快速建立手感，理解"什么问题适合交给 AI"。',
       icon: '🎮'
     },
     {
       href: '/zh-cn/stage-1/introduction-to-ai-ide/',
       title: 'AI 编程工具介绍与使用',
-      description: '从网页试玩升级到本地 AI IDE（Trae），建立完整开发环境，学会高效与 AI 对话。',
+      description:
+        '从网页试玩升级到本地 AI IDE（Trae），建立完整开发环境，学会高效与 AI 对话。',
       icon: '💻'
     },
     {
@@ -57,7 +59,8 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-1/building-prototype/',
       title: '6. 做出可交互原型',
-      description: '从需求拆解到页面落地，用 AI IDE 生成多页面应用，完成第一版可交互 Demo。',
+      description:
+        '从需求拆解到页面落地，用 AI IDE 生成多页面应用，完成第一版可交互 Demo。',
       icon: '🧩'
     },
     {
@@ -69,7 +72,8 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-1/complete-project-practice/',
       title: '8. 打磨并交付完整作品',
-      description: '补齐数据、交互、异常处理，做出可展示、可交互的完整 AI 产品原型。',
+      description:
+        '补齐数据、交互、异常处理，做出可展示、可交互的完整 AI 产品原型。',
       icon: '🚀'
     }
   ],
@@ -77,7 +81,8 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-1/introduction-to-ai-ide/',
       title: 'AI 编程工具介绍与使用',
-      description: '把网页试玩升级到本地 AI IDE（Trae），建立完整开发环境，学会高效与 AI 对话。',
+      description:
+        '把网页试玩升级到本地 AI IDE（Trae），建立完整开发环境，学会高效与 AI 对话。',
       icon: '💻'
     },
     {
@@ -147,7 +152,8 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-1/integrating-ai-capabilities/',
       title: '为原型接入 AI 能力',
-      description: '接入真实 API（文本模型、文生图），把静态原型升级为可调用真实模型服务的应用。',
+      description:
+        '接入真实 API（文本模型、文生图），把静态原型升级为可调用真实模型服务的应用。',
       icon: '🤖'
     },
     {
@@ -207,7 +213,8 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-2/frontend/ui-design/',
       title: '前端2：AI 设计入门',
-      description: '借助 AI 设计能力完成 Logo、图标与完整网页 UI，掌握提示词工程与一致性技巧。',
+      description:
+        '借助 AI 设计能力完成 Logo、图标与完整网页 UI，掌握提示词工程与一致性技巧。',
       icon: '✨'
     },
     {
@@ -219,13 +226,15 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-2/frontend/multi-product-ui/',
       title: '前端4：UI 设计规范与多产品界面',
-      description: '建立统一的设计系统与组件规范，完成从单个页面到多产品线布局。',
+      description:
+        '建立统一的设计系统与组件规范，完成从单个页面到多产品线布局。',
       icon: '📐'
     },
     {
       href: '/zh-cn/stage-2/frontend/llm-skills-beautiful/',
       title: '前端5：结合 Agent Skills 美化界面',
-      description: '把设计系统封装成 Skill，让 AI 自动加载品牌规范完成页面美化。',
+      description:
+        '把设计系统封装成 Skill，让 AI 自动加载品牌规范完成页面美化。',
       icon: '🎯'
     },
     {
@@ -245,7 +254,8 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-2/frontend/lovart-assets/',
       title: '前端1：NanoBanana 素材生产',
-      description: '用文生图/图生图批量生成设计素材，并搭建可复用的生产流程，作为 AI 设计的素材来源。',
+      description:
+        '用文生图/图生图批量生成设计素材，并搭建可复用的生产流程，作为 AI 设计的素材来源。',
       icon: '🖼️'
     },
     {
@@ -257,13 +267,15 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-2/frontend/multi-product-ui/',
       title: '前端4：UI 设计规范与多产品界面',
-      description: '建立统一的设计系统与组件规范，完成从单个页面到多产品线布局。',
+      description:
+        '建立统一的设计系统与组件规范，完成从单个页面到多产品线布局。',
       icon: '🎨'
     },
     {
       href: '/zh-cn/stage-2/frontend/llm-skills-beautiful/',
       title: '前端5：结合 Agent Skills 美化界面',
-      description: '把设计系统封装成 Skill，让 AI 自动加载你的品牌规范完成页面美化。',
+      description:
+        '把设计系统封装成 Skill，让 AI 自动加载你的品牌规范完成页面美化。',
       icon: '🎯'
     },
     {
@@ -283,19 +295,22 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-2/frontend/ui-design/',
       title: '前端2：AI 设计入门',
-      description: '借助 AI 设计完成 Logo、图标与完整网页 UI，作为设计稿的素材来源。',
+      description:
+        '借助 AI 设计完成 Logo、图标与完整网页 UI，作为设计稿的素材来源。',
       icon: '✨'
     },
     {
       href: '/zh-cn/stage-2/frontend/multi-product-ui/',
       title: '前端4：UI 设计规范与多产品界面',
-      description: '建立统一的设计系统与组件规范，完成从单个页面到多产品线布局。',
+      description:
+        '建立统一的设计系统与组件规范，完成从单个页面到多产品线布局。',
       icon: '📐'
     },
     {
       href: '/zh-cn/stage-2/frontend/llm-skills-beautiful/',
       title: '前端5：结合 Agent Skills 美化界面',
-      description: '把设计系统封装成 Skill，让 AI 自动加载品牌规范完成页面美化。',
+      description:
+        '把设计系统封装成 Skill，让 AI 自动加载品牌规范完成页面美化。',
       icon: '🎯'
     },
     {
@@ -340,19 +355,19 @@ const rawRelatedArticlesMap = {
   'zh-cn/stage-1/appendix-b-common-errors': [
     {
       href: '/zh-cn/stage-1/introduction-to-ai-ide/',
-      title: '第2课：学会 AI 编程工具',
+      title: 'AI 编程工具介绍与使用',
       description: '重新梳理 Trae IDE 的环境配置与常见设置。',
       icon: '💻'
     },
     {
       href: '/zh-cn/stage-1/building-prototype/',
-      title: '第5课：动手做出原型',
+      title: '6. 做出可交互原型',
       description: '从需求拆解到页面落地，学会用 AI IDE 生成多页面应用。',
       icon: '🧩'
     },
     {
       href: '/zh-cn/stage-1/learning-map/',
-      title: '返回学习地图',
+      title: '返回：如何学习本课程',
       description: '按完整路线查看每个阶段目标与推荐学习顺序。',
       icon: '🗺️'
     }
@@ -367,7 +382,8 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-2/frontend/llm-skills-beautiful/',
       title: '前端5：结合 Agent Skills 美化界面',
-      description: '把设计系统封装成 Skill，让 AI 自动加载品牌规范完成页面美化。',
+      description:
+        '把设计系统封装成 Skill，让 AI 自动加载品牌规范完成页面美化。',
       icon: '🎯'
     },
     {
@@ -407,7 +423,8 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-2/frontend/llm-skills-beautiful/',
       title: '前端5：结合 Agent Skills 美化界面',
-      description: '把设计系统封装成 Skill，让 AI 自动加载品牌规范完成页面美化。',
+      description:
+        '把设计系统封装成 Skill，让 AI 自动加载品牌规范完成页面美化。',
       icon: '🎯'
     },
     {
@@ -419,7 +436,8 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-2/backend/zeabur-deployment/',
       title: '把网站发到网上（简单方式）：一键 PaaS 部署',
-      description: '学会把代码一键发布到 Vercel / Zeabur / CloudBase 等平台，让全世界都能访问。',
+      description:
+        '学会把代码一键发布到 Vercel / Zeabur / CloudBase 等平台，让全世界都能访问。',
       icon: '🚀'
     },
     {
@@ -439,7 +457,8 @@ const rawRelatedArticlesMap = {
     {
       href: '/zh-cn/stage-2/backend/zeabur-deployment/',
       title: '把网站发到网上（简单方式）：一键 PaaS 部署',
-      description: '学会把代码一键发布到 Vercel / Zeabur / CloudBase 等平台，让全世界都能访问。',
+      description:
+        '学会把代码一键发布到 Vercel / Zeabur / CloudBase 等平台，让全世界都能访问。',
       icon: '🚀'
     },
     {
@@ -726,15 +745,18 @@ const localizedArticleText = {
   'zh-tw': {
     'ai-capabilities-through-games': {
       title: '初級一：AI 時代，會說話就會編程',
-      description: '先用小遊戲感受 AI 編程，快速建立手感，理解「什麼問題適合交給 AI」。'
+      description:
+        '先用小遊戲感受 AI 編程，快速建立手感，理解「什麼問題適合交給 AI」。'
     },
     'finding-great-idea': {
       title: '初級三：找到好點子',
-      description: '從「我有想法」走向「做對方向」，學會挖掘真實用戶需求，找到有人願意買單的產品方向。'
+      description:
+        '從「我有想法」走向「做對方向」，學會挖掘真實用戶需求，找到有人願意買單的產品方向。'
     },
     'building-prototype': {
       title: '初級四：動手做出原型',
-      description: '從需求拆解到頁面落地，學會用 AI IDE 生成多頁面應用，快速完成第一版可交互 Demo。'
+      description:
+        '從需求拆解到頁面落地，學會用 AI IDE 生成多頁面應用，快速完成第一版可交互 Demo。'
     },
     'lovart-assets': {
       title: '前端1：NanoBanana 素材生產 Agent',
@@ -742,7 +764,8 @@ const localizedArticleText = {
     },
     'introduction-to-ai-ide': {
       title: '初級二：學會 AI 程式設計工具',
-      description: '從網頁試玩升級到本地 AI IDE（Trae），建立完整開發環境，學會高效與 AI 對話。'
+      description:
+        '從網頁試玩升級到本地 AI IDE（Trae），建立完整開發環境，學會高效與 AI 對話。'
     },
     'learning-map': {
       title: '返回學習地圖',
@@ -750,7 +773,8 @@ const localizedArticleText = {
     },
     'integrating-ai-capabilities': {
       title: '初級五：給原型加上 AI 能力',
-      description: '接入真實 API（文本模型、文生圖），讓原型從「可看」變「可用」，學會模型選型與除錯。'
+      description:
+        '接入真實 API（文本模型、文生圖），讓原型從「可看」變「可用」，學會模型選型與除錯。'
     },
     'appendix-b-common-errors': {
       title: '附錄：常見報錯與解決方案',
@@ -758,7 +782,8 @@ const localizedArticleText = {
     },
     'complete-project-practice': {
       title: '初級六：完整專案實戰',
-      description: '補齊資料、互動、異常處理，做出可展示、可互動的完整 AI 產品原型。'
+      description:
+        '補齊資料、互動、異常處理，做出可展示、可互動的完整 AI 產品原型。'
     },
     'figma-mastergo': {
       title: '前端3：Figma 與 MasterGo 入門',
@@ -778,7 +803,8 @@ const localizedArticleText = {
     },
     'ui-design': {
       title: '前端2：AI 設計入門',
-      description: '借助 AI 設計能力完成 Logo、圖示與完整網頁 UI，掌握提示詞工程與一致性技巧。'
+      description:
+        '借助 AI 設計能力完成 Logo、圖示與完整網頁 UI，掌握提示詞工程與一致性技巧。'
     },
     'design-to-code': {
       title: '前端6：設計原型到專案程式碼',
@@ -798,11 +824,13 @@ const localizedArticleText = {
     },
     'multi-product-ui': {
       title: '前端4：UI 設計規範與多產品介面',
-      description: '建立統一的設計系統與元件規範，完成從單個頁面到多產品線佈局。'
+      description:
+        '建立統一的設計系統與元件規範，完成從單個頁面到多產品線佈局。'
     },
     'llm-skills-beautiful': {
       title: '前端5：結合 Agent Skills 美化介面',
-      description: '把設計系統封裝成 Skill，讓 AI 自動載入品牌規範完成頁面美化。'
+      description:
+        '把設計系統封裝成 Skill，讓 AI 自動載入品牌規範完成頁面美化。'
     },
     'git-workflow': {
       title: '後端3：Git 與 GitHub 入門',
@@ -1033,8 +1061,7 @@ const localizedArticleText = {
     },
     'git-workflow': {
       title: '백엔드 3: Git & GitHub 입문',
-      description:
-        '코드 버전 관리는 협업과 자동 배포의 기초입니다.'
+      description: '코드 버전 관리는 협업과 자동 배포의 기초입니다.'
     },
     'modern-cli': {
       title: 'CLI Coding Agent 프로그래밍 어시스턴트',
@@ -1168,12 +1195,12 @@ const localizedArticleText = {
     'building-prototype': {
       title: 'Débutant 4 : Créer un prototype interactif',
       description:
-        "Du découpage des besoins à la mise en page. Apprends à générer des apps multi-pages avec un AI IDE et à sortir vite une première Demo interactive."
+        'Du découpage des besoins à la mise en page. Apprends à générer des apps multi-pages avec un AI IDE et à sortir vite une première Demo interactive.'
     },
     'lovart-assets': {
       title: 'Frontend 1 : Agent de Production de Ressources NanoBanana',
       description:
-        "Générez des ressources de design par lots avec texte vers image / image vers image et construisez un flux de production réutilisable."
+        'Générez des ressources de design par lots avec texte vers image / image vers image et construisez un flux de production réutilisable.'
     },
     'introduction-to-ai-ide': {
       title: 'Débutant 2 : Maîtriser les outils de programmation IA',
@@ -1198,12 +1225,12 @@ const localizedArticleText = {
     'complete-project-practice': {
       title: 'Débutant 6 : Projet complet de A à Z',
       description:
-        "Complète la persistance des données, les interactions et la gestion des erreurs. Livre un prototype de produit IA complet et prêt à être présenté."
+        'Complète la persistance des données, les interactions et la gestion des erreurs. Livre un prototype de produit IA complet et prêt à être présenté.'
     },
     'figma-mastergo': {
       title: 'Frontend 3 : Bases de Figma et MasterGo',
       description:
-        "Placez les ressources générées par IA dans les maquettes et construisez des expressions structurées du visuel aux mises en page."
+        'Placez les ressources générées par IA dans les maquettes et construisez des expressions structurées du visuel aux mises en page.'
     },
     'ui-design': {
       title: 'Frontend 2 : Introduction au Design IA',
@@ -1223,7 +1250,7 @@ const localizedArticleText = {
     'database-supabase': {
       title: 'Backend Junior : de la Base de Données à Supabase',
       description:
-        "Ajoutez la modélisation de données, le stockage et les capacités de permissions."
+        'Ajoutez la modélisation de données, le stockage et les capacités de permissions.'
     },
     'zeabur-deployment': {
       title: 'Mettre son Site en Ligne (Facile) : Déploiement PaaS en un Clic',
@@ -1233,12 +1260,12 @@ const localizedArticleText = {
     'cloud-server-deployment': {
       title: 'Mettre son Site en Ligne (Avancé) : Configurer son Propre VPS',
       description:
-        "Achetez un VPS, configurez Nginx/Docker/HTTPS depuis zéro — contrôle total sur vos services."
+        'Achetez un VPS, configurez Nginx/Docker/HTTPS depuis zéro — contrôle total sur vos services.'
     },
     'multi-product-ui': {
       title: 'Frontend 4 : Système de Design UI et Interfaces Multi-Produits',
       description:
-        "Construisez un système de design et des spécifications de composants unifiés, passant de pages individuelles à des mises en page multi-produits."
+        'Construisez un système de design et des spécifications de composants unifiés, passant de pages individuelles à des mises en page multi-produits.'
     },
     'llm-skills-beautiful': {
       title: 'Frontend 5 : Embellir les Interfaces avec les Compétences LLM',
@@ -1253,7 +1280,7 @@ const localizedArticleText = {
     'modern-cli': {
       title: 'Assistant CLI Coding Agent',
       description:
-        "Utilisez des Agents IA basés sur un terminal pour exécuter déploiements et opérations directement sur les serveurs."
+        'Utilisez des Agents IA basés sur un terminal pour exécuter déploiements et opérations directement sur les serveurs.'
     },
     'stripe-payment': {
       title: 'Intégration de paiement Stripe',
@@ -1423,11 +1450,13 @@ const localizedArticleText = {
     },
     'modern-cli': {
       title: 'مساعد البرمجة CLI Coding Agent',
-      description: 'استخدم وكلاء ذكاء اصطناعي قائمين على الطرفية لتنفيذ عمليات النشر والتشغيل مباشرة على الخوادم.'
+      description:
+        'استخدم وكلاء ذكاء اصطناعي قائمين على الطرفية لتنفيذ عمليات النشر والتشغيل مباشرة على الخوادم.'
     },
     'stripe-payment': {
       title: 'تكامل مدفوعات Stripe',
-      description: 'بعد إطلاق الموقع، تعلم كيفية ربط طرق الدفع العالمية الرائدة وإكمال حلقة التمويل.'
+      description:
+        'بعد إطلاق الموقع، تعلم كيفية ربط طرق الدفع العالمية الرائدة وإكمال حلقة التمويل.'
     }
   },
   'vi-vn': {
@@ -1503,15 +1532,18 @@ const localizedArticleText = {
     },
     'git-workflow': {
       title: 'Back-end 3: Nhập môn Git và GitHub',
-      description: 'Quản lý phiên bản mã nguồn là nền tảng cho cộng tác và triển khai tự động.'
+      description:
+        'Quản lý phiên bản mã nguồn là nền tảng cho cộng tác và triển khai tự động.'
     },
     'modern-cli': {
       title: 'Trợ lý lập trình CLI Coding Agent',
-      description: 'Sử dụng các tác nhân AI dựa trên terminal để thực thi triển khai và vận hành trực tiếp trên máy chủ.'
+      description:
+        'Sử dụng các tác nhân AI dựa trên terminal để thực thi triển khai và vận hành trực tiếp trên máy chủ.'
     },
     'stripe-payment': {
       title: 'Tích hợp thanh toán Stripe',
-      description: 'Sau khi trang web lên mạng, học cách kết nối các phương thức thanh toán toàn cầu phổ biến và hoàn thành vòng thu tiền.'
+      description:
+        'Sau khi trang web lên mạng, học cách kết nối các phương thức thanh toán toàn cầu phổ biến và hoàn thành vòng thu tiền.'
     }
   }
 }
@@ -1705,7 +1737,8 @@ const localizedStage2ArticleText = {
         'Convierte con precisión los archivos de diseño en código frontend y estructuras de componentes mantenibles.'
     },
     'modern-component-library': {
-      title: 'Frontend 7: Librerías de Componentes Modernas y Actualización de UI',
+      title:
+        'Frontend 7: Librerías de Componentes Modernas y Actualización de UI',
       description:
         'Usa librerías de componentes para mejorar la eficiencia de ingeniería y la consistencia de la interfaz.'
     }
@@ -1724,7 +1757,7 @@ const localizedStage2ArticleText = {
     'database-supabase': {
       title: 'Backend Junior : de la Base de Données à Supabase',
       description:
-        "Ajoutez la modélisation de données, le stockage et les capacités de permissions."
+        'Ajoutez la modélisation de données, le stockage et les capacités de permissions.'
     },
     'ui-design': {
       title: 'Frontend 2 : Introduction au Design IA',
@@ -1737,7 +1770,8 @@ const localizedStage2ArticleText = {
         'Transformez avec précision les fichiers de design en code frontend et structures de composants maintenables.'
     },
     'modern-component-library': {
-      title: 'Frontend 7 : Bibliothèques de Composants Modernes et Mise à Niveau UI',
+      title:
+        'Frontend 7 : Bibliothèques de Composants Modernes et Mise à Niveau UI',
       description:
         "Utilisez des bibliothèques de composants pour améliorer l'efficacité d'ingénierie et la cohérence de l'interface."
     }
@@ -1799,8 +1833,7 @@ const localizedStage2ArticleText = {
     },
     'modern-component-library': {
       title: 'الواجهة الأمامية 7: مكتبات المكونات الحديثة وترقية الواجهة',
-      description:
-        'استخدم مكتبات المكونات لتحسين كفاءة الهندسة واتساق الواجهة.'
+      description: 'استخدم مكتبات المكونات لتحسين كفاءة الهندسة واتساق الواجهة.'
     }
   },
   'vi-vn': {
@@ -1842,6 +1875,286 @@ for (const locale of Object.keys(localizedStage2ArticleText)) {
   }
 }
 
+const localizedStage1LearningMapOrder = [
+  'ai-capabilities-through-games',
+  'introduction-to-ai-ide',
+  'clone-your-favorite-app',
+  'appendix-idea-sources',
+  'finding-great-idea',
+  'appendix-double-diamond',
+  'appendix-jobs-to-be-done',
+  'appendix-mom-test',
+  'building-prototype',
+  'integrating-ai-capabilities',
+  'complete-project-practice'
+]
+
+// Keep learning-map cards identical to each locale's Stage 1 sidebar labels.
+// These overrides also remove the obsolete "Beginner 1–6" naming wherever a
+// Stage 1 article is reused in a related-article card.
+const localizedStage1LearningMapTitles = {
+  en: [
+    'First Programming Experience in the AI Era',
+    'Introduction to AI Programming Tools',
+    'Clone from Screenshots: First Imitation Practice',
+    'Sources of Creative Inspiration',
+    'How to Identify a Great Idea',
+    'Double Diamond Design Model',
+    'Jobs to Be Done Theory',
+    'The Mom Test: User Interview Method',
+    'Building Interactive Product Prototypes',
+    'Integrating AI Capabilities into Prototypes',
+    'Complete Project Practice: From Idea to Product'
+  ],
+  'zh-tw': [
+    'AI 時代的程式設計初體驗',
+    'AI 程式設計工具介紹與使用',
+    '從截圖复刻：第一次模仿練習',
+    '創意靈感的來源',
+    '如何判斷一個好點子',
+    '雙鑽設計模型',
+    'Jobs to Be Done 需求理論',
+    'The Mom Test：使用者訪談方法',
+    '構建可互動的產品原型',
+    '為原型接入 AI 能力',
+    '完整專案實戰：從想法到作品'
+  ],
+  'ja-jp': [
+    'AI時代のプログラミング初体験',
+    'AIプログラミングツールの紹介と使い方',
+    'スクリーンショットから複製：初めての模倣練習',
+    'クリエイティブな発想の源',
+    '良いアイデアを見極める方法',
+    'ダブルダイヤモンドデザインモデル',
+    'Jobs to Be Done 要求理論',
+    'The Mom Test：ユーザーインタビュー手法',
+    'インタラクティブなプロダクトプロトタイプの構築',
+    'プロトタイプへのAI機能の統合',
+    '完全プロジェクト実践：アイデアから作品まで'
+  ],
+  'ko-kr': [
+    'AI 시대의 프로그래밍 첫 경험',
+    'AI 프로그래밍 도구 소개와 사용',
+    '스크린샷으로 복제하기: 첫 모방 연습',
+    '창의적 영감의 원천',
+    '좋은 아이디어 판별 방법',
+    '더블 다이아몬드 디자인 모델',
+    'Jobs to Be Done 요구 이론',
+    'The Mom Test: 사용자 인터뷰 방법',
+    '인터랙티브한 제품 프로토타입 구축',
+    '프로토타입에 AI 기능 통합하기',
+    '완성 프로젝트 실전: 아이디어에서 작품까지'
+  ],
+  'es-es': [
+    'Primera experiencia de programación en la era de la IA',
+    'Introducción y uso de herramientas de programación con IA',
+    'Clonar desde capturas de pantalla: primer ejercicio de imitación',
+    'Fuentes de inspiración creativa',
+    'Cómo identificar una gran idea',
+    'Modelo de diseño Double Diamond',
+    'Teoría Jobs to Be Done',
+    'The Mom Test: método de entrevistas a usuarios',
+    'Construcción de prototipos de producto interactivos',
+    'Integración de capacidades de IA en prototipos',
+    'Práctica completa de proyecto: de idea a producto'
+  ],
+  'fr-fr': [
+    "Première expérience de programmation à l'ère de l'IA",
+    'Présentation et utilisation des outils de programmation IA',
+    "Cloner depuis des captures d'écran : premier exercice d'imitation",
+    "Sources d'inspiration créative",
+    'Comment identifier une bonne idée',
+    'Modèle de conception Double Diamond',
+    'Théorie Jobs to Be Done',
+    "The Mom Test : méthode d'entretiens utilisateurs",
+    'Construction de prototypes de produit interactifs',
+    'Intégration de capacités IA dans les prototypes',
+    "Projet complet pratique : de l'idée au produit"
+  ],
+  'de-de': [
+    'Erste Programmiererfahrung im KI-Zeitalter',
+    'Einführung und Nutzung von KI-Programmierwerkzeugen',
+    'Klonen aus Screenshots: Erste Imitationsübung',
+    'Quellen kreativer Inspiration',
+    'Wie man eine großartige Idee erkennt',
+    'Double Diamond Design-Modell',
+    'Jobs to Be Done-Theorie',
+    'The Mom Test: Benutzerinterviewmethode',
+    'Erstellung interaktiver Produktprototypen',
+    'Integration von KI-Fähigkeiten in Prototypen',
+    'Vollständige Projektpraxis: Von der Idee zum Produkt'
+  ],
+  'ar-sa': [
+    'أول تجربة برمجة في عصر الذكاء الاصطناعي',
+    'مقدمة واستخدام أدوات البرمجة بالذكاء الاصطناعي',
+    'الاستنساخ من لقطات الشاشة: أول تمرين محاكاة',
+    'مصادر الإلهام الإبداعي',
+    'كيف تحدد فكرة رائعة',
+    'نموذج التصميم الماسي المزدوج',
+    'نظرية Jobs to Be Done',
+    'اختبار الأم: طريقة مقابلات المستخدم',
+    'بناء نماذج أولية تفاعلية للمنتج',
+    'دمج قدرات الذكاء الاصطناعي في النماذج الأولية',
+    'مشروع عملي كامل: من الفكرة إلى المنتج'
+  ],
+  'vi-vn': [
+    'Trải nghiệm lập trình đầu tiên trong thời đại AI',
+    'Giới thiệu và sử dụng công cụ lập trình AI',
+    'Sao chép từ ảnh chụp màn hình: bài tập bắt chước đầu tiên',
+    'Nguồn cảm hứng sáng tạo',
+    'Cách xác định một ý tưởng hay',
+    'Mô hình thiết kế Double Diamond',
+    'Lý thuyết Jobs to Be Done',
+    'The Mom Test: phương pháp phỏng vấn người dùng',
+    'Xây dựng nguyên mẫu sản phẩm tương tác',
+    'Tích hợp năng lực AI vào nguyên mẫu',
+    'Thực chiến dự án hoàn chỉnh: từ ý tưởng đến sản phẩm'
+  ]
+}
+
+const localizedStage1NewArticleDescriptions = {
+  en: {
+    'clone-your-favorite-app':
+      'Practice with a screenshot-based recreation and become comfortable with your AI programming tools.',
+    'appendix-idea-sources':
+      'Find promising product ideas in real work, daily life, communities, and public feedback.',
+    'appendix-double-diamond':
+      'Use the Double Diamond to explore problems and converge on a solution worth building.',
+    'appendix-jobs-to-be-done':
+      'Understand the real job users are trying to accomplish behind their stated requests.',
+    'appendix-mom-test':
+      'Validate demand through interviews without mistaking compliments for evidence.'
+  },
+  'zh-tw': {
+    'clone-your-favorite-app':
+      '從截圖模仿開始練習，熟悉 AI 程式設計工具與完整操作流程。',
+    'appendix-idea-sources':
+      '從真實工作、日常生活、社群與公開回饋中尋找值得研究的產品問題。',
+    'appendix-double-diamond':
+      '用雙鑽模型發散問題與方案，再收斂到值得實作的方向。',
+    'appendix-jobs-to-be-done':
+      '從使用者想完成的任務出發，理解表面需求背後的真實動機。',
+    'appendix-mom-test': '用正確的訪談方式驗證需求，避免把客套話誤當成證據。'
+  },
+  'ja-jp': {
+    'clone-your-favorite-app':
+      'スクリーンショットの再現から練習し、AIプログラミングツールの操作に慣れます。',
+    'appendix-idea-sources':
+      '実際の仕事、日常生活、コミュニティ、公開フィードバックから価値ある課題を探します。',
+    'appendix-double-diamond':
+      'ダブルダイヤモンドで問題と解決策を広げ、作る価値のある方向へ絞り込みます。',
+    'appendix-jobs-to-be-done':
+      'ユーザーの言葉の背後にある、本当に達成したいジョブを理解します。',
+    'appendix-mom-test':
+      '社交辞令を証拠と取り違えないインタビュー方法で、ニーズを検証します。'
+  },
+  'ko-kr': {
+    'clone-your-favorite-app':
+      '스크린샷을 따라 만들어 보며 AI 프로그래밍 도구와 전체 작업 흐름에 익숙해집니다.',
+    'appendix-idea-sources':
+      '실제 업무, 일상생활, 커뮤니티와 공개 피드백에서 탐구할 가치가 있는 문제를 찾습니다.',
+    'appendix-double-diamond':
+      '더블 다이아몬드로 문제와 해결책을 확장한 뒤 만들 가치가 있는 방향으로 수렴합니다.',
+    'appendix-jobs-to-be-done':
+      '사용자가 말한 요구 뒤에 있는, 실제로 완수하려는 과업을 이해합니다.',
+    'appendix-mom-test':
+      '칭찬을 증거로 착각하지 않는 인터뷰 방법으로 수요를 검증합니다.'
+  },
+  'es-es': {
+    'clone-your-favorite-app':
+      'Practica recreando una captura de pantalla y familiarízate con las herramientas de programación con IA.',
+    'appendix-idea-sources':
+      'Encuentra problemas valiosos en el trabajo real, la vida cotidiana, las comunidades y los comentarios públicos.',
+    'appendix-double-diamond':
+      'Usa el Double Diamond para explorar problemas y soluciones y converger en una dirección que valga la pena construir.',
+    'appendix-jobs-to-be-done':
+      'Comprende la tarea real que el usuario intenta completar detrás de lo que pide.',
+    'appendix-mom-test':
+      'Valida la demanda mediante entrevistas sin confundir los cumplidos con evidencia.'
+  },
+  'fr-fr': {
+    'clone-your-favorite-app':
+      "Entraînez-vous en reproduisant une capture d'écran et maîtrisez progressivement les outils de programmation IA.",
+    'appendix-idea-sources':
+      'Repérez des problèmes utiles dans le travail réel, la vie quotidienne, les communautés et les retours publics.',
+    'appendix-double-diamond':
+      'Utilisez le Double Diamond pour explorer problèmes et solutions, puis converger vers une piste à construire.',
+    'appendix-jobs-to-be-done':
+      "Comprenez la tâche réelle que l'utilisateur cherche à accomplir derrière sa demande.",
+    'appendix-mom-test':
+      'Validez le besoin par des entretiens sans confondre compliments et preuves.'
+  },
+  'de-de': {
+    'clone-your-favorite-app':
+      'Üben Sie anhand eines Screenshot-Nachbaus und machen Sie sich mit den KI-Programmierwerkzeugen vertraut.',
+    'appendix-idea-sources':
+      'Finden Sie relevante Probleme in echter Arbeit, Alltag, Communities und öffentlichem Feedback.',
+    'appendix-double-diamond':
+      'Nutzen Sie den Double Diamond, um Probleme und Lösungen zu erkunden und auf eine lohnende Richtung zu fokussieren.',
+    'appendix-jobs-to-be-done':
+      'Verstehen Sie die eigentliche Aufgabe, die Nutzer hinter ihrer formulierten Anfrage erledigen wollen.',
+    'appendix-mom-test':
+      'Validieren Sie Bedarf durch Interviews, ohne Höflichkeit mit Belegen zu verwechseln.'
+  },
+  'ar-sa': {
+    'clone-your-favorite-app':
+      'تدرّب على إعادة إنشاء واجهة من لقطة شاشة وتعرّف إلى أدوات البرمجة بالذكاء الاصطناعي.',
+    'appendix-idea-sources':
+      'ابحث عن مشكلات تستحق الدراسة في العمل والحياة اليومية والمجتمعات والملاحظات العامة.',
+    'appendix-double-diamond':
+      'استخدم نموذج الماسة المزدوجة لاستكشاف المشكلات والحلول ثم تضييقها إلى اتجاه يستحق البناء.',
+    'appendix-jobs-to-be-done':
+      'افهم المهمة الحقيقية التي يحاول المستخدم إنجازها وراء الطلب الذي يعبّر عنه.',
+    'appendix-mom-test':
+      'تحقق من الحاجة بالمقابلات من دون الخلط بين المجاملة والدليل.'
+  },
+  'vi-vn': {
+    'clone-your-favorite-app':
+      'Luyện tập bằng cách dựng lại từ ảnh chụp màn hình và làm quen với công cụ lập trình AI.',
+    'appendix-idea-sources':
+      'Tìm vấn đề đáng nghiên cứu trong công việc thật, đời sống, cộng đồng và phản hồi công khai.',
+    'appendix-double-diamond':
+      'Dùng Double Diamond để mở rộng vấn đề và giải pháp, rồi hội tụ vào hướng đáng xây dựng.',
+    'appendix-jobs-to-be-done':
+      'Hiểu công việc thực sự người dùng muốn hoàn thành phía sau yêu cầu họ nêu ra.',
+    'appendix-mom-test':
+      'Kiểm chứng nhu cầu bằng phỏng vấn mà không nhầm lời khen với bằng chứng.'
+  }
+}
+
+const localizedStage1ReturnTitles = {
+  en: 'Back: How to Learn This Course',
+  'zh-tw': '返回：如何學習本課程',
+  'ja-jp': '戻る：このコースの学び方',
+  'ko-kr': '돌아가기: 이 과목 학습 방법',
+  'es-es': 'Volver: Cómo aprender este curso',
+  'fr-fr': 'Retour : Comment apprendre ce cours',
+  'de-de': 'Zurück: Wie man diesen Kurs lernt',
+  'ar-sa': 'العودة: كيف تتعلم هذه الدورة',
+  'vi-vn': 'Quay lại: Cách học khóa học này'
+}
+
+for (const [locale, titles] of Object.entries(
+  localizedStage1LearningMapTitles
+)) {
+  for (const [index, slug] of localizedStage1LearningMapOrder.entries()) {
+    localizedArticleText[locale][slug] = {
+      ...localizedArticleText[locale][slug],
+      title: titles[index],
+      ...(localizedStage1NewArticleDescriptions[locale]?.[slug]
+        ? {
+            description: localizedStage1NewArticleDescriptions[locale][slug]
+          }
+        : {})
+    }
+  }
+
+  localizedArticleText[locale]['learning-map'] = {
+    ...localizedArticleText[locale]['learning-map'],
+    title: localizedStage1ReturnTitles[locale]
+  }
+}
+
 const withLocalizedArticleText = (item, locale) => {
   const text = localizedArticleText[locale]?.[getArticleSlug(item.href)]
   return text ? { ...item, ...text } : item
@@ -1852,6 +2165,17 @@ const localizeArticleLinks = (items, locale) =>
     ...withLocalizedArticleText(item, locale),
     href: item.href.replace(/^\/zh-cn\//, `/${locale}/`)
   }))
+
+const orderLocalizedLearningMapItems = (items) => {
+  const order = new Map(
+    localizedStage1LearningMapOrder.map((slug, index) => [slug, index])
+  )
+  return [...items].sort(
+    (left, right) =>
+      (order.get(getArticleSlug(left.href)) ?? Number.MAX_SAFE_INTEGER) -
+      (order.get(getArticleSlug(right.href)) ?? Number.MAX_SAFE_INTEGER)
+  )
+}
 
 export const relatedArticlesMap = new Proxy(rawRelatedArticlesMap, {
   get(target, prop) {
@@ -1865,6 +2189,10 @@ export const relatedArticlesMap = new Proxy(rawRelatedArticlesMap, {
     const fallbackItems = target[fallbackKey]
     if (!fallbackItems) return undefined
 
-    return localizeArticleLinks(fallbackItems, locale)
+    const localizedItems = prop.endsWith('/stage-1/learning-map')
+      ? orderLocalizedLearningMapItems(fallbackItems)
+      : fallbackItems
+
+    return localizeArticleLinks(localizedItems, locale)
   }
 })
