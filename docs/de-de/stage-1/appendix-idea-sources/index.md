@@ -9,7 +9,6 @@ const duration = 'Etwa <strong>20 Minuten</strong>'
 
 # Woher kreative Ideen kommen
 
-<ProductJourney current="find" />
 
 ## Worum es in diesem Kapitel geht
 

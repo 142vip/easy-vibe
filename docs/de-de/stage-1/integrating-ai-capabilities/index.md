@@ -15,7 +15,6 @@ const relatedArticles =
 
 # KI-Funktionen in einen Prototyp integrieren
 
-<ProductJourney current="ai" />
 
 ## Einführung
 

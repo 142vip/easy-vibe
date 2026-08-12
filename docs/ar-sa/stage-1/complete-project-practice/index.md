@@ -16,7 +16,6 @@ const relatedArticles =
 
 # تطبيق مشروع كامل: من الفكرة إلى عمل جاهز
 
-<ProductJourney current="finish" />
 
 ## ماذا سنفعل في هذا الفصل؟
 

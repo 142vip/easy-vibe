@@ -5,51 +5,20 @@ description: 'ゼロベースの読者向けの Jobs to Be Done 入門記事。�
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = '約 <strong>1.5 時間</strong>'
 </script>
 
-# Jobs to Be Done でユーザーが本当に達成したいことを見極める
+# Jobs to Be Done ニーズ理論
 
 <a id="top-jtbd"></a>
 
-## 本章のガイド
+会議議事録ツールを作るとします。機能から考えると、文字起こし、要約、ToDo の抽出、文書のエクスポートをすぐに列挙できます。しかし、これらの機能だけでは、ユーザーが会議後になぜそのツールを使うのかという、より基本的な問いには答えられません。
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['JTBD', 'ユーザーニーズ', 'プロダクト思考', 'ニーズインサイト']"
-  coreOutput="1 つのよりリアルなニーズに近い JTBD 文"
-  expectedOutput="曖昧なアイデアをより具体的なユーザーシーンと MVP 方向に絞り込める"
->
+Jobs to Be Done（JTBD）は、「ユーザーが成し遂げたい仕事」からこの問いを考えます。特定の状況、期待する結果、現在の方法に注目し、ある機能が必ず役立つとは最初から決めません。
 
-多くの人が初めてプロダクトを作る時、最も陥りやすい間違いは「自分がどんな機能を作るか」に注意を全部向けてしまうことです。他のプロダクトにスマート分類があれば自分も追加したくなり、自動サマリーがあれば自分も接続したくなり、Agent、マルチモーダル、ワークフローがあれば自分も欠かせないと感じてしまいます。
-
-しかし現実には、ユーザーが「この機能名がかっこいいから」という理由でプロダクトを使うことはめったにありません。彼らはむしろ特定の場面で、あることを前に進めたいと思い、一時的にツールやサービス、さらには人を「雇用」して、この一歩を完了させようとします。
-
-これこそが **Jobs to Be Done（JTBD）** という手法が私たちに気づかせようとしていることです：**ユーザーは機能そのものを買っているのではなく、あるソリューションを雇用して、自分の進捗を達成しようとしているのです。**
-
-本記事はできるだけ分かりやすい言葉で、ゼロから JTBD を理解し、AI アプリケーションを作る際に直接使える分析ツールにするまでを案内します。
-
-</ChapterIntroduction>
-
-::: info 最小 SOP
-**目的**：読み終わった後、曖昧なアイデアを本当にユーザーシーンのあるニーズの一文に絞り込む方法がより明確になり、頭の中に機能名の羅列だけが残ることはありません。
-
-**アクション項目**：曖昧なアイデアを 1 文書き、潜在ユーザー 3 人に「前回どう対処したか」を聞き、それを JTBD 文に整理する。
-
-**結果**：より明確なニーズ仮説が得られ、初版で何を優先すべきかがわかる。
-
-**キーワードジャンプ**：[JTBDとは](#jtbd-what) · [一文公式](#jtbd-formula) · [AIの活用法](#jtbd-ai)
-:::
-
-## この章で学ぶ内容
-
-1. Jobs to Be Done とは何か、なぜ「機能ブレスト」よりもリアルなニーズに近いのか
-2. 「ユーザーが欲しいと言う機能」と「ユーザーが本当に達成したいこと」の区別方法
-3. 簡単なテンプレートを使って、曖昧なアイデアをシーン、トリガー、障害、成功基準に分解する方法
-4. JTBD を AI プロダクト、インタビュー質問、プロンプト整理にどう活用するか
+本章では、曖昧なプロダクトの方向性を、検証可能なニーズ仮説へ整理する方法を説明します。
 
 <a id="jtbd-what"></a>
-## [1. Jobs to Be Done とは何か](#top-jtbd)
+## [1. 機能から Job へ](#top-jtbd)
 
 Jobs to Be Done は **JTBD** と略されることが多いです。その背後にある核心的なアイデアは、Clayton Christensen のチームが広めた次の古典的な表現に関連しています：**ユーザーはあるプロダクトを「雇用」して一つのことを完了させる。**
 
@@ -64,6 +33,13 @@ Jobs to Be Done は **JTBD** と略されることが多いです。その背後
 これこそが、一見異なるプロダクトが実際には同じ Job を争っている理由でもあります。ユーザーが「通勤途中で退屈したくない」と思えば、雇用の対象はショート動画、ポッドキャスト、ゲーム、チャット、さらには居眠りかもしれません。ユーザーが「とても長い PDF を素早く理解したい」と思えば、雇用の対象は AI 要約ツール、インターン、同僚、自分で頑張って読む、あるいはとりあえず読まないことかもしれません。
 
 この視点で問題を見ると、本当の競合相手は「自分と似たような App」だけではなく、**ユーザーの現在受け入れ可能なすべての代替ソリューション** であることに気づくでしょう。
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/customer-journey-map.png" alt="段階ごとにユーザーのニーズ、行動、利用物、感情、プロダクト機会を記録したカスタマージャーニーマップ" loading="lazy" />
+  </a>
+  <figcaption><strong>Job は一連のプロセスの中で発生します。</strong>この図はオンラインツールの利用を段階に分け、ニーズ、行動、道具、感情、機会を記録しています。JTBD でも、好みの機能だけでなく、この過程に沿って確認します。作者：Advenio、出典：<a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer">Wikimedia Commons</a>、<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>。</figcaption>
+</figure>
 
 ## 2. JTBD とユーザーペルソナ、機能リストの違い
 
@@ -87,7 +63,7 @@ JTBD がより関心を持つのは次のような問題です：
 
 多くの場合、**機能は Job の一時的な翻訳にすぎません**。機能だけを集めると、プロダクトは「ユーザーが言うままに積み上げる」ものになりがちですが、背後にある Job が見えれば、本当に使いやすく、本当に競争力のあるソリューションを作れる可能性がずっと高くなります。
 
-## 3. ゼロベースでも理解できる例
+## 3. 例：会議議事録
 
 まず複雑な AI プロダクトを考えるのは後回しにして、生活の例から始めましょう。
 
@@ -114,6 +90,15 @@ JTBD がより関心を持つのは次のような問題です：
 - ToDo、責任者、締切をきれいに抽出し、チームが記憶に頼ったコラボレーションをしなくて済むようにしたい
 - 議事録の整理にかかる繰り返しの時間を減らし、意思決定と実行にエネルギーを注ぎたい
 
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Meeting_notes.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/meeting-note-taking.jpg" alt="実際の会議で参加者がコンピューターと紙の両方を使って記録している様子" loading="lazy" />
+  </a>
+  <figcaption><strong>機能を考える前に、現場を見ます。</strong>参加者はすでにコンピューター、紙、自分なりの習慣で Job を進めています。何を記録し、会議後にどう整理するかを先に調べ、「録音の文字起こし」が答えかどうかを判断します。写真：Unclefeet、<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>。</figcaption>
+</figure>
+
+<JtbdProgressLab />
+
 Job が明確になると、多くの機能の優先順位が自動的に見えてきます。初版で最も重要なのは「12 種類のエクスポート形式に対応すること」ではなく、次のようなことかもしれません：
 
 - 議事録の構造が十分に明確であること
@@ -123,7 +108,7 @@ Job が明確になると、多くの機能の優先順位が自動的に見え�
 
 これこそが JTBD の価値です：**「どの能力を積み上げるか」から「ユーザーのどんな進捗を支援するか」に注意を戻すことができます。**
 
-## 4. 使いやすい JTBD テンプレート
+## 4. JTBD の五つの要素
 
 ゼロベースなら、JTBD を学術的に考えすぎる必要はありません。まず最も実用的な 5 つの要素を掴めば十分です。
 
@@ -172,6 +157,13 @@ Job が明確になると、多くの機能の優先順位が自動的に見え�
 - 複数のツールの間で行き来する
 
 誰が代替ソリューションか、誰があなたの本当の競争環境か。
+
+<figure class="field-figure field-figure--narrow">
+  <a href="https://commons.wikimedia.org/wiki/File:Scrum_task_board.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/physical-task-board.jpg" alt="付箋が列の間を移動する、オフィスの物理的なタスクボード" loading="lazy" />
+  </a>
+  <figcaption><strong>代替案は別のアプリとは限りません。</strong>この物理的なボードは、付箋とテープだけで「進捗を見えるようにする」という Job をこなしています。競合調査では、このような手作業や習慣も含めて考えます。写真：Logan Ingalls、<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>。</figcaption>
+</figure>
 
 ### 4.5 成功基準
 
@@ -272,7 +264,9 @@ JTBD は次のような質問により適しています：
 
 この聞き方には利点があります：会話をリアルな体験に引き戻し、想像上の好みに留まらせないことです。
 
-## 9. AI に JTBD 分析を手伝ってもらう
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/jtbd/intel-context-observation.jpg" alt="Intel の調査で参加者がノートパソコンの画面へ直接触れている様子" loading="lazy" /></a><figcaption><strong>行動は回答より具体的なことがあります。</strong>参加者の操作姿勢は、欲しい機能を尋ねるだけでは見つけにくいものです。写真：<a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer">Intel Free Press / Wikimedia Commons</a>、<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>。</figcaption></figure>
+
+## 9. AI に JTBD の分解を手伝ってもらう
 
 JTBD 自体は AI が発明したものではありませんが、AI は JTBD の整理と洗練に非常に適しています。
 
@@ -326,23 +320,8 @@ Jobs to Be Done のフレームワークで整理してください：
 
 JTBD の正しい使い方は、通常「何でもできる大きなプラットフォームを作る」ことではなく、まず一つのシーンで最も重要な一歩に注目し、それを非常に使いやすくすることです。
 
-## 11. まとめ
-
-Jobs to Be Done の最も価値のある点は、新しい用語を与えることではなく、観察の角度を変えてくれることです：**プロダクトの機能だけを見るのではなく、ユーザーが何を次のステップに進めたいのかを見る。**
-
-あなたが次のようなことを繰り返し自分に問い始めると：
-
-- ユーザーはどんなシーンでこのプロダクトを雇用しているのか
-- 彼は一体どこでつまずいているのか
-- 今どんな方法でやりくりしているのか
-- 問題が解決した後、状態はどう変わるのか
-
-元々曖昧だったアイデアが急にはっきりとし、元々派手だった機能も急に重要ではなくなっていくことに気づくでしょう。
-
-プロダクトを作る時、特に AI プロダクトを作る時、最も怖しいのは最初から能力展示に夢中になることです。JTBD はあなたの注意を本当に重要なところに引き戻してくれます：**ユーザーはなぜあなたを必要としているのか、そしてあなたは一体ユーザーのどんな進捗を支援しているのか。**
-
 <a id="jtbd-ai"></a>
-## [12. AI を活用して JTBD を実践する方法](#top-jtbd)
+## [11. AI を使って JTBD の資料を整理する](#top-jtbd)
 
 JTBD は AI が発明したものではありませんが、AI はこの手法で研究アシスタント、整理アシスタント、対照アシスタントとして非常に適しています。重要なのは：**AI に整理と拡張をさせ、ユーザーの推測をAIに代行させないこと。**
 
@@ -480,7 +459,13 @@ AI は次のように出力するかもしれません：
 
 このようにすることで、自分がニーズを見ているのか、それともただ自分が好きなソリューションを見ているのかをより早く発見できます。
 
-## 📚 課題
+## 12. まとめ
+
+- JTBD は機能ではなく、具体的な状況でユーザーが進めたい変化を記述します。
+- 状況、トリガー、進捗、現在の代替策、成功基準をそろえると、仮説を検証しやすくなります。
+- AI は資料整理を助けますが、ユーザーの行動を示す証拠の代わりにはなりません。
+
+## 13. 練習
 
 <StageAssignmentCard title="ユーザーが本当に成し遂げたいことを書く">
 
@@ -499,3 +484,12 @@ AI は次のように出力するかもしれません：
 - [Harvard Business School Online: What Is Jobs to Be Done?](https://online.hbs.edu/blog/post/jobs-to-be-done)
 - [Intercom: Jobs-to-be-Done: A framework for customer needs](https://www.intercom.com/blog/jobs-to-be-done-framework/)
 - [Mural: Jobs to Be Done framework guide](https://www.mural.co/blog/jobs-to-be-done-framework)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } }
+</style>

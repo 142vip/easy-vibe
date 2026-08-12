@@ -5,59 +5,30 @@ description: 'ゼロベースの読者向けの The Mom Test 入門記事。礼�
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = '約 <strong>1.5 時間</strong>'
 </script>
 
-# The Mom Test：ユーザーインタビューでニーズを検証する方法
+# The Mom Test：ユーザーインタビューの方法
 
 <a id="top-mom"></a>
 
-## 本章のガイド
+前章で作成した JTBD の文は、まだ仮説にすぎません。その問題が最近実際に起こり、ユーザーがすでに時間、金銭、労力を費やしているかを、インタビューで確かめる必要があります。
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['ユーザーインタビュー', 'ニーズ検証', 'ユーザーリサーチ', 'プロダクト調査']"
-  coreOutput="1 組のよりリアルな情報を引き出せるインタビュー質問"
-  expectedOutput="ユーザーの礼儀正しい励ましを検証とみなさず、実際の行動で方向性を判断できる"
->
-
-多くの人が初めてプロダクト調査をする時、最も重要なのは「人に話を聞くこと」だと思いがちです。そこで友達や同僚、さらには家族に聞いてみます：
+難しくは見えません。しかし、アイデアを気に入ったかどうかを直接尋ねると、礼儀正しく曖昧な回答が返ってきがちです。
 
 - このアイデア、どう思う？
 - こんなプロダクトがあったら、使う？
 - この機能、悪くないよね？
 
-相手もとても励みになるフィードバックをくれるでしょう：
-
 - いいね
 - 役に立ちそう
 - 試してみたらいいと思う
 
-問題は、これらの回答は通常、判断に役立たないということです。それはむしろ礼儀、サポート、あるいはその場で盛り上げようとする自然な反応に近いものです。自分が「市場検証」を得たと思っても、実際には判断に使いづらい慰めを集めただけなのです。
+これらの回答が誤っているわけではありません。ただし、プロダクトの判断を支える材料にはなりにくいものです。The Mom Test は、将来の意思を尋ねるよりも、過去に何が起き、ユーザーがどう対処し、何を支払ったかを尋ねるよう促します。
 
-The Mom Test という手法は、まさにこの問題を解決するためのものです。それは私たちに注意喚起します：**ユーザーがわざと嘘をついているのではなく、あなたの質問の仕方が、自然と相手を聞こえの良いが無難な回答に導いているのです。**
-
-</ChapterIntroduction>
-
-::: info 最小 SOP
-**目的**：読み終わった後、ユーザーとどう話せば「良さそう」しか聞けない会話から、方向性を判断できる情報を引き出せるかがより明確になります。
-
-**アクション項目**：本来聞こうとしていた 5 つの質問を書き直し、「最近いつありましたか」「その時どうしましたか」を優先して聞くようにします。
-
-**結果**：どれが意見で、どれが本当に判断を支える証拠なのかを見分けやすくなります。
-
-**キーワードジャンプ**：[The Mom Testとは](#mom-what) · [3つの核心原則](#mom-principles) · [AIの活用法](#mom-ai)
-:::
-
-## この章で学ぶ内容
-
-1. The Mom Test が一体何を解決しようとしているのか、なぜ多くの「ユーザー調査」が実際にはリアルな情報を調査できていないのか
-2. この手法の最も核心的ないくつかの原則：意見を聞くのを減らし、行動を聞くのを増やす；仮定を聞くのを減らし、事実を聞くのを増やす
-3. 偽陽性フィードバックを得やすい質問を、より価値のあるインタビュー質問に書き直す方法
-4. The Mom Test と JTBD、ニーズ検証、MVP 判断をどう組み合わせて使うか
+本章では、このような「偽陽性」のフィードバックを避け、意見や未来の仮定から、過去の行動、現在の方法、すでに支払ったコストへ注意を移す方法を説明します。
 
 <a id="mom-what"></a>
-## [1. The Mom Test とは一体何か](#top-mom)
+## [1. インタビューで偽陽性が生じる理由](#top-mom)
 
 The Mom Test は Rob Fitzpatrick の同名の著書に由来します。その名前は冗談のように聞こえますが、非常に的確に指摘しています：
 
@@ -77,7 +48,7 @@ The Mom Test は Rob Fitzpatrick の同名の著書に由来します。その�
 
 この手法が本当に教えたいのは、対話を通じて、よりリアルなニーズに近い情報を手に入れる方法であり、自分を気分よくさせるコメントを集めることではありません。
 
-## 2. この手法が解決する核心的な問題
+## 2. 意見と行動の証拠
 
 The Mom Test が主に解決するのは、非常に一般的な認知の錯覚です：
 
@@ -106,7 +77,7 @@ The Mom Test が主に解決するのは、非常に一般的な認知の錯覚�
 「使うかどうか」よりも「前回どう対処したか」のほうが、真実に近いことが多いからです。
 
 <a id="mom-principles"></a>
-## [3. 3つの最も核心的な原則](#top-mom)
+## [3. 三つの質問原則](#top-mom)
 
 最も重要な部分だけを先に覚えたいなら、次の 3 つの原則を先に覚えてください。
 
@@ -154,6 +125,13 @@ The Mom Test が主に解決するのは、非常に一般的な認知の錯覚�
 - どこが良くないですか？
 
 既存の代替ソリューションを見極めることは、「何を欲しがっているか」を直接聞くよりも重要なことが多いのです。
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/user-interview-session.jpg" alt="インタビュアーが参加者と話し、机上にコンピューターと記録資料が置かれた実際のインタビュー" loading="lazy" />
+  </a>
+  <figcaption><strong>インタビューの中心は相手であり、質問票ではありません。</strong>「先週」「仕方なく」「すでに支払った」といった具体的な手がかりが出たら、その経験を続けて尋ねます。写真：<a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer">ManonB2018 / Wikimedia Commons</a>、<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>。</figcaption>
+</figure>
 
 ## 4. なぜ人々はいつも聞こえは良いが役に立たない回答をするのか
 
@@ -209,7 +187,11 @@ The Mom Test が主に解決するのは、非常に一般的な認知の錯覚�
 - 未来から過去へ
 - あなたのソリューションからユーザーの問題へ
 
-## 6. ゼロベースでもすぐに使えるインタビューの流れ
+次の練習では、六つの発言が判断に使える証拠か、単なる意見かを分類します。
+
+<InterviewEvidenceLab />
+
+## 6. インタビューの基本的な順序
 
 今すぐ誰かに話を聞きに行きたいなら、次の順序で進められます。
 
@@ -320,6 +302,8 @@ The Mom Test が主に解決するのは、非常に一般的な認知の錯覚�
 
 ## 9. 初心者がユーザーインタビューをする時に最も陥りやすい誤解
 
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/usability-testing-session.jpg" alt="参加者が翻訳アプリを操作するユーザビリティテスト" loading="lazy" /></a><figcaption><strong>発言の次は操作を観察します。</strong>インタビューは問題の存在を、操作テストは解決策が実際に役立つかを検証します。写真：Amire80 / Wikimedia Commons、CC BY-SA 3.0。</figcaption></figure>
+
 ### 9.1 インタビューをプロダクト紹介会にしてしまう
 
 自分のアイデアを話しすぎると、相手はリアルな状況を教えるのではなく、あなたに合わせ始めやすくなります。
@@ -347,6 +331,8 @@ The Mom Test が主に解決するのは、非常に一般的な認知の錯覚�
 - 自分の新しい判断
 
 ## 10. そのままコピーして使える質問リスト
+
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Wikipedia-Affinity.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/wikipedia-affinity-synthesis.jpg" alt="証拠をテーマ別に分類した Wikipedia のアフィニティ図" loading="lazy" /></a><figcaption><strong>インタビュー終了は、材料がそろった段階です。</strong>証拠を分けて分類すると、複数の会話に共通するパターンが見えます。写真：Parul Vora / Wikimedia Foundation、CC BY-SA 3.0。</figcaption></figure>
 
 すぐに始めたいなら、ここに汎用性の高い質問セットがあります。
 
@@ -376,26 +362,8 @@ The Mom Test が主に解決するのは、非常に一般的な認知の錯覚�
 
 この締めくくりの質問は聞いてもいいですが、最後に置くのが良いでしょう。なぜなら、前半では事実をより多く手に入れる必要があり、願望ではないからです。
 
-## 11. まとめ
-
-The Mom Test の最も重要な貢献は、「よりうまく話す」スキルを与えることではなく、より冷静な判断方法を構築することです：
-
-- 他人のあなたのアイデアに対する褒め言葉を急いで信用しない
-- 「あれば使う」をリアルなニーズとみなさない
-- インタビューを自分への承認探しにしない
-
-本当に価値のあるインタビューは、これらのものにできるだけ戻るべきです：
-
-- ユーザーの最近のリアルな体験
-- 今どう対処しているか
-- すでにどんなコストを払っているか
-- どこで明らかに不快感を感じているか
-
-このように聞き始めると、得られる情報は時に聞こえは良くないかもしれませんが、通常はより役立ちます。
-プロダクトを作る時、**役に立つ真実は、聞こえの良い励ましよりも常に重要です。**
-
 <a id="mom-ai"></a>
-## [12. AI を活用してユーザーインタビューに役立てる方法](#top-mom)
+## [11. AI を使ったインタビューの準備と整理](#top-mom)
 
 The Mom Test は本質的に「リアルな人と話す」手法なので、AI が実際のインタビューに代わることはありません。しかし、AI はインタビューの前、中、後でサポートするのに非常に適しており、特に初心者のハードルを下げるのに役立ちます。
 
@@ -479,6 +447,8 @@ AI は次のように出力するかもしれません：
 このようにすれば、ゼロから質問を考える必要がなく、インタビューの準備がずっと楽になります。
 
 ### 12.3 AI にインタビュー記録を整理させる
+
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Volunteer_Molly_conducting_an_interview._Over_200_prospects_still_need_to_be_interviewed._Plus_the_park_needs_help_transcribing_(791cd068-1dd8-b71b-0b4d-48151192c96f).jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/oral-history-interview.jpg" alt="資料を使いながら対面インタビューを行うオーラルヒストリー" loading="lazy" /></a><figcaption><strong>整理は原資料から切り離せません。</strong>AI は文字起こしと分類を助けられますが、結論は元の発言までたどれる必要があります。写真：U.S. National Park Service、パブリックドメイン。</figcaption></figure>
 
 インタビューが終わった後、最も起こりやすい問題は「情報がない」ことではなく、「情報が散らばっている」ことです。AI は断片的な会話を構造化されたメモに整理するのに非常に適しています：
 
@@ -575,7 +545,13 @@ The Mom Test の観点から振り返りを行ってください：
 
 これは初心者に特に役立ちます。なぜなら、「私は証拠を集めているのか、それとも励ましを集めているのか」という感度をより早く構築できるからです。
 
-## 📚 課題
+## 12. まとめ
+
+- プロダクトへの好意的な評価だけでは、ニーズの証拠になりません。
+- 過去の具体的な経験、行動、時間、金銭、現在の代替策を優先して尋ねます。
+- AI は質問の準備や記録整理を助けますが、実際のインタビューの代わりにはなりません。
+
+## 13. 練習
 
 <StageAssignmentCard title="アイデアを売り込まないユーザーインタビューを行う">
 
@@ -592,3 +568,12 @@ The Mom Test の観点から振り返りを行ってください：
 
 - [The Mom Test 公式サイト](https://momtestbook.com/)
 - [Rob Fitzpatrick: The Mom Test](https://www.robfitz.com/the-mom-test/)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } }
+</style>

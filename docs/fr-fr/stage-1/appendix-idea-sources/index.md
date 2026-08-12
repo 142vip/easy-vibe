@@ -9,7 +9,6 @@ const duration = 'Environ <strong>20 minutes</strong>'
 
 # D’où viennent les idées créatives
 
-<ProductJourney current="find" />
 
 ## Objectif du chapitre
 

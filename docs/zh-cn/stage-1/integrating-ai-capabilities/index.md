@@ -15,8 +15,6 @@ const relatedArticles =
 
 # 为原型接入 AI 能力
 
-<ProductJourney current="ai" />
-
 ## 章节导读
 
 <ChapterIntroduction :duration="duration" :tags="['提示词', 'API 文档', '服务台', '多模态']" coreOutput="为原型接入 1～2 种真实 AI 能力" expectedOutput="能够调用文本、图像、语音或视频服务的 Web 原型">

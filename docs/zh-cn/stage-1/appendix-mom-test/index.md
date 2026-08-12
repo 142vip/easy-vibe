@@ -5,28 +5,15 @@ description: '面向零基础读者的 The Mom Test 入门文章。学会避免�
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-
-const duration = '约 <strong>1.5 小时</strong>'
 </script>
 
 # The Mom Test：用户访谈方法
 
-<ProductJourney current="interview" />
-
 <a id="top-mom"></a>
 
-## 本章导读
+上一章得到的 JTBD 句子仍然是假设。我们需要通过访谈检查：这个问题最近是否真的发生过，用户是否已经为它付出了时间、金钱或精力。
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['用户访谈', '需求验证', '用户研究', '产品调研']"
-  coreOutput="1 组更能问出真实信息的访谈问题"
-  expectedOutput="不再把用户的礼貌性鼓励当成验证，而能用真实行为判断方向"
->
-
-上一章得到的 JTBD 句子仍然只是一条假设。要判断它是否成立，我们需要回到用户过去的真实经历中寻找证据。
-
-用户访谈并不只是“找人聊聊”。如果我们直接询问对方是否喜欢某个想法，常常会得到礼貌而笼统的回答：
+这听起来并不困难。但如果直接询问对方是否喜欢某个想法，往往只会得到礼貌而笼统的回答：
 
 - 你觉得我这个想法怎么样？
 - 如果有这样一个产品，你会不会用？
@@ -40,31 +27,12 @@ const duration = '约 <strong>1.5 小时</strong>'
 
 这些回答并没有错，只是很难支持产品决策。The Mom Test 提醒我们少问未来的意愿，多问过去发生过什么、用户怎样处理、为此付出了什么。
 
-本章结束时，你会得到一组可以直接使用的访谈问题，以及若干来自真实行为的证据。下一章将用双钻模型整理这些信息，并收敛出第一版方案。
-
-</ChapterIntroduction>
-
-::: info 最小 SOP
-**目的**：看完后，你会更清楚怎么和用户聊天，才不会只听到“听起来不错”，而是真的问出能帮你判断方向的信息。
-
-**行动项**：把你原本想问的 5 个问题改掉，优先问“最近一次发生在什么时候”“你当时怎么处理”。
-
-**结果**：你会更容易分清哪些是意见，哪些才是真正能支撑判断的证据。
-
-**关键词跳转**：[The Mom Test 是什么](#mom-what) · [三个核心原则](#mom-principles) · [AI 怎么帮你](#mom-ai)
-:::
-
-## 你将学到以下内容
-
-1. The Mom Test 到底在解决什么问题，为什么很多“用户调研”其实没有调研到真实信息
-2. 这套方法最核心的几个原则：少问意见，多问行为；少问假设，多问事实
-3. 怎样把一个容易得到假阳性反馈的问题，改成更有价值的访谈问题
-4. 如何把 The Mom Test 和 JTBD、需求验证、MVP 判断连起来使用
+本章讨论如何避免这类“假阳性”反馈，并将注意力从意见和未来假设转向过去的行为、现有做法和已经付出的成本。
 
 <a id="mom-what"></a>
-## [1. The Mom Test 到底是什么](#top-mom)
+## [1. 为什么访谈会得到假阳性](#top-mom)
 
-The Mom Test 来自 Rob Fitzpatrick 的同名书籍。它的名字听起来有点像玩笑，但点得非常准：
+The Mom Test 来自 Rob Fitzpatrick 的同名书籍。这个名称指出了访谈中的一个常见现象：
 
 **就算是你妈妈，也很难直接告诉你“这是个烂想法”。**
 
@@ -76,13 +44,9 @@ The Mom Test 来自 Rob Fitzpatrick 的同名书籍。它的名字听起来有�
 
 其实不只是妈妈，朋友、同事、前同学，甚至很多陌生人，在面对你的产品想法时，也常常会给出类似的“正向反馈”。这不代表需求真的存在，只代表你把问题问成了一个很容易得到好听答案的形式。
 
-所以，The Mom Test 的重点从来不是“别问妈妈”，而是：
+因此，The Mom Test 的重点不是访谈谁，而是问题如何组织。访谈应尽量寻找可核对的经历，而不是收集对方对产品想法的评价。
 
-**别把问题问成任何人都会顺着你回答的样子。**
-
-这套方法真正想教你的，是如何通过对话，拿到更接近真实需求的信息，而不是收集一堆让自己感觉良好的评论。
-
-## 2. 它解决的核心问题是什么
+## 2. 意见与行为证据
 
 The Mom Test 主要解决的是一种非常常见的认知错觉：
 
@@ -111,9 +75,9 @@ The Mom Test 主要解决的是一种非常常见的认知错觉：
 因为和“你会不会用”相比，“你上次怎么处理这件事的”往往更接近真相。
 
 <a id="mom-principles"></a>
-## [3. 三个最核心的原则](#top-mom)
+## [3. 三个提问原则](#top-mom)
 
-如果你只想先记住最重要的部分，可以先记下面这三个原则。
+下面三个原则将提问从产品方案转向用户已经发生的经历。
 
 ### 3.1 少谈你的点子，多谈用户过去的真实经历
 
@@ -159,6 +123,13 @@ The Mom Test 主要解决的是一种非常常见的认知错觉：
 - 它哪里不够好？
 
 看清现有替代方案，往往比直接问“你想要什么”更重要。
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/user-interview-session.jpg" alt="一次真实访谈现场，访谈者手持麦克风与参与者交谈，桌上放有电脑和记录材料" loading="lazy" />
+  </a>
+  <figcaption><strong>访谈的主体是对方，不是提纲。</strong>照片里，访谈者把注意力放在参与者的叙述上，电脑和纸面材料只是记录工具。实际访谈时也不必急着逐题打勾；听到“上周”“我后来只好”“我已经花了”这类具体线索，应顺着经历继续追问。照片：<a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer">ManonB2018 / Wikimedia Commons</a>，<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>。</figcaption>
+</figure>
 
 ## 4. 为什么人们总会给你好听但没用的回答
 
@@ -208,15 +179,19 @@ The Mom Test 主要解决的是一种非常常见的认知错觉：
 | 你觉得这个功能重要吗？ | 这个流程里最烦、最慢、最不放心的是哪一步？ |
 | 你想不想要一个 AI 帮你自动做？ | 你现在为什么还没有找到更顺手的解决办法？ |
 
-这张表最重要的不是具体句子，而是背后的方向：
+这些改写有三个共同点：
 
 - 从意见走向事实
 - 从未来走向过去
 - 从你的方案走向用户的问题
 
-## 6. 一个零基础也能立刻用的访谈节奏
+下面的练习给出了六句常见的访谈原话。尝试判断哪些是可用的证据，哪些只是意见。
 
-如果你现在就想去找人聊，可以直接按下面这个顺序来。
+<InterviewEvidenceLab />
+
+## 6. 访谈的基本顺序
+
+一次简短访谈可以按下面的顺序进行。
 
 ### 6.1 开场：说明你在学习，不是在推销
 
@@ -323,6 +298,15 @@ The Mom Test 主要解决的是一种非常常见的认知错觉：
 - JTBD 帮你定义需求假设
 - The Mom Test 帮你访谈验证假设
 
+访谈帮助我们理解过去发生了什么，但它还不是最后一步。做出原型后，还要让用户实际操作，观察他说的做法与真实行为是否一致。
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/usability-testing-session.jpg" alt="Bangalore DevCamp 现场，一名参与者正在实际操作新的翻译应用进行可用性测试" loading="lazy" />
+  </a>
+  <figcaption><strong>“我会用”之后，还要看“能不能用”。</strong>这张照片记录了 2012 年 Bangalore DevCamp 对新翻译应用的可用性测试。参与者直接在电脑上完成任务，研究者据此观察卡点。访谈验证问题是否存在；操作测试继续验证方案是否真的帮助用户完成任务。照片：<a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer">Amire80 / Wikimedia Commons</a>，<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>。</figcaption>
+</figure>
+
 ## 9. 新手做用户访谈时最常见的误区
 
 ### 9.1 把访谈做成产品介绍会
@@ -350,6 +334,13 @@ The Mom Test 主要解决的是一种非常常见的认知错觉：
 - 当前替代方案
 - 已经付出的成本
 - 你自己的新判断
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Wikipedia-Affinity.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/wikipedia-affinity-synthesis.jpg" alt="Wikipedia 可用性项目把访谈和观察材料按主题聚类成亲和图" loading="lazy" />
+  </a>
+  <figcaption><strong>访谈完成，只代表原材料到手。</strong>图中是 Wikimedia Foundation 可用性项目的亲和图整理：先把观察拆成一条条证据，再按重复主题聚类。这样得到的是跨访谈的模式，而不是“我感觉大家都需要”。照片：Parul Vora / Wikimedia Foundation，<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>。</figcaption>
+</figure>
 
 ## 10. 可以直接复制去用的问题清单
 
@@ -381,26 +372,8 @@ The Mom Test 主要解决的是一种非常常见的认知错觉：
 
 注意，这个收尾问题可以问，但最好放在后面。因为前面你更需要拿到事实，而不是愿望。
 
-## 11. 小结
-
-The Mom Test 最重要的贡献，不是给你一套“更会聊天”的技巧，而是帮你建立一种更清醒的判断方式：
-
-- 不要太快相信别人对你点子的夸奖
-- 不要把“如果有我会用”当成真实需求
-- 不要让访谈变成你在寻找认可
-
-真正有价值的访谈，应该尽量回到这些东西上：
-
-- 用户最近一次真实经历
-- 他现在怎么处理
-- 他已经付出了什么成本
-- 他在哪些地方明显不舒服
-
-当你开始这样问，你得到的信息虽然有时没那么好听，但通常更有用。  
-而做产品时，**有用的真相，永远比好听的鼓励更重要。**
-
 <a id="mom-ai"></a>
-## [12. 如何利用 AI 帮你做用户访谈](#top-mom)
+## [11. 使用 AI 准备和整理访谈](#top-mom)
 
 The Mom Test 本质上还是一套“和真人聊”的方法，所以 AI 不能替代真实访谈。但 AI 非常适合在访谈前、中、后给你打辅助，尤其适合帮新手降低门槛。
 
@@ -486,6 +459,13 @@ AI 可能输出：
 ### 12.3 让 AI 帮你整理访谈记录
 
 访谈做完之后，最容易出现的问题不是“没信息”，而是“信息太散”。AI 很适合帮你把碎片化对话整理成结构化笔记：
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Volunteer_Molly_conducting_an_interview._Over_200_prospects_still_need_to_be_interviewed._Plus_the_park_needs_help_transcribing_(791cd068-1dd8-b71b-0b4d-48151192c96f).jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/oral-history-interview.jpg" alt="美国国家公园管理局口述史项目中的面对面访谈，桌面上有提纲、照片和记录材料" loading="lazy" />
+  </a>
+  <figcaption><strong>整理不能脱离原始材料。</strong>这场口述史访谈同时使用提纲、历史照片和现场笔记；项目说明里还特别提到转写是让记录真正可用的关键一步。AI 可以协助转写和归类，但结论仍要能回到原话。照片：U.S. National Park Service，公有领域。</figcaption>
+</figure>
 
 ```text
 下面是我和 3 位用户的访谈记录。
@@ -580,7 +560,14 @@ AI 可能输出：
 
 这对新手特别有帮助，因为你会更快建立一种“我到底是在收集证据，还是在收集鼓励”的敏感度。
 
-## 📚 本章作业
+## 12. 小结
+
+- 对产品想法的积极评价不能单独作为需求证据。
+- 访谈应优先询问过去的具体经历，而不是对未来行为的预测。
+- 行为、时间、金钱和现有替代方案是判断问题强度的主要依据。
+- AI 可以帮助准备提纲和整理记录，但不能替代真实访谈。
+
+## 13. 练习
 
 <StageAssignmentCard title="做一次不推销想法的用户访谈">
 
@@ -598,3 +585,43 @@ AI 可能输出：
 
 - [The Mom Test 官方网站](https://momtestbook.com/)
 - [Rob Fitzpatrick: The Mom Test](https://www.robfitz.com/the-mom-test/)
+
+<style scoped>
+.field-figure {
+  margin: 24px 0 32px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+}
+
+.field-figure > a {
+  display: block;
+  background: #f4f4f1;
+}
+
+.field-figure img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
+
+.field-figure figcaption {
+  padding: 13px 16px 15px;
+  border-top: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.field-figure figcaption strong {
+  color: var(--vp-c-text-1);
+}
+
+@media (max-width: 640px) {
+  .field-figure {
+    margin: 20px 0 28px;
+  }
+}
+</style>

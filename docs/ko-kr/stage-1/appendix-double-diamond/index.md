@@ -5,51 +5,20 @@ description: '제로 베이스 독자를 위한 Double Diamond 입문 글입니�
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = '약 <strong>1.5시간</strong>'
 </script>
 
 # Double Diamond: 올바른 일을 먼저 하고, 그 일을 제대로 하기
 
 <a id="top-dd"></a>
 
-## 이 장의 가이드
+요구 분석과 사용자 인터뷰를 마치면 서로 다른 사용자의 경험, 기존 도구의 문제, 여러 개선 방향처럼 많은 자료가 쌓입니다. 자료가 늘어난 다음의 어려움은 무엇을 남기고 무엇을 버릴지 정하는 일입니다.
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['Double Diamond', '디자인 사고', '요구사항 분석', '솔루션 설계']"
-  coreOutput="더 명확한 문제 정의 1개와 더 합리적인 검증 진입점 1개"
-  expectedOutput="처음부터 서둘러 프로토타입을 그리지 않고, 먼저 문제를 명확히 생각한 후 솔루션을 비교하게 됩니다"
->
+‘문제 이해’와 ‘해결책 설계’를 구분하지 않으면 인터뷰를 하면서도 자신이 선호하는 기능을 뒷받침할 이유를 찾기 쉽습니다. Double Diamond는 두 번의 발산과 수렴으로 이 두 종류의 일을 분리합니다.
 
-많은 사람이 처음 제품을 만들 때 가장 많이 빠지는 함정은 "노력이 부족해서"가 아니라 너무 빨리 솔루션에 들어간다는 것입니다.
-
-머릿속에 방향이 떠오르자마자, 페이지를 어떻게 그릴지, 버튼을 어디에 둘지, AI를 연동할지 말지, 로그인/회원가입을 만들지 말지, 프로토타입은 어떤 도구로 그릴지 생각하기 시작합니다. 한참을 바쁘게 돌아간 후에야, 가장 근본적인 문제를 전혀 생각하지 않았다는 것을 깨닫습니다: 사용자가 정말로 이 페인포인트를 가지고 있는지? 이 문제가 지금 해결할 가치가 있는지? 프로젝트를 진행하고 있다고 생각했지만, 사실은 잘못된 방향에서 열심히 가속하고 있었을 뿐입니다.
-
-Double Diamond(더블 다이아몬드) 모델은 바로 이런 상황을 피하기 위한 것입니다.
-
-이것이 가장 가치 있는 교훈은: **"올바른 일을 하는 것"과 "일을 올바르게 하는 것"은 완전히 다른 단계라는 것입니다.** 문제를 아직 명확히 파악하지 못한 상태에서 서둘러 프로토타입을 만들면, 보통 잘못된 방향을 더 완성도 있게 만들 뿐입니다.
-
-</ChapterIntroduction>
-
-::: info 최소 SOP
-**목적**: 이 글을 읽은 후, 제품을 만들 때 언제 먼저 문제를 생각해야 하고, 언제 솔루션과 프로토타입을 생각하기 시작해야 하는지 더 명확해져서, 처음부터 잘못된 방향에서 열심히 하는 일을 피할 수 있습니다.
-
-**실행 항목**: `Discover -> Define -> Develop -> Deliver` 4단계로 진행하며, 각 단계에서 현재 단계에 해야 할 일만 합니다.
-
-**결과**: 더 명확한 문제 정의, 비교 가능한 여러 솔루션, 그리고 검증 가능한 최소 버전을 얻게 됩니다.
-
-**키워드 바로가기**: [Double Diamond란](#dd-what) · [첫 번째 다이아몬드](#dd-first) · [AI가 도와주는 방법](#dd-ai)
-:::
-
-## 배울 내용
-
-1. Double Diamond 모델이란 무엇이며, 왜 제로 베이스 제품 개발에 적합한지
-2. Discover, Define, Develop, Deliver 네 단계에서 각각 무엇을 하는지
-3. "지금 계속 발산해야 하는지"와 "지금 수렴을 시작해야 하는지"를 어떻게 구분하는지
-4. Double Diamond 모델을 AI 제품, 프로토타입 설계, 요구사항 검증에 어떻게 적용하는지
+이 장에서는 Discover, Define, Develop, Deliver 네 단계와 각 단계의 입력, 산출물, 흔한 오류를 설명합니다.
 
 <a id="dd-what"></a>
-## [1. Double Diamond 모델이란 무엇인가](#top-dd)
+## [1. 두 번의 발산과 수렴](#top-dd)
 
 Double Diamond 모델은 영국 **Design Council**이 보급한 고전적인 디자인 프로세스 프레임워크입니다. 완전한 디자인과 혁신 과정을 두 개의 연속된 다이아몬드 모양으로 표현합니다.
 
@@ -65,6 +34,10 @@ Double Diamond 모델은 영국 **Design Council**이 보급한 고전적인 디
 3. **Develop**: 핵심 문제를 중심으로 다양한 솔루션을 발산
 4. **Deliver**: 선별, 프로토타입, 테스트 및 더 적합한 솔루션 전달
 
+앞의 두 단계는 문제 공간을, 뒤의 두 단계는 해결책 공간을 다룹니다.
+
+<figure class="field-figure field-figure--diagram"><a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/design-council-double-diamond-wide.png" alt="Discover, Define, Develop, Deliver가 두 개의 연결된 다이아몬드를 이루는 Design Council 공식 도표" loading="lazy" /></a><figcaption><strong>먼저 원본 도표를 봅니다.</strong> 왼쪽은 Discover에서 발산하고 Define에서 수렴하며, 오른쪽은 Develop에서 다시 발산하고 Deliver에서 수렴합니다. 테스트에서 문제가 발견되면 앞 단계로 돌아갈 수 있습니다. 출처: <a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">Design Council</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption></figure>
+
 이 네 단계를 가장 기억하기 쉬운 한 문장으로 압축하면:
 
 - **첫 번째 다이아몬드**: 먼저 무엇을 해결해야 하는지 명확히 파악하기
@@ -75,7 +48,7 @@ Double Diamond 모델은 영국 **Design Council**이 보급한 고전적인 디
 - **첫 번째 다이아몬드: 올바른 일을 하기**
 - **두 번째 다이아몬드: 일을 올바르게 하기**
 
-## 2. 왜 Double Diamond 모델이 특히 초보자에게 적합한가
+## 2. 문제와 해결책을 분리해야 하는 이유
 
 초보자가 제품을 만들 때 가장 흔한 리듬은 보통 이렇습니다:
 
@@ -101,7 +74,7 @@ Double Diamond 모델은 계속해서 다음을 상기시킵니다:
 - 프로토타입이 완성되어 보인다고 해서 사용자가 정말로 필요로 할 것이라고 가정하지 마세요
 
 <a id="dd-first"></a>
-## [3. 첫 번째 다이아몬드: 올바른 일을 하기](#top-dd)
+## [3. 첫 번째 다이아몬드: 문제 공간](#top-dd)
 
 첫 번째 다이아몬드가 주목하는 것은 **문제 자체**이며, 솔루션이 아닙니다.
 
@@ -132,6 +105,8 @@ Discover 단계의 핵심 작업은 **폭넓은 조사이며, 빠른 결론을 �
 
 ### 3.2 Define: 정보 더미에서 핵심 문제 추출
 
+<figure class="field-figure"><a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/creative-commons-design-workshop.jpg" alt="질문별 인터뷰 자료가 벽에 정리된 Creative Commons 워크숍" loading="lazy" /></a><figcaption><strong>Discover의 실제 자료는 복잡합니다.</strong> 81회의 인터뷰와 기존 인터뷰 36회의 차이를 보존한 채 비교하는 현장입니다. 사례: <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption></figure>
+
 Discover가 시야를 넓히는 것이라면, Define은 수렴을 시작하는 것입니다.
 
 Define 단계에서 해야 할 것은 모든 관찰을 보존하는 것이 아니라, 다음을 묻는 것입니다:
@@ -159,7 +134,9 @@ Define 단계에 이르면, 더 나은 표현은 이렇게 될 수 있습니다:
 
 Define의 본질은 **"문제가 많다"에서 "이번에 어떤 문제를 먼저 해결할 것인가"로 수렴하는 것입니다.**
 
-## 4. 두 번째 다이아몬드: 일을 올바르게 하기
+<figure class="field-figure"><a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/creative-commons-research-synthesis.jpg" alt="인터뷰 메모를 배열하고 군집화해 주제를 찾는 Creative Commons 팀" loading="lazy" /></a><figcaption><strong>Define은 듣기 좋은 한 문장을 고르는 일이 아닙니다.</strong> 팀은 117회의 인터뷰를 모아 반복 패턴을 찾고 9가지 통찰로 정리했습니다. 사례: <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption></figure>
+
+## 4. 두 번째 다이아몬드: 해결책 공간
 
 첫 번째 다이아몬드를 완료한 후에야 비로소 두 번째 다이아몬드에 진입하는 것이 적절합니다. 왜냐하면 이때 해결하는 것은 모호한 방향이 아니라, 수렴된 구체적인 문제이기 때문입니다.
 
@@ -187,6 +164,8 @@ Develop 단계의 핵심은 **같은 문제를 중심으로 여러 가능한 솔
 
 ### 4.2 Deliver: 솔루션 선택, 프로토타입, 테스트 및 전달
 
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/develop-idea-board.jpg" alt="여러 후보 방향에 색색의 메모지가 놓인 해결책 보드" loading="lazy" /></a><figcaption><strong>Develop에서는 여러 답을 남겨 둡니다.</strong> 선택 전에 서로 다른 경로를 실제로 비교하는 것이 발산의 목적입니다. 사진: <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer">Corinna Schuster (WMDE)</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption></figure>
+
 Deliver 단계는 두 번째 다이아몬드의 수렴 단계입니다.
 
 이때 해야 할 것은 계속 더 많은 것을 생각하는 것이 아니라, 판단을 시작하는 것입니다:
@@ -208,7 +187,11 @@ Deliver 단계는 두 번째 다이아몬드의 수렴 단계입니다.
 
 Deliver의 핵심은 "완벽한 전달"이 아니라, **최대한 빨리 솔루션을 실제 환경에서 검증하는 것입니다.**
 
-## 5. 가장 기억하기 쉬운 비교표
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/paper-prototype-test.jpg" alt="종이 인터페이스의 입력 칸에 글을 쓰는 프로토타입 테스트" loading="lazy" /></a><figcaption><strong>테스트할 수 있다는 말이 코드를 모두 썼다는 뜻은 아닙니다.</strong> 종이 프로토타입만으로도 흐름과 문구, 작업 순서를 확인할 수 있습니다. 사진: <a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer">d_jan / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption></figure>
+
+## 5. 네 단계의 차이
+
+<DoubleDiamondNavigator />
 
 네 단계를 항상 헷갈린다면, 아래 버전을 바로 기억하세요:
 
@@ -304,6 +287,13 @@ AI 제품은 특히 "기능 우선" 함정에 빠지기 쉽습니다. 왜냐하�
 - 누구에게 테스트를 맡겨야 하는가?
 - 테스트 후 계속할지, 수정할지, 포기할지 어떻게 판단할 것인가?
 
+<figure class="field-figure field-figure--portrait">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_Gruppenarbeit_2.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-group-workshop.jpg" alt="Wikimedia Deutschland 디자인 사고 워크숍에서 참가자들이 함께 해결책을 만드는 모습" loading="lazy" />
+  </a>
+  <figcaption><strong>Develop는 좋은 아이디어가 떠오르기를 기다리는 단계가 아닙니다.</strong> 생각을 빠르게 눈에 보이는 형태로 만들면 서로 비교하고 조합하고 버리기가 쉬워집니다. 사진: Corinna Schuster (WMDE), <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
 ## 9. 제로 베이스도 이해할 수 있는 예시
 
 "대학생의 구직 이력서를 준비해 주는" AI 도구를 만들고 싶다고 가정해 봅시다.
@@ -343,6 +333,13 @@ AI 제품은 특히 "기능 우선" 함정에 빠지기 쉽습니다. 왜냐하�
 - 5명의 학생에게 사용해 보고, 더 빨리 첫 번째 버전의 이력서를 제출하는지 확인
 
 첫 번째 다이아몬드를 탄탄하게 하면, 두 번째 다이아몬드가 훨씬 명확해지는 것을 발견할 것입니다.
+
+<figure class="field-figure field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_Prototyp_Mitmach-O-Mat.png" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-workshop-prototype.png" alt="Wikimedia Deutschland 워크숍에서 만든 Mitmach-O-Mat 손그림 프로토타입" loading="lazy" />
+  </a>
+  <figcaption><strong>프로토타입은 우선 하나의 질문에 답할 수 있으면 됩니다.</strong> 완성된 시각 체계가 없어도 참가자가 다음 행동을 이해하는지 관찰할 수 있습니다. 프로토타입: Corinna Schuster / WMDE, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
 
 ## 10. 요약
 
@@ -547,3 +544,13 @@ Double Diamond 모델의 가장 흔한 문제는 단계를 건너뛰는 것입�
 - [Design Council: The Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/)
 - [Design Council: Framework for Innovation](https://www.designcouncil.org.uk/our-work/skills-learning/tools-frameworks/framework-for-innovation-design-councils-evolved-double-diamond/)
 - [Design Council: History of the Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/history-of-the-double-diamond/)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure--diagram img { max-height: 580px; padding: 18px; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } .field-figure--diagram img { padding: 8px; } }
+</style>

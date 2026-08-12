@@ -15,7 +15,6 @@ const relatedArticles =
 
 # Kết nối năng lực AI cho nguyên mẫu
 
-<ProductJourney current="ai" />
 
 ## Giới thiệu chương
 

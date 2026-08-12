@@ -5,51 +5,20 @@ description: "Article d'introduction au Double Diamond pour les lecteurs débuta
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = 'Environ <strong>1,5 heure</strong>'
 </script>
 
 # Le modèle Double Diamond : faire d'abord les bonnes choses, puis faire les choses correctement
 
 <a id="top-dd"></a>
 
-## Introduction du chapitre
+L'analyse des besoins et les entretiens produisent souvent beaucoup de matériel : des expériences différentes, les limites des outils actuels et plusieurs pistes d'amélioration. Plus ce matériel s'accumule, plus il devient difficile de choisir.
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['Double Diamond', 'Design Thinking', 'Analyse des besoins', 'Conception de solutions']"
-  coreOutput="1 définition de problème plus claire et 1 point d'entrée de validation plus raisonnable"
-  expectedOutput="Ne plus se précipiter pour dessiner des prototypes, mais savoir d'abord clarifier le problème avant de comparer les solutions"
->
+Sans séparer la compréhension du problème de la conception d'une solution, on finit facilement par chercher, pendant les entretiens, des arguments en faveur de la fonctionnalité que l'on préfère. Le Double Diamond distingue ces deux travaux grâce à deux cycles de divergence et de convergence.
 
-Beaucoup de gens, lorsqu'ils créent un produit pour la première fois, le piège le plus courant n'est pas « ne pas travailler assez dur », mais de passer trop vite à la solution.
-
-À peine une direction a-t-elle germé dans leur esprit qu'ils commencent à penser : comment dessiner les pages, où placer les boutons, faut-il intégrer l'IA, faut-il faire un système de connexion, quel outil utiliser pour les prototypes. Après s'être agité un moment, ils se rendent compte que le problème fondamental n'a jamais été vraiment clarifié : les utilisateurs ont-ils vraiment ce point de douleur ? Ce problème mérite-t-il d'être résolu maintenant ? Vous pensiez faire avancer le projet, mais en réalité vous accélérez juste dans la mauvaise direction.
-
-Le modèle Double Diamond est conçu pour éviter ce genre de situation.
-
-Son rappel le plus précieux est : **« faire les bonnes choses » et « faire les choses correctement » sont deux étapes complètement différentes.** Si vous n'avez pas encore compris le problème et que vous vous précipitez pour faire un prototype, vous ne ferez généralement que rendre la mauvaise direction plus complète.
-
-</ChapterIntroduction>
-
-::: info SOP minimale
-**Objectif** : après avoir lu, vous saurez mieux quand réfléchir d'abord au problème et quand commencer à penser aux solutions et aux prototypes, évitant ainsi de travailler dur dans la mauvaise direction dès le début.
-
-**Actions** : suivez les quatre étapes `Discover → Define → Develop → Deliver`, en ne faisant à chaque étape que ce qui est nécessaire.
-
-**Résultat** : vous obtiendrez une définition de problème plus claire, plusieurs solutions comparables, et une version minimale validable.
-
-**Navigation rapide** : [Qu'est-ce que le Double Diamond](#dd-what) · [Le premier diamant](#dd-first) · [Comment l'IA peut vous aider](#dd-ai)
-:::
-
-## Ce que vous apprendrez
-
-1. Qu'est-ce que le modèle Double Diamond, et pourquoi il est adapté aux débutants en création de produit
-2. Ce que font les quatre phases Discover, Define, Develop, Deliver
-3. Comment distinguer « je devrais continuer à diverger » de « je devrais commencer à converger »
-4. Comment appliquer le modèle Double Diamond aux produits AI, à la conception de prototypes et à la validation des besoins
+Ce chapitre présente les phases Discover, Define, Develop et Deliver, avec leurs entrées, leurs livrables et leurs erreurs fréquentes.
 
 <a id="dd-what"></a>
-## [1. Qu'est-ce que le modèle Double Diamond](#top-dd)
+## [1. Deux cycles de divergence et de convergence](#top-dd)
 
 Le modèle Double Diamond est un cadre de processus de design classique promu par le **Design Council** britannique. Il représente un processus complet de design et d'innovation sous la forme de deux diamants consécutifs.
 
@@ -74,6 +43,13 @@ C'est aussi la phrase que vous avez prononcée avec justesse :
 
 - **Le premier diamant : faire les bonnes choses**
 - **Le deuxième diamant : faire les choses correctement**
+
+<figure class="field-figure field-figure--diagram">
+  <a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/design-council-double-diamond-wide.png" alt="Schéma officiel du Double Diamond du Design Council : Discover, Define, Develop et Deliver forment deux diamants reliés" loading="lazy" />
+  </a>
+  <figcaption><strong>Commençons par le schéma original.</strong> Le diamant de gauche diverge avec Discover puis converge avec Define ; celui de droite diverge avec Develop puis converge avec Deliver. Le Design Council précise que le processus n'est pas une ligne à parcourir une seule fois : un test peut conduire à revenir à une phase antérieure. Source : <a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">Design Council</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption>
+</figure>
 
 ## 2. Pourquoi le modèle Double Diamond est particulièrement adapté aux débutants
 
@@ -130,6 +106,8 @@ Par exemple, si vous voulez créer un outil « AI qui aide à organiser les comp
 
 L'objectif le plus important de cette étape n'est pas d'obtenir une réponse, mais de **ne pas supposer trop tôt que vous connaissez déjà la réponse.**
 
+<figure class="field-figure"><a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/creative-commons-design-workshop.jpg" alt="Atelier de recherche en utilisabilité de Creative Commons, avec de nombreuses notes classées par question d'entretien" loading="lazy" /></a><figcaption><strong>Les matériaux de Discover sont hétérogènes.</strong> Lors de cette étude, Creative Commons a mené 81 entretiens et repris 36 entretiens antérieurs. L'équipe conserve d'abord les différences avant de les réduire à une réponse. Source : <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption></figure>
+
 ### 3.2 Define : extraire le problème central de la masse d'informations
 
 Si Discover est l'ouverture, Define est le recentrage.
@@ -159,6 +137,8 @@ En phase Define, une meilleure formulation pourrait devenir :
 
 L'essence de Define est de **passer de « beaucoup de problèmes » à « quel problème résoudre en premier cette fois-ci ».**
 
+<figure class="field-figure"><a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/creative-commons-research-synthesis.jpg" alt="Mur de synthèse où l'équipe Creative Commons regroupe les notes d'entretien par thème" loading="lazy" /></a><figcaption><strong>Define ne consiste pas à choisir la phrase la plus séduisante.</strong> L'équipe a regroupé 117 entretiens, recherché les motifs récurrents et formulé 9 enseignements. Source : <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption></figure>
+
 ## 4. Le deuxième diamant : faire les choses correctement
 
 Ce n'est qu'après avoir terminé le premier diamant qu'il est vraiment approprié d'entrer dans le deuxième. Parce qu'à ce stade, vous ne résolvez pas une direction vague, mais un problème spécifique qui a été cerné.
@@ -185,6 +165,8 @@ Cette étape se prête bien au brainstorming, et aussi à l'élargissement des s
 Mais il y a un prérequis : **toutes les solutions doivent servir le même problème déjà défini.**
 Si le problème n'est pas clairement défini, Develop risque de redevenir une dispersion de fonctionnalités.
 
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/develop-idea-board.jpg" alt="Tableau de solutions d'un atelier de design thinking de Wikimedia Deutschland" loading="lazy" /></a><figcaption><strong>Develop conserve d'abord plusieurs réponses.</strong> Les idées restent réparties entre plusieurs pistes avant d'être transformées en liste de fonctionnalités. Photo : <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer">Corinna Schuster (WMDE) / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption></figure>
+
 ### 4.2 Deliver : choisir la solution, faire le prototype, tester et livrer
 
 La phase Deliver est l'étape de convergence du deuxième diamant.
@@ -208,7 +190,13 @@ Cela peut être :
 
 L'essentiel de Deliver n'est pas la « livraison parfaite », mais de **mettre la solution dans un environnement réel pour validation aussi rapidement que possible.**
 
-## 5. Un tableau comparatif facile à retenir
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/paper-prototype-test.jpg" alt="Une personne écrit dans le champ d'un prototype papier pour simuler l'interaction avec une interface encore non développée" loading="lazy" /></a><figcaption><strong>Testable ne signifie pas codé.</strong> Un prototype papier suffit à vérifier le parcours, les textes et l'ordre des actions sans consacrer plusieurs semaines à une direction peut-être erronée. Photo : <a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer">d_jan / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption></figure>
+
+## 5. Distinguer les quatre phases
+
+Sélectionnez une phase pour comparer son travail, ses livrables et ce qu'il faut provisoirement laisser de côté.
+
+<DoubleDiamondNavigator />
 
 Si vous n'arrivez jamais à distinguer les quatre phases, retenez simplement cette version :
 
@@ -304,6 +292,8 @@ Si vous êtes en train de créer votre propre produit, vous pouvez suivre cet or
 - Qui devons-nous trouver pour tester ?
 - Après le test, comment décider : continuer, modifier ou abandonner ?
 
+<figure class="field-figure field-figure--portrait"><a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_Gruppenarbeit_2.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/wmde-group-workshop.jpg" alt="Participants à un atelier de design thinking de Wikimedia Deutschland fabriquant des solutions autour d'une table" loading="lazy" /></a><figcaption><strong>Develop ne consiste pas à attendre la bonne idée.</strong> Rendre les pistes visibles permet de les comparer, de les combiner et de les abandonner plus tôt. Photo : Corinna Schuster (WMDE), <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption></figure>
+
 ## 9. Un exemple compréhensible même par un débutant
 
 Supposons que vous voulez créer un outil AI pour « aider les étudiants à préparer leur CV de candidature ».
@@ -343,6 +333,8 @@ Mais selon le modèle Double Diamond, un meilleur processus serait :
 - La faire tester par 5 étudiants, pour voir s'ils soumettent leur première version de CV plus rapidement
 
 Vous constaterez que, une fois le premier diamant bien fait, le deuxième devient beaucoup plus clair.
+
+<figure class="field-figure field-figure--artifact"><a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_Prototyp_Mitmach-O-Mat.png" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/wmde-workshop-prototype.png" alt="Interface dessinée à la main du prototype Mitmach-O-Mat produit lors d'un atelier Wikimedia Deutschland" loading="lazy" /></a><figcaption><strong>Un prototype doit seulement permettre de répondre à une question.</strong> Celui-ci peut déjà servir à observer si les participants comprennent l'étape suivante. Prototype : Corinna Schuster / WMDE, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption></figure>
 
 ## 10. Résumé
 
@@ -545,3 +537,13 @@ Cet article s'inspire principalement des ressources officielles du Design Counci
 - [Design Council : The Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/)
 - [Design Council : Framework for Innovation](https://www.designcouncil.org.uk/our-work/skills-learning/tools-frameworks/framework-for-innovation-design-councils-evolved-double-diamond/)
 - [Design Council : History of the Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/history-of-the-double-diamond/)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure--portrait img, .field-figure--artifact img { max-height: 720px; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } }
+</style>

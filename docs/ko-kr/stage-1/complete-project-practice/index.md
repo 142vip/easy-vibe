@@ -16,7 +16,6 @@ const relatedArticles =
 
 # 완성 프로젝트 실습: 아이디어를 작품으로 만들기
 
-<ProductJourney current="finish" />
 
 ## 이번 장에서 할 일
 

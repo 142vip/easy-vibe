@@ -5,51 +5,20 @@ description: 'ゼロベースの読者向け Double Diamond 入門記事。Disco
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = '約 <strong>1.5 時間</strong>'
 </script>
 
-# ダブルダイヤモンドモデル：正しいことをして、正しくやる
+# ダブルダイヤモンドモデル
 
 <a id="top-dd"></a>
 
-## 本章のガイド
+要件分析とユーザーインタビューを終えると、さまざまなユーザーの経験、既存ツールの問題、改善できそうな方向など、多くの材料が集まります。材料が増えた後に生じる新しい課題は、何を残し、何を見送るかです。
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['Double Diamond', 'デザイン思考', '要件分析', 'ソリューション設計']"
-  coreOutput="より明確な問題定義と、より合理的な検証の切り口"
-  expectedOutput="いきなりプロトタイプを作り始めるのではなく、まず問題を明確にしてからソリューションを比較できるようになる"
->
+「問題を理解すること」と「解決策を設計すること」を分けなければ、インタビューをしながら、自分が好む機能を正当化する根拠を探してしまいがちです。ダブルダイヤモンド（Double Diamond）は、二度の発散と収束によって、この二つの作業を分離します。
 
-多くの人が初めてプロダクトを作るとき、最も陥りやすい罠は「不够努力」ではなく、ソリューションに早く入りすぎることです。
-
-頭の中に方向性が浮かんだ途端、ページのレイアウト、ボタンの配置、AIの統合の有無、ログイン登録の要否、プロトタイプのツール選びなどを考え始めます。色々と作業した後で、根本的な問題が全く考えられていなかったことに気づくのです：ユーザーに本当にそのペインポイントがあるのか？この問題に今取り組む価値があるのか？プロジェクトを前に進めているつもりで、実は間違った方向で一所懸命加速しているだけなのです。
-
-ダブルダイヤモンドモデル（Double Diamond）は、まさにこの状況を防ぐためにあります。
-
-このモデルが最も価値ある点は：**「正しいことをする」と「正しくやる」は、全く異なる2つの段階である**という提醒です。問題がまだ明確になっていないのに、急いでプロトタイプを作り始めると、通常は間違った方向をより完全に仕上げるだけです。
-
-</ChapterIntroduction>
-
-::: info 最小SOP
-**目的**：読み終えた後、プロダクトを作るときにいつまず問題を考え、いつからソリューションやプロトタイプを考え始めればよいかがより明確になり、いきなり間違った方向で一所懸命作業するのを防げるようになります。
-
-**アクションアイテム**：`Discover → Define → Develop → Deliver`の4つのステップに沿って進み、各ステップでその段階がやるべきことだけを行う。
-
-**結果**：より明確な問題定義、複数の比較可能なソリューション、そして検証可能な最小バージョンを得られます。
-
-**キーワードジャンプ**：[ダブルダイヤモンドモデルとは](#dd-what) · [最初のダイヤモンド](#dd-first) · [AIがどう役立つか](#dd-ai)
-:::
-
-## 以下の内容を学びます
-
-1. ダブルダイヤモンドモデルとは何か、なぜゼロベースのプロダクト作りに適しているのか
-2. Discover、Define、Develop、Deliver の4つの段階がそれぞれ何をしているのか
-3. 「今はまだ発散を続けるべき」か「今から収束を始めるべき」かをどう見分けるか
-4. ダブルダイヤモンドモデルをAIプロダクト、プロトタイプ設計、要件検証にどう活用するか
+本章では Discover、Define、Develop、Deliver の四段階を取り上げ、それぞれの入力、成果物、よくある誤りを説明します。
 
 <a id="dd-what"></a>
-## [1. ダブルダイヤモンドモデルとは](#top-dd)
+## [1. 二度の発散と収束](#top-dd)
 
 ダブルダイヤモンドモデルは、英国の**Design Council**が提唱した古典的なデザインプロセスフレームワークです。完全なデザイン・イノベーションプロセスを、2つの連続したダイヤモンド形で表します。
 
@@ -65,17 +34,16 @@ const duration = '約 <strong>1.5 時間</strong>'
 3. **Develop**：核心問題を中心に複数のソリューションを発散させる
 4. **Deliver**：スクリーニング、プロトタイプ、テスト、そしてより適切なソリューションを納品する
 
-この4つのステップを最も覚えやすい一言に圧縮すると：
+前半の二段階は問題空間を、後半の二段階は解決策空間を扱います。
 
-- **最初のダイヤモンド**：まず何を解決すべきかを明確にする
-- **2つ目のダイヤモンド**：その問題をどう解決するかを決める
+<figure class="field-figure field-figure--diagram">
+  <a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/design-council-double-diamond-wide.png" alt="Discover、Define、Develop、Deliver からなる Design Council 公式のダブルダイヤモンド図" loading="lazy" />
+  </a>
+  <figcaption><strong>まず原図を見てみましょう。</strong>左のダイヤモンドは Discover で発散し、Define で収束します。右側は Develop で再び発散し、Deliver で収束します。Design Council は、これが一方向に一度だけ進む直線的な工程ではなく、テストで問題が見つかれば前の段階に戻れることも示しています。出典：<a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">Design Council</a>、<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。</figcaption>
+</figure>
 
-これはあなたが正確に表現した次の言葉と同じです：
-
-- **最初のダイヤモンド：正しいことをする**
-- **2つ目のダイヤモンド：正しくやる**
-
-## 2. なぜダブルダイヤモンドモデルは初心者に特に適しているのか
+## 2. 問題と解決策を分ける理由
 
 初心者がプロダクトを作るとき、最もよくあるリズムは次のようになります：
 
@@ -101,11 +69,11 @@ const duration = '約 <strong>1.5 時間</strong>'
 - プロトタイプが完全に見えるからといって、ユーザーが本当に必要とするとは限らない
 
 <a id="dd-first"></a>
-## [3. 最初のダイヤモンド：正しいことをする](#top-dd)
+## [3. 最初のダイヤモンド：問題空間](#top-dd)
 
 最初のダイヤモンドが焦点を当てるのは**問題そのもの**であり、ソリューションではありません。
 
-一言で理解するなら：**まず急いで作るのではなく、本当にやる価値があるかどうかを明確にする。**
+このダイヤモンドの成果物は問題定義であり、プロダクトのプロトタイプではありません。
 
 ### 3.1 Discover：まず問題空間を広げる
 
@@ -129,6 +97,13 @@ Discover段階の核心的なタスクは、**広く調査することであり�
 - どの会議シナリオで議事録が最も必要で、どのシナリオでは不要なのか
 
 このステップの最も重要な目標は答えを出すことではなく、**早すぎる段階で答えが分かったと思い込まないことです。**
+
+<figure class="field-figure">
+  <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/creative-commons-design-workshop.jpg" alt="インタビュー項目ごとに多数の付箋を整理した Creative Commons のユーザビリティ調査ワークショップ" loading="lazy" />
+  </a>
+  <figcaption><strong>実際の Discover で集まる材料は雑多です。</strong>Creative Commons は 2018 年のユーザビリティ調査で 81 件のインタビューを行い、さらに既存の 36 件も整理しました。写真では、紙ごとに質問を分け、付箋に回答を記録し、丸印で比較しています。この段階では違いを残し、一つの答えへ急いでまとめていません。写真と事例：<a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>、<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。</figcaption>
+</figure>
 
 ### 3.2 Define：大量の情報から核心問題を抽出する
 
@@ -159,7 +134,14 @@ Define段階に到達すると、より良い表現は次のようになるか�
 
 Defineの本質は、**「問題がたくさんある」状態から「今回はどの問題を先に解決するか」への収束です。**
 
-## 4. 2つ目のダイヤモンド：正しくやる
+<figure class="field-figure">
+  <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/creative-commons-research-synthesis.jpg" alt="Creative Commons チームがインタビューの付箋を並べ、分類し、テーマを付けた調査整理の壁" loading="lazy" />
+  </a>
+  <figcaption><strong>Define は、耳ざわりのよい一文を選ぶ作業ではありません。</strong>同じ事例では、117 件のインタビューを集約して分類し、繰り返し現れるパターンから 9 件の洞察を導きました。図に見える余白、まとまり、色の違いは、生の回答からテーマと優先順位へ進む中間工程です。写真と事例：<a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>、<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。</figcaption>
+</figure>
+
+## 4. 二つ目のダイヤモンド：解決策空間
 
 最初のダイヤモンドを完了して初めて、2つ目のダイヤモンドに進むのが適切です。なぜなら、この時点で解決しているのは曖昧な方向ではなく、収束された具体的な問題だからです。
 
@@ -185,6 +167,13 @@ Develop段階の重点は、**同じ問題に対して、複数の可能なソ�
 ただし、ここには一つの前提があります：**すべてのソリューションは、定義済みの同じ問題にサービスする必要があります。**
 問題が明確に定義されていないと、Developは再び機能の乱れに戻ってしまいます。
 
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/develop-idea-board.jpg" alt="複数の候補方向に色分けした付箋を広げた Wikimedia Deutschland のデザイン思考ワークショップのボード" loading="lazy" />
+  </a>
+  <figcaption><strong>Develop では、まず複数の答えを残します。</strong>このボードは Wikimedia Deutschland のデザイン思考ワークショップで使われたものです。候補となるアイデアをテーマごとに広げ、まだ一つの機能一覧にはまとめていません。発散の価値は付箋の枚数ではなく、選択する前に異なる経路を比較できることにあります。写真：<a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer">Corinna Schuster（WMDE）/ Wikimedia Commons</a>、<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>。</figcaption>
+</figure>
+
 ### 4.2 Deliver：ソリューションの選択、プロトタイプ、テスト、納品
 
 Deliver段階は2つ目のダイヤモンドの収束段階です。
@@ -208,21 +197,18 @@ Deliver段階は2つ目のダイヤモンドの収束段階です。
 
 Deliverのポイントは「完璧な納品」ではなく、**できるだけ早くソリューションを実際の環境で検証することです。**
 
-## 5. 最も覚えやすい比較表
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/paper-prototype-test.jpg" alt="未実装の画面との操作を再現するため、紙のプロトタイプの入力欄に書き込む手" loading="lazy" />
+  </a>
+  <figcaption><strong>テスト可能であることは、コードが完成していることと同じではありません。</strong>紙に画面を描き、参加者がクリックや入力を行うたびに、調査者が次の紙へ差し替えます。フロー、文言、操作順を確かめながら、誤った方向を数週間かけて実装することを避けられます。写真：<a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer">d_jan / Wikimedia Commons</a>、<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>。</figcaption>
+</figure>
 
-4つの段階がいつも混同されるなら、以下のバージョンを直接覚えてください：
+## 5. 四つの段階の違い
 
-| 段階 | 何をしているか | キーワード | 一般的な成果物 |
-| --- | --- | --- | --- |
-| Discover | 問題を理解する | 調査、観察、インタビュー、情報収集 | ユーザーインサイト、シナリオノート、問題リスト |
-| Define | 問題を定義する | 抽出、焦点、取捨選択、問題の書き直し | 問題定義、優先順位、MVPの切り口 |
-| Develop | ソリューションを探索する | ブレインストーミング、比較、共創、プロトタイプの構想 | ソリューションリスト、フローのラフスケッチ、プロトタイプの方向性 |
-| Deliver | ソリューションを検証する | プロトタイプ、テスト、反復、納品 | プロトタイプ、テストフィードバック、最適化バージョン |
+ここまで、四つの段階をそれぞれ説明しました。次の図は、それらを一つの流れに並べたものです。段階を一つ選び、そこで行う作業、成果物、まだ行わないことを比較してみましょう。
 
-さらに圧縮すると：
-
-- **Discover / Define**：「正しいことをする」を解決する
-- **Develop / Deliver**：「正しくやる」を解決する
+<DoubleDiamondNavigator />
 
 ## 6. ダブルダイヤモンドモデルの最もよくある誤解
 
@@ -304,6 +290,13 @@ AIプロダクトは特に「能力先行」の罠に陥りやすいです。な
 - 誰にテストを依頼しますか？
 - テスト後、継続、修正、中止をどう判断しますか？
 
+<figure class="field-figure field-figure--portrait">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_Gruppenarbeit_2.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-group-workshop.jpg" alt="Wikimedia Deutschland のデザイン思考ワークショップで参加者がテーブルを囲み、案を形にしている様子" loading="lazy" />
+  </a>
+  <figcaption><strong>Develop は、座ってよいアイデアを待つ段階ではありません。</strong>案を早く目に見える形にすると、比較、組み合わせ、見送りが容易になります。写真：Corinna Schuster（WMDE）、<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>。</figcaption>
+</figure>
+
 ## 9. ゼロベースでも理解できる例
 
 「大学生の就職活動用レジュメ作成を支援する」AIツールを作りたいと仮定します。
@@ -344,25 +337,15 @@ AIプロダクトは特に「能力先行」の罠に陥りやすいです。な
 
 最初のダイヤモンドをしっかりやれば、2つ目のダイヤモンドはずっと明確になることが分かるでしょう。
 
-## 10. まとめ
-
-ダブルダイヤモンドモデルが最も力を発揮するのは、全体のごちゃ混ぜ状態を4つのより明確なアクションに分解することです：
-
-- まず発散して問題を理解する
-- その後収束して問題を定義する
-- 再び発散してソリューションを探索する
-- 最後に収束してソリューションを納品する
-
-これはあなたを遅くするのではなく、**忙しく見えて実は方向が間違っている遠回りを大幅に減らしてくれます。**
-
-特にAI時代において、ものを作るスピードがますます速くなる中、ダブルダイヤモンドモデルは逆に重要になります。なぜなら「作る」ことがますます簡単になると、本当に希少な能力は次のようになるからです：**あなたが解決する価値のある問題を解決しているか、そして適切な方法でそれを解決しているかどうか。**
-
-この一言を覚えておけば十分です：
-
-**まず正しいことをして、その後正しくやる。**
+<figure class="field-figure field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_Prototyp_Mitmach-O-Mat.png" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-workshop-prototype.png" alt="Wikimedia Deutschland のデザイン思考ワークショップで制作された Mitmach-O-Mat の手描き画面" loading="lazy" />
+  </a>
+  <figcaption><strong>プロトタイプは、一つの問いに答えられれば十分です。</strong>完全なビジュアルシステムがなくても、参加者が次の操作を理解できるか観察できます。Deliver の目的は完成品らしく見せることではなく、フィードバックを得ることです。プロトタイプ：Corinna Schuster / WMDE、<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>。</figcaption>
+</figure>
 
 <a id="dd-ai"></a>
-## [11. AIを使ってダブルダイヤモンドプロセスを進める方法](#top-dd)
+## [10. ダブルダイヤモンドの工程で AI を使う](#top-dd)
 
 ダブルダイヤモンドモデル自体はAIツールではありませんが、AIは4つの段階で「アクセラレーター」として非常に適しています。重要なのは、AIに意思決定を任せるのではなく、視野の拡大、情報の整理、ソリューションの比較、検証資料の生成を支援させることです。
 
@@ -527,7 +510,13 @@ AIは次のような出力をするかもしれません：
 
 これは初心者にとって特に役立ちます。なぜなら、「問題がまだ明確になっていないのにプロトタイプを作り始める」ことが非常に起こりやすいからです。
 
-## 📚 課題
+## 11. まとめ
+
+- Discover と Define は問題定義を、Develop と Deliver は解決策の形成と検証を扱います。
+- 発散は候補を増やし、収束は証拠に基づいて選択します。
+- Deliver の目的は学習に使えるテスト結果であり、完成品の公開とは限りません。
+
+## 12. 練習
 
 <StageAssignmentCard title="ダブルダイヤモンドでアイデアを整理する">
 
@@ -547,3 +536,12 @@ AIは次のような出力をするかもしれません：
 - [Design Council: The Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/)
 - [Design Council: Framework for Innovation](https://www.designcouncil.org.uk/our-work/skills-learning/tools-frameworks/framework-for-innovation-design-councils-evolved-double-diamond/)
 - [Design Council: History of the Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/history-of-the-double-diamond/)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } }
+</style>

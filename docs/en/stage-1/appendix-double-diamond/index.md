@@ -5,51 +5,20 @@ description: 'A beginner-friendly introduction to the Double Diamond. Understand
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = 'About <strong>1.5 hours</strong>'
 </script>
 
 # Double Diamond: First Do the Right Thing, Then Do It Right
 
 <a id="top-dd"></a>
 
-## Introduction
+After needs analysis and user interviews, we often have a large collection of material: accounts from different users, problems with existing tools, and several possible directions for improvement. Once the material grows, the next difficulty is deciding what to keep.
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['Double Diamond', 'Design Thinking', 'Demand Analysis', 'Solution Design']"
-  coreOutput="1 clearer problem definition and 1 more reasonable validation entry point"
-  expectedOutput="Stop rushing straight into prototypes and learn to think through the problem before comparing solutions"
->
+When "understanding the problem" and "designing the solution" are not separated, it is easy to conduct interviews while searching for reasons to support a preferred feature. The **Double Diamond** separates these two kinds of work through two cycles of divergence and convergence.
 
-One of the most common beginner mistakes in product work is not "not trying hard enough." It is moving into solutions too fast.
-
-The moment an idea appears, people start thinking about screens, buttons, AI integrations, login flows, and prototype tools. Then after a lot of work, they realize the most basic question was never clear: does the user really have this pain point, and is it worth solving now? What feels like project progress is sometimes just accelerating very quickly in the wrong direction.
-
-That is exactly what the **Double Diamond** is designed to prevent.
-
-Its most valuable reminder is this: **"choosing the right thing to do" and "doing the thing right" are two different stages.** If the problem is still unclear and you rush into prototyping, you usually just make the wrong direction more complete.
-
-</ChapterIntroduction>
-
-::: info Minimal SOP
-**Goal**: After this, you should be much clearer about when to think about the problem first and when to start designing solutions and prototypes.
-
-**Action**: Move through `Discover → Define → Develop → Deliver`, and only do the kind of work that belongs to the current stage.
-
-**Result**: You will leave with a clearer problem definition, several comparable solution directions, and one testable first version.
-
-**Quick links**: [What the Double Diamond is](#dd-what) · [The first diamond](#dd-first) · [How AI can help](#dd-ai)
-:::
-
-## What You Will Learn
-
-1. What the Double Diamond is, and why it is especially useful for beginners
-2. What Discover, Define, Develop, and Deliver actually mean
-3. How to tell whether you should still be expanding or whether it is time to narrow down
-4. How to use the Double Diamond in AI products, prototype design, and demand validation
+This chapter introduces Discover, Define, Develop, and Deliver, and explains the inputs, outputs, and common mistakes of each stage.
 
 <a id="dd-what"></a>
-## [1. What the Double Diamond Really Is](#top-dd)
+## [1. Two Cycles of Divergence and Convergence](#top-dd)
 
 The Double Diamond is a classic design process framework promoted by the UK **Design Council**. It represents a full design and innovation process as two connected diamond shapes.
 
@@ -65,17 +34,16 @@ The full process has four steps:
 3. **Develop**: explore multiple solution directions around that problem
 4. **Deliver**: choose, prototype, test, and deliver the more suitable solution
 
-If you want the shortest way to remember it:
+The first two stages address the problem space; the last two address the solution space.
 
-- **the first diamond**: first figure out what problem is really worth solving
-- **the second diamond**: then decide what kind of solution should solve it
+<figure class="field-figure field-figure--diagram">
+  <a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/design-council-double-diamond-wide.png" alt="The Design Council Double Diamond: Discover, Define, Develop, and Deliver form two connected diamonds" loading="lazy" />
+  </a>
+  <figcaption><strong>Begin with the original diagram.</strong> The left diamond diverges through Discover and converges through Define; the right diverges again through Develop and converges through Deliver. The Design Council also notes that this is not a linear process that can only move forward once. When testing reveals a problem, the team can return to an earlier stage. Source: <a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">Design Council</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption>
+</figure>
 
-That is why a very accurate summary is:
-
-- **first diamond: choose the right thing to do**
-- **second diamond: do that thing right**
-
-## 2. Why the Double Diamond Is Especially Useful for Beginners
+## 2. Why Separate Problems from Solutions
 
 The most common beginner rhythm looks like this:
 
@@ -100,14 +68,12 @@ The Double Diamond keeps reminding you:
 - do not assume something is worth building just because it is technically buildable
 - do not assume a prototype matters just because it looks complete
 
+All three warnings address the same error: treating the amount already invested as evidence that the direction is correct. A prototype only shows what the team has made. Interviews, field observation, and real use provide evidence that the problem exists.
+
 <a id="dd-first"></a>
-## [3. The First Diamond: Choose the Right Thing to Do](#top-dd)
+## [3. The First Diamond: The Problem Space](#top-dd)
 
-The first diamond is about the **problem itself**, not the solution.
-
-You can translate it into one simple sentence:
-
-**before building, first make sure this is worth building at all.**
+The first diamond is about the **problem itself**, not the solution. Its output is a problem definition, not a product prototype.
 
 ### 3.1 Discover: Open up the problem space first
 
@@ -131,6 +97,13 @@ For example, imagine you want to build an AI tool for organizing meeting notes. 
 - which meeting types really need notes, and which ones do not
 
 The main goal in Discover is not to get the answer right away. It is to **avoid assuming too early that you already know the answer.**
+
+<figure class="field-figure">
+  <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/creative-commons-design-workshop.jpg" alt="A Creative Commons usability research workshop, with interview responses organized on sheets and sticky notes across a wall" loading="lazy" />
+  </a>
+  <figcaption><strong>Real Discover material is messy.</strong> In a 2018 usability study, the Creative Commons team conducted 81 interviews and synthesized another 36 existing interviews. Each sheet in the photograph represents a question, sticky notes record participants' answers, and dots help mark and compare them. At this point, the team preserved differences instead of forcing the material into one answer. Photograph and case: <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption>
+</figure>
 
 ### 3.2 Define: Extract the core problem from a pile of information
 
@@ -161,7 +134,14 @@ At that point, the problem is starting to become clear:
 
 The essence of Define is this: **go from "there are many problems" to "this is the one problem we will solve first."**
 
-## 4. The Second Diamond: Do the Thing Right
+<figure class="field-figure">
+  <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/creative-commons-research-synthesis.jpg" alt="The Creative Commons team arranging and clustering interview notes to identify research themes" loading="lazy" />
+  </a>
+  <figcaption><strong>Define is not choosing the most appealing quote.</strong> In the same case, the team combined and clustered 117 interviews, searched for recurring patterns, and eventually developed 9 insights. The spaces, groups, and colors in the photograph show the intermediate work between raw answers and themes and priorities. Photograph and case: <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption>
+</figure>
+
+## 4. The Second Diamond: The Solution Space
 
 Only after you complete the first diamond does it make sense to move fully into the second. By then, you are not solving a vague direction anymore. You are solving a specific problem that has already been narrowed down.
 
@@ -186,6 +166,13 @@ This is a good phase for brainstorming, comparison, and co-creation.
 
 But there is an important precondition: **all of these solution directions must still serve the same defined problem.**  
 If the problem is not clear, Develop quickly turns back into random feature sprawl.
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/develop-idea-board.jpg" alt="A solution board from a Wikimedia Deutschland design-thinking workshop, with colored notes spread across several candidate directions" loading="lazy" />
+  </a>
+  <figcaption><strong>Develop keeps several answers in view.</strong> This board comes from a Wikimedia Deutschland design-thinking workshop. Candidate ideas are spread out by theme and have not yet been compressed into a feature list. The value of divergence is not the number of sticky notes; it is that the team genuinely compares different paths before choosing one. Photograph: <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer">Corinna Schuster (WMDE) / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
 
 ### 4.2 Deliver: Choose, prototype, test, and put the solution into reality
 
@@ -212,21 +199,18 @@ That could be:
 
 The point of Deliver is not perfection. It is to **get the solution into a real environment quickly enough to validate it.**
 
-## 5. A Comparison Table That Is Easy to Remember
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/paper-prototype-test.jpg" alt="A participant writing in an input field on a paper prototype to simulate interaction with an unbuilt interface" loading="lazy" />
+  </a>
+  <figcaption><strong>Testable does not mean fully coded.</strong> A paper prototype draws the interface on paper. A participant clicks and writes while the researcher substitutes the next sheet. This is enough to examine the flow, wording, and sequence of actions without spending weeks implementing a direction that may be wrong. Photograph: <a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer">d_jan / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption>
+</figure>
 
-If you keep mixing up the four stages, this table is the easiest version to remember:
+## 5. Distinguishing the Four Stages
 
-| Stage | What you are doing | Keywords | Common outputs |
-| --- | --- | --- | --- |
-| Discover | Understanding the problem | research, observation, interviews, collecting information | user insight, context notes, problem list |
-| Define | Defining the problem | synthesis, focus, tradeoff, rewriting the problem | problem statement, priority, MVP cut |
-| Develop | Exploring solutions | brainstorming, comparison, co-creation, prototype directions | solution list, flow sketches, prototype directions |
-| Deliver | Validating solutions | prototype, test, iteration, delivery | prototype, test feedback, improved version |
+We have now examined the four stages separately. The interactive diagram below places them in one process. Select a stage and compare its work, outputs, and the tasks deliberately postponed until later.
 
-You can compress it even further:
-
-- **Discover / Define**: choose the right thing to do
-- **Develop / Deliver**: do that thing right
+<DoubleDiamondNavigator />
 
 ## 6. Common Double Diamond Mistakes
 
@@ -303,6 +287,13 @@ If you are working on your own product, you can write through the stages in this
 - Which directions are lightest, fastest, and easiest to validate?
 - Which parts are essential now, and which can wait?
 
+<figure class="field-figure field-figure--portrait">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_Gruppenarbeit_2.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-group-workshop.jpg" alt="Participants at a Wikimedia Deutschland design-thinking workshop making solution ideas visible through hands-on group work" loading="lazy" />
+  </a>
+  <figcaption><strong>Develop is not waiting for one good idea.</strong> The participants are cutting, arranging, and making so that different people's ideas become objects the group can discuss. The sooner a solution becomes visible, the easier it is to compare, combine, or discard. Photograph: Corinna Schuster (WMDE), <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
 ### Deliver
 
 - What is the smallest thing we can deliver to validate this direction?
@@ -350,25 +341,15 @@ But with the Double Diamond, a stronger process looks like this:
 
 Once the first diamond is solid, the second diamond becomes much clearer.
 
-## 10. Summary
-
-The strongest part of the Double Diamond is that it breaks one big messy process into four clearer moves:
-
-- first expand to understand the problem
-- then narrow to define the problem
-- then expand to explore solutions
-- finally narrow to deliver the solution
-
-It does not make you slower. It helps you **avoid many detours that look busy but are moving in the wrong direction.**
-
-This matters even more in the AI era because building things is getting easier and faster. When "making something" becomes cheap, the scarcer skill becomes this: **are you solving a problem worth solving, and are you solving it in an appropriate way?**
-
-If you remember only one sentence, remember this:
-
-**first choose the right thing to do, then do that thing right.**
+<figure class="field-figure field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_Prototyp_Mitmach-O-Mat.png" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-workshop-prototype.png" alt="A hand-drawn Mitmach-O-Mat interface produced during a Wikimedia Deutschland design-thinking workshop" loading="lazy" />
+  </a>
+  <figcaption><strong>A prototype only needs to answer one question.</strong> This workshop artifact has no complete visual system, only a welcome message, an action button, and a short explanation. It is already sufficient for observing whether participants understand the next step. Deliver aims to obtain feedback, not to make the interface look finished first. Prototype: Corinna Schuster / WMDE, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
 
 <a id="dd-ai"></a>
-## [11. How AI Can Help You Run the Double Diamond](#top-dd)
+## [10. Using AI in the Double Diamond](#top-dd)
 
 The Double Diamond is not an AI tool, but AI works very well as an accelerator inside all four stages. The key is not to let AI decide for you. The key is to let it help you expand the view, organize information, compare directions, and generate validation material.
 
@@ -534,7 +515,14 @@ Then tell me:
 
 That is especially helpful for beginners because it is very easy to start prototyping before the problem is truly clear.
 
-## Assignments
+## 11. Summary
+
+- Discover and Define produce a problem definition; Develop and Deliver produce and test a solution.
+- Divergence expands the candidate set; convergence uses evidence to make tradeoffs.
+- The problem definition should precede solution exploration, but later tests may require revision.
+- Deliver aims to produce test results that support learning, not necessarily a complete product.
+
+## 12. Exercise
 
 <StageAssignmentCard title="Organize Your Idea with the Double Diamond">
 
@@ -552,3 +540,15 @@ This article mainly draws on the Design Council's official material about the Do
 - [Design Council: The Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/)
 - [Design Council: Framework for Innovation](https://www.designcouncil.org.uk/our-work/skills-learning/tools-frameworks/framework-for-innovation-design-councils-evolved-double-diamond/)
 - [Design Council: History of the Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/history-of-the-double-diamond/)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure--diagram img { max-height: 580px; padding: 18px; }
+.field-figure--portrait img { max-height: 640px; object-fit: contain; }
+.field-figure--artifact img { padding: 20px; background: #f4f1eb; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } .field-figure--diagram img { padding: 8px; } }
+</style>

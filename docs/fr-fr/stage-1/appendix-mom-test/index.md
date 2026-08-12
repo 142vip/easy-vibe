@@ -5,14 +5,13 @@ description: "Article d'introduction à The Mom Test pour les lecteurs débutant
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = 'Environ <strong>1,5 heure</strong>'
 </script>
 
 # The Mom Test : comment valider les besoins par les entretiens utilisateurs
 
 <a id="top-mom"></a>
 
-## Introduction du chapitre
+<!-- Introduction du chapitre -->
 
 <ChapterIntroduction
   :duration="duration"
@@ -49,7 +48,7 @@ La méthode The Mom Test a été conçue précisément pour résoudre ce problè
 **Navigation rapide** : [Qu'est-ce que The Mom Test](#mom-what) · [Trois principes fondamentaux](#mom-principles) · [Comment l'IA peut vous aider](#mom-ai)
 :::
 
-## Ce que vous apprendrez
+<!-- Ce que vous apprendrez -->
 
 1. Quel problème The Mom Test résout réellement, et pourquoi beaucoup de « recherches utilisateurs » ne capturent en fait pas d'informations réelles
 2. Les principes fondamentaux de cette méthode : moins demander des opinions, plus demander des comportements ; moins demander des hypothèses, plus demander des faits
@@ -57,7 +56,7 @@ La méthode The Mom Test a été conçue précisément pour résoudre ce problè
 4. Comment combiner The Mom Test avec JTBD, la validation des besoins et l'évaluation du MVP
 
 <a id="mom-what"></a>
-## [1. Qu'est-ce que The Mom Test vraiment](#top-mom)
+## [1. Pourquoi les entretiens produisent des faux positifs](#top-mom)
 
 The Mom Test vient du livre du même nom de Rob Fitzpatrick. Son nom ressemble à une blague, mais il touche juste :
 
@@ -155,6 +154,8 @@ Les meilleures questions sont :
 
 Comprendre les alternatives actuelles est souvent plus important que de demander directement « que voulez-vous ».
 
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/user-interview-session.jpg" alt="Entretien réel avec un ordinateur et des notes posés sur la table" loading="lazy" /></a><figcaption><strong>La personne interrogée est au centre, pas le guide.</strong> Lorsqu'un récit contient « la semaine dernière », « j'ai fini par » ou « j'ai déjà payé », poursuivez cette expérience concrète. Photo : <a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer">ManonB2018 / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption></figure>
+
 ## 4. Pourquoi les gens vous donnent toujours des réponses flatteuses mais inutiles
 
 Si vous comprenez cela, vous ferez beaucoup moins d'erreurs de jugement lors des entretiens.
@@ -208,6 +209,8 @@ Ce qui est le plus important dans ce tableau, ce ne sont pas les phrases exactes
 - Des opinions vers les faits
 - Du futur vers le passé
 - De votre solution vers le problème de l'utilisateur
+
+<InterviewEvidenceLab />
 
 ## 6. Un rythme d'entretien que même un débutant peut utiliser immédiatement
 
@@ -318,6 +321,10 @@ Ainsi, les méthodes se connectent :
 - JTBD vous aide à définir l'hypothèse de besoin
 - The Mom Test vous aide à vérifier l'hypothèse par entretien
 
+Un entretien aide à comprendre le passé, mais il ne constitue pas la dernière étape. Une fois le prototype réalisé, faites-le manipuler afin de comparer le récit au comportement réel.
+
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/usability-testing-session.jpg" alt="Lors du Bangalore DevCamp, une participante utilise une nouvelle application de traduction pendant un test d'utilisabilité" loading="lazy" /></a><figcaption><strong>Après « je l'utiliserais », vérifiez « peut-il l'utiliser ? ».</strong> L'entretien valide l'existence du problème ; le test d'usage vérifie la solution. Photo : <a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer">Amire80 / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption></figure>
+
 ## 9. Erreurs les plus courantes des débutants lors des entretiens utilisateurs
 
 ### 9.1 Transformer l'entretien en présentation produit
@@ -345,6 +352,8 @@ Si vous laissez les informations de côté après avoir discuté, elles devienne
 - Les solutions alternatives actuelles
 - Les coûts déjà engagés
 - Vos propres nouveaux jugements
+
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Wikipedia-Affinity.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/wikipedia-affinity-synthesis.jpg" alt="Projet d'utilisabilité de Wikipedia regroupant les observations dans un diagramme d'affinité" loading="lazy" /></a><figcaption><strong>La fin des entretiens marque seulement l'arrivée de la matière première.</strong> Les observations sont décomposées en preuves puis regroupées par thèmes. Photo : Parul Vora / Wikimedia Foundation, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption></figure>
 
 ## 10. Liste de questions prêtes à l'emploi
 
@@ -482,6 +491,8 @@ Ainsi, vous n'avez pas besoin d'inventer les questions à partir de zéro, la pr
 
 Après les entretiens, le problème le plus fréquent n'est pas « manquer d'informations », mais « les informations sont trop dispersées ». L'IA est très adaptée pour vous aider à organiser des conversations fragmentées en notes structurées :
 
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Volunteer_Molly_conducting_an_interview._Over_200_prospects_still_need_to_be_interviewed._Plus_the_park_needs_help_transcribing_(791cd068-1dd8-b71b-0b4d-48151192c96f).jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/oral-history-interview.jpg" alt="Entretien d'histoire orale du National Park Service, avec guide, photographies et notes sur la table" loading="lazy" /></a><figcaption><strong>La synthèse doit rester reliée aux sources.</strong> L'IA peut aider à transcrire et classer, mais chaque conclusion doit pouvoir revenir aux propos originaux. Photo : U.S. National Park Service, domaine public.</figcaption></figure>
+
 ```text
 Voici les notes de mes entretiens avec 3 utilisateurs.
 Merci de les organiser selon la perspective de The Mom Test :
@@ -592,3 +603,12 @@ En vous basant sur le contenu ci-dessus, veuillez réaliser les exercices suivan
 
 - [Site officiel de The Mom Test](https://momtestbook.com/)
 - [Rob Fitzpatrick : The Mom Test](https://www.robfitz.com/the-mom-test/)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } }
+</style>

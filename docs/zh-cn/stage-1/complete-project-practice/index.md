@@ -16,8 +16,6 @@ const relatedArticles =
 
 # 完整项目实战：从想法到作品
 
-<ProductJourney current="finish" />
-
 ## 章节导读
 
 <ChapterIntroduction :duration="duration" :tags="['完整使用', '产品体验', '用户试用', '作品展示']" coreOutput="1 个别人不需要指导也能使用的 AI 产品" expectedOutput="经过真实试用和修改的 Web 作品">

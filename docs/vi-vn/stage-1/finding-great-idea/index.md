@@ -11,8 +11,6 @@ const duration = 'Khoảng <strong>3 giờ</strong>'
 
 # Cách nhận biết một ý tưởng tốt
 
-<ProductJourney current="choose" />
-
 ## Dẫn nhập chương
 
 <ChapterIntroduction :duration="duration" :tags="['Khám phá nhu cầu', 'Tư duy sản phẩm', 'Phân tích người dùng', 'Mô hình kinh doanh']" coreOutput="3 khái niệm sản phẩm có bằng chứng" expectedOutput="Một hướng sản phẩm có thể kiểm chứng">
@@ -73,7 +71,9 @@ Tháng đầu ra mắt có 50.000 lượt tải nhờ quảng bá. Nhưng phần
 Sau một năm, Tiểu Minh lỗ 200.000 nhân dân tệ. Anh nhìn bảng số liệu và tự hỏi: “Ứng dụng đâu có tệ, tại sao không ai dùng và càng không ai mua?”
 
 <figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Woman_stretching_in_a_gym_while_holding_her_phone.jpg" target="_blank" rel="noopener noreferrer">
   <img src="/images/finding-great-idea/fitness-phone-context.jpg" alt="Một phụ nữ giãn cơ trong phòng tập khi cầm điện thoại" loading="lazy" />
+  </a>
   <figcaption><strong>Hãy nhìn tình huống trước khi chọn tính năng.</strong> Điện thoại đã xuất hiện trong buổi tập, nhưng điều đó chưa chứng minh người dùng cần thêm một ứng dụng thể dục. Ta vẫn phải hỏi họ dùng điện thoại để làm gì và cách hiện tại vướng ở bước nào. Ảnh: Shixart1985, CC BY 2.0.</figcaption>
 </figure>
 
@@ -103,9 +103,9 @@ Anh tìm vài người bạn đã dùng ứng dụng. Một người nói: “�
 
 Ba vấn đề lộ ra:
 
-1. **Giải pháp hiện có đã đủ tốt.** Đổi sản phẩm làm mất thời gian và buộc người dùng thay thói quen.
-2. **Sản phẩm đòi hỏi quá nhiều hành vi mới.** Ghi chép trước khi nhận được giá trị tạo thêm ma sát.
-3. **Có quá nhiều lựa chọn miễn phí.** Chức năng chung chung không tạo lý do trả tiền.
+- **Giải pháp hiện có đã đủ tốt.** Đổi sản phẩm làm mất thời gian và buộc người dùng thay thói quen.
+- **Sản phẩm đòi hỏi quá nhiều hành vi mới.** Ghi chép trước khi nhận được giá trị tạo thêm ma sát.
+- **Có quá nhiều lựa chọn miễn phí.** Chức năng chung chung không tạo lý do trả tiền.
 
 ### Nhu cầu thật là gì?
 
@@ -122,7 +122,9 @@ Nhìn bề ngoài, Meicai chỉ giúp nhà hàng mua rau. Nhưng nhiều chủ q
 Nỗi đau càng rõ, ý định trả tiền thường càng mạnh. Thời gian và sức lực tiết kiệm được có thể đáng giá hơn phần chênh lệch giá rau.
 
 <figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Haikou_wholesale_vegetable_market_-_06.JPG" target="_blank" rel="noopener noreferrer">
   <img src="/images/finding-great-idea/haikou-wholesale-market.jpg" alt="Người mua rau tại một chợ đầu mối ở Hải Khẩu" loading="lazy" />
+  </a>
   <figcaption><strong>Việc mua hàng không chỉ là lúc đặt đơn.</strong> Bức ảnh ghi lại một chợ đầu mối có thật ở Hải Khẩu. Đi đến chợ, chọn hàng, vận chuyển rồi quay về quán đều là những phần của công việc; giá trị lớn nhất có thể nằm ở đó. Ảnh: Anna Frodesiak, CC0.</figcaption>
 </figure>
 
@@ -170,7 +172,9 @@ Một sai lầm phổ biến là quảng bá mong muốn như thể đó là n�
 2. **Phân tích lựa chọn thay thế.** Họ có thể dùng sản phẩm khác, bảng tính, trí nhớ hoặc chịu đựng. Giải pháp mới phải tốt hơn theo cách dễ nhận thấy.
 
 <figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Project_User_Experience_Testing_(9719939867).jpg" target="_blank" rel="noopener noreferrer">
   <img src="/images/finding-great-idea/ux-test-researcher-participant.jpg" alt="Một nhà nghiên cứu và người tham gia cùng thử một trang web" loading="lazy" />
+  </a>
   <figcaption><strong>Kiểm chứng riêng điều người dùng nói và điều họ làm.</strong> Bức ảnh ghi lại một buổi thử nghiệm trải nghiệm người dùng trên trang web. Phỏng vấn giúp ta hiểu thói quen thường ngày; thử nghiệm khả dụng cho thấy người tham gia thật sự dừng lại ở đâu. Ảnh: Samuel Mann, CC BY 2.0.</figcaption>
 </figure>
 3. **Kiểm tra việc trả tiền.** Đặt trước hoặc tiền cọc có giá trị hơn lời hứa. Trên 10% là tín hiệu mạnh; từ 5% đến 10% cần chỉnh; dưới 5% buộc ta xem lại giả thuyết.
@@ -194,7 +198,9 @@ Khi được hỏi đang giải quyết thế nào, chị nói bài tập chung 
 Vấn đề rất cụ thể: thời gian vụn vặt, hạn chế cơ thể, lo âu về vóc dáng, quá nhiều thông tin và thiếu người đồng hành. Đây không phải điều “có thì tốt”, mà là một nhóm nỗi đau thật.
 
 <figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Post_Pregnancy_Pt_Class_DVIDS301829.jpg" target="_blank" rel="noopener noreferrer">
   <img src="/images/finding-great-idea/post-pregnancy-training.jpg" alt="Một nhóm tham gia lớp tập luyện sau thai kỳ" loading="lazy" />
+  </a>
   <figcaption><strong>Tập luyện sau sinh có những ràng buộc riêng.</strong> Bức ảnh ghi lại một lớp tập thật dành cho giai đoạn sau thai kỳ. Không gian, sự hướng dẫn và cường độ vận động không phải chi tiết trang trí; chúng là một phần của vấn đề cần hiểu trước khi liệt kê tính năng. Ảnh: Staff Sgt Orly N. Tyrell, Không quân Hoa Kỳ, phạm vi công cộng.</figcaption>
 </figure>
 
@@ -226,7 +232,9 @@ Tiểu Minh quan sát một ngày của chị gái.
 Nỗi đau không phải “thiếu khóa tập”, mà là sợ hãi và lo âu trong quá trình hồi phục sau sinh.
 
 <figure class="idea-field-figure idea-field-figure--portrait idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Beispiel_Customer_Journey_Map.jpg" target="_blank" rel="noopener noreferrer">
   <img src="/images/finding-great-idea/customer-journey-work.jpg" alt="Ví dụ bản đồ hành trình khách hàng bằng giấy trên tường" loading="lazy" />
+  </a>
   <figcaption><strong>Đặt lại tình huống lên một dòng thời gian.</strong> Bức ảnh cho thấy một ví dụ thực hành bản đồ hành trình khách hàng. Bản đồ tự nó không phải bằng chứng người dùng; nó giúp sắp xếp dữ liệu từ phỏng vấn và quan sát để thấy lúc cảm xúc đổi chiều và trở ngại xuất hiện. Ảnh: Anakin Schoeber, CC BY-SA 4.0.</figcaption>
 </figure>
 
@@ -282,7 +290,7 @@ Sinh viên tốt nghiệp chỉ còn vài ngày rời trường, có quá nhiề
 
 ### Tóm tắt hồi hai: điều Tiểu Minh học được
 
-1. **Bắt đầu từ điều gần gũi.** Ta hiểu sâu hơn nhóm mà mình thuộc về hoặc thường xuyên tiếp xúc.
+- **Bắt đầu từ điều gần gũi.** Ta hiểu sâu hơn nhóm mà mình thuộc về hoặc thường xuyên tiếp xúc.
 2. **Chia ngang nhóm người dùng.** Không phục vụ “tất cả”; hãy tìm nhóm đau nhất.
 3. **Đào sâu bối cảnh.** Mô tả trước, trong và sau cùng cảm xúc sợ hãi, lo âu, bất lực, cô đơn.
 4. **Tái cấu trúc giá trị.** Đi từ chức năng tới giải pháp, từ công cụ tới trợ lý.
@@ -312,7 +320,9 @@ Từ tháng sáu đến tháng mười hai, phát triển ứng dụng độc l�
 Không cần tự xây thị giác máy tính từ đầu. Có thể dùng dịch vụ có sẵn, kết hợp con người với AI ở giai đoạn đầu. Chỉ số ban đầu là một trăm người dùng trong tháng đầu và tỷ lệ trả tiền 10%.
 
 <figure class="idea-field-figure idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:UX_prototyping_4.jpg" target="_blank" rel="noopener noreferrer">
   <img src="/images/finding-great-idea/app-prototype-user-test.jpg" alt="Một người tham gia thử nguyên mẫu ứng dụng trên điện thoại" loading="lazy" />
+  </a>
   <figcaption><strong>Hãy đặt nguyên mẫu vào tay người tham gia.</strong> Bức ảnh ghi lại một buổi thử nghiệm nguyên mẫu ứng dụng có thật. Điều cần xem không phải giao diện trông hoàn chỉnh đến đâu, mà là người tham gia có làm xong nhiệm vụ không, do dự ở đâu và vòng tiếp theo cần sửa gì. Ảnh: Luthienrecanto, CC BY-SA 4.0.</figcaption>
 </figure>
 

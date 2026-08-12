@@ -14,15 +14,11 @@ const duration = 'Etwa <strong>3 Stunden</strong>'
 
 <ChapterIntroduction :duration="duration" :tags="['Bedarfserkennung', 'Produktdenken', 'Nutzeranalyse', 'Geschäftsmodell']" coreOutput="3 validierte Produktkonzepte" expectedOutput="Umsetzbare Gründungs-/Produktrichtung">
 
-Wir haben gelernt, mit AI IDE Dinge zu erstellen, aber es gibt eine grundlegendere Frage: <strong>Was erstellen?</strong>
+Im vorigen Kapitel haben wir aus Alltagserlebnissen, öffentlichen Diskussionen und Produktbewertungen erste Hinweise gesammelt. Nun geht es nicht darum, sofort Code zu schreiben, sondern die Hinweise zu Richtungen zu ordnen und eine davon für die weitere Prüfung auszuwählen.
 
-Viele wollen sofort „ein AI-Tool" oder „eine Social Platform" entwickeln, aber das Ergebnis ist ein Produkt, das niemand nutzt. Wo liegt das Problem? <strong>Der echte Bedarf wurde nicht gefunden.</strong>
+Ob sich eine Richtung lohnt, hängt nicht nur davon ab, wie neuartig sie klingt. Wir müssen auch beobachten, wie häufig das Problem auftritt, wie deutlich seine Folgen sind, wie Nutzer es heute lösen und ob sie bereit sind, Zeit oder Geld zu investieren.
 
-Die noch härtere Realität: <strong>Viele Produkte lösen zwar Probleme, aber Nutzer sind einfach nicht bereit zu bezahlen.</strong>
-
-In diesem Kapitel lernen wir anhand der Geschichte von Xiao Ming, wie man Produktrichtungen findet, die es wert sind, umgesetzt zu werden.
-
-Nach Abschluss dieses Kapitels werden Sie über eine <strong>vollständige Methodik zur Ideenfindung</strong> sowie 3 validierte Produktkonzepte verfügen.
+Anhand der Geschichte von Xiao Ming ordnet dieses Kapitel diese Kriterien in konkrete Situationen ein. Schritt für Schritt entstehen mehrere durch Hinweise gestützte Produktkonzepte, die eine weitere Untersuchung verdienen. Im nächsten Kapitel betrachten wir genauer, was Nutzer tatsächlich erreichen wollen.
 
 </ChapterIntroduction>
 
@@ -1122,4 +1118,4 @@ In diesem Kapitel haben wir anhand der Geschichte von Xiao Ming gelernt, Produkt
 
 **Merken Sie sich:** Gute Produktmanager erfinden keine Bedürfnisse aus dem Nichts, sondern entdecken die <strong>übersehenen, unterschätzten und falsch befriedigten</strong> echten Bedürfnisse und finden Wege, wie Nutzer bereit sind, dafür zu bezahlen.
 
-Im nächsten Kapitel werden wir mit validierten Ideen lernen, wie man sie mit AI IDE in interaktive Produktprototypen verwandelt.
+Als Nächstes ordnen wir die Richtung mit dem Double-Diamond-Modell und prüfen sie weiter mit Jobs to Be Done und der Interviewmethode The Mom Test. Erst nach dieser Validierung wird aus der Idee ein Produktprototyp.

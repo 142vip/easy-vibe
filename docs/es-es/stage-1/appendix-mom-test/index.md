@@ -5,23 +5,15 @@ description: 'Aprende a evitar retroalimentacion educada, y haz entrevistas cent
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = 'Aproximadamente <strong>1.5 horas</strong>'
 </script>
 
 # The Mom Test: Como validar necesidades a traves de entrevistas con usuarios
 
 <a id="top-mom"></a>
 
-## Resumen del capitulo
+La frase JTBD obtenida en el capítulo anterior sigue siendo una hipótesis. Debemos comprobar mediante entrevistas si el problema ha sucedido recientemente y si el usuario ya ha invertido tiempo, dinero o esfuerzo en resolverlo.
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['Entrevistas con usuarios', 'Validacion de necesidades', 'Investigacion de usuarios', 'Investigacion de producto']"
-  coreOutput="1 conjunto de preguntas de entrevista que obtienen informacion mas real"
-  expectedOutput="Dejar de tomar la retroalimentacion educada como validacion, y poder juzgar direcciones con comportamientos reales"
->
-
-Muchas personas, la primera vez que hacen investigacion de producto, creen que lo mas importante es "hablar con alguien". Asi que van y preguntan a amigos, colegas e incluso familiares:
+Esto parece sencillo. Sin embargo, si preguntamos directamente si gusta una idea, solemos obtener respuestas corteses y generales:
 
 - Que te parece esta idea?
 - Si existiera un producto asi, lo usarias?
@@ -35,29 +27,12 @@ La otra persona suele dar una retroalimentacion muy alentadora:
 
 El problema es que estas respuestas normalmente no te ayudan a tomar decisiones. Son mas bien cortesia, apoyo, o una reaccion natural para no desanimarte en el momento. Crees haber obtenido "validacion de mercado", pero en realidad solo has recogido un monton de consuelos dificiles de usar para tomar decisiones.
 
-El metodo The Mom Test fue creado precisamente para resolver este problema. Nos recuerda: **no es que los usuarios te esten mintiendo a proposito, sino que tu forma de hacer las preguntas lleva naturalmente a la otra persona hacia respuestas agradables pero inutiles.**
+Estas respuestas no son incorrectas, pero apenas sirven para decidir sobre el producto. The Mom Test propone preguntar menos por intenciones futuras y más por lo que ocurrió en el pasado, cómo se resolvió y qué coste tuvo.
 
-</ChapterIntroduction>
-
-::: info SOP minimo
-**Objetivo**: Despues de leer, sabras mejor como hablar con usuarios sin escuchar solo "suena bien", sino obtener informacion que realmente te ayude a juzgar la direccion.
-
-**Accion**: Reescribe las 5 preguntas que ibas a hacer, priorizando "cuando fue la ultima vez que paso esto" y "como lo manejaste entonces".
-
-**Resultado**: Te sera mas facil distinguir que son opiniones y que son verdaderas evidencias para tomar decisiones.
-
-**Enlaces rapidos**: [Que es The Mom Test](#mom-what) · [Tres principios centrales](#mom-principles) · [Como te ayuda la IA](#mom-ai)
-:::
-
-## Aprenderas lo siguiente
-
-1. Que problema esta resolviendo exactamente The Mom Test, y por que muchas "investigaciones de usuarios" en realidad no investigan informacion real
-2. Los principios mas importantes de este metodo: preguntar menos opiniones y mas comportamientos; preguntar menos hipotesis y mas hechos
-3. Como transformar una pregunta que facilmente genera falsos positivos en una pregunta de entrevista mas valiosa
-4. Como usar The Mom Test junto con JTBD, validacion de necesidades y evaluacion de MVP
+Este capítulo explica cómo evitar esos «falsos positivos» y centrar la entrevista en comportamientos, alternativas actuales y costes reales.
 
 <a id="mom-what"></a>
-## [1. Que es exactamente The Mom Test](#top-mom)
+## [1. Por qué las entrevistas producen falsos positivos](#top-mom)
 
 The Mom Test proviene del libro homonimo de Rob Fitzpatrick. Su nombre suena como una broma, pero da muy en el clavo:
 
@@ -77,7 +52,7 @@ Por lo tanto, el punto de The Mom Test nunca ha sido "no le preguntes a tu madre
 
 Lo que este metodo realmente quiere ensenarte es como obtener informacion mas cercana a las necesidades reales a traves de la conversacion, en lugar de recoger un monton de comentarios que te hagan sentir bien.
 
-## 2. Cual es el problema central que resuelve
+## 2. Opiniones y pruebas de comportamiento
 
 The Mom Test resuelve principalmente una ilusion cognitiva muy comun:
 
@@ -106,7 +81,7 @@ Por eso The Mom Test te recuerda:
 Porque comparado con "la usarias?", "como manejaste esto la ultima vez?" suele estar mas cerca de la verdad.
 
 <a id="mom-principles"></a>
-## [3. Los tres principios mas importantes](#top-mom)
+## [3. Tres principios para formular preguntas](#top-mom)
 
 Si solo quieres recordar lo mas importante, empieza con estos tres principios.
 
@@ -154,6 +129,8 @@ Mejores preguntas son:
 - En que falla?
 
 Entender las soluciones alternativas existentes suele ser mas importante que preguntar directamente "que quieres".
+
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/user-interview-session.jpg" alt="Entrevista real con una participante, un ordenador y materiales de notas" loading="lazy" /></a><figcaption><strong>La protagonista es la otra persona, no el guion.</strong> Cuando aparecen pistas como «la semana pasada», «al final tuve que» o «ya he pagado», conviene seguir esa experiencia. Foto: <a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer">ManonB2018 / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption></figure>
 
 ## 4. Por que la gente siempre te da respuestas agradables pero inutiles
 
@@ -209,7 +186,13 @@ Lo mas importante de esta tabla no son las frases concretas, sino la direccion d
 - Del futuro hacia el pasado
 - De tu solucion hacia el problema del usuario
 
-## 6. Un ritmo de entrevista que incluso un principiante puede usar inmediatamente
+Las reformulaciones siguen tres movimientos: de la opinión al hecho, del futuro al pasado y de nuestra solución al problema del usuario.
+
+El siguiente ejercicio contiene seis frases habituales de una entrevista. Clasifiquemos cuáles constituyen pruebas útiles y cuáles son solo opiniones.
+
+<InterviewEvidenceLab />
+
+## 6. Orden básico de una entrevista
 
 Si quieres ir a hablar con alguien ahora mismo, puedes seguir esta secuencia directamente.
 
@@ -318,6 +301,10 @@ Asi, los metodos se conectan:
 - JTBD te ayuda a definir la hipotesis de necesidad
 - The Mom Test te ayuda a verificar la hipotesis a traves de entrevistas
 
+Las entrevistas explican qué ocurrió en el pasado, pero no son el último paso. Cuando exista un prototipo, debemos pedir al usuario que lo utilice y comparar su relato con su comportamiento.
+
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/usability-testing-session.jpg" alt="Una participante prueba una nueva aplicación de traducción durante Bangalore DevCamp" loading="lazy" /></a><figcaption><strong>Después de «lo usaría», debemos comprobar «puede usarlo».</strong> La entrevista valida el problema; la prueba de uso observa si la solución permite completar la tarea. Foto: <a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer">Amire80 / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption></figure>
+
 ## 9. Los errores mas comunes de los principiantes al hacer entrevistas con usuarios
 
 ### 9.1 Convertir la entrevista en una presentacion de producto
@@ -345,6 +332,8 @@ Si dejas la informacion ahi, rapidamente se convertira en impresiones vagas. Es 
 - Soluciones alternativas actuales
 - Costos ya incurridos
 - Tus propios nuevos juicios
+
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Wikipedia-Affinity.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/wikipedia-affinity-synthesis.jpg" alt="Observaciones de entrevistas agrupadas en un diagrama de afinidad del proyecto de usabilidad de Wikipedia" loading="lazy" /></a><figcaption><strong>Terminar la entrevista solo significa tener la materia prima.</strong> Las observaciones se separan y después se agrupan por temas repetidos para descubrir patrones entre entrevistas. Foto: Parul Vora / Wikimedia Foundation, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption></figure>
 
 ## 10. Lista de preguntas que puedes copiar y usar directamente
 
@@ -376,7 +365,7 @@ Si quieres empezar rapidamente, aqui tienes un conjunto de preguntas suficientem
 
 Nota: esta pregunta de cierre puede hacerse, pero es mejor dejarla para el final. Porque primero necesitas obtener hechos, no deseos.
 
-## 11. Resumen
+## [11. Uso de la IA para preparar y organizar entrevistas](#top-mom)
 
 La contribucion mas importante de The Mom Test no es darte un conjunto de tecnicas para "saber hablar mejor", sino ayudarte a establecer una forma mas lucida de juzgar:
 
@@ -395,11 +384,10 @@ Cuando empieces a preguntar de esta manera, la informacion que obtengas a veces 
 Y al hacer productos, **la verdad util siempre es mas importante que el elogio agradable.**
 
 <a id="mom-ai"></a>
-## [12. Como usar la IA para ayudarte con las entrevistas de usuarios](#top-mom)
 
 The Mom Test es esencialmente un metodo de "hablar con personas reales", por lo que la IA no puede sustituir las entrevistas reales. Pero la IA es muy adecuada para asistirte antes, durante y despues de las entrevistas, especialmente para reducir la barrera de entrada de los principiantes.
 
-### 12.1 Dejar que la IA reescriba las preguntas "que se desperdician facilmente"
+### 11.1 Pedir a la IA que reformule preguntas poco útiles
 
 Muchas personas saben que no deberian preguntar "que te parece esta idea?", pero al abrir la boca vuelven a este tipo de frases. Puedes pasar primero a la IA las preguntas que has preparado, y pedirle que las reescriba:
 
@@ -440,7 +428,7 @@ Preguntas reescritas:
 
 Este tipo de resultado es muy util porque transforma directamente tus preguntas "de opinion" en preguntas "de comportamiento real".
 
-### 12.2 Dejar que la IA genere guiones de entrevista para diferentes perfiles
+### 11.2 Pedir a la IA guiones para distintos perfiles
 
 La misma direccion, para diferentes grupos de personas, tiene diferentes focos de entrevista. Por ejemplo, estudiantes, Recursos Humanos y trabajadores freelance tienen preocupaciones completamente diferentes. Puedes pedir a la IA que genere una version del guion para cada tipo de interlocutor:
 
@@ -478,9 +466,11 @@ Para companeros de cursos superiores:
 
 Asi, no tienes que inventar preguntas desde cero, y la preparacion de entrevistas sera mucho mas facil.
 
-### 12.3 Dejar que la IA organice las notas de entrevista
+### 11.3 Pedir a la IA que organice las notas
 
 Despues de las entrevistas, el problema mas comun no es "falta de informacion", sino "informacion demasiado dispersa". La IA es muy adecuada para ayudarte a organizar conversaciones fragmentadas en notas estructuradas:
+
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Volunteer_Molly_conducting_an_interview._Over_200_prospects_still_need_to_be_interviewed._Plus_the_park_needs_help_transcribing_(791cd068-1dd8-b71b-0b4d-48151192c96f).jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/oral-history-interview.jpg" alt="Entrevista de historia oral con guion, fotografías y notas sobre la mesa" loading="lazy" /></a><figcaption><strong>La síntesis debe conservar el vínculo con el material original.</strong> La IA ayuda a transcribir y clasificar, pero cada conclusión debe poder remontarse a las palabras originales. Foto: U.S. National Park Service, dominio público.</figcaption></figure>
 
 ```text
 A continuacion estan las notas de mis entrevistas con 3 usuarios.
@@ -527,7 +517,7 @@ Puntos clave para juzgar la necesidad:
 
 Este resultado puede mostrar muy intuitivamente a los principiantes: que frases se pueden usar para tomar decisiones y cuales solo se pueden escuchar.
 
-### 12.4 Dejar que la IA haga una ronda ligera de busqueda en la web
+### 11.4 Pedir a la IA una búsqueda web preliminar
 
 Si aun no has empezado las entrevistas, primero puedes pedir a la IA que haga una investigacion externa muy ligera, como:
 
@@ -560,7 +550,7 @@ Quejas comunes:
 
 El valor de este tipo de resultado es que te facilita encontrar un punto de entrada para las entrevistas.
 
-### 12.5 Dejar que la IA actue como "coach de revision de entrevistas"
+### 11.5 Pedir a la IA que actúe como asesora de revisión
 
 Tambien puedes pasar las notas de una entrevista recien terminada a la IA y pedirle que te haga criticas:
 
@@ -575,7 +565,14 @@ Por favor ayudame a revisar desde la perspectiva de The Mom Test:
 
 Esto es especialmente util para principiantes, porque desarrollaras mas rapidamente una sensibilidad sobre "si realmente estoy recogiendo evidencia o solo recogiendo animos".
 
-## 📚 Tareas
+## 12. Resumen
+
+- Una valoración positiva de la idea no constituye por sí sola una prueba de necesidad.
+- Conviene preguntar por experiencias concretas del pasado, no por predicciones de conducta futura.
+- El comportamiento, el tiempo, el dinero y las alternativas actuales indican la intensidad del problema.
+- La IA puede preparar guiones y ordenar notas, pero no sustituye una entrevista real.
+
+## 13. Ejercicio
 
 <StageAssignmentCard title="Haz una entrevista sin intentar vender tu idea">
 
@@ -592,3 +589,12 @@ Por favor completa las siguientes tareas basandote en el contenido anterior:
 
 - [The Mom Test sitio web oficial](https://momtestbook.com/)
 - [Rob Fitzpatrick: The Mom Test](https://www.robfitz.com/the-mom-test/)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } }
+</style>

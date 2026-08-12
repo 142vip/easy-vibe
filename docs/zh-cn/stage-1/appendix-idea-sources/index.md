@@ -9,8 +9,6 @@ const duration = '约 <strong>20 分钟</strong>'
 
 # 创意灵感从哪里来
 
-<ProductJourney current="find" />
-
 ## 本章导读
 
 <ChapterIntroduction

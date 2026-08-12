@@ -9,7 +9,6 @@ const duration = 'نحو <strong>20 دقيقة</strong>'
 
 # من أين تأتي الأفكار الإبداعية
 
-<ProductJourney current="find" />
 
 ## ما الذي سنفعله في هذا الفصل؟
 

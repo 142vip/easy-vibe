@@ -15,7 +15,6 @@ const relatedArticles =
 
 # 프로토타입에 AI 기능 연결하기
 
-<ProductJourney current="ai" />
 
 ## 이 장에서 배울 내용
 

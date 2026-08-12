@@ -1,61 +1,30 @@
 ---
-title: '雙鑽模型：先做對的事，再把事做對'
+title: '雙鑽設計模型'
 description: '面向零基礎讀者的 Double Diamond 入門文章。理解 Discover、Define、Develop、Deliver 四個階段，避免在問題還沒搞清楚時就急著做原型。'
 ---
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = '約 <strong>1.5 小時</strong>'
 </script>
 
-# 雙鑽模型：先做對的事，再把事做對
+# 雙鑽設計模型
 
 <a id="top-dd"></a>
 
-## 本章導讀
+經過需求分析和使用者訪談，我們往往會得到很多材料：不同使用者的經歷、現有工具的問題，以及若干可能的改進方向。材料變多之後，新的困難是如何取捨。
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['Double Diamond', '設計思維', '需求分析', '方案設計']"
-  coreOutput="1 個更清楚的問題定義和 1 個更合理的驗證切口"
-  expectedOutput="不再一上來就急著畫原型，而是知道先想清楚問題，再比較方案"
->
+如果沒有區分“理解問題”和“設計方案”，人們很容易一邊訪談，一邊為自己偏好的功能尋找理由。雙鑽模型（Double Diamond）用兩次發散和收斂將這兩類工作分開。
 
-很多人第一次做產品時，最容易踩的坑不是“不夠努力”，而是太快進入解決方案。
-
-腦子裡剛冒出一個方向，就開始想頁面怎麼畫、按鈕放哪、要不要接 AI、要不要做登入註冊、原型用什麼工具畫。忙了一圈之後，才發現最根本的問題根本沒想清楚：使用者到底是不是真的有這個痛點？這個問題值不值得現在解決？你以為自己在推進專案，其實只是很努力地在錯誤方向上加速。
-
-雙鑽模型（Double Diamond）就是用來避免這種情況的。
-
-它最有價值的提醒是：**“做對的事情”和“把事情做對”，是兩個完全不同的階段。** 如果你還沒搞清楚問題，就急著衝去做原型，通常只會把錯誤方向做得更完整。
-
-</ChapterIntroduction>
-
-::: info 最小 SOP
-**目的**：看完後，你會更清楚做產品時什麼時候該先想問題，什麼時候才該開始想方案和原型，避免一上來就在錯誤方向上做得很認真。
-
-**行動項**：按 `Discover → Define → Develop → Deliver` 四步往下走，每一步只做當前階段該做的事。
-
-**結果**：你會得到一個更清楚的問題定義、幾種可比較的方案，以及一個可驗證的最小版本。
-
-**關鍵詞跳轉**：[雙鑽模型是什麼](#dd-what) · [第一個鑽石](#dd-first) · [AI 怎麼幫你](#dd-ai)
-:::
-
-## 你將學到以下內容
-
-1. 雙鑽模型是什麼，為什麼它適合零基礎做產品時使用
-2. Discover、Define、Develop、Deliver 四個階段分別在做什麼
-3. 怎樣區分“現在應該繼續發散”還是“現在應該開始收斂”
-4. 如何把雙鑽模型用在 AI 產品、原型設計和需求驗證裡
+本章介紹 Discover、Define、Develop 和 Deliver 四個階段，並說明每個階段的輸入、產出和常見錯誤。
 
 <a id="dd-what"></a>
-## [1. 雙鑽模型到底是什麼](#top-dd)
+## [1. 兩次發散與收斂](#top-dd)
 
-雙鑽模型是英國 **Design Council** 推廣的一套經典設計流程框架。它把一個完整的設計與創新過程，畫成兩個連續的鑽石形狀。
+雙鑽模型是英國 **Design Council** 推廣的設計流程框架。它用兩個連續的鑽石表示問題空間和方案空間。
 
-之所以是“鑽石”，是因為每個鑽石都包含兩種相反但都很重要的動作：
+每個鑽石包含兩個過程：
 
-- **發散**：先把視野開啟，看更多可能性
+- **發散**：先把視野打開，看更多可能性
 - **收斂**：再把範圍縮小，做出判斷和取捨
 
 整個過程一共四步：
@@ -65,19 +34,18 @@ const duration = '約 <strong>1.5 小時</strong>'
 3. **Develop**：圍繞核心問題發散多種解決方案
 4. **Deliver**：篩選、原型、測試並交付更合適的方案
 
-如果把這四步壓縮成一句最容易記住的話，就是：
+前兩個階段處理問題空間，後兩個階段處理方案空間。
 
-- **第一個鑽石**：先搞清楚到底要解決什麼問題
-- **第二個鑽石**：再決定用什麼方案去解決它
+<figure class="field-figure field-figure--diagram">
+  <a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/design-council-double-diamond-wide.png" alt="Design Council 官方雙鑽圖：Discover、Define、Develop 和 Deliver 組成兩個相連的鑽石" loading="lazy" />
+  </a>
+  <figcaption><strong>先看原圖：</strong>左邊的鑽石從 Discover 發散到 Define 收斂，右邊從 Develop 再次發散到 Deliver 收斂。Design Council 同時指出，這不是只能向前走一次的直線流程；測試中發現問題時，可以回到前面的階段。圖片來源：<a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">Design Council</a>，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。</figcaption>
+</figure>
 
-這也是你剛才說得很準確的那句話：
+## 2. 為什麼要把問題和方案分開
 
-- **第一個鑽石：做對的事情**
-- **第二個鑽石：把事情做對**
-
-## 2. 為什麼雙鑽模型特別適合新手
-
-新手做產品最常見的節奏，往往是這樣的：
+一種常見的產品開發過程如下：
 
 - 想到一個點子
 - 覺得這個方向很酷
@@ -85,31 +53,31 @@ const duration = '約 <strong>1.5 小時</strong>'
 - 做著做著發現功能越來越多
 - 最後不知道自己到底在解決什麼問題
 
-雙鑽模型的價值，不在於讓流程變複雜，而在於 **強迫你把“理解問題”和“設計方案”拆開** 。
-
-這件事聽起來很普通，但實際非常重要。因為很多失敗的產品，不是執行不認真，而是：
+雙鑽模型將“理解問題”和“設計方案”分開。這樣可以檢查下列情況：
 
 - 選錯了問題
 - 誤解了使用者
-- 過早鎖定了解決方案
+- 過早鎖定瞭解決方案
 - 把大量時間花在細節打磨上，卻沒有驗證方向
 
-雙鑽模型就是在不斷提醒你：
+因此，進入下一階段前應檢查：
 
-- 不要因為想法順手，就預設問題已經成立
-- 不要因為方案能做出來，就預設它值得做
-- 不要因為原型看起來完整，就預設使用者會真的需要
+- 不要因為想法順手，就默認問題已經成立
+- 不要因為方案能做出來，就默認它值得做
+- 不要因為原型看起來完整，就默認使用者會真的需要
+
+這三句話針對的是同一個錯誤：把“已經投入了多少”視為“方向是否正確”的證據。原型只能證明團隊做出了什麼；使用者訪談、現場觀察和真實使用，才能說明問題是否存在。
 
 <a id="dd-first"></a>
-## [3. 第一個鑽石：做對的事情](#top-dd)
+## [3. 第一個鑽石：問題空間](#top-dd)
 
 第一個鑽石關注的是 **問題本身** ，而不是解決方案。
 
-你可以把它理解成一句話：**先別急著做，先搞清楚到底值不值得做。**
+在這個鑽石中，產出是問題定義，而不是產品原型。
 
-### 3.1 Discover：先把問題空間開啟
+### 3.1 Discover：先把問題空間打開
 
-Discover 階段的核心任務，是 **廣泛調研，而不是快速下結論。**
+Discover 階段的核心任務，是 **廣泛研究，而不是快速下結論。**
 
 這一步通常會做的事情包括：
 
@@ -130,9 +98,16 @@ Discover 階段的核心任務，是 **廣泛調研，而不是快速下結論�
 
 這一步最重要的目標不是得出答案，而是 **別太早以為自己已經知道答案。**
 
+<figure class="field-figure">
+  <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/creative-commons-design-workshop.jpg" alt="Creative Commons 可用性研究工作坊現場，牆面貼著按訪談問題整理的大量便利貼" loading="lazy" />
+  </a>
+  <figcaption><strong>真實的 Discover 材料會很雜。</strong>Creative Commons 團隊在 2018 年的可用性研究中完成了 81 次訪談，並整理了另外 36 次既有訪談。照片裡的每張紙對應一個問題，便利貼記錄受訪者的回答，圓點用於標記和比較。此時團隊先保留差異，還沒有急著把材料壓成一個答案。照片與案例：<a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。</figcaption>
+</figure>
+
 ### 3.2 Define：從一堆資訊裡提煉出核心問題
 
-如果 Discover 是開啟視野，Define 就是開始收束。
+如果 Discover 是打開視野，Define 就是開始收束。
 
 Define 階段要做的，不是把所有觀察都保留下來，而是問：
 
@@ -140,7 +115,7 @@ Define 階段要做的，不是把所有觀察都保留下來，而是問：
 - 哪個問題最常出現、最痛、最有價值
 - 我們第一版到底只盯住哪一個場景
 
-這一步的核心，是把一個寬泛話題，收斂成一個清晰問題定義。
+這一步的核心，是把一個寬泛話題，收斂成一個清楚問題定義。
 
 比如你一開始說：
 
@@ -148,18 +123,25 @@ Define 階段要做的，不是把所有觀察都保留下來，而是問：
 
 到了 Define 階段，更好的表達可能會變成：
 
-> 我們先解決專案型團隊在 30 到 60 分鐘協作會議結束後，無法在 10 分鐘內輸出帶待辦、責任人和截止時間的紀要這個問題。
+> 我們先解決項目型團隊在 30 到 60 分鐘協作會議結束後，無法在 10 分鐘內輸出帶待辦、責任人和截止時間的紀要這個問題。
 
 這時候問題就開始變清楚了：
 
 - 使用者是誰
 - 場景是什麼
 - 卡點是什麼
-- 成功標準是什麼
+- 成功標准是什麼
 
 Define 的本質，就是 **從“問題很多”收斂到“這次先解決哪一個問題”。**
 
-## 4. 第二個鑽石：把事情做對
+<figure class="field-figure">
+  <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/creative-commons-research-synthesis.jpg" alt="Creative Commons 團隊將訪談便利貼排列、聚類並標記主題的研究歸納牆" loading="lazy" />
+  </a>
+  <figcaption><strong>Define 不是挑一句最順耳的話。</strong>同一案例中，團隊把 117 次訪談彙整、聚類並尋找重複模式，最後提煉出 9 條洞察。圖中的空白、分組和不同顏色，正是從原始回答走向主題和優先級的中間過程。照片與案例：<a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。</figcaption>
+</figure>
+
+## 4. 第二個鑽石：方案空間
 
 當你完成第一個鑽石後，才真正適合進入第二個鑽石。因為這時你解決的不是一個模糊方向，而是一個被收斂過的具體問題。
 
@@ -174,16 +156,23 @@ Develop 階段的重點，是 **圍繞同一個問題，探索多種可能方案
 
 比如還是會議紀要這個例子，到了 Develop 階段，你可以開始想：
 
-- 是做網頁工具，還是會議外掛
+- 是做網頁工具，還是會議插件
 - 是上傳錄音後處理，還是實時記錄
-- 是隻做摘要，還是重點做待辦提取
+- 是只做摘要，還是重點做待辦提取
 - 是強調個人效率，還是強調團隊同步
 - 是給使用者自由編輯，還是直接輸出結構化模板
 
 這一步很適合腦暴，也很適合和團隊一起把方案拉開。
 
-但這裡有一個前提：**所有方案都必須服務同一個已定義的問題。**  
+但這裡有一個前提：**所有方案都必須服務同一個已定義的問題。**
 如果問題沒定義清楚，Develop 很容易又重新變成功能亂飛。
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/develop-idea-board.jpg" alt="Wikimedia Deutschland 設計思維工作坊的方案白板，不同顏色便利貼被分布在多個候選方向中" loading="lazy" />
+  </a>
+  <figcaption><strong>Develop 先保留多個答案。</strong>這塊白板來自 Wikimedia Deutschland 的設計思維工作坊。候選想法按主題散開放置，還沒有被壓成一套功能清單。發散的價值不是便利貼數量，而是讓團隊在選方案之前真正比較過不同路徑。照片：<a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer">Corinna Schuster（WMDE）/ Wikimedia Commons</a>，<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>。</figcaption>
+</figure>
 
 ### 4.2 Deliver：選擇方案、做原型、測試和交付
 
@@ -196,33 +185,30 @@ Deliver 階段是第二個鑽石裡的收斂階段。
 - 哪些功能必須先做，哪些可以以後再說
 - 怎麼做原型、測試和小範圍驗證
 
-很多人以為 Deliver 就等於“上線”。其實它更準確的意思是：**把一個方案變成可測試、可驗證、可迭代的東西。**
+很多人以為 Deliver 就等於“上線”。其實它更准確的意思是：**把一個方案變成可測試、可驗證、可迭代的內容。**
 
 它可能是：
 
-- 一張低保真流程圖
+- 一張低擬真流程圖
 - 一個 Figma 原型
-- 一個可執行的 MVP
+- 一個可運行的 MVP
 - 一次小規模使用者測試
-- 一輪真實反饋後的迭代版本
+- 一輪真實回饋後的迭代版本
 
-Deliver 的重點不是“完美交付”，而是 **儘快把方案放進真實環境裡驗證。**
+Deliver 的重點不是“完美交付”，而是 **盡快把方案放進真實環境裡驗證。**
 
-## 5. 一個最容易記住的對照表
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/paper-prototype-test.jpg" alt="一隻手正在紙面原型的輸入框中書寫，模擬使用者與尚未開發的界面交互" loading="lazy" />
+  </a>
+  <figcaption><strong>可測試，不等於已經寫完程式碼。</strong>紙面原型把界面畫在紙上，由參與者點擊、填寫，研究者再替換下一張頁面。它足以檢查流程、文字和操作順序，卻避免團隊先花幾周實現一個可能錯誤的方向。照片：<a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer">d_jan / Wikimedia Commons</a>，<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>。</figcaption>
+</figure>
 
-如果你總是分不清四個階段，可以直接記下面這個版本：
+## 5. 四個階段的區別
 
-| 階段 | 你在做什麼 | 關鍵詞 | 常見產出 |
-| --- | --- | --- | --- |
-| Discover | 理解問題 | 調研、觀察、訪談、收集資訊 | 使用者洞察、場景筆記、問題清單 |
-| Define | 定義問題 | 提煉、聚焦、取捨、重寫問題 | 問題定義、優先順序、MVP 切口 |
-| Develop | 探索方案 | 腦暴、比較、共創、原型設想 | 方案列表、流程草圖、原型方向 |
-| Deliver | 驗證方案 | 原型、測試、迭代、交付 | 原型、測試反饋、最佳化版本 |
+現在我們已經分別討論了四個階段。下面的圖將它們放在同一個過程中。選擇一個階段，並比較它的工作、產出和暫時不做的事情。
 
-再壓縮一點，就是這樣：
-
-- **Discover / Define**：解決“做對的事情”
-- **Develop / Deliver**：解決“把事情做對”
+<DoubleDiamondNavigator />
 
 ## 6. 雙鑽模型最常見的誤區
 
@@ -234,7 +220,7 @@ Deliver 的重點不是“完美交付”，而是 **儘快把方案放進真實
 
 ### 6.2 Discover 很久，但始終不 Define
 
-另一種極端是一直調研、一直看資料、一直訪談，卻遲遲不敢收斂。
+另一種極端是一直研究、一直看資料、一直訪談，卻遲遲不敢收斂。
 
 雙鑽不是讓你無限發散，而是提醒你：發散之後必須進入判斷和取捨。
 
@@ -246,7 +232,7 @@ Deliver 的重點不是“完美交付”，而是 **儘快把方案放進真實
 
 ### 6.4 把 Deliver 誤解成“大而全上線”
 
-Deliver 不是說必須把完整產品都做完纔算結束。很多時候，一個可以測試的原型、一輪真實使用者試用，已經是很好的 deliver。
+Deliver 不是說必須把完整產品都做完才算結束。很多時候，一個可以測試的原型、一輪真實使用者試用，已經是很好的 deliver。
 
 ## 7. 在 AI 產品裡，雙鑽模型怎麼用
 
@@ -255,7 +241,7 @@ AI 產品特別容易掉進“能力先行”的坑裡，因為模型能力看�
 - 要不要接多模態
 - 要不要做 Agent
 - 要不要加工作流
-- 要不要接語音、影象、聯網搜尋
+- 要不要接語音、圖像、聯網搜索
 
 但雙鑽模型會逼你先問：
 
@@ -269,7 +255,7 @@ AI 產品特別容易掉進“能力先行”的坑裡，因為模型能力看�
 一個實用的順序是：
 
 1. 在 Discover 階段觀察使用者現在怎麼處理任務
-2. 在 Define 階段把最痛的一個場景寫成一句清晰的問題定義
+2. 在 Define 階段把最痛的一個場景寫成一句清楚的問題定義
 3. 在 Develop 階段再去比較哪些 AI 能力最適合服務這個問題
 4. 在 Deliver 階段做一個最小版本，讓真實使用者測試
 
@@ -297,6 +283,13 @@ AI 產品特別容易掉進“能力先行”的坑裡，因為模型能力看�
 - 哪些方案最輕、最快、最容易驗證？
 - 哪些是必須做，哪些是以後再說？
 
+<figure class="field-figure field-figure--portrait">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_Gruppenarbeit_2.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-group-workshop.jpg" alt="Wikimedia Deutschland 設計思維工作坊中，參與者圍桌動手製作方案" loading="lazy" />
+  </a>
+  <figcaption><strong>Develop 不是坐著等一個好點子。</strong>圖中的參與者正在剪裁、擺放和製作，把不同人的想法變成可以討論的內容。方案越早變得可見，就越容易比較、組合和捨棄。照片：Corinna Schuster（WMDE），<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>。</figcaption>
+</figure>
+
 ### Deliver
 
 - 我們最小可以交付什麼來驗證這個方向？
@@ -306,12 +299,12 @@ AI 產品特別容易掉進“能力先行”的坑裡，因為模型能力看�
 
 ## 9. 一個從零基礎也能看懂的例子
 
-假設你想做一個“幫大學生準備求職簡歷”的 AI 工具。
+假設你想做一個“幫大學生准備求職簡歷”的 AI 工具。
 
 很多人一開始就會直接進入第二個鑽石，開始想：
 
 - 要不要一鍵美化
-- 要不要智慧改寫
+- 要不要智能改寫
 - 要不要自動匹配 JD
 - 要不要生成自我介紹
 
@@ -342,40 +335,30 @@ AI 產品特別容易掉進“能力先行”的坑裡，因為模型能力看�
 - 第一版只做“根據崗位描述改寫經歷 bullet points”
 - 給 5 個學生試用，看他們會不會更快投出第一版簡歷
 
-你會發現，一旦第一個鑽石做紮實，第二個鑽石會清楚很多。
+你會發現，一旦第一個鑽石做扎實，第二個鑽石會清楚很多。
 
-## 10. 小結
-
-雙鑽模型最有力量的地方，是它幫你把一整團混亂拆成了四個更清楚的動作：
-
-- 先發散理解問題
-- 再收斂定義問題
-- 再發散探索方案
-- 最後收斂交付方案
-
-它不是讓你變慢，而是讓你 **少走很多看起來很忙、其實方向不對的彎路。**
-
-尤其在 AI 時代，做東西變得越來越快，雙鑽模型反而更重要。因為當“做出來”越來越容易時，真正稀缺的能力會變成：**你有沒有在解決一個值得解決的問題，以及你有沒有用合適的方式去解決它。**
-
-記住這一句就夠了：
-
-**先做對的事情，再把事情做對。**
+<figure class="field-figure field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_Prototyp_Mitmach-O-Mat.png" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-workshop-prototype.png" alt="Wikimedia Deutschland 設計思維工作坊產出的 Mitmach-O-Mat 手繪原型界面" loading="lazy" />
+  </a>
+  <figcaption><strong>原型只要足夠回答一個問題。</strong>這張工作坊產物沒有完整視覺系統，只有歡迎語、行動按鈕和一句說明，卻已經能拿去觀察參與者是否理解下一步。Deliver 的重點是獲得回饋，不是先把界面做得像成品。原型：Corinna Schuster / WMDE，<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>。</figcaption>
+</figure>
 
 <a id="dd-ai"></a>
-## [11. 如何利用 AI 幫你跑雙鑽流程](#top-dd)
+## [10. 在雙鑽流程中使用 AI](#top-dd)
 
-雙鑽模型本身不是 AI 工具，但 AI 很適合在四個階段裡充當“加速器”。關鍵不是讓 AI 替你決策，而是讓它幫你擴充套件視野、整理資訊、比較方案和生成驗證材料。
+AI 可以用於整理資訊、擴展候選方案和准備測試材料，但不能替代使用者證據或項目決策。
 
 ### 11.1 在 Discover 階段，用 AI 先做一輪資訊鋪墊
 
-在正式訪談和調研前，你可以先讓 AI 幫你做一些輕量級問題掃描，比如：
+在正式訪談和研究前，你可以先讓 AI 幫你做一些輕量級問題掃描，比如：
 
 - 市面上常見替代方案有哪些
-- 使用者在公開社羣裡最常抱怨什麼
-- 這個問題常見於哪些場景和人羣
+- 使用者在公開社群裡最常抱怨什麼
+- 這個問題常見於哪些場景和人群
 - 現有產品通常忽略了什麼
 
-這一步不能代替真實調研，但很適合幫你快速搭一個問題地圖。
+這一步不能代替真實研究，但很適合幫你快速搭一個問題地圖。
 
 一個很簡單的小白輸入可以是：
 
@@ -400,10 +383,10 @@ AI 可能輸出：
 
 ### 11.2 在 Define 階段，讓 AI 幫你收斂問題定義
 
-很多人收集了一堆資料之後，最難的是把問題收成一句真正清楚的話。你可以把調研筆記交給 AI，讓它幫你壓縮成幾個候選問題定義：
+很多人收集了一堆資料之後，最難的是把問題收成一句真正清楚的話。你可以把研究筆記交給 AI，讓它幫你壓縮成幾個候選問題定義：
 
 ```text
-下面是我在 Discover 階段收集到的使用者反饋和調研筆記：
+下面是我在 Discover 階段收集到的使用者回饋和研究筆記：
 [貼上內容]
 
 請你幫我做三件事：
@@ -430,7 +413,7 @@ AI 可能輸出：
 ```text
 建議優先解決的問題：
 
-“第一次投遞實習的學生，不確定簡歷是否已經達到可投遞水平，因此會反覆修改並拖延投遞。”
+“第一次投遞實習的學生，不確定簡歷是否已經達到可投遞水準，因此會反複修改並拖延投遞。”
 
 原因：
 1. 這個問題更具體
@@ -481,12 +464,12 @@ AI 可能輸出：
 
 當你進入 Deliver 階段，AI 非常適合幫你加快這些工作：
 
-- 生成低保真原型裡的頁面文案
-- 整理使用者測試指令碼
+- 生成低擬真原型裡的頁面文案
+- 整理使用者測試腳本
 - 生成可對比的多個版本標題、按鈕、說明語
-- 整理測試後的反饋和問題列表
+- 整理測試後的回饋和問題列表
 
-比如你可以讓 AI 幫你生成一個 20 分鐘使用者測試指令碼，或者幫你把 5 個使用者反饋歸納成“繼續做 / 修改方向 / 暫停”的判斷依據。
+比如你可以讓 AI 幫你生成一個 20 分鐘使用者測試腳本，或者幫你把 5 個使用者回饋歸納成“繼續做 / 修改方向 / 暫停”的判斷依據。
 
 比如一個最小輸入可以是：
 
@@ -494,17 +477,17 @@ AI 可能輸出：
 我做了一個很簡單的原型：
 使用者上傳簡歷，系統告訴他哪些地方還不適合投遞。
 
-請幫我生成一份 15 分鐘的使用者測試指令碼。
+請幫我生成一份 15 分鐘的使用者測試腳本。
 ```
 
 AI 可能輸出：
 
 ```text
-15 分鐘測試指令碼：
+15 分鐘測試腳本：
 
 1. 先請使用者描述最近一次投簡歷經歷
 2. 讓使用者獨立完成上傳簡歷
-3. 觀察他是否看得懂反饋結果
+3. 觀察他是否看得懂回饋結果
 4. 詢問：這些提示裡哪些最有幫助，哪些讓你困惑
 5. 詢問：如果下次投遞前，你會不會想再用一次
 ```
@@ -517,7 +500,7 @@ AI 可能輸出：
 
 ```text
 請你扮演產品流程教練。
-下面是我當前的專案狀態：[你的描述]
+下面是我當前的項目狀態：[你的描述]
 請你判斷我現在更像處於 Discover、Define、Develop 還是 Deliver。
 並告訴我：
 1. 我是不是過早跳到了下一階段
@@ -527,17 +510,25 @@ AI 可能輸出：
 
 這對新手特別有幫助，因為你很容易在“還沒想清楚問題時就開始畫原型”。
 
-## 📚 Assignments
+## 11. 小結
+
+- Discover 和 Define 用於形成問題定義，Develop 和 Deliver 用於形成並驗證方案。
+- 發散用於擴展候選項，收斂用於根據證據做出取捨。
+- 問題定義應在方案探索之前完成，但可以根據後續測試結果修正。
+- Deliver 的目標是獲得可用於學習的測試結果，不一定要交付完整產品。
+
+## 12. 練習
 
 <StageAssignmentCard title="用雙鑽模型整理你的點子">
 
-請你根據上文內容，完成下列作業：
+  <ol>
+    <li>選一個最近想做的點子，分別寫下發現、定義、發展和交付四步。</li>
+    <li>把真正要解決的問題收成一句話。</li>
+    <li>想出三種不同做法，再選擇其中一種。</li>
+    <li>寫下一個可以在一周內做出來的最小版本。</li>
+  </ol>
 
-1. 選一個你最近想做的產品點子，寫出它的 Discover、Define、Develop、Deliver 四步草稿
-2. 在 Define 階段，強迫自己把問題縮成一句具體的話
-3. 在 Develop 階段，至少列出 3 種不同方案，而不是隻盯著第一個想到的做法
-4. 在 Deliver 階段，寫出一個一週內能交付的最小驗證版本
-
+  <p>重點不是記住四個英文單詞，而是先把問題想清楚，再決定做什麼。</p>
 </StageAssignmentCard>
 
 ## 延伸閱讀
@@ -547,3 +538,63 @@ AI 可能輸出：
 - [Design Council: The Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/)
 - [Design Council: Framework for Innovation](https://www.designcouncil.org.uk/our-work/skills-learning/tools-frameworks/framework-for-innovation-design-councils-evolved-double-diamond/)
 - [Design Council: History of the Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/history-of-the-double-diamond/)
+
+<style scoped>
+.field-figure {
+  margin: 24px 0 32px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+}
+
+.field-figure > a {
+  display: block;
+  background: #f4f4f1;
+}
+
+.field-figure img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
+
+.field-figure--diagram img {
+  max-height: 580px;
+  padding: 18px;
+}
+
+.field-figure--portrait img {
+  max-height: 640px;
+  object-fit: contain;
+}
+
+.field-figure--artifact img {
+  padding: 20px;
+  background: #f4f1eb;
+  object-fit: contain;
+}
+
+.field-figure figcaption {
+  padding: 13px 16px 15px;
+  border-top: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.field-figure figcaption strong {
+  color: var(--vp-c-text-1);
+}
+
+@media (max-width: 640px) {
+  .field-figure {
+    margin: 20px 0 28px;
+  }
+
+  .field-figure--diagram img {
+    padding: 8px;
+  }
+}
+</style>

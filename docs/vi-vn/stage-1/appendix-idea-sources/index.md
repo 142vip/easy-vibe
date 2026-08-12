@@ -9,7 +9,6 @@ const duration = 'Khoảng <strong>20 phút</strong>'
 
 # Ý tưởng sáng tạo đến từ đâu
 
-<ProductJourney current="find" />
 
 ## Nội dung của chương
 

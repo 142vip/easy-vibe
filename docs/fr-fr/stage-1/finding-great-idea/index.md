@@ -14,15 +14,11 @@ const duration = 'environ <strong>3 heures</strong>'
 
 <ChapterIntroduction :duration="duration" :tags="['Découverte des besoins', 'Pensée produit', 'Analyse utilisateur', 'Modèle économique']" coreOutput="3 concepts de produit validés" expectedOutput="Direction entrepreneuriale / produit actionnable">
 
-Dans le chapitre précédent, nous avons appris à utiliser un AI IDE pour créer des choses, mais il y a une question plus fondamentale : <strong>que créer ?</strong>
+Dans le chapitre précédent, nous avons recueilli un ensemble de premiers indices à partir d'expériences quotidiennes, de discussions publiques et d'avis sur des produits. Il ne s'agit pas encore de coder, mais d'organiser ces indices en pistes, puis de choisir celle qui mérite le plus d'être validée.
 
-Beaucoup de gens veulent d'emblée "faire un outil IA" ou "créer une plateforme sociale", mais le résultat final n'intéresse personne. Le problème ? <strong>Ils n'ont pas trouvé un vrai besoin.</strong>
+Une piste ne vaut pas la peine d'être suivie uniquement parce qu'elle semble originale. Il faut aussi observer la fréquence du problème, l'importance de ses effets, la manière dont les utilisateurs le résolvent aujourd'hui, ainsi que le temps ou l'argent qu'ils sont prêts à y consacrer.
 
-La réalité est encore plus cruelle : <strong>beaucoup de produits résolvent un problème, mais les utilisateurs refusent tout simplement de payer.</strong>
-
-Dans ce chapitre, nous allons suivre l'histoire de Xiaoming pour apprendre à trouver une direction produit qui vaut la peine d'être poursuivie.
-
-À la fin de ce chapitre, vous disposerez d'une <strong>méthodologie complète pour trouver des idées</strong>, ainsi que de 3 concepts de produit validés.
+En suivant l'histoire de Xiaoming, ce chapitre replace ces critères dans des situations concrètes. Vous organiserez progressivement plusieurs pistes et conserverez quelques concepts de produit appuyés par des preuves, qui méritent d'être approfondis. Dans le chapitre suivant, nous analyserons plus précisément ce que les utilisateurs cherchent réellement à accomplir.
 
 </ChapterIntroduction>
 
@@ -672,29 +668,16 @@ Grâce à cette troisième partie, Xiaoming a compris trois choses.
 
 <StageAssignmentCard title="Transformer un petit problème en idée de produit">
 
-Choisissez un petit problème de votre vie quotidienne et développez-le avec la méthode de ce chapitre :
+  <p>Partez d'un petit problème rencontré récemment, sans inventer un sujet ambitieux.</p>
 
-::: tip Mission d'exercice
+  <ol>
+    <li>Décrivez ce problème en une phrase.</li>
+    <li>Listez trois types de personnes susceptibles de le rencontrer, puis choisissez celui que vous connaissez le mieux.</li>
+    <li>Précisez dans quelle situation cette personne rencontre le problème et comment elle le résout aujourd'hui.</li>
+    <li>Reformulez l'idée : à qui s'adresse-t-elle et quelle tâche l'aide-t-elle à mieux accomplir ?</li>
+  </ol>
 
-**1. Décrire le problème** (1 phrase)
-- Exemple : "Je veux créer une application de gestion de dépenses pour aider les utilisateurs à suivre leurs dépenses"
-
-**2. Segmenter : Trouver 3 groupes avec des besoins potentiellement différents**
-- Exemple : petits entrepreneurs, parents d'étudiants à l'étranger, freelances
-
-**3. Choisir un groupe, creuser verticalement : Décrire leur scénario complet et leurs émotions réelles**
-- Exemple : le scénario des parents d'étudiants à l'étranger -- vouloir savoir combien leur enfant dépense, mais l'enfant ne le dit pas
-
-**4. Reconstruire le concept de produit : D'"une fonctionnalité" à "une solution"**
-- Exemple : "Gestionnaire de budget d'études" -- pas seulement enregistrer les dépenses, mais permettre aux parents d'avoir une vue claire des dépenses de leur enfant à l'étranger
-
-**5. Évaluer votre idée avec la liste de validation** (voir Annexe F)
-
-**Partagez votre analyse dans la communauté et discutez avec les autres apprenants !**
-
-:::
-
----
+  <p>Une fois terminé, montrez ce texte à un ami et vérifiez s'il le comprend immédiatement.</p>
 
 </StageAssignmentCard>
 

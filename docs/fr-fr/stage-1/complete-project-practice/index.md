@@ -16,7 +16,6 @@ const relatedArticles =
 
 # Projet complet : de l’idée à une création aboutie
 
-<ProductJourney current="finish" />
 
 ## Ce que nous allons faire
 

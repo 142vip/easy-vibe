@@ -5,51 +5,20 @@ description: 'Comprende las cuatro etapas de Discover, Define, Develop, Deliver 
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = 'Aproximadamente <strong>1.5 horas</strong>'
 </script>
 
 # Modelo Double Diamond: primero haz lo correcto, luego hazlo bien
 
 <a id="top-dd"></a>
 
-## Resumen del capitulo
+Después del análisis de necesidades y las entrevistas solemos acumular muchos materiales: experiencias de distintos usuarios, problemas con las herramientas actuales y posibles direcciones de mejora. Cuando aumenta el material, aparece una nueva dificultad: decidir qué conservar.
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['Double Diamond', 'Pensamiento de diseno', 'Analisis de necesidades', 'Diseno de soluciones']"
-  coreOutput="1 definicion de problema mas clara y 1 punto de entrada de validacion mas razonable"
-  expectedOutput="Dejar de precipitarse a dibujar prototipos, sabiendo primero pensar claramente en el problema y luego comparar soluciones"
->
+Si no distinguimos entre «comprender el problema» y «diseñar la solución», es fácil entrevistar mientras buscamos argumentos a favor de nuestra función preferida. El modelo Double Diamond separa ambos trabajos mediante dos ciclos de divergencia y convergencia.
 
-Muchas personas, la primera vez que hacen un producto, caen en la trampa mas facil: no es que "no se esfuercen lo suficiente", sino que entran demasiado rapido en la solucion.
-
-Apenas les viene una direccion a la mente, ya estan pensando en como dibujar la pagina, donde poner los botones, si conectar IA, si hacer login y registro, con que herramienta hacer el prototipo. Despues de un rato de trabajo, descubren que el problema mas fundamental no se ha pensado claramente: el usuario realmente tiene este punto de dolor? Vale la pena resolver este problema ahora? Crees que estas avanzando en el proyecto, pero en realidad solo estas acelerando en la direccion equivocada.
-
-El modelo Double Diamond existe precisamente para evitar esta situacion.
-
-Su recordatorio mas valioso es: **"hacer lo correcto" y "hacerlo bien" son dos etapas completamente diferentes.** Si aun no has aclarado el problema y te precipitas a hacer prototipos, normalmente solo haras la direccion equivocada mas completa.
-
-</ChapterIntroduction>
-
-::: info SOP minimo
-**Objetivo**: Despues de leer, sabras mejor cuando hacer productos, cuando pensar primero en el problema y cuando empezar a pensar en soluciones y prototipos, evitando precipitarte en la direccion equivocada desde el principio.
-
-**Accion**: Sigue los cuatro pasos `Discover -> Define -> Develop -> Deliver`, haciendo solo lo que corresponde a la etapa actual en cada paso.
-
-**Resultado**: Obtendras una definicion de problema mas clara, varias soluciones comparables y una version minima verificable.
-
-**Enlaces rapidos**: [Que es el Double Diamond](#dd-what) · [Primer diamante](#dd-first) · [Como te ayuda la IA](#dd-ai)
-:::
-
-## Aprenderas lo siguiente
-
-1. Que es el modelo Double Diamond, y por que es adecuado para personas sin experiencia al hacer productos
-2. Que hacen las cuatro etapas Discover, Define, Develop y Deliver respectivamente
-3. Como distinguir entre "ahora debo seguir divergiendo" y "ahora debo empezar a converger"
-4. Como usar el modelo Double Diamond en productos de IA, diseno de prototipos y validacion de necesidades
+Este capítulo presenta Discover, Define, Develop y Deliver, junto con las entradas, los resultados y los errores frecuentes de cada etapa.
 
 <a id="dd-what"></a>
-## [1. Que es exactamente el modelo Double Diamond](#top-dd)
+## [1. Dos ciclos de divergencia y convergencia](#top-dd)
 
 El modelo Double Diamond es un marco clasico de proceso de diseno promovido por el **Design Council** del Reino Unido. Representa un proceso completo de diseno e innovacion como dos formas de diamante consecutivas.
 
@@ -75,7 +44,14 @@ Que es exactamente lo que dijiste muy bien:
 - **Primer diamante: hacer lo correcto**
 - **Segundo diamante: hacerlo bien**
 
-## 2. Por que el modelo Double Diamond es especialmente adecuado para principiantes
+<figure class="field-figure field-figure--diagram">
+  <a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/design-council-double-diamond-wide.png" alt="Diagrama oficial del Double Diamond del Design Council: Discover, Define, Develop y Deliver forman dos diamantes conectados" loading="lazy" />
+  </a>
+  <figcaption><strong>Observemos primero el diagrama original.</strong> El diamante izquierdo diverge desde Discover y converge en Define; el derecho vuelve a divergir en Develop y converge en Deliver. El Design Council señala además que no es un proceso lineal que solo se recorra una vez: si las pruebas revelan un problema, podemos regresar a una etapa anterior. Fuente: <a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">Design Council</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption>
+</figure>
+
+## 2. Por qué separar el problema de la solución
 
 El ritmo mas comun de los principiantes al hacer productos suele ser:
 
@@ -101,7 +77,7 @@ El modelo Double Diamond te esta recordando constantemente:
 - No porque un prototipo parezca completo, asumas que los usuarios realmente lo necesitaran
 
 <a id="dd-first"></a>
-## [3. Primer diamante: hacer lo correcto](#top-dd)
+## [3. Primer diamante: el espacio del problema](#top-dd)
 
 El primer diamante se centra en **el problema en si**, no en la solucion.
 
@@ -129,6 +105,8 @@ Por ejemplo, si quieres hacer una herramienta de "IA que ayuda a organizar actas
 - Que escenarios de reunion necesitan mas actas y cuales no las necesitan en absoluto
 
 El objetivo mas importante de este paso no es llegar a una respuesta, sino **no asumir demasiado pronto que ya conoces la respuesta.**
+
+<figure class="field-figure"><a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/creative-commons-design-workshop.jpg" alt="Taller de usabilidad de Creative Commons con numerosas notas organizadas por preguntas de entrevista" loading="lazy" /></a><figcaption><strong>Los materiales reales de Discover son heterogéneos.</strong> En 2018, Creative Commons realizó 81 entrevistas y reunió otras 36 anteriores. Cada hoja corresponde a una pregunta; las notas registran respuestas y los puntos ayudan a compararlas. En esta fase se conservan las diferencias antes de reducirlas a una conclusión. Caso y foto: <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption></figure>
 
 ### 3.2 Define: extraer el problema central de un monton de informacion
 
@@ -159,7 +137,9 @@ En este punto el problema empieza a aclararse:
 
 La esencia de Define es **converger de "hay muchos problemas" a "que problema resolver primero esta vez".**
 
-## 4. Segundo diamante: hacerlo bien
+<figure class="field-figure"><a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/creative-commons-research-synthesis.jpg" alt="Muro de síntesis donde el equipo de Creative Commons agrupa notas de entrevistas e identifica temas" loading="lazy" /></a><figcaption><strong>Define no consiste en escoger la frase más atractiva.</strong> El equipo agrupó 117 entrevistas, buscó patrones repetidos y sintetizó nueve hallazgos. Los espacios, grupos y colores muestran el proceso intermedio entre las respuestas originales, los temas y las prioridades. Caso y foto: <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption></figure>
+
+## 4. Segundo diamante: el espacio de soluciones
 
 Cuando completas el primer diamante, solo entonces es realmente apropiado entrar en el segundo. Porque ahora no estas resolviendo una direccion vaga, sino un problema concreto que ha sido convergido.
 
@@ -185,6 +165,8 @@ Este paso es ideal para brainstorming y para abrir las soluciones con el equipo.
 Pero hay un requisito previo: **todas las soluciones deben servir al mismo problema ya definido.**  
 Si el problema no esta claramente definido, Develop facilmente se convierte de nuevo en funciones volando en todas direcciones.
 
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/develop-idea-board.jpg" alt="Pizarra de soluciones de un taller de pensamiento de diseño de Wikimedia Deutschland" loading="lazy" /></a><figcaption><strong>Develop conserva primero varias respuestas.</strong> Las ideas candidatas están distribuidas por temas y aún no se han convertido en una lista única de funciones. Divergir permite comparar caminos distintos antes de elegir. Foto: <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer">Corinna Schuster (WMDE) / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption></figure>
+
 ### 4.2 Deliver: elegir la solucion, hacer prototipos, probar y entregar
 
 La fase Deliver es la fase de convergencia del segundo diamante.
@@ -208,7 +190,9 @@ Puede ser:
 
 El punto de Deliver no es "entrega perfecta", sino **poner la solucion en un entorno real para verificarla lo antes posible.**
 
-## 5. Una tabla de comparacion facil de recordar
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/paper-prototype-test.jpg" alt="Una mano escribe en el campo de un prototipo de papel para simular la interacción con una interfaz todavía no desarrollada" loading="lazy" /></a><figcaption><strong>Que pueda probarse no significa que el código esté terminado.</strong> Un prototipo de papel permite comprobar el flujo, los textos y el orden de las operaciones sin dedicar semanas a implementar una dirección posiblemente equivocada. Foto: <a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer">d_jan / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption></figure>
+
+## 5. Diferencias entre las cuatro etapas
 
 Si siempre te confundes con las cuatro etapas, puedes recordar directamente esta version:
 
@@ -219,10 +203,9 @@ Si siempre te confundes con las cuatro etapas, puedes recordar directamente esta
 | Develop | Explorar soluciones | Brainstorming, comparacion, cocreacion, conceptos de prototipo | Lista de soluciones, bocetos de flujo, direccion del prototipo |
 | Deliver | Verificar soluciones | Prototipos, pruebas, iteracion, entrega | Prototipos, retroalimentacion de pruebas, version optimizada |
 
-Comprimiendolo aun mas:
+Ahora hemos examinado las cuatro etapas por separado. El siguiente recurso las sitúa en un mismo proceso. Seleccionemos una etapa para comparar su trabajo, su resultado y lo que todavía no corresponde hacer.
 
-- **Discover / Define**: resolver "hacer lo correcto"
-- **Develop / Deliver**: resolver "hacerlo bien"
+<DoubleDiamondNavigator />
 
 ## 6. Los errores mas comunes con el modelo Double Diamond
 
@@ -344,7 +327,21 @@ Pero siguiendo el modelo Double Diamond, un mejor proceso seria:
 
 Descubriras que, una vez que el primer diamante se hace solidamente, el segundo diamante se vuelve mucho mas claro.
 
-## 10. Resumen
+<figure class="field-figure field-figure--portrait">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_Gruppenarbeit_2.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-group-workshop.jpg" alt="Participantes de un taller de pensamiento de diseño de Wikimedia Deutschland construyen soluciones alrededor de una mesa" loading="lazy" />
+  </a>
+  <figcaption><strong>Develop no consiste en esperar sentado una buena idea.</strong> Los participantes cortan, colocan y construyen para convertir ideas distintas en objetos que puedan compararse, combinarse o descartarse. Foto: Corinna Schuster (WMDE), <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
+<figure class="field-figure field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_Prototyp_Mitmach-O-Mat.png" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-workshop-prototype.png" alt="Prototipo dibujado a mano de Mitmach-O-Mat producido en un taller de Wikimedia Deutschland" loading="lazy" />
+  </a>
+  <figcaption><strong>El prototipo solo necesita responder una pregunta.</strong> Aunque no tiene un sistema visual completo, ya permite observar si una persona entiende el siguiente paso. Deliver busca retroalimentación, no que la interfaz parezca terminada. Prototipo: Corinna Schuster / WMDE, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
+## [10. Uso de la IA en el proceso Double Diamond](#top-dd)
 
 Lo mas poderoso del modelo Double Diamond es que te ayuda a descomponer una masa confusa en cuatro acciones mas claras:
 
@@ -362,11 +359,9 @@ Recuerda solo esta frase:
 **Primero haz lo correcto, luego hazlo bien.**
 
 <a id="dd-ai"></a>
-## [11. Como usar la IA para recorrer el proceso Double Diamond](#top-dd)
-
 El modelo Double Diamond en si no es una herramienta de IA, pero la IA es muy adecuada para actuar como "acelerador" en las cuatro etapas. La clave no es que la IA tome decisiones por ti, sino que te ayude a expandir tu campo de vision, organizar informacion, comparar soluciones y generar materiales de validacion.
 
-### 11.1 En la fase Discover, usar la IA para hacer una primera preparacion de informacion
+### 10.1 En Discover, usar la IA para preparar información
 
 Antes de las entrevistas e investigacion formales, puedes pedir a la IA que haga un barrido ligero de problemas, como:
 
@@ -398,7 +393,7 @@ Mapa inicial de problemas:
 
 La funcion de este tipo de resultado no es sacar conclusiones por ti, sino ayudarte a entrar mas rapido en Discover.
 
-### 11.2 En la fase Define, dejar que la IA te ayude a converger la definicion del problema
+### 10.2 En la fase Define, dejar que la IA te ayude a converger la definicion del problema
 
 Despues de recoger mucha informacion, lo mas dificil para mucha gente es comprimir el problema en una frase verdaderamente clara. Puedes pasar tus notas de investigacion a la IA y pedirle que las comprima en varias definiciones de problema candidatas:
 
@@ -440,7 +435,7 @@ Razones:
 
 Este tipo de resultado es muy util porque te ayuda a converger de un monton de problemas vagos a una definicion mas como un punto de partida para un MVP.
 
-### 11.3 En la fase Develop, usar la IA para diverger multiples soluciones
+### 10.3 En la fase Develop, usar la IA para diverger multiples soluciones
 
 Muchas personas, una vez definido el problema, se fijan solo en la primera solucion que les viene a la mente. La IA es ideal en este paso para forzarte a diverger:
 
@@ -477,7 +472,7 @@ Solucion 4: Proporcionar comparacion con casos excelentes para ayudar al usuario
 
 En este punto te sera mas facil entrar en "comparar soluciones", en lugar de fijarte solo en la reescritura con IA desde el principio.
 
-### 11.4 En la fase Deliver, usar la IA para generar textos de prototipos y materiales de prueba
+### 10.4 En la fase Deliver, usar la IA para generar textos de prototipos y materiales de prueba
 
 Cuando entras en la fase Deliver, la IA es muy adecuada para acelerar estos trabajos:
 
@@ -511,7 +506,7 @@ Guion de prueba de 15 minutos:
 
 Este tipo de resultado es muy practico porque te ayuda a pasar de "ya termine el prototipo" a "como lo pruebo ahora".
 
-### 11.5 Dejar que la IA actue como "guardian de etapas"
+### 10.5 Dejar que la IA actue como "guardian de etapas"
 
 El problema mas comun del modelo Double Diamond es que la gente se salta etapas. Puedes pedir directamente a la IA que actue como guardian, recordandote en que etapa estas realmente:
 
@@ -527,7 +522,14 @@ Y dime:
 
 Esto es especialmente util para principiantes, porque es facil "empezar a dibujar prototipos antes de haber aclarado el problema".
 
-## 📚 Tareas
+## 11. Resumen
+
+- Discover y Define producen una definición del problema; Develop y Deliver producen y validan soluciones.
+- Divergir amplía las alternativas; converger permite elegir según las pruebas.
+- La definición del problema precede a la exploración de soluciones, aunque puede revisarse a partir de pruebas posteriores.
+- Deliver busca resultados que permitan aprender, no necesariamente un producto completo.
+
+## 12. Ejercicio
 
 <StageAssignmentCard title="Organiza tu idea con el Doble Diamante">
 
@@ -547,3 +549,15 @@ Este articulo se basa principalmente en los materiales oficiales del Design Coun
 - [Design Council: The Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/)
 - [Design Council: Framework for Innovation](https://www.designcouncil.org.uk/our-work/skills-learning/tools-frameworks/framework-for-innovation-design-councils-evolved-double-diamond/)
 - [Design Council: History of the Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/history-of-the-double-diamond/)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure--diagram img { max-height: 580px; padding: 18px; }
+.field-figure--portrait img { max-height: 640px; object-fit: contain; }
+.field-figure--artifact img { padding: 20px; background: #f4f1eb; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } .field-figure--diagram img { padding: 8px; } }
+</style>

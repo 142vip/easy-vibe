@@ -5,14 +5,13 @@ description: "Article d'introduction à Jobs to Be Done pour les lecteurs début
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = 'Environ <strong>1,5 heure</strong>'
 </script>
 
 # Jobs to Be Done : trouver ce que les utilisateurs veulent vraiment accomplir
 
 <a id="top-jtbd"></a>
 
-## Introduction du chapitre
+<!-- Introduction du chapitre -->
 
 <ChapterIntroduction
   :duration="duration"
@@ -41,7 +40,7 @@ Cet article vous guidera, dans un langage aussi simple que possible, pour compre
 **Navigation rapide** : [Qu'est-ce que JTBD](#jtbd-what) · [La formule en une phrase](#jtbd-formula) · [Comment l'IA peut vous aider](#jtbd-ai)
 :::
 
-## Ce que vous apprendrez
+<!-- Ce que vous apprendrez -->
 
 1. Qu'est-ce que Jobs to Be Done, et pourquoi c'est plus proche des besoins réels que le « brainstorming de fonctionnalités »
 2. Comment distinguer « les fonctionnalités que les utilisateurs disent vouloir » de « ce qu'ils veulent vraiment accomplir »
@@ -49,7 +48,7 @@ Cet article vous guidera, dans un langage aussi simple que possible, pour compre
 4. Comment utiliser JTBD pour les produits AI, les questions d'entretien et l'organisation des prompts
 
 <a id="jtbd-what"></a>
-## [1. Qu'est-ce que Jobs to Be Done](#top-jtbd)
+## [1. Passer des fonctionnalités aux tâches à accomplir](#top-jtbd)
 
 Jobs to Be Done est souvent abrégé en **JTBD**. L'idée centrale derrière cette méthode est liée à l'expression classique popularisée par l'équipe de Clayton Christensen : **les utilisateurs vont « employer » un certain produit pour accomplir une tâche.**
 
@@ -64,6 +63,8 @@ Donc, **JTBD ne s'intéresse pas à l'apparence du produit, mais à la raison po
 C'est aussi pourquoi de nombreux produits apparemment différents sont en réalité en concurrence pour le même job. L'utilisateur qui veut « ne pas s'ennuyer sur le chemin du travail » peut embaucher des vidéos courtes, des podcasts, des jeux, des chats, ou même la sieste. L'utilisateur qui veut « comprendre rapidement un PDF très long » peut embaucher un outil de résumé AI, un stagiaire, un collègue, lire lui-même en serrant les dents, ou simplement ne pas lire pour l'instant.
 
 Une fois que vous regardez le problème sous cet angle, vous découvrirez que vos véritables concurrents ne sont souvent pas « une autre app qui vous ressemble », mais **toutes les alternatives actuellement acceptables pour l'utilisateur**.
+
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer"><img src="/images/product-discovery/jtbd/customer-journey-map.png" alt="Carte du parcours client recensant besoins, activités, objets utilisés, ressentis et opportunités produit" loading="lazy" /></a><figcaption><strong>Un job s'inscrit dans un parcours.</strong> La carte rend visibles les étapes, les objets déjà utilisés et les changements d'état, au lieu de commencer par une liste de fonctionnalités. Source : <a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer">Wikimedia Commons</a>.</figcaption></figure>
 
 ## 2. Quelle est la différence entre JTBD, les personas et les listes de fonctionnalités
 
@@ -123,6 +124,10 @@ Une fois le job clairement énoncé, beaucoup de priorités de fonctionnalités 
 
 C'est la valeur de JTBD : **il vous aide à passer de « quelles capacités dois-je empiler » à « quelle progression je dois aider l'utilisateur à accomplir ».**
 
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Taking_Notes.JPG" target="_blank" rel="noreferrer"><img src="/images/product-discovery/jtbd/meeting-note-taking.jpg" alt="Lors d'une vraie réunion, des participants prennent des notes sur ordinateur et sur papier" loading="lazy" /></a><figcaption><strong>Le job existe avant le produit.</strong> Ordinateur, papier, mémoire et partage oral constituent déjà un système de remplacement. Photo : <a href="https://commons.wikimedia.org/wiki/File:Taking_Notes.JPG" target="_blank" rel="noreferrer">Wikimedia Commons</a>.</figcaption></figure>
+
+<JtbdProgressLab />
+
 ## 4. Un modèle JTBD pratique
 
 Si vous êtes débutant, ne cherchez pas à rendre JTBD trop académique. Saisissez les 5 éléments les plus utiles pour commencer.
@@ -172,6 +177,8 @@ Sans votre produit, comment fait-il ?
 - Naviguer entre plusieurs outils
 
 Qui est l'alternative, qui est votre véritable environnement concurrentiel.
+
+<figure class="field-figure field-figure--narrow"><a href="https://commons.wikimedia.org/wiki/File:Scrum_task_board.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/jtbd/physical-task-board.jpg" alt="Tableau de tâches physique où des notes adhésives circulent entre les colonnes à faire, en cours et test" loading="lazy" /></a><figcaption><strong>L'alternative n'est pas nécessairement une autre application.</strong> Ce tableau physique accomplit déjà le job « rendre l'avancement visible ». Photo : Logan Ingalls, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption></figure>
 
 ### 4.5 Critère de succès
 
@@ -271,6 +278,8 @@ JTBD est plus adapté pour poser les questions suivantes :
 - Quelles alternatives avez-vous essayées ? Pourquoi n'étaient-elles pas assez bonnes ?
 
 L'avantage de cette approche est qu'elle ramène la conversation vers les expériences réelles, au lieu de rester sur des préférences imaginaires.
+
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/jtbd/intel-context-observation.jpg" alt="Dans une étude d'Intel, une participante touche directement l'écran d'un ordinateur portable" loading="lazy" /></a><figcaption><strong>Le comportement est parfois plus précis que la réponse.</strong> Ces gestes observés en situation sont difficiles à faire apparaître avec la seule question « quelle fonctionnalité voulez-vous ? ». Photo : <a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer">Intel Free Press / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption></figure>
 
 ## 9. Utiliser l'IA pour vous aider dans la décomposition JTBD
 
@@ -499,3 +508,13 @@ En vous basant sur le contenu ci-dessus, veuillez réaliser les exercices suivan
 - [Harvard Business School Online : What Is Jobs to Be Done?](https://online.hbs.edu/blog/post/jobs-to-be-done)
 - [Intercom : Jobs-to-be-Done : A framework for customer needs](https://www.intercom.com/blog/jobs-to-be-done-framework/)
 - [Mural : Jobs to Be Done framework guide](https://www.mural.co/blog/jobs-to-be-done-framework)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure--narrow img { max-height: 720px; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } }
+</style>

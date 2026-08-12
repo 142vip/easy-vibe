@@ -16,7 +16,6 @@ const relatedArticles =
 
 # Vollständige Projektpraxis: Von der Idee zum fertigen Werk
 
-<ProductJourney current="finish" />
 
 ## Darum geht es in diesem Kapitel
 

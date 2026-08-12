@@ -5,51 +5,20 @@ description: 'مقالة تمهيدية عن نموذج الألماس المز�
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = 'حوالي <strong>1.5 ساعة</strong>'
 </script>
 
-# نموذج الألماس المزدوج: افعل الشيء الصحيح أولاً، ثم افعل الشيء بشكل صحيح
+# نموذج التصميم بالألماسة المزدوجة
 
 <a id="top-dd"></a>
 
-## دليل هذا الفصل
+بعد تحليل الاحتياجات ومقابلات المستخدمين، تتجمع لدينا عادةً مواد كثيرة: تجارب مستخدمين مختلفين، ومشكلات الأدوات الحالية، وعدة اتجاهات محتملة للتحسين. وعندما تكثر المواد، تصبح المفاضلة بينها هي الصعوبة الجديدة.
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['Double Diamond', 'التفكير التصميمي', 'تحليل المتطلبات', 'تصميم الحلول']"
-  coreOutput="تعريف مشكلة أوضح ونقطة تحقق أكثر منطقية"
-  expectedOutput="عدم الاستعجال في رسم النموذج الأولي، بل معرفة التفكير في المشكلة أولاً ثم مقارنة الحلول"
->
+إذا لم نفصل بين «فهم المشكلة» و«تصميم الحل»، فمن السهل أن نجري المقابلات ونحن نبحث عن مبررات للوظيفة التي نفضّلها. يفصل نموذج الألماسة المزدوجة (Double Diamond) بين هذين النوعين من العمل عبر مرحلتين من التوسّع ثم التضييق.
 
-العديد من الأشخاص عند صنع منتجهم الأول، الخطأ الأكثر شيوعًا ليس "عدم بذل جهد كافٍ"، بل الدخول بسرعة كبيرة في الحل.
-
-بمجرد أن يظهر اتجاه في الذهن، يبدأون في التفكير في كيفية رسم الصفحة، وأين يوضع الزر، وهل يتم توصيل AI، وهل يتم عمل تسجيل دخول، وبأي أداة يتم رسم النموذج الأولي. بعد جولة كاملة من العمل، يكتشفون أن المشكلة الأساسية لم يتم التفكير فيها بوضوح: هل لدى المستخدم نقطة ألم حقيقية؟ هل هذه المشكلة تستحق الحل الآن؟ تعتقد أنك تتقدم في المشروع، لكنك في الواقع تتسارع فقط في الاتجاه الخاطئ بجدية.
-
-نموذج الألماس المزدوج (Double Diamond) مصمم لتجنب هذه الحالة.
-
-أهم تذكير قدمه هو: **"عمل الشيء الصحيح" و"عمل الشيء بشكل صحيح" هما مرحلتان مختلفتان تمامًا.** إذا لم توضح المشكلة بعد، واستعجلت في صنع نموذج أولي، فعادةً ما ستجعل الاتجاه الخاطئ أكثر اكتمالاً فقط.
-
-</ChapterIntroduction>
-
-::: info الحد الأدنى من SOP
-**الهدف**: بعد القراءة، ستكون أكثر وضوحًا حول متى يجب التفكير في المشكلة أولاً ومتى يجب البدء في التفكير في الحلول والنماذج الأولية عند صنع المنتج، لتجنب العمل بجدية في الاتجاه الخاطئ منذ البداية.
-
-**خطوات العمل**: اتبع الخطوات الأربع `Discover → Define → Develop → Deliver`، وقم فقط بما يجب القيام به في المرحلة الحالية.
-
-**النتيجة**: ستحصل على تعريف مشكلة أوضح، والعديد من الحلول القابلة للمقارنة، وأصغر نسخة قابلة للتحقق.
-
-**روابط سريعة**: [ما هو نموذج الألماس المزدوج](#dd-what) · [الألماس الأول](#dd-first) · [كيف يساعدك AI](#dd-ai)
-:::
-
-## ما ستتعلمه في هذا الفصل
-
-1. ما هو نموذج الألماس المزدوج، ولماذا هو مناسب للمبتدئين عند صنع المنتجات
-2. ماذا تفعل المراحل الأربع Discover و Define و Develop و Deliver على التوالي
-3. كيف نفرق بين "الآن يجب الاستمرار في التوسع" و"الآن يجب البدء في التضييق"
-4. كيفية استخدام نموذج الألماس المزدوج في منتجات AI وتصميم النماذج الأولية والتحقق من المتطلبات
+يشرح هذا الفصل مراحل Discover وDefine وDevelop وDeliver، ويوضح مدخلات كل مرحلة ومخرجاتها وأخطاءها الشائعة.
 
 <a id="dd-what"></a>
-## [1. ما هو نموذج الألماس المزدوج بالضبط](#top-dd)
+## [1. دورتان من التوسّع والتضييق](#top-dd)
 
 نموذج الألماس المزدوج هو إطار عمل تصميم كلاسيكي روجت له **Design Council** البريطانية. يرسم عملية التصميم والابتكار الكاملة في شكل ألماسين متتاليين.
 
@@ -65,6 +34,15 @@ const duration = 'حوالي <strong>1.5 ساعة</strong>'
 3. **Develop**: تطوير حلول متعددة متنوعة حول المشكلة الأساسية
 4. **Deliver**: الفرز، صنع النماذج الأولية، الاختبار، وتسليم الحل الأنسب
 
+تعالج المرحلتان الأوليان فضاء المشكلة، وتعالج المرحلتان الأخيرتان فضاء الحل.
+
+<figure class="field-figure field-figure--diagram">
+  <a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/design-council-double-diamond-wide.png" alt="الرسم الرسمي للألماسة المزدوجة من Design Council" loading="lazy" />
+  </a>
+  <figcaption><strong>لنبدأ بالرسم الأصلي.</strong> تتوسع الألماسة اليسرى من Discover ثم تضيق عند Define، وتتوسع اليمنى من Develop ثم تضيق عند Deliver. وليست العملية خطًا يسير إلى الأمام مرة واحدة؛ يمكن العودة عندما يكشف الاختبار مشكلة. المصدر: <a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">Design Council</a>، بترخيص <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption>
+</figure>
+
 إذا ضغطت هذه الخطوات الأربع في جملة واحدة أسهل في التذكر، فهي:
 
 - **الألماس الأول**: أوضح أولاً ما هي المشكلة التي يجب حلها بالضبط
@@ -75,7 +53,7 @@ const duration = 'حوالي <strong>1.5 ساعة</strong>'
 - **الألماس الأول: عمل الشيء الصحيح**
 - **الألماس الثاني: عمل الشيء بشكل صحيح**
 
-## 2. لماذا نموذج الألماس المزدوج مناسب بشكل خاص للمبتدئين
+## 2. لماذا نفصل المشكلة عن الحل
 
 الإيقاع الأكثر شيوعًا بين المبتدئين عند صنع المنتجات غالبًا ما يكون هكذا:
 
@@ -101,7 +79,7 @@ const duration = 'حوالي <strong>1.5 ساعة</strong>'
 - لا تفترض أن المستخدم سيحتاجه حقًا لمجرد أن النموذج الأولي يبدو كاملًا
 
 <a id="dd-first"></a>
-## [3. الألماس الأول: عمل الشيء الصحيح](#top-dd)
+## [3. الألماسة الأولى: فضاء المشكلة](#top-dd)
 
 الألماس الأول يركز على **المشكلة نفسها**، وليس الحل.
 
@@ -129,6 +107,13 @@ const duration = 'حوالي <strong>1.5 ساعة</strong>'
 - أي سيناريوهات الاجتماعات تحتاج أكثر لمحاضر، وأيها لا تحتاج أبدًا
 
 الهدف الأهم في هذه الخطوة ليس الوصول إلى إجابة، بل **لا تعتقد أنك تعرف الإجابة مبكرًا جدًا.**
+
+<figure class="field-figure">
+  <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/creative-commons-design-workshop.jpg" alt="ورشة بحث لدى Creative Commons مع أوراق وملاحظات كثيرة" loading="lazy" />
+  </a>
+  <figcaption><strong>مواد Discover الحقيقية تكون متنوعة.</strong> أجرى فريق Creative Commons عام 2018 عدد 81 مقابلة، ونظم 36 مقابلة سابقة. تمثل الأوراق الأسئلة والملاحظات إجابات المشاركين والنقاط وسيلة للمقارنة. حافظ الفريق هنا على الاختلافات ولم يختزلها مبكرًا في إجابة واحدة. الحالة والصورة: <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>، بترخيص <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption>
+</figure>
 
 ### 3.2 Define: استخلص المشكلة الأساسية من كومة المعلومات
 
@@ -159,7 +144,14 @@ const duration = 'حوالي <strong>1.5 ساعة</strong>'
 
 جوهر Define هو **التضييق من "مشاكل كثيرة" إلى "أي مشكلة سنحلها أولاً هذه المرة".**
 
-## 4. الألماس الثاني: عمل الشيء بشكل صحيح
+<figure class="field-figure">
+  <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/creative-commons-research-synthesis.jpg" alt="فريق Creative Commons يرتب ملاحظات المقابلات ويجمعها حسب الموضوع" loading="lazy" />
+  </a>
+  <figcaption><strong>Define ليس اختيار العبارة الأكثر جاذبية.</strong> جمع الفريق 117 مقابلة وصنّفها وبحث عن الأنماط المتكررة، ثم استخلص 9 رؤى. تمثل المجموعات والألوان الطريق من الإجابات الخام إلى الموضوعات والأولويات. الحالة والصورة: <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>، بترخيص <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>.</figcaption>
+</figure>
+
+## 4. الألماسة الثانية: فضاء الحل
 
 عندما تكمل الألماس الأول، حينها فقط تكون مناسبًا حقًا للدخول في الألماس الثاني. لأنك في هذه اللحظة لا تحل اتجاهًا غامضًا، بل مشكلة محددة تم تضييقها.
 
@@ -185,6 +177,13 @@ const duration = 'حوالي <strong>1.5 ساعة</strong>'
 لكن هناك شرط مسبق: **جميع الحلول يجب أن تخدم نفس المشكلة المحددة.**
 إذا لم يتم تعريف المشكلة بوضوح، فمن السهل أن يتحول Develop مرة أخرى إلى فوضى في الوظائف.
 
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/develop-idea-board.jpg" alt="لوحة حلول من ورشة تفكير تصميمي لدى Wikimedia Deutschland" loading="lazy" />
+  </a>
+  <figcaption><strong>تحتفظ Develop بعدة إجابات أولًا.</strong> وُزعت الأفكار المرشحة بحسب الموضوع ولم تتحول بعد إلى قائمة وظائف واحدة. قيمة التوسّع ليست عدد الملاحظات، بل مقارنة مسارات مختلفة قبل الاختيار. الصورة: <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer">Corinna Schuster (WMDE) / Wikimedia Commons</a>، بترخيص <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
 ### 4.2 Deliver: اختيار الحل، صنع النموذج الأولي، الاختبار والتسليم
 
 مرحلة Deliver هي مرحلة التضييق في الألماس الثاني.
@@ -208,7 +207,20 @@ const duration = 'حوالي <strong>1.5 ساعة</strong>'
 
 تركيز Deliver ليس "التسليم المثالي"، بل **وضع الحل في بيئة حقيقية للتحقق في أسرع وقت ممكن.**
 
-## 5. جدول مقارنة سهل التذكر
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/paper-prototype-test.jpg" alt="شخص يكتب في حقل إدخال على نموذج أولي ورقي" loading="lazy" />
+  </a>
+  <figcaption><strong>قابلية الاختبار لا تعني اكتمال الكود.</strong> يسمح النموذج الورقي للمشارك بالنقر والكتابة، ثم يبدّل الباحث الصفحة التالية. وهذا يكفي لفحص المسار والنص وترتيب العمليات، قبل قضاء أسابيع في تنفيذ اتجاه قد يكون خاطئًا. الصورة: <a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer">d_jan / Wikimedia Commons</a>، بترخيص <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption>
+</figure>
+
+## 5. الفرق بين المراحل الأربع
+
+بعد أن ناقشنا المراحل الأربع، يضعها الشكل التالي ضمن عملية واحدة. اختر مرحلة وقارن بين عملها ومخرجاتها وما لا ينبغي فعله فيها مؤقتًا.
+
+<DoubleDiamondNavigator />
+
+<!-- يحافظ الجدول التالي على التفاصيل المرجعية الموجودة في النسخة السابقة. -->
 
 إذا كنت دائمًا تخلط بين المراحل الأربع، يمكنك حفظ هذا الإصدار مباشرة:
 
@@ -304,6 +316,13 @@ Deliver لا يعني أنه لا يُعد منتهيًا إلا بعد إكما
 - من نحتاج لاختباره؟
 - بعد الاختبار، كيف نحكم على ما إذا كنا سنستمر أم نعدل أم نتخلى؟
 
+<figure class="field-figure field-figure--portrait">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_Gruppenarbeit_2.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-group-workshop.jpg" alt="مشاركون في ورشة تفكير تصميمي لويكيميديا ألمانيا يطوّرون حلولًا معًا" loading="lazy" />
+  </a>
+  <figcaption><strong>مرحلة Develop لا تعني انتظار فكرة مثالية.</strong> عندما تتحول الأفكار سريعًا إلى أشياء مرئية، يصبح من الأسهل مقارنتها ودمجها واستبعادها. الصورة: Corinna Schuster (WMDE)، <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
 ## 9. مثال يمكن فهمه حتى من المبتدئين تمامًا
 
 لنفترض أنك تريد صنع أداة AI "تساعد طلاب الجامعات في إعداد سيرهم الذاتية للبحث عن عمل".
@@ -344,25 +363,15 @@ Deliver لا يعني أنه لا يُعد منتهيًا إلا بعد إكما
 
 ستكتشف أنه بمجرد أن يتم تنفيذ الألماس الأول بشكل متين، سيكون الألماس الثاني أوضح بكثير.
 
-## 10. ملخص
-
-أقوى جانب في نموذج الألماس المزدوج هو أنه يساعدك في تقسيم كتلة الفوضى الكاملة إلى أربع حركات أوضح:
-
-- توسع أولاً لفهم المشكلة
-- ثم ضيق لتعريف المشكلة
-- ثم توسع لاستكشاف الحلول
-- وأخيرًا ضيق لتسليم الحل
-
-إنه لا يجعلك أبطأ، بل يجعلك **توفر الكثير من المسارات التي تبدو مشغولة لكنها في الاتجاه الخاطئ.**
-
-خاصة في عصر AI، حيث أصبح صنع الأشياء أسرع فأسرع، يصبح نموذج الألماس المزدوج أكثر أهمية. لأنه عندما يصبح "الصنع" أسهل فأسهل، ستكون القدرة النادرة حقًا هي: **هل تحل مشكلة تستحق الحل، وهل تستخدم الطريقة المناسبة لحلها.**
-
-تذكر هذه الجملة فقط:
-
-**افعل الشيء الصحيح أولاً، ثم افعل الشيء بشكل صحيح.**
+<figure class="field-figure field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_Prototyp_Mitmach-O-Mat.png" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-workshop-prototype.png" alt="نموذج أولي مرسوم يدويًا لـ Mitmach-O-Mat من ورشة ويكيميديا ألمانيا" loading="lazy" />
+  </a>
+  <figcaption><strong>يكفي في البداية أن يجيب النموذج الأولي عن سؤال واحد.</strong> حتى من دون نظام بصري مكتمل، يمكن ملاحظة ما إذا كان المشارك يفهم الخطوة التالية. النموذج: Corinna Schuster / WMDE، <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
 
 <a id="dd-ai"></a>
-## [11. كيفية استخدام AI لمساعدتك في تشغيل عملية الألماس المزدوج](#top-dd)
+## [10. استخدام AI ضمن عملية الألماسة المزدوجة](#top-dd)
 
 نموذج الألماس المزدوج نفسه ليس أداة AI، لكن AI مناسب جدًا ليكون "مسرعًا" في المراحل الأربع. المفتاح ليس جعل AI يتخذ القرارات بدلاً منك، بل جعله يساعدك في توسيع الأفق وتنظيم المعلومات ومقارنة الحلول وتوليد مواد التحقق.
 
@@ -527,7 +536,14 @@ AI قد يخرج:
 
 هذا مفيد جدًا للمبتدئين، لأنك تتسرع بسهولة في "رسم النموذج الأولي قبل أن توضح المشكلة".
 
-## 📚 الواجبات
+## 11. الخلاصة
+
+- تُستخدم Discover وDefine لصياغة تعريف المشكلة، وتُستخدم Develop وDeliver لصياغة الحل والتحقق منه.
+- يوسّع التباعد الخيارات، ويضيّق التقارب نطاقها استنادًا إلى الأدلة.
+- ينبغي تعريف المشكلة قبل استكشاف الحلول، مع إمكان مراجعته وفق نتائج الاختبار اللاحق.
+- هدف Deliver هو الحصول على نتيجة اختبار نتعلم منها، وليس بالضرورة تسليم منتج كامل.
+
+## 12. تمرين
 
 <StageAssignmentCard title="رتّب فكرتك باستخدام نموذج الماسة المزدوجة">
 
@@ -547,3 +563,13 @@ AI قد يخرج:
 - [Design Council: The Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/)
 - [Design Council: Framework for Innovation](https://www.designcouncil.org.uk/our-work/skills-learning/tools-frameworks/framework-for-innovation-design-councils-evolved-double-diamond/)
 - [Design Council: History of the Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/history-of-the-double-diamond/)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure--diagram img { max-height: 580px; padding: 18px; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } .field-figure--diagram img { padding: 8px; } }
+</style>

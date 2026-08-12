@@ -5,23 +5,15 @@ description: 'A beginner-friendly introduction to The Mom Test. Learn how to avo
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = 'About <strong>1.5 hours</strong>'
 </script>
 
 # The Mom Test: A User Interview Method for Validating Demand
 
 <a id="top-mom"></a>
 
-## Introduction
+The JTBD statement from the previous chapter is still a hypothesis. Interviews help us check whether the problem has occurred recently and whether users have already spent time, money, or effort on it.
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['User Interviews', 'Demand Validation', 'User Research', 'Product Discovery']"
-  coreOutput="1 set of interview questions more likely to reveal real user information"
-  expectedOutput="Stop treating polite encouragement as validation and start judging direction through real behavior"
->
-
-When many beginners do product research for the first time, they assume the important thing is simply to "talk to some people." So they ask friends, classmates, coworkers, or family:
+This sounds straightforward. Yet if we directly ask whether someone likes an idea, we often receive polite, general replies. For example:
 
 - What do you think of this idea?
 - Would you use this if I built it?
@@ -35,31 +27,12 @@ The replies usually sound encouraging:
 
 The problem is that these answers usually do not help you decide anything. They are often just politeness, support, or a natural instinct not to discourage you in the moment. You think you collected "market validation," but what you really collected was a pile of comforting feedback that is hard to use.
 
-That is exactly what **The Mom Test** is for. Its central reminder is:
+These answers are not wrong, but they are difficult to use for product decisions. The Mom Test asks us to spend less time on future intentions and more on what happened in the past, how the user handled it, and what it already cost them.
 
-**users are usually not trying to lie to you. The real problem is that your question format often pushes them toward nice but useless answers.**
-
-</ChapterIntroduction>
-
-::: info Minimal SOP
-**Goal**: After this, you should be much clearer on how to talk to users without getting stuck with “sounds good,” and instead get information that actually helps you judge direction.
-
-**Action**: Rewrite 5 questions you would normally ask so they focus on “when did this last happen?” and “how did you handle it?”
-
-**Result**: You will get better at separating opinions from evidence, and encouragement from demand.
-
-**Quick links**: [What The Mom Test is](#mom-what) · [Three core principles](#mom-principles) · [How AI can help](#mom-ai)
-:::
-
-## What You Will Learn
-
-1. What problem The Mom Test is actually solving, and why many "user interviews" fail to uncover useful truth
-2. The core principles of the method: ask less about opinions and future hypotheticals, and more about real behavior and real facts
-3. How to rewrite low-value questions into stronger interview questions
-4. How The Mom Test works together with JTBD, validation, and MVP decisions
+This chapter explains how to avoid such false-positive feedback and shift the interview from opinions and hypothetical futures toward past behavior, current workarounds, and costs already incurred.
 
 <a id="mom-what"></a>
-## [1. What The Mom Test Really Is](#top-mom)
+## [1. Why Interviews Produce False Positives](#top-mom)
 
 The Mom Test comes from Rob Fitzpatrick's book of the same name. The title sounds playful, but the point is sharp:
 
@@ -73,13 +46,9 @@ The reason is not that she is dishonest. It is that:
 
 And this is not only about your mom. Friends, coworkers, former classmates, and even strangers often do the same thing when they react to a product idea. A positive answer does not necessarily mean the demand is real. It may simply mean you asked in a way that made a flattering answer easy.
 
-So the point of The Mom Test is not really "do not ask your mom." It is:
+The point of The Mom Test is therefore not whom to interview, but how to structure the questions. An interview should look for verifiable experiences instead of collecting evaluations of the product idea.
 
-**do not ask in a way that makes almost anyone answer by encouraging you.**
-
-What this method really teaches is how to use conversation to get closer to real demand instead of collecting feel-good commentary.
-
-## 2. The Core Problem It Solves
+## 2. Opinions and Behavioral Evidence
 
 The Mom Test mainly helps you avoid one very common cognitive mistake:
 
@@ -108,7 +77,7 @@ That is why The Mom Test keeps reminding you:
 Compared with "Would you use this?", a question like "How did you handle this last time?" is usually much closer to truth.
 
 <a id="mom-principles"></a>
-## [3. Three Core Principles](#top-mom)
+## [3. Three Principles for Asking Questions](#top-mom)
 
 If you want to remember only the most important part first, remember these three principles.
 
@@ -156,6 +125,13 @@ Better questions are:
 - What is bad about that method?
 
 Seeing the current workaround clearly is often more valuable than asking "What do you want us to build?"
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/user-interview-session.jpg" alt="A real interview in which an interviewer holds a microphone while speaking with a participant, with a computer and notes on the table" loading="lazy" />
+  </a>
+  <figcaption><strong>The participant, not the script, is the center of the interview.</strong> The interviewer in this photograph attends to the participant's account; the computer and paper are only recording tools. There is no need to rush through a checklist. When phrases such as “last week,” “eventually I had to,” or “I already spent” appear, follow the experience with another question. Photograph: <a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer">ManonB2018 / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
 
 ## 4. Why People Keep Giving Nice but Unhelpful Answers
 
@@ -213,7 +189,11 @@ The most important thing in the table is not the wording itself, but the directi
 - from future to past
 - from your solution to the user's problem
 
-## 6. A Simple Interview Flow You Can Use Right Away
+The exercise below presents six common interview statements. Decide which ones provide usable evidence and which ones are only opinions.
+
+<InterviewEvidenceLab />
+
+## 6. A Basic Interview Sequence
 
 If you want to talk to someone now, you can use this order directly.
 
@@ -322,6 +302,15 @@ That is how the two methods connect:
 - JTBD helps define the need hypothesis
 - The Mom Test helps validate it through conversation
 
+Interviews help us understand what happened in the past, but they are not the final step. Once a prototype exists, users should operate it directly so we can compare what they described with what they actually do.
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/usability-testing-session.jpg" alt="At Bangalore DevCamp, a participant operates a new translation application during a usability test" loading="lazy" />
+  </a>
+  <figcaption><strong>After “I would use it,” examine whether the solution is usable.</strong> This photograph records a 2012 Bangalore DevCamp usability test of a new translation application. A participant completes a task on the computer while researchers observe points of difficulty. Interviews test whether the problem exists; usability testing then examines whether the solution helps complete the task. Photograph: <a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer">Amire80 / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption>
+</figure>
+
 ## 9. Common Beginner Mistakes in Interviews
 
 ### 9.1 Turning the interview into a product presentation
@@ -349,6 +338,13 @@ If you do not organize the conversation afterward, it quickly becomes a blurry i
 - current workarounds
 - costs already paid
 - your updated judgment
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Wikipedia-Affinity.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/wikipedia-affinity-synthesis.jpg" alt="A Wikipedia usability project clustering interview and observation evidence into an affinity diagram" loading="lazy" />
+  </a>
+  <figcaption><strong>Finishing the interviews only means the raw material is ready.</strong> This affinity diagram comes from a Wikimedia Foundation usability project. Observations were first separated into individual pieces of evidence and then clustered by recurring theme. This produces a pattern across interviews rather than the impression that everyone needs the product. Photograph: Parul Vora / Wikimedia Foundation, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption>
+</figure>
 
 ## 10. A Reusable Question Checklist
 
@@ -380,27 +376,8 @@ If you want to start quickly, this set is broad enough for many interviews.
 
 This is fine near the end, but it should not come first. Earlier in the conversation, you want facts more than wishes.
 
-## 11. Summary
-
-The most important contribution of The Mom Test is not a set of "better conversation tricks." It is a more sober way to judge what you hear:
-
-- do not trust praise for your idea too quickly
-- do not treat "I would use that" as real demand
-- do not turn interviews into a search for approval
-
-The most useful conversations usually keep coming back to:
-
-- the user's most recent real experience
-- how they handle the problem today
-- what cost they have already paid
-- where they feel obvious discomfort
-
-When you start asking in this way, the answers may sound less flattering, but they are usually much more useful.
-
-**In product work, useful truth is always better than encouraging noise.**
-
 <a id="mom-ai"></a>
-## [12. How AI Can Help with Interviews](#top-mom)
+## [11. Using AI to Prepare and Organize Interviews](#top-mom)
 
 The Mom Test is still a method for talking to real people, so AI cannot replace real interviews. But AI is extremely useful before, during, and after interviews, especially for beginners who need structure.
 
@@ -478,6 +455,13 @@ For seniors:
 That makes interview prep much easier because you do not need to invent every question from scratch.
 
 ### 12.3 Sort interview notes into facts vs opinions
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Volunteer_Molly_conducting_an_interview._Over_200_prospects_still_need_to_be_interviewed._Plus_the_park_needs_help_transcribing_(791cd068-1dd8-b71b-0b4d-48151192c96f).jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/oral-history-interview.jpg" alt="A face-to-face oral-history interview for the U.S. National Park Service, with an interview guide, photographs, and notes on the table" loading="lazy" />
+  </a>
+  <figcaption><strong>Synthesis must remain connected to the source material.</strong> This oral-history interview uses a guide, historical photographs, and field notes together. The project description also identifies transcription as a key step in making the record usable. AI can assist with transcription and classification, but every conclusion should remain traceable to the participant's words. Photograph: U.S. National Park Service, public domain.</figcaption>
+</figure>
 
 After interviews, the problem is often not "too little information," but "too much scattered information." AI is good at turning messy notes into structured evidence:
 
@@ -571,7 +555,14 @@ That is especially helpful for beginners because it trains the instinct to ask:
 
 **am I collecting evidence, or am I just collecting encouragement?**
 
-## Assignments
+## 12. Summary
+
+- A positive evaluation of a product idea is not sufficient evidence of demand.
+- Interviews should prioritize specific past experiences over predictions of future behavior.
+- Behavior, time, money, and current alternatives are the main evidence for judging problem intensity.
+- AI can help prepare a guide and organize notes, but it cannot replace real interviews.
+
+## 13. Exercise
 
 <StageAssignmentCard title="Run a User Interview Without Pitching Your Idea">
 
@@ -586,3 +577,12 @@ That is especially helpful for beginners because it trains the instinct to ask:
 
 - [The Mom Test official site](https://momtestbook.com/)
 - [Rob Fitzpatrick: The Mom Test](https://www.robfitz.com/the-mom-test/)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } }
+</style>

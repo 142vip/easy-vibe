@@ -1,63 +1,36 @@
 ---
-title: 'The Mom Test：Xác minh nhu cầu thông qua phỏng vấn người dùng'
-description: 'Bài viết The Mom Test dành cho người mới. Học cách tránh phản hồi lịch sự, tập trung vào hành vi thực tế, sự kiện cụ thể và vấn đề hiện có trong phỏng vấn người dùng, biến "nghe có vẻ ổn" thành đánh giá nhu cầu đáng tin cậy hơn.'
+title: 'The Mom Test: Phương pháp phỏng vấn người dùng'
+description: 'Bài nhập môn The Mom Test dành cho người chưa có kiến thức nền. Chúng ta sẽ học cách tránh phản hồi mang tính xã giao, phỏng vấn xoay quanh hành vi thực, sự việc cụ thể và vấn đề đang tồn tại, qua đó biến lời khen "nghe hay đấy" thành nhận định nhu cầu đáng tin cậy hơn.'
 ---
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = 'Khoảng <strong>1.5 giờ</strong>'
 </script>
 
-# The Mom Test：Xác minh nhu cầu thông qua phỏng vấn người dùng
+# The Mom Test: Phương pháp phỏng vấn người dùng
 
 <a id="top-mom"></a>
 
-## Hướng dẫn chương này
+Phát biểu JTBD ở chương trước vẫn chỉ là một giả thuyết. Chúng ta cần dùng phỏng vấn để kiểm tra xem vấn đề ấy gần đây có thực sự xảy ra hay không, và người dùng đã bỏ ra thời gian, tiền bạc hay công sức nào để xử lý nó.
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['Phỏng vấn người dùng', 'Xác minh nhu cầu', 'Nghiên cứu người dùng', 'Nghiên cứu sản phẩm']"
-  coreOutput="1 bộ câu hỏi phỏng vấn có thể khai thác thông tin thực tế hơn"
-  expectedOutput="Không còn coi phản hồi lịch sự của người dùng là xác minh, mà có thể dùng hành vi thực tế để đánh giá hướng đi"
->
-
-Rất nhiều người lần đầu làm nghiên cứu sản phẩm, nghĩ rằng điều quan trọng nhất là "tìm người trò chuyện". Thế là họ đi hỏi bạn bè, đồng nghiệp, thậm chí người thân:
+Việc này nghe có vẻ không khó. Tuy nhiên, nếu hỏi thẳng người đối diện có thích một ý tưởng hay không, ta thường chỉ nhận được những câu trả lời lịch sự và chung chung:
 
 - Bạn thấy ý tưởng này của tôi thế nào?
 - Nếu có một sản phẩm như vậy, bạn có dùng không?
 - Chức năng này nghe có vẻ khá chứ?
 
-Đối phương cũng thường cho phản hồi rất đáng khích lệ:
+Chẳng hạn:
 
 - Khá lắm
 - Nghe có vẻ hữu ích
 - Tôi nghĩ bạn có thể thử
 
-Vấn đề là, những câu trả lời này thường không giúp bạn đưa ra đánh giá. Chúng giống như sự lịch sự, ủng hộ, hoặc phản ứng tự nhiên không muốn làm mất lòng bạn tại chỗ. Bạn tưởng mình đã "xác minh thị trường", thực ra chỉ thu thập được một đống lời an ủi khó dùng để ra quyết định.
+Những câu trả lời này không sai, nhưng rất khó dùng làm cơ sở cho quyết định sản phẩm. The Mom Test nhắc chúng ta bớt hỏi về ý định trong tương lai, thay vào đó hãy hỏi chuyện gì đã xảy ra, người dùng đã xử lý ra sao và đã đánh đổi những gì.
 
-Phương pháp The Mom Test là để giải quyết vấn đề này. Nó nhắc nhở chúng ta: **Không phải người dùng cố tình lừa bạn, mà là cách bạn hỏi câu hỏi, tự nhiên sẽ dẫn đối phương đến những câu trả lời nghe hay nhưng vô dụng.**
-
-</ChapterIntroduction>
-
-::: info SOP tối thiểu
-**Mục đích**: Sau khi đọc xong, bạn sẽ rõ hơn cách trò chuyện với người dùng thế nào để không chỉ nghe "nghe có vẻ ổn", mà thực sự hỏi được thông tin giúp bạn đánh giá hướng đi.
-
-**Hành động**: Viết lại 5 câu hỏi bạn định hỏi, ưu tiên hỏi "lần gần nhất xảy ra khi nào", "bạn đã xử lý thế nào lúc đó".
-
-**Kết quả**: Bạn sẽ dễ dàng phân biệt hơn đâu là ý kiến, đâu mới là bằng chứng thực sự có thể hỗ trợ đánh giá.
-
-**Từ khóa chuyển nhanh**: [The Mom Test là gì](#mom-what) · [Ba nguyên tắc cốt lõi](#mom-principles) · [AI giúp bạn thế nào](#mom-ai)
-:::
-
-## Bạn sẽ học được những nội dung sau
-
-1. The Mom Test đang giải quyết vấn đề gì, tại sao nhiều "nghiên cứu người dùng" thực ra không nghiên cứu được thông tin thực tế
-2. Vài nguyên tắc cốt lõi nhất của phương pháp này: Hỏi ít ý kiến, hỏi nhiều hành vi; Hỏi ít giả định, hỏi nhiều sự kiện
-3. Làm thế nào biến một câu hỏi dễ nhận được phản hồi dương tính giả thành câu hỏi phỏng vấn có giá trị hơn
-4. Cách kết hợp The Mom Test với JTBD, xác minh nhu cầu, đánh giá MVP
+Chương này trình bày cách tránh loại phản hồi “dương tính giả” ấy, đồng thời chuyển sự chú ý từ quan điểm và giả định tương lai sang hành vi trong quá khứ, cách làm hiện tại và chi phí đã thực sự phát sinh.
 
 <a id="mom-what"></a>
-## [1. The Mom Test thực chất là gì](#top-mom)
+## [1. Vì sao phỏng vấn lại cho ra phản hồi dương tính giả](#top-mom)
 
 The Mom Test đến từ cuốn sách cùng tên của Rob Fitzpatrick. Tên nó nghe hơi giống đùa, nhưng chỉ trúng rất chuẩn:
 
@@ -71,13 +44,9 @@ Lý do không phải bà không trung thực, mà là:
 
 Thực ra không chỉ mẹ, bạn bè, đồng nghiệp, bạn học cũ, thậm chí rất nhiều người lạ, khi đối mặt với ý tưởng sản phẩm của bạn, cũng thường cho "phản hồi tích cực" tương tự. Điều này không có nghĩa nhu cầu thực sự tồn tại, chỉ có nghĩa là bạn đã hỏi câu hỏi thành một dạng dễ nhận được câu trả lời nghe hay.
 
-Vì vậy, trọng tâm của The Mom Test chưa bao giờ là "đừng hỏi mẹ", mà là:
+Vì vậy, trọng tâm của The Mom Test không nằm ở việc phỏng vấn ai, mà nằm ở cách tổ chức câu hỏi. Cuộc phỏng vấn nên cố gắng tìm những trải nghiệm có thể kiểm chứng, thay vì thu thập đánh giá của người đối diện về ý tưởng sản phẩm.
 
-**Đừng hỏi câu hỏi thành dạng ai cũng sẽ thuận theo bạn mà trả lời.**
-
-Phương pháp này thực sự muốn dạy bạn, là cách thông qua đối thoại, lấy được thông tin gần với nhu cầu thực tế hơn, thay vì thu thập một đống lời bình luận khiến bạn cảm thấy tốt.
-
-## 2. Vấn đề cốt lõi mà nó giải quyết là gì
+## 2. Ý kiến và bằng chứng hành vi
 
 The Mom Test chủ yếu giải quyết một loại nhận thức ảo rất phổ biến:
 
@@ -106,9 +75,9 @@ Vì vậy The Mom Test nhắc bạn:
 Bởi vì so với "bạn có dùng không", "bạn lần trước xử lý việc này thế nào" thường gần với sự thật hơn.
 
 <a id="mom-principles"></a>
-## [3. Ba nguyên tắc cốt lõi nhất](#top-mom)
+## [3. Ba nguyên tắc đặt câu hỏi](#top-mom)
 
-Nếu bạn chỉ muốn ghi nhớ phần quan trọng nhất trước, có thể ghi trước ba nguyên tắc dưới đây.
+Ba nguyên tắc sau đây giúp chuyển câu hỏi từ giải pháp sản phẩm sang những trải nghiệm đã thực sự xảy ra với người dùng.
 
 ### 3.1 Nói ít về ý tưởng của bạn, hỏi nhiều về trải nghiệm thực tế trong quá khứ của người dùng
 
@@ -155,6 +124,13 @@ Câu hỏi tốt hơn là:
 
 Nhìn rõ giải pháp thay thế hiện tại, thường quan trọng hơn trực tiếp hỏi "bạn muốn gì".
 
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/user-interview-session.jpg" alt="Một buổi phỏng vấn thực tế, trong đó người phỏng vấn cầm micro trò chuyện với người tham gia; trên bàn có máy tính và tài liệu ghi chép" loading="lazy" />
+  </a>
+  <figcaption><strong>Nhân vật chính của cuộc phỏng vấn là người đối diện, không phải dàn câu hỏi.</strong> Trong ảnh, người phỏng vấn tập trung vào lời kể của người tham gia; máy tính và giấy tờ chỉ là công cụ ghi chép. Khi phỏng vấn, chúng ta cũng không cần vội đánh dấu từng câu. Nếu nghe thấy những manh mối cụ thể như “tuần trước”, “sau đó tôi đành phải” hay “tôi đã chi”, hãy lần theo trải nghiệm ấy để hỏi tiếp. Ảnh: <a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer">ManonB2018 / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
 ## 4. Tại sao người ta luôn cho bạn câu trả lời nghe hay nhưng vô dụng
 
 Nếu bạn hiểu được điều này, khi làm phỏng vấn sẽ ít sai lầm hơn.
@@ -191,11 +167,11 @@ Thực ra bạn đã lén nhét "câu trả lời đúng" vào câu hỏi rồi.
 
 Đây cũng là lý do The Mom Test đặc biệt nhấn mạnh: **Đừng biến phỏng vấn thành bạn đang tìm kiếm sự công nhận.**
 
-## 5. So sánh trực tiếp: Câu hỏi nào dễ hỏi hỏng, câu hỏi nào có giá trị hơn
+## 5. So sánh trực tiếp: Câu hỏi nào dễ trở nên vô ích, câu hỏi nào có giá trị hơn
 
 Những đối chiếu dưới đây, hầu như người mới nào cũng dùng đến.
 
-| Câu hỏi dễ hỏi hỏng | Câu hỏi có giá trị hơn |
+| Câu hỏi dễ trở nên vô ích | Câu hỏi có giá trị hơn |
 | --- | --- |
 | Bạn thấy ý tưởng này của tôi thế nào? | Lần gần nhất bạn gặp vấn đề này là khi nào? |
 | Nếu có sản phẩm này bạn có dùng không? | Hiện bạn xử lý việc này thế nào? |
@@ -203,13 +179,17 @@ Những đối chiếu dưới đây, hầu như người mới nào cũng dùng
 | Bạn thấy chức năng này quan trọng không? | Trong quy trình này, bước nào phiền nhất, chậm nhất, không yên tâm nhất? |
 | Bạn có muốn một AI giúp bạn tự động làm không? | Tại sao hiện tại bạn chưa tìm được giải pháp thuận tiện hơn? |
 
-Điều quan trọng nhất của bảng này không phải câu cụ thể, mà là hướng phía sau:
+Những cách viết lại này có ba điểm chung:
 
 - Từ ý kiến tiến về sự kiện
 - Từ tương lai tiến về quá khứ
 - Từ giải pháp của bạn tiến về vấn đề của người dùng
 
-## 6. Một nhịp độ phỏng vấn người mới cũng có thể dùng ngay
+Bài thực hành dưới đây gồm sáu câu thường xuất hiện trong phỏng vấn. Hãy thử phân biệt câu nào là bằng chứng có thể sử dụng, câu nào chỉ là ý kiến.
+
+<InterviewEvidenceLab />
+
+## 6. Trình tự cơ bản của một cuộc phỏng vấn
 
 Nếu bây giờ bạn muốn đi tìm người trò chuyện, có thể trực tiếp làm theo trình tự dưới đây.
 
@@ -264,9 +244,9 @@ Bạn đi hỏi bạn học:
 
 Lúc này, đối phương rất có thể sẽ nói:
 
-- Nghe khá lắm
-- Tôi nghĩ nên hữu ích
-> Nếu miễn phí tôi sẽ thử
+- Nghe khá hay
+- Tôi nghĩ chắc sẽ hữu ích
+- Nếu miễn phí thì tôi sẽ thử
 
 Những câu trả lời này hầu như không giúp bạn đánh giá nhu cầu mạnh hay yếu.
 
@@ -318,6 +298,15 @@ Như vậy, phương pháp đã được kết nối:
 - JTBD giúp bạn định nghĩa giả định nhu cầu
 - The Mom Test giúp bạn phỏng vấn xác minh giả định
 
+Phỏng vấn giúp chúng ta hiểu chuyện gì đã xảy ra trong quá khứ, nhưng đó chưa phải bước cuối cùng. Sau khi làm nguyên mẫu, ta còn phải để người dùng trực tiếp thao tác, rồi quan sát xem cách họ kể có nhất quán với hành vi thực tế hay không.
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/usability-testing-session.jpg" alt="Tại Bangalore DevCamp, một người tham gia đang trực tiếp thao tác một ứng dụng dịch mới trong buổi kiểm thử khả dụng" loading="lazy" />
+  </a>
+  <figcaption><strong>Sau câu “tôi sẽ dùng”, ta còn phải xem họ có thực sự dùng được hay không.</strong> Bức ảnh ghi lại buổi kiểm thử khả dụng cho một ứng dụng dịch mới tại Bangalore DevCamp năm 2012. Người tham gia hoàn thành nhiệm vụ ngay trên máy tính, nhờ đó nhà nghiên cứu quan sát được các điểm vướng. Phỏng vấn kiểm tra xem vấn đề có tồn tại hay không; thử nghiệm thao tác tiếp tục kiểm tra xem giải pháp có thực sự giúp người dùng hoàn thành công việc hay không. Ảnh: <a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer">Amire80 / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption>
+</figure>
+
 ## 9. Sai lầm phổ biến nhất khi người mới làm phỏng vấn người dùng
 
 ### 9.1 Biến phỏng vấn thành hội thảo giới thiệu sản phẩm
@@ -345,6 +334,13 @@ Nếu bạn trò chuyện xong rồi để đó, thông tin nhanh chóng sẽ tr
 - Giải pháp thay thế hiện tại
 - Chi phí đã trả
 - Đánh giá mới của bạn
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Wikipedia-Affinity.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/wikipedia-affinity-synthesis.jpg" alt="Dự án khả dụng Wikipedia nhóm các tài liệu phỏng vấn và quan sát theo chủ đề để tạo thành sơ đồ ái lực" loading="lazy" />
+  </a>
+  <figcaption><strong>Phỏng vấn xong chỉ có nghĩa là ta đã có nguyên liệu.</strong> Hình trên là sơ đồ ái lực của dự án khả dụng thuộc Wikimedia Foundation: trước hết, các quan sát được tách thành từng mẩu bằng chứng; sau đó, chúng được nhóm theo những chủ đề lặp lại. Kết quả thu được là mẫu hình xuất hiện qua nhiều cuộc phỏng vấn, chứ không phải cảm giác “tôi thấy ai cũng cần”. Ảnh: Parul Vora / Wikimedia Foundation, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption>
+</figure>
 
 ## 10. Danh sách câu hỏi có thể copy để dùng ngay
 
@@ -376,30 +372,12 @@ Nếu bạn muốn bắt đầu nhanh nhất, đây là một bộ câu hỏi đ
 
 Lưu ý, câu hỏi kết thúc này có thể hỏi, nhưng tốt nhất đặt phía sau. Vì phía trước bạn cần lấy sự kiện trước, thay vì ước mơ.
 
-## 11. Tóm tắt
-
-Đóng góp quan trọng nhất của The Mom Test, không phải cho bạn một bộ kỹ năng "giỏi trò chuyện hơn", mà là giúp bạn xây dựng một cách đánh giá tỉnh táo hơn:
-
-- Đừng quá nhanh tin vào lời khen của người khác về ý tưởng của bạn
-- Đừng coi "nếu có tôi sẽ dùng" thành nhu cầu thực tế
-- Đừng để phỏng vấn biến thành bạn đang tìm kiếm sự công nhận
-
-Phỏng vấn thực sự có giá trị, nên cố gắng quay về những thứ này:
-
-- Trải nghiệm thực tế gần nhất của người dùng
-- Họ đang xử lý thế nào hiện tại
-- Họ đã trả chi phí gì
-- Họ không thoải mái rõ ràng ở điểm nào
-
-Khi bạn bắt đầu hỏi như thế, thông tin bạn nhận được tuy đôi khi không nghe hay bằng, nhưng thường hữu dụng hơn.
-Và khi làm sản phẩm, **sự thật hữu dụng, mãi mãi quan trọng hơn lời khích lệ nghe hay.**
-
 <a id="mom-ai"></a>
-## [12. Cách dùng AI giúp bạn làm phỏng vấn người dùng](#top-mom)
+## [11. Dùng AI để chuẩn bị và tổng hợp phỏng vấn](#top-mom)
 
 The Mom Test bản chất vẫn là phương pháp "trò chuyện với người thật", nên AI không thể thay thế phỏng vấn thực tế. Nhưng AI rất phù hợp hỗ trợ bạn trước, trong và sau phỏng vấn, đặc biệt giúp người mới giảm rào cản.
 
-### 12.1 Để AI giúp bạn viết lại câu hỏi "dễ hỏi hỏng"
+### 12.1 Nhờ AI viết lại những câu hỏi dễ trở nên vô ích
 
 Rất nhiều người biết mình không nên hỏi "bạn thấy ý tưởng này của tôi thế nào", nhưng vừa mở miệng vẫn sẽ quay lại câu kiểu này. Bạn có thể đưa câu hỏi chuẩn bị hỏi cho AI trước, để nó giúp bạn viết lại:
 
@@ -445,7 +423,7 @@ Loại output này rất hữu ích, vì nó trực tiếp biến câu hỏi "đ
 Cùng một hướng, đối mặt với các nhóm người khác nhau, trọng tâm phỏng vấn sẽ khác. Ví dụ sinh viên, HR, freelancer, điểm quan tâm hoàn toàn khác. Bạn có thể để AI giúp bạn xuất một bản đề cương cho từng đối tượng:
 
 - Hướng người dùng mới, tập trung hiểu trải nghiệm thực tế gần nhất
-- Hướng người dùng nặng, tập trung hiểu giải pháp thay thế và mức độ đau
+- Với người dùng thường xuyên, tập trung tìm hiểu giải pháp thay thế và mức độ bất tiện
 - Hướng người dùng trả phí, tập trung hiểu đã từng trả chi phí cho việc này chưa
 
 Như vậy khi thực sự trò chuyện bạn sẽ có nhịp điệu hơn, thay vì hỏi cùng một bộ câu hỏi với tất cả mọi người.
@@ -481,6 +459,13 @@ Như vậy, bạn không cần tự biên soạn câu hỏi từ đầu, chuẩn
 ### 12.3 Để AI giúp bạn sắp xếp bản ghi phỏng vấn
 
 Sau khi phỏng vấn xong, vấn đề dễ xuất hiện nhất không phải "không có thông tin", mà là "thông tin quá phân tán". AI rất phù hợp giúp bạn sắp xếp đối thoại phân mảnh thành ghi chú có cấu trúc:
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Volunteer_Molly_conducting_an_interview._Over_200_prospects_still_need_to_be_interviewed._Plus_the_park_needs_help_transcribing_(791cd068-1dd8-b71b-0b4d-48151192c96f).jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/oral-history-interview.jpg" alt="Một cuộc phỏng vấn trực tiếp trong dự án lịch sử truyền miệng của Cục Công viên Quốc gia Hoa Kỳ; trên bàn có dàn câu hỏi, ảnh và tài liệu ghi chép" loading="lazy" />
+  </a>
+  <figcaption><strong>Việc tổng hợp không thể tách rời tài liệu gốc.</strong> Cuộc phỏng vấn lịch sử truyền miệng này đồng thời sử dụng dàn câu hỏi, ảnh tư liệu và ghi chép tại chỗ; phần mô tả dự án còn nhấn mạnh rằng chép lời là bước then chốt để bản ghi trở nên thực sự hữu dụng. AI có thể hỗ trợ chép lời và phân loại, nhưng mọi kết luận vẫn phải truy ngược được về lời nói gốc. Ảnh: U.S. National Park Service, phạm vi công cộng.</figcaption>
+</figure>
 
 ```text
 Dưới đây là bản ghi phỏng vấn của tôi với 3 người dùng.
@@ -575,20 +560,68 @@ Xin giúp tôi tổng kết từ góc nhìn The Mom Test:
 
 Điều này đặc biệt hữu ích cho người mới, vì bạn sẽ nhanh chóng xây dựng độ nhạy "tôi đang thu thập bằng chứng hay đang thu thập lời khích lệ".
 
-## 📚 Bài tập
+## 12. Tóm tắt
+
+- Nhận xét tích cực về một ý tưởng sản phẩm không thể tự nó trở thành bằng chứng về nhu cầu.
+- Phỏng vấn nên ưu tiên những trải nghiệm cụ thể trong quá khứ, thay vì dự đoán hành vi tương lai.
+- Hành vi, thời gian, tiền bạc và giải pháp thay thế hiện tại là những căn cứ chính để đánh giá mức độ nghiêm trọng của vấn đề.
+- AI có thể hỗ trợ chuẩn bị dàn câu hỏi và tổng hợp bản ghi, nhưng không thể thay thế phỏng vấn thực tế.
+
+## 13. Bài tập
 
 <StageAssignmentCard title="Thực hiện một cuộc phỏng vấn không chào bán ý tưởng">
 
-Xin bạn dựa vào nội dung bài viết, hoàn thành bài tập sau:
+  <ol>
+    <li>Chọn một hướng sản phẩm chúng ta đang muốn thực hiện, rồi viết ra năm câu hỏi dự định sẽ hỏi.</li>
+    <li>Loại bỏ những câu giả định như “bạn có dùng không”, thay bằng câu hỏi về trải nghiệm thực tế gần nhất của người đối diện.</li>
+    <li>Tìm một người có thể từng gặp vấn đề này và thực hiện một cuộc phỏng vấn.</li>
+    <li>Ghi lại cách họ đang làm, giải pháp thay thế, chi phí đã bỏ ra và những khó khăn lặp lại.</li>
+  </ol>
 
-1. Chọn một hướng sản phẩm bạn muốn làm gần đây, trước viết ra 5 câu hỏi "dễ hỏi hỏng" bạn sẽ hỏi
-2. Viết lại 5 câu hỏi này thành câu hỏi phù hợp hơn với phong cách The Mom Test
-3. Tìm 3 người dùng tiềm năng, ít nhất hỏi được một lần "lần gần nhất bạn gặp vấn đề này là khi nào"
-4. Sau khi phỏng vấn xong sắp xếp 4 loại thông tin: Hành vi thực tế, giải pháp thay thế, chi phí đã trả, khó khăn xuất hiện lặp đi lặp lại
-
+  <p>Trong khi phỏng vấn, hãy lắng nghe trước và chưa vội giới thiệu giải pháp của mình. Một cuộc phỏng vấn nghiêm túc có giá trị hơn việc thu thập nhiều câu “ý tưởng này hay đấy”.</p>
 </StageAssignmentCard>
 
-## Đọc thêm
+## Tài liệu đọc thêm
 
 - [The Mom Test trang web chính thức](https://momtestbook.com/)
 - [Rob Fitzpatrick: The Mom Test](https://www.robfitz.com/the-mom-test/)
+
+<style scoped>
+.field-figure {
+  margin: 24px 0 32px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+}
+
+.field-figure > a {
+  display: block;
+  background: #f4f4f1;
+}
+
+.field-figure img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
+
+.field-figure figcaption {
+  padding: 13px 16px 15px;
+  border-top: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.field-figure figcaption strong {
+  color: var(--vp-c-text-1);
+}
+
+@media (max-width: 640px) {
+  .field-figure {
+    margin: 20px 0 28px;
+  }
+}
+</style>

@@ -16,7 +16,6 @@ const relatedArticles =
 
 # Thực hành dự án hoàn chỉnh: từ ý tưởng đến sản phẩm
 
-<ProductJourney current="finish" />
 
 ## Bài này sẽ làm gì?
 

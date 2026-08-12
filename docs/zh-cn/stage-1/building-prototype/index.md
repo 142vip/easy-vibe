@@ -14,8 +14,6 @@ const relatedArticles =
 
 # 构建可交互的产品原型
 
-<ProductJourney current="prototype" />
-
 ## 本章导读
 
 <ChapterIntroduction :duration="duration" :tags="['业务分析', '原型设计', 'AI 辅助编程', '多页面应用']" coreOutput="1 个电商素材工作台原型" expectedOutput="可交互的 Web 原型">

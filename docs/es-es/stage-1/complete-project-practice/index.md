@@ -16,7 +16,6 @@ const relatedArticles =
 
 # Proyecto completo: de una idea a una obra terminada
 
-<ProductJourney current="finish" />
 
 ## Qué haremos en este capítulo
 

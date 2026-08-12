@@ -5,54 +5,22 @@ description: '面向零基础读者的 Jobs to Be Done 入门文章。理解用�
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-
-const duration = '约 <strong>1.5 小时</strong>'
 </script>
 
 # Jobs to Be Done 需求理论
 
-<ProductJourney current="understand" />
-
 <a id="top-jtbd"></a>
 
-## 本章导读
+假设我们准备做一个会议纪要工具。从功能出发，很容易列出转写、摘要、待办提取和文档导出。但这些功能并不能回答一个更基本的问题：用户为什么要在会议结束后使用它？
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['JTBD', '用户需求', '产品思维', '需求洞察']"
-  coreOutput="1 条更像真实需求的 JTBD 句子"
-  expectedOutput="能把模糊点子收成一个更具体的用户场景和 MVP 方向"
->
+Jobs to Be Done（JTBD）用“用户想完成的任务”来回答这个问题。它关心具体情境、期望的结果和现有做法，而不是先假定某个功能必然有用。
 
-上一章帮助我们筛出了值得继续了解的方向，但“方向不错”仍然不等于“需求已经清楚”。同一个用户可能在不同场景下遇到不同问题，同一个问题也可能有很多替代方案。
-
-Jobs to Be Done（JTBD）提供了一种观察方式：先不急着列功能，而是理解用户在什么情境下，想把什么事情推进一步。用户选择一个产品，往往不是因为功能名称本身，而是因为它能帮助自己完成这段进展。
-
-本章会把模糊的产品方向整理成一条具体的 JTBD 需求假设。下一章，我们再通过用户访谈检查这条假设是否符合真实情况。
-
-</ChapterIntroduction>
-
-::: info 最小 SOP
-**目的**：看完后，你会更清楚怎样把一个模糊点子，收成一句真正有用户场景的需求，而不是脑子里只有一堆功能名。
-
-**行动项**：写 1 句模糊点子，找 3 个潜在用户聊“最近一次怎么处理”，再整理成 1 条 JTBD 句子。
-
-**结果**：你会得到一个更清楚的需求假设，知道第一版该先解决什么。
-
-**关键词跳转**：[JTBD 是什么](#jtbd-what) · [一句话公式](#jtbd-formula) · [AI 怎么帮你](#jtbd-ai)
-:::
-
-## 你将学到以下内容
-
-1. 什么是 Jobs to Be Done，为什么它比“功能脑暴”更接近真实需求
-2. 如何区分“用户说想要的功能”和“用户真正想完成的事”
-3. 怎样用一套简单模板，把一个模糊点子拆成场景、触发、障碍和成功标准
-4. 如何把 JTBD 用在 AI 产品、访谈提问和提示词整理里
+本章先介绍 JTBD 的基本概念，再说明如何把功能描述改写为可验证的需求假设。
 
 <a id="jtbd-what"></a>
-## [1. 什么是 Jobs to Be Done](#top-jtbd)
+## [1. 从功能转向任务](#top-jtbd)
 
-Jobs to Be Done 常被简称为 **JTBD**。它背后的核心想法，和 Clayton Christensen 团队推广的那句经典表达有关：**用户会“雇用”某个产品来完成一件事。**
+Jobs to Be Done 常简写为 **JTBD**。它把产品看作用户用来完成某项任务的工具。
 
 这里的“事”，不是待办清单里那种表面动作，而是用户希望自己状态发生的一种 **进展** 。比如：
 
@@ -60,13 +28,20 @@ Jobs to Be Done 常被简称为 **JTBD**。它背后的核心想法，和 Clayto
 - 不是“我要一个记账 App”，而是“我想知道钱到底花去哪了，好让我月底别再焦虑”
 - 不是“我要一个简历优化器”，而是“我想更有把握地投出一份像样的简历，不想每次投递都怀疑自己写得太差”
 
-所以，**JTBD 关注的不是产品长什么样，而是用户为什么在这个时刻需要它。**
+因此，JTBD 区分了产品的实现方式和用户需要完成的任务。
 
 这也是为什么很多看似不同的产品，实际上在竞争同一个 job。用户想“在上班路上不那么无聊”，可雇用的对象可能是短视频、播客、游戏、聊天，甚至打瞌睡。用户想“快速搞懂一份很长的 PDF”，可雇用的对象可能是 AI 摘要工具、实习生、同事、自己硬着头皮看，或者干脆先不看。
 
-一旦你用这种视角看问题，你会发现自己真正的竞争对手，往往并不只是“另一个长得像你的 App”，而是 **用户当前所有可接受的替代方案** 。
+因而，一个产品的竞争对手不一定是同类应用，也包括用户已经在采用的其他做法。
 
-## 2. JTBD 和用户画像、功能列表有什么不同
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/customer-journey-map.png" alt="一张顾客旅程图，按阶段记录用户需要、活动、使用物、感受和产品机会" loading="lazy" />
+  </a>
+  <figcaption><strong>任务发生在一段过程里。</strong>这张顾客旅程图把使用一个在线工具的过程拆成若干阶段，并分别记录用户需要、实际活动、正在使用的工具、感受和机会。JTBD 研究也应沿着这条过程追问，而不是只问用户喜欢哪项功能。作者：Advenio；图源：<a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer">Wikimedia Commons</a>，<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>。</figcaption>
+</figure>
+
+## 2. 与用户画像和功能列表的区别
 
 很多新手刚开始做需求分析时，会先写用户画像：25 岁，女生，一线城市，白领，喜欢效率工具，愿意尝试新产品。这样的信息不能说完全没用，但它通常 **不够解释一个人为什么会在此刻采取行动。**
 
@@ -88,45 +63,44 @@ JTBD 更关心的是下面这些问题：
 
 很多时候，**功能只是 job 的一种临时翻译** 。如果你只收集功能，很容易把产品做成“用户说什么就堆什么”；如果你能看见背后的 job，才更有机会做出真正顺手、真正有竞争力的方案。
 
-## 3. 一个零基础也能理解的例子
+## 3. 例子：会议纪要
 
-先不要急着想复杂的 AI 产品，我们从一个生活例子开始。
-
-假设有人早上出门前总来不及吃早餐，于是经常在地铁口买一个三明治和咖啡。表面上看，他“购买”的是早餐；但如果用 JTBD 看，他真正想完成的事可能是：
-
-- 在赶时间的早晨，用最省脑力的方式解决一顿饭
-- 让自己在到公司前不至于饿得发慌
-- 不因为吃早餐耽误通勤节奏
-
-这时候，用户雇用的不是“某个固定品牌的三明治”，而是一个能帮他把早晨顺利推进下去的解决方案。如果隔壁便利店更快、更近、更稳定，他可能立刻换掉原来的选择。
-
-把这个逻辑搬到 AI 产品里就更明显了。
-
-比如你想做一个“AI 会议纪要工具”。如果只停在功能层面，你会很容易开始想：
+假设我们准备开发一个会议纪要工具。如果从功能开始，可以列出：
 
 - 要不要支持上传音频
 - 要不要接入说话人分离
 - 要不要导出 Markdown
 - 要不要自动生成待办
 
-这些都没错，但还不够。用 JTBD 再问一层，用户真正想完成的可能是：
+这些都是可能的实现方式。但是，用户任务可能是：
 
 - 我想在会后 10 分钟内，把讨论结果同步给没参会的人
 - 我想把待办、责任人和截止时间提干净，别让团队靠记忆协作
 - 我想减少重复整理会议内容的时间，把精力留给决策和推进
 
-一旦 job 被说清楚，很多功能优先级就会自动浮出来。第一版最重要的也许不是“支持 12 种导出格式”，而是：
+由此可以判断，第一版的重点可能不是“支持 12 种导出格式”，而是：
 
 - 纪要结构要足够清楚
 - 待办提取要稳定
 - 分享链接要方便
 - 输出结果要让人敢直接转发给团队
 
-这就是 JTBD 的价值：**它能帮助你从“我要堆哪些能力”回到“我要帮用户推进什么进展”。**
+产品功能的取舍因此可以回到用户任务上进行。
 
-## 4. 一个好用的 JTBD 模板
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Taking_Notes.JPG" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/meeting-note-taking.jpg" alt="一场真实会议中，参与者同时使用电脑和纸笔做记录" loading="lazy" />
+  </a>
+  <figcaption><strong>先看现场，再想功能。</strong>会议里已经有人用电脑、纸笔和自己的记录习惯完成任务。要做会议纪要产品，先弄清他们在记什么、会后还要怎么整理，而不是先假定“录音转文字”就是答案。照片：Unclefeet，<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>。</figcaption>
+</figure>
 
-如果你是零基础，可以先不要试图把 JTBD 想得很学术。先抓住最实用的 5 个要素就够了。
+下面的对照给出了三个场景。切换场景时，注意“产品功能”和“用户任务”分别描述了什么。
+
+<JtbdProgressLab />
+
+## 4. JTBD 的五个要素
+
+JTBD 描述通常包含五个要素：场景、触发、期望的进展、当前替代方案和成功标准。
 
 ### 4.1 场景
 
@@ -174,6 +148,13 @@ JTBD 更关心的是下面这些问题：
 
 谁是替代方案，谁就是你的真实竞争环境。
 
+<figure class="field-figure field-figure--narrow">
+  <a href="https://commons.wikimedia.org/wiki/File:Scrum_task_board.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/physical-task-board.jpg" alt="办公室中的实体任务看板，便签在待办、进行中和测试等栏目间移动" loading="lazy" />
+  </a>
+  <figcaption><strong>替代方案不一定是另一个 App。</strong>这块实体任务板用最普通的便签和胶带，就完成了“让进度可见”的任务。做竞品调研时，也要把这类人工流程、表格和协作习惯算进去。照片：Logan Ingalls，<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>。</figcaption>
+</figure>
+
 ### 4.5 成功标准
 
 事情怎样才算真的被解决？
@@ -186,7 +167,7 @@ JTBD 更关心的是下面这些问题：
 如果你连“用户怎么判断值不值”都说不清，那这个方向大概率还没有收敛好。
 
 <a id="jtbd-formula"></a>
-## [5. 直接套用的一句话公式](#top-jtbd)
+## [5. JTBD 句式](#top-jtbd)
 
 当你想梳理一个产品方向时，可以先套这个非常实用的句式：
 
@@ -273,6 +254,13 @@ JTBD 更适合问下面这些问题：
 
 这种问法有个好处：它会把对话拉回真实经历，而不是停留在想象中的偏好。
 
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/intel-context-observation.jpg" alt="Intel 用户体验研究中，一名参与者直接用手触摸笔记本屏幕" loading="lazy" />
+  </a>
+  <figcaption><strong>行为有时比回答更具体。</strong>Intel 在巴西、中国、意大利和美国进行笔记本触控研究时，研究者观察到参与者会把屏幕向后压，并用双手拇指或不同姿势操作屏幕。这类现场动作很难靠“你想要什么功能”问出来，却能揭示用户真正采用产品的方式。照片：<a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer">Intel Free Press / Wikimedia Commons</a>，<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>。</figcaption>
+</figure>
+
 ## 9. 用 AI 帮你做 JTBD 拆解
 
 JTBD 本身不是 AI 发明的，但 AI 很适合帮你整理和提炼 JTBD。
@@ -325,25 +313,10 @@ JTBD 本身不是 AI 发明的，但 AI 很适合帮你整理和提炼 JTBD。
 
 ### 10.4 一开始就想做完整平台
 
-JTBD 的正确打开方式，通常不是“我来做一个包打天下的大平台”，而是先盯住一个场景里最关键的一步，把它做到非常顺手。
-
-## 11. 小结
-
-Jobs to Be Done 最有价值的地方，不是给你一个新名词，而是帮你换一个观察角度：**不要只盯着产品功能，而要盯着用户想把什么事情推进到下一步。**
-
-当你开始反复问自己：
-
-- 用户是在什么场景下雇用这个产品的
-- 他到底卡在了哪里
-- 现在正用什么办法硬撑
-- 事情解决后，状态会发生什么变化
-
-你会发现，很多原本模糊的点子一下子变清楚了，很多原本很花哨的功能也一下子没那么重要了。
-
-做产品，尤其是做 AI 产品，最怕的是一开始就沉迷能力展示。JTBD 能帮你把注意力拉回到真正重要的地方：**用户为什么需要你，以及你到底在帮他完成什么进展。**
+JTBD 不要求一开始就覆盖完整流程。通常应先选择一个具体场景，并确定其中优先验证的一步。
 
 <a id="jtbd-ai"></a>
-## [12. 如何利用 AI 帮你实践 JTBD](#top-jtbd)
+## [11. 使用 AI 整理 JTBD 材料](#top-jtbd)
 
 JTBD 不是 AI 发明的，但 AI 很适合在这套方法里当你的研究助手、整理助手和对照助手。关键是：**让 AI 帮你整理和扩展，而不是替你臆测用户。**
 
@@ -481,7 +454,14 @@ AI 可能输出：
 
 这样做的好处是，你能更快发现自己是在看需求，还是只是在看自己喜欢的方案。
 
-## 📚 本章作业
+## 12. 小结
+
+- JTBD 将分析对象从产品功能转向用户想完成的任务。
+- 一条 JTBD 假设应说明场景、触发、期望进展、当前替代方案和成功标准。
+- 产品功能是完成任务的一种方案，不应与用户任务混为一谈。
+- JTBD 是需求假设，还需要通过用户访谈和行为证据检查。
+
+## 13. 练习
 
 <StageAssignmentCard title="写清用户真正想完成的事">
 
@@ -501,3 +481,48 @@ AI 可能输出：
 - [Harvard Business School Online: What Is Jobs to Be Done?](https://online.hbs.edu/blog/post/jobs-to-be-done)
 - [Intercom: Jobs-to-be-Done: A framework for customer needs](https://www.intercom.com/blog/jobs-to-be-done-framework/)
 - [Mural: Jobs to Be Done framework guide](https://www.mural.co/blog/jobs-to-be-done-framework)
+
+<style scoped>
+.field-figure {
+  margin: 24px 0 32px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+}
+
+.field-figure > a {
+  display: block;
+  background: #f4f4f1;
+}
+
+.field-figure img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
+
+.field-figure--narrow img {
+  max-height: 720px;
+  object-fit: contain;
+}
+
+.field-figure figcaption {
+  padding: 13px 16px 15px;
+  border-top: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.field-figure figcaption strong {
+  color: var(--vp-c-text-1);
+}
+
+@media (max-width: 640px) {
+  .field-figure {
+    margin: 20px 0 28px;
+  }
+}
+</style>

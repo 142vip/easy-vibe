@@ -16,7 +16,6 @@ const relatedArticles =
 
 # プロジェクト実践：アイデアを作品に仕上げる
 
-<ProductJourney current="finish" />
 
 ## この章で行うこと
 

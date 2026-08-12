@@ -15,7 +15,6 @@ const relatedArticles =
 
 # Add AI Capabilities to a Prototype
 
-<ProductJourney current="ai" />
 
 ## Chapter overview
 

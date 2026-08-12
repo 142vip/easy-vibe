@@ -9,7 +9,6 @@ const duration = 'About <strong>20 minutes</strong>'
 
 # Where Creative Ideas Come From
 
-<ProductJourney current="find" />
 
 ## What this lesson is for
 

@@ -5,59 +5,20 @@ description: 'Ein Einf&uuml;hrungsartikel zu The Mom Test f&uuml;r Einsteiger. L
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = 'Etwa <strong>1,5 Stunden</strong>'
 </script>
 
-# The Mom Test: Wie man Bed&uuml;rfnisse durch Nutzerinterviews validiert
+# The Mom Test: Nutzerinterviews
 
 <a id="top-mom"></a>
 
-## Kapitel&uuml;bersicht
+In Nutzerinterviews h&ouml;ren wir leicht Zustimmung: „Klingt n&uuml;tzlich“ oder „Das w&uuml;rde ich verwenden“. Solche Aussagen sind freundlich, liefern aber kaum belastbare Hinweise auf tats&auml;chliches Verhalten.
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['Nutzerinterviews', 'Bedarfsvalidierung', 'Nutzerforschung', 'Produktrecherche']"
-  coreOutput="1 Satz Interview-Fragen, die echte Informationen zutage f&ouml;rdern"
-  expectedOutput="Nutzerh&ouml;flichkeit nicht mehr als Validierung betrachten und stattdessen echtes Verhalten zur Richtungsbewertung nutzen"
->
+The Mom Test ist eine Methode, Fragen so zu stellen, dass sie weniger leicht zu falschen positiven Signalen f&uuml;hren. Im Mittelpunkt stehen vergangene Erlebnisse, konkrete Handlungen, bereits investierte Zeit oder Kosten und bestehende Alternativen.
 
-Viele denken beim ersten Mal, wenn sie eine Produktrecherche durchf&uuml;hren, das Wichtigste sei "mit jemandem zu sprechen". Also fragen sie Freunde, Kollegen oder sogar Familienmitglieder:
-
-- Was h&auml;ltst du von meiner Idee?
-- W&uuml;rdest du ein solches Produkt nutzen, wenn es g&auml;be?
-- Klingt diese Funktion nicht ganz gut?
-
-Die anderen geben dann oft sehr ermutigendes Feedback:
-
-- Das ist toll
-- Klingt sehr n&uuml;tzlich
-- Ich denke, du k&ouml;nntest es ausprobieren
-
-Das Problem ist, dass diese Antworten Ihnen in der Regel nicht bei der Entscheidungsfindung helfen. Sie sind eher H&ouml;flichkeit, Unterst&uuml;tzung oder eine nat&uuml;rliche Reaktion, um Ihnen nicht den Wind aus den Segeln zu nehmen. Sie denken, Sie h&auml;tten "Marktvalidierung" erhalten, aber tats&auml;chlich haben Sie nur eine Reihe von schwer verwertbaren Trostpflastern gesammelt.
-
-The Mom Test wurde genau entwickelt, um dieses Problem zu l&ouml;sen. Es erinnert uns: **Nutzer wollen Sie nicht absichtlich t&auml;uschen, sondern Ihre Frageweise f&uuml;hrt sie nat&uuml;rlich zu sch&ouml;nen, aber nutzlosen Antworten.**
-
-</ChapterIntroduction>
-
-::: info Minimales SOP
-**Ziel**: Nach dem Lesen wissen Sie besser, wie Sie mit Nutzern sprechen, ohne nur "klingt gut" zu h&ouml;ren, sondern wirklich Informationen zu erhalten, die Ihnen bei der Richtungsbewertung helfen.
-
-**Aktionspunkte**: &Auml;ndern Sie Ihre urspr&uuml;nglich geplanten 5 Fragen und priorisieren Sie "Wann war das letzte Mal" und "Wie haben Sie das damals gel&ouml;st".
-
-**Ergebnis**: Sie k&ouml;nnen leichter unterscheiden, was Meinungen sind und was wirklich evidenzbasierte Erkenntnisse.
-
-**Stichwortspr&uuml;nge**: [Was ist The Mom Test](#mom-what) &middot; [Drei Kernprinzipien](#mom-principles) &middot; [Wie AI Ihnen hilft](#mom-ai)
-:::
-
-## Was Sie lernen werden
-
-1. Welches Problem The Mom Test eigentlich l&ouml;st und warum viele "Nutzerbefragungen" keine echten Informationen liefern
-2. Die wichtigsten Prinzipien dieser Methode: Weniger nach Meinungen fragen, mehr nach Verhalten; weniger nach Hypothesen, mehr nach Fakten
-3. Wie man eine Frage, die leicht zu falsch-positivem Feedback f&uuml;hrt, in eine wertvollere Interview-Frage umschreibt
-4. Wie man The Mom Test mit JTBD, Bedarfsvalidierung und MVP-Bewertung verkn&uuml;pft
+Dieses Kapitel erl&auml;utert drei Grundprinzipien, einen einfachen Gespr&auml;chsablauf und eine direkt nutzbare Fragenliste. Ziel ist nicht, Zustimmung zu sammeln, sondern Hinweise zu gewinnen, anhand derer sich eine Produktrichtung beurteilen l&auml;sst.
 
 <a id="mom-what"></a>
-## [1. Was ist The Mom Test &uuml;berhaupt?](#top-mom)
+## [1. Warum Interviews falsch positive Signale erzeugen](#top-mom)
 
 The Mom Test stammt aus dem gleichnamigen Buch von Rob Fitzpatrick. Der Name klingt wie ein Witz, trifft aber den Nagel auf den Kopf:
 
@@ -77,7 +38,7 @@ Also geht es bei The Mom Test nie um "Frag deine Mama nicht", sondern:
 
 Die Methode will Ihnen beibringen, wie Sie durch Gespr&auml;che Informationen erhalten, die n&auml;her an echten Bed&uuml;rfnissen sind, anstatt eine Sammlung von sich gut anf&uuml;hlenden Kommentaren zu sammeln.
 
-## 2. Welches Kernproblem es l&ouml;st
+## 2. Meinung und Verhaltensbeleg
 
 The Mom Test l&ouml;st haupts&auml;chlich eine sehr h&auml;ufige kognitive T&auml;uschung:
 
@@ -155,6 +116,13 @@ Bessere Fragen:
 
 Die bestehenden Alternativl&ouml;sungen zu verstehen, ist oft wichtiger als direkt zu fragen, "was wollen Sie".
 
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/user-interview-session.jpg" alt="Interviewerin im Gespr&auml;ch mit einer Teilnehmerin; auf dem Tisch liegen Computer und Notizmaterial" loading="lazy" />
+  </a>
+  <figcaption><strong>Im Mittelpunkt steht die andere Person, nicht der Leitfaden.</strong> Die Interviewerin richtet ihre Aufmerksamkeit auf die Erz&auml;hlung; Computer und Papier dienen nur der Aufzeichnung. Konkreten Hinweisen wie „letzte Woche“, „danach musste ich“ oder „daf&uuml;r habe ich schon bezahlt“ sollte man weiter folgen. Foto: <a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer">ManonB2018 / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
 ## 4. Warum Menschen Ihnen immer sch&ouml;ne, aber nutzlose Antworten geben
 
 Wenn Sie dies verstehen, werden Sie bei Interviews weniger Fehleinsch&auml;tzungen machen.
@@ -208,6 +176,8 @@ Das Wichtigste an dieser Tabelle ist nicht der konkrete Satz, sondern die Richtu
 - Von Meinungen zu Fakten
 - Von der Zukunft zur Vergangenheit
 - Von Ihrer L&ouml;sung zum Problem des Nutzers
+
+<InterviewEvidenceLab />
 
 ## 6. Eine Interview-Struktur, die Einsteiger sofort nutzen k&ouml;nnen
 
@@ -318,6 +288,13 @@ So verbinden sich die Methoden:
 - JTBD hilft Ihnen, die Bedarfshypothese zu definieren
 - The Mom Test hilft Ihnen, die Hypothese durch Interviews zu validieren
 
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/usability-testing-session.jpg" alt="Ein Teilnehmer testet bei einem DevCamp eine neue Übersetzungsanwendung" loading="lazy" />
+  </a>
+  <figcaption><strong>Nach „Ich w&uuml;rde es nutzen“ folgt die Beobachtung.</strong> Bei diesem Usability-Test bearbeitet ein Teilnehmer eine echte Aufgabe am Computer. Interviews pr&uuml;fen, ob das Problem existiert; die Nutzung eines Prototyps zeigt, ob die L&ouml;sung bei der Aufgabe hilft. Foto: Amire80 / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption>
+</figure>
+
 ## 9. Die h&auml;ufigsten Fehler bei Nutzerinterviews
 
 ### 9.1 Das Interview zur Produktvorstellung machen
@@ -345,6 +322,13 @@ Wenn Sie nach dem Gespr&auml;ch die Informationen einfach liegen lassen, werden 
 - Aktuelle Alternativl&ouml;sungen
 - Bereits aufgewendete Kosten
 - Ihre eigenen neuen Einsch&auml;tzungen
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Wikipedia-Affinity.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/wikipedia-affinity-synthesis.jpg" alt="Interview- und Beobachtungsnotizen werden in einem Affinitätsdiagramm nach Themen gruppiert" loading="lazy" />
+  </a>
+  <figcaption><strong>Nach dem Interview liegt zun&auml;chst nur Rohmaterial vor.</strong> Im Affinit&auml;tsdiagramm werden einzelne Beobachtungen nach wiederkehrenden Themen geordnet. So entstehen Muster &uuml;ber mehrere Gespr&auml;che hinweg, statt nur ein allgemeiner Eindruck. Foto: Parul Vora / Wikimedia Foundation, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption>
+</figure>
 
 ## 10. Eine Fragenliste, die Sie direkt kopieren k&ouml;nnen
 
@@ -482,6 +466,13 @@ So m&uuml;ssen Sie nicht von null anfangen und die Interview-Vorbereitung wird d
 
 Nach dem Interview ist das h&auml;ufigste Problem nicht "keine Informationen", sondern "Informationen sind zu verstreut". AI eignet sich hervorragend, um fragmentierte Gespr&auml;che in strukturierte Notizen zu ordnen:
 
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Volunteer_Molly_conducting_an_interview._Over_200_prospects_still_need_to_be_interviewed._Plus_the_park_needs_help_transcribing_(791cd068-1dd8-b71b-0b4d-48151192c96f).jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/mom-test/oral-history-interview.jpg" alt="Persönliches Oral-History-Interview mit Leitfaden, historischen Fotos und Notizen auf dem Tisch" loading="lazy" />
+  </a>
+  <figcaption><strong>Die Auswertung muss auf das Ausgangsmaterial zur&uuml;ckf&uuml;hren.</strong> Leitfaden, Fotos und Notizen bleiben in diesem Oral-History-Interview gemeinsam sichtbar. AI kann beim Transkribieren und Gruppieren helfen; jede Schlussfolgerung sollte sich weiterhin mit Originalaussagen belegen lassen. Foto: U.S. National Park Service, gemeinfrei.</figcaption>
+</figure>
+
 ```text
 Hier sind meine Interview-Aufzeichnungen mit 3 Nutzern.
 Bitte ordne sie aus der Perspektive von The Mom Test:
@@ -592,3 +583,11 @@ Bitte bearbeiten Sie die folgenden Aufgaben basierend auf dem obigen Inhalt:
 
 - [The Mom Test Offizielle Website](https://momtestbook.com/)
 - [Rob Fitzpatrick: The Mom Test](https://www.robfitz.com/the-mom-test/)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+</style>

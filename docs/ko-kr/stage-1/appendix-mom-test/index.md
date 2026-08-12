@@ -5,59 +5,26 @@ description: '제로 베이스 독자를 위한 The Mom Test 입문 글입니다
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = '약 <strong>1.5시간</strong>'
 </script>
 
 # The Mom Test: 사용자 인터뷰로 수요를 검증하는 방법
 
 <a id="top-mom"></a>
 
-## 이 장의 가이드
+앞 장에서 만든 JTBD 문장은 여전히 가설입니다. 인터뷰를 통해 이 문제가 최근 실제로 일어났는지, 사용자가 이미 시간이나 돈, 노력을 들였는지 확인해야 합니다.
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['사용자 인터뷰', '수요 검증', '사용자 조사', '제품 조사']"
-  coreOutput="실제 정보를 더 잘 끌어낼 수 있는 인터뷰 질문 세트 1개"
-  expectedOutput="사용자의 예의상 응원을 검증으로 받아들이지 않고, 실제 행동으로 방향을 판단하게 됩니다"
->
+간단해 보이지만 아이디어가 마음에 드는지 직접 물으면 대개 정중하고 막연한 답을 얻게 됩니다.
 
-많은 사람이 처음 제품 조사를 할 때, 가장 중요한 것이 "누군가와 이야기하는 것"이라고 생각합니다. 그래서 친구, 동료, 심지어 가족에게 물어봅니다:
+- 이 아이디어 어때요?
+- 이런 제품이 있으면 쓸 것 같아요?
+- AI가 자동으로 해 주면 더 좋지 않을까요?
 
-- 내 이 아이디어 어때?
-- 이런 제품이 있다면, 쓸 것 같아?
-- 이 기능 꽤 괜찮지 않아?
+이런 답이 틀린 것은 아니지만 제품 판단의 근거로 쓰기는 어렵습니다. The Mom Test는 미래의 의향을 덜 묻고, 과거에 무슨 일이 있었는지, 사용자가 어떻게 처리했는지, 이미 어떤 비용을 치렀는지를 더 묻도록 안내합니다.
 
-상대방도 보통 매우 고무적인 피드백을 줍니다:
-
-- 꽤 좋은데
-- 쓸모 있어 보여
-- 한번 해 보면 좋을 것 같아
-
-문제는, 이런 대답이 보통 판단에 도움이 되지 않는다는 것입니다. 그것들은 예의, 지지, 또는 당장 기분을 상하게 하고 싶지 않은 자연스러운 반응에 더 가깝습니다. 자신이 "시장 검증"을 얻었다고 생각하지만, 사실은 판단에 사용하기 어려운 위안을 모았을 뿐입니다.
-
-The Mom Test 방법론은 바로 이 문제를 해결하기 위해 만들어졌습니다. 이것은 우리에게 상기시킵니다: **사용자가 일부러 거짓말을 하는 것이 아니라, 질문하는 방식 자체가 상대를 듣기 좋지만 쓸모없는 대답으로 자연스럽게 유도하고 있는 것입니다.**
-
-</ChapterIntroduction>
-
-::: info 최소 SOP
-**목적**: 이 글을 읽은 후, 사용자와 어떻게 대화해야 "꽤 좋아 보인다"만 듣지 않고, 정말로 방향을 판단하는 데 도움이 되는 정보를 끌어낼 수 있는지 더 명확히 알게 됩니다.
-
-**실행 항목**: 원래 물어보려고 했던 5개의 질문을 바꾸고, "최근에 언제 일어났는지", "그때 어떻게 처리했는지"를 우선으로 물어보세요.
-
-**결과**: 어떤 것이 의견이고, 어떤 것이 판단을 뒷받침할 수 있는 진짜 증거인지 더 쉽게 구분할 수 있게 됩니다.
-
-**키워드 바로가기**: [The Mom Test란](#mom-what) · [세 가지 핵심 원칙](#mom-principles) · [AI가 도와주는 방법](#mom-ai)
-:::
-
-## 배울 내용
-
-1. The Mom Test가 정확히 무엇을 해결하는지, 왜 많은 "사용자 조사"가 사실 실제 정보를 조사하지 못했는지
-2. 이 방법의 가장 핵심적인 몇 가지 원칙: 의견은 적게 묻고, 행동은 많이 묻기; 가정은 적게 묻고, 사실은 많이 묻기
-3. 가양성 피드백을 얻기 쉬운 질문을 어떻게 더 가치 있는 인터뷰 질문으로 바꾸는지
-4. The Mom Test를 JTBD, 수요 검증, MVP 판단과 어떻게 연결해서 사용하는지
+이 장에서는 이런 ‘거짓 양성’ 피드백을 피하고, 의견과 미래의 가정에서 과거 행동, 현재 대안, 이미 지불한 비용으로 초점을 옮기는 방법을 다룹니다.
 
 <a id="mom-what"></a>
-## [1. The Mom Test란 무엇인가](#top-mom)
+## [1. 인터뷰는 왜 거짓 양성을 만드는가](#top-mom)
 
 The Mom Test는 Rob Fitzpatrick의 동명의 책에서 유래했습니다. 이름은 농담처럼 들리지만, 핵심은 매우 정확합니다:
 
@@ -155,6 +122,8 @@ The Mom Test가 주로 해결하는 것은 매우 흔한 인지적 착각입니�
 
 기존 대체 솔루션을 파악하는 것이 "무엇을 원하시나요"를 직접 묻는 것보다 보통 더 중요합니다.
 
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/user-interview-session.jpg" alt="인터뷰어가 참가자와 대화하는 실제 사용자 인터뷰 현장" loading="lazy" /></a><figcaption><strong>인터뷰의 중심은 질문지가 아니라 상대방입니다.</strong> “지난주”, “결국 할 수 없이”, “이미 비용을 썼다” 같은 구체적인 단서가 나오면 경험을 따라 더 물어보세요. 사진: <a href="https://commons.wikimedia.org/wiki/File:Participants_-_Interview.jpg" target="_blank" rel="noreferrer">ManonB2018 / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption></figure>
+
 ## 4. 왜 사람들은 항상 듣기 좋지만 쓸모없는 대답을 줄까
 
 이것을 이해하면, 인터뷰에서 오해가 많이 줄어듭니다.
@@ -209,7 +178,11 @@ The Mom Test가 주로 해결하는 것은 매우 흔한 인지적 착각입니�
 - 미래에서 과거로
 - 당신의 솔루션에서 사용자의 문제로
 
-## 6. 제로 베이스도 바로 사용할 수 있는 인터뷰 리듬
+아래 연습에는 흔한 인터뷰 문장 여섯 개가 나옵니다. 쓸 수 있는 증거와 단순한 의견을 구분해 보세요.
+
+<InterviewEvidenceLab />
+
+## 6. 인터뷰의 기본 순서
 
 지금 당장 누군가와 이야기하러 가고 싶다면, 다음 순서대로 진행하세요.
 
@@ -320,6 +293,8 @@ The Mom Test 스타일의 질문으로 검증할 수 있습니다:
 
 ## 9. 초보자가 사용자 인터뷰를 할 때 가장 흔한 오해
 
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/usability-testing-session.jpg" alt="참가자가 번역 애플리케이션을 직접 조작하는 사용성 테스트" loading="lazy" /></a><figcaption><strong>‘쓰겠다’ 다음에는 ‘쓸 수 있는지’를 봅니다.</strong> 인터뷰는 문제가 존재하는지 확인하고, 조작 테스트는 해결책이 실제로 과업을 돕는지 확인합니다. 사진: <a href="https://commons.wikimedia.org/wiki/File:03-Pau-DevCamp-usability-testing.jpg" target="_blank" rel="noreferrer">Amire80</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption></figure>
+
 ### 9.1 인터뷰를 제품 소개회로 만듦
 
 자신의 아이디어를 너무 많이 이야기하면, 상대가 실제 상황을 알려주는 대신 당신에게 협조하기 시작합니다.
@@ -347,6 +322,8 @@ The Mom Test 스타일의 질문으로 검증할 수 있습니다:
 - 자신의 새로운 판단
 
 ## 10. 바로 복사해서 사용할 수 있는 질문 목록
+
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Wikipedia-Affinity.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/wikipedia-affinity-synthesis.jpg" alt="인터뷰와 관찰 증거를 주제별로 군집화한 친화도 지도" loading="lazy" /></a><figcaption><strong>인터뷰가 끝나면 원재료가 준비된 것입니다.</strong> 증거를 한 조각씩 나눈 뒤 반복 주제로 묶어야 여러 인터뷰에 걸친 패턴을 찾을 수 있습니다. 사진: Parul Vora / Wikimedia Foundation, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption></figure>
 
 빠르게 시작하고 싶다면, 여기에 충분히 범용적인 질문 세트가 있습니다.
 
@@ -376,7 +353,9 @@ The Mom Test 스타일의 질문으로 검증할 수 있습니다:
 
 주의: 이 마무리 질문은 물어볼 수 있지만, 뒤에 두는 것이 좋습니다. 왜냐하면 앞에서는 사실을 먼저 얻어야 하고, 소원은 나중에 얻어도 되기 때문입니다.
 
-## 11. 요약
+## 11. AI로 인터뷰 준비하고 정리하기
+
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Volunteer_Molly_conducting_an_interview._Over_200_prospects_still_need_to_be_interviewed._Plus_the_park_needs_help_transcribing_(791cd068-1dd8-b71b-0b4d-48151192c96f).jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/oral-history-interview.jpg" alt="자료와 기록을 놓고 진행하는 대면 구술사 인터뷰" loading="lazy" /></a><figcaption><strong>정리는 원자료에서 떨어져서는 안 됩니다.</strong> AI는 전사와 분류를 도울 수 있지만 모든 결론은 참가자의 원래 말로 거슬러 올라갈 수 있어야 합니다. 사진: U.S. National Park Service, 퍼블릭 도메인.</figcaption></figure>
 
 The Mom Test의 가장 중요한 기여는 "더 잘 채팅하는" 기술을 주는 것이 아니라, 더 명확한 판단 방식을 구축하도록 돕는 것입니다:
 
@@ -395,7 +374,6 @@ The Mom Test의 가장 중요한 기여는 "더 잘 채팅하는" 기술을 주�
 제품을 만들 때, **유용한 진실은 항상 듣기 좋은 응원보다 더 중요합니다.**
 
 <a id="mom-ai"></a>
-## [12. AI를 활용해 사용자 인터뷰 하는 방법](#top-mom)
 
 The Mom Test는 본질적으로 "실제 사람과 대화하는" 방법이므로, AI가 실제 인터뷰를 대체할 수는 없습니다. 하지만 AI는 인터뷰 전, 중, 후에 보조 역할을 하기에 매우 적합하며, 특히 초보자의 진입 장벽을 낮추는 데 도움이 됩니다.
 
@@ -575,7 +553,14 @@ The Mom Test 관점에서 복기해 주세요:
 
 이것은 초보자에게 특히 도움이 됩니다. 왜냐하면 "내가 증거를 수집하고 있는지, 아니면 응원을 수집하고 있는지"에 대한 감각을 더 빨리 구축할 수 있기 때문입니다.
 
-## 📚 과제
+## 12. 요약
+
+- 제품 아이디어에 대한 긍정 평가는 그 자체로 요구의 증거가 아닙니다.
+- 미래 행동의 예측보다 과거의 구체적인 경험을 먼저 물어야 합니다.
+- 행동, 시간, 돈, 현재 대안은 문제의 강도를 판단하는 핵심 증거입니다.
+- AI는 질문지 준비와 기록 정리를 도울 수 있지만 실제 인터뷰를 대신할 수 없습니다.
+
+## 13. 연습
 
 <StageAssignmentCard title="아이디어를 권하지 않는 사용자 인터뷰 해보기">
 
@@ -592,3 +577,12 @@ The Mom Test 관점에서 복기해 주세요:
 
 - [The Mom Test 공식 웹사이트](https://momtestbook.com/)
 - [Rob Fitzpatrick: The Mom Test](https://www.robfitz.com/the-mom-test/)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } }
+</style>

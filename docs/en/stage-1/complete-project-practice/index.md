@@ -16,7 +16,6 @@ const relatedArticles =
 
 # Complete Project Practice: From an Idea to a Finished Work
 
-<ProductJourney current="finish" />
 
 ## What this chapter is for
 

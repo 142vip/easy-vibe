@@ -5,51 +5,20 @@ description: 'A beginner-friendly introduction to Jobs to Be Done. Learn how to 
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = 'About <strong>1.5 hours</strong>'
 </script>
 
 # Use Jobs to Be Done to Find What Users Really Want to Get Done
 
 <a id="top-jtbd"></a>
 
-## Introduction
+Suppose we are planning a meeting-notes tool. Starting from features, it is easy to list transcription, summaries, action-item extraction, and document export. Yet those features do not answer a more basic question: why would someone use the tool after a meeting?
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['JTBD', 'User Needs', 'Product Thinking', 'Discovery']"
-  coreOutput="1 JTBD statement that feels closer to a real user need"
-  expectedOutput="Turn a vague idea into a clearer user scenario and a more grounded MVP direction"
->
+**Jobs to Be Done (JTBD)** answers this question by looking at the task the user is trying to complete. It focuses on the specific situation, the desired result, and the current way of working instead of assuming that a particular feature must be useful.
 
-Many beginners start product thinking from the wrong place: features. You see another product with AI summaries, tags, agents, or workflows, and your first instinct is to ask, “What features should I add too?”
-
-But users rarely choose a product because a feature name sounds cool. Most of the time, they are trying to make progress in a specific situation, and they temporarily “hire” a tool to help them move forward.
-
-That is the core reminder behind **Jobs to Be Done (JTBD)**: users are not buying features. They are hiring a solution to help them make progress.
-
-This article explains JTBD in plain language and turns it into something you can actually use when shaping an AI product.
-
-</ChapterIntroduction>
-
-::: info Minimal SOP
-**Goal**: After this, you should be better at turning a vague idea into a real user need instead of just a pile of feature names.
-
-**Action**: Write one rough product idea, talk to 3 possible users about the last time they dealt with this problem, then rewrite it as one JTBD sentence.
-
-**Result**: You will leave with a clearer need hypothesis and a better sense of what your first version should solve.
-
-**Quick links**: [What JTBD is](#jtbd-what) · [One-sentence formula](#jtbd-formula) · [How AI can help](#jtbd-ai)
-:::
-
-## What You Will Learn
-
-1. What Jobs to Be Done means in plain language
-2. How to separate “what users say they want” from “what they are really trying to get done”
-3. How to turn a vague idea into a situation, trigger, progress, workaround, and success condition
-4. How JTBD connects to AI product thinking, interviews, and prompt-based analysis
+This chapter first introduces the basic idea of JTBD, then shows how to rewrite a feature description as a testable needs hypothesis.
 
 <a id="jtbd-what"></a>
-## [1. What Jobs to Be Done Means](#top-jtbd)
+## [1. From Features to Jobs](#top-jtbd)
 
 Jobs to Be Done, often shortened to **JTBD**, is built around a simple idea: users “hire” a product to get something done.
 
@@ -64,6 +33,13 @@ Examples:
 JTBD helps you focus less on feature names and more on what users are trying to move toward.
 
 It also changes how you see competition. If the job is “make a long PDF easier to understand,” your competition is not just another AI tool. It may be a colleague, an intern, manual skimming, or even delaying the task.
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/customer-journey-map.png" alt="A customer journey map recording user needs, activities, artifacts, feelings, and product opportunities across several stages" loading="lazy" />
+  </a>
+  <figcaption><strong>A job unfolds through a process.</strong> This customer journey map divides the use of an online tool into stages and records needs, activities, tools, feelings, and opportunities for each one. JTBD research should follow this process rather than asking only which feature a user prefers. Author: Advenio; source: <a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
 
 ## 2. JTBD vs Personas and Feature Lists
 
@@ -90,7 +66,7 @@ Feature lists have a similar trap. Users may ask for export, rewrite, voice inpu
 
 Sometimes a feature is just a temporary translation of a deeper job.
 
-## 3. A Beginner-Friendly Example
+## 3. Example: Meeting Notes
 
 Imagine someone buys coffee and a sandwich every morning on the way to work.
 
@@ -117,7 +93,18 @@ If the job becomes clear, priorities become clearer too. Maybe the first version
 
 That is JTBD at its best: it brings you back from “which capabilities should I stack?” to “what progress am I helping the user make?”
 
-## 4. A Practical JTBD Template
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Taking_Notes.JPG" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/meeting-note-taking.jpg" alt="Participants in a real meeting taking notes with both computers and pen and paper" loading="lazy" />
+  </a>
+  <figcaption><strong>Observe the setting before designing features.</strong> People in this meeting already use computers, paper, and their own note-taking habits to complete the job. Before building a meeting-notes product, find out what they record and what they must still organize afterward instead of assuming that speech-to-text is the answer. Photograph: Unclefeet, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption>
+</figure>
+
+The comparison below presents three situations. As you switch between them, notice what the product feature and the user's job describe.
+
+<JtbdProgressLab />
+
+## 4. Five Elements of a JTBD Statement
 
 If you are a beginner, do not overcomplicate this. Start with five parts.
 
@@ -167,6 +154,13 @@ What are they doing right now without your product?
 
 The workaround is often your real competition.
 
+<figure class="field-figure field-figure--narrow">
+  <a href="https://commons.wikimedia.org/wiki/File:Scrum_task_board.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/physical-task-board.jpg" alt="A physical office task board with sticky notes moving between To Do, In Progress, and Testing columns" loading="lazy" />
+  </a>
+  <figcaption><strong>The alternative does not have to be another app.</strong> This physical board uses ordinary sticky notes and tape to complete the job of making progress visible. Competitor research should include manual processes, spreadsheets, and collaboration habits like this one. Photograph: Logan Ingalls, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption>
+</figure>
+
 ### 4.5 Success condition
 
 What would make the user say this was truly helpful?
@@ -179,7 +173,7 @@ What would make the user say this was truly helpful?
 If you cannot say what “useful enough” means, the direction is probably still not focused enough.
 
 <a id="jtbd-formula"></a>
-## [5. A One-Sentence Formula You Can Reuse](#top-jtbd)
+## [5. A JTBD Sentence Pattern](#top-jtbd)
 
 Use this sentence pattern:
 
@@ -263,6 +257,13 @@ JTBD-style questions are better:
 
 These questions pull the conversation back into real experience instead of imagined preference.
 
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/intel-context-observation.jpg" alt="In an Intel user-experience study, a participant touches a laptop screen directly" loading="lazy" />
+  </a>
+  <figcaption><strong>Behavior is sometimes more specific than an answer.</strong> During Intel's research on laptop touch interaction in Brazil, China, Italy, and the United States, researchers observed participants pushing screens backward and operating them with both thumbs or in other postures. Such actions are difficult to uncover by asking which feature someone wants, but they reveal how people actually use a product. Photograph: <a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer">Intel Free Press / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption>
+</figure>
+
 ## 9. Use AI to Help You Break Down JTBD
 
 JTBD is not an AI invention, but AI is very useful for organizing and clarifying JTBD.
@@ -319,26 +320,8 @@ What people say matters, but their current workaround often reveals their priori
 
 JTBD works best when you focus on one important step in one concrete situation and make that part feel much better.
 
-## 11. Summary
-
-The real value of JTBD is not the label. It is the shift in perspective:
-
-- stop looking first at features
-- start looking at the progress users are trying to make
-
-If you keep asking:
-
-- In what situation does the user hire this?
-- What exactly are they stuck on?
-- What workaround are they using now?
-- What would “better” look like for them?
-
-your idea usually becomes much sharper.
-
-It also helps you avoid one of the biggest mistakes in AI products: falling in love with capability demos instead of user progress.
-
 <a id="jtbd-ai"></a>
-## [12. How AI Can Help You Practice JTBD](#top-jtbd)
+## [11. Using AI to Organize JTBD Material](#top-jtbd)
 
 JTBD is not an AI invention, but AI can be a very helpful research assistant, organizer, and challenger. The key is this:
 
@@ -474,7 +457,14 @@ Critique it from these angles:
 
 That kind of challenge helps you see whether you are really looking at user needs or just defending your favorite solution.
 
-## Assignments
+## 12. Summary
+
+- JTBD shifts analysis from product features to the task the user wants to complete.
+- A JTBD hypothesis should describe the situation, trigger, desired progress, current alternative, and success condition.
+- A feature is one possible way to complete the job and should not be confused with the job itself.
+- JTBD remains a needs hypothesis and must be checked through interviews and behavioral evidence.
+
+## 13. Exercise
 
 <StageAssignmentCard title="Describe the Job the User Is Really Trying to Get Done">
 
@@ -491,3 +481,13 @@ That kind of challenge helps you see whether you are really looking at user need
 - [Harvard Business School Online: What Is Jobs to Be Done?](https://online.hbs.edu/blog/post/jobs-to-be-done)
 - [Intercom: Jobs-to-be-Done: A framework for customer needs](https://www.intercom.com/blog/jobs-to-be-done-framework/)
 - [Mural: Jobs to Be Done framework guide](https://www.mural.co/blog/jobs-to-be-done-framework)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure--narrow img { max-height: 720px; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } }
+</style>

@@ -15,7 +15,6 @@ const relatedArticles =
 
 # 為原型接入 AI 能力
 
-<ProductJourney current="ai" />
 
 ## 章節導讀
 

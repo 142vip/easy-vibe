@@ -5,51 +5,20 @@ description: 'Ein Einf&uuml;hrungsartikel zu Jobs to Be Done f&uuml;r Einsteiger
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = 'Etwa <strong>1,5 Stunden</strong>'
 </script>
 
-# Mit Jobs to Be Done herausfinden, was Nutzer wirklich erreichen wollen
+# Jobs to Be Done
 
 <a id="top-jtbd"></a>
 
-## Kapitel&uuml;bersicht
+Eine Produktrichtung beginnt oft als Funktionsidee: automatische Zusammenfassung, intelligente Kategorisierung oder ein neuer Agent. Eine Funktion beschreibt jedoch noch nicht, warum jemand sein bisheriges Vorgehen &auml;ndern sollte.
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['JTBD', 'Nutzerbed&uuml;rfnisse', 'Produktdenken', 'Bedarfserkenntnis']"
-  coreOutput="1 JTBD-Satz, der einem echten Bedarf n&auml;her kommt"
-  expectedOutput="Eine vage Idee zu einem konkreteren Nutzerszenario und einer MVP-Richtung verdichten k&ouml;nnen"
->
+Jobs to Be Done (JTBD) betrachtet deshalb nicht zuerst die Funktion, sondern den Fortschritt, den ein Nutzer in einer bestimmten Situation erreichen will. Ein Produkt ist dabei nur eine von mehreren m&ouml;glichen L&ouml;sungen, die der Nutzer f&uuml;r diese Aufgabe „einstellt“.
 
-Viele Anf&auml;nger machen bei der Produktentwicklung am h&auml;ufigsten den Fehler, ihre gesamte Aufmerksamkeit auf "Welche Funktionen will ich bauen" zu richten. Man sieht, dass andere intelligente Kategorisierung haben, man will auch welche; man sieht, dass andere automatische Zusammenfassung haben, man will auch welche; man sieht, dass andere Agenten, Multimodalit&auml;t und Workflows gebaut haben, man f&uuml;hlt sich auch nicht zur&uuml;ckbleiben.
-
-In der Realit&auml;t entscheiden sich Nutzer aber selten deshalb f&uuml;r ein Produkt, weil "der Funktionsname cool klingt". Vielmehr m&ouml;chten sie in einem bestimmten Moment etwas voranbringen und "stellen" ad hoc ein Werkzeug, einen Service oder sogar eine Person ein, die ihnen bei diesem Schritt hilft.
-
-Genau das ist es, was die **Jobs to Be Done (JTBD)** -Methode uns verdeutlichen will: **Nutzer kaufen nicht die Funktion an sich, sondern stellen eine L&ouml;sung ein, die ihnen hilft, einen Fortschritt zu erzielen.**
-
-Dieser Artikel f&uuml;hrt Sie in verst&auml;ndlicher Sprache durch JTBD und macht es zu einem Analysewerkzeug, das Sie direkt bei der Entwicklung von AI-Anwendungen einsetzen k&ouml;nnen.
-
-</ChapterIntroduction>
-
-::: info Minimales SOP
-**Ziel**: Nach dem Lesen wissen Sie besser, wie Sie eine vage Idee in einen Satz mit echtem Nutzerszenario verdichten, anstatt nur eine Sammlung von Funktionsnamen im Kopf zu haben.
-
-**Aktionspunkte**: 1 vage Idee aufschreiben, 3 potenzielle Nutzer nach "Wie haben Sie das letzte Mal damit umgebracht" fragen und dann zu 1 JTBD-Satz zusammenfassen.
-
-**Ergebnis**: Sie erhalten eine klarere Bedarfshypothese und wissen, was in der ersten Version priorit&auml;r gel&ouml;st werden sollte.
-
-**Stichwortspr&uuml;nge**: [Was ist JTBD](#jtbd-what) &middot; [Ein-Satz-Formel](#jtbd-formula) &middot; [Wie AI Ihnen hilft](#jtbd-ai)
-:::
-
-## Was Sie lernen werden
-
-1. Was Jobs to Be Done ist und warum es n&auml;her an echten Bed&uuml;rfnissen liegt als "Funktions-Brainstorming"
-2. Wie man unterscheidet zwischen "Funktionen, die Nutzer sagen zu wollen" und "was Nutzer wirklich erreichen wollen"
-3. Wie man mit einer einfachen Vorlage eine vage Idee in Szenario, Ausl&ouml;ser, Hindernis und Erfolgskriterium zerlegt
-4. Wie man JTBD bei AI-Produkten, Interview-Fragen und Prompt-Strukturierung anwendet
+Dieses Kapitel zeigt, wie sich Szenario, Ausl&ouml;ser, gew&uuml;nschter Fortschritt, heutige Alternative und Erfolgskriterium erfassen lassen. Am Ende steht eine pr&uuml;fbare Bedarfshypothese statt einer Funktionsliste.
 
 <a id="jtbd-what"></a>
-## [1. Was ist Jobs to Be Done?](#top-jtbd)
+## [1. Von der Funktion zur Aufgabe](#top-jtbd)
 
 Jobs to Be Done wird oft als **JTBD** abgek&uuml;rzt. Die Kernidee dahinter h&auml;ngt mit dem klassischen Ausdruck zusammen, den Clayton Christensens Team verbreitet hat: **Nutzer "stellen" ein Produkt ein, um etwas zu erledigen.**
 
@@ -64,6 +33,13 @@ Deshalb konzentriert sich **JTBD nicht darauf, wie das Produkt aussieht, sondern
 Das erkl&auml;rt auch, warum viele scheinbar unterschiedliche Produkte tats&auml;chlich um denselben Job konkurrieren. Wenn ein Nutzer "auf dem Arbeitsweg weniger gelangweilt sein" m&ouml;chte, k&ouml;nnte er Kurzvideos, Podcasts, Spiele, Chats oder sogar Nickerchen einsetzen. Wenn ein Nutzer "ein langes PDF schnell verstehen" m&ouml;chte, k&ouml;nnte er AI-Zusammenfassungs-Tools, Praktikanten, Kollegen, sich selbst durchbei&szlig;en oder es erst einmal liegen lassen.
 
 Mit dieser Perspektive werden Sie feststellen, dass Ihre wahren Konkurrenten oft nicht nur "eine andere App, die wie Ihre aussieht" sind, sondern **alle akzeptablen Alternativl&ouml;sungen, die dem Nutzer aktuell zur Verf&uuml;gung stehen.**
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/customer-journey-map.png" alt="Customer-Journey-Map mit Phasen, Bed&uuml;rfnissen, Aktivit&auml;ten, Werkzeugen, Gef&uuml;hlen und Chancen" loading="lazy" />
+  </a>
+  <figcaption><strong>Eine Aufgabe findet innerhalb eines Ablaufs statt.</strong> Diese Customer-Journey-Map zerlegt die Nutzung eines Online-Werkzeugs in Phasen und erfasst Bed&uuml;rfnisse, Handlungen, verwendete Werkzeuge, Gef&uuml;hle und Chancen. Auch JTBD-Forschung sollte entlang dieses Ablaufs fragen, statt nur nach bevorzugten Funktionen. Autor: Advenio; Quelle: <a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
 
 ## 2. Worin unterscheidet sich JTBD von Personas und Funktionslisten?
 
@@ -87,7 +63,7 @@ Gleichzeitig f&uuml;hren Funktionslisten oft in die Irre. Nutzer sagen: "Ich wil
 
 Oft ist **eine Funktion nur eine vorl&auml;ufige &Uuml;bersetzung eines Jobs.** Wenn Sie nur Funktionen sammeln, machen Sie leicht ein Produkt, das "alles aufstapelt, was Nutzer sagen". Wenn Sie den dahinterliegenden Job erkennen, haben Sie eher die Chance, eine wirklich handliche und wettbewerbsf&auml;hige L&ouml;sung zu entwickeln.
 
-## 3. Ein Beispiel, das auch Einsteiger verstehen
+## 3. Beispiel: Sitzungsprotokolle
 
 Lassen Sie uns zun&auml;chst nicht an komplexe AI-Produkte denken, sondern mit einem Alltagsbeispiel beginnen.
 
@@ -123,7 +99,16 @@ Sobald der Job klar formuliert ist, ergeben sich viele Funktionspriorit&auml;ten
 
 Das ist der Wert von JTBD: **Es hilft Ihnen, von "Welche F&auml;higkeiten will ich aufstapeln" zur&uuml;ckzukehren zu "Welchen Fortschritt will ich dem Nutzer erm&ouml;glichen".**
 
-## 4. Eine n&uuml;tzliche JTBD-Vorlage
+<JtbdProgressLab />
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Meeting_at_Wikimedia_France.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/meeting-note-taking.jpg" alt="Besprechung, in der Teilnehmende Computer, Papier und eigene Notizgewohnheiten nutzen" loading="lazy" />
+  </a>
+  <figcaption><strong>Erst die Situation beobachten, dann Funktionen entwerfen.</strong> In einer Besprechung erledigen Menschen die Aufgabe bereits mit Computer, Papier und eigenen Routinen. Wer ein Protokollprodukt entwickelt, sollte zuerst verstehen, was sie notieren und wie sie es danach aufbereiten, statt „Audio transkribieren“ als Antwort vorauszusetzen. Foto: Unclefeet, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption>
+</figure>
+
+## 4. Die f&uuml;nf Elemente von JTBD
 
 Wenn Sie Einsteiger sind, m&uuml;ssen Sie JTBD zun&auml;chst nicht zu akademisch betrachten. Konzentrieren Sie sich auf die 5 wichtigsten Elemente.
 
@@ -172,6 +157,13 @@ Wie macht er es ohne Ihr Produkt?
 - Zwischen mehreren Tools hin- und herwechseln
 
 Wer die Alternative ist, das ist Ihre echte Wettbewerbsumgebung.
+
+<figure class="field-figure field-figure--narrow">
+  <a href="https://commons.wikimedia.org/wiki/File:Kanban_board.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/physical-task-board.jpg" alt="Physisches Aufgabenboard aus Haftnotizen und Klebeband" loading="lazy" />
+  </a>
+  <figcaption><strong>Die Alternative muss keine andere App sein.</strong> Dieses physische Aufgabenboard erledigt mit gew&ouml;hnlichen Haftnotizen und Klebeband die Aufgabe, Fortschritt sichtbar zu machen. Zur Wettbewerbsanalyse geh&ouml;ren deshalb auch manuelle Abl&auml;ufe, Tabellen und eingespielte Formen der Zusammenarbeit. Foto: Logan Ingalls, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption>
+</figure>
 
 ### 4.5 Erfolgskriterium
 
@@ -271,6 +263,13 @@ JTBD eignet sich besser f&uuml;r folgende Fragen:
 - Welche Alternativmethoden haben Sie ausprobiert und warum waren sie nicht gut genug?
 
 Diese Frageweise hat einen Vorteil: Sie bringt das Gespr&auml;ch zur&uuml;ck zu echten Erlebnissen, anstatt bei imagin&auml;ren Pr&auml;ferenzen zu bleiben.
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/intel-context-observation.jpg" alt="Teilnehmer einer Intel-Nutzerstudie ber&uuml;hrt direkt den Bildschirm eines Notebooks" loading="lazy" />
+  </a>
+  <figcaption><strong>Verhalten ist manchmal konkreter als eine Antwort.</strong> Bei Intels Touch-Studie in Brasilien, China, Italien und den USA beobachteten Forschende, wie Teilnehmende den Bildschirm nach hinten dr&uuml;ckten und ihn mit beiden Daumen oder in unterschiedlichen Haltungen bedienten. Solche Handlungen lassen sich mit „Welche Funktion m&ouml;chten Sie?“ kaum erfragen, zeigen aber die tats&auml;chliche Nutzung. Foto: <a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer">Intel Free Press / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption>
+</figure>
 
 ## 9. AI nutzen, um JTBD-Analyse durchzuf&uuml;hren
 
@@ -499,3 +498,12 @@ Bitte bearbeiten Sie die folgenden Aufgaben basierend auf dem obigen Inhalt:
 - [Harvard Business School Online: What Is Jobs to Be Done?](https://online.hbs.edu/blog/post/jobs-to-be-done)
 - [Intercom: Jobs-to-be-Done: A framework for customer needs](https://www.intercom.com/blog/jobs-to-be-done-framework/)
 - [Mural: Jobs to Be Done framework guide](https://www.mural.co/blog/jobs-to-be-done-framework)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure--narrow img { max-height: 720px; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+</style>

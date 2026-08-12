@@ -9,7 +9,6 @@ const duration = '約 <strong>20 分鐘</strong>'
 
 # 創意靈感從哪裡來
 
-<ProductJourney current="find" />
 
 ## 本章導讀
 

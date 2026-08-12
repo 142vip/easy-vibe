@@ -16,7 +16,6 @@ const relatedArticles =
 
 # 完整專案實作：從想法到作品
 
-<ProductJourney current="finish" />
 
 ## 章節導讀
 

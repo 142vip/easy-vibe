@@ -9,7 +9,6 @@ const duration = '約 <strong>20分</strong>'
 
 # アイデアの種はどこから来るのか
 
-<ProductJourney current="find" />
 
 ## この章で行うこと
 

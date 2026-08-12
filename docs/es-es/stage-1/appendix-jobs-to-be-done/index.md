@@ -5,51 +5,20 @@ description: 'Comprende que los usuarios no compran funciones, sino que "contrat
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = 'Aproximadamente <strong>1.5 horas</strong>'
 </script>
 
 # Usa Jobs to Be Done para encontrar lo que los usuarios realmente quieren lograr
 
 <a id="top-jtbd"></a>
 
-## Resumen del capitulo
+Supongamos que queremos crear una herramienta para redactar actas de reuniones. Si partimos de las funciones, enseguida podemos enumerar transcripción, resumen, extracción de tareas y exportación de documentos. Sin embargo, esas funciones no responden a una pregunta más básica: ¿por qué querría alguien utilizarla después de una reunión?
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['JTBD', 'Necesidades del usuario', 'Pensamiento de producto', 'Insight de necesidades']"
-  coreOutput="1 frase JTBD que se parezca mas a una necesidad real"
-  expectedOutput="Poder convertir una idea vaga en un escenario de usuario y una direccion MVP mas concretos"
->
+Jobs to Be Done (JTBD) responde desde la «tarea que el usuario quiere completar». Se ocupa de la situación concreta, el resultado esperado y la forma de resolverlo actualmente, sin dar por sentado que una función determinada será útil.
 
-Muchas personas que empiezan a hacer productos cometen el error de centrar toda su atencion en "que funcionalidad voy a hacer". Ves que otros tienen clasificacion inteligente, y tu tambien quieres anadirla; ves que otros tienen resumen automatico, y tu tambien quieres integrarlo; ves que otros han hecho Agent, multimodal, workflows, y sientes que no puedes quedarte atras.
-
-Pero en la realidad, los usuarios rara vez deciden usar un producto porque "el nombre de la funcion es genial". Lo que hacen es, en un momento concreto, querer avanzar en algo, y por ello "contratan" temporalmente una herramienta, un servicio, o incluso a una persona, para ayudarles a completar ese paso.
-
-Esto es exactamente lo que el metodo **Jobs to Be Done (JTBD)** quiere recordarnos: **los usuarios no compran funciones en si, sino que contratan alguna solucion para ayudarles a completar un progreso.**
-
-Este articulo te guiara desde cero para entender JTBD en un lenguaje lo mas claro posible, y convertirlo en una herramienta de analisis que puedas usar directamente al hacer aplicaciones de IA.
-
-</ChapterIntroduction>
-
-::: info SOP minimo
-**Objetivo**: Despues de leer, sabras mejor como convertir una idea vaga en una necesidad con un escenario de usuario real, en lugar de tener solo un monton de nombres de funciones en la cabeza.
-
-**Accion**: Escribe 1 idea vaga, encuentra 3 usuarios potenciales y preguntales "la ultima vez, como lo manejaste", y luego organizalo en 1 frase JTBD.
-
-**Resultado**: Obtendras una hipotesis de necesidad mas clara, sabiendo que debes resolver primero en la primera version.
-
-**Enlaces rapidos**: [Que es JTBD](#jtbd-what) · [Formula de una frase](#jtbd-formula) · [Como te ayuda la IA](#jtbd-ai)
-:::
-
-## Aprenderas lo siguiente
-
-1. Que es Jobs to Be Done, y por que esta mas cerca de las necesidades reales que el "brainstorming de funciones"
-2. Como distinguir entre "funciones que el usuario dice querer" y "lo que el usuario realmente quiere lograr"
-3. Como usar una plantilla simple para descomponer una idea vaga en escenario, disparador, obstaculo y criterio de exito
-4. Como usar JTBD en productos de IA, preguntas de entrevistas y organizacion de prompts
+Este capítulo presenta primero los conceptos fundamentales de JTBD y después explica cómo convertir una descripción funcional en una hipótesis de necesidad que podamos validar.
 
 <a id="jtbd-what"></a>
-## [1. Que es Jobs to Be Done](#top-jtbd)
+## [1. De las funciones a la tarea](#top-jtbd)
 
 Jobs to Be Done se abrevia comunmente como **JTBD**. Su idea central esta relacionada con la expresion clasica promovida por el equipo de Clayton Christensen: **los usuarios "contrataran" un producto para completar una tarea.**
 
@@ -65,7 +34,14 @@ Es por eso que muchos productos aparentemente diferentes en realidad compiten po
 
 Una vez que miras los problemas desde esta perspectiva, descubres que tu verdadero competidor muchas veces no es solo "otra app parecida a la tuya", sino **todas las soluciones alternativas aceptables para el usuario**.
 
-## 2. En que se diferencia JTBD de los perfiles de usuario y las listas de funciones
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/customer-journey-map.png" alt="Mapa del recorrido del cliente que registra por etapas sus necesidades, actividades, herramientas, emociones y oportunidades de producto" loading="lazy" />
+  </a>
+  <figcaption><strong>La tarea sucede a lo largo de un proceso.</strong> Este mapa divide el uso de una herramienta en línea en varias etapas y anota en cada una las necesidades, las actividades reales, las herramientas empleadas, las emociones y las oportunidades. Una investigación JTBD también debe seguir ese proceso, en vez de preguntar únicamente qué funciones gustan al usuario. Autor: Advenio; fuente: <a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
+
+## 2. Diferencias respecto al perfil de usuario y la lista de funciones
 
 Muchos principiantes, al hacer analisis de necesidades, primero escriben un perfil de usuario: 25 anos, mujer, ciudad de primer nivel, oficinista, le gustan las herramientas de eficiencia, dispuesta a probar productos nuevos. Esta informacion no se puede decir que sea completamente inutil, pero normalmente **no es suficiente para explicar por que una persona tomara accion en este momento.**
 
@@ -87,7 +63,7 @@ Asimismo, las listas de funciones tambien pueden desviar a uno. El usuario dice 
 
 Muchas veces, **la funcion es solo una traduccion temporal del job**. Si solo recoges funciones, es facil hacer un producto donde "agregas lo que el usuario dice"; si puedes ver el job detras, tienes mas oportunidades de hacer una solucion verdaderamente comoda y competitiva.
 
-## 3. Un ejemplo que hasta un principiante puede entender
+## 3. Ejemplo: actas de reuniones
 
 Primero no te apresures a pensar en productos complejos de IA; empecemos con un ejemplo de la vida cotidiana.
 
@@ -123,7 +99,18 @@ Una vez que el job queda claro, muchas prioridades de funciones aparecen automat
 
 Este es el valor de JTBD: **te ayuda a volver de "que capacidades quiero apilar" a "que progreso quiero ayudar al usuario a alcanzar".**
 
-## 4. Una plantilla JTBD util
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Taking_Notes.JPG" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/meeting-note-taking.jpg" alt="En una reunión real, los participantes toman notas tanto con ordenadores como con papel y bolígrafo" loading="lazy" />
+  </a>
+  <figcaption><strong>Observemos la situación antes de pensar en funciones.</strong> En la reunión ya se emplean ordenadores, papel, bolígrafos y hábitos propios para completar la tarea. Antes de crear un producto de actas, debemos averiguar qué anotan y cómo organizan después el material, no suponer que «transcribir el audio» es la respuesta. Foto: Unclefeet, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption>
+</figure>
+
+La siguiente comparación presenta tres situaciones. Al cambiar de una a otra, observemos qué describen respectivamente la «función del producto» y la «tarea del usuario».
+
+<JtbdProgressLab />
+
+## 4. Los cinco elementos de JTBD
 
 Si eres principiante, primero no intentes hacer JTBD muy academico. Con capturar los 5 elementos mas practicos es suficiente.
 
@@ -173,6 +160,13 @@ Sin tu producto, como lo hace ahora?
 
 Quien sea la solucion alternativa, ese es tu verdadero entorno competitivo.
 
+<figure class="field-figure field-figure--narrow">
+  <a href="https://commons.wikimedia.org/wiki/File:Scrum_task_board.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/physical-task-board.jpg" alt="Tablero físico de tareas en una oficina, con notas adhesivas que se desplazan entre las columnas de pendientes, en curso y pruebas" loading="lazy" />
+  </a>
+  <figcaption><strong>La alternativa no tiene por qué ser otra aplicación.</strong> Este tablero físico cumple la tarea de «hacer visible el progreso» con simples notas adhesivas y cinta. Al estudiar la competencia también debemos incluir procesos manuales, hojas de cálculo y hábitos de colaboración como estos. Foto: Logan Ingalls, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption>
+</figure>
+
 ### 4.5 Criterio de exito
 
 Como se sabe que el problema esta realmente resuelto?
@@ -185,7 +179,7 @@ Como se sabe que el problema esta realmente resuelto?
 Si ni siquiera puedes explicar "como juzga el usuario si valio la pena", entonces esta direccion probablemente aun no esta bien definida.
 
 <a id="jtbd-formula"></a>
-## [5. Formula de una frase que puedes usar directamente](#top-jtbd)
+## [5. Fórmula de una frase JTBD](#top-jtbd)
 
 Cuando quieras organizar una direccion de producto, puedes usar esta formula muy practica:
 
@@ -272,6 +266,13 @@ JTBD es mas adecuado para hacer este tipo de preguntas:
 
 Este tipo de preguntas tiene una ventaja: lleva la conversacion de vuelta a las experiencias reales, en lugar de quedarse en preferencias imaginadas.
 
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/jtbd/intel-context-observation.jpg" alt="Durante un estudio de experiencia de usuario de Intel, una participante toca directamente la pantalla de un portátil" loading="lazy" />
+  </a>
+  <figcaption><strong>El comportamiento puede ser más concreto que una respuesta.</strong> Durante un estudio de Intel sobre el uso táctil de portátiles en Brasil, China, Italia y Estados Unidos, los investigadores observaron que los participantes inclinaban la pantalla hacia atrás y la manejaban con ambos pulgares o desde distintas posturas. Es difícil descubrir estos gestos preguntando «¿qué función quieres?», pero muestran cómo se adopta realmente un producto. Foto: <a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer">Intel Free Press / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption>
+</figure>
+
 ## 9. Usa IA para ayudarte con el analisis JTBD
 
 JTBD no fue inventado por la IA, pero la IA es muy adecuada para ayudarte a organizar y refinar JTBD.
@@ -326,29 +327,14 @@ El usuario describira lo que quiere, pero sus verdaderas prioridades suelen esta
 
 La forma correcta de usar JTBD normalmente no es "voy a hacer una gran plataforma que haga de todo", sino primero enfocarse en el paso mas critico de un escenario y hacerlo excepcionalmente bien.
 
-## 11. Resumen
-
-Lo mas valioso de Jobs to Be Done no es darte un nuevo termino, sino ayudarte a cambiar tu angulo de observacion: **no te centres solo en las funciones del producto, sino en lo que el usuario quiere avanzar al siguiente paso.**
-
-Cuando empieces a preguntarte repetidamente:
-
-- En que escenario contrata el usuario este producto
-- Donde se ha quedado bloqueado exactamente
-- Que metodo esta usando para arreglarselas
-- Despues de resolver el problema, como cambiara su estado
-
-Descubriras que muchas ideas originalmente vagas se aclaran de repente, y muchas funciones originalmente llamativas dejan de ser tan importantes.
-
-Hacer productos, especialmente productos de IA, es facil caer en la trampa de obsesionarse con la demostracion de capacidades desde el principio. JTBD te ayuda a devolver la atencion a lo realmente importante: **por que te necesita el usuario, y que progreso le estas ayudando a completar.**
-
 <a id="jtbd-ai"></a>
-## [12. Como usar la IA para practicar JTBD](#top-jtbd)
+## [11. Uso de la IA para organizar materiales JTBD](#top-jtbd)
 
 JTBD no fue inventado por la IA, pero la IA es muy adecuada para actuar como tu asistente de investigacion, asistente de organizacion y asistente de contraste dentro de este metodo. La clave es: **dejar que la IA te ayude a organizar y expandir, no que adivine por ti lo que piensan los usuarios.**
 
 Puedes usarlo asi:
 
-### 12.1 Dejar que la IA te ayude a reescribir ideas vagas como hipotesis JTBD
+### 11.1 Pedir a la IA que convierta ideas vagas en hipótesis JTBD
 
 Cuando solo tienes una descripcion vaga en mente, como "quiero hacer una herramienta para ayudar a universitarios a encontrar practicas", primero puedes pedir a la IA que la descomponga en varios jobs posibles:
 
@@ -386,7 +372,7 @@ para poder enviarlo mas rapido y mejorar mi tasa de aprobacion.
 
 El valor de este tipo de resultado es que descompone tu idea original muy general en varias direcciones mas cercanas a escenarios reales.
 
-### 12.2 Dejar que la IA te ayude a organizar citas textuales de entrevistas
+### 11.2 Dejar que la IA te ayude a organizar citas textuales de entrevistas
 
 Si ya has hecho varias entrevistas con usuarios, puedes pasar las transcripciones a la IA y pedirle que extraiga los escenarios, disparadores, soluciones alternativas y criterios de exito que se repiten.
 
@@ -429,7 +415,7 @@ Resultado organizado:
 
 Este tipo de resultado es muy util porque te ayuda a extraer de citas textuales dispersas algo que se parece mas a una "necesidad".
 
-### 12.3 Dejar que la IA haga una ronda ligera de investigacion en la red
+### 11.3 Dejar que la IA haga una ronda ligera de investigacion en la red
 
 Antes de empezar entrevistas a gran escala, puedes pedir a la IA que haga un barrido de informacion externa muy ligero, como:
 
@@ -463,7 +449,7 @@ Puntos de dolor comunes organizados:
 
 Este tipo de resultado no debe tomarse como conclusion final, pero es ideal para decidir que tipo de problema priorizar en las entrevistas.
 
-### 12.4 Dejar que la IA actue como "abogado del diablo"
+### 11.4 Dejar que la IA actue como "abogado del diablo"
 
 Muchas veces nos encariñamos demasiado con nuestras propias ideas. Puedes pedir especificamente a la IA que asuma el rol de alguien critico, obligandote a explicar el problema mas claramente:
 
@@ -480,7 +466,14 @@ Por favor critica desde los siguientes angulos:
 
 La ventaja de hacer esto es que descubriras mas rapidamente si estas mirando necesidades o solo estas mirando la solucion que te gusta.
 
-## 📚 Tareas
+## 12. Resumen
+
+- JTBD desplaza el análisis desde las funciones del producto hacia la tarea que el usuario quiere completar.
+- Una hipótesis JTBD debe indicar la situación, el desencadenante, el progreso esperado, la alternativa actual y el criterio de éxito.
+- Una función es solo una posible forma de completar la tarea; no debemos confundirla con la tarea del usuario.
+- JTBD sigue siendo una hipótesis que debemos comprobar mediante entrevistas y pruebas de comportamiento.
+
+## 13. Ejercicio
 
 <StageAssignmentCard title="Explica qué intenta conseguir realmente el usuario">
 
@@ -499,3 +492,13 @@ Por favor completa las siguientes tareas basandote en el contenido anterior:
 - [Harvard Business School Online: What Is Jobs to Be Done?](https://online.hbs.edu/blog/post/jobs-to-be-done)
 - [Intercom: Jobs-to-be-Done: A framework for customer needs](https://www.intercom.com/blog/jobs-to-be-done-framework/)
 - [Mural: Jobs to Be Done framework guide](https://www.mural.co/blog/jobs-to-be-done-framework)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure--narrow img { max-height: 720px; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } }
+</style>

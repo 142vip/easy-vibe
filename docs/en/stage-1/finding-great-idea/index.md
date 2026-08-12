@@ -14,15 +14,11 @@ const duration = 'About <strong>3 hours</strong>'
 
 <ChapterIntroduction :duration="duration" :tags="['Need Discovery', 'Product Thinking', 'User Analysis', 'Business Model']" coreOutput="3 validated product concepts" expectedOutput="Actionable startup/product direction">
 
-Previously, we learned how to build things with AI IDE, but there's a more fundamental question: <strong>What to build?</strong>
+In the previous chapter, we collected a set of raw clues from everyday experience, public discussions, and product reviews. The next step is not to start coding at once. We first need to organize those clues into possible directions, then choose one that is worth validating.
 
-Many people start by thinking "let's make an AI tool" or "let's create a social platform," only to find that nobody uses what they build. Where's the problem? <strong>They didn't find real needs.</strong>
+A direction is not worth pursuing simply because it sounds novel. We also need to examine how often the problem occurs, how much it affects people, how they solve it today, and whether they already spend time or money on it.
 
-The harsher reality is: <strong>Many products solve problems, but users still won't pay for them.</strong>
-
-In this chapter, through Xiao Ming's story, we'll learn how to find product directions worth pursuing.
-
-After completing this chapter, you'll have a <strong>complete methodology for finding ideas</strong> and 3 validated product concepts.
+Through Xiao Ming's story, this chapter places those judgments in concrete situations. We will gradually organize the candidate directions and keep several product concepts that have supporting evidence and deserve further study. In the next chapter, we will examine what users are really trying to accomplish.
 
 </ChapterIntroduction>
 
@@ -686,29 +682,16 @@ Through Act 3, Xiao Ming understood three things.
 
 <StageAssignmentCard title="Turn One Small Frustration into a Product Idea">
 
-Choose one small annoyance from your daily life and expand it using this chapter's method:
+  <p>Start with one small frustration you encountered recently. There is no need to invent a grand topic.</p>
 
-::: tip Exercise Task
+  <ol>
+    <li>Write the frustration in one sentence.</li>
+    <li>List three kinds of people who might encounter it, then choose the group you know best.</li>
+    <li>Describe when that person encounters the problem and how they solve it today.</li>
+    <li>State the idea again: who is it for, and what will it help them do better?</li>
+  </ol>
 
-**1. Describe this annoyance** (in one sentence)
-- Example: "I want to build a bookkeeping app to help users record spending."
-
-**2. Horizontal segmentation: find 3 user groups that may have different needs**
-- Example: small business owners, parents of overseas students, freelancers
-
-**3. Select one group, then deep-dive vertically: describe their complete scenario and real emotions**
-- Example: scenario of overseas-student parents - they want to know how much their child spends abroad, but the child does not tell them
-
-**4. Reconstruct product concept: evolve from "one feature" into "one solution"**
-- Example: "Overseas Spending Steward" - not just bookkeeping, but giving parents confidence and visibility into overseas spending
-
-**5. Evaluate your idea with the validation checklist** (see Appendix F)
-
-**Share your analysis in the community and discuss with other learners!**
-
-:::
-
----
+  <p>When you are done, show this description to a friend and see whether they understand it immediately.</p>
 
 </StageAssignmentCard>
 

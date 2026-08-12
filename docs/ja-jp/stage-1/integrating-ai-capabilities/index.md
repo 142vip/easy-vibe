@@ -15,7 +15,6 @@ const relatedArticles =
 
 # プロトタイプに AI 機能を組み込む
 
-<ProductJourney current="ai" />
 
 ## この章で学ぶこと
 

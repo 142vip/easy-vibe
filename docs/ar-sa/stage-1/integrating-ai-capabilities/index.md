@@ -15,7 +15,6 @@ const relatedArticles =
 
 # إضافة قدرات الذكاء الاصطناعي إلى النموذج الأولي
 
-<ProductJourney current="ai" />
 
 ## تمهيد الفصل
 

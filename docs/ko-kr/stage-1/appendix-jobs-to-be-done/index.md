@@ -5,51 +5,20 @@ description: '제로 베이스 독자를 위한 Jobs to Be Done 입문 글입니
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-const duration = '약 <strong>1.5시간</strong>'
 </script>
 
 # Jobs to Be Done으로 사용자가 진짜 완료하고 싶은 일 찾기
 
 <a id="top-jtbd"></a>
 
-## 이 장의 가이드
+회의록 도구를 만든다고 가정해 봅시다. 기능부터 생각하면 전사, 요약, 할 일 추출, 문서 내보내기를 쉽게 나열할 수 있습니다. 그러나 이런 기능만으로는 사용자가 왜 회의가 끝난 뒤 이 도구를 써야 하는지 답할 수 없습니다.
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['JTBD', '사용자 니즈', '제품 사고', '니즈 인사이트']"
-  coreOutput="실제 니즈에 더 가까운 JTBD 문장 1개"
-  expectedOutput="모호한 아이디어를 더 구체적인 사용자 시나리오와 MVP 방향으로 수렴 가능"
->
+Jobs to Be Done(JTBD)은 ‘사용자가 끝내려는 일’에서 이 질문을 바라봅니다. 특정 기능이 당연히 유용하다고 가정하지 않고, 구체적인 상황과 기대 결과, 현재의 처리 방식을 살핍니다.
 
-많은 사람이 처음 제품을 만들 때, 가장 많이 하는 실수 중 하나는 주의를 전부 "어떤 기능을 만들지"에 집중하는 것입니다. 남이 스마트 분류를 하니까 나도 추가하고 싶고, 남이 자동 요약을 하니까 나도 연동하고 싶고, 남이 Agent, 멀티모달, 워크플로를 만들었으니 나도 빠지면 안 된다고 생각합니다.
-
-하지만 현실에서, 사용자가 "이 기능 이름이 멋져서" 제품을 사용하기로 결정하는 경우는 거의 없습니다. 그들은 특정 순간에, 한 가지 일을 앞으로 밀고 나가고 싶어서, 임시로 도구 하나, 서비스 하나, 심지어 사람 하나를 "고용"하여 이 단계를 완수하도록 돕습니다.
-
-이것이 바로 **Jobs to Be Done(JTBD)** 방법론이 우리에게 상기시키려는 것입니다: **사용자는 기능 자체를 구매하는 것이 아니라, 어떤 솔루션을 고용하여 자신의 진전을 완수하려고 합니다.**
-
-이 글은 가능한 한 알기 쉬운 언어로, 제로에서 JTBD를 이해하고, 이를 AI 애플리케이션을 만들 때 바로 사용할 수 있는 분석 도구로 만들어 드립니다.
-
-</ChapterIntroduction>
-
-::: info 최소 SOP
-**목적**: 이 글을 읽은 후, 모호한 아이디어를 실제 사용자 시나리오가 있는 진짜 니즈 한 문장으로 수렴하는 방법을 더 명확히 알게 되며, 머릿속에 기능 이름만 있는 상태에서 벗어나게 됩니다.
-
-**실행 항목**: 모호한 아이디어 1문장을 쓰고, 잠재 사용자 3명을 찾아 "최근에 어떻게 처리했는지" 물어본 후, JTBD 문장 1개로 정리합니다.
-
-**결과**: 첫 번째 버전에서 먼저 무엇을 해결해야 할지 아는, 더 명확한 니즈 가설을 얻게 됩니다.
-
-**키워드 바로가기**: [JTBD란](#jtbd-what) · [한 문장 공식](#jtbd-formula) · [AI가 도와주는 방법](#jtbd-ai)
-:::
-
-## 배울 내용
-
-1. Jobs to Be Done이란 무엇이며, 왜 "기능 브레인스토밍"보다 실제 니즈에 더 가까운지
-2. "사용자가 원한다고 말한 기능"과 "사용자가 진짜로 완수하고 싶은 일"을 어떻게 구분하는지
-3. 간단한 템플릿으로 모호한 아이디어를 시나리오, 트리거, 장애물, 성공 기준으로 분해하는 법
-4. JTBD를 AI 제품, 인터뷰 질문, 프롬프트 정리에 어떻게 활용하는지
+이 장에서는 JTBD의 기본 개념을 설명하고, 기능 설명을 검증 가능한 요구 가설로 바꾸는 방법을 알아봅니다.
 
 <a id="jtbd-what"></a>
-## [1. Jobs to Be Done이란](#top-jtbd)
+## [1. 기능에서 과업으로](#top-jtbd)
 
 Jobs to Be Done은 보통 **JTBD**로 줄여 부릅니다. 그 배후의 핵심 아이디어는 Clayton Christensen 팀이 보급한 그 유명한 표현과 관련이 있습니다: **사용자는 어떤 제품을 "고용"하여 한 가지 일을 완수합니다.**
 
@@ -64,6 +33,11 @@ Jobs to Be Done은 보통 **JTBD**로 줄여 부릅니다. 그 배후의 핵심 
 이것이 왜 겉보기에 다른 제품들이 실제로는 같은 job을 두고 경쟁하는지를 설명합니다. 사용자가 "출근길에 덜 지루하고 싶다"면, 고용할 수 있는 대상은 숏폼 영상, 팟캐스트, 게임, 채팅, 심지어 졸음일 수 있습니다. 사용자가 "긴 PDF를 빨리 이해하고 싶다"면, 고용할 수 있는 대상은 AI 요약 도구, 인턴, 동료, 스스로 억지로 읽기, 또는 그냥 안 읽기일 수 있습니다.
 
 이런 관점으로 문제를 보면, 진짜 경쟁 상대가 보통 "당신과 비슷하게 생긴 다른 앱"이 아니라 **사용자의 현재 모든 수용 가능한 대체 솔루션**이라는 것을 발견하게 됩니다.
+
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer"><img src="/images/product-discovery/jtbd/customer-journey-map.png" alt="단계별로 사용자의 요구, 활동, 도구, 감정, 제품 기회를 기록한 고객 여정 지도" loading="lazy" /></a>
+  <figcaption><strong>과업은 하나의 과정 안에서 일어납니다.</strong> 이 고객 여정 지도는 온라인 도구를 사용하는 과정을 여러 단계로 나누고, 각 단계의 사용자 요구와 활동, 도구, 감정, 기회를 기록합니다. JTBD 조사도 기능 선호만 묻지 말고 이 과정을 따라가야 합니다. 제작: Advenio. 출처: <a href="https://commons.wikimedia.org/wiki/File:Mapa_de_viaje_de_clientes.png" target="_blank" rel="noreferrer">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
+</figure>
 
 ## 2. JTBD와 사용자 페르소나, 기능 목록의 차이
 
@@ -87,7 +61,7 @@ JTBD는 다음 질문들에 더 관심이 있습니다:
 
 많은 경우, **기능은 job의 일시적인 번역일 뿐입니다.** 기능만 수집하면 제품이 "사용자가 말하는 대로 쌓는 것"이 되기 쉽고, 배후의 job을 볼 수 있어야 비로소 정말로 편하고, 정말로 경쟁력 있는 솔루션을 만들 기회가 생깁니다.
 
-## 3. 제로 베이스도 이해할 수 있는 예시
+## 3. 예시: 회의록
 
 복잡한 AI 제품을 먼저 생각하지 말고, 일상적인 예시로 시작해 봅시다.
 
@@ -123,7 +97,16 @@ job이 명확해지면, 많은 기능의 우선순위가 자동으로 떠오릅�
 
 이것이 JTBD의 가치입니다: **"어떤 능력을 쌓을지"에서 "사용자가 어떤 진전을 이루도록 도울지"로 되돌려 줍니다.**
 
-## 4. 유용한 JTBD 템플릿
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Taking_Notes.JPG" target="_blank" rel="noreferrer"><img src="/images/product-discovery/jtbd/meeting-note-taking.jpg" alt="실제 회의에서 참석자들이 컴퓨터와 종이로 동시에 기록하는 모습" loading="lazy" /></a>
+  <figcaption><strong>기능을 생각하기 전에 현장을 봅니다.</strong> 회의 참석자들은 이미 컴퓨터와 종이, 저마다의 기록 습관으로 과업을 처리합니다. 먼저 무엇을 기록하고 회의 뒤 어떻게 정리하는지 알아야 하며, ‘녹음 전사’가 답이라고 미리 가정해서는 안 됩니다. 사진: Unclefeet, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>.</figcaption>
+</figure>
+
+아래 세 가지 상황을 바꾸어 보면서 ‘제품 기능’과 ‘사용자 과업’이 각각 무엇을 설명하는지 비교해 보세요.
+
+<JtbdProgressLab />
+
+## 4. JTBD의 다섯 요소
 
 제로 베이스라면, JTBD를 너무 학술적으로 생각하지 마세요. 가장 실용적인 5가지 요소만 먼저 잡으면 됩니다.
 
@@ -173,6 +156,11 @@ job이 명확해지면, 많은 기능의 우선순위가 자동으로 떠오릅�
 
 대체 솔루션이 누구인지, 그것이 바로 당신의 실제 경쟁 환경입니다.
 
+<figure class="field-figure field-figure--narrow">
+  <a href="https://commons.wikimedia.org/wiki/File:Scrum_task_board.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/jtbd/physical-task-board.jpg" alt="할 일, 진행 중, 테스트 열 사이에서 메모지가 이동하는 사무실의 실물 작업 보드" loading="lazy" /></a>
+  <figcaption><strong>대안이 반드시 다른 App일 필요는 없습니다.</strong> 이 실물 보드는 평범한 메모지와 테이프만으로 ‘진행 상황을 보이게 한다’는 과업을 완수합니다. 경쟁 조사에는 이런 수작업 절차와 표, 협업 습관도 포함해야 합니다. 사진: Logan Ingalls, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption>
+</figure>
+
 ### 4.5 성공 기준
 
 일이 어떻게 되어야 정말로 해결된 것인가?
@@ -185,7 +173,7 @@ job이 명확해지면, 많은 기능의 우선순위가 자동으로 떠오릅�
 "사용자가 가치 있는지 어떻게 판단하는지"조차 말할 수 없다면, 이 방향은 아마 아직 잘 수렴되지 않은 것입니다.
 
 <a id="jtbd-formula"></a>
-## [5. 바로 사용할 수 있는 한 문장 공식](#top-jtbd)
+## [5. JTBD 문장 형식](#top-jtbd)
 
 제품 방향을 정리할 때, 이 매우 실용적인 문장 형식을 먼저 사용해 보세요:
 
@@ -272,6 +260,8 @@ JTBD는 다음 질문들에 더 적합합니다:
 
 이런 질문 방식의 장점은: 대화를 상상 속의 선호에 머물게 하지 않고, 실제 경험으로 되돌린다는 것입니다.
 
+<figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/jtbd/intel-context-observation.jpg" alt="Intel 사용자 경험 조사에서 참가자가 노트북 화면을 직접 만지는 모습" loading="lazy" /></a><figcaption><strong>행동은 때로 답변보다 구체적입니다.</strong> Intel의 노트북 터치 연구에서는 참가자가 화면을 뒤로 밀고 여러 자세로 조작하는 모습이 관찰되었습니다. 이런 행동은 원하는 기능을 묻는 것만으로 찾기 어렵지만 실제 사용 방식을 드러냅니다. 사진: <a href="https://commons.wikimedia.org/wiki/File:Touch_on_Clamshell_Devices.jpg" target="_blank" rel="noreferrer">Intel Free Press / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>.</figcaption></figure>
+
 ## 9. AI로 JTBD 분해 돕기
 
 JTBD 자체는 AI가 발명한 것이 아니지만, AI는 JTBD를 정리하고 추출하는 데 매우 적합합니다.
@@ -326,7 +316,7 @@ Jobs to Be Done 프레임워크로 정리해 주세요:
 
 JTBD의 올바른 사용법은 보통 "모든 것을 해결하는 대플랫폼을 만들겠다"가 아니라, 먼저 한 시나리오에서 가장 핵심적인 단계 하나를 정조준하여, 그것을 아주 편하게 만드는 것입니다.
 
-## 11. 요약
+## 11. AI로 JTBD 자료 정리하기
 
 Jobs to Be Done의 가장 가치 있는 부분은 새로운 용어를 주는 것이 아니라, 관찰 관점을 바꿔주는 것입니다: **제품 기능만 바라보지 말고, 사용자가 무엇을 다음 단계로 밀고 나가고 싶은지 바라보세요.**
 
@@ -342,7 +332,6 @@ Jobs to Be Done의 가장 가치 있는 부분은 새로운 용어를 주는 것
 제품을 만드는 것, 특히 AI 제품을 만드는 데 있어 가장 두려운 것은 처음부터 능력 전시에 빠지는 것입니다. JTBD는 여러분의 주의를 정말로 중요한 곳으로 되돌려 줍니다: **사용자가 왜 당신이 필요한지, 그리고 당신이 정확히 어떤 진전을 도와주고 있는지.**
 
 <a id="jtbd-ai"></a>
-## [12. AI를 활용해 JTBD를 실천하는 방법](#top-jtbd)
 
 JTBD는 AI가 발명한 것이 아니지만, AI는 이 방법에서 연구 조수, 정리 조수, 비교 조수로 활용하기에 매우 적합합니다. 핵심은: **AI가 정리와 확장을 돕게 하고, AI가 사용자를 대신해 추측하게 하지 않는 것입니다.**
 
@@ -480,7 +469,13 @@ AI의 출력은 다음과 같을 수 있습니다:
 
 이렇게 하면 자신이 니즈를 보고 있는지, 아니면 자신이 좋아하는 솔루션만 보고 있는지 더 빨리 발견할 수 있습니다.
 
-## 📚 과제
+## 12. 요약
+
+- JTBD는 제품 기능이 아니라 사용자가 끝내려는 과업을 분석합니다.
+- 가설에는 상황, 계기, 기대하는 진전, 현재 대안, 성공 기준이 들어가야 합니다.
+- 기능은 과업을 완수하는 한 가지 방안일 뿐이며, 가설은 인터뷰와 행동 증거로 확인해야 합니다.
+
+## 13. 연습
 
 <StageAssignmentCard title="사용자가 정말 끝내고 싶은 일을 분명히 쓰기">
 
@@ -499,3 +494,13 @@ AI의 출력은 다음과 같을 수 있습니다:
 - [Harvard Business School Online: What Is Jobs to Be Done?](https://online.hbs.edu/blog/post/jobs-to-be-done)
 - [Intercom: Jobs-to-be-Done: A framework for customer needs](https://www.intercom.com/blog/jobs-to-be-done-framework/)
 - [Mural: Jobs to Be Done framework guide](https://www.mural.co/blog/jobs-to-be-done-framework)
+
+<style scoped>
+.field-figure { margin: 24px 0 32px; overflow: hidden; border: 1px solid var(--vp-c-divider); border-radius: 12px; background: var(--vp-c-bg-soft); }
+.field-figure > a { display: block; background: #f4f4f1; }
+.field-figure img { display: block; width: 100%; max-height: 520px; object-fit: contain; }
+.field-figure--narrow img { max-height: 720px; object-fit: contain; }
+.field-figure figcaption { padding: 13px 16px 15px; border-top: 1px solid var(--vp-c-divider); color: var(--vp-c-text-2); font-size: 13px; line-height: 1.75; }
+.field-figure figcaption strong { color: var(--vp-c-text-1); }
+@media (max-width: 640px) { .field-figure { margin: 20px 0 28px; } }
+</style>

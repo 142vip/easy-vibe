@@ -5,56 +5,24 @@ description: '面向零基础读者的 Double Diamond 入门文章。理解 Disc
 
 <script setup>
 import StageAssignmentCard from '@theme/components/StageAssignmentCard.vue'
-
-const duration = '约 <strong>1.5 小时</strong>'
 </script>
 
 # 双钻设计模型
 
-<ProductJourney current="define" />
-
 <a id="top-dd"></a>
 
-## 本章导读
+经过需求分析和用户访谈，我们往往会得到很多材料：不同用户的经历、现有工具的问题，以及若干可能的改进方向。材料变多之后，新的困难是如何取舍。
 
-<ChapterIntroduction
-  :duration="duration"
-  :tags="['Double Diamond', '设计思维', '需求分析', '方案设计']"
-  coreOutput="1 个更清楚的问题定义和 1 个更合理的验证切口"
-  expectedOutput="不再一上来就急着画原型，而是知道先想清楚问题，再比较方案"
->
+如果没有区分“理解问题”和“设计方案”，人们很容易一边访谈，一边为自己偏好的功能寻找理由。双钻模型（Double Diamond）用两次发散和收敛将这两类工作分开。
 
-经过前面的需求分析和用户访谈，我们已经积累了一批事实：用户在什么场景下遇到问题、现在怎样处理，以及哪些问题更值得优先解决。下一步是把这些信息整理成清楚的问题定义，再比较可能的方案。
-
-双钻模型（Double Diamond）把这个过程分成两次“发散—收敛”：第一个钻石用于理解并定义问题，第二个钻石用于探索、选择和验证方案。
-
-本章会使用前面收集到的材料走完这四个阶段。最后得到的问题定义和最小方案，将直接成为下一章产品原型的输入。
-
-</ChapterIntroduction>
-
-::: info 最小 SOP
-**目的**：看完后，你会更清楚做产品时什么时候该先想问题，什么时候才该开始想方案和原型，避免一上来就在错误方向上做得很认真。
-
-**行动项**：按 `Discover → Define → Develop → Deliver` 四步往下走，每一步只做当前阶段该做的事。
-
-**结果**：你会得到一个更清楚的问题定义、几种可比较的方案，以及一个可验证的最小版本。
-
-**关键词跳转**：[双钻模型是什么](#dd-what) · [第一个钻石](#dd-first) · [AI 怎么帮你](#dd-ai)
-:::
-
-## 你将学到以下内容
-
-1. 双钻模型是什么，为什么它适合零基础做产品时使用
-2. Discover、Define、Develop、Deliver 四个阶段分别在做什么
-3. 怎样区分“现在应该继续发散”还是“现在应该开始收敛”
-4. 如何把双钻模型用在 AI 产品、原型设计和需求验证里
+本章介绍 Discover、Define、Develop 和 Deliver 四个阶段，并说明每个阶段的输入、产出和常见错误。
 
 <a id="dd-what"></a>
-## [1. 双钻模型到底是什么](#top-dd)
+## [1. 两次发散与收敛](#top-dd)
 
-双钻模型是英国 **Design Council** 推广的一套经典设计流程框架。它把一个完整的设计与创新过程，画成两个连续的钻石形状。
+双钻模型是英国 **Design Council** 推广的设计流程框架。它用两个连续的钻石表示问题空间和方案空间。
 
-之所以是“钻石”，是因为每个钻石都包含两种相反但都很重要的动作：
+每个钻石包含两个过程：
 
 - **发散**：先把视野打开，看更多可能性
 - **收敛**：再把范围缩小，做出判断和取舍
@@ -66,19 +34,18 @@ const duration = '约 <strong>1.5 小时</strong>'
 3. **Develop**：围绕核心问题发散多种解决方案
 4. **Deliver**：筛选、原型、测试并交付更合适的方案
 
-如果把这四步压缩成一句最容易记住的话，就是：
+前两个阶段处理问题空间，后两个阶段处理方案空间。
 
-- **第一个钻石**：先搞清楚到底要解决什么问题
-- **第二个钻石**：再决定用什么方案去解决它
+<figure class="field-figure field-figure--diagram">
+  <a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/design-council-double-diamond-wide.png" alt="Design Council 官方双钻图：Discover、Define、Develop 和 Deliver 组成两个相连的钻石" loading="lazy" />
+  </a>
+  <figcaption><strong>先看原图：</strong>左边的钻石从 Discover 发散到 Define 收敛，右边从 Develop 再次发散到 Deliver 收敛。Design Council 同时指出，这不是只能向前走一次的直线流程；测试中发现问题时，可以回到前面的阶段。图源：<a href="https://www.designcouncil.org.uk/resources/framework-for-innovation/" target="_blank" rel="noreferrer">Design Council</a>，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。</figcaption>
+</figure>
 
-这也是你刚才说得很准确的那句话：
+## 2. 为什么要把问题和方案分开
 
-- **第一个钻石：做对的事情**
-- **第二个钻石：把事情做对**
-
-## 2. 为什么双钻模型特别适合新手
-
-新手做产品最常见的节奏，往往是这样的：
+一种常见的产品开发过程如下：
 
 - 想到一个点子
 - 觉得这个方向很酷
@@ -86,27 +53,27 @@ const duration = '约 <strong>1.5 小时</strong>'
 - 做着做着发现功能越来越多
 - 最后不知道自己到底在解决什么问题
 
-双钻模型的价值，不在于让流程变复杂，而在于 **强迫你把“理解问题”和“设计方案”拆开** 。
-
-这件事听起来很普通，但实际非常重要。因为很多失败的产品，不是执行不认真，而是：
+双钻模型将“理解问题”和“设计方案”分开。这样可以检查下列情况：
 
 - 选错了问题
 - 误解了用户
 - 过早锁定了解决方案
 - 把大量时间花在细节打磨上，却没有验证方向
 
-双钻模型就是在不断提醒你：
+因此，进入下一阶段前应检查：
 
 - 不要因为想法顺手，就默认问题已经成立
 - 不要因为方案能做出来，就默认它值得做
 - 不要因为原型看起来完整，就默认用户会真的需要
 
+这三句话针对的是同一个错误：把“已经投入了多少”当成“方向是否正确”的证据。原型只能证明团队做出了什么；用户访谈、现场观察和真实使用，才能说明问题是否存在。
+
 <a id="dd-first"></a>
-## [3. 第一个钻石：做对的事情](#top-dd)
+## [3. 第一个钻石：问题空间](#top-dd)
 
 第一个钻石关注的是 **问题本身** ，而不是解决方案。
 
-你可以把它理解成一句话：**先别急着做，先搞清楚到底值不值得做。**
+在这个钻石中，产出是问题定义，而不是产品原型。
 
 ### 3.1 Discover：先把问题空间打开
 
@@ -130,6 +97,13 @@ Discover 阶段的核心任务，是 **广泛调研，而不是快速下结论�
 - 哪些会议场景最需要纪要，哪些根本不需要
 
 这一步最重要的目标不是得出答案，而是 **别太早以为自己已经知道答案。**
+
+<figure class="field-figure">
+  <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/creative-commons-design-workshop.jpg" alt="Creative Commons 可用性研究工作坊现场，墙面贴着按访谈问题整理的大量便签" loading="lazy" />
+  </a>
+  <figcaption><strong>真实的 Discover 材料会很杂。</strong>Creative Commons 团队在 2018 年的可用性研究中完成了 81 次访谈，并整理了另外 36 次既有访谈。照片里的每张纸对应一个问题，便签记录受访者的回答，圆点用于标记和比较。此时团队先保留差异，还没有急着把材料压成一个答案。照片与案例：<a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。</figcaption>
+</figure>
 
 ### 3.2 Define：从一堆信息里提炼出核心问题
 
@@ -160,7 +134,14 @@ Define 阶段要做的，不是把所有观察都保留下来，而是问：
 
 Define 的本质，就是 **从“问题很多”收敛到“这次先解决哪一个问题”。**
 
-## 4. 第二个钻石：把事情做对
+<figure class="field-figure">
+  <a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/creative-commons-research-synthesis.jpg" alt="Creative Commons 团队将访谈便签排列、聚类并标记主题的研究归纳墙" loading="lazy" />
+  </a>
+  <figcaption><strong>Define 不是挑一句最顺耳的话。</strong>同一案例中，团队把 117 次访谈汇总、聚类并寻找重复模式，最后提炼出 9 条洞察。图中的空白、分组和不同颜色，正是从原始回答走向主题和优先级的中间过程。照片与案例：<a href="https://creativecommons.org/2018/09/25/findings-from-the-discovery-phase-of-cc-usability/" target="_blank" rel="noreferrer">Creative Commons</a>，<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>。</figcaption>
+</figure>
+
+## 4. 第二个钻石：方案空间
 
 当你完成第一个钻石后，才真正适合进入第二个钻石。因为这时你解决的不是一个模糊方向，而是一个被收敛过的具体问题。
 
@@ -186,6 +167,13 @@ Develop 阶段的重点，是 **围绕同一个问题，探索多种可能方案
 但这里有一个前提：**所有方案都必须服务同一个已定义的问题。**  
 如果问题没定义清楚，Develop 很容易又重新变成功能乱飞。
 
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/develop-idea-board.jpg" alt="Wikimedia Deutschland 设计思维工作坊的方案白板，不同颜色便签被分布在多个候选方向中" loading="lazy" />
+  </a>
+  <figcaption><strong>Develop 先保留多个答案。</strong>这块白板来自 Wikimedia Deutschland 的设计思维工作坊。候选想法按主题散开放置，还没有被压成一套功能清单。发散的价值不是便签数量，而是让团队在选方案之前真正比较过不同路径。照片：<a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_1.jpg" target="_blank" rel="noreferrer">Corinna Schuster（WMDE）/ Wikimedia Commons</a>，<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>。</figcaption>
+</figure>
+
 ### 4.2 Deliver：选择方案、做原型、测试和交付
 
 Deliver 阶段是第二个钻石里的收敛阶段。
@@ -209,21 +197,18 @@ Deliver 阶段是第二个钻石里的收敛阶段。
 
 Deliver 的重点不是“完美交付”，而是 **尽快把方案放进真实环境里验证。**
 
-## 5. 一个最容易记住的对照表
+<figure class="field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/paper-prototype-test.jpg" alt="一只手正在纸面原型的输入框中书写，模拟用户与尚未开发的界面交互" loading="lazy" />
+  </a>
+  <figcaption><strong>可测试，不等于已经写完代码。</strong>纸面原型把界面画在纸上，由参与者点击、填写，研究者再替换下一张页面。它足以检查流程、文字和操作顺序，却避免团队先花几周实现一个可能错误的方向。照片：<a href="https://commons.wikimedia.org/wiki/File:TestingPaperPrototype.jpg" target="_blank" rel="noreferrer">d_jan / Wikimedia Commons</a>，<a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a>。</figcaption>
+</figure>
 
-如果你总是分不清四个阶段，可以直接记下面这个版本：
+## 5. 四个阶段的区别
 
-| 阶段 | 你在做什么 | 关键词 | 常见产出 |
-| --- | --- | --- | --- |
-| Discover | 理解问题 | 调研、观察、访谈、收集信息 | 用户洞察、场景笔记、问题清单 |
-| Define | 定义问题 | 提炼、聚焦、取舍、重写问题 | 问题定义、优先级、MVP 切口 |
-| Develop | 探索方案 | 脑暴、比较、共创、原型设想 | 方案列表、流程草图、原型方向 |
-| Deliver | 验证方案 | 原型、测试、迭代、交付 | 原型、测试反馈、优化版本 |
+现在我们已经分别讨论了四个阶段。下面的图将它们放在同一个过程中。选择一个阶段，并比较它的工作、产出和暂时不做的事情。
 
-再压缩一点，就是这样：
-
-- **Discover / Define**：解决“做对的事情”
-- **Develop / Deliver**：解决“把事情做对”
+<DoubleDiamondNavigator />
 
 ## 6. 双钻模型最常见的误区
 
@@ -298,6 +283,13 @@ AI 产品特别容易掉进“能力先行”的坑里，因为模型能力看�
 - 哪些方案最轻、最快、最容易验证？
 - 哪些是必须做，哪些是以后再说？
 
+<figure class="field-figure field-figure--portrait">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_WMDE_Gruppenarbeit_2.jpg" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-group-workshop.jpg" alt="Wikimedia Deutschland 设计思维工作坊中，参与者围桌动手制作方案" loading="lazy" />
+  </a>
+  <figcaption><strong>Develop 不是坐着等一个好点子。</strong>图中的参与者正在剪裁、摆放和制作，把不同人的想法变成可以讨论的东西。方案越早变得可见，就越容易比较、组合和舍弃。照片：Corinna Schuster（WMDE），<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>。</figcaption>
+</figure>
+
 ### Deliver
 
 - 我们最小可以交付什么来验证这个方向？
@@ -345,27 +337,17 @@ AI 产品特别容易掉进“能力先行”的坑里，因为模型能力看�
 
 你会发现，一旦第一个钻石做扎实，第二个钻石会清楚很多。
 
-## 10. 小结
-
-双钻模型最有力量的地方，是它帮你把一整团混乱拆成了四个更清楚的动作：
-
-- 先发散理解问题
-- 再收敛定义问题
-- 再发散探索方案
-- 最后收敛交付方案
-
-它不是让你变慢，而是让你 **少走很多看起来很忙、其实方向不对的弯路。**
-
-尤其在 AI 时代，做东西变得越来越快，双钻模型反而更重要。因为当“做出来”越来越容易时，真正稀缺的能力会变成：**你有没有在解决一个值得解决的问题，以及你有没有用合适的方式去解决它。**
-
-记住这一句就够了：
-
-**先做对的事情，再把事情做对。**
+<figure class="field-figure field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_Prototyp_Mitmach-O-Mat.png" target="_blank" rel="noreferrer">
+    <img src="/images/product-discovery/double-diamond/wmde-workshop-prototype.png" alt="Wikimedia Deutschland 设计思维工作坊产出的 Mitmach-O-Mat 手绘原型界面" loading="lazy" />
+  </a>
+  <figcaption><strong>原型只要足够回答一个问题。</strong>这张工作坊产物没有完整视觉系统，只有欢迎语、行动按钮和一句说明，却已经能拿去观察参与者是否理解下一步。Deliver 的重点是获得反馈，不是先把界面做得像成品。原型：Corinna Schuster / WMDE，<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>。</figcaption>
+</figure>
 
 <a id="dd-ai"></a>
-## [11. 如何利用 AI 帮你跑双钻流程](#top-dd)
+## [10. 在双钻流程中使用 AI](#top-dd)
 
-双钻模型本身不是 AI 工具，但 AI 很适合在四个阶段里充当“加速器”。关键不是让 AI 替你决策，而是让它帮你扩展视野、整理信息、比较方案和生成验证材料。
+AI 可以用于整理信息、扩展候选方案和准备测试材料，但不能替代用户证据或项目决策。
 
 ### 11.1 在 Discover 阶段，用 AI 先做一轮信息铺垫
 
@@ -528,7 +510,14 @@ AI 可能输出：
 
 这对新手特别有帮助，因为你很容易在“还没想清楚问题时就开始画原型”。
 
-## 📚 本章作业
+## 11. 小结
+
+- Discover 和 Define 用于形成问题定义，Develop 和 Deliver 用于形成并验证方案。
+- 发散用于扩展候选项，收敛用于根据证据做出取舍。
+- 问题定义应在方案探索之前完成，但可以根据后续测试结果修正。
+- Deliver 的目标是获得可用于学习的测试结果，不一定要交付完整产品。
+
+## 12. 练习
 
 <StageAssignmentCard title="用双钻模型整理你的点子">
 
@@ -549,3 +538,63 @@ AI 可能输出：
 - [Design Council: The Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/)
 - [Design Council: Framework for Innovation](https://www.designcouncil.org.uk/our-work/skills-learning/tools-frameworks/framework-for-innovation-design-councils-evolved-double-diamond/)
 - [Design Council: History of the Double Diamond](https://www.designcouncil.org.uk/our-resources/the-double-diamond/history-of-the-double-diamond/)
+
+<style scoped>
+.field-figure {
+  margin: 24px 0 32px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+}
+
+.field-figure > a {
+  display: block;
+  background: #f4f4f1;
+}
+
+.field-figure img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
+
+.field-figure--diagram img {
+  max-height: 580px;
+  padding: 18px;
+}
+
+.field-figure--portrait img {
+  max-height: 640px;
+  object-fit: contain;
+}
+
+.field-figure--artifact img {
+  padding: 20px;
+  background: #f4f1eb;
+  object-fit: contain;
+}
+
+.field-figure figcaption {
+  padding: 13px 16px 15px;
+  border-top: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.field-figure figcaption strong {
+  color: var(--vp-c-text-1);
+}
+
+@media (max-width: 640px) {
+  .field-figure {
+    margin: 20px 0 28px;
+  }
+
+  .field-figure--diagram img {
+    padding: 8px;
+  }
+}
+</style>

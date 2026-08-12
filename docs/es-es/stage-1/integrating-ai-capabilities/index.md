@@ -15,7 +15,6 @@ const relatedArticles =
 
 # Añadir funciones de IA a un prototipo
 
-<ProductJourney current="ai" />
 
 ## Presentación del capítulo
 

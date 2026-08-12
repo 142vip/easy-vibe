@@ -9,7 +9,6 @@ const duration = '약 <strong>20분</strong>'
 
 # 창의적인 아이디어는 어디에서 오는가
 
-<ProductJourney current="find" />
 
 ## 이번 장에서 할 일
 
