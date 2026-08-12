@@ -150,6 +150,7 @@ Easy-Vibe 教你的，就是怎样把它一步步做成真正的产品。
 
 ## 🔥 News
 
+- **[2026-08-12]** 📘 **Stage 1 完成重构与润色**：新的入门路径从真实问题出发，依次完成找问题、选方向、理解需求、用户访谈、收敛方案、制作原型、接入 AI 和完成作品。章节中的解释、真实案例、配图与动手练习也一并整理。现在的 Stage 1 更适合零基础学习者、第一次尝试做产品的人，以及希望从真实需求走到可展示原型的独立开发者。[👉 从 Stage 1 开始](https://datawhalechina.github.io/easy-vibe/zh-cn/stage-1/learning-map/)
 - **[2026-05-20]** 🌍 **第一阶段（Stage 1）多语言已全面覆盖**：Stage 1 已在所有支持的语言（zh-cn, en, zh-tw, ja-jp, ko-kr, es-es, fr-fr, de-de, ar-sa, vi-vn）下完整可用，并已完成导航/构建校验，确保不会出现 404。
 - **[2026-03-29]** ✨ **「用户故事」专区上线并更新为真实案例**：首页新增交互式故事轮播组件和独立故事页面，并将原有占位内容替换为 4 篇真实用户故事，涵盖乡村小学老师、大学生、高中信息技术老师和货车司机，展示不同背景的学习者如何用 AI 解决真实问题、做出真实产品。[👉 查看故事](https://datawhalechina.github.io/easy-vibe/zh-cn/vibe-stories/story-1.html)
 - **[2026-03-26]** 🚀 **阶段二实战内容集中更新**：补充完整 SaaS 全栈大作业[《第一个 SaaS 全栈应用——文案生成网站》](https://datawhalechina.github.io/easy-vibe/zh-cn/stage-2/assignments/copywriting-platform-supabase/)；同时大幅补全[《如何集成 Stripe 等收费系统》](https://datawhalechina.github.io/easy-vibe/zh-cn/stage-2/backend/stripe-payment/)，完善多产品 UI、微信小程序后端等关键章节。
