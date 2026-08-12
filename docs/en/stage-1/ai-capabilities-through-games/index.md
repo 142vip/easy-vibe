@@ -150,7 +150,7 @@ Once generated, you will see a browsable webpage UI on the right. Scroll around 
 
 > The buttons at the top from left to right are: Arrow button expands chat history, Pencil button to start a new chat, Refresh icon to rebuild the page, Compass icon to toggle fullscreen, Download button to download the project, <> button to view code, and Publish button to publish it.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.webp)
 
 If you'd like to check the webpage's source code, click the code icon in the top right to view the entire codebase.
 
@@ -232,23 +232,23 @@ You can simply provide these prompts:
 
 > **💡 Example Prompt:** Build me a Snake game.
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.webp)
 
 > **💡 Example Prompt:** Build me a Snake game that supports:
 > 1. Eating different words and placing them in a collection box.
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.webp)
 
 > **💡 Example Prompt:** Build a Snake game that supports:
 > 1. I can eat distinct words, collected in a box.
 > 2. When eating 8 words, the LLM generates a poem using them.
 > 3. An image generation API is called right after the poem is composed.
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.webp)
 
 If you face any issues, just screenshot the error or tell the bot what's wrong and it will iterate the changes.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.webp)
 
 ### 3.2 Add New Features to the Game
 
@@ -292,13 +292,13 @@ If you want to learn how to write better prompts, check out the [Prompt Engineer
 
 z.ai's response will look like this:
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.webp)
 
 We can use this prompt to regenerate the project in full-stack development mode:
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.webp)
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>
@@ -363,7 +363,7 @@ The answer is yes. Below are **8** curated real-world cases from across the web�
 
 Japanese developer [in0ho1no](https://github.com/in0ho1no), who knew absolutely nothing about programming, used Claude through pure conversation (Vibe Coding) to build the 2048-style "flower garden" game [Blooming Garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) in **about 2 hours**: merging identical plants to upgrade them, gorgeous blooming effects, particle animations, leaderboards, sound effects, mobile adaptation... All of these features were completed through natural language conversation, without writing a single line of code by hand.
 
-![Blooming Garden plant-matching game (100% AI-generated)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.png)
+![Blooming Garden plant-matching game (100% AI-generated)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.webp)
 
 > 🔗 Play online: [in0ho1no.github.io/2025-adhoc-blooming-garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) ｜ Source code: [github.com/in0ho1no/2025-adhoc-blooming-garden](https://github.com/in0ho1no/2025-adhoc-blooming-garden)
 
@@ -371,7 +371,7 @@ Japanese developer [in0ho1no](https://github.com/in0ho1no), who knew absolutely 
 
 Designer [Ricardo de Zoete (Hammy)](https://x.com/RicardoDeZoete) used OpenAI's AI through pure conversation (Vibe Coding) on top of three.js to build [Planet Jumper](https://gamesbyhammy.cloud/play/planetjumper)—a **3D multiplayer platformer**: run, dash, and jump across the surface of a small spherical planet, competing online against strangers in the same arena. Systems that are far from simple—spherical gravity, networked synchronization, and jump feel—were all "chatted" into existence with prompts.
 
-![Planet Jumper 3D multiplayer platformer (generated with Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.png)
+![Planet Jumper 3D multiplayer platformer (generated with Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.webp)
 
 > 🔗 Play online: [gamesbyhammy.cloud/play/planetjumper](https://gamesbyhammy.cloud/play/planetjumper) ｜ Detailed write-up: [Planet Jumper: A Vibe-Coded Three.js Multiplayer Platformer](https://www.webgpu.com/showcase/planet-jumper-threejs-multiplayer/)
 
@@ -381,7 +381,7 @@ In July 2026, Chinese community developer [wangzifan396-wzf](https://github.com/
 
 ![Online catalog of 100 browser games (a Vibe Coding open-source project from 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
 
-![Neon 2048: a six-chapter, 18-node expedition + multiple modes and a tool system](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.png)
+![Neon 2048: a six-chapter, 18-node expedition + multiple modes and a tool system](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
 > 🔗 Online catalog: [wangzifan396-wzf.github.io/mini-browser-games](https://wangzifan396-wzf.github.io/mini-browser-games/) ｜ Source code: [github.com/wangzifan396-wzf/mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) ｜ Creation retrospective: [I Built 100 Browser Games with Vibe Coding and Open-Sourced All of Them](https://blog.csdn.net/m0_74023007/article/details/162945755)
 
@@ -417,7 +417,7 @@ On July 17, 2026, Moonshot AI released the Kimi K3 model and, at the same time, 
 
 ![K399 platform interface—K3 Game Arcade, click any game to play instantly](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
 
-![SpiderPunk, an open-world game on K399: swinging between cyberpunk skyscrapers on spider webs (generated by the K3 model, actual gameplay footage)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.png)
+![SpiderPunk, an open-world game on K399: swinging between cyberpunk skyscrapers on spider webs (generated by the K3 model, actual gameplay footage)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 
 > 🔗 Play online: [k399.games](https://www.k399.games/) (K3 Game Arcade, play with one click) ｜ Detailed write-up: [A Former miHoYo Executive Joined, and the Hottest AI Company Suddenly Made Dozens of Games](https://eu.36kr.com/zh/p/3906895998178441) ｜ [Kimi K3: Who's Getting Nervous?](https://36kr.com/p/3905392402748801)
 
@@ -561,7 +561,7 @@ To learn more, check out the [Web Basics Appendix](/zh-cn/appendix/3-browser-and
 
 > 💡 What is Vibe Coding? Computer scientist [Andrej Karpathy](https://karpathy.ai/) (one of the co-founders of OpenAI, former head of AI at Tesla) coined the term **vibe coding** in February 2025. This concept refers to a coding methodology that relies on LLMs, **allowing programmers to generate working code by providing natural language descriptions instead of manually writing code.**
 
-![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.png)
+![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.webp)
 
 Literally, Vibe Coding can be understood as a way of "developing by talking." The core change is: you no longer need to write code line by line, look up syntax, or debug yourself. Instead, you directly describe what you want in natural language, for example:
 

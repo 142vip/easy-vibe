@@ -100,7 +100,7 @@ Après l’envoi, attendez que Trae termine de créer les fichiers. N’envoyez 
 
 Trae a créé `index.html`, `styles.css` et `script.js`, puis a ouvert la page dans le navigateur. Cette animation montre le résultat obtenu pendant la leçon :
 
-![Page Wishlabs générée et exécutée à partir de la capture](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.gif)
+![Page Wishlabs générée et exécutée à partir de la capture](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.webp)
 
 N’étudiez pas encore le code. Regardez la page et comparez-la à la référence :
 
@@ -167,7 +167,7 @@ La méthode de la capture ne se limite pas aux pages d’accueil. Pour le vérif
 
 Les produits SaaS utilisent souvent des tableaux de bord pour suivre projets, ventes ou utilisateurs. Dans cette capture de Linear, la navigation est à gauche et le contenu à droite.
 
-![Interface officielle du tableau de bord Linear](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.png)
+![Interface officielle du tableau de bord Linear](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.webp)
 
 _Référence du cours : [Linear Dashboards](https://linear.app/docs/dashboards)_
 
@@ -180,7 +180,7 @@ Utilise des données d’exemple pour le moment.
 
 Trae a produit une barre latérale, des cartes et des graphiques. Voici la page ouverte dans le navigateur :
 
-![Tableau de bord généré et exécuté à partir de la capture](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.gif)
+![Tableau de bord généré et exécuté à partir de la capture](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.webp)
 
 Les chiffres ne sont pas encore de vraies données d’entreprise, et ce n’est pas grave. Le premier exercice sert à construire la structure du tableau. Vous changerez les libellés et les valeurs une fois la page stable.
 
@@ -188,7 +188,7 @@ Les chiffres ne sont pas encore de vraies données d’entreprise, et ce n’est
 
 Si une page ordinaire ne vous intéresse pas, partez d’une capture de jeu. Le professeur a choisi une image de l’univers en blocs de Minecraft.
 
-![Interface du mode Créatif de Minecraft](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.png)
+![Interface du mode Créatif de Minecraft](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.webp)
 
 _Référence du cours : [exemple Minecraft sur Microsoft Learn](https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/108)_
 
@@ -201,7 +201,7 @@ Le personnage doit pouvoir se déplacer et poser des blocs.
 
 Trae a créé un jeu jouable dans le navigateur, où le personnage peut se déplacer, poser et retirer des blocs :
 
-![Jeu de blocs 2D généré et exécuté à partir de la capture](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.gif)
+![Jeu de blocs 2D généré et exécuté à partir de la capture](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.webp)
 
 Ce résultat est un <strong>jeu 2D vu de côté</strong>. Le personnage se déplace sur un plan, sans profondeur vers l’avant ou l’arrière. Comme la demande disait seulement « jeu de blocs », Trae a choisi l’interprétation la plus simple.
 
@@ -218,7 +218,7 @@ Le joueur doit pouvoir marcher, tourner la caméra et poser des blocs.
 
 Cette fois, Trae a créé un véritable monde de blocs en trois dimensions :
 
-![Jeu de blocs 3D généré et exécuté à partir de la capture](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.gif)
+![Jeu de blocs 3D généré et exécuté à partir de la capture](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.webp)
 
 Après avoir choisi « Start Game », utilisez `WASD` pour marcher et la souris pour tourner. Le bouton gauche retire un bloc, le bouton droit en pose un et les touches numériques changent de type de bloc.
 

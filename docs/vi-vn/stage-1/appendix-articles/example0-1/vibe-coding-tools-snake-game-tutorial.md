@@ -244,7 +244,7 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
 - **Đặc điểm chính và workflow:** Lovable làm tốt trong tích hợp và phối hợp, nó tự động hoàn thành các khởi tạo như kết nối database Supabase, khiến quá trình xây dựng dự án rất thuận lợi. Bạn chỉ cần mô tả nhu cầu dự án, Agent sẽ giúp bạn kết nối các loại dịch vụ, xây dựng cấu trúc cơ bản.
 - **Người dùng phù hợp:** Đối với người mới lần đầu thử Vibe Coding, Lovable là lựa chọn rất thân thiện. Nó đơn giản hóa độ phức tạp của liên kết đa dịch vụ, để bạn tập trung sự chú ý vào prompt và lặp lại, thay vì cấu hình môi trường. Nhờ tự động hóa cao, bạn có thể nhanh chóng nhận được prototype chạy được.
 - **Quá trình prompt:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.webp)
 - **Hiệu quả trò Snake:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.png)
@@ -258,10 +258,10 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
 - **Đặc điểm chính và workflow:** Cursor là một IDE chuyên biệt tích hợp khả năng AI, hỗ trợ Windows, macOS và Linux. Nó nhúng trực tiếp tạo code, viết lại thông minh, truy vấn codebase vào môi trường phát triển. So với công cụ Web, nó gần với trải nghiệm phát triển cục bộ truyền thống hơn. Vì là môi trường cục bộ, cấu hình máy khác nhau sẽ thỉnh thoảng gặp vấn đề liên quan đến môi trường. Điểm tốt là dự án nằm ngay trên máy, không cần tải thêm hay cấu hình môi trường chạy, Cursor sẽ giúp bạn xử lý nhiều bước phức tạp.
 - **Người dùng phù hợp:** Đối với người dùng đã có nền tảng lập trình nhất định, Cursor là một môi trường rất mạnh mẽ và quen thuộc. Nhưng đối với người mới hoàn toàn không có nền tảng, cần tự hiểu cấu trúc dự án, quản lý dependency và tổ chức file, đường cong học sẽ dốc hơn. Phù hợp hơn cho nhà phát triển muốn thêm trợ lý AI vào quy trình lập trình truyền thống.
 - **Quá trình prompt:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image7.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image7.webp)
 - **Hiệu quả trò Snake:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.webp)
 
 - **Giá:**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
@@ -272,7 +272,7 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
 - **Đặc điểm chính và workflow:** Cách sử dụng Z.ai khá trực tiếp, nhưng một thách thức rõ ràng là: bạn cần **thủ công copy paste code đã tạo**. Bản thân nền tảng thiếu cửa sổ xem trước thời gian thực, nên rất khó thấy ngay hiệu quả chạy code.
 - **Người dùng phù hợp:** Nền tảng này yêu cầu cách sử dụng "động tay" hơn. Thiếu tự động hóa nghĩa là bạn phải trực tiếp đối mặt với code, điều này đối với người muốn hiểu sâu nội dung AI output lại là một dạng rèn luyện. Nhưng copy paste thường xuyên sẽ mang lại vấn đề hiệu quả và nguy cơ sai sót. Phù hợp hơn cho người muốn xem "raw AI output code", chứ không phải người theo đuổi trải nghiệm một lần click.
 - **Quá trình prompt:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image11.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image11.webp)
 - **Hiệu quả trò Snake:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image12.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image13.png)
@@ -285,11 +285,11 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
 - **Loại nền tảng:** Web
 - **Đặc điểm chính và workflow:** Replit là môi trường phát triển và triển khai trực tuyến tất cả trong một, trong trình duyệt đã có thể viết code, chạy chương trình, tạo địa chỉ truy cập online. Trước khi bắt đầu code, nó sẽ đưa ra kế hoạch hành động rõ ràng; đồng thời cung cấp editor trực quan, bạn có thể sửa UI trực tiếp trong cửa sổ xem trước, source code tự động đồng bộ cập nhật. Như vậy có thể bạn luôn xác nhận output của AI có đúng kỳ vọng không, giảm đáng kể số lần sửa đổi qua lại.
 
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image15.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image15.webp)
 
 - **Người dùng phù hợp:** Replit rất thân thiện với người mới. Nó đơn giản hóa vòng khép kín hoàn chỉnh từ code đến triển khai, không cần tự cấu hình server hay hosting thêm. Chức năng phối hợp cũng rất mạnh, phù hợp bạn học cùng làm dự án hoặc nhờ người khác hỗ trợ xem code từ xa.
 - **Quá trình prompt:** Trong quá trình xây dựng, AI không phải ngay từ đầu đã hiểu hoàn toàn nhu cầu, trải qua khoảng 3 vòng lặp, output cuối cùng mới đạt hiệu quả lý tưởng.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.webp)
 - **Hiệu quả trò Snake:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.png)
@@ -304,7 +304,7 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
 - **Người dùng phù hợp:** Vì nó sẽ tự động chạy test và sửa lỗi, thời gian và tiêu thụ Token đều khá lớn, nhưng bạn có thể rõ ràng thấy AI định vị và giải quyết vấn đề thế nào, từ góc độ học tập rất có giá trị.
 - **Quá trình prompt:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
 
 - **Hiệu quả trò Snake:**
 
@@ -319,10 +319,10 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
 - **Đặc điểm chính và workflow:** Là ứng dụng desktop, Trae so với công cụ Web thường có ưu thế hơn về hiệu năng và tốc độ phản hồi. Nhưng nó cần tải và cài đặt, đối với một số người dùng rào cản ban đầu hơi cao. Tương tự, vì là môi trường cục bộ, sự khác biệt về cấu hình máy và môi trường dependency sẽ mang lại một số không chắc chắn. Ưu điểm là Trae sẽ giúp bạn hoàn thành tạo dự án và cấu hình chạy ở cục bộ, bạn có thể trực tiếp phát triển và debug trên máy.
 - **Người dùng phù hợp:** Phù hợp hơn cho người dùng kế hoạch tiến hành dự án Vibe Coding dài hạn, và muốn sử dụng tổ hợp công cụ desktop chuyên dụng. Đối với người chỉ muốn "thỉnh thoảng chơi thử", có thể không phải lựa chọn nhẹ nhất.
 - **Quá trình prompt:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.webp)
 - **Hiệu quả trò Snake:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.webp)
 
 - **Giá:** Giá tương đối hợp lý, kể cả phiên bản miễn phí cũng đủ để hoàn thành dự án nhỏ chất lượng khá.
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
@@ -333,9 +333,9 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
 - **Đặc điểm chính và workflow:** V0 là một công cụ tập trung vào tạo component UI React, do Vercel cung cấp. Nó thể hiện xuất sắc trong việc tạo giao diện chất lượng cao, có thể dùng cho môi trường production. Nhưng trong sử dụng thực tế, sẽ gặp những vấn đề như "khó tìm code view", "không nói rõ API Key nên cấu hình ở đâu".
 - **Người dùng phù hợp:** V0 rất phù hợp cho sinh viên hoặc nhà thiết kế tập trung vào frontend và UI/UX. Nhưng nó không phải giải pháp fullstack hoàn chỉnh, bạn vẫn cần sử dụng nền tảng khác để triển khai logic backend và tích hợp API, vì vậy nếu mục tiêu của bạn là "xây ứng dụng hoàn chỉnh tại chỗ", nó có thể không phải lựa chọn hàng đầu.
 - **Quá trình prompt:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.webp)
 
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.webp)
 
 - **Hiệu quả trò Snake:**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.png)

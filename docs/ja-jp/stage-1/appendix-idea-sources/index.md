@@ -31,7 +31,7 @@ const duration = '約 <strong>20分</strong>'
 
 たとえば部屋探しでは、三つのサイトを同時に開き、家賃と通勤時間を表に書き写すことがあります。内見から戻ると、スマートフォンの写真がどの物件だったか分からなくなることもあります。
 
-![散らばった物件写真を位置情報と通勤経路で一つの比較画面にまとめた例](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.jpg)
+![散らばった物件写真を位置情報と通勤経路で一つの比較画面にまとめた例](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.webp)
 
 _まず体験を記録します。すぐに製品へ変える必要はありません。_
 
@@ -45,7 +45,7 @@ _まず体験を記録します。すぐに製品へ変える必要はありま�
 
 イベント公開前には、一枚のポスターをWebの横長画像、縦長投稿、動画の表紙に作り直すことがあります。サイズが変わるたび、デザイナーは見出し、主役、安全領域を並べ直します。
 
-![同じ内容を横長、正方形、縦長、細長い形式に配置した例](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.jpg)
+![同じ内容を横長、正方形、縦長、細長い形式に配置した例](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.webp)
 
 _数日後に同じ相談が出たら、保存する価値があります。_
 
@@ -88,7 +88,7 @@ site:reddit.com is there a tool for
 
 Product Huntは、テクノロジー製品が公開され、注目を集める場所です。開発者は説明、画像、デモを準備し、公開日に投票とコメントを集めます。
 
-![新製品、投票、議論を表示するProduct Huntのトップページ](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.png)
+![新製品、投票、議論を表示するProduct Huntのトップページ](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.webp)
 
 製品は毎日変わります。製品を開いたら、一文でどう説明しているか、最初の画像が何を強調しているか、コメントで何を質問されているかを見ます。1位だけでなく数日続けて見ると、繰り返し登場する分野が分かります。
 
@@ -96,7 +96,7 @@ Product Huntは、テクノロジー製品が公開され、注目を集める�
 
 Product Huntが公開日の舞台なら、Indie Hackersは個人開発者が長期的に事業を語るコミュニティです。進捗、売上、顧客獲得、失敗も共有されます。
 
-![個人製品と開発状況を表示するIndie Hackers Productsページ](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.png)
+![個人製品と開発状況を表示するIndie Hackers Productsページ](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.webp)
 
 売上が最大の製品だけを探す必要はありません。一人で運営し、毎月小さく安定して稼ぐ製品の方が、最初に解いた小さな問題と最初の顧客の見つけ方を理解しやすいことがあります。
 
@@ -104,7 +104,7 @@ Product Huntが公開日の舞台なら、Indie Hackersは個人開発者が長�
 
 Capterraは業務ソフトウェアの一覧と評価サイトです。CRM、プロジェクト管理、顧客対応、勤務表などを分類から比較できます。
 
-![業務ソフトウェアの検索、分類、比較を提供するCapterraのトップページ](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.png)
+![業務ソフトウェアの検索、分類、比較を提供するCapterraのトップページ](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.webp)
 
 気になる分野があれば、代表的な製品を数件開き、低い評価を読みます。モバイル版が使いにくい、書き出し形式が違う、設定が複雑すぎる、といった繰り返し出る不満は、公式機能一覧より保存する価値があります。
 
@@ -112,7 +112,7 @@ Capterraは業務ソフトウェアの一覧と評価サイトです。CRM、プ
 
 Google Trendsは、キーワードへの相対的な検索関心を時間と地域ごとに示し、関連検索や急上昇語も表示します。
 
-![リアルタイムの傾向とキーワード探索を表示するGoogle Trends](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.png)
+![リアルタイムの傾向とキーワード探索を表示するGoogle Trends](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.webp)
 
 候補の言葉がいくつかできてから使います。たとえば「AI meeting notes」「AI transcription」「voice notes」を比べ、どの表現がよく検索されるか確認します。線が上がっても市場の存在は証明できません。関心の変化が分かるだけです。
 

@@ -79,7 +79,7 @@ Combina un grafico abstracto que simbolice la IA con el texto, y exportalo como 
 
 - Introduce el prompt anterior -> compara los multiples disenos generados por el Agent.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. Confirmar el logotipo final
 
@@ -142,7 +142,7 @@ Incluso si no se te ocurre un esquema de colores en este momento, puedes encontr
 
 - **Buscar esquemas de colores en Google por palabras clave**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.webp)
 
 ## 4. Escribir el prompt para el diseno del sitio web
 
@@ -164,7 +164,7 @@ El estilo general debe ser moderno y limpio."
 
 **Ejemplo de prompt en Mastergo**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.webp)
 
 ## 2. Revisar el diseno y sugerir cambios
 
@@ -187,7 +187,7 @@ La forma de convertir el diseno a codigo varia segun la plataforma, pero general
 
 1. Abre el [sitio de plugins de Mastergo](https://mastergo.com/community/plugin) y busca **seal**.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.webp)
 
 2. Vuelve a la pagina de diseno y haz clic en el **icono de cubo (plugin)**.
 
@@ -195,7 +195,7 @@ La forma de convertir el diseno a codigo varia segun la plataforma, pero general
 
 3. Selecciona el area de diseno que deseas convertir a codigo y haz clic en el boton **Generate** para generar el codigo.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.webp)
 
 ---
 
@@ -305,7 +305,7 @@ El sitio web de la version inicial generada por el Agent generalmente incluye al
 
 1. Primero escribe el contenido que deseas mostrar en la pagina About. Para facilitar la comprension del Agent, puedes guardar el contenido en formato Markdown.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.webp)
 
 2. Luego dile al Agent en la conversacion que aplique el contenido del archivo a la pagina especificada.
 
@@ -313,7 +313,7 @@ El sitio web de la version inicial generada por el Agent generalmente incluye al
 
 3. Revisa la version actualizada despues de aplicar el contenido.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.webp)
 
 ## 6. Insertar imagenes
 
@@ -325,7 +325,7 @@ Si deseas anadir imagenes especificas (por ejemplo, logotipo, imagen de fondo, e
 
 - **Resultado:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.webp)
 
 ---
 
@@ -341,7 +341,7 @@ Cuando hayas descargado los archivos de codigo del Agent de diseno, puedes mover
 
 - **Resultado:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
 ---
 title: 'Construir un sitio con agentes de diseno y programacion'
 description: 'Del concepto al lanzamiento: coordina un agente de diseno para el visual y un agente de codigo para convertirlo en un sitio funcionando con un flujo reutilizable.'

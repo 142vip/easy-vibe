@@ -41,7 +41,7 @@ Capgemini의 소비자 12,000명 조사에서는 생성형 AI가 상품 발견�
 
 <figure class="product-shot">
   <a href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.jpg" alt="지불 연장과 다국어 상담, 환불 설명을 제공하는 Klarna AI Assistant" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.webp" alt="지불 연장과 다국어 상담, 환불 설명을 제공하는 Klarna AI Assistant" loading="lazy" />
   </a>
   <figcaption><strong>Klarna AI Assistant:</strong> ‘상담원에게 문의’만 말하지 않고 지불 연장 동작을 열며 환불 금액을 항목별로 설명합니다. 유용한 상담 AI는 주문을 찾고 다음 동작까지 이어 갑니다.</figcaption>
 </figure>
@@ -114,7 +114,7 @@ Thomson Reuters의 2025년 조사에서 법무, 세무, 위험 분야의 조사,
 
 <figure class="product-shot">
   <a href="https://github.blog/changelog/2024-10-29-github-copilot-code-review-in-github-com-private-preview/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.png" alt="Pull Request에서 코드 검토 의견을 주는 GitHub Copilot" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.webp" alt="Pull Request에서 코드 검토 의견을 주는 GitHub Copilot" loading="lazy" />
   </a>
   <figcaption><strong>GitHub Copilot Code Review:</strong> 의견은 정확한 코드 줄에 붙고 적용 가능한 수정도 제안합니다. 개발자는 차이를 보고 묶거나 거절합니다. 가치는 다른 채팅창이 아니라 Pull Request 안에 있습니다.</figcaption>
 </figure>
@@ -146,7 +146,7 @@ Siemens Industrial Copilot은 설비 설명, 정비 근거 검색, 자동화 프
 
 <figure class="product-shot">
   <a href="https://www.abridge.com/product" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.png" alt="임상 기록과 원래 대화를 연결하는 Abridge" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.webp" alt="임상 기록과 원래 대화를 연결하는 Abridge" loading="lazy" />
   </a>
   <figcaption><strong>Abridge:</strong> 생성된 진료 기록에서 해당 의사·환자 대화로 돌아갑니다. 중요한 것은 빠른 자동 작성보다 의사가 각 기록을 추적, 수정, 확인하는 일입니다.</figcaption>
 </figure>
@@ -184,7 +184,7 @@ Deloitte는 개인화, 상품 운영, 공급망, 마케팅을 AI 진입 영역�
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://www.aboutamazon.com/news/retail/amazon-rufus" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.jpg" alt="Amazon Rufus 쇼핑 도우미 화면" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.webp" alt="Amazon Rufus 쇼핑 도우미 화면" loading="lazy" />
   </a>
   <figcaption><strong>Amazon Rufus:</strong> Amazon 검색창 아래에서 식탁보 비교, Prime Day 준비, 수면 추적 시계처럼 쇼핑 문제를 다룹니다. 일반적인 조언이 아니라 실제 상품으로 이어집니다.</figcaption>
 </figure>
@@ -210,7 +210,7 @@ Deloitte는 개인화, 상품 운영, 공급망, 마케팅을 AI 진입 영역�
 
 <figure class="product-shot product-shot--portrait">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.png" alt="파리 카페에서 주문하는 Duolingo Max 역할 연습" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.webp" alt="파리 카페에서 주문하는 Duolingo Max 역할 연습" loading="lazy" />
   </a>
   <figcaption><strong>Duolingo Max Roleplay:</strong> ‘프랑스어로 대화’가 아니라 파리 카페에서 주문하는 구체적 과제입니다. 장면, 역할, 목표, 보상이 준비돼 바로 한 번 연습합니다.</figcaption>
 </figure>
@@ -223,7 +223,7 @@ Deloitte는 개인화, 상품 운영, 공급망, 마케팅을 AI 진입 영역�
 
 <figure class="product-shot">
   <a href="https://firefly.adobe.com/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.png" alt="Adobe Firefly 이미지 생성 작업 화면" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.webp" alt="Adobe Firefly 이미지 생성 작업 화면" loading="lazy" />
   </a>
   <figcaption><strong>Adobe Firefly:</strong> 프롬프트 창뿐 아니라 모델, 비율, 콘텐츠 유형, 강도, 참고 이미지, 여러 결과가 있습니다. 창작 제품은 ‘다시 생성’ 외에 계속 고칠 제어를 줍니다.</figcaption>
 </figure>

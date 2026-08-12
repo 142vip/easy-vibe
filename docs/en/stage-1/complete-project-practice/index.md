@@ -109,7 +109,7 @@ If the form has many fields, keep only those required to generate a useful resul
 
 An AI request may take several seconds or longer. After the click, the button should display “Generating” and temporarily prevent repeated submission. Existing input should not suddenly disappear, and the page should not jump to an empty result panel.
 
-![Waiting state while product content is generated](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![Waiting state while product content is generated](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.webp)
 
 *A waiting state does not need a complicated animation. Showing that work has started while preserving the original input and position already prevents most confusion.*
 
@@ -119,7 +119,7 @@ For queued image or video work, you may show stages such as “Queued” and “
 
 AI output is not the end of the journey. Users usually need to verify facts, revise wording, and carry the result into another step. The result panel should therefore offer at least one useful action: edit, copy, download, or regenerate.
 
-![Result page after image understanding and copy generation are connected](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![Result page after image understanding and copy generation are connected](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.webp)
 
 *This page keeps the uploaded product image above the recognition and generation result. The user can compare the text with the original image instead of having to accept one model answer.*
 

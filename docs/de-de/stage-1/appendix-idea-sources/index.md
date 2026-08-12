@@ -31,7 +31,7 @@ Denke an die vergangene Woche. Wobei musstest du wiederholt kopieren und einfüg
 
 Bei der Wohnungssuche sind vielleicht drei Portale gleichzeitig geöffnet, während Miete und Fahrzeit in eine Tabelle übertragen werden. Nach einer Besichtigung lassen sich die Fotos auf dem Handy manchmal nicht mehr der richtigen Wohnung zuordnen.
 
-![Verstreute Wohnungsfotos mit Ortsmarken und Pendelwegen in einer Übersicht](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.jpg)
+![Verstreute Wohnungsfotos mit Ortsmarken und Pendelwegen in einer Übersicht](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.webp)
 
 _Halte zuerst das Erlebnis fest. Du musst daraus nicht sofort ein Produkt machen._
 
@@ -45,7 +45,7 @@ In gewöhnlichen Gesprächen bei der Arbeit, in der Klasse oder in einer Communi
 
 Vor einer Veranstaltung muss aus einem Plakat oft ein Webbanner, ein Hochformat-Beitrag und ein Videocover werden. Mit jedem Format ordnet die Designerin Titel, Hauptmotiv und sicheren Bereich neu an.
 
-![Dasselbe Motiv in breitem, quadratischem, vertikalem und schmalem Format](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.jpg)
+![Dasselbe Motiv in breitem, quadratischem, vertikalem und schmalem Format](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.webp)
 
 _Kommt dieselbe Bitte nach einigen Tagen wieder, lohnt sich das Speichern._
 
@@ -88,7 +88,7 @@ Die Karte enthält viele Quellen. Die folgenden vier stehen für Produktstarts, 
 
 Auf Product Hunt werden Technologieprodukte vorgestellt und gewinnen Aufmerksamkeit. Entwickler bereiten Kurzbeschreibung, Bilder und Demo vor und sammeln am Starttag Stimmen und Kommentare.
 
-![Product-Hunt-Startseite mit neuen Produkten, Stimmen und Diskussionen](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.png)
+![Product-Hunt-Startseite mit neuen Produkten, Stimmen und Diskussionen](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.webp)
 
 Die Produkte wechseln täglich. Öffne eines und prüfe die Beschreibung in einem Satz, die Aussage des ersten Bildes und die Fragen in den Kommentaren. Nicht nur der Sieger zählt; mehrere Tage zeigen wiederkehrende Kategorien.
 
@@ -96,7 +96,7 @@ Die Produkte wechseln täglich. Öffne eines und prüfe die Beschreibung in eine
 
 Product Hunt ähnelt einer Bühne am Starttag. Indie Hackers ist eine Community, in der unabhängige Entwickler länger über Fortschritt, Einnahmen, Kundengewinnung und Fehlschläge berichten.
 
-![Products-Seite von Indie Hackers mit unabhängigen Produkten und Fortschritt](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.png)
+![Products-Seite von Indie Hackers mit unabhängigen Produkten und Fortschritt](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.webp)
 
 Suche nicht nur nach dem höchsten Umsatz. Bei einem Produkt, das eine Person mit kleinen, stabilen Einnahmen betreibt, sind das ursprüngliche Problem und der Weg zu den ersten Kunden oft leichter zu erkennen.
 
@@ -104,7 +104,7 @@ Suche nicht nur nach dem höchsten Umsatz. Bei einem Produkt, das eine Person mi
 
 Capterra ist ein Verzeichnis mit Bewertungen für Unternehmenssoftware. Dort lassen sich CRM, Projektmanagement, Support, Dienstplanung und weitere Werkzeuge vergleichen.
 
-![Capterra-Startseite mit Suche, Kategorien und Vergleich](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.png)
+![Capterra-Startseite mit Suche, Kategorien und Vergleich](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.webp)
 
 Interessiert dich eine Kategorie, öffne einige bekannte Produkte und lies niedrige Bewertungen. Wiederholte Beschwerden über schlechte mobile Nutzung, falsche Exportformate oder komplizierte Einrichtung sind oft hilfreicher als die offizielle Funktionsliste.
 
@@ -112,7 +112,7 @@ Interessiert dich eine Kategorie, öffne einige bekannte Produkte und lies niedr
 
 Google Trends zeigt relatives Suchinteresse nach Zeit und Region sowie verwandte und schnell wachsende Suchanfragen.
 
-![Google-Trends-Startseite mit aktuellen Trends und Schlüsselwortsuche](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.png)
+![Google-Trends-Startseite mit aktuellen Trends und Schlüsselwortsuche](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.webp)
 
 Nutze es, wenn einige mögliche Begriffe feststehen. Vergleiche „AI meeting notes“, „AI transcription“ und „voice notes“, um die häufigere Formulierung zu sehen. Eine steigende Kurve beweist keinen Markt; sie zeigt nur veränderte Aufmerksamkeit.
 

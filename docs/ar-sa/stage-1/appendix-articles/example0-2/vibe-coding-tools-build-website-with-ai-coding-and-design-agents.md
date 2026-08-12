@@ -79,7 +79,7 @@
 
 - أدخل التعليمات المذكورة أعلاه → قارن بين التصميمات المتعددة التي أنشأها الوكيل.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. تحديد الشعار النهائي
 
@@ -142,7 +142,7 @@
 
 - **البحث عن الألوان عبر الكلمات المفتاحية على Google**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.webp)
 
 ## 4. كتابة تعليمات تصميم الموقع
 
@@ -164,7 +164,7 @@
 
 **نموذج تعليمات Mastergo**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.webp)
 
 ## 2. مراجعة التصميم وتقديم ملاحظات التعديل
 
@@ -187,7 +187,7 @@
 
 1. افتح [موقع إضافات Mastergo](https://mastergo.com/community/plugin)، وابحث عن **seal**.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.webp)
 
 2. عد إلى صفحة التصميم، وانقر على **أيقونة المربع (الإضافات)**.
 
@@ -195,7 +195,7 @@
 
 3. حدد منطقة التصميم التي تريد تحويلها إلى كود، وانقر على زر **Generate** لإنشاء الكود.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.webp)
 
 ---
 
@@ -305,7 +305,7 @@ function showAlert() {
 
 1. اكتب أولاً المحتوى الذي تريد عرضه في صفحة "حول". لتسهيل فهم الوكيل، يمكنك حفظ المحتوى بتنسيق Markdown.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.webp)
 
 2. ثم أخبر الوكيل في المحادثة بتطبيق المحتوى من هذا الملف على الصفحة المحددة.
 
@@ -313,7 +313,7 @@ function showAlert() {
 
 3. تحقق من النسخة المحدثة بعد تطبيق المحتوى.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.webp)
 
 ## 6. إدراج الصور
 
@@ -325,7 +325,7 @@ function showAlert() {
 
 - **النتيجة:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.webp)
 
 ---
 
@@ -341,7 +341,7 @@ function showAlert() {
 
 - **النتيجة:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
 ---
 title: 'Build A Website With Design + Coding Agents'
 description: 'From idea to launch: coordinate a design agent to produce visuals, then use a coding agent to turn it into a working website with a reusable workflow.'

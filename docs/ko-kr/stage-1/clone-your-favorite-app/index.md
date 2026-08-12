@@ -100,7 +100,7 @@ _이미지 출처: [Framer Website Builder](https://www.framer.com/solutions/web
 
 Trae는 `index.html`, `styles.css`, `script.js`를 만들고 브라우저에서 페이지를 열었습니다. 아래는 수업에서 실제로 생성한 결과입니다.
 
-![스크린샷으로 생성해 실행한 Wishlabs 페이지](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.gif)
+![스크린샷으로 생성해 실행한 Wishlabs 페이지](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.webp)
 
 아직 코드는 읽지 않습니다. 참고 화면과 비교하며 페이지를 봅니다.
 
@@ -167,7 +167,7 @@ Trae가 끝낼 때까지 기다립니다. 파일 생성이나 실행을 물으�
 
 SaaS 제품은 진행 상황, 매출, 사용자 데이터를 대시보드로 보여 줍니다. Linear 화면은 왼쪽에 내비게이션, 오른쪽에 내용이 있어 구조가 명확합니다.
 
-![Linear 공식 Dashboard 화면](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.png)
+![Linear 공식 Dashboard 화면](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.webp)
 
 _수업 참고: [Linear Dashboards](https://linear.app/docs/dashboards)_
 
@@ -180,7 +180,7 @@ _수업 참고: [Linear Dashboards](https://linear.app/docs/dashboards)_
 
 Trae는 사이드바, 데이터 카드, 차트를 만들었습니다. 아래는 실제 실행 화면입니다.
 
-![스크린샷으로 생성해 실행한 대시보드](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.gif)
+![스크린샷으로 생성해 실행한 대시보드](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.webp)
 
 숫자가 실제 업무 데이터일 필요는 없습니다. 첫 연습의 목적은 대시보드 구조를 만드는 것입니다. 화면이 안정된 뒤 내 제목과 숫자로 바꿉니다.
 
@@ -188,7 +188,7 @@ Trae는 사이드바, 데이터 카드, 차트를 만들었습니다. 아래는 
 
 일반 웹페이지에 관심이 없다면 게임 화면으로 연습할 수 있습니다. 선생님은 Minecraft의 블록 세계를 골랐습니다.
 
-![Minecraft Creative Mode 실제 화면](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.png)
+![Minecraft Creative Mode 실제 화면](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.webp)
 
 _수업 참고: [Microsoft Learn의 Minecraft 예시](https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/108)_
 
@@ -201,7 +201,7 @@ _수업 참고: [Microsoft Learn의 Minecraft 예시](https://learn.microsoft.co
 
 Trae는 캐릭터가 움직이고 블록을 놓거나 부술 수 있는 브라우저 게임을 만들었습니다.
 
-![스크린샷으로 생성해 실행한 2D 블록 게임](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.gif)
+![스크린샷으로 생성해 실행한 2D 블록 게임](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.webp)
 
 위 결과는 <strong>2D 횡스크롤 게임</strong>입니다. 캐릭터는 평면에서만 움직이고 앞뒤 깊이는 없습니다. 요청에 “블록 게임”만 있고 3D는 없었기 때문에 Trae가 더 단순한 해석을 선택했습니다.
 
@@ -218,7 +218,7 @@ Minecraft에 가까운 1인칭 화면을 원한다면 요청에 “3D”를 넣�
 
 이번에는 실제 3D 블록 세계가 만들어졌습니다.
 
-![스크린샷으로 생성해 실행한 3D 블록 게임](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.gif)
+![스크린샷으로 생성해 실행한 3D 블록 게임](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.webp)
 
 “게임 시작”을 누른 뒤 `WASD`로 걷고 마우스로 시점을 돌립니다. 왼쪽 버튼으로 블록을 부수고 오른쪽 버튼으로 놓으며 숫자키로 종류를 바꿉니다.
 

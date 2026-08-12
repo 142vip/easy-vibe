@@ -404,17 +404,17 @@ Wenn Sie die folgende Szene sehen, bedeutet das, dass bereits ein lokaler Dienst
 :::
 
 Nachdem alles bestätigt ist, warten Sie einen Moment, bis der Agent seine Arbeit beendet hat. Wir erhalten folgendes Ergebnis:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.webp)
 
 Man sieht bereits eine erste funktionale Ansicht, aber das Frontend sieht noch sehr unschön aus. Jetzt können wir versuchen, direkt mit AI zu dialogieren und die Oberfläche zu optimieren:
 
 Nach der Optimierung erhalten wir eine deutlich ansprechendere Oberfläche:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.webp)
 
 Sie können die Webseiten-Funktionen nach Ihren eigenen Bedürfnissen anpassen, Screenshots anhängen und frei Fragen stellen, wie zum Beispiel: "Ich brauche die Batch-Import-Funktion derzeit nicht, bitte entfernen", "Links muss zu viel eingegeben werden, behalte nur xxxxx". Sie können sogar andere ausgereifte Websites als Referenz heranziehen &ndash; hier können wir direkt ein Design-Produkt von Google als "Referenz" verwenden (Sie können einen Screenshot einer ausgereiften Website einfügen, die Ihnen gefällt):
 
 Schließlich erhalten wir:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.webp)
 
 ### 2.3 Was tun bei Fehlern
 
@@ -573,13 +573,13 @@ schnell testen kann, ob der gesamte Prozess normal funktioniert:
 ```
 
 Man erhält schnell Ergebnisse (wenn Ihnen ein Datensatz zu wenig ist, können Sie AI bitten, mehrere testbare Use Cases zu generieren):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.webp)
 
 Nach dem Klick erhalten wir das Ergebnis:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.webp)
 
 Was wir hier direkt erhalten, ist das Ergebnis &ndash; es gibt keinen "simulierten Generierungsprozess". Wenn wir einen realistischen Generierungsprozess simulieren möchten, können wir direkt mit AI dialogieren: "Bitte simuliere einen realistischen Generierungsprozess, bei dem die Ergebnisse erst nach einiger Zeit nach dem Klick angezeigt werden."
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.webp)
 
 Nachdem die Generierungsfunktion durchlaufen ist, müssen wir auch sicherstellen, dass die Vorlagenbibliothek ordnungsgemäß funktioniert. Auf der Generierungskarte der Seite können wir sehen, dass die Vorlagenbibliothek-Speicherfunktion noch nicht implementiert ist. Jetzt müssen wir mit AI weitergehend kommunizieren: "Bitte hilf mir sicherzustellen, dass die Anforderung [hier den Inhalt von Punkt 2 oben einfügen] erfüllt ist, ein Ergebnis angeklickt werden kann, um die entsprechende Vorlage zu speichern, und nach dem Öffnen die Generierungsparameter sichtbar sind."
 
@@ -587,7 +587,7 @@ Generierung ist oft nicht in einem Schritt erledigt &ndash; häufig sind Screens
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
 
 Schließlich erhalten wir das erwartete Ergebnis:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.webp)
 
 Neben der manuellen Überprüfung des Anforderungsprozesses können Sie AI auch bitten, direkt eine Anforderungsprüfung durchzuführen, zum Beispiel:
 

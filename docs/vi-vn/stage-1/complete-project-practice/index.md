@@ -109,7 +109,7 @@ Nếu biểu mẫu có nhiều trường, giữ lại phần kết quả thật 
 
 Yêu cầu AI có thể mất vài giây hoặc lâu hơn. Sau khi nhấn, nút nên hiển thị “Đang tạo” và tạm ngăn gửi nhiều lần. Nội dung đã nhập không được biến mất và trang không nên nhảy sang vùng kết quả trống.
 
-![Trạng thái chờ khi tạo nội dung sản phẩm](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![Trạng thái chờ khi tạo nội dung sản phẩm](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.webp)
 
 *Không cần hiệu ứng phức tạp. Chỉ cần cho thấy công việc đã bắt đầu, đồng thời giữ nội dung và vị trí trang, đã tránh được phần lớn nhầm lẫn.*
 
@@ -119,7 +119,7 @@ Nếu ảnh hoặc video phải xếp hàng, có thể hiển thị “Đang x�
 
 Kết quả AI không phải điểm cuối. Người dùng thường phải kiểm tra sự thật, sửa cách viết và đưa nội dung sang bước khác. Vùng kết quả phải có ít nhất một thao tác: sửa, sao chép, tải xuống hoặc tạo lại.
 
-![Trang kết quả sau khi kết nối hiểu ảnh và tạo nội dung](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![Trang kết quả sau khi kết nối hiểu ảnh và tạo nội dung](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.webp)
 
 *Ảnh sản phẩm đã tải vẫn nằm trên kết quả. Người dùng có thể đối chiếu nội dung với ảnh gốc thay vì chỉ chấp nhận một câu trả lời của mô hình.*
 

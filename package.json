@@ -16,6 +16,7 @@
     "format": "prettier --write .",
     "lint": "eslint docs/.vitepress/theme",
     "lint:fix": "eslint docs/.vitepress/theme --fix",
+    "images:stage1": "node scripts/optimize-stage1-images.mjs",
     "prepare": "husky",
     "sitemap": "node scripts/generate-sitemap.mjs",
     "book:pdf": "node scripts/build-latex-book.mjs",

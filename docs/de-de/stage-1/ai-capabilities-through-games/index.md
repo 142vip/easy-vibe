@@ -149,7 +149,7 @@ Nach der Generierung siehst du rechts eine durchblätterbare Weboberfläche. Du 
 
 > Von links nach rechts oben: Pfeil-Schaltfläche öffnet die Seitenleiste mit dem Gesprächsverlauf, Stift-Schaltfläche für einen neuen Dialog, Kreisschaltfläche aktualisiert die Seite, Kompass-Schaltfläche schaltet in den Vollbildmodus, Download-Schaltfläche lädt das Projekt herunter, <>-Schaltfläche schaltet zur Code-Ansicht, Publish-Schaltfläche veröffentlicht das Projekt.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.webp)
 
 Wenn du den Quellcode der Webseite anzeigen möchtest, klicke auf das Code-Symbol oben rechts, um den vollständigen Code zu sehen.
 
@@ -241,12 +241,12 @@ Am Anfang können wir auf die einfachste Weise mit dem großen Modell sprechen, 
 
 > **💡 Beispiel-Prompt:** Erstelle ein Snake-Spiel für mich
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.webp)
 
 > **💡 Beispiel-Prompt:** Erstelle ein Snake-Spiel, das Folgendes unterstützen soll:
 >
 > 1. Ich kann verschiedene Wörter fressen, die in einer Box gesammelt werden
->    ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.png)
+>    ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.webp)
 
 > **💡 Beispiel-Prompt:** Erstelle ein Snake-Spiel, das Folgendes unterstützen soll:
 >
@@ -254,13 +254,13 @@ Am Anfang können wir auf die einfachste Weise mit dem großen Modell sprechen, 
 > 2. Wenn die Schlange 8 Wörter gefressen hat, soll das LLM basierend auf diesen Wörtern ein Gedicht erstellen; wir können das Gedicht nach Bedarf neu mischen.
 > 3. Nach Abschluss des Gedichts wird automatisch ein Bild basierend auf dem Gedicht erstellt.
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.webp)
 
 Beachte, dass während der Entwicklung Probleme auftreten können, bei denen zum Beispiel das Klicken auf einen Button keine Reaktion zeigt, Fehler bei der Nutzung von Funktionen auftreten, Funktionen nicht wie erwartet arbeiten oder die Frontend-Oberfläche nicht dem erwarteten Design entspricht.
 
 In diesem Fall müssen wir das Modell weiter fragen, um diese unerwarteten Probleme zu beheben.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.webp)
 
 ### 3.2 Neue Funktionen zum Spiel hinzufügen
 
@@ -305,13 +305,13 @@ Wenn du lernen möchtest, bessere Prompts zu schreiben, siehe das [Prompt-Engine
 
 Die Antwort von z.ai wird ungefähr so aussehen:
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.webp)
 
 Wir können diesen Prompt verwenden, um das Projekt im Full-Stack-Modus neu zu generieren:
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.webp)
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>
@@ -376,7 +376,7 @@ Die Antwort ist ja. Im Folgenden findest du **8** handverlesene, öffentlich zug
 
 Der japanische Entwickler [in0ho1no](https://github.com/in0ho1no), der überhaupt nicht programmieren kann, hat mit Claude rein über Dialoge (Vibe Coding) in **etwa 2 Stunden** das 2048-artige „Pflanzengarten"-Spiel [Blooming Garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) gebaut: Pflanzen gleicher Art fusionieren und upgraden, prächtige Blüteffekte, Partikel-Animationen, Rangliste, Soundeffekte, Handy-Anpassung … Alle diese Funktionen wurden rein über natürliche Sprachdialoge umgesetzt – ohne eine einzige von Hand geschriebene Codezeile.
 
-![Blooming Garden Pflanzensynthese-Spiel (100 % AI-generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.png)
+![Blooming Garden Pflanzensynthese-Spiel (100 % AI-generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.webp)
 
 > 🔗 Online spielen: [in0ho1no.github.io/2025-adhoc-blooming-garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) ｜ Quellcode: [github.com/in0ho1no/2025-adhoc-blooming-garden](https://github.com/in0ho1no/2025-adhoc-blooming-garden)
 
@@ -384,7 +384,7 @@ Der japanische Entwickler [in0ho1no](https://github.com/in0ho1no), der überhaup
 
 Der Designer [Ricardo de Zoete (Hammy)](https://x.com/RicardoDeZoete) hat mit der AI von OpenAI rein über Dialoge (Vibe Coding) auf Basis von three.js [Planet Jumper](https://gamesbyhammy.cloud/play/planetjumper) gebaut – ein **3D-Mehrspieler-Platformer**: Auf der Oberfläche eines kleinen kugelförmigen Planeten rennen, sprinten und springen und dabei sogar online gegen Fremde antreten. Systeme wie kugelförmige Schwerkraft, Online-Synchronisation und Sprunggefühl sind alles andere als einfach und wurden komplett per Prompt „herausgeplaudert".
 
-![Planet Jumper 3D-Mehrspieler-Platformer (per Vibe Coding generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.png)
+![Planet Jumper 3D-Mehrspieler-Platformer (per Vibe Coding generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.webp)
 
 > 🔗 Online spielen: [gamesbyhammy.cloud/play/planetjumper](https://gamesbyhammy.cloud/play/planetjumper) ｜ Ausführliche Vorstellung: [Planet Jumper: A Vibe-Coded Three.js Multiplayer Platformer](https://www.webgpu.com/showcase/planet-jumper-threejs-multiplayer/)
 
@@ -394,7 +394,7 @@ Im Juli 2026 hat der Entwickler [wangzifan396-wzf](https://github.com/wangzifan3
 
 ![Online-Katalog der 100 Browserspiele (Open-Source-Vibe-Coding-Projekt von 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
 
-![„Neon 2048": Expedition mit sechs Kapiteln und 18 Knoten + mehrere Modi und Werkzeugsysteme](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.png)
+![„Neon 2048": Expedition mit sechs Kapiteln und 18 Knoten + mehrere Modi und Werkzeugsysteme](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
 > 🔗 Online-Katalog: [wangzifan396-wzf.github.io/mini-browser-games](https://wangzifan396-wzf.github.io/mini-browser-games/) ｜ Quellcode: [github.com/wangzifan396-wzf/mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) ｜ Entstehungs-Rückblick: [Ich habe mit Vibe Coding 100 Browserspiele gebaut und alle als Open Source veröffentlicht](https://blog.csdn.net/m0_74023007/article/details/162945755)
 
@@ -430,7 +430,7 @@ Am 17. Juli 2026 veröffentlichte Moonshot AI das Modell Kimi K3 und brachte zei
 
 ![K399-Plattformoberfläche – K3 Game Arcade, Spieleliste mit einem Klick spielbar](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
 
-![SpiderPunk, ein Open-World-Spiel auf K399: zwischen Cyberpunk-Hochhäusern an Spinnenseilen schwingen (mit K3-Modell generiert, echtes Gameplay)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.png)
+![SpiderPunk, ein Open-World-Spiel auf K399: zwischen Cyberpunk-Hochhäusern an Spinnenseilen schwingen (mit K3-Modell generiert, echtes Gameplay)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 
 > 🔗 Online spielen: [k399.games](https://www.k399.games/) (K3 Game Arcade, mit einem Klick spielbar) ｜ Ausführliche Vorstellung: [Ein ehemaliger miHoYo-Manager stößt dazu – das gerade angesagteste AI-Unternehmen hat plötzlich dutzende Spiele gemacht](https://eu.36kr.com/zh/p/3906895998178441) ｜ [Kimi K3: Wer wird nervös?](https://36kr.com/p/3905392402748801)
 
@@ -574,7 +574,7 @@ Mehr dazu: [Web-Basics-Appendix](/zh-cn/appendix/3-browser-and-frontend/javascri
 
 > 💡 Was ist Vibe Coding? Der Informatiker [Andrej Karpathy](https://karpathy.ai/) (Mitbegründer von OpenAI, ehemaliger AI-Chef bei Tesla) prägte im Februar 2025 den Begriff **Vibe Coding**. Dieser Begriff beschreibt eine Programmiermethode, die auf LLMs basiert und **es Programmierern ermöglicht, lauffähigen Code durch natürliche Sprachbeschreibungen statt manuelles Codieren zu generieren.**
 
-![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.png)
+![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.webp)
 
 Wörtlich verstanden kann Vibe Coding als „Entwicklung durch Sprechen" verstanden werden. Der Kernwandel besteht darin: Du musst nicht mehr selbst Code Zeile für Zeile schreiben, Syntax nachschlagen und Bugs beheben; stattdessen beschreibst du in natürlicher Sprache, was du willst, z. B.:
 

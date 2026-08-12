@@ -79,7 +79,7 @@ Logo 是決定你網站第一印象的關鍵元素之一。想要從 AI 設計 A
 
 - 輸入上述提示詞 → 比對 Agent 生成的多個設計稿。
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. 確定最終 Logo
 
@@ -142,7 +142,7 @@ Logo 是決定你網站第一印象的關鍵元素之一。想要從 AI 設計 A
 
 - **在 Google 上透過關鍵詞搜尋配色**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.webp)
 
 ## 4. 編寫網站設計提示詞
 
@@ -164,7 +164,7 @@ Logo 是決定你網站第一印象的關鍵元素之一。想要從 AI 設計 A
 
 **Mastergo 提示詞示例**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.webp)
 
 ## 2. 審閱設計稿並提出修改意見
 
@@ -187,7 +187,7 @@ Logo 是決定你網站第一印象的關鍵元素之一。想要從 AI 設計 A
 
 1. 開啟 [Mastergo 外掛網站](https://mastergo.com/community/plugin)，搜尋 **seal**。
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.webp)
 
 2. 回到設計頁面，點選 **方塊圖示（外掛）**。
 
@@ -195,7 +195,7 @@ Logo 是決定你網站第一印象的關鍵元素之一。想要從 AI 設計 A
 
 3. 選中你想轉換為程式碼的設計區域，點選 **Generate** 按鈕生成程式碼。
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.webp)
 
 ---
 
@@ -305,7 +305,7 @@ Agent 生成的初版網站，通常會包含一些自動生成的佔位文字�
 
 1. 先寫好你想在 About 頁面展示的內容。為了方便 Agent 理解，可以將內容儲存為 Markdown 格式。
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.webp)
 
 2. 然後在對話中告訴 Agent，將該檔案中的內容應用到指定頁面上。
 
@@ -313,7 +313,7 @@ Agent 生成的初版網站，通常會包含一些自動生成的佔位文字�
 
 3. 檢視應用內容後的更新版本。
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.webp)
 
 ## 6. 插入圖片
 
@@ -325,7 +325,7 @@ Agent 生成的初版網站，通常會包含一些自動生成的佔位文字�
 
 - **結果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.webp)
 
 ---
 
@@ -341,7 +341,7 @@ Agent 生成的初版網站，通常會包含一些自動生成的佔位文字�
 
 - **結果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
 ---
 title: '用設計與編程 Agent 設計網站'
 description: '從創意到上線：用設計 Agent 產出視覺方案，再用編程 Agent 把設計稿變成可運行網站，總結可復用的協作流程。'

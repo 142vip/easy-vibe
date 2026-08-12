@@ -27,7 +27,7 @@ Antes era muy difícil crear software. Había que aprender lenguajes de programa
 Su primera gran aportación fue permitir que más personas superaran la barrera de «no sé programar, por eso no puedo empezar». Alguien sin experiencia puede crear en pocos minutos un juego pequeño, una página o un prototipo demostrable.
 
 <figure class="concept-illustration">
-  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.png" alt="Una persona convierte con IA una idea expresada en lenguaje natural en un prototipo, lo entrega a usuarios reales y sigue mejorándolo con sus comentarios" loading="lazy">
+  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.webp" alt="Una persona convierte con IA una idea expresada en lenguaje natural en un prototipo, lo entrega a usuarios reales y sigue mejorándolo con sus comentarios" loading="lazy">
   <figcaption>Vibe Coding ayuda a superar la barrera de «hacerlo»; construir un producto exige continuar hacia usuarios reales, comentarios y valor.</figcaption>
 </figure>
 

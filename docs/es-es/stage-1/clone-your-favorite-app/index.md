@@ -100,7 +100,7 @@ Tras enviarla, espera a que Trae cree los archivos. No mandes varias peticiones 
 
 Trae creó `index.html`, `styles.css` y `script.js`, y después abrió la página en el navegador. Esta animación muestra el resultado obtenido en clase:
 
-![Página Wishlabs generada y ejecutada desde la captura](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.gif)
+![Página Wishlabs generada y ejecutada desde la captura](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.webp)
 
 Todavía no estudies el código. Mira la página y compárala con la referencia:
 
@@ -167,7 +167,7 @@ Trabajar desde una captura no se limita a portadas. Para comprobarlo, el profeso
 
 Los productos SaaS suelen mostrar proyectos, ventas o usuarios en paneles. En esta captura de Linear, la navegación está a la izquierda y el contenido a la derecha.
 
-![Interfaz oficial del panel de Linear](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.png)
+![Interfaz oficial del panel de Linear](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.webp)
 
 _Referencia de clase: [Linear Dashboards](https://linear.app/docs/dashboards)_
 
@@ -180,7 +180,7 @@ Por ahora usa datos de ejemplo.
 
 Trae produjo una barra lateral, tarjetas y gráficos. Esta es la página ejecutándose en el navegador:
 
-![Panel generado y ejecutado desde la captura](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.gif)
+![Panel generado y ejecutado desde la captura](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.webp)
 
 Los números aún no son datos reales de una empresa, y no pasa nada. En este ejercicio primero se construye la estructura; las etiquetas y cifras se cambian cuando la página ya es estable.
 
@@ -188,7 +188,7 @@ Los números aún no son datos reales de una empresa, y no pasa nada. En este ej
 
 Si una web corriente no te interesa, usa una captura de un juego. El profesor eligió una imagen del mundo de bloques de Minecraft.
 
-![Interfaz de Minecraft en modo creativo](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.png)
+![Interfaz de Minecraft en modo creativo](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.webp)
 
 _Referencia de clase: [ejemplo de Minecraft en Microsoft Learn](https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/108)_
 
@@ -201,7 +201,7 @@ El personaje debe moverse y colocar bloques.
 
 Trae creó un juego para navegador en el que el personaje puede moverse y colocar o retirar bloques:
 
-![Juego de bloques 2D generado y ejecutado desde la captura](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.gif)
+![Juego de bloques 2D generado y ejecutado desde la captura](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.webp)
 
 Este resultado es un juego <strong>2D visto de lado</strong>. El personaje se mueve sobre un plano y no existe profundidad hacia delante o hacia atrás. Como la petición solo decía “juego de bloques”, Trae eligió la interpretación más sencilla.
 
@@ -218,7 +218,7 @@ Quiero caminar, girar la cámara y colocar bloques.
 
 Esta vez Trae creó un mundo de bloques realmente tridimensional:
 
-![Juego de bloques 3D generado y ejecutado desde la captura](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.gif)
+![Juego de bloques 3D generado y ejecutado desde la captura](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.webp)
 
 Después de pulsar “Start Game”, usa `WASD` para caminar y el ratón para girar. El botón izquierdo retira un bloque, el derecho coloca uno y las teclas numéricas cambian el tipo de bloque.
 

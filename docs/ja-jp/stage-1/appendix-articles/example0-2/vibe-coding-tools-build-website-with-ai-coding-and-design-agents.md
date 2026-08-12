@@ -79,7 +79,7 @@ AIを象徴する抽象的な図形とテキストを組み合わせ、透明背
 
 - 上記のプロンプトを入力 → Agentが生成した複数のデザイン案を比較。
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. 最終ロゴを決定
 
@@ -142,7 +142,7 @@ AIを象徴する抽象的な図形とテキストを組み合わせ、透明背
 
 - **Googleでキーワード検索して配色を探す**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.webp)
 
 ## 4. ウェブサイトデザインのプロンプト作成
 
@@ -164,7 +164,7 @@ AIを象徴する抽象的な図形とテキストを組み合わせ、透明背
 
 **Mastergoプロンプト例**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.webp)
 
 ## 2. デザイン稿を確認し修正意見を提示
 
@@ -187,7 +187,7 @@ AIを象徴する抽象的な図形とテキストを組み合わせ、透明背
 
 1. [Mastergoプラグインサイト](https://mastergo.com/community/plugin)を開き、**seal** を検索。
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.webp)
 
 2. デザインページに戻り、**四角アイコン（プラグイン）** をクリック。
 
@@ -195,7 +195,7 @@ AIを象徴する抽象的な図形とテキストを組み合わせ、透明背
 
 3. コードに変換したいデザイン領域を選択し、**Generate** ボタンをクリックしてコードを生成。
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.webp)
 
 ---
 
@@ -305,7 +305,7 @@ Agentが生成した初期版のウェブサイトには、通常、自動生成
 
 1. Aboutページに表示したい内容を事前に書く。Agentが理解しやすいように、Markdown形式で保存すると便利。
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.webp)
 
 2. ダイアログでAgentに、そのファイルの内容を指定ページに適用するよう指示。
 
@@ -313,7 +313,7 @@ Agentが生成した初期版のウェブサイトには、通常、自動生成
 
 3. 内容適用後の更新版を確認。
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.webp)
 
 ## 6. 画像を挿入
 
@@ -325,7 +325,7 @@ Agentが生成した初期版のウェブサイトには、通常、自動生成
 
 - **結果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.webp)
 
 ---
 
@@ -341,4 +341,4 @@ Agentが生成した初期版のウェブサイトには、通常、自動生成
 
 - **結果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)

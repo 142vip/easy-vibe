@@ -139,15 +139,15 @@ const relatedArticles =
 
 现代 IDE 往往还内置 Git 等工具。最流行的是微软的 **[Visual Studio Code (VS Code)](https://code.visualstudio.com/)**，它轻量且可扩展。虽然也有 JetBrains 全家桶等专业 IDE，但 VS Code 对初学者最友好。
 
-![](images/image4.png)
+![](images/image4.webp)
 
 VS Code 的核心理念是“一切皆插件”。它通过插件机制支持各种语言，安装 Python 插件就是 Python IDE，安装 C++ 插件就是 C++ IDE。不装插件时，它只是个高级文本编辑器。
 
-![](images/image5.png)
+![](images/image5.webp)
 
 甚至可以用来编辑 Markdown 文档。
 
-![](images/image6.png)
+![](images/image6.webp)
 
 总之，IDE 是一套帮助开发者高效写代码和运行程序的工具集。
 
@@ -214,7 +214,7 @@ Cursor 是 Anysphere 开发的一款 AI 代码编辑器，基于 VS Code 定制�
 
 目前，Cursor 可以说是“带前端界面的 AI IDE”中综合体验最好的一款之一，用户数量庞大，功能迭代频率也很高。它最大的缺点是价格较高——专业版大约需要每月 20 美元。
 
-![](images/image9.png)
+![](images/image9.webp)
 :::
 
 ::: details Qoder
@@ -223,7 +223,7 @@ Cursor 是 Anysphere 开发的一款 AI 代码编辑器，基于 VS Code 定制�
 
 Qoder 是阿里巴巴推出的一款强调“透明协作”和“增强上下文工程能力”的 AI IDE。它通过 Action Flow 支持把任务拆解成多个步骤，并实时跟踪 AI 的执行过程；还支持多模型动态路由和任务状态机管理，非常适合在中大型项目中做架构治理和对遗留系统进行“反向工程”分析。
 
-![](images/image10.png)
+![](images/image10.webp)
 :::
 
 ::: details CodeBuddy
@@ -232,7 +232,7 @@ Qoder 是阿里巴巴推出的一款强调“透明协作”和“增强上下�
 
 CodeBuddy 是腾讯云推出的一款 AI 编程工具，强调对中文指令的支持以及企业级合规能力。它提供代码补全、批量代码审查和多模型切换等功能；其中的 Craft 智能体可以实现多文件代码生成和 API 集成。企业版支持私有化部署，并通过了三级等保认证，适合金融、医疗等对数据安全要求较高的行业。
 
-![](images/image11.png)
+![](images/image11.webp)
 :::
 
 ::: details VS Code + Cline
@@ -241,9 +241,9 @@ CodeBuddy 是腾讯云推出的一款 AI 编程工具，强调对中文指令的
 
 Cline 是 VS Code（Visual Studio Code）的一款 AI 编程 Agent 插件，可以通过配置不同的 API 端点来灵活切换所使用的大模型。Cline 支持多模态输入、MCP 工具扩展以及成本监控，所有操作都需要用户确认后才会执行。它非常适合用于快速验证想法，或与现有开发流程集成。基础功能是免费的，企业版则支持在私有环境中部署模型。
 
-![](images/image13.png)
+![](images/image13.webp)
 
-![](images/image14.png)
+![](images/image14.webp)
 :::
 
 ::: details Kiro
@@ -436,7 +436,7 @@ Coding Plan 是各大云服务厂商推出的订阅计划，购买后你可以�
 
 如图所示，这里我们正在创建模板，但不知道如何操作，我们可以截图该部分对大模型进行询问：
 
-![](images/index-2026-01-09-10-29-12.png)
+![](images/index-2026-01-09-10-29-12.webp)
 
 AI Agent 在执行过程中暂停的还有一部分原因是因为此时启动了一个“服务”，我们的贪吃蛇本身属于一种“服务”，如果你看到如下命令的网址，则表示 Agent 帮我们执行了一个本地的电脑服务，我们可以访问对应的网址访问我们的贪吃蛇，由于服务需要持续启动，这里会陷入暂停。我们只需要点击 `Skip` 按钮即可。
 
@@ -448,7 +448,7 @@ AI Agent 在执行过程中暂停的还有一部分原因是因为此时启动�
 
 稍作片刻，我们即可得到类似 z.ai 一样的结果：
 
-![](images/index-2026-01-09-10-33-37.png)
+![](images/index-2026-01-09-10-33-37.webp)
 
 我们可以点击右下角的打勾进行确定代码的变更，也可以点击 `Cancel` 按钮取消变更。或者点击 2 files need review 的地方展开查看变动后的代码。
 
@@ -464,7 +464,7 @@ AI Agent 在执行过程中暂停的还有一部分原因是因为此时启动�
 
 > “请从上到下讲一遍，这个贪吃蛇游戏每一步是怎么动起来的？尽量少用专业术语。”
 
-![](images/index-2026-01-09-10-44-36.png)
+![](images/index-2026-01-09-10-44-36.webp)
 
 然后再顺着它的回答继续追问关键点，例如：
 
@@ -517,15 +517,15 @@ AI 会根据你的描述，直接修改 React 组件和样式。保存后刷新�
 
 对于 vibe coding 小白来说，最难的事情反而是不知道什么才算是“最佳实践“，不知道怎么样的架构才是最适合的；因为不知道计算机基础，所以没办法很好的引导 AI，解决这个难题的方法是”直接参考“；还记得我们之前说过的 z.ai 中可以查看代码吗？其实对应 README（项目中用于介绍功能和技术架构的部分）中已经给出了一个最佳架构参考：
 
-![](images/index-2026-01-09-10-49-33.png)
+![](images/index-2026-01-09-10-49-33.webp)
 
 我们想要让本地的结果尽量符合 z.ai 的结果，我们可以复制这个 README 的全部内容，粘贴到 Trae 的侧边栏中，让他根据 README 的架构，修改本地的代码。
 
-![](images/index-2026-01-09-10-50-31.png)
+![](images/index-2026-01-09-10-50-31.webp)
 
 最后我们能得到与 z.ai 高度相似的页面设计风格：
 
-![](images/index-2026-01-09-11-00-57.png)
+![](images/index-2026-01-09-11-00-57.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>

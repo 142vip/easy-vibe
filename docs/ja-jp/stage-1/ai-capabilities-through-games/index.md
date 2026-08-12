@@ -149,7 +149,7 @@ AI の登場により、初めて一般人に全く新しい可能性がもた�
 
 > 上部の左から右へのボタンの役割はそれぞれ：矢印ボタンはサイドバーの対話履歴を展開、鉛筆ボタンは新しい対話を作成、ループ矢印ボタンはページをリロード、コンパスボタンはフルスクリーンモードに切り替え、Download ボタンはプロジェクトをダウンロード、<> ボタンはコードビューに切り替え、Publish ボタンはプロジェクトを公開。
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.webp)
 
 この Web ページのソースコードを表示したい場合は、右上隅のコードアイコンをクリックして完全なコードを確認できます。
 
@@ -240,12 +240,12 @@ z.ai のほかに、以下の優れた AI プログラミングプラットフ�
 
 > **💡 プロンプト例：** スネークゲームを作ってください
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.webp)
 
 > **💡 プロンプト例：** スネークゲームを作ってください。以下の機能をサポートしてください
 >
 > 1. さまざまな単語を食べることができ、それらがボックスに収集されます
->    ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.png)
+>    ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.webp)
 
 > **💡 プロンプト例：** スネークゲームを作ってください。以下の機能をサポートしてください：
 >
@@ -253,13 +253,13 @@ z.ai のほかに、以下の優れた AI プログラミングプラットフ�
 > 2. 蛇が8つの単語を食べると、LLM がそれらの単語に基づいて詩を作成し、必要に応じて詩を再ミックスできます
 > 3. 詩が完成したら、次のステップでその詩に基づいて画像が自動的に作成されます
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.webp)
 
 注意：開発中に期待通りにいかない問題に遭遇する場合があります。ボタンをクリックしても反応がない、機能使用時にエラーが発生する、機能が期待通りに動作しない、またはフロントエンドページが期待したデザインと一致しないなどです。
 
 この場合、モデルにさらに質問して、これらの予期せぬ問題を修正するよう助けてもらう必要があります。
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.webp)
 
 ### 3.2 ゲームに新機能を追加する
 
@@ -303,13 +303,13 @@ z.ai のほかに、以下の優れた AI プログラミングプラットフ�
 
 z.ai の回答は次のようになります：
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.webp)
 
 このプロンプトを使ってフルスタック開発モードでプロジェクトを再生成できます：
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.webp)
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>
@@ -374,7 +374,7 @@ z.ai の回答は次のようになります：
 
 プログラミングをまったく知らない日本の開発者 [in0ho1no](https://github.com/in0ho1no) は、Claude を使った純粋な対話（Vibe Coding）で、**約 2 時間**で 2048 風の「植物ガーデン」ゲーム [Blooming Garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) を作り上げました：同じ種類の植物の合成と進化、華やかな開花エフェクト、パーティクルアニメーション、ランキング、サウンドエフェクト、スマホ対応……これらの機能はすべて自然言語での対話だけで完成し、コードは一行も手書きしていません。
 
-![Blooming Garden 植物合成ゲーム（100% AI 生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.png)
+![Blooming Garden 植物合成ゲーム（100% AI 生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.webp)
 
 > 🔗 オンラインで遊ぶ：[in0ho1no.github.io/2025-adhoc-blooming-garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) ｜ ソースコード：[github.com/in0ho1no/2025-adhoc-blooming-garden](https://github.com/in0ho1no/2025-adhoc-blooming-garden)
 
@@ -382,7 +382,7 @@ z.ai の回答は次のようになります：
 
 デザイナー [Ricardo de Zoete（Hammy）](https://x.com/RicardoDeZoete) は、OpenAI の AI を使った純粋な対話（Vibe Coding）で、three.js をベースに [Planet Jumper](https://gamesbyhammy.cloud/play/planetjumper) を作りました——**3D マルチプレイプラットフォーマー**です：小さな球形の惑星の表面を走り、ダッシュし、ジャンプしながら、見知らぬ人とオンラインで同じステージに挑めます。球形の重力、ネットワーク同期、ジャンプの手応えといった簡単ではないシステムも、すべてプロンプトの「会話」だけで作り上げられました。
 
-![Planet Jumper 3D マルチプレイプラットフォーマー（Vibe Coding で生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.png)
+![Planet Jumper 3D マルチプレイプラットフォーマー（Vibe Coding で生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.webp)
 
 > 🔗 オンラインで遊ぶ：[gamesbyhammy.cloud/play/planetjumper](https://gamesbyhammy.cloud/play/planetjumper) ｜ 詳細紹介：[Planet Jumper: A Vibe-Coded Three.js Multiplayer Platformer](https://www.webgpu.com/showcase/planet-jumper-threejs-multiplayer/)
 
@@ -392,7 +392,7 @@ z.ai の回答は次のようになります：
 
 ![100 本のブラウザゲームのオンラインカタログ（2026 年 Vibe Coding オープンソースプロジェクト）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
 
-![『ネオン2048』：六章 18 ノードの遠征 + 複数のモードとツールシステム](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.png)
+![『ネオン2048』：六章 18 ノードの遠征 + 複数のモードとツールシステム](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
 > 🔗 オンラインカタログ：[wangzifan396-wzf.github.io/mini-browser-games](https://wangzifan396-wzf.github.io/mini-browser-games/) ｜ ソースコード：[github.com/wangzifan396-wzf/mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) ｜ 制作の振り返り：[Vibe Coding で 100 本のブラウザゲームを作り、すべてオープンソースにしました](https://blog.csdn.net/m0_74023007/article/details/162945755)
 
@@ -428,7 +428,7 @@ z.ai の回答は次のようになります：
 
 ![K399 プラットフォームのインターフェース——K3 Game Arcade、ゲームリストをクリックするだけで遊べる](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
 
-![K399 のオープンワールドゲーム SpiderPunk：サイバー都市の高層ビルの間を蜘蛛の糸でスイング（K3 モデル生成、実際のプレイ画面）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.png)
+![K399 のオープンワールドゲーム SpiderPunk：サイバー都市の高層ビルの間を蜘蛛の糸でスイング（K3 モデル生成、実際のプレイ画面）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 
 > 🔗 オンラインで遊ぶ：[k399.games](https://www.k399.games/)（K3 Game Arcade、クリックするだけで遊べる）｜ 詳細紹介：[元 miHoYo 幹部が加入、今最も注目される AI 企業が突然数十本のゲームを作った](https://eu.36kr.com/zh/p/3906895998178441) ｜ [Kimi K3、誰を緊張させたのか？](https://36kr.com/p/3905392402748801)
 
@@ -572,7 +572,7 @@ Web ページを一軒の家だと思ってください。三つの「コード�
 
 > 💡 Vibe Coding とは？コンピュータ科学者 [Andrej Karpathy](https://karpathy.ai/)（OpenAI の共同創業者の一人、テスラ元 AI 責任者）が 2025 年 2 月に **vibe coding** という言葉を提案しました。この概念は、LLM に依存するコーディング方法を指し、**プログラマーが自然言語の説明を提供することで、手動でコードを書くことなく動作するコードを生成できるようにします。**
 
-![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.png)
+![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.webp)
 
 文字通り、Vibe Coding は「話すことで開発する」方法として理解できます。その核となる変化は：もう自分で一行一行コードを書いたり、構文を調べたり、バグを修正したりする必要はなく、自然言語で欲しいものを直接説明するだけです。例えば：
 

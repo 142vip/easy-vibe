@@ -65,7 +65,7 @@ No empieces la división por los nombres de los modelos. Sigue las acciones de l
 
 La IA solo debe encargarse de aquello para lo que resulta apropiada. El inicio de sesión, los pagos, el guardado de archivos y la navegación tienen reglas explícitas y siguen siendo trabajo del programa convencional.
 
-![Página real en la que se comprende una imagen de producto antes de generar su descripción](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![Página real en la que se comprende una imagen de producto antes de generar su descripción](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.webp)
 
 *En este prototipo se identifica primero la información del producto. Después se genera una descripción y una lista de argumentos que la persona puede seguir editando.*
 
@@ -169,7 +169,7 @@ Si el error incluye un Request ID o Trace ID, guárdalo. Este número permite lo
 
 El catálogo muestra los modelos de texto, imagen, voz y vídeo disponibles. Entra en el detalle y copia el Model ID que se utiliza en el código; puede no coincidir con el nombre visible.
 
-![Catálogo de SiliconFlow con filtros de texto, imagen, vídeo y voz](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
+![Catálogo de SiliconFlow con filtros de texto, imagen, vídeo y voz](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.webp)
 
 *El catálogo de SiliconFlow permite filtrar por tipo de capacidad.*
 
@@ -286,7 +286,7 @@ response = client.chat.completions.create(
 )
 ```
 
-![Integración de una API de comprensión de imágenes en el IDE](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
+![Integración de una API de comprensión de imágenes en el IDE](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.webp)
 
 *Es más fácil detectar errores si la persona confirma primero los datos identificados y después genera el texto final.*
 
@@ -318,7 +318,7 @@ curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
   }'
 ```
 
-![Resultado de la generación de imágenes integrada en el producto](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
+![Resultado de la generación de imágenes integrada en el producto](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.webp)
 
 Las URL de imagen pueden caducar. Un prototipo puede mostrarlas directamente; un producto debe decidir, según las condiciones del servicio, si las copia a su almacenamiento y registrar prompt, versión del modelo y fecha.
 

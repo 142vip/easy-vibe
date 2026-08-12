@@ -100,7 +100,7 @@ Sau khi gửi, hãy chờ Trae tạo xong tệp. Đừng gửi thêm nhiều yê
 
 Trae tạo `index.html`, `styles.css` và `script.js`, sau đó mở trang trong trình duyệt. Đây là kết quả thực tế trong bài học:
 
-![Trang Wishlabs được tạo và chạy từ ảnh chụp](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.gif)
+![Trang Wishlabs được tạo và chạy từ ảnh chụp](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.webp)
 
 Chưa cần đọc mã. Hãy nhìn trang và so sánh với ảnh tham khảo:
 
@@ -167,7 +167,7 @@ Làm từ ảnh chụp không chỉ dành cho trang chủ. Để kiểm tra, gi�
 
 Sản phẩm SaaS thường dùng bảng điều khiển để hiển thị tiến độ dự án, doanh số hoặc người dùng. Trong ảnh Linear này, thanh điều hướng ở bên trái và nội dung ở bên phải.
 
-![Giao diện bảng điều khiển chính thức của Linear](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.png)
+![Giao diện bảng điều khiển chính thức của Linear](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.webp)
 
 _Tài liệu tham khảo trên lớp: [Linear Dashboards](https://linear.app/docs/dashboards)_
 
@@ -180,7 +180,7 @@ Trước mắt dùng dữ liệu mẫu.
 
 Trae tạo thanh bên, thẻ dữ liệu và biểu đồ. Đây là trang đang chạy trong trình duyệt:
 
-![Bảng điều khiển được tạo và chạy từ ảnh chụp](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.gif)
+![Bảng điều khiển được tạo và chạy từ ảnh chụp](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.webp)
 
 Các con số chưa phải dữ liệu kinh doanh thật, và điều đó không sao. Bài đầu tiên chỉ xây cấu trúc bảng. Khi trang chạy ổn định, bạn mới thay nhãn và số liệu.
 
@@ -188,7 +188,7 @@ Các con số chưa phải dữ liệu kinh doanh thật, và điều đó khôn
 
 Nếu trang web thông thường không làm bạn hứng thú, hãy dùng ảnh trò chơi. Giảng viên chọn một ảnh thế giới khối của Minecraft.
 
-![Giao diện chế độ Sáng tạo của Minecraft](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.png)
+![Giao diện chế độ Sáng tạo của Minecraft](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.webp)
 
 _Tài liệu tham khảo trên lớp: [ví dụ Minecraft trên Microsoft Learn](https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/108)_
 
@@ -201,7 +201,7 @@ Nhân vật phải di chuyển và đặt được khối.
 
 Trae tạo một trò chơi chạy trong trình duyệt, nhân vật có thể di chuyển, đặt hoặc bỏ khối:
 
-![Trò chơi khối 2D được tạo và chạy từ ảnh chụp](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.gif)
+![Trò chơi khối 2D được tạo và chạy từ ảnh chụp](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.webp)
 
 Kết quả này là <strong>trò chơi 2D nhìn ngang</strong>. Nhân vật di chuyển trên mặt phẳng, không có chiều sâu tiến hoặc lùi. Vì yêu cầu chỉ nói “trò chơi khối”, Trae đã chọn cách hiểu đơn giản hơn.
 
@@ -218,7 +218,7 @@ Người chơi phải đi lại, xoay camera và đặt được khối.
 
 Lần này Trae tạo một thế giới khối ba chiều thực sự:
 
-![Trò chơi khối 3D được tạo và chạy từ ảnh chụp](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.gif)
+![Trò chơi khối 3D được tạo và chạy từ ảnh chụp](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.webp)
 
 Sau khi chọn “Start Game”, dùng `WASD` để đi và chuột để xoay. Chuột trái bỏ khối, chuột phải đặt khối và các phím số đổi loại khối.
 

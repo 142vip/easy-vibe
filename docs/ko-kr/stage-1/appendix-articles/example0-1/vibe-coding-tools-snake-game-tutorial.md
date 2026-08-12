@@ -244,7 +244,7 @@ AI Agent는 환경을 인식하고, 의사결정을 내리며, 특정 목표를 
 - **주요 특징 및 워크플로:** Lovable은 통합과 협업 측면에서 매우 우수합니다. Supabase 데이터베이스 연결 등의 초기화 작업을 자동으로 완료하여, 프로젝트 설정 과정을 매우 원활하게 만듭니다. 프로젝트 요구사항만 설명하면 Agent가 다양한 서비스를 연결하고 기본 구조를 구축해 줍니다.
 - **적합한 사용자:** 처음 Vibe Coding을 시도하는 초보자에게 Lovable은 매우 친근한 선택입니다. 다중 서비스 연동의 복잡성을 단순화하여, 환경 설정이 아닌 프롬프트와 반복에 집중할 수 있게 합니다. 높은 자동화 덕분에 실행 가능한 프로토타입을 빠르게 얻을 수 있습니다.
 - **프롬프트 과정:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.webp)
 - **스네이크 게임 효과:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.png)
@@ -258,10 +258,10 @@ AI Agent는 환경을 인식하고, 의사결정을 내리며, 특정 목표를 
 - **주요 특징 및 워크플로:** Cursor는 AI 기능이 통합된 전용 IDE로, Windows, macOS, Linux를 지원합니다. 코드 생성, 지능형 재작성, 코드베이스 쿼리 등의 기능을 개발 환경에 직접 내장합니다. 웹 도구와 비교하여 전통적인 로컬 개발 경험에 더 가깝습니다. 로컬 환경이므로 컴퓨터마다 설정이 다를 수 있어, 때때로 환경 관련 문제가 발생할 수 있습니다. 장점은 프로젝트가 로컬에 있어 추가로 다운로드하거나 실행 환경을 설정할 필요가 없으며, Cursor가 많은 번거로운 단계를 처리해 준다는 것입니다.
 - **적합한 사용자:** 이미 어느 정도 프로그래밍 기반이 있는 사용자에게 Cursor는 매우 강력하고 익숙한 환경입니다. 하지만 완전한 제로 베이스 초보자에게는 프로젝트 구조, 의존성 관리, 파일 구성 등의 개념을 이해해야 하므로 학습 곡선이 더 가파릅니다. 전통적인 코딩 워크플로에 AI 어시스턴트를 추가하고 싶은 개발자에게 더 적합합니다.
 - **프롬프트 과정:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image7.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image7.webp)
 - **스네이크 게임 효과:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.webp)
 
 - **가격:**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
@@ -272,7 +272,7 @@ AI Agent는 환경을 인식하고, 의사결정을 내리며, 특정 목표를 
 - **주요 특징 및 워크플로:** Z.ai의 사용 방식은 비교적 직접적이지만, 한 가지 명백한 도전은 **생성된 코드를 수동으로 복사하여 붙여넣기**해야 한다는 것입니다. 플랫폼 자체에 실시간 미리보기 창이 없어, 코드 실행 효과를 바로 확인하기 어렵습니다.
 - **적합한 사용자:** 이 플랫폼은 비교적 "손으로 하는" 사용 방식을 요구합니다. 자동화가 부족하다는 것은 코드와 직접적으로 상호작용해야 한다는 의미이며, 이는 AI 출력 내용을 깊이 이해하고 싶은 사람에게는 오히려 훈련이 됩니다. 하지만 빈번한 복사 붙여넣기는 효율성 문제와 오류 위험을 가져옵니다. "원클릭 경험"을 추구하는 사람보다 "원래 AI 출력 코드"를 보고 싶은 분들에게 더 적합합니다.
 - **프롬프트 과정:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image11.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image11.webp)
 - **스네이크 게임 효과:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image12.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image13.png)
@@ -285,11 +285,11 @@ AI Agent는 환경을 인식하고, 의사결정을 내리며, 특정 목표를 
 - **플랫폼 유형:** 웹
 - **주요 특징 및 워크플로:** Replit은 올인원 온라인 개발 및 배포 환경으로, 브라우저에서 코드를 작성하고, 프로그램을 실행하고, 온라인 접속 주소를 생성할 수 있습니다. 코딩을 시작하기 전에 명확한 실행 계획을 보여주며, 시각적 편집기도 제공하여 미리보기 창에서 UI를 직접 수정하면 소스 코드가 자동으로 동기화됩니다. 이렇게 하면 AI의 출력이 기대에 부합하는지 언제든 확인할 수 있어, 수정을 위한 반복 작업을 크게 줄일 수 있습니다.
 
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image15.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image15.webp)
 
 - **적합한 사용자:** Replit은 초보자에게 매우 친근합니다. 코딩에서 배포까지의 완전한 루프를 단순화하여, 별도로 서버나 호스팅 서비스를 설정할 필요가 없습니다. 협업 기능도 강력하여, 학생들끼리 함께 프로젝트를 하거나 다른 사람에게 원격으로 코드를 확인해 달라고 요청하기에 적합합니다.
 - **프롬프트 과정:** 구축 과정에서 AI가 처음부터 요구사항을 완전히 이해한 것은 아니었고, 약 3라운드의 반복을 거쳐 최종 출력이 이상적인 효과에 도달했습니다.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.webp)
 - **스네이크 게임 효과:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.png)
@@ -304,7 +304,7 @@ AI Agent는 환경을 인식하고, 의사결정을 내리며, 특정 목표를 
 - **적합한 사용자:** 자동으로 테스트를 실행하고 오류를 수정하므로, 시간과 Token 소모가 크지만, AI가 어떻게 문제를 파악하고 해결하는지 명확히 볼 수 있어 학습 관점에서 가치가 높습니다.
 - **프롬프트 과정:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
 
 - **스네이크 게임 효과:**
 
@@ -319,10 +319,10 @@ AI Agent는 환경을 인식하고, 의사결정을 내리며, 특정 목표를 
 - **주요 특징 및 워크플로:** 데스크톱 앱으로서 Trae는 웹 도구보다 성능과 응답 속도에서 보통 더 유리합니다. 하지만 다운로드 및 설치가 필요하여 일부 사용자에게는 진입 장벽이 약간 높습니다. 마찬가지로 로컬 환경이므로, 컴퓨터 설정과 의존성 환경의 차이로 인해 어느 정도 불확실성이 발생할 수 있습니다. 장점은 Trae가 로컬에서 프로젝트 생성과 실행 설정을 도와주어, 로컬에서 직접 개발과 디버깅을 할 수 있다는 것입니다.
 - **적합한 사용자:** 장기간 Vibe Coding 프로젝트를 진행할 계획이 있고, 전용 데스크톱 도구를 사용하고자 하는 사용자에게 더 적합합니다. "가끔 놀아보고 싶은" 분들에게는 가장 가벼운 선택이 아닐 수 있습니다.
 - **프롬프트 과정:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.webp)
 - **스네이크 게임 효과:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.webp)
 
 - **가격:** 가격이 상대적으로 저렴하며, 무료 버전만으로도 품질이 꽤 좋은 소규모 프로젝트를 완성할 수 있습니다.
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
@@ -333,9 +333,9 @@ AI Agent는 환경을 인식하고, 의사결정을 내리며, 특정 목표를 
 - **주요 특징 및 워크플로:** V0은 Vercel에서 제공하는 React UI 컴포넌트 생성에 특화된 도구입니다. 고품질, 프로덕션 환경에서 사용 가능한 인터페이스 생성에 탁월합니다. 하지만 실제 사용에서 "코드 뷰를 찾기 어려움", "API Key를 어디에 설정해야 하는지 명확한 안내가 없음" 등의 문제가 발생할 수 있습니다.
 - **적합한 사용자:** V0은 프론트엔드와 UI/UX 디자인에 집중하는 학생이나 디자이너에게 매우 적합합니다. 하지만 완전한 풀스택 솔루션은 아니며, 백엔드 로직과 API 통합을 구현하려면 다른 플랫폼을 사용해야 합니다. 따라서 "원스톱으로 완전한 애플리케이션 구축"이 목표라면 최선의 첫 번째 선택이 아닐 수 있습니다.
 - **프롬프트 과정:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.webp)
 
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.webp)
 
 - **스네이크 게임 효과:**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.png)

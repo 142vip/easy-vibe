@@ -65,7 +65,7 @@ Beginne die Zerlegung nicht mit Modellnamen. Folge dem Bedienablauf: Welcher Sch
 
 KI übernimmt nur passende Aufgaben. Anmeldung, Zahlung, Dateispeicherung und Navigation folgen festen Regeln und werden weiterhin mit normaler Programmlogik umgesetzt.
 
-![Reale Seite, auf der ein Produktbild vor der Beschreibung verstanden wird](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![Reale Seite, auf der ein Produktbild vor der Beschreibung verstanden wird](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.webp)
 
 *In diesem Prototyp wird das Produktbild zuerst ausgewertet. Nach der Bestätigung entstehen eine bearbeitbare Beschreibung und Verkaufsargumente.*
 
@@ -169,7 +169,7 @@ Eine Request ID oder Trace ID aus der Fehlermeldung sollte aufbewahrt werden. Da
 
 Der Modellkatalog zeigt verfügbare Text-, Bild-, Sprach- und Videomodelle. Öffne die Details und kopiere die Model ID für den Code; sie kann vom sichtbaren Namen abweichen.
 
-![SiliconFlow-Katalog mit Filtern für Text, Bild, Video und Sprache](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
+![SiliconFlow-Katalog mit Filtern für Text, Bild, Video und Sprache](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.webp)
 
 *Der SiliconFlow-Katalog lässt sich nach Fähigkeit filtern.*
 
@@ -286,7 +286,7 @@ response = client.chat.completions.create(
 )
 ```
 
-![Einbindung der Bildverständnis-API in der KI-IDE](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
+![Einbindung der Bildverständnis-API in der KI-IDE](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.webp)
 
 *Wenn Nutzende erkannte Produktdaten vor der Texterzeugung bestätigen, fallen Fehler leichter auf.*
 
@@ -318,7 +318,7 @@ curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
   }'
 ```
 
-![In das Produkt integrierte Bilderzeugung](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
+![In das Produkt integrierte Bilderzeugung](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.webp)
 
 Bild-URLs können ablaufen. Ein Prototyp kann sie direkt zeigen; für den Betrieb muss nach den Dienstbedingungen über eigenen Speicher entschieden und Prompt, Modellversion und Zeit protokolliert werden.
 

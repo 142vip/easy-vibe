@@ -27,7 +27,7 @@ const relatedArticles = relatedArticlesMap['zh-cn/stage-1/learning-map'] ?? []
 它最先带来的突破，是让更多人跨过了“不会写代码，所以无法开始”的门槛。一个没有编程经验的人，也可以在几分钟内做出小游戏、网页或可以演示的原型。
 
 <figure class="concept-illustration">
-  <img src="./images/vibe-coding-to-product.png" alt="一位创作者借助 AI 将自然语言想法变成产品原型，交给真实用户使用，并根据反馈继续迭代" loading="lazy">
+  <img src="./images/vibe-coding-to-product.webp" alt="一位创作者借助 AI 将自然语言想法变成产品原型，交给真实用户使用，并根据反馈继续迭代" loading="lazy">
   <figcaption>Vibe Coding 帮助你跨过“做出来”的门槛；Build Product 要继续走向真实用户、反馈与价值。</figcaption>
 </figure>
 

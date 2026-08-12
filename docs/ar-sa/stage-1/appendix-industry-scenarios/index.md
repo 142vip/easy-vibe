@@ -41,7 +41,7 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 
 <figure class="product-shot">
   <a href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.jpg" alt="مساعد Klarna مع تأجيل الدفع والدعم متعدد اللغات وشرح الاسترداد" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.webp" alt="مساعد Klarna مع تأجيل الدفع والدعم متعدد اللغات وشرح الاسترداد" loading="lazy" />
   </a>
   <figcaption><strong>Klarna AI Assistant:</strong> لا يقول «اتصل بموظف» فقط؛ بل يفتح إجراء تأجيل الدفع ويفصل مبلغ الاسترداد. الخدمة المفيدة تجد الطلب وتكمل الإجراء.</figcaption>
 </figure>
@@ -114,7 +114,7 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 
 <figure class="product-shot">
   <a href="https://github.blog/changelog/2024-10-29-github-copilot-code-review-in-github-com-private-preview/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.png" alt="GitHub Copilot يراجع Pull Request" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.webp" alt="GitHub Copilot يراجع Pull Request" loading="lazy" />
   </a>
   <figcaption><strong>GitHub Copilot Code Review:</strong> يعلق على السطر وقد يقترح تعديلًا قابلًا للتطبيق. يقرأ المطور الفرق ويجمعه أو يرفضه. القيمة في Pull Request لا في محادثة أخرى.</figcaption>
 </figure>
@@ -146,7 +146,7 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 
 <figure class="product-shot">
   <a href="https://www.abridge.com/product" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.png" alt="Abridge يربط الملاحظة السريرية بالمحادثة" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.webp" alt="Abridge يربط الملاحظة السريرية بالمحادثة" loading="lazy" />
   </a>
   <figcaption><strong>Abridge:</strong> تعود الملاحظة الناتجة إلى الحوار الموافق. المهم ليس سرعة الكتابة بل قدرة الطبيب على التتبع والتعديل والتأكيد.</figcaption>
 </figure>
@@ -184,7 +184,7 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://www.aboutamazon.com/news/retail/amazon-rufus" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.jpg" alt="مساعد التسوق Amazon Rufus" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.webp" alt="مساعد التسوق Amazon Rufus" loading="lazy" />
   </a>
   <figcaption><strong>Amazon Rufus:</strong> يقع تحت البحث ويتناول المقارنة وPrime Day وساعات النوم. يصل الجواب إلى سلع حقيقية بدل نصيحة عامة.</figcaption>
 </figure>
@@ -210,7 +210,7 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 
 <figure class="product-shot product-shot--portrait">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.png" alt="Duolingo Max يتدرب على الطلب في مقهى بباريس" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.webp" alt="Duolingo Max يتدرب على الطلب في مقهى بباريس" loading="lazy" />
   </a>
   <figcaption><strong>Duolingo Max Roleplay:</strong> ليست «تحدث الفرنسية»، بل مهمة طلب في مقهى. المشهد والدور والهدف والمكافأة جاهزة، فيبدأ التدريب فورًا.</figcaption>
 </figure>
@@ -223,7 +223,7 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 
 <figure class="product-shot">
   <a href="https://firefly.adobe.com/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.png" alt="مساحة توليد Adobe Firefly" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.webp" alt="مساحة توليد Adobe Firefly" loading="lazy" />
   </a>
   <figcaption><strong>Adobe Firefly:</strong> يحوي نموذجًا ونسبة ونوعًا وشدة وصورة مرجعية ونتائج متعددة، لا مربع تعليمات فقط. يحتاج المنتج الإبداعي إلى أدوات متابعة التعديل.</figcaption>
 </figure>

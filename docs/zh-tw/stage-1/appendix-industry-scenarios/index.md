@@ -41,7 +41,7 @@ Capgemini 對 12,000 名消費者的調查里，生成式 AI 已經進入商品�
 
 <figure class="product-shot">
   <a href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.jpg" alt="Klarna AI Assistant 的延期付款、多語言客服與退款解釋界面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.webp" alt="Klarna AI Assistant 的延期付款、多語言客服與退款解釋界面" loading="lazy" />
   </a>
   <figcaption><strong>Klarna AI Assistant：</strong>左邊不是一句“請聯繫人工”，而是直接給出延期付款入口；右邊把退款金額逐項拆開。客服 AI 真正有用的地方，是能查到這筆訂單並把動作接下去。</figcaption>
 </figure>
@@ -114,7 +114,7 @@ Thomson Reuters 的 2025 年調查顯示，法律、稅務、風控等專業服�
 
 <figure class="product-shot">
   <a href="https://github.blog/changelog/2024-10-29-github-copilot-code-review-in-github-com-private-preview/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.png" alt="GitHub Copilot 在 Pull Request 中給出代碼審查建議" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.webp" alt="GitHub Copilot 在 Pull Request 中給出代碼審查建議" loading="lazy" />
   </a>
   <figcaption><strong>GitHub Copilot Code Review：</strong>Copilot 被選為審查人後，會把問題落到具體代碼行，並給出可提交的修改；開發者仍能查看差異、加入批次或拒絕建議。價值發生在 Pull Request 里，不在另一個聊天窗口裡。</figcaption>
 </figure>
@@ -146,7 +146,7 @@ Siemens Industrial Copilot 已用於解釋設備信息、查找維修依據和�
 
 <figure class="product-shot">
   <a href="https://www.abridge.com/product" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.png" alt="Abridge 將臨床記錄與原始醫患對話關聯的界面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.webp" alt="Abridge 將臨床記錄與原始醫患對話關聯的界面" loading="lazy" />
   </a>
   <figcaption><strong>Abridge：</strong>上方是生成的病歷段落，下方是對應的醫患對話，點擊 Linked Evidence 可以回到原話。這裡最重要的不是“自動寫得快”，而是醫生能追溯、修改並確認每條記錄。</figcaption>
 </figure>
@@ -184,7 +184,7 @@ C 端應用最容易犯的錯，是把同一個聊天框換七種提示詞。下
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://www.aboutamazon.com/news/retail/amazon-rufus" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.jpg" alt="Amazon Rufus 購物助手界面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.webp" alt="Amazon Rufus 購物助手界面" loading="lazy" />
   </a>
   <figcaption><strong>Amazon Rufus：</strong>入口就在 Amazon 搜索框下面，問題也圍繞購物展開：比較桌布、為 Prime Day 做準備、尋找適合睡眠監測的手錶。它能繼續接到真實商品，而不是只給一段泛泛建議。</figcaption>
 </figure>
@@ -210,7 +210,7 @@ C 端應用最容易犯的錯，是把同一個聊天框換七種提示詞。下
 
 <figure class="product-shot product-shot--portrait">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.png" alt="Duolingo Max 的巴黎咖啡館角色扮演練習" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.webp" alt="Duolingo Max 的巴黎咖啡館角色扮演練習" loading="lazy" />
   </a>
   <figcaption><strong>Duolingo Max Roleplay：</strong>練習不是一句“和 AI 聊法語”，而是一個具體任務：在巴黎咖啡館點餐。場景、角色、目標和獎勵都已經設好，使用者打開後馬上就能練一輪。</figcaption>
 </figure>
@@ -223,7 +223,7 @@ C 端應用最容易犯的錯，是把同一個聊天框換七種提示詞。下
 
 <figure class="product-shot">
   <a href="https://firefly.adobe.com/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.png" alt="Adobe Firefly 文生圖工作界面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.webp" alt="Adobe Firefly 文生圖工作界面" loading="lazy" />
   </a>
   <figcaption><strong>Adobe Firefly：</strong>真實界面里不只有一個提示詞框，還能選擇模型、比例、內容類型、視覺強度和參考圖，並比較多組結果。個人創作產品要給使用者繼續修改的控制，而不是只剩“再生成一次”。</figcaption>
 </figure>

@@ -399,14 +399,14 @@ If you encounter the screen below, it usually means the local service has alread
 
 After confirmation, wait briefly, and you should see the initial result:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
+![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.webp)
 
 The base function appears, but UI is rough. Now talk to AI directly to improve visual quality:
 
 
 After refinement, you can get a cleaner interface:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
+![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.webp)
 
 Then keep iterating by need, for example:
 
@@ -418,7 +418,7 @@ You can even ask AI to reference established websites by attaching screenshots:
 
 Result example:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
+![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.webp)
 
 ### 2.3 What to Do When Errors Happen
 
@@ -551,17 +551,17 @@ Please generate test-data shortcuts based on the requirement below so I can quic
 
 You can quickly get a usable result (and if one case is not enough, ask AI to generate multiple test cases):
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.png)
+![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.webp)
 
 Click to test:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.png)
+![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.webp)
 
 At this point, the result may appear immediately without a simulated generation process. If you want realistic delay/feedback, ask AI:
 
 "Please simulate a real generation process so after clicking, results appear after a short delay."
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.webp)
 
 After generation flow works, verify template-library behavior. If the "save template" interaction is missing, ask AI:
 
@@ -573,7 +573,7 @@ Generation is usually iterative, and screenshots are often needed for correction
 
 Expected final result:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.png)
+![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.webp)
 
 Besides manual user-flow testing, you can also ask AI to do requirement coverage checks:
 

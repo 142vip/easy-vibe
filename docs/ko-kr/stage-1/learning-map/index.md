@@ -27,7 +27,7 @@ const relatedArticles = relatedArticlesMap['ko-kr/stage-1/learning-map'] ?? []
 가장 먼저 생긴 변화는 “코드를 못 쓰니 시작할 수 없다”는 장벽을 더 많은 사람이 넘게 된 것입니다. 프로그래밍 경험이 없어도 몇 분 만에 작은 게임, 웹페이지, 시연 가능한 프로토타입을 만들 수 있습니다.
 
 <figure class="concept-illustration">
-  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.png" alt="제작자가 AI로 자연어 아이디어를 제품 프로토타입으로 만들고 실제 사용자에게 전달한 뒤 피드백으로 개선하는 모습" loading="lazy">
+  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.webp" alt="제작자가 AI로 자연어 아이디어를 제품 프로토타입으로 만들고 실제 사용자에게 전달한 뒤 피드백으로 개선하는 모습" loading="lazy">
   <figcaption>Vibe Coding은 “만드는” 장벽을 넘게 합니다. 제품 만들기는 실제 사용자, 피드백, 가치까지 계속 나아가는 일입니다.</figcaption>
 </figure>
 

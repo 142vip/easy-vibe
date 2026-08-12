@@ -65,7 +65,7 @@ const relatedArticles =
 
 AI 只負責其中適合它的部分。登錄、支付、保存檔案和頁面跳轉都有明確規則，仍然使用普通程序來完成。
 
-![商品圖片經過圖片理解後生成商品描述的實際頁面](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![商品圖片經過圖片理解後生成商品描述的實際頁面](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.webp)
 
 *在這個原型中，使用者先上傳商品圖片，頁面識別出商品資訊，再生成可以繼續編輯的描述和賣點。*
 
@@ -169,7 +169,7 @@ API Key 是應用呼叫模型時使用的憑證。創建以後，把它放進本
 
 模型廣場或 Models 頁面用來查看平台當前提供哪些文本、圖片、語音和影片模型。點進詳情頁以後，注意複製代碼中使用的 Model ID；它可能和頁面上顯示的中文名稱不同。
 
-![SiliconFlow 模型廣場，左側按文本、圖像、影片和語音區分能力](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
+![SiliconFlow 模型廣場，左側按文本、圖像、影片和語音區分能力](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.webp)
 
 *SiliconFlow 的模型廣場可以按文本、圖像、影片和語音篩選模型。*
 
@@ -286,7 +286,7 @@ response = client.chat.completions.create(
 )
 ```
 
-![在 AI IDE 中接入圖片理解接口](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
+![在 AI IDE 中接入圖片理解接口](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.webp)
 
 *先讓使用者確認模型識別出的商品資訊，再生成文案，通常比直接從圖片生成最終文案更容易發現錯誤。*
 
@@ -318,7 +318,7 @@ curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
   }'
 ```
 
-![圖片生成能力接入產品後的效果](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
+![圖片生成能力接入產品後的效果](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.webp)
 
 圖片 URL 往往有有效期。原型可以直接展示，準備上線時要根據服務條款決定是否轉存，並記錄提示詞、模型版本和生成時間。
 

@@ -30,7 +30,7 @@ const duration = '约 <strong>20 分钟</strong>'
 
 比如找房时，你可能同时开着三个平台，又手抄一份表格比较租金和通勤。看房回来，手机里的照片还经常和房源对不上。
 
-![分散的房源照片通过位置标记和通勤路线汇总到一张比较图中](images/rental-listing-comparison.jpg)
+![分散的房源照片通过位置标记和通勤路线汇总到一张比较图中](images/rental-listing-comparison.webp)
 
 _先把这次经历记下来，不必马上想它能做成什么产品。_
 
@@ -44,7 +44,7 @@ _先把这次经历记下来，不必马上想它能做成什么产品。_
 
 比如活动上线前，一张海报常要改成公众号头图、小红书竖图和视频封面。尺寸一变，设计师又要重新安排标题、主体和安全区域。
 
-![同一套视觉内容在横版、方形、竖版和窄版画幅中的不同排布](images/multi-format-design.jpg)
+![同一套视觉内容在横版、方形、竖版和窄版画幅中的不同排布](images/multi-format-design.webp)
 
 _同一种求助隔几天又出现，就值得保存。_
 
@@ -87,7 +87,7 @@ site:v2ex.com 有没有工具
 
 Product Hunt 是科技产品集中首发和争取曝光的平台。很多独立开发者和产品团队会提前准备介绍、截图和演示，在上线当天邀请用户来投票，希望冲进当日榜单前几名。
 
-![Product Hunt 首页展示当天发布的新产品、投票数和讨论](images/source-product-hunt.png)
+![Product Hunt 首页展示当天发布的新产品、投票数和讨论](images/source-product-hunt.webp)
 
 首页每天都会换一批产品。每个产品旁边有一句简短介绍、所属分类、投票和评论。进去以后先看三处：产品用一句话怎样介绍自己、首屏截图在强调什么、评论区的人在问什么。不要只看第一名，连续看几天，更容易发现最近大家都在做哪些品类。
 
@@ -95,7 +95,7 @@ Product Hunt 是科技产品集中首发和争取曝光的平台。很多独立�
 
 Product Hunt 更像产品上线当天的舞台，Indie Hackers 则更像独立开发者长期交流生意的社区。这里有人公开产品进展、收入、获客过程，也会诚实地讲“做了几个月还是没有客户”。
 
-![Indie Hackers Products 页面展示独立产品和开发进展](images/source-indie-hackers.png)
+![Indie Hackers Products 页面展示独立产品和开发进展](images/source-indie-hackers.webp)
 
 逛 Products 和案例时，不必只找收入最高的项目。一个人维护、每月稳定赚几千美元的产品，通常更容易看清它最初解决了什么小问题，第一批客户又是从哪里来的。
 
@@ -103,7 +103,7 @@ Product Hunt 更像产品上线当天的舞台，Indie Hackers 则更像独立�
 
 Capterra 是商业软件目录和评价网站。公司在挑选 CRM、项目管理、客服、排班等软件时，可以按品类搜索、比较产品，再阅读真实用户写下的优点和缺点。
 
-![Capterra 首页提供商业软件搜索、分类和比较入口](images/source-capterra.png)
+![Capterra 首页提供商业软件搜索、分类和比较入口](images/source-capterra.webp)
 
 如果你已经对某类产品感兴趣，可以先在这里找到几款常见工具，再打开低分评价。反复出现的抱怨——例如移动端难用、导出格式不对、配置过于复杂——往往比官网的功能列表更值得记录。
 
@@ -111,7 +111,7 @@ Capterra 是商业软件目录和评价网站。公司在挑选 CRM、项目管�
 
 Google Trends 展示的是关键词搜索热度的相对变化。你可以比较几个词在不同时间、地区的趋势，也可以查看相关查询和突然升温的词。
 
-![Google Trends 首页展示实时趋势和关键词探索入口](images/source-google-trends.png)
+![Google Trends 首页展示实时趋势和关键词探索入口](images/source-google-trends.webp)
 
 它适合在已经有了几个关键词以后使用。例如同时比较“AI meeting notes”“AI transcription”和“voice notes”，看看人们更常搜索哪种表达。曲线上升不等于一定有市场，它只能告诉你关注度正在怎样变化。
 

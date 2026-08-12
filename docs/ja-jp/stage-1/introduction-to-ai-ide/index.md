@@ -138,15 +138,15 @@ IDE は「コードを編集、管理、実行、デバッグする」ための�
 
 モダン IDE にはさらに Git などのツールが内蔵されていることも多いです。最も人気のあるのは Microsoft の **[Visual Studio Code (VS Code)](https://code.visualstudio.com/)** で、軽量で拡張性が高いです。JetBrains 全家桶などの専門 IDE もありますが、VS Code は初学者に最も親和的です。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.webp)
 
 VS Code のコア理念は「すべてがプラグイン」です。プラグインメカニズムを通じて各言語をサポートし、Python プラグインをインストールすれば Python IDE に、C++ プラグインをインストールすれば C++ IDE になります。プラグインをインストールしなければ、高度なテキストエディタに過ぎません。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.webp)
 
 Markdown ドキュメントを編集することもできます。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.webp)
 
 要するに、IDE は開発者が効率的にコードを書き、プログラムを実行するためのツールキットです。
 
@@ -213,7 +213,7 @@ Cursor は Anysphere が開発した AI コードエディタで、VS Code を�
 
 現在、Cursor は「フロントエンドインターフェース付き AI IDE」の中で総合的な体験が最も良いものの一つで、ユーザー数も多く、機能のイテレーションも頻繁です。最大の欠点は価格が高いこと——プロフェッショナル版は月額約20ドルです。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.webp)
 :::
 
 ::: details Qoder
@@ -222,7 +222,7 @@ Cursor は Anysphere が開発した AI コードエディタで、VS Code を�
 
 Qoder は Alibaba がリリースした AI IDE で、「透明な協働」と「強化されたコンテキストエンジニアリング能力」を強調しています。Action Flow を使ってタスクを複数のステップに分解し、AI の実行プロセスをリアルタイムで追跡できます。また、マルチモデルの動的ルーティングとタスク状態機管理をサポートしており、中・大規模プロジェクトでのアーキテクチャガバナンスやレガシーシステムの「リバースエンジニアリング」分析に非常に適しています。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.webp)
 :::
 
 ::: details CodeBuddy
@@ -231,7 +231,7 @@ Qoder は Alibaba がリリースした AI IDE で、「透明な協働」と「
 
 CodeBuddy は Tencent Cloud がリリースした AI プログラミングツールで、中国語の指示のサポートとエンタープライズ級のコンプライアンス能力を強調しています。コード補完、バッチコードレビュー、マルチモデル切り替えなどの機能を提供。Craft インテリジェントはマルチファイルのコード生成と API 統合を実現できます。エンタープライズ版はプライベート環境でのデプロイをサポートし、レベル3等保認証を通過しており、金融、医療などデータセキュリティ要件が高い業界に適しています。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.webp)
 :::
 
 ::: details VS Code + Cline
@@ -240,9 +240,9 @@ CodeBuddy は Tencent Cloud がリリースした AI プログラミングツー
 
 Cline は VS Code（Visual Studio Code）の AI プログラミング Agent プラグインで、異なる API エンドポイントを設定することで使用する大規模言語モデルを柔軟に切り替えることができます。Cline はマルチモーダル入力、MCP ツール拡張、コストモニタリングをサポートし、すべての操作はユーザーの確認後に実行されます。アイデアの迅速な検証や、既存の開発フローへの統合に非常に適しています。基本機能は無料で、エンタープライズ版はプライベート環境でのモデルデプロイをサポートしています。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.webp)
 :::
 
 ::: details Kiro
@@ -437,7 +437,7 @@ AI チャットサイドバーを開きます：通常は `Ctrl+L` または右�
 
 以下の図では、テンプレートを作成中ですが操作方法が分からず、AI に質問する例です：
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.webp)
 
 AI Agent が実行中に一時停止するもう一つの原因は、"サービス"が開始されたためです。スネークゲーム自体が一種の"サービス"であり、以下のような URL が表示されたら、Agent がローカルでサービスを起動したことを意味します。対応する URL にアクセスしてスネークゲームを遊ぶことができます。サービスを継続的に実行する必要があるため、ここで一時停止します。`Skip` ボタンをクリックしてください。
 
@@ -449,7 +449,7 @@ AI Agent が実行中に一時停止するもう一つの原因は、"サービ�
 
 しばらくすると、z.ai と同様の結果が得られます：
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.webp)
 
 右下のチェックマークをクリックしてコードの変更を確定することもできますし、`Cancel` ボタンで変更を取り消すこともできます。または `2 files need review` の箇所を展開して変更後のコードを確認することもできます。
 
@@ -465,7 +465,7 @@ AI Agent が実行中に一時停止するもう一つの原因は、"サービ�
 
 > 「上から順に説明して。このスネークゲームが1ステップずつどう動くのか？専門用語はできるだけ使わないで。」
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.webp)
 
 その後、回答に沿ってさらに核心的な点を質問します。例えば：
 
@@ -512,15 +512,15 @@ AI は記述に基づいて React コンポーネントとスタイルを直接�
 
 Vibe coding 初心者にとって最も難しいのは、"ベストプラクティス"が何かわからず、"どんなアーキテクチャが最適か"がわからないことです。しかし、コンピュータの基礎がないため、AI をうまく誘導できないという問題があります。解決策は"直接参考する"ことです——以前に z.ai でコードを確認したことを覚えていますか？実は README（プロジェクトの機能と技術アーキテクチャを紹介する部分）にベストプラクティスの参考が記載されています：
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.webp)
 
 README の全内容をコピーして Trae のサイドバーに貼り付け、README のアーキテクチャに基づいてローカルのコードを修正させます。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.webp)
 
 最終的に z.ai と非常に似たページデザインスタイルが得られます：
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>

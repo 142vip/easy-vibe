@@ -154,7 +154,7 @@ AI 出现之后，第一次给了普通人一个全新的可能：你不需要�
 
 > 其中顶部从左到右按钮的作用依次为：箭头按钮展开侧边对话历史栏，铅笔按钮用于新建一个对话，循环箭头按钮用于刷新页面，指南针按钮负责切换至全屏模式，Download 按钮用于下载项目，<> 按钮用于切换代码视图，Publish 按钮用于发布项目。
 
-![](images/index-2026-01-07-18-35-11.png)
+![](images/index-2026-01-07-18-35-11.webp)
 
 如果你想查看该网页的源代码，可以点击右上角的代码图标查看完整代码。
 
@@ -245,12 +245,12 @@ AI 出现之后，第一次给了普通人一个全新的可能：你不需要�
 
 > **💡 示例提示词：** 帮我做一个贪吃蛇游戏
 >
-> ![](images/image12.png)
+> ![](images/image12.webp)
 
 > **💡 示例提示词：** 帮我做一个贪吃蛇游戏，它应该支持
 >
 > 1. 可以吃不同的单词，它们会被收集在一个盒子里
->    ![](images/image13.png)
+>    ![](images/image13.webp)
 
 > **💡 示例提示词：** 帮我做一个贪吃蛇游戏，它应该支持：
 >
@@ -258,13 +258,13 @@ AI 出现之后，第一次给了普通人一个全新的可能：你不需要�
 > 2. 当蛇吃了8个单词时，llm 应该根据这些单词创作一首诗，我们可以根据需要重新混合这首诗。
 > 3. 当诗完成后，下一步将自动根据这首诗创建一幅图像。
 >
-> ![](images/image14.png)
+> ![](images/image14.webp)
 
 注意，在开发过程中，我们可能会遇到不尽如人意的问题，例如点击按钮没有任何反应、使用功能时报错、功能未按预期工作，或者前端页面与预期设计不符。
 
 在这种情况下，我们需要进一步向模型提问，以帮助修复这些意外问题。
 
-![](images/image15.png)
+![](images/image15.webp)
 
 ### 3.2 给游戏添加新功能
 
@@ -308,13 +308,13 @@ AI 出现之后，第一次给了普通人一个全新的可能：你不需要�
 
 z.ai 的回复将会是这样的：
 
-![](images/image56.png)
+![](images/image56.webp)
 
 我们可以使用这个提示词在全栈开发模式下重新生成项目：
 
-![](images/image57.png)
+![](images/image57.webp)
 
-![](images/image58.png)
+![](images/image58.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>
@@ -379,7 +379,7 @@ z.ai 的回复将会是这样的：
 
 日本一位完全不懂编程的开发者 [in0ho1no](https://github.com/in0ho1no)，用 Claude 通过纯对话（Vibe Coding）在 **约 2 小时内** 做出了 2048 风格的「植物花园」游戏 [Blooming Garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/)：同种植物合成升级、华丽的开花特效、粒子动画、排行榜、音效、手机适配……这些功能全部通过自然语言对话完成，没有手写一行代码。
 
-![Blooming Garden 植物合成游戏（100% AI 生成）](images/case-blooming-garden.png)
+![Blooming Garden 植物合成游戏（100% AI 生成）](images/case-blooming-garden.webp)
 
 > 🔗 在线试玩：[in0ho1no.github.io/2025-adhoc-blooming-garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) ｜ 源码：[github.com/in0ho1no/2025-adhoc-blooming-garden](https://github.com/in0ho1no/2025-adhoc-blooming-garden)
 
@@ -387,7 +387,7 @@ z.ai 的回复将会是这样的：
 
 设计师 [Ricardo de Zoete（Hammy）](https://x.com/RicardoDeZoete) 用 OpenAI 的 AI 通过纯对话（Vibe Coding）在 three.js 基础上做出了 [Planet Jumper](https://gamesbyhammy.cloud/play/planetjumper)——一个**3D 多人平台跳跃游戏**：在一个小球状星球表面奔跑、冲刺、跳跃，还能与陌生人在线同场竞技。球形引力、联网同步、跳跃手感这些并不简单的系统，全靠提示词「聊」出来。
 
-![Planet Jumper 3D 多人平台跳跃游戏（Vibe Coding 生成）](images/case-planet-jumper.png)
+![Planet Jumper 3D 多人平台跳跃游戏（Vibe Coding 生成）](images/case-planet-jumper.webp)
 
 > 🔗 在线试玩：[gamesbyhammy.cloud/play/planetjumper](https://gamesbyhammy.cloud/play/planetjumper) ｜ 详细介绍：[Planet Jumper: A Vibe-Coded Three.js Multiplayer Platformer](https://www.webgpu.com/showcase/planet-jumper-threejs-multiplayer/)
 
@@ -397,7 +397,7 @@ z.ai 的回复将会是这样的：
 
 ![100 款浏览器游戏在线目录（2026 年 Vibe Coding 开源项目）](images/case-100-games.png)
 
-![《霓虹 2048》：六章 18 节点远征 + 多种模式与工具系统](images/case-100-games-neon2048.png)
+![《霓虹 2048》：六章 18 节点远征 + 多种模式与工具系统](images/case-100-games-neon2048.webp)
 
 > 🔗 在线目录：[wangzifan396-wzf.github.io/mini-browser-games](https://wangzifan396-wzf.github.io/mini-browser-games/) ｜ 源码：[github.com/wangzifan396-wzf/mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) ｜ 创作复盘：[我用 Vibe Coding 做了 100 款浏览器游戏，并把它们全部开源了](https://blog.csdn.net/m0_74023007/article/details/162945755)
 
@@ -433,7 +433,7 @@ z.ai 的回复将会是这样的：
 
 ![K399 平台界面——K3 Game Arcade，游戏列表点开即玩](images/case-k399-platform-live.png)
 
-![K399 上的开放世界游戏 SpiderPunk：在赛博都市高楼间荡蛛丝（K3 模型生成，实际游玩画面）](images/case-k399-spiderpunk.png)
+![K399 上的开放世界游戏 SpiderPunk：在赛博都市高楼间荡蛛丝（K3 模型生成，实际游玩画面）](images/case-k399-spiderpunk.webp)
 
 > 🔗 在线试玩：[k399.games](https://www.k399.games/)（K3 Game Arcade，点开即玩）｜ 详细介绍：[前米哈游高管加入，当下最火的 AI 公司突然做了几十个游戏](https://eu.36kr.com/zh/p/3906895998178441) ｜ [Kimi K3，让谁紧张？](https://36kr.com/p/3905392402748801)
 
@@ -576,7 +576,7 @@ z.ai 的回复将会是这样的：
 
 > 💡 什么是 Vibe Coding？计算机科学家 [Andrej Karpathy](https://karpathy.ai/)（OpenAI 的联合创始人之一，特斯拉前 AI 负责人）于 2025 年 2 月提出了 **vibe coding** 一词。这个概念指的是一种依赖于 LLM 的编码方法，**允许程序员通过提供自然语言描述而不是手动编写代码来生成可工作的代码。**
 
-![1767350588191](images/1767350588191.png)
+![1767350588191](images/1767350588191.webp)
 
 从字面上看，Vibe Coding 可以理解为一种“用说的方式来做开发”。它的核心变化在于：你不再需要自己一行一行写代码、查语法、调 Bug，而是直接用自然语言描述你想要的东西，例如：
 

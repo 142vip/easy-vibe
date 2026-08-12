@@ -31,7 +31,7 @@ Think back over the last week. What made you copy and paste repeatedly, switch b
 
 While apartment hunting, for example, you may keep three listing sites open and copy rent and commute times into a spreadsheet. After a viewing, the photos on your phone may no longer match the correct listing.
 
-![Scattered listing photos organized with location markers and commute routes](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.jpg)
+![Scattered listing photos organized with location markers and commute routes](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.webp)
 
 _Record the experience first. You do not need to turn it into a product immediately._
 
@@ -45,7 +45,7 @@ Ordinary conversations in work chats, class groups, and hobby communities often 
 
 Before an event launches, one poster may have to become a social banner, a vertical post, and a video cover. Every change in size forces the designer to rearrange the title, main subject, and safe area.
 
-![The same visual content arranged for wide, square, vertical, and narrow formats](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.jpg)
+![The same visual content arranged for wide, square, vertical, and narrow formats](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.webp)
 
 _When the same request returns every few days, save it._
 
@@ -88,7 +88,7 @@ The map contains many sources. These four represent product launches, indie busi
 
 Product Hunt is a place where technology products launch and compete for attention. Makers prepare a short description, screenshots, and a demo, then invite people to vote and comment on launch day.
 
-![Product Hunt homepage showing new products, votes, and discussions](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.png)
+![Product Hunt homepage showing new products, votes, and discussions](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.webp)
 
 The products change every day. Open a product and study three things: how it describes itself in one sentence, what the first screenshot emphasizes, and what people ask in the comments. Do not look only at the winner; watch several days to see which categories keep appearing.
 
@@ -96,7 +96,7 @@ The products change every day. Open a product and study three things: how it des
 
 Product Hunt resembles a launch-day stage. Indie Hackers is a longer-running community where makers share product progress, revenue, customer acquisition, and failures.
 
-![Indie Hackers Products page showing independent products and progress](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.png)
+![Indie Hackers Products page showing independent products and progress](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.webp)
 
 Do not study only the highest-revenue projects. A product maintained by one person and earning a modest, steady income often makes it easier to see the original small problem and where its first customers came from.
 
@@ -104,7 +104,7 @@ Do not study only the highest-revenue projects. A product maintained by one pers
 
 Capterra is a directory and review site for business software. Companies use it to compare CRM, project management, support, scheduling, and other tools.
 
-![Capterra homepage with software search and comparison categories](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.png)
+![Capterra homepage with software search and comparison categories](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.webp)
 
 If a category interests you, open several established tools and read the low-scoring reviews. Repeated complaints—such as a poor mobile experience, wrong export format, or overly complex setup—are often more useful than the feature list on a product homepage.
 
@@ -112,7 +112,7 @@ If a category interests you, open several established tools and read the low-sco
 
 Google Trends shows relative search interest over time and by region, along with related and rapidly growing queries.
 
-![Google Trends homepage with trending topics and keyword exploration](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.png)
+![Google Trends homepage with trending topics and keyword exploration](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.webp)
 
 Use it after you have a few possible terms. For example, compare “AI meeting notes,” “AI transcription,” and “voice notes” to see which wording people search for. A rising line does not prove a market exists; it only shows how attention is changing.
 

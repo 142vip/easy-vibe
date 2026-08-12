@@ -149,7 +149,7 @@ AI가 등장한 뒤, 일반인에게 처음으로 완전히 새로운 가능성�
 
 > 상단 버튼의 역할은 왼쪽부터 차례대로 다음과 같습니다. 화살표 버튼은 사이드 대화 기록 영역을 펼치고, 연필 버튼은 새 대화를 만들며, 순환 화살표 버튼은 페이지를 새로고침하고, 나침반 버튼은 전체 화면 모드로 전환합니다. Download 버튼은 프로젝트 다운로드, <> 버튼은 코드 보기 전환, Publish 버튼은 프로젝트 게시에 사용됩니다.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.webp)
 
 이 웹페이지의 소스 코드를 보고 싶다면 오른쪽 위의 코드 아이콘을 클릭해 전체 코드를 확인할 수 있습니다.
 
@@ -240,12 +240,12 @@ z.ai 외에도 아래의 훌륭한 AI 프로그래밍 플랫폼을 시도해 볼
 
 > **💡 예시 프롬프트:** 스네이크 게임을 만들어줘
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.webp)
 
 > **💡 예시 프롬프트:** 스네이크 게임을 만들어줘. 다음을 지원해야 해.
 >
 > 1. 서로 다른 단어를 먹을 수 있고, 그 단어들은 상자 안에 수집되어야 해.
->    ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.png)
+>    ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.webp)
 
 > **💡 예시 프롬프트:** 스네이크 게임을 만들어줘. 다음을 지원해야 해.
 >
@@ -253,13 +253,13 @@ z.ai 외에도 아래의 훌륭한 AI 프로그래밍 플랫폼을 시도해 볼
 > 2. 뱀이 단어 8개를 먹으면, llm이 이 단어들을 바탕으로 시를 만들어야 하고, 필요에 따라 이 시를 다시 섞을 수 있어야 해.
 > 3. 시가 완성되면, 다음 단계에서 이 시를 바탕으로 이미지를 자동으로 만들어야 해.
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.webp)
 
 개발 과정에서는 기대만큼 좋지 않은 문제를 만날 수 있습니다. 예를 들어 버튼을 클릭해도 아무 반응이 없거나, 기능을 사용할 때 오류가 나거나, 기능이 예상대로 작동하지 않거나, 프론트엔드 페이지가 기대한 디자인과 맞지 않을 수 있습니다.
 
 이런 상황에서는 모델에게 더 질문하여 예상치 못한 문제를 수정하도록 도와야 합니다.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.webp)
 
 ### 3.2 게임에 새 기능 추가하기
 
@@ -303,13 +303,13 @@ z.ai 외에도 아래의 훌륭한 AI 프로그래밍 플랫폼을 시도해 볼
 
 z.ai의 답변은 다음과 같을 것입니다.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.webp)
 
 이 프롬프트를 사용해 풀스택 개발 모드에서 프로젝트를 다시 생성할 수 있습니다.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.webp)
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>
@@ -374,7 +374,7 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 일본의 프로그래밍을 전혀 모르는 개발자 [in0ho1no](https://github.com/in0ho1no)가 Claude를 사용해 순수 대화(Vibe Coding)만으로 **약 2시간** 만에 2048 스타일의 「식물 정원」 게임 [Blooming Garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/)을 만들었습니다. 같은 종류의 식물 합성 업그레이드, 화려한 개화 이펙트, 파티클 애니메이션, 순위표, 효과음, 모바일 지원까지... 이 모든 기능을 자연어 대화로만 완성했고, 코드를 한 줄도 직접 쓰지 않았습니다.
 
-![Blooming Garden 식물 합성 게임(100% AI 생성)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.png)
+![Blooming Garden 식물 합성 게임(100% AI 생성)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.webp)
 
 > 🔗 온라인 플레이: [in0ho1no.github.io/2025-adhoc-blooming-garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) ｜ 소스 코드: [github.com/in0ho1no/2025-adhoc-blooming-garden](https://github.com/in0ho1no/2025-adhoc-blooming-garden)
 
@@ -382,7 +382,7 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 디자이너 [Ricardo de Zoete(Hammy)](https://x.com/RicardoDeZoete)가 OpenAI의 AI를 사용해 순수 대화(Vibe Coding)로 three.js 기반의 [Planet Jumper](https://gamesbyhammy.cloud/play/planetjumper)를 만들었습니다. 작은 구형 행성 표면에서 달리고, 대시하고, 점프하며 낯선 사람들과 온라인에서 함께 겨루는 **3D 멀티플레이 플랫포머 게임**입니다. 구형 중력, 온라인 동기화, 점프 감각 같은 쉽지 않은 시스템들이 전부 프롬프트로만 "이야기"해 만들어졌습니다.
 
-![Planet Jumper 3D 멀티플레이 플랫포머 게임(Vibe Coding으로 생성)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.png)
+![Planet Jumper 3D 멀티플레이 플랫포머 게임(Vibe Coding으로 생성)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.webp)
 
 > 🔗 온라인 플레이: [gamesbyhammy.cloud/play/planetjumper](https://gamesbyhammy.cloud/play/planetjumper) ｜ 자세한 소개: [Planet Jumper: A Vibe-Coded Three.js Multiplayer Platformer](https://www.webgpu.com/showcase/planet-jumper-threejs-multiplayer/)
 
@@ -392,7 +392,7 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 ![브라우저 게임 100개의 온라인 카탈로그(2026년 Vibe Coding 오픈소스 프로젝트)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
 
-![《네온 2048》: 여섯 챕터 18개 노드 원정 + 다양한 모드와 도구 시스템](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.png)
+![《네온 2048》: 여섯 챕터 18개 노드 원정 + 다양한 모드와 도구 시스템](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
 > 🔗 온라인 카탈로그: [wangzifan396-wzf.github.io/mini-browser-games](https://wangzifan396-wzf.github.io/mini-browser-games/) ｜ 소스 코드: [github.com/wangzifan396-wzf/mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) ｜ 창작 회고: [Vibe Coding으로 브라우저 게임 100개를 만들어 모두 오픈소스로 공개했습니다](https://blog.csdn.net/m0_74023007/article/details/162945755)
 
@@ -428,7 +428,7 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 ![K399 플랫폼 화면 - K3 Game Arcade, 게임 목록 클릭하면 바로 플레이](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
 
-![K399의 오픈월드 게임 SpiderPunk: 사이버 도시 고층 빌딩 사이에서 거미줄을 타고 이동(K3 모델 생성, 실제 플레이 화면)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.png)
+![K399의 오픈월드 게임 SpiderPunk: 사이버 도시 고층 빌딩 사이에서 거미줄을 타고 이동(K3 모델 생성, 실제 플레이 화면)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 
 > 🔗 온라인 플레이: [k399.games](https://www.k399.games/)(K3 Game Arcade, 클릭하면 바로 플레이) ｜ 자세한 소개: [전 미하요우(米哈游) 임원 합류, 가장 뜨거운 AI 회사가 갑자기 게임 수십 개를 만들었다](https://eu.36kr.com/zh/p/3906895998178441) ｜ [Kimi K3, 누구를 긴장시키나?](https://36kr.com/p/3905392402748801)
 
@@ -572,7 +572,7 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 > 💡 Vibe Coding이란 무엇인가요? 컴퓨터 과학자 [Andrej Karpathy](https://karpathy.ai/)(OpenAI 공동 창립자 중 한 명이자 Tesla 전 AI 책임자)는 2025년 2월 **vibe coding**이라는 용어를 제안했습니다. 이 개념은 LLM에 의존하는 코딩 방법을 가리키며, **프로그래머가 코드를 직접 작성하는 대신 자연어 설명을 제공하여 작동 가능한 코드를 생성할 수 있게 합니다.**
 
-![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.png)
+![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.webp)
 
 문자 그대로 보면 Vibe Coding은 “말로 개발하는 방식”으로 이해할 수 있습니다. 핵심 변화는 다음과 같습니다. 더 이상 코드를 한 줄씩 직접 쓰고, 문법을 찾고, Bug를 고칠 필요가 없습니다. 원하는 것을 자연어로 바로 설명합니다. 예를 들면 다음과 같습니다.
 

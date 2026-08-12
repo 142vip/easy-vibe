@@ -65,7 +65,7 @@ AI の組み込みは、API コードをコピーするだけでは終わりま�
 
 AI に任せるのは、AI が得意な部分だけです。ログイン、決済、ファイル保存、画面遷移のようにルールが決まっている処理は、通常のプログラムで実装します。
 
-![商品画像を理解してから商品説明を生成する実際の画面](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![商品画像を理解してから商品説明を生成する実際の画面](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.webp)
 
 *このプロトタイプでは、商品画像を読み取って情報を表示し、利用者が確認した後に編集可能な説明と特徴を生成します。*
 
@@ -169,7 +169,7 @@ API Key は、アプリがモデルを呼び出すための認証情報です。
 
 モデル一覧では、現在使えるテキスト、画像、音声、動画モデルを確認できます。詳細画面で、コードに使う Model ID をコピーします。画面上の表示名と異なることがあります。
 
-![テキスト、画像、動画、音声で絞り込める SiliconFlow のモデル一覧](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
+![テキスト、画像、動画、音声で絞り込める SiliconFlow のモデル一覧](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.webp)
 
 *SiliconFlow のモデル一覧は、テキスト、画像、動画、音声の種類で絞り込めます。*
 
@@ -286,7 +286,7 @@ response = client.chat.completions.create(
 )
 ```
 
-![AI IDE で画像理解 API を接続する](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
+![AI IDE で画像理解 API を接続する](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.webp)
 
 *写真からすぐ最終文章を作るより、認識した商品情報を利用者が確認してから文章を生成する方が、間違いを見つけやすくなります。*
 
@@ -318,7 +318,7 @@ curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
   }'
 ```
 
-![商品に組み込んだ画像生成の結果](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
+![商品に組み込んだ画像生成の結果](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.webp)
 
 画像 URL には有効期限がある場合があります。プロトタイプでは直接表示できますが、公開時は利用規約を確認して自分のストレージへ保存するか決め、プロンプト、モデル版、生成時刻も記録します。
 

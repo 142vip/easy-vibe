@@ -41,7 +41,7 @@ Chaque section commence par un rôle concret. Avant de copier un produit, observ
 
 <figure class="product-shot">
   <a href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.jpg" alt="Klarna AI Assistant avec report de paiement, assistance multilingue et explication du remboursement" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.webp" alt="Klarna AI Assistant avec report de paiement, assistance multilingue et explication du remboursement" loading="lazy" />
   </a>
   <figcaption><strong>Klarna AI Assistant :</strong> il ne dit pas seulement « contactez un agent » ; il ouvre le report de paiement et détaille le remboursement. Une IA utile retrouve la commande et poursuit l’action.</figcaption>
 </figure>
@@ -114,7 +114,7 @@ Une petite équipe peut vérifier paiement, renouvellement, indemnité et donné
 
 <figure class="product-shot">
   <a href="https://github.blog/changelog/2024-10-29-github-copilot-code-review-in-github-com-private-preview/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.png" alt="GitHub Copilot examinant une Pull Request" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.webp" alt="GitHub Copilot examinant une Pull Request" loading="lazy" />
   </a>
   <figcaption><strong>GitHub Copilot Code Review :</strong> le commentaire s’attache à la ligne et peut proposer une modification. Le développeur inspecte, regroupe ou refuse. La valeur est dans la Pull Request, pas dans un autre chat.</figcaption>
 </figure>
@@ -146,7 +146,7 @@ Commencez par un équipement, pas « prévoir toute l’usine » : identifier le
 
 <figure class="product-shot">
   <a href="https://www.abridge.com/product" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.png" alt="Abridge reliant note clinique et conversation" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.webp" alt="Abridge reliant note clinique et conversation" loading="lazy" />
   </a>
   <figcaption><strong>Abridge :</strong> la note générée renvoie à la conversation correspondante. L’essentiel n’est pas la vitesse, mais la possibilité pour le médecin de tracer, modifier et valider chaque entrée.</figcaption>
 </figure>
@@ -184,7 +184,7 @@ L’erreur la plus simple consiste à placer sept prompts dans le même chat. Ce
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://www.aboutamazon.com/news/retail/amazon-rufus" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.jpg" alt="Assistant d’achat Amazon Rufus" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.webp" alt="Assistant d’achat Amazon Rufus" loading="lazy" />
   </a>
   <figcaption><strong>Amazon Rufus :</strong> placé sous la recherche, il traite comparaisons, Prime Day et montres de sommeil. Il mène à de vrais produits, pas à un conseil général.</figcaption>
 </figure>
@@ -210,7 +210,7 @@ Commencez plus petit : « demi-journée avec des enfants » ou « trajet de nuit
 
 <figure class="product-shot product-shot--portrait">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.png" alt="Duolingo Max simulant une commande dans un café parisien" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.webp" alt="Duolingo Max simulant une commande dans un café parisien" loading="lazy" />
   </a>
   <figcaption><strong>Duolingo Max Roleplay :</strong> non pas « parle français », mais « commande dans un café parisien ». Scène, rôle, objectif et récompense permettent une pratique immédiate.</figcaption>
 </figure>
@@ -223,7 +223,7 @@ Un produit peut servir un geste : entretien, oral, objection commerciale ou sout
 
 <figure class="product-shot">
   <a href="https://firefly.adobe.com/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.png" alt="Espace de génération Adobe Firefly" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.webp" alt="Espace de génération Adobe Firefly" loading="lazy" />
   </a>
   <figcaption><strong>Adobe Firefly :</strong> modèle, ratio, type, intensité, référence et plusieurs résultats entourent le prompt. Un produit créatif donne des contrôles pour continuer.</figcaption>
 </figure>

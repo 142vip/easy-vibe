@@ -109,7 +109,7 @@ Si el formulario tiene muchos campos, conserva los que necesita un buen resultad
 
 Una petición a la IA puede tardar varios segundos. Después del clic, el botón debe mostrar «Generando» y evitar temporalmente envíos repetidos. Los datos introducidos no deben desaparecer y la página no debería saltar a un resultado vacío.
 
-![Estado de espera durante la generación del contenido](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![Estado de espera durante la generación del contenido](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.webp)
 
 *La espera no necesita una animación complicada. Mostrar que el trabajo ha empezado y conservar el contenido y la posición ya evita la mayor parte de la confusión.*
 
@@ -119,7 +119,7 @@ Si una imagen o un vídeo entra en una cola, puedes mostrar fases como «En cola
 
 La respuesta de la IA no termina el recorrido. Normalmente hay que verificar datos, corregir palabras y llevar el resultado al siguiente paso. La zona de resultado debe ofrecer al menos una acción útil: editar, copiar, descargar o volver a generar.
 
-![Página de resultado con comprensión de imagen y generación de texto](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![Página de resultado con comprensión de imagen y generación de texto](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.webp)
 
 *La imagen subida permanece encima del resultado. Así se puede comparar el texto con el original, en lugar de aceptar sin más una respuesta del modelo.*
 

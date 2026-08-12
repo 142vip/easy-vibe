@@ -244,7 +244,7 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
 - **Caractéristiques principales et flux de travail :** Lovable excelle dans l'intégration et la collaboration. Il automatise des tâches comme la connexion à la base de données Supabase, rendant le processus de configuration du projet très fluide. Il suffit de décrire les besoins du projet pour que l'Agent connecte les différents services et construise la structure de base.
 - **Utilisateurs ciblés :** Pour les débutants qui essaient le Vibe Coding pour la première fois, Lovable est un choix très convivial. Il simplifie la complexité de la connexion multi-services, vous permettant de vous concentrer sur les prompts et l'itération plutôt que sur la configuration de l'environnement. Grâce à une automatisation poussée, vous obtenez rapidement un prototype fonctionnel.
 - **Processus de prompts :**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.webp)
 - **Résultat du jeu Snake :**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.png)
@@ -258,10 +258,10 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
 - **Caractéristiques principales et flux de travail :** Cursor est un IDE propriétaire intégrant des capacités AI, supportant Windows, macOS et Linux. Il intègre directement la génération de code, la réécriture intelligente et la recherche dans la base de code dans l'environnement de développement. Comparé aux outils Web, il offre une expérience plus proche du développement local traditionnel. Étant un environnement local, les configurations varient d'un ordinateur à l'autre, ce qui peut occasionner des problèmes liés à l'environnement. L'avantage est que le projet est sur votre machine, pas besoin de télécharger ou configurer un environnement d'exécution supplémentaire — Cursor gère de nombreuses étapes fastidieuses pour vous.
 - **Utilisateurs ciblés :** Pour les utilisateurs ayant déjà des bases en programmation, Cursor est un environnement très puissant et familier. Mais pour les débutants complets, il faut comprendre soi-même la structure du projet, la gestion des dépendances et l'organisation des fichiers — la courbe d'apprentissage est plus raide. Plus adapté aux développeurs qui souhaitent intégrer un assistant AI dans leur flux de codage traditionnel.
 - **Processus de prompts :**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image7.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image7.webp)
 - **Résultat du jeu Snake :**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.webp)
 
 - **Prix :**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
@@ -272,7 +272,7 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
 - **Caractéristiques principales et flux de travail :** L'utilisation de Z.ai est assez directe, mais un défi notable : vous devez **copier-coller manuellement le code généré**. La plateforme elle-même manque d'une fenêtre de prévisualisation en temps réel, ce qui rend difficile de voir immédiatement le résultat de l'exécution du code.
 - **Utilisateurs ciblés :** Cette plateforme requiert une utilisation assez « manuelle ». L'absence d'automatisation signifie que vous devez interagir directement avec le code, ce qui est un exercice formateur pour ceux qui veulent comprendre en profondeur le contenu généré par l'IA. Mais les copier-coller fréquents posent des problèmes d'efficacité et de risque d'erreur. Plus adapté à ceux qui veulent voir « le code brut généré par l'IA » plutôt que ceux qui recherchent une expérience en un clic.
 - **Processus de prompts :**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image11.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image11.webp)
 - **Résultat du jeu Snake :**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image12.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image13.png)
@@ -285,11 +285,11 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
 - **Type de plateforme :** Web
 - **Caractéristiques principales et flux de travail :** Replit est un environnement de développement et de déploiement en ligne tout-en-un. Dans le navigateur, vous pouvez écrire du code, exécuter des programmes et générer des URL d'accès en ligne. Avant de commencer à coder, il affiche un plan d'action clair ; il propose aussi un éditeur visuel où vous pouvez modifier l'UI directement dans la fenêtre de prévisualisation, et le code source se met à jour automatiquement. Cela vous permet de vérifier en permanence si la sortie de l'IA correspond à vos attentes, réduisant considérablement les allers-retours de modification.
 
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image15.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image15.webp)
 
 - **Utilisateurs ciblés :** Replit est très convivial pour les débutants. Il simplifie le cycle complet du codage au déploiement, sans nécessiter de configuration supplémentaire de serveur ou de service d'hébergement. Les fonctionnalités de collaboration sont également solides, adaptées pour les projets entre camarades de classe ou pour demander de l'aide à distance.
 - **Processus de prompts :** Pendant la construction, l'IA n'a pas compris le besoin du premier coup — environ 3 itérations ont été nécessaires pour obtenir le résultat idéal.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.webp)
 - **Résultat du jeu Snake :**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.png)
@@ -304,7 +304,7 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
 - **Utilisateurs ciblés :** Comme il exécute automatiquement les tests et corrige les erreurs, la consommation de temps et de tokens est importante, mais vous pouvez clairement voir comment l'IA localise et résout les problèmes — ce qui est très valuable d'un point de vue apprentissage.
 - **Processus de prompts :**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
 
 - **Résultat du jeu Snake :**
 
@@ -319,10 +319,10 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
 - **Caractéristiques principales et flux de travail :** En tant qu'application desktop, Trae est généralement plus performant et plus réactif que les outils Web. Mais il nécessite un téléchargement et une installation, ce qui peut représenter une barrière d'entrée légèrement plus élevée pour certains utilisateurs. De même, étant un environnement local, les différences de configuration et de dépendances entre les ordinateurs introduisent une certaine incertitude. L'avantage est que Trae vous aide à créer et configurer le projet localement, et vous pouvez développer et déboguer directement sur votre machine.
 - **Utilisateurs ciblés :** Plus adapté aux utilisateurs qui prévoient de faire du Vibe Coding sur le long terme et souhaitent utiliser un outil desktop dédié. Pour ceux qui veulent juste « essayer de temps en temps », ce n'est peut-être pas le choix le plus léger.
 - **Processus de prompts :**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.webp)
 - **Résultat du jeu Snake :**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.webp)
 
 - **Prix :** Le prix est relativement abordable, même la version gratuite suffit pour réaliser des petits projets de bonne qualité.
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
@@ -333,9 +333,9 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
 - **Caractéristiques principales et flux de travail :** V0 est un outil spécialisé dans la génération de composants UI React, fourni par Vercel. Il excelle dans la génération d'interfaces de haute qualité, prêtes pour la production. Cependant, en utilisation réelle, on rencontre des problèmes comme « difficile de trouver la vue code » ou « pas d'indication claire sur où configurer la clé API ».
 - **Utilisateurs ciblés :** V0 est très adapté aux étudiants ou designers focalisés sur le frontend et le design UI/UX. Mais ce n'est pas une solution full-stack complète — vous avez toujours besoin d'autres plateformes pour implémenter la logique backend et l'intégration API. Si votre objectif est de « construire une application complète en un seul endroit », ce n'est probablement pas le meilleur premier choix.
 - **Processus de prompts :**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.webp)
 
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.webp)
 
 - **Résultat du jeu Snake :**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.png)

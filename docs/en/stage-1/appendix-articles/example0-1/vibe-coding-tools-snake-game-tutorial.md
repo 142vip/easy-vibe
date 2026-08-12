@@ -276,7 +276,7 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Key Features & Workflow:** Lovable does very well in integration and collaboration. It automatically handles initialization tasks like connecting to Supabase databases, making the project setup process very smooth. You only need to describe your project requirements, and the Agent will help connect various services and build the basic structure.
 - **Suitable Users:** For beginners trying Vibe Coding for the first time, Lovable is a very friendly choice. It simplifies the complexity of multi-service integration, allowing you to focus on prompts and iteration rather than environment configuration. Thanks to high automation, you can quickly get a runnable prototype.
 - **Prompt Process:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.webp)
 - **Snake Game Results:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)
@@ -291,11 +291,11 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Key Features & Workflow:** Cursor is a proprietary IDE with integrated AI capabilities, supporting Windows, macOS, and Linux. It embeds features like code generation, intelligent rewriting, and codebase queries directly into the development environment. Compared to web tools, it's closer to a traditional local development experience. Since it's a local environment, different computers have varying configurations, and occasionally you'll encounter environment-related issues. The benefit is that the project is on your machine—no need to separately download or configure a runtime environment, as Cursor handles many tedious steps for you.
 - **Suitable Users:** For users with some programming foundation, Cursor is a very powerful and familiar environment. However, for complete beginners with no foundation, you'll need to understand project structure, dependency management, and file organization concepts yourself, which has a steeper learning curve. More suitable for developers who want to add AI assistants to traditional coding workflows.
 - **Prompt Process:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image7.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image7.webp)
 - **Snake Game Results:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.png)
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.webp)
 
 - **Price:**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
@@ -306,7 +306,7 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Key Features & Workflow:** Z.ai's usage is relatively straightforward, but a clear challenge is: you need to **manually copy and paste the generated code**. The platform lacks a real-time preview window, making it difficult to see the code running effect immediately.
 - **Suitable Users:** This platform requires a more "hands-on" approach to use. The lack of automation means you must interact directly with the code, which can actually be a kind of training for those who want to deeply understand AI output. However, frequent copy-pasting brings efficiency problems and error risks. More suitable for students who want to see "raw AI output code" rather than those seeking a one-click experience.
 - **Prompt Process:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image11.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image11.webp)
 - **Snake Game Results:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image12.png)
@@ -320,11 +320,11 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Platform Type:** Web
 - **Key Features & Workflow:** Replit is an all-in-one online development and deployment environment—you can write code, run programs, and generate online access links directly in the browser. Before starting coding, it gives you a clear action plan; it also provides a visual editor where you can directly modify the UI in the preview window, and the source code automatically syncs. This allows you to verify at any time whether the AI output matches expectations, greatly reducing the number of back-and-forth modifications.
 
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image15.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image15.webp)
 
 - **Suitable Users:** Replit is very beginner-friendly. It simplifies the complete loop from coding to deployment—no need to separately configure servers or hosting services. Collaboration features are also strong, making it suitable for classmates working on projects together or having others help review code remotely.
 - **Prompt Process:** During the build process, the AI didn't fully understand the requirements at first—about 3 rounds of iteration were needed before the final output reached the ideal result.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.webp)
 - **Snake Game Results:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)
@@ -346,7 +346,7 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)
 
 - **Price:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
 
 ### 6. Claude Dev (Web-based)
 
@@ -361,7 +361,7 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.png)
 
 - **Price:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.webp)
 
 ### 7. GitHub Copilot (IDE Plugin)
 
@@ -369,14 +369,14 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Key Features & Workflow:** GitHub Copilot is not a complete development platform but an AI coding assistant that integrates into your existing IDE. It provides code suggestions, auto-completion, and can help explain and refactor code. It works locally without sending code to the cloud, offering better privacy and security.
 - **Suitable Users:** For developers who already have a development environment set up and want to enhance productivity with AI assistance. Not suitable for complete beginners who haven't set up a local environment yet.
 - **Prompt Process:** Copilot works differently—it provides inline suggestions as you type, rather than generating entire projects through conversations. You can write comments or function names, and Copilot will suggest implementations.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.webp)
 - **Snake Game Results:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.webp)
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
 
 - **Price:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.webp)
 
 ## 3. Summary and Recommendations
 
@@ -475,4 +475,4 @@ Vibe Coding represents the future of software development. As AI technology cont
 
 Happy Vibe Coding! 🚀
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.webp)

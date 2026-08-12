@@ -27,7 +27,7 @@ const relatedArticles = relatedArticlesMap['ar-sa/stage-1/learning-map'] ?? []
 كان أول إنجاز له مساعدة مزيد من الناس على تجاوز حاجز «لا أعرف البرمجة، لذلك لا أستطيع البدء». يمكن لمن لا يملك خبرة أن ينشئ خلال دقائق لعبة صغيرة أو صفحة أو نموذجًا أوليًا يمكن عرضه.
 
 <figure class="concept-illustration">
-  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.png" alt="منشئ يستخدم الذكاء الاصطناعي لتحويل فكرة مكتوبة بلغة طبيعية إلى نموذج أولي، ويسلمه لمستخدمين حقيقيين، ثم يحسنه وفق ملاحظاتهم" loading="lazy">
+  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.webp" alt="منشئ يستخدم الذكاء الاصطناعي لتحويل فكرة مكتوبة بلغة طبيعية إلى نموذج أولي، ويسلمه لمستخدمين حقيقيين، ثم يحسنه وفق ملاحظاتهم" loading="lazy">
   <figcaption>يساعدك Vibe Coding على تجاوز حاجز «الصنع»؛ أما بناء المنتج فيتطلب متابعة الطريق إلى المستخدم الحقيقي والملاحظات والقيمة.</figcaption>
 </figure>
 

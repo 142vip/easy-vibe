@@ -55,7 +55,7 @@ Una ocurrencia se convierte en idea cuando reúne cuatro elementos:
 3. **Una tarea clara.** Resumir un documento, preparar un acta o crear una ruta para el sábado.
 4. **Una forma mejor que la actual.** Menos pasos, menos errores, menos preocupación o un resultado más agradable.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image1.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image1.webp)
 
 Si todavía no puedes completar estas cuatro piezas, explica a la IA lo que sabes y pídele que señale lo que falta. Úsala como compañera para preguntar y revisar, no como sustituto de tu decisión.
 
@@ -65,7 +65,7 @@ El autoengaño aparece cuando el creador está entusiasmado y el usuario solo re
 
 Una función llamativa no basta. La señal de una necesidad real es que, incluso sin tu aplicación, la persona ya intenta resolverla: utiliza una hoja de cálculo, copia datos entre herramientas, paga por una alternativa o soporta un proceso molesto. Una necesidad imaginada solo aparece cuando tú la explicas y desaparece de la mente del usuario al terminar la conversación.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image2.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image2.webp)
 
 Pregunta: «Además de mí, ¿quién se preocupa de verdad por esto?». Busca quejas repetidas, soluciones improvisadas y costes concretos en foros, comunidades y conversaciones directas.
 
@@ -79,13 +79,13 @@ Una mala idea necesita publicidad, explicaciones y empuje continuo; cuando se de
 
 Las ideas no suelen caer del techo. Se recogen observando la vida, las comunidades, las conversaciones públicas y los productos que ya existen.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image3.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image3.webp)
 
 ### Participa en tu propia vida
 
 Cuanto más practicas una afición, mejor reconoces sus pequeñas fricciones. Quien vive con un gato sabe cuándo evita la cámara, qué objetos derriba y qué sonidos atraen su atención. De ahí puede salir una aplicación que muestre un punto móvil junto a la cámara, haga una ráfaga y aprenda qué estímulo funciona con cada animal.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image4.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image4.webp)
 
 Lo mismo ocurre con el maquillaje: una foto puede guardar por voz la combinación de productos y permitir buscar después «entrevista», «tonos cálidos» o «cinco minutos». En una caminata urbana, una nota de voz puede marcar un cruce con ubicación, clima y ambiente para construir un mapa personal. Cada pequeño rodeo repetido contiene una pista.
 
@@ -150,9 +150,9 @@ La dificultad empieza cuando una visión completa parece demasiado grande para c
 
 El Design Council representa el proceso como dos diamantes. El primero abre la investigación y luego define el problema. El segundo abre varias soluciones y termina seleccionando y entregando una. En ambos se alternan divergencia y convergencia para no saltar demasiado pronto a una respuesta.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image6.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image6.webp)
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image7.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image7.webp)
 
 ### Primer diamante: comprender el problema, de un punto al panorama
 
@@ -170,7 +170,7 @@ La primera versión no debe ser perfecta, sino existir y completar bien una tare
 
 «Mejorar la eficiencia» no indica qué página dibujar mañana. Descomponer significa convertir un objetivo amplio en decisiones y acciones que puedan realizarse de inmediato.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image8.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image8.webp)
 
 ### Un ejemplo cotidiano: ¿qué significa «quiero una hamburguesa»?
 
@@ -184,7 +184,7 @@ Define «documento»: PDF de texto, escaneo, Word, tabla o Markdown. Define «pr
 
 Aclara «eficiencia». ¿Quieres menos tiempo, menos errores, mejor comprensión o menos esfuerzo mental? Pregunta cuál sería el cambio más importante si el producto funcionara: ¿leer en cinco minutos en lugar de treinta o sentirse seguro de no perder una decisión?
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image9.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image9.webp)
 
 #### Segunda capa de descomposición
 
@@ -202,13 +202,13 @@ Una primera definición razonable puede limitarse a informes de texto de hasta v
 
 Una lista inicial puede ser: dibujar carga y resultado; escoger un parser; probar diez PDF representativos; definir qué errores se aceptan; mostrar progreso; permitir copiar y descargar; observar a cinco usuarios. Cada elemento ya puede asignarse, construirse y comprobarse.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image10.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image10.webp)
 
 ## 2.3 Pensar la aplicación en una pizarra: dibujar antes de construir
 
 Un boceto revela lagunas sin pagar el coste de escribir código. Dibuja el recorrido mínimo como entrada, operación y resultado.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image11.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image11.webp)
 
 ### Página de entrada: por dónde llega el usuario y qué ve primero
 
@@ -226,9 +226,9 @@ El resultado debe conectar con la promesa: texto editable, resumen descargable o
 
 Escoge productos con tareas parecidas y estudia navegación, formularios, mensajes de espera, resultados y guía inicial. No copies logotipo, textos ni estilo. Anota qué problema resuelve cada decisión y reexprésala para tu usuario.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image12.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image12.webp)
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image13.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image13.webp)
 
 Una biblioteca de referencias con capturas, notas y fuentes evita depender de la memoria y ayuda a explicar a la IA qué patrón quieres adaptar.
 
@@ -266,13 +266,13 @@ Una pantalla incompleta invita a criticar; una muy pulida puede hacer que la per
 
 «Me gusta» es demasiado vago. El valor puede medirse como minutos ahorrados, errores evitados, ingresos generados, decisiones aceleradas o menor ansiedad.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image14.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image14.webp)
 
 ### Es fácil de empezar y casi no necesita manual
 
 El usuario reconoce la acción principal, entiende el estado del sistema y puede corregir un error. Una interfaz sencilla no tiene menos capacidad; muestra cada capacidad cuando hace falta.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image15.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image15.webp)
 
 ### Aparece de forma natural en una situación frecuente o importante
 
@@ -286,7 +286,7 @@ El pensamiento de producto empieza por mejorar el resultado del usuario, no por 
 
 La jerarquía no es una fórmula rígida, pero ayuda a preguntar qué valor profundo se esconde detrás de una función.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image16.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image16.webp)
 
 ### Necesidades fisiológicas y de supervivencia
 
@@ -316,13 +316,13 @@ El mismo problema cambia cuando quien compra es una persona o una organización.
 
 Importan la primera impresión, la facilidad, el precio individual, la privacidad y la recomendación entre amigos. El usuario puede abandonar en segundos y suele decidir por sí mismo.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image17.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image17.webp)
 
 ### Producto empresarial: eficiencia, coste y control del riesgo
 
 Intervienen usuario, responsable, compras, seguridad y dirección. El valor se expresa en horas, errores, cumplimiento y colaboración. Se necesitan permisos, auditoría, integración y soporte.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image18.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image18.webp)
 
 No confundas «industrial» con una fábrica: aquí significa una situación real de una empresa, como aprobar contratos, atender clientes, coordinar inventario o preparar informes.
 
@@ -350,7 +350,7 @@ Pregunta primero si el producto seguiría resolviendo algo sin modelo. Si una re
 
 La IA puede clasificar, resumir, generar, recomendar, conversar o coordinar pasos. Define también el papel humano: aportar contexto, confirmar decisiones, corregir y asumir acciones de riesgo.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image19.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image19.webp)
 
 Para cada función escribe entrada, salida, error posible, revisión y alternativa cuando el modelo no esté disponible. Así «usar IA» se convierte en un diseño verificable.
 
@@ -358,7 +358,7 @@ Para cada función escribe entrada, salida, error posible, revisión y alternati
 
 Los modelos pueden trabajar con texto, imágenes, voz, vídeo y herramientas, pero también inventan hechos, pierden contexto y producen resultados variables. Los datos sensibles, decisiones médicas, legales o financieras y acciones irreversibles exigen revisión y controles.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image20.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image20.webp)
 
 Mide si la IA reduce el tiempo, mejora la calidad, aumenta la frecuencia de uso o crea una función por la que alguien pagaría. Si solo encarece y vuelve impredecible el flujo, no está ampliando valor.
 
@@ -436,4 +436,4 @@ No pasa nada si el comienzo es tosco, la interfaz sencilla o nadie paga todavía
 
 Como recuerda _To the Moon_: **«El final no es más importante que ninguno de los momentos que conducen hasta él».**
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image21.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image21.webp)

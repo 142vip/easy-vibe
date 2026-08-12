@@ -41,7 +41,7 @@ Each section begins with a specific role. Do not copy the product name first. As
 
 <figure class="product-shot">
   <a href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.jpg" alt="Klarna AI Assistant interfaces for payment extension, multilingual support, and refund explanation" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.webp" alt="Klarna AI Assistant interfaces for payment extension, multilingual support, and refund explanation" loading="lazy" />
   </a>
   <figcaption><strong>Klarna AI Assistant:</strong> the left side does not merely say “contact an agent”; it opens the payment-extension action. The right side itemizes a refund. Useful service AI finds the order and carries the action forward.</figcaption>
 </figure>
@@ -114,7 +114,7 @@ A small team can start with one document and one rule set: check payment, renewa
 
 <figure class="product-shot">
   <a href="https://github.blog/changelog/2024-10-29-github-copilot-code-review-in-github-com-private-preview/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.png" alt="GitHub Copilot reviewing code in a pull request" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.webp" alt="GitHub Copilot reviewing code in a pull request" loading="lazy" />
   </a>
   <figcaption><strong>GitHub Copilot Code Review:</strong> when Copilot is assigned as a reviewer, comments attach to exact lines and can include a proposed change. A developer still inspects the diff, batches, or rejects it. The value is inside the pull request, not another chat window.</figcaption>
 </figure>
@@ -146,7 +146,7 @@ A good starting point is one equipment type, not “predict the whole factory”
 
 <figure class="product-shot">
   <a href="https://www.abridge.com/product" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.png" alt="Abridge linking a clinical note to its original conversation" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.webp" alt="Abridge linking a clinical note to its original conversation" loading="lazy" />
   </a>
   <figcaption><strong>Abridge:</strong> the generated clinical note appears above the matching clinician-patient conversation. Linked Evidence returns to the original words. The important part is not fast writing, but a physician who can trace, edit, and approve every entry.</figcaption>
 </figure>
@@ -184,7 +184,7 @@ The easiest consumer mistake is to put seven prompts behind the same chat box. T
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://www.aboutamazon.com/news/retail/amazon-rufus" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.jpg" alt="Amazon Rufus shopping assistant" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.webp" alt="Amazon Rufus shopping assistant" loading="lazy" />
   </a>
   <figcaption><strong>Amazon Rufus:</strong> the entry point sits beneath Amazon search, and the sample questions are shopping tasks: compare tablecloths, prepare for Prime Day, and find a watch for sleep tracking. It connects the answer to real products rather than offering generic advice.</figcaption>
 </figure>
@@ -210,7 +210,7 @@ A smaller opening might be “half a day in one city with children” or “a sa
 
 <figure class="product-shot product-shot--portrait">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.png" alt="Duolingo Max role-play exercise in a Paris café" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.webp" alt="Duolingo Max role-play exercise in a Paris café" loading="lazy" />
   </a>
   <figcaption><strong>Duolingo Max Roleplay:</strong> the exercise is not “chat in French” but the concrete job of ordering in a Paris café. Scene, role, goal, and reward are prepared, so the learner can practise immediately.</figcaption>
 </figure>
@@ -223,7 +223,7 @@ A product can serve one practice action: an interview answer, spoken English, a 
 
 <figure class="product-shot">
   <a href="https://firefly.adobe.com/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.png" alt="Adobe Firefly text-to-image workspace" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.webp" alt="Adobe Firefly text-to-image workspace" loading="lazy" />
   </a>
   <figcaption><strong>Adobe Firefly:</strong> the real interface contains model, aspect ratio, content type, visual intensity, references, and several results—not only a prompt box. A creative product gives people controls for the next edit instead of one “generate again” button.</figcaption>
 </figure>

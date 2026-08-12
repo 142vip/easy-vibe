@@ -100,7 +100,7 @@ _مصدر اللقطة: [Framer Website Builder](https://www.framer.com/solution
 
 أنشأ Trae ملفات `index.html` و`styles.css` و`script.js`، ثم فتح الصفحة في المتصفح. تعرض هذه الصورة المتحركة النتيجة التي ظهرت في الدرس:
 
-![صفحة Wishlabs التي أُنشئت وشُغلت من لقطة الشاشة](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.gif)
+![صفحة Wishlabs التي أُنشئت وشُغلت من لقطة الشاشة](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.webp)
 
 لا تدرس الشيفرة الآن. انظر إلى الصفحة وقارنها بالمرجع:
 
@@ -167,7 +167,7 @@ _مصدر اللقطة: [Framer Website Builder](https://www.framer.com/solution
 
 تعرض منتجات SaaS عادة تقدم المشاريع أو المبيعات أو بيانات المستخدمين في لوحات. في لقطة Linear هذه، يوجد التنقل يسارًا والمحتوى يمينًا.
 
-![واجهة لوحة Linear الرسمية](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.png)
+![واجهة لوحة Linear الرسمية](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.webp)
 
 _مرجع الدرس: [Linear Dashboards](https://linear.app/docs/dashboards)_
 
@@ -180,7 +180,7 @@ _مرجع الدرس: [Linear Dashboards](https://linear.app/docs/dashboards)_
 
 أنشأ Trae شريطًا جانبيًا وبطاقات بيانات ورسومًا. وهذه هي الصفحة وهي تعمل في المتصفح:
 
-![لوحة البيانات التي أُنشئت وشُغلت من لقطة الشاشة](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.gif)
+![لوحة البيانات التي أُنشئت وشُغلت من لقطة الشاشة](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.webp)
 
 ليست الأرقام بيانات عمل حقيقية، وهذا طبيعي. يركز التمرين الأول على بناء هيكل اللوحة. غيّر التسميات والأرقام بعد استقرار الصفحة.
 
@@ -188,7 +188,7 @@ _مرجع الدرس: [Linear Dashboards](https://linear.app/docs/dashboards)_
 
 إذا لم تجذبك صفحات الويب المعتادة، فاستخدم لقطة من لعبة. اختار المدرّس صورة لعالم Minecraft المبني من المكعبات.
 
-![واجهة النمط الإبداعي في Minecraft](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.png)
+![واجهة النمط الإبداعي في Minecraft](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.webp)
 
 _مرجع الدرس: [مثال Minecraft في Microsoft Learn](https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/108)_
 
@@ -201,7 +201,7 @@ _مرجع الدرس: [مثال Minecraft في Microsoft Learn](https://learn.mi
 
 أنشأ Trae لعبة تعمل في المتصفح، ويمكن للشخصية فيها التحرك ووضع المكعبات أو إزالتها:
 
-![لعبة المكعبات ثنائية الأبعاد التي أُنشئت وشُغلت من لقطة الشاشة](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.gif)
+![لعبة المكعبات ثنائية الأبعاد التي أُنشئت وشُغلت من لقطة الشاشة](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.webp)
 
 هذه النتيجة <strong>لعبة ثنائية الأبعاد من الجانب</strong>. تتحرك الشخصية على سطح مسطح، ولا يوجد عمق للأمام والخلف. لأن الطلب قال «لعبة مكعبات» فقط، اختار Trae التفسير الأسهل.
 
@@ -218,7 +218,7 @@ _مرجع الدرس: [مثال Minecraft في Microsoft Learn](https://learn.mi
 
 أنشأ Trae هذه المرة عالم مكعبات ثلاثي الأبعاد فعلًا:
 
-![لعبة المكعبات ثلاثية الأبعاد التي أُنشئت وشُغلت من لقطة الشاشة](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.gif)
+![لعبة المكعبات ثلاثية الأبعاد التي أُنشئت وشُغلت من لقطة الشاشة](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.webp)
 
 بعد اختيار “Start Game”، استخدم `WASD` للمشي والفأرة للدوران. الزر الأيسر يزيل مكعبًا، والأيمن يضع مكعبًا، ومفاتيح الأرقام تغير نوعه.
 

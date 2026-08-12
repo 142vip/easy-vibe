@@ -72,7 +72,7 @@ Third, **it needs to help users complete a clear task**. The task doesn't have t
 
 Fourth, **it provides a better approach or tool than the current situation**. How did users originally complete this task, was it by memory, paper notes, Excel, screenshot collections, or switching back and forth between different applications. If you can provide a clearly more effortless, more stable, more pleasant way, then this idea truly starts to have value.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image1.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image1.webp)
 
 If you can't think clearly about the above, it doesn't matter. Now is the AI era, you can organize the above content into a complete prompt, then write your thoughts, target users and usage scenarios together, and hand it to a large model to help you complete and refine. Treat the model as an always-online product partner, repeatedly dialogue, question, modify, and you can turn a vague concept into something concrete.
 
@@ -92,7 +92,7 @@ When judging a thought, there's a simple way to distinguish whether it's more li
 
 The typical situation of fake needs is exactly the opposite. If you don't actively bring it up, most people won't realize that's a problem, and won't even feel it must be solved. The usage scenarios you describe exist more in your imagination than in users' daily lives. After hearing your introduction, they'll just think this thing is good, quite interesting, but won't pay, and might even turn around and forget. Such ideas are okay for writing stories, but very dangerous for making products.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image2.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image2.webp)
 
 So, **the first line of defense against self-indulgence is understanding user needs.** From the beginning, you need to force yourself to answer a seemingly simple but very critical question: besides myself, who else is seriously worrying about this matter. You can go to forums, communities, comment sections, or directly ask a few people around you who might become users. If you rarely hear complaints with real emotion like "I get stuck on this every time" or "the current approach is really too troublesome," then it means this idea is still some distance from real needs.
 
@@ -118,7 +118,7 @@ Many people, when mentioning thinking of ideas, the picture that comes to mind i
 
 These four sources below, if you're willing to seriously do them, are easy to dig out directions you can start with.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image3.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image3.webp)
 
 ### Love Your Own Life
 
@@ -128,7 +128,7 @@ For example, if you particularly love raising cats, a day you live with a cat yo
 
 Like taking photos of your cat: many people have encountered the situation where you're holding your phone up, but the cat just won't look at the lens, either lowering its head to lick paws or staring at some other corner. Could there be a small tool that makes your phone or tablet screen show an automatically moving red dot, feather, or bug animation, specifically attracting the cat's attention? When you press the photo button, it automatically waves around near the front camera, "tricking" the cat's gaze toward the lens, and conveniently takes several consecutive shots, helping you pick out the clear and good-looking one. Thinking one step further, this app could also record which color and movement trajectory each cat is most interested in, next time automatically using its "exclusive" teasing mode to increase success rate.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image4.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image4.webp)
 
 If you enjoy makeup or skincare, every bottle on your cabinet represents a lot of trial and error and decision-making. You might already be used to taking photos of each makeup look with your phone album, but every time you look back, you have to recall bit by bit which lipstick and which eyeshadow palette you used that day. Could these pieces of information be systematically recorded to create your own makeup look collection? The app could even help you count which makeup looks you use most in what occasions, which combinations perform best in photos, so you don't have to think from scratch every time you choose makeup.
 
@@ -259,9 +259,9 @@ The Double Diamond, proposed by the UK Design Council, describes innovation/desi
 
 Its core principle: both the “problem phase” and “solution phase” should go through **diverge -> converge**. This prevents jumping to solutions too early and improves innovation quality and success rate.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image6.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image6.webp)
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image7.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image7.webp)
 
 ### First Diamond: Understand the Problem (Diverge from a Point, Converge to a Core)
 
@@ -304,7 +304,7 @@ Getting ideas is easy after divergence; getting executable steps is hard. Statem
 
 The key ability here is **decompose and refine**: turning abstract goals into minimum actionable items you can execute immediately. This matters not only in product work but in life as well.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image8.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image8.webp)
 
 ### Start with a Life Example: What Does “I Want a Burger” Really Mean?
 
@@ -343,7 +343,7 @@ For example, reading 20 pages from 30 minutes down to 5 is speed. Quickly spotti
 
 Ask one direct question: if this app succeeds greatly, what is the biggest user change? “Half the time on documents,” or “much less mental fatigue around document tasks”? Once clear, feature priority has a basis.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image9.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image9.webp)
 
 #### Second-Layer Decomposition
 
@@ -406,7 +406,7 @@ You can further simplify to one sentence:
 
 This is no longer an empty slogan. It can directly become prompt instructions or execution plan for AI, a design brief for UI prototypes, or an engineering brief for implementation-cost assessment.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image10.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image10.webp)
 
 When you reach this point, two practical changes occur:
 
@@ -426,7 +426,7 @@ A simple but neglected method is: draw first. No professional software needed. W
 
 You can split the app into three page types first: entry page, operation page, result page.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image11.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image11.webp)
 
 ### Entry Page: Where Users Enter and What They See First
 
@@ -483,9 +483,9 @@ Do not focus mainly on color beauty. Focus on how they handle key areas:
 - Result presentation: whether primary information is truly prominent and secondary information is properly organized.
 - First-time onboarding: whether a short guide clearly explains next steps.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image12.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image12.webp)
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image13.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image13.webp)
 
 Useful screenshot/reference sites:
 
@@ -572,7 +572,7 @@ To judge whether an application is good, you can't just look at how much you lik
 
 The most direct characteristic of a good application is that it can let people get some real benefit in some scenario. This benefit doesn't have to be grand, nor does it need to be packaged in profound language, but must be specific enough that you can clearly say: **what exactly did it help users do less, how much time did it save, or what did it make less error-prone.**
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image14.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image14.webp)
 
 For example, a simple meeting minutes tool, if it can automatically generate a structured meeting minute after uploading a recording or directly recording during a meeting, and clearly list action items, responsible persons, and deadlines, then what it saves users is not just typing time, but the entire mental effort from recording, organizing, screening to formatted output. You can very clearly say that this tool probably saves one person twenty minutes per meeting. And if the entire team has ten such meetings every week, then the total time saved is very considerable.
 
@@ -584,7 +584,7 @@ So, when you say your application has value, it's best to break the value into o
 
 Another easily underestimated but extremely important characteristic is that **good applications usually don't need much explanation.** When users open it for the first time, they can intuitively know roughly where to start, what will happen when clicking what, the largest button usually does the most core thing, the most important entrance is placed in a truly important position, not hidden in the third layer of the menu.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image15.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image15.webp)
 
 You can imagine a new user who just downloaded your application, they might have opened it casually while queuing, on the bus, or in a coffee shop. The network signal might not be very good at the time, and they don't have patience to read any long instructions. The confusion time they can tolerate is often only a few seconds. If in these few seconds they don't see any clear guidance, don't know what to do next, it's easy to just close it and never come back.
 
@@ -614,7 +614,7 @@ There's another important point: **good applications don't have to be big applic
 
 ## 3.2 Insight into Needs: Maslow's Hierarchy of Needs Theory
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image16.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image16.webp)
 
 Before making an application, many people jump directly to the functional level thinking: can something more be done here, should a button be added there. What truly determines whether an application can survive is which level of human needs you've stepped on, and how accurately you've stepped.
 
@@ -697,7 +697,7 @@ After an application is built, you'll quickly discover another important thing: 
 
 C-End applications face individual users, embedded in everyone's daily life. Common types include content, tools, entertainment, social, learning, etc.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image17.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image17.webp)
 
 Content applications, like news reading, short video platforms, podcast tools. Their core task is usually to screen out content users are interested in from massive information within limited time. Also need to ensure there's constantly new things attracting users back.
 
@@ -723,7 +723,7 @@ A simple way to judge whether a C-end need is real is to see whether users are w
 
 B-end applications serve enterprises, teams, institutions, or specific departments. Common categories include ERP (resource management systems), CRM (customer relationship management), collaborative office tools, different SaaS tools, and internal industry management systems.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image18.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image18.webp)
 
 The biggest difference from C-end is that B-end apps must satisfy multiple roles at once. The direct user may be a frontline employee, while the decision-maker is a manager or owner; data ownership may belong to the organization; and approval flows may involve multiple departments. You need to make users feel it is easy to use, **help decision-makers see the ROI**, and also give the organization a sense of security in risk and compliance.
 
@@ -824,7 +824,7 @@ When you confirm the app still works without AI and you have identified a clear 
 
 A clearer approach is to treat AI as different components: **it can be the brain, the eyes, or the hands**. Decide which part it should handle based on your product goal. If possible, choose one or two roles first and do them well instead of stuffing everything in at once.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image19.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image19.webp)
 
 **When AI acts as the brain, it mainly handles language understanding and generation, or reasoning across complex information.** For example, in a meeting-minutes assistant, it should extract truly core discussion points from a long recording rather than just list by timeline. In a learning app, it should judge whether a user misunderstood a concept or just made a careless step error, then give different feedback. In these scenarios, AI’s value is understanding what users say, understanding provided material, and generating structured, logical output. Your job is to help users ask clear questions and feed accurate context so this “brain” has enough information to judge.
 
@@ -893,7 +893,7 @@ Back to the core question of this section: what does it mean to truly understand
 
 First, understand that different scenarios need AI differently. As the workflow/context example shows: when both are deterministic, AI has limited room and classic automation may suffice; when workflow is fixed but context varies, AI’s value is understanding and completion; when workflow is uncertain, AI needs planning and exploration. The essence is identifying source and degree of uncertainty. AI’s core strength is finding patterns and relationships under uncertainty. This way of thinking applies beyond Agents, including image recognition, content generation, and recommendation systems. For example, in an AI background-removal tool, input is deterministic (an image), while edge precision and complex-background handling are the uncertainty.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image20.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image20.webp)
 
 But while AI solves uncertainty, it also introduces new uncertainty. Its output is probabilistic: it can misunderstand, reason off-path, or hallucinate. Different scenarios and user groups have very different tolerance for this uncertainty. So you must ask:
 
@@ -1152,4 +1152,4 @@ At this stage, the author believes one thing is enough: enjoy the process. As th
 
 **_The ending is never more important than the process._**
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image21.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image21.webp)

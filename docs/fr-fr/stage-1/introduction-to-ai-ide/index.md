@@ -135,15 +135,15 @@ Pour plus d'efficacité, nous avons besoin d'IDE modernes prenant en charge la s
 
 Les IDE modernes intègrent souvent des outils comme Git. Le plus populaire est **[Visual Studio Code (VS Code)](https://code.visualstudio.com/)** de Microsoft, léger et extensible. Bien qu'il existe des IDE professionnels comme la suite JetBrains, VS Code est le plus convivial pour les débutants.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.webp)
 
 Le concept central de VS Code est « tout est plugin ». Grâce à son système de plugins, il supporte divers langages : installer le plugin Python en fait un IDE Python, installer le plugin C++ en fait un IDE C++. Sans plugin, ce n'est qu'un éditeur de texte avancé.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.webp)
 
 On peut même l'utiliser pour éditer des documents Markdown.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.webp)
 
 En résumé, un IDE est un ensemble d'outils qui aide les développeurs à écrire du code et à exécuter des programmes plus efficacement.
 
@@ -210,7 +210,7 @@ Cursor est un éditeur de code IA développé par Anysphere, basé sur VS Code, 
 
 Actuellement, Cursor est probablement l'un des AI IDE avec interface graphique offrant la meilleure expérience globale, avec une base d'utilisateurs importante et une fréquence d'itération élevée. Son plus grand inconvénient est son prix élevé -- la version professionnelle coûte environ 20 dollars par mois.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.webp)
 :::
 
 ::: details Qoder
@@ -219,7 +219,7 @@ Actuellement, Cursor est probablement l'un des AI IDE avec interface graphique o
 
 Qoder est un AI IDE développé par Alibaba, mettant l'accent sur la « collaboration transparente » et les « capacités d'ingénierie de contexte améliorées ». Il supporte le décomposition de tâches en plusieurs étapes via Action Flow et le suivi en temps réel de l'exécution de l'IA ; il supporte également le routage dynamique multi-modèles et la gestion de machines à états pour les tâches, ce qui le rend très adapté à la gouvernance d'architecture et à l'analyse de « rétro-ingénierie » des systèmes hérités dans les projets de taille moyenne à grande.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.webp)
 :::
 
 ::: details CodeBuddy
@@ -228,7 +228,7 @@ Qoder est un AI IDE développé par Alibaba, mettant l'accent sur la « collabor
 
 CodeBuddy est un outil de programmation IA de Tencent Cloud, mettant l'accent sur le support des instructions en chinois et les capacités de conformité entreprise. Il offre des fonctionnalités de complétion de code, de revue de code en masse et de basculement entre plusieurs modèles ; l'Agent Craft peut réaliser la génération de code multi-fichiers et l'intégration d'API. La version entreprise supporte le déploiement en mode privé et a obtenu la certification de sécurité de niveau 3, ce qui la rend adaptée aux secteurs comme la finance et la santé qui ont des exigences élevées en matière de sécurité des données.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.webp)
 :::
 
 ::: details VS Code + Cline
@@ -237,9 +237,9 @@ CodeBuddy est un outil de programmation IA de Tencent Cloud, mettant l'accent su
 
 Cline est un plugin Agent de programmation IA pour VS Code (Visual Studio Code), qui permet de changer de modèle de manière flexible en configurant différents endpoints API. Cline supporte l'entrée multimodale, l'extension d'outils MCP et la surveillance des coûts. Toutes les opérations nécessitent la confirmation de l'utilisateur avant exécution. Il est très adapté pour valider rapidement des idées ou pour s'intégrer à un flux de développement existant. Les fonctionnalités de base sont gratuites, et la version entreprise supporte le déploiement de modèles en environnement privé.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.webp)
 :::
 
 ::: details Kiro
@@ -431,7 +431,7 @@ Comme le montre la capture d'écran, ici il suffit de taper y pour confirmer :
 
 Comme le montre la capture d'écran, ici nous sommes en train de créer un modèle mais nous ne savons pas comment procéder. Nous pouvons faire une capture d'écran de cette partie et interroger le modèle :
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.webp)
 
 Une autre raison pour laquelle l'Agent IA se met en pause pendant l'exécution est qu'un « service » a été lancé. Notre jeu de serpent est lui-même un « service ». Si vous voyez une URL de commande comme ci-dessous, cela signifie que l'Agent a lancé un service local sur votre ordinateur. Vous pouvez accéder à l'URL correspondante pour voir votre jeu de serpent. Comme le service doit continuer à tourner, il y a une pause ici. Il suffit de cliquer sur le bouton `Skip`.
 
@@ -443,7 +443,7 @@ Si vous rencontrez des résultats inattendus pendant le processus, par exemple l
 
 Après un moment, nous obtenons un résultat similaire à z.ai :
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.webp)
 
 Vous pouvez cliquer sur la coche en bas à droite pour confirmer les modifications de code, ou sur le bouton `Cancel` pour les annuler. Vous pouvez aussi cliquer sur « 2 files need review » pour développer et voir le code modifié.
 
@@ -459,7 +459,7 @@ Une approche pratique est de demander d'abord à l'IA d'expliquer globalement «
 
 > « Explique-moi de haut en bas, étape par étape, comment ce jeu de serpent fonctionne. Utilise le moins de jargon technique possible. »
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.webp)
 
 Puis continuez avec des questions sur les points clés en fonction de ses réponses, par exemple :
 
@@ -512,15 +512,15 @@ L'IA modifiera directement les composants et les styles React. Après sauvegarde
 
 Pour les débutants en vibe coding, la chose la plus difficile est en fait de ne pas savoir ce qui constitue une « bonne pratique », ni quelle architecture est la plus adaptée ; faute de bases en informatique, il est difficile de bien guider l'IA. La solution à ce problème est de « se référer directement » ; vous vous souvenez que nous avons dit qu'on pouvait voir le code sur z.ai ? En fait, le README (la partie du projet qui présente les fonctionnalités et l'architecture technique) donne déjà une référence d'architecture optimale :
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.webp)
 
 Nous voulons que le résultat local soit aussi conforme que possible à celui de z.ai. Nous pouvons copier tout le contenu de ce README et le coller dans la barre latérale de Trae, pour qu'il modifie le code local en fonction de l'architecture du README.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.webp)
 
 Finalement, nous obtenons un style de conception de page très similaire à celui de z.ai :
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>

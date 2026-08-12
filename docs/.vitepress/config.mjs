@@ -3234,6 +3234,27 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       md.use(markdownItKatex)
+
+      // Long tutorials contain many screenshots. Native lazy loading keeps
+      // below-the-fold images from competing with the initial page render,
+      // while async decoding prevents large screenshots from blocking paint.
+      const defaultImageRenderer =
+        md.renderer.rules.image ||
+        ((tokens, index, options, env, self) =>
+          self.renderToken(tokens, index, options))
+      md.renderer.rules.image = (tokens, index, options, env, self) => {
+        const token = tokens[index]
+        const pagePath = env.relativePath || env.filePath || env.path || ''
+        const isStage1Page = /(^|[/\\])stage-1([/\\]|$)/.test(pagePath)
+
+        if (isStage1Page) {
+          if (token.attrIndex('decoding') < 0)
+            token.attrSet('decoding', 'async')
+          if (token.attrIndex('loading') < 0) token.attrSet('loading', 'lazy')
+        }
+
+        return defaultImageRenderer(tokens, index, options, env, self)
+      }
     }
   },
   base: base,

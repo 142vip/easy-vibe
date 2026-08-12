@@ -390,17 +390,17 @@ AI IDE(Cursor, Trae, Windsurf 등)의 기본 사용 방식이 아직 익숙하�
 :::
 
 모두 확인한 뒤 Agent가 잠시 실행되기를 기다리면 아래와 같은 결과를 얻을 수 있습니다.
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.webp)
 
 초기 기능 화면은 생겼지만 프론트엔드 페이지가 너무 못생겼다는 것을 볼 수 있습니다. 이때 AI와 직접 대화하며 인터페이스 표시를 최적화할 수 있습니다.
 
 최적화 후에는 아래와 같은 더 보기 좋은 인터페이스를 얻을 수 있습니다.
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.webp)
 
 자신의 필요에 따라 웹페이지 기능을 수정할 수 있습니다. 스크린샷을 첨부하고 자유롭게 질문해도 됩니다. 예를 들어 “지금은 일괄 가져오기 기능이 필요 없으니 제거해 줘”, “왼쪽 입력 항목이 너무 많으니 xxxxx만 남겨 줘”라고 할 수 있습니다. 더 나아가 다른 성숙한 웹사이트를 참고할 수도 있습니다. 예를 들어 여기서는 Google의 어떤 디자인 제품을 직접 참고해 “참고”할 수 있습니다. 마음에 드는 성숙한 웹사이트의 스크린샷을 붙여 넣어도 됩니다.
 
 마지막으로 다음과 같은 결과를 얻을 수 있습니다.
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.webp)
 
 ### 2.3 오류가 나면 어떻게 할까?
 
@@ -530,13 +530,13 @@ AI에게 비즈니스 프롬프트 요구사항에 따라 검사하고 아직 �
 ```
 
 결과는 쉽게 얻을 수 있습니다. 데이터 하나가 너무 적다고 느껴지면, AI에게 테스트 케이스를 여러 개 생성하게 할 수 있습니다.
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.webp)
 
 클릭하면 결과를 얻습니다.
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.webp)
 
 이때 우리가 바로 얻는 것은 결과이지, “가상의 생성 과정”이 있는 것은 아닙니다. 실제 생성 과정을 모방하고 싶다면 AI와 직접 대화할 수 있습니다. “실제 생성 과정을 시뮬레이션해 주세요. 클릭한 뒤 일정 시간이 지난 후에 결과를 보여 주세요.”
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.webp)
 
 생성 기능을 끝까지 통과한 뒤에는 템플릿 라이브러리 기능이 정상인지 확인해야 합니다. 페이지의 생성 카드에서 알 수 있듯 템플릿 라이브러리 저장 기능은 구현되지 않았습니다. 이때 AI와 더 깊게 대화해야 합니다. “요구사항 [여기에 위 2번 내용을 붙여 넣기] 이 정상 동작하도록 확인해 주세요. 결과 하나를 클릭해 해당 템플릿을 저장할 수 있고, 열어 보면 생성 매개변수를 볼 수 있어야 합니다.”
 
@@ -544,7 +544,7 @@ AI에게 비즈니스 프롬프트 요구사항에 따라 검사하고 아직 �
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
 
 마지막으로 기대한 결과를 얻습니다.
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.webp)
 
 요구 흐름을 직접 경험하는 것 외에도, AI에게 바로 요구사항 검사를 시킬 수 있습니다. 예를 들면 다음과 같습니다.
 

@@ -79,7 +79,7 @@ AI를 상징하는 추상 그래픽과 텍스트를 결합하고, 투명 배경�
 
 - 위 프롬프트 입력 -> Agent가 생성한 여러 디자인 시안 비교
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. 최종 로고 확정
 
@@ -142,7 +142,7 @@ AI를 상징하는 추상 그래픽과 텍스트를 결합하고, 투명 배경�
 
 - **Google에서 키워드로 색상 구성 검색**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.webp)
 
 ## 4. 웹사이트 디자인 프롬프트 작성
 
@@ -164,7 +164,7 @@ AI를 상징하는 추상 그래픽과 텍스트를 결합하고, 투명 배경�
 
 **Mastergo 프롬프트 예시**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.webp)
 
 ## 2. 디자인 시안 검토 및 수정 요청
 
@@ -187,7 +187,7 @@ AI를 상징하는 추상 그래픽과 텍스트를 결합하고, 투명 배경�
 
 1. [Mastergo 플러그인 웹사이트](https://mastergo.com/community/plugin)를 열고 **seal**을 검색합니다.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.webp)
 
 2. 디자인 페이지로 돌아가서 **블록 아이콘(플러그인)**을 클릭합니다.
 
@@ -195,7 +195,7 @@ AI를 상징하는 추상 그래픽과 텍스트를 결합하고, 투명 배경�
 
 3. 코드로 변환하고 싶은 디자인 영역을 선택하고 **Generate** 버튼을 클릭하여 코드를 생성합니다.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.webp)
 
 ---
 
@@ -305,7 +305,7 @@ Agent가 생성한 초안 웹사이트에는 보통 자동으로 생성된 임�
 
 1. About 페이지에 표시하고 싶은 콘텐츠를 먼저 작성합니다. Agent가 이해하기 쉽도록 Markdown 형식으로 저장할 수 있습니다.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.webp)
 
 2. 대화에서 Agent에게 해당 파일의 콘텐츠를 지정된 페이지에 적용하라고 알려 줍니다.
 
@@ -313,7 +313,7 @@ Agent가 생성한 초안 웹사이트에는 보통 자동으로 생성된 임�
 
 3. 콘텐츠 적용 후 업데이트된 버전을 확인합니다.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.webp)
 
 ## 6. 이미지 삽입하기
 
@@ -325,7 +325,7 @@ Agent가 생성한 초안 웹사이트에는 보통 자동으로 생성된 임�
 
 - **결과:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.webp)
 
 ---
 
@@ -341,7 +341,7 @@ Agent가 생성한 초안 웹사이트에는 보통 자동으로 생성된 임�
 
 - **결과:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
 ---
 title: 'Build A Website With Design + Coding Agents'
 description: 'From idea to launch: coordinate a design agent to produce visuals, then use a coding agent to turn it into a working website with a reusable workflow.'

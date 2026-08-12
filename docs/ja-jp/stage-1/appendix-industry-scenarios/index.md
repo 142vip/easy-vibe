@@ -41,7 +41,7 @@ Capgemini が 12,000 人を調べると、生成 AI は商品発見と比較へ�
 
 <figure class="product-shot">
   <a href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.jpg" alt="Klarna AI Assistant の支払延長、多言語対応、返金説明画面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.webp" alt="Klarna AI Assistant の支払延長、多言語対応、返金説明画面" loading="lazy" />
   </a>
   <figcaption><strong>Klarna AI Assistant：</strong>「担当者へ連絡」だけでなく、支払延長の操作を開き、返金額を項目別に示します。役立つ顧客対応 AI は注文を見つけ、次の操作へ進みます。</figcaption>
 </figure>
@@ -114,7 +114,7 @@ Thomson Reuters の 2025 年調査では、法務、税務、リスクで調査�
 
 <figure class="product-shot">
   <a href="https://github.blog/changelog/2024-10-29-github-copilot-code-review-in-github-com-private-preview/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.png" alt="Pull Request でコードを確認する GitHub Copilot" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.webp" alt="Pull Request でコードを確認する GitHub Copilot" loading="lazy" />
   </a>
   <figcaption><strong>GitHub Copilot Code Review：</strong>指摘は具体的な行につき、変更案も出ます。開発者は差分を読み、まとめるか拒否できます。価値は Pull Request の中にあります。</figcaption>
 </figure>
@@ -146,7 +146,7 @@ Siemens Industrial Copilot は設備説明、保守根拠の検索、自動化�
 
 <figure class="product-shot">
   <a href="https://www.abridge.com/product" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.png" alt="診療記録と医師・患者の会話を結びつける Abridge" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.webp" alt="診療記録と医師・患者の会話を結びつける Abridge" loading="lazy" />
   </a>
   <figcaption><strong>Abridge：</strong>生成した診療記録から元の会話へ戻れます。重要なのは自動作成の速さより、医師が各記録を追跡、修正、確認できることです。</figcaption>
 </figure>
@@ -184,7 +184,7 @@ Deloitte は個別化、商品運営、供給網、マーケティングを AI �
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://www.aboutamazon.com/news/retail/amazon-rufus" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.jpg" alt="Amazon Rufus の買い物支援画面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.webp" alt="Amazon Rufus の買い物支援画面" loading="lazy" />
   </a>
   <figcaption><strong>Amazon Rufus：</strong>入口は検索欄の下にあり、質問は商品比較や Prime Day、睡眠計測の時計など買い物に直結します。一般的な助言で終わらず、実商品へ進めます。</figcaption>
 </figure>
@@ -210,7 +210,7 @@ Deloitte は個別化、商品運営、供給網、マーケティングを AI �
 
 <figure class="product-shot product-shot--portrait">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.png" alt="パリのカフェで注文する Duolingo Max の練習" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.webp" alt="パリのカフェで注文する Duolingo Max の練習" loading="lazy" />
   </a>
   <figcaption><strong>Duolingo Max Roleplay：</strong>「フランス語で話す」ではなく、パリのカフェで注文する課題です。場面、役、目標、報酬が用意され、すぐ一回練習できます。</figcaption>
 </figure>
@@ -223,7 +223,7 @@ Deloitte は個別化、商品運営、供給網、マーケティングを AI �
 
 <figure class="product-shot">
   <a href="https://firefly.adobe.com/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.png" alt="Adobe Firefly の画像生成画面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.webp" alt="Adobe Firefly の画像生成画面" loading="lazy" />
   </a>
   <figcaption><strong>Adobe Firefly：</strong>プロンプト欄だけでなく、モデル、比率、内容種別、強度、参照画像、複数結果があります。制作製品には「もう一度生成」以外の編集手段が必要です。</figcaption>
 </figure>

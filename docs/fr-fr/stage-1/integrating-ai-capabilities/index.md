@@ -65,7 +65,7 @@ Ne partez pas du nom des modèles. Suivez les actions : quelle étape comprend u
 
 L’IA ne prend en charge que les étapes qui lui conviennent. La connexion, le paiement, l’enregistrement de fichiers et la navigation suivent des règles explicites et restent du ressort du programme classique.
 
-![Page réelle où l’image du produit est comprise avant de générer sa description](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![Page réelle où l’image du produit est comprise avant de générer sa description](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.webp)
 
 *Dans ce prototype, la page identifie d’abord le produit. La personne valide les informations avant de générer une description et des arguments encore modifiables.*
 
@@ -169,7 +169,7 @@ Conservez le Request ID ou Trace ID présent dans une erreur. Il permet de retro
 
 Le catalogue indique les modèles de texte, d’image, de voix et de vidéo actuellement disponibles. Ouvrez le détail et copiez le Model ID utilisé dans le code ; il peut différer du nom affiché.
 
-![Catalogue SiliconFlow filtrable par texte, image, vidéo et voix](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
+![Catalogue SiliconFlow filtrable par texte, image, vidéo et voix](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.webp)
 
 *Le catalogue SiliconFlow permet de filtrer les capacités.*
 
@@ -286,7 +286,7 @@ response = client.chat.completions.create(
 )
 ```
 
-![Connexion d’une API de compréhension d’image dans l’IDE](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
+![Connexion d’une API de compréhension d’image dans l’IDE](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.webp)
 
 *Faire valider les informations reconnues avant de générer le texte final aide à repérer les erreurs.*
 
@@ -318,7 +318,7 @@ curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
   }'
 ```
 
-![Résultat de la génération d’image intégrée au produit](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
+![Résultat de la génération d’image intégrée au produit](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.webp)
 
 Les URL d’images peuvent expirer. Un prototype peut les afficher directement ; un produit doit décider, selon les conditions du service, de les copier dans son stockage et enregistrer prompt, version du modèle et date.
 

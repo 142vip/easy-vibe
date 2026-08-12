@@ -72,7 +72,7 @@ Troisièmement, **elle doit aider l’utilisateur à accomplir une tâche claire
 
 Quatrièmement, **elle doit proposer une méthode ou un outil meilleur que l’existant**. Comment l’utilisateur faisait-il cette tâche auparavant ? En mémoire, sur papier, dans Excel, avec des captures d’écran, ou en jonglant entre différentes applications ? Si vous apportez quelque chose de manifestement plus simple, plus stable et plus agréable, alors l’idée commence vraiment à avoir de la valeur.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image1.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image1.webp)
 
 Si vous n’arrivez pas à formuler clairement ce qui précède, ce n’est pas grave. Nous sommes à l’ère de l’IA : vous pouvez transformer tout cela en un prompt complet, y ajouter votre idée, vos utilisateurs cibles et votre scénario d’usage, puis laisser un grand modèle vous aider à compléter et à affiner. Considérez le modèle comme un partenaire produit toujours disponible : dialoguez avec lui, questionnez-le, modifiez, et vous pourrez rendre concret un concept encore flou.
 
@@ -92,7 +92,7 @@ Pour juger une idée, il existe une manière simple de distinguer ce qui ressemb
 
 Le faux besoin, au contraire, fonctionne dans l’autre sens. Si vous ne le soulevez pas vous-même, la plupart des gens ne verront même pas que c’est un problème, et encore moins quelque chose d’absolument nécessaire à résoudre. Les scénarios que vous décrivez existent davantage dans votre imagination que dans la vie quotidienne des utilisateurs. Après votre présentation, ils trouveront l’idée sympathique, intéressante, mais n’achèteront pas, et risquent même d’oublier aussitôt. De telles idées peuvent servir pour des histoires, mais elles sont dangereuses pour un produit.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image2.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image2.webp)
 
 Donc, **la première ligne de défense contre l’auto-satisfaction est de comprendre les besoins utilisateurs.** Dès le départ, vous devez vous forcer à répondre à une question apparemment simple mais très importante : à part moi, qui d’autre se plaint vraiment de ce problème ? Vous pouvez aller voir les forums, les communautés, les commentaires, ou demander directement à quelques personnes autour de vous qui pourraient devenir des utilisateurs. Si vous entendez rarement des plaintes émotionnellement fortes du type « je suis bloqué dessus à chaque fois » ou « la méthode actuelle est vraiment trop pénible », cela veut dire que cette idée reste encore assez éloignée d’un vrai besoin.
 
@@ -118,7 +118,7 @@ Quand beaucoup de gens pensent à trouver une idée, ils s’imaginent un indivi
 
 Si vous prenez vraiment au sérieux les quatre sources suivantes, vous pourrez facilement y dénicher des directions de départ.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image3.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image3.webp)
 
 ### Aimer sa propre vie
 
@@ -128,7 +128,7 @@ Par exemple, si vous aimez particulièrement vivre avec des chats, une journée 
 
 Prenons la photo de votre chat : beaucoup ont déjà connu cette scène, le téléphone levé, mais le chat refuse obstinément de regarder l’objectif, baisse la tête pour se lécher les pattes ou fixe un autre coin de la pièce. Ne pourrait-on pas imaginer un petit outil qui afficherait sur l’écran du téléphone ou de la tablette un point rouge, une plume ou un petit insecte en mouvement, juste pour attirer l’attention du chat ? Lorsque vous appuyez sur le bouton photo, l’outil bougerait automatiquement près de la caméra avant pour “tromper” le regard du chat et le faire regarder vers l’objectif, tout en prenant plusieurs photos d’affilée pour vous aider à choisir celle qui est nette et jolie. En allant un peu plus loin, l’application pourrait même enregistrer quelles couleurs et quels trajectoires de mouvement attirent le plus chaque chat, et utiliser la prochaine fois un mode de jeu “exclusif” pour ce chat afin d’augmenter le taux de réussite.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image4.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image4.webp)
 
 Si vous aimez le maquillage ou les soins de la peau, chaque produit sur l’étagère de votre salle de bain représente énormément d’essais, d’erreurs et de décisions. Vous avez peut-être déjà l’habitude de prendre une photo de chaque maquillage avec votre album photo, mais à chaque fois que vous revenez dessus, il faut vous rappeler quel rouge à lèvres et quelle palette vous aviez utilisés ce jour-là. Ne pourrait-on pas enregistrer tout cela de manière systématique pour créer votre propre catalogue de looks ? L’application pourrait même vous aider à voir quels looks sont les plus fréquents selon les contextes, quelles combinaisons rendent le mieux en photo, afin que vous n’ayez plus à repartir de zéro à chaque fois que vous choisissez votre maquillage.
 
@@ -255,9 +255,9 @@ Le double diamant est un cadre de processus d’innovation et de design proposé
 
 Le cœur du modèle est que les deux phases, problème et solution, doivent passer par un mouvement **divergence -> convergence**. Cela évite de sauter trop vite vers une solution et augmente la qualité ainsi que les chances de réussite de l’innovation.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image6.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image6.webp)
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image7.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image7.webp)
 
 ### Premier diamant : comprendre le problème, diverger d’un point vers l’ensemble puis converger
 
@@ -293,7 +293,7 @@ Après avoir fait diverger les idées, obtenir des idées est relativement simpl
 
 La capacité nécessaire ici s’appelle **découper et affiner pour transformer l’abstrait en concret**. Il s’agit de transformer un objectif vaste et flou, étape par étape, en éléments d’action minimaux que l’on peut exécuter immédiatement. Cette capacité est importante pour construire un produit, mais elle l’est aussi dans la vie.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image8.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image8.webp)
 
 ### Commencer par un exemple de vie : que signifie vraiment « j’ai envie de manger un burger » ?
 
@@ -327,7 +327,7 @@ Revenons ensuite à la phrase elle-même : « améliorer l’efficacité du trai
 
 Le mot « efficacité » mérite lui aussi d’être découpé. **L’efficacité signifie-t-elle seulement la vitesse, ou inclut-elle aussi la qualité, le taux d’erreur et la difficulté de compréhension ?** Lire les points clés d’un document de 20 pages en 5 minutes au lieu de 30, c’est de la vitesse. Repérer rapidement une contradiction logique ou un conflit de données, c’est de la qualité. Aider quelqu’un qui ne connaît pas le jargon professionnel à comprendre un rapport grâce à des annotations, c’est abaisser le seuil cognitif. Demandez-vous : si cette application réussit très bien, quel est le plus grand changement pour l’utilisateur ? « Il passe deux fois moins de temps sur les documents » ou « il se sent moins épuisé lorsqu’il travaille avec des documents » ? Une réponse claire donne une base aux priorités de fonctionnalités.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image9.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image9.webp)
 
 #### Deuxième niveau de découpage et d’affinage
 
@@ -383,7 +383,7 @@ Après simplification, cela peut devenir :
 
 Ce type de description n’est plus un slogan vide. Il peut devenir directement un prompt, une instruction de plan pour une IA de développement, un brief pour designer ou un document d’évaluation rapide pour un ingénieur.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image10.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image10.webp)
 
 À ce stade, deux changements très concrets apparaissent. Premièrement, vous n’êtes plus écrasé par la phrase « je veux faire une application d’efficacité » ; vous avez des étapes sur lesquelles agir immédiatement. Deuxièmement, le coût de communication avec les autres baisse fortement, car vous disposez d’une première solution déjà assez précise.
 
@@ -400,7 +400,7 @@ Une pratique très simple, mais souvent négligée, consiste à dessiner d’abo
 
 Vous pouvez d’abord diviser l’application en trois types de pages : page d’entrée, page d’opération, page de résultat.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image11.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image11.webp)
 
 ### Page d’entrée : par où l’utilisateur arrive et ce qu’il voit au premier regard
 
@@ -449,9 +449,9 @@ Ce qu’il faut observer en priorité n’est pas la beauté des couleurs, mais 
 - lors de l’affichage du résultat, l’information la plus importante est-elle bien mise en évidence, et les informations secondaires sont-elles bien rangées ;
 - quand un nouvel utilisateur arrive pour la première fois, existe-t-il un guide court qui lui montre quoi faire ensuite ?
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image12.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image12.webp)
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image13.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image13.webp)
 
 Vous pouvez consulter ces sites de captures et de références :
 
@@ -532,7 +532,7 @@ Pour juger si une application est bonne, il ne suffit pas de regarder à quel po
 
 La caractéristique la plus directe d’une bonne application est qu’elle apporte un bénéfice réel dans un scénario précis. Ce bénéfice n’a pas besoin d’être grandiose ni emballé dans de grands mots, mais il doit être suffisamment concret pour que vous puissiez dire clairement : **qu’a-t-elle évité à l’utilisateur, combien de temps lui a-t-elle fait gagner, ou quelle erreur rend-elle moins probable ?**
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image14.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image14.webp)
 
 Prenons un outil simple de compte rendu de réunion. S’il permet de téléverser un enregistrement, ou d’enregistrer directement pendant la réunion, puis de générer automatiquement un compte rendu structuré avec les actions à faire, les responsables et les dates limites, il ne fait pas seulement gagner du temps de frappe. Il économise l’effort mental de prise de notes, d’organisation, de filtrage et de mise en forme. Vous pouvez dire très concrètement que cet outil économise environ vingt minutes par réunion à une personne. Si toute l’équipe a dix réunions de ce type par semaine, le gain total devient considérable.
 
@@ -544,7 +544,7 @@ Donc, lorsque vous dites que votre application a de la valeur, il vaut mieux dé
 
 Une autre caractéristique sous-estimée mais extrêmement importante est que **les bonnes applications n’ont généralement pas besoin de beaucoup d’explications**. Quand un utilisateur les ouvre pour la première fois, il comprend intuitivement par où commencer, ce qui se passera s’il clique sur tel élément, et quel bouton sert à l’action principale. L’entrée importante se trouve à un endroit vraiment visible, pas dans le troisième niveau d’un menu.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image15.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image15.webp)
 
 Imaginez un utilisateur qui vient de télécharger votre application. Il l’ouvre peut-être dans une file d’attente, dans un bus ou dans un café. Le réseau n’est pas forcément stable, et il n’a aucune patience pour lire une longue explication. Le temps de confusion qu’il accepte se compte souvent en secondes. Si, pendant ces quelques secondes, il ne voit aucun guidage clair et ne sait pas quoi faire ensuite, il risque de fermer l’application et de ne jamais revenir.
 
@@ -574,7 +574,7 @@ Un point important : **une bonne application n’a pas besoin d’être grande**
 
 ## 3.2 Comprendre les besoins : **la pyramide de Maslow**
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image16.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image16.webp)
 
 Avant de construire une application, beaucoup de gens sautent directement aux fonctionnalités : peut-on ajouter quelque chose ici, faut-il mettre un bouton là ? Mais ce qui décide réellement si une application peut survivre, c’est le niveau de besoin humain qu’elle touche, et avec quelle précision.
 
@@ -655,7 +655,7 @@ Après avoir construit l’application, vous découvrirez vite une autre chose i
 
 Les applications C-end s’adressent aux individus et s’insèrent dans leur vie quotidienne. Les types courants incluent contenu, outils, divertissement, social, apprentissage, etc.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image17.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image17.webp)
 
 Les applications de contenu, comme les lectures d’actualité, plateformes de vidéos courtes ou outils de podcast, aident l’utilisateur à extraire ce qui l’intéresse d’une masse d’informations en temps limité, tout en lui donnant régulièrement de nouvelles raisons de revenir.
 
@@ -681,7 +681,7 @@ Une manière simple de juger si un besoin C-end est réel consiste à voir si l�
 
 Les applications B-end servent des entreprises, équipes, institutions ou départements. Les catégories courantes incluent ERP, CRM, outils de collaboration, SaaS et systèmes internes de gestion métier.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image18.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image18.webp)
 
 La grande différence avec le C-end est qu’elles doivent satisfaire plusieurs rôles en même temps. L’utilisateur direct peut être un employé de première ligne, le décideur un manager ou patron, les données appartiennent à l’organisation, et les validations impliquent plusieurs départements. Il faut que l’utilisateur trouve le produit pratique, **que le décideur voie le retour sur investissement**, et que l’organisation se sente en sécurité côté risque et conformité.
 
@@ -782,7 +782,7 @@ Quand vous avez confirmé que l’application tient même sans IA, et que vous a
 
 Une approche plus claire consiste à voir l’IA comme plusieurs composants possibles : **elle peut être le cerveau, les yeux ou les mains**. Selon l’objectif produit, choisissez la partie qu’elle doit prendre en charge. Si possible, commencez par un ou deux rôles bien faits, plutôt que de tout ajouter d’un coup.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image19.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image19.webp)
 
 **Quand l’IA joue le rôle du cerveau, elle comprend et génère surtout du texte, ou raisonne entre des informations complexes.** Par exemple, dans un assistant de compte rendu de réunion, elle doit extraire les points vraiment importants d’un long enregistrement, et non simplement lister tout dans l’ordre chronologique. Dans une application d’apprentissage, elle doit distinguer si l’utilisateur n’a pas compris un concept ou s’il a seulement fait une erreur d’inattention, puis donner un retour différent. Dans ces scénarios, la valeur de l’IA vient de sa capacité à lire les paroles de l’utilisateur, comprendre les matériaux fournis et produire une sortie structurée et logique. Votre travail consiste à aider l’utilisateur à poser clairement le problème et à fournir un contexte assez précis.
 
@@ -849,7 +849,7 @@ Revenons à la question de départ : que signifie vraiment comprendre les limite
 
 D’abord, comprendre que les scénarios n’ont pas tous le même besoin d’IA. Comme le montre l’exemple workflow/context : quand tout est déterminé, l’IA a peu d’espace ; quand le flux est fixe mais l’information variable, l’IA sert à comprendre et compléter ; quand le flux est incertain, elle doit planifier et explorer. Le fond de cette méthode consiste à identifier la source et le degré d’incertitude. La force centrale de l’IA est de trouver des motifs et relations dans l’incertitude. Cela vaut aussi pour la reconnaissance d’image, la génération de contenu ou les systèmes de recommandation.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image20.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image20.webp)
 
 Mais l’IA, en résolvant une incertitude, en introduit aussi une nouvelle. Ses sorties sont probabilistes : elle peut mal comprendre, raisonner de travers ou halluciner. Les tolérances varient énormément selon les scénarios et les utilisateurs. Il faut donc demander :
 
@@ -1106,4 +1106,4 @@ C’est pourquoi un début brut n’est pas grave. Fonctions incomplètes, flux 
 
 **_La fin n’est jamais plus importante que le chemin qui y mène._**
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image21.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image21.webp)

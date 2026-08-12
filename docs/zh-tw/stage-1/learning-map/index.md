@@ -27,7 +27,7 @@ const relatedArticles = relatedArticlesMap['zh-tw/stage-1/learning-map'] ?? []
 它最先帶來的突破，是讓更多人跨過了“不會寫程式碼，所以無法開始”的門檻。一個沒有編程經驗的人，也可以在幾分鐘內做出小遊戲、網頁或可以演示的原型。
 
 <figure class="concept-illustration">
-  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.png" alt="一位創作者借助 AI 將自然語言想法變成產品原型，交給真實使用者使用，並根據反饋繼續迭代" loading="lazy">
+  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.webp" alt="一位創作者借助 AI 將自然語言想法變成產品原型，交給真實使用者使用，並根據反饋繼續迭代" loading="lazy">
   <figcaption>Vibe Coding 幫助你跨過“做出來”的門檻；Build Product 要繼續走向真實使用者、反饋與價值。</figcaption>
 </figure>
 

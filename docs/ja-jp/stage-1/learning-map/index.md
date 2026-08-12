@@ -27,7 +27,7 @@ const relatedArticles = relatedArticlesMap['ja-jp/stage-1/learning-map'] ?? []
 最初の大きな変化は、「コードを書けないから始められない」という壁を多くの人が越えられるようになったことです。プログラミング経験がなくても、数分で小さなゲーム、ウェブページ、デモできるプロトタイプを作れます。
 
 <figure class="concept-illustration">
-  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.png" alt="制作者が AI を使い、自然言語のアイデアを製品プロトタイプにして実際の利用者へ渡し、フィードバックから改善する様子" loading="lazy">
+  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.webp" alt="制作者が AI を使い、自然言語のアイデアを製品プロトタイプにして実際の利用者へ渡し、フィードバックから改善する様子" loading="lazy">
   <figcaption>Vibe Coding は「作る」壁を越える助けになります。製品づくりは、さらに実際の利用者、反応、価値へ進むことです。</figcaption>
 </figure>
 

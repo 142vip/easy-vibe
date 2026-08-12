@@ -109,7 +109,7 @@ Si le formulaire comporte beaucoup de champs, gardez ceux dont le résultat a vr
 
 Une requête IA peut durer plusieurs secondes. Après le clic, le bouton doit afficher « Génération » et empêcher momentanément les envois répétés. Les informations saisies ne doivent pas disparaître, ni la page sauter vers un résultat vide.
 
-![État d’attente pendant la génération du contenu](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![État d’attente pendant la génération du contenu](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.webp)
 
 *Une animation complexe est inutile. Montrer que le travail a commencé tout en conservant les saisies et la position de la page évite déjà la plupart des confusions.*
 
@@ -119,7 +119,7 @@ Si une image ou une vidéo passe par une file, vous pouvez afficher « En attent
 
 La réponse de l’IA n’est pas la fin du parcours. Il faut souvent vérifier les faits, corriger les mots et emporter le résultat dans l’étape suivante. La zone de résultat doit proposer au moins une action : modifier, copier, télécharger ou régénérer.
 
-![Page de résultat après connexion de la compréhension d’image et de la génération](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![Page de résultat après connexion de la compréhension d’image et de la génération](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.webp)
 
 *L’image envoyée reste visible au-dessus du résultat. La personne peut comparer le texte à l’original au lieu d’accepter une seule réponse du modèle.*
 

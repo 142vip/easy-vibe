@@ -135,15 +135,15 @@ IDE는 “코드를 편집하고, 관리하고, 실행하고, 디버깅”하기
 
 현대 IDE는 Git 같은 도구도 내장하는 경우가 많습니다. 가장 인기 있는 것은 Microsoft의 **[Visual Studio Code (VS Code)](https://code.visualstudio.com/)** 입니다. 가볍고 확장 가능합니다. JetBrains 제품군 같은 전문 IDE도 있지만, 초보자에게는 VS Code가 가장 친절합니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.webp)
 
 VS Code의 핵심 철학은 “모든 것은 플러그인”입니다. 플러그인 메커니즘으로 여러 언어를 지원합니다. Python 플러그인을 설치하면 Python IDE가 되고, C++ 플러그인을 설치하면 C++ IDE가 됩니다. 플러그인을 설치하지 않으면 고급 텍스트 편집기일 뿐입니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.webp)
 
 심지어 Markdown 문서를 편집하는 데도 사용할 수 있습니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.webp)
 
 정리하면 IDE는 개발자가 코드를 효율적으로 쓰고 프로그램을 실행하도록 돕는 도구 묶음입니다.
 
@@ -210,7 +210,7 @@ Cursor는 Anysphere가 개발한 AI 코드 편집기이며 VS Code 기반으로 
 
 현재 Cursor는 “프론트엔드 인터페이스가 있는 AI IDE” 중 종합 경험이 가장 좋은 도구 중 하나라고 할 수 있습니다. 사용자 수가 많고 기능 반복 주기도 빠릅니다. 가장 큰 단점은 가격이 높다는 점입니다. Pro 버전은 월 약 20달러가 필요합니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.webp)
 :::
 
 ::: details Qoder
@@ -219,7 +219,7 @@ Cursor는 Anysphere가 개발한 AI 코드 편집기이며 VS Code 기반으로 
 
 Qoder는 Alibaba가 출시한 AI IDE이며 “투명한 협업”과 “강화된 컨텍스트 엔지니어링 능력”을 강조합니다. Action Flow를 통해 작업을 여러 단계로 분해하고 AI의 실행 과정을 실시간으로 추적할 수 있습니다. 또한 다중 모델 동적 라우팅과 작업 상태 머신 관리를 지원하므로, 중대형 프로젝트에서 아키텍처 거버넌스를 하거나 레거시 시스템을 “역공학” 분석하는 데 매우 적합합니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.webp)
 :::
 
 ::: details CodeBuddy
@@ -228,7 +228,7 @@ Qoder는 Alibaba가 출시한 AI IDE이며 “투명한 협업”과 “강화�
 
 CodeBuddy는 Tencent Cloud가 출시한 AI 프로그래밍 도구이며 중국어 지시에 대한 지원과 기업급 규정 준수 능력을 강조합니다. 코드 완성, 일괄 코드 리뷰, 다중 모델 전환 등의 기능을 제공합니다. 그중 Craft 지능체는 다중 파일 코드 생성과 API 통합을 구현할 수 있습니다. 기업 버전은 사유화 배포를 지원하고 중국의 3급 등급보호 인증을 통과했으므로 금융, 의료 등 데이터 보안 요구가 높은 업종에 적합합니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.webp)
 :::
 
 ::: details VS Code + Cline
@@ -237,9 +237,9 @@ CodeBuddy는 Tencent Cloud가 출시한 AI 프로그래밍 도구이며 중국�
 
 Cline은 VS Code(Visual Studio Code)의 AI 프로그래밍 Agent 플러그인입니다. 서로 다른 API 엔드포인트를 설정해 사용하는 대형 모델을 유연하게 바꿀 수 있습니다. Cline은 멀티모달 입력, MCP 도구 확장, 비용 모니터링을 지원하며, 모든 작업은 사용자 확인 후 실행됩니다. 아이디어를 빠르게 검증하거나 기존 개발 흐름에 통합하는 데 매우 적합합니다. 기본 기능은 무료이고, 기업 버전은 사유 환경에서 모델 배포를 지원합니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.webp)
 :::
 
 ::: details Kiro
@@ -432,7 +432,7 @@ Trae에서 사용자 지정 모델을 연결할 때는 **기본적으로 OpenRou
 
 그림처럼 여기서는 템플릿을 만들고 있지만 어떻게 조작해야 할지 모르겠습니다. 이 부분을 스크린샷으로 찍어 대형 모델에게 물어볼 수 있습니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.webp)
 
 AI Agent가 실행 중 멈추는 또 다른 이유는 이때 “서비스”가 시작되었기 때문입니다. 우리의 스네이크 자체도 하나의 “서비스”입니다. 아래 명령의 URL을 보면 Agent가 로컬 컴퓨터 서비스를 실행했다는 뜻입니다. 해당 주소에 접속하면 스네이크를 볼 수 있습니다. 서비스는 계속 켜져 있어야 하므로 여기서 일시정지처럼 보입니다. 우리는 `Skip` 버튼만 클릭하면 됩니다.
 
@@ -444,7 +444,7 @@ AI Agent가 실행 중 멈추는 또 다른 이유는 이때 “서비스”가 
 
 잠시 기다리면 z.ai와 비슷한 결과를 얻을 수 있습니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.webp)
 
 오른쪽 아래의 체크 표시를 클릭해 코드 변경을 확정할 수 있고, `Cancel` 버튼을 클릭해 변경을 취소할 수도 있습니다. 또는 “2 files need review” 위치를 클릭해 변경된 코드를 펼쳐 볼 수 있습니다.
 
@@ -460,7 +460,7 @@ AI Agent가 실행 중 멈추는 또 다른 이유는 이때 “서비스”가 
 
 > “위에서 아래로 한 번 설명해 줘. 이 스네이크 게임은 각 단계에서 어떻게 움직이는 거야? 전문 용어는 최대한 적게 써줘.”
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.webp)
 
 그다음 AI의 답변을 따라 핵심 지점을 계속 물어볼 수 있습니다. 예:
 
@@ -513,15 +513,15 @@ AI는 설명에 따라 React 컴포넌트와 스타일을 직접 수정합니다
 
 vibe coding 초보자에게 가장 어려운 것은 오히려 무엇이 “베스트 프랙티스”인지, 어떤 아키텍처가 가장 적합한지 모른다는 점입니다. 컴퓨터 기초를 모르기 때문에 AI를 잘 이끌기 어렵습니다. 이 문제를 해결하는 방법은 “직접 참고”입니다. z.ai에서 코드를 볼 수 있다고 앞에서 말했던 것을 기억하나요? 사실 해당 README(프로젝트에서 기능과 기술 아키텍처를 소개하는 부분)에는 이미 최적 아키텍처 참고가 제시되어 있습니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.webp)
 
 로컬 결과가 z.ai 결과와 최대한 비슷해지게 하고 싶다면, 이 README 전체 내용을 복사해 Trae 사이드바에 붙여 넣고, README의 아키텍처에 따라 로컬 코드를 수정하게 하면 됩니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.webp)
 
 마지막으로 z.ai와 매우 비슷한 페이지 디자인 스타일을 얻을 수 있습니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>

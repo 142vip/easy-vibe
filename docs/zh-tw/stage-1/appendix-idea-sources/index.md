@@ -31,7 +31,7 @@ const duration = '約 <strong>20 分鐘</strong>'
 
 例如找房時，你可能同時開著三個平台，又手抄一份表格比較租金和通勤。看房回來後，手機裡的照片還常常對不上房源。
 
-![分散的房源照片透過位置標記和通勤路線整理到同一張比較圖](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.jpg)
+![分散的房源照片透過位置標記和通勤路線整理到同一張比較圖](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.webp)
 
 _先記下這次經歷，不必立刻想它能做成什麼產品。_
 
@@ -45,7 +45,7 @@ _先記下這次經歷，不必立刻想它能做成什麼產品。_
 
 例如活動上線前，一張海報常要改成社群橫幅、直式貼文和影片封面。尺寸一變，設計師又要重新安排標題、主體和安全區域。
 
-![同一套視覺內容在橫版、方形、直版和窄版畫幅中的不同排列](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.jpg)
+![同一套視覺內容在橫版、方形、直版和窄版畫幅中的不同排列](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.webp)
 
 _同一種求助隔幾天又出現，就值得保存。_
 
@@ -88,7 +88,7 @@ site:v2ex.com 有沒有工具
 
 Product Hunt 是科技產品集中首發並爭取曝光的平台。許多獨立開發者和產品團隊會準備介紹、截圖和展示，在上線當天邀請使用者投票和留言。
 
-![Product Hunt 首頁展示當天發布的新產品、票數和討論](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.png)
+![Product Hunt 首頁展示當天發布的新產品、票數和討論](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.webp)
 
 首頁每天都會換一批產品。打開產品後先看三處：它怎麼用一句話介紹自己、首張截圖強調什麼、留言區的人在問什麼。不要只看第一名，連續觀察幾天更容易看出近期反覆出現的類別。
 
@@ -96,7 +96,7 @@ Product Hunt 是科技產品集中首發並爭取曝光的平台。許多獨立�
 
 Product Hunt 像產品上線當天的舞台，Indie Hackers 則像獨立開發者長期交流生意的社群。有人公開產品進度、收入、獲客過程，也會誠實分享失敗。
 
-![Indie Hackers Products 頁面展示獨立產品和開發進度](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.png)
+![Indie Hackers Products 頁面展示獨立產品和開發進度](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.webp)
 
 不必只找收入最高的專案。一個人維護、每月穩定賺取不高收入的產品，往往更容易看清它最初解決了哪個小問題，第一批顧客又從哪裡來。
 
@@ -104,7 +104,7 @@ Product Hunt 像產品上線當天的舞台，Indie Hackers 則像獨立開發�
 
 Capterra 是商業軟體目錄和評價網站。公司挑選 CRM、專案管理、客服、排班等軟體時，可以按分類搜尋、比較並閱讀真實評價。
 
-![Capterra 首頁提供商業軟體搜尋、分類和比較入口](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.png)
+![Capterra 首頁提供商業軟體搜尋、分類和比較入口](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.webp)
 
 如果你對某類產品有興趣，可以先找到幾款常見工具，再打開低分評價。反覆出現的抱怨，例如手機版難用、匯出格式不對或設定過於複雜，通常比官網功能表更值得保存。
 
@@ -112,7 +112,7 @@ Capterra 是商業軟體目錄和評價網站。公司挑選 CRM、專案管理�
 
 Google Trends 顯示關鍵字搜尋熱度的相對變化，也能比較不同時間、地區，並查看相關查詢和突然升溫的字詞。
 
-![Google Trends 首頁展示即時趨勢和關鍵字探索入口](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.png)
+![Google Trends 首頁展示即時趨勢和關鍵字探索入口](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.webp)
 
 它適合在已經有幾個關鍵字後使用。例如比較「AI meeting notes」「AI transcription」和「voice notes」，看看使用者更常搜尋哪一種說法。曲線上升不等於一定有市場，只代表關注度正在變化。
 

@@ -31,7 +31,7 @@ const duration = '약 <strong>20분</strong>'
 
 집을 구할 때 세 개의 매물 사이트를 열고 월세와 통근 시간을 표에 옮겨 적을 수 있습니다. 집을 보고 돌아온 뒤에는 휴대전화 사진이 어느 매물인지 헷갈리기도 합니다.
 
-![흩어진 매물 사진을 위치 표시와 통근 경로로 한 화면에 정리한 예](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.jpg)
+![흩어진 매물 사진을 위치 표시와 통근 경로로 한 화면에 정리한 예](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.webp)
 
 _먼저 경험을 적어 두세요. 곧바로 제품을 생각할 필요는 없습니다._
 
@@ -45,7 +45,7 @@ _먼저 경험을 적어 두세요. 곧바로 제품을 생각할 필요는 없�
 
 행사 공개 전에는 포스터 한 장을 웹 배너, 세로형 게시물, 영상 표지로 바꿔야 할 때가 많습니다. 크기가 달라질 때마다 디자이너는 제목, 중심 요소, 안전 영역을 다시 배치합니다.
 
-![같은 시각 자료를 가로, 정사각형, 세로, 좁은 형식에 각각 배치한 예](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.jpg)
+![같은 시각 자료를 가로, 정사각형, 세로, 좁은 형식에 각각 배치한 예](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.webp)
 
 _같은 요청이 며칠 뒤 또 나오면 저장할 가치가 있습니다._
 
@@ -88,7 +88,7 @@ site:reddit.com is there a tool for
 
 Product Hunt는 기술 제품이 처음 공개되고 주목을 얻는 곳입니다. 제작자는 설명, 화면, 시연을 준비하고 출시일에 투표와 의견을 모읍니다.
 
-![새 제품, 투표 수, 토론을 보여 주는 Product Hunt 홈페이지](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.png)
+![새 제품, 투표 수, 토론을 보여 주는 Product Hunt 홈페이지](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.webp)
 
 제품은 매일 바뀝니다. 제품 페이지에서 한 문장 소개, 첫 화면이 강조하는 것, 댓글의 질문을 보세요. 1위만 보지 말고 며칠간 살펴보면 반복해서 등장하는 분야가 보입니다.
 
@@ -96,7 +96,7 @@ Product Hunt는 기술 제품이 처음 공개되고 주목을 얻는 곳입니�
 
 Product Hunt가 출시일의 무대라면 Indie Hackers는 독립 개발자가 오랫동안 사업을 이야기하는 커뮤니티입니다. 진행 상황, 수입, 고객 확보, 실패도 공개합니다.
 
-![독립 제품과 진행 상황을 보여 주는 Indie Hackers Products 화면](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.png)
+![독립 제품과 진행 상황을 보여 주는 Indie Hackers Products 화면](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.webp)
 
 수입이 가장 큰 제품만 찾지 마세요. 한 사람이 운영하며 매달 작지만 안정적인 수입을 내는 제품에서 처음 해결한 작은 문제와 첫 고객을 찾은 경로가 더 잘 보이기도 합니다.
 
@@ -104,7 +104,7 @@ Product Hunt가 출시일의 무대라면 Indie Hackers는 독립 개발자가 �
 
 Capterra는 업무용 소프트웨어 목록과 평가 사이트입니다. CRM, 프로젝트 관리, 고객 지원, 근무표 도구 등을 분야별로 비교할 수 있습니다.
 
-![업무 소프트웨어 검색, 분류, 비교를 제공하는 Capterra 홈페이지](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.png)
+![업무 소프트웨어 검색, 분류, 비교를 제공하는 Capterra 홈페이지](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.webp)
 
 관심 분야가 있다면 대표 제품을 몇 개 찾고 낮은 평점을 읽으세요. 모바일이 불편하다, 내보내기 형식이 틀리다, 설정이 너무 복잡하다는 반복 불만은 홈페이지 기능 목록보다 유용합니다.
 
@@ -112,7 +112,7 @@ Capterra는 업무용 소프트웨어 목록과 평가 사이트입니다. CRM, 
 
 Google Trends는 키워드의 상대적인 검색 관심을 시간과 지역별로 보여 주며 관련 검색어와 급상승어도 제공합니다.
 
-![실시간 추세와 키워드 탐색을 보여 주는 Google Trends 홈페이지](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.png)
+![실시간 추세와 키워드 탐색을 보여 주는 Google Trends 홈페이지](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.webp)
 
 후보 키워드가 몇 개 생긴 뒤 사용하세요. “AI meeting notes”, “AI transcription”, “voice notes”를 비교하면 사람들이 어떤 표현을 더 찾는지 알 수 있습니다. 선이 오른다고 시장이 증명되는 것은 아니며 관심 변화만 보여 줍니다.
 

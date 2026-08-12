@@ -135,15 +135,15 @@ const relatedArticles =
 
 現代 IDE 往往還內建 Git 等工具。最流行的是微軟的 **[Visual Studio Code (VS Code)](https://code.visualstudio.com/)**，它輕量且可擴充套件。雖然也有 JetBrains 全家桶等專業 IDE，但 VS Code 對初學者最友好。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.webp)
 
 VS Code 的核心理念是“一切皆外掛”。它透過外掛機制支援各種語言，安裝 Python 外掛就是 Python IDE，安裝 C++ 外掛就是 C++ IDE。不裝外掛時，它只是個高階文字編輯器。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.webp)
 
 甚至可以用來編輯 Markdown 文件。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.webp)
 
 總之，IDE 是一套幫助開發者高效寫程式碼和執行程式的工具集。
 
@@ -210,7 +210,7 @@ Cursor 是 Anysphere 開發的一款 AI 程式碼編輯器，基於 VS Code 定�
 
 目前，Cursor 可以說是“帶前端介面的 AI IDE”中綜合體驗最好的一款之一，使用者數量龐大，功能迭代頻率也很高。它最大的缺點是價格較高——專業版大約需要每月 20 美元。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.webp)
 :::
 
 ::: details Qoder
@@ -219,7 +219,7 @@ Cursor 是 Anysphere 開發的一款 AI 程式碼編輯器，基於 VS Code 定�
 
 Qoder 是阿里巴巴推出的一款強調“透明協作”和“增強上下文工程能力”的 AI IDE。它透過 Action Flow 支援把任務拆解成多個步驟，並實時跟蹤 AI 的執行過程；還支援多模型動態路由和任務狀態機管理，非常適合在中大型專案中做架構治理和對遺留系統進行“反向工程”分析。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.webp)
 :::
 
 ::: details CodeBuddy
@@ -228,7 +228,7 @@ Qoder 是阿里巴巴推出的一款強調“透明協作”和“增強上下�
 
 CodeBuddy 是騰訊雲推出的一款 AI 程式設計工具，強調對中文指令的支援以及企業級合規能力。它提供程式碼補全、批次程式碼審查和多模型切換等功能；其中的 Craft 智慧體可以實現多檔案程式碼生成和 API 整合。企業版支援私有化部署，並透過了三級等保認證，適合金融、醫療等對資料安全要求較高的行業。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.webp)
 :::
 
 ::: details VS Code + Cline
@@ -237,9 +237,9 @@ CodeBuddy 是騰訊雲推出的一款 AI 程式設計工具，強調對中文指
 
 Cline 是 VS Code（Visual Studio Code）的一款 AI 程式設計 Agent 外掛，可以透過配置不同的 API 端點來靈活切換所使用的大模型。Cline 支援多模態輸入、MCP 工具擴充套件以及成本監控，所有操作都需要使用者確認後才會執行。它非常適合用於快速驗證想法，或與現有開發流程整合。基礎功能是免費的，企業版則支援在私有環境中部署模型。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.webp)
 :::
 
 ::: details Kiro
@@ -432,7 +432,7 @@ Coding Plan 是各大雲服務廠商推出的訂閱計劃，購買後你可以�
 
 如圖所示，這裡我們正在建立模板，但不知道如何操作，我們可以截圖該部分對大模型進行詢問：
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.webp)
 
 AI Agent 在執行過程中暫停的還有一部分原因是因為此時啟動了一個“服務”，我們的貪喫蛇本身屬於一種“服務”，如果你看到如下命令的網址，則表示 Agent 幫我們執行了一個本地的電腦服務，我們可以訪問對應的網址訪問我們的貪喫蛇，由於服務需要持續啟動，這裡會陷入暫停。我們只需要點選 `Skip` 按鈕即可。
 
@@ -444,7 +444,7 @@ AI Agent 在執行過程中暫停的還有一部分原因是因為此時啟動�
 
 稍作片刻，我們即可得到類似 z.ai 一樣的結果：
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.webp)
 
 我們可以點選右下角的打勾進行確定程式碼的變更，也可以點選 `Cancel` 按鈕取消變更。或者點選 2 files need review 的地方展開檢視變動後的程式碼。
 
@@ -460,7 +460,7 @@ AI Agent 在執行過程中暫停的還有一部分原因是因為此時啟動�
 
 > “請從上到下講一遍，這個貪喫蛇遊戲每一步是怎麼動起來的？儘量少用專業術語。”
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.webp)
 
 然後再順著它的回答繼續追問關鍵點，例如：
 
@@ -513,15 +513,15 @@ AI 會根據你的描述，直接修改 React 元件和樣式。儲存後重新�
 
 對於 vibe coding 小白來說，最難的事情反而是不知道什麼纔算是“最佳實踐“，不知道怎麼樣的架構纔是最適合的；因為不知道計算機基礎，所以沒辦法很好的引導 AI，解決這個難題的方法是”直接參考“；還記得我們之前說過的 z.ai 中可以檢視程式碼嗎？其實對應 README（專案中用於介紹功能和技術架構的部分）中已經給出了一個最佳架構參考：
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.webp)
 
 我們想要讓本地的結果儘量符合 z.ai 的結果，我們可以複製這個 README 的全部內容，貼上到 Trae 的側邊欄中，讓他根據 README 的架構，修改本地的程式碼。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.webp)
 
 最後我們能得到與 z.ai 高度相似的頁面設計風格：
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>

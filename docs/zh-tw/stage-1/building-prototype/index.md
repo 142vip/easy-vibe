@@ -388,17 +388,17 @@ AI 會返回一份結構化的需求和對應的提示詞。你自己檢查一�
 :::
 
 都確認完畢後，等待智慧體執行片刻，我們可以得到如下結果：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.webp)
 
 可以看到已經有了初步功能圖，但前端頁面顯示太醜了，此時我們可以嘗試這樣和 AI 進行直接對話，最佳化介面顯示：
 
 最佳化後我們能夠得到如下更美觀的介面：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.webp)
 
 你可以根據自己的需求修改網頁功能，可以附上截圖自由進行提問，比如：“我現在還不需要批次匯入功能，幫我取消”，“左邊要輸入的東西太多了，幫我只留下 xxxxx”。甚至，你還可以參考其他成熟的網站，比如這裡我們可以直接參考谷歌的某設計產品進行“參考”（你可以貼上自己喜歡的某個成熟網站的截圖）：
 
 最後可以得到：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.webp)
 
 ### 2.3 遇到報錯怎麼辦
 
@@ -528,13 +528,13 @@ AI 會返回一份結構化的需求和對應的提示詞。你自己檢查一�
 ```
 
 很容易得到結果（如果你覺得一個資料太少，你可以讓 AI 生成多個可測試用例）：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.webp)
 
 點選後得到結果：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.webp)
 
 此時我們直接得到的是結果，並不是有一個“假設的生成過程”，我們想要模擬真實的生成過程，可以直接和 AI 進行對話：“請你模擬一個真實的生成過程，在點選後過一段時間才給我結果。”
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.webp)
 
 走通生成功能後，我們還要確保模板庫的功能正常，從頁面的生成卡片上我們能夠知道模版庫收藏功能並沒有實現，此時需要和 AI 進一步深入對話，“請你幫我確保需求 [此處貼上上面的 2. 的內容] 正常，可以點選一個結果收藏對應的模板，點開後能看到生成引數”
 
@@ -542,7 +542,7 @@ AI 會返回一份結構化的需求和對應的提示詞。你自己檢查一�
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
 
 最後得到預期結果：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.webp)
 
 除了手動體驗需求流程，你還可以讓 AI 幫你直接做需求檢查，例如：
 

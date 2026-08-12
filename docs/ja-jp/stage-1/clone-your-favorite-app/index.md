@@ -100,7 +100,7 @@ _画像出典：[Framer Website Builder](https://www.framer.com/solutions/websit
 
 Traeは`index.html`、`styles.css`、`script.js`を作り、ブラウザーでページを開きました。授業で実際に生成した結果です。
 
-![画像から生成して実行したWishlabsページ](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.gif)
+![画像から生成して実行したWishlabsページ](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.webp)
 
 まだコードは読みません。参考画像と比べて画面を見ます。
 
@@ -167,7 +167,7 @@ Traeが完了するまで待ちます。ファイル作成や実行の確認が�
 
 SaaSでは進捗、売上、利用者データをダッシュボードで表示します。Linearの画面は左がナビゲーション、右が内容で、構造が明確です。
 
-![Linear公式Dashboard画面](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.png)
+![Linear公式Dashboard画面](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.webp)
 
 _授業の参考：[Linear Dashboards](https://linear.app/docs/dashboards)_
 
@@ -180,7 +180,7 @@ _授業の参考：[Linear Dashboards](https://linear.app/docs/dashboards)_
 
 Traeはサイドバー、データカード、グラフを作りました。実際の動作画面です。
 
-![画像から生成して実行したダッシュボード](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.gif)
+![画像から生成して実行したダッシュボード](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.webp)
 
 データは本物の業務データではありません。最初の目的は構造を作ることです。安定してからタイトルや数字を自分の内容へ置き換えます。
 
@@ -188,7 +188,7 @@ Traeはサイドバー、データカード、グラフを作りました。実�
 
 普通のWebページに興味がなければ、ゲーム画像で練習できます。先生はMinecraftのブロック世界を選びました。
 
-![Minecraft Creative Modeの実際の画面](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.png)
+![Minecraft Creative Modeの実際の画面](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.webp)
 
 _授業の参考：[Microsoft LearnのMinecraft例](https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/108)_
 
@@ -201,7 +201,7 @@ _授業の参考：[Microsoft LearnのMinecraft例](https://learn.microsoft.com/
 
 Traeは、キャラクターを動かし、ブロックを置いたり壊したりできるブラウザーゲームを作りました。
 
-![画像から生成して実行した2Dブロックゲーム](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.gif)
+![画像から生成して実行した2Dブロックゲーム](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.webp)
 
 これは<strong>2D横視点ゲーム</strong>です。キャラクターは平面で動き、前後の奥行きはありません。「ブロックゲーム」とだけ頼み、3Dとは言わなかったため、Traeは簡単な方法を選びました。
 
@@ -218,7 +218,7 @@ Minecraftに近い一人称画面が欲しい場合は、依頼に「3D」と入
 
 今度は本当の3Dブロック世界が生成されました。
 
-![画像から生成して実行した3Dブロックゲーム](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.gif)
+![画像から生成して実行した3Dブロックゲーム](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.webp)
 
 「ゲーム開始」を押した後、`WASD`で歩き、マウスで視点を回します。左クリックで壊し、右クリックで置き、数字キーで種類を変えます。
 

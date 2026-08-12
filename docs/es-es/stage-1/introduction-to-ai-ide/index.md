@@ -135,15 +135,15 @@ Para trabajar con mas eficiencia, necesitamos IDE modernos que soporten operacio
 
 Los IDE modernos suelen integrar tambien herramientas como Git. El mas popular es **[Visual Studio Code (VS Code)](https://code.visualstudio.com/)** de Microsoft: ligero y extensible. Aunque existen IDE profesionales como la suite de JetBrains, VS Code es el mas amable para principiantes.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.webp)
 
 La idea central de VS Code es "todo es un plugin". Mediante su sistema de plugins soporta muchos lenguajes: instala el plugin de Python y se convierte en un IDE de Python; instala el plugin de C++ y se convierte en un IDE de C++. Sin plugins, es solo un editor de texto avanzado.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.webp)
 
 Incluso puede usarse para editar documentos Markdown.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.webp)
 
 En resumen, un IDE es un conjunto de herramientas que ayuda a los desarrolladores a escribir codigo y ejecutar programas con eficiencia.
 
@@ -210,7 +210,7 @@ Cursor es un editor de codigo con IA desarrollado por Anysphere, personalizado s
 
 Actualmente, Cursor puede considerarse uno de los AI IDE con interfaz grafica de mejor experiencia global. Tiene una base de usuarios grande y un ritmo alto de iteracion. Su mayor desventaja es el precio: la version Pro cuesta alrededor de 20 USD al mes.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.webp)
 :::
 
 ::: details Qoder
@@ -219,7 +219,7 @@ Actualmente, Cursor puede considerarse uno de los AI IDE con interfaz grafica de
 
 Qoder es un AI IDE lanzado por Alibaba que enfatiza la "colaboracion transparente" y una "capacidad reforzada de context engineering". Mediante Action Flow permite dividir tareas en varios pasos y seguir en tiempo real la ejecucion de la IA. Tambien soporta routing dinamico entre modelos y gestion de estado de tareas, por lo que es adecuado para gobernanza de arquitectura en proyectos medianos/grandes y analisis de "reverse engineering" de sistemas legacy.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.webp)
 :::
 
 ::: details CodeBuddy
@@ -228,7 +228,7 @@ Qoder es un AI IDE lanzado por Alibaba que enfatiza la "colaboracion transparent
 
 CodeBuddy es una herramienta de programacion con IA lanzada por Tencent Cloud, centrada en soporte para instrucciones en chino y cumplimiento empresarial. Ofrece autocompletado de codigo, revision de codigo por lotes y cambio entre modelos. Su agente Craft puede generar codigo en multiples archivos e integrar APIs. La version enterprise soporta despliegue privado y ha pasado certificacion de seguridad de nivel 3, adecuada para sectores con altas exigencias de seguridad de datos como finanzas y salud.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.webp)
 :::
 
 ::: details VS Code + Cline
@@ -237,9 +237,9 @@ CodeBuddy es una herramienta de programacion con IA lanzada por Tencent Cloud, c
 
 Cline es un plugin de AI programming Agent para VS Code (Visual Studio Code). Permite cambiar de forma flexible el modelo grande configurando distintos endpoints de API. Cline soporta entrada multimodal, extension de herramientas MCP y monitoreo de costes; todas las operaciones requieren confirmacion del usuario antes de ejecutarse. Es muy adecuado para validar ideas rapidamente o integrarse con flujos de desarrollo existentes. Las funciones basicas son gratuitas, y la version enterprise soporta desplegar modelos en entornos privados.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.webp)
 :::
 
 ::: details Kiro
@@ -432,7 +432,7 @@ Como se muestra, aqui solo necesitamos introducir y para confirmar:
 
 Como se muestra, aqui estamos creando una plantilla pero no sabemos como operar; podemos capturar esta parte y preguntar al modelo:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.webp)
 
 Otra razon por la que el AI Agent se pausa es que en ese momento se ha iniciado un "service". Nuestro Snake tambien es una especie de "service". Si ves una URL como la del comando siguiente, significa que el Agent ha ejecutado un servicio local en tu ordenador; puedes visitar esa URL para abrir Snake. Como el servicio debe seguir ejecutandose, aqui parece quedar pausado. Solo tienes que hacer clic en `Skip`.
 
@@ -444,7 +444,7 @@ Si encuentras comportamientos inesperados, por ejemplo Snake no termina al choca
 
 Tras esperar un momento, obtendremos un resultado similar al de z.ai:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.webp)
 
 Podemos hacer clic en el check de la esquina inferior derecha para confirmar los cambios de codigo, o en `Cancel` para cancelarlos. Tambien puedes hacer clic donde dice 2 files need review para desplegar y revisar el codigo modificado.
 
@@ -460,7 +460,7 @@ Un metodo util es pedir primero una explicacion general de "como se mueve el jue
 
 > "Explicame de arriba abajo como funciona paso a paso este juego de Snake. Usa la menor cantidad posible de terminos tecnicos."
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.webp)
 
 Luego sigue preguntando puntos clave segun su respuesta, por ejemplo:
 
@@ -513,15 +513,15 @@ En esta etapa, si una modificacion causa error, no necesitas investigarlo a la f
 
 Para principiantes de vibe coding, lo mas dificil suele ser no saber que cuenta como "best practice" ni que arquitectura conviene. Como falta base de computacion, tambien cuesta guiar bien a la IA. La solucion es "referenciar directamente". Recuerdas que dijimos que en z.ai se puede ver el codigo? En el README correspondiente, que presenta funciones y arquitectura tecnica del proyecto, ya hay una buena referencia arquitectonica:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.webp)
 
 Si queremos que el resultado local se parezca lo mas posible al de z.ai, podemos copiar todo el README, pegarlo en la barra lateral de Trae y pedirle que modifique el codigo local segun esa arquitectura.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.webp)
 
 Al final obtendremos un estilo de pagina muy parecido al de z.ai:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>

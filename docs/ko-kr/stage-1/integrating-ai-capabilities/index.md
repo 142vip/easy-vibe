@@ -65,7 +65,7 @@ AI 연결은 API 코드를 복사하는 일로 끝나지 않습니다. **할 일
 
 로그인, 결제, 파일 저장, 화면 이동처럼 규칙이 분명한 일은 일반 프로그램이 맡고, AI는 잘할 수 있는 부분에만 사용합니다.
 
-![상품 이미지를 이해한 뒤 상품 설명을 만드는 실제 화면](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![상품 이미지를 이해한 뒤 상품 설명을 만드는 실제 화면](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.webp)
 
 *이 프로토타입은 상품 이미지를 읽어 정보를 보여 주고, 사용자가 확인한 뒤 편집 가능한 설명과 특징을 생성합니다.*
 
@@ -169,7 +169,7 @@ API Key는 앱이 모델을 부르는 인증 정보입니다. 로컬 환경 변�
 
 Models 화면에서 현재 제공되는 텍스트, 이미지, 음성, 영상 모델을 확인하고, 상세 페이지에서 코드용 Model ID를 복사합니다. 화면 표시명과 다를 수 있습니다.
 
-![텍스트·이미지·영상·음성으로 거를 수 있는 SiliconFlow 모델 목록](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
+![텍스트·이미지·영상·음성으로 거를 수 있는 SiliconFlow 모델 목록](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.webp)
 
 *SiliconFlow 모델 목록은 기능 유형별로 필터링할 수 있습니다.*
 
@@ -286,7 +286,7 @@ response = client.chat.completions.create(
 )
 ```
 
-![AI IDE에서 이미지 이해 API 연결하기](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
+![AI IDE에서 이미지 이해 API 연결하기](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.webp)
 
 *사진에서 바로 최종 문구를 만들기보다 사용자가 인식 결과를 확인한 뒤 생성하면 오류를 발견하기 쉽습니다.*
 
@@ -318,7 +318,7 @@ curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
   }'
 ```
 
-![제품에 연결한 이미지 생성 결과](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
+![제품에 연결한 이미지 생성 결과](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.webp)
 
 이미지 URL은 만료될 수 있습니다. 프로토타입에서는 바로 보여 줄 수 있지만 운영할 때는 서비스 약관에 따라 자체 저장 여부를 정하고 프롬프트, 모델 버전, 생성 시각을 기록합니다.
 

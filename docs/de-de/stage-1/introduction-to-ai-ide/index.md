@@ -112,15 +112,15 @@ Auf Servern werden Werkzeuge wie Vim bis heute verwendet.
 
 Moderne IDEs verbinden Editor, Dateibaum, Terminal, Ausführung, Debugging und Git. [Visual Studio Code](https://code.visualstudio.com/) ist leicht und erweiterbar.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.webp)
 
 Der Editor färbt Code und ergänzt Namen.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.webp)
 
 Debugger, Suche und Versionsverwaltung helfen bei größeren Projekten.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.webp)
 
 Mehr Details finden Sie in der [visuellen Erklärung der IDE](/de-de/appendix/2-development-tools/ide-basics).
 
@@ -146,27 +146,27 @@ Trae basiert auf der VS-Code-Oberfläche und bietet Chat- sowie Agentenmodi. Die
 
 Cursor kombiniert Editor, projektweite Suche, Chat und Agentenänderungen. Es ist verbreitet bei Teams, die eine VS-Code-nahe Oberfläche wünschen.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.webp)
 
 ### [Qoder](https://qoder.com/)
 
 Qoder bietet Codeverständnis, Aufgabenplanung und Agentenfunktionen. Modellangebot und Tarife können sich ändern.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.webp)
 
 ### [CodeBuddy](https://www.codebuddy.com/)
 
 CodeBuddy richtet sich an Entwicklung mit integriertem Chat und Codeänderungen und bietet je nach Region unterschiedliche Modelle.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.webp)
 
 ### VS Code + [Cline](https://cline.bot/)
 
 Cline ist eine Erweiterung, die Agentenarbeit in VS Code bringt. Sie wählen Modellanbieter und Schlüssel selbst, behalten dafür aber auch Kosten und Berechtigungen im Blick.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.webp)
 
 ### [Kiro](https://kiro.dev/)
 
@@ -240,7 +240,7 @@ Manche Werkzeuge fragen im Terminal nach `y` oder einem Projektnamen.
 
 Wenn die Frage unklar ist, senden Sie einen Screenshot an AI und bitten nur um Erklärung der nächsten Eingabe.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.webp)
 
 Ein laufender Entwicklungsserver beendet sich nicht von selbst. Öffnen Sie die angezeigte lokale Adresse im Browser; im Agentenfenster kann der laufende Schritt anschließend übersprungen werden.
 
@@ -248,7 +248,7 @@ Ein laufender Entwicklungsserver beendet sich nicht von selbst. Öffnen Sie die 
 
 Nach der ersten Runde sollte das Spiel im Browser laufen.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.webp)
 
 Prüfen Sie die geänderten Dateien. Bei einem schlechten Ergebnis verwenden Sie **Revert**, bevor Sie mit einer veränderten Anweisung neu beginnen.
 
@@ -258,7 +258,7 @@ Prüfen Sie die geänderten Dateien. Bei einem schlechten Ergebnis verwenden Sie
 
 Bitten Sie AI zunächst um den Gesamtweg: „Erkläre von oben nach unten, wie das Spiel sich bewegt, möglichst ohne Fachsprache.“ Fragen Sie danach nach Daten für Schlange und Futter, Timer, Kollisionsprüfung und Spielzustand.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.webp)
 
 Das Ziel ist nicht, alles auswendig zu lernen. Erkennen Sie zuerst die wichtigsten Daten, wann sie sich verändern und in welcher Datei die Veränderung geschieht.
 
@@ -274,15 +274,15 @@ Starten und prüfen Sie nach jeder kleinen Änderung. Bei einem Fehler senden Si
 
 Wenn ein früheres z.ai-Projekt eine README mit Architektur besitzt, lassen Sie AI erst Unterschiede zwischen dieser Struktur und dem lokalen Projekt erklären.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.webp)
 
 Bitten Sie danach um einen kleinen Umbauplan, nicht sofort um alle Änderungen.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.webp)
 
 Prüfen Sie nach dem Umbau Spiel, Eingabe und Neustart erneut.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.webp)
 
 ## 5. Was bedeuten die Bereiche und Schaltflächen der IDE?
 

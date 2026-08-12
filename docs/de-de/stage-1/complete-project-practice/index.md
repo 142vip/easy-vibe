@@ -109,7 +109,7 @@ Hat das Formular viele Felder, behalte nur die für ein gutes Ergebnis nötigen 
 
 Eine KI-Anfrage kann mehrere Sekunden dauern. Nach dem Klick sollte der Button „Wird erzeugt“ anzeigen und weitere Klicks vorübergehend verhindern. Eingaben dürfen nicht plötzlich verschwinden und die Seite sollte nicht zu einem leeren Ergebnis springen.
 
-![Wartezustand während der Erzeugung von Produktinhalten](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![Wartezustand während der Erzeugung von Produktinhalten](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.webp)
 
 *Ein Wartezustand braucht keine aufwendige Animation. Zeige, dass die Arbeit begonnen hat, und erhalte Eingaben und Seitenposition – das verhindert bereits die meiste Verwirrung.*
 
@@ -119,7 +119,7 @@ Bei Bild- oder Videoaufträgen mit Warteschlange kannst du „In Warteschlange�
 
 Die KI-Antwort ist nicht das Ende des Ablaufs. Nutzer prüfen Fakten, ändern Formulierungen und übernehmen das Ergebnis in den nächsten Arbeitsschritt. Der Ergebnisbereich braucht daher mindestens eine Aktion: Bearbeiten, Kopieren, Herunterladen oder Neu erzeugen.
 
-![Ergebnisseite nach der Verbindung von Bilderkennung und Texterzeugung](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![Ergebnisseite nach der Verbindung von Bilderkennung und Texterzeugung](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.webp)
 
 *Das hochgeladene Bild bleibt über dem Ergebnis sichtbar. Nutzer können den Text mit dem Original vergleichen, statt nur eine Modellantwort anzunehmen.*
 

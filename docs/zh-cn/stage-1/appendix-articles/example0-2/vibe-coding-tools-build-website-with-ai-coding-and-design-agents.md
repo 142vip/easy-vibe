@@ -86,7 +86,7 @@ Logo 是决定你网站第一印象的关键元素之一。想要从 AI 设计 A
 
 - 输入上述提示词 → 比对 Agent 生成的多个设计稿。
 
-![](images/image1.png)![](images/image2.png)
+![](images/image1.png)![](images/image2.webp)
 
 ## 4. 确定最终 Logo
 
@@ -149,7 +149,7 @@ Logo 是决定你网站第一印象的关键元素之一。想要从 AI 设计 A
 
 - **在 Google 上通过关键词搜索配色**
 
-![](images/image5.png)
+![](images/image5.webp)
 
 ## 4. 编写网站设计提示词
 
@@ -171,7 +171,7 @@ Logo 是决定你网站第一印象的关键元素之一。想要从 AI 设计 A
 
 **Mastergo 提示词示例**
 
-![](images/image6.png)![](images/image7.png)
+![](images/image6.webp)![](images/image7.webp)
 
 ## 2. 审阅设计稿并提出修改意见
 
@@ -194,7 +194,7 @@ Logo 是决定你网站第一印象的关键元素之一。想要从 AI 设计 A
 
 1. 打开 [Mastergo 插件网站](https://mastergo.com/community/plugin)，搜索 **seal**。
 
-![](images/image9.png)
+![](images/image9.webp)
 
 2. 回到设计页面，点击 **方块图标（插件）**。
 
@@ -202,7 +202,7 @@ Logo 是决定你网站第一印象的关键元素之一。想要从 AI 设计 A
 
 3. 选中你想转换为代码的设计区域，点击 **Generate** 按钮生成代码。
 
-![](images/image11.png)
+![](images/image11.webp)
 
 ---
 
@@ -312,7 +312,7 @@ Agent 生成的初版网站，通常会包含一些自动生成的占位文本�
 
 1. 先写好你想在 About 页面展示的内容。为了方便 Agent 理解，可以将内容保存为 Markdown 格式。
 
-![](images/image15.png)
+![](images/image15.webp)
 
 2. 然后在对话中告诉 Agent，将该文件中的内容应用到指定页面上。
 
@@ -320,7 +320,7 @@ Agent 生成的初版网站，通常会包含一些自动生成的占位文本�
 
 3. 查看应用内容后的更新版本。
 
-![](images/image17.png)
+![](images/image17.webp)
 
 ## 6. 插入图片
 
@@ -332,7 +332,7 @@ Agent 生成的初版网站，通常会包含一些自动生成的占位文本�
 
 - **结果：**
 
-![](images/image21.png)
+![](images/image21.webp)
 
 ---
 
@@ -348,4 +348,4 @@ Agent 生成的初版网站，通常会包含一些自动生成的占位文本�
 
 - **结果：**
 
-![](images/image23.png)
+![](images/image23.webp)

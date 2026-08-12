@@ -55,7 +55,7 @@ Một suy nghĩ mơ hồ trở thành ý tưởng khi có ít nhất bốn phầ
 3. **Một nhiệm vụ có thể nói thành lời** như tóm tắt báo cáo hoặc tạo biên bản.
 4. **Một cách tốt hơn hiện tại**: ít bước, ít lỗi, bớt lo hoặc cho kết quả dễ dùng hơn.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image1.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image1.webp)
 
 Nếu chưa điền đủ, hãy kể cho AI điều bạn đã biết và yêu cầu nó chỉ ra chỗ thiếu. Xem AI như người cùng bàn luận, không phải người quyết định thay bạn.
 
@@ -65,7 +65,7 @@ Tự say mê xảy ra khi người làm rất hào hứng còn người dùng ch
 
 Chức năng hào nhoáng chưa tạo thành nhu cầu. Với nhu cầu thật, người dùng đã cố giải quyết dù chưa có sản phẩm của bạn: dùng Excel, chép qua nhiều công cụ, trả tiền cho lựa chọn khác hoặc chịu một quy trình thủ công khó chịu. Nhu cầu giả chỉ tồn tại khi bạn đang thuyết trình.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image2.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image2.webp)
 
 Hãy hỏi: “Ngoài tôi ra, ai đang thật sự đau đầu vì việc này?”. Tìm lời phàn nàn lặp lại, cách chắp vá và chi phí cụ thể.
 
@@ -79,13 +79,13 @@ Hãy hỏi: “Ngoài tôi ra, ai đang thật sự đau đầu vì việc này?
 
 Ý tưởng thường được nhặt từ đời sống của chính mình, cộng đồng có thể tiếp cận, cuộc trò chuyện công khai và sản phẩm đã tồn tại.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image3.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image3.webp)
 
 ### Yêu và tham gia đời sống của chính mình
 
 Càng thật sự làm một sở thích, bạn càng thấy ma sát nhỏ. Người nuôi mèo biết khi nào mèo tránh camera. Từ đó có thể nghĩ ra ứng dụng hiện chấm sáng cạnh camera, chụp liên tiếp và học kiểu chuyển động mỗi con thích.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image4.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image4.webp)
 
 Khi trang điểm, một câu nói sau lúc chụp có thể lưu sản phẩm rồi tìm lại theo “phỏng vấn”, “tông ấm” hoặc “năm phút”. Khi đi bộ trong thành phố, ghi âm có thể lưu vị trí, thời tiết và không khí. Mỗi lần phải xoay xở là một manh mối.
 
@@ -150,9 +150,9 @@ Nhiều người dừng ở đây vì bức tranh trong đầu quá lớn. Để
 
 Design Council mô tả hai hình thoi. Hình đầu mở rộng nghiên cứu rồi thu lại thành vấn đề rõ. Hình thứ hai mở nhiều giải pháp rồi chọn, thử và hoàn thiện một phương án có thể giao. Cả hai đều tránh việc nhảy quá sớm vào đáp án yêu thích.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image6.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image6.webp)
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image7.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image7.webp)
 
 ### Hình thoi thứ nhất: từ một điểm tới toàn cảnh rồi thu hẹp vấn đề
 
@@ -170,7 +170,7 @@ Phiên bản đầu không cần hoàn hảo, nhưng phải hoàn thành trọn 
 
 “Nâng hiệu suất” không cho biết ngày mai cần vẽ trang nào. Chia nhỏ là biến mục tiêu rộng thành quyết định và hành động có thể bắt đầu ngay.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image8.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image8.webp)
 
 ### Ví dụ đời sống: “tôi muốn ăn hamburger” nghĩa là gì?
 
@@ -184,7 +184,7 @@ Trước hết làm rõ động cơ: đói và cần nhanh, thèm vị hay gặp
 
 “Hiệu suất” cũng phải cụ thể: ít thời gian, lỗi, khó hiểu hay áp lực tinh thần? Câu trả lời quyết định thứ tự chức năng.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image9.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image9.webp)
 
 #### Lớp chia nhỏ thứ hai
 
@@ -202,13 +202,13 @@ Một giới hạn hợp lý là báo cáo nhiều chữ, tối đa hai mươi t
 
 Vẽ trang tải lên và kết quả; chọn bộ đọc; thử mười PDF đại diện; quy định lỗi chấp nhận được; hiện tiến độ; cho sao chép và tải; quan sát năm người dùng. Mỗi việc đều có thể giao, làm và kiểm tra.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image10.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image10.webp)
 
 ## 2.3 Phác ứng dụng trên bảng: vẽ trước khi làm
 
 Bản vẽ làm lộ khoảng trống trước khi phải trả giá bằng mã. Vẽ đường ngắn nhất gồm vào, thao tác và nhận kết quả.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image11.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image11.webp)
 
 ### Trang vào: người dùng đến từ đâu và thấy gì đầu tiên?
 
@@ -226,9 +226,9 @@ Kết quả phải nối với lời hứa và có bước tiếp theo tự nhi�
 
 Chọn sản phẩm có nhiệm vụ tương tự rồi xem điều hướng, biểu mẫu, trạng thái chờ, trình bày kết quả và hướng dẫn đầu. Không chép logo, câu chữ hay phong cách; hãy hiểu lý do của thiết kế rồi áp dụng cho người dùng của bạn.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image12.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image12.webp)
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image13.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image13.webp)
 
 Kho tham khảo gồm ảnh, nguồn và ghi chú cũng giúp bạn nói rõ với AI mẫu nào cần thích nghi.
 
@@ -266,13 +266,13 @@ Màn hình chưa đẹp khiến người ta dễ góp ý; màn hình quá bóng 
 
 “Khá hay” quá mơ hồ. Giá trị có thể là số phút tiết kiệm, lỗi tránh được, doanh thu tăng, quyết định nhanh hoặc bớt lo lắng.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image14.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image14.webp)
 
 ### Dễ bắt đầu, gần như không cần đọc hướng dẫn
 
 Hành động chính, trạng thái hệ thống và cách thoát lỗi đều rõ. Đơn giản không phải ít năng lực mà là hiện đúng năng lực vào đúng lúc.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image15.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image15.webp)
 
 ### Được nhớ tới tự nhiên trong bối cảnh thường xuyên hoặc quan trọng
 
@@ -286,7 +286,7 @@ Tư duy sản phẩm nhằm làm kết quả của người dùng tốt hơn, kh
 
 Tháp không phải công thức cứng, nhưng giúp hỏi giá trị sâu hơn sau một chức năng.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image16.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image16.webp)
 
 ### Nhu cầu sinh lý và sinh tồn
 
@@ -316,13 +316,13 @@ Cùng một vấn đề sẽ khác khi người mua là cá nhân hay tổ chứ
 
 Ấn tượng đầu, dễ dùng, giá cá nhân, riêng tư và lời giới thiệu rất quan trọng. Người dùng có thể rời sau vài giây và thường tự quyết định.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image17.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image17.webp)
 
 ### Ứng dụng B-end: hiệu suất, chi phí và kiểm soát rủi ro
 
 Người dùng, quản lý, mua sắm, an ninh và lãnh đạo cùng tham gia. Giá trị được tính bằng giờ làm, lỗi, tuân thủ và phối hợp. Cần quyền, nhật ký, tích hợp và hỗ trợ.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image18.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image18.webp)
 
 “Công nghiệp” ở đây là thực tiễn doanh nghiệp, không chỉ nhà máy: duyệt hợp đồng, chăm sóc khách, phối hợp tồn kho hay làm báo cáo.
 
@@ -350,7 +350,7 @@ Hỏi trước liệu sản phẩm có giải quyết được gì khi không c�
 
 AI có thể phân loại, tóm tắt, tạo, đề xuất, trò chuyện hoặc điều phối bước. Đồng thời xác định vai trò con người: đưa bối cảnh, xác nhận quyết định, sửa và chịu trách nhiệm với hành động rủi ro.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image19.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image19.webp)
 
 Với mỗi chức năng, ghi đầu vào, đầu ra, lỗi có thể có, cách kiểm tra và phương án khi mô hình không dùng được. Như vậy “dùng AI” trở thành thiết kế có thể kiểm chứng.
 
@@ -358,7 +358,7 @@ Với mỗi chức năng, ghi đầu vào, đầu ra, lỗi có thể có, cách
 
 Mô hình xử lý chữ, ảnh, giọng nói, video và công cụ, nhưng có thể bịa, mất bối cảnh và cho kết quả dao động. Dữ liệu nhạy cảm, quyết định y tế, pháp lý, tài chính và hành động không thể hoàn tác cần kiểm soát.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image20.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image20.webp)
 
 Đo xem AI có giảm thời gian, nâng chất lượng, tăng tần suất hay tạo chức năng được trả tiền không. Nếu nó chỉ làm luồng đắt và khó đoán, đó không phải khuếch đại giá trị.
 
@@ -434,4 +434,4 @@ Khởi đầu thô, ít chức năng hoặc chưa ai trả tiền đều là d�
 
 Như _To the Moon_ nói: **“Kết thúc không quan trọng hơn bất kỳ khoảnh khắc nào dẫn đến nó.”**
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image21.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image21.webp)

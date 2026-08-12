@@ -31,7 +31,7 @@ Hãy nhớ lại tuần vừa qua. Việc nào khiến bạn liên tục sao ch�
 
 Ví dụ khi tìm nhà, bạn có thể mở ba nền tảng và tự chép tiền thuê cùng thời gian đi lại vào bảng. Sau khi xem nhà, ảnh trong điện thoại đôi khi không còn khớp với tin đăng.
 
-![Ảnh nhà rời rạc được gom lại cùng vị trí và tuyến đi lại](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.jpg)
+![Ảnh nhà rời rạc được gom lại cùng vị trí và tuyến đi lại](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.webp)
 
 _Trước hết hãy ghi lại trải nghiệm, chưa cần biến nó thành sản phẩm ngay._
 
@@ -45,7 +45,7 @@ Manh mối thường nằm trong những cuộc trò chuyện rất bình thư�
 
 Trước một sự kiện, một áp phích có thể phải đổi thành ảnh ngang, bài dọc và bìa video. Mỗi lần đổi kích thước, người thiết kế lại sắp xếp tiêu đề, chủ thể và vùng an toàn.
 
-![Cùng một nội dung được bố trí cho khung ngang, vuông, dọc và hẹp](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.jpg)
+![Cùng một nội dung được bố trí cho khung ngang, vuông, dọc và hẹp](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.webp)
 
 _Nếu cùng một lời nhờ xuất hiện lại sau vài ngày, hãy lưu nó._
 
@@ -88,7 +88,7 @@ Bản đồ có nhiều nguồn. Bốn trang sau đại diện cho ra mắt sả
 
 Product Hunt tập trung các đợt ra mắt sản phẩm công nghệ. Nhà phát triển chuẩn bị mô tả, ảnh và bản trình diễn rồi nhận phiếu bầu cùng bình luận trong ngày ra mắt.
 
-![Trang chủ Product Hunt với sản phẩm mới, phiếu bầu và thảo luận](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.png)
+![Trang chủ Product Hunt với sản phẩm mới, phiếu bầu và thảo luận](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.webp)
 
 Sản phẩm thay đổi mỗi ngày. Mở một sản phẩm rồi xem nó tự giới thiệu bằng một câu thế nào, ảnh đầu nhấn mạnh điều gì và mọi người hỏi gì trong bình luận. Đừng chỉ nhìn hạng nhất; theo dõi vài ngày sẽ thấy nhóm sản phẩm lặp lại.
 
@@ -96,7 +96,7 @@ Sản phẩm thay đổi mỗi ngày. Mở một sản phẩm rồi xem nó tự
 
 Product Hunt giống sân khấu ngày ra mắt. Indie Hackers là cộng đồng dài hạn nơi nhà phát triển chia sẻ tiến độ, doanh thu, cách tìm khách hàng và cả thất bại.
 
-![Trang Products của Indie Hackers hiển thị sản phẩm và tiến độ](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.png)
+![Trang Products của Indie Hackers hiển thị sản phẩm và tiến độ](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.webp)
 
 Không cần chỉ tìm dự án có doanh thu cao nhất. Một sản phẩm do một người duy trì với thu nhập nhỏ nhưng đều thường cho thấy rõ hơn vấn đề ban đầu và nguồn khách hàng đầu tiên.
 
@@ -104,7 +104,7 @@ Không cần chỉ tìm dự án có doanh thu cao nhất. Một sản phẩm do
 
 Capterra là danh mục và trang đánh giá phần mềm doanh nghiệp. Có thể so sánh CRM, quản lý dự án, hỗ trợ khách hàng, xếp lịch và nhiều công cụ khác.
 
-![Trang chủ Capterra với tìm kiếm, danh mục và so sánh](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.png)
+![Trang chủ Capterra với tìm kiếm, danh mục và so sánh](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.webp)
 
 Nếu quan tâm một nhóm sản phẩm, hãy mở vài công cụ quen thuộc và đọc đánh giá thấp. Những lời phàn nàn lặp lại như bản di động khó dùng, định dạng xuất sai hoặc cài đặt quá phức tạp thường đáng lưu hơn danh sách chức năng chính thức.
 
@@ -112,7 +112,7 @@ Nếu quan tâm một nhóm sản phẩm, hãy mở vài công cụ quen thuộc
 
 Google Trends cho thấy mức quan tâm tìm kiếm tương đối theo thời gian và khu vực, kèm truy vấn liên quan và tăng nhanh.
 
-![Trang chủ Google Trends với xu hướng và khám phá từ khóa](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.png)
+![Trang chủ Google Trends với xu hướng và khám phá từ khóa](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.webp)
 
 Hãy dùng khi đã có vài cách gọi. So sánh “AI meeting notes”, “AI transcription” và “voice notes” để xem người dùng tìm cách nói nào nhiều hơn. Đường tăng không chứng minh có thị trường; nó chỉ cho thấy sự chú ý đang thay đổi.
 

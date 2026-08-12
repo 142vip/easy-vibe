@@ -244,7 +244,7 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
 - **主要特性與工作流：** Lovable 在整合與協作方面做得很好，它自動完成諸如連線 Supabase 資料庫等初始化工作，使專案搭建過程非常順暢。你只需描述專案需求，Agent 就會幫你把各類服務串聯起來，構建好基本結構。
 - **適合的使用者：** 對於第一次嘗試 Vibe Coding 的新手來說，Lovable 是非常友好的選擇。它簡化了多服務聯動的複雜度，讓你可以把注意力集中在提示詞與迭代上，而不是環境配置。得益於高度自動化，你能很快得到一個可執行的原型。
 - **提示詞過程：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.webp)
 - **貪喫蛇遊戲效果：**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.png)
@@ -258,10 +258,10 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
 - **主要特性與工作流：** Cursor 是一款整合了 AI 能力的專有 IDE，支援 Windows、macOS 和 Linux。它把程式碼生成、智慧重寫、程式碼庫查詢等功能直接嵌入在開發環境中。與 Web 工具相比，它更接近傳統本地開發體驗。由於是本地環境，不同電腦的配置各異，偶爾會遇到環境相關問題。好處是專案就在本機，無需再額外下載或配置執行環境，Cursor 會幫你處理很多繁瑣步驟。
 - **適合的使用者：** 對已有一定程式設計基礎的使用者，Cursor 是一個非常強大又熟悉的環境。但對完全零基礎的新手來說，需要自己理解專案結構、依賴管理和檔案組織等概念，學習曲線會更陡一些。更適合想在傳統編碼流程中加入 AI 助手的開發者。
 - **提示詞過程：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image7.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image7.webp)
 - **貪喫蛇遊戲效果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.webp)
 
 - **價格：**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
@@ -272,7 +272,7 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
 - **主要特性與工作流：** Z.ai 的使用方式比較直接，但一個明顯的挑戰在於：你需要 **手動複製貼上生成的程式碼**。平臺本身缺少實時預覽視窗，因此很難第一時間看到程式碼執行效果。
 - **適合的使用者：** 這個平臺要求比較“動手”的使用方式。缺少自動化意味著你必須與程式碼直接打交道，這對想深入理解 AI 輸出內容的人來說反而是種訓練。但頻繁的複製貼上會帶來效率問題和出錯風險。更適合想看“原生 AI 輸出程式碼”的同學，而不是追求一鍵式體驗的人。
 - **提示詞過程：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image11.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image11.webp)
 - **貪喫蛇遊戲效果：**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image12.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image13.png)
@@ -285,11 +285,11 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
 - **平臺型別：** Web 端
 - **主要特性與工作流：** Replit 是一體化的線上開發與部署環境，瀏覽器裡就可以寫程式碼、執行程式、生成線上訪問地址。開始編碼前，它會給出清晰的行動計劃；同時還提供視覺化編輯器，你可以在預覽視窗裡直接改 UI，原始碼會自動同步更新。這樣可以讓你隨時校驗 AI 的輸出是否符合預期，大幅減少來回修改的次數。
 
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image15.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image15.webp)
 
 - **適合的使用者：** Replit 對新手十分友好。它簡化了從編碼到部署的完整閉環，無需自己額外配置伺服器或託管服務。協作功能也很強，適合同學之間一起做專案或請他人遠端幫忙檢視程式碼。
 - **提示詞過程：** 在構建過程中，AI 並不是一開始就完全理解需求，中間經歷了大約 3 輪迭代，最終輸出才達到了理想效果。
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.webp)
 - **貪喫蛇遊戲效果：**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.png)
@@ -304,7 +304,7 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
 - **適合的使用者：** 由於它會自動執行測試和修復錯誤，時間與 Token 消耗都比較大，但你可以清楚看到 AI 如何定位並解決問題，從學習角度看很有價值。
 - **提示詞過程：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
 
 - **貪喫蛇遊戲效果：**
 
@@ -319,10 +319,10 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
 - **主要特性與工作流：** 作為桌面應用，Trae 相比 Web 工具在效能和響應速度上通常更有優勢。但它需要下載安裝，對一些使用者來說入門門檻稍高。同樣地，由於是本地環境，不同電腦配置和依賴環境的差異，會帶來一定的不確定性。優勢在於，Trae 會幫助你在本地完成專案建立與執行配置，你可以直接在本機開發與除錯。
 - **適合的使用者：** 更適合計劃長期進行 Vibe Coding 專案、並希望使用專門桌面工具的使用者。對於只想“偶爾玩一下”的同學，可能不是最輕量的選擇。
 - **提示詞過程：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.webp)
 - **貪喫蛇遊戲效果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.webp)
 
 - **價格：** 價格相對親民，即便是免費版本，也足以完成質量不錯的小專案。
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
@@ -333,9 +333,9 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
 - **主要特性與工作流：** V0 是一個專注於生成 React UI 元件的工具，由 Vercel 提供。它在生成高質量、可用於生產環境的介面方面表現出色。但在實際使用中，會遇到諸如“難以找到程式碼檢視”、“沒有清晰說明 API Key 應該配置在何處”等問題。
 - **適合的使用者：** V0 非常適合專注前端和 UI/UX 設計的學生或設計師。但它並不是完整的全棧解決方案，你仍然需要使用其他平臺來實現後端邏輯與 API 整合，因此如果你的目標是“一站式搭建完整應用”，它可能不是最佳首選。
 - **提示詞過程：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.webp)
 
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.webp)
 
 - **貪喫蛇遊戲效果：**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.png)

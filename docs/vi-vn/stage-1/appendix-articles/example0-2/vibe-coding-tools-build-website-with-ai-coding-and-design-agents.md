@@ -79,7 +79,7 @@ Kết hợp đồ họa trừu tượng tượng trưng cho AI với chữ, và 
 
 - Nhập prompt trên → So sánh nhiều bản thiết kế do Agent tạo.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. Xác định Logo cuối cùng
 
@@ -142,7 +142,7 @@ Kể cả bạn tạm chưa nghĩ ra phối màu nào, cũng có thể tìm cả
 
 - **Tìm kiếm phối màu qua từ khóa trên Google**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.webp)
 
 ## 4. Viết prompt thiết kế trang web
 
@@ -164,7 +164,7 @@ Phong cách tổng thể hiện đại, gọn gàng."
 
 **Ví dụ prompt Mastergo**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.webp)
 
 ## 2. Xem xét bản thiết kế và đưa ra ý kiến sửa đổi
 
@@ -187,7 +187,7 @@ Cách chuyển thiết kế thành code sẽ khác nhau tùy nền tảng, nhưn
 
 1. Mở [trang plugin Mastergo](https://mastergo.com/community/plugin), tìm **seal**.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.webp)
 
 2. Quay lại trang thiết kế, click **icon hình vuông (plugin)**.
 
@@ -195,7 +195,7 @@ Cách chuyển thiết kế thành code sẽ khác nhau tùy nền tảng, nhưn
 
 3. Chọn vùng thiết kế bạn muốn chuyển thành code, click nút **Generate** để tạo code.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.webp)
 
 ---
 
@@ -305,7 +305,7 @@ Trang web phiên bản đầu do Agent tạo, thường bao gồm một số vă
 
 1. Trước viết xong nội dung bạn muốn hiển thị trên trang About. Để Agent dễ hiểu, có thể lưu nội dung dưới định dạng Markdown.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.webp)
 
 2. Sau đó nói với Agent trong hội thoại, áp dụng nội dung từ file này lên trang được chỉ định.
 
@@ -313,7 +313,7 @@ Trang web phiên bản đầu do Agent tạo, thường bao gồm một số vă
 
 3. Xem phiên bản cập nhật sau khi áp dụng nội dung.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.webp)
 
 ## 6. Chèn hình ảnh
 
@@ -325,7 +325,7 @@ Nếu bạn muốn thêm hình ảnh cụ thể (ví dụ Logo, ảnh nền, v.v
 
 - **Kết quả:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.webp)
 
 ---
 
@@ -341,7 +341,7 @@ Khi bạn đã tải xuống file code từ Agent thiết kế, có thể di chu
 
 - **Kết quả:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
 ---
 title: 'Lam website voi agent thiet ke va lap trinh'
 description: 'Tu y tuong den len song: dung agent thiet ke tao visual, sau do dung agent code tao website chay duoc voi workflow tai su dung.'

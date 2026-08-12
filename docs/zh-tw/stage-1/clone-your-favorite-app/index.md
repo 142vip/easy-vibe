@@ -100,7 +100,7 @@ _截圖來源：[Framer Website Builder](https://www.framer.com/solutions/websit
 
 Trae 建立了 `index.html`、`styles.css` 和 `script.js`，接著在瀏覽器開啟網頁。下面是這次實際產生的結果：
 
-![Trae 依截圖實際產生並執行的 Wishlabs 網頁](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.gif)
+![Trae 依截圖實際產生並執行的 Wishlabs 網頁](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.webp)
 
 先不用研究程式碼，只看頁面。對照參考圖，可以看到：
 
@@ -167,7 +167,7 @@ Trae 建立了 `index.html`、`styles.css` 和 `script.js`，接著在瀏覽器�
 
 SaaS 產品常用資料看板呈現專案進度、銷售或使用者資料。Linear 頁面左邊是導覽，右邊是看板內容，結構很清楚。
 
-![Linear 官方 Dashboard 介面](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.png)
+![Linear 官方 Dashboard 介面](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.webp)
 
 _課堂參考圖：[Linear Dashboards](https://linear.app/docs/dashboards)_
 
@@ -180,7 +180,7 @@ _課堂參考圖：[Linear Dashboards](https://linear.app/docs/dashboards)_
 
 Trae 做出側邊欄、資料卡片和圖表。下面是實際執行畫面：
 
-![Trae 依截圖產生並執行的資料看板](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.gif)
+![Trae 依截圖產生並執行的資料看板](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.webp)
 
 這些不是真實業務資料，沒有關係。第一次重點是做出看板結構，頁面穩定後再換成自己的標題和數字。
 
@@ -188,7 +188,7 @@ Trae 做出側邊欄、資料卡片和圖表。下面是實際執行畫面：
 
 如果對普通網頁沒興趣，也可以用遊戲畫面練習。老師選了一張 Minecraft 方塊世界截圖。
 
-![Minecraft Creative Mode 真實介面](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.png)
+![Minecraft Creative Mode 真實介面](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.webp)
 
 _課堂參考圖：[Microsoft Learn 的 Minecraft 範例](https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/108)_
 
@@ -201,7 +201,7 @@ _課堂參考圖：[Microsoft Learn 的 Minecraft 範例](https://learn.microsof
 
 Trae 做出可以玩的瀏覽器遊戲，角色能移動，也能放置和破壞方塊：
 
-![Trae 依截圖產生並執行的 2D 方塊遊戲](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.gif)
+![Trae 依截圖產生並執行的 2D 方塊遊戲](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.webp)
 
 注意，上面是 <strong>2D 橫向遊戲</strong>。角色只在平面移動，畫面沒有前後遠近。因為提示詞只說「方塊遊戲」，沒有要求 3D，所以 Trae 選了比較簡單的做法。
 
@@ -218,7 +218,7 @@ Trae 做出可以玩的瀏覽器遊戲，角色能移動，也能放置和破壞
 
 這次 Trae 做出了真正的 3D 方塊世界：
 
-![Trae 依截圖產生並執行的 3D 方塊遊戲](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.gif)
+![Trae 依截圖產生並執行的 3D 方塊遊戲](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.webp)
 
 點選「開始遊戲」後，用 `WASD` 走動、滑鼠轉視角。左鍵破壞方塊、右鍵放置方塊，數字鍵更換方塊。
 

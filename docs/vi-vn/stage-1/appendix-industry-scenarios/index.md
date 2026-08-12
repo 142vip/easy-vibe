@@ -41,7 +41,7 @@ Mỗi mục bắt đầu từ một vị trí cụ thể. Đừng vội sao ché
 
 <figure class="product-shot">
   <a href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.jpg" alt="Klarna AI Assistant với gia hạn thanh toán, hỗ trợ đa ngôn ngữ và giải thích hoàn tiền" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/klarna.webp" alt="Klarna AI Assistant với gia hạn thanh toán, hỗ trợ đa ngôn ngữ và giải thích hoàn tiền" loading="lazy" />
   </a>
   <figcaption><strong>Klarna AI Assistant:</strong> không chỉ nói “liên hệ nhân viên”; nó mở thao tác gia hạn và tách khoản hoàn tiền. AI hữu ích phải tìm được đơn hàng và tiếp tục hành động.</figcaption>
 </figure>
@@ -114,7 +114,7 @@ Nhóm nhỏ có thể kiểm tra thanh toán, gia hạn, bồi thường và d�
 
 <figure class="product-shot">
   <a href="https://github.blog/changelog/2024-10-29-github-copilot-code-review-in-github-com-private-preview/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.png" alt="GitHub Copilot đánh giá Pull Request" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/github-copilot-review.webp" alt="GitHub Copilot đánh giá Pull Request" loading="lazy" />
   </a>
   <figcaption><strong>GitHub Copilot Code Review:</strong> nhận xét gắn đúng dòng và có thể đề xuất thay đổi. Lập trình viên xem khác biệt, gom hoặc từ chối. Giá trị nằm trong Pull Request, không phải cửa sổ chat khác.</figcaption>
 </figure>
@@ -146,7 +146,7 @@ Bắt đầu với một loại thiết bị, không “dự đoán cả nhà m�
 
 <figure class="product-shot">
   <a href="https://www.abridge.com/product" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.png" alt="Abridge nối ghi chú lâm sàng với cuộc trò chuyện" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/abridge-note.webp" alt="Abridge nối ghi chú lâm sàng với cuộc trò chuyện" loading="lazy" />
   </a>
   <figcaption><strong>Abridge:</strong> ghi chú tạo ra quay về đúng cuộc trò chuyện. Quan trọng không phải viết nhanh, mà bác sĩ truy vết, sửa và xác nhận được từng mục.</figcaption>
 </figure>
@@ -184,7 +184,7 @@ Lỗi dễ gặp là đặt bảy prompt vào cùng một chat. Các sản phẩ
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://www.aboutamazon.com/news/retail/amazon-rufus" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.jpg" alt="Trợ lý mua sắm Amazon Rufus" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/amazon-rufus.webp" alt="Trợ lý mua sắm Amazon Rufus" loading="lazy" />
   </a>
   <figcaption><strong>Amazon Rufus:</strong> nằm dưới ô tìm kiếm và xử lý so sánh, Prime Day, đồng hồ theo dõi giấc ngủ. Câu trả lời nối với hàng thật, không dừng ở lời khuyên chung.</figcaption>
 </figure>
@@ -210,7 +210,7 @@ Có thể bắt đầu “nửa ngày với trẻ” hoặc “đường đêm s
 
 <figure class="product-shot product-shot--portrait">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.png" alt="Duolingo Max luyện gọi món trong quán cà phê Paris" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-roleplay.webp" alt="Duolingo Max luyện gọi món trong quán cà phê Paris" loading="lazy" />
   </a>
   <figcaption><strong>Duolingo Max Roleplay:</strong> không phải “nói tiếng Pháp”, mà là gọi món trong quán Paris. Cảnh, vai, mục tiêu và thưởng đã sẵn để luyện ngay.</figcaption>
 </figure>
@@ -223,7 +223,7 @@ Sản phẩm có thể phục vụ một thao tác: trả lời phỏng vấn, n
 
 <figure class="product-shot">
   <a href="https://firefly.adobe.com/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.png" alt="Không gian sinh ảnh Adobe Firefly" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/adobe-firefly.webp" alt="Không gian sinh ảnh Adobe Firefly" loading="lazy" />
   </a>
   <figcaption><strong>Adobe Firefly:</strong> có mô hình, tỷ lệ, loại, cường độ, ảnh tham khảo và nhiều kết quả, không chỉ ô prompt. Sản phẩm sáng tạo phải cho điều khiển để sửa tiếp.</figcaption>
 </figure>

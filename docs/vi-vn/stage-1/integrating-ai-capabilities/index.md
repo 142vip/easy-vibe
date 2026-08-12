@@ -65,7 +65,7 @@ Không phải chức năng nào cũng hoàn thành trong một lần gọi một
 
 AI chỉ xử lý phần phù hợp với nó. Đăng nhập, thanh toán, lưu tệp và chuyển trang có quy tắc rõ ràng, vẫn được thực hiện bằng chương trình thông thường.
 
-![Trang thật hiểu ảnh sản phẩm trước khi tạo mô tả](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![Trang thật hiểu ảnh sản phẩm trước khi tạo mô tả](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.webp)
 
 *Trong nguyên mẫu này, trang nhận diện thông tin sản phẩm trước. Người dùng xác nhận rồi mới tạo mô tả và các điểm nổi bật còn chỉnh sửa được.*
 
@@ -169,7 +169,7 @@ Nếu lỗi có Request ID hoặc Trace ID, hãy lưu lại để tìm đúng y�
 
 Danh mục Models cho biết những mô hình văn bản, ảnh, giọng nói và video hiện có. Mở chi tiết và sao chép Model ID dùng trong mã; nó có thể khác tên hiển thị.
 
-![Danh mục SiliconFlow với bộ lọc văn bản, ảnh, video và giọng nói](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
+![Danh mục SiliconFlow với bộ lọc văn bản, ảnh, video và giọng nói](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.webp)
 
 *Danh mục SiliconFlow có thể lọc theo loại năng lực.*
 
@@ -286,7 +286,7 @@ response = client.chat.completions.create(
 )
 ```
 
-![Kết nối API hiểu ảnh trong IDE có AI](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
+![Kết nối API hiểu ảnh trong IDE có AI](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.webp)
 
 *Cho người dùng xác nhận thông tin đã nhận diện trước khi tạo nội dung cuối giúp phát hiện lỗi dễ hơn.*
 
@@ -318,7 +318,7 @@ curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
   }'
 ```
 
-![Kết quả sinh ảnh được nối vào sản phẩm](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
+![Kết quả sinh ảnh được nối vào sản phẩm](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.webp)
 
 URL ảnh có thể hết hạn. Nguyên mẫu có thể hiển thị trực tiếp; khi phát hành cần quyết định lưu vào kho riêng theo điều khoản dịch vụ và ghi lại prompt, phiên bản mô hình, thời gian tạo.
 

@@ -388,17 +388,17 @@ Si te encuentras con la siguiente situacion, significa que ya se ha iniciado un 
 :::
 
 Despues de confirmar todo, espera un momento a que el agente termine de ejecutarse, y podemos obtener el siguiente resultado:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.webp)
 
 Podemos ver que ya hay una vista preliminar de las funcionalidades, pero la pagina frontend se ve muy fea. En este momento podemos intentar hablar directamente con la IA para optimizar la visualizacion de la interfaz:
 
 Despues de optimizar, podemos obtener una interfaz mas bonita:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.webp)
 
 Puedes modificar las funcionalidades de la pagina web segun tus necesidades; puedes adjuntar capturas de pantalla y preguntar libremente, por ejemplo: "Todavia no necesito la funcion de importacion en lote, ayudame a quitarla", "Hay demasiadas cosas que rellenar a la izquierda, ayudame a dejar solo xxxxx". Incluso puedes referenciar otros sitios web maduros; por ejemplo, aqui podemos referirnos directamente a un producto de diseno de Google (puedes pegar una captura de pantalla de un sitio web maduro que te guste):
 
 Finalmente podemos obtener:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.webp)
 
 ### 2.3 Que hacer cuando hay errores
 
@@ -528,13 +528,13 @@ Necesito probar el proceso de uso del usuario, asegurandome de que pueda complet
 ```
 
 Es facil obtener resultados (si crees que un dato es muy poco, puedes pedirle a la IA que genere multiples casos de prueba):
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.webp)
 
 Despues de hacer clic, obtenemos el resultado:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.webp)
 
 En este punto lo que obtenemos directamente es el resultado, no hay un "proceso de generacion simulado". Si queremos simular un proceso de generacion real, podemos hablar directamente con la IA: "Por favor simula un proceso de generacion real, que me des el resultado despues de un rato al hacer clic."
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.webp)
 
 Despues de verificar la funcionalidad de generacion, tambien debemos asegurarnos de que la funcionalidad de la biblioteca de plantillas funciona correctamente. En la tarjeta de generacion de la pagina podemos ver que la funcion de guardado de plantillas no se ha implementado; necesitamos tener una conversacion mas profunda con la IA: "Por favor ayudame a asegurarme de que el requisito [pega aqui el contenido del punto 2 de arriba] funciona correctamente, que se pueda hacer clic en un resultado para guardar la plantilla correspondiente, y que al abrirlo se puedan ver los parametros de generacion"
 
@@ -542,7 +542,7 @@ La generacion a menudo no se consigue de una sola vez; frecuentemente hay que ha
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
 
 Finalmente obtenemos el resultado esperado:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.webp)
 
 Ademas de experimentar manualmente el flujo de requisitos, tambien puedes pedirle a la IA que haga directamente una verificacion de requisitos, por ejemplo:
 

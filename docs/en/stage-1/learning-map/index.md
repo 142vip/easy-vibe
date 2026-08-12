@@ -27,7 +27,7 @@ Building software used to have a high barrier. You had to learn programming lang
 Its first breakthrough was allowing more people to cross the barrier of “I cannot code, so I cannot begin.” Someone with no programming experience can now create a small game, webpage, or demonstrable prototype in a few minutes.
 
 <figure class="concept-illustration">
-  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.png" alt="A creator uses AI to turn a natural-language idea into a product prototype, gives it to real users, and continues iterating from feedback" loading="lazy">
+  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.webp" alt="A creator uses AI to turn a natural-language idea into a product prototype, gives it to real users, and continues iterating from feedback" loading="lazy">
   <figcaption>Vibe Coding helps you cross the “make it” barrier; building a product means continuing toward real users, feedback, and value.</figcaption>
 </figure>
 

@@ -100,7 +100,7 @@ After sending, wait while Trae creates the files. Do not send several more reque
 
 Trae created `index.html`, `styles.css`, and `script.js`, then opened the webpage in a browser. This animation is the result produced in the lesson:
 
-![Wishlabs page generated and run from the screenshot](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.gif)
+![Wishlabs page generated and run from the screenshot](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.webp)
 
 Do not study the code yet. Look at the page and compare it with the reference:
 
@@ -167,7 +167,7 @@ The screenshot method is not limited to product homepages. To verify that, the t
 
 SaaS products often use dashboards for project progress, sales, or user data. In this Linear screenshot, navigation is on the left and the dashboard content is on the right.
 
-![Official Linear Dashboard interface](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.png)
+![Official Linear Dashboard interface](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.webp)
 
 _Class reference: [Linear Dashboards](https://linear.app/docs/dashboards)_
 
@@ -180,7 +180,7 @@ Use sample data for now.
 
 Trae produced a sidebar, data cards, and charts. This is the page running in the browser:
 
-![Dashboard generated and run from the screenshot](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.gif)
+![Dashboard generated and run from the screenshot](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.webp)
 
 The numbers are not real business data, and that is fine. The first exercise is about building the dashboard structure. Replace the labels and figures only after the page is stable.
 
@@ -188,7 +188,7 @@ The numbers are not real business data, and that is fine. The first exercise is 
 
 If an ordinary webpage does not interest you, use a game screenshot. The teacher chose a Minecraft block-world image.
 
-![Minecraft Creative Mode interface](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.png)
+![Minecraft Creative Mode interface](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.webp)
 
 _Class reference: [Minecraft example on Microsoft Learn](https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/108)_
 
@@ -201,7 +201,7 @@ The character should move and place blocks.
 
 Trae created a playable browser game in which the character can move and place or remove blocks:
 
-![2D block game generated and run from the screenshot](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.gif)
+![2D block game generated and run from the screenshot](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.webp)
 
 Notice that this result is a <strong>2D side-view game</strong>. The character moves on a flat plane and the picture has no forward or backward depth. Because the prompt only said “block game,” Trae chose the simpler interpretation.
 
@@ -218,7 +218,7 @@ Let the player walk, turn the camera, and place blocks.
 
 This time Trae created an actual 3D block world:
 
-![3D block game generated and run from the screenshot](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.gif)
+![3D block game generated and run from the screenshot](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.webp)
 
 After selecting “Start Game,” use `WASD` to walk and the mouse to turn. The left button removes a block, the right button places one, and number keys change the block type.
 

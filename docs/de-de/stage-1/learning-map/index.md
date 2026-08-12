@@ -27,7 +27,7 @@ Software zu bauen hatte früher eine hohe Einstiegshürde. Man musste Programmie
 Der erste Durchbruch bestand darin, dass mehr Menschen die Hürde „Ich kann nicht programmieren, also kann ich nicht anfangen“ überwinden konnten. Ohne Erfahrung lassen sich innerhalb weniger Minuten ein kleines Spiel, eine Webseite oder ein vorführbarer Prototyp erstellen.
 
 <figure class="concept-illustration">
-  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.png" alt="Eine Person verwandelt mit KI eine natürlich formulierte Idee in einen Produktprototyp, gibt ihn echten Nutzern und verbessert ihn anhand des Feedbacks" loading="lazy">
+  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.webp" alt="Eine Person verwandelt mit KI eine natürlich formulierte Idee in einen Produktprototyp, gibt ihn echten Nutzern und verbessert ihn anhand des Feedbacks" loading="lazy">
   <figcaption>Vibe Coding hilft über die Hürde des „Machens“; ein Produkt zu bauen bedeutet, weiter zu echten Nutzern, Feedback und Wert zu gehen.</figcaption>
 </figure>
 

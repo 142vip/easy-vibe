@@ -316,14 +316,14 @@ Khi tạo dự án React bằng Vite, máy tính sẽ chạy một server local 
 
 Sau khi xác nhận xong, chờ Agent chạy một lúc, bạn sẽ có phiên bản đầu tiên:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.webp)
 
 Nếu giao diện còn xấu, hãy nói thẳng với AI:
 
 
 Sau khi tối ưu có thể nhận được giao diện đẹp hơn:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.webp)
 
 Bạn có thể tiếp tục điều chỉnh bằng yêu cầu cụ thể:
 
@@ -334,7 +334,7 @@ Bạn có thể tiếp tục điều chỉnh bằng yêu cầu cụ thể:
 
 Kết quả cuối có thể tiến gần hơn đến một prototype chuyên nghiệp:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.webp)
 
 ### 2.3 Gặp lỗi thì làm gì?
 
@@ -419,17 +419,17 @@ Tôi cần kiểm thử luồng người dùng này. Hãy thêm một lối vào
 
 Nếu một bộ dữ liệu quá ít, hãy yêu cầu AI tạo nhiều case kiểm thử:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.webp)
 
 Bấm vào có thể nhận kết quả:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.webp)
 
 Nếu kết quả xuất hiện quá nhanh, không giống quá trình tạo thật, có thể yêu cầu:
 
 > Hãy mô phỏng một quá trình tạo thật: sau khi bấm nút, chờ một khoảng thời gian rồi mới hiển thị kết quả.
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.webp)
 
 Sau đó kiểm tra thư viện mẫu. Nếu card kết quả chưa có chức năng lưu, hãy yêu cầu:
 
@@ -441,7 +441,7 @@ Quá trình này thường cần sửa nhiều vòng bằng ảnh chụp và mô
 
 Kết quả kỳ vọng:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.webp)
 
 Ngoài tự trải nghiệm, bạn cũng có thể nhờ AI làm kiểm tra yêu cầu:
 

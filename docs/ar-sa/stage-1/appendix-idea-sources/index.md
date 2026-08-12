@@ -31,7 +31,7 @@ const duration = 'نحو <strong>20 دقيقة</strong>'
 
 عند البحث عن سكن مثلًا، قد تفتح ثلاث منصات وتنسخ الإيجار وزمن التنقل إلى جدول. وبعد الزيارات قد تختلط صور الهاتف فلا تعرف الإعلان الذي تنتمي إليه.
 
-![صور عقارات متفرقة مجمعة مع علامات الموقع وطرق التنقل](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.jpg)
+![صور عقارات متفرقة مجمعة مع علامات الموقع وطرق التنقل](../../../zh-cn/stage-1/appendix-idea-sources/images/rental-listing-comparison.webp)
 
 _سجّل التجربة أولًا، ولا تحاول تحويلها إلى منتج فورًا._
 
@@ -45,7 +45,7 @@ _سجّل التجربة أولًا، ولا تحاول تحويلها إلى م
 
 قبل إطلاق فعالية، قد تتحول ملصقة واحدة إلى ترويسة أفقية ومنشور رأسي وغلاف فيديو. ومع كل مقاس يعيد المصمم ترتيب العنوان والعنصر الرئيسي والمنطقة الآمنة.
 
-![المحتوى البصري نفسه مرتب في مقاسات أفقي ومربع ورأسي وضيق](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.jpg)
+![المحتوى البصري نفسه مرتب في مقاسات أفقي ومربع ورأسي وضيق](../../../zh-cn/stage-1/appendix-idea-sources/images/multi-format-design.webp)
 
 _إذا عاد الطلب نفسه بعد أيام، فهو يستحق الحفظ._
 
@@ -88,7 +88,7 @@ site:reddit.com is there a tool for
 
 يجمع Product Hunt إطلاقات المنتجات التقنية. يجهز المطورون وصفًا مختصرًا وصورًا وعرضًا، ثم يجمعون الأصوات والتعليقات يوم الإطلاق.
 
-![صفحة Product Hunt تعرض المنتجات الجديدة والأصوات والنقاشات](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.png)
+![صفحة Product Hunt تعرض المنتجات الجديدة والأصوات والنقاشات](../../../zh-cn/stage-1/appendix-idea-sources/images/source-product-hunt.webp)
 
 تتغير المنتجات يوميًا. افتح منتجًا وانظر إلى وصفه في جملة، وما تؤكده الصورة الأولى، والأسئلة في التعليقات. لا تكتفِ بالمركز الأول؛ تكشف عدة أيام الفئات المتكررة.
 
@@ -96,7 +96,7 @@ site:reddit.com is there a tool for
 
 يشبه Product Hunt منصة يوم الإطلاق، بينما Indie Hackers مجتمع طويل الأمد يشارك فيه المطورون التقدم والإيرادات واكتساب العملاء والإخفاقات.
 
-![صفحة منتجات Indie Hackers تعرض المنتجات المستقلة وتقدمها](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.png)
+![صفحة منتجات Indie Hackers تعرض المنتجات المستقلة وتقدمها](../../../zh-cn/stage-1/appendix-idea-sources/images/source-indie-hackers.webp)
 
 لا تبحث عن أعلى إيراد فقط. فالمنتج الذي يديره شخص واحد بدخل صغير وثابت قد يوضح المشكلة الأولى ومصدر العملاء الأوائل بصورة أفضل.
 
@@ -104,7 +104,7 @@ site:reddit.com is there a tool for
 
 Capterra دليل وتقييم لبرامج الشركات، ويمكن عبره مقارنة CRM وإدارة المشاريع والدعم والجداول وغيرها.
 
-![صفحة Capterra مع البحث والفئات والمقارنة](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.png)
+![صفحة Capterra مع البحث والفئات والمقارنة](../../../zh-cn/stage-1/appendix-idea-sources/images/source-capterra.webp)
 
 إذا اهتممت بفئة، افتح أدوات معروفة واقرأ التقييمات المنخفضة. الشكاوى المتكررة مثل ضعف الهاتف أو خطأ التصدير أو تعقيد الإعداد أنفع من قائمة الميزات الرسمية.
 
@@ -112,7 +112,7 @@ Capterra دليل وتقييم لبرامج الشركات، ويمكن عبره
 
 يعرض Google Trends الاهتمام النسبي بالكلمات عبر الزمن والمناطق، والعبارات المرتبطة والصاعدة.
 
-![صفحة Google Trends مع الاتجاهات واستكشاف الكلمات](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.png)
+![صفحة Google Trends مع الاتجاهات واستكشاف الكلمات](../../../zh-cn/stage-1/appendix-idea-sources/images/source-google-trends.webp)
 
 استخدمه بعد أن تملك عدة عبارات محتملة. قارن “AI meeting notes” و“AI transcription” و“voice notes” لترى ما يبحث عنه الناس أكثر. ارتفاع الخط لا يثبت وجود سوق؛ بل يعرض تغير الاهتمام فقط.
 

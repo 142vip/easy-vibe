@@ -65,7 +65,7 @@ You do not need to start with model names when breaking down the task. Follow th
 
 AI should handle only the parts for which it is suitable. Login, payment, file storage, and page navigation follow explicit rules and should still be implemented with ordinary program logic.
 
-![A working page in which a product image is understood before its description is generated](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.png)
+![A working page in which a product image is understood before its description is generated](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-35-41.webp)
 
 *In this prototype, the user first uploads a product image. The page identifies the product information, then creates a description and selling points that the user can continue editing.*
 
@@ -169,7 +169,7 @@ If the error contains a Request ID or Trace ID, save it. Many calls may occur at
 
 The model catalog or Models page shows which text, image, speech, and video models the platform currently offers. Open the details and copy the model ID used in code; it may differ from the display name on the page.
 
-![SiliconFlow model catalog with filters for text, image, video, and speech capabilities](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.png)
+![SiliconFlow model catalog with filters for text, image, video, and speech capabilities](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-05-04.webp)
 
 *SiliconFlow's catalog can be filtered by text, image, video, and speech.*
 
@@ -286,7 +286,7 @@ response = client.chat.completions.create(
 )
 ```
 
-![Connecting an image-understanding API in an AI IDE](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.png)
+![Connecting an image-understanding API in an AI IDE](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-15-34-36.webp)
 
 *Letting the user confirm the identified product information before generating copy usually makes errors easier to spot than generating the final copy directly from the image.*
 
@@ -319,7 +319,7 @@ curl -X POST https://ark.cn-beijing.volces.com/api/v3/images/generations \
   }'
 ```
 
-![Image generation integrated into the product](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.png)
+![Image generation integrated into the product](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-21-13.webp)
 
 Image URLs often expire. A prototype can display one directly, but a production application should decide whether to copy the image into its own storage under the service's terms, and should record the prompt, model version, and generation time.
 

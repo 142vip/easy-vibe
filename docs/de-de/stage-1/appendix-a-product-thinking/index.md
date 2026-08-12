@@ -55,7 +55,7 @@ Ein spontaner Gedanke wird zu einer Idee, wenn vier Teile erkennbar sind:
 3. **Eine klare Aufgabe**, zum Beispiel ein Dokument zusammenfassen oder ein Protokoll erstellen.
 4. **Ein besserer Weg als heute**: weniger Schritte, Fehler, Sorgen oder Aufwand.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image1.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image1.webp)
 
 Wenn ein Teil noch fehlt, schildern Sie AI die bisherigen Annahmen und lassen Sie Lücken benennen. AI ist dabei Gesprächspartnerin, nicht Entscheiderin.
 
@@ -65,7 +65,7 @@ Selbstbegeisterung entsteht, wenn der Ersteller von seiner Idee fasziniert ist u
 
 Eine auffällige Funktion genügt nicht. Bei einem echten Bedarf versucht die Person das Problem bereits ohne Ihr Produkt zu lösen: mit Tabellen, Kopieren zwischen Werkzeugen, einer bezahlten Alternative oder einem unbequemen manuellen Ablauf. Ein erfundener Bedarf erscheint erst in Ihrer Präsentation und ist danach sofort vergessen.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image2.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image2.webp)
 
 Fragen Sie: „Wer außer mir macht sich darüber ernsthaft Gedanken?“ Suchen Sie wiederkehrende Beschwerden, improvisierte Lösungen und konkrete Kosten.
 
@@ -79,13 +79,13 @@ Eine schwache Idee braucht dauernd Werbung und Erklärungen; stoppt der Druck, s
 
 Gute Ideen werden meist aus dem eigenen Leben, erreichbaren Gruppen, öffentlichen Gesprächen und vorhandenen Produkten gesammelt.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image3.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image3.webp)
 
 ### Das eigene Leben aufmerksam leben
 
 Wer ein Hobby wirklich ausübt, erkennt seine kleinen Reibungen. Katzenhalter wissen, wann das Tier der Kamera ausweicht. Daraus kann eine App entstehen, die neben der Kamera einen bewegten Punkt zeigt, eine Bildserie aufnimmt und lernt, welcher Reiz bei welcher Katze funktioniert.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image4.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image4.webp)
 
 Beim Schminken könnte ein Foto per Sprachsatz die verwendeten Produkte speichern und später nach „Bewerbung“, „warm“ oder „fünf Minuten“ gefunden werden. Beim Stadtspaziergang könnte eine Sprachnotiz Ort, Wetter und Atmosphäre markieren. Jede wiederholte Notlösung ist eine Spur.
 
@@ -150,9 +150,9 @@ Viele scheitern an einer zu großen inneren Gesamtvision. Damit „irgendwann“
 
 Der britische Design Council beschreibt zwei Diamanten. Im ersten wird breit geforscht und danach das Problem definiert. Im zweiten werden Lösungen geöffnet, geprüft und zu einer lieferbaren Variante verdichtet. Beide Seiten verhindern, dass man zu früh auf eine Lieblingslösung springt.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image6.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image6.webp)
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image7.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image7.webp)
 
 ### Erster Diamant: vom Einzelproblem zum Gesamtbild und zurück
 
@@ -170,7 +170,7 @@ Die erste Version muss nicht perfekt sein, sondern eine Aufgabe vollständig lö
 
 „Effizienz verbessern“ verrät nicht, welche Seite morgen gezeichnet werden soll. Zerlegen heißt, ein breites Ziel in Entscheidungen und sofort mögliche Handlungen zu übersetzen.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image8.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image8.webp)
 
 ### Alltagsbeispiel: Was bedeutet „Ich möchte einen Burger“?
 
@@ -184,7 +184,7 @@ Definieren Sie „Dokument“: Text-PDF, Scan, Word, Tabelle oder Markdown. Defi
 
 Auch „Effizienz“ braucht eine Bedeutung: weniger Zeit, Fehler, Verständnisaufwand oder psychische Belastung? Die Antwort legt die Priorität fest.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image9.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image9.webp)
 
 #### Zweite Zerlegungsebene
 
@@ -202,13 +202,13 @@ Eine sinnvolle erste Grenze könnte textlastige Berichte bis zwanzig Seiten, edi
 
 Zeichnen Sie Upload und Ergebnis, wählen Sie einen Parser, testen Sie zehn typische PDF, definieren Sie akzeptable Fehler, zeigen Sie Fortschritt und erlauben Sie Kopieren sowie Herunterladen. Jeder Punkt lässt sich bauen und prüfen.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image10.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image10.webp)
 
 ## 2.3 Die Anwendung auf dem Whiteboard entwerfen
 
 Eine Skizze zeigt Lücken, bevor Code teuer wird. Zeichnen Sie den kleinsten Weg aus Einstieg, Bedienung und Ergebnis.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image11.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image11.webp)
 
 ### Einstiegsseite: Wo kommt der Nutzer an und was sieht er zuerst?
 
@@ -226,9 +226,9 @@ Das Ergebnis muss das Versprechen einlösen und eine natürliche Folgehandlung b
 
 Untersuchen Sie Produkte mit ähnlichen Aufgaben: Navigation, Formulare, Wartezustände, Ergebnisdarstellung und Einstiegshilfe. Kopieren Sie nicht Marke und Wortlaut, sondern verstehen Sie den Grund einer Entscheidung und übertragen Sie das Muster auf Ihren Nutzer.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image12.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image12.webp)
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image13.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image13.webp)
 
 Eine Referenzsammlung aus Screenshots, Quellen und Notizen hilft auch, einem AI-Werkzeug genau zu zeigen, welches Muster Sie anpassen möchten.
 
@@ -266,13 +266,13 @@ Eine unfertige Oberfläche lädt zu Kritik ein; eine polierte macht Menschen oft
 
 „Gefällt mir“ ist zu ungenau. Wert zeigt sich in gesparten Minuten, vermiedenen Fehlern, mehr Umsatz, schnelleren Entscheidungen oder weniger Sorge.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image14.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image14.webp)
 
 ### Sie ist leicht zu beginnen und fast ohne Anleitung verständlich
 
 Die Hauptaktion, der Systemzustand und der Weg aus einem Fehler sind sichtbar. Einfachheit bedeutet nicht wenig Leistung, sondern die richtige Leistung im richtigen Moment.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image15.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image15.webp)
 
 ### In häufigen oder wichtigen Situationen erinnert man sich natürlich daran
 
@@ -286,7 +286,7 @@ Produktdenken soll den Nutzer besser stellen und ihn nicht um jeden Preis festha
 
 Die Hierarchie ist keine starre Formel, hilft aber, den tieferen Wert hinter einer Funktion zu erfragen.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image16.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image16.webp)
 
 ### Physiologische Bedürfnisse und Überleben
 
@@ -316,13 +316,13 @@ Dasselbe Problem verändert sich, wenn eine Person oder eine Organisation kauft.
 
 Erster Eindruck, Einfachheit, individueller Preis, Privatsphäre und Empfehlung zählen. Der Nutzer kann nach Sekunden gehen und entscheidet meist selbst.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image17.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image17.webp)
 
 ### Unternehmensanwendung: Effizienz, Kosten und Risikokontrolle
 
 Nutzer, Leitung, Einkauf, Sicherheit und Management sind beteiligt. Wert wird in Arbeitsstunden, Fehlern, Compliance und Zusammenarbeit gemessen. Rollen, Audit, Integration und Support werden wichtig.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image18.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image18.webp)
 
 „Industrie“ meint hier reale Unternehmenspraxis, nicht zwingend Fabriken: Verträge freigeben, Kundenservice, Bestand koordinieren oder Berichte erstellen.
 
@@ -350,7 +350,7 @@ Fragen Sie, ob das Produkt ohne Modell bereits einen Wert besitzt. Wenn Regeln, 
 
 AI kann klassifizieren, zusammenfassen, erzeugen, empfehlen, sprechen oder Schritte koordinieren. Definieren Sie ebenso die menschliche Rolle: Kontext liefern, Entscheidungen bestätigen, korrigieren und riskante Aktionen verantworten.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image19.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image19.webp)
 
 Notieren Sie für jede Funktion Eingabe, Ausgabe, mögliche Fehler, Prüfung und Ersatzweg. So wird „AI verwenden“ zu einem prüfbaren Entwurf.
 
@@ -358,7 +358,7 @@ Notieren Sie für jede Funktion Eingabe, Ausgabe, mögliche Fehler, Prüfung und
 
 Modelle verarbeiten Text, Bild, Stimme, Video und Werkzeuge, können aber Fakten erfinden, Kontext verlieren und schwanken. Sensible Daten, medizinische, rechtliche oder finanzielle Entscheidungen und irreversible Aktionen benötigen Kontrollen.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image20.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image20.webp)
 
 Messen Sie kürzere Aufgabenzeit, bessere Qualität, häufigere Nutzung oder Zahlungsbereitschaft. Wird der Ablauf nur teurer und unberechenbarer, verstärkt AI keinen Wert.
 
@@ -434,4 +434,4 @@ Ein rauer Anfang, wenige Funktionen und fehlende Zahlungen sind Prozessdaten, ke
 
 Wie es in _To the Moon_ heißt: **„Das Ende ist nicht wichtiger als irgendeiner der Momente, die dorthin führen.“**
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image21.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image21.webp)

@@ -149,7 +149,7 @@ const relatedArticles =
 
 > الأزرار من اليسار إلى اليمين في الجزء العلوي تعمل على التوالي: زر السهم يفتح شريط سجل المحادثات الجانبي، زر القلم لإنشاء محادثة جديدة، زر السهم الدائري لتحديث الصفحة، زر البوصلة للتبديل إلى وضع ملء الشاشة، زر Download لتنزيل المشروع، زر <> للتبديل إلى عرض الكود، زر Publish لنشر المشروع.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.webp)
 
 إذا كنت تريد عرض الكود المصدري لصفحة الويب، يمكنك النقر على أيقونة الكود في الزاوية العلوية اليمنى لعرض الكود الكامل.
 
@@ -241,12 +241,12 @@ const relatedArticles =
 
 > **💡 مثال على prompt:** ساعدني في صنع لعبة ثعبان
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.webp)
 
 > **💡 مثال على prompt:** ساعدني في صنع لعبة ثعبان يجب أن تدعم
 >
 > 1. يمكنني أكل كلمات مختلفة سيتم جمعها في صندوق
->    ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.png)
+>    ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.webp)
 
 > **💡 مثال على prompt:** ساعدني في صنع لعبة ثعبان يجب أن تدعم:
 >
@@ -254,13 +254,13 @@ const relatedArticles =
 > 2. عندما يأكل الثعبان 8 كلمات، يجب أن ينشئ LLM قصيدة بناءً على هذه الكلمات، ويمكننا إعادة مزج القصيدة حسب الحاجة.
 > 3. عند اكتمال القصيدة، ستقوم الخطوة التالية تلقائيًا بإنشاء صورة بناءً على القصيدة.
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.webp)
 
 لاحظ أنه أثناء عملية التطوير، قد نواجه مشاكل غير مرضية، مثل عدم استجابة الأزرار عند النقر، أو ظهور أخطاء عند استخدام الوظائف، أو عدم عمل الوظائف كما هو متوقع، أو عدم تطابق واجهة الواجهة الأمامية مع التصميم المتوقع.
 
 في هذه الحالة، نحتاج إلى طرح المزيد من الأسئلة على النموذج لمساعدته في إصلاح هذه المشاكل غير المتوقعة.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.webp)
 
 ### 3.2 إضافة ميزات جديدة للعبة
 
@@ -305,13 +305,13 @@ const relatedArticles =
 
 ستكون إجابة z.ai كالتالي:
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.webp)
 
 يمكننا استخدام هذا prompt لإعادة إنشاء المشروع في وضع التطوير الكامل:
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.webp)
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>
@@ -376,7 +376,7 @@ const relatedArticles =
 
 مطور ياباني لا يعرف البرمجة إطلاقًا [in0ho1no](https://github.com/in0ho1no)، باستخدام Claude عبر حوار خالص (Vibe Coding)، صنع في **حوالي ساعتين** لعبة «الحديقة النباتية» بأسلوب 2048 [Blooming Garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/): دمج النباتات المتشابهة للترقية، تأثيرات ازدهار رائعة، رسوم متحركة جسيمية، لوحة متصدرين، مؤثرات صوتية، توافق مع الجوال... كل هذه الوظائف أُنجزت عبر حوار باللغة الطبيعية، دون كتابة سطر واحد من الأكواد يدويًا.
 
-![لعبة دمج النباتات Blooming Garden (مولّدة بالذكاء الاصطناعي 100%)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.png)
+![لعبة دمج النباتات Blooming Garden (مولّدة بالذكاء الاصطناعي 100%)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.webp)
 
 > 🔗 العب عبر الإنترنت: [in0ho1no.github.io/2025-adhoc-blooming-garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) ｜ الكود المصدري: [github.com/in0ho1no/2025-adhoc-blooming-garden](https://github.com/in0ho1no/2025-adhoc-blooming-garden)
 
@@ -384,7 +384,7 @@ const relatedArticles =
 
 المصمم [Ricardo de Zoete (Hammy)](https://x.com/RicardoDeZoete) باستخدام ذكاء اصطناعي من OpenAI عبر حوار خالص (Vibe Coding)، صنع [Planet Jumper](https://gamesbyhammy.cloud/play/planetjumper) على أساس three.js — وهي **لعبة منصات ثلاثية الأبعاد متعددة اللاعبين**: تركض وتنقضّ وتقفز على سطح كوكب كروي صغير، ويمكنك التنافس مع غرباء عبر الإنترنت في نفس الوقت. أنظمة ليست بسيطة مثل الجاذبية الكروية ومزامنة الشبكة والإحساس بالقفز، كلها «حُوّرت» عبر الـ prompts.
 
-![لعبة المنصات ثلاثية الأبعاد متعددة اللاعبين Planet Jumper (مولّدة بواسطة Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.png)
+![لعبة المنصات ثلاثية الأبعاد متعددة اللاعبين Planet Jumper (مولّدة بواسطة Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.webp)
 
 > 🔗 العب عبر الإنترنت: [gamesbyhammy.cloud/play/planetjumper](https://gamesbyhammy.cloud/play/planetjumper) ｜ تفاصيل: [Planet Jumper: A Vibe-Coded Three.js Multiplayer Platformer](https://www.webgpu.com/showcase/planet-jumper-threejs-multiplayer/)
 
@@ -394,7 +394,7 @@ const relatedArticles =
 
 ![الدليل عبر الإنترنت لـ 100 لعبة متصفح (مشروع Vibe Coding مفتوح المصدر لعام 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
 
-![«نيون 2048»: رحلة استكشاف من 6 فصول و18 عقدة + أوضاع متعددة ونظام أدوات](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.png)
+![«نيون 2048»: رحلة استكشاف من 6 فصول و18 عقدة + أوضاع متعددة ونظام أدوات](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
 > 🔗 الدليل عبر الإنترنت: [wangzifan396-wzf.github.io/mini-browser-games](https://wangzifan396-wzf.github.io/mini-browser-games/) ｜ الكود المصدري: [github.com/wangzifan396-wzf/mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) ｜ مراجعة الإبداع: [صنعت 100 لعبة متصفح بواسطة Vibe Coding وأصدرتها جميعًا مفتوحة المصدر](https://blog.csdn.net/m0_74023007/article/details/162945755)
 
@@ -430,7 +430,7 @@ const relatedArticles =
 
 ![واجهة منصة K399 — K3 Game Arcade، قائمة ألعاب تفتح وتلعب فورًا](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
 
-![لعبة العالم المفتوح SpiderPunk على K399: التأرجح بخيوط العنكبوت بين ناطحات السحاب في مدينة سيبربانك (مولّدة بنموذج K3، لقطة لعب فعلية)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.png)
+![لعبة العالم المفتوح SpiderPunk على K399: التأرجح بخيوط العنكبوت بين ناطحات السحاب في مدينة سيبربانك (مولّدة بنموذج K3، لقطة لعب فعلية)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 
 > 🔗 العب عبر الإنترنت: [k399.games](https://www.k399.games/) (K3 Game Arcade، افتح والعب فورًا) ｜ تفاصيل: [انضم تنفيذي سابق من miHoYo، شركة الذكاء الاصطناعي الأكثر سخونة صنعت فجأة عشرات الألعاب](https://eu.36kr.com/zh/p/3906895998178441) ｜ [Kimi K3، من يشعر بالقلق؟](https://36kr.com/p/3905392402748801)
 
@@ -578,7 +578,7 @@ const relatedArticles =
 
 > 💡 ما هو Vibe Coding؟ عالم الكمبيوتر [Andrej Karpathy](https://karpathy.ai/) (أحد المؤسسين المشاركين لـ OpenAI، الرئيس السابق للذكاء الاصطناعي في تسلا) صاغ مصطلح **vibe coding** في فبراير 2025. يشير هذا المفهوم إلى طريقة برمجة تعتمد على LLM، **تسمح للمبرمجين بتوليد أكواد قابلة للعمل من خلال تقديم أوصاف باللغة الطبيعية بدلاً من كتابة الأكواد يدويًا.**
 
-![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.png)
+![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.webp)
 
 من حيث المعنى الحرفي، يمكن فهم Vibe Coding على أنه «طريقة تطوير من خلال الكلام». التغيير الأساسي هو: لم تعد بحاجة إلى كتابة الأكواد سطرًا بسطر، أو البحث عن القواعد، أو تصحيح الأخطاء، بل تصف ما تريده مباشرة باللغة الطبيعية، مثل:
 

@@ -41,7 +41,7 @@ Capgemini 对 12,000 名消费者的调查里，生成式 AI 已经进入商品�
 
 <figure class="product-shot">
   <a href="https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month/" target="_blank" rel="noreferrer">
-    <img src="./images/products/klarna.jpg" alt="Klarna AI Assistant 的延期付款、多语言客服与退款解释界面" loading="lazy" />
+    <img src="./images/products/klarna.webp" alt="Klarna AI Assistant 的延期付款、多语言客服与退款解释界面" loading="lazy" />
   </a>
   <figcaption><strong>Klarna AI Assistant：</strong>左边不是一句“请联系人工”，而是直接给出延期付款入口；右边把退款金额逐项拆开。客服 AI 真正有用的地方，是能查到这笔订单并把动作接下去。</figcaption>
 </figure>
@@ -114,7 +114,7 @@ Thomson Reuters 的 2025 年调查显示，法律、税务、风控等专业服�
 
 <figure class="product-shot">
   <a href="https://github.blog/changelog/2024-10-29-github-copilot-code-review-in-github-com-private-preview/" target="_blank" rel="noreferrer">
-    <img src="./images/products/github-copilot-review.png" alt="GitHub Copilot 在 Pull Request 中给出代码审查建议" loading="lazy" />
+    <img src="./images/products/github-copilot-review.webp" alt="GitHub Copilot 在 Pull Request 中给出代码审查建议" loading="lazy" />
   </a>
   <figcaption><strong>GitHub Copilot Code Review：</strong>Copilot 被选为审查人后，会把问题落到具体代码行，并给出可提交的修改；开发者仍能查看差异、加入批次或拒绝建议。价值发生在 Pull Request 里，不在另一个聊天窗口里。</figcaption>
 </figure>
@@ -146,7 +146,7 @@ Siemens Industrial Copilot 已用于解释设备信息、查找维修依据和�
 
 <figure class="product-shot">
   <a href="https://www.abridge.com/product" target="_blank" rel="noreferrer">
-    <img src="./images/products/abridge-note.png" alt="Abridge 将临床记录与原始医患对话关联的界面" loading="lazy" />
+    <img src="./images/products/abridge-note.webp" alt="Abridge 将临床记录与原始医患对话关联的界面" loading="lazy" />
   </a>
   <figcaption><strong>Abridge：</strong>上方是生成的病历段落，下方是对应的医患对话，点击 Linked Evidence 可以回到原话。这里最重要的不是“自动写得快”，而是医生能追溯、修改并确认每条记录。</figcaption>
 </figure>
@@ -184,7 +184,7 @@ C 端应用最容易犯的错，是把同一个聊天框换七种提示词。下
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://www.aboutamazon.com/news/retail/amazon-rufus" target="_blank" rel="noreferrer">
-    <img src="./images/products/amazon-rufus.jpg" alt="Amazon Rufus 购物助手界面" loading="lazy" />
+    <img src="./images/products/amazon-rufus.webp" alt="Amazon Rufus 购物助手界面" loading="lazy" />
   </a>
   <figcaption><strong>Amazon Rufus：</strong>入口就在 Amazon 搜索框下面，问题也围绕购物展开：比较桌布、为 Prime Day 做准备、寻找适合睡眠监测的手表。它能继续接到真实商品，而不是只给一段泛泛建议。</figcaption>
 </figure>
@@ -210,7 +210,7 @@ C 端应用最容易犯的错，是把同一个聊天框换七种提示词。下
 
 <figure class="product-shot product-shot--portrait">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="./images/products/duolingo-roleplay.png" alt="Duolingo Max 的巴黎咖啡馆角色扮演练习" loading="lazy" />
+    <img src="./images/products/duolingo-roleplay.webp" alt="Duolingo Max 的巴黎咖啡馆角色扮演练习" loading="lazy" />
   </a>
   <figcaption><strong>Duolingo Max Roleplay：</strong>练习不是一句“和 AI 聊法语”，而是一个具体任务：在巴黎咖啡馆点餐。场景、角色、目标和奖励都已经设好，用户打开后马上就能练一轮。</figcaption>
 </figure>
@@ -223,7 +223,7 @@ C 端应用最容易犯的错，是把同一个聊天框换七种提示词。下
 
 <figure class="product-shot">
   <a href="https://firefly.adobe.com/" target="_blank" rel="noreferrer">
-    <img src="./images/products/adobe-firefly.png" alt="Adobe Firefly 文生图工作界面" loading="lazy" />
+    <img src="./images/products/adobe-firefly.webp" alt="Adobe Firefly 文生图工作界面" loading="lazy" />
   </a>
   <figcaption><strong>Adobe Firefly：</strong>真实界面里不只有一个提示词框，还能选择模型、比例、内容类型、视觉强度和参考图，并比较多组结果。个人创作产品要给用户继续修改的控制，而不是只剩“再生成一次”。</figcaption>
 </figure>

@@ -157,7 +157,7 @@ Khi xong, bạn sẽ thấy trang web ở bên phải. Bạn có thể cuộn l�
 
 > Tác dụng của các nút ở phía trên từ trái sang phải lần lượt là: nút mũi tên mở thanh lịch sử hội thoại bên cạnh, nút bút chì để tạo hội thoại mới, nút mũi tên vòng để làm mới trang, nút la bàn để chuyển sang chế độ toàn màn hình, nút Download để tải dự án, nút <> để chuyển sang chế độ xem code, nút Publish để xuất bản dự án.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.webp)
 
 Để xem mã nguồn của trang web này, bấm vào biểu tượng code ở góc trên bên phải để xem toàn bộ code.
 
@@ -264,12 +264,12 @@ Ban đầu, chúng ta có thể đối thoại với mô hình lớn theo cách 
 
 > **💡 Ví dụ prompt:** Làm giúp tôi một game Snake.
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.webp)
 
 > **💡 Ví dụ prompt:** Làm giúp tôi một game Snake, nó nên hỗ trợ:
 >
 > 1. Có thể ăn các từ khác nhau, chúng sẽ được thu thập trong một cái hộp.
->    ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.png)
+>    ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.webp)
 
 > **💡 Ví dụ prompt:** Làm giúp tôi một game Snake, nó nên hỗ trợ:
 >
@@ -277,13 +277,13 @@ Ban đầu, chúng ta có thể đối thoại với mô hình lớn theo cách 
 > 2. Khi rắn ăn được 8 từ, LLM nên dựa trên những từ này sáng tác một bài thơ, chúng ta có thể phối lại bài thơ tùy theo nhu cầu.
 > 3. Khi bài thơ hoàn thành, bước tiếp theo sẽ tự động tạo một hình ảnh dựa trên bài thơ này.
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.webp)
 
 Lưu ý, trong quá trình phát triển, chúng ta có thể gặp những vấn đề không như ý: chẳng hạn bấm nút không có phản ứng gì, dùng tính năng bị báo lỗi, tính năng không hoạt động như kỳ vọng, hoặc giao diện không khớp với thiết kế dự kiến.
 
 Trong trường hợp này, chúng ta cần tiếp tục hỏi mô hình để giúp sửa những sự cố ngoài ý muốn này.
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.webp)
 
 ### 3.2 Thêm tính năng mới cho game
 
@@ -327,13 +327,13 @@ Nếu muốn học cách viết prompt tốt hơn, bạn có thể xem [Phụ l�
 
 Câu trả lời của z.ai sẽ như thế này:
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.webp)
 
 Chúng ta có thể dùng prompt này để tạo lại dự án ở chế độ phát triển full-stack:
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.webp)
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>
@@ -405,7 +405,7 @@ Câu trả lời là có. Dưới đây là **8** case study thực tế công k
 
 Một lập trình viên người Nhật [in0ho1no](https://github.com/in0ho1no) hoàn toàn không biết lập trình, dùng Claude qua đối thoại thuần túy (Vibe Coding) trong **khoảng 2 giờ** làm ra game "vườn cây" phong cách 2048 [Blooming Garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/): cùng loài cây hợp thành thăng cấp, hiệu ứng nở hoa lộng lẫy, hoạt ảnh hạt, bảng xếp hạng, âm thanh, tương thích điện thoại... Tất cả tính năng này đều hoàn thành qua đối thoại ngôn ngữ tự nhiên, không viết một dòng code tay nào.
 
-![Blooming Garden, game hợp thành cây cối (100% do AI tạo)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.png)
+![Blooming Garden, game hợp thành cây cối (100% do AI tạo)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.webp)
 
 > 🔗 Chơi thử trực tuyến: [in0ho1no.github.io/2025-adhoc-blooming-garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) ｜ Mã nguồn: [github.com/in0ho1no/2025-adhoc-blooming-garden](https://github.com/in0ho1no/2025-adhoc-blooming-garden)
 
@@ -413,7 +413,7 @@ Một lập trình viên người Nhật [in0ho1no](https://github.com/in0ho1no)
 
 Nhà thiết kế [Ricardo de Zoete (Hammy)](https://x.com/RicardoDeZoete) dùng AI của OpenAI qua đối thoại thuần túy (Vibe Coding) trên nền three.js làm ra [Planet Jumper](https://gamesbyhammy.cloud/play/planetjumper) — một **game nhảy nền tảng 3D nhiều người chơi**: chạy, bứt tốc, nhảy trên bề mặt một hành tinh nhỏ hình cầu, còn có thể thi đấu online cùng lúc với người lạ. Những hệ thống không hề đơn giản như trọng lực hình cầu, đồng bộ mạng, cảm giác nhảy, đều được "trò chuyện" ra bằng prompt.
 
-![Planet Jumper, game nhảy nền tảng 3D nhiều người chơi (tạo bằng Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.png)
+![Planet Jumper, game nhảy nền tảng 3D nhiều người chơi (tạo bằng Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.webp)
 
 > 🔗 Chơi thử trực tuyến: [gamesbyhammy.cloud/play/planetjumper](https://gamesbyhammy.cloud/play/planetjumper) ｜ Giới thiệu chi tiết: [Planet Jumper: A Vibe-Coded Three.js Multiplayer Platformer](https://www.webgpu.com/showcase/planet-jumper-threejs-multiplayer/)
 
@@ -423,7 +423,7 @@ Tháng 7/2026, lập trình viên cộng đồng Trung Quốc [wangzifan396-wzf]
 
 ![Danh mục trực tuyến 100 game trình duyệt (dự án mã nguồn mở Vibe Coding 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
 
-![Neon 2048: chuyến thám hiểm 6 chương 18 điểm mốc + nhiều chế độ và hệ thống công cụ](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.png)
+![Neon 2048: chuyến thám hiểm 6 chương 18 điểm mốc + nhiều chế độ và hệ thống công cụ](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
 > 🔗 Danh mục trực tuyến: [wangzifan396-wzf.github.io/mini-browser-games](https://wangzifan396-wzf.github.io/mini-browser-games/) ｜ Mã nguồn: [github.com/wangzifan396-wzf/mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) ｜ Bài tổng kết sáng tạo: [Tôi dùng Vibe Coding làm 100 game trình duyệt và mở mã nguồn toàn bộ](https://blog.csdn.net/m0_74023007/article/details/162945755)
 
@@ -459,7 +459,7 @@ Ngày 17/7/2026, Moonshot AI phát hành mô hình Kimi K3, đồng thời ra m�
 
 ![Giao diện nền tảng K399 — K3 Game Arcade, danh sách game nhấn vào là chơi](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
 
-![SpiderPunk, game thế giới mở trên K399: đu tơ nhện giữa các tòa nhà thành phố cyberpunk (do mô hình K3 tạo, hình ảnh chơi thực tế)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.png)
+![SpiderPunk, game thế giới mở trên K399: đu tơ nhện giữa các tòa nhà thành phố cyberpunk (do mô hình K3 tạo, hình ảnh chơi thực tế)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 
 > 🔗 Chơi thử trực tuyến: [k399.games](https://www.k399.games/) (K3 Game Arcade, nhấn vào là chơi) ｜ Giới thiệu chi tiết: [Cựu lãnh đạo miHoYo gia nhập, công ty AI hot nhất hiện nay bỗng làm hàng chục game](https://eu.36kr.com/zh/p/3906895998178441) ｜ [Kimi K3, khiến ai lo lắng?](https://36kr.com/p/3905392402748801)
 
@@ -603,7 +603,7 @@ Xem thêm: [Phụ lục Web cơ bản](/vi-vn/appendix/3-browser-and-frontend/ja
 
 > 💡 Vibe Coding là gì? Nhà khoa học máy tính [Andrej Karpathy](https://karpathy.ai/) (một trong những người đồng sáng lập OpenAI, cựu lãnh đạo AI của Tesla) đã đề xuất thuật ngữ **vibe coding** vào tháng 2/2025. Khái niệm này chỉ một phương pháp viết code dựa trên LLM, **cho phép lập trình viên tạo ra code chạy được bằng cách đưa ra mô tả ngôn ngữ tự nhiên thay vì tự tay viết code.**
 
-![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.png)
+![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.webp)
 
 Theo nghĩa đen, Vibe Coding có thể hiểu là cách "phát triển bằng cách nói". Thay đổi cốt lõi nằm ở chỗ: bạn không cần tự viết từng dòng code, tra cú pháp, sửa Bug, mà dùng ngôn ngữ tự nhiên mô tả trực tiếp thứ bạn muốn, ví dụ:
 

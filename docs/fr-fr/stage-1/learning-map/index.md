@@ -27,7 +27,7 @@ Créer un logiciel demandait autrefois beaucoup de préparation. Il fallait appr
 Sa première avancée a été d’aider davantage de personnes à franchir la barrière « je ne sais pas coder, donc je ne peux pas commencer ». Sans expérience, on peut créer en quelques minutes un petit jeu, une page ou un prototype à présenter.
 
 <figure class="concept-illustration">
-  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.png" alt="Une personne utilise l’IA pour transformer une idée exprimée en langage naturel en prototype, le confie à de vrais utilisateurs et l’améliore avec leurs retours" loading="lazy">
+  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.webp" alt="Une personne utilise l’IA pour transformer une idée exprimée en langage naturel en prototype, le confie à de vrais utilisateurs et l’améliore avec leurs retours" loading="lazy">
   <figcaption>Vibe Coding aide à franchir la barrière du « faire » ; construire un produit exige de poursuivre vers de vrais utilisateurs, des retours et de la valeur.</figcaption>
 </figure>
 

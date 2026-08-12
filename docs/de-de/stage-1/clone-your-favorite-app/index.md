@@ -100,7 +100,7 @@ Warte nach dem Absenden, bis Trae die Dateien erstellt hat. Schicke nicht schon 
 
 Trae erstellte `index.html`, `styles.css` und `script.js` und öffnete die Webseite anschließend im Browser. Diese Animation zeigt das Ergebnis aus dem Unterricht:
 
-![Aus dem Screenshot erzeugte und gestartete Wishlabs-Seite](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.gif)
+![Aus dem Screenshot erzeugte und gestartete Wishlabs-Seite](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-wishlabs.webp)
 
 Lies den Code noch nicht. Sieh dir die Seite an und vergleiche sie mit der Vorlage:
 
@@ -167,7 +167,7 @@ Die Screenshot-Methode eignet sich nicht nur für Produkt-Startseiten. Zum Vergl
 
 SaaS-Produkte zeigen Projektfortschritt, Verkäufe oder Nutzerdaten häufig in Dashboards. Bei diesem Linear-Screenshot liegt die Navigation links und der Inhalt rechts.
 
-![Offizielle Oberfläche des Linear-Dashboards](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.png)
+![Offizielle Oberfläche des Linear-Dashboards](../../../zh-cn/stage-1/clone-your-favorite-app/images/linear-official-dashboard.webp)
 
 _Unterrichtsreferenz: [Linear Dashboards](https://linear.app/docs/dashboards)_
 
@@ -180,7 +180,7 @@ Verwende zunächst Beispieldaten.
 
 Trae erzeugte eine Seitenleiste, Datenkarten und Diagramme. So sah die laufende Seite im Browser aus:
 
-![Aus dem Screenshot erzeugtes und getestetes Dashboard](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.gif)
+![Aus dem Screenshot erzeugtes und getestetes Dashboard](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-linear-dashboard.webp)
 
 Die Zahlen sind noch keine echten Geschäftsdaten – das ist in Ordnung. In der ersten Übung geht es um die Struktur. Beschriftungen und Werte ersetzt du erst, wenn die Seite stabil läuft.
 
@@ -188,7 +188,7 @@ Die Zahlen sind noch keine echten Geschäftsdaten – das ist in Ordnung. In der
 
 Wenn dich eine gewöhnliche Webseite nicht anspricht, verwende einen Spiel-Screenshot. Die Lehrkraft wählte ein Bild aus der Blockwelt von Minecraft.
 
-![Oberfläche des Kreativmodus in Minecraft](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.png)
+![Oberfläche des Kreativmodus in Minecraft](../../../zh-cn/stage-1/clone-your-favorite-app/images/minecraft-official-creative-mode.webp)
 
 _Unterrichtsreferenz: [Minecraft-Beispiel bei Microsoft Learn](https://learn.microsoft.com/en-us/xbox/accessibility/xbox-accessibility-guidelines/108)_
 
@@ -201,7 +201,7 @@ Die Figur soll sich bewegen und Blöcke setzen können.
 
 Trae erstellte ein spielbares Browsergame, in dem sich die Figur bewegen sowie Blöcke setzen und entfernen kann:
 
-![Aus dem Screenshot erzeugtes und gestartetes 2D-Blockspiel](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.gif)
+![Aus dem Screenshot erzeugtes und gestartetes 2D-Blockspiel](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-block-game.webp)
 
 Dieses Ergebnis ist ein <strong>2D-Spiel in Seitenansicht</strong>. Die Figur bewegt sich auf einer flachen Ebene; vorwärts und rückwärts in die Tiefe gibt es nicht. Weil die Anweisung nur „Blockspiel“ sagte, wählte Trae die einfachere Auslegung.
 
@@ -218,7 +218,7 @@ Der Spieler soll laufen, die Kamera drehen und Blöcke setzen können.
 
 Diesmal erzeugte Trae eine echte dreidimensionale Blockwelt:
 
-![Aus dem Screenshot erzeugtes und gestartetes 3D-Blockspiel](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.gif)
+![Aus dem Screenshot erzeugtes und gestartetes 3D-Blockspiel](../../../zh-cn/stage-1/clone-your-favorite-app/images/trae-generated-3d-block-game.webp)
 
 Wähle „Start Game“, bewege dich mit `WASD` und drehe dich mit der Maus. Die linke Maustaste entfernt einen Block, die rechte setzt einen; mit den Zahlentasten wechselst du den Blocktyp.
 

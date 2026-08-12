@@ -79,7 +79,7 @@ Kombiniere ein abstraktes AI-Symbol mit dem Text und exportiere als PNG mit tran
 
 - Obigen Prompt eingeben &rarr; Mehrere Designentw&uuml;rfe des Agents vergleichen.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. Endg&uuml;ltiges Logo bestimmen
 
@@ -142,7 +142,7 @@ Auch ohne eigenes Farbschema k&ouml;nnen Sie &uuml;ber Farb-Websites oder Suchbe
 
 - **Farbsuche &uuml;ber Google-Schl&uuml;sselw&ouml;rter**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.webp)
 
 ## 4. Website-Design-Prompt schreiben
 
@@ -164,7 +164,7 @@ Der Gesamtstil soll modern und schlicht sein."
 
 **Mastergo Prompt-Beispiel**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.webp)
 
 ## 2. Designentw&uuml;rfe pr&uuml;fen und &Auml;nderungsw&uuml;nsche stellen
 
@@ -187,7 +187,7 @@ Die Methode zur Umwandlung von Design in Code variiert je nach Plattform, erfolg
 
 1. [Mastergo Plugin-Website](https://mastergo.com/community/plugin) &ouml;ffnen und nach **seal** suchen.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.webp)
 
 2. Zur&uuml;ck zur Design-Seite, auf das **Quadrat-Icon (Plugins)** klicken.
 
@@ -195,7 +195,7 @@ Die Methode zur Umwandlung von Design in Code variiert je nach Plattform, erfolg
 
 3. Den Design-Bereich, den Sie in Code umwandeln m&ouml;chten, ausw&auml;hlen und auf **Generate** klicken, um den Code zu generieren.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.webp)
 
 ---
 
@@ -305,7 +305,7 @@ Die vom Agent generierte Erstversion enth&auml;lt meist automatisch generierten 
 
 1. Zun&auml;chst den Inhalt, den Sie auf der About-Seite zeigen m&ouml;chten, aufschreiben. F&uuml;r besseres Agent-Verst&auml;ndnis kann der Inhalt im Markdown-Format gespeichert werden.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.webp)
 
 2. Dann im Dialog dem Agent mitteilen, den Inhalt der Datei auf der angegebenen Seite anzuwenden.
 
@@ -313,7 +313,7 @@ Die vom Agent generierte Erstversion enth&auml;lt meist automatisch generierten 
 
 3. Die aktualisierte Version nach der Inhaltsanwendung ansehen.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.webp)
 
 ## 6. Bilder einf&uuml;gen
 
@@ -325,7 +325,7 @@ Wenn Sie bestimmte Bilder einf&uuml;gen m&ouml;chten (z.B. Logo, Hintergrundbild
 
 - **Ergebnis:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.webp)
 
 ---
 
@@ -341,7 +341,7 @@ Wenn Sie vom Design-Agent Codedateien heruntergeladen haben, k&ouml;nnen Sie die
 
 - **Ergebnis:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
 ---
 title: 'Eine Website mit Design- und Coding-Agents bauen'
 description: 'Von Idee bis Launch: Design-Agent fuer Visuals, Coding-Agent fuer Umsetzung. Ein wiederverwendbarer Workflow fuer Solo-Entwicklung.'

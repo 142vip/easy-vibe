@@ -244,7 +244,7 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
 - **主な特徴とワークフロー：** Lovableは統合とコラボレーションの面で優れています。Supabaseデータベースの接続などの初期化作業を自動的に完了し、プロジェクトのセットアッププロセスを非常にスムーズにします。プロジェクトの要件を記述するだけで、Agentが各種サービスを連携させ、基本構造を構築してくれます。
 - **対象ユーザー：** 初めてVibe Codingに挑戦する初心者にとって、Lovableは非常に使いやすい選択肢です。複数サービス連携の複雑さを簡略化し、環境設定ではなくプロンプトとイテレーションに集中できます。高度な自動化のおかげで、すぐに実行可能なプロトタイプを得られます。
 - **プロンプトのプロセス：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.webp)
 - **スネークゲームの効果：**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.png)
@@ -258,10 +258,10 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
 - **主な特徴とワークフロー：** CursorはAI機能を統合した専用IDEで、Windows、macOS、Linuxに対応しています。コード生成、スマートリライト、コードベース検索などの機能を開発環境に直接組み込んでいます。Webツールと比較すると、より従来のローカル開発体験に近いです。ローカル環境であるため、コンピュータごとの設定が異なり、環境関連の問題に遭遇することがあります。メリットは、プロジェクトがローカルにあるため、追加で実行環境をダウンロード・設定する必要がなく、Cursorが多くの煩雑な手順を処理してくれることです。
 - **対象ユーザー：** ある程度プログラミングの基礎があるユーザーにとって、Cursorは非常に強力で馴染みのある環境です。しかし、完全なゼロベースの初心者にとっては、プロジェクト構造、依存関係管理、ファイル編成などの概念を自分で理解する必要があり、学習曲線はやや急になります。従来のコーディングプロセスにAIアシスタントを加えたい開発者により適しています。
 - **プロンプトのプロセス：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image7.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image7.webp)
 - **スネークゲームの効果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.webp)
 
 - **価格：**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
@@ -272,7 +272,7 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
 - **主な特徴とワークフロー：** Z.aiの使い方は比較的シンプルですが、明らかな課題が一つあります：**生成されたコードを手動でコピー＆ペーストする**必要があります。プラットフォーム自体にリアルタイムプレビューウィンドウがないため、コードの実行結果をすぐに確認するのが難しいです。
 - **対象ユーザー：** このプラットフォームは比較的「手動」の使用方式を求めます。自動化が少ないため、コードと直接向き合う必要があり、AIの出力内容を深く理解したい人にとっては逆に良い訓練になります。しかし、頻繁なコピー＆ペーストは効率の問題とミスのリスクをもたらします。ワンクリック体験を追求する人ではなく、「生のAI出力コード」を見たい方に向いています。
 - **プロンプトのプロセス：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image11.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image11.webp)
 - **スネークゲームの効果：**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image12.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image13.png)
@@ -285,11 +285,11 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
 - **プラットフォームタイプ：** Web
 - **主な特徴とワークフロー：** Replitはオールインワンのオンライン開発・デプロイ環境で、ブラウザ上でコーディング、プログラムの実行、オンラインアクセスURLの生成が可能です。コーディングを始める前に、明確なアクションプランを提示します。またビジュアルエディタも提供しており、プレビューウィンドウで直接UIを変更でき、ソースコードが自動的に同期更新されます。これにより、AIの出力が期待通りかどうかを随時確認でき、修正の往復を大幅に減らすことができます。
 
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image15.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image15.webp)
 
 - **対象ユーザー：** Replitは初心者に非常に使いやすいです。コーディングからデプロイまでの完全なサイクルを簡略化し、自前でサーバーやホスティングサービスを設定する必要がありません。コラボレーション機能も強力で、同級生と一緒にプロジェクトを作ったり、他の人にリモートでコードを見てもらうのに適しています。
 - **プロンプトのプロセス：** 構築中、AIは最初から要件を完全に理解しているわけではなく、約3ラウンドのイテレーションを経て、最終的に理想的な結果に到達しました。
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.webp)
 - **スネークゲームの効果：**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.png)
@@ -304,7 +304,7 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
 - **対象ユーザー：** 自動的にテストを実行しエラーを修正するため、時間とTokenの消費が大きいですが、AIがどのように問題を特定し解決するかを明確に観察でき、学習の観点からは非常に価値があります。
 - **プロンプトのプロセス：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
 
 - **スネークゲームの効果：**
 
@@ -319,10 +319,10 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
 - **主な特徴とワークフロー：** デスクトップアプリケーションとして、TraeはWebツールと比較してパフォーマンスとレスポンス速度で通常優位性があります。ただし、ダウンロードとインストールが必要で、一部のユーザーにとっては導入の敷居が少し高くなります。同様に、ローカル環境であるため、コンピュータの設定や依存環境の違いにより、ある程度の不確実性が生じます。メリットは、Traeがローカルでのプロジェクト作成と実行設定を支援し、直接ローカルで開発とデバッグができることです。
 - **対象ユーザー：** 長期的にVibe Codingプロジェクトを行い、専用のデスクトップツールを使用したいと考えているユーザーにより適しています。「たまに遊んでみたい」だけの方には、最も軽量な選択肢ではないかもしれません。
 - **プロンプトのプロセス：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.webp)
 - **スネークゲームの効果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.webp)
 
 - **価格：** 価格は比較的手頃で、無料版でも品質の良い小規模プロジェクトを十分に完了できます。
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
@@ -333,9 +333,9 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
 - **主な特徴とワークフロー：** V0はVercelが提供する、React UIコンポーネントの生成に特化したツールです。高品質で本番環境に使用可能なインターフェースの生成において優れたパフォーマンスを発揮します。ただし実際の使用では、「コードビューが見つけにくい」「API Keyをどこに設定すべきかの明確な説明がない」といった問題に直面することがあります。
 - **対象ユーザー：** V0はフロントエンドとUI/UXデザインに注力する学生やデザイナーに非常に適しています。しかし完全なフルスタックソリューションではなく、バックエンドロジックとAPI統合を実装するには他のプラットフォームを使用する必要があるため、「ワンストップで完全なアプリケーションを構築する」ことが目標であれば、最適な第一選択ではないかもしれません。
 - **プロンプトのプロセス：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.webp)
 
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.webp)
 
 - **スネークゲームの効果：**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.png)

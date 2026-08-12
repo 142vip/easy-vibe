@@ -388,17 +388,17 @@ Si vous rencontrez le scénario suivant, cela signifie qu'un service local a dé
 :::
 
 Une fois toutes les confirmations terminées, attendez que l'agent s'exécute quelques instants, et vous obtiendrez le résultat suivant :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-50-34.webp)
 
 On peut voir qu'il y a déjà une première version fonctionnelle, mais la page frontend est vraiment laide. À ce stade, vous pouvez essayer de dialoguer directement avec l'IA pour optimiser l'affichage de l'interface :
 
 Après optimisation, nous obtenons une interface plus esthétique :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-05-16.webp)
 
 Vous pouvez modifier les fonctionnalités de la page selon vos besoins, joindre des captures d'écran et poser des questions librement, par exemple : « Je n'ai pas besoin de la fonctionnalité d'import par lot pour l'instant, aide-moi à la supprimer », « Il y a trop de champs à remplir à gauche, garde uniquement xxxxx ». Vous pouvez même vous référer à d'autres sites matures — par exemple, vous pouvez directement « vous inspirer » d'un produit de design de Google (vous pouvez coller une capture d'écran d'un site mature que vous aimez) :
 
 Et finalement obtenir :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.webp)
 
 ### 2.3 Que faire en cas d'erreur
 
@@ -530,13 +530,13 @@ pour que je puisse cliquer et tester rapidement si le flux complet fonctionne no
 ```
 
 On obtient facilement le résultat (si vous trouvez qu'une donnée c'est trop peu, vous pouvez demander à l'IA de générer plusieurs cas de test) :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-30-30.webp)
 
 Résultat après clic :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-31-23.webp)
 
 À ce stade, nous obtenons directement le résultat, sans qu'il y ait un « processus de génération simulé ». Si nous voulons simuler un vrai processus de génération, nous pouvons directement parler à l'IA : « Merci de simuler un vrai processus de génération, il faut attendre un moment après le clic avant de me donner le résultat. »
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-50-05.webp)
 
 Une fois la fonctionnalité de génération validée, nous devons aussi nous assurer que la fonctionnalité de bibliothèque de modèles fonctionne correctement. Sur la carte de génération de la page, nous pouvons voir que la fonctionnalité de favoris de la bibliothèque de modèles n'est pas implémentée. Il faut alors approfondir la conversation avec l'IA : « Merci de t'assurer que le besoin [collez ici le contenu du point 2 ci-dessus] fonctionne correctement, on peut cliquer sur un résultat pour sauvegarder le modèle correspondant, et en l'ouvrant on peut voir les paramètres de génération »
 
@@ -544,7 +544,7 @@ La génération n'est souvent pas immédiate, il faut régulièrement corriger a
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
 
 Et finalement obtenir le résultat attendu :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.webp)
 
 En plus du test manuel du parcours des besoins, vous pouvez aussi demander à l'IA de faire directement une vérification des besoins, par exemple :
 

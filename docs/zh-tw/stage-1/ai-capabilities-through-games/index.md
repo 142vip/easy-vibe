@@ -149,7 +149,7 @@ AI 出現之後，第一次給了普通人一個全新的可能：你不需要�
 
 > 其中頂部從左到右按鈕的作用依次為：箭頭按鈕展開側邊對話歷史欄，鉛筆按鈕用於新建一個對話，迴圈箭頭按鈕用於重新整理頁面，指南針按鈕負責切換至全屏模式，Download 按鈕用於下載專案，<> 按鈕用於切換程式碼檢視，Publish 按鈕用於釋出專案。
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-35-11.webp)
 
 如果你想檢視該網頁的原始碼，可以點選右上角的程式碼圖示檢視完整程式碼。
 
@@ -240,12 +240,12 @@ AI 出現之後，第一次給了普通人一個全新的可能：你不需要�
 
 > **💡 示例提示詞：** 幫我做一個貪喫蛇遊戲
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image12.webp)
 
 > **💡 示例提示詞：** 幫我做一個貪喫蛇遊戲，它應該支援
 >
 > 1. 我可以喫不同的單詞，它們會被收集在一個盒子裡
->    ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.png)
+>    ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image13.webp)
 
 > **💡 示例提示詞：** 幫我做一個貪喫蛇遊戲，它應該支援：
 >
@@ -253,13 +253,13 @@ AI 出現之後，第一次給了普通人一個全新的可能：你不需要�
 > 2. 當蛇喫了8個單詞時，llm 應該根據這些單詞創作一首詩，我們可以根據需要重新混合這首詩。
 > 3. 當詩完成後，下一步將自動根據這首詩建立一幅影象。
 >
-> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.png)
+> ![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image14.webp)
 
 注意，在開發過程中，我們可能會遇到不盡如人意的問題，例如點選按鈕沒有任何反應、使用功能時報錯、功能未按預期工作，或者前端頁面與預期設計不符。
 
 在這種情況下，我們需要進一步向模型提問，以幫助修復這些意外問題。
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image15.webp)
 
 ### 3.2 給遊戲新增新功能
 
@@ -303,13 +303,13 @@ AI 出現之後，第一次給了普通人一個全新的可能：你不需要�
 
 z.ai 的回覆將會是這樣的：
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image56.webp)
 
 我們可以使用這個提示詞在全棧開發模式下重新生成專案：
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image57.webp)
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/image58.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>
@@ -374,7 +374,7 @@ z.ai 的回覆將會是這樣的：
 
 日本一位完全不懂程式設計的開發者 [in0ho1no](https://github.com/in0ho1no)，用 Claude 透過純對話（Vibe Coding）在 **約 2 小時內** 做出了 2048 風格的「植物花園」遊戲 [Blooming Garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/)：同種植物合成升級、華麗的開花特效、粒子動畫、排行榜、音效、手機適配……這些功能全部透過自然語言對話完成，沒有手寫一行程式碼。
 
-![Blooming Garden 植物合成遊戲（100% AI 生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.png)
+![Blooming Garden 植物合成遊戲（100% AI 生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-blooming-garden.webp)
 
 > 🔗 線上試玩：[in0ho1no.github.io/2025-adhoc-blooming-garden](https://in0ho1no.github.io/2025-adhoc-blooming-garden/) ｜ 原始碼：[github.com/in0ho1no/2025-adhoc-blooming-garden](https://github.com/in0ho1no/2025-adhoc-blooming-garden)
 
@@ -382,7 +382,7 @@ z.ai 的回覆將會是這樣的：
 
 設計師 [Ricardo de Zoete（Hammy）](https://x.com/RicardoDeZoete) 用 OpenAI 的 AI 透過純對話（Vibe Coding）在 three.js 基礎上做出了 [Planet Jumper](https://gamesbyhammy.cloud/play/planetjumper)——一個**3D 多人平台跳躍遊戲**：在一個小球狀星球表面奔跑、衝刺、跳躍，還能與陌生人在線同場競技。球形引力、連線同步、跳躍手感這些並不簡單的系統，全靠提示詞「聊」出來。
 
-![Planet Jumper 3D 多人平台跳躍遊戲（Vibe Coding 生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.png)
+![Planet Jumper 3D 多人平台跳躍遊戲（Vibe Coding 生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-planet-jumper.webp)
 
 > 🔗 線上試玩：[gamesbyhammy.cloud/play/planetjumper](https://gamesbyhammy.cloud/play/planetjumper) ｜ 詳細介紹：[Planet Jumper: A Vibe-Coded Three.js Multiplayer Platformer](https://www.webgpu.com/showcase/planet-jumper-threejs-multiplayer/)
 
@@ -392,7 +392,7 @@ z.ai 的回覆將會是這樣的：
 
 ![100 款瀏覽器遊戲線上目錄（2026 年 Vibe Coding 開源專案）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
 
-![《霓虹 2048》：六章 18 節點遠征 + 多種模式與工具系統](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.png)
+![《霓虹 2048》：六章 18 節點遠征 + 多種模式與工具系統](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
 > 🔗 線上目錄：[wangzifan396-wzf.github.io/mini-browser-games](https://wangzifan396-wzf.github.io/mini-browser-games/) ｜ 原始碼：[github.com/wangzifan396-wzf/mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) ｜ 創作復盤：[我用 Vibe Coding 做了 100 款瀏覽器遊戲，並把它們全部開源了](https://blog.csdn.net/m0_74023007/article/details/162945755)
 
@@ -428,7 +428,7 @@ z.ai 的回覆將會是這樣的：
 
 ![K399 平台介面——K3 Game Arcade，遊戲列表點開即玩](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
 
-![K399 上的開放世界遊戲 SpiderPunk：在賽博都市高樓間蕩蛛絲（K3 模型生成，實際遊玩畫面）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.png)
+![K399 上的開放世界遊戲 SpiderPunk：在賽博都市高樓間蕩蛛絲（K3 模型生成，實際遊玩畫面）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 
 > 🔗 線上試玩：[k399.games](https://www.k399.games/)（K3 Game Arcade，點開即玩）｜ 詳細介紹：[前米哈遊高階主管加入，當下最火的 AI 公司突然做了幾十個遊戲](https://eu.36kr.com/zh/p/3906895998178441) ｜ [Kimi K3，讓誰緊張？](https://36kr.com/p/3905392402748801)
 
@@ -572,7 +572,7 @@ z.ai 的回覆將會是這樣的：
 
 > 💡 什麼是 Vibe Coding？電腦科學家 [Andrej Karpathy](https://karpathy.ai/)（OpenAI 的聯合創始人之一，特斯拉前 AI 負責人）於 2025 年 2 月提出了 **vibe coding** 一詞。這個概念指的是一種依賴於 LLM 的編碼方法，**允許程式設計師透過提供自然語言描述而不是手動編寫程式碼來生成可工作的程式碼。**
 
-![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.png)
+![1767350588191](../../../zh-cn/stage-1/ai-capabilities-through-games/images/1767350588191.webp)
 
 從字面上看，Vibe Coding 可以理解為一種“用說的方式來做開發”。它的核心變化在於：你不再需要自己一行一行寫程式碼、查語法、調 Bug，而是直接用自然語言描述你想要的東西，例如：
 

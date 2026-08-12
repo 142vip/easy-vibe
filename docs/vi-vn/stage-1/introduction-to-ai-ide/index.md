@@ -135,15 +135,15 @@ Các "IDE tích hợp" nổi tiếng và trưởng thành về chức năng như
 
 IDE hiện đại thường còn tích hợp các công cụ như Git. Phổ biến nhất là **[Visual Studio Code (VS Code)](https://code.visualstudio.com/)** của Microsoft: nhẹ và có thể mở rộng. Dù cũng có các IDE chuyên nghiệp như hệ sinh thái JetBrains, VS Code vẫn thân thiện nhất với người mới.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image4.webp)
 
 Triết lý cốt lõi của VS Code là "mọi thứ đều là plugin". Thông qua cơ chế plugin, nó hỗ trợ nhiều ngôn ngữ: cài plugin Python thì thành Python IDE, cài plugin C++ thì thành C++ IDE. Khi chưa cài plugin, nó chỉ là một trình soạn thảo văn bản cao cấp.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image5.webp)
 
 Thậm chí có thể dùng để chỉnh sửa tài liệu Markdown.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image6.webp)
 
 Tóm lại, IDE là một bộ công cụ giúp lập trình viên viết code và chạy chương trình hiệu quả.
 
@@ -210,7 +210,7 @@ Cursor là trình soạn thảo code AI do Anysphere phát triển, tùy biến 
 
 Hiện tại, Cursor có thể xem là một trong những AI IDE "có giao diện frontend" có trải nghiệm tổng thể tốt nhất, lượng người dùng lớn và tần suất cập nhật tính năng cao. Nhược điểm lớn nhất của nó là giá tương đối cao: bản Pro khoảng 20 USD mỗi tháng.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image9.webp)
 :::
 
 ::: details Qoder
@@ -219,7 +219,7 @@ Hiện tại, Cursor có thể xem là một trong những AI IDE "có giao di�
 
 Qoder là AI IDE do Alibaba ra mắt, nhấn mạnh "cộng tác minh bạch" và "tăng cường năng lực context engineering". Thông qua Action Flow, nó hỗ trợ chia nhiệm vụ thành nhiều bước và theo dõi quá trình thực thi của AI theo thời gian thực; đồng thời hỗ trợ routing động nhiều mô hình và quản lý trạng thái nhiệm vụ, rất phù hợp để quản trị kiến trúc trong dự án vừa/lớn và phân tích "reverse engineering" hệ thống legacy.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image10.webp)
 :::
 
 ::: details CodeBuddy
@@ -228,7 +228,7 @@ Qoder là AI IDE do Alibaba ra mắt, nhấn mạnh "cộng tác minh bạch" v�
 
 CodeBuddy là công cụ lập trình AI do Tencent Cloud ra mắt, nhấn mạnh hỗ trợ chỉ dẫn tiếng Trung và năng lực tuân thủ cấp doanh nghiệp. Nó cung cấp các chức năng như hoàn thành code, review code hàng loạt và chuyển đổi nhiều mô hình; trong đó Craft agent có thể tạo code nhiều tệp và tích hợp API. Bản enterprise hỗ trợ triển khai private và đã đạt chứng nhận bảo mật cấp 3, phù hợp với các ngành có yêu cầu cao về an toàn dữ liệu như tài chính và y tế.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image11.webp)
 :::
 
 ::: details VS Code + Cline
@@ -237,9 +237,9 @@ CodeBuddy là công cụ lập trình AI do Tencent Cloud ra mắt, nhấn mạn
 
 Cline là một plugin AI programming Agent cho VS Code (Visual Studio Code), có thể linh hoạt chuyển đổi mô hình lớn được dùng bằng cách cấu hình các API endpoint khác nhau. Cline hỗ trợ đầu vào đa phương thức, mở rộng công cụ MCP và giám sát chi phí; mọi thao tác đều cần người dùng xác nhận trước khi thực thi. Nó rất phù hợp để nhanh chóng kiểm chứng ý tưởng hoặc tích hợp vào quy trình phát triển hiện có. Chức năng cơ bản miễn phí, còn bản enterprise hỗ trợ triển khai mô hình trong môi trường private.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image13.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image14.webp)
 :::
 
 ::: details Kiro
@@ -432,7 +432,7 @@ Như hình minh họa, ở đây chỉ cần nhập y để xác nhận:
 
 Như hình minh họa, ở đây chúng ta đang tạo template nhưng không biết thao tác ra sao; có thể chụp màn hình phần này và hỏi mô hình lớn:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-29-12.webp)
 
 Một lý do khác khiến AI Agent tạm dừng trong quá trình thực thi là lúc này đã khởi động một "service". Trò Rắn săn mồi của chúng ta về bản chất cũng là một loại "service". Nếu bạn thấy URL như trong lệnh dưới đây, nghĩa là Agent đã giúp chúng ta chạy một service local trên máy; chúng ta có thể truy cập URL tương ứng để mở trò Rắn săn mồi. Vì service cần tiếp tục chạy, giao diện sẽ rơi vào trạng thái tạm dừng. Lúc này chỉ cần bấm nút `Skip`.
 
@@ -444,7 +444,7 @@ Nếu trong quá trình làm gặp hiện tượng không đúng kỳ vọng, v�
 
 Chờ một lúc, chúng ta có thể nhận được kết quả tương tự z.ai:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-33-37.webp)
 
 Chúng ta có thể bấm dấu tick ở góc dưới bên phải để xác nhận thay đổi code, hoặc bấm nút `Cancel` để hủy thay đổi. Bạn cũng có thể bấm vào vị trí 2 files need review để mở ra xem code đã thay đổi.
 
@@ -460,7 +460,7 @@ Một cách khá thực dụng là để AI giải thích tổng thể trước 
 
 > "Hãy giải thích từ trên xuống dưới, từng bước trò Rắn săn mồi này vận hành như thế nào. Cố gắng dùng ít thuật ngữ chuyên môn."
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-44-36.webp)
 
 Sau đó tiếp tục hỏi sâu theo câu trả lời của nó, ví dụ:
 
@@ -513,15 +513,15 @@ AI sẽ dựa trên mô tả của bạn để trực tiếp sửa component Rea
 
 Với người mới làm vibe coding, điều khó nhất thường lại là không biết thế nào mới là "best practice", không biết kiến trúc nào phù hợp nhất. Vì chưa nắm nền tảng máy tính, bạn cũng khó dẫn dắt AI tốt. Cách giải quyết vấn đề này là "tham khảo trực tiếp". Bạn còn nhớ trước đó chúng ta nói trong z.ai có thể xem code không? Thực ra trong README tương ứng, tức phần dùng để giới thiệu chức năng và kiến trúc kỹ thuật của dự án, đã có một tham khảo kiến trúc khá tốt:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-49-33.webp)
 
 Nếu muốn kết quả local gần với kết quả của z.ai nhất có thể, chúng ta có thể sao chép toàn bộ nội dung README này, dán vào sidebar của Trae và yêu cầu nó sửa code local theo kiến trúc trong README.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-50-31.webp)
 
 Cuối cùng, chúng ta có thể nhận được phong cách thiết kế trang rất giống z.ai:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-11-00-57.webp)
 
 <div style="margin: 50px 0;">
   <ClientOnly>

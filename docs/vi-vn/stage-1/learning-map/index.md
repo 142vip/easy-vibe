@@ -27,7 +27,7 @@ Trước đây, làm phần mềm có rào cản rất cao. Bạn phải học n
 Thay đổi đầu tiên là nhiều người vượt qua được rào cản “không biết viết mã nên không thể bắt đầu”. Người chưa có kinh nghiệm cũng có thể làm một trò chơi nhỏ, trang web hoặc nguyên mẫu có thể trình bày chỉ trong vài phút.
 
 <figure class="concept-illustration">
-  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.png" alt="Một người dùng AI biến ý tưởng bằng ngôn ngữ tự nhiên thành nguyên mẫu, đưa cho người dùng thật và tiếp tục cải thiện từ phản hồi" loading="lazy">
+  <img src="../../../zh-cn/stage-1/learning-map/images/vibe-coding-to-product.webp" alt="Một người dùng AI biến ý tưởng bằng ngôn ngữ tự nhiên thành nguyên mẫu, đưa cho người dùng thật và tiếp tục cải thiện từ phản hồi" loading="lazy">
   <figcaption>Vibe Coding giúp bạn vượt qua rào cản “làm ra”; xây sản phẩm còn phải đi tiếp đến người dùng thật, phản hồi và giá trị.</figcaption>
 </figure>
 
