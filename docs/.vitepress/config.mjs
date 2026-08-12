@@ -1759,7 +1759,7 @@ const productManagerSidebar = [
     collapsed: false,
     items: [
       {
-        text: '在魔搭社区发布你的网页',
+        text: '在魔搭社区发布你的 Vibe Coding 产物',
         link: '/zh-cn/stage-1/appendix-modelscope-static-site/'
       },
       {
