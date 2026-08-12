@@ -451,7 +451,7 @@ Project Settings 是 Supabase 项目的高级配置部分，你可在此实现�
 
 其余配置项在当前阶段无需深究，待后续有进阶使用需求时再逐一探索即可。
 
-## 2.1 创建你的第一个 SQL 数据表
+## 2.2 创建你的第一个 SQL 数据表
 
 以上是 Supabase 的界面介绍，接下来我们将深入 Supabase 的核心数据库的操作环节。
 
@@ -824,7 +824,7 @@ export function maybeCreateBrowserClient(): SupabaseClient | null {
 
 1. 尝试增加和删除已有项目，在 Table Editor 中查看修改操作对数据表内容变动的影响。
 
-## 3.4 项目2 - 汉堡店认证用户
+## 3.3 项目2 - 汉堡店认证用户
 
 Project1 实现了 “菜单 CRUD + 数据库连接” ，Project2 将引入更贴近真实业务的核心能力，用户认证（Auth）与行级安全（RLS）权限管理。
 
@@ -1036,7 +1036,7 @@ Supabase 将这些后端能力打包为开箱即用的服务（PostgreSQL数据�
 
 至此，你已经能够使用第三方账户在构建的网站中进行登录，你可以直接让 AI 基于 `Project5-Supabase-Demos/apps/project-burger-shop-auth-advanced-supabase-6`项目作为参考，在你的项目的基础上支持用户登录系统，以最小成本集成包含 github 与 google 鉴权的用户登录界面。
 
-### 5.2.6 密码重置实现
+### 5.2.5 密码重置实现
 
 作为一个成熟的用户登录组件，密码重置也是极其重要的一环，本项目 `project-burger-shop-auth-advanced-supabase-6`也包含了该功能的完整实现，你可以直接让 AI 基于本项目的密码重置功能复刻完整的密码重置组件。其主要分为以下几步：
 
@@ -1246,7 +1246,7 @@ ch.on('broadcast', { event: 'cursor' }, ({ payload }) => {
 
 ![](images/image56.png)
 
-### 5.4.1. 存储桶
+### 5.4.1 存储桶
 
 Supabase Storage 的组成单元是存储桶 Bucket。你可以把它想象成电脑操作系统中的文件夹。每个 Bucket 都可以有自己独立的安全策略和配置。
 
