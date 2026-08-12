@@ -118,8 +118,9 @@ const localizedStage2Cards = computed(() => {
 }
 
 .comm-visual {
-  height: 220px;
   width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 941;
   position: relative;
   overflow: hidden;
 }
@@ -127,6 +128,8 @@ const localizedStage2Cards = computed(() => {
 .comm-visual img {
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   display: block;
   object-fit: cover;
   object-position: top center;

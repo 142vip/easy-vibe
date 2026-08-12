@@ -88,49 +88,38 @@ const tStories = computed(() => [
 ])
 
 const defaultScreenViewport = Object.freeze({
-  left: 19,
-  top: 1.75,
-  width: 62.75,
-  height: 71.5,
-  radius: 12
+  // Let the screenshot bleed slightly under the black bezel. The frame is
+  // rendered above it and masks the excess, avoiding sub-pixel seams at any
+  // browser zoom level.
+  left: 10,
+  top: 1.5,
+  width: 80,
+  height: 87.5
 })
 
 const currentIndex = ref(0)
 let autoplayTimer = null
 const isPaginating = ref(false)
 const containerRef = ref(null)
-const laptopRef = ref(null)
 let wheelHandler = null
-let resizeObserver = null
-
-const LAPTOP_ASPECT_RATIO = 2675 / 4608
-const laptopHeightPx = ref(null)
 
 // Visible image container geometry relative to `.laptop-container`.
-// Adjust these five values directly to control the screen viewport.
+// Adjust these values directly to control the screen viewport.
 const screenViewport = ref({ ...defaultScreenViewport })
 
 const formatPercent = (value) => `${value}%`
-const formatPixels = (value) => `${value}px`
 
 // The percentages below are always resolved against `.laptop-container`.
 const screenViewportStyle = computed(() => ({
   '--screen-left': formatPercent(screenViewport.value.left),
   '--screen-top': formatPercent(screenViewport.value.top),
   '--screen-width': formatPercent(screenViewport.value.width),
-  '--screen-height': formatPercent(screenViewport.value.height),
-  '--screen-radius': formatPixels(screenViewport.value.radius)
+  '--screen-height': formatPercent(screenViewport.value.height)
 }))
 
 const currentStory = computed(() => tStories.value[currentIndex.value] ?? tStories.value[0])
 
 const currentImageStyle = computed(() => currentStory.value?.imageStyle || {})
-
-const laptopContainerStyle = computed(() => (
-  laptopHeightPx.value
-    ? { height: `${laptopHeightPx.value}px` }
-    : {}
-))
 
 const transitionName = ref('slide-left')
 
@@ -175,18 +164,9 @@ const stopAutoplay = () => {
   }
 }
 
-const updateLaptopHeight = () => {
-  const laptop = laptopRef.value
-  if (!laptop) return
-
-  const nextHeight = laptop.clientWidth * LAPTOP_ASPECT_RATIO
-  laptopHeightPx.value = nextHeight > 0 ? nextHeight : null
-}
-
 onMounted(() => {
   startAutoplay()
   const container = containerRef.value
-  const laptop = laptopRef.value
   if (!container) return
 
   wheelHandler = (e) => {
@@ -201,17 +181,6 @@ onMounted(() => {
   }
 
   container.addEventListener('wheel', wheelHandler, { passive: false })
-
-  updateLaptopHeight()
-
-  if (typeof ResizeObserver !== 'undefined' && laptop) {
-    resizeObserver = new ResizeObserver(() => {
-      updateLaptopHeight()
-    })
-    resizeObserver.observe(laptop)
-  } else if (typeof window !== 'undefined') {
-    window.addEventListener('resize', updateLaptopHeight)
-  }
 })
 
 onUnmounted(() => {
@@ -219,13 +188,6 @@ onUnmounted(() => {
   const container = containerRef.value
   if (container && wheelHandler) {
     container.removeEventListener('wheel', wheelHandler)
-  }
-
-  if (resizeObserver) {
-    resizeObserver.disconnect()
-    resizeObserver = null
-  } else if (typeof window !== 'undefined') {
-    window.removeEventListener('resize', updateLaptopHeight)
   }
 })
 </script>
@@ -238,7 +200,7 @@ onUnmounted(() => {
     </div>
 
     <div class="laptop-wrapper" @mouseenter="stopAutoplay" @mouseleave="startAutoplay">
-      <div ref="laptopRef" class="laptop-container" :style="laptopContainerStyle">
+      <div class="laptop-container">
         <!-- Navigation Controls -->
         <button class="nav-btn prev" :aria-label="t.stories?.ui?.prevLabel || 'Previous story'" @click="prev">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6" /></svg>
@@ -370,17 +332,21 @@ onUnmounted(() => {
 
 .laptop-container {
   position: relative;
+  isolation: isolate;
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
-  aspect-ratio: 4608 / 2675;
+  aspect-ratio: 1400 / 813;
 }
 
 .laptop-frame {
   position: relative;
   z-index: 10;
   width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1400 / 813;
+  display: block;
   object-fit: contain;
   pointer-events: none;
   filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
@@ -397,15 +363,11 @@ onUnmounted(() => {
   left: var(--screen-left);
   width: var(--screen-width);
   height: var(--screen-height);
-  border-radius: var(--screen-radius);
   background: #0b0b0f;
   overflow: hidden;
   perspective: 1000px;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
-  mask-image: radial-gradient(white, black);
-  isolation: isolate;
 }
 
 .screen-link {
@@ -437,8 +399,8 @@ onUnmounted(() => {
   height: 100%;
   min-width: 100%;
   min-height: 100%;
-  max-width: none;
-  max-height: none;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: cover;
   object-position: center;
 }

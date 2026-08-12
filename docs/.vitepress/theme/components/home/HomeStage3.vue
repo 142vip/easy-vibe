@@ -139,7 +139,9 @@ const t = inject('t')
 
 .prod-visual {
   margin-top: auto;
-  height: 150px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 941;
   border-radius: 20px;
   overflow: hidden;
   background: linear-gradient(135deg, #dbeafe 0%, #e5e7eb 100%);
@@ -148,6 +150,8 @@ const t = inject('t')
 .prod-visual img {
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   display: block;
   object-fit: cover;
   object-position: center;
