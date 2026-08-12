@@ -33,11 +33,71 @@ const locales = (process.env.VITEPRESS_BUILD_LOCALES || defaultLocales.join(',')
   .filter(Boolean)
 
 const heapMb = process.env.BUILD_HEAP_MB || '4096'
-const groupSize = Number.parseInt(process.env.BUILD_LOCALE_GROUP_SIZE || '2', 10)
+// VitePress 2 alpha uses one shared `.temp` directory per build. Building more
+// than one locale at a time can remove SSR chunks before page rendering has
+// finished, producing intermittent ERR_MODULE_NOT_FOUND failures. Keep the
+// default deterministic; callers can still opt into grouping explicitly.
+const groupSize = Number.parseInt(process.env.BUILD_LOCALE_GROUP_SIZE || '1', 10)
 const forceBuild = process.argv.includes('--force')
 const finalOutDir = path.join(docsDir, '.vitepress/dist')
 const tempRoot = path.join(docsDir, '.vitepress/dist-locales')
+const lockPath = path.join(docsDir, '.vitepress/build-locales.lock')
 const mergedHashmap = {}
+
+function sleep(milliseconds) {
+  Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, milliseconds)
+}
+
+function processIsRunning(pid) {
+  if (!Number.isInteger(pid) || pid <= 0) return false
+  try {
+    process.kill(pid, 0)
+    return true
+  } catch {
+    return false
+  }
+}
+
+function acquireBuildLock() {
+  const deadline = Date.now() + 15 * 60 * 1000
+
+  while (Date.now() < deadline) {
+    try {
+      const file = fs.openSync(lockPath, 'wx')
+      fs.writeFileSync(file, `${process.pid}\n`)
+      fs.closeSync(file)
+      return
+    } catch (error) {
+      if (error.code !== 'EEXIST') throw error
+
+      const ownerPid = Number.parseInt(
+        fs.readFileSync(lockPath, 'utf8').trim(),
+        10
+      )
+      if (!processIsRunning(ownerPid)) {
+        fs.rmSync(lockPath, { force: true })
+        continue
+      }
+
+      console.log(`Waiting for locale build ${ownerPid} to finish...`)
+      sleep(2000)
+    }
+  }
+
+  throw new Error('Timed out waiting for another locale build to finish')
+}
+
+function releaseBuildLock() {
+  try {
+    const ownerPid = Number.parseInt(
+      fs.readFileSync(lockPath, 'utf8').trim(),
+      10
+    )
+    if (ownerPid === process.pid) fs.rmSync(lockPath, { force: true })
+  } catch {
+    // The lock may already be gone after an interrupted build.
+  }
+}
 
 function run(command, args, options = {}) {
   const result = spawnSync(command, args, {
@@ -80,6 +140,9 @@ console.log(`Building locales: ${locales.join(', ')}`)
 console.log(`Node heap per locale build: ${heapMb} MB`)
 console.log(`Locale group size: ${groupSize}`)
 if (forceBuild) console.log('VitePress force build: enabled')
+
+acquireBuildLock()
+process.on('exit', releaseBuildLock)
 
 fs.rmSync(tempRoot, { recursive: true, force: true })
 fs.rmSync(finalOutDir, { recursive: true, force: true })
