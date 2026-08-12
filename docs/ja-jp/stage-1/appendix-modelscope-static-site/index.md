@@ -1,15 +1,15 @@
 ---
-title: ModelScopeでウェブサイトを公開する
+title: Vibe Codingの成果物をModelScopeで公開する
 description: 純粋なHTMLからVue、React、Viteのビルド成果物まで、公式SkillとStatic Studioを使って公開する完全ガイド
 ---
 
-# ModelScopeでウェブサイトを公開する
+# Vibe Codingの成果物をModelScopeで公開する
 
 ローカルで動くWebページができたら、友人や利用者が直接開ける場所へ公開します。
 
 自分でサーバー、ドメイン、HTTPS、デプロイを設定する方法もありますが、ここでは運用作業を減らすため、**ModelScope Studio**へ公開します。
 
-ModelScopeはモデルとデータセットに加え、アプリを展示する **Studio** を提供しています。コミュニティでは[コア開発者の交流会](https://community.modelscope.cn/683562c6870cef7360622f7f.html)も開かれています。Studioを使えば、サーバー運用を先に学ばなくても共有URLを用意できます。
+ModelScopeはAlibabaとCCFオープンソース発展委員会が共同で立ち上げたコミュニティです。20万を超えるオープンソースモデルと3万を超えるデータセットに加え、アプリを展示する **Studio** も提供しています。Studioを使えば、サーバー運用を先に学ばなくても無料で共有URLを用意できます。
 
 > 本文は現在のStudio画面、公式Skill、コマンド資料を基に **2026年8月11日** に確認しました。ボタンの位置が変わっても、「Static Studioを作成 → ビルド成果物をアップロード → デプロイ → URLを確認」という流れは同じです。
 
@@ -176,7 +176,7 @@ export default {
 
 作成ボタンまたは[Studio作成ページ](https://modelscope.cn/studios/create)を開きます。中国サイト`modelscope.cn`と国際サイト`modelscope.ai`のアカウント、トークン、内容は共有されません。
 
-## 手動操作：第2段階 — Static Studioを作成する
+## 手動操作：第2段階 — Studioの基本情報を入力する
 
 ![所有者、名前、ライセンス、公開範囲、説明を入力する画面](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/02-create-studio.jpg)
 
@@ -185,12 +185,6 @@ export default {
 3. **表示名と説明**：訪問者に分かる言葉で書きます。
 4. **公開範囲**：初回は非公開、確認後に公開します。
 5. **ライセンス**：プロジェクトに合わせて選びます。
-
-SDK形式では必ず **Static** を選びます。現在のフォームにはGradio、Streamlit、Static、Dockerがあります。
-
-![SDK欄でStaticを選ぶ画面](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
-
-> データベース、秘密のAPIキー、サーバー計算が必要なら純粋な静的サイトではありません。Gradio、Streamlit、Docker、または別のバックエンドを使います。フロントエンドJavaScriptに置いたキーは秘密になりません。
 
 内容を確認して作成し、詳細ページが開くまで待ちます。
 
@@ -204,9 +198,19 @@ SDK形式では必ず **Static** を選びます。現在のフォームにはGr
 
 少数ファイルなら手動で構いません。ファイルや更新が多い場合は`ms-studio-deploy`でGit同期します。
 
-## 手動操作：第4段階 — デプロイして確認する
+## 手動操作：第4段階 — デプロイ設定でStaticを選ぶ
 
-保存すると通常は自動でデプロイされます。始まらない場合はデプロイ、再起動、再実行を選びます。実行中になったら次の形式のURLを開きます。
+ファイルをアップロードしたら、Studioのデプロイ設定を開き、SDK形式に **Static** を選びます。Staticは準備済みのHTMLサイト向けです。同じ画面にはGradio、Streamlit、Dockerも表示されます。
+
+![デプロイ設定のSDK欄でStaticを選ぶ画面](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+
+リポジトリのルートに`index.html`があることをもう一度確認し、デプロイ設定を保存します。
+
+> データベース、秘密のAPIキー、サーバー計算が必要なら純粋な静的サイトではありません。Gradio、Streamlit、Docker、または別のバックエンドを使います。フロントエンドJavaScriptに置いたキーは秘密になりません。
+
+## 手動操作：第5段階 — デプロイを待って確認する
+
+デプロイ設定を保存すると通常は自動でデプロイされます。始まらない場合はデプロイ、再起動、再実行を選びます。実行中になったら次の形式のURLを開きます。
 
 ```text
 https://modelscope.cn/studios/ユーザー名/Studio名
@@ -220,7 +224,7 @@ https://modelscope.cn/studios/ユーザー名/Studio名
 
 非公開Studioは動作確認後に公開へ変更し、ログアウト状態でも再確認します。
 
-## 手動操作：第5段階 — 公開済みサイトを更新する
+## 手動操作：第6段階 — 公開済みサイトを更新する
 
 ソース変更後はローカルテストと再ビルドを行い、**Files**ページで古い成果物を新しい`dist`または`build`の中身へ置き換え、再デプロイします。
 

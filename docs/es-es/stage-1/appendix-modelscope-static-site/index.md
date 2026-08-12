@@ -1,15 +1,15 @@
 ---
-title: Publica tu sitio web en ModelScope
+title: Publica tu proyecto de Vibe Coding en ModelScope
 description: Guía completa para publicar HTML o el resultado de Vue, React y Vite con el Skill oficial y un Static Studio.
 ---
 
-# Publica tu sitio web en ModelScope
+# Publica tu proyecto de Vibe Coding en ModelScope
 
 Cuando la página funciona en tu ordenador, hace falta una dirección que puedan abrir amigos, compañeros o usuarios reales.
 
 Puedes alquilar un servidor y configurar dominio, HTTPS y despliegue. En esta lección reduciremos ese trabajo y publicaremos la página en **ModelScope Studio**.
 
-ModelScope ofrece modelos y conjuntos de datos, además de **Studios** para mostrar aplicaciones. Su comunidad también organiza [encuentros de desarrolladores](https://community.modelscope.cn/683562c6870cef7360622f7f.html). Un Studio permite conseguir una dirección compartible sin aprender antes a administrar servidores.
+ModelScope nació de la colaboración entre Alibaba y el Comité de Desarrollo de Código Abierto de CCF. Además de más de 200 000 modelos de código abierto y 30 000 conjuntos de datos, ofrece **Studios** para mostrar aplicaciones. Un Studio permite conseguir gratis una dirección compartible sin aprender antes a administrar servidores.
 
 > La guía se comprobó con la interfaz actual, los Skills oficiales y la documentación de comandos el **11 de agosto de 2026**. Los botones pueden moverse, pero el recorrido continúa siendo: crear un Static Studio, subir el resultado compilado, desplegar y probar el enlace.
 
@@ -176,7 +176,7 @@ Abre [ModelScope Studio](https://modelscope.cn/studios). La parte superior muest
 
 Pulsa crear o abre [Crear Studio](https://modelscope.cn/studios/create). El sitio chino `modelscope.cn` y el internacional `modelscope.ai` no comparten cuenta, token ni contenido.
 
-## Ruta manual: Paso 2 — crea un Static Studio
+## Ruta manual: Paso 2 — completa la información básica
 
 ![Formulario con propietario, nombre, licencia, visibilidad y descripción](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/02-create-studio.jpg)
 
@@ -185,12 +185,6 @@ Pulsa crear o abre [Crear Studio](https://modelscope.cn/studios/create). El siti
 3. **Nombre visible y descripción:** escribe para el visitante.
 4. **Visibilidad:** comienza privado y hazlo público después de revisar.
 5. **Licencia:** elige según el proyecto.
-
-En el tipo de SDK, selecciona **Static**. El formulario actual ofrece Gradio, Streamlit, Static y Docker.
-
-![Selección de Static en el formulario de Studio](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
-
-> Si la web necesita base de datos, una clave secreta o cálculo de servidor, no es puramente estática. Usa Gradio, Streamlit, Docker o un backend aparte. Una clave escrita en JavaScript del frontend no puede mantenerse secreta.
 
 Confirma y espera a que se abra el Studio.
 
@@ -204,9 +198,19 @@ Sube `index.html`, CSS, JavaScript e imágenes desde **Files**. No los envuelvas
 
 La subida manual sirve para pocos archivos. Con muchos archivos o cambios frecuentes, usa `ms-studio-deploy` para sincronizar Git.
 
-## Ruta manual: Paso 4 — despliega y revisa
+## Ruta manual: Paso 4 — selecciona Static en la configuración de despliegue
 
-Guardar suele iniciar el despliegue. Si no ocurre, usa desplegar, reiniciar o volver a ejecutar. Cuando esté activo, abre:
+Después de subir los archivos, abre la configuración de despliegue del Studio y selecciona **Static** como tipo de SDK. Static está pensado para sitios HTML ya preparados; en la misma zona también aparecen Gradio, Streamlit y Docker.
+
+![Selección de Static en la configuración de despliegue](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+
+Comprueba de nuevo que `index.html` esté en la raíz del repositorio y guarda la configuración de despliegue.
+
+> Si la web necesita base de datos, una clave secreta o cálculo de servidor, no es puramente estática. Usa Gradio, Streamlit, Docker o un backend aparte. Una clave escrita en JavaScript del frontend no puede mantenerse secreta.
+
+## Ruta manual: Paso 5 — espera el despliegue y revisa
+
+Guardar la configuración suele iniciar el despliegue. Si no ocurre, usa desplegar, reiniciar o volver a ejecutar. Cuando esté activo, abre:
 
 ```text
 https://modelscope.cn/studios/tu-usuario/tu-studio
@@ -220,7 +224,7 @@ https://modelscope.cn/studios/tu-usuario/tu-studio
 
 Revisa primero el Studio privado, después hazlo público y repite la prueba sin sesión.
 
-## Ruta manual: Paso 5 — actualiza el sitio
+## Ruta manual: Paso 6 — actualiza el sitio
 
 Tras modificar el código, prueba en local y compila de nuevo. Sustituye en **Files** los archivos anteriores por el nuevo contenido de `dist` o `build` y vuelve a desplegar.
 

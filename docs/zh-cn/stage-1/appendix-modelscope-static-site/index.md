@@ -3,7 +3,7 @@ title: 在魔搭社区发布你的 Vibe Coding 产物
 description: 从纯 HTML 到 Vue、React、Vite 构建产物，结合魔搭官方 Skill 与创空间发布静态网页的完整教程
 ---
 
-# 在魔搭社区发布你的网页
+# 在魔搭社区发布你的 Vibe Coding 产物
 
 网页终于做出来了，接下来当然要找个地方展示，让朋友、同学或者真正的用户可以直接打开它。
 

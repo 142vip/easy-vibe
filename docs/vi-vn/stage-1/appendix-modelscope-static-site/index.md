@@ -1,15 +1,15 @@
 ---
-title: Đăng trang web lên ModelScope
+title: Đăng sản phẩm Vibe Coding lên ModelScope
 description: Hướng dẫn đầy đủ để đăng HTML hoặc kết quả build Vue, React và Vite bằng Skill chính thức và Static Studio.
 ---
 
-# Đăng trang web lên ModelScope
+# Đăng sản phẩm Vibe Coding lên ModelScope
 
 Khi trang đã chạy trên máy, bạn cần một địa chỉ mà bạn bè, bạn học hoặc người dùng thật có thể mở.
 
 Bạn có thể thuê máy chủ rồi tự cấu hình tên miền, HTTPS và triển khai. Trong bài này, chúng ta giảm phần vận hành và đăng trang lên **ModelScope Studio**.
 
-ModelScope cung cấp mô hình, tập dữ liệu và cả **Studio** để trình bày ứng dụng. Cộng đồng cũng tổ chức [gặp gỡ nhà phát triển](https://community.modelscope.cn/683562c6870cef7360622f7f.html). Studio giúp tạo địa chỉ chia sẻ mà chưa cần học quản trị máy chủ trước.
+ModelScope được Alibaba khởi xướng cùng Ủy ban Phát triển Mã nguồn Mở CCF. Bên cạnh hơn 200.000 mô hình mã nguồn mở và 30.000 tập dữ liệu, nền tảng còn cung cấp **Studio** để trình bày ứng dụng. Studio giúp tạo miễn phí một địa chỉ chia sẻ mà chưa cần học quản trị máy chủ trước.
 
 > Bài được kiểm tra với giao diện hiện tại, Skills chính thức và tài liệu lệnh vào **11 tháng 8 năm 2026**. Vị trí nút có thể đổi, nhưng luồng vẫn là: tạo Static Studio, tải kết quả build, triển khai và kiểm tra liên kết.
 
@@ -176,7 +176,7 @@ Mở [ModelScope Studio](https://modelscope.cn/studios). Phần đầu trang tr�
 
 Chọn tạo hoặc mở [Tạo Studio](https://modelscope.cn/studios/create). Trang Trung Quốc `modelscope.cn` và quốc tế `modelscope.ai` không dùng chung tài khoản, token hay nội dung.
 
-## Cách thủ công: Bước 2 — tạo Static Studio
+## Cách thủ công: Bước 2 — điền thông tin cơ bản
 
 ![Biểu mẫu chủ sở hữu, tên, giấy phép, hiển thị và mô tả](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/02-create-studio.jpg)
 
@@ -185,12 +185,6 @@ Chọn tạo hoặc mở [Tạo Studio](https://modelscope.cn/studios/create). T
 3. **Tên hiển thị và mô tả:** viết để khách hiểu.
 4. **Hiển thị:** bắt đầu riêng tư, chuyển công khai sau khi kiểm tra.
 5. **Giấy phép:** chọn theo dự án.
-
-Chọn **Static** làm loại SDK. Biểu mẫu hiện có Gradio, Streamlit, Static và Docker.
-
-![Chọn Static trong biểu mẫu Studio](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
-
-> Nếu trang cần cơ sở dữ liệu, khóa bí mật hoặc xử lý máy chủ, nó không hoàn toàn tĩnh. Hãy dùng Gradio, Streamlit, Docker hoặc backend riêng. Khóa trong JavaScript frontend không thể giữ bí mật.
 
 Xác nhận và chờ Studio mở.
 
@@ -204,9 +198,19 @@ Tải `index.html`, CSS, JavaScript và ảnh trong **Files**. Đừng bọc ch�
 
 Tải thủ công phù hợp khi ít tệp. Khi nhiều tệp hoặc cập nhật thường xuyên, dùng `ms-studio-deploy` để đồng bộ Git.
 
-## Cách thủ công: Bước 4 — triển khai và kiểm tra
+## Cách thủ công: Bước 4 — chọn Static trong cài đặt triển khai
 
-Lưu thường bắt đầu triển khai. Nếu chưa, chọn triển khai, khởi động lại hoặc chạy lại. Khi hoạt động, mở:
+Sau khi tải tệp lên, mở cài đặt triển khai của Studio và chọn **Static** làm loại SDK. Static phù hợp với trang HTML đã chuẩn bị sẵn; cùng khu vực này cũng có Gradio, Streamlit và Docker.
+
+![Chọn Static trong cài đặt triển khai](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+
+Kiểm tra lại rằng `index.html` nằm ở thư mục gốc của kho mã rồi lưu cài đặt triển khai.
+
+> Nếu trang cần cơ sở dữ liệu, khóa bí mật hoặc xử lý máy chủ, nó không hoàn toàn tĩnh. Hãy dùng Gradio, Streamlit, Docker hoặc backend riêng. Khóa trong JavaScript frontend không thể giữ bí mật.
+
+## Cách thủ công: Bước 5 — chờ triển khai và kiểm tra
+
+Lưu cài đặt thường bắt đầu triển khai. Nếu chưa, chọn triển khai, khởi động lại hoặc chạy lại. Khi hoạt động, mở:
 
 ```text
 https://modelscope.cn/studios/ten-cua-ban/ten-studio
@@ -220,7 +224,7 @@ https://modelscope.cn/studios/ten-cua-ban/ten-studio
 
 Kiểm tra riêng tư trước, sau đó công khai và thử lại khi chưa đăng nhập.
 
-## Cách thủ công: Bước 5 — cập nhật trang
+## Cách thủ công: Bước 6 — cập nhật trang
 
 Sau khi sửa nguồn, kiểm tra trên máy và build lại. Trong **Files**, thay tệp cũ bằng nội dung `dist` hoặc `build` mới rồi triển khai lại.
 

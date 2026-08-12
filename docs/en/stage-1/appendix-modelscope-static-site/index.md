@@ -1,15 +1,15 @@
 ---
-title: Publish Your Website on ModelScope
+title: Publish Your Vibe Coding Project on ModelScope
 description: A complete guide to publishing plain HTML or Vue, React, and Vite build output with official ModelScope Skills and a Static Studio.
 ---
 
-# Publish Your Website on ModelScope
+# Publish Your Vibe Coding Project on ModelScope
 
 Your webpage finally works. The next step is to put it somewhere that classmates, friends, or real users can open directly.
 
 You could rent a server and configure a domain, HTTPS, and deployment yourself. You can also host the work on an established open-source community and spend less time on operations. This lesson takes the second route and publishes the website on **ModelScope**.
 
-ModelScope was initiated by Alibaba DAMO Academy together with the CCF Open Source Development Committee. Besides models and datasets, it provides **Studios** for showing applications. The community has also held [core developer meetups](https://community.modelscope.cn/683562c6870cef7360622f7f.html) for open-source contributors. For us, the practical advantage is simple: you can prepare a shareable address for your work without first becoming a server administrator.
+ModelScope was initiated by Alibaba together with the CCF Open Source Development Committee. Alongside more than 200,000 open-source models and 30,000 datasets, it provides **Studios** for showing applications. For us, the practical advantage is simple: we can give a project a free, shareable address without first becoming server administrators.
 
 > This guide was checked against the current Studio pages, official Skills, and command-line material on **August 11, 2026**. Button positions may change, but the main route remains: create a Static Studio, upload the build output, deploy, and open the Studio link.
 
@@ -188,7 +188,7 @@ Open [ModelScope Studio](https://modelscope.cn/studios). The top of the page pre
 
 Select the create button or open [Create Studio](https://modelscope.cn/studios/create). If you are signed out, ModelScope asks you to sign in or register. The China site at `modelscope.cn` and the international site at `modelscope.ai` do not share accounts, tokens, or content. The China site is usually the practical choice for users in China.
 
-## Manual route: Step 2 — create a Static Studio
+## Manual route: Step 2 — fill in the basic information
 
 Fill in the basic information on the creation page:
 
@@ -199,12 +199,6 @@ Fill in the basic information on the creation page:
 3. **Display name and description:** explain the site in words a visitor can understand.
 4. **Visibility:** begin privately and make it public after inspection.
 5. **License:** choose according to the project.
-
-The most important option is the SDK type: choose **Static**. The current form lists Gradio, Streamlit, Static, and Docker and explains that Static is for existing HTML pages.
-
-![Selecting Static in the SDK section of the Create Studio form](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
-
-> A website that needs a database, a secret API key, or server-side computation is not a purely static site. Use Gradio, Streamlit, Docker, or a separate backend instead. A key written in frontend JavaScript cannot remain secret.
 
 Confirm the form and wait for the Studio detail page to open.
 
@@ -218,9 +212,19 @@ Open the **Files** page and upload `index.html`, CSS, JavaScript, and images. Af
 
 Manual upload is suitable for a plain HTML site or a project with only a few files. If there are many files or frequent updates, return to `ms-studio-deploy` and let it perform the Git synchronization.
 
-## Manual route: Step 4 — deploy and inspect
+## Manual route: Step 4 — select Static in deployment settings
 
-Saving files usually starts a deployment. If it does not, use the deploy, restart, or rerun control on the Studio page. Wait for the status to become running and open an address like:
+After uploading the files, open the Studio deployment settings and select **Static** as the SDK type. The page explains that Static is intended for an existing HTML site; the same area also lists Gradio, Streamlit, and Docker.
+
+![Selecting Static in the Studio deployment settings](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+
+Check once more that `index.html` is at the repository root, then save the deployment settings.
+
+> A website that needs a database, a secret API key, or server-side computation is not a purely static site. Use Gradio, Streamlit, Docker, or a separate backend instead. A key written in frontend JavaScript cannot remain secret.
+
+## Manual route: Step 5 — wait for deployment and inspect
+
+Saving the deployment settings usually starts a deployment. If it does not, use the deploy, restart, or rerun control on the Studio page. Wait for the status to become running and open an address like:
 
 ```text
 https://modelscope.cn/studios/your-name/your-studio
@@ -236,7 +240,7 @@ Check the final page carefully:
 
 If the Studio is private, make it public only after the page works, then test the public address in a signed-out window.
 
-## Manual route: Step 5 — update a published site
+## Manual route: Step 6 — update a published site
 
 After modifying the source, test locally and build again. Return to the **Files** page, replace the old files with the new contents of `dist` or `build`, and redeploy.
 

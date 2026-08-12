@@ -1,15 +1,15 @@
 ---
-title: Website auf ModelScope veröffentlichen
+title: Dein Vibe-Coding-Projekt auf ModelScope veröffentlichen
 description: Vollständige Anleitung zum Veröffentlichen von HTML sowie Vue-, React- und Vite-Builds mit offiziellem Skill und Static Studio.
 ---
 
-# Website auf ModelScope veröffentlichen
+# Dein Vibe-Coding-Projekt auf ModelScope veröffentlichen
 
 Wenn die Seite lokal funktioniert, brauchst du eine Adresse, die Freunde, Mitschüler oder echte Nutzer öffnen können.
 
 Du könntest einen Server mieten und Domain, HTTPS und Deployment selbst einrichten. In dieser Lektion sparen wir diesen Betriebsaufwand und veröffentlichen die Seite in **ModelScope Studio**.
 
-ModelScope bietet neben Modellen und Datensätzen auch **Studios** zur Präsentation von Anwendungen. Die Community veranstaltet zudem [Treffen für Kernentwickler](https://community.modelscope.cn/683562c6870cef7360622f7f.html). Mit einem Studio erhältst du eine teilbare Adresse, ohne zuerst Serververwaltung zu lernen.
+ModelScope wurde von Alibaba zusammen mit dem CCF-Komitee für Open-Source-Entwicklung ins Leben gerufen. Neben mehr als 200.000 Open-Source-Modellen und 30.000 Datensätzen bietet die Plattform **Studios** zur Präsentation von Anwendungen. Mit einem Studio erhältst du kostenlos eine teilbare Adresse, ohne zuerst Serververwaltung zu lernen.
 
 > Diese Anleitung wurde am **11. August 2026** anhand der aktuellen Oberfläche, offiziellen Skills und Befehlsdokumentation geprüft. Schaltflächen können sich verschieben; der Ablauf bleibt: Static Studio erstellen, Build-Ausgabe hochladen, bereitstellen und Link prüfen.
 
@@ -176,7 +176,7 @@ Baue erneut. Ein statischer Host leitet nicht immer jede Route nach `index.html`
 
 Wähle Erstellen oder öffne [Studio erstellen](https://modelscope.cn/studios/create). Die chinesische Seite `modelscope.cn` und die internationale Seite `modelscope.ai` teilen weder Konto, Token noch Inhalt.
 
-## Manuell: Schritt 2 — Static Studio erstellen
+## Manuell: Schritt 2 — Grundinformationen eintragen
 
 ![Formular mit Besitzer, Name, Lizenz, Sichtbarkeit und Beschreibung](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/02-create-studio.jpg)
 
@@ -185,12 +185,6 @@ Wähle Erstellen oder öffne [Studio erstellen](https://modelscope.cn/studios/cr
 3. **Anzeigename und Beschreibung:** für Besucher verständlich schreiben.
 4. **Sichtbarkeit:** zunächst privat, nach Prüfung öffentlich.
 5. **Lizenz:** passend zum Projekt wählen.
-
-Wähle beim SDK-Typ unbedingt **Static**. Das aktuelle Formular bietet Gradio, Streamlit, Static und Docker.
-
-![Auswahl von Static im Studio-Formular](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
-
-> Braucht die Seite Datenbank, geheimen API-Schlüssel oder Serverberechnung, ist sie nicht rein statisch. Nutze Gradio, Streamlit, Docker oder ein getrenntes Backend. Ein Schlüssel im Frontend-JavaScript bleibt nicht geheim.
 
 Bestätige und warte, bis das Studio geöffnet wird.
 
@@ -204,9 +198,19 @@ Lade `index.html`, CSS, JavaScript und Bilder unter **Files** hoch. Lege sie nic
 
 Manuelles Hochladen reicht für wenige Dateien. Bei vielen Dateien oder häufigen Änderungen verwende `ms-studio-deploy` zur Git-Synchronisierung.
 
-## Manuell: Schritt 4 — bereitstellen und prüfen
+## Manuell: Schritt 4 — Static in den Deployment-Einstellungen wählen
 
-Speichern startet meist das Deployment. Andernfalls wähle Bereitstellen, Neustarten oder Erneut ausführen. Sobald es läuft, öffne:
+Öffne nach dem Hochladen die Deployment-Einstellungen des Studios und wähle **Static** als SDK-Typ. Static ist für eine vorbereitete HTML-Website vorgesehen; im selben Bereich stehen auch Gradio, Streamlit und Docker zur Auswahl.
+
+![Auswahl von Static in den Deployment-Einstellungen](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+
+Prüfe erneut, dass `index.html` im Stammverzeichnis des Repositorys liegt, und speichere die Deployment-Einstellungen.
+
+> Braucht die Seite Datenbank, geheimen API-Schlüssel oder Serverberechnung, ist sie nicht rein statisch. Nutze Gradio, Streamlit, Docker oder ein getrenntes Backend. Ein Schlüssel im Frontend-JavaScript bleibt nicht geheim.
+
+## Manuell: Schritt 5 — Deployment abwarten und prüfen
+
+Das Speichern der Einstellungen startet meist das Deployment. Andernfalls wähle Bereitstellen, Neustarten oder Erneut ausführen. Sobald es läuft, öffne:
 
 ```text
 https://modelscope.cn/studios/dein-name/dein-studio
@@ -220,7 +224,7 @@ https://modelscope.cn/studios/dein-name/dein-studio
 
 Prüfe zuerst privat, schalte dann öffentlich und teste erneut ohne Anmeldung.
 
-## Manuell: Schritt 5 — Website aktualisieren
+## Manuell: Schritt 6 — Website aktualisieren
 
 Nach Änderungen lokal testen und neu bauen. Ersetze unter **Files** die alten Dateien durch den neuen Inhalt aus `dist` oder `build` und stelle erneut bereit.
 

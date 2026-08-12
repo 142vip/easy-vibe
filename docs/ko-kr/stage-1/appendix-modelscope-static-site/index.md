@@ -1,15 +1,15 @@
 ---
-title: ModelScope에 웹사이트 게시하기
+title: Vibe Coding 결과물을 ModelScope에 게시하기
 description: 순수 HTML부터 Vue, React, Vite 빌드 결과물까지 공식 Skill과 Static Studio로 게시하는 전체 수업
 ---
 
-# ModelScope에 웹사이트 게시하기
+# Vibe Coding 결과물을 ModelScope에 게시하기
 
 웹페이지가 로컬에서 잘 열리면, 친구나 실제 사용자가 직접 접속할 수 있는 주소를 만들 차례입니다.
 
 서버를 빌리고 도메인, HTTPS, 배포를 직접 설정할 수도 있습니다. 이 수업에서는 운영 부담을 줄이고 페이지에 집중하기 위해 **ModelScope Studio**에 게시합니다.
 
-ModelScope는 모델과 데이터셋뿐 아니라 앱을 보여 주는 **Studio**를 제공합니다. 커뮤니티에서는 [핵심 개발자 모임](https://community.modelscope.cn/683562c6870cef7360622f7f.html)도 열립니다. Studio를 사용하면 서버 운영을 먼저 익히지 않아도 공유 주소를 만들 수 있습니다.
+ModelScope는 Alibaba와 CCF 오픈소스 발전위원회가 함께 시작한 커뮤니티입니다. 20만 개 이상의 오픈소스 모델과 3만 개 이상의 데이터셋뿐 아니라 앱을 보여 주는 **Studio**도 제공합니다. Studio를 사용하면 서버 운영을 먼저 익히지 않아도 무료 공유 주소를 만들 수 있습니다.
 
 > 이 글은 현재 Studio 화면, 공식 Skill, 명령줄 자료를 기준으로 **2026년 8월 11일** 확인했습니다. 버튼 위치는 달라질 수 있지만 “Static Studio 만들기 → 빌드 결과 업로드 → 배포 → Studio 링크 확인” 흐름은 같습니다.
 
@@ -176,7 +176,7 @@ export default {
 
 생성 버튼이나 [Studio 생성 페이지](https://modelscope.cn/studios/create)를 엽니다. 중국 사이트 `modelscope.cn`과 국제 사이트 `modelscope.ai`는 계정, 토큰, 콘텐츠를 공유하지 않습니다.
 
-## 수동 방법: 2단계 — Static Studio 만들기
+## 수동 방법: 2단계 — Studio 기본 정보 입력하기
 
 ![소유자, 이름, 라이선스, 공개 범위, 설명을 입력하는 Studio 생성 화면](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/02-create-studio.jpg)
 
@@ -185,12 +185,6 @@ export default {
 3. **표시 이름과 설명:** 방문자가 이해할 수 있게 쓴다.
 4. **공개 범위:** 처음에는 비공개, 검사 후 공개로 바꾼다.
 5. **라이선스:** 프로젝트에 맞게 고른다.
-
-SDK 유형은 반드시 **Static**을 선택합니다. 현재 양식에는 Gradio, Streamlit, Static, Docker가 있습니다.
-
-![SDK 항목에서 Static을 선택하는 화면](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
-
-> 데이터베이스, 비밀 API 키, 서버 계산이 필요하면 순수 정적 사이트가 아닙니다. Gradio, Streamlit, Docker 또는 별도 백엔드를 사용하세요. 프런트엔드 JavaScript에 쓴 키는 비밀로 남지 않습니다.
 
 내용을 확인해 생성하고 상세 페이지가 열릴 때까지 기다립니다.
 
@@ -204,9 +198,19 @@ SDK 유형은 반드시 **Static**을 선택합니다. 현재 양식에는 Gradi
 
 파일이 적으면 수동 업로드로 충분합니다. 파일이나 업데이트가 많다면 `ms-studio-deploy`로 Git 동기화를 수행합니다.
 
-## 수동 방법: 4단계 — 배포하고 검사하기
+## 수동 방법: 4단계 — 배포 설정에서 Static 선택하기
 
-저장하면 보통 자동으로 배포됩니다. 시작하지 않으면 배포, 재시작, 다시 실행을 선택합니다. 실행 중 상태가 되면 다음 형태의 주소를 엽니다.
+파일 업로드를 마치면 Studio의 배포 설정을 열고 SDK 유형으로 **Static**을 선택합니다. Static은 준비된 HTML 사이트에 적합하며, 같은 영역에서 Gradio, Streamlit, Docker도 선택할 수 있습니다.
+
+![배포 설정의 SDK 항목에서 Static을 선택하는 화면](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+
+저장소 루트에 `index.html`이 있는지 다시 확인하고 배포 설정을 저장합니다.
+
+> 데이터베이스, 비밀 API 키, 서버 계산이 필요하면 순수 정적 사이트가 아닙니다. Gradio, Streamlit, Docker 또는 별도 백엔드를 사용하세요. 프런트엔드 JavaScript에 쓴 키는 비밀로 남지 않습니다.
+
+## 수동 방법: 5단계 — 배포를 기다리고 검사하기
+
+배포 설정을 저장하면 보통 자동으로 배포됩니다. 시작하지 않으면 배포, 재시작, 다시 실행을 선택합니다. 실행 중 상태가 되면 다음 형태의 주소를 엽니다.
 
 ```text
 https://modelscope.cn/studios/사용자이름/Studio이름
@@ -220,7 +224,7 @@ https://modelscope.cn/studios/사용자이름/Studio이름
 
 비공개 Studio는 정상 동작을 확인한 뒤 공개로 변경하고 로그아웃 상태에서 다시 검사합니다.
 
-## 수동 방법: 5단계 — 게시한 사이트 업데이트하기
+## 수동 방법: 6단계 — 게시한 사이트 업데이트하기
 
 소스를 수정하면 로컬 테스트와 재빌드를 수행합니다. **Files** 페이지에서 이전 파일을 새로운 `dist` 또는 `build` 내용으로 바꾼 뒤 다시 배포합니다.
 

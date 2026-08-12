@@ -532,7 +532,7 @@ const productManagerSidebarEn = [
     collapsed: false,
     items: [
       {
-        text: 'Publish Your Website on ModelScope',
+        text: 'Publish Your Vibe Coding Project on ModelScope',
         link: '/en/stage-1/appendix-modelscope-static-site/'
       },
       {
@@ -626,7 +626,7 @@ const productManagerSidebarKo = [
     collapsed: false,
     items: [
       {
-        text: 'ModelScope에 웹사이트 게시하기',
+        text: 'Vibe Coding 결과물을 ModelScope에 게시하기',
         link: '/ko-kr/stage-1/appendix-modelscope-static-site/'
       },
       {
@@ -1994,7 +1994,7 @@ const stage1SidebarLabels = {
     {
       text: '付録',
       items: [
-        'ModelScopeでウェブサイトを公開する',
+        'Vibe Codingの成果物をModelScopeで公開する',
         'プロダクト思考の基礎',
         '実際の業務フローからAI活用場面を探す',
         'よくある問題とトラブルシューティング'
@@ -2031,7 +2031,7 @@ const stage1SidebarLabels = {
     {
       text: '附錄',
       items: [
-        '在魔搭社群發布你的網頁',
+        '在魔搭社群發布你的 Vibe Coding 作品',
         '產品思維基礎',
         '從真實工作流程中找 AI 場景',
         '常見問題與除錯'
@@ -2074,7 +2074,7 @@ const stage1SidebarLabels = {
     {
       text: 'Apéndice',
       items: [
-        'Publica tu sitio web en ModelScope',
+        'Publica tu proyecto de Vibe Coding en ModelScope',
         'Fundamentos del pensamiento de producto',
         'Encontrar escenarios de IA en flujos de trabajo reales',
         'Problemas comunes y solución de errores'
@@ -2117,7 +2117,7 @@ const stage1SidebarLabels = {
     {
       text: 'Annexe',
       items: [
-        'Publier votre site web sur ModelScope',
+        'Publier votre projet Vibe Coding sur ModelScope',
         'Fondamentaux de la pensée produit',
         'Trouver des usages IA dans les flux de travail réels',
         'Problèmes courants et dépannage'
@@ -2160,7 +2160,7 @@ const stage1SidebarLabels = {
     {
       text: 'Anhang',
       items: [
-        'Website auf ModelScope veröffentlichen',
+        'Dein Vibe-Coding-Projekt auf ModelScope veröffentlichen',
         'Grundlagen des Produktdenkens',
         'KI-Szenarien in echten Arbeitsabläufen finden',
         'Häufige Probleme und Fehlerbehebung'
@@ -2200,7 +2200,7 @@ const stage1SidebarLabels = {
     {
       text: 'الملحق',
       items: [
-        'نشر موقعك على ModelScope',
+        'نشر مشروع Vibe Coding على ModelScope',
         'أساسيات التفكير المنتجي',
         'العثور على سيناريوهات الذكاء الاصطناعي في سير العمل الحقيقي',
         'المشاكل الشائعة واستكشاف الأخطاء وإصلاحها'
@@ -2243,7 +2243,7 @@ const stage1SidebarLabels = {
     {
       text: 'Phụ lục',
       items: [
-        'Đăng trang web lên ModelScope',
+        'Đăng sản phẩm Vibe Coding lên ModelScope',
         'Nền tảng tư duy sản phẩm',
         'Tìm kịch bản AI trong quy trình làm việc thật',
         'Các vấn đề thường gặp và khắc phục lỗi'
