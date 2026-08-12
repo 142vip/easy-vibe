@@ -88,6 +88,13 @@ Vibe Coding でアイデアを素早くプロダクトにできるのなら、<s
 
 彼はパソコンの前に座り、惨めなバックエンドデータを見つめながら、心の中に一つの問いしかありませんでした：私の APP はちゃんと作ったはずなのに、なぜ誰も使わないのか？しかも支払ってくれないのか？
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Woman_stretching_in_a_gym_while_holding_her_phone.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/fitness-phone-context.jpg" alt="ジムでスマートフォンを持ちながらストレッチする女性" loading="lazy" />
+  </a>
+  <figcaption><strong>機能を考える前に、現場を観察します。</strong>写真では、トレーニングの場にすでにスマートフォンがあります。しかし、これだけでは別のフィットネスアプリが必要だとは言えません。なぜ手に取ったのか、今の方法のどこで困っているのかを確認する必要があります。写真：Shixart1985、CC BY 2.0。</figcaption>
+</figure>
+
 
 
 小明の失敗は、技術力の問題でも、プロダクトの質の問題でもありませんでした。正直に言えば、彼の APP は機能もデザインもなかなか良かったのです。
@@ -156,6 +163,13 @@ Vibe Coding でアイデアを素早くプロダクトにできるのなら、<s
 小規模飲食店のオーナーは毎日午前4時に起きて卸売市場に行かなければならず、非常に過酷で、よく騙されます。美菜網がやっているのは、単なる「EC で野菜を売る」ではなく、サプライチェーン全体を再構築し、小規模飲食店のオーナーにぐっすり眠れるようにすることです。
 
 ペインポイントが痛いほど、支払意欲は強くなります。節約できた時間と労力は、節約できた食材代よりも価値があるのです。
+
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Haikou_wholesale_vegetable_market_-_06.JPG" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/haikou-wholesale-market.jpg" alt="海口の青果卸売市場" loading="lazy" />
+  </a>
+  <figcaption><strong>仕入れは注文だけでは終わりません。</strong>写真は海口の青果卸売市場です。市場へ行く、品物を選ぶ、運ぶ、店へ戻るところまでが一つの仕事です。全体を追うことで、プロダクトがどの負担を減らすのかが見えてきます。写真：Anna Frodesiak、CC0。</figcaption>
+</figure>
 
 #### 小紅書（RED）：選択の悩みを解決する
 
@@ -238,6 +252,13 @@ Vibe Coding でアイデアを素早くプロダクトにできるのなら、<s
 
    ユーザーは他のプロダクト、Excel、記憶力、または我慢して解決しているかもしれない。これらのソリューションにどのような欠点があるかを明らかにする必要がある。プロダクトがそれらより大幅に良くないと、ユーザーは乗り換えてくれない。
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Project_User_Experience_Testing_(9719939867).jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/ux-test-researcher-participant.jpg" alt="研究者とテスト参加者がウェブサイトを試している様子" loading="lazy" />
+  </a>
+  <figcaption><strong>発言と行動は分けて確かめます。</strong>写真はウェブサイトのユーザー体験テストで、研究者と参加者が一緒にサイトを試しています。インタビューでは普段のやり方を聞き、操作テストでは実際にどこで止まるかを観察します。写真：Samuel Mann、CC BY 2.0。</figcaption>
+</figure>
+
 3. **ステップ3：ユーザーがプロダクトにお金を払う意思があるかテストする**
 
    プリセールスや前金を取る。前金を払うユーザーの割合を統計する（早く稼げるほどニーズが正しい）：
@@ -295,6 +316,13 @@ Vibe Coding でアイデアを素早くプロダクトにできるのなら、<s
 
 これらはすべて本当のペインポイントであり、「あったらいいな」程度のイッチポイントではありません。
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Post_Pregnancy_Pt_Class_DVIDS301829.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/post-pregnancy-training.jpg" alt="産後の体力回復クラス" loading="lazy" />
+  </a>
+  <figcaption><strong>産後の運動には固有の条件があります。</strong>写真は産後の体力回復クラスです。運動への復帰とけがの予防を同時に扱うため、段階、動作の制限、専門家の指導を個別に調べる必要があります。写真：Staff Sgt. Orly N. Tyrell / U.S. Air Force、パブリックドメイン。</figcaption>
+</figure>
+
 ---
 
 ### 横分割：異なるユーザー層のニーズ
@@ -334,6 +362,13 @@ Vibe Coding でアイデアを素早くプロダクトにできるのなら、<s
 夜8時、やっと時間があるが、不安でいっぱい。鏡の中の自分を見て、人生が終わったと思い、以前の写真を見てこっそり泣いている。
 
 小明は、姉のペインポイントは「フィットネスコースがない」ことではなく、「産後回復への恐怖と不安」であることを発見しました。
+
+<figure class="idea-field-figure idea-field-figure--portrait idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Beispiel_Customer_Journey_Map.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/customer-journey-work.jpg" alt="手作業で作られたカスタマージャーニーマップ" loading="lazy" />
+  </a>
+  <figcaption><strong>時間に沿って状況を組み立てます。</strong>これは手作業で作られたカスタマージャーニーマップです。朝、昼、夜の体験を一つの時間軸に置けますが、図そのものはユーザーの証拠ではありません。各判断にはインタビューや観察の裏付けが必要です。作品：Anakin Schoeber、CC BY-SA 4.0。</figcaption>
+</figure>
 
 ---
 
@@ -506,6 +541,13 @@ AI は3つのフェーズに分けることを提案しました。第1フェー
 スタートコストについて、ミニプログラム開発は1〜2万元（外注）または自分で AI IDE で開発、コンテンツ制作は産後リハビリコーチと提携、プロモーションはママコミュニティ、小紅書から開始。
 
 検証指標は初月100人のユーザー、10%の課金コンバージョン率。達成できればニーズは本物で継続投資；達成できなければ方向を調整。
+
+<figure class="idea-field-figure idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:UX_prototyping_4.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/app-prototype-user-test.jpg" alt="参加者がモバイルアプリのプロトタイプを操作している様子" loading="lazy" />
+  </a>
+  <figcaption><strong>プロトタイプを参加者に渡します。</strong>写真はモバイルアプリのプロトタイプテストです。どこで止まり、何を質問し、その後も使おうとするかを観察することで、MVP の計画を確認可能な結果に変えられます。写真：Luthienrecanto、CC BY-SA 4.0。</figcaption>
+</figure>
 
 ---
 

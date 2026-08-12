@@ -88,6 +88,13 @@ After a year, Xiao Ming lost 200,000 yuan.
 
 He sat in front of his computer, looking at the dismal data in the backend, with only one question in his mind: My APP is pretty good, why does nobody use it? Even more, why won't anyone pay for it?
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Woman_stretching_in_a_gym_while_holding_her_phone.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/fitness-phone-context.jpg" alt="A woman stretches in a gym while holding her phone" loading="lazy" />
+  </a>
+  <figcaption><strong>Observe the setting before choosing a feature.</strong> A phone is already present in this workout, but that does not prove the user needs another fitness app. We still need to learn why she picked it up and where her current approach breaks down. Photo: Shixart1985, CC BY 2.0.</figcaption>
+</figure>
+
 
 
 Xiao Ming's failure wasn't because his technology was bad, nor because the product was poorly made. Honestly, his APP had comprehensive features and a nice interface.
@@ -156,6 +163,13 @@ On the surface, what Meicai does is simple: help restaurants buy vegetables. But
 Because small restaurant owners have to get up at 4 AM every day to go to wholesale markets. It's exhausting, and they often get cheated. What Meicai does isn't simple "e-commerce selling vegetables" — it restructured the entire supply chain, letting small restaurant owners sleep better.
 
 The more painful the pain point, the stronger the willingness to pay. The time and energy saved is more valuable than the money saved on vegetables.
+
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Haikou_wholesale_vegetable_market_-_06.JPG" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/haikou-wholesale-market.jpg" alt="A wholesale vegetable market in Haikou" loading="lazy" />
+  </a>
+  <figcaption><strong>Procurement extends beyond placing an order.</strong> This photograph shows a wholesale vegetable market in Haikou. Arriving, selecting goods, moving them, and returning to the restaurant are all part of the task. Only after tracing the whole process can we see which cost a product removes. Photo: Anna Frodesiak, CC0.</figcaption>
+</figure>
 
 #### Xiaohongshu: Solving Choice Paralysis
 
@@ -238,6 +252,13 @@ He learned the 5-step judgment method commonly used by product managers (detaile
 
    Users might currently use other products, Excel, rely on memory, or just endure without solving. You need to figure out the drawbacks of these solutions. Your product needs to be much better than them for users to switch.
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Project_User_Experience_Testing_(9719939867).jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/ux-test-researcher-participant.jpg" alt="A researcher and a test participant try a website" loading="lazy" />
+  </a>
+  <figcaption><strong>Test what people say and what they do separately.</strong> This photograph records a website user-experience test: a researcher and a participant are trying the site together. Interviews reveal the usual routine; a usability test shows where a participant actually stops. Photo: Samuel Mann, CC BY 2.0.</figcaption>
+</figure>
+
 3. **Step 3: Test if users are willing to pay for your product**
 
    Do pre-sales or collect deposits. Count the percentage of users willing to pay deposits (earning money early indicates correct need):
@@ -295,6 +316,13 @@ His sister's troubles are actually quite specific: Fragmented time, needs to car
 
 These are all real pain points, not "nice to have" itch points.
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Post_Pregnancy_Pt_Class_DVIDS301829.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/post-pregnancy-training.jpg" alt="A real postpartum physical-training class" loading="lazy" />
+  </a>
+  <figcaption><strong>Postpartum training has its own constraints.</strong> This photograph records a postpartum physical-training class. The class considers both returning to exercise and avoiding injury, so training stages, movement limits, and professional guidance require separate research. Photo: Staff Sgt. Orly N. Tyrell / U.S. Air Force, public domain.</figcaption>
+</figure>
+
 ---
 
 ### Horizontal Segmentation: Needs of Different User Groups
@@ -334,6 +362,13 @@ He observed his sister's day.
 8 PM, sister finally has time but is very anxious. Looking at herself in the mirror, feeling like life is over, secretly crying while looking at old photos.
 
 Xiao Ming discovered that his sister's pain point isn't "no fitness courses" but "fear and anxiety about postpartum recovery."
+
+<figure class="idea-field-figure idea-field-figure--portrait idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Beispiel_Customer_Journey_Map.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/customer-journey-work.jpg" alt="A handmade customer-journey map" loading="lazy" />
+  </a>
+  <figcaption><strong>Reconstruct the situation along a timeline.</strong> This is a handmade customer-journey map. It can place morning, daytime, and evening experiences on one line, but the map itself is not user evidence; each conclusion still needs support from interviews or observation. Work: Anakin Schoeber, CC BY-SA 4.0.</figcaption>
+</figure>
 
 ---
 
@@ -506,6 +541,13 @@ For technical implementation, AI suggested using existing AI capabilities for mo
 For startup cost, mini program development is about 10,000-20,000 RMB if outsourced, or do it yourself with AI IDE. For content creation, cooperate with postpartum recovery coaches. For promotion, start from mom groups and Xiaohongshu.
 
 Validation KPI: 100 users in the first month and a 10% paid conversion rate. If reached, demand is real and you continue investing; if not, adjust direction in time.
+
+<figure class="idea-field-figure idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:UX_prototyping_4.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/app-prototype-user-test.jpg" alt="A participant operates a mobile-app prototype during a user test" loading="lazy" />
+  </a>
+  <figcaption><strong>Put the prototype in a participant's hands.</strong> This photograph records a mobile-app prototype test. Observing where the participant stops, what questions arise, and whether they continue turns an MVP plan into a result that can be examined. Photo: Luthienrecanto, CC BY-SA 4.0.</figcaption>
+</figure>
 
 ---
 

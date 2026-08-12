@@ -88,6 +88,13 @@ Nach einem Jahr hatte Xiao Ming 200.000 Yuan verloren.
 
 Er saß vor dem Computer, sah die düsteren Backend-Daten und stellte sich nur eine Frage: Meine APP ist doch ganz gut – warum nutzt sie niemand? Und warum will niemand dafür bezahlen?
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Woman_stretching_in_a_gym_while_holding_her_phone.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/fitness-phone-context.jpg" alt="Eine Frau dehnt sich im Fitnessstudio und hält dabei ihr Smartphone" loading="lazy" />
+  </a>
+  <figcaption><strong>Zuerst die Situation beobachten, dann die Funktion wählen.</strong> Das Smartphone ist beim Training bereits vorhanden. Das beweist jedoch nicht, dass eine weitere Fitness-App gebraucht wird. Wir müssen noch verstehen, warum es benutzt wird und an welcher Stelle die bisherige Vorgehensweise scheitert. Foto: Shixart1985, CC BY 2.0.</figcaption>
+</figure>
+
 
 
 Xiao Mings Scheitern lag nicht an mangelnden technischen Fähigkeiten und auch nicht daran, dass das Produkt schlecht war. Ehrlich gesagt: Seine APP hatte viele Funktionen und ein ansprechendes Interface.
@@ -155,6 +162,13 @@ Oberflächlich betrachtet macht Meicaiwang etwas sehr Einfaches: Restaurants bei
 Weil kleine Restaurant-Besitzer täglich um 4 Uhr morgens aufstehen müssen, um zum Großmarkt zu gehen – sehr anstrengend und oft übervorteilt. Meicaiwang tut nicht einfach „E-Commerce-Gemüseverkauf", sondern restrukturiert die gesamte Lieferkette, damit Restaurant-Besitzer besser schlafen können.
 
 Je schmerzhafter der Schmerzpunkt, desto stärker die Zahlungsbereitschaft. Die eingesparte Zeit und Energie sind wertvoller als das gesparte Gemüse-Geld.
+
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Haikou_wholesale_vegetable_market_-_06.JPG" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/haikou-wholesale-market.jpg" alt="Ein Gemüse-Großmarkt in Haikou" loading="lazy" />
+  </a>
+  <figcaption><strong>Beschaffung ist mehr als eine Bestellung.</strong> Das Foto zeigt einen Gemüse-Großmarkt in Haikou. Anfahrt, Auswahl, Transport und Rückweg gehören zur selben Aufgabe. Erst der vollständige Ablauf zeigt, welchen Aufwand ein Produkt tatsächlich reduziert. Foto: Anna Frodesiak, CC0.</figcaption>
+</figure>
 
 #### Xiaohongshu: Entscheidungsschwierigkeiten lösen
 
@@ -237,6 +251,13 @@ Er erlernte die von Produktmanagern häufig verwendete 5-Schritte-Beurteilungsme
 
    Nutzer verwenden möglicherweise andere Produkte, Excel, ihr Gedächtnis, oder sie ertragen das Problem einfach. Sie müssen herausfinden, welche Nachteile diese Lösungen haben. Ihr Produkt muss deutlich besser sein, damit Nutzer wechseln wollen.
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Project_User_Experience_Testing_(9719939867).jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/ux-test-researcher-participant.jpg" alt="Ein Forscher und ein Testteilnehmer probieren eine Website aus" loading="lazy" />
+  </a>
+  <figcaption><strong>Aussagen und Handlungen werden getrennt geprüft.</strong> Das Foto dokumentiert einen User-Experience-Test: Ein Forscher und ein Teilnehmer probieren gemeinsam eine Website aus. Interviews zeigen die übliche Vorgehensweise; ein Nutzungstest zeigt, an welcher Stelle jemand tatsächlich stoppt. Foto: Samuel Mann, CC BY 2.0.</figcaption>
+</figure>
+
 3. **Schritt 3: Testen, ob Nutzer für Ihr Produkt bezahlen wollen**
 
    Machen Sie Vorverkäufe oder nehmen Sie Anzahlungen. Erfassen Sie den Anteil der Nutzer, die bereit sind, Anzahlung zu leisten (je früher Sie Geld verdienen, desto eher ist das Bedürfnis echt):
@@ -294,6 +315,13 @@ Die Probleme seiner Schwester waren tatsächlich sehr konkret: Zeit ist fragment
 
 Das sind alles echte Schmerzpunkte, keine „schön-wäre"-Juckpunkte.
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Post_Pregnancy_Pt_Class_DVIDS301829.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/post-pregnancy-training.jpg" alt="Ein Kurs für körperliches Training nach der Schwangerschaft" loading="lazy" />
+  </a>
+  <figcaption><strong>Postpartales Training hat eigene Rahmenbedingungen.</strong> Das Foto zeigt einen Kurs zur körperlichen Rückkehr nach der Schwangerschaft. Trainingsaufbau und Verletzungsprävention werden gemeinsam behandelt; Stufen, Bewegungseinschränkungen und fachliche Anleitung müssen daher gesondert untersucht werden. Foto: Staff Sgt. Orly N. Tyrell / U.S. Air Force, gemeinfrei.</figcaption>
+</figure>
+
 ---
 
 ### Horizontale Aufteilung: Bedürfnisse unterschiedlicher Zielgruppen
@@ -333,6 +361,13 @@ Um 15 Uhr schlief das Baby, seine Schwester wollte trainieren. Aber ihr Körper 
 Um 20 Uhr abends hatte seine Schwester endlich Zeit, aber war sehr angespannt. Sie sah sich im Spiegel an und dachte, ihr Leben sei ruiniert, blätterte heimlich durch alte Fotos und weinte.
 
 Xiao Ming erkannte, dass der Schmerzpunkt seiner Schwester nicht „keine Fitnesskurse" war, sondern „die Angst und Unsicherheit der postpartalen Erholung".
+
+<figure class="idea-field-figure idea-field-figure--portrait idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Beispiel_Customer_Journey_Map.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/customer-journey-work.jpg" alt="Eine handgefertigte Customer-Journey-Map" loading="lazy" />
+  </a>
+  <figcaption><strong>Die Situation entlang der Zeit rekonstruieren.</strong> Dies ist eine handgefertigte Customer-Journey-Map. Sie ordnet Erlebnisse am Morgen, tagsüber und am Abend auf einer Zeitachse. Die Karte selbst ist jedoch kein Nutzerbeleg; jede Schlussfolgerung braucht weiterhin Interviews oder Beobachtungen als Grundlage. Werk: Anakin Schoeber, CC BY-SA 4.0.</figcaption>
+</figure>
 
 ---
 
@@ -504,6 +539,13 @@ Zur technischen Umsetzung schlug AI vor, für die AI-Bewegungskorrektur fertige 
 Die Startkosten: Mini-Programm-Entwicklung 10.000-20.000 Yuan (Outsourcing) oder selbst mit AI IDE; Content-Erstellung in Zusammenarbeit mit postpartalen Reha-Trainer; Vermarktung über Mami-Gruppen und Xiaohongshu.
 
 Die Validierungskennzahlen: Erster Monat 100 Nutzer, 10% Conversion-Rate. Wenn erreicht, ist das Bedürfnis echt, weiter investieren; wenn nicht, rechtzeitig anpassen.
+
+<figure class="idea-field-figure idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:UX_prototyping_4.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/app-prototype-user-test.jpg" alt="Eine Teilnehmerin bedient einen Prototyp einer mobilen App" loading="lazy" />
+  </a>
+  <figcaption><strong>Den Prototyp in die Hände der Teilnehmer geben.</strong> Das Foto dokumentiert einen Test eines mobilen App-Prototyps. Wo jemand stoppt, welche Fragen entstehen und ob die Nutzung fortgesetzt wird, macht aus einem MVP-Plan ein überprüfbares Ergebnis. Foto: Luthienrecanto, CC BY-SA 4.0.</figcaption>
+</figure>
 
 ---
 

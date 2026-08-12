@@ -72,6 +72,11 @@ Tháng đầu ra mắt có 50.000 lượt tải nhờ quảng bá. Nhưng phần
 
 Sau một năm, Tiểu Minh lỗ 200.000 nhân dân tệ. Anh nhìn bảng số liệu và tự hỏi: “Ứng dụng đâu có tệ, tại sao không ai dùng và càng không ai mua?”
 
+<figure class="idea-field-figure">
+  <img src="/images/finding-great-idea/fitness-phone-context.jpg" alt="Một phụ nữ giãn cơ trong phòng tập khi cầm điện thoại" loading="lazy" />
+  <figcaption><strong>Hãy nhìn tình huống trước khi chọn tính năng.</strong> Điện thoại đã xuất hiện trong buổi tập, nhưng điều đó chưa chứng minh người dùng cần thêm một ứng dụng thể dục. Ta vẫn phải hỏi họ dùng điện thoại để làm gì và cách hiện tại vướng ở bước nào. Ảnh: Shixart1985, CC BY 2.0.</figcaption>
+</figure>
+
 Vấn đề không nằm ở kỹ thuật hay mức độ hoàn thiện, mà ở điểm xuất phát. Tiểu Minh chưa từng hỏi người dùng có cần thêm một ứng dụng thể dục không, điểm khác biệt cụ thể là gì và tại sao họ phải trả tiền.
 
 **Sai hướng thì càng làm kỹ càng xa mục tiêu.**
@@ -116,6 +121,11 @@ Nhìn bề ngoài, Meicai chỉ giúp nhà hàng mua rau. Nhưng nhiều chủ q
 
 Nỗi đau càng rõ, ý định trả tiền thường càng mạnh. Thời gian và sức lực tiết kiệm được có thể đáng giá hơn phần chênh lệch giá rau.
 
+<figure class="idea-field-figure">
+  <img src="/images/finding-great-idea/haikou-wholesale-market.jpg" alt="Người mua rau tại một chợ đầu mối ở Hải Khẩu" loading="lazy" />
+  <figcaption><strong>Việc mua hàng không chỉ là lúc đặt đơn.</strong> Bức ảnh ghi lại một chợ đầu mối có thật ở Hải Khẩu. Đi đến chợ, chọn hàng, vận chuyển rồi quay về quán đều là những phần của công việc; giá trị lớn nhất có thể nằm ở đó. Ảnh: Anna Frodesiak, CC0.</figcaption>
+</figure>
+
 #### Xiaohongshu: giải quyết khó khăn khi lựa chọn
 
 Giữa vô số mặt hàng, người dùng không biết thứ nào đáng mua và nên tin ai. Ghi chép của người khác giúp giảm thời gian tìm kiếm và rủi ro mua nhầm.
@@ -158,6 +168,11 @@ Một sai lầm phổ biến là quảng bá mong muốn như thể đó là n�
 
 1. **Nói chuyện với người dùng thật và hỏi cách họ làm hiện nay.** Tìm mười người thuộc nhóm mục tiêu. Nếu họ đang chắp vá một giải pháp, vấn đề có tồn tại; nếu chưa từng muốn giải quyết, có thể nó chưa cấp bách.
 2. **Phân tích lựa chọn thay thế.** Họ có thể dùng sản phẩm khác, bảng tính, trí nhớ hoặc chịu đựng. Giải pháp mới phải tốt hơn theo cách dễ nhận thấy.
+
+<figure class="idea-field-figure">
+  <img src="/images/finding-great-idea/ux-test-researcher-participant.jpg" alt="Một nhà nghiên cứu và người tham gia cùng thử một trang web" loading="lazy" />
+  <figcaption><strong>Kiểm chứng riêng điều người dùng nói và điều họ làm.</strong> Bức ảnh ghi lại một buổi thử nghiệm trải nghiệm người dùng trên trang web. Phỏng vấn giúp ta hiểu thói quen thường ngày; thử nghiệm khả dụng cho thấy người tham gia thật sự dừng lại ở đâu. Ảnh: Samuel Mann, CC BY 2.0.</figcaption>
+</figure>
 3. **Kiểm tra việc trả tiền.** Đặt trước hoặc tiền cọc có giá trị hơn lời hứa. Trên 10% là tín hiệu mạnh; từ 5% đến 10% cần chỉnh; dưới 5% buộc ta xem lại giả thuyết.
 4. **Ước tính thị trường.** Nhân số người dùng mục tiêu, tỷ lệ sẵn sàng trả và mức chi trung bình.
 5. **Tìm điều khó sao chép.** Kỹ thuật, dữ liệu, hiệu ứng mạng, thương hiệu hoặc chi phí thấp hơn có thể trở thành hào lũy.
@@ -177,6 +192,11 @@ Chị anh vừa sinh con, muốn phục hồi vóc dáng nhưng không có thờ
 Khi được hỏi đang giải quyết thế nào, chị nói bài tập chung trên Keep làm đau lưng; không thể tới phòng gym vì phải trông em bé; huấn luyện viên riêng giá 300–500 nhân dân tệ một buổi; tự tập lại sợ chấn thương.
 
 Vấn đề rất cụ thể: thời gian vụn vặt, hạn chế cơ thể, lo âu về vóc dáng, quá nhiều thông tin và thiếu người đồng hành. Đây không phải điều “có thì tốt”, mà là một nhóm nỗi đau thật.
+
+<figure class="idea-field-figure">
+  <img src="/images/finding-great-idea/post-pregnancy-training.jpg" alt="Một nhóm tham gia lớp tập luyện sau thai kỳ" loading="lazy" />
+  <figcaption><strong>Tập luyện sau sinh có những ràng buộc riêng.</strong> Bức ảnh ghi lại một lớp tập thật dành cho giai đoạn sau thai kỳ. Không gian, sự hướng dẫn và cường độ vận động không phải chi tiết trang trí; chúng là một phần của vấn đề cần hiểu trước khi liệt kê tính năng. Ảnh: Staff Sgt Orly N. Tyrell, Không quân Hoa Kỳ, phạm vi công cộng.</figcaption>
+</figure>
 
 ### Chia ngang: nhu cầu của các nhóm khác nhau
 
@@ -204,6 +224,11 @@ Tiểu Minh quan sát một ngày của chị gái.
 - Tám giờ tối, cuối cùng có thời gian; chị nhìn gương, nhớ hình ảnh trước đây rồi lo lắng.
 
 Nỗi đau không phải “thiếu khóa tập”, mà là sợ hãi và lo âu trong quá trình hồi phục sau sinh.
+
+<figure class="idea-field-figure idea-field-figure--portrait idea-field-figure--artifact">
+  <img src="/images/finding-great-idea/customer-journey-work.jpg" alt="Ví dụ bản đồ hành trình khách hàng bằng giấy trên tường" loading="lazy" />
+  <figcaption><strong>Đặt lại tình huống lên một dòng thời gian.</strong> Bức ảnh cho thấy một ví dụ thực hành bản đồ hành trình khách hàng. Bản đồ tự nó không phải bằng chứng người dùng; nó giúp sắp xếp dữ liệu từ phỏng vấn và quan sát để thấy lúc cảm xúc đổi chiều và trở ngại xuất hiện. Ảnh: Anakin Schoeber, CC BY-SA 4.0.</figcaption>
+</figure>
 
 ::: info Tư duy theo bối cảnh
 Nỗi đau không chỉ là một chức năng bị thiếu. Nó là cảm xúc trong thời điểm cụ thể, đi kèm ý định hành động. Một người mẹ có thể sợ di chứng, lo lắng trước gương, bất lực vì không biết bắt đầu và cô đơn vì không ai hiểu.
@@ -285,6 +310,11 @@ Từ tháng ba đến tháng sáu, nếu thử nghiệm thành công, thêm sử
 Từ tháng sáu đến tháng mười hai, phát triển ứng dụng độc lập, hợp tác với trung tâm phục hồi và mở rộng sang thai kỳ.
 
 Không cần tự xây thị giác máy tính từ đầu. Có thể dùng dịch vụ có sẵn, kết hợp con người với AI ở giai đoạn đầu. Chỉ số ban đầu là một trăm người dùng trong tháng đầu và tỷ lệ trả tiền 10%.
+
+<figure class="idea-field-figure idea-field-figure--artifact">
+  <img src="/images/finding-great-idea/app-prototype-user-test.jpg" alt="Một người tham gia thử nguyên mẫu ứng dụng trên điện thoại" loading="lazy" />
+  <figcaption><strong>Hãy đặt nguyên mẫu vào tay người tham gia.</strong> Bức ảnh ghi lại một buổi thử nghiệm nguyên mẫu ứng dụng có thật. Điều cần xem không phải giao diện trông hoàn chỉnh đến đâu, mà là người tham gia có làm xong nhiệm vụ không, do dự ở đâu và vòng tiếp theo cần sửa gì. Ảnh: Luthienrecanto, CC BY-SA 4.0.</figcaption>
+</figure>
 
 ### Vòng ba: Tiểu Minh nêu lo ngại
 

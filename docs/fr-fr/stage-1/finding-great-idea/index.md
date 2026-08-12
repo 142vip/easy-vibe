@@ -88,6 +88,13 @@ Au bout d'un an, Xiaoming avait perdu 200 000 yuan.
 
 Assis devant son ordinateur, regardant les données décevantes du tableau de bord, il n'avait qu'une seule question : mon application est plutôt bien faite, pourquoi personne ne l'utilise ? Et encore moins paie pour l'utiliser ?
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Woman_stretching_in_a_gym_while_holding_her_phone.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/fitness-phone-context.jpg" alt="Une femme s'étire dans une salle de sport en tenant son téléphone" loading="lazy" />
+  </a>
+  <figcaption><strong>Observer la situation avant de choisir une fonctionnalité.</strong> Le téléphone est déjà présent pendant l'entraînement, mais cela ne prouve pas qu'une nouvelle application de fitness soit nécessaire. Il reste à comprendre pourquoi la personne le prend et à quelle étape sa méthode actuelle échoue. Photo : Shixart1985, CC BY 2.0.</figcaption>
+</figure>
+
 
 
 L'échec de Xiaoming n'est pas dû à un manque de compétences techniques, ni à un produit mal fait. Pour être honnête, son application avait beaucoup de fonctionnalités et une belle interface.
@@ -156,6 +163,13 @@ En surface, ce que fait Meicai est simple : aider les restaurants à acheter des
 Parce que les petits restaurateurs doivent se lever à 4 heures du matin pour aller au marché de gros, c'est épuisant, et ils se font souvent arnaquer. Ce que fait Meicai, ce n'est pas simplement du "e-commerce de légumes", c'est restructurer toute la chaîne d'approvisionnement pour que les petits restaurateurs puissent dormir tranquilles.
 
 Plus le point de douleur est intense, plus la volonté de payer est forte. Le temps et l'énergie économisés valent plus que les économies sur les légumes.
+
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Haikou_wholesale_vegetable_market_-_06.JPG" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/haikou-wholesale-market.jpg" alt="Un marché de gros de légumes à Haikou" loading="lazy" />
+  </a>
+  <figcaption><strong>L'approvisionnement ne se limite pas à la commande.</strong> La photo montre un marché de gros de légumes à Haikou. Se rendre sur place, choisir, transporter puis revenir au restaurant font partie de la même tâche. Retracer le processus complet permet d'identifier le coût réellement supprimé par le produit. Photo : Anna Frodesiak, CC0.</figcaption>
+</figure>
 
 #### Xiaohongshu : Résoudre la difficulté de choisir
 
@@ -238,6 +252,13 @@ Il a étudié la méthode de jugement en 5 étapes couramment utilisée par les 
 
    Les utilisateurs utilisent peut-être d'autres produits, Excel, leur mémoire, ou tolèrent le problème. Vous devez comprendre les défauts de ces solutions. Votre produit doit être nettement meilleur pour que les utilisateurs soient prêts à changer.
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Project_User_Experience_Testing_(9719939867).jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/ux-test-researcher-participant.jpg" alt="Un chercheur et un participant testent un site web" loading="lazy" />
+  </a>
+  <figcaption><strong>Les déclarations et les actions se vérifient séparément.</strong> La photo montre un test d'expérience utilisateur : un chercheur et un participant essaient un site web. L'entretien renseigne sur les habitudes ; le test d'usage montre l'étape à laquelle la personne s'arrête réellement. Photo : Samuel Mann, CC BY 2.0.</figcaption>
+</figure>
+
 3. **Troisième étape : Tester si les utilisateurs sont prêts à payer pour votre produit**
 
    Faites une prévente ou demandez un acompte. Calculez le pourcentage d'utilisateurs prêts à payer un acompte (plus tôt vous gagnez de l'argent, plus le besoin est confirmé) :
@@ -295,6 +316,13 @@ Les problèmes de sa soeur étaient en réalité très concrets : du temps fragm
 
 Ce sont tous de vrais points de douleur, pas des points de démangeaison du type "c'est bien si on a".
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Post_Pregnancy_Pt_Class_DVIDS301829.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/post-pregnancy-training.jpg" alt="Un cours réel de remise en condition physique après l'accouchement" loading="lazy" />
+  </a>
+  <figcaption><strong>L'entraînement post-partum possède ses propres contraintes.</strong> La photo montre un cours de remise en condition après l'accouchement. Le retour à l'exercice et la prévention des blessures y sont traités ensemble ; les étapes, les limites de mouvement et l'encadrement professionnel doivent donc être étudiés séparément. Photo : Staff Sgt. Orly N. Tyrell / U.S. Air Force, domaine public.</figcaption>
+</figure>
+
 ---
 
 ### Segmentation horizontale : Les besoins de différents groupes
@@ -334,6 +362,13 @@ Il a observé une journée dans la vie de sa soeur.
 À 20 heures, sa soeur avait enfin du temps libre, mais elle était très anxieuse. Elle se regardait dans le miroir, se sentait détruite, et pleurait en regardant ses anciennes photos.
 
 Xiaoming a découvert que le point de douleur de sa soeur n'était pas "l'absence de cours de fitness", mais "la peur et l'anxiété de la récupération post-partum".
+
+<figure class="idea-field-figure idea-field-figure--portrait idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Beispiel_Customer_Journey_Map.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/customer-journey-work.jpg" alt="Une carte de parcours client réalisée à la main" loading="lazy" />
+  </a>
+  <figcaption><strong>Reconstituer la situation dans le temps.</strong> Voici une carte de parcours client réalisée à la main. Elle place les expériences du matin, de la journée et du soir sur une même chronologie, mais la carte n'est pas une preuve utilisateur : chaque conclusion doit encore être étayée par des entretiens ou des observations. Réalisation : Anakin Schoeber, CC BY-SA 4.0.</figcaption>
+</figure>
 
 ---
 
@@ -506,6 +541,13 @@ Concernant la réalisation technique, l'IA a suggéré d'utiliser des capacités
 Pour les coûts de démarrage, le développement du mini-programme coûte 10 000 à 20 000 yuans (en sous-traitance) ou vous pouvez le faire vous-même avec un AI IDE. Pour le contenu, collaborer avec des coachs de rééducation post-partum. Pour la promotion, commencer avec les groupes de mamans et Xiaohongshu.
 
 L'indicateur de validation est de 100 utilisateurs le premier mois, avec un taux de conversion payant de 10 %. Si cet objectif est atteint, le besoin est réel et l'investissement continue ; sinon, ajuster la direction à temps.
+
+<figure class="idea-field-figure idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:UX_prototyping_4.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/app-prototype-user-test.jpg" alt="Une participante manipule un prototype d'application mobile" loading="lazy" />
+  </a>
+  <figcaption><strong>Confier le prototype à une participante.</strong> La photo montre un test de prototype d'application mobile. Observer où la personne s'arrête, quelles questions elle pose et si elle poursuit transforme le plan du MVP en un résultat vérifiable. Photo : Luthienrecanto, CC BY-SA 4.0.</figcaption>
+</figure>
 
 ---
 

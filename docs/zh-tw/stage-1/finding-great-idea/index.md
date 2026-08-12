@@ -88,6 +88,13 @@ const duration = '約 <strong>3 小時</strong>'
 
 他坐在電腦前，看著後臺慘淡的資料，心裡只有一個問題：我的 APP 做得挺好的啊，為什麼沒人用？更沒人願意買單？
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Woman_stretching_in_a_gym_while_holding_her_phone.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/fitness-phone-context.jpg" alt="一名女性在健身房伸展，同時拿著手機" loading="lazy" />
+  </a>
+  <figcaption><strong>先看現場，再想功能。</strong>照片中的手機已經出現在訓練場景裡，但這並不能證明使用者還需要一個健身 APP。我們還要了解她為什麼拿起手機，以及原來的做法在哪一步遇到了困難。照片：Shixart1985，CC BY 2.0。</figcaption>
+</figure>
+
 
 
 小明的失敗，不是因為技術不行，也不是因為產品做得不好。說實話，他的 APP 功能挺全的，介面也挺好看的。
@@ -156,6 +163,13 @@ const duration = '約 <strong>3 小時</strong>'
 因為小餐館老闆每天凌晨 4 點就要起牀去批發市場，很辛苦，而且經常被坑。美菜網做的事情，不是簡單的"電商賣菜"，而是重構了整個供應鏈，讓小餐館老闆能睡個好覺。
 
 痛點越痛，付費意願越強。省下的時間和體力，比省下的菜錢更有價值。
+
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Haikou_wholesale_vegetable_market_-_06.JPG" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/haikou-wholesale-market.jpg" alt="海口一處蔬菜批發市場" loading="lazy" />
+  </a>
+  <figcaption><strong>採購不只發生在下單時。</strong>照片記錄了海口一處蔬菜批發市場。到場、挑貨、搬運和返程都屬於採購過程。把這些步驟連起來，我們才能判斷產品究竟減少了哪一部分成本。照片：Anna Frodesiak，CC0。</figcaption>
+</figure>
 
 #### 小紅書：解決選擇困難
 
@@ -238,6 +252,13 @@ const duration = '約 <strong>3 小時</strong>'
 
    使用者現在可能用其他產品、Excel、靠記憶，或者忍受著不解決。你需要弄清楚這些方案有什麼缺點。你的產品要比它們好很多，使用者才願意換。
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Project_User_Experience_Testing_(9719939867).jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/ux-test-researcher-participant.jpg" alt="研究者與測試參與者一起試用網站" loading="lazy" />
+  </a>
+  <figcaption><strong>說法和做法要分開驗證。</strong>照片記錄了一次網站使用者體驗測試：一名研究者與一名測試參與者正在試用網站。訪談用來了解平時的做法；操作測試則用來觀察參與者在哪一步停下來。照片：Samuel Mann，CC BY 2.0。</figcaption>
+</figure>
+
 3. **第三步：測試使用者是否願意為你的產品付錢**
 
    做預售或收定金。統計願意付定金的使用者比例（越早賺上錢說明需求越正確）：
@@ -295,6 +316,13 @@ const duration = '約 <strong>3 小時</strong>'
 
 這些都是真實的痛點，不是"有也挺好"的癢點。
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Post_Pregnancy_Pt_Class_DVIDS301829.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/post-pregnancy-training.jpg" alt="一堂真實的產後體能恢復課程" loading="lazy" />
+  </a>
+  <figcaption><strong>產後訓練有自己的限制。</strong>照片記錄了一堂產後體能恢復課。課程同時考慮重新適應訓練與避免受傷，因此訓練階段、動作限制和專業指導都需要單獨調查。照片：Staff Sgt. Orly N. Tyrell / U.S. Air Force，公有領域。</figcaption>
+</figure>
+
 ---
 
 ### 橫向切分：不同人羣的需求
@@ -334,6 +362,13 @@ const duration = '約 <strong>3 小時</strong>'
 晚上 8 點，姐姐終於有空了，但很焦慮。她看著鏡子裡的自己，覺得人生完蛋了，翻著以前的照片偷偷哭。
 
 小明發現，姐姐的痛點不是"沒有健身課程"，而是"產後恢復的恐懼和焦慮"。
+
+<figure class="idea-field-figure idea-field-figure--portrait idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Beispiel_Customer_Journey_Map.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/customer-journey-work.jpg" alt="手工製作的顧客旅程圖" loading="lazy" />
+  </a>
+  <figcaption><strong>先依時間還原場景。</strong>這是一張手工製作的顧客旅程圖。它可以把早晨、白天和晚上的經歷放在同一條時間線上，但圖表本身不是使用者證據；其中的判斷仍要由訪談或觀察支持。作品：Anakin Schoeber，CC BY-SA 4.0。</figcaption>
+</figure>
 
 ---
 
@@ -506,6 +541,13 @@ AI 建議分三個階段來做。第一階段是 1-2 個月，目標是驗證需
 啟動成本方面，小程式開發 1-2 萬（外包）或自己用 AI IDE 做，內容製作找產後康復教練合作，推廣從媽媽羣、小紅書開始。
 
 驗證指標是第一個月 100 個使用者，10% 付費轉化率。如果達到，說明需求真實，繼續投入；如果達不到，及時調整方向。
+
+<figure class="idea-field-figure idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:UX_prototyping_4.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/app-prototype-user-test.jpg" alt="參與者在使用者測試中操作行動應用程式原型" loading="lazy" />
+  </a>
+  <figcaption><strong>把原型交到參與者手中。</strong>照片記錄了一次行動應用程式原型測試。觀察參與者在哪一步停下、提出了什麼問題，以及是否願意繼續使用，才能把 MVP 計畫轉化為可檢查的結果。照片：Luthienrecanto，CC BY-SA 4.0。</figcaption>
+</figure>
 
 ---
 

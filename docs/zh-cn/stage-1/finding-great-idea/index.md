@@ -11,8 +11,6 @@ const duration = '约 <strong>3 小时</strong>'
 
 # 如何判断一个好点子
 
-<ProductJourney current="choose" />
-
 ## 本章导读
 
 <ChapterIntroduction :duration="duration" :tags="['需求挖掘', '产品思维', '用户分析', '商业模式']" coreOutput="3 个经过验证的产品概念" expectedOutput="可落地的创业/产品方向">
@@ -87,6 +85,13 @@ const duration = '约 <strong>3 小时</strong>'
 
 他坐在电脑前，看着后台惨淡的数据，心里只有一个问题：我的 APP 做得挺好的啊，为什么没人用？更没人愿意买单？
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Woman_stretching_in_a_gym_while_holding_her_phone.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/fitness-phone-context.jpg" alt="一名女性在健身房拉伸，同时拿着手机" loading="lazy" />
+  </a>
+  <figcaption><strong>先看现场，再想功能。</strong>照片中的手机已经出现在训练场景里，但这并不能证明用户还需要一个健身 APP。我们还要了解她为什么拿起手机，以及原来的做法在哪一步遇到了困难。照片：Shixart1985，CC BY 2.0。</figcaption>
+</figure>
+
 
 
 小明的失败，不是因为技术不行，也不是因为产品做得不好。说实话，他的 APP 功能挺全的，界面也挺好看的。
@@ -155,6 +160,13 @@ const duration = '约 <strong>3 小时</strong>'
 因为小餐馆老板每天凌晨 4 点就要起床去批发市场，很辛苦，而且经常被坑。美菜网做的事情，不是简单的"电商卖菜"，而是重构了整个供应链，让小餐馆老板能睡个好觉。
 
 痛点越痛，付费意愿越强。省下的时间和体力，比省下的菜钱更有价值。
+
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Haikou_wholesale_vegetable_market_-_06.JPG" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/haikou-wholesale-market.jpg" alt="海口一处蔬菜批发市场的真实交易现场" loading="lazy" />
+  </a>
+  <figcaption><strong>采购不只发生在下单时。</strong>照片记录了海口一处蔬菜批发市场。到场、挑货、搬运和返程都属于采购过程。把这些步骤连起来，我们才能判断产品究竟减少了哪一部分成本。照片：Anna Frodesiak，CC0。</figcaption>
+</figure>
 
 #### 小红书：解决选择困难
 
@@ -237,6 +249,13 @@ const duration = '约 <strong>3 小时</strong>'
 
    用户现在可能用其他产品、Excel、靠记忆，或者忍受着不解决。你需要弄清楚这些方案有什么缺点。你的产品要比它们好很多，用户才愿意换。
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Project_User_Experience_Testing_(9719939867).jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/ux-test-researcher-participant.jpg" alt="研究者与测试参与者一起试用一个网站" loading="lazy" />
+  </a>
+  <figcaption><strong>说法和做法要分开验证。</strong>照片记录了一次网站用户体验测试：一名研究者与一名测试参与者正在试用网站。访谈用于了解平时的做法；操作测试则用于观察参与者在哪一步停下来。照片：Samuel Mann，CC BY 2.0。</figcaption>
+</figure>
+
 3. **第三步：测试用户是否愿意为你的产品付钱**
 
    做预售或收定金。统计愿意付定金的用户比例（越早赚上钱说明需求越正确）：
@@ -294,6 +313,13 @@ const duration = '约 <strong>3 小时</strong>'
 
 这些都是真实的痛点，不是"有也挺好"的痒点。
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Post_Pregnancy_Pt_Class_DVIDS301829.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/post-pregnancy-training.jpg" alt="美国空军基地一堂真实的产后体能恢复课程" loading="lazy" />
+  </a>
+  <figcaption><strong>产后训练有自己的约束。</strong>照片记录了一堂产后体能恢复课。课程同时考虑重新适应训练与避免受伤，因此训练阶段、动作限制和专业指导都需要单独调查。照片：Staff Sgt. Orly N. Tyrell / U.S. Air Force，公有领域。</figcaption>
+</figure>
+
 ---
 
 ### 横向切分：不同人群的需求
@@ -333,6 +359,13 @@ const duration = '约 <strong>3 小时</strong>'
 晚上 8 点，姐姐终于有空了，但很焦虑。她看着镜子里的自己，觉得人生完蛋了，翻着以前的照片偷偷哭。
 
 小明发现，姐姐的痛点不是"没有健身课程"，而是"产后恢复的恐惧和焦虑"。
+
+<figure class="idea-field-figure idea-field-figure--portrait idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Beispiel_Customer_Journey_Map.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/customer-journey-work.jpg" alt="纸上手工绘制的客户旅程图示例" loading="lazy" />
+  </a>
+  <figcaption><strong>先按时间还原场景。</strong>这是一张手工制作的客户旅程图示例。它可以把早晨、白天和晚上的经历放在同一条时间线上，但图表本身不是用户证据；其中的判断仍要由访谈或观察支持。作品：Anakin Schoeber，CC BY-SA 4.0。</figcaption>
+</figure>
 
 ---
 
@@ -505,6 +538,13 @@ AI 建议分三个阶段来做。第一阶段是 1-2 个月，目标是验证需
 启动成本方面，小程序开发 1-2 万（外包）或自己用 AI IDE 做，内容制作找产后康复教练合作，推广从妈妈群、小红书开始。
 
 验证指标是第一个月 100 个用户，10% 付费转化率。如果达到，说明需求真实，继续投入；如果达不到，及时调整方向。
+
+<figure class="idea-field-figure idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:UX_prototyping_4.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/app-prototype-user-test.jpg" alt="一名参与者正在操作手机应用原型进行用户测试" loading="lazy" />
+  </a>
+  <figcaption><strong>原型要交到参与者手中。</strong>照片记录了一次移动应用原型测试。观察参与者在哪一步停下、提出了什么问题，以及是否愿意继续使用，才能把 MVP 计划转化为可检查的结果。照片：Luthienrecanto，CC BY-SA 4.0。</figcaption>
+</figure>
 
 ---
 

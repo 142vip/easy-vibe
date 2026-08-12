@@ -725,3 +725,54 @@ body.mermaid-viewer-open .viewer-canvas img {
     font-size: 1.08rem;
   }
 }
+/* Shared field photographs for the multilingual product-idea chapter. */
+.vp-doc .idea-field-figure {
+  margin: 24px 0 32px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+}
+
+.vp-doc .idea-field-figure > a {
+  display: block;
+  background: #f4f4f1;
+}
+
+.vp-doc .idea-field-figure img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+}
+
+.vp-doc .idea-field-figure--portrait img {
+  max-height: 640px;
+}
+
+.vp-doc .idea-field-figure--artifact img {
+  padding: 20px;
+  background: #f4f1eb;
+}
+
+.vp-doc .idea-field-figure figcaption {
+  padding: 13px 16px 15px;
+  border-top: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.vp-doc .idea-field-figure figcaption strong {
+  color: var(--vp-c-text-1);
+}
+
+@media (max-width: 640px) {
+  .vp-doc .idea-field-figure {
+    margin: 20px 0 28px;
+  }
+
+  .vp-doc .idea-field-figure--artifact img {
+    padding: 8px;
+  }
+}

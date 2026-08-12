@@ -88,6 +88,13 @@ Vibe Coding이 우리에게 아이디어를 빠르게 제품으로 바꿀 수 �
 
 그는 컴퓨터 앞에 앉아 처참한 백오피스 데이터를 보며 마음속에 단 하나의 질문만 남았습니다. 내 APP은 꽤 잘 만들었는데, 왜 아무도 쓰지 않을까? 더구나 왜 아무도 비용을 지불하지 않을까?
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Woman_stretching_in_a_gym_while_holding_her_phone.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/fitness-phone-context.jpg" alt="헬스장에서 휴대전화를 든 채 스트레칭하는 여성" loading="lazy" />
+  </a>
+  <figcaption><strong>기능보다 먼저 현장을 봅니다.</strong>사진 속 운동 장면에는 이미 휴대전화가 있습니다. 그러나 이것만으로 또 하나의 피트니스 앱이 필요하다고 말할 수는 없습니다. 왜 휴대전화를 들었는지, 기존 방식의 어느 단계에서 어려움을 겪는지 확인해야 합니다. 사진: Shixart1985, CC BY 2.0.</figcaption>
+</figure>
+
 
 
 샤오밍의 실패는 기술이 부족해서도, 제품을 잘못 만들어서도 아닙니다. 솔직히 말해 그의 APP은 기능이 꽤 완전했고, 인터페이스도 꽤 보기 좋았습니다.
@@ -156,6 +163,13 @@ Vibe Coding이 우리에게 아이디어를 빠르게 제품으로 바꿀 수 �
 작은 식당 사장은 매일 새벽 4시에 일어나 도매시장에 가야 합니다. 매우 힘들고, 자주 바가지를 쓰기도 합니다. Meicai가 하는 일은 단순한 “식재료 이커머스”가 아니라 전체 공급망을 재구성하여 작은 식당 사장이 잠을 잘 수 있게 하는 것입니다.
 
 문제점이 아플수록 지불 의향은 강해집니다. 절약되는 시간과 체력은 절약되는 식재료 값보다 더 가치 있습니다.
+
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Haikou_wholesale_vegetable_market_-_06.JPG" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/haikou-wholesale-market.jpg" alt="하이커우의 채소 도매시장" loading="lazy" />
+  </a>
+  <figcaption><strong>구매는 주문만으로 끝나지 않습니다.</strong>사진은 하이커우의 채소 도매시장입니다. 시장에 가고, 물건을 고르고, 옮기고, 식당으로 돌아오는 과정이 모두 구매에 포함됩니다. 전체 과정을 보아야 제품이 어떤 비용을 줄이는지 판단할 수 있습니다. 사진: Anna Frodesiak, CC0.</figcaption>
+</figure>
 
 #### 샤오홍슈: 선택 어려움 해결
 
@@ -238,6 +252,13 @@ Vibe Coding이 우리에게 아이디어를 빠르게 제품으로 바꿀 수 �
 
    사용자는 지금 다른 제품, Excel, 기억력, 또는 참고 견디기를 사용하고 있을 수 있습니다. 이 방안들의 단점이 무엇인지 파악해야 합니다. 당신의 제품이 그것들보다 훨씬 좋아야 사용자가 바꿀 의향이 생깁니다.
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Project_User_Experience_Testing_(9719939867).jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/ux-test-researcher-participant.jpg" alt="연구자와 테스트 참여자가 웹사이트를 사용해 보는 모습" loading="lazy" />
+  </a>
+  <figcaption><strong>말과 행동은 따로 검증합니다.</strong>사진은 연구자와 참여자가 함께 웹사이트를 사용해 보는 사용자 경험 테스트입니다. 인터뷰에서는 평소 방식을 듣고, 조작 테스트에서는 실제로 어느 단계에서 멈추는지 관찰합니다. 사진: Samuel Mann, CC BY 2.0.</figcaption>
+</figure>
+
 3. **3단계: 사용자가 제품에 돈을 낼 의향이 있는지 테스트하기**
 
    사전 판매나 예약금을 받습니다. 예약금을 낼 의향이 있는 사용자 비율을 집계합니다. 돈을 빨리 벌수록 요구가 더 맞다는 뜻입니다.
@@ -295,6 +316,13 @@ Vibe Coding이 우리에게 아이디어를 빠르게 제품으로 바꿀 수 �
 
 이것들은 모두 진짜 문제점입니다. “있으면 좋겠다” 수준의 가려운 지점이 아닙니다.
 
+<figure class="idea-field-figure">
+  <a href="https://commons.wikimedia.org/wiki/File:Post_Pregnancy_Pt_Class_DVIDS301829.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/post-pregnancy-training.jpg" alt="산후 체력 회복 수업" loading="lazy" />
+  </a>
+  <figcaption><strong>산후 운동에는 별도의 제약이 있습니다.</strong>사진은 산후 체력 회복 수업입니다. 운동 복귀와 부상 방지를 함께 다루므로 훈련 단계, 동작 제한, 전문가 지도를 따로 조사해야 합니다. 사진: Staff Sgt. Orly N. Tyrell / U.S. Air Force, 퍼블릭 도메인.</figcaption>
+</figure>
+
 ---
 
 ### 가로로 나누기: 서로 다른 사람군의 요구
@@ -334,6 +362,13 @@ Vibe Coding이 우리에게 아이디어를 빠르게 제품으로 바꿀 수 �
 밤 8시, 누나는 드디어 시간이 생겼지만 매우 불안했습니다. 거울 속의 자신을 보며 인생이 끝난 것 같다고 느끼고, 예전 사진을 넘겨 보며 몰래 울었습니다.
 
 샤오밍은 누나의 문제점이 “운동 수업이 없음”이 아니라 “산후 회복에 대한 두려움과 불안”이라는 것을 발견했습니다.
+
+<figure class="idea-field-figure idea-field-figure--portrait idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:Beispiel_Customer_Journey_Map.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/customer-journey-work.jpg" alt="손으로 만든 고객 여정 지도" loading="lazy" />
+  </a>
+  <figcaption><strong>시간 순서대로 상황을 복원합니다.</strong>이것은 손으로 만든 고객 여정 지도입니다. 아침, 낮, 저녁의 경험을 한 시간축에 놓을 수 있지만 지도 자체가 사용자 증거는 아닙니다. 각 판단은 인터뷰나 관찰로 뒷받침해야 합니다. 작품: Anakin Schoeber, CC BY-SA 4.0.</figcaption>
+</figure>
 
 ---
 
@@ -506,6 +541,13 @@ AI는 세 단계로 나누어 만들 것을 제안했습니다. 첫 번째 단�
 시작 비용 측면에서 미니프로그램 개발은 1-2만 위안(외주) 또는 AI IDE로 직접 만들 수 있습니다. 콘텐츠 제작은 산후 회복 코치와 협력하고, 홍보는 엄마 커뮤니티와 샤오홍슈에서 시작합니다.
 
 검증 지표는 첫 달 사용자 100명, 10% 유료 전환율입니다. 도달하면 요구가 진짜라는 뜻이므로 계속 투자합니다. 도달하지 못하면 방향을 즉시 조정합니다.
+
+<figure class="idea-field-figure idea-field-figure--artifact">
+  <a href="https://commons.wikimedia.org/wiki/File:UX_prototyping_4.jpg" target="_blank" rel="noopener noreferrer">
+    <img src="/images/finding-great-idea/app-prototype-user-test.jpg" alt="참여자가 모바일 앱 프로토타입을 조작하는 모습" loading="lazy" />
+  </a>
+  <figcaption><strong>프로토타입을 참여자에게 건넵니다.</strong>사진은 모바일 앱 프로토타입 테스트입니다. 참여자가 어디에서 멈추고, 무엇을 묻고, 계속 사용하려 하는지 관찰하면 MVP 계획을 확인 가능한 결과로 바꿀 수 있습니다. 사진: Luthienrecanto, CC BY-SA 4.0.</figcaption>
+</figure>
 
 ---
 

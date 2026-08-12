@@ -72,6 +72,11 @@ El primer mes después del lanzamiento consiguió 50 000 descargas gracias a la 
 
 Al cabo de un año había perdido 200 000 yuanes. Su pregunta era sencilla: «La aplicación está bien hecha, ¿por qué nadie la usa ni paga por ella?».
 
+<figure class="idea-field-figure">
+  <img src="/images/finding-great-idea/fitness-phone-context.jpg" alt="Una mujer estira en un gimnasio mientras sostiene el teléfono" loading="lazy" />
+  <figcaption><strong>Observa la situación antes de elegir funciones.</strong> El teléfono ya aparece en una sesión de ejercicio, pero eso no demuestra que haga falta otra aplicación. Primero hay que averiguar para qué se usa y en qué punto deja de servir la solución actual. Foto: Shixart1985, CC BY 2.0.</figcaption>
+</figure>
+
 El problema no estaba en la tecnología ni en el acabado, sino en el punto de partida. Xiao Ming nunca había preguntado si el usuario necesitaba otra aplicación de ejercicio, qué diferencia concreta ofrecía o por qué estaría dispuesto a pagar.
 
 **Cuando la dirección es incorrecta, mejorar el producto solo te aleja más del objetivo.**
@@ -118,6 +123,11 @@ Meicai parece un servicio para comprar verduras, pero el problema profundo era o
 
 Cuanto mayor es el dolor, mayor suele ser la disposición a pagar. El tiempo y el esfuerzo ahorrados pueden valer más que el descuento en la compra.
 
+<figure class="idea-field-figure">
+  <img src="/images/finding-great-idea/haikou-wholesale-market.jpg" alt="Personas comprando verduras en un mercado mayorista de Haikou" loading="lazy" />
+  <figcaption><strong>Comprar no empieza ni termina al hacer el pedido.</strong> La fotografía muestra un mercado mayorista real de Haikou. Llegar, elegir, cargar y volver al restaurante también forman parte del trabajo; ahí puede estar el valor principal del producto. Foto: Anna Frodesiak, CC0.</figcaption>
+</figure>
+
 #### Xiaohongshu: reducir la dificultad de elegir
 
 Xiaohongshu comenzó con recomendaciones de compras. Frente a miles de opciones, muchas personas no sabían qué comprar ni en quién confiar. Las notas de otros usuarios reducían el tiempo de búsqueda y el riesgo de equivocarse.
@@ -160,6 +170,11 @@ Un error frecuente consiste en vender un deseo como si fuera un dolor. «Registr
 
 1. **Habla con usuarios reales y pregunta qué hacen hoy.** Busca diez personas del grupo objetivo. Si ya improvisan una solución, el problema existe; si nunca intentan resolverlo, quizá no sea urgente.
 2. **Analiza las alternativas actuales.** Pueden usar otro producto, una hoja de cálculo, su memoria o simplemente soportar el problema. Tu propuesta debe mejorar de forma visible esa alternativa.
+
+<figure class="idea-field-figure">
+  <img src="/images/finding-great-idea/ux-test-researcher-participant.jpg" alt="Un investigador y una participante prueban juntos un sitio web" loading="lazy" />
+  <figcaption><strong>Comprueba por separado lo que la gente dice y lo que hace.</strong> La fotografía documenta una prueba de experiencia de usuario de un sitio web. La entrevista ayuda a reconstruir la rutina habitual; una prueba de usabilidad permite ver dónde se detiene realmente la participante. Foto: Samuel Mann, CC BY 2.0.</figcaption>
+</figure>
 3. **Comprueba si pagan.** Una preventa o una pequeña señal vale más que una promesa. Más del 10 % es una señal fuerte; entre 5 % y 10 % exige ajustes; por debajo del 5 % conviene revisar la hipótesis.
 4. **Calcula si el mercado sostiene el proyecto.** Multiplica el número de usuarios objetivo, la proporción que pagaría y el precio medio.
 5. **Piensa qué será difícil de copiar.** La tecnología, los datos, la red de usuarios, la marca o un coste operativo menor pueden convertirse en barreras.
@@ -179,6 +194,11 @@ Su hermana acababa de ser madre. Quería recuperar su cuerpo, pero tenía poco t
 Cuando Xiao Ming le preguntó cómo lo resolvía, ella explicó que los ejercicios generales de Keep le provocaban dolor lumbar, no podía ir al gimnasio porque cuidaba al bebé, un entrenador personal costaba entre 300 y 500 yuanes por sesión y entrenar sola le daba miedo.
 
 El problema era concreto: tiempo fragmentado, limitaciones físicas, ansiedad por el cuerpo, demasiada información y poca compañía. No era una mejora agradable; era una combinación de dolores reales.
+
+<figure class="idea-field-figure">
+  <img src="/images/finding-great-idea/post-pregnancy-training.jpg" alt="Un grupo participa en una clase de ejercicio después del embarazo" loading="lazy" />
+  <figcaption><strong>El ejercicio posparto tiene restricciones propias.</strong> La fotografía documenta una clase real después del embarazo. El lugar, la supervisión y la intensidad del movimiento no son adornos del escenario: forman parte del problema que conviene entender antes de enumerar funciones. Foto: Staff Sgt Orly N. Tyrell, Fuerza Aérea de Estados Unidos, dominio público.</figcaption>
+</figure>
 
 ### Segmentación horizontal: necesidades de grupos diferentes
 
@@ -206,6 +226,11 @@ Xiao Ming observó un día entero de su hermana.
 - A las ocho por fin tiene tiempo; se mira al espejo, recuerda su cuerpo anterior y se angustia.
 
 La necesidad no era «faltan cursos de ejercicio», sino el miedo y la ansiedad de la recuperación posparto.
+
+<figure class="idea-field-figure idea-field-figure--portrait idea-field-figure--artifact">
+  <img src="/images/finding-great-idea/customer-journey-work.jpg" alt="Ejemplo físico de un mapa de experiencia del cliente colocado en una pared" loading="lazy" />
+  <figcaption><strong>Reconstruye la situación sobre una línea de tiempo.</strong> La imagen muestra un ejemplo de trabajo con un mapa de experiencia. El mapa no es evidencia de usuario por sí solo; sirve para ordenar lo aprendido en entrevistas y observaciones, y localizar cambios de emoción y obstáculos. Foto: Anakin Schoeber, CC BY-SA 4.0.</figcaption>
+</figure>
 
 ::: info Pensar en escenarios
 Un dolor no es simplemente una función que falta. Es una emoción situada en un momento concreto y acompañada de voluntad de actuar. Una madre puede sentir miedo a una secuela, ansiedad ante el espejo, desorientación por no saber cómo empezar y soledad porque nadie parece comprenderla.
@@ -287,6 +312,11 @@ Entre el tercer y el sexto mes, si la prueba funciona, añadir corrección de po
 Entre el sexto y el duodécimo mes, desarrollar una aplicación independiente, colaborar con centros de recuperación y ampliar el servicio al embarazo.
 
 En vez de crear visión artificial desde cero, podría usar servicios existentes y combinar al principio trabajo humano con IA. Los indicadores iniciales serían cien usuarias el primer mes y una conversión de pago del 10 %.
+
+<figure class="idea-field-figure idea-field-figure--artifact">
+  <img src="/images/finding-great-idea/app-prototype-user-test.jpg" alt="Una participante prueba el prototipo de una aplicación en un teléfono" loading="lazy" />
+  <figcaption><strong>Pon el prototipo en manos de la participante.</strong> La fotografía documenta una prueba real de un prototipo de aplicación. No importa que la interfaz parezca terminada: importa si la participante completa la tarea, dónde duda y qué debe cambiar en la siguiente iteración. Foto: Luthienrecanto, CC BY-SA 4.0.</figcaption>
+</figure>
 
 ### Tercera ronda: Xiao Ming plantea una preocupación
 
