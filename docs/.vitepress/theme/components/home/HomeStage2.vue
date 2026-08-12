@@ -49,7 +49,11 @@ const localizedStage2Cards = computed(() => {
           <img
             :src="card.image"
             :alt="card.imageAlt || card.title"
+            width="1672"
+            height="941"
             loading="lazy"
+            decoding="async"
+            fetchpriority="low"
           >
         </div>
         <div class="comm-text">

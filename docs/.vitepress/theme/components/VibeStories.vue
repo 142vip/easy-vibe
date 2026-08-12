@@ -1,11 +1,15 @@
 <script setup>
 import { computed, inject, onMounted, onUnmounted, ref } from 'vue'
 import { withBase } from 'vitepress'
-import macbookImage from '../../../../assets/macbook.png'
-import story1Cover from '../../../zh-cn/vibe-stories/images/story-1/image5.png'
-import story2Cover from '../../../zh-cn/vibe-stories/images/story-2/image4.png'
-import story3Cover from '../../../zh-cn/vibe-stories/images/story-3/image3.png'
-import story4Cover from '../../../zh-cn/vibe-stories/images/story-4/image7.png'
+import macbookImage from '../assets/home/stories/macbook-frame.webp'
+import story1Cover from '../assets/home/stories/story-1.webp'
+import story1CoverSmall from '../assets/home/stories/story-1-640.webp'
+import story2Cover from '../assets/home/stories/story-2.webp'
+import story2CoverSmall from '../assets/home/stories/story-2-640.webp'
+import story3Cover from '../assets/home/stories/story-3.webp'
+import story3CoverSmall from '../assets/home/stories/story-3-640.webp'
+import story4Cover from '../assets/home/stories/story-4.webp'
+import story4CoverSmall from '../assets/home/stories/story-4-640.webp'
 
 // Try to inject translation context from parent or provide a default fallback
 const t = inject('t', {
@@ -35,6 +39,8 @@ const tStories = computed(() => [
     author: t.value?.stories?.s1?.author || '小学老师小浩',
     avatar: '👨‍🏫',
     image: story1Cover,
+    imageSrcset: `${story1CoverSmall} 640w, ${story1Cover} 1280w`,
+    imageHeight: 959,
     imageStyle: {
       objectPosition: 'center center'
     },
@@ -46,6 +52,8 @@ const tStories = computed(() => [
     author: t.value?.stories?.s2?.author || '一位大二学生',
     avatar: '🎓',
     image: story2Cover,
+    imageSrcset: `${story2CoverSmall} 640w, ${story2Cover} 1280w`,
+    imageHeight: 700,
     imageStyle: {
       objectPosition: 'center center'
     },
@@ -57,6 +65,8 @@ const tStories = computed(() => [
     author: t.value?.stories?.s3?.author || '高中信息技术老师',
     avatar: '🧑‍🏫',
     image: story3Cover,
+    imageSrcset: `${story3CoverSmall} 640w, ${story3Cover} 1280w`,
+    imageHeight: 768,
     imageStyle: {
       objectPosition: '34% center'
     },
@@ -68,6 +78,8 @@ const tStories = computed(() => [
     author: t.value?.stories?.s4?.author || '货车司机老黄',
     avatar: '🚚',
     image: story4Cover,
+    imageSrcset: `${story4CoverSmall} 640w, ${story4Cover} 1280w`,
+    imageHeight: 992,
     imageStyle: {
       objectPosition: 'center center'
     },
@@ -241,16 +253,32 @@ onUnmounted(() => {
               <div :key="currentStory.id" class="screen-image-wrapper">
                 <img
                   :src="currentStory.image"
+                  :srcset="currentStory.imageSrcset"
+                  sizes="(max-width: 760px) 62vw, 440px"
                   class="screen-image" 
                   :style="currentImageStyle"
                   :alt="t.stories?.ui?.imageAlt || 'Story screenshot'"
+                  width="1280"
+                  :height="currentStory.imageHeight"
+                  loading="lazy"
+                  decoding="async"
+                  fetchpriority="low"
                 />
               </div>
             </transition>
           </a>
         </div>
         <!-- Laptop Frame -->
-        <img :src="macbookImage" class="laptop-frame" alt="MacBook Frame" />
+        <img
+          :src="macbookImage"
+          class="laptop-frame"
+          alt="MacBook Frame"
+          width="1400"
+          height="813"
+          loading="lazy"
+          decoding="async"
+          fetchpriority="low"
+        />
       </div>
 
       <!-- Story Info & Avatar -->

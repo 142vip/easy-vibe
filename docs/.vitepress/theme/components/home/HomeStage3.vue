@@ -41,7 +41,11 @@ const t = inject('t')
               :src="card.image"
               :alt="card.imageAlt"
               :class="card.imageClass"
+              width="1672"
+              height="941"
               loading="lazy"
+              decoding="async"
+              fetchpriority="low"
             >
           </div>
         </a>

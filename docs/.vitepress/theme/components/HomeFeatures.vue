@@ -358,6 +358,7 @@ onUnmounted(() => {
               :alt="t.nav.title"
               width="64"
               height="30"
+              decoding="async"
               draggable="false"
             >
           </div>
