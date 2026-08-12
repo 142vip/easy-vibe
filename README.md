@@ -227,7 +227,7 @@ Easy-Vibe teaches you how to turn that into a real product.
 ### 📖 Content Navigation
 
 <div align="center">
-  <img src="assets/readme-learning-map.svg" alt="Easy Vibe learning map: from idea validation to full-stack delivery and advanced AI coding" width="90%" style="border-radius: 10px; box-shadow: 0 8px 20px rgba(45,55,72,0.3); margin: 15px 0;"/>
+  <img src="assets/readme-image1.png" alt="Easy Vibe learning map: from idea validation to full-stack delivery and advanced AI coding" width="70%" style="border-radius: 10px; box-shadow: 0 8px 20px rgba(45,55,72,0.3); margin: 15px 0;"/>
 </div>
 
 ### I. Beginner Entry
