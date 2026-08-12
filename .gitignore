@@ -1,5 +1,15 @@
 .DS_Store
 node_modules
+HANDOFF-to-codex.md
+examples/**/dist/
+docs/zh-cn/stage-1/appendix-double-diamond/images/
+docs/zh-cn/stage-1/appendix-jobs-to-be-done/images/
+docs/zh-cn/stage-1/appendix-mom-test/images/
+docs/zh-cn/stage-1/appendix-idea-sources/images/export-quotation-workflow.jpg
+docs/zh-cn/stage-1/appendix-idea-sources/images/idea-research-session.jpg
+docs/zh-cn/stage-1/appendix-idea-sources/images/public-review-research.jpg
+docs/zh-cn/stage-1/appendix-idea-sources/images/quotation-prototype-review.jpg
+docs/zh-cn/stage-1/appendix-idea-sources/images/teacher-lesson-planning.jpg
 tools/*
 !tools/translation/
 !tools/translation/**

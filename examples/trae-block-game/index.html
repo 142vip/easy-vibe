@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>方块小游戏</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #1a1a2e;
+        font-family: 'Microsoft YaHei', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        color: white;
+        overflow: hidden;
+      }
+      #gameContainer {
+        position: relative;
+        border: 4px solid #555;
+        border-radius: 6px;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+      }
+      canvas {
+        display: block;
+        image-rendering: pixelated;
+        background: linear-gradient(to bottom, #87ceeb 0%, #b0e0e6 100%);
+      }
+      #hotbar {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 4px;
+        padding: 4px;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 6px;
+        border: 2px solid #444;
+      }
+      .slot {
+        width: 48px;
+        height: 48px;
+        border: 2px solid #666;
+        background: rgba(30, 30, 30, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        border-radius: 4px;
+      }
+      .slot.active {
+        border-color: #fff;
+        box-shadow: 0 0 10px #fff;
+        transform: scale(1.05);
+      }
+      .slot .block-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 2px;
+      }
+      .slot .num {
+        position: absolute;
+        bottom: 2px;
+        right: 4px;
+        font-size: 11px;
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px #000;
+      }
+      #info {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 14px;
+        color: #aaa;
+        line-height: 1.8;
+      }
+      #info span {
+        display: inline-block;
+        background: #333;
+        padding: 2px 8px;
+        border-radius: 4px;
+        margin: 0 2px;
+        color: #fff;
+      }
+      #title {
+        font-size: 24px;
+        margin-bottom: 12px;
+        color: #8bc34a;
+        text-shadow: 2px 2px 4px #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="title">⛏ 方块小游戏</div>
+    <div id="gameContainer">
+      <canvas id="game" width="800" height="560"></canvas>
+      <div id="hotbar"></div>
+    </div>
+    <div id="info">
+      移动: <span>W A S D</span> 或 <span>方向键</span> &nbsp;|&nbsp; 放方块:
+      <span>左键</span> &nbsp;|&nbsp; 挖方块: <span>右键</span> &nbsp;|&nbsp;
+      选方块: <span>1-7</span> 或 <span>点击物品栏</span>
+    </div>
+
+    <script>
+      ;(() => {
+        const canvas = document.getElementById('game')
+        const ctx = canvas.getContext('2d')
+        const TILE = 32
+        const COLS = 50
+        const ROWS = 30
+
+        // Block types
+        const BLOCKS = {
+          AIR: 0,
+          GRASS: 1,
+          DIRT: 2,
+          STONE: 3,
+          WOOD: 4,
+          LEAVES: 5,
+          SAND: 6,
+          WATER: 7
+        }
+
+        const BLOCK_COLORS = {
+          [BLOCKS.GRASS]: { top: '#7CB342', side: '#8D6E63', body: '#8D6E63' },
+          [BLOCKS.DIRT]: { top: '#8D6E63', side: '#8D6E63', body: '#8D6E63' },
+          [BLOCKS.STONE]: { top: '#9E9E9E', side: '#757575', body: '#9E9E9E' },
+          [BLOCKS.WOOD]: { top: '#A1887F', side: '#6D4C41', body: '#8D6E63' },
+          [BLOCKS.LEAVES]: { top: '#4CAF50', side: '#388E3C', body: '#4CAF50' },
+          [BLOCKS.SAND]: { top: '#FFE082', side: '#FFD54F', body: '#FFE082' },
+          [BLOCKS.WATER]: { top: '#42A5F5', side: '#1E88E5', body: '#42A5F5' }
+        }
+
+        const HOTBAR_BLOCKS = [
+          BLOCKS.GRASS,
+          BLOCKS.DIRT,
+          BLOCKS.STONE,
+          BLOCKS.WOOD,
+          BLOCKS.LEAVES,
+          BLOCKS.SAND,
+          BLOCKS.WATER
+        ]
+
+        // Generate world
+        let world = []
+        function genWorld() {
+          world = []
+          for (let y = 0; y < ROWS; y++) {
+            const row = []
+            for (let x = 0; x < COLS; x++) {
+              row.push(BLOCKS.AIR)
+            }
+            world.push(row)
+          }
+
+          // Simple terrain with hills
+          for (let x = 0; x < COLS; x++) {
+            const groundY =
+              Math.floor(ROWS * 0.55) +
+              Math.floor(Math.sin(x * 0.25) * 2) +
+              Math.floor(Math.sin(x * 0.1) * 3)
+            // Grass top
+            if (groundY < ROWS) world[groundY][x] = BLOCKS.GRASS
+            // Dirt layers
+            for (let dy = 1; dy <= 4; dy++) {
+              const yy = groundY + dy
+              if (yy < ROWS) world[yy][x] = BLOCKS.DIRT
+            }
+            // Stone below
+            for (let dy = 5; groundY + dy < ROWS; dy++) {
+              world[groundY + dy][x] = BLOCKS.STONE
+            }
+          }
+
+          // Add some water pockets
+          for (let x = 15; x < 22; x++) {
+            const waterY = Math.floor(ROWS * 0.55) + 1
+            if (waterY < ROWS && world[waterY][x] === BLOCKS.GRASS) {
+              world[waterY][x] = BLOCKS.SAND
+              world[waterY + 1][x] = BLOCKS.WATER
+              world[waterY + 2][x] = BLOCKS.WATER
+            }
+          }
+
+          // Add trees
+          const treeSpots = [5, 12, 28, 35, 42, 46]
+          for (const tx of treeSpots) {
+            const groundY =
+              Math.floor(ROWS * 0.55) +
+              Math.floor(Math.sin(tx * 0.25) * 2) +
+              Math.floor(Math.sin(tx * 0.1) * 3)
+            if (
+              world[groundY][tx] === BLOCKS.GRASS ||
+              world[groundY][tx] === BLOCKS.SAND
+            ) {
+              // Trunk
+              for (let h = 1; h <= 4; h++) {
+                const yy = groundY - h
+                if (yy >= 0) world[yy][tx] = BLOCKS.WOOD
+              }
+              // Leaves
+              const topY = groundY - 4
+              for (let dy = -2; dy <= 0; dy++) {
+                for (let dx = -2; dx <= 2; dx++) {
+                  const yy = topY + dy
+                  const xx = tx + dx
+                  if (yy >= 0 && xx >= 0 && xx < COLS) {
+                    if (
+                      Math.abs(dx) + Math.abs(dy) <= 3 &&
+                      world[yy][xx] === BLOCKS.AIR
+                    ) {
+                      world[yy][xx] = BLOCKS.LEAVES
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        genWorld()
+
+        // Player
+        const player = {
+          x: 8 * TILE,
+          y: 10 * TILE,
+          w: TILE - 4,
+          h: TILE * 1.7,
+          vx: 0,
+          vy: 0,
+          speed: 3,
+          onGround: false,
+          dir: 1, // 1 right, -1 left
+          animFrame: 0,
+          animTime: 0
+        }
+
+        // Camera
+        const camera = { x: 0, y: 0 }
+        function updateCamera() {
+          camera.x = player.x + player.w / 2 - canvas.width / 2
+          camera.y = player.y + player.h / 2 - canvas.height / 2
+          camera.x = Math.max(0, Math.min(camera.x, COLS * TILE - canvas.width))
+          camera.y = Math.max(
+            0,
+            Math.min(camera.y, ROWS * TILE - canvas.height)
+          )
+        }
+
+        // Input
+        const keys = {}
+        const mouse = { x: 0, y: 0, worldX: 0, worldY: 0 }
+
+        window.addEventListener('keydown', (e) => {
+          keys[e.key.toLowerCase()] = true
+          // Hotbar 1-7
+          const n = parseInt(e.key)
+          if (n >= 1 && n <= 7) {
+            selectedSlot = n - 1
+            updateHotbarUI()
+          }
+          if (e.key === ' ') {
+            keys['space'] = true
+            e.preventDefault()
+          }
+        })
+        window.addEventListener('keyup', (e) => {
+          keys[e.key.toLowerCase()] = false
+          if (e.key === ' ') keys['space'] = false
+        })
+
+        canvas.addEventListener('mousemove', (e) => {
+          const rect = canvas.getBoundingClientRect()
+          mouse.x = e.clientX - rect.left
+          mouse.y = e.clientY - rect.top
+        })
+
+        canvas.addEventListener('mousedown', (e) => {
+          e.preventDefault()
+          const rect = canvas.getBoundingClientRect()
+          const mx = e.clientX - rect.left
+          const my = e.clientY - rect.top
+          const wx = Math.floor((mx + camera.x) / TILE)
+          const wy = Math.floor((my + camera.y) / TILE)
+          if (wx < 0 || wx >= COLS || wy < 0 || wy >= ROWS) return
+
+          if (e.button === 0) {
+            // Place block - don't place inside player
+            const bx = wx * TILE,
+              by = wy * TILE
+            if (
+              !rectIntersect(
+                bx,
+                by,
+                TILE,
+                TILE,
+                player.x,
+                player.y,
+                player.w,
+                player.h
+              )
+            ) {
+              world[wy][wx] = HOTBAR_BLOCKS[selectedSlot]
+            }
+          } else if (e.button === 2) {
+            // Break block
+            world[wy][wx] = BLOCKS.AIR
+          }
+        })
+        canvas.addEventListener('contextmenu', (e) => e.preventDefault())
+
+        // Collision helpers
+        function tileAt(x, y) {
+          const tx = Math.floor(x / TILE)
+          const ty = Math.floor(y / TILE)
+          if (tx < 0 || tx >= COLS || ty < 0 || ty >= ROWS) return BLOCKS.STONE
+          return world[ty][tx]
+        }
+        function isSolid(b) {
+          return b !== BLOCKS.AIR && b !== BLOCKS.WATER
+        }
+        function rectIntersect(ax, ay, aw, ah, bx, by, bw, bh) {
+          return ax < bx + bw && ax + aw > bx && ay < by + bh && ay + ah > by
+        }
+
+        function collides(px, py, pw, ph) {
+          // Check 4 corners + midpoints
+          const pts = [
+            [px + 1, py + 1],
+            [px + pw - 1, py + 1],
+            [px + 1, py + ph - 1],
+            [px + pw - 1, py + ph - 1],
+            [px + pw / 2, py + 1],
+            [px + pw / 2, py + ph - 1],
+            [px + 1, py + ph / 2],
+            [px + pw - 1, py + ph / 2]
+          ]
+          for (const [x, y] of pts) {
+            if (isSolid(tileAt(x, y))) return true
+          }
+          return false
+        }
+
+        // Physics / movement
+        function updatePlayer(dt) {
+          // Horizontal
+          let dx = 0
+          if (keys['a'] || keys['arrowleft']) {
+            dx = -1
+            player.dir = -1
+          }
+          if (keys['d'] || keys['arrowright']) {
+            dx = 1
+            player.dir = 1
+          }
+          player.vx = dx * player.speed
+
+          // Jump
+          if (
+            (keys['w'] || keys['arrowup'] || keys['space']) &&
+            player.onGround
+          ) {
+            player.vy = -8.5
+            player.onGround = false
+          }
+
+          // Gravity
+          player.vy += 0.42
+          if (player.vy > 14) player.vy = 14
+
+          // Move X with collision
+          const newX = player.x + player.vx
+          if (!collides(newX, player.y, player.w, player.h)) {
+            player.x = newX
+          } else {
+            // Try step by step
+            const step = player.vx > 0 ? 1 : -1
+            while (
+              !collides(player.x + step, player.y, player.w, player.h) &&
+              ((step > 0 && player.x + step <= newX) ||
+                (step < 0 && player.x + step >= newX))
+            ) {
+              player.x += step
+            }
+            player.vx = 0
+          }
+
+          // Move Y with collision
+          const newY = player.y + player.vy
+          if (!collides(player.x, newY, player.w, player.h)) {
+            player.y = newY
+            player.onGround = false
+          } else {
+            if (player.vy > 0) {
+              // Landing
+              player.onGround = true
+              // Snap to ground
+              while (!collides(player.x, player.y + 1, player.w, player.h)) {
+                player.y += 1
+              }
+            }
+            player.vy = 0
+          }
+
+          // Bounds
+          if (player.x < 0) player.x = 0
+          if (player.x + player.w > COLS * TILE)
+            player.x = COLS * TILE - player.w
+          if (player.y > ROWS * TILE) {
+            player.y = 5 * TILE
+            player.x = 8 * TILE
+            player.vy = 0
+          }
+
+          // Animation
+          if (Math.abs(player.vx) > 0.1 && player.onGround) {
+            player.animTime += dt
+            if (player.animTime > 120) {
+              player.animTime = 0
+              player.animFrame = (player.animFrame + 1) % 4
+            }
+          } else {
+            player.animFrame = 0
+          }
+        }
+
+        // Rendering
+        function drawBlock(wx, wy, type, screenX, screenY) {
+          if (type === BLOCKS.AIR) return
+          const c = BLOCK_COLORS[type]
+
+          if (type === BLOCKS.WATER) {
+            ctx.fillStyle = c.body
+            ctx.globalAlpha = 0.7
+            ctx.fillRect(screenX, screenY, TILE, TILE)
+            ctx.globalAlpha = 1
+            // Wavy highlight
+            ctx.fillStyle = '#90CAF9'
+            const wave = Math.sin(Date.now() / 300 + wx + wy) * 2
+            ctx.fillRect(screenX + 2, screenY + 4 + wave, TILE - 4, 2)
+            return
+          }
+
+          // Body
+          ctx.fillStyle = c.body
+          ctx.fillRect(screenX, screenY, TILE, TILE)
+
+          // Top lighter shade (pseudo-2.5D)
+          ctx.fillStyle = c.top
+          ctx.fillRect(screenX, screenY, TILE, TILE / 5)
+
+          // Subtle noise / texture dots
+          ctx.fillStyle = 'rgba(0,0,0,0.08)'
+          for (let i = 0; i < 3; i++) {
+            const rx = ((wx * 7 + i * 13 + wy * 5) % (TILE - 6)) + 3
+            const ry = ((wy * 11 + i * 17 + wx * 3) % (TILE - 6)) + 3
+            ctx.fillRect(screenX + rx, screenY + ry, 2, 2)
+          }
+
+          // Grass special: dirt bottom transition
+          if (type === BLOCKS.GRASS) {
+            ctx.fillStyle = '#8D6E63'
+            ctx.fillRect(screenX, screenY + TILE / 5, TILE, TILE - TILE / 5)
+            ctx.fillStyle = c.top
+            ctx.fillRect(screenX, screenY, TILE, TILE / 5)
+            // Grass blades
+            ctx.fillStyle = '#689F38'
+            for (let i = 0; i < 5; i++) {
+              const gx = screenX + (i * 7 + ((wx + wy) % 4))
+              ctx.fillRect(gx, screenY + 2, 2, 4)
+            }
+          }
+
+          // Wood: vertical lines
+          if (type === BLOCKS.WOOD) {
+            ctx.fillStyle = '#5D4037'
+            ctx.fillRect(screenX + 6, screenY + 2, 2, TILE - 4)
+            ctx.fillRect(screenX + 18, screenY + 2, 2, TILE - 4)
+            ctx.fillRect(screenX + TILE - 10, screenY + 2, 2, TILE - 4)
+          }
+
+          // Leaves: darker spots
+          if (type === BLOCKS.LEAVES) {
+            ctx.fillStyle = 'rgba(46,125,50,0.6)'
+            ctx.fillRect(screenX + 4, screenY + 8, 6, 5)
+            ctx.fillRect(screenX + 16, screenY + 18, 7, 5)
+            ctx.fillRect(screenX + 22, screenY + 4, 5, 6)
+          }
+
+          // Border
+          ctx.strokeStyle = 'rgba(0,0,0,0.2)'
+          ctx.lineWidth = 1
+          ctx.strokeRect(screenX + 0.5, screenY + 0.5, TILE - 1, TILE - 1)
+        }
+
+        function drawPlayer() {
+          const sx = player.x - camera.x
+          const sy = player.y - camera.y
+          const w = player.w
+          const h = player.h
+
+          // Legs (animated)
+          const legSwing =
+            player.animFrame === 0
+              ? 0
+              : player.animFrame === 2
+                ? 0
+                : player.animFrame === 1
+                  ? 4
+                  : -4
+          ctx.fillStyle = '#1565C0'
+          ctx.fillRect(sx + 2, sy + h * 0.65, w / 2 - 3, h * 0.35 + legSwing)
+          ctx.fillRect(
+            sx + w / 2 + 1,
+            sy + h * 0.65,
+            w / 2 - 3,
+            h * 0.35 - legSwing
+          )
+          // Shoes
+          ctx.fillStyle = '#3E2723'
+          ctx.fillRect(sx + 2, sy + h - 4, w / 2 - 3, 4)
+          ctx.fillRect(sx + w / 2 + 1, sy + h - 4, w / 2 - 3, 4)
+
+          // Body
+          ctx.fillStyle = '#E53935'
+          ctx.fillRect(sx, sy + h * 0.3, w, h * 0.38)
+          ctx.fillStyle = '#C62828'
+          ctx.fillRect(sx, sy + h * 0.3, w, 3)
+
+          // Arms
+          const armSwing = -legSwing
+          ctx.fillStyle = '#FFCCBC'
+          ctx.fillRect(sx - 3, sy + h * 0.32 + armSwing, 5, h * 0.32)
+          ctx.fillRect(sx + w - 2, sy + h * 0.32 - armSwing, 5, h * 0.32)
+
+          // Head
+          const headSize = w
+          const headY = sy
+          ctx.fillStyle = '#FFCCBC'
+          ctx.fillRect(sx - 1, headY, headSize + 2, headSize * 0.95)
+          // Hair
+          ctx.fillStyle = '#3E2723'
+          ctx.fillRect(sx - 1, headY, headSize + 2, headSize * 0.28)
+          ctx.fillRect(sx - 1, headY, 3, headSize * 0.5)
+          ctx.fillRect(sx + headSize - 2, headY, 3, headSize * 0.5)
+
+          // Eyes
+          ctx.fillStyle = '#fff'
+          const eyeY = headY + headSize * 0.4
+          if (player.dir === 1) {
+            ctx.fillRect(sx + 5, eyeY, 5, 5)
+            ctx.fillRect(sx + headSize - 10, eyeY, 5, 5)
+            ctx.fillStyle = '#000'
+            ctx.fillRect(sx + 8, eyeY + 1, 2, 3)
+            ctx.fillRect(sx + headSize - 7, eyeY + 1, 2, 3)
+          } else {
+            ctx.fillRect(sx + 5, eyeY, 5, 5)
+            ctx.fillRect(sx + headSize - 10, eyeY, 5, 5)
+            ctx.fillStyle = '#000'
+            ctx.fillRect(sx + 5, eyeY + 1, 2, 3)
+            ctx.fillRect(sx + headSize - 10, eyeY + 1, 2, 3)
+          }
+
+          // Mouth
+          ctx.fillStyle = '#4E342E'
+          ctx.fillRect(
+            sx + headSize * 0.35,
+            headY + headSize * 0.72,
+            headSize * 0.3,
+            2
+          )
+        }
+
+        function drawHighlight() {
+          const wx = Math.floor((mouse.x + camera.x) / TILE)
+          const wy = Math.floor((mouse.y + camera.y) / TILE)
+          if (wx < 0 || wx >= COLS || wy < 0 || wy >= ROWS) return
+          const sx = wx * TILE - camera.x
+          const sy = wy * TILE - camera.y
+          ctx.strokeStyle = 'rgba(255,255,255,0.9)'
+          ctx.lineWidth = 2
+          ctx.strokeRect(sx + 1, sy + 1, TILE - 2, TILE - 2)
+        }
+
+        function drawBackground() {
+          // Sky gradient already on canvas, add sun
+          ctx.fillStyle = 'rgba(255, 235, 59, 0.9)'
+          const sunX = canvas.width - 80 - camera.x * 0.1
+          const sunY = 60
+          ctx.beginPath()
+          ctx.arc(sunX, sunY, 26, 0, Math.PI * 2)
+          ctx.fill()
+
+          // Clouds
+          ctx.fillStyle = 'rgba(255,255,255,0.85)'
+          function drawCloud(cx, cy, scale) {
+            const x = cx - camera.x * 0.15
+            ctx.beginPath()
+            ctx.arc(x, cy, 18 * scale, 0, Math.PI * 2)
+            ctx.arc(x + 20 * scale, cy + 4 * scale, 16 * scale, 0, Math.PI * 2)
+            ctx.arc(x - 20 * scale, cy + 6 * scale, 14 * scale, 0, Math.PI * 2)
+            ctx.arc(x + 8 * scale, cy - 8 * scale, 13 * scale, 0, Math.PI * 2)
+            ctx.fill()
+          }
+          drawCloud(200, 80, 1)
+          drawCloud(500, 50, 0.8)
+          drawCloud(800, 100, 1.1)
+          drawCloud(1100, 60, 0.9)
+        }
+
+        function render() {
+          // Sky
+          const grad = ctx.createLinearGradient(0, 0, 0, canvas.height)
+          grad.addColorStop(0, '#87CEEB')
+          grad.addColorStop(0.6, '#B0E0E6')
+          grad.addColorStop(1, '#C8E6C9')
+          ctx.fillStyle = grad
+          ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+          drawBackground()
+
+          // Only draw visible tiles
+          const startX = Math.max(0, Math.floor(camera.x / TILE))
+          const endX = Math.min(
+            COLS,
+            Math.ceil((camera.x + canvas.width) / TILE) + 1
+          )
+          const startY = Math.max(0, Math.floor(camera.y / TILE))
+          const endY = Math.min(
+            ROWS,
+            Math.ceil((camera.y + canvas.height) / TILE) + 1
+          )
+
+          for (let y = startY; y < endY; y++) {
+            for (let x = startX; x < endX; x++) {
+              const b = world[y][x]
+              if (b !== BLOCKS.AIR) {
+                drawBlock(x, y, b, x * TILE - camera.x, y * TILE - camera.y)
+              }
+            }
+          }
+
+          drawPlayer()
+          drawHighlight()
+        }
+
+        // Hotbar UI
+        let selectedSlot = 0
+        const hotbar = document.getElementById('hotbar')
+
+        function makeIcon(type) {
+          const c = BLOCK_COLORS[type]
+          const canvas = document.createElement('canvas')
+          canvas.width = 36
+          canvas.height = 36
+          const cctx = canvas.getContext('2d')
+          cctx.fillStyle = c.body
+          cctx.fillRect(0, 0, 36, 36)
+          cctx.fillStyle = c.top
+          cctx.fillRect(0, 0, 36, 8)
+          if (type === BLOCKS.GRASS) {
+            cctx.fillStyle = '#8D6E63'
+            cctx.fillRect(0, 8, 36, 28)
+            cctx.fillStyle = c.top
+            cctx.fillRect(0, 0, 36, 8)
+          }
+          if (type === BLOCKS.WATER) {
+            cctx.globalAlpha = 0.8
+            cctx.fillStyle = c.body
+            cctx.fillRect(0, 0, 36, 36)
+          }
+          cctx.strokeStyle = 'rgba(0,0,0,0.3)'
+          cctx.strokeRect(0.5, 0.5, 35, 35)
+          return canvas.toDataURL()
+        }
+
+        function updateHotbarUI() {
+          const slots = hotbar.querySelectorAll('.slot')
+          slots.forEach((s, i) => {
+            s.classList.toggle('active', i === selectedSlot)
+          })
+        }
+
+        function buildHotbar() {
+          hotbar.innerHTML = ''
+          HOTBAR_BLOCKS.forEach((type, i) => {
+            const slot = document.createElement('div')
+            slot.className = 'slot' + (i === selectedSlot ? ' active' : '')
+            const icon = document.createElement('div')
+            icon.className = 'block-icon'
+            icon.style.backgroundImage = `url(${makeIcon(type)})`
+            icon.style.backgroundSize = 'cover'
+            slot.appendChild(icon)
+            const num = document.createElement('div')
+            num.className = 'num'
+            num.textContent = i + 1
+            slot.appendChild(num)
+            slot.addEventListener('click', () => {
+              selectedSlot = i
+              updateHotbarUI()
+            })
+            hotbar.appendChild(slot)
+          })
+        }
+        buildHotbar()
+
+        // Main loop
+        let lastTime = performance.now()
+        function loop(now) {
+          const dt = now - lastTime
+          lastTime = now
+          updatePlayer(dt)
+          updateCamera()
+          render()
+          requestAnimationFrame(loop)
+        }
+        requestAnimationFrame(loop)
+      })()
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "name": "trae-3d-block-game",
+  "version": "1.0.0",
+  "description": "A 3D voxel-based block game built with Three.js and Electron",
+  "main": "electron/main.js",
+  "author": "Trae",
+  "license": "MIT",
+  "scripts": {
+    "dev:web": "vite",
+    "build:web": "vite build",
+    "dev:electron": "vite build && electron .",
+    "build": "vite build && electron-builder",
+    "build:mac": "vite build && electron-builder --mac",
+    "build:win": "vite build && electron-builder --win",
+    "build:linux": "vite build && electron-builder --linux"
+  },
+  "dependencies": {
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "vite": "^5.0.0"
+  },
+  "build": {
+    "appId": "com.trae.blockgame",
+    "productName": "TraeBlockGame",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron/**/*",
+      "dist/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.games",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "zip"
+      ],
+      "category": "Game"
+    }
+  }
+}

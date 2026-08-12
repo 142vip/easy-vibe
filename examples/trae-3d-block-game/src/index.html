@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trae 3D Block Game</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- 游戏画布容器 -->
+    <div id="game-container"></div>
+
+    <!-- 准星 -->
+    <div id="crosshair" class="hidden">
+      <div class="crosshair-h"></div>
+      <div class="crosshair-v"></div>
+    </div>
+
+    <!-- 主菜单 -->
+    <div id="main-menu" class="menu-overlay">
+      <div class="menu-panel">
+        <h1 class="game-title">🧱 Trae Block World</h1>
+        <p class="game-subtitle">3D 方块冒险世界</p>
+        <div class="menu-buttons">
+          <button id="start-btn" class="menu-btn primary">开始游戏</button>
+          <button id="exit-btn" class="menu-btn secondary">退出游戏</button>
+        </div>
+        <div class="menu-controls">
+          <h3>操作说明</h3>
+          <ul>
+            <li><span class="key">W A S D</span> 移动</li>
+            <li><span class="key">Shift</span> 跑步</li>
+            <li><span class="key">空格</span> 跳跃</li>
+            <li><span class="key">鼠标</span> 视角</li>
+            <li><span class="key">左键</span> 破坏方块</li>
+            <li><span class="key">右键</span> 放置方块</li>
+            <li><span class="key">1-6</span> 选择方块</li>
+            <li><span class="key">ESC</span> 菜单</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 暂停菜单 -->
+    <div id="pause-menu" class="menu-overlay hidden">
+      <div class="menu-panel small">
+        <h2>游戏暂停</h2>
+        <div class="menu-buttons">
+          <button id="resume-btn" class="menu-btn primary">继续游戏</button>
+          <button id="menu-btn" class="menu-btn secondary">返回主菜单</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HUD: 物品栏 -->
+    <div id="hud" class="hidden">
+      <div id="hotbar">
+        <div class="hotbar-slot active" data-index="0">
+          <div class="slot-icon grass"></div>
+          <span class="slot-key">1</span>
+          <span class="slot-name">草地</span>
+        </div>
+        <div class="hotbar-slot" data-index="1">
+          <div class="slot-icon dirt"></div>
+          <span class="slot-key">2</span>
+          <span class="slot-name">泥土</span>
+        </div>
+        <div class="hotbar-slot" data-index="2">
+          <div class="slot-icon stone"></div>
+          <span class="slot-key">3</span>
+          <span class="slot-name">石头</span>
+        </div>
+        <div class="hotbar-slot" data-index="3">
+          <div class="slot-icon wood"></div>
+          <span class="slot-key">4</span>
+          <span class="slot-name">木头</span>
+        </div>
+        <div class="hotbar-slot" data-index="4">
+          <div class="slot-icon leaves"></div>
+          <span class="slot-key">5</span>
+          <span class="slot-name">树叶</span>
+        </div>
+        <div class="hotbar-slot" data-index="5">
+          <div class="slot-icon sand"></div>
+          <span class="slot-key">6</span>
+          <span class="slot-name">沙子</span>
+        </div>
+      </div>
+      <div id="status-bar">
+        <span id="fps-counter">FPS: --</span>
+        <span id="pos-info">位置: 0, 0, 0</span>
+      </div>
+    </div>
+
+    <!-- 点击锁定提示 -->
+    <div id="click-to-play" class="hidden">
+      <div class="click-panel">
+        <h2>点击开始</h2>
+        <p>点击屏幕进入游戏</p>
+      </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
