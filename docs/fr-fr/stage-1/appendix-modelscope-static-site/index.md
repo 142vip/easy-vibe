@@ -9,7 +9,7 @@ Lorsque votre page fonctionne en local, il faut une adresse que vos amis, vos ca
 
 Vous pourriez louer un serveur et configurer le domaine, HTTPS et le déploiement. Dans cette leçon, nous réduisons ce travail et publions le site sur **ModelScope Studio**.
 
-ModelScope a été lancé par Alibaba avec le comité CCF chargé du développement open source. Outre plus de 200 000 modèles open source et 30 000 jeux de données, la plateforme propose des **Studios** pour présenter des applications. Un Studio permet d’obtenir gratuitement une adresse partageable sans devoir apprendre d’abord l’administration de serveurs.
+ModelScope est une communauté open source lancée par Alibaba avec le comité CCF chargé du développement open source. Outre plus de 200 000 modèles open source et 30 000 jeux de données, elle propose des **Studios** pour présenter des applications. Un Studio permet d’obtenir gratuitement une adresse partageable sans devoir apprendre d’abord l’administration de serveurs.
 
 > Ce guide a été vérifié avec l’interface actuelle, les Skills officiels et la documentation en ligne de commande le **11 août 2026**. Les boutons peuvent changer de place, mais le parcours reste : créer un Static Studio, importer le résultat compilé, déployer et tester le lien.
 

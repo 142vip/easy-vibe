@@ -9,7 +9,7 @@ Khi trang đã chạy trên máy, bạn cần một địa chỉ mà bạn bè, 
 
 Bạn có thể thuê máy chủ rồi tự cấu hình tên miền, HTTPS và triển khai. Trong bài này, chúng ta giảm phần vận hành và đăng trang lên **ModelScope Studio**.
 
-ModelScope được Alibaba khởi xướng cùng Ủy ban Phát triển Mã nguồn Mở CCF. Bên cạnh hơn 200.000 mô hình mã nguồn mở và 30.000 tập dữ liệu, nền tảng còn cung cấp **Studio** để trình bày ứng dụng. Studio giúp tạo miễn phí một địa chỉ chia sẻ mà chưa cần học quản trị máy chủ trước.
+ModelScope là một cộng đồng mã nguồn mở do Alibaba khởi xướng cùng Ủy ban Phát triển Mã nguồn Mở CCF. Bên cạnh hơn 200.000 mô hình mã nguồn mở và 30.000 tập dữ liệu, cộng đồng còn cung cấp **Studio** để trình bày ứng dụng. Studio giúp tạo miễn phí một địa chỉ chia sẻ mà chưa cần học quản trị máy chủ trước.
 
 > Bài được kiểm tra với giao diện hiện tại, Skills chính thức và tài liệu lệnh vào **11 tháng 8 năm 2026**. Vị trí nút có thể đổi, nhưng luồng vẫn là: tạo Static Studio, tải kết quả build, triển khai và kiểm tra liên kết.
 

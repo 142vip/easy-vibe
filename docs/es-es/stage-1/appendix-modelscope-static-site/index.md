@@ -9,7 +9,7 @@ Cuando la página funciona en tu ordenador, hace falta una dirección que puedan
 
 Puedes alquilar un servidor y configurar dominio, HTTPS y despliegue. En esta lección reduciremos ese trabajo y publicaremos la página en **ModelScope Studio**.
 
-ModelScope nació de la colaboración entre Alibaba y el Comité de Desarrollo de Código Abierto de CCF. Además de más de 200 000 modelos de código abierto y 30 000 conjuntos de datos, ofrece **Studios** para mostrar aplicaciones. Un Studio permite conseguir gratis una dirección compartible sin aprender antes a administrar servidores.
+ModelScope es una comunidad de código abierto creada por Alibaba junto con el Comité de Desarrollo de Código Abierto de CCF. Además de más de 200 000 modelos de código abierto y 30 000 conjuntos de datos, ofrece **Studios** para mostrar aplicaciones. Un Studio permite conseguir gratis una dirección compartible sin aprender antes a administrar servidores.
 
 > La guía se comprobó con la interfaz actual, los Skills oficiales y la documentación de comandos el **11 de agosto de 2026**. Los botones pueden moverse, pero el recorrido continúa siendo: crear un Static Studio, subir el resultado compilado, desplegar y probar el enlace.
 

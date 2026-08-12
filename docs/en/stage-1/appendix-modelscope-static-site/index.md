@@ -9,7 +9,7 @@ Your webpage finally works. The next step is to put it somewhere that classmates
 
 You could rent a server and configure a domain, HTTPS, and deployment yourself. You can also host the work on an established open-source community and spend less time on operations. This lesson takes the second route and publishes the website on **ModelScope**.
 
-ModelScope was initiated by Alibaba together with the CCF Open Source Development Committee. Alongside more than 200,000 open-source models and 30,000 datasets, it provides **Studios** for showing applications. For us, the practical advantage is simple: we can give a project a free, shareable address without first becoming server administrators.
+ModelScope is an open-source community initiated by Alibaba together with the CCF Open Source Development Committee. Alongside more than 200,000 open-source models and 30,000 datasets, it provides **Studios** for showing applications. For us, the practical advantage is simple: we can give a project a free, shareable address without first becoming server administrators.
 
 > This guide was checked against the current Studio pages, official Skills, and command-line material on **August 11, 2026**. Button positions may change, but the main route remains: create a Static Studio, upload the build output, deploy, and open the Studio link.
 

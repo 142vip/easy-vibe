@@ -9,7 +9,7 @@ Wenn die Seite lokal funktioniert, brauchst du eine Adresse, die Freunde, Mitsch
 
 Du könntest einen Server mieten und Domain, HTTPS und Deployment selbst einrichten. In dieser Lektion sparen wir diesen Betriebsaufwand und veröffentlichen die Seite in **ModelScope Studio**.
 
-ModelScope wurde von Alibaba zusammen mit dem CCF-Komitee für Open-Source-Entwicklung ins Leben gerufen. Neben mehr als 200.000 Open-Source-Modellen und 30.000 Datensätzen bietet die Plattform **Studios** zur Präsentation von Anwendungen. Mit einem Studio erhältst du kostenlos eine teilbare Adresse, ohne zuerst Serververwaltung zu lernen.
+ModelScope ist eine Open-Source-Community, die von Alibaba zusammen mit dem CCF-Komitee für Open-Source-Entwicklung ins Leben gerufen wurde. Neben mehr als 200.000 Open-Source-Modellen und 30.000 Datensätzen bietet sie **Studios** zur Präsentation von Anwendungen. Mit einem Studio erhältst du kostenlos eine teilbare Adresse, ohne zuerst Serververwaltung zu lernen.
 
 > Diese Anleitung wurde am **11. August 2026** anhand der aktuellen Oberfläche, offiziellen Skills und Befehlsdokumentation geprüft. Schaltflächen können sich verschieben; der Ablauf bleibt: Static Studio erstellen, Build-Ausgabe hochladen, bereitstellen und Link prüfen.
 
