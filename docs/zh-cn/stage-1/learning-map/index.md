@@ -85,14 +85,34 @@ AI 带来的真正变化，是把“做东西”这件事的门槛大大降低�
 - **2026 年 6月 · [Alma：Product Engineer - AI](https://jobs.ashbyhq.com/tryalma/8021fb35-fc1e-4950-a078-afc0e89d9856)**
   一个人搞定 Agent 设计、后端代码、界面开发，还要观察律师和客户实际怎么用。
 
+  <figure class="job-screenshot">
+    <img src="./images/sources/alma-product-engineer-ai.png" alt="Alma AI 产品工程师招聘截图" loading="lazy">
+    <figcaption>法律科技公司 Alma 要求产品工程师能独立完成从 Agent 到界面的全栈工作</figcaption>
+  </figure>
+
 - **2026 年 7月 · [Harper：Product Engineer](https://jobs.ashbyhq.com/harperinsure/7d678dba-885a-4432-94c7-a9c20852db35)**
   要深入销售、客服、承保现场，最终对转化率这类业务指标负责，不只是把功能上线。
+
+  <figure class="job-screenshot">
+    <img src="./images/sources/harper-product-engineer.png" alt="Harper 产品工程师招聘截图" loading="lazy">
+    <figcaption>保险公司 Harper 要求工程师深入业务一线，直接对转化率负责</figcaption>
+  </figure>
 
 - **2026 年 8月 · [Paradigm：Product Engineer, Applied AI](https://jobs.ashbyhq.com/Paradigm/b85b9094-2467-4f49-9a36-ca93da34a3f5)**
   要泡在投资、研究、业务团队里找问题，做内部工具也做开源产品，在实践里找新机会。
 
+  <figure class="job-screenshot">
+    <img src="./images/sources/paradigm-product-engineer.png" alt="Paradigm 应用AI产品工程师招聘截图" loading="lazy">
+    <figcaption>加密投资机构 Paradigm 要求工程师深入业务团队，既做内部工具也做开源产品</figcaption>
+  </figure>
+
 - **截至 2026 年 8月 · [OpenAI：Forward Deployed Engineer](https://openai.com/careers/forward-deployed-engineer-%28fde%29-seattle-seattle/)**
   从找问题、定方案、写代码到部署上线全包，成功标准是用户用不用、有没有真的提升工作效率。
+
+  <figure class="job-screenshot">
+    <img src="./images/sources/openai-fde.png" alt="OpenAI FDE 岗位招聘截图" loading="lazy">
+    <figcaption>OpenAI 的 FDE 岗位把生产采用率和工作流影响作为核心成功标准</figcaption>
+  </figure>
 
 <details>
 <summary><strong>查看更多不同行业的真实岗位</strong></summary>
