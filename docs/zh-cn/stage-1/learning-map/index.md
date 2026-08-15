@@ -117,20 +117,37 @@ AI 带来的真正变化，是把“做东西”这件事的门槛大大降低�
 <details>
 <summary><strong>查看更多不同行业的真实岗位</strong></summary>
 
-这些案例来自航空、法律、保险、金融合规、生物医药、工业、企业服务和 AI 基础设施等不同领域。
+这些案例来自航空、法律、保险、金融合规、生物医药、工业、企业服务和 AI 基础设施等不同领域：
 
-| 发布时间 | 公司与岗位 | 需要完成的闭环 |
-| --- | --- | --- |
-| 2026 年 2 月 | [Sphinx：Product Engineer](https://jobs.ashbyhq.com/Sphinx/08bdb9eb-4b6c-44ab-9615-3bb6b908d008) | 从客户交流中选择机会，快速做原型、测试，再用结果影响产品路线图 |
-| 2026 年 3 月 | [Hyperscale：Founding Forward Deployed Engineer](https://jobs.ashbyhq.com/hyperscale/950c982f-5fb9-481b-a6ad-808feba76757) | 参与技术调研、PoC、现场实施和企业销售，用技术工作帮助赢得客户 |
-| 2026 年 4 月 | [Sphere：Founding Forward Deployed Engineer](https://jobs.ashbyhq.com/sphere/7b5f39b0-6f3f-4bc4-9469-74ae9722d85a) | 从客户发现做到部署，并把客户需求转化成通用产品能力 |
-| 2026 年 5 月 | [Avent：Founding Forward Deployed Engineer](https://jobs.ashbyhq.com/avent-industrial-inc/bf8337c2-00cf-4ca7-aa43-b4c29e4b8083) | 理解客户业务、编写代码、集成系统，对客户成功上线负责 |
-| 2026 年 5 月 | [Tamarind Bio：Founding Forward Deployed Engineer](https://jobs.ashbyhq.com/tamarindbio/be678c9b-984e-4a0a-aedc-a87187e18748/) | 覆盖第一次技术沟通、试点、生产部署和扩展，参与 Demo 与销售周期 |
-| 2026 年 6 月 | [Protege：Forward Deployed Engineer, New Verticals](https://jobs.ashbyhq.com/protege/b62ebf3e-e07f-4f67-bc9c-4787f23fe449/) | 从早期客户需求中建立新业务方向，把有效做法沉淀进平台 |
-| 2026 年 6 月 | [Dataleap：Founding Forward Deployed Engineer](https://jobs.ashbyhq.com/dataleap/6afe756f-fea9-42fc-82ed-621c72a99387/) | 进入企业现场寻找重要工作流、构建 Agent、完成集成并教会客户使用 |
-| 2026 年 6 月 | [Collinear AI：Product Engineer](https://jobs.ashbyhq.com/collinear-ai/4d4af6b1-bfc7-4a28-9d86-5bab73e6e396) | 横跨后端、前端、API、用户体验、测试和线上质量，把复杂 AI 变成可用产品 |
-| 2026 年 7 月 | [Restate：Forward Deployed Engineer](https://jobs.ashbyhq.com/restate/c9419551-7f51-4691-8ba9-d80a27f1e284) | 负责 PoC、生产就绪和部署，把一次性交付沉淀为可重复模式 |
-| 截至 2026 年 8 月 | [Scale AI：Forward Deployed Engineer, GenAI](https://scale.com/careers/4593571005) | 直接面对技术客户，完成端到端开发和快速实验，并影响产品路线图 |
+- **2026 年 2月 · [Sphinx：Product Engineer](https://jobs.ashbyhq.com/Sphinx/08bdb9eb-4b6c-44ab-9615-3bb6b908d008)**
+  从客户交流中选择机会，快速做原型、测试，再用结果影响产品路线图。
+
+- **2026 年 3月 · [Hyperscale：Founding Forward Deployed Engineer](https://jobs.ashbyhq.com/hyperscale/950c982f-5fb9-481b-a6ad-808feba76757)**
+  参与技术调研、PoC、现场实施和企业销售，用技术工作帮助赢得客户。
+
+- **2026 年 4月 · [Sphere：Founding Forward Deployed Engineer](https://jobs.ashbyhq.com/sphere/7b5f39b0-6f3f-4bc4-9469-74ae9722d85a)**
+  从客户发现做到部署，并把客户需求转化成通用产品能力。
+
+- **2026 年 5月 · [Avent：Founding Forward Deployed Engineer](https://jobs.ashbyhq.com/avent-industrial-inc/bf8337c2-00cf-4ca7-aa43-b4c29e4b8083)**
+  理解客户业务、编写代码、集成系统，对客户成功上线负责。
+
+- **2026 年 5月 · [Tamarind Bio：Founding Forward Deployed Engineer](https://jobs.ashbyhq.com/tamarindbio/be678c9b-984e-4a0a-aedc-a87187e18748/)**
+  覆盖第一次技术沟通、试点、生产部署和扩展，参与 Demo 与销售周期。
+
+- **2026 年 6月 · [Protege：Forward Deployed Engineer, New Verticals](https://jobs.ashbyhq.com/protege/b62ebf3e-e07f-4f67-bc9c-4787f23fe449/)**
+  从早期客户需求中建立新业务方向，把有效做法沉淀进平台。
+
+- **2026 年 6月 · [Dataleap：Founding Forward Deployed Engineer](https://jobs.ashbyhq.com/dataleap/6afe756f-fea9-42fc-82ed-621c72a99387/)**
+  进入企业现场寻找重要工作流、构建 Agent、完成集成并教会客户使用。
+
+- **2026 年 6月 · [Collinear AI：Product Engineer](https://jobs.ashbyhq.com/collinear-ai/4d4af6b1-bfc7-4a28-9d86-5bab73e6e396)**
+  横跨后端、前端、API、用户体验、测试和线上质量，把复杂 AI 变成可用产品。
+
+- **2026 年 7月 · [Restate：Forward Deployed Engineer](https://jobs.ashbyhq.com/restate/c9419551-7f51-4691-8ba9-d80a27f1e284)**
+  负责 PoC、生产就绪和部署，把一次性交付沉淀为可重复模式。
+
+- **截至 2026 年 8月 · [Scale AI：Forward Deployed Engineer, GenAI](https://scale.com/careers/4593571005)**
+  直接面对技术客户，完成端到端开发和快速实验，并影响产品路线图。
 
 </details>
 
