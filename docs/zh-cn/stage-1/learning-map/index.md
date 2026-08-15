@@ -231,17 +231,32 @@ AI 带来的真正变化，是把“做东西”这件事的门槛大大降低�
 3. **落地交付：** 写真正能上生产环境的代码，把方案接入客户的真实数据和日常工作流。
 4. **沉淀产品：** 观察客户用得怎么样，把多个客户都遇到的共性需求，沉淀成产品里的通用功能。
 
-截至 2026 年 8 月，OpenAI 已经在全球多个城市招聘 FDE，并且在岗位描述里明确写了：成功标准不是写了多少代码，而是客户的生产采用率、可量化的工作流效率提升，以及从一线带回来、能改变产品和模型路线图的真实反馈。这说明 FDE 这种模式正在从少数企业软件公司的“特殊岗位”，变成 AI 产品落地的重要角色。
+截至 2026 年 8 月，OpenAI 已经在全球多个城市招聘 FDE，并且在岗位描述里明确写了：成功标准不是写了多少代码，而是客户的生产采用率、可量化的工作流效率提升，以及从一线带回来、能改变产品和模型路线图的真实反馈。这说明 FDE 这种模式正在从少数企业软件公司的"特殊岗位"，变成 AI 产品落地的重要角色。
 
-#### OPC：一个人也能带一支“数字团队”
+<figure class="job-screenshot">
+  <img src="./images/sources/openai-fde.png" alt="OpenAI FDE 岗位招聘截图" loading="lazy">
+  <figcaption>OpenAI 的 FDE 岗位描述把"生产采用率"和"工作流影响"作为核心考核标准</figcaption>
+</figure>
 
-这里说的 OPC，不只是法律意义上注册的“一人有限责任公司”，而是指 **One-Person Company 这种工作方式：一个人主导整个业务，尽可能借助软件、AI Agent 和现成的云服务，完成过去需要一个团队才能做完的事。**
+#### OPC：一个人也能带一支"数字团队"
 
-但这也不是说什么都不用干，AI 自己就能把公司运转起来——那种“无人公司”目前还不存在。创始人依然要自己判断市场方向、承担风险、接触用户、拍板关键决策；AI 的角色更像是一支你随时可以调度的“数字团队”，帮你写代码、做设计、写文案、分析数据、回复客服。
+这里说的 OPC，不只是法律意义上注册的"一人有限责任公司"，而是指 **One-Person Company 这种工作方式：一个人主导整个业务，尽可能借助软件、AI Agent 和现成的云服务，完成过去需要一个团队才能做完的事。**
+
+但这也不是说什么都不用干，AI 自己就能把公司运转起来——那种"无人公司"目前还不存在。创始人依然要自己判断市场方向、承担风险、接触用户、拍板关键决策；AI 的角色更像是一支你随时可以调度的"数字团队"，帮你写代码、做设计、写文案、分析数据、回复客服。
 
 这种趋势也不是 AI 出现后才有的。独立开发者 Pieter Levels 已经一个人做了很多年，Nomads.com、Remote OK、Photo AI、Interior AI 这些产品都是他独自构建和运营的。AI 只是让这种模式能覆盖的范围更广了——设计、编程、内容、分析、客服这些以前需要不同专业人做的事，现在一个人加 AI 就能搞定，但最终还是要经过真实市场的检验。[查看 Pieter Levels 的项目记录](https://levels.io/projects/)
 
+<figure class="job-screenshot">
+  <img src="./images/sources/pieter-levels-projects.png" alt="Pieter Levels 的个人项目页面截图" loading="lazy">
+  <figcaption>独立开发者 Pieter Levels 一个人构建和运营了多个产品</figcaption>
+</figure>
+
 2025 年，微软在 Work Trend Index 报告里提出了 **Agent Boss** 这个概念，用来描述那些会创建、分配任务给 AI Agent、并管理它们工作的人。这份报告调查了 31 个国家的 31,000 名职场人，数据显示 81% 的企业领导者预计在未来 12～18 个月里，会把 AI Agent 深度融入业务流程。[查看 Microsoft 2025 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born)
+
+<figure class="job-screenshot">
+  <img src="./images/sources/microsoft-agent-boss.png" alt="Microsoft Work Trend Index 报告截图" loading="lazy">
+  <figcaption>微软 2025 年报告提出"Agent Boss"概念，描述能够管理 AI Agent 的新型工作者</figcaption>
+</figure>
 
 2025 年 6 月，网站搭建平台 Wix 以约 8,000 万美元收购了自然语言应用开发平台 Base44。Base44 本身不是 OPC，但它透露出一个重要信号：以前需要后端工程师、运维工程师、DBA 多种角色配合才能搞定的数据库、用户认证、部署上线这些事，正在被对话式的工具封装起来，普通人也能搞定。[查看 Wix 收购公告](https://www.wix.com/press-room/home/post/wix-further-expands-into-vibe-coding-with-acquisition-of-base44-a-hyper-growth-startup-that-simplif)
 
