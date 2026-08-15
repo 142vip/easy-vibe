@@ -56,24 +56,43 @@ Vibe Coding 是这门课的起点，但不是终点。我们会先让你快速�
 
 ## 为什么现在需要产品工程师？
 
-产品工程师并不是 2026 年突然出现的新职业。
+你可能会问：“产品工程师”到底是什么？这不是 2026 年才突然冒出来的新头衔。
 
-早在 2018 年，Intercom 就用 Product Engineer 描述一种具有产品所有权的工程师：他不只是实现别人已经设计好的功能，也要理解客户、参与产品判断，并持续改进自己交付的产品。
+早在 2018 年，客户通讯公司 Intercom 就提出了 Product Engineer 这个概念，用来描述一种对产品有“所有权”的工程师：不只是照着别人写好的需求文档写代码，而是要真正理解用户的问题，参与讨论产品应该做成什么样，并且持续跟进自己负责的产品上线后的表现。
 
-AI 带来的新变化，是大幅降低了“做出来”的成本，也让工程师有机会承担更多过去由不同角色分工完成的工作。借助大模型和编程 Agent，一个人更容易跨越原型、界面、前后端、AI 能力集成、测试和部署。于是，岗位要求也开始从“完成代码”继续向前延伸：直接理解用户、验证方案、推动采用，并对业务结果负责。
+AI 带来的真正变化，是把“做东西”这件事的门槛大大降低了。以前一个人很难同时搞定原型、界面、前后端、AI 能力集成、测试和部署这一整套工作，但借助大模型和编程 Agent，这些技术边界正在被打破。相应地，公司对工程师的期待也在变化——不只是把代码写完交差，而是要能直接理解用户需求、验证方案是否可行、推动产品被真正用起来，最终对业务结果负责。
 
 ### 从“参与产品”到“负责结果”
 
-下面是这条变化的几个真实时间点：
+下面是这条变化的几个真实时间点，都来自公开的招聘信息：
 
-| 时间 | 公司与岗位 | 岗位释放的信号 |
-| --- | --- | --- |
-| 2018 年 5 月 | [Intercom：Product Engineer](https://www.intercom.com/blog/making-the-transition-from-consultant-to-product-engineer/) | 工程师同时也是产品人，要理解客户并参与决定产品应该怎样发展 |
-| 2026 年 2 月 | [Hamilton AI：Product Engineer](https://jobs.ashbyhq.com/hamilton-ai/78c69fe9-828d-44b3-abe6-af56a2badf76/) | 直接与客户交流，把一次客户对话变成可以使用的产品，再交给真实用户验证 |
-| 2026 年 6 月 | [Alma：Product Engineer - AI](https://jobs.ashbyhq.com/tryalma/8021fb35-fc1e-4950-a078-afc0e89d9856) | 同一个人设计 Agent、编写后端、完成界面，并观察律师和客户怎样使用产品 |
-| 2026 年 7 月 | [Harper：Product Engineer](https://jobs.ashbyhq.com/harperinsure/7d678dba-885a-4432-94c7-a9c20852db35) | 深入销售、客服和承保现场，对转化率等业务指标负责，而不只对功能上线负责 |
-| 2026 年 8 月 | [Paradigm：Product Engineer, Applied AI](https://jobs.ashbyhq.com/Paradigm/b85b9094-2467-4f49-9a36-ca93da34a3f5) | 进入投资、研究和业务团队发现问题，构建内部与开源产品，并用实践寻找新机会 |
-| 截至 2026 年 8 月 | [OpenAI：Forward Deployed Engineer](https://openai.com/careers/forward-deployed-engineer-%28fde%29-seattle-seattle/) | 从问题发现、技术规划、系统构建到生产部署全程负责，用采用率和工作流影响衡量成功 |
+- **2018 年 5月 · [Intercom：Product Engineer](https://www.intercom.com/blog/making-the-transition-from-consultant-to-product-engineer/)**
+  工程师不能只埋头写代码，也要懂用户、参与讨论产品该往哪走。
+
+  <figure class="job-screenshot">
+    <img src="./images/sources/intercom-product-engineer.png" alt="Intercom 关于 Product Engineer 的文章截图" loading="lazy">
+    <figcaption>Intercom 早在 2018 年就提出了 Product Engineer 的概念</figcaption>
+  </figure>
+
+- **2026 年 2月 · [Hamilton AI：Product Engineer](https://jobs.ashbyhq.com/hamilton-ai/78c69fe9-828d-44b3-abe6-af56a2badf76/)**
+  直接跟客户聊天，从一次对话里挖出需求做出产品，马上给真实用户试用。
+
+  <figure class="job-screenshot">
+    <img src="./images/sources/hamilton-ai-product-engineer.png" alt="Hamilton AI 产品工程师招聘截图" loading="lazy">
+    <figcaption>2026 年的招聘要求已经覆盖从客户交流到产品验证的完整闭环</figcaption>
+  </figure>
+
+- **2026 年 6月 · [Alma：Product Engineer - AI](https://jobs.ashbyhq.com/tryalma/8021fb35-fc1e-4950-a078-afc0e89d9856)**
+  一个人搞定 Agent 设计、后端代码、界面开发，还要观察律师和客户实际怎么用。
+
+- **2026 年 7月 · [Harper：Product Engineer](https://jobs.ashbyhq.com/harperinsure/7d678dba-885a-4432-94c7-a9c20852db35)**
+  要深入销售、客服、承保现场，最终对转化率这类业务指标负责，不只是把功能上线。
+
+- **2026 年 8月 · [Paradigm：Product Engineer, Applied AI](https://jobs.ashbyhq.com/Paradigm/b85b9094-2467-4f49-9a36-ca93da34a3f5)**
+  要泡在投资、研究、业务团队里找问题，做内部工具也做开源产品，在实践里找新机会。
+
+- **截至 2026 年 8月 · [OpenAI：Forward Deployed Engineer](https://openai.com/careers/forward-deployed-engineer-%28fde%29-seattle-seattle/)**
+  从找问题、定方案、写代码到部署上线全包，成功标准是用户用不用、有没有真的提升工作效率。
 
 <details>
 <summary><strong>查看更多不同行业的真实岗位</strong></summary>
@@ -101,25 +120,27 @@ AI 带来的新变化，是大幅降低了“做出来”的成本，也让工�
 以上内容是对一组真实岗位的观察，不是对整个就业市场的统计。它更适合说明 AI 原生公司和小型产品团队正在出现的能力方向，而不是说明所有公司都会取消产品、设计、工程和销售的专业分工。
 :::
 
-### 这些岗位正在发生什么变化？
+### 这些变化意味着什么？
 
-- **工作的起点变了：** 不再等别人写好需求，而是直接进入用户和业务现场发现问题。
-- **原型的作用变了：** 不只是展示技术，而是尽快交给用户，用来验证判断。
-- **工程的边界变了：** 从单一技术模块扩展到界面、后端、AI、部署和用户体验。
-- **成功的标准变了：** 从“功能上线”转向采用率、效率提升、转化率、收入和真实影响。
-- **与销售的关系变了：** 一部分产品工程师开始参与 Demo、PoC 和客户上线，用技术证明产品价值。
+对比传统的工程师岗位，你会发现几个明显的不同：
 
-这里的“会销售”，并不是要求每个人都成为传统销售。对产品工程师来说，它首先意味着：**能够找到可能需要产品的人，听懂他们的问题，演示解决方案，邀请他们使用，并验证他们是否愿意持续使用或付费。**
+- **工作起点变了：** 不再等着产品经理把需求文档写好，而是自己走到用户和业务一线去发现真正的问题。
+- **原型的作用变了：** 做原型不只是为了展示技术有多酷，而是尽快交到用户手里，验证你的想法对不对。
+- **能力边界变了：** 不再只负责自己那一小块技术模块，而是要能打通界面、后端、AI、部署，甚至关心用户体验好不好用。
+- **成功标准变了：** 以前“代码写完、功能上线”就算交差，现在要看产品有没有人用、有没有提升效率、能不能带来转化和收入。
+- **和客户的距离变近了：** 越来越多的产品工程师开始直接参与客户演示、PoC（概念验证）和上线支持，用技术实力证明产品的价值。
+
+你可能会担心：“还要会销售？” 别紧张，这不是让你去做传统意义上的销售。对产品工程师来说，所谓“会销售”其实是：**能找到可能需要你产品的人，听得懂他们的真实痛点，能演示你的解决方案，邀请他们试用，并且验证他们是否真的愿意持续使用、甚至付费。**
 
 ### Product Engineer、FDE 和 OPC 是什么关系？
 
-这三个概念处在同一条能力链上，但并不是同一种东西。
+你可能还听过 FDE、OPC 这些说法，它们和产品工程师是什么关系呢？简单说，这三个概念是同一套能力在不同范围的应用，但它们不是一回事，也不是必须按顺序晋升的阶梯。
 
-| 概念 | 它是什么 | 主要工作场景 | 需要负责到哪里 |
+| 概念 | 是什么 | 主要在哪里工作 | 要对什么结果负责 |
 | --- | --- | --- | --- |
-| **Product Engineer** | 一种产品与工程融合的岗位 | 在产品团队内部工作 | 从问题和方案负责到产品上线、用户反馈与业务指标 |
-| **FDE（Forward Deployed Engineer）** | 产品工程能力向客户现场的延伸 | 深入企业客户、真实业务和生产环境 | 从客户发现、PoC 和集成负责到部署、采用、扩展，有时直接参与销售周期 |
-| **OPC（One-Person Company）** | 一种由个人主导的公司经营方式，不是职位名称 | 一个人借助 AI Agent、自动化平台和外部服务经营产品 | 从找市场、做产品负责到营销、销售、交付、客服和现金流 |
+| **Product Engineer（产品工程师）** | 产品思维和工程能力融合的岗位 | 在公司内部的产品团队 | 从发现问题、设计方案，一直负责到产品上线、用户反馈和业务指标 |
+| **FDE（Forward Deployed Engineer，前沿部署工程师）** | 产品工程能力延伸到客户现场 | 深入企业客户一线，在真实业务环境里工作 | 从发现客户需求、做 PoC、系统集成，一直负责到部署上线、用户采用、后续扩展，有时还会直接参与销售过程 |
+| **OPC（One-Person Company，一人公司）** | 一个人主导经营的公司模式，不是岗位名称 | 自己给自己干，借助 AI Agent、自动化平台和外部服务来做产品 | 从找市场机会、做产品，一直负责到营销、销售、交付、客服，甚至现金流 |
 
 <div class="role-path-figure" role="img" aria-label="产品工程师、FDE 和 OPC 的能力范围逐步从做出产品扩展到客户现场和完整生意">
   <div class="role-path-node">
@@ -145,36 +166,36 @@ AI 带来的新变化，是大幅降低了“做出来”的成本，也让工�
 > **FDE：把产品带进客户现场并产生结果**<br>
 > **OPC：用同一套能力经营一门完整生意**
 
-#### FDE：工程师开始进入客户现场
+#### FDE：走到客户现场解决问题
 
-FDE 并不是只负责安装软件的实施人员，也不是只做演示的售前工程师。AI 公司的 FDE 通常要同时完成四件事：
+很多人会把 FDE 误解成“帮客户装软件的实施人员”或者“只做演示的售前”，其实不是这样。AI 公司的 FDE 通常要从头到尾负责四件事：
 
-1. 和客户一起找到最值得解决的问题。
-2. 快速做出原型或 PoC，证明技术与业务价值。
-3. 编写生产代码，把方案接入客户的真实数据和工作流。
-4. 观察采用效果，把重复出现的需求沉淀成通用产品。
+1. **找对问题：** 和客户一起聊，找到那个真正值得解决的核心问题，而不是上来就写代码。
+2. **快速验证：** 用最短时间做出原型或 PoC（概念验证），证明这个方案既有技术可行性，也能带来业务价值。
+3. **落地交付：** 写真正能上生产环境的代码，把方案接入客户的真实数据和日常工作流。
+4. **沉淀产品：** 观察客户用得怎么样，把多个客户都遇到的共性需求，沉淀成产品里的通用功能。
 
-截至 2026 年 8 月，OpenAI 已经在多个国家和城市招聘 FDE，并把岗位成功标准写成生产采用率、可衡量的工作流影响，以及能够改变产品和模型路线图的现场反馈。这说明 FDE 正在从少数企业软件公司的特殊模式，扩展为 AI 落地的重要岗位形态。
+截至 2026 年 8 月，OpenAI 已经在全球多个城市招聘 FDE，并且在岗位描述里明确写了：成功标准不是写了多少代码，而是客户的生产采用率、可量化的工作流效率提升，以及从一线带回来、能改变产品和模型路线图的真实反馈。这说明 FDE 这种模式正在从少数企业软件公司的“特殊岗位”，变成 AI 产品落地的重要角色。
 
-#### OPC：一个人也可以拥有一支“数字团队”
+#### OPC：一个人也能带一支“数字团队”
 
-这里说的 OPC，不特指法律意义上的“一人公司”，而是指 **One-Person Company：由一个人主导经营，尽可能利用软件、AI Agent 和外部基础设施完成过去需要多人协作的工作。**
+这里说的 OPC，不只是法律意义上注册的“一人有限责任公司”，而是指 **One-Person Company 这种工作方式：一个人主导整个业务，尽可能借助软件、AI Agent 和现成的云服务，完成过去需要一个团队才能做完的事。**
 
-它也不是完全由 AI 自动运行的“无人公司”。创始人仍然需要判断市场、承担责任、接触用户并做关键决策；AI 更像是一支可以被调度的数字团队。
+但这也不是说什么都不用干，AI 自己就能把公司运转起来——那种“无人公司”目前还不存在。创始人依然要自己判断市场方向、承担风险、接触用户、拍板关键决策；AI 的角色更像是一支你随时可以调度的“数字团队”，帮你写代码、做设计、写文案、分析数据、回复客服。
 
-这条趋势并非完全从 AI 开始。独立开发者 Pieter Levels 在自己的官网上介绍，他长期独自构建和经营 Nomads.com、Remote OK、Photo AI 和 Interior AI 等产品。AI 让这种模式能够进一步覆盖设计、编程、内容、分析和客服，但最终仍然要经过真实市场验证。[查看 Pieter Levels 的项目记录](https://levels.io/projects/)
+这种趋势也不是 AI 出现后才有的。独立开发者 Pieter Levels 已经一个人做了很多年，Nomads.com、Remote OK、Photo AI、Interior AI 这些产品都是他独自构建和运营的。AI 只是让这种模式能覆盖的范围更广了——设计、编程、内容、分析、客服这些以前需要不同专业人做的事，现在一个人加 AI 就能搞定，但最终还是要经过真实市场的检验。[查看 Pieter Levels 的项目记录](https://levels.io/projects/)
 
-到了 2025 年，Microsoft 的 Work Trend Index 开始使用 **Agent Boss** 描述能够创建、委派和管理 AI Agent 的工作者。该报告基于 31 个国家的 31,000 名工作者调查，并显示 81% 的领导者预计未来 12～18 个月会把 Agent 中度或深度纳入 AI 战略。[查看 Microsoft 2025 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born)
+2025 年，微软在 Work Trend Index 报告里提出了 **Agent Boss** 这个概念，用来描述那些会创建、分配任务给 AI Agent、并管理它们工作的人。这份报告调查了 31 个国家的 31,000 名职场人，数据显示 81% 的企业领导者预计在未来 12～18 个月里，会把 AI Agent 深度融入业务流程。[查看 Microsoft 2025 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born)
 
-2025 年 6 月，Wix 以约 8,000 万美元收购自然语言应用开发平台 Base44。Base44 并不是严格意义上的 OPC，但它展示了一个重要基础条件：数据库、身份认证、部署等过去需要多种专业角色协作的工作，正在被对话式产品封装和自动化。[查看 Wix 收购公告](https://www.wix.com/press-room/home/post/wix-further-expands-into-vibe-coding-with-acquisition-of-base44-a-hyper-growth-startup-that-simplif)
+2025 年 6 月，网站搭建平台 Wix 以约 8,000 万美元收购了自然语言应用开发平台 Base44。Base44 本身不是 OPC，但它透露出一个重要信号：以前需要后端工程师、运维工程师、DBA 多种角色配合才能搞定的数据库、用户认证、部署上线这些事，正在被对话式的工具封装起来，普通人也能搞定。[查看 Wix 收购公告](https://www.wix.com/press-room/home/post/wix-further-expands-into-vibe-coding-with-acquisition-of-base44-a-hyper-growth-startup-that-simplif)
 
-因此，“第一家一人独角兽什么时候出现”目前仍然是一种预测，不应该被写成已经发生的事实。更值得初学者关注的现实变化是：**一个人已经可以用更少的资金和团队，更快完成产品验证，并经营一门规模不大但真实赚钱的业务。**
+所以，“第一家一人独角兽什么时候出现”目前还是个预测，我们不应该把它当成已经发生的事实。对初学者来说，更实在的变化是：**现在一个人真的可以用更少的钱、更小的团队，更快地验证一个产品想法，甚至经营起一门虽然不大、但真的能赚钱的小生意。**
 
-::: tip 为什么课程要同时讲这三条路径？
-无论你以后进入产品团队、成为 FDE，还是尝试经营自己的 OPC，起点都是同一套产品工程基本功：发现真实问题、做出最小产品、交给用户、说明价值，并根据使用和付费结果继续迭代。
+::: tip 为什么这门课三条路径都讲？
+不管你毕业之后是想进大公司做产品工程师、去 AI 公司当 FDE，还是想自己试试做点小生意（OPC），起步要练的基本功都是一样的：发现真实问题、做出最小可用产品、交到用户手里、讲清楚价值，然后根据用户的使用反馈和付费意愿继续迭代。
 :::
 
-因此，这门课训练的不是几个彼此分开的职位，而是一次完整的产品循环：
+所以这门课不是在教你几个互不相干的岗位技能，而是在帮你走通一次完整的产品闭环：
 
 > **发现问题 → 验证需求 → 设计方案 → 构建产品 → 交付用户 → 说明价值 → 观察结果 → 持续迭代**
 
@@ -387,6 +408,26 @@ AI 可以降低实现成本，但真正决定产品价值的，仍然是你能�
   background-color: var(--vp-c-bg);
   border-color: var(--vp-c-brand-dimm);
   color: var(--vp-c-brand-dark);
+}
+
+.job-screenshot {
+  margin: 16px 0 24px;
+}
+
+.job-screenshot img {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  background: var(--vp-c-bg-soft);
+}
+
+.job-screenshot figcaption {
+  margin: 8px 12px 0;
+  color: var(--vp-c-text-2);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  text-align: center;
 }
 
 @media (max-width: 720px) {
