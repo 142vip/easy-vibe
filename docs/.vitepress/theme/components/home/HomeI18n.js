@@ -59,7 +59,7 @@ export const i18n = {
           title: '产品原型实战',
           desc: '掌握 Vibe Coding 工作流，从想法到可交互原型，独立完成高保真 Web 应用。',
           sub: '核心心法',
-          link: '/zh-cn/stage-1/finding-great-idea/'
+          link: '/zh-cn/stage-1/introduction-to-ai-ide/'
         }
       ]
     },
@@ -269,7 +269,7 @@ export const i18n = {
           title: 'Vibe Coding',
           desc: 'Master the core of AI coding: From product ideas to interactive prototypes.',
           sub: 'Core Mindset',
-          link: '/en/stage-1/learning-map/'
+          link: '/en/stage-1/introduction-to-ai-ide/'
         }
       ]
     },
@@ -476,13 +476,13 @@ export const i18n = {
           title: 'ゲーム化入門',
           desc: 'スネークゲームやテトリスを作って、コードへの恐怖を克服。',
           sub: '遊びながら学ぶ',
-          link: '/ja-jp/stage-1/learning-map/'
+          link: '/ja-jp/stage-1/ai-capabilities-through-games/'
         },
         {
           title: 'Vibe Coding',
           desc: 'AI時代のコーディングの核心：プロンプトエンジニアリングとコンテキスト管理。',
           sub: '核心的な考え方',
-          link: '/ja-jp/stage-1/learning-map/'
+          link: '/ja-jp/stage-1/introduction-to-ai-ide/'
         }
       ]
     },
@@ -628,13 +628,13 @@ export const i18n = {
           title: '遊戲化入門',
           desc: '通過製作貪吃蛇、俄羅斯方塊，打破對代碼的恐懼。',
           sub: '邊玩邊學',
-          link: '/zh-tw/stage-1/learning-map/'
+          link: '/zh-tw/stage-1/ai-capabilities-through-games/'
         },
         {
           title: 'Vibe Coding',
           desc: '掌握 AI 時代的編程核心：提示詞工程與上下文管理。',
           sub: '核心心法',
-          link: '/zh-tw/stage-1/learning-map/'
+          link: '/zh-tw/stage-1/introduction-to-ai-ide/'
         }
       ]
     },
@@ -781,13 +781,13 @@ export const i18n = {
           title: '게임으로 입문',
           desc: '스네이크 게임, 테트리스를 만들며 코딩 공포증 극복.',
           sub: '놀면서 배우기',
-          link: '/ko-kr/stage-1/learning-map/'
+          link: '/ko-kr/stage-1/ai-capabilities-through-games/'
         },
         {
           title: 'Vibe Coding',
           desc: 'AI 시대 코딩의 핵심: 프롬프트 엔지니어링과 컨텍스트 관리.',
           sub: '핵심 마인드셋',
-          link: '/ko-kr/stage-1/learning-map/'
+          link: '/ko-kr/stage-1/introduction-to-ai-ide/'
         }
       ]
     },
@@ -938,13 +938,13 @@ export const i18n = {
           title: 'Intro Gamificada',
           desc: 'Crea Snake, Tetris y rompe el miedo al código.',
           sub: 'Aprende jugando',
-          link: '/es-es/stage-1/learning-map/'
+          link: '/es-es/stage-1/ai-capabilities-through-games/'
         },
         {
           title: 'Vibe Coding',
           desc: 'Domina el núcleo de la programación con IA: Ingeniería de Prompts y Contexto.',
           sub: 'Mentalidad Clave',
-          link: '/es-es/stage-1/learning-map/'
+          link: '/es-es/stage-1/introduction-to-ai-ide/'
         }
       ]
     },
@@ -1095,13 +1095,13 @@ export const i18n = {
           title: 'Intro Gamifiée',
           desc: 'Créez Snake, Tetris et brisez la peur du code.',
           sub: 'Apprendre en jouant',
-          link: '/fr-fr/stage-1/learning-map/'
+          link: '/fr-fr/stage-1/ai-capabilities-through-games/'
         },
         {
           title: 'Vibe Coding',
           desc: 'Maîtrisez le cœur du codage IA : Prompt Engineering & Contexte.',
           sub: 'Esprit Clé',
-          link: '/fr-fr/stage-1/learning-map/'
+          link: '/fr-fr/stage-1/introduction-to-ai-ide/'
         }
       ]
     },
@@ -1253,13 +1253,13 @@ export const i18n = {
           title: 'Gamifizierte Intro',
           desc: 'Baue Snake, Tetris und überwinde die Angst vor Code.',
           sub: 'Spielend lernen',
-          link: '/de-de/stage-1/learning-map/'
+          link: '/de-de/stage-1/ai-capabilities-through-games/'
         },
         {
           title: 'Vibe Coding',
           desc: 'Meistere den Kern des KI-Codings: Prompt Engineering & Kontext.',
           sub: 'Kern-Mindset',
-          link: '/de-de/stage-1/learning-map/'
+          link: '/de-de/stage-1/introduction-to-ai-ide/'
         }
       ]
     },
@@ -1408,13 +1408,13 @@ export const i18n = {
           title: 'مقدمة بالألعاب',
           desc: 'ابنِ Snake و Tetris واكسر حاجز الخوف من الكود.',
           sub: 'تعلم باللعب',
-          link: '/ar-sa/stage-1/learning-map/'
+          link: '/ar-sa/stage-1/ai-capabilities-through-games/'
         },
         {
           title: 'Vibe Coding',
           desc: 'أتقن جوهر برمجة الذكاء الاصطناعي: هندسة الأوامر والسياق.',
           sub: 'العقلية الأساسية',
-          link: '/ar-sa/stage-1/learning-map/'
+          link: '/ar-sa/stage-1/introduction-to-ai-ide/'
         }
       ]
     },
@@ -1565,13 +1565,13 @@ export const i18n = {
           title: 'Nhập môn qua Game',
           desc: 'Xây dựng Snake, Tetris và phá bỏ nỗi sợ code.',
           sub: 'Học mà chơi',
-          link: '/vi-vn/stage-1/learning-map/'
+          link: '/vi-vn/stage-1/ai-capabilities-through-games/'
         },
         {
           title: 'Vibe Coding',
           desc: 'Nắm vững cốt lõi lập trình AI: Prompt Engineering & Context.',
           sub: 'Tư duy cốt lõi',
-          link: '/vi-vn/stage-1/learning-map/'
+          link: '/vi-vn/stage-1/introduction-to-ai-ide/'
         }
       ]
     },
