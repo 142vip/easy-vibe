@@ -172,7 +172,7 @@ export default {
 
 [ModelScope Studio](https://modelscope.cn/studios)를 엽니다. 페이지 위쪽에 생성, 구축, 게시, 공유 순서가 보입니다.
 
-![생성부터 공유까지 표시한 ModelScope Studio 홈](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.jpg)
+![생성부터 공유까지 표시한 ModelScope Studio 홈](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.webp)
 
 생성 버튼이나 [Studio 생성 페이지](https://modelscope.cn/studios/create)를 엽니다. 중국 사이트 `modelscope.cn`과 국제 사이트 `modelscope.ai`는 계정, 토큰, 콘텐츠를 공유하지 않습니다.
 
@@ -202,7 +202,7 @@ export default {
 
 파일 업로드를 마치면 Studio의 배포 설정을 열고 SDK 유형으로 **Static**을 선택합니다. Static은 준비된 HTML 사이트에 적합하며, 같은 영역에서 Gradio, Streamlit, Docker도 선택할 수 있습니다.
 
-![배포 설정의 SDK 항목에서 Static을 선택하는 화면](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+![배포 설정의 SDK 항목에서 Static을 선택하는 화면](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.webp)
 
 저장소 루트에 `index.html`이 있는지 다시 확인하고 배포 설정을 저장합니다.
 

@@ -82,7 +82,7 @@ Le professeur a créé un dossier vide et l’a ouvert dans Trae. Le projet s’
 
 La référence vient d’une page de démonstration Framer. Le grand titre, la navigation, le paysage violet et les petits contrôles sont visibles sur une seule image.
 
-![Capture de la page placée dans Trae](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.jpg)
+![Capture de la page placée dans Trae](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.webp)
 
 _Source de la capture : [Framer Website Builder](https://www.framer.com/solutions/website-builder/)_
 

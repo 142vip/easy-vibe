@@ -70,7 +70,7 @@ AI 带来的真正变化，是把“做东西”这件事的门槛大大降低�
   工程师不能只埋头写代码，也要懂用户、参与讨论产品该往哪走。
 
   <figure class="job-screenshot">
-    <div class="screenshot-scroll"><img src="./images/sources/intercom-product-engineer.png" alt="Intercom 关于 Product Engineer 的文章截图" loading="lazy"></div>
+    <div class="screenshot-scroll"><img src="./images/sources/intercom-product-engineer.webp" alt="Intercom 关于 Product Engineer 的文章截图" loading="lazy"></div>
     <figcaption>Intercom 早在 2018 年就提出了 Product Engineer 的概念</figcaption>
   </figure>
 
@@ -78,7 +78,7 @@ AI 带来的真正变化，是把“做东西”这件事的门槛大大降低�
   直接跟客户聊天，从一次对话里挖出需求做出产品，马上给真实用户试用。
 
   <figure class="job-screenshot">
-    <div class="screenshot-scroll"><img src="./images/sources/hamilton-ai-product-engineer.png" alt="Hamilton AI 产品工程师招聘截图" loading="lazy"></div>
+    <div class="screenshot-scroll"><img src="./images/sources/hamilton-ai-product-engineer.webp" alt="Hamilton AI 产品工程师招聘截图" loading="lazy"></div>
     <figcaption>2026 年的招聘要求已经覆盖从客户交流到产品验证的完整闭环</figcaption>
   </figure>
 
@@ -86,7 +86,7 @@ AI 带来的真正变化，是把“做东西”这件事的门槛大大降低�
   一个人搞定 Agent 设计、后端代码、界面开发，还要观察律师和客户实际怎么用。
 
   <figure class="job-screenshot">
-    <div class="screenshot-scroll"><img src="./images/sources/alma-product-engineer-ai.png" alt="Alma AI 产品工程师招聘截图" loading="lazy"></div>
+    <div class="screenshot-scroll"><img src="./images/sources/alma-product-engineer-ai.webp" alt="Alma AI 产品工程师招聘截图" loading="lazy"></div>
     <figcaption>法律科技公司 Alma 要求产品工程师能独立完成从 Agent 到界面的全栈工作</figcaption>
   </figure>
 
@@ -94,7 +94,7 @@ AI 带来的真正变化，是把“做东西”这件事的门槛大大降低�
   要深入销售、客服、承保现场，最终对转化率这类业务指标负责，不只是把功能上线。
 
   <figure class="job-screenshot">
-    <div class="screenshot-scroll"><img src="./images/sources/harper-product-engineer.png" alt="Harper 产品工程师招聘截图" loading="lazy"></div>
+    <div class="screenshot-scroll"><img src="./images/sources/harper-product-engineer.webp" alt="Harper 产品工程师招聘截图" loading="lazy"></div>
     <figcaption>保险公司 Harper 要求工程师深入业务一线，直接对转化率负责</figcaption>
   </figure>
 
@@ -102,7 +102,7 @@ AI 带来的真正变化，是把“做东西”这件事的门槛大大降低�
   要泡在投资、研究、业务团队里找问题，做内部工具也做开源产品，在实践里找新机会。
 
   <figure class="job-screenshot">
-    <div class="screenshot-scroll"><img src="./images/sources/paradigm-product-engineer.png" alt="Paradigm 应用AI产品工程师招聘截图" loading="lazy"></div>
+    <div class="screenshot-scroll"><img src="./images/sources/paradigm-product-engineer.webp" alt="Paradigm 应用AI产品工程师招聘截图" loading="lazy"></div>
     <figcaption>加密投资机构 Paradigm 要求工程师深入业务团队，既做内部工具也做开源产品</figcaption>
   </figure>
 
@@ -110,7 +110,7 @@ AI 带来的真正变化，是把“做东西”这件事的门槛大大降低�
   从找问题、定方案、写代码到部署上线全包，成功标准是用户用不用、有没有真的提升工作效率。
 
   <figure class="job-screenshot">
-    <div class="screenshot-scroll"><img src="./images/sources/openai-fde.png" alt="OpenAI FDE 岗位招聘截图" loading="lazy"></div>
+    <div class="screenshot-scroll"><img src="./images/sources/openai-fde.webp" alt="OpenAI FDE 岗位招聘截图" loading="lazy"></div>
     <figcaption>OpenAI 的 FDE 岗位把生产采用率和工作流影响作为核心成功标准</figcaption>
   </figure>
 
@@ -234,7 +234,7 @@ AI 带来的真正变化，是把“做东西”这件事的门槛大大降低�
 截至 2026 年 8 月，OpenAI 已经在全球多个城市招聘 FDE，并且在岗位描述里明确写了：成功标准不是写了多少代码，而是客户的生产采用率、可量化的工作流效率提升，以及从一线带回来、能改变产品和模型路线图的真实反馈。这说明 FDE 这种模式正在从少数企业软件公司的"特殊岗位"，变成 AI 产品落地的重要角色。
 
 <figure class="job-screenshot">
-  <div class="screenshot-scroll"><img src="./images/sources/openai-fde.png" alt="OpenAI FDE 岗位招聘截图" loading="lazy"></div>
+  <div class="screenshot-scroll"><img src="./images/sources/openai-fde.webp" alt="OpenAI FDE 岗位招聘截图" loading="lazy"></div>
   <figcaption>OpenAI 的 FDE 岗位描述把"生产采用率"和"工作流影响"作为核心考核标准</figcaption>
 </figure>
 
@@ -247,14 +247,14 @@ AI 带来的真正变化，是把“做东西”这件事的门槛大大降低�
 这种趋势也不是 AI 出现后才有的。独立开发者 Pieter Levels 已经一个人做了很多年，Nomads.com、Remote OK、Photo AI、Interior AI 这些产品都是他独自构建和运营的。AI 只是让这种模式能覆盖的范围更广了——设计、编程、内容、分析、客服这些以前需要不同专业人做的事，现在一个人加 AI 就能搞定，但最终还是要经过真实市场的检验。[查看 Pieter Levels 的项目记录](https://levels.io/projects/)
 
 <figure class="job-screenshot">
-  <div class="screenshot-scroll"><img src="./images/sources/pieter-levels-projects.png" alt="Pieter Levels 的个人项目页面截图" loading="lazy"></div>
+  <div class="screenshot-scroll"><img src="./images/sources/pieter-levels-projects.webp" alt="Pieter Levels 的个人项目页面截图" loading="lazy"></div>
   <figcaption>独立开发者 Pieter Levels 一个人构建和运营了多个产品</figcaption>
 </figure>
 
 2025 年，微软在 Work Trend Index 报告里提出了 **Agent Boss** 这个概念，用来描述那些会创建、分配任务给 AI Agent、并管理它们工作的人。这份报告调查了 31 个国家的 31,000 名职场人，数据显示 81% 的企业领导者预计在未来 12～18 个月里，会把 AI Agent 深度融入业务流程。[查看 Microsoft 2025 Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/2025-the-year-the-frontier-firm-is-born)
 
 <figure class="job-screenshot">
-  <div class="screenshot-scroll"><img src="./images/sources/microsoft-agent-boss.png" alt="Microsoft Work Trend Index 报告截图" loading="lazy"></div>
+  <div class="screenshot-scroll"><img src="./images/sources/microsoft-agent-boss.webp" alt="Microsoft Work Trend Index 报告截图" loading="lazy"></div>
   <figcaption>微软 2025 年报告提出"Agent Boss"概念，描述能够管理 AI Agent 的新型工作者</figcaption>
 </figure>
 

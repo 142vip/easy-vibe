@@ -337,7 +337,7 @@ Exigences :
 ```
 
 L'IA générera généralement un prompt structuré comme suit :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.webp)
 
 Vous pouvez modifier légèrement ce prompt avant de l'envoyer à l'IDE AI pour générer le code.
 
@@ -448,12 +448,12 @@ Il n'y a que trois approches courantes :
 Une fois la logique de la fonctionnalité clé générée, nous pouvons générer le reste du contenu. Par exemple, à ce stade, si vous cliquez sur Paramètres ou certains boutons, ils ne fonctionnent pas du tout.
 
 Vous pouvez demander à l'IA de vérifier selon les besoins du prompt métier, de générer les parties manquantes, ou de compléter directement les pages non implémentées. Vous pouvez aussi spécifier une page pour que l'IA la complète, jusqu'à ce que toutes les pages soient cliquables et que les fonctionnalités soient interactives :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.webp)
 
 Après quelques instants, nous pouvons voir que le programme a complété plusieurs pages et fonctionnalités interactives sur la base de ce qui existait déjà :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.webp)
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.webp)
 
 Il vous suffit alors de cliquer manuellement sur chaque fonctionnalité et bouton qui vous intéresse, pour vous assurer que les interactions sont normales. Si une fonctionnalité n'est pas interactive, vous pouvez en parler avec l'IA pour qu'elle vous aide à la corriger.
 
@@ -541,7 +541,7 @@ Résultat après clic :
 Une fois la fonctionnalité de génération validée, nous devons aussi nous assurer que la fonctionnalité de bibliothèque de modèles fonctionne correctement. Sur la carte de génération de la page, nous pouvons voir que la fonctionnalité de favoris de la bibliothèque de modèles n'est pas implémentée. Il faut alors approfondir la conversation avec l'IA : « Merci de t'assurer que le besoin [collez ici le contenu du point 2 ci-dessus] fonctionne correctement, on peut cliquer sur un résultat pour sauvegarder le modèle correspondant, et en l'ouvrant on peut voir les paramètres de génération »
 
 La génération n'est souvent pas immédiate, il faut régulièrement corriger avec des captures d'écran :
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.webp)
 
 Et finalement obtenir le résultat attendu :
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.webp)

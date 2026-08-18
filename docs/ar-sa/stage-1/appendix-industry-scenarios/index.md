@@ -80,7 +80,7 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 
 <figure class="product-shot">
   <a href="https://www.notion.com/help/guides/find-answers-and-generate-reports-with-enterprise-search" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.png" alt="واجهة Notion Enterprise Search" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.webp" alt="واجهة Notion Enterprise Search" loading="lazy" />
   </a>
   <figcaption><strong>Notion Enterprise Search:</strong> يبحث السؤال في Notion وSlack ويمكن الانتقال بين Ask وResearch وBuild. المهم هو ربط المصادر والصلاحيات، لا رفع PDF واحد.</figcaption>
 </figure>
@@ -97,7 +97,7 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 
 <figure class="product-shot">
   <a href="https://mena.thomsonreuters.com/en/products-services/legal/cocounsel.html" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.jpg" alt="Thomson Reuters CoCounsel لصياغة العقود والبحث" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.webp" alt="Thomson Reuters CoCounsel لصياغة العقود والبحث" loading="lazy" />
   </a>
   <figcaption><strong>Thomson Reuters CoCounsel:</strong> يعرض تقدم الصياغة والبحث ثم يفتح Word. يقرأ الذكاء الاصطناعي ويجد الأساس ويكتب، ويراجع المختص في وثيقته المعتادة.</figcaption>
 </figure>
@@ -129,7 +129,7 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 
 <figure class="product-shot">
   <a href="https://blog.siemens.com/2026/02/the-digital-enterprise-and-the-synthesis-of-industrial-ai-digital-twin-and-data/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.jpg" alt="Siemens Engineering Copilot بجانب TIA Portal" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.webp" alt="Siemens Engineering Copilot بجانب TIA Portal" loading="lazy" />
   </a>
   <figcaption><strong>Siemens Engineering Copilot:</strong> يعمل بجانب TIA Portal ويرى المشروع وبنية المعدات والوثائق الحالية بدل جواب عام عن تعطل الآلة.</figcaption>
 </figure>
@@ -163,7 +163,7 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 
 <figure class="product-shot">
   <a href="https://www.canva.com/newsroom/news/magic-studio/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.png" alt="Canva Magic Switch لتغيير الحجم والترجمة والتحويل" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.webp" alt="Canva Magic Switch لتغيير الحجم والترجمة والتحويل" loading="lazy" />
   </a>
   <figcaption><strong>Canva Magic Switch:</strong> يغير تصميمًا مؤكدًا إلى أحجام ولغات ووثائق. إنه العمل المتكرر لصنع نسخ كثيرة من مادة واحدة.</figcaption>
 </figure>
@@ -197,7 +197,7 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 
 <figure class="product-shot">
   <a href="https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.jpg" alt="تخطيط السفر الحواري في Expedia" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.webp" alt="تخطيط السفر الحواري في Expedia" loading="lazy" />
   </a>
   <figcaption><strong>تخطيط Expedia:</strong> يقارن المستخدم Maui وKauai لشهر العسل ثم يحفظ الفنادق في Trips. تكتمل الحلقة عندما يصل الحوار إلى الحفظ والخطة والحجز.</figcaption>
 </figure>
@@ -236,7 +236,7 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 
 <figure class="product-shot">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.jpg" alt="شرح الخطأ في Duolingo Max" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.webp" alt="شرح الخطأ في Duolingo Max" loading="lazy" />
   </a>
   <figcaption><strong>Explain My Answer:</strong> يقتبس الجواب ويشرح لماذا ترافق gustan كلمة vestidos ويسمح بمثال آخر. يمسك لحظة «لماذا أخطأت؟» بدل درس عام جديد.</figcaption>
 </figure>
@@ -249,7 +249,7 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.jpg" alt="مشغل Spotify AI DJ" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.webp" alt="مشغل Spotify AI DJ" loading="lazy" />
   </a>
   <figcaption><strong>Spotify AI DJ:</strong> مدخل دائم في الصفحة يصل إلى الأغاني والتحكم. يعتمد على سجل الاستماع والكتالوج وفعل التشغيل، لا صوت المذيع فقط.</figcaption>
 </figure>

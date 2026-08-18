@@ -119,13 +119,13 @@ const relatedArticles =
 
 你可以把 IDE 理解成專門用來“編輯、管理、執行和除錯”程式碼的程式。早期的 IDE 外觀非常“原始”，幾乎完全透過鍵盤操作。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.png)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.webp)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
 
 終端介面（Terminal） 圖片來源：https://en.wikipedia.org/wiki/File:Emacs-screenshot.png
 
 知名且功能成熟的“內建 IDE”如 `Vim`，常用於伺服器遠端操作。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.webp)
 
 為了更高效，我們需要支援滑鼠操作的現代 IDE，通常包含：
 
@@ -170,7 +170,7 @@ VS Code 的核心理念是“一切皆外掛”。它透過外掛機制支援各
 
 你可以下載安裝 VS Code，在點選右上角的側邊欄入口，開啟 AI 功能區域，體驗這些能力。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.webp)
 
 不過，VS Code 並不是 AI 能力最強的 IDE。對於需要大量 AI 輔助編碼的場景，我們往往希望使用“更聰明、效率更高”的工具——好的 AI IDE 能顯著節省寫程式碼和改 Bug 的時間。下面我們會介紹幾款目前比較流行的 AI IDE，你可以根據個人喜好選擇任意一款 AI IDE 使用。
 
@@ -197,7 +197,7 @@ Antigravity 是 Google 在 2025 年 11 月與 Gemini 3 一同釋出的全新 AI 
 
 ### [Trae](https://www.trae.ai/)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.webp)
 
 Trae 是位元組跳動推出的一款 AI 程式設計助手，支援 100 多種程式語言，並能整合到主流 IDE 中。它的功能包括：用自然語言生成程式碼、自動除錯、把設計稿轉換為 React/Vue 元件等。在 2025 年 8 月的更新之後，Trae 新增了智慧依賴匯入、重新命名建議、任務清單管理等功能；SOLO 模式也開始支援後端程式碼生成和技術架構文件編輯。
 :::
@@ -314,15 +314,15 @@ Trae 分為國際版和中國版。國際版需要能夠訪問海外網路，但
 
 從介面形態上看，Trae 與我們日常使用的 VS Code 高度相似：同樣是左側資源管理器、中間編輯區、右側擴充套件面板的經典三欄佈局。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.webp)
 
 右側的側邊欄就是 Copilot 互動視窗，也可以理解為 Agent 視窗。如果你暫時看不到它，可以點選 Trae 右上角的側邊欄圖示將其開啟。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.webp)
 
 開啟側邊欄之後，你會看到一個 `Builder` 選項，這就是 Agent 模式。簡單理解，它相當於 z.ai 的“本地版”，可以幫你操作本機環境，安裝執行環境、開啟網頁等。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.webp)
 
 點選 “Builder” 後，你會看到 “Chat” 模式和 “Builder with MCP” 模式：
 
@@ -335,7 +335,7 @@ Trae 分為國際版和中國版。國際版需要能夠訪問海外網路，但
 
 **需要注意的是，這裡不推薦使用 Auto 模式（自動選擇模型），如果是國際版，我們推薦使用 Gemini 或者 GPT 模型， 如果是國內版，我們推薦你嘗試 Kimi k2 或 Minimax、GLM 等國內模型，** 不同模型有不同的使用場景，沒有教條式的一定誰比誰好在哪，你可以在不同任務遇到困難無法解決時換一個模型，透過多次測試得到屬於自己的最佳實驗結果。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.webp)
 
 以上就是對 Trae 的一個簡單介紹。接下來，我們可以回顧一下之前在 z.ai 中做過的操作，並嘗試在 Trae 中做同樣的事情。
 
@@ -403,9 +403,9 @@ Coding Plan 是各大雲服務廠商推出的訂閱計劃，購買後你可以�
 
 透過下列介面，你可以成功新增（注意看選擇模型的選項後【一定要滑動到最底部】，下面有一個“自定義模型“，點選後纔可以輸入模型 ID，此時可以輸入上述推薦的模型 ID 如 `stepfun/step-3.5-flash:free` 直接寫入即可，同時點選下方的獲取 Key 前往官網獲得對應的 API Key 寫入即可正常使用。）
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.webp)
 :::
 
 ### 4.3 第二步：在側邊欄聊天，讓 AI 用 React 設計貪喫蛇遊戲
@@ -423,12 +423,12 @@ Coding Plan 是各大雲服務廠商推出的訂閱計劃，購買後你可以�
 :::
 
 如圖所示，這裡我們需要點選 Run 進行確認：
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.webp)
 
 如圖所示，這裡我們只需要輸入 y 即可確認：
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.webp)
 
 如圖所示，這裡我們正在建立模板，但不知道如何操作，我們可以截圖該部分對大模型進行詢問：
 
@@ -436,7 +436,7 @@ Coding Plan 是各大雲服務廠商推出的訂閱計劃，購買後你可以�
 
 AI Agent 在執行過程中暫停的還有一部分原因是因為此時啟動了一個“服務”，我們的貪喫蛇本身屬於一種“服務”，如果你看到如下命令的網址，則表示 Agent 幫我們執行了一個本地的電腦服務，我們可以訪問對應的網址訪問我們的貪喫蛇，由於服務需要持續啟動，這裡會陷入暫停。我們只需要點選 `Skip` 按鈕即可。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.webp)
 
 在這個過程中，如果你遇到一些術語和看不懂的內容，不用擔心，你可以查閱附錄中的“計算機術語解釋”部分，或者直接向 AI 諮詢，或者及時提問！
 
@@ -450,7 +450,7 @@ AI Agent 在執行過程中暫停的還有一部分原因是因為此時啟動�
 
 這裡還值得注意的是，由於修改程式碼並不一定正確，我們還需要知道所有的 IDE 的 Agent 都支援程式碼回退，例如，假設我這裡不小心做了個錯誤的修改操作，或者這次操作的結果讓你感到不滿意，在修改結束後我們可以返回輸入框的部分，點選 Revert 按鈕將操作回退到修改前的狀態，你可以修改輸入的文字進行再一次操作：
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.webp)
 
 ### 4.4 第三步（可選）：向 AI 追問程式碼實現細節
 

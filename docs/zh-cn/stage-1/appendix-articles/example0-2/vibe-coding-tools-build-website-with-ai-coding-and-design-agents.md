@@ -86,7 +86,7 @@ Logo 是决定你网站第一印象的关键元素之一。想要从 AI 设计 A
 
 - 输入上述提示词 → 比对 Agent 生成的多个设计稿。
 
-![](images/image1.png)![](images/image2.webp)
+![](images/image1.webp)![](images/image2.webp)
 
 ## 4. 确定最终 Logo
 
@@ -145,7 +145,7 @@ Logo 是决定你网站第一印象的关键元素之一。想要从 AI 设计 A
   - https://colorhunt.co/
   - https://coolors.co/
 
-![](images/image3.png)![](images/image4.png)
+![](images/image3.webp)![](images/image4.webp)
 
 - **在 Google 上通过关键词搜索配色**
 
@@ -182,7 +182,7 @@ Logo 是决定你网站第一印象的关键元素之一。想要从 AI 设计 A
 - “调整一下颜色搭配。”
 - “把这里这一块删掉。”
 
-![](images/image8.png)
+![](images/image8.webp)
 
 ## 3. 确定最终设计
 
@@ -281,7 +281,7 @@ function showAlert() {
 背景为黑色，文字为白色。"
 ```
 
-![](images/image12.png)
+![](images/image12.webp)
 
 ## 3. 运行网站
 
@@ -344,7 +344,7 @@ Agent 生成的初版网站，通常会包含一些自动生成的占位文本�
 
 - **示例：**
 
-![](images/image22.png)
+![](images/image22.webp)
 
 - **结果：**
 

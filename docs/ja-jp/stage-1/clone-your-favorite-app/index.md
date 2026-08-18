@@ -82,7 +82,7 @@ const duration = '約 <strong>2時間</strong>'
 
 参考にしたのはFramerの紹介画面です。大きな見出し、ナビゲーション、紫の山、操作ボタンが一枚に見えます。
 
-![Traeへ渡したWebページのスクリーンショット](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.jpg)
+![Traeへ渡したWebページのスクリーンショット](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.webp)
 
 _画像出典：[Framer Website Builder](https://www.framer.com/solutions/website-builder/)_
 

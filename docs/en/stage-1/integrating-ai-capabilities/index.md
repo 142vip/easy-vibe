@@ -159,7 +159,7 @@ An API key is the credential your application uses to call the model. Store it i
 
 After sending the first request, open the Usage or Billing page and look for a new record. This page also shows your balance and quota. When a request fails, first determine whether the code sent nothing, the platform rejected the call, or the account has no remaining quota.
 
-![DeepSeek Usage page showing the balance, monthly spending, and request trend](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
+![DeepSeek Usage page showing the balance, monthly spending, and request trend](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.webp)
 
 *DeepSeek's Usage page shows request volume, cost, and the remaining balance.*
 
@@ -175,7 +175,7 @@ The model catalog or Models page shows which text, image, speech, and video mode
 
 Some platforms also require you to select a region or create a deployment before they provide a base URL and endpoint. Follow the platform's quick-start guide in that case. Do not use the console page URL as the API address.
 
-![Volcengine Ark quick API access page showing the API key and quick-test steps](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
+![Volcengine Ark quick API access page showing the API key and quick-test steps](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.webp)
 
 *Volcengine Ark places key creation, model selection, and a runnable example in the same quick-start flow.*
 

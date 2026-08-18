@@ -206,7 +206,7 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
 
 - **効果の例**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.webp)
 
 ---
 
@@ -247,10 +247,10 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.webp)
 - **スネークゲームの効果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.webp)
 
 - **価格：** 比較的高めですが、学校のメールアドレスがあれば、学生認証により半額で利用できます。
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.webp)
 
 ### 2. Cursor（IDE）
 
@@ -264,7 +264,7 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.webp)
 
 - **価格：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.webp)
 
 ### 3. Z.ai（Web-based）
 
@@ -278,7 +278,7 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image12.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image13.png)
 
 - **価格：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.webp)
 
 ### 4. Replit（Web-based）
 
@@ -292,10 +292,10 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.webp)
 - **スネークゲームの効果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.webp)
 
 - **価格：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.webp)
 
 ### 5. Minimax（Web-based）
 
@@ -304,14 +304,14 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
 - **対象ユーザー：** 自動的にテストを実行しエラーを修正するため、時間とTokenの消費が大きいですが、AIがどのように問題を特定し解決するかを明確に観察でき、学習の観点からは非常に価値があります。
 - **プロンプトのプロセス：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
 
 - **スネークゲームの効果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.webp)
 
 - **価格：** 無料版では複雑なプロジェクトを最初から最後までスムーズに完了するのが難しい場合があるため、プロジェクトを完全に構築できるよう、有料プランへのアップグレードをお勧めします。
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.webp)
 
 ### 6. Trae（IDE）
 
@@ -325,7 +325,7 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.webp)
 
 - **価格：** 価格は比較的手頃で、無料版でも品質の良い小規模プロジェクトを十分に完了できます。
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.webp)
 
 ### 7. V0（Web-based）
 
@@ -338,9 +338,9 @@ AI Agentを従来のプログラムと区別する主な特徴は以下の通り
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.webp)
 
 - **スネークゲームの効果：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.webp)
 - **価格：** 無料ユーザーは約4〜5個のシンプルなプロジェクトを構築できます。
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image35.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image35.webp)
 
 ## 3. プラットフォームの総合比較
 

@@ -82,7 +82,7 @@ The teacher created an empty folder and opened it in Trae. The project was named
 
 The reference comes from a Framer showcase page. The large heading, navigation, purple mountain scene, and small controls are all visible.
 
-![The webpage screenshot placed into Trae](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.jpg)
+![The webpage screenshot placed into Trae](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.webp)
 
 _Screenshot source: [Framer Website Builder](https://www.framer.com/solutions/website-builder/)_
 

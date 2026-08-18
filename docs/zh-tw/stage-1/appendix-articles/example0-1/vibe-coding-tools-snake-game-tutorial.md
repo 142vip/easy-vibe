@@ -206,7 +206,7 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
 
 - **效果示例**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.webp)
 
 ---
 
@@ -247,10 +247,10 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.webp)
 - **貪喫蛇遊戲效果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.webp)
 
 - **價格：** 相對偏貴，但如果你有學校郵箱，可以透過學生驗證以半價使用。
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.webp)
 
 ### 2. Cursor（IDE）
 
@@ -264,7 +264,7 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.webp)
 
 - **價格：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.webp)
 
 ### 3. Z.ai（Web-based）
 
@@ -278,7 +278,7 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image12.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image13.png)
 
 - **價格：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.webp)
 
 ### 4. Replit（Web-based）
 
@@ -292,10 +292,10 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.webp)
 - **貪喫蛇遊戲效果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.webp)
 
 - **價格：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.webp)
 
 ### 5. Minimax（Web-based）
 
@@ -304,14 +304,14 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
 - **適合的使用者：** 由於它會自動執行測試和修復錯誤，時間與 Token 消耗都比較大，但你可以清楚看到 AI 如何定位並解決問題，從學習角度看很有價值。
 - **提示詞過程：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
 
 - **貪喫蛇遊戲效果：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.webp)
 
 - **價格：** 免費版在複雜專案中很可能無法順利從頭跑到尾，因此更推薦付費升級，以確保專案可以完整構建。
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.webp)
 
 ### 6. Trae（IDE）
 
@@ -325,7 +325,7 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.webp)
 
 - **價格：** 價格相對親民，即便是免費版本，也足以完成質量不錯的小專案。
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.webp)
 
 ### 7. V0（Web-based）
 
@@ -338,9 +338,9 @@ AI Agent 是一種軟體系統，它能夠感知環境、做出決策，並自�
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.webp)
 
 - **貪喫蛇遊戲效果：**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.webp)
 - **價格：** 免費使用者大約可以構建 4–5 個簡單專案。
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image35.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image35.webp)
 
 ## 3. 平臺總結對比
 

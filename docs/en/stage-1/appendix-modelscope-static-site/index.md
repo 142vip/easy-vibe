@@ -184,7 +184,7 @@ Build again afterward. A single-page application can also use hash routing, such
 
 Open [ModelScope Studio](https://modelscope.cn/studios). The top of the page presents the route from creating and building a Studio to publishing and sharing it.
 
-![ModelScope Studio homepage showing the create, build, publish, and share process](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.jpg)
+![ModelScope Studio homepage showing the create, build, publish, and share process](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.webp)
 
 Select the create button or open [Create Studio](https://modelscope.cn/studios/create). If you are signed out, ModelScope asks you to sign in or register. The China site at `modelscope.cn` and the international site at `modelscope.ai` do not share accounts, tokens, or content. The China site is usually the practical choice for users in China.
 
@@ -216,7 +216,7 @@ Manual upload is suitable for a plain HTML site or a project with only a few fil
 
 After uploading the files, open the Studio deployment settings and select **Static** as the SDK type. The page explains that Static is intended for an existing HTML site; the same area also lists Gradio, Streamlit, and Docker.
 
-![Selecting Static in the Studio deployment settings](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+![Selecting Static in the Studio deployment settings](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.webp)
 
 Check once more that `index.html` is at the repository root, then save the deployment settings.
 

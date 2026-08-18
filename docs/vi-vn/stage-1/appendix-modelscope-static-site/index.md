@@ -172,7 +172,7 @@ Build lại. Host tĩnh có thể không chuyển mọi đường dẫn về `in
 
 Mở [ModelScope Studio](https://modelscope.cn/studios). Phần đầu trang trình bày luồng tạo, xây dựng, đăng và chia sẻ.
 
-![Trang chủ ModelScope Studio với quy trình tạo và đăng](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.jpg)
+![Trang chủ ModelScope Studio với quy trình tạo và đăng](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.webp)
 
 Chọn tạo hoặc mở [Tạo Studio](https://modelscope.cn/studios/create). Trang Trung Quốc `modelscope.cn` và quốc tế `modelscope.ai` không dùng chung tài khoản, token hay nội dung.
 
@@ -202,7 +202,7 @@ Tải thủ công phù hợp khi ít tệp. Khi nhiều tệp hoặc cập nhậ
 
 Sau khi tải tệp lên, mở cài đặt triển khai của Studio và chọn **Static** làm loại SDK. Static phù hợp với trang HTML đã chuẩn bị sẵn; cùng khu vực này cũng có Gradio, Streamlit và Docker.
 
-![Chọn Static trong cài đặt triển khai](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+![Chọn Static trong cài đặt triển khai](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.webp)
 
 Kiểm tra lại rằng `index.html` nằm ở thư mục gốc của kho mã rồi lưu cài đặt triển khai.
 

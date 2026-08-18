@@ -135,7 +135,7 @@ AI 出现之后，第一次给了普通人一个全新的可能：你不需要�
 这种「对话即编程」的模式，让编程从「写代码」变成了「描述需求」。你不需要关心底层技术细节，只需要清楚地告诉 AI 你想要什么，它就能帮你把想法变成可运行的程序。这就是 AI 时代编程的新范式——**Vibe Coding（氛围式编码）**。
 :::
 
-![](images/index-2026-01-07-18-25-03.png)
+![](images/index-2026-01-07-18-25-03.webp)
 
 输入我们的简单需求后点击 **全栈开发** 按钮，你可以实时观看网页的完整创建过程。通常只需泡一杯咖啡的时间，网页便会自动生成完毕！
 
@@ -148,7 +148,7 @@ AI 出现之后，第一次给了普通人一个全新的可能：你不需要�
 5. 界面要简洁好看
 ```
 
-![](images/index-2026-01-07-18-34-03.png)
+![](images/index-2026-01-07-18-34-03.webp)
 
 生成结束后，你能看到右侧出现可浏览的网页界面。你可以上下滚动浏览页面内容，或点击页面顶部的 🧭 按钮切换至全屏模式查看效果。
 
@@ -367,11 +367,11 @@ z.ai 的回复将会是这样的：
 
 [WotAI Games](https://games.wotai.co/) 是一个完全用 Claude Code（Vibe Coding）从零开发、**不使用任何游戏引擎** 的网页游戏合集。通过对话让 AI 一口气复刻了 10 款经典街机游戏：吃豆人、俄罗斯方块、太空侵略者、贪吃蛇、Flappy Bird、打砖块、小蜜蜂、青蛙过河、涂鸦跳跃和数独。每款都可以直接在线玩，还自带排行榜系统。
 
-![WotAI Games 首页——10 款经典街机游戏合集](images/case-wotai-games.png)
+![WotAI Games 首页——10 款经典街机游戏合集](images/case-wotai-games.webp)
 
 ![俄罗斯方块（WotAI Games，Vibe Coding 生成）](images/case-wotai-tetris.png)
 
-![吃豆人（WotAI Games，Vibe Coding 生成）](images/case-wotai-pacman.png)
+![吃豆人（WotAI Games，Vibe Coding 生成）](images/case-wotai-pacman.webp)
 
 > 🔗 在线试玩：[games.wotai.co](https://games.wotai.co/) ｜ 开发复盘：[We vibe coded 10 classic arcade games with Claude Code](https://wotai.co/blog/wotai-games-vibe-coded-arcade-classics)
 
@@ -395,7 +395,7 @@ z.ai 的回复将会是这样的：
 
 2026 年 7 月，中文社区开发者 [wangzifan396-wzf](https://github.com/wangzifan396-wzf) 开源了 [mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games)——**用 Vibe Coding 一个人做出并持续打磨的 100 款浏览器小游戏**，全部是零依赖的单 HTML 文件，双击即可运行。玩法覆盖动作、策略、塔防、经营、卡牌、物理、推理、竞速、节奏、棋类和益智等类型，其中不少已经做到了多章节战役、养成系统、存档码跨设备同步的完整产品级深度。整个项目以 MIT 协议开源，在线目录可以直接开玩。
 
-![100 款浏览器游戏在线目录（2026 年 Vibe Coding 开源项目）](images/case-100-games.png)
+![100 款浏览器游戏在线目录（2026 年 Vibe Coding 开源项目）](images/case-100-games.webp)
 
 ![《霓虹 2048》：六章 18 节点远征 + 多种模式与工具系统](images/case-100-games-neon2048.webp)
 
@@ -405,7 +405,7 @@ z.ai 的回复将会是这样的：
 
 2026 年 2 月，开发者 [Trent Sterling](https://tront.xyz/blog/posts/craftmine/) 因为侄子们想玩《我的世界》但没有正版，干脆打开一个空白 HTML 文件，用 Claude Code 通过纯对话做出了 [CraftMine](https://tront.xyz/craftmine/)——一个 **6,820 行、单文件** 的网页版《我的世界》复刻版：46 种方块（还加了 21 种 DOOM 地狱主题方块）、36 种生物（从小鸡到 300 血的泰坦 Boss）、19 种武器（含 BFG 9000）、5 种生物群系、昼夜循环，甚至支持 **P2P 多人联机**。没有任何构建步骤，打开网页就能玩。
 
-![CraftMine：《我的世界》复刻版，6,820 行单文件（Vibe Coding 生成）](images/case-craftmine.png)
+![CraftMine：《我的世界》复刻版，6,820 行单文件（Vibe Coding 生成）](images/case-craftmine.webp)
 
 > 🔗 在线试玩：[tront.xyz/craftmine](https://tront.xyz/craftmine/) ｜ 开发复盘：[CraftMine: A 6,820-line vibe-coded Minecraft clone in one HTML file](https://tront.xyz/blog/posts/craftmine/)
 
@@ -423,7 +423,7 @@ z.ai 的回复将会是这样的：
 
 2026 年 7 月，开发者 [Dr. Josh Simmons](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it) 只给国产大模型 **Kimi K3** 发了一个提示词，就让它做出了一个可玩的第一人称 3D 游戏：在程序化生成的服务器设施里收集数据核心、躲避巡逻无人机、坐货运电梯下三层楼。整个游戏一次生成即可游玩，再通过两轮对话修掉两个 bug 就能顺畅通关，全程花费约 **2 美元**。
 
-![Kimi K3 一个提示词生成的 3D 服务器设施游戏](images/case-kimi-k3-game.png)
+![Kimi K3 一个提示词生成的 3D 服务器设施游戏](images/case-kimi-k3-game.webp)
 
 > 🔗 在线试玩：[kimi-test-theta.vercel.app](https://kimi-test-theta.vercel.app/) ｜ 源码：[github.com/jcpsimmons/kimi-test](https://github.com/jcpsimmons/kimi-test) ｜ 开发者复盘：[Kimi K3 Built the Game. I Still Had to Play It.](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it)
 
@@ -431,7 +431,7 @@ z.ai 的回复将会是这样的：
 
 2026 年 7 月 17 日，月之暗面发布 Kimi K3 模型后，同步上线了网页游戏平台 [K399](https://www.k399.games/)——里面几十款游戏全部由 K3 模型参与制作，点开即玩。品类覆盖 3D 射击、音游、横版动作、宫斗 AVG、3D 解谜甚至开放世界：既有复刻《塞尔达传说》《黑神话：悟空》《泡泡堂》《吸血鬼幸存者》等经典玩法的作品，也有《先锋练习场》（可移动、跳跃、滑铲、瞄准射击的 3D FPS）、开放世界《SpiderPunk》、五章主线八条支线 32 种随机事件的宫斗 AVG《凤阙深宫》等完成度远超 Demo 的原创游戏。
 
-![K399 平台界面——K3 Game Arcade，游戏列表点开即玩](images/case-k399-platform-live.png)
+![K399 平台界面——K3 Game Arcade，游戏列表点开即玩](images/case-k399-platform-live.webp)
 
 ![K399 上的开放世界游戏 SpiderPunk：在赛博都市高楼间荡蛛丝（K3 模型生成，实际游玩画面）](images/case-k399-spiderpunk.webp)
 

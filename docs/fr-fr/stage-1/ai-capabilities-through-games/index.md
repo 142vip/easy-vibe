@@ -130,7 +130,7 @@ Maintenant, grâce aux plateformes de programmation par IA, il vous suffit de :
 Ce mode « dialoguer pour coder » transforme la programmation : au lieu « d'écrire du code », vous « décrivez vos besoins ». Vous n'avez pas besoin de comprendre les détails techniques, il vous suffit d'expliquer clairement à l'IA ce que vous souhaitez, et elle transforme vos idées en un programme fonctionnel. C'est le nouveau paradigme de la programmation à l'ère de l'IA — le <strong>Vibe Coding</strong>.
 :::
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.webp)
 
 Après avoir saisi vos besoins et cliqué sur le bouton **Développement full-stack**, vous pouvez observer en temps réel le processus complet de création de la page. En général, le temps de préparer un café suffit pour que la page soit générée automatiquement !
 
@@ -143,7 +143,7 @@ Crée-moi un jeu de Snake :
 5. L'interface doit être simple et élégante
 ```
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.webp)
 
 Une fois la génération terminée, vous verrez apparaître à droite une interface navigable. Vous pouvez faire défiler la page ou cliquer sur le bouton 🧭 en haut à droite pour passer en mode plein écran.
 
@@ -362,11 +362,11 @@ La réponse est oui. Voici une sélection de **8 cas réels** publics sur le web
 
 [WotAI Games](https://games.wotai.co/) est une collection de jeux web développée entièrement de zéro avec Claude Code (Vibe Coding), **sans utiliser aucun moteur de jeu**. Grâce au dialogue, l'IA a répliqué d'un coup 10 jeux d'arcade classiques : Pac-Man, Tetris, Space Invaders, Snake, Flappy Bird, Breakout, Galaga, Frogger, Doodle Jump et Sudoku. Chacun est jouable directement en ligne et dispose de son propre système de classement.
 
-![Accueil de WotAI Games — collection de 10 jeux d'arcade classiques](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.png)
+![Accueil de WotAI Games — collection de 10 jeux d'arcade classiques](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.webp)
 
 ![Tetris (WotAI Games, généré par Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-tetris.png)
 
-![Pac-Man (WotAI Games, généré par Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.png)
+![Pac-Man (WotAI Games, généré par Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.webp)
 
 > 🔗 Jouer en ligne : [games.wotai.co](https://games.wotai.co/) ｜ Rétrospective : [We vibe coded 10 classic arcade games with Claude Code](https://wotai.co/blog/wotai-games-vibe-coded-arcade-classics)
 
@@ -390,7 +390,7 @@ Le designer [Ricardo de Zoete (Hammy)](https://x.com/RicardoDeZoete) a créé av
 
 En juillet 2026, le développeur de la communauté chinoise [wangzifan396-wzf](https://github.com/wangzifan396-wzf) a open-sourcé [mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) — **100 mini-jeux navigateur créés et peaufinés en continu par une seule personne avec le Vibe Coding**, tous en un seul fichier HTML sans aucune dépendance, lancés d'un simple double-clic. Les genres couvrent l'action, la stratégie, la défense de tour, la gestion, les cartes, la physique, le raisonnement, la course, le rythme, les jeux de plateau et les casse-tête ; certains atteignent déjà une profondeur digne d'un vrai produit : campagnes multi-chapitres, système d'évolution, codes de sauvegarde synchronisés entre appareils. L'ensemble du projet est open source sous licence MIT, et le catalogue en ligne permet de jouer directement.
 
-![Catalogue en ligne des 100 jeux navigateur (projet open source Vibe Coding 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
+![Catalogue en ligne des 100 jeux navigateur (projet open source Vibe Coding 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.webp)
 
 ![« Neon 2048 » : expédition de 18 nœuds en six chapitres + plusieurs modes et système d'outils](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
@@ -400,7 +400,7 @@ En juillet 2026, le développeur de la communauté chinoise [wangzifan396-wzf](h
 
 En février 2026, le développeur [Trent Sterling](https://tront.xyz/blog/posts/craftmine/) a ouvert un fichier HTML vierge parce que ses neveux voulaient jouer à Minecraft sans en avoir la version officielle, et a créé [CraftMine](https://tront.xyz/craftmine/) avec Claude Code par simple dialogue — une réplique de Minecraft en version web **de 6 820 lignes dans un seul fichier** : 46 blocs (dont 21 blocs sur le thème de l'enfer de DOOM), 36 créatures (du poulet au boss titan de 300 PV), 19 armes (dont la BFG 9000), 5 biomes, un cycle jour/nuit, et même le **multijoueur P2P**. Aucune étape de compilation : il suffit d'ouvrir la page web pour jouer.
 
-![CraftMine : réplique de Minecraft en un seul fichier de 6 820 lignes (généré par Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.png)
+![CraftMine : réplique de Minecraft en un seul fichier de 6 820 lignes (généré par Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.webp)
 
 > 🔗 Jouer en ligne : [tront.xyz/craftmine](https://tront.xyz/craftmine/) ｜ Rétrospective : [CraftMine: A 6,820-line vibe-coded Minecraft clone in one HTML file](https://tront.xyz/blog/posts/craftmine/)
 
@@ -418,7 +418,7 @@ En mars 2026, un développeur a combiné la version open source de Super Mario a
 
 En juillet 2026, le développeur [Dr. Josh Simmons](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it) n'a envoyé qu'un seul prompt au grand modèle chinois **Kimi K3** pour qu'il crée un jeu 3D jouable à la première personne : collecter des noyaux de données dans une installation de serveurs générée par procédure, esquiver des drones de patrouille, et descendre trois étages en monte-charge. Le jeu entier est jouable dès sa première génération ; deux tours de conversation suffisent pour corriger deux bugs et terminer le jeu en douceur, pour un coût total d'environ **2 dollars**.
 
-![Jeu 3D dans une installation de serveurs généré par Kimi K3 avec un seul prompt](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.png)
+![Jeu 3D dans une installation de serveurs généré par Kimi K3 avec un seul prompt](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.webp)
 
 > 🔗 Jouer en ligne : [kimi-test-theta.vercel.app](https://kimi-test-theta.vercel.app/) ｜ Code source : [github.com/jcpsimmons/kimi-test](https://github.com/jcpsimmons/kimi-test) ｜ Rétrospective du développeur : [Kimi K3 Built the Game. I Still Had to Play It.](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it)
 
@@ -426,7 +426,7 @@ En juillet 2026, le développeur [Dr. Josh Simmons](https://www.drjoshcsimmons.c
 
 Le 17 juillet 2026, après la sortie du modèle Kimi K3 par Moonshot AI, la plateforme de jeux web [K399](https://www.k399.games/) a été lancée en parallèle — des dizaines de jeux tous créés avec la participation du modèle K3, jouables d'un clic. Les genres couvrent le tir 3D, les jeux de rythme, l'action en défilement horizontal, les AVG de drame de palais, les puzzles 3D et même les mondes ouverts : on y trouve aussi bien des répliques de classiques comme *The Legend of Zelda*, *Black Myth: Wukong*, *Bubble Land* et *Vampire Survivors*, que des jeux originaux bien plus aboutis qu'une simple démo, comme *Pioneer Practice Ground* (un FPS 3D avec déplacement, saut, glissade et tir à la visée), le monde ouvert *SpiderPunk*, ou encore *Fengque Shen Gong*, un AVG de drame de palais avec cinq chapitres d'intrigue principale, huit intrigues secondaires et 32 événements aléatoires.
 
-![Interface de la plateforme K399 — K3 Game Arcade, liste de jeux jouables d'un clic](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
+![Interface de la plateforme K399 — K3 Game Arcade, liste de jeux jouables d'un clic](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.webp)
 
 ![SpiderPunk, jeu en monde ouvert sur K399 : se balancer entre les gratte-ciels d'une ville cyberpunk (généré par le modèle K3, image de gameplay réel)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 

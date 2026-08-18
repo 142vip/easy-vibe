@@ -80,7 +80,7 @@ Phiên bản đầu giải quyết mười lăm phút sau họp: lấy mục ti�
 
 <figure class="product-shot">
   <a href="https://www.notion.com/help/guides/find-answers-and-generate-reports-with-enterprise-search" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.png" alt="Giao diện Notion Enterprise Search" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.webp" alt="Giao diện Notion Enterprise Search" loading="lazy" />
   </a>
   <figcaption><strong>Notion Enterprise Search:</strong> một câu hỏi tìm trong Notion và Slack, chuyển giữa Ask, Research và Build. Trọng tâm là nguồn và quyền hiện có, không chỉ tải một PDF.</figcaption>
 </figure>
@@ -97,7 +97,7 @@ Sun Life xử lý hơn mười nghìn câu hỏi nội bộ mỗi tuần; Morgan
 
 <figure class="product-shot">
   <a href="https://mena.thomsonreuters.com/en/products-services/legal/cocounsel.html" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.jpg" alt="Thomson Reuters CoCounsel soạn hợp đồng và nghiên cứu" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.webp" alt="Thomson Reuters CoCounsel soạn hợp đồng và nghiên cứu" loading="lazy" />
   </a>
   <figcaption><strong>Thomson Reuters CoCounsel:</strong> hiển thị tiến độ soạn và nghiên cứu rồi mở trong Word. AI đọc, tìm căn cứ và viết; chuyên gia kiểm tra và hoàn tất trong tài liệu quen thuộc.</figcaption>
 </figure>
@@ -129,7 +129,7 @@ Công cụ nội bộ có thể bắt đầu từ CI thất bại: đọc lỗi 
 
 <figure class="product-shot">
   <a href="https://blog.siemens.com/2026/02/the-digital-enterprise-and-the-synthesis-of-industrial-ai-digital-twin-and-data/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.jpg" alt="Siemens Engineering Copilot cạnh TIA Portal" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.webp" alt="Siemens Engineering Copilot cạnh TIA Portal" loading="lazy" />
   </a>
   <figcaption><strong>Siemens Engineering Copilot:</strong> Copilot mở cạnh TIA Portal và thấy dự án, cấu trúc thiết bị, tài liệu hiện tại thay vì trả lời chung “vì sao máy hỏng”.</figcaption>
 </figure>
@@ -163,7 +163,7 @@ Không có đối tác lâm sàng, dữ liệu và tuân thủ thì đừng bắ
 
 <figure class="product-shot">
   <a href="https://www.canva.com/newsroom/news/magic-studio/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.png" alt="Canva Magic Switch đổi kích thước, dịch và chuyển tài liệu" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.webp" alt="Canva Magic Switch đổi kích thước, dịch và chuyển tài liệu" loading="lazy" />
   </a>
   <figcaption><strong>Canva Magic Switch:</strong> một thiết kế đã duyệt đổi sang kích thước, ngôn ngữ hay tài liệu. Đây là việc lặp lại biến một tư liệu thành nhiều phiên bản.</figcaption>
 </figure>
@@ -197,7 +197,7 @@ Hãy nghiên cứu loại hàng khó chọn, không phải cụm “mua sắm AI
 
 <figure class="product-shot">
   <a href="https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.jpg" alt="Lập kế hoạch du lịch bằng hội thoại của Expedia" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.webp" alt="Lập kế hoạch du lịch bằng hội thoại của Expedia" loading="lazy" />
   </a>
   <figcaption><strong>Lập kế hoạch Expedia:</strong> người dùng so sánh Maui và Kauai cho tuần trăng mật rồi lưu khách sạn vào Trips. Vòng tròn khép lại khi chat vào lưu, hành trình và đặt chỗ.</figcaption>
 </figure>
@@ -236,7 +236,7 @@ Hãy cho điều khiển, không chỉ “tạo lại”. Xác định sản ph�
 
 <figure class="product-shot">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.jpg" alt="Duolingo Max giải thích câu trả lời sai" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.webp" alt="Duolingo Max giải thích câu trả lời sai" loading="lazy" />
   </a>
   <figcaption><strong>Explain My Answer:</strong> dẫn câu trả lời, giải thích vì sao vestidos đi với gustan và cho hỏi thêm ví dụ. Nó bắt đúng khoảnh khắc “sao vừa sai?” thay vì mở bài ngữ pháp mới.</figcaption>
 </figure>
@@ -249,7 +249,7 @@ Cách này dùng cho tư thế tập, thông số máy ảnh, xem lại cờ hay
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.jpg" alt="Trình phát Spotify AI DJ" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.webp" alt="Trình phát Spotify AI DJ" loading="lazy" />
   </a>
   <figcaption><strong>Spotify AI DJ:</strong> là lối phát liên tục trên trang chủ nối với bài và điều khiển. Nó dựa vào lịch sử nghe, kho nội dung và hành động phát, không chỉ giọng dẫn.</figcaption>
 </figure>

@@ -104,11 +104,11 @@ Wenn die Oberfläche völlig neu ist, lesen Sie ergänzend die [IDE-Grundlagen](
 
 Frühe Programmierer arbeiteten in Terminal und einfachen Editoren.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.png)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.webp)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
 
 Auf Servern werden Werkzeuge wie Vim bis heute verwendet.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.webp)
 
 Moderne IDEs verbinden Editor, Dateibaum, Terminal, Ausführung, Debugging und Git. [Visual Studio Code](https://code.visualstudio.com/) ist leicht und erweiterbar.
 
@@ -128,7 +128,7 @@ Mehr Details finden Sie in der [visuellen Erklärung der IDE](/de-de/appendix/2-
 
 Eine normale IDE führt Ihre Befehle aus. Eine AI IDE versteht zusätzlich natürliche Sprache, liest mehrere Projektdateien, schlägt einen Plan vor, ändert Dateien und kann Befehle ausführen. Sie bleibt trotzdem ein Werkzeug: Änderungen und Ergebnis müssen geprüft werden.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.webp)
 
 ::: info Häufig verwendete AI-Entwicklungsumgebungen
 
@@ -140,7 +140,7 @@ Antigravity verbindet einen agentischen Arbeitsbereich mit aktuellen Modellen un
 
 Trae basiert auf der VS-Code-Oberfläche und bietet Chat- sowie Agentenmodi. Dieses Kapitel nutzt Trae als Beispiel, die Arbeitsweise lässt sich aber auf andere Werkzeuge übertragen.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.webp)
 
 ### [Cursor](https://cursor.com/)
 
@@ -194,15 +194,15 @@ API-Schlüssel sind geheime Zugangsdaten. Zeigen Sie sie nie in Screenshots, Rep
 
 Links steht der Datei-Explorer, in der Mitte der Editor und rechts der AI-Bereich.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.webp)
 
 Die rechte Seitenleiste öffnet Chat oder Agent.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.webp)
 
 Im Agentenmodus kann Trae planen und Werkzeuge verwenden.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.webp)
 
 MCP kann zusätzliche externe Werkzeuge verfügbar machen. Für das erste lokale Spiel wird es nicht benötigt.
 
@@ -210,7 +210,7 @@ MCP kann zusätzliche externe Werkzeuge verfügbar machen. Für das erste lokale
 
 Wählen Sie ein Modell bewusst. Wenn eines eine Aufgabe nicht löst, probieren Sie nach dem Sichern des Projekts ein anderes und vergleichen Sie das Ergebnis.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.webp)
 
 ### 4.2 Schritt eins: Einen leeren Ordner öffnen
 
@@ -218,9 +218,9 @@ Erstellen Sie einen Ordner `snake-game-react` und öffnen Sie ihn über **Open F
 
 Wenn Sie einen eigenen Modellanbieter hinzufügen, öffnen Sie die Modellverwaltung, tragen Anbieter, Modell-ID und Schlüssel ein und speichern. Die beiden folgenden Bilder zeigen den Weg; echte Schlüssel bleiben verdeckt.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.webp)
 
 ### 4.3 Schritt zwei: Im Chat ein React-Snake-Spiel anfordern
 
@@ -230,13 +230,13 @@ Geben Sie ein klares Ziel ein:
 
 Der Agent kann vor einem Befehl auf Bestätigung warten. Lesen Sie den Befehl und klicken Sie nur dann auf **Run**, wenn er zum Projekt gehört.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.webp)
 
 Manche Werkzeuge fragen im Terminal nach `y` oder einem Projektnamen.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.webp)
 
 Wenn die Frage unklar ist, senden Sie einen Screenshot an AI und bitten nur um Erklärung der nächsten Eingabe.
 
@@ -244,7 +244,7 @@ Wenn die Frage unklar ist, senden Sie einen Screenshot an AI und bitten nur um E
 
 Ein laufender Entwicklungsserver beendet sich nicht von selbst. Öffnen Sie die angezeigte lokale Adresse im Browser; im Agentenfenster kann der laufende Schritt anschließend übersprungen werden.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.webp)
 
 Nach der ersten Runde sollte das Spiel im Browser laufen.
 
@@ -252,7 +252,7 @@ Nach der ersten Runde sollte das Spiel im Browser laufen.
 
 Prüfen Sie die geänderten Dateien. Bei einem schlechten Ergebnis verwenden Sie **Revert**, bevor Sie mit einer veränderten Anweisung neu beginnen.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.webp)
 
 ### 4.4 Schritt drei (optional): Die Umsetzung erklären lassen
 

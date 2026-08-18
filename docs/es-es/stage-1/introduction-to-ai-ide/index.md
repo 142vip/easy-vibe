@@ -119,13 +119,13 @@ En los primeros tiempos de la programacion, bastaban un editor de texto simple y
 
 Puedes entender un IDE como un programa especializado para "editar, gestionar, ejecutar y depurar" codigo. Los IDE tempranos tenian un aspecto muy "primitivo" y se operaban casi por completo con el teclado.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.png)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.webp)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
 
 Interfaz de terminal. Fuente de la imagen: https://en.wikipedia.org/wiki/File:Emacs-screenshot.png
 
 Los "IDE integrados" conocidos y maduros, como `Vim`, se usan a menudo para operaciones remotas en servidores.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.webp)
 
 Para trabajar con mas eficiencia, necesitamos IDE modernos que soporten operaciones con raton. Normalmente incluyen:
 
@@ -170,7 +170,7 @@ En la version mas reciente de VS Code ya hay integrado un asistente basado en un
 
 Puedes descargar e instalar VS Code, hacer clic en la entrada de la barra lateral en la esquina superior derecha y abrir el area de funciones de IA para probar estas capacidades.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.webp)
 
 Sin embargo, VS Code no es el IDE con capacidades de IA mas fuertes. Para escenarios que requieren mucha asistencia de IA al programar, a menudo conviene usar herramientas "mas inteligentes y eficientes": un buen AI IDE puede ahorrar mucho tiempo escribiendo codigo y corrigiendo bugs. A continuacion presentamos varios AI IDE populares; puedes elegir cualquiera segun tus preferencias.
 
@@ -197,7 +197,7 @@ Antigravity es un AI IDE nuevo lanzado por Google en noviembre de 2025 junto con
 
 ### [Trae](https://www.trae.ai/)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.webp)
 
 Trae es un asistente de programacion con IA lanzado por ByteDance. Soporta mas de 100 lenguajes de programacion y puede integrarse con IDE populares. Sus funciones incluyen generar codigo desde lenguaje natural, depuracion automatica y convertir disenos en componentes React/Vue. Tras la actualizacion de agosto de 2025, Trae agrego importacion inteligente de dependencias, sugerencias de renombrado, gestion de listas de tareas y mas; el modo SOLO tambien empezo a soportar generacion de backend y edicion de documentos de arquitectura tecnica.
 :::
@@ -314,15 +314,15 @@ Se recomienda a principiantes empezar con la version CN gratuita (descarga: http
 
 En cuanto a interfaz, Trae se parece mucho a VS Code: mantiene el layout clasico de tres columnas, con explorador de recursos a la izquierda, editor en el centro y panel extendido a la derecha.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.webp)
 
 La barra lateral derecha es la ventana de interaccion de Copilot, que tambien puede entenderse como ventana del Agent. Si no la ves, puedes abrirla haciendo clic en el icono de barra lateral en la esquina superior derecha de Trae.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.webp)
 
 Al abrir la barra lateral veras una opcion `Builder`: ese es el modo Agent. De forma simple, es como una "version local" de z.ai; puede operar tu entorno local, instalar runtimes, abrir paginas web, etc.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.webp)
 
 Tras hacer clic en "Builder", veras los modos "Chat" y "Builder with MCP":
 
@@ -335,7 +335,7 @@ En la zona inferior tambien veras la opcion de seleccion de modelo; al hacer cli
 
 **Ten en cuenta que aqui no se recomienda usar modo Auto (seleccion automatica de modelo). Si es la version internacional, recomendamos Gemini o GPT; si es la version china, recomendamos probar modelos nacionales como Kimi k2, MiniMax o GLM.** Cada modelo encaja mejor en escenarios distintos; no hay una regla dogmatica sobre cual es mejor. Si una tarea se atasca, cambia de modelo y usa varias pruebas para encontrar tu mejor resultado.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.webp)
 
 Esto es una introduccion breve a Trae. A continuacion, podemos repasar lo que hicimos antes en z.ai e intentar hacer lo mismo en Trae.
 
@@ -403,9 +403,9 @@ Estas opciones gratuitas son ideales para principiantes. Antes de entrar en prod
 
 Con la siguiente interfaz puedes agregarlo correctamente. Ojo: tras ver las opciones de seleccion de modelo, **debes desplazarte hasta el final**. Abajo hay una opcion "Custom Model"; solo al hacer clic podras introducir el model ID. Aqui puedes escribir directamente el model ID recomendado, por ejemplo `stepfun/step-3.5-flash:free`. Luego haz clic abajo para obtener Key, ve al sitio oficial y escribe la API Key correspondiente para usarlo normalmente.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.webp)
 :::
 
 ### 4.3 Paso 2: conversa en la barra lateral y deja que la IA disene Snake con React
@@ -423,12 +423,12 @@ Como se muestra abajo, **a veces el AI Agent se pausa durante la ejecucion porqu
 :::
 
 Como se muestra, aqui debemos hacer clic en Run para confirmar:
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.webp)
 
 Como se muestra, aqui solo necesitamos introducir y para confirmar:
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.webp)
 
 Como se muestra, aqui estamos creando una plantilla pero no sabemos como operar; podemos capturar esta parte y preguntar al modelo:
 
@@ -436,7 +436,7 @@ Como se muestra, aqui estamos creando una plantilla pero no sabemos como operar;
 
 Otra razon por la que el AI Agent se pausa es que en ese momento se ha iniciado un "service". Nuestro Snake tambien es una especie de "service". Si ves una URL como la del comando siguiente, significa que el Agent ha ejecutado un servicio local en tu ordenador; puedes visitar esa URL para abrir Snake. Como el servicio debe seguir ejecutandose, aqui parece quedar pausado. Solo tienes que hacer clic en `Skip`.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.webp)
 
 Si durante el proceso encuentras terminos o contenido que no entiendes, no te preocupes. Puedes consultar la seccion "explicacion de terminos de computacion" del apendice, preguntar directamente a la IA o plantear dudas a tiempo.
 
@@ -450,7 +450,7 @@ Podemos hacer clic en el check de la esquina inferior derecha para confirmar los
 
 Tambien conviene recordar que las modificaciones de codigo no siempre son correctas. Los Agent de IDE suelen soportar rollback. Por ejemplo, si aqui haces una modificacion equivocada o el resultado no te satisface, tras terminar puedes volver al area de entrada, hacer clic en Revert y regresar al estado anterior. Luego ajusta el texto de entrada y vuelve a intentarlo:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.webp)
 
 ### 4.4 Paso 3 (opcional): preguntar a la IA por detalles de implementacion
 

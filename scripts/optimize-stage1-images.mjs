@@ -6,7 +6,10 @@ const projectRoot = path.resolve(import.meta.dirname, '..')
 const docsRoot = path.join(projectRoot, 'docs')
 const sourceRoot = path.join(docsRoot, 'zh-cn', 'stage-1')
 const supportedRasterExtensions = new Set(['.png', '.jpg', '.jpeg'])
-const minimumSourceBytes = 200 * 1024
+// GitHub Pages can be slow in mainland China even for moderately sized files.
+// Convert screenshots from 50 KB onward so image-heavy Stage 1 lessons spend
+// less time transferring assets over high-latency connections.
+const minimumSourceBytes = 50 * 1024
 const maximumWidth = 1600
 const maximumWebpDimension = 16_380
 

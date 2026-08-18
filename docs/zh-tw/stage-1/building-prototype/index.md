@@ -337,7 +337,7 @@ AI 會返回一份結構化的需求和對應的提示詞。你自己檢查一�
 ```
 
 通常 AI 會生成類似下面的結構化提示詞：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.webp)
 
 你可以把這份提示詞稍作修改後，發給 AI IDE 生成程式碼。
 
@@ -448,12 +448,12 @@ AI 會返回一份結構化的需求和對應的提示詞。你自己檢查一�
 當核心玩法的邏輯基本生成完畢後，我們可以生成剩下部分的內容。比如此時我們點選設定或者是一些按鈕是根本無效的。
 
 你可以讓 AI 根據業務提示詞的需求進行檢查，生成未生成的部分，又或者是讓 AI 直接補充未實現完成的頁面，你也可以指定一個頁面讓 AI 補充實現，直到頁面可以被點選，功能可以正常互動：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.webp)
 
 等待片刻後，我們能夠看到程式已經在之前的基礎上補充了多個頁面和可互動功能：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.webp)
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.webp)
 
 此時你只需要人工點選每個你所關注的功能和按鍵，確保互動正常即可，如果有不能互動的功能，你可以和 AI 溝通，讓它幫你修復。
 
@@ -539,7 +539,7 @@ AI 會返回一份結構化的需求和對應的提示詞。你自己檢查一�
 走通生成功能後，我們還要確保模板庫的功能正常，從頁面的生成卡片上我們能夠知道模版庫收藏功能並沒有實現，此時需要和 AI 進一步深入對話，“請你幫我確保需求 [此處貼上上面的 2. 的內容] 正常，可以點選一個結果收藏對應的模板，點開後能看到生成引數”
 
 生成往往不是一蹴而就，時常需要截圖修正：
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.webp)
 
 最後得到預期結果：
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.webp)

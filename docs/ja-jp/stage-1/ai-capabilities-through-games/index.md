@@ -130,7 +130,7 @@ AI の登場により、初めて一般人に全く新しい可能性がもた�
 この「対話即プログラミング」のモードにより、プログラミングは「コードを書く」ことから「要件を説明する」ことになりました。あなたは技術的な詳細を気にする必要がなく、AI に欲しいものを明確に伝えるだけで、アイデアを実行可能なプログラムに変えてくれます。これが AI 時代のプログラミングの新しいパラダイム——**Vibe Coding（バイブコーディング）**です。
 :::
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.webp)
 
 シンプルな要件を入力して**フルスタック開発**ボタンをクリックすると、Web ページの完全な作成プロセスをリアルタイムで見ることができます。通常、コーヒーを淹れる時間で Web ページが自動的に生成されます！
 
@@ -143,7 +143,7 @@ AI の登場により、初めて一般人に全く新しい可能性がもた�
 5. シンプルで美しいインターフェース
 ```
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.webp)
 
 生成が完了すると、右側にブラウズ可能な Web ページのインターフェースが表示されます。ページのコンテンツを上下にスクロールしたり、ページ上部の 🧭 ボタンをクリックしてフルスクリーンモードに切り替えて効果を確認したりできます。
 
@@ -362,11 +362,11 @@ z.ai の回答は次のようになります：
 
 [WotAI Games](https://games.wotai.co/) は、完全に Claude Code（Vibe Coding）でゼロから開発され、**ゲームエンジンを一切使っていない**Web ゲームコレクションです。対話で AI に一度に 10 本のクラシックアーケードゲームを再現させました：パックマン、テトリス、スペースインベーダー、スネークゲーム、Flappy Bird、ブロック崩し、ギャラクシアン、カエル渡り、Doodle Jump、数独。どれもそのままオンラインで遊べて、ランキングシステムも内蔵されています。
 
-![WotAI Games トップページ——10 本のクラシックアーケードゲームコレクション](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.png)
+![WotAI Games トップページ——10 本のクラシックアーケードゲームコレクション](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.webp)
 
 ![テトリス（WotAI Games、Vibe Coding で生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-tetris.png)
 
-![パックマン（WotAI Games、Vibe Coding で生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.png)
+![パックマン（WotAI Games、Vibe Coding で生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.webp)
 
 > 🔗 オンラインで遊ぶ：[games.wotai.co](https://games.wotai.co/) ｜ 開発レポート：[We vibe coded 10 classic arcade games with Claude Code](https://wotai.co/blog/wotai-games-vibe-coded-arcade-classics)
 
@@ -390,7 +390,7 @@ z.ai の回答は次のようになります：
 
 2026 年 7 月、中国語圏コミュニティの開発者 [wangzifan396-wzf](https://github.com/wangzifan396-wzf) が [mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) をオープンソース化しました——**Vibe Coding で一人で作り、磨き続けた 100 本のブラウザミニゲーム**で、すべて依存ゼロの単一 HTML ファイル、ダブルクリックでそのまま実行できます。ゲームプレイはアクション、ストラテジー、タワーディフェンス、経営、カード、物理、推理、レーシング、リズム、ボードゲーム、パズルなど多岐にわたり、中には多章構成のキャンペーン、育成システム、セーブコードによるデバイス間同期といった、完成度の高いプロダクト級の深みに達した作品も少なくありません。プロジェクト全体は MIT ライセンスで公開され、オンラインカタログから直接遊べます。
 
-![100 本のブラウザゲームのオンラインカタログ（2026 年 Vibe Coding オープンソースプロジェクト）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
+![100 本のブラウザゲームのオンラインカタログ（2026 年 Vibe Coding オープンソースプロジェクト）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.webp)
 
 ![『ネオン2048』：六章 18 ノードの遠征 + 複数のモードとツールシステム](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
@@ -400,7 +400,7 @@ z.ai の回答は次のようになります：
 
 2026 年 2 月、開発者 [Trent Sterling](https://tront.xyz/blog/posts/craftmine/) は、甥っ子たちが『マインクラフト』を遊びたがっていたのに正規版がなかったため、白紙の HTML ファイルを開いて、Claude Code で純粋な対話を重ねて [CraftMine](https://tront.xyz/craftmine/) を作りました——**6,820 行・単一ファイル**の Web 版『マインクラフト』クローンです：46 種類のブロック（さらに 21 種類の DOOM ヘルテーマブロックを追加）、36 種類のモブ（ひよこから HP 300 のタイタンボスまで）、19 種類の武器（BFG 9000 を含む）、5 つのバイオーム、昼夜サイクル、さらには **P2P マルチプレイ**にも対応しています。ビルド手順は一切不要で、Web ページを開くだけで遊べます。
 
-![CraftMine：『マインクラフト』クローン、6,820 行の単一ファイル（Vibe Coding で生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.png)
+![CraftMine：『マインクラフト』クローン、6,820 行の単一ファイル（Vibe Coding で生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.webp)
 
 > 🔗 オンラインで遊ぶ：[tront.xyz/craftmine](https://tront.xyz/craftmine/) ｜ 開発レポート：[CraftMine: A 6,820-line vibe-coded Minecraft clone in one HTML file](https://tront.xyz/blog/posts/craftmine/)
 
@@ -418,7 +418,7 @@ z.ai の回答は次のようになります：
 
 2026 年 7 月、開発者 [Dr. Josh Simmons](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it) は、中国産大規模モデル **Kimi K3** にプロンプトを一つ送っただけで、プレイ可能な一人称 3D ゲームを作らせました：プロシージャル生成されたサーバー施設でデータコアを収集し、巡回ドローンをかわし、貨物エレベーターで 3 階下に降ります。ゲーム全体が一度の生成で遊べる状態になり、さらに 2 ラウンドの対話で 2 つのバグを修正すればスムーズにクリアできます。総費用は約 **2 ドル**でした。
 
-![Kimi K3 がワンプロンプトで生成した 3D サーバー施設ゲーム](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.png)
+![Kimi K3 がワンプロンプトで生成した 3D サーバー施設ゲーム](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.webp)
 
 > 🔗 オンラインで遊ぶ：[kimi-test-theta.vercel.app](https://kimi-test-theta.vercel.app/) ｜ ソースコード：[github.com/jcpsimmons/kimi-test](https://github.com/jcpsimmons/kimi-test) ｜ 開発者の振り返り：[Kimi K3 Built the Game. I Still Had to Play It.](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it)
 
@@ -426,7 +426,7 @@ z.ai の回答は次のようになります：
 
 2026 年 7 月 17 日、月之暗面は Kimi K3 モデルの発表と同時に、Web ゲームプラットフォーム [K399](https://www.k399.games/) を公開しました——中の数十本のゲームはすべて K3 モデルが制作に関わっており、クリックするだけで遊べます。ジャンルは 3D シューティング、リズムゲーム、横スクロールアクション、宮廷ドラマ AVG、3D パズル、さらにはオープンワールドまでカバー：『ゼルダの伝説』『黒神話：悟空』『泡泡堂』『ヴァンパイアサバイバーズ』などのクラシックな遊びを再現した作品に加え、『先鋒練習場』（移動、ジャンプ、スライディング、エイム射撃ができる 3D FPS）、オープンワールド『SpiderPunk』、五章のメインストーリー・八本のサブストーリー・32 種のランダムイベントを持つ宮廷ドラマ AVG『鳳闕深宮』など、デモの域をはるかに超えたオリジナルゲームもあります。
 
-![K399 プラットフォームのインターフェース——K3 Game Arcade、ゲームリストをクリックするだけで遊べる](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
+![K399 プラットフォームのインターフェース——K3 Game Arcade、ゲームリストをクリックするだけで遊べる](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.webp)
 
 ![K399 のオープンワールドゲーム SpiderPunk：サイバー都市の高層ビルの間を蜘蛛の糸でスイング（K3 モデル生成、実際のプレイ画面）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 

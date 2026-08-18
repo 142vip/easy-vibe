@@ -138,7 +138,7 @@ Nó chuyển trọng tâm từ "viết cú pháp" sang "mô tả yêu cầu". B�
 
 :::
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.webp)
 
 Nhập yêu cầu đơn giản của chúng ta rồi bấm nút **Phát triển full-stack**, bạn có thể xem trực tiếp toàn bộ quá trình tạo trang web. Thông thường chỉ cần thời gian pha một tách cà phê, trang web sẽ tự động được tạo xong!
 
@@ -151,7 +151,7 @@ Làm giúp tôi game Snake:
 5. Giao diện gọn và đẹp
 ```
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.webp)
 
 Khi xong, bạn sẽ thấy trang web ở bên phải. Bạn có thể cuộn lên xuống để xem nội dung, hoặc bấm nút 🧭 ở phía trên để chuyển sang chế độ toàn màn hình.
 
@@ -393,11 +393,11 @@ Câu trả lời là có. Dưới đây là **8** case study thực tế công k
 
 [WotAI Games](https://games.wotai.co/) là bộ sưu tập game trình duyệt được phát triển từ con số 0 hoàn toàn bằng Claude Code (Vibe Coding), **không dùng bất kỳ engine game nào**. Qua đối thoại, AI làm lại một mạch 10 game arcade kinh điển: Pac-Man, Tetris, Space Invaders, Snake, Flappy Bird, Breakout, Galaxian, Frogger, Doodle Jump và Sudoku. Game nào cũng chơi trực tiếp trên web được, còn kèm hệ thống bảng xếp hạng.
 
-![Trang chủ WotAI Games — bộ sưu tập 10 game arcade kinh điển](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.png)
+![Trang chủ WotAI Games — bộ sưu tập 10 game arcade kinh điển](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.webp)
 
 ![Tetris (WotAI Games, tạo bằng Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-tetris.png)
 
-![Pac-Man (WotAI Games, tạo bằng Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.png)
+![Pac-Man (WotAI Games, tạo bằng Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.webp)
 
 > 🔗 Chơi thử trực tuyến: [games.wotai.co](https://games.wotai.co/) ｜ Bài viết tổng kết: [We vibe coded 10 classic arcade games with Claude Code](https://wotai.co/blog/wotai-games-vibe-coded-arcade-classics)
 
@@ -421,7 +421,7 @@ Nhà thiết kế [Ricardo de Zoete (Hammy)](https://x.com/RicardoDeZoete) dùng
 
 Tháng 7/2026, lập trình viên cộng đồng Trung Quốc [wangzifan396-wzf](https://github.com/wangzifan396-wzf) mở mã nguồn [mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) — **100 game trình duyệt do một người dùng Vibe Coding làm ra và liên tục trau chuốt**, tất cả đều là file HTML đơn lẻ không phụ thuộc thư viện nào, bấm đúp là chạy. Thể loại trải khắp hành động, chiến thuật, phòng thủ tháp, kinh doanh, bài, vật lý, suy luận, đua tốc độ, nhịp điệu, cờ và giải đố; nhiều game trong số đó đã đạt độ sâu cấp sản phẩm hoàn chỉnh: chiến dịch nhiều chương, hệ thống nuôi dưỡng, mã lưu đồng bộ giữa các thiết bị. Toàn bộ dự án mở mã nguồn theo giấy phép MIT, danh mục trực tuyến có thể chơi ngay.
 
-![Danh mục trực tuyến 100 game trình duyệt (dự án mã nguồn mở Vibe Coding 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
+![Danh mục trực tuyến 100 game trình duyệt (dự án mã nguồn mở Vibe Coding 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.webp)
 
 ![Neon 2048: chuyến thám hiểm 6 chương 18 điểm mốc + nhiều chế độ và hệ thống công cụ](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
@@ -431,7 +431,7 @@ Tháng 7/2026, lập trình viên cộng đồng Trung Quốc [wangzifan396-wzf]
 
 Tháng 2/2026, lập trình viên [Trent Sterling](https://tront.xyz/blog/posts/craftmine/) vì các cháu muốn chơi *Minecraft* nhưng không có bản chính hãng, bèn mở một file HTML trống, dùng Claude Code qua đối thoại thuần túy làm ra [CraftMine](https://tront.xyz/craftmine/) — một bản làm lại *Minecraft* chạy trên web **6.820 dòng, đơn file**: 46 loại khối (còn thêm 21 loại khối chủ đề địa ngục DOOM), 36 loại sinh vật (từ gà con đến boss Titan 300 máu), 19 loại vũ khí (gồm cả BFG 9000), 5 quần xã sinh thái, chu kỳ ngày đêm, thậm chí hỗ trợ **chơi nhiều người P2P**. Không cần bất kỳ bước build nào, mở trang web là chơi được.
 
-![CraftMine: bản làm lại Minecraft, 6.820 dòng trong một file (tạo bằng Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.png)
+![CraftMine: bản làm lại Minecraft, 6.820 dòng trong một file (tạo bằng Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.webp)
 
 > 🔗 Chơi thử trực tuyến: [tront.xyz/craftmine](https://tront.xyz/craftmine/) ｜ Bài tổng kết phát triển: [CraftMine: A 6,820-line vibe-coded Minecraft clone in one HTML file](https://tront.xyz/blog/posts/craftmine/)
 
@@ -449,7 +449,7 @@ Tháng 3/2026, một lập trình viên kết hợp bản *Super Mario* mã ngu�
 
 Tháng 7/2026, lập trình viên [Dr. Josh Simmons](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it) chỉ gửi **Kimi K3** — mô hình lớn nội địa Trung Quốc — một prompt duy nhất, là nó làm ra một game 3D góc nhìn thứ nhất chơi được: thu thập lõi dữ liệu trong cơ sở máy chủ được sinh theo thủ tục, né tránh drone tuần tra, đi thang máy chở hàng xuống ba tầng. Cả game sinh một lần là chơi được, rồi chỉ cần hai vòng đối thoại sửa hai bug là thông quan suôn sẻ, tổng chi phí khoảng **2 đô la**.
 
-![Game 3D cơ sở máy chủ do Kimi K3 tạo từ một prompt duy nhất](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.png)
+![Game 3D cơ sở máy chủ do Kimi K3 tạo từ một prompt duy nhất](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.webp)
 
 > 🔗 Chơi thử trực tuyến: [kimi-test-theta.vercel.app](https://kimi-test-theta.vercel.app/) ｜ Mã nguồn: [github.com/jcpsimmons/kimi-test](https://github.com/jcpsimmons/kimi-test) ｜ Bài tổng kết của tác giả: [Kimi K3 Built the Game. I Still Had to Play It.](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it)
 
@@ -457,7 +457,7 @@ Tháng 7/2026, lập trình viên [Dr. Josh Simmons](https://www.drjoshcsimmons.
 
 Ngày 17/7/2026, Moonshot AI phát hành mô hình Kimi K3, đồng thời ra mắt nền tảng game trình duyệt [K399](https://www.k399.games/) — trong đó hàng chục game đều do mô hình K3 tham gia làm ra, nhấn vào là chơi. Thể loại trải khắp bắn súng 3D, game âm nhạc, hành động ngang màn hình, AVG cung đấu, giải đố 3D, thậm chí cả thế giới mở: vừa có tác phẩm làm lại lối chơi kinh điển như *The Legend of Zelda*, *Black Myth: Wukong*, *Bubble Land*, *Vampire Survivors*, vừa có những game gốc độ hoàn thiện vượt xa Demo như *Pioneer Practice Ground* (FPS 3D di chuyển, nhảy, trượt, ngắm bắn), thế giới mở *SpiderPunk*, AVG cung đấu *Fengque Shen Gong* với năm chương chính tuyến tám nhánh phụ 32 sự kiện ngẫu nhiên.
 
-![Giao diện nền tảng K399 — K3 Game Arcade, danh sách game nhấn vào là chơi](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
+![Giao diện nền tảng K399 — K3 Game Arcade, danh sách game nhấn vào là chơi](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.webp)
 
 ![SpiderPunk, game thế giới mở trên K399: đu tơ nhện giữa các tòa nhà thành phố cyberpunk (do mô hình K3 tạo, hình ảnh chơi thực tế)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 

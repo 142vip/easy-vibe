@@ -142,7 +142,7 @@ Que la primera versión de la idea sea mala no es un problema: **terminar algo q
 
 La dificultad empieza cuando una visión completa parece demasiado grande para comenzar. Para evitar que «algún día lo haré» se convierta en excusa, utilizaremos acciones repetibles: abrir posibilidades, reducir, descomponer, dibujar, estudiar ejemplos y preguntar pronto.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image5.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image5.webp)
 
 ## 2.1 Del pensamiento a la solución: abrir y cerrar con el doble diamante
 

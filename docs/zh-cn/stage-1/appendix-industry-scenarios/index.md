@@ -80,7 +80,7 @@ McKinsey 对 B2B 销售的研究把应用拆到完整交易周期：寻找线索
 
 <figure class="product-shot">
   <a href="https://www.notion.com/help/guides/find-answers-and-generate-reports-with-enterprise-search" target="_blank" rel="noreferrer">
-    <img src="./images/products/notion-enterprise-search.png" alt="Notion Enterprise Search 企业搜索界面" loading="lazy" />
+    <img src="./images/products/notion-enterprise-search.webp" alt="Notion Enterprise Search 企业搜索界面" loading="lazy" />
   </a>
   <figcaption><strong>Notion Enterprise Search：</strong>同一个问题可以跨 Notion 与 Slack 查找，用户还能在 Ask、Research 和 Build 之间切换。企业知识助手的产品形态，重点是接入现有资料和权限，而不只是上传一份 PDF。</figcaption>
 </figure>
@@ -97,7 +97,7 @@ Sun Life 的内部助手每周处理一万多次员工查询；Morgan Stanley �
 
 <figure class="product-shot">
   <a href="https://mena.thomsonreuters.com/en/products-services/legal/cocounsel.html" target="_blank" rel="noreferrer">
-    <img src="./images/products/cocounsel.jpg" alt="Thomson Reuters CoCounsel 合同起草与研究界面" loading="lazy" />
+    <img src="./images/products/cocounsel.webp" alt="Thomson Reuters CoCounsel 合同起草与研究界面" loading="lazy" />
   </a>
   <figcaption><strong>Thomson Reuters CoCounsel：</strong>左侧显示“起草”和“研究”两项任务的进度，完成后再把草稿打开到 Word。AI 先读材料、找依据、起草，专业人员仍在熟悉的文档里复核和定稿。</figcaption>
 </figure>
@@ -129,7 +129,7 @@ Thomson Reuters 的 2025 年调查显示，法律、税务、风控等专业服�
 
 <figure class="product-shot">
   <a href="https://blog.siemens.com/2026/02/the-digital-enterprise-and-the-synthesis-of-industrial-ai-digital-twin-and-data/" target="_blank" rel="noreferrer">
-    <img src="./images/products/siemens-industrial-copilot.jpg" alt="Siemens Engineering Copilot 与 TIA Portal 并排运行" loading="lazy" />
+    <img src="./images/products/siemens-industrial-copilot.webp" alt="Siemens Engineering Copilot 与 TIA Portal 并排运行" loading="lazy" />
   </a>
   <figcaption><strong>Siemens Engineering Copilot：</strong>右侧 Copilot 与左侧 TIA Portal 同时打开。工程师提问时，助手面对的是当前自动化项目、设备结构和工程文档，而不是脱离现场回答一个宽泛的“机器为什么坏了”。</figcaption>
 </figure>
@@ -163,7 +163,7 @@ Abridge 等环境式记录产品，会从医患对话生成结构化病历草稿
 
 <figure class="product-shot">
   <a href="https://www.canva.com/newsroom/news/magic-studio/" target="_blank" rel="noreferrer">
-    <img src="./images/products/canva-magic-switch.png" alt="Canva Magic Switch 的改尺寸、翻译与转文档菜单" loading="lazy" />
+    <img src="./images/products/canva-magic-switch.webp" alt="Canva Magic Switch 的改尺寸、翻译与转文档菜单" loading="lazy" />
   </a>
   <figcaption><strong>Canva Magic Switch：</strong>同一份设计可以继续改尺寸、翻译或转成文档。对内容团队来说，这正是“一份确认过的素材，接着做出多个渠道版本”的那段高频工作。</figcaption>
 </figure>
@@ -197,7 +197,7 @@ C 端应用最容易犯的错，是把同一个聊天框换七种提示词。下
 
 <figure class="product-shot">
   <a href="https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/" target="_blank" rel="noreferrer">
-    <img src="./images/products/expedia-chatgpt.jpg" alt="Expedia 对话式旅行规划界面" loading="lazy" />
+    <img src="./images/products/expedia-chatgpt.webp" alt="Expedia 对话式旅行规划界面" loading="lazy" />
   </a>
   <figcaption><strong>Expedia 对话式旅行规划：</strong>用户从“蜜月去 Maui 还是 Kauai”聊起，得到酒店建议后可以直接保存到 Trips。真正形成产品闭环的，是聊天结果进入了收藏、行程和预订。</figcaption>
 </figure>
@@ -236,7 +236,7 @@ C 端应用最容易犯的错，是把同一个聊天框换七种提示词。下
 
 <figure class="product-shot">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="./images/products/duolingo-explain.jpg" alt="Duolingo Max Explain My Answer 的答错解释界面" loading="lazy" />
+    <img src="./images/products/duolingo-explain.webp" alt="Duolingo Max Explain My Answer 的答错解释界面" loading="lazy" />
   </a>
   <figcaption><strong>Explain My Answer：</strong>中间这张界面直接引用用户刚才的答案，解释为什么复数 vestidos 要配 gustan，并允许继续要例子。它不是重新讲一节语法课，而是接住“我刚才到底错在哪”这一刻。</figcaption>
 </figure>
@@ -249,7 +249,7 @@ C 端应用最容易犯的错，是把同一个聊天框换七种提示词。下
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/" target="_blank" rel="noreferrer">
-    <img src="./images/products/spotify-ai-dj.jpg" alt="Spotify AI DJ 播放界面" loading="lazy" />
+    <img src="./images/products/spotify-ai-dj.webp" alt="Spotify AI DJ 播放界面" loading="lazy" />
   </a>
   <figcaption><strong>Spotify AI DJ：</strong>DJ 是首页里的一个持续播放入口，下面直接接着曲目和播放控制。它依靠的是用户长期收听记录、Spotify 的内容库和下一首播放动作，而不只是生成一段像主持人的话。</figcaption>
 </figure>

@@ -79,7 +79,7 @@ Combina un grafico abstracto que simbolice la IA con el texto, y exportalo como 
 
 - Introduce el prompt anterior -> compara los multiples disenos generados por el Agent.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. Confirmar el logotipo final
 
@@ -138,7 +138,7 @@ Incluso si no se te ocurre un esquema de colores en este momento, puedes encontr
   - https://colorhunt.co/
   - https://coolors.co/
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.webp)
 
 - **Buscar esquemas de colores en Google por palabras clave**
 
@@ -175,7 +175,7 @@ Puedes proporcionar retroalimentacion al Agent segun tus necesidades, por ejempl
 - "Ajusta la combinacion de colores."
 - "Elimina esta seccion de aqui."
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.webp)
 
 ## 3. Confirmar el diseno final
 
@@ -274,7 +274,7 @@ Usa los colores #171721, #FF7130, #FF3C68.
 Fondo negro y texto blanco."
 ```
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.webp)
 
 ## 3. Ejecutar el sitio web
 
@@ -337,7 +337,7 @@ Cuando hayas descargado los archivos de codigo del Agent de diseno, puedes mover
 
 - **Ejemplo:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.webp)
 
 - **Resultado:**
 

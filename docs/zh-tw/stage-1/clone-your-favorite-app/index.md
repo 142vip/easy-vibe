@@ -82,7 +82,7 @@ const duration = '約 <strong>2 小時</strong>'
 
 這次選的是 Framer 官網展示的一張頁面。大標題、導覽列、紫色山景和小按鈕都很清楚。
 
-![老師放進 Trae 的網頁截圖](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.jpg)
+![老師放進 Trae 的網頁截圖](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.webp)
 
 _截圖來源：[Framer Website Builder](https://www.framer.com/solutions/website-builder/)_
 

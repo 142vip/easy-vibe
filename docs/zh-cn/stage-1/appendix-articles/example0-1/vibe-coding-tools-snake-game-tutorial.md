@@ -213,7 +213,7 @@ AI Agent 是一种软件系统，它能够感知环境、做出决策，并自�
 
 - **效果示例**
 
-![](images/image1.png)![](images/image2.png)
+![](images/image1.png)![](images/image2.webp)
 
 ---
 
@@ -254,10 +254,10 @@ AI Agent 是一种软件系统，它能够感知环境、做出决策，并自�
   ![](images/image3.webp)
 - **贪吃蛇游戏效果：**
 
-![](images/image4.png)![](images/image5.png)
+![](images/image4.webp)![](images/image5.webp)
 
 - **价格：** 相对偏贵，但如果你有学校邮箱，可以通过学生验证以半价使用。
-  ![](images/image6.png)
+  ![](images/image6.webp)
 
 ### 2. Cursor（IDE）
 
@@ -271,7 +271,7 @@ AI Agent 是一种软件系统，它能够感知环境、做出决策，并自�
 ![](images/image8.webp)![](images/image9.webp)
 
 - **价格：**
-  ![](images/image10.png)
+  ![](images/image10.webp)
 
 ### 3. Z.ai（Web-based）
 
@@ -285,7 +285,7 @@ AI Agent 是一种软件系统，它能够感知环境、做出决策，并自�
 ![](images/image12.png)![](images/image13.png)
 
 - **价格：**
-  ![](images/image14.png)
+  ![](images/image14.webp)
 
 ### 4. Replit（Web-based）
 
@@ -299,10 +299,10 @@ AI Agent 是一种软件系统，它能够感知环境、做出决策，并自�
   ![](images/image16.webp)
 - **贪吃蛇游戏效果：**
 
-![](images/image17.png)![](images/image18.png)
+![](images/image17.webp)![](images/image18.webp)
 
 - **价格：**
-  ![](images/image19.png)
+  ![](images/image19.webp)
 
 ### 5. Minimax（Web-based）
 
@@ -311,14 +311,14 @@ AI Agent 是一种软件系统，它能够感知环境、做出决策，并自�
 - **适合的用户：** 由于它会自动运行测试和修复错误，时间与 Token 消耗都比较大，但你可以清楚看到 AI 如何定位并解决问题，从学习角度看很有价值。
 - **提示词过程：**
 
-![](images/image20.png)![](images/image21.png)![](images/image22.png)![](images/image23.webp)
+![](images/image20.webp)![](images/image21.webp)![](images/image22.webp)![](images/image23.webp)
 
 - **贪吃蛇游戏效果：**
 
-![](images/image24.png)![](images/image25.png)
+![](images/image24.webp)![](images/image25.webp)
 
 - **价格：** 免费版在复杂项目中很可能无法顺利从头跑到尾，因此更推荐付费升级，以确保项目可以完整构建。
-  ![](images/image26.png)
+  ![](images/image26.webp)
 
 ### 6. Trae（IDE）
 
@@ -332,7 +332,7 @@ AI Agent 是一种软件系统，它能够感知环境、做出决策，并自�
 ![](images/image28.webp)![](images/image29.webp)
 
 - **价格：** 价格相对亲民，即便是免费版本，也足以完成质量不错的小项目。
-  ![](images/image30.png)
+  ![](images/image30.webp)
 
 ### 7. V0（Web-based）
 
@@ -345,9 +345,9 @@ AI Agent 是一种软件系统，它能够感知环境、做出决策，并自�
   ![](images/image32.webp)
 
 - **贪吃蛇游戏效果：**
-  ![](images/image33.png)![](images/image34.png)
+  ![](images/image33.png)![](images/image34.webp)
 - **价格：** 免费用户大约可以构建 4–5 个简单项目。
-  ![](images/image35.png)
+  ![](images/image35.webp)
 
 ## 3. 平台总结对比
 

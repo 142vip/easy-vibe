@@ -130,7 +130,7 @@ Heute reicht es mit AI-Programmierplattformen aus:
 Dieses Paradigma „Gespräch als Programmierung" verwandelt das Programmieren vom „Code schreiben" zum „Anforderungen beschreiben". Du musst dich nicht um technische Details kümmern, sondern musst AI nur klar sagen, was du willst, und es verwandelt deine Ideen in lauffähige Programme. Das ist das neue Paradigma des Programmierens im AI-Zeitalter – **Vibe Coding**.
 :::
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.webp)
 
 Gib nach der Eingabe unserer einfachen Anforderung auf **Full-Stack-Entwicklung** klicken, kannst du den kompletten Erstellungsprozess der Webseite in Echtzeit beobachten. Normalerweise reicht die Zeit für eine Tasse Kaffee, und die Webseite ist automatisch fertig!
 
@@ -143,7 +143,7 @@ Erstelle ein Snake-Spiel für mich:
 5. Die Oberfläche soll übersichtlich und ansprechend sein
 ```
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.webp)
 
 Nach der Generierung siehst du rechts eine durchblätterbare Weboberfläche. Du kannst nach oben und unten scrollen, um den Seiteninhalt zu betrachten, oder oben auf die 🧭 -Schaltfläche klicken, um in den Vollbildmodus zu wechseln.
 
@@ -364,11 +364,11 @@ Die Antwort ist ja. Im Folgenden findest du **8** handverlesene, öffentlich zug
 
 [WotAI Games](https://games.wotai.co/) ist eine Sammlung von Browserspielen, die komplett von Grund auf mit Claude Code (Vibe Coding) entwickelt wurde und **keine Spielengine verwendet**. Per Dialog ließ man AI in einem Rutsch 10 klassische Arcade-Spiele nachbauen: Pac-Man, Tetris, Space Invaders, Snake, Flappy Bird, Breakout, Galaga, Frogger, Doodle Jump und Sudoku. Jedes Spiel ist direkt online spielbar und bringt ein eigenes Ranglistensystem mit.
 
-![Startseite von WotAI Games – Sammlung von 10 klassischen Arcade-Spielen](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.png)
+![Startseite von WotAI Games – Sammlung von 10 klassischen Arcade-Spielen](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.webp)
 
 ![Tetris (WotAI Games, per Vibe Coding generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-tetris.png)
 
-![Pac-Man (WotAI Games, per Vibe Coding generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.png)
+![Pac-Man (WotAI Games, per Vibe Coding generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.webp)
 
 > 🔗 Online spielen: [games.wotai.co](https://games.wotai.co/) ｜ Entwicklungs-Rückblick: [We vibe coded 10 classic arcade games with Claude Code](https://wotai.co/blog/wotai-games-vibe-coded-arcade-classics)
 
@@ -392,7 +392,7 @@ Der Designer [Ricardo de Zoete (Hammy)](https://x.com/RicardoDeZoete) hat mit de
 
 Im Juli 2026 hat der Entwickler [wangzifan396-wzf](https://github.com/wangzifan396-wzf) aus der chinesischen Community [mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) als Open Source veröffentlicht – **100 Browser-Minispiele, die eine einzelne Person mit Vibe Coding gebaut und kontinuierlich verfeinert hat**. Alle sind abhängigkeitsfreie einzelne HTML-Dateien, die man per Doppelklick starten kann. Die Spielarten decken Action, Strategie, Tower Defense, Management, Kartenspiele, Physik, Logik, Rennspiele, Rhythmus, Brettspiele und Puzzles ab; viele davon erreichen bereits produktionsreife Tiefe mit Mehr-Kapitel-Kampagnen, Aufbausystemen und geräteübergreifender Synchronisierung per Speichercode. Das gesamte Projekt ist unter der MIT-Lizenz open source, und der Online-Katalog lässt sich direkt durchspielen.
 
-![Online-Katalog der 100 Browserspiele (Open-Source-Vibe-Coding-Projekt von 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
+![Online-Katalog der 100 Browserspiele (Open-Source-Vibe-Coding-Projekt von 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.webp)
 
 ![„Neon 2048": Expedition mit sechs Kapiteln und 18 Knoten + mehrere Modi und Werkzeugsysteme](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
@@ -402,7 +402,7 @@ Im Juli 2026 hat der Entwickler [wangzifan396-wzf](https://github.com/wangzifan3
 
 Im Februar 2026 hat der Entwickler [Trent Sterling](https://tront.xyz/blog/posts/craftmine/), weil seine Neffen *Minecraft* spielen wollten, aber keine Originalversion besaßen, einfach eine leere HTML-Datei geöffnet und mit Claude Code rein über Dialoge [CraftMine](https://tront.xyz/craftmine/) gebaut – einen **6.820 Zeilen umfassenden Einzeldatei**-Nachbau von *Minecraft* für den Browser: 46 Blockarten (zusätzlich 21 DOOM-Höllen-Themenblöcke), 36 Kreaturen (vom Huhn bis zum Titan-Boss mit 300 HP), 19 Waffen (inklusive BFG 9000), 5 Biome, Tag-Nacht-Zyklus und sogar **P2P-Mehrspieler**. Es gibt keinen Build-Schritt – Webseite öffnen und losspielen.
 
-![CraftMine: Minecraft-Nachbau, 6.820 Zeilen in einer einzigen Datei (per Vibe Coding generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.png)
+![CraftMine: Minecraft-Nachbau, 6.820 Zeilen in einer einzigen Datei (per Vibe Coding generiert)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.webp)
 
 > 🔗 Online spielen: [tront.xyz/craftmine](https://tront.xyz/craftmine/) ｜ Entwicklungs-Rückblick: [CraftMine: A 6,820-line vibe-coded Minecraft clone in one HTML file](https://tront.xyz/blog/posts/craftmine/)
 
@@ -420,7 +420,7 @@ Im März 2026 hat ein Entwickler die Open-Source-Version von *Super Mario* mit d
 
 Im Juli 2026 hat der Entwickler [Dr. Josh Simmons](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it) dem chinesischen LLM **Kimi K3** nur einen einzigen Prompt geschickt und es daraufhin ein spielbares Ego-3D-Spiel bauen lassen: Datenkerne in einer prozedural generierten Serveranlage sammeln, patrouillierenden Drohnen ausweichen und mit dem Frachtaufzug drei Stockwerke nach unten fahren. Das gesamte Spiel war nach einer einzigen Generierung spielbar; nach zwei Dialogrunden zum Beheben von zwei Bugs ließ es sich problemlos durchspielen – für insgesamt etwa **2 US-Dollar**.
 
-![Das 3D-Serveranlagen-Spiel, das Kimi K3 aus einem einzigen Prompt generiert hat](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.png)
+![Das 3D-Serveranlagen-Spiel, das Kimi K3 aus einem einzigen Prompt generiert hat](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.webp)
 
 > 🔗 Online spielen: [kimi-test-theta.vercel.app](https://kimi-test-theta.vercel.app/) ｜ Quellcode: [github.com/jcpsimmons/kimi-test](https://github.com/jcpsimmons/kimi-test) ｜ Entwickler-Rückblick: [Kimi K3 Built the Game. I Still Had to Play It.](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it)
 
@@ -428,7 +428,7 @@ Im Juli 2026 hat der Entwickler [Dr. Josh Simmons](https://www.drjoshcsimmons.co
 
 Am 17. Juli 2026 veröffentlichte Moonshot AI das Modell Kimi K3 und brachte zeitgleich die Browserspiele-Plattform [K399](https://www.k399.games/) online – dutzende Spiele dort wurden alle mit dem K3-Modell erstellt und sind mit einem Klick spielbar. Die Bandbreite reicht von 3D-Shootern, Musikspielen, Side-Scrolling-Action und Hof-Intrigen-AVGs über 3D-Puzzles bis hin zu Open-World-Spielen: Neben Nachbauten klassischer Gameplay-Konzepte wie *The Legend of Zelda*, *Black Myth: Wukong*, *Bubble Land* und *Vampire Survivors* gibt es auch Originale, deren Fertigstellungstiefe weit über Demos hinausgeht, etwa *Pioneer Practice Ground* (ein 3D-FPS mit Bewegen, Springen, Rutschen, Zielen und Schießen), das Open-World-Spiel *SpiderPunk* und das Hof-Intrigen-AVG *Fengque Shen Gong* mit einer Hauptstory über fünf Kapitel, acht Nebensträngen und 32 Zufallsereignissen.
 
-![K399-Plattformoberfläche – K3 Game Arcade, Spieleliste mit einem Klick spielbar](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
+![K399-Plattformoberfläche – K3 Game Arcade, Spieleliste mit einem Klick spielbar](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.webp)
 
 ![SpiderPunk, ein Open-World-Spiel auf K399: zwischen Cyberpunk-Hochhäusern an Spinnenseilen schwingen (mit K3-Modell generiert, echtes Gameplay)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 

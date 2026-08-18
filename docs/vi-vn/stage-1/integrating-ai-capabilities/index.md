@@ -159,7 +159,7 @@ API Key là thông tin xác thực để ứng dụng gọi mô hình. Lưu nó 
 
 Sau yêu cầu đầu, mở Usage hoặc Billing và tìm bản ghi mới. Ở đó còn có số dư và Quota. Nếu lỗi, hãy phân biệt mã chưa gửi, nền tảng từ chối hay tài khoản hết hạn mức.
 
-![Trang Usage của DeepSeek hiển thị số dư, chi phí tháng và xu hướng lời gọi](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
+![Trang Usage của DeepSeek hiển thị số dư, chi phí tháng và xu hướng lời gọi](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.webp)
 
 *Trang Usage của DeepSeek cho biết số lần gọi, chi phí và số dư.*
 
@@ -175,7 +175,7 @@ Danh mục Models cho biết những mô hình văn bản, ảnh, giọng nói v
 
 Một số nền tảng yêu cầu chọn Region hoặc tạo Deployment rồi mới cấp Base URL và Endpoint. Khi đó hãy làm theo hướng dẫn nhanh, đừng dùng URL của bảng điều khiển làm địa chỉ API.
 
-![Trang kết nối nhanh Volcengine Ark hiển thị API Key và các bước thử](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
+![Trang kết nối nhanh Volcengine Ark hiển thị API Key và các bước thử](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.webp)
 
 *Volcengine Ark đặt tạo khóa, chọn mô hình và ví dụ chạy được trong cùng một luồng.*
 

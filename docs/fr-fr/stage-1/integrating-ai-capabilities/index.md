@@ -159,7 +159,7 @@ L’API Key est l’identifiant utilisé par l’application. Stockez-la dans un
 
 Après la première requête, ouvrez Usage ou Billing et cherchez un nouvel enregistrement. Vous y trouverez aussi le solde et le quota. En cas d’échec, distinguez un code qui n’envoie rien, un refus de la plateforme et un compte sans quota.
 
-![Page Usage de DeepSeek montrant le solde, les dépenses mensuelles et la tendance des appels](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
+![Page Usage de DeepSeek montrant le solde, les dépenses mensuelles et la tendance des appels](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.webp)
 
 *La page Usage de DeepSeek affiche le volume, le coût et le solde.*
 
@@ -175,7 +175,7 @@ Le catalogue indique les modèles de texte, d’image, de voix et de vidéo actu
 
 Certaines plateformes demandent de choisir une Region ou de créer un Deployment avant de fournir Base URL et Endpoint. Suivez alors le guide rapide et ne prenez pas l’URL de la console pour celle de l’API.
 
-![Accès rapide Volcengine Ark présentant l’API Key et les étapes de test](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
+![Accès rapide Volcengine Ark présentant l’API Key et les étapes de test](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.webp)
 
 *Volcengine Ark réunit création de clé, choix du modèle et exemple exécutable.*
 

@@ -82,7 +82,7 @@ const duration = '약 <strong>2시간</strong>'
 
 참고 화면은 Framer 소개 페이지입니다. 큰 제목, 내비게이션, 보라색 산, 작은 조작 버튼이 한 장에 보입니다.
 
-![Trae에 넣은 웹페이지 스크린샷](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.jpg)
+![Trae에 넣은 웹페이지 스크린샷](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.webp)
 
 _이미지 출처: [Framer Website Builder](https://www.framer.com/solutions/website-builder/)_
 

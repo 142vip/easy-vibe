@@ -172,7 +172,7 @@ Vuelve a compilar. Un host estático puede no redirigir todas las rutas a `index
 
 Abre [ModelScope Studio](https://modelscope.cn/studios). La parte superior muestra el recorrido de crear, construir, publicar y compartir.
 
-![Inicio de ModelScope Studio con el proceso de creación y publicación](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.jpg)
+![Inicio de ModelScope Studio con el proceso de creación y publicación](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.webp)
 
 Pulsa crear o abre [Crear Studio](https://modelscope.cn/studios/create). El sitio chino `modelscope.cn` y el internacional `modelscope.ai` no comparten cuenta, token ni contenido.
 
@@ -202,7 +202,7 @@ La subida manual sirve para pocos archivos. Con muchos archivos o cambios frecue
 
 Después de subir los archivos, abre la configuración de despliegue del Studio y selecciona **Static** como tipo de SDK. Static está pensado para sitios HTML ya preparados; en la misma zona también aparecen Gradio, Streamlit y Docker.
 
-![Selección de Static en la configuración de despliegue](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+![Selección de Static en la configuración de despliegue](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.webp)
 
 Comprueba de nuevo que `index.html` esté en la raíz del repositorio y guarda la configuración de despliegue.
 

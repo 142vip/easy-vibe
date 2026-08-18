@@ -79,7 +79,7 @@ Logo 是決定你網站第一印象的關鍵元素之一。想要從 AI 設計 A
 
 - 輸入上述提示詞 → 比對 Agent 生成的多個設計稿。
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. 確定最終 Logo
 
@@ -138,7 +138,7 @@ Logo 是決定你網站第一印象的關鍵元素之一。想要從 AI 設計 A
   - https://colorhunt.co/
   - https://coolors.co/
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.webp)
 
 - **在 Google 上透過關鍵詞搜尋配色**
 
@@ -175,7 +175,7 @@ Logo 是決定你網站第一印象的關鍵元素之一。想要從 AI 設計 A
 - “調整一下顏色搭配。”
 - “把這裡這一塊刪掉。”
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.webp)
 
 ## 3. 確定最終設計
 
@@ -274,7 +274,7 @@ function showAlert() {
 背景為黑色，文字為白色。"
 ```
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.webp)
 
 ## 3. 執行網站
 
@@ -337,7 +337,7 @@ Agent 生成的初版網站，通常會包含一些自動生成的佔位文字�
 
 - **示例：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.webp)
 
 - **結果：**
 

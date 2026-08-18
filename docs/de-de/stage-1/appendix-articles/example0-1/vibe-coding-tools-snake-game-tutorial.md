@@ -206,7 +206,7 @@ Viele sind versucht, in einem einzigen Prompt "eine vollst&auml;ndige Full-Stack
 
 - **Ergebnis-Beispiel**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.webp)
 
 ---
 
@@ -247,10 +247,10 @@ Verschiedene Vibe Coding Plattformen haben unterschiedliche St&auml;rken und Wor
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.webp)
 - **Snake-Spiel-Ergebnis:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.webp)
 
 - **Preis:** Relativ teuer, aber mit einer Uni-E-Mail k&ouml;nnen Sie durch Studenten-Verifizierung den halben Preis erhalten.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.webp)
 
 ### 2. Cursor (IDE)
 
@@ -264,7 +264,7 @@ Verschiedene Vibe Coding Plattformen haben unterschiedliche St&auml;rken und Wor
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.webp)
 
 - **Preis:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.webp)
 
 ### 3. Z.ai (Web-based)
 
@@ -278,7 +278,7 @@ Verschiedene Vibe Coding Plattformen haben unterschiedliche St&auml;rken und Wor
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image12.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image13.png)
 
 - **Preis:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.webp)
 
 ### 4. Replit (Web-based)
 
@@ -292,10 +292,10 @@ Verschiedene Vibe Coding Plattformen haben unterschiedliche St&auml;rken und Wor
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.webp)
 - **Snake-Spiel-Ergebnis:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.webp)
 
 - **Preis:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.webp)
 
 ### 5. Minimax (Web-based)
 
@@ -304,14 +304,14 @@ Verschiedene Vibe Coding Plattformen haben unterschiedliche St&auml;rken und Wor
 - **Geeignete Nutzer:** Da es automatisch Tests ausf&uuml;hrt und Fehler repariert, sind Zeit- und Token-Verbrauch hoch, aber man kann klar sehen, wie AI Probleme lokalisiert und l&ouml;st, was aus Lernperspektive sehr wertvoll ist.
 - **Prompt-Prozess:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
 
 - **Snake-Spiel-Ergebnis:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.webp)
 
 - **Preis:** Die kostenlose Version kann bei komplexen Projekten wahrscheinlich nicht vollst&auml;ndig durchlaufen, daher wird ein kostenpflichtiges Upgrade empfohlen, um sicherzustellen, dass das Projekt vollst&auml;ndig erstellt werden kann.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.webp)
 
 ### 6. Trae (IDE)
 
@@ -325,7 +325,7 @@ Verschiedene Vibe Coding Plattformen haben unterschiedliche St&auml;rken und Wor
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.webp)
 
 - **Preis:** Preis relativ g&uuml;nstig, selbst die kostenlose Version reicht f&uuml;r qualitativ gute kleine Projekte.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.webp)
 
 ### 7. V0 (Web-based)
 
@@ -338,9 +338,9 @@ Verschiedene Vibe Coding Plattformen haben unterschiedliche St&auml;rken und Wor
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.webp)
 
 - **Snake-Spiel-Ergebnis:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.webp)
 - **Preis:** Kostenlose Nutzer k&ouml;nnen etwa 4-5 einfache Projekte erstellen.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image35.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image35.webp)
 
 ## 3. Plattform-Gesamtvergleich
 

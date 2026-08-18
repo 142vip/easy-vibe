@@ -237,7 +237,7 @@ Le vrai défi commence ici. Beaucoup de gens tombent précisément à cette éta
 
 > « Ce n’est pas grave, je le ferai peut-être plus tard... »
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image5.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image5.webp)
 
 N’y pensez plus : c’est maintenant qu’il faut commencer. Ce chapitre va vous aider à apprendre une méthode pour passer d’une idée à une version réalisable. Vous verrez que créer quelque chose à partir de rien ne dépend pas du génie, mais d’une série d’actions concrètes que l’on peut pratiquer encore et encore : **diverger, converger, découper, affiner, s’inspirer, questionner**. En suivant cet ordre, même sans équipe et sans beaucoup de temps, vous pouvez transformer une idée en demo d’application qui fonctionne.
 

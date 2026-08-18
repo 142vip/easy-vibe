@@ -142,7 +142,7 @@ Eine schlechte erste Fassung ist normal: **Etwas Prüfbares fertigzustellen ist 
 
 Viele scheitern an einer zu großen inneren Gesamtvision. Damit „irgendwann“ nicht zur Ausrede wird, folgen nun wiederholbare Schritte: Möglichkeiten öffnen, reduzieren, zerlegen, zeichnen, Vorbilder untersuchen und früh fragen.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image5.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image5.webp)
 
 ## 2.1 Vom Gedanken zur Lösung: Öffnen und Schließen im Double Diamond
 

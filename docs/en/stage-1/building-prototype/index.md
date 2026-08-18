@@ -342,7 +342,7 @@ Requirements:
 ```
 
 AI will usually output a structured prompt similar to this:
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.png)
+![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.webp)
 
 You can then make small edits and pass it into your AI IDE.
 
@@ -469,12 +469,12 @@ Once the core gameplay logic is roughly generated, we can continue building rema
 
 You can ask AI to inspect against your business requirements and generate missing parts, or directly ask AI to implement unfinished pages one by one until all page interactions work:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.png)
+![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.webp)
 
 After a short wait, you can see multiple pages and interactive features added on top of the previous base:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.png)
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.png)
+![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.webp)
+![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.webp)
 
 At this stage, manually click through the key flows you care about and confirm interactions. If something is not interactive, ask AI to fix it.
 
@@ -569,7 +569,7 @@ After generation flow works, verify template-library behavior. If the "save temp
 
 Generation is usually iterative, and screenshots are often needed for correction:
 
-![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
+![](/zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.webp)
 
 Expected final result:
 

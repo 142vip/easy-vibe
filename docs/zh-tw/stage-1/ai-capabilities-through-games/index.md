@@ -130,7 +130,7 @@ AI 出現之後，第一次給了普通人一個全新的可能：你不需要�
 這種「對話即程式設計」的模式，讓程式設計從「寫程式碼」變成了「描述需求」。你不需要關心底層技術細節，只需要清楚地告訴 AI 你想要什麼，它就能幫你把想法變成可執行的程式。這就是 AI 時代程式設計的新正規化——**Vibe Coding（氛圍式編碼）**。
 :::
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.webp)
 
 輸入我們的簡單需求後點選 **全棧開發** 按鈕，你可以實時觀看網頁的完整建立過程。通常只需泡一杯咖啡的時間，網頁便會自動生成完畢！
 
@@ -143,7 +143,7 @@ AI 出現之後，第一次給了普通人一個全新的可能：你不需要�
 5. 介面要簡潔好看
 ```
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.webp)
 
 生成結束後，你能看到右側出現可瀏覽的網頁介面。你可以上下滾動瀏覽頁面內容，或點選頁面頂部的 🧭 按鈕切換至全屏模式檢視效果。
 
@@ -362,11 +362,11 @@ z.ai 的回覆將會是這樣的：
 
 [WotAI Games](https://games.wotai.co/) 是一個完全用 Claude Code（Vibe Coding）從零開發、**不使用任何遊戲引擎** 的網頁遊戲合集。透過對話讓 AI 一口氣復刻了 10 款經典街機遊戲：吃豆人、俄羅斯方塊、太空侵略者、貪喫蛇、Flappy Bird、打磚塊、小蜜蜂、青蛙過河、塗鴉跳躍和數獨。每款都可以直接線上玩，還自帶排行榜系統。
 
-![WotAI Games 首頁——10 款經典街機遊戲合集](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.png)
+![WotAI Games 首頁——10 款經典街機遊戲合集](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.webp)
 
 ![俄羅斯方塊（WotAI Games，Vibe Coding 生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-tetris.png)
 
-![吃豆人（WotAI Games，Vibe Coding 生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.png)
+![吃豆人（WotAI Games，Vibe Coding 生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.webp)
 
 > 🔗 線上試玩：[games.wotai.co](https://games.wotai.co/) ｜ 開發復盤：[We vibe coded 10 classic arcade games with Claude Code](https://wotai.co/blog/wotai-games-vibe-coded-arcade-classics)
 
@@ -390,7 +390,7 @@ z.ai 的回覆將會是這樣的：
 
 2026 年 7 月，中文社群開發者 [wangzifan396-wzf](https://github.com/wangzifan396-wzf) 開源了 [mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games)——**用 Vibe Coding 一個人做出並持續打磨的 100 款瀏覽器小遊戲**，全部是零依賴的單 HTML 檔案，雙擊即可執行。玩法覆蓋動作、策略、塔防、經營、卡牌、物理、推理、競速、節奏、棋類和益智等類型，其中不少已經做到了多章節戰役、養成系統、存檔碼跨裝置同步的完整產品級深度。整個專案以 MIT 協議開源，線上目錄可以直接開玩。
 
-![100 款瀏覽器遊戲線上目錄（2026 年 Vibe Coding 開源專案）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
+![100 款瀏覽器遊戲線上目錄（2026 年 Vibe Coding 開源專案）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.webp)
 
 ![《霓虹 2048》：六章 18 節點遠征 + 多種模式與工具系統](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
@@ -400,7 +400,7 @@ z.ai 的回覆將會是這樣的：
 
 2026 年 2 月，開發者 [Trent Sterling](https://tront.xyz/blog/posts/craftmine/) 因為侄子們想玩《我的世界》但沒有正版，乾脆打開一個空白 HTML 檔案，用 Claude Code 透過純對話做出了 [CraftMine](https://tront.xyz/craftmine/)——一個 **6,820 行、單檔案** 的網頁版《我的世界》復刻版：46 種方塊（還加了 21 種 DOOM 地獄主題方塊）、36 種生物（從小雞到 300 血的泰坦 Boss）、19 種武器（含 BFG 9000）、5 種生物群系、晝夜循環，甚至支援 **P2P 多人連線**。沒有任何建置步驟，打開網頁就能玩。
 
-![CraftMine：《我的世界》復刻版，6,820 行單檔案（Vibe Coding 生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.png)
+![CraftMine：《我的世界》復刻版，6,820 行單檔案（Vibe Coding 生成）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.webp)
 
 > 🔗 線上試玩：[tront.xyz/craftmine](https://tront.xyz/craftmine/) ｜ 開發復盤：[CraftMine: A 6,820-line vibe-coded Minecraft clone in one HTML file](https://tront.xyz/blog/posts/craftmine/)
 
@@ -418,7 +418,7 @@ z.ai 的回覆將會是這樣的：
 
 2026 年 7 月，開發者 [Dr. Josh Simmons](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it) 只給國產大模型 **Kimi K3** 發了一個提示詞，就讓它做出了一個可玩的第一人稱 3D 遊戲：在程式化生成的伺服器設施裡收集資料核心、躲避巡邏無人機、坐貨運電梯下三層樓。整個遊戲一次生成即可遊玩，再透過兩輪對話修掉兩個 bug 就能順暢通關，全程花費約 **2 美元**。
 
-![Kimi K3 一個提示詞生成的 3D 伺服器設施遊戲](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.png)
+![Kimi K3 一個提示詞生成的 3D 伺服器設施遊戲](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.webp)
 
 > 🔗 線上試玩：[kimi-test-theta.vercel.app](https://kimi-test-theta.vercel.app/) ｜ 原始碼：[github.com/jcpsimmons/kimi-test](https://github.com/jcpsimmons/kimi-test) ｜ 開發者復盤：[Kimi K3 Built the Game. I Still Had to Play It.](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it)
 
@@ -426,7 +426,7 @@ z.ai 的回覆將會是這樣的：
 
 2026 年 7 月 17 日，月之暗面發布 Kimi K3 模型後，同步上線了網頁遊戲平台 [K399](https://www.k399.games/)——裡面幾十款遊戲全部由 K3 模型參與製作，點開即玩。品類覆蓋 3D 射擊、音遊、橫版動作、宮鬥 AVG、3D 解謎甚至開放世界：既有復刻《薩爾達傳說》《黑神話：悟空》《泡泡堂》《吸血鬼倖存者》等經典玩法的作品，也有《先鋒練習場》（可移動、跳躍、滑鏟、瞄準射擊的 3D FPS）、開放世界《SpiderPunk》、五章主線八條支線 32 種隨機事件的宮鬥 AVG《鳳闕深宮》等完成度遠超 Demo 的原創遊戲。
 
-![K399 平台介面——K3 Game Arcade，遊戲列表點開即玩](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
+![K399 平台介面——K3 Game Arcade，遊戲列表點開即玩](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.webp)
 
 ![K399 上的開放世界遊戲 SpiderPunk：在賽博都市高樓間蕩蛛絲（K3 模型生成，實際遊玩畫面）](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 

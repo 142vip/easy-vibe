@@ -337,7 +337,7 @@ Requisitos:
 ```
 
 Normalmente la IA generara un prompt estructurado como el siguiente:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.webp)
 
 Puedes modificar ligeramente este prompt y luego enviarlo al AI IDE para generar codigo.
 
@@ -448,12 +448,12 @@ Solo hay tres formas comunes de manejarlos:
 Cuando la logica de la funcionalidad central esta basicamente generada, podemos generar el resto del contenido. Por ejemplo, en este punto, si hacemos clic en configuracion o en algunos botones, no hacen nada.
 
 Puedes pedirle a la IA que revise segun los requisitos del prompt de negocio y genere las partes que faltan, o pedirle directamente que complete las paginas no implementadas. Tambien puedes especificar una pagina para que la IA la complete, hasta que las paginas se puedan hacer clic y las funcionalidades puedan interactuar normalmente:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.webp)
 
 Despues de esperar un momento, podemos ver que el programa ya ha completado multiples paginas y funcionalidades interactivas basandose en lo anterior:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.webp)
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.webp)
 
 En este punto solo necesitas hacer clic manualmente en cada funcion y boton que te interese, asegurandote de que la interaccion sea normal. Si hay funcionalidades que no se pueden interactuar, puedes comunicarte con la IA para que te ayude a repararlas.
 
@@ -539,7 +539,7 @@ En este punto lo que obtenemos directamente es el resultado, no hay un "proceso 
 Despues de verificar la funcionalidad de generacion, tambien debemos asegurarnos de que la funcionalidad de la biblioteca de plantillas funciona correctamente. En la tarjeta de generacion de la pagina podemos ver que la funcion de guardado de plantillas no se ha implementado; necesitamos tener una conversacion mas profunda con la IA: "Por favor ayudame a asegurarme de que el requisito [pega aqui el contenido del punto 2 de arriba] funciona correctamente, que se pueda hacer clic en un resultado para guardar la plantilla correspondiente, y que al abrirlo se puedan ver los parametros de generacion"
 
 La generacion a menudo no se consigue de una sola vez; frecuentemente hay que hacer capturas de pantalla para corregir:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.webp)
 
 Finalmente obtenemos el resultado esperado:
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.webp)

@@ -80,7 +80,7 @@ McKinsey は見込み客、商談準備、会話、提案、成約、更新ま�
 
 <figure class="product-shot">
   <a href="https://www.notion.com/help/guides/find-answers-and-generate-reports-with-enterprise-search" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.png" alt="Notion Enterprise Search の画面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.webp" alt="Notion Enterprise Search の画面" loading="lazy" />
   </a>
   <figcaption><strong>Notion Enterprise Search：</strong>一つの質問で Notion と Slack を検索し、Ask、Research、Build を切り替えます。企業向け支援は一つの PDF より、既存資料と権限につながることが重要です。</figcaption>
 </figure>
@@ -97,7 +97,7 @@ Sun Life の社内支援は週一万件以上を処理し、Morgan Stanley は�
 
 <figure class="product-shot">
   <a href="https://mena.thomsonreuters.com/en/products-services/legal/cocounsel.html" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.jpg" alt="Thomson Reuters CoCounsel の契約作成と調査画面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.webp" alt="Thomson Reuters CoCounsel の契約作成と調査画面" loading="lazy" />
   </a>
   <figcaption><strong>Thomson Reuters CoCounsel：</strong>作成と調査の進行を示し、完成後に Word で開きます。AI が資料を読み、根拠を探して下書きし、専門家が慣れた文書で確認します。</figcaption>
 </figure>
@@ -129,7 +129,7 @@ Thomson Reuters の 2025 年調査では、法務、税務、リスクで調査�
 
 <figure class="product-shot">
   <a href="https://blog.siemens.com/2026/02/the-digital-enterprise-and-the-synthesis-of-industrial-ai-digital-twin-and-data/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.jpg" alt="TIA Portal と並ぶ Siemens Engineering Copilot" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.webp" alt="TIA Portal と並ぶ Siemens Engineering Copilot" loading="lazy" />
   </a>
   <figcaption><strong>Siemens Engineering Copilot：</strong>TIA Portal と Copilot が並びます。支援側は現在の自動化案件、設備構造、技術文書を見ており、文脈なしに「機械はなぜ壊れたか」と答えるものではありません。</figcaption>
 </figure>
@@ -163,7 +163,7 @@ Abridge のような環境記録は会話から構造化下書きを作り、医
 
 <figure class="product-shot">
   <a href="https://www.canva.com/newsroom/news/magic-studio/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.png" alt="サイズ変更、翻訳、文書変換を行う Canva Magic Switch" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.webp" alt="サイズ変更、翻訳、文書変換を行う Canva Magic Switch" loading="lazy" />
   </a>
   <figcaption><strong>Canva Magic Switch：</strong>確認済みのデザインを別寸法、別言語、文書へ変えられます。一つの素材から多販路版を作る高頻度の仕事です。</figcaption>
 </figure>
@@ -197,7 +197,7 @@ Deloitte は個別化、商品運営、供給網、マーケティングを AI �
 
 <figure class="product-shot">
   <a href="https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.jpg" alt="Expedia の会話型旅行計画画面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.webp" alt="Expedia の会話型旅行計画画面" loading="lazy" />
   </a>
   <figcaption><strong>Expedia の会話型旅行計画：</strong>新婚旅行で Maui と Kauai を比べ、ホテル案を Trips へ直接保存します。会話が保存、旅程、予約へ入ることで製品の循環が閉じます。</figcaption>
 </figure>
@@ -236,7 +236,7 @@ Deloitte は個別化、商品運営、供給網、マーケティングを AI �
 
 <figure class="product-shot">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.jpg" alt="Duolingo Max Explain My Answer の説明画面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.webp" alt="Duolingo Max Explain My Answer の説明画面" loading="lazy" />
   </a>
   <figcaption><strong>Explain My Answer：</strong>直前の回答を引用し、複数形 vestidos に gustan が必要な理由を説明して追加例へ進めます。一般文法ではなく「今の間違い」に答えます。</figcaption>
 </figure>
@@ -249,7 +249,7 @@ Deloitte は個別化、商品運営、供給網、マーケティングを AI �
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.jpg" alt="Spotify AI DJ の再生画面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.webp" alt="Spotify AI DJ の再生画面" loading="lazy" />
   </a>
   <figcaption><strong>Spotify AI DJ：</strong>ホームに継続的な再生入口があり、曲と操作へ直結します。長期の聴取履歴、楽曲庫、次の再生操作に支えられ、司会の一文だけではありません。</figcaption>
 </figure>

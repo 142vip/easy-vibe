@@ -206,7 +206,7 @@ Beaucoup de gens sont tentés de tout expliquer en un seul prompt pour « créer
 
 - **Exemple de résultat**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.webp)
 
 ---
 
@@ -247,10 +247,10 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.webp)
 - **Résultat du jeu Snake :**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.webp)
 
 - **Prix :** relativement élevé, mais si vous avez un email universitaire, vous pouvez bénéficier d'une réduction de 50% via la vérification étudiante.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.webp)
 
 ### 2. Cursor (IDE)
 
@@ -264,7 +264,7 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.webp)
 
 - **Prix :**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.webp)
 
 ### 3. Z.ai (Web-based)
 
@@ -278,7 +278,7 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image12.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image13.png)
 
 - **Prix :**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.webp)
 
 ### 4. Replit (Web-based)
 
@@ -292,10 +292,10 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.webp)
 - **Résultat du jeu Snake :**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.webp)
 
 - **Prix :**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.webp)
 
 ### 5. Minimax (Web-based)
 
@@ -304,14 +304,14 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
 - **Utilisateurs ciblés :** Comme il exécute automatiquement les tests et corrige les erreurs, la consommation de temps et de tokens est importante, mais vous pouvez clairement voir comment l'IA localise et résout les problèmes — ce qui est très valuable d'un point de vue apprentissage.
 - **Processus de prompts :**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
 
 - **Résultat du jeu Snake :**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.webp)
 
 - **Prix :** La version gratuite ne permet probablement pas de mener à bien un projet complexe du début à la fin, il est donc recommandé de passer à la version payante pour garantir que le projet puisse être construit complètement.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.webp)
 
 ### 6. Trae (IDE)
 
@@ -325,7 +325,7 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.webp)
 
 - **Prix :** Le prix est relativement abordable, même la version gratuite suffit pour réaliser des petits projets de bonne qualité.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.webp)
 
 ### 7. V0 (Web-based)
 
@@ -338,9 +338,9 @@ Différentes plateformes Vibe Coding ont chacune leurs particularités et leur f
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.webp)
 
 - **Résultat du jeu Snake :**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.webp)
 - **Prix :** Les utilisateurs gratuits peuvent construire environ 4 à 5 projets simples.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image35.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image35.webp)
 
 ## 3. Tableau comparatif récapitulatif
 

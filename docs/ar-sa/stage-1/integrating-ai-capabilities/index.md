@@ -158,7 +158,7 @@ API Key هي بيانات اعتماد التطبيق. ضعها في متغير 
 
 بعد أول طلب افتح Usage أو Billing وابحث عن سجل جديد. سترى أيضًا الرصيد وQuota. عند الفشل ميّز بين كود لم يرسل، ومنصة رفضت الطلب، وحساب نفدت حصته.
 
-![صفحة Usage في DeepSeek تعرض الرصيد والإنفاق الشهري واتجاه الاستدعاءات](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
+![صفحة Usage في DeepSeek تعرض الرصيد والإنفاق الشهري واتجاه الاستدعاءات](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.webp)
 
 *تعرض صفحة Usage حجم الاستدعاءات والتكلفة والرصيد.*
 
@@ -174,7 +174,7 @@ API Key هي بيانات اعتماد التطبيق. ضعها في متغير 
 
 تطلب بعض المنصات اختيار Region أو إنشاء Deployment قبل إظهار Base URL وEndpoint. اتبع دليل البدء السريع ولا تستعمل عنوان لوحة التحكم بوصفه عنوان API.
 
-![صفحة الوصول السريع في Volcengine Ark تعرض المفتاح وخطوات التجربة](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
+![صفحة الوصول السريع في Volcengine Ark تعرض المفتاح وخطوات التجربة](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.webp)
 
 *تجمع Volcengine Ark إنشاء المفتاح واختيار النموذج والمثال القابل للتشغيل.*
 

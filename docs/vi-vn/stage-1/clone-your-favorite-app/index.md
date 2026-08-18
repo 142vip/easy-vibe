@@ -82,7 +82,7 @@ Giảng viên tạo một thư mục trống và mở nó trong Trae. Dự án c
 
 Ảnh tham khảo đến từ trang giới thiệu của Framer. Tiêu đề lớn, thanh điều hướng, cảnh núi màu tím và các nút điều khiển nhỏ đều nhìn thấy rõ.
 
-![Ảnh chụp trang web được đưa vào Trae](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.jpg)
+![Ảnh chụp trang web được đưa vào Trae](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.webp)
 
 _Nguồn ảnh: [Framer Website Builder](https://www.framer.com/solutions/website-builder/)_
 

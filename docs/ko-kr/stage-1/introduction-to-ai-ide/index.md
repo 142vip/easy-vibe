@@ -119,13 +119,13 @@ IDE가 무엇인지, 각 인터페이스 요소가 어떤 역할을 하는지 �
 
 IDE는 “코드를 편집하고, 관리하고, 실행하고, 디버깅”하기 위해 특화된 프로그램으로 이해할 수 있습니다. 초기 IDE의 외형은 매우 “원시적”이었고, 거의 전부 키보드로 조작했습니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.png)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.webp)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
 
 터미널 인터페이스(Terminal) 이미지 출처: https://en.wikipedia.org/wiki/File:Emacs-screenshot.png
 
 `Vim`처럼 유명하고 기능이 성숙한 “내장형 IDE”는 서버 원격 조작에 자주 쓰입니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.webp)
 
 더 효율적으로 작업하려면 마우스 조작을 지원하는 현대 IDE가 필요합니다. 보통 다음을 포함합니다.
 
@@ -170,7 +170,7 @@ VS Code의 핵심 철학은 “모든 것은 플러그인”입니다. 플러그
 
 VS Code를 다운로드해 설치한 뒤, 오른쪽 위의 사이드바 입구를 클릭해 AI 기능 영역을 열고 이러한 능력을 체험할 수 있습니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.webp)
 
 다만 VS Code가 AI 능력이 가장 강한 IDE는 아닙니다. 대량의 AI 보조 코딩이 필요한 상황에서는 보통 “더 똑똑하고 효율이 높은” 도구를 쓰고 싶어 합니다. 좋은 AI IDE는 코드 작성과 Bug 수정 시간을 크게 줄여 줍니다. 아래에서는 현재 비교적 인기 있는 AI IDE 몇 가지를 소개합니다. 취향에 맞게 아무 AI IDE나 선택해 사용해도 됩니다.
 
@@ -197,7 +197,7 @@ Antigravity는 Google이 2025년 11월 Gemini 3와 함께 발표한 새로운 AI
 
 ### [Trae](https://www.trae.ai/)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.webp)
 
 Trae는 ByteDance가 출시한 AI 프로그래밍 어시스턴트이며 100개 이상의 프로그래밍 언어를 지원하고 주요 IDE에 통합될 수 있습니다. 기능에는 자연어로 코드 생성, 자동 디버깅, 디자인 시안을 React/Vue 컴포넌트로 변환하기 등이 포함됩니다. 2025년 8월 업데이트 이후 Trae에는 지능형 의존성 가져오기, 이름 변경 제안, 작업 목록 관리 등의 기능이 추가되었습니다. SOLO 모드도 백엔드 코드 생성과 기술 아키텍처 문서 편집을 지원하기 시작했습니다.
 :::
@@ -314,15 +314,15 @@ Trae의 비용과 사용 방식에는 다음 선택지가 있습니다.
 
 인터페이스 형태로 보면 Trae는 우리가 일상적으로 사용하는 VS Code와 매우 비슷합니다. 왼쪽 리소스 관리자, 가운데 편집 영역, 오른쪽 확장 패널이라는 고전적인 3열 배치를 사용합니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.webp)
 
 오른쪽 사이드바가 Copilot 상호작용 창이며, Agent 창으로 이해할 수도 있습니다. 보이지 않는다면 Trae 오른쪽 위의 사이드바 아이콘을 클릭해 열 수 있습니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.webp)
 
 사이드바를 열면 `Builder` 옵션이 보입니다. 이것이 Agent 모드입니다. 간단히 이해하면 z.ai의 “로컬 버전”과 같으며, 내 컴퓨터 환경을 조작하고 실행 환경을 설치하고 웹페이지를 여는 일을 도와줄 수 있습니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.webp)
 
 “Builder”를 클릭하면 “Chat” 모드와 “Builder with MCP” 모드가 보입니다.
 
@@ -335,7 +335,7 @@ Trae의 비용과 사용 방식에는 다음 선택지가 있습니다.
 
 **주의할 점은 Auto 모드(자동 모델 선택)를 추천하지 않는다는 것입니다. 국제판이라면 Gemini 또는 GPT 모델을 추천하고, 중국판이라면 Kimi k2, Minimax, GLM 같은 중국 모델을 시도해 보기를 추천합니다.** 모델마다 적합한 장면이 다르며, 누가 반드시 더 좋다는 식의 교조적인 답은 없습니다. 서로 다른 작업에서 어려움을 만나 해결되지 않을 때 모델을 바꿔 보고, 여러 번 테스트해 자신만의 최적 실험 결과를 얻을 수 있습니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.webp)
 
 이상이 Trae에 대한 간단한 소개입니다. 이제 이전에 z.ai에서 했던 조작을 돌아보고, Trae에서 같은 일을 시도해 볼 수 있습니다.
 
@@ -403,9 +403,9 @@ Trae에서 사용자 지정 모델을 연결할 때는 **기본적으로 OpenRou
 
 아래 인터페이스를 통해 성공적으로 추가할 수 있습니다. 모델 선택 옵션을 본 뒤 **반드시 맨 아래까지 스크롤**해야 합니다. 아래에 “사용자 지정 모델”이 있고, 클릭하면 모델 ID를 입력할 수 있습니다. 이때 위 추천 모델 ID인 `stepfun/step-3.5-flash:free` 등을 그대로 입력하면 됩니다. 동시에 아래의 Key 얻기를 클릭해 공식 사이트로 이동하고 해당 API Key를 받아 입력하면 정상 사용 가능합니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.webp)
 :::
 
 ### 4.3 두 번째 단계: 사이드바에서 채팅하며 AI가 React로 스네이크 게임을 설계하게 하기
@@ -423,12 +423,12 @@ Trae에서 사용자 지정 모델을 연결할 때는 **기본적으로 OpenRou
 :::
 
 그림처럼 여기서는 Run을 클릭해 확인해야 합니다.
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.webp)
 
 그림처럼 여기서는 y만 입력하면 확인됩니다.
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.webp)
 
 그림처럼 여기서는 템플릿을 만들고 있지만 어떻게 조작해야 할지 모르겠습니다. 이 부분을 스크린샷으로 찍어 대형 모델에게 물어볼 수 있습니다.
 
@@ -436,7 +436,7 @@ Trae에서 사용자 지정 모델을 연결할 때는 **기본적으로 OpenRou
 
 AI Agent가 실행 중 멈추는 또 다른 이유는 이때 “서비스”가 시작되었기 때문입니다. 우리의 스네이크 자체도 하나의 “서비스”입니다. 아래 명령의 URL을 보면 Agent가 로컬 컴퓨터 서비스를 실행했다는 뜻입니다. 해당 주소에 접속하면 스네이크를 볼 수 있습니다. 서비스는 계속 켜져 있어야 하므로 여기서 일시정지처럼 보입니다. 우리는 `Skip` 버튼만 클릭하면 됩니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.webp)
 
 이 과정에서 용어나 이해하기 어려운 내용을 만나도 걱정하지 마세요. 부록의 “컴퓨터 용어 설명” 부분을 확인하거나, AI에게 직접 질문하거나, 바로 질문하면 됩니다!
 
@@ -450,7 +450,7 @@ AI Agent가 실행 중 멈추는 또 다른 이유는 이때 “서비스”가 
 
 여기서 또 주의할 점은 코드 수정이 반드시 옳은 것은 아니라는 점입니다. 또한 모든 IDE의 Agent가 코드 되돌리기를 지원한다는 사실도 알아야 합니다. 예를 들어 여기서 실수로 잘못 수정했거나 이번 작업 결과가 만족스럽지 않다면, 수정이 끝난 뒤 입력창 부분으로 돌아가 Revert 버튼을 클릭해 수정 전 상태로 되돌릴 수 있습니다. 입력 문구를 바꾸어 다시 작업할 수 있습니다.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.webp)
 
 ### 4.4 세 번째 단계(선택): AI에게 코드 구현 세부 사항 묻기
 

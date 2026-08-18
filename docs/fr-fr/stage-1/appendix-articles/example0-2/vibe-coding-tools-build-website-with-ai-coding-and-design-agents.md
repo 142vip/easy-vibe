@@ -79,7 +79,7 @@ Combine un graphique abstrait symbolisant l'IA avec le texte, et exporte en PNG 
 
 - Saisissez le prompt ci-dessus -> comparez les plusieurs propositions de design générées par l'Agent.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. Finaliser le Logo
 
@@ -138,7 +138,7 @@ Même si vous n'avez pas encore de schéma de couleurs en tête, vous pouvez tro
   - https://colorhunt.co/
   - https://coolors.co/
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.webp)
 
 - **Recherche de couleurs par mots-clés sur Google**
 
@@ -175,7 +175,7 @@ Vous pouvez faire des retours à l'Agent en fonction de vos besoins, par exemple
 - « Ajuste la combinaison de couleurs. »
 - « Supprime cette section ici. »
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.webp)
 
 ## 3. Finaliser le design
 
@@ -274,7 +274,7 @@ Utilise les couleurs #171721, #FF7130, #FF3C68.
 Fond noir, texte blanc."
 ```
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.webp)
 
 ## 3. Lancer le site web
 
@@ -337,7 +337,7 @@ Une fois que vous avez téléchargé les fichiers de code depuis l'Agent de desi
 
 - **Exemple :**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.webp)
 
 - **Résultat :**
 

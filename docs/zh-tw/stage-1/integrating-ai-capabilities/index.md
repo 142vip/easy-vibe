@@ -159,7 +159,7 @@ API Key 是應用呼叫模型時使用的憑證。創建以後，把它放進本
 
 發出第一次請求後，可以打開 Usage 或 Billing 頁面看看是否出現了新的呼叫記錄。這裡還會顯示餘額和 Quota（額度）。遇到請求失敗時，先確認是代碼沒有發出去、平台拒絕了請求，還是賬號已經沒有可用額度。
 
-![DeepSeek 用量頁面，包含餘額、月度支出和呼叫趨勢](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
+![DeepSeek 用量頁面，包含餘額、月度支出和呼叫趨勢](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.webp)
 
 *DeepSeek 的 Usage 頁面會顯示呼叫量、消耗和餘額。*
 
@@ -175,7 +175,7 @@ API Key 是應用呼叫模型時使用的憑證。創建以後，把它放進本
 
 有些平台還要求先選擇 Region（區域），或者創建一個 Deployment（推理服務），然後才會給出 Base URL 和 Endpoint。遇到這種情況，直接跟著平台的快速接入嚮導完成，不要把控制台頁面的網址當成 API 地址。
 
-![火山方舟快速 API 接入頁面，展示 API Key 與快速測試步驟](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
+![火山方舟快速 API 接入頁面，展示 API Key 與快速測試步驟](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.webp)
 
 *火山方舟的快速接入頁面把創建 Key、選擇模型和執行示例放在了一起。*
 

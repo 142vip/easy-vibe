@@ -238,7 +238,7 @@ The real challenge starts now. Many people fail here: in their minds the bluepri
 
 > “It’s okay, maybe I’ll build it someday...”
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image5.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image5.webp)
 
 Don’t delay. Start now. This chapter teaches a practical decomposition method from idea to buildable version. You will see that going from zero to one does not depend on genius, but on a repeatable action sequence: **diverge, converge, decompose, refine, benchmark, ask.** Following this order, even without a team or abundant time, you can turn an idea into a runnable app demo.
 

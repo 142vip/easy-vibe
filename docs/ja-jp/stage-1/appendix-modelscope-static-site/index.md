@@ -172,7 +172,7 @@ export default {
 
 [ModelScope Studio](https://modelscope.cn/studios)を開きます。上部に「作成 → 構築 → 公開 → 共有」の流れが表示されます。
 
-![作成から共有までを示すModelScope Studioのホーム](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.jpg)
+![作成から共有までを示すModelScope Studioのホーム](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.webp)
 
 作成ボタンまたは[Studio作成ページ](https://modelscope.cn/studios/create)を開きます。中国サイト`modelscope.cn`と国際サイト`modelscope.ai`のアカウント、トークン、内容は共有されません。
 
@@ -202,7 +202,7 @@ export default {
 
 ファイルをアップロードしたら、Studioのデプロイ設定を開き、SDK形式に **Static** を選びます。Staticは準備済みのHTMLサイト向けです。同じ画面にはGradio、Streamlit、Dockerも表示されます。
 
-![デプロイ設定のSDK欄でStaticを選ぶ画面](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+![デプロイ設定のSDK欄でStaticを選ぶ画面](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.webp)
 
 リポジトリのルートに`index.html`があることをもう一度確認し、デプロイ設定を保存します。
 

@@ -80,7 +80,7 @@ McKinsey는 잠재 고객 찾기, 회의 준비, 의사소통, 제안, 계약, �
 
 <figure class="product-shot">
   <a href="https://www.notion.com/help/guides/find-answers-and-generate-reports-with-enterprise-search" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.png" alt="Notion Enterprise Search 기업 검색 화면" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.webp" alt="Notion Enterprise Search 기업 검색 화면" loading="lazy" />
   </a>
   <figcaption><strong>Notion Enterprise Search:</strong> 한 질문으로 Notion과 Slack을 찾고 Ask, Research, Build를 바꿉니다. 기업 지식 도우미의 핵심은 PDF 한 장이 아니라 기존 자료와 권한 연결입니다.</figcaption>
 </figure>
@@ -97,7 +97,7 @@ Sun Life 내부 도우미는 주당 만 건이 넘는 질문을 처리하고 Mor
 
 <figure class="product-shot">
   <a href="https://mena.thomsonreuters.com/en/products-services/legal/cocounsel.html" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.jpg" alt="Thomson Reuters CoCounsel 계약 작성 및 조사 화면" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.webp" alt="Thomson Reuters CoCounsel 계약 작성 및 조사 화면" loading="lazy" />
   </a>
   <figcaption><strong>Thomson Reuters CoCounsel:</strong> 초안과 조사의 진행을 보여 준 뒤 Word에서 엽니다. AI가 자료를 읽고 근거를 찾아 쓰며 전문가는 익숙한 문서에서 검토하고 마무리합니다.</figcaption>
 </figure>
@@ -129,7 +129,7 @@ Thomson Reuters의 2025년 조사에서 법무, 세무, 위험 분야의 조사,
 
 <figure class="product-shot">
   <a href="https://blog.siemens.com/2026/02/the-digital-enterprise-and-the-synthesis-of-industrial-ai-digital-twin-and-data/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.jpg" alt="TIA Portal 옆에서 실행되는 Siemens Engineering Copilot" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.webp" alt="TIA Portal 옆에서 실행되는 Siemens Engineering Copilot" loading="lazy" />
   </a>
   <figcaption><strong>Siemens Engineering Copilot:</strong> Copilot과 TIA Portal이 함께 열려 있습니다. 도우미는 현재 자동화 프로젝트, 설비 구조, 기술 문서를 보며 맥락 없는 ‘기계가 왜 고장 났나’에 답하지 않습니다.</figcaption>
 </figure>
@@ -163,7 +163,7 @@ Abridge 같은 환경 기록 제품은 대화에서 구조화 초안을 만들�
 
 <figure class="product-shot">
   <a href="https://www.canva.com/newsroom/news/magic-studio/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.png" alt="크기 변경과 번역, 문서 전환을 하는 Canva Magic Switch" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.webp" alt="크기 변경과 번역, 문서 전환을 하는 Canva Magic Switch" loading="lazy" />
   </a>
   <figcaption><strong>Canva Magic Switch:</strong> 확인된 하나의 디자인을 다른 크기, 언어, 문서로 바꿉니다. 콘텐츠 팀이 한 자료에서 여러 채널 버전을 만드는 잦은 업무입니다.</figcaption>
 </figure>
@@ -197,7 +197,7 @@ Deloitte는 개인화, 상품 운영, 공급망, 마케팅을 AI 진입 영역�
 
 <figure class="product-shot">
   <a href="https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.jpg" alt="Expedia 대화형 여행 계획 화면" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.webp" alt="Expedia 대화형 여행 계획 화면" loading="lazy" />
   </a>
   <figcaption><strong>Expedia 대화형 여행 계획:</strong> 신혼여행지로 Maui와 Kauai를 비교하고 호텔 제안을 Trips에 바로 저장합니다. 대화가 저장, 일정, 예약으로 들어갈 때 제품 흐름이 닫힙니다.</figcaption>
 </figure>
@@ -236,7 +236,7 @@ Deloitte는 개인화, 상품 운영, 공급망, 마케팅을 AI 진입 영역�
 
 <figure class="product-shot">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.jpg" alt="Duolingo Max Explain My Answer 오답 설명 화면" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.webp" alt="Duolingo Max Explain My Answer 오답 설명 화면" loading="lazy" />
   </a>
   <figcaption><strong>Explain My Answer:</strong> 방금 한 답을 인용해 복수 vestidos에 gustan이 필요한 이유를 말하고 추가 예를 요청할 수 있습니다. 새 문법 강의가 아니라 ‘방금 왜 틀렸지’라는 순간을 받습니다.</figcaption>
 </figure>
@@ -249,7 +249,7 @@ Deloitte는 개인화, 상품 운영, 공급망, 마케팅을 AI 진입 영역�
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.jpg" alt="Spotify AI DJ 재생 화면" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.webp" alt="Spotify AI DJ 재생 화면" loading="lazy" />
   </a>
   <figcaption><strong>Spotify AI DJ:</strong> 홈의 지속 재생 입구가 곡과 조작으로 이어집니다. 장기 청취 기록, Spotify 콘텐츠, 다음 재생 행동에 의존하며 진행자 말투만 만드는 것이 아닙니다.</figcaption>
 </figure>

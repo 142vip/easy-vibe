@@ -206,7 +206,7 @@ AI Agent هو نظام برمجي قادر على إدراك البيئة وات
 
 - **نموذج للنتيجة**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.webp)
 
 ---
 
@@ -247,10 +247,10 @@ AI Agent هو نظام برمجي قادر على إدراك البيئة وات
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.webp)
 - **نتيجة لعبة الثعبان:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.webp)
 
 - **السعر:** مرتفع نسبيًا، ولكن إذا كان لديك بريد إلكتروني جامعي، يمكنك التحقق من هويتك كطالب للحصول على نصف السعر.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.webp)
 
 ### 2. Cursor (IDE)
 
@@ -264,7 +264,7 @@ AI Agent هو نظام برمجي قادر على إدراك البيئة وات
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.webp)
 
 - **السعر:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.webp)
 
 ### 3. Z.ai (Web-based)
 
@@ -278,7 +278,7 @@ AI Agent هو نظام برمجي قادر على إدراك البيئة وات
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image12.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image13.png)
 
 - **السعر:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.webp)
 
 ### 4. Replit (Web-based)
 
@@ -292,10 +292,10 @@ AI Agent هو نظام برمجي قادر على إدراك البيئة وات
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.webp)
 - **نتيجة لعبة الثعبان:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.webp)
 
 - **السعر:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.webp)
 
 ### 5. Minimax (Web-based)
 
@@ -304,14 +304,14 @@ AI Agent هو نظام برمجي قادر على إدراك البيئة وات
 - **المستخدمون المناسبون:** نظرًا لأنه يُشغّل الاختبارات ويصلح الأخطاء تلقائيًا، فإن استهلاك الوقت والرموز (Tokens) كبير نسبيًا، لكن يمكنك رؤية بوضوح كيف يحدد الذكاء الاصطناعي المشاكل ويحلها، مما يجعله ذا قيمة تعليمية كبيرة.
 - **عملية الأوامر التوجيهية:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
 
 - **نتيجة لعبة الثعبان:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.webp)
 
 - **السعر:** الإصدار المجاني قد لا يتمكن من إكمال المشاريع المعقدة من البداية إلى النهاية بسلاسة، لذا يُوصى بشدة بالترقية إلى الإصدار المدفوع لضمان بناء المشروع بالكامل.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.webp)
 
 ### 6. Trae (IDE)
 
@@ -325,7 +325,7 @@ AI Agent هو نظام برمجي قادر على إدراك البيئة وات
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.webp)
 
 - **السعر:** السعر معقول نسبيًا، وحتى الإصدار المجاني كافٍ لإنجاز مشاريع صغيرة بجودة جيدة.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.webp)
 
 ### 7. V0 (Web-based)
 
@@ -338,9 +338,9 @@ AI Agent هو نظام برمجي قادر على إدراك البيئة وات
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.webp)
 
 - **نتيجة لعبة الثعبان:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.webp)
 - **السعر:** يمكن للمستخدمين المجانيين بناء حوالي 4-5 مشاريع بسيطة.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image35.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image35.webp)
 
 ## 3. ملخص المقارنة بين المنصات
 

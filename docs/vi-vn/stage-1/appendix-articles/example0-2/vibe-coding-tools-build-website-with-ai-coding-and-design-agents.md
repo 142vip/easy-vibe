@@ -79,7 +79,7 @@ Kết hợp đồ họa trừu tượng tượng trưng cho AI với chữ, và 
 
 - Nhập prompt trên → So sánh nhiều bản thiết kế do Agent tạo.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. Xác định Logo cuối cùng
 
@@ -138,7 +138,7 @@ Kể cả bạn tạm chưa nghĩ ra phối màu nào, cũng có thể tìm cả
   - https://colorhunt.co/
   - https://coolors.co/
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.webp)
 
 - **Tìm kiếm phối màu qua từ khóa trên Google**
 
@@ -175,7 +175,7 @@ Bạn có thể đưa ra phản hồi cho Agent theo nhu cầu của mình, ví 
 - "Điều chỉnh phối màu."
 - "Xóa phần này đi."
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.webp)
 
 ## 3. Xác định thiết kế cuối cùng
 
@@ -274,7 +274,7 @@ Sử dụng phối màu #171721, #FF7130, #FF3C68.
 Nền đen, chữ trắng."
 ```
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.webp)
 
 ## 3. Chạy trang web
 
@@ -337,7 +337,7 @@ Khi bạn đã tải xuống file code từ Agent thiết kế, có thể di chu
 
 - **Ví dụ:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.webp)
 
 - **Kết quả:**
 

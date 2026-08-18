@@ -123,13 +123,13 @@ IDE が何か、各画面要素が何の役に立つかまだ馴染みがない�
 
 IDE は「コードを編集、管理、実行、デバッグする」ための専用プログラムと理解できます。初期の IDE は非常に「原始的」で、ほぼ完全にキーボード操作でした。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.png)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.webp)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
 
 ターミナル画面（Terminal） 画像出典：https://en.wikipedia.org/wiki/File:Emacs-screenshot.png
 
 `Vim` のような機能が成熟した「内蔵 IDE」は、サーバーのリモート操作によく使われます。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.webp)
 
 より効率的にするために、マウス操作をサポートするモダン IDE が必要です。通常、以下を含みます：
 - **ソースコードエディタ**：シンタックスハイライト、自動補完
@@ -173,7 +173,7 @@ Markdown ドキュメントを編集することもできます。
 
 VS Code をインストールして、右上のサイドバー入口をクリックし、AI 機能領域を開くと、これらの機能を体験できます。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.webp)
 
 しかし、VS Code は AI 能力が最強の IDE ではありません。大量の AI 補助コーディングが必要なシーンでは、「もっと賢く、効率の良い」ツールを使いたいと思うでしょう——良い AI IDE はコードの記述やバグ修正の時間を大幅に削減できます。以下では、現在比較的人気のある AI IDE をいくつ紹介します。個人の好みに応じてどれでも選んで使えます。
 
@@ -200,7 +200,7 @@ Antigravity は Google が2025年11月に Gemini 3 とともにリリースし�
 
 ### [Trae](https://www.trae.ai/)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.webp)
 
 Trae は ByteDance がリリースした AI プログラミングアシスタントで、100種類以上のプログラミング言語をサポートし、主流 IDE に統合できます。機能には、自然言語によるコード生成、自動デバッグ、デザイン画を React/Vue コンポーネントに変換などがあります。2025年8月のアップデート以降、Trae はインテリジェントな依存関係のインポート、リネーム提案、タスクリスト管理などの機能を追加。SOLO モードでもバックエンドコード生成と技術アーキテクチャドキュメントの編集をサポートするようになりました。
 :::
@@ -318,15 +318,15 @@ Trae の料金と使用方法には以下のオプションがあります：
 
 インターフェースの見た目は、Trae は日常的に使っている VS Code と非常に似ています：左側にエクスプローラー、中央にエディタ、右側に拡張パネルという古典的な3カラムレイアウトです。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.webp)
 
 右側のサイドバーが Copilot インタラクションウィンドウ、または Agent ウィンドウとしても機能します。表示されていない場合は、Trae 右上のサイドバーアイコンをクリックして開いてください。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.webp)
 
 サイドバーを開くと、`Builder` オプションが表示されます。これが Agent モードです。シンプルに理解すると、z.ai の「ローカル版」のようなもので、ローカル環境で操作を実行し、環境をインストールし、ウェブページを開いたりできます。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.webp)
 
 "Builder" をクリックすると、"Chat" モードと "Builder with MCP" モードが表示されます：
 
@@ -339,7 +339,7 @@ Trae の料金と使用方法には以下のオプションがあります：
 
 **注意：Auto モード（モデルを自動選択）の使用は推奨しません。** 国際版の場合は Gemini または GPT モデルを、中国版の場合は Kimi k2、Minimax、GLM などの国内モデルを推奨します。** 異なるモデルには異なる使用シーンがあり、教条的にどれが優れているかを断定するものではありません。**異なるタスクで行き詰まったらモデルを切り替え、複数回テストして自分にとって最適な結果を得てください。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.webp)
 
 以上が Trae の簡単な紹介です。次に、以前 z.ai で行った操作を振り返り、Trae で同じことを試してみましょう。
 
@@ -408,9 +408,9 @@ Trae でカスタムモデルを統合する際、<strong>デフォルトで Ope
 
 以下の画面で、カスタムモデルを追加できます。（注意：モデル選択のオプションの後【必ず最後までスクロール】し、下部に「自定义模型」があるのでクリックしてモデル ID を入力。上記の推奨モデル ID である `stepfun/step-3.5-flash:free` を直接入力。同時に下部の "Get Key" をクリックして公式サイトにアクセスし、対応する API Key を入力すれば正常に使用できます。）
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.webp)
 :::
 
 ### 4.3 ステップ2：サイドバーでチャットし、AI に React でスネークゲームを設計させる
@@ -428,12 +428,12 @@ AI チャットサイドバーを開きます：通常は `Ctrl+L` または右�
 :::
 
 以下の図では、Run をクリックして確認する必要があります：
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.webp)
 
 以下の図では、y を入力して確認するだけです：
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.webp)
 
 以下の図では、テンプレートを作成中ですが操作方法が分からず、AI に質問する例です：
 
@@ -441,7 +441,7 @@ AI チャットサイドバーを開きます：通常は `Ctrl+L` または右�
 
 AI Agent が実行中に一時停止するもう一つの原因は、"サービス"が開始されたためです。スネークゲーム自体が一種の"サービス"であり、以下のような URL が表示されたら、Agent がローカルでサービスを起動したことを意味します。対応する URL にアクセスしてスネークゲームを遊ぶことができます。サービスを継続的に実行する必要があるため、ここで一時停止します。`Skip` ボタンをクリックしてください。
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.webp)
 
 このプロセスで、聞き慣れない用語や理解できない内容に遭遇しても、心配ありません。付録の「コンピュータ用語解説」を参照するか、AI に直接質問したり、その場で質問してください。
 
@@ -455,7 +455,7 @@ AI Agent が実行中に一時停止するもう一つの原因は、"サービ�
 
 ここで注意すべき点として、コードの修正が必ず正しいとは限らないことです。すべての IDE の Agent はコードのロールバックをサポートしています。例えば、誤って変更操作を行った場合や、今回の操作結果に不満な場合、修正完了後に戻って入力フィールドに移動し、`Revert` ボタンをクリックして操作前の状態に戻すことができます。入力するテキストを修正して再度実行できます：
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.webp)
 
 ### 4.4 ステップ3（オプション）：AI にコードの実装の詳細を聞く
 

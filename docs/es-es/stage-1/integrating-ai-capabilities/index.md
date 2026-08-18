@@ -159,7 +159,7 @@ La API Key es la credencial con la que la aplicación llama al modelo. Guárdala
 
 Después de la primera petición abre Usage o Billing y busca un registro nuevo. Allí también verás el saldo y la quota. Si falla, distingue entre código que no envió nada, una petición rechazada y una cuenta sin cuota disponible.
 
-![Página Usage de DeepSeek con saldo, gasto mensual y tendencia de llamadas](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
+![Página Usage de DeepSeek con saldo, gasto mensual y tendencia de llamadas](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.webp)
 
 *La página Usage de DeepSeek muestra el volumen de llamadas, el gasto y el saldo.*
 
@@ -175,7 +175,7 @@ El catálogo muestra los modelos de texto, imagen, voz y vídeo disponibles. Ent
 
 Algunas plataformas piden elegir una Region o crear un Deployment antes de proporcionar Base URL y Endpoint. Sigue su guía rápida y no confundas la URL de la consola con la dirección de la API.
 
-![Acceso rápido de Volcengine Ark con API Key y pasos de prueba](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
+![Acceso rápido de Volcengine Ark con API Key y pasos de prueba](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.webp)
 
 *Volcengine Ark reúne la creación de la clave, la elección del modelo y un ejemplo ejecutable.*
 

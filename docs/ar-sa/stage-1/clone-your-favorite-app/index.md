@@ -82,7 +82,7 @@ const duration = 'نحو <strong>ساعتين</strong>'
 
 يأتي المرجع من صفحة عرض في Framer. يظهر فيها العنوان الكبير، وشريط التنقل، ومشهد الجبال البنفسجي، وأزرار التحكم الصغيرة.
 
-![لقطة الشاشة بعد وضعها في Trae](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.jpg)
+![لقطة الشاشة بعد وضعها في Trae](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.webp)
 
 _مصدر اللقطة: [Framer Website Builder](https://www.framer.com/solutions/website-builder/)_
 

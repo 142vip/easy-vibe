@@ -288,7 +288,7 @@ Yêu cầu:
 4. Liệt kê các chức năng cốt lõi cần làm.
 ```
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.webp)
 
 ### 2.2 Bước hai: để AI IDE sinh code
 
@@ -366,13 +366,13 @@ Một vài câu hỏi thường gặp:
 
 Khi logic cốt lõi đã chạy, hãy bổ sung các phần còn thiếu. Ví dụ nút cài đặt chưa hoạt động, trang thư viện mẫu chưa có, hoặc luồng lưu mẫu chưa hoàn chỉnh. Bạn có thể yêu cầu AI kiểm tra theo tài liệu nghiệp vụ và triển khai từng trang.
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.webp)
 
 Sau một lúc, ứng dụng có thể được bổ sung nhiều trang và chức năng tương tác:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.webp)
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.webp)
 
 Lúc này bạn cần tự bấm thử những nút quan trọng. Nếu phần nào không tương tác, hãy mô tả hiện tượng và để AI sửa.
 
@@ -437,7 +437,7 @@ Sau đó kiểm tra thư viện mẫu. Nếu card kết quả chưa có chức n
 
 Quá trình này thường cần sửa nhiều vòng bằng ảnh chụp và mô tả:
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.webp)
 
 Kết quả kỳ vọng:
 

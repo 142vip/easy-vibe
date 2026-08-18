@@ -206,7 +206,7 @@ Rất nhiều người sẽ không nhịn được muốn trực tiếp trong m�
 
 - **Ví dụ kết quả**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.webp)
 
 ---
 
@@ -247,10 +247,10 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.webp)
 - **Hiệu quả trò Snake:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.webp)
 
 - **Giá:** Tương đối cao, nhưng nếu bạn có email trường, có thể xác minh sinh viên để dùng với giá nửa.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.webp)
 
 ### 2. Cursor (IDE)
 
@@ -264,7 +264,7 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image8.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.webp)
 
 - **Giá:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.webp)
 
 ### 3. Z.ai (Web-based)
 
@@ -278,7 +278,7 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image12.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image13.png)
 
 - **Giá:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.webp)
 
 ### 4. Replit (Web-based)
 
@@ -292,10 +292,10 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.webp)
 - **Hiệu quả trò Snake:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.webp)
 
 - **Giá:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.webp)
 
 ### 5. Minimax (Web-based)
 
@@ -304,14 +304,14 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
 - **Người dùng phù hợp:** Vì nó sẽ tự động chạy test và sửa lỗi, thời gian và tiêu thụ Token đều khá lớn, nhưng bạn có thể rõ ràng thấy AI định vị và giải quyết vấn đề thế nào, từ góc độ học tập rất có giá trị.
 - **Quá trình prompt:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
 
 - **Hiệu quả trò Snake:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.webp)
 
 - **Giá:** Phiên bản miễn phí trong dự án phức tạp rất có thể không chạy từ đầu đến cuối suôn sẻ, nên khuyến nghị nâng cấp trả phí, để đảm bảo dự án có thể xây dựng hoàn chỉnh.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.webp)
 
 ### 6. Trae (IDE)
 
@@ -325,7 +325,7 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image28.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.webp)
 
 - **Giá:** Giá tương đối hợp lý, kể cả phiên bản miễn phí cũng đủ để hoàn thành dự án nhỏ chất lượng khá.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.webp)
 
 ### 7. V0 (Web-based)
 
@@ -338,9 +338,9 @@ Các nền tảng Vibe Coding khác nhau có đặc điểm và workflow khác n
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image32.webp)
 
 - **Hiệu quả trò Snake:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image33.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image34.webp)
 - **Giá:** Người dùng miễn phí khoảng có thể xây dựng 4-5 dự án đơn giản.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image35.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image35.webp)
 
 ## 3. Bảng so sánh tổng kết nền tảng
 

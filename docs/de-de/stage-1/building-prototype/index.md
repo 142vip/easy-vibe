@@ -353,7 +353,7 @@ Anforderungen:
 ```
 
 Normalerweise generiert AI einen strukturierten Prompt wie den folgenden:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-14-25-56.webp)
 
 Sie können diesen Prompt nach kleinen Anpassungen an AI IDE senden, um Code zu generieren.
 
@@ -464,12 +464,12 @@ Es gibt grundsätzlich drei Behandlungsmethoden:
 Wenn die Logik der Kernfunktion grundsätzlich generiert ist, können wir die restlichen Inhalte erstellen. Zum Beispiel sind Klicks auf Einstellungen oder bestimmte Buttons zu diesem Zeitpunkt noch völlig wirkungslos.
 
 Sie können AI bitten, basierend auf den Anforderungen des Geschäftsprompts zu prüfen und die noch nicht generierten Teile zu erstellen. Oder Sie lassen AI die nicht vollständig implementierten Seiten direkt ergänzen. Sie können auch eine bestimmte Seite angeben, die AI implementieren soll, bis alle Seiten klickbar und alle Funktionen ordnungsgemäß interaktiv sind:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-17-55.webp)
 
 Nach kurzer Wartezeit sehen wir, dass das Programm auf der bisherigen Basis mehrere Seiten und interaktive Funktionen ergänzt hat:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-40.webp)
 
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-23-53.webp)
 
 Jetzt müssen Sie nur noch manuell jede Funktion und jeden Button anklicken, die Sie interessieren, und sicherstellen, dass die Interaktion ordnungsgemäß funktioniert. Wenn es nicht interaktive Funktionen gibt, können Sie mit AI kommunizieren und sie um Hilfe bei der Reparatur bitten.
 
@@ -584,7 +584,7 @@ Was wir hier direkt erhalten, ist das Ergebnis &ndash; es gibt keinen "simuliert
 Nachdem die Generierungsfunktion durchlaufen ist, müssen wir auch sicherstellen, dass die Vorlagenbibliothek ordnungsgemäß funktioniert. Auf der Generierungskarte der Seite können wir sehen, dass die Vorlagenbibliothek-Speicherfunktion noch nicht implementiert ist. Jetzt müssen wir mit AI weitergehend kommunizieren: "Bitte hilf mir sicherzustellen, dass die Anforderung [hier den Inhalt von Punkt 2 oben einfügen] erfüllt ist, ein Ergebnis angeklickt werden kann, um die entsprechende Vorlage zu speichern, und nach dem Öffnen die Generierungsparameter sichtbar sind."
 
 Generierung ist oft nicht in einem Schritt erledigt &ndash; häufig sind Screenshots und Korrekturen nötig:
-![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.png)
+![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-57-14.webp)
 
 Schließlich erhalten wir das erwartete Ergebnis:
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-16-12-56.webp)

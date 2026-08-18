@@ -172,7 +172,7 @@ Baue erneut. Ein statischer Host leitet nicht immer jede Route nach `index.html`
 
 Öffne [ModelScope Studio](https://modelscope.cn/studios). Oben wird der Weg von Erstellen und Aufbauen bis Veröffentlichen und Teilen gezeigt.
 
-![ModelScope-Studio-Startseite mit dem Ablauf bis zur Veröffentlichung](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.jpg)
+![ModelScope-Studio-Startseite mit dem Ablauf bis zur Veröffentlichung](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.webp)
 
 Wähle Erstellen oder öffne [Studio erstellen](https://modelscope.cn/studios/create). Die chinesische Seite `modelscope.cn` und die internationale Seite `modelscope.ai` teilen weder Konto, Token noch Inhalt.
 
@@ -202,7 +202,7 @@ Manuelles Hochladen reicht für wenige Dateien. Bei vielen Dateien oder häufige
 
 Öffne nach dem Hochladen die Deployment-Einstellungen des Studios und wähle **Static** als SDK-Typ. Static ist für eine vorbereitete HTML-Website vorgesehen; im selben Bereich stehen auch Gradio, Streamlit und Docker zur Auswahl.
 
-![Auswahl von Static in den Deployment-Einstellungen](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+![Auswahl von Static in den Deployment-Einstellungen](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.webp)
 
 Prüfe erneut, dass `index.html` im Stammverzeichnis des Repositorys liegt, und speichere die Deployment-Einstellungen.
 

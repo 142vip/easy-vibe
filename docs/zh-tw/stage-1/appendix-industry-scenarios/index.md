@@ -80,7 +80,7 @@ McKinsey 對 B2B 銷售的研究把應用拆到完整交易週期：尋找線索
 
 <figure class="product-shot">
   <a href="https://www.notion.com/help/guides/find-answers-and-generate-reports-with-enterprise-search" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.png" alt="Notion Enterprise Search 企業搜索界面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.webp" alt="Notion Enterprise Search 企業搜索界面" loading="lazy" />
   </a>
   <figcaption><strong>Notion Enterprise Search：</strong>同一個問題可以跨 Notion 與 Slack 查找，使用者還能在 Ask、Research 和 Build 之間切換。企業知識助手的產品形態，重點是接入現有資料和權限，而不只是上傳一份 PDF。</figcaption>
 </figure>
@@ -97,7 +97,7 @@ Sun Life 的內部助手每周處理一萬多次員工查詢；Morgan Stanley �
 
 <figure class="product-shot">
   <a href="https://mena.thomsonreuters.com/en/products-services/legal/cocounsel.html" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.jpg" alt="Thomson Reuters CoCounsel 合同起草與研究界面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.webp" alt="Thomson Reuters CoCounsel 合同起草與研究界面" loading="lazy" />
   </a>
   <figcaption><strong>Thomson Reuters CoCounsel：</strong>左側顯示“起草”和“研究”兩項任務的進度，完成後再把草稿打開到 Word。AI 先讀材料、找依據、起草，專業人員仍在熟悉的文件里復核和定稿。</figcaption>
 </figure>
@@ -129,7 +129,7 @@ Thomson Reuters 的 2025 年調查顯示，法律、稅務、風控等專業服�
 
 <figure class="product-shot">
   <a href="https://blog.siemens.com/2026/02/the-digital-enterprise-and-the-synthesis-of-industrial-ai-digital-twin-and-data/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.jpg" alt="Siemens Engineering Copilot 與 TIA Portal 並排執行" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.webp" alt="Siemens Engineering Copilot 與 TIA Portal 並排執行" loading="lazy" />
   </a>
   <figcaption><strong>Siemens Engineering Copilot：</strong>右側 Copilot 與左側 TIA Portal 同時打開。工程師提問時，助手面對的是當前自動化項目、設備結構和工程文件，而不是脫離現場回答一個寬泛的“機器為什麼壞了”。</figcaption>
 </figure>
@@ -163,7 +163,7 @@ Abridge 等環境式記錄產品，會從醫患對話生成結構化病歷草稿
 
 <figure class="product-shot">
   <a href="https://www.canva.com/newsroom/news/magic-studio/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.png" alt="Canva Magic Switch 的改尺寸、翻譯與轉文件菜單" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.webp" alt="Canva Magic Switch 的改尺寸、翻譯與轉文件菜單" loading="lazy" />
   </a>
   <figcaption><strong>Canva Magic Switch：</strong>同一份設計可以繼續改尺寸、翻譯或轉成文件。對內容團隊來說，這正是“一份確認過的素材，接著做出多個渠道版本”的那段高頻工作。</figcaption>
 </figure>
@@ -197,7 +197,7 @@ C 端應用最容易犯的錯，是把同一個聊天框換七種提示詞。下
 
 <figure class="product-shot">
   <a href="https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.jpg" alt="Expedia 對話式旅行規劃界面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.webp" alt="Expedia 對話式旅行規劃界面" loading="lazy" />
   </a>
   <figcaption><strong>Expedia 對話式旅行規劃：</strong>使用者從“蜜月去 Maui 還是 Kauai”聊起，得到酒店建議後可以直接保存到 Trips。真正形成產品閉環的，是聊天結果進入了收藏、行程和預訂。</figcaption>
 </figure>
@@ -236,7 +236,7 @@ C 端應用最容易犯的錯，是把同一個聊天框換七種提示詞。下
 
 <figure class="product-shot">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.jpg" alt="Duolingo Max Explain My Answer 的答錯解釋界面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.webp" alt="Duolingo Max Explain My Answer 的答錯解釋界面" loading="lazy" />
   </a>
   <figcaption><strong>Explain My Answer：</strong>中間這張界面直接引用使用者剛才的答案，解釋為什麼複數 vestidos 要配 gustan，並允許繼續要例子。它不是重新講一節語法課，而是接住“我剛才到底錯在哪”這一刻。</figcaption>
 </figure>
@@ -249,7 +249,7 @@ C 端應用最容易犯的錯，是把同一個聊天框換七種提示詞。下
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.jpg" alt="Spotify AI DJ 播放界面" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.webp" alt="Spotify AI DJ 播放界面" loading="lazy" />
   </a>
   <figcaption><strong>Spotify AI DJ：</strong>DJ 是首頁里的一個持續播放入口，下面直接接著曲目和播放控制。它依靠的是使用者長期收聽記錄、Spotify 的內容庫和下一首播放動作，而不只是生成一段像主持人的話。</figcaption>
 </figure>

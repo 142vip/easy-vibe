@@ -172,7 +172,7 @@ Compilez de nouveau. Un hébergeur statique ne redirige pas toujours toutes les 
 
 Ouvrez [ModelScope Studio](https://modelscope.cn/studios). Le haut de la page présente les étapes de création, construction, publication et partage.
 
-![Accueil de ModelScope Studio avec le processus de création et de partage](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.jpg)
+![Accueil de ModelScope Studio avec le processus de création et de partage](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.webp)
 
 Choisissez créer ou ouvrez [Créer un Studio](https://modelscope.cn/studios/create). Le site chinois `modelscope.cn` et le site international `modelscope.ai` ne partagent ni compte, ni jeton, ni contenu.
 
@@ -202,7 +202,7 @@ L’import manuel convient à peu de fichiers. Pour de nombreux fichiers ou des 
 
 Après l’import des fichiers, ouvrez les paramètres de déploiement du Studio et choisissez **Static** comme type de SDK. Static convient à un site HTML déjà préparé ; Gradio, Streamlit et Docker sont également proposés dans cette zone.
 
-![Sélection de Static dans les paramètres de déploiement](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+![Sélection de Static dans les paramètres de déploiement](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.webp)
 
 Vérifiez de nouveau que `index.html` se trouve à la racine du dépôt, puis enregistrez les paramètres de déploiement.
 

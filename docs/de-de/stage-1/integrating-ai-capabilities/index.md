@@ -159,7 +159,7 @@ Die API Key ist der Berechtigungsnachweis der Anwendung. Speichere sie in einer 
 
 Öffne nach der ersten Anfrage Usage oder Billing und suche einen neuen Eintrag. Dort stehen auch Guthaben und Quota. Bei Fehlern wird geprüft, ob der Code nichts gesendet hat, die Plattform ablehnte oder kein Kontingent mehr vorhanden ist.
 
-![DeepSeek-Usage-Seite mit Guthaben, Monatskosten und Aufruftrend](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
+![DeepSeek-Usage-Seite mit Guthaben, Monatskosten und Aufruftrend](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.webp)
 
 *Die Usage-Seite von DeepSeek zeigt Aufrufmenge, Kosten und Guthaben.*
 
@@ -175,7 +175,7 @@ Der Modellkatalog zeigt verfügbare Text-, Bild-, Sprach- und Videomodelle. Öff
 
 Manche Plattformen verlangen Region oder Deployment, bevor Base URL und Endpoint erscheinen. Folge dann dem Schnellstart und verwende nicht die Konsolen-URL als API-Adresse.
 
-![Volcengine-Ark-Schnellzugriff mit API Key und Testschritten](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
+![Volcengine-Ark-Schnellzugriff mit API Key und Testschritten](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.webp)
 
 *Volcengine Ark bündelt Schlüsselerstellung, Modellauswahl und ausführbares Beispiel.*
 

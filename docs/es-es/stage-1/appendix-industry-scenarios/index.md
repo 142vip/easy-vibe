@@ -80,7 +80,7 @@ La primera versión puede resolver los quince minutos posteriores: extraer objet
 
 <figure class="product-shot">
   <a href="https://www.notion.com/help/guides/find-answers-and-generate-reports-with-enterprise-search" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.png" alt="Interfaz Notion Enterprise Search" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.webp" alt="Interfaz Notion Enterprise Search" loading="lazy" />
   </a>
   <figcaption><strong>Notion Enterprise Search:</strong> una pregunta busca en Notion y Slack y permite cambiar entre Ask, Research y Build. Lo importante son fuentes y permisos existentes, no subir un único PDF.</figcaption>
 </figure>
@@ -97,7 +97,7 @@ No conectes toda la empresa primero. Elige devoluciones o soporte de TI, con muc
 
 <figure class="product-shot">
   <a href="https://mena.thomsonreuters.com/en/products-services/legal/cocounsel.html" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.jpg" alt="Thomson Reuters CoCounsel para contratos e investigación" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.webp" alt="Thomson Reuters CoCounsel para contratos e investigación" loading="lazy" />
   </a>
   <figcaption><strong>Thomson Reuters CoCounsel:</strong> muestra progreso de redacción e investigación y abre el borrador en Word. La IA lee, busca fundamento y redacta; el profesional revisa y termina en su documento habitual.</figcaption>
 </figure>
@@ -129,7 +129,7 @@ Una herramienta interna puede empezar en un CI fallido: leer error y cambios, lo
 
 <figure class="product-shot">
   <a href="https://blog.siemens.com/2026/02/the-digital-enterprise-and-the-synthesis-of-industrial-ai-digital-twin-and-data/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.jpg" alt="Siemens Engineering Copilot junto a TIA Portal" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.webp" alt="Siemens Engineering Copilot junto a TIA Portal" loading="lazy" />
   </a>
   <figcaption><strong>Siemens Engineering Copilot:</strong> Copilot y TIA Portal están abiertos juntos. El asistente ve proyecto, estructura y documentación actuales, no responde sin contexto a «por qué falló la máquina».</figcaption>
 </figure>
@@ -163,7 +163,7 @@ Sin socio clínico, datos y cumplimiento, no empieces por diagnóstico. Investig
 
 <figure class="product-shot">
   <a href="https://www.canva.com/newsroom/news/magic-studio/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.png" alt="Canva Magic Switch para cambiar tamaño, traducir y convertir" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.webp" alt="Canva Magic Switch para cambiar tamaño, traducir y convertir" loading="lazy" />
   </a>
   <figcaption><strong>Canva Magic Switch:</strong> un diseño aprobado cambia de tamaño, idioma o tipo de documento. Es el trabajo frecuente de convertir un recurso en muchas versiones.</figcaption>
 </figure>
@@ -197,7 +197,7 @@ Investiga una categoría difícil, no «compras con IA». Un inquilino que compr
 
 <figure class="product-shot">
   <a href="https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.jpg" alt="Planificador conversacional de Expedia" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.webp" alt="Planificador conversacional de Expedia" loading="lazy" />
   </a>
   <figcaption><strong>Planificación conversacional de Expedia:</strong> se comparan Maui y Kauai para una luna de miel y se guardan hoteles en Trips. El círculo se cierra cuando el chat llega a guardado, itinerario y reserva.</figcaption>
 </figure>
@@ -236,7 +236,7 @@ Ofrece control, no solo «generar de nuevo». Define el resultado —fotos de vi
 
 <figure class="product-shot">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.jpg" alt="Explicación de error en Duolingo Max" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.webp" alt="Explicación de error en Duolingo Max" loading="lazy" />
   </a>
   <figcaption><strong>Explain My Answer:</strong> cita la respuesta, explica por qué vestidos exige gustan y deja pedir ejemplos. Atiende el momento «¿por qué me equivoqué?» en vez de empezar otra lección.</figcaption>
 </figure>
@@ -249,7 +249,7 @@ También sirve para postura deportiva, cámara, ajedrez o instrumento: toma una 
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.jpg" alt="Reproductor Spotify AI DJ" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.webp" alt="Reproductor Spotify AI DJ" loading="lazy" />
   </a>
   <figcaption><strong>Spotify AI DJ:</strong> es una entrada continua en inicio, unida a canciones y controles. Se apoya en historial, catálogo y acción de reproducir, no solo en una voz de presentador.</figcaption>
 </figure>

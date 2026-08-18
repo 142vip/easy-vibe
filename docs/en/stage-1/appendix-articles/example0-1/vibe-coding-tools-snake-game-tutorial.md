@@ -237,7 +237,7 @@ npm start
 
 - **Example Results**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image2.webp)
 
 ---
 
@@ -279,11 +279,11 @@ Different Vibe Coding platforms each have their own characteristics and workflow
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image3.webp)
 - **Snake Game Results:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.png)
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image4.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image5.webp)
 
 - **Price:** Relatively expensive, but if you have a school email, you can verify as a student to use it at half price.
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image6.webp)
 
 ### 2. Cursor (IDE)
 
@@ -298,7 +298,7 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image9.webp)
 
 - **Price:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image10.webp)
 
 ### 3. Z.ai (Web-based)
 
@@ -313,7 +313,7 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image13.png)
 
 - **Price:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image14.webp)
 
 ### 4. Replit (Web-based)
 
@@ -327,11 +327,11 @@ Different Vibe Coding platforms each have their own characteristics and workflow
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image16.webp)
 - **Snake Game Results:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.png)
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image17.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image18.webp)
 
 - **Price:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image19.webp)
 
 ### 5. Bolt.new (Web-based)
 
@@ -339,11 +339,11 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Key Features & Workflow:** Bolt.new is similar to Lovable, featuring a Web + AI development environment. It can automatically generate project scaffolding and offers real-time preview. Compared to Lovable, Bolt.new provides more development control, allowing you to directly modify files in the browser and configure build tools.
 - **Suitable Users:** For developers who want more control but don't want to set up a local environment, Bolt.new offers a good balance. It allows you to get started quickly while having the flexibility to customize configurations.
 - **Prompt Process:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image20.webp)
 - **Snake Game Results:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.png)
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image21.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image22.webp)
 
 - **Price:**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image23.webp)
@@ -354,11 +354,11 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Key Features & Workflow:** Claude Dev is essentially a browser-based version of Cursor, providing a full VS Code-like development environment in the web. It supports file management, terminal, and various extensions. The advantage is that you don't need to install anything—just open the browser to start coding.
 - **Suitable Users:** For users who like Cursor's workflow but don't want to install desktop software, or those who need to code on different devices, Claude Dev is a great alternative.
 - **Prompt Process:**
-  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.png)
+  ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image24.webp)
 - **Snake Game Results:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.png)
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image25.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image26.webp)
 
 - **Price:**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image27.webp)
@@ -373,7 +373,7 @@ Different Vibe Coding platforms each have their own characteristics and workflow
 - **Snake Game Results:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image29.webp)
-![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image30.webp)
 
 - **Price:**
   ![](../../../../zh-cn/stage-1/appendix-articles/example0-1/images/image31.webp)

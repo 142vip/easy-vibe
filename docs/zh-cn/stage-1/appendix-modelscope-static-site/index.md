@@ -184,7 +184,7 @@ export default {
 
 打开 [魔搭社区创空间](https://modelscope.cn/studios)。页面顶部会显示“创建空间 → 搭建应用 → 发布空间 → 分享创意”的流程。
 
-![魔搭社区创空间首页，页面顶部展示创建、搭建、发布和分享流程](./images/modelscope-static-site/01-studios-home.jpg)
+![魔搭社区创空间首页，页面顶部展示创建、搭建、发布和分享流程](./images/modelscope-static-site/01-studios-home.webp)
 
 点击页面中的创建按钮，或直接访问 [创建创空间](https://modelscope.cn/studios/create)。未登录时，平台会先要求登录或注册。国内站 `modelscope.cn` 和国际站 `modelscope.ai` 的账号、令牌与内容并不互通；面向国内用户时通常选择国内站。
 
@@ -216,7 +216,7 @@ export default {
 
 文件上传完成后，进入创空间的部署设置，在 SDK 类型中选择 **Static**。页面会提示 Static 适合展示已经准备好的 HTML 页面；同一区域也会提供 Gradio、Streamlit 和 Docker 等类型。
 
-![魔搭社区创空间的部署设置，在“接入 SDK”区域选择 Static](./images/modelscope-static-site/03-select-static.jpg)
+![魔搭社区创空间的部署设置，在“接入 SDK”区域选择 Static](./images/modelscope-static-site/03-select-static.webp)
 
 再次确认仓库根目录有 `index.html`，然后保存部署设置。
 

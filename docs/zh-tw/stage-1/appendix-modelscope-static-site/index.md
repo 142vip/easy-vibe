@@ -184,7 +184,7 @@ export default {
 
 開啟[魔搭社群創空間](https://modelscope.cn/studios)。頁面頂部會顯示「建立空間 → 搭建應用 → 發布空間 → 分享創意」的流程。
 
-![魔搭社群創空間首頁，頁面頂部展示建立、搭建、發布和分享流程](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.jpg)
+![魔搭社群創空間首頁，頁面頂部展示建立、搭建、發布和分享流程](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.webp)
 
 點選建立按鈕，或直接進入[建立創空間](https://modelscope.cn/studios/create)。尚未登入時，平台會先要求登入或註冊。中國站 `modelscope.cn` 和國際站 `modelscope.ai` 的帳號、權杖與內容並不互通；面向中國使用者時通常選擇中國站。
 
@@ -216,7 +216,7 @@ export default {
 
 檔案上傳完成後，進入創空間的部署設定，在 SDK 類型中選擇 **Static**。頁面會提示 Static 適合展示已準備好的 HTML 頁面；同一區域也會提供 Gradio、Streamlit 和 Docker。
 
-![魔搭社群創空間的部署設定，在 SDK 區域選擇 Static](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+![魔搭社群創空間的部署設定，在 SDK 區域選擇 Static](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.webp)
 
 再次確認倉庫根目錄有 `index.html`，然後儲存部署設定。
 

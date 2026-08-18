@@ -82,7 +82,7 @@ El profesor creó una carpeta vacía y la abrió en Trae. El proyecto se llamó 
 
 La referencia procede de una página de muestra de Framer. En ella se distinguen el título grande, la navegación, el paisaje morado y los pequeños controles.
 
-![Captura de la página colocada en Trae](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.jpg)
+![Captura de la página colocada en Trae](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.webp)
 
 _Fuente de la captura: [Framer Website Builder](https://www.framer.com/solutions/website-builder/)_
 

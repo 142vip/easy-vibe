@@ -172,7 +172,7 @@ export default {
 
 افتح [ModelScope Studio](https://modelscope.cn/studios). يعرض أعلى الصفحة مسار الإنشاء والبناء والنشر والمشاركة.
 
-![صفحة ModelScope Studio مع مراحل الإنشاء والنشر](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.jpg)
+![صفحة ModelScope Studio مع مراحل الإنشاء والنشر](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/01-studios-home.webp)
 
 اختر الإنشاء أو افتح [إنشاء Studio](https://modelscope.cn/studios/create). لا يشارك الموقع الصيني `modelscope.cn` والدولي `modelscope.ai` الحساب أو الرمز أو المحتوى.
 
@@ -202,7 +202,7 @@ export default {
 
 بعد رفع الملفات، افتح إعدادات النشر في Studio واختر **Static** لنوع SDK. يناسب Static موقع HTML جاهزًا، وتظهر في المنطقة نفسها خيارات Gradio وStreamlit وDocker.
 
-![اختيار Static في إعدادات النشر](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.jpg)
+![اختيار Static في إعدادات النشر](../../../zh-cn/stage-1/appendix-modelscope-static-site/images/modelscope-static-site/03-select-static.webp)
 
 تأكد مرة أخرى من وجود `index.html` في جذر المستودع، ثم احفظ إعدادات النشر.
 

@@ -159,7 +159,7 @@ API Key는 앱이 모델을 부르는 인증 정보입니다. 로컬 환경 변�
 
 첫 요청 뒤 Usage 또는 Billing에서 새 기록을 찾습니다. 잔액과 Quota도 여기서 확인합니다. 실패했다면 코드가 보내지 못했는지, 플랫폼이 거부했는지, 할당량이 없는지 나눠 확인하세요.
 
-![잔액과 월 지출, 호출 추이를 보여 주는 DeepSeek Usage 화면](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
+![잔액과 월 지출, 호출 추이를 보여 주는 DeepSeek Usage 화면](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.webp)
 
 *DeepSeek Usage 화면에서 호출량, 비용, 잔액을 확인할 수 있습니다.*
 
@@ -175,7 +175,7 @@ Models 화면에서 현재 제공되는 텍스트, 이미지, 음성, 영상 모
 
 Region을 고르거나 Deployment를 만든 뒤 Base URL과 Endpoint를 받는 플랫폼도 있습니다. 이때는 빠른 시작 안내를 따르고 콘솔 화면 URL을 API 주소로 쓰지 않습니다.
 
-![API Key와 빠른 시험 절차를 보여 주는 화산방주 API 연결 화면](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
+![API Key와 빠른 시험 절차를 보여 주는 화산방주 API 연결 화면](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.webp)
 
 *화산방주는 Key 생성, 모델 선택, 실행 예제를 한 흐름으로 보여 줍니다.*
 

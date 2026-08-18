@@ -159,7 +159,7 @@ API Key は、アプリがモデルを呼び出すための認証情報です。
 
 初回リクエスト後に Usage または Billing を開き、新しい記録があるか確認します。残高や Quota もここで分かります。失敗時は、コードから送られていないのか、サービスに拒否されたのか、利用枠がないのかを分けて調べます。
 
-![残高、月間支出、呼び出し傾向を表示する DeepSeek の Usage 画面](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.png)
+![残高、月間支出、呼び出し傾向を表示する DeepSeek の Usage 画面](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-13-57-41.webp)
 
 *DeepSeek の Usage 画面では、呼び出し量、消費額、残高を確認できます。*
 
@@ -175,7 +175,7 @@ API Key は、アプリがモデルを呼び出すための認証情報です。
 
 Region を選び、Deployment を作ってから Base URL と Endpoint が発行されるサービスもあります。その場合はクイックスタートに従います。コンソール画面の URL を API アドレスとして使わないでください。
 
-![API Key 作成、モデル選択、テスト手順をまとめた火山方舟のクイック接続画面](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.png)
+![API Key 作成、モデル選択、テスト手順をまとめた火山方舟のクイック接続画面](../../../zh-cn/stage-1/integrating-ai-capabilities/images/index-2026-01-20-23-13-01.webp)
 
 *火山方舟では、Key 作成、モデル選択、実行例を一つの流れで確認できます。*
 

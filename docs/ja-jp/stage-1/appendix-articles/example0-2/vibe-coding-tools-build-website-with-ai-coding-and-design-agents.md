@@ -79,7 +79,7 @@ AIを象徴する抽象的な図形とテキストを組み合わせ、透明背
 
 - 上記のプロンプトを入力 → Agentが生成した複数のデザイン案を比較。
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. 最終ロゴを決定
 
@@ -138,7 +138,7 @@ AIを象徴する抽象的な図形とテキストを組み合わせ、透明背
   - https://colorhunt.co/
   - https://coolors.co/
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.webp)
 
 - **Googleでキーワード検索して配色を探す**
 
@@ -175,7 +175,7 @@ AIを象徴する抽象的な図形とテキストを組み合わせ、透明背
 - 「カラーリングを調整して。」
 - 「この部分を削除して。」
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.webp)
 
 ## 3. 最終デザインを確定
 
@@ -274,7 +274,7 @@ function showAlert() {
 背景は黒、テキストは白にしてください。」
 ```
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.webp)
 
 ## 3. ウェブサイトを実行
 
@@ -337,7 +337,7 @@ Agentが生成した初期版のウェブサイトには、通常、自動生成
 
 - **例：**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.webp)
 
 - **結果：**
 

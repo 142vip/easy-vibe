@@ -142,7 +142,7 @@ AI mở rộng bản đồ. Hướng đi cuối cùng vẫn do nhu cầu, nguồ
 
 Nhiều người dừng ở đây vì bức tranh trong đầu quá lớn. Để “sau này sẽ làm” không thành lời an ủi, ta dùng chuỗi động tác lặp lại được: mở rộng, thu hẹp, chia nhỏ, vẽ, tham khảo và hỏi sớm.
 
-![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image5.png)
+![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image5.webp)
 
 ## 2.1 Từ suy nghĩ đến giải pháp: mở và khép bằng Double Diamond
 

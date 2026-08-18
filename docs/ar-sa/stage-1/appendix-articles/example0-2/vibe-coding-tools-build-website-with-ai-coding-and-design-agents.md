@@ -79,7 +79,7 @@
 
 - أدخل التعليمات المذكورة أعلاه → قارن بين التصميمات المتعددة التي أنشأها الوكيل.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. تحديد الشعار النهائي
 
@@ -138,7 +138,7 @@
   - https://colorhunt.co/
   - https://coolors.co/
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.webp)
 
 - **البحث عن الألوان عبر الكلمات المفتاحية على Google**
 
@@ -175,7 +175,7 @@
 - "عدّل مجموعة الألوان."
 - "احذف هذا القسم هنا."
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.webp)
 
 ## 3. تحديد التصميم النهائي
 
@@ -274,7 +274,7 @@ function showAlert() {
 الخلفية سوداء والنص أبيض."
 ```
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.webp)
 
 ## 3. تشغيل الموقع
 
@@ -337,7 +337,7 @@ function showAlert() {
 
 - **مثال:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.webp)
 
 - **النتيجة:**
 

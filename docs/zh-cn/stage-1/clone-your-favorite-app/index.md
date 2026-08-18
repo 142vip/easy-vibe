@@ -82,7 +82,7 @@ const duration = '约 <strong>2 小时</strong>'
 
 这次选择的是 Framer 官网展示的一张页面。画面里有大标题、导航栏、紫色山景和几个小按钮，主要内容很清楚。
 
-![老师放进 Trae 的网页截图](./images/framer-official-interface.jpg)
+![老师放进 Trae 的网页截图](./images/framer-official-interface.webp)
 
 _截图来源：[Framer Website Builder](https://www.framer.com/solutions/website-builder/)_
 

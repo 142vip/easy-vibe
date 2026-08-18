@@ -130,7 +130,7 @@ AI가 등장한 뒤, 일반인에게 처음으로 완전히 새로운 가능성�
 이런 “대화가 곧 프로그래밍”인 방식은 프로그래밍을 “코드 작성”에서 “요구사항 설명”으로 바꿉니다. 당신은 하위 기술 세부 사항을 신경 쓸 필요가 없고, AI에게 원하는 것을 명확히 알려 주기만 하면 됩니다. 그러면 AI가 아이디어를 실행 가능한 프로그램으로 바꿔 줍니다. 이것이 AI 시대 프로그래밍의 새로운 패러다임, 즉 **Vibe Coding(분위기식 코딩)** 입니다.
 :::
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.webp)
 
 간단한 요구사항을 입력한 뒤 **풀스택 개발** 버튼을 클릭하면, 웹페이지가 생성되는 전체 과정을 실시간으로 볼 수 있습니다. 보통 커피 한 잔을 내릴 시간 정도면 웹페이지가 자동으로 완성됩니다!
 
@@ -143,7 +143,7 @@ AI가 등장한 뒤, 일반인에게 처음으로 완전히 새로운 가능성�
 5. 인터페이스는 간결하고 보기 좋아야 합니다.
 ```
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.webp)
 
 생성이 끝나면 오른쪽에 탐색 가능한 웹 인터페이스가 나타납니다. 페이지 내용을 위아래로 스크롤해 보거나, 페이지 상단의 🧭 버튼을 클릭해 전체 화면 모드로 전환해 결과를 확인할 수 있습니다.
 
@@ -362,11 +362,11 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 [WotAI Games](https://games.wotai.co/)는 Claude Code(Vibe Coding)로 처음부터 완전히 개발했고, **어떤 게임 엔진도 사용하지 않은** 웹 게임 모음집입니다. 대화를 통해 AI가 클래식 아케이드 게임 10종(팩맨, 테트리스, 스페이스 인베이더, 스네이크, Flappy Bird, 벽돌 깨기, 갤러그, 개구리 건너기, Doodle Jump, 스도쿠)을 한 번에 복제했습니다. 각각 온라인에서 바로 플레이할 수 있고, 순위표 시스템도 내장되어 있습니다.
 
-![WotAI Games 홈페이지 - 클래식 아케이드 게임 10종 모음](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.png)
+![WotAI Games 홈페이지 - 클래식 아케이드 게임 10종 모음](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.webp)
 
 ![테트리스(WotAI Games, Vibe Coding으로 생성)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-tetris.png)
 
-![팩맨(WotAI Games, Vibe Coding으로 생성)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.png)
+![팩맨(WotAI Games, Vibe Coding으로 생성)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.webp)
 
 > 🔗 온라인 플레이: [games.wotai.co](https://games.wotai.co/) ｜ 개발 회고: [We vibe coded 10 classic arcade games with Claude Code](https://wotai.co/blog/wotai-games-vibe-coded-arcade-classics)
 
@@ -390,7 +390,7 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 2026년 7월, 중국어 커뮤니티 개발자 [wangzifan396-wzf](https://github.com/wangzifan396-wzf)가 [mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games)를 오픈소스로 공개했습니다. **Vibe Coding으로 한 명이 만들고 계속 다듬어 온 브라우저 미니게임 100개**로, 전부 의존성이 없는 단일 HTML 파일이라 더블클릭하면 바로 실행됩니다. 플레이 방식은 액션, 전략, 타워 디펜스, 경영, 카드, 물리, 추리, 레이싱, 리듬, 보드게임, 퍼즐 등 다양한 장르를 아우르며, 그중 상당수는 다챕터 캠페인, 육성 시스템, 세이브 코드를 통한 크로스 디바이스 동기화까지 갖춘 완성도 높은 제품 수준에 도달했습니다. 프로젝트 전체가 MIT 라이선스로 오픈되어 있으며, 온라인 카탈로그에서 바로 플레이할 수 있습니다.
 
-![브라우저 게임 100개의 온라인 카탈로그(2026년 Vibe Coding 오픈소스 프로젝트)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
+![브라우저 게임 100개의 온라인 카탈로그(2026년 Vibe Coding 오픈소스 프로젝트)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.webp)
 
 ![《네온 2048》: 여섯 챕터 18개 노드 원정 + 다양한 모드와 도구 시스템](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
@@ -400,7 +400,7 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 2026년 2월, 개발자 [Trent Sterling](https://tront.xyz/blog/posts/craftmine/)은 조카들이 《마인크래프트》를 하고 싶어 하지만 정품이 없어서, 빈 HTML 파일 하나를 열고 Claude Code로 순수 대화를 통해 [CraftMine](https://tront.xyz/craftmine/)을 만들었습니다. **6,820줄, 단일 파일**의 웹 버전 《마인크래프트》 복제판입니다. 46종의 블록(DOOM 지옥 테마 블록 21종 추가 포함), 36종의 몹(닭부터 체력 300의 타이탄 보스까지), 19종의 무기(BFG 9000 포함), 5종의 생물 군계, 낮과 밤 순환, 심지어 **P2P 멀티플레이**까지 지원합니다. 빌드 과정이 전혀 없이 웹페이지를 열면 바로 플레이할 수 있습니다.
 
-![CraftMine: 《마인크래프트》 복제판, 6,820줄 단일 파일(Vibe Coding으로 생성)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.png)
+![CraftMine: 《마인크래프트》 복제판, 6,820줄 단일 파일(Vibe Coding으로 생성)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.webp)
 
 > 🔗 온라인 플레이: [tront.xyz/craftmine](https://tront.xyz/craftmine/) ｜ 개발 회고: [CraftMine: A 6,820-line vibe-coded Minecraft clone in one HTML file](https://tront.xyz/blog/posts/craftmine/)
 
@@ -418,7 +418,7 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 2026년 7월, 개발자 [Dr. Josh Simmons](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it)은 중국산 대형 모델 **Kimi K3**에게 프롬프트 하나만 보내서, 플레이 가능한 1인칭 3D 게임을 만들게 했습니다. 프로그램으로 생성된 서버 시설에서 데이터 코어를 수집하고, 순찰 드론을 피하고, 화물 엘리베이터를 타고 3층 아래로 내려가는 게임입니다. 게임 전체가 한 번 생성으로 바로 플레이 가능하고, 두 차례 대화로 버그 2개를 고치면 무리 없이 클리어할 수 있으며, 총비용은 약 **2달러**입니다.
 
-![Kimi K3가 프롬프트 하나로 생성한 3D 서버 시설 게임](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.png)
+![Kimi K3가 프롬프트 하나로 생성한 3D 서버 시설 게임](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.webp)
 
 > 🔗 온라인 플레이: [kimi-test-theta.vercel.app](https://kimi-test-theta.vercel.app/) ｜ 소스 코드: [github.com/jcpsimmons/kimi-test](https://github.com/jcpsimmons/kimi-test) ｜ 개발자 회고: [Kimi K3 Built the Game. I Still Had to Play It.](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it)
 
@@ -426,7 +426,7 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 2026년 7월 17일, Moonshot AI가 Kimi K3 모델을 발표한 뒤 웹 게임 플랫폼 [K399](https://www.k399.games/)도 함께 출시했습니다. 안의 수십 개 게임이 모두 K3 모델로 제작되었고, 클릭하면 바로 플레이할 수 있습니다. 장르는 3D 슈팅, 리듬 게임, 횡스크롤 액션, 궁중 드라마 AVG, 3D 퍼즐, 심지어 오픈월드까지 아우릅니다. 《젤다의 전설》《흑신화: 오공》《크레이지 아케이드》《뱀파이어 서바이버》 등 클래식 플레이 방식을 복제한 작품부터, 《파이오니어 트레이닝 그라운드》(이동, 점프, 슬라이딩, 조준 사격이 가능한 3D FPS), 오픈월드 《SpiderPunk》, 다섯 챕터 본편과 여덟 개 지선, 32종 랜덤 이벤트가 있는 궁중 드라마 AVG 《봉궐심궁》 등 Demo 수준을 훨씬 넘어서는 오리지널 게임까지 있습니다.
 
-![K399 플랫폼 화면 - K3 Game Arcade, 게임 목록 클릭하면 바로 플레이](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
+![K399 플랫폼 화면 - K3 Game Arcade, 게임 목록 클릭하면 바로 플레이](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.webp)
 
 ![K399의 오픈월드 게임 SpiderPunk: 사이버 도시 고층 빌딩 사이에서 거미줄을 타고 이동(K3 모델 생성, 실제 플레이 화면)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 

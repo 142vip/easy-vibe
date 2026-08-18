@@ -79,7 +79,7 @@ Kombiniere ein abstraktes AI-Symbol mit dem Text und exportiere als PNG mit tran
 
 - Obigen Prompt eingeben &rarr; Mehrere Designentw&uuml;rfe des Agents vergleichen.
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. Endg&uuml;ltiges Logo bestimmen
 
@@ -138,7 +138,7 @@ Auch ohne eigenes Farbschema k&ouml;nnen Sie &uuml;ber Farb-Websites oder Suchbe
   - https://colorhunt.co/
   - https://coolors.co/
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.webp)
 
 - **Farbsuche &uuml;ber Google-Schl&uuml;sselw&ouml;rter**
 
@@ -175,7 +175,7 @@ Sie k&ouml;nnen dem Agent Feedback geben, z.B.:
 - "Farbkombination anpassen."
 - "Diesen Bereich entfernen."
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.webp)
 
 ## 3. Endg&uuml;ltiges Design bestimmen
 
@@ -274,7 +274,7 @@ Verwende die Farben #171721, #FF7130, #FF3C68.
 Schwarzer Hintergrund, wei&szlig;er Text."
 ```
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.webp)
 
 ## 3. Website starten
 
@@ -337,7 +337,7 @@ Wenn Sie vom Design-Agent Codedateien heruntergeladen haben, k&ouml;nnen Sie die
 
 - **Beispiel:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.webp)
 
 - **Ergebnis:**
 

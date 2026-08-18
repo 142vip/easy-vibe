@@ -80,7 +80,7 @@ A first version can handle the fifteen minutes after a meeting: extract goals, o
 
 <figure class="product-shot">
   <a href="https://www.notion.com/help/guides/find-answers-and-generate-reports-with-enterprise-search" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.png" alt="Notion Enterprise Search interface" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/notion-enterprise-search.webp" alt="Notion Enterprise Search interface" loading="lazy" />
   </a>
   <figcaption><strong>Notion Enterprise Search:</strong> one question can search Notion and Slack, and the user can switch among Ask, Research, and Build. An enterprise assistant connects existing sources and permissions; it is not merely a place to upload one PDF.</figcaption>
 </figure>
@@ -97,7 +97,7 @@ Do not connect the whole company first. Select a team with many questions and a 
 
 <figure class="product-shot">
   <a href="https://mena.thomsonreuters.com/en/products-services/legal/cocounsel.html" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.jpg" alt="Thomson Reuters CoCounsel contract drafting and research interface" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/cocounsel.webp" alt="Thomson Reuters CoCounsel contract drafting and research interface" loading="lazy" />
   </a>
   <figcaption><strong>Thomson Reuters CoCounsel:</strong> progress for drafting and research appears on the left, then the draft opens in Word. AI reads, finds support, and drafts; professionals review and finish the work in a familiar document.</figcaption>
 </figure>
@@ -129,7 +129,7 @@ A useful internal tool can begin with a failed CI run: read the error and releva
 
 <figure class="product-shot">
   <a href="https://blog.siemens.com/2026/02/the-digital-enterprise-and-the-synthesis-of-industrial-ai-digital-twin-and-data/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.jpg" alt="Siemens Engineering Copilot beside TIA Portal" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/siemens-industrial-copilot.webp" alt="Siemens Engineering Copilot beside TIA Portal" loading="lazy" />
   </a>
   <figcaption><strong>Siemens Engineering Copilot:</strong> Copilot and TIA Portal are open side by side. The assistant sees the current automation project, equipment structure, and engineering documents instead of answering a context-free question about why a machine failed.</figcaption>
 </figure>
@@ -163,7 +163,7 @@ Without a clinical partner, suitable data, and compliance expertise, do not star
 
 <figure class="product-shot">
   <a href="https://www.canva.com/newsroom/news/magic-studio/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.png" alt="Canva Magic Switch menu for resizing, translation, and document conversion" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/canva-magic-switch.webp" alt="Canva Magic Switch menu for resizing, translation, and document conversion" loading="lazy" />
   </a>
   <figcaption><strong>Canva Magic Switch:</strong> the same approved design can be resized, translated, or turned into a document. This is the frequent content-team task of turning one accepted asset into versions for many channels.</figcaption>
 </figure>
@@ -197,7 +197,7 @@ Research a difficult product category, not the phrase “AI shopping assistant.�
 
 <figure class="product-shot">
   <a href="https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.jpg" alt="Expedia conversational trip-planning interface" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/expedia-chatgpt.webp" alt="Expedia conversational trip-planning interface" loading="lazy" />
   </a>
   <figcaption><strong>Expedia conversational planning:</strong> a user begins by comparing Maui and Kauai for a honeymoon, then saves hotel suggestions directly to Trips. The loop closes when conversation becomes a saved itinerary and booking action.</figcaption>
 </figure>
@@ -236,7 +236,7 @@ Offer control, not only “generate again.” A useful opening has a defined art
 
 <figure class="product-shot">
   <a href="https://blog.duolingo.com/duolingo-max/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.jpg" alt="Duolingo Max Explain My Answer interface" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/duolingo-explain.webp" alt="Duolingo Max Explain My Answer interface" loading="lazy" />
   </a>
   <figcaption><strong>Explain My Answer:</strong> the screen quotes the learner's answer, explains why plural vestidos takes gustan, and allows another example. It meets the exact moment “why was my answer wrong?” instead of restarting a general grammar lesson.</figcaption>
 </figure>
@@ -249,7 +249,7 @@ The same pattern applies to exercise form, camera settings, a chess review, or m
 
 <figure class="product-shot product-shot--mobile">
   <a href="https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/" target="_blank" rel="noreferrer">
-    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.jpg" alt="Spotify AI DJ player" loading="lazy" />
+    <img src="../../../zh-cn/stage-1/appendix-industry-scenarios/images/products/spotify-ai-dj.webp" alt="Spotify AI DJ player" loading="lazy" />
   </a>
   <figcaption><strong>Spotify AI DJ:</strong> DJ is a persistent home-screen playback entry connected directly to tracks and controls. It relies on listening history, Spotify's catalog, and the next playback action—not just a generated presenter voice.</figcaption>
 </figure>

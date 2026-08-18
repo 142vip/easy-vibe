@@ -82,7 +82,7 @@ Die Lehrkraft hat einen leeren Ordner erstellt und in Trae geöffnet. Das Projek
 
 Die Vorlage stammt von einer Framer-Beispielseite. Große Überschrift, Navigation, violette Berglandschaft und kleine Bedienelemente sind gut erkennbar.
 
-![Der in Trae eingefügte Webseiten-Screenshot](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.jpg)
+![Der in Trae eingefügte Webseiten-Screenshot](../../../zh-cn/stage-1/clone-your-favorite-app/images/framer-official-interface.webp)
 
 _Quelle des Screenshots: [Framer Website Builder](https://www.framer.com/solutions/website-builder/)_
 

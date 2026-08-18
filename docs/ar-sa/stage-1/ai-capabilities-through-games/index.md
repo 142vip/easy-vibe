@@ -130,7 +130,7 @@ const relatedArticles =
 نموذج "الحوار هو البرمجة" هذا يحول البرمجة من "كتابة الأكواد" إلى "وصف المتطلبات". لا تحتاج للقلق بشأن التفاصيل التقنية الأساسية، فقط أخبر الذكاء الاصطناعي بوضوح بما تريد، وسيساعدك في تحويل أفكارك إلى برنامج قابل للتشغيل. هذا هو النموذج الجديد للبرمجة في عصر الذكاء الاصطناعي — **Vibe Coding (البرمجة الجوهرية)**.
 :::
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-25-03.webp)
 
 بعد إدخال متطلباتنا البسيطة، انقر على زر **التطوير الكامل**، يمكنك مشاهدة عملية إنشاء صفحة الويب بالكامل في الوقت الفعلي. عادةً ما يكون وقت تحضير فنجان قهوة كافيًا لتكتمل صفحة الويب تلقائيًا!
 
@@ -143,7 +143,7 @@ const relatedArticles =
 5. الواجهة يجب أن تكون بسيطة وجميلة
 ```
 
-![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.png)
+![](../../../zh-cn/stage-1/ai-capabilities-through-games/images/index-2026-01-07-18-34-03.webp)
 
 بعد الانتهاء من الإنشاء، يمكنك رؤية واجهة صفحة ويب قابلة للتصفح على الجانب الأيمن. يمكنك التمرير لأعلى وأسفل لتصفح محتوى الصفحة، أو النقر على زر 🧭 في الجزء العلوي من الصفحة للتبديل إلى وضع ملء الشاشة لمشاهدة التأثير.
 
@@ -364,11 +364,11 @@ const relatedArticles =
 
 [WotAI Games](https://games.wotai.co/) هي مجموعة ألعاب ويب طُوّرت بالكامل من الصفر باستخدام Claude Code (Vibe Coding) **بدون استخدام أي محرك ألعاب**. عبر الحوار، أعاد الذكاء الاصطناعي إنتاج 10 ألعاب أركيد كلاسيكية دفعة واحدة: باك مان، تترس، الغزاة الفضائيون، الثعبان، Flappy Bird، كسر الطوب، Galaga، عبور الضفدع، القفز الرسومي والسودوكو. كل لعبة قابلة للعب مباشرة عبر الإنترنت، مع نظام لوحة متصدرين مدمج.
 
-![الصفحة الرئيسية لـ WotAI Games — مجموعة من 10 ألعاب أركيد كلاسيكية](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.png)
+![الصفحة الرئيسية لـ WotAI Games — مجموعة من 10 ألعاب أركيد كلاسيكية](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-games.webp)
 
 ![تترس (WotAI Games، مولّد بواسطة Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-tetris.png)
 
-![باك مان (WotAI Games، مولّد بواسطة Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.png)
+![باك مان (WotAI Games، مولّد بواسطة Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-wotai-pacman.webp)
 
 > 🔗 العب عبر الإنترنت: [games.wotai.co](https://games.wotai.co/) ｜ مراجعة التطوير: [We vibe coded 10 classic arcade games with Claude Code](https://wotai.co/blog/wotai-games-vibe-coded-arcade-classics)
 
@@ -392,7 +392,7 @@ const relatedArticles =
 
 في يوليو 2026، أطلق المطور [wangzifan396-wzf](https://github.com/wangzifan396-wzf) من المجتمع الصيني مشروع [mini-browser-games](https://github.com/wangzifan396-wzf/mini-browser-games) مفتوح المصدر — **100 لعبة متصفح صغيرة صنعها شخص واحد وصقلها باستمرار بواسطة Vibe Coding**، جميعها ملفات HTML مفردة بدون أي تبعيات، تعمل بمجرد النقر المزدوج. تغطي أنماط اللعب: الحركة، الاستراتيجية، الدفاع عن الأبراج، الإدارة، البطاقات، الفيزياء، الألغاز المنطقية، السباقات، الإيقاع، ألعاب الطاولة والذكاء. كثير منها وصل إلى عمق منتج كامل مثل حملات متعددة الفصول وأنظمة تطوير ومزامنة رموز الحفظ عبر الأجهزة. المشروع كاملًا مفتوح المصدر برخصة MIT، والدليل عبر الإنترنت يمكن اللعب فيه مباشرة.
 
-![الدليل عبر الإنترنت لـ 100 لعبة متصفح (مشروع Vibe Coding مفتوح المصدر لعام 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.png)
+![الدليل عبر الإنترنت لـ 100 لعبة متصفح (مشروع Vibe Coding مفتوح المصدر لعام 2026)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games.webp)
 
 ![«نيون 2048»: رحلة استكشاف من 6 فصول و18 عقدة + أوضاع متعددة ونظام أدوات](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-100-games-neon2048.webp)
 
@@ -402,7 +402,7 @@ const relatedArticles =
 
 في فبراير 2026، المطور [Trent Sterling](https://tront.xyz/blog/posts/craftmine/) لأن أبناء إخوته أرادوا لعب *ماينكرافت* لكن بدون نسخة أصلية، فتح ملف HTML فارغًا وصنع [CraftMine](https://tront.xyz/craftmine/) عبر حوار خالص باستخدام Claude Code — نسخة ويب مستنسخة من *ماينكرافت* بـ **6,820 سطرًا في ملف واحد**: 46 نوعًا من المكعبات (مع إضافة 21 مكعبًا بموضوع جحيم DOOM)، و36 نوعًا من الكائنات (من الدجاج إلى زعيم تيتان بـ 300 نقطة حياة)، و19 سلاحًا (بما فيها BFG 9000)، و5 مناطق حيوية، ودورة ليل ونهار، وحتى دعم **اللعب الجماعي P2P**. بدون أي خطوات بناء، افتح الصفحة والعب مباشرة.
 
-![CraftMine: نسخة مستنسخة من ماينكرافت في ملف واحد بـ 6,820 سطرًا (مولّدة بواسطة Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.png)
+![CraftMine: نسخة مستنسخة من ماينكرافت في ملف واحد بـ 6,820 سطرًا (مولّدة بواسطة Vibe Coding)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-craftmine.webp)
 
 > 🔗 العب عبر الإنترنت: [tront.xyz/craftmine](https://tront.xyz/craftmine/) ｜ مراجعة التطوير: [CraftMine: A 6,820-line vibe-coded Minecraft clone in one HTML file](https://tront.xyz/blog/posts/craftmine/)
 
@@ -420,7 +420,7 @@ const relatedArticles =
 
 في يوليو 2026، أرسل المطور [Dr. Josh Simmons](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it) prompt واحدًا فقط إلى النموذج الصيني الكبير **Kimi K3**، فصنع لعبة ثلاثية الأبعاد قابلة للعب بمنظور شخص أول: جمع نوى البيانات داخل منشأة خوادم مولّدة برمجيًا، وتجنّب طائرات المراقبة بدون طيار، وركوب مصعد شحن لثلاثة طوابق. اللعبة كاملة قابلة للعب منذ التوليد الأول، وبجولتي حوار لإصلاح خطأين يمكن إكمالها بسلاسة، بتكلفة إجمالية حوالي **دولارين**.
 
-![لعبة منشأة خوادم ثلاثية الأبعاد ولّدها Kimi K3 بـ prompt واحد](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.png)
+![لعبة منشأة خوادم ثلاثية الأبعاد ولّدها Kimi K3 بـ prompt واحد](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-kimi-k3-game.webp)
 
 > 🔗 العب عبر الإنترنت: [kimi-test-theta.vercel.app](https://kimi-test-theta.vercel.app/) ｜ الكود المصدري: [github.com/jcpsimmons/kimi-test](https://github.com/jcpsimmons/kimi-test) ｜ مراجعة المطور: [Kimi K3 Built the Game. I Still Had to Play It.](https://www.drjoshcsimmons.com/writing/kimi-k3-built-the-game-i-still-had-to-play-it)
 
@@ -428,7 +428,7 @@ const relatedArticles =
 
 في 17 يوليو 2026، بعد إصدار نموذج Kimi K3 من شركة Moonshot AI، أُطلقت بالتزامن منصة ألعاب الويب [K399](https://www.k399.games/) — عشرات الألعاب بداخلها جميعها صُنعت بمشاركة نموذج K3، افتح والعب فورًا. تغطي الأنواع: إطلاق النار ثلاثي الأبعاد، ألعاب الإيقاع، الحركة الأفقية، دراما القصر AVG، الألغاز ثلاثية الأبعاد وحتى العوالم المفتوحة: منها أعمال مستنسخة من أساليب كلاسيكية مثل *زيلدا* و*الأسطورة السوداء: ووكونغ* و*بومبمان* و*فامباير سرفايفرز*، ومنها ألعاب أصلية يتجاوز اكتمالها مستوى الـ Demo بكثير مثل «ميدان الرواد» (FPS ثلاثي الأبعاد مع الحركة والقفز والانزلاق والتصويب)، والعالم المفتوح *SpiderPunk*، ودراما قصر AVG «قصر فنغ تشي شين» بخمسة فصول رئيسية وثماني قصص جانبية و32 حدثًا عشوائيًا.
 
-![واجهة منصة K399 — K3 Game Arcade، قائمة ألعاب تفتح وتلعب فورًا](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.png)
+![واجهة منصة K399 — K3 Game Arcade، قائمة ألعاب تفتح وتلعب فورًا](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-platform-live.webp)
 
 ![لعبة العالم المفتوح SpiderPunk على K399: التأرجح بخيوط العنكبوت بين ناطحات السحاب في مدينة سيبربانك (مولّدة بنموذج K3، لقطة لعب فعلية)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 

@@ -119,13 +119,13 @@ Si vous n'êtes pas encore familier avec ce qu'est un IDE et à quoi servent les
 
 Vous pouvez comprendre l'IDE comme un programme dédié à « éditer, gérer, exécuter et déboguer » le code. Les premiers IDE avaient une apparence très « primitive », fonctionnant presque entièrement au clavier.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.png)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.webp)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
 
 Interface terminal (Terminal) Source de l'image : https://en.wikipedia.org/wiki/File:Emacs-screenshot.png
 
 Un IDE « historique » bien connu et fonctionnellement mature comme `Vim` est souvent utilisé pour les opérations distantes sur les serveurs.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.webp)
 
 Pour plus d'efficacité, nous avons besoin d'IDE modernes prenant en charge la souris, incluant généralement :
 
@@ -170,7 +170,7 @@ Dans les dernières versions de VS Code, un assistant de grand modèle de langag
 
 Vous pouvez télécharger et installer VS Code, puis cliquer sur l'icône de la barre latérale en haut à droite pour ouvrir la zone de fonctionnalités IA et découvrir ces capacités.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.webp)
 
 Cependant, VS Code n'est pas l'IDE avec les capacités IA les plus puissantes. Pour les scénarios nécessitant beaucoup d'assistance IA pour le codage, nous préférons souvent des outils « plus intelligents et plus efficaces » -- un bon AI IDE peut considérablement réduire le temps d'écriture de code et de correction de bugs. Ci-dessous, nous présenterons quelques AI IDE populaires actuels. Vous pouvez choisir celui qui vous convient selon vos préférences.
 
@@ -197,7 +197,7 @@ Antigravity est un nouvel AI IDE publié par Google en novembre 2025 avec Gemini
 
 ### [Trae](https://www.trae.ai/)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.webp)
 
 Trae est un assistant de programmation IA développé par ByteDance, supportant plus de 100 langages de programmation et intégrable dans les IDE majeurs. Ses fonctionnalités incluent la génération de code en langage naturel, le débogage automatique et la conversion de maquettes en composants React/Vue. Après la mise à jour d'août 2025, Trae a ajouté l'importation intelligente de dépendances, des suggestions de renommage et la gestion de listes de tâches ; le mode SOLO supporte également la génération de code backend et l'édition de documents d'architecture technique.
 :::
@@ -314,15 +314,15 @@ Il est recommandé aux débutants de commencer par la version chinoise gratuite 
 
 Visuellement, l'interface de Trae est très similaire à celle de VS Code : le même layout classique à trois colonnes avec l'explorateur de fichiers à gauche, la zone d'édition au centre et le panneau d'extensions à droite.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.webp)
 
 La barre latérale droite est la fenêtre d'interaction Copilot, aussi appelée fenêtre Agent. Si vous ne la voyez pas, cliquez sur l'icône de la barre latérale en haut à droite de Trae pour l'ouvrir.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.webp)
 
 Une fois la barre latérale ouverte, vous verrez une option `Builder`, c'est le mode Agent. Pour faire simple, c'est l'équivalent « local » de z.ai, capable d'opérer sur votre environnement local, d'installer des environnements d'exécution, d'ouvrir des pages web, etc.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.webp)
 
 Après avoir cliqué sur « Builder », vous verrez les modes « Chat » et « Builder with MCP » :
 
@@ -335,7 +335,7 @@ Dans la zone inférieure, vous verrez également les options de sélection de mo
 
 **Il est à noter que nous ne recommandons pas d'utiliser le mode Auto (sélection automatique de modèle). Pour la version internationale, nous recommandons d'utiliser Gemini ou GPT ; pour la version chinoise, nous recommandons d'essayer Kimi k2, Minimax ou GLM.** Les différents modèles ont différents cas d'usage, il n'y a pas de règle absolue sur lequel est le meilleur. Vous pouvez changer de modèle si vous rencontrez des difficultés dans différentes tâches, et trouver par vous-même les meilleurs résultats grâce à plusieurs essais.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.webp)
 
 Voilà pour la présentation de Trae. Maintenant, reprenons les opérations que nous avons faites sur z.ai et essayons de les reproduire dans Trae.
 
@@ -402,9 +402,9 @@ Ces options gratuites sont très adaptées aux débutants pour se familiariser a
 
 Via l'interface suivante, vous pouvez ajouter avec succès (notez qu'après avoir sélectionné les options de modèle, vous devez **absolument faire défiler jusqu'en bas**, il y a un champ « modèle personnalisé » en dessous, cliquez dessus pour pouvoir entrer l'ID du modèle. Vous pouvez alors entrer les IDs de modèle recommandés ci-dessus comme `stepfun/step-3.5-flash:free`, et cliquer sur le lien d'obtention de clé en dessous pour obtenir la clé API correspondante sur le site officiel et l'entrer pour utiliser normalement.)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.webp)
 :::
 
 ### 4.3 Deuxième étape : Dans la barre latérale, demander à l'IA de créer un jeu de serpent en React
@@ -422,12 +422,12 @@ Par exemple, comme le montre la capture d'écran ci-dessous, **parfois l'Agent I
 :::
 
 Comme le montre la capture d'écran, ici nous devons cliquer sur Run pour confirmer :
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.webp)
 
 Comme le montre la capture d'écran, ici il suffit de taper y pour confirmer :
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.webp)
 
 Comme le montre la capture d'écran, ici nous sommes en train de créer un modèle mais nous ne savons pas comment procéder. Nous pouvons faire une capture d'écran de cette partie et interroger le modèle :
 
@@ -435,7 +435,7 @@ Comme le montre la capture d'écran, ici nous sommes en train de créer un modè
 
 Une autre raison pour laquelle l'Agent IA se met en pause pendant l'exécution est qu'un « service » a été lancé. Notre jeu de serpent est lui-même un « service ». Si vous voyez une URL de commande comme ci-dessous, cela signifie que l'Agent a lancé un service local sur votre ordinateur. Vous pouvez accéder à l'URL correspondante pour voir votre jeu de serpent. Comme le service doit continuer à tourner, il y a une pause ici. Il suffit de cliquer sur le bouton `Skip`.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.webp)
 
 Pendant ce processus, si vous rencontrez des termes ou du contenu que vous ne comprenez pas, ne vous inquiétez pas. Vous pouvez consulter la section « explication des termes informatiques » dans l'annexe, ou demander directement à l'IA, ou poser une question à temps !
 
@@ -449,7 +449,7 @@ Vous pouvez cliquer sur la coche en bas à droite pour confirmer les modificatio
 
 Il est également important de noter que, comme les modifications de code ne sont pas toujours correctes, vous devez savoir que tous les IDE Agent supportent la réversion de code. Par exemple, si vous avez fait une modification erronée ou que le résultat ne vous satisfait pas, une fois la modification terminée, vous pouvez revenir à la zone de saisie et cliquer sur le bouton Revert pour revenir à l'état précédent la modification. Vous pouvez alors modifier le texte de saisie et relancer une opération :
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.webp)
 
 ### 4.4 Troisième étape (optionnelle) : Demander à l'IA d'expliquer les détails de l'implémentation
 

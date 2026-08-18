@@ -119,13 +119,13 @@ Trong giai đoạn đầu của lập trình, chúng ta chỉ cần một trình
 
 Bạn có thể hiểu IDE là một chương trình chuyên dùng để "chỉnh sửa, quản lý, chạy và debug" code. IDE thời kỳ đầu trông rất "thô sơ" và gần như hoàn toàn thao tác bằng bàn phím.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.png)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image1.webp)![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image2.png)
 
 Giao diện terminal. Nguồn ảnh: https://en.wikipedia.org/wiki/File:Emacs-screenshot.png
 
 Các "IDE tích hợp" nổi tiếng và trưởng thành về chức năng như `Vim` thường được dùng khi thao tác từ xa trên server.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image3.webp)
 
 Để hiệu quả hơn, chúng ta cần IDE hiện đại hỗ trợ thao tác chuột, thường bao gồm:
 
@@ -170,7 +170,7 @@ Trong phiên bản VS Code mới, đã có sẵn một trợ lý mô hình ngôn
 
 Bạn có thể tải và cài VS Code, rồi bấm lối vào sidebar ở góc trên bên phải để mở khu vực chức năng AI và trải nghiệm các năng lực này.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image7.webp)
 
 Tuy nhiên, VS Code không phải IDE có năng lực AI mạnh nhất. Với các tình huống cần nhiều hỗ trợ lập trình bằng AI, chúng ta thường muốn dùng công cụ "thông minh hơn, hiệu quả hơn". Một AI IDE tốt có thể tiết kiệm đáng kể thời gian viết code và sửa bug. Dưới đây, chúng ta sẽ giới thiệu một số AI IDE phổ biến hiện nay; bạn có thể chọn bất kỳ công cụ nào theo sở thích cá nhân.
 
@@ -197,7 +197,7 @@ Antigravity là AI IDE hoàn toàn mới do Google phát hành cùng Gemini 3 v�
 
 ### [Trae](https://www.trae.ai/)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image8.webp)
 
 Trae là trợ lý lập trình AI do ByteDance ra mắt, hỗ trợ hơn 100 ngôn ngữ lập trình và có thể tích hợp vào các IDE phổ biến. Chức năng của nó bao gồm tạo code bằng ngôn ngữ tự nhiên, debug tự động, chuyển bản thiết kế thành component React/Vue, v.v. Sau bản cập nhật tháng 8 năm 2025, Trae thêm các tính năng như import dependency thông minh, gợi ý đổi tên, quản lý checklist nhiệm vụ; chế độ SOLO cũng bắt đầu hỗ trợ tạo code backend và chỉnh sửa tài liệu kiến trúc kỹ thuật.
 :::
@@ -314,15 +314,15 @@ Người mới nên bắt đầu từ bản CN miễn phí (địa chỉ tải: 
 
 Về hình thái giao diện, Trae rất giống VS Code mà chúng ta thường dùng: vẫn là bố cục ba cột kinh điển với Explorer bên trái, vùng editor ở giữa và panel mở rộng bên phải.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image17.webp)
 
 Sidebar bên phải là cửa sổ tương tác Copilot, cũng có thể hiểu là cửa sổ Agent. Nếu tạm thời chưa thấy, bạn có thể bấm biểu tượng sidebar ở góc trên bên phải của Trae để mở.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image18.webp)
 
 Sau khi mở sidebar, bạn sẽ thấy tùy chọn `Builder`; đây chính là chế độ Agent. Hiểu đơn giản, nó tương đương "bản local" của z.ai, có thể giúp bạn thao tác môi trường trên máy, cài runtime, mở trang web, v.v.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image19.webp)
 
 Bấm "Builder", bạn sẽ thấy chế độ "Chat" và "Builder with MCP":
 
@@ -335,7 +335,7 @@ Bấm "Builder", bạn sẽ thấy chế độ "Chat" và "Builder with MCP":
 
 **Cần lưu ý rằng không khuyến nghị dùng chế độ Auto (tự chọn mô hình). Nếu là bản quốc tế, chúng tôi khuyến nghị dùng Gemini hoặc GPT; nếu là bản nội địa, khuyến nghị thử các mô hình trong nước như Kimi k2, MiniMax, GLM.** Mỗi mô hình có tình huống phù hợp khác nhau; không có quy tắc cứng nhắc rằng mô hình nào nhất định tốt hơn mô hình nào. Khi gặp nhiệm vụ khó chưa giải quyết được, bạn có thể đổi mô hình và qua nhiều lần thử nghiệm để tìm kết quả tốt nhất cho mình.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/image21.webp)
 
 Trên đây là giới thiệu nhanh về Trae. Tiếp theo, chúng ta có thể nhìn lại thao tác đã làm trong z.ai trước đó và thử làm điều tương tự trong Trae.
 
@@ -403,9 +403,9 @@ Các lựa chọn miễn phí này rất phù hợp để người mới trải 
 
 Thông qua giao diện dưới đây, bạn có thể thêm thành công. Lưu ý: sau khi xem tùy chọn chọn mô hình, **nhất định phải cuộn xuống cuối cùng**. Bên dưới có mục "Custom Model"; bấm vào đó mới có thể nhập model ID. Lúc này có thể nhập trực tiếp model ID được khuyến nghị ở trên, ví dụ `stepfun/step-3.5-flash:free`. Đồng thời bấm nút lấy Key phía dưới để đi tới website chính thức, lấy API Key tương ứng rồi nhập vào là có thể dùng bình thường.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-14-51.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-02-12-14-15-29.webp)
 :::
 
 ### 4.3 Bước 2: trò chuyện trong sidebar, để AI dùng React thiết kế trò Rắn săn mồi
@@ -423,12 +423,12 @@ Như hình bên dưới, **đôi khi AI Agent sẽ tạm dừng trong quá trìn
 :::
 
 Như hình minh họa, ở đây chúng ta cần bấm Run để xác nhận:
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-52-55.webp)
 
 Như hình minh họa, ở đây chỉ cần nhập y để xác nhận:
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-53-24.webp)
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-26-33.webp)
 
 Như hình minh họa, ở đây chúng ta đang tạo template nhưng không biết thao tác ra sao; có thể chụp màn hình phần này và hỏi mô hình lớn:
 
@@ -436,7 +436,7 @@ Như hình minh họa, ở đây chúng ta đang tạo template nhưng không bi
 
 Một lý do khác khiến AI Agent tạm dừng trong quá trình thực thi là lúc này đã khởi động một "service". Trò Rắn săn mồi của chúng ta về bản chất cũng là một loại "service". Nếu bạn thấy URL như trong lệnh dưới đây, nghĩa là Agent đã giúp chúng ta chạy một service local trên máy; chúng ta có thể truy cập URL tương ứng để mở trò Rắn săn mồi. Vì service cần tiếp tục chạy, giao diện sẽ rơi vào trạng thái tạm dừng. Lúc này chỉ cần bấm nút `Skip`.
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-30-51.webp)
 
 Trong quá trình này, nếu gặp thuật ngữ hoặc nội dung không hiểu, đừng lo. Bạn có thể xem phần "giải thích thuật ngữ máy tính" trong phụ lục, hỏi trực tiếp AI hoặc đặt câu hỏi kịp thời.
 
@@ -450,7 +450,7 @@ Chúng ta có thể bấm dấu tick ở góc dưới bên phải để xác nh�
 
 Điểm đáng chú ý nữa là sửa code không phải lúc nào cũng đúng, nên bạn cần biết Agent của các IDE đều hỗ trợ rollback code. Ví dụ, nếu ở đây tôi vô tình thực hiện một thay đổi sai, hoặc kết quả lần này khiến bạn không hài lòng, sau khi sửa xong chúng ta có thể quay lại phần ô nhập, bấm nút Revert để đưa thao tác về trạng thái trước khi sửa. Sau đó bạn có thể chỉnh lại prompt và thao tác lần nữa:
 
-![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.png)
+![](../../../zh-cn/stage-1/introduction-to-ai-ide/images/index-2026-01-09-10-42-53.webp)
 
 ### 4.4 Bước 3 (tùy chọn): hỏi thêm AI về chi tiết hiện thực code
 

@@ -79,7 +79,7 @@ AI를 상징하는 추상 그래픽과 텍스트를 결합하고, 투명 배경�
 
 - 위 프롬프트 입력 -> Agent가 생성한 여러 디자인 시안 비교
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
 ## 4. 최종 로고 확정
 
@@ -138,7 +138,7 @@ AI를 상징하는 추상 그래픽과 텍스트를 결합하고, 투명 배경�
   - https://colorhunt.co/
   - https://coolors.co/
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.webp)
 
 - **Google에서 키워드로 색상 구성 검색**
 
@@ -175,7 +175,7 @@ AI를 상징하는 추상 그래픽과 텍스트를 결합하고, 투명 배경�
 - "색상 조합을 조정해 주세요."
 - "여기 이 부분을 삭제해 주세요."
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.webp)
 
 ## 3. 최종 디자인 확정
 
@@ -274,7 +274,7 @@ function showAlert() {
 배경은 검은색, 텍스트는 흰색으로 해 주세요."
 ```
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.webp)
 
 ## 3. 웹사이트 실행하기
 
@@ -337,7 +337,7 @@ Agent가 생성한 초안 웹사이트에는 보통 자동으로 생성된 임�
 
 - **예시:**
 
-![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.png)
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.webp)
 
 - **결과:**
 
