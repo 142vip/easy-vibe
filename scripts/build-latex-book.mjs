@@ -79,7 +79,9 @@ const isRtl = locale === 'ar-sa'
 const pdfVersion = bookVersion
 const pdfVersionLabel = versionLabel(pdfVersion)
 const pdfVersionFile = String(pdfVersion).replace(/^v/i, '')
-const sourcePageLimit = Math.max(0, readNumberArg('--limit', 18))
+// Keep the production book complete by default; use --limit or PDF_BOOK_LIMIT
+// explicitly when a smaller development build is needed.
+const sourcePageLimit = Math.max(0, readNumberArg('--limit', 0))
 const defaultPdfFileName = `easy-vibe-open-textbook-${locale}-v${pdfVersionFile}.pdf`
 const pdfOutputPath = path.join(
   distDir,
