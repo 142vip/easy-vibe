@@ -5,6 +5,28 @@ import './HomeSection.css'
 
 const t = inject('t')
 
+// 每个附录页面（按链接最后一段 slug）对应一个贴合词意的唯一图标
+const appendixIcons = {
+  'ai-history': '🤖', // AI 进化史
+  'prompt-engineering': '💬', // 提示词工程
+  'llm-principles': '🧠', // 大语言模型
+  'ai-agents': '🦾', // Agent 智能体
+  'javascript-deep-dive': '💻', // 前端基础
+  'frontend-frameworks': '📈', // 前端进化史
+  'backend-layered-architecture': '🏗️', // 后端架构
+  'backend-languages': '⌨️', // 后端语言
+  'database-fundamentals': '🗄️', // 数据库原理
+  'api-intro': '🔌', // API 设计
+  'git-version-control': '🌿', // Git 版本控制
+  'computer-networks': '🌐' // 计算机网络
+}
+
+const appendixIcon = (card) => {
+  const segments = (card.link || '').split('/').filter(Boolean)
+  const slug = (segments[segments.length - 1] || '').replace(/\.html$/, '')
+  return appendixIcons[slug] || '📚'
+}
+
 const appendixWrapper = ref(null)
 const totalPages = ref(1)
 const currentPage = ref(0)
@@ -94,9 +116,7 @@ onUnmounted(() => {
           :href="withBase(card.link)"
           class="appendix-card"
         >
-          <span class="appendix-emoji">{{
-            ['🤖', '🧠', '🎨', '🚀', '⚙️', '💾', '🛠️', '🌐'][index] || '📚'
-          }}</span>
+          <span class="appendix-emoji">{{ appendixIcon(card) }}</span>
           <span class="appendix-title">{{ card.title }}</span>
         </a>
       </div>
