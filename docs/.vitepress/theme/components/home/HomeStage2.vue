@@ -59,7 +59,7 @@ const localizedStage2Cards = computed(() => {
         <div class="comm-text">
           <h4 class="comm-title">{{ card.title }}</h4>
           <p class="comm-desc">{{ card.desc }}</p>
-          <span class="comm-note">进一步了解 ›</span>
+          <span class="comm-note">{{ t.stage2.more }} ›</span>
         </div>
       </a>
     </div>

@@ -1,3 +1,5 @@
+import { synchronizeHomeTranslations } from './HomeI18nSync.js'
+
 export const i18n = {
   'zh-cn': {
     nav: {
@@ -1664,3 +1666,5 @@ export const i18n = {
     }
   }
 }
+
+synchronizeHomeTranslations(i18n)

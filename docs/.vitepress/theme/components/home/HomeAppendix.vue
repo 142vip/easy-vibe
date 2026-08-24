@@ -140,7 +140,7 @@ onUnmounted(() => {
           class="appendix-arrow-btn"
           :class="{ disabled: currentPage === 0 }"
           :disabled="currentPage === 0"
-          aria-label="向左滑动"
+          :aria-label="t.appendix.ui.previous"
           @click="scrollAppendixByPage(-1)"
         >
           <svg
@@ -162,7 +162,7 @@ onUnmounted(() => {
           class="appendix-arrow-btn"
           :class="{ disabled: currentPage >= totalPages - 1 }"
           :disabled="currentPage >= totalPages - 1"
-          aria-label="向右滑动"
+          :aria-label="t.appendix.ui.next"
           @click="scrollAppendixByPage(1)"
         >
           <svg
