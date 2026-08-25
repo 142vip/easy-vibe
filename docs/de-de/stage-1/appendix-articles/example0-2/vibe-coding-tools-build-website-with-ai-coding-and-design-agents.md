@@ -1,3 +1,7 @@
+---
+title: 'Eine Website mit Design- und Coding-Agents bauen'
+description: 'Von Idee bis Launch: Design-Agent fuer Visuals, Coding-Agent fuer Umsetzung. Ein wiederverwendbarer Workflow fuer Solo-Entwicklung.'
+---
 # Website mit Design- und Programmier-Agent entwerfen
 
 ## Kapitel&uuml;bersicht
@@ -342,7 +346,3 @@ Wenn Sie vom Design-Agent Codedateien heruntergeladen haben, k&ouml;nnen Sie die
 - **Ergebnis:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
----
-title: 'Eine Website mit Design- und Coding-Agents bauen'
-description: 'Von Idee bis Launch: Design-Agent fuer Visuals, Coding-Agent fuer Umsetzung. Ein wiederverwendbarer Workflow fuer Solo-Entwicklung.'
----

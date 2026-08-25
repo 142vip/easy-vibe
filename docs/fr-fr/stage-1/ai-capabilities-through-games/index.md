@@ -1,3 +1,7 @@
+---
+title: 'Debutant 1 : A l ere de l IA, parler c est programmer'
+description: 'Creer un jeu du serpent AI-native par conversation, puis reutiliser la methode pour construire ton propre mini jeu ou demo.'
+---
 # Niveau 1 : À l'ère de l'IA, savoir parler, c'est savoir programmer
 
 Ceci est un tutoriel basé sur l'<strong>apprentissage par projet</strong>. Nous vous encourageons à suivre les étapes une par une et à essayer de reproduire les résultats.
@@ -297,7 +301,7 @@ Si cela vous semble trop difficile, vous pouvez demander directement au modèle 
 
 De plus, nous pouvons demander au LLM de générer directement un prompt de niveau projet. Dans la section précédente, nous n'avons écrit nous-mêmes que le prompt du Snake. Maintenant, essayons de demander au modèle de générer un prompt avec un cadre d'ensemble et un chemin de réalisation (vous pouvez utiliser z.ai directement).
 
-Si vous souhaitez apprendre à écrire de meilleurs prompts, consultez [l'annexe sur le Prompt Engineering](/zh-cn/appendix/8-artificial-intelligence/prompt-engineering).
+Si vous souhaitez apprendre à écrire de meilleurs prompts, consultez [l'annexe sur le Prompt Engineering](/fr-fr/appendix/8-artificial-intelligence/prompt-engineering).
 
 > Je veux que l'IA génère un jeu de Snake en page web, avec un prompt plus complet pour un résultat plus impressionnant et amusant. Génère le prompt correspondant. L'objectif actuel : créer un jeu de Snake avec la fonctionnalité de génération de poèmes à partir de mots mangés, incluant un module de génération d'images.
 
@@ -566,7 +570,7 @@ Ce sont des **« outils préfabriqués » pour construire des pages complexes** 
 
 > « Crée une page de classement avec React, avec la liste des scores à droite, et en cliquant sur une ligne, affiche les détails du joueur en dessous, dans un style épuré et moderne. »
 
-Pour aller plus loin : [l'annexe sur les fondamentaux du Web](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive) et [l'annexe sur l'évolution des frameworks frontend](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks).
+Pour aller plus loin : [l'annexe sur les fondamentaux du Web](/fr-fr/appendix/3-browser-and-frontend/javascript-deep-dive) et [l'annexe sur l'évolution des frameworks frontend](/fr-fr/appendix/3-browser-and-frontend/frontend-frameworks).
 
 ## <span id="appendix-2">[Annexe 2 : Qu'est-ce que le Vibe Coding exactement](#appendix-nav)</span>
 
@@ -658,7 +662,3 @@ En pratique, une forte capacité de suivi des instructions est très importante 
   description="À partir de l'« expérience ludique », nous vous recommandons de poursuivre vers le développement local et la pratique produit."
   :items="relatedArticles"
 />
----
-title: 'Debutant 1 : A l ere de l IA, parler c est programmer'
-description: 'Creer un jeu du serpent AI-native par conversation, puis reutiliser la methode pour construire ton propre mini jeu ou demo.'
----

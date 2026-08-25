@@ -1,3 +1,7 @@
+---
+title: 'Beginner 2: AI Coding Tools'
+description: 'Move from web AI coding to local development: understand IDE vs AI IDE, build a snake game with Trae, and learn practical AI collaboration tips.'
+---
 
 # 초급 2: AI 프로그래밍 도구 배우기
 
@@ -1293,7 +1297,3 @@ API Key는 **아주 긴 “고급 비밀번호 + 신분증 번호”**로 이해
 - 그다음 “무엇에 비유할 수 있는가”를 한 문장으로 쓰기
 - 마지막으로 아주 간단한 예 하나 주기  
   이렇게 하면 당신의 “개인 용어집”이 점점 길어지고 실용적이 되어, 컴퓨터와 더 잘 소통할 수 있게 됩니다.
----
-title: 'Beginner 2: AI Coding Tools'
-description: 'Move from web AI coding to local development: understand IDE vs AI IDE, build a snake game with Trae, and learn practical AI collaboration tips.'
----

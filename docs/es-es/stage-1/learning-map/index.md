@@ -101,7 +101,11 @@ Esta página se recopiló el **9 de agosto de 2026**. Las fechas de los puestos 
 Son observaciones de varios puestos reales, no una estadística de todo el mercado laboral. Sirven para mostrar una tendencia en empresas nativas de IA y equipos pequeños, no para afirmar que todas las empresas eliminarán las especialidades de producto, diseño, ingeniería y ventas.
 :::
 
-### ¿Cómo están cambiando estos puestos?
+### ¿Qué significan estos cambios?
+
+No se trata solo de que las empresas pidan más a los ingenieros. Cambia el papel de quienes ya programan y, al mismo tiempo, aparece una nueva vía para quienes todavía no programan.
+
+#### Para quienes ya programan: se redefine el papel del ingeniero
 
 - **Cambia el punto de partida:** ya no se espera un requisito escrito; se entra en el contexto del usuario y del negocio para descubrir el problema.
 - **Cambia la función del prototipo:** no solo muestra tecnología; llega pronto a usuarios y sirve para validar una decisión.
@@ -110,6 +114,16 @@ Son observaciones de varios puestos reales, no una estadística de todo el merca
 - **Cambia la relación con ventas:** algunos ingenieros participan en demostraciones, PoC e implantaciones para demostrar valor con tecnología.
 
 «Saber vender» no significa que todo el mundo deba convertirse en vendedor tradicional. Para un ingeniero de producto significa encontrar personas que podrían necesitarlo, entender su problema, mostrar una solución, invitarles a usarla y comprobar si seguirán usándola o pagando.
+
+#### Para principiantes que no programan: se abre una nueva puerta
+
+La IA también ha reducido mucho la barrera para crear productos.
+
+- **No hace falta estudiar programación durante años antes de empezar.** Se puede pedir a la IA que genere código e interfaces y resolver errores mientras se construye algo funcional.
+- **El conocimiento del sector puede ser más escaso que la capacidad de programar.** Docentes, médicos, abogados, vendedores y personal de operaciones conocen usuarios y procesos reales; esa experiencia es la base de un buen producto.
+- **La distancia entre una idea y un producto puede reducirse a semanas o incluso días.** Un problema conocido puede convertirse en una pequeña herramienta y validarse con usuarios reales.
+
+Por eso, el curso sirve tanto a ingenieros que quieren ampliar su alcance como a principiantes con ideas o experiencia sectorial.
 
 ### ¿Qué relación tienen Product Engineer, FDE y OPC?
 

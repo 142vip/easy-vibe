@@ -258,8 +258,8 @@ Voilà ce qu'il faut clarifier avant de coder. Le code n'est qu'un outil — **c
 
 ## 2. Produire un prototype en 10 minutes : faire atterrir la « fonctionnalité clé » avec l'IDE AI
 
-::: info 💡 Conseil Plan de programmation
-Si vous trouvez que l'IDE actuel n'est pas assez intelligent, ou que vous épuisez rapidement vos crédits, vous pouvez acheter un **Plan de programmation**. Pour anticiper, consultez [cet article](../../stage-2/backend/modern-cli/) sur l'utilisation de Claude pour programmer.
+::: info 💡 Remarque sur les outils
+L'interface, les modèles disponibles et les quotas des AI IDE évoluent constamment. Choisissez simplement un outil que vous pouvez utiliser de manière fiable : le processus décrit dans ce chapitre — exprimer les besoins, générer, vérifier et modifier — ne dépend d'aucune marque. Si vous avez besoin d'un outil de programmation en ligne de commande, consultez les [outils AI CLI modernes](../../stage-2/backend/modern-cli/).
 :::
 
 Réfléchir est une bonne chose, mais il ne faut pas sur-réfléchir. Arrêtons de trop philosopher et essayons de créer un prototype en commençant par une seule page.

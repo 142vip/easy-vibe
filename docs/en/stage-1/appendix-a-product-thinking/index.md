@@ -494,7 +494,6 @@ Useful screenshot/reference sites:
 - [https://pagecollective.com/](https://pagecollective.com/)
 - [https://patttterns.net/](https://patttterns.net/)
 - [https://mobbin.com/](https://mobbin.com/)
-- [https://uizze.com/mobbin-alternative](https://uizze.com/mobbin-alternative)
 - [https://refero.design/](https://refero.design/)
 - [https://scrnshts.club/](https://scrnshts.club/)
 - [https://godly.website](https://godly.website/)

@@ -286,7 +286,7 @@ If these feel challenging, you can ask the language model directly for help! It 
 
 Additionally, we can also ask the LLM to generate project-level prompts for you directly. In the previous section, we only wrote the Snake game prompt ourselves. Now let's try having the LLM generate a prompt with an overall framework and implementation path (you can generate it directly with z.ai).
 
-If you want to learn how to write better prompts, check out the [Prompt Engineering Appendix](/zh-cn/appendix/8-artificial-intelligence/prompt-engineering).
+If you want to learn how to write better prompts, check out the [Prompt Engineering Appendix](/en/appendix/8-artificial-intelligence/prompt-engineering).
 
 > I want AI to generate a web-based Snake game and need a more complete prompt to make the result more impressive and fun. Please generate the corresponding prompt. The current goal is: generate a Snake game that implements the function of eating different words to generate poetry, and should include an image generation module.
 
@@ -555,7 +555,7 @@ They're **"prefab tools" for building complex pages** — faster and more reliab
 
 > "Use React to make a leaderboard page, with a score list on the right. Clicking a row shows player details below. Clean, modern style."
 
-To learn more, check out the [Web Basics Appendix](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive) and the [Frontend Evolution Appendix](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks).
+To learn more, check out the [Web Basics Appendix](/en/appendix/3-browser-and-frontend/javascript-deep-dive) and the [Frontend Evolution Appendix](/en/appendix/3-browser-and-frontend/frontend-frameworks).
 
 ## <span id="appendix-2">[Appendix 2: What Exactly is Vibe Coding](#appendix-nav)</span>
 

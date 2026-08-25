@@ -3,6 +3,8 @@ title: 'AI-Programmierwerkzeuge verstehen und verwenden'
 description: 'Von Web-AI zur lokalen Entwicklung: IDE und AI IDE verstehen, mit Trae ein Snake-Spiel bauen und Computerbegriffe für Einsteiger nachschlagen.'
 ---
 
+# AI-Programmierwerkzeuge verstehen und verwenden
+
 ## Mit AI aktiv lernen
 
 ::: tip 💡 Die wichtigste Lernregel: Bei einer Frage zuerst AI fragen
@@ -43,8 +45,6 @@ flowchart LR
 ::: info Wiederverwendbare Vorlage
 **Mein Ziel ist …; ich bin bei …; ich habe … versucht; Ergebnis oder vollständiger Fehler ist …; erkläre zuerst die Ursache und nenne danach die kleinste nächste Aktion.**
 :::
-
-# AI-Programmierwerkzeuge verstehen und verwenden
 
 ## Kapitelüberblick
 
@@ -187,6 +187,8 @@ Trae ist eine auf VS Code aufbauende AI-Entwicklungsumgebung. Der Agent kann Dat
 #### Trae installieren
 
 Internationale Version: [trae.ai](https://www.trae.ai/) · chinesische Version: [trae.cn](https://www.trae.cn/). Modelle, kostenlose Kontingente und Preise ändern sich; beginnen Sie mit einer verfügbaren kostenlosen oder kleinen Variante und prüfen Sie die aktuelle Abrechnung direkt beim Anbieter.
+
+##### Preise und Nutzungsmodelle von Trae
 
 API-Schlüssel sind geheime Zugangsdaten. Zeigen Sie sie nie in Screenshots, Repositories oder Chats. Ein „Coding Plan“ ist ein Abonnement für häufigere Modellaufrufe; für diese Übung ist kein bestimmter Plan vorgeschrieben.
 

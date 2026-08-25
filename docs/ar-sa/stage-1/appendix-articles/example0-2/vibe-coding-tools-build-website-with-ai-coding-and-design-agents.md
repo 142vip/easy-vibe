@@ -1,3 +1,7 @@
+---
+title: 'Build A Website With Design + Coding Agents'
+description: 'From idea to launch: coordinate a design agent to produce visuals, then use a coding agent to turn it into a working website with a reusable workflow.'
+---
 # تصميم موقع ويب باستخدام وكلاء التصميم والبرمجة
 
 ## مقدمة الفصل
@@ -342,7 +346,3 @@ function showAlert() {
 - **النتيجة:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
----
-title: 'Build A Website With Design + Coding Agents'
-description: 'From idea to launch: coordinate a design agent to produce visuals, then use a coding agent to turn it into a working website with a reusable workflow.'
----

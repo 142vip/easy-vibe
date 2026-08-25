@@ -1,3 +1,7 @@
+---
+title: '初級一：AI 時代，會說話就會編程'
+description: '用對話式方式讓 AI 幫你寫代碼：從 0 到 1 做出 AI 原生貪吃蛇，並學會舉一反三做出自己的小遊戲或 Demo。'
+---
 # 初級一：AI 時代，會說話就會程式設計
 
 這是一個**基於專案制學習**的學習教程。我們鼓勵你跟隨步驟一步步操作，並嘗試復現結果。
@@ -297,7 +301,7 @@ AI 出現之後，第一次給了普通人一個全新的可能：你不需要�
 
 此外，我們還可以要求 LLM 幫你直接生成專案級的提示詞。在上一節中，我們只自己寫了貪喫蛇遊戲的提示詞。現在讓我們嘗試讓大模型生成一個帶有整體框架和實現路徑的提示詞（你可以直接用 z.ai 生成）。
 
-如果你想學習如何寫出更好的提示詞，可以檢視[提示詞工程附錄](/zh-cn/appendix/8-artificial-intelligence/prompt-engineering)。
+如果你想學習如何寫出更好的提示詞，可以檢視[提示詞工程附錄](/zh-tw/appendix/8-artificial-intelligence/prompt-engineering)。
 
 > 我想讓 AI 生成一個網頁貪喫蛇遊戲，需要一個更完整的提示詞，讓生成結果更令人印象深刻和有趣。請生成相應的提示詞。當前目標是：生成一個貪喫蛇遊戲，需要實現喫不同單詞生成詩歌的功能，並且應該包含影象生成模組。
 
@@ -566,7 +570,7 @@ z.ai 的回覆將會是這樣的：
 
 > "用 React 做個排行榜：右側分數列表，點一行下方顯示玩家詳情，風格簡潔現代。"
 
-想深入看看 [Web 基礎附錄](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive) 和 [前端進化史附錄](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks)。
+想深入看看 [Web 基礎附錄](/zh-tw/appendix/3-browser-and-frontend/javascript-deep-dive) 和 [前端進化史附錄](/zh-tw/appendix/3-browser-and-frontend/frontend-frameworks)。
 
 ## <span id="appendix-2">[附錄 2：到底什麼是 Vibe Coding](#appendix-nav)</span>
 
@@ -685,7 +689,3 @@ z.ai 的回覆將會是這樣的：
   description="從“遊戲化體驗”出發，推薦你繼續進入本地開發與產品實踐。"
   :items="relatedArticles"
 />
----
-title: '初級一：AI 時代，會說話就會編程'
-description: '用對話式方式讓 AI 幫你寫代碼：從 0 到 1 做出 AI 原生貪吃蛇，並學會舉一反三做出自己的小遊戲或 Demo。'
----

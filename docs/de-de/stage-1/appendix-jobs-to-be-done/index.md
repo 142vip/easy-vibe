@@ -325,29 +325,14 @@ Nutzer beschreiben, was sie wollen, aber ihre wahren Priorit&auml;ten verstecken
 
 Die richtige Herangehensweise an JTBD ist meist nicht "Ich baue eine All-in-One-Plattform", sondern zun&auml;chst den wichtigsten Schritt in einem Szenario ins Visier zu nehmen und ihn sehr handlich zu machen.
 
-## 11. Zusammenfassung
-
-Der wertvollste Beitrag von Jobs to Be Done besteht nicht darin, Ihnen ein neues Schlagwort zu geben, sondern Ihnen zu helfen, die Perspektive zu wechseln: **Nicht auf Produktfunktionen starren, sondern darauf, was Nutzer voranbringen m&ouml;chten.**
-
-Wenn Sie anfangen, sich wiederholt zu fragen:
-
-- In welchem Szenario stellen Nutzer dieses Produkt ein
-- Wo genau h&auml;ngen sie fest
-- Mit welcher Methode k&auml;mpfen sie sich aktuell durch
-- Wie &auml;ndert sich ihr Zustand, wenn das Problem gel&ouml;st ist
-
-werden Sie feststellen, dass viele urspr&uuml;nglich vage Ideen pl&ouml;tzlich klar werden und viele urspr&uuml;nglich beeindruckende Funktionen pl&ouml;tzlich weniger wichtig sind.
-
-Bei der Produktentwicklung, besonders bei AI-Produkten, ist das Schlimmste, sich von Anfang an in der Pr&auml;sentation von F&auml;higkeiten zu verlieren. JTBD hilft Ihnen, die Aufmerksamkeit auf das wirklich Wichtige zur&uuml;ckzulenken: **Warum Nutzer Sie brauchen und welchen Fortschritt Sie ihnen erm&ouml;glichen.**
-
 <a id="jtbd-ai"></a>
-## [12. Wie Sie AI nutzen k&ouml;nnen, um JTBD zu praktizieren](#top-jtbd)
+## [11. Wie Sie AI nutzen k&ouml;nnen, um JTBD zu praktizieren](#top-jtbd)
 
 JTBD wurde nicht von AI erfunden, aber AI eignet sich hervorragend als Forschungsassistent, Ordnungsassistent und Gegen&uuml;ber in dieser Methode. Der Schl&uuml;ssel: **AI beim Ordnen und Erweitern helfen lassen, nicht Nutzer f&uuml;r Sie erfinden lassen.**
 
 Sie k&ouml;nnen es so einsetzen:
 
-### 12.1 AI helfen lassen, vage Ideen in JTBD-Hypothesen umzuschreiben
+### 11.1 AI helfen lassen, vage Ideen in JTBD-Hypothesen umzuschreiben
 
 Wenn Sie nur eine vage Beschreibung im Kopf haben, wie "Ich m&ouml;chte ein Tool entwickeln, das Studierenden bei der Praktikumssuche hilft", k&ouml;nnen Sie zun&auml;chst AI bitten, es in m&ouml;gliche Jobs aufzuteilen:
 
@@ -385,7 +370,7 @@ damit ich schneller abschicken und die Erfolgsquote erh&ouml;hen kann.
 
 Der Wert dieser Ausgabe liegt darin, Ihre urspr&uuml;nglich sehr allgemeine Idee in mehrere richtungen&auml;here Szenarien aufzuteilen.
 
-### 12.2 AI beim Ordnen von Interview-Originalzitaten helfen lassen
+### 11.2 AI beim Ordnen von Interview-Originalzitaten helfen lassen
 
 Wenn Sie bereits mehrere Nutzer-Interviews durchgef&uuml;hrt haben, k&ouml;nnen Sie die Interviewaufzeichnungen an AI &uuml;bergeben und sie bitten, wiederkehrende Szenarien, Ausl&ouml;ser, Alternativl&ouml;sungen und Erfolgskriterien zu destillieren.
 
@@ -428,7 +413,7 @@ Zusammenfassung:
 
 Diese Ausgabe ist sehr n&uuml;tzlich, denn sie hilft, aus verstreuten Originalzitaten etwas herauszudestillieren, das eher einem "Bedarf" entspricht.
 
-### 12.3 AI eine leichte Webrecherche durchf&uuml;hren lassen
+### 11.3 AI eine leichte Webrecherche durchf&uuml;hren lassen
 
 Bevor Sie mit umfangreichen Interviews beginnen, k&ouml;nnen Sie AI zun&auml;chst einen leichten Scan externer Informationen durchf&uuml;hren lassen:
 
@@ -462,7 +447,7 @@ H&auml;ufigste Schmerzpunkte:
 
 Diese Art von Ausgabe kann nicht als endg&uuml;ltige Schlussfolgerung dienen, hilft aber zu entscheiden, welche Art von Problem priorisiert interviewt werden sollte.
 
-### 12.4 AI als "Gegenspieler" fungieren lassen
+### 11.4 AI als "Gegenspieler" fungieren lassen
 
 Oft sind wir zu sehr mit unseren eigenen Ideen verbunden. Sie k&ouml;nnen AI gezielt als kritischen Gegen&uuml;ber einsetzen, der Sie zwingt, das Problem klarer zu formulieren:
 
@@ -479,7 +464,22 @@ Kritisiere sie aus folgenden Perspektiven:
 
 Der Vorteil: Sie erkennen schneller, ob Sie sich auf den Bedarf oder nur auf Ihre bevorzugte L&ouml;sung konzentrieren.
 
-## Assignments
+## 12. Zusammenfassung
+
+Der wertvollste Beitrag von Jobs to Be Done besteht nicht darin, Ihnen ein neues Schlagwort zu geben, sondern Ihnen zu helfen, die Perspektive zu wechseln: **Nicht auf Produktfunktionen starren, sondern darauf, was Nutzer voranbringen m&ouml;chten.**
+
+Wenn Sie anfangen, sich wiederholt zu fragen:
+
+- In welchem Szenario stellen Nutzer dieses Produkt ein
+- Wo genau h&auml;ngen sie fest
+- Mit welcher Methode k&auml;mpfen sie sich aktuell durch
+- Wie &auml;ndert sich ihr Zustand, wenn das Problem gel&ouml;st ist
+
+werden Sie feststellen, dass viele urspr&uuml;nglich vage Ideen pl&ouml;tzlich klar werden und viele urspr&uuml;nglich beeindruckende Funktionen pl&ouml;tzlich weniger wichtig sind.
+
+Bei der Produktentwicklung, besonders bei AI-Produkten, ist das Schlimmste, sich von Anfang an in der Pr&auml;sentation von F&auml;higkeiten zu verlieren. JTBD hilft Ihnen, die Aufmerksamkeit auf das wirklich Wichtige zur&uuml;ckzulenken: **Warum Nutzer Sie brauchen und welchen Fortschritt Sie ihnen erm&ouml;glichen.**
+
+## 13. Aufgaben
 
 <StageAssignmentCard title="Beschreibe, was der Nutzer wirklich erledigen möchte">
 

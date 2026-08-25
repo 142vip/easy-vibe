@@ -1,3 +1,7 @@
+---
+title: 'Beginner 1: Talking Is Programming'
+description: 'Build an AI-native snake game through conversation, then reuse the workflow to create your own mini game or demo.'
+---
 # 초급 1: AI 시대에는 말할 수 있으면 프로그래밍할 수 있다
 
 이것은 **프로젝트 기반 학습** 튜토리얼입니다. 단계별로 따라 하며 결과를 재현해 보기를 권장합니다.
@@ -297,7 +301,7 @@ z.ai 외에도 아래의 훌륭한 AI 프로그래밍 플랫폼을 시도해 볼
 
 또한 LLM에게 프로젝트 수준의 프롬프트를 직접 생성해 달라고 요청할 수도 있습니다. 지난 절에서는 스네이크 게임의 프롬프트만 우리가 직접 작성했습니다. 이제 대형 모델에게 전체 프레임워크와 구현 경로가 포함된 프롬프트를 생성하게 해 봅시다. z.ai로 바로 생성할 수 있습니다.
 
-더 좋은 프롬프트를 작성하는 법을 배우고 싶다면 [프롬프트 엔지니어링 부록](/zh-cn/appendix/8-artificial-intelligence/prompt-engineering)을 확인하세요.
+더 좋은 프롬프트를 작성하는 법을 배우고 싶다면 [프롬프트 엔지니어링 부록](/ko-kr/appendix/8-artificial-intelligence/prompt-engineering)을 확인하세요.
 
 > AI가 웹 스네이크 게임을 생성하게 하고 싶습니다. 더 완성도 높은 프롬프트가 필요합니다. 생성 결과가 더 인상적이고 재미있어야 합니다. 이에 맞는 프롬프트를 생성해 주세요. 현재 목표는 다음과 같습니다. 서로 다른 단어를 먹으면 시를 생성하는 기능이 있는 스네이크 게임을 만들고, 이미지 생성 모듈도 포함해야 합니다.
 
@@ -430,7 +434,7 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 ![K399의 오픈월드 게임 SpiderPunk: 사이버 도시 고층 빌딩 사이에서 거미줄을 타고 이동(K3 모델 생성, 실제 플레이 화면)](../../../zh-cn/stage-1/ai-capabilities-through-games/images/case-k399-spiderpunk.webp)
 
-> 🔗 온라인 플레이: [k399.games](https://www.k399.games/)(K3 Game Arcade, 클릭하면 바로 플레이) ｜ 자세한 소개: [전 미하요우(米哈游) 임원 합류, 가장 뜨거운 AI 회사가 갑자기 게임 수십 개를 만들었다](https://eu.36kr.com/zh/p/3906895998178441) ｜ [Kimi K3, 누구를 긴장시키나?](https://36kr.com/p/3905392402748801)
+> 🔗 온라인 플레이: [k399.games](https://www.k399.games/)(K3 Game Arcade, 클릭하면 바로 플레이) ｜ 자세한 소개: [전 miHoYo 임원 합류, 가장 뜨거운 AI 회사가 갑자기 게임 수십 개를 만들었다](https://eu.36kr.com/zh/p/3906895998178441) ｜ [Kimi K3, 누구를 긴장시키나?](https://36kr.com/p/3905392402748801)
 
 이 사례들을 보면 알 수 있습니다. **스네이크는 AI 프로그래밍 능력의 빙산의 일각에 불과합니다**. 클래식 아케이드 게임, 2048 퍼즐, 3D 게임, 《마인크래프트》와 《슈퍼마리오》 복제, 수백 개가 넘는 게임 모음집, 심지어 중국산 대형 모델의 공식 게임 플랫폼까지, 아이디어를 명확히 말하고 여러 차례 대화로 다듬을 의지가 있다면 AI가 0에서 1까지 만들어 줍니다. 이제 당신 차례입니다!
 
@@ -566,7 +570,7 @@ z.ai의 답변은 다음과 같을 것입니다.
 
 > "React로 순위표 페이지를 만들어줘. 오른쪽에 점수 목록, 행을 클릭하면 아래에 상세 정보. 간결하고 모던한 스타일로."
 
-더 자세히: [Web 기초 부록](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive) 과 [프론트엔드 진화사 부록](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks).
+더 자세히: [Web 기초 부록](/ko-kr/appendix/3-browser-and-frontend/javascript-deep-dive) 과 [프론트엔드 진화사 부록](/ko-kr/appendix/3-browser-and-frontend/frontend-frameworks).
 
 ## <span id="appendix-2">[부록 2: Vibe Coding은 대체 무엇인가](#appendix-nav)</span>
 
@@ -685,7 +689,3 @@ Karpathy의 공유 내용을 더 보려면 여기에서 확인할 수 있습니�
   description="“게임화 경험”에서 출발해 로컬 개발과 제품 실습으로 계속 들어가 보기를 추천합니다."
   :items="relatedArticles"
 />
----
-title: 'Beginner 1: Talking Is Programming'
-description: 'Build an AI-native snake game through conversation, then reuse the workflow to create your own mini game or demo.'
----

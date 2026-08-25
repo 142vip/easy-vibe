@@ -1,3 +1,7 @@
+---
+title: 'Construir un sitio con agentes de diseno y programacion'
+description: 'Del concepto al lanzamiento: coordina un agente de diseno para el visual y un agente de codigo para convertirlo en un sitio funcionando con un flujo reutilizable.'
+---
 # Disenar un sitio web con Agent de diseno y programacion
 
 ## Resumen del capitulo
@@ -342,7 +346,3 @@ Cuando hayas descargado los archivos de codigo del Agent de diseno, puedes mover
 - **Resultado:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
----
-title: 'Construir un sitio con agentes de diseno y programacion'
-description: 'Del concepto al lanzamiento: coordina un agente de diseno para el visual y un agente de codigo para convertirlo en un sitio funcionando con un flujo reutilizable.'
----

@@ -1,3 +1,7 @@
+---
+title: 'Construire un site avec des agents design et code'
+description: 'De l idee a la mise en ligne : piloter un agent design pour le visuel puis un agent code pour produire un site fonctionnel, avec un workflow reutilisable.'
+---
 # Concevoir un site web avec des Agents de design et de programmation
 
 ## Introduction du chapitre
@@ -342,7 +346,3 @@ Une fois que vous avez téléchargé les fichiers de code depuis l'Agent de desi
 - **Résultat :**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
----
-title: 'Construire un site avec des agents design et code'
-description: 'De l idee a la mise en ligne : piloter un agent design pour le visuel puis un agent code pour produire un site fonctionnel, avec un workflow reutilisable.'
----

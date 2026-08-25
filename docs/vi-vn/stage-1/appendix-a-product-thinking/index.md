@@ -198,7 +198,7 @@ Từ câu rộng có thể thu thành “trang web dùng AI chuyển PDF sang ch
 
 Một giới hạn hợp lý là báo cáo nhiều chữ, tối đa hai mươi trang, trả văn bản có thể sửa và giữ tầng tiêu đề. Giới hạn làm lời hứa đo được.
 
-#### Biến quyết định thành nhiệm vụ
+**Biến quyết định thành nhiệm vụ**
 
 Vẽ trang tải lên và kết quả; chọn bộ đọc; thử mười PDF đại diện; quy định lỗi chấp nhận được; hiện tiến độ; cho sao chép và tải; quan sát năm người dùng. Mỗi việc đều có thể giao, làm và kiểm tra.
 
@@ -231,6 +231,17 @@ Chọn sản phẩm có nhiệm vụ tương tự rồi xem điều hướng, bi
 ![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image13.webp)
 
 Kho tham khảo gồm ảnh, nguồn và ghi chú cũng giúp bạn nói rõ với AI mẫu nào cần thích nghi.
+
+Bạn có thể bắt đầu với các thư viện ảnh chụp giao diện sau:
+
+- [https://www.uisources.com/](https://www.uisources.com/)
+- [https://screenlane.com/](https://screenlane.com/)
+- [https://pagecollective.com/](https://pagecollective.com/)
+- [https://patttterns.net/](https://patttterns.net/)
+- [https://mobbin.com/](https://mobbin.com/)
+- [https://refero.design/](https://refero.design/)
+- [https://scrnshts.club/](https://scrnshts.club/)
+- [https://godly.website](https://godly.website/)
 
 ## 2.5 Đừng chờ mọi thứ sẵn sàng mới hỏi người dùng
 

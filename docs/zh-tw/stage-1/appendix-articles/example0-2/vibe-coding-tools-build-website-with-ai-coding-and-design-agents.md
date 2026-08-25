@@ -1,3 +1,7 @@
+---
+title: '用設計與編程 Agent 設計網站'
+description: '從創意到上線：用設計 Agent 產出視覺方案，再用編程 Agent 把設計稿變成可運行網站，總結可復用的協作流程。'
+---
 # 用設計和程式設計 Agent 設計網站
 
 ## 本章導讀
@@ -342,7 +346,3 @@ Agent 生成的初版網站，通常會包含一些自動生成的佔位文字�
 - **結果：**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
----
-title: '用設計與編程 Agent 設計網站'
-description: '從創意到上線：用設計 Agent 產出視覺方案，再用編程 Agent 把設計稿變成可運行網站，總結可復用的協作流程。'
----

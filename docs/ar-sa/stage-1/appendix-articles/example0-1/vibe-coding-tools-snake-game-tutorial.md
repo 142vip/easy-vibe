@@ -1,3 +1,7 @@
+---
+title: 'Comparison Of 7 AI Coding Tools'
+description: 'A hands-on benchmark of popular Web Vibe Coding platforms using one unified task, covering beginner-friendliness, code control, and deployment.'
+---
 # مقارنة بين سبع أدوات برمجة بالذكاء الاصطناعي
 
 ## مقدمة الفصل
@@ -353,7 +357,3 @@ AI Agent هو نظام برمجي قادر على إدراك البيئة وات
 | **[Minimax](https://agent.minimaxi.com/)** | مناسب لمن يريد رؤية العملية الكاملة للبحث عن الأخطاء وإصلاحها تلقائيًا بالذكاء الاصطناعي والتعلم منها، لكنه بطيء نسبيًا ويستهلك رموزًا كثيرة. | Web-based    | العملية بأكملها طويلة، ويُشغّل الذكاء الاصطناعي الاختبارات ويصلح الأخطاء عدة مرات تلقائيًا.                                |
 | **[Trae](https://www.trae.ai/)**           | للمستخدمين ذوي الخبرة في البرمجة الذين يتطلعون لاستخدام مزيج IDE سطح المكتب + AI Agent، أداة قوية لتعزيز الكفاءة. | PC           | يتطلب تثبيتًا محليًا وإعداد بيئة، لكن أداءً أفضل، ومناسب لمشاريع Vibe Coding طويلة الأمد.              |
 | **[V0](https://v0.app/)**                  | مُحسَّن لغير المطورين الذين يريدون صنع تأثيرات مرئية سريعة لـ React UI، مناسب للطلاب ذوي التوجه الأمامي/التصميم.  | Web-based    | متخصص في توليد React UI، ويحتاج للتعاون مع منصات أخرى لإكمال الواجهة الخلفية وبناء التطبيق الكامل.                  |
----
-title: 'Comparison Of 7 AI Coding Tools'
-description: 'A hands-on benchmark of popular Web Vibe Coding platforms using one unified task, covering beginner-friendliness, code control, and deployment.'
----

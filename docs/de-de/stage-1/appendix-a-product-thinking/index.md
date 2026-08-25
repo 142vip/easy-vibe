@@ -198,7 +198,7 @@ Aus „Dokumente effizienter bearbeiten“ könnte werden: „Eine Webseite, die
 
 Eine sinnvolle erste Grenze könnte textlastige Berichte bis zwanzig Seiten, editierbaren Text und erhaltene Überschriftsebenen versprechen. Grenzen machen die Leistung messbar.
 
-#### Aus Entscheidungen Aufgaben machen
+**Aus Entscheidungen Aufgaben machen**
 
 Zeichnen Sie Upload und Ergebnis, wählen Sie einen Parser, testen Sie zehn typische PDF, definieren Sie akzeptable Fehler, zeigen Sie Fortschritt und erlauben Sie Kopieren sowie Herunterladen. Jeder Punkt lässt sich bauen und prüfen.
 
@@ -231,6 +231,17 @@ Untersuchen Sie Produkte mit ähnlichen Aufgaben: Navigation, Formulare, Wartezu
 ![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image13.webp)
 
 Eine Referenzsammlung aus Screenshots, Quellen und Notizen hilft auch, einem AI-Werkzeug genau zu zeigen, welches Muster Sie anpassen möchten.
+
+Als Ausgangspunkt eignen sich diese Sammlungen von Interface-Screenshots:
+
+- [https://www.uisources.com/](https://www.uisources.com/)
+- [https://screenlane.com/](https://screenlane.com/)
+- [https://pagecollective.com/](https://pagecollective.com/)
+- [https://patttterns.net/](https://patttterns.net/)
+- [https://mobbin.com/](https://mobbin.com/)
+- [https://refero.design/](https://refero.design/)
+- [https://scrnshts.club/](https://scrnshts.club/)
+- [https://godly.website](https://godly.website/)
 
 ## 2.5 Nicht warten, bis alles fertig ist, bevor Sie Nutzer befragen
 

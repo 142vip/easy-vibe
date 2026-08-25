@@ -1,3 +1,7 @@
+---
+title: "初級一：AI 時代、話せるならプログラミングできる"
+description: "これはプロジェクトベースの学習チュートリアルです。ステップに沿って操作し、結果を再現してみましょう。"
+---
 # 初級一：AI 時代、話せるならプログラミングできる
 
 これは**プロジェクトベースの学習**チュートリアルです。ステップに沿って操作し、結果を再現してみましょう。
@@ -297,7 +301,7 @@ z.ai のほかに、以下の優れた AI プログラミングプラットフ�
 
 また、LLM にプロジェクトレベルのプロンプトを直接生成させるよう依頼することもできます。前のセクションでは、スネークゲームのプロンプトを自分で書きました。今回は、大規模モデルに全体フレームワークと実装パスを含むプロンプトを生成させましょう（z.ai で直接生成できます）。
 
-より良いプロンプトの書き方を学びたい場合は、[プロンプトエンジニアリング付録](/zh-cn/appendix/8-artificial-intelligence/prompt-engineering)を参照してください。
+より良いプロンプトの書き方を学びたい場合は、[プロンプトエンジニアリング付録](/ja-jp/appendix/8-artificial-intelligence/prompt-engineering)を参照してください。
 
 > AI にウェブスネークゲームを生成させたいのですが、より完全なプロンプトが必要で、結果をより印象的で面白くしたいです。詩を生成する機能を実装するスネークゲームを生成してください。また、画像生成モジュールを含める必要があります。
 
@@ -566,7 +570,7 @@ Web ページを一軒の家だと思ってください。三つの「コード�
 
 > "React でリーダーボードページを作って。右側にスコアリスト、行をクリックすると下に詳細表示。シンプルでモダンなスタイルに。"
 
-詳しくは [Web 基礎付録](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive) と [フロントエンド進化史付録](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks) をどうぞ。
+詳しくは [Web 基礎付録](/ja-jp/appendix/3-browser-and-frontend/javascript-deep-dive) と [フロントエンド進化史付録](/ja-jp/appendix/3-browser-and-frontend/frontend-frameworks) をどうぞ。
 
 ## <span id="appendix-2">[付録 2：Vibe Coding とは何か](#appendix-nav)</span>
 

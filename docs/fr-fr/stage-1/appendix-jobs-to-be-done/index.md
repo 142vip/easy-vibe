@@ -335,29 +335,14 @@ Les utilisateurs peuvent décrire ce qu'ils veulent, mais leurs véritables prio
 
 La bonne approche de JTBD n'est généralement pas « je vais construire une grande plateforme qui fait tout », mais cibler d'abord l'étape la plus critique dans un scénario, et la rendre extrêmement fluide.
 
-## 11. Résumé
-
-La valeur la plus importante de Jobs to Be Done n'est pas de vous donner un nouveau terme, mais de vous aider à changer de perspective : **ne vous fixez pas uniquement sur les fonctionnalités du produit, mais sur ce que l'utilisateur veut faire avancer à l'étape suivante.**
-
-Quand vous commencerez à vous poser répétitivement ces questions :
-
-- Dans quel contexte l'utilisateur embauche-t-il ce produit
-- Où est-il exactement bloqué
-- Quelle méthode de fortune utilise-t-il actuellement
-- Une fois le problème résolu, quel sera le changement d'état
-
-Vous découvrirez que beaucoup d'idées floues deviennent soudainement claires, et que beaucoup de fonctionnalités tape-à-l'œil deviennent soudainement moins importantes.
-
-Créer un produit, surtout un produit AI, le plus grand risque est de se laisser absorber par la démonstration de capacités dès le début. JTBD vous aide à ramener l'attention sur ce qui compte vraiment : **pourquoi l'utilisateur a besoin de vous, et quelle progression vous l'aidez à accomplir.**
-
 <a id="jtbd-ai"></a>
-## [12. Comment utiliser l'IA pour mettre en pratique JTBD](#top-jtbd)
+## [11. Comment utiliser l'IA pour mettre en pratique JTBD](#top-jtbd)
 
 JTBD n'a pas été inventé par l'IA, mais l'IA est très bien adaptée pour servir d'assistante de recherche, d'assistante d'organisation et de miroir dans cette méthode. L'essentiel est : **laissez l'IA vous aider à organiser et à élargir, pas à deviner les utilisateurs à votre place.**
 
 Voici comment l'utiliser :
 
-### 12.1 Laissez l'IA réécrire vos idées vagues en hypothèses JTBD
+### 11.1 Laissez l'IA réécrire vos idées vagues en hypothèses JTBD
 
 Quand vous n'avez qu'une description vague en tête, comme « je veux créer un outil pour aider les étudiants à trouver un stage », vous pouvez d'abord demander à l'IA de la décomposer en plusieurs jobs possibles :
 
@@ -395,7 +380,7 @@ pour pouvoir postuler plus vite et améliorer mon taux de réussite.
 
 La valeur de ce type de résultat est qu'il décompose votre pensée vague en plusieurs directions plus proches de scénarios réels.
 
-### 12.2 Laissez l'IA organiser les citations d'utilisateurs
+### 11.2 Laissez l'IA organiser les citations d'utilisateurs
 
 Si vous avez déjà fait quelques entretiens, vous pouvez confier les notes à l'IA pour qu'elle en extraie les contextes, déclencheurs, alternatives et critères de succès qui reviennent :
 
@@ -438,7 +423,7 @@ Résultat de l'organisation :
 
 Ce type de résultat est utile parce qu'il vous aide à extraire des notes dispersées quelque chose qui ressemble davantage à un « besoin ».
 
-### 12.3 Laissez l'IA faire une recherche en ligne légère
+### 11.3 Laissez l'IA faire une recherche en ligne légère
 
 Avant de vous lancer dans des entretiens à grande échelle, vous pouvez demander à l'IA de faire un scan externe très léger, comme :
 
@@ -472,7 +457,7 @@ Douleurs fréquentes :
 
 Ce type de résultat ne peut pas être considéré comme conclusion finale, mais il est idéal pour décider quel type de problème interviewer en priorité.
 
-### 12.4 Laissez l'IA jouer le rôle de « contre-partie »
+### 11.4 Laissez l'IA jouer le rôle de « contre-partie »
 
 Très souvent, nous sommes trop attachés à nos propres idées. Vous pouvez demander à l'IA de jouer un rôle de critique pour vous forcer à clarifier vos questions :
 
@@ -489,7 +474,22 @@ Critiquez-la sous les angles suivants :
 
 L'avantage de cette approche est que vous découvrirez plus vite si vous regardez un besoin ou seulement une solution que vous aimez.
 
-## 📚 Exercices
+## 12. Résumé
+
+La valeur la plus importante de Jobs to Be Done n'est pas de vous donner un nouveau terme, mais de vous aider à changer de perspective : **ne vous fixez pas uniquement sur les fonctionnalités du produit, mais sur ce que l'utilisateur veut faire avancer à l'étape suivante.**
+
+Quand vous commencerez à vous poser répétitivement ces questions :
+
+- Dans quel contexte l'utilisateur embauche-t-il ce produit
+- Où est-il exactement bloqué
+- Quelle méthode de fortune utilise-t-il actuellement
+- Une fois le problème résolu, quel sera le changement d'état
+
+Vous découvrirez que beaucoup d'idées floues deviennent soudainement claires, et que beaucoup de fonctionnalités tape-à-l'œil deviennent soudainement moins importantes.
+
+Créer un produit, surtout un produit AI, le plus grand risque est de se laisser absorber par la démonstration de capacités dès le début. JTBD vous aide à ramener l'attention sur ce qui compte vraiment : **pourquoi l'utilisateur a besoin de vous, et quelle progression vous l'aidez à accomplir.**
+
+## 13. Exercices
 
 <StageAssignmentCard title="Décrire ce que l’utilisateur cherche réellement à accomplir">
 

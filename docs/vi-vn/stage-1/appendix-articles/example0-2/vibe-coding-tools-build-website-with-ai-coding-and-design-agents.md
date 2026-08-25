@@ -1,3 +1,7 @@
+---
+title: 'Lam website voi agent thiet ke va lap trinh'
+description: 'Tu y tuong den len song: dung agent thiet ke tao visual, sau do dung agent code tao website chay duoc voi workflow tai su dung.'
+---
 # Dùng Agent thiết kế và lập trình thiết kế trang web
 
 ## Hướng dẫn chương này
@@ -342,7 +346,3 @@ Khi bạn đã tải xuống file code từ Agent thiết kế, có thể di chu
 - **Kết quả:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
----
-title: 'Lam website voi agent thiet ke va lap trinh'
-description: 'Tu y tuong den len song: dung agent thiet ke tao visual, sau do dung agent code tao website chay duoc voi workflow tai su dung.'
----

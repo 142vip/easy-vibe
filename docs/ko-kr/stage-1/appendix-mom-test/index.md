@@ -353,7 +353,7 @@ The Mom Test 스타일의 질문으로 검증할 수 있습니다:
 
 주의: 이 마무리 질문은 물어볼 수 있지만, 뒤에 두는 것이 좋습니다. 왜냐하면 앞에서는 사실을 먼저 얻어야 하고, 소원은 나중에 얻어도 되기 때문입니다.
 
-## 11. AI로 인터뷰 준비하고 정리하기
+## [11. AI로 인터뷰 준비하고 정리하기](#top-mom)
 
 <figure class="field-figure"><a href="https://commons.wikimedia.org/wiki/File:Volunteer_Molly_conducting_an_interview._Over_200_prospects_still_need_to_be_interviewed._Plus_the_park_needs_help_transcribing_(791cd068-1dd8-b71b-0b4d-48151192c96f).jpg" target="_blank" rel="noreferrer"><img src="/images/product-discovery/mom-test/oral-history-interview.jpg" alt="자료와 기록을 놓고 진행하는 대면 구술사 인터뷰" loading="lazy" /></a><figcaption><strong>정리는 원자료에서 떨어져서는 안 됩니다.</strong> AI는 전사와 분류를 도울 수 있지만 모든 결론은 참가자의 원래 말로 거슬러 올라갈 수 있어야 합니다. 사진: U.S. National Park Service, 퍼블릭 도메인.</figcaption></figure>
 

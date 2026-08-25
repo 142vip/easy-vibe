@@ -1,3 +1,7 @@
+---
+title: 'Beginner 2: AI Coding Tools'
+description: 'Move from web AI coding to local development: understand IDE vs AI IDE, build a snake game with Trae, and learn practical AI collaboration tips.'
+---
 
 # المستوى المبتدئ الثاني: تعلم أدوات برمجة الذكاء الاصطناعي
 
@@ -1288,7 +1292,3 @@ console.log('النقاط الحالية', score)
 - ثم اكتب جملة "بماذا يمكن تشبيهه؟"؛
 - وأخيراً أعطِ مثالاً صغيراً وبسيطاً جداً.  
   هكذا ستزداد "قاموس مصطلحاتك الشخصي" فائدة مع الوقت، وستتمكن تدريجياً من التواصل مع الكمبيوتر بشكل أفضل.
----
-title: 'Beginner 2: AI Coding Tools'
-description: 'Move from web AI coding to local development: understand IDE vs AI IDE, build a snake game with Trae, and learn practical AI collaboration tips.'
----

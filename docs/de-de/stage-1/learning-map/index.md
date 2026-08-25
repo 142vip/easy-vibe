@@ -101,7 +101,11 @@ Diese Seite wurde am **9. August 2026** zusammengestellt. Daten von Ashby-Rollen
 Die Beispiele sind Beobachtungen realer Rollen, keine Statistik des gesamten Arbeitsmarktes. Sie zeigen eine Richtung in KI-nativen Unternehmen und kleinen Produktteams, nicht die Abschaffung spezialisierter Produkt-, Design-, Engineering- und Vertriebsrollen in allen Unternehmen.
 :::
 
-### Wie verändern sich diese Rollen?
+### Was bedeuten diese Veränderungen?
+
+Es geht nicht nur darum, dass Unternehmen mehr von Ingenieuren erwarten. Die Rolle erfahrener Entwickler verändert sich, während zugleich ein neuer Einstieg für Menschen ohne Programmiererfahrung entsteht.
+
+#### Für Menschen, die bereits programmieren: Die Ingenieurrolle wird neu definiert
 
 - **Der Ausgangspunkt ändert sich:** nicht auf Anforderungen warten, sondern im Nutzer- und Geschäftsumfeld Probleme entdecken.
 - **Der Zweck des Prototyps ändert sich:** nicht nur Technik zeigen, sondern schnell ausliefern und eine Annahme prüfen.
@@ -110,6 +114,16 @@ Die Beispiele sind Beobachtungen realer Rollen, keine Statistik des gesamten Arb
 - **Die Beziehung zum Vertrieb ändert sich:** einige Product Engineers nehmen an Demos, PoCs und Kundeneinführungen teil.
 
 „Verkaufen können“ bedeutet nicht, dass jeder klassischer Verkäufer werden muss. Für Product Engineers heißt es zunächst: Menschen finden, die das Produkt brauchen könnten, ihr Problem verstehen, die Lösung zeigen, sie zum Test einladen und prüfen, ob sie weiter nutzen oder zahlen.
+
+#### Für Einsteiger ohne Programmiererfahrung: Eine neue Tür öffnet sich
+
+KI hat auch die Hürde für die Produktentwicklung deutlich gesenkt.
+
+- **Man muss nicht erst jahrelang programmieren lernen.** In natürlicher Sprache kann KI Code und Oberflächen erzeugen und beim Beheben von Fehlern helfen, während ein funktionierendes Ergebnis entsteht.
+- **Branchenwissen kann seltener sein als Programmierfähigkeit.** Lehrkräfte, Ärzte, Juristen, Vertrieb und Betrieb kennen reale Nutzer und Abläufe; dieses Wissen bildet die Grundlage guter Produkte.
+- **Der Weg von der Idee zum Produkt kann auf Wochen oder sogar Tage schrumpfen.** Ein vertrautes Problem lässt sich als kleines Werkzeug umsetzen und mit echten Nutzern prüfen.
+
+Der Kurs richtet sich deshalb sowohl an Ingenieure, die ihren Wirkungsbereich erweitern möchten, als auch an Einsteiger mit Ideen oder Branchenwissen.
 
 ### Wie hängen Product Engineer, FDE und OPC zusammen?
 

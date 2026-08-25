@@ -1,3 +1,7 @@
+---
+title: 'Comparacion de 7 herramientas de programacion con IA'
+description: 'Una evaluacion practica de plataformas Web de Vibe Coding con una tarea unificada, comparando facilidad para principiantes, control de codigo y despliegue.'
+---
 # Comparacion de 7 herramientas de programacion con IA
 
 ## Resumen del capitulo
@@ -353,7 +357,3 @@ Las diferentes plataformas de Vibe Coding tienen caracteristicas y flujos de tra
 | **[Minimax](https://agent.minimaxi.com/)** | Adecuado para quienes quieren ver todo el proceso de la IA detectando y reparando errores automaticamente y aprender de el, pero en general es lento y consume muchos Tokens. | Web-based    | Todo el proceso es largo; la IA ejecuta multiples pruebas automaticamente y repara errores.                                |
 | **[Trae](https://www.trae.ai/)**           | Para usuarios con experiencia en programacion que buscan la combinacion de IDE de escritorio + AI Agent; una herramienta poderosa para mejorar la eficiencia. | PC           | Requiere instalacion local y configuracion del entorno, pero mejor rendimiento; adecuado para proyectos de Vibe Coding a largo plazo.              |
 | **[V0](https://v0.app/)**                  | Optimizado para no desarrolladores que quieren crear rapidamente efectos visuales de React UI; adecuado para estudiantes orientados a frontend / diseno.  | Web-based    | Enfocado en generar React UI; necesita combinarse con otras plataformas para completar el backend y la construccion de la aplicacion completa.                  |
----
-title: 'Comparacion de 7 herramientas de programacion con IA'
-description: 'Una evaluacion practica de plataformas Web de Vibe Coding con una tarea unificada, comparando facilidad para principiantes, control de codigo y despliegue.'
----

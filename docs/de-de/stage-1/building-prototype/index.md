@@ -258,8 +258,8 @@ Das ist es, was wir klären müssen, bevor wir Code schreiben. Code ist nur ein 
 
 ## 2. In 10 Minuten einen Prototyp erstellen: AI IDE lässt die "Kernfunktion" Wirklichkeit werden
 
-::: info Programmier-Plan-Empfehlung
-Wenn Sie das Gefühl haben, dass Ihre aktuelle IDE nicht intelligent genug ist oder Ihr Kontingent schnell aufgebraucht ist, können Sie einen **Programmier-Plan** erwerben. Zur Vorbereitung lesen Sie [diesen Artikel](../../stage-2/backend/modern-cli/) über die Verwendung von Claude zum Programmieren.
+::: info 💡 Hinweis zu den Werkzeugen
+Oberfläche, verfügbare Modelle und Kontingente von AI IDEs ändern sich laufend. Wählen Sie einfach ein Werkzeug, das Sie zuverlässig nutzen können; der in diesem Kapitel beschriebene Ablauf aus Anforderung, Generierung, Prüfung und Überarbeitung hängt nicht von einer bestimmten Marke ab. Wenn Sie ein Kommandozeilenwerkzeug zum Programmieren benötigen, lesen Sie den Überblick über [moderne AI-CLI-Werkzeuge](../../stage-2/backend/modern-cli/).
 :::
 
 Nachdenken ist gut, aber man sollte nicht übermäßig reflektieren. Wir steuern die übermäßige Reflexion und versuchen, mit einer einzelnen Seite einen Prototyp zu erstellen.

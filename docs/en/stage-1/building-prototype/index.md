@@ -260,8 +260,8 @@ This is what must be clear before coding. Code is just a tool; **understanding u
 
 ## 2. Build a Prototype in 10 Minutes: Let AI IDE Implement the Core Gameplay
 
-::: info 💡 Coding plan suggestion
-If your current IDE feels not smart enough, or you run out of quota quickly, consider a dedicated **coding plan**. You can preview [this article](../../stage-2/backend/modern-cli/) to use Claude for coding.
+::: info 💡 Tool note
+AI IDE interfaces, available models, and quotas change continuously. Choose a tool you can use reliably; the process in this chapter—describing requirements, generating, checking, and revising—does not depend on a particular brand. If you need a command-line coding tool, see [modern AI CLI tools](../../stage-2/backend/modern-cli/).
 :::
 
 Thinking is good, but avoid overthinking. Let's start from one page and build a prototype first.

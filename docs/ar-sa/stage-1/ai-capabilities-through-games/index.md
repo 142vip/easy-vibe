@@ -1,3 +1,7 @@
+---
+title: 'Beginner 1: Talking Is Programming'
+description: 'Build an AI-native snake game through conversation, then reuse the workflow to create your own mini game or demo.'
+---
 # المستوى الأول: في عصر الذكاء الاصطناعي، إذا كنت تستطيع التحدث، يمكنك البرمجة
 
 هذا تعليمي تعليمي **مبني على التعلم بالمشاريع**. نشجعك على اتباع الخطوات خطوة بخطوة ومحاولة إعادة إنشاء النتائج.
@@ -299,7 +303,7 @@ const relatedArticles =
 
 بالإضافة إلى ذلك، يمكننا أيضًا طلب من LLM مساعدتنا في توليد prompt على مستوى المشروع مباشرة. في القسم السابق، كتبنا بأنفسنا فقط prompt لعبة الثعبان. الآن دعنا نحاول جعل النموذج اللغوي الكبير يولد prompt مع إطار كامل ومسار تنفيذ (يمكنك استخدام z.ai مباشرة للتوليد).
 
-إذا كنت تريد تعلم كيفية كتابة prompts أفضل، يمكنك الاطلاع على [ملحق هندسة Prompts](/zh-cn/appendix/8-artificial-intelligence/prompt-engineering).
+إذا كنت تريد تعلم كيفية كتابة prompts أفضل، يمكنك الاطلاع على [ملحق هندسة Prompts](/ar-sa/appendix/8-artificial-intelligence/prompt-engineering).
 
 > أريد أن يجعل الذكاء الاصطناعي يولد لعبة ثعبان على الويب، أحتاج إلى prompt أكثر اكتمالاً لجعل النتيجة أكثر إثارة وإمتاعًا. يرجى توليد prompt المناسب. الهدف الحالي: إنشاء لعبة ثعبان يجب أن تطبق وظيفة أكل كلمات مختلفة لتوليد الشعر، ويجب أن تتضمن وحدة إنشاء الصور.
 
@@ -570,7 +574,7 @@ const relatedArticles =
 
 > "اصنع صفحة لوحة متصدرين باستخدام React، عرض قائمة النقاط على اليمين، وعند النقر على صف يظهر تفاصيل اللاعب بالأسفل، بأسلوب بسيط وعصري."
 
-للمزيد: [ملحق أساسيات الويب](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive) و[ملحق تاريخ تطور الواجهة الأمامية](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks).
+للمزيد: [ملحق أساسيات الويب](/ar-sa/appendix/3-browser-and-frontend/javascript-deep-dive) و[ملحق تاريخ تطور الواجهة الأمامية](/ar-sa/appendix/3-browser-and-frontend/frontend-frameworks).
 
 <a id="appendix-2"></a>
 
@@ -694,7 +698,3 @@ const relatedArticles =
   description="انطلاقًا من تجربة الألعاب، نوصي بالمتابعة نحو التطوير المحلي والممارسة العملية للمنتجات."
   :items="relatedArticles"
 />
----
-title: 'Beginner 1: Talking Is Programming'
-description: 'Build an AI-native snake game through conversation, then reuse the workflow to create your own mini game or demo.'
----

@@ -214,13 +214,15 @@ Tóm lại, trước khi viết code ta đã làm ba việc: hỏi người dùn
 
 ## 2. Tạo prototype trong 10 phút: để AI IDE làm ra lõi trải nghiệm
 
-::: info Gợi ý về Coding Plan
-Nếu IDE hiện tại không đủ thông minh hoặc hạn mức hết quá nhanh, bạn có thể tìm hiểu các Coding Plan hoặc công cụ CLI ở bài [Moderne CLI Coding Werkzeuge](../../stage-2/backend/modern-cli/).
+::: info 💡 Ghi chú về công cụ
+Giao diện, mô hình hỗ trợ và hạn mức của AI IDE thay đổi liên tục. Chỉ cần chọn công cụ bạn có thể sử dụng ổn định; quy trình diễn đạt nhu cầu, tạo, kiểm tra và chỉnh sửa trong chương này không phụ thuộc vào một thương hiệu cụ thể. Khi cần công cụ lập trình dòng lệnh, hãy xem [công cụ AI CLI hiện đại](../../stage-2/backend/modern-cli/).
 :::
 
 Không nên suy nghĩ quá lâu. Khi phạm vi đã rõ, hãy bắt đầu từ một trang đơn giản.
 
 ### 2.1 Bước một: nói với AI bằng ngôn ngữ đời thường
+
+#### 2.1.1 Bắt đầu bằng lời mô tả của chính bạn (khuyên dùng cho người mới)
 
 Người mới không cần viết prompt hoàn hảo ngay. Hãy mô tả như đang nói chuyện với đồng nghiệp:
 
@@ -292,7 +294,11 @@ Yêu cầu:
 
 ### 2.2 Bước hai: để AI IDE sinh code
 
+#### 2.2.1 Chuẩn bị: nắm thao tác cơ bản của AI IDE
+
 Nếu chưa quen AI IDE như Cursor, Trae hoặc Windsurf, hãy xem trước [IDE cơ bản](/vi-vn/appendix/2-development-tools/ide-basics): cách tạo dự án, nói chuyện với Agent và đọc quá trình sinh code.
+
+#### 2.2.2 Bắt đầu tạo code
 
 Tạo một thư mục mới rồi mở trong AI IDE:
 
@@ -337,6 +343,8 @@ Kết quả cuối có thể tiến gần hơn đến một prototype chuyên ng
 ![](../../../zh-cn/stage-1/building-prototype/images/index-2026-01-14-15-15-18.webp)
 
 ### 2.3 Gặp lỗi thì làm gì?
+
+#### 2.3.1 Những câu hỏi thường gặp của người mới
 
 Gặp lỗi là bình thường. Người mới không cần hiểu toàn bộ lỗi, chỉ cần đưa đầy đủ hiện tượng cho AI.
 

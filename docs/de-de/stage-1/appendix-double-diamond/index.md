@@ -366,29 +366,12 @@ Sie werden feststellen: Wenn der erste Diamant gr&uuml;ndlich bearbeitet wurde, 
   <figcaption><strong>Ein Prototyp muss zun&auml;chst nur eine Frage beantworten.</strong> Begr&uuml;&szlig;ung, Schaltfl&auml;che und ein kurzer Hinweis reichen bereits, um zu beobachten, ob Teilnehmende den n&auml;chsten Schritt verstehen. Prototyp: Corinna Schuster / WMDE, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption>
 </figure>
 
-## 10. Zusammenfassung
-
-Die gr&ouml;&szlig;te St&auml;rke des Double-Diamond-Modells liegt darin, ein Chaos in vier klarere Aktionen zu zerlegen:
-
-- Erst divergieren, um das Problem zu verstehen
-- Dann konvergieren, um das Problem zu definieren
-- Dann divergieren, um L&ouml;sungen zu erkunden
-- Schlie&szlig;lich konvergieren, um die L&ouml;sung zu liefern
-
-Es macht Sie nicht langsamer, sondern hilft Ihnen, **viele Umwege zu vermeiden, die besch&auml;ftigt aussehen, aber in die falsche Richtung f&uuml;hren.**
-
-Besonders in der AI-&Auml;ra, in der das Erstellen von Dingen immer schneller wird, ist das Double-Diamond-Modell sogar noch wichtiger. Denn wenn "etwas zu bauen" immer einfacher wird, wird die wirklich seltene F&auml;higkeit: **L&ouml;sen Sie ein Problem, das es wert ist, gel&ouml;st zu werden, und tun Sie es auf angemessene Weise.**
-
-Merken Sie sich nur diesen einen Satz:
-
-**Erst die richtigen Dinge tun, dann die Dinge richtig tun.**
-
 <a id="dd-ai"></a>
-## [11. Wie Sie AI nutzen k&ouml;nnen, um den Double-Diamond-Prozess zu durchlaufen](#top-dd)
+## [10. Wie Sie AI nutzen k&ouml;nnen, um den Double-Diamond-Prozess zu durchlaufen](#top-dd)
 
 Das Double-Diamond-Modell ist kein AI-Tool, aber AI eignet sich hervorragend als "Beschleuniger" in den vier Phasen. Der Schl&uuml;ssel liegt nicht darin, AI f&uuml;r Sie entscheiden zu lassen, sondern darin, sie zu nutzen, um Ihren Horizont zu erweitern, Informationen zu ordnen, L&ouml;sungen zu vergleichen und Validierungsmaterial zu erstellen.
 
-### 11.1 In der Discover-Phase: AI f&uuml;r eine erste Informationsgrundlage nutzen
+### 10.1 In der Discover-Phase: AI f&uuml;r eine erste Informationsgrundlage nutzen
 
 Vor offiziellen Interviews und Recherche k&ouml;nnen Sie AI zun&auml;chst einen leichten Problemaufkl&auml;rungsscan durchf&uuml;hren lassen:
 
@@ -420,7 +403,7 @@ Erste Problem-Landkarte:
 
 Diese Ausgabe soll Ihnen nicht die Entscheidung abnehmen, sondern Ihnen den schnelleren Einstieg in Discover erm&ouml;glichen.
 
-### 11.2 In der Define-Phase: AI beim Konvergieren der Problemdefinition unterst&uuml;tzen
+### 10.2 In der Define-Phase: AI beim Konvergieren der Problemdefinition unterst&uuml;tzen
 
 Nachdem man viele Informationen gesammelt hat, ist das Schwierigste oft, das Problem in einen wirklich klaren Satz zu verdichten. Sie k&ouml;nnen Ihre Recherche-Notizen an AI &uuml;bergeben und sie bitten, daraus mehrere Problemdefinitionen zu komprimieren:
 
@@ -462,7 +445,7 @@ Gr&uuml;nde:
 
 Diese Art von Ausgabe ist sehr n&uuml;tzlich, denn sie hilft, aus einer Vielzahl vager Probleme eine Definition herauszudestillieren, die als MVP-Startpunkt dienen kann.
 
-### 11.3 In der Develop-Phase: AI nutzen, um mehrere L&ouml;sungen zu divergieren
+### 10.3 In der Develop-Phase: AI nutzen, um mehrere L&ouml;sungen zu divergieren
 
 Viele verharren nach der Problemdefinition auf dem ersten L&ouml;sungsansatz, der ihnen in den Sinn kommt. AI eignet sich hervorragend daf&uuml;r, Sie zur Divergenz zu zwingen:
 
@@ -499,7 +482,7 @@ Ansatz 4: Hervorragende Beispiele zum Vergleich zeigen
 
 Jetzt k&ouml;nnen Sie leichter "L&ouml;sungen vergleichen", anstatt von Anfang an nur auf AI-Umschreibung zu starren.
 
-### 11.4 In der Deliver-Phase: AI beim Generieren von Prototyp-Text und Testmaterial unterst&uuml;tzen
+### 10.4 In der Deliver-Phase: AI beim Generieren von Prototyp-Text und Testmaterial unterst&uuml;tzen
 
 Wenn Sie in die Deliver-Phase eintreten, ist AI hervorragend daf&uuml;r geeignet, folgende Aufgaben zu beschleunigen:
 
@@ -533,7 +516,7 @@ AI k&ouml;nnte ausgeben:
 
 Diese Art von Ausgabe ist sehr praktisch, denn sie hilft, von "Ich habe den Prototyp fertig" zu "Wie teste ich als N&auml;chstes" zu gelangen.
 
-### 11.5 AI als "Phasen-W&auml;chter" einsetzen
+### 10.5 AI als "Phasen-W&auml;chter" einsetzen
 
 Das h&auml;ufigste Problem beim Double-Diamond-Modell ist, dass Menschen Phasen &uuml;berspringen. Sie k&ouml;nnen AI direkt als W&auml;chter fungieren lassen, der Sie erinnert, wo Sie sich gerade befinden:
 
@@ -549,7 +532,24 @@ Und sage mir:
 
 Das ist besonders hilfreich f&uuml;r Einsteiger, da man leicht dazu neigt, "Prototypen zu zeichnen, bevor man das Problem durchdacht hat".
 
-## Assignments
+## 11. Zusammenfassung
+
+Die gr&ouml;&szlig;te St&auml;rke des Double-Diamond-Modells liegt darin, ein Chaos in vier klarere Aktionen zu zerlegen:
+
+- Erst divergieren, um das Problem zu verstehen
+- Dann konvergieren, um das Problem zu definieren
+- Dann divergieren, um L&ouml;sungen zu erkunden
+- Schlie&szlig;lich konvergieren, um die L&ouml;sung zu liefern
+
+Es macht Sie nicht langsamer, sondern hilft Ihnen, **viele Umwege zu vermeiden, die besch&auml;ftigt aussehen, aber in die falsche Richtung f&uuml;hren.**
+
+Besonders in der AI-&Auml;ra, in der das Erstellen von Dingen immer schneller wird, ist das Double-Diamond-Modell sogar noch wichtiger. Denn wenn "etwas zu bauen" immer einfacher wird, wird die wirklich seltene F&auml;higkeit: **L&ouml;sen Sie ein Problem, das es wert ist, gel&ouml;st zu werden, und tun Sie es auf angemessene Weise.**
+
+Merken Sie sich nur diesen einen Satz:
+
+**Erst die richtigen Dinge tun, dann die Dinge richtig tun.**
+
+## 12. Aufgaben
 
 <StageAssignmentCard title="Deine Idee mit dem Double Diamond ordnen">
 

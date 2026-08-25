@@ -257,8 +257,8 @@ const relatedArticles =
 
 ## 2. 10分鐘產出原型：讓 AI IDE 落地"核心玩法"
 
-::: info 💡 程式設計 Plan 建議
-如果你覺得當前 IDE 不夠聰明，或者覺得很快就花完了額度，你可以去買一個**程式設計 Plan 計劃**。提前預習參考[這個文章](../../stage-2/backend/modern-cli/)使用 Claude 進行程式設計。
+::: info 💡 工具說明
+AI IDE 的介面、可用模型和額度會持續變化。選擇目前能穩定使用的工具即可；本章關注的需求表達、生成、檢查和修改流程並不依賴特定品牌。需要使用命令列程式設計工具時，可以參考[現代 AI CLI 工具](../../stage-2/backend/modern-cli/)。
 :::
 
 Thinking 是好事，但不可 over thinking，我們就此控制過度反思，嘗試從單個頁面開始製作原型。

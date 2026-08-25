@@ -1,3 +1,7 @@
+---
+title: 'Vergleich von 7 KI-Programmiertools'
+description: 'Praxisnaher Vergleich von Web-Vibe-Coding-Plattformen mit einer einheitlichen Aufgabe: Bedienbarkeit, Code-Kontrolle und Deployment.'
+---
 # Sieben AI-Programmier-Tools im Vergleich
 
 ## Kapitel&uuml;bersicht
@@ -353,7 +357,3 @@ Verschiedene Vibe Coding Plattformen haben unterschiedliche St&auml;rken und Wor
 | **[Minimax](https://agent.minimaxi.com/)** | Geeignet f&uuml;r Leute, die den gesamten AI-Fehlererkennungs- und -Reparaturprozess sehen und daraus lernen wollen, aber insgesamt langsamer und token-intensiv. | Web-based | L&auml;ngerer Gesamtprozess, AI f&uuml;hrt mehrfach automatisch Tests aus und repariert Fehler. |
 | **[Trae](https://www.trae.ai/)** | F&uuml;r Nutzer mit Programmiererfahrung, die Desktop-IDE + AI Agent kombinieren wollen, ein leistungsstarkes Effizienz-Tool. | PC | Lokale Installation und Umgebungskonfiguration erforderlich, aber bessere Leistung, geeignet f&uuml;r langfristige Vibe Coding-Projekte. |
 | **[V0](https://v0.app/)** | Optimiert f&uuml;r Nicht-Entwickler, die schnell React-UI erstellen wollen, geeignet f&uuml;r Frontend-/Design-orientierte Studierende. | Web-based | Fokussiert auf React-UI-Generierung, muss mit anderen Plattformen f&uuml;r Backend und vollst&auml;ndigen App-Aufbau kombiniert werden. |
----
-title: 'Vergleich von 7 KI-Programmiertools'
-description: 'Praxisnaher Vergleich von Web-Vibe-Coding-Plattformen mit einer einheitlichen Aufgabe: Bedienbarkeit, Code-Kontrolle und Deployment.'
----

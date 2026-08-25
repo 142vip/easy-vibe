@@ -1,3 +1,7 @@
+---
+title: 'Debutant 2 : Outils de programmation IA'
+description: 'Passer du codage IA sur le web au dev local : comprendre IDE vs AI IDE, construire un jeu du serpent avec Trae et ameliorer la collaboration avec l IA.'
+---
 
 # Module 2 : Apprendre les outils de programmation IA
 
@@ -1289,7 +1293,3 @@ Si vous rencontrez de nouveaux termes par la suite, vous pouvez demander à l'IA
 - Puis « à quoi on peut le comparer » ;
 - Enfin « un petit exemple très simple ».
 Ainsi, votre « glossaire personnel » deviendra de plus en plus utile, et vous pourrez mieux communiquer avec l'ordinateur.
----
-title: 'Debutant 2 : Outils de programmation IA'
-description: 'Passer du codage IA sur le web au dev local : comprendre IDE vs AI IDE, construire un jeu du serpent avec Trae et ameliorer la collaboration avec l IA.'
----

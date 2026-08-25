@@ -257,8 +257,8 @@ Esto es lo que debemos aclarar antes de escribir codigo. El codigo es solo una h
 
 ## 2. Producir un prototipo en 10 minutos: dejar que el AI IDE implemente la "funcionalidad central"
 
-::: info Sobre el Plan de programacion
-Si sientes que tu IDE actual no es lo suficientemente inteligente, o que te quedas sin cuota muy rapido, puedes comprar un **plan de programacion**. Puedes prever este articulo de referencia sobre el uso de Claude para programar.
+::: info 💡 Nota sobre las herramientas
+La interfaz, los modelos disponibles y las cuotas de los AI IDE cambian continuamente. Elige una herramienta que puedas usar de forma estable; el proceso de expresar requisitos, generar, comprobar y modificar que se explica en este capítulo no depende de una marca concreta. Si necesitas una herramienta de programación por línea de comandos, consulta [las herramientas modernas de AI CLI](../../stage-2/backend/modern-cli/).
 :::
 
 Pensar es bueno, pero no hay que sobre-pensar. Dejemos de lado el exceso de reflexion y intentemos hacer un prototipo empezando con una sola pagina.

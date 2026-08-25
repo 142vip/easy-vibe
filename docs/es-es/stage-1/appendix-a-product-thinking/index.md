@@ -198,7 +198,7 @@ Supón que la frase queda así: «Una página web que utiliza IA para convertir 
 
 Una primera definición razonable puede limitarse a informes de texto de hasta veinte páginas, devolver contenido editable y conservar títulos y párrafos. Las restricciones reducen el riesgo y hacen posible medir la promesa.
 
-#### Convertir las decisiones en tareas
+**Convertir las decisiones en tareas**
 
 Una lista inicial puede ser: dibujar carga y resultado; escoger un parser; probar diez PDF representativos; definir qué errores se aceptan; mostrar progreso; permitir copiar y descargar; observar a cinco usuarios. Cada elemento ya puede asignarse, construirse y comprobarse.
 
@@ -231,6 +231,17 @@ Escoge productos con tareas parecidas y estudia navegación, formularios, mensaj
 ![](../../../zh-cn/stage-1/appendix-a-product-thinking/images/image13.webp)
 
 Una biblioteca de referencias con capturas, notas y fuentes evita depender de la memoria y ayuda a explicar a la IA qué patrón quieres adaptar.
+
+Puedes empezar con estas bibliotecas de capturas de interfaces:
+
+- [https://www.uisources.com/](https://www.uisources.com/)
+- [https://screenlane.com/](https://screenlane.com/)
+- [https://pagecollective.com/](https://pagecollective.com/)
+- [https://patttterns.net/](https://patttterns.net/)
+- [https://mobbin.com/](https://mobbin.com/)
+- [https://refero.design/](https://refero.design/)
+- [https://scrnshts.club/](https://scrnshts.club/)
+- [https://godly.website](https://godly.website/)
 
 ## 2.5 No esperes a tenerlo todo para investigar al usuario
 

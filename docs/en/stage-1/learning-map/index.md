@@ -101,7 +101,11 @@ This page was compiled on **August 9, 2026**. Dates shown for Ashby roles come f
 These examples are observations from a group of real roles, not a statistical description of the whole labor market. They show an emerging direction in AI-native companies and small product teams, not that every company will remove specialized product, design, engineering, and sales roles.
 :::
 
-### How are these roles changing?
+### What do these changes mean?
+
+This shift is more than companies asking engineers to do more. It changes the role of people who already write code, while also creating a new way in for people who do not.
+
+#### For people who already write code: the engineering role is being redefined
 
 - **The starting point changes:** instead of waiting for a written requirement, they enter user and business settings to discover problems.
 - **The purpose of a prototype changes:** it is not merely a technical demonstration; it reaches users quickly and tests a judgment.
@@ -110,6 +114,18 @@ These examples are observations from a group of real roles, not a statistical de
 - **The relationship with sales changes:** some product engineers join demos, proofs of concept, and customer launches to prove value through technology.
 
 “Knowing how to sell” does not mean everyone must become a traditional salesperson. For a product engineer, it first means being able to find people who may need the product, understand their problem, demonstrate the solution, invite them to use it, and learn whether they will continue using or paying for it.
+
+#### For beginners who do not write code: a new door has opened
+
+AI is not only changing engineering work. It has also lowered the barrier to building a product.
+
+In the past, a person who could not code might have been able to produce a mind map, mockup, or slide deck, but building a working product still required finding an engineer or spending years learning programming. That is no longer the only route:
+
+- **You do not need to study programming for years before starting.** You can describe a requirement in natural language, ask AI to generate code and interfaces, and work through errors while building something that runs.
+- **Domain knowledge can be rarer than coding ability.** Teachers, doctors, lawyers, salespeople, operators, and experienced industry practitioners understand real users and workflows. That knowledge is often what a technically strong team lacks, and it is essential to building a valuable product.
+- **The distance from “I have an idea” to “I built a product” can shrink to weeks or even days.** You can turn one familiar industry problem into a small tool, give it to real users, and test whether it creates value.
+
+This course is designed for both groups: engineers who want to expand their scope and complete beginners who have ideas or domain knowledge. Both can begin here and learn to turn an idea into a product that solves a real problem.
 
 ### How do Product Engineer, FDE, and OPC relate?
 

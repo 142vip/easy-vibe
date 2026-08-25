@@ -374,8 +374,8 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 11. [Accenture：Reinventing Enterprise Models in the Age of Gen AI](https://www.accenture.com/us-en/insights/artificial-intelligence/ai-investments)
 12. [Accenture：Making Reinvention Real with Gen AI](https://www.accenture.com/us-en/insights/consulting/making-reinvention-real-with-gen-ai)
 13. [OpenAI：The State of Enterprise AI 2025](https://openai.com/business/guides-and-resources/the-state-of-enterprise-ai-2025-report/)
-14. [中国信通院：《人工智能发展报告（2024 年）》](https://hrssit.cn/Uploads/file/20241217/1734400434600250.pdf)
-15. [CNNIC：《生成式人工智能应用发展报告（2025）》](https://www3.cnnic.cn/n4/2025/1021/c88-11391.html)
+14. [CAICT: تقرير تطور الذكاء الاصطناعي (2024)](https://hrssit.cn/Uploads/file/20241217/1734400434600250.pdf)
+15. [CNNIC: تقرير تطور تطبيقات الذكاء الاصطناعي التوليدي (2025)](https://www3.cnnic.cn/n4/2025/1021/c88-11391.html)
 
 </details>
 
@@ -399,13 +399,13 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 30. [Salesforce：State of Sales 2026](https://www.salesforce.com/en/wp-content/uploads/sites/4/documents/reports/sales/salesforce-state-of-sales-report-2026.pdf)
 31. [Adobe：2025 AI and Digital Trends](https://business.adobe.com/content/dam/dx/us/en/resources/digital-trends-report-2025/2025_Digital_Trends_Report.pdf)
 32. [Adobe：2025 Content Creation and Management](https://business.adobe.com/content/dam/dx/us/en/resources/reports/content-management-digital-trends/2025-ai-and-digital-trends-content-creation-and-management.pdf)
-33. [艾瑞咨询：《2025 年中国企业级 AI 应用行业研究报告》](https://www.bsia.org.cn/site/content/31686.html)
+33. [iResearch: تقرير أبحاث قطاع تطبيقات الذكاء الاصطناعي للمؤسسات في الصين (2025)](https://www.bsia.org.cn/site/content/31686.html)
 34. [GitHub：Quantifying Copilot’s Impact on Developer Productivity](https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/)
 35. [Siemens × Microsoft：Industrial Copilot](https://news.microsoft.com/source/2024/10/24/siemens-and-microsoft-scale-industrial-ai/)
-36. [Abridge：Hartford HealthCare Ambient AI 案例](https://www.abridge.com/press-release/abridge-hartford-healthcare)
-37. [AWS：Sun Life 内部知识助手](https://aws.amazon.com/solutions/case-studies/sun-life-case-study/)
-38. [AWS：ResultsCX 客服自动化](https://aws.amazon.com/solutions/case-studies/resultscx/)
-39. [AWS：Sanofi 企业 AI 助手](https://aws.amazon.com/solutions/case-studies/sanofi-bedrock-case-study/)
+36. [Abridge: Hartford HealthCare Ambient AI case study](https://www.abridge.com/press-release/abridge-hartford-healthcare)
+37. [AWS: Sun Life internal knowledge assistant](https://aws.amazon.com/solutions/case-studies/sun-life-case-study/)
+38. [AWS: ResultsCX customer-service automation](https://aws.amazon.com/solutions/case-studies/resultscx/)
+39. [AWS: Sanofi enterprise AI assistant](https://aws.amazon.com/solutions/case-studies/sanofi-bedrock-case-study/)
 
 </details>
 
@@ -417,10 +417,10 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 42. [OpenAI：Moderna](https://openai.com/index/moderna/)
 43. [OpenAI：BBVA](https://openai.com/index/bbva-2025/)
 44. [OpenAI × PwC：Reimagining the Office of the CFO](https://openai.com/index/openai-pwc-finance-collaboration/)
-45. [Microsoft：Siemens 现场服务报告](https://www.microsoft.com/en/customers/story/19736-siemens-ag-germany-dynamics-365-field-service)
-46. [AWS：Legal & General 文档处理](https://aws.amazon.com/solutions/case-studies/aws-innovator-legal-and-general/)
-47. [AWS × Infosys：医疗保险客服助手](https://aws.amazon.com/blogs/apn/how-infosys-built-aws-generative-ai-based-assistant-for-a-healthcare-payer-company/)
-48. [Notion：Notion AI 功能说明](https://www.notion.com/help/notion-ai-faqs)
+45. [Microsoft: Siemens field-service report](https://www.microsoft.com/en/customers/story/19736-siemens-ag-germany-dynamics-365-field-service)
+46. [AWS: Legal & General document processing](https://aws.amazon.com/solutions/case-studies/aws-innovator-legal-and-general/)
+47. [AWS × Infosys: healthcare insurance customer-service assistant](https://aws.amazon.com/blogs/apn/how-infosys-built-aws-generative-ai-based-assistant-for-a-healthcare-payer-company/)
+48. [Notion: Notion AI feature guide](https://www.notion.com/help/notion-ai-faqs)
 49. [Canva：Magic Studio](https://www.canva.com/newsroom/news/magic-studio/)
 
 </details>
@@ -431,11 +431,11 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 50. [Capgemini：What Matters to Today’s Consumer 2025](https://www.capgemini.com/insights/research-library/top-consumer-trends-in-2025/)
 51. [Accenture：Me, My Brand and AI](https://www.accenture.com/us-en/insights/consulting/me-my-brand-ai-new-world-consumer-engagement)
 52. [Deloitte：2025 Digital Media Trends](https://www.deloitte.com/us/en/insights/industry/technology/digital-media-trends-consumption-habits-survey/2025.html)
-53. [QuestMobile：2025 中国移动互联网春季报告](https://www.questmobile.cn/research/report/1919961024158601218/)
-54. [QuestMobile：2025 年 8 月 AI 应用行业报告](https://www.questmobile.com.cn/research/report/1967853261412208641/)
-55. [艾瑞咨询：《2025 年中国 AI 类 App 流量分析报告》](https://www.etc.org.cn/UserFiles/Article/file/6388341575962762472758248.pdf)
-56. [Amazon：Rufus 购物助手](https://www.aboutamazon.com/news/retail/amazon-rufus)
-57. [Expedia：对话式旅行规划](https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/)
+53. [QuestMobile: 2025 China Mobile Internet Spring Report](https://www.questmobile.cn/research/report/1919961024158601218/)
+54. [QuestMobile: August 2025 AI Application Industry Report](https://www.questmobile.com.cn/research/report/1967853261412208641/)
+55. [iResearch: تقرير تحليل زيارات تطبيقات الذكاء الاصطناعي في الصين (2025)](https://www.etc.org.cn/UserFiles/Article/file/6388341575962762472758248.pdf)
+56. [Amazon: Rufus shopping assistant](https://www.aboutamazon.com/news/retail/amazon-rufus)
+57. [Expedia: conversational trip planning](https://www.expedia.com/newsroom/expedia-launches-conversational-trip-planning-powered-by-chatgpt-to-inspire-members-to-dream-about-travel-in-new-ways/)
 58. [Duolingo：Duolingo Max](https://blog.duolingo.com/duolingo-max/)
 59. [Khan Academy：Khanmigo](https://2023-2024.annualreport.khanacademy.org/khanmigo)
 60. [Spotify：AI DJ](https://newsroom.spotify.com/2023-02-22/spotify-debuts-a-new-ai-dj-right-in-your-pocket/)
@@ -447,11 +447,11 @@ description: 'تعرض أكثر من ستين دراسة وحالة منتج ا�
 <details class="source-group">
 <summary>5. منظور شركات الأوراق المالية الصينية (5)</summary>
 
-63. [华鑫证券：WAIC 大会强供给，AI 应用商业化如何解](https://pdf.dfcfw.com/pdf/H3_AP202507291717868704_1.pdf)
-64. [国信证券：人工智能专题——AI Agent](https://pdf.dfcfw.com/pdf/H3_AP202503121644302597_1.pdf)
-65. [东吴证券：2025 年 AI 应用渗透趋势](https://pdf.dfcfw.com/pdf/H301_AP202501021641518997_1.pdf)
-66. [中银证券：“人工智能+”应用与平台](https://pdf.dfcfw.com/pdf/H3_AP202510201765533690_1.pdf)
-67. [AIGC 行业深度：算力、模型与应用的创新融合](https://pdf.dfcfw.com/pdf/H3_AP202411151640914780_1.pdf)
+63. [China Fortune Securities: commercializing AI applications after WAIC](https://pdf.dfcfw.com/pdf/H3_AP202507291717868704_1.pdf)
+64. [Guosen Securities: AI special report—AI Agents](https://pdf.dfcfw.com/pdf/H3_AP202503121644302597_1.pdf)
+65. [Soochow Securities: AI application adoption trends in 2025](https://pdf.dfcfw.com/pdf/H301_AP202501021641518997_1.pdf)
+66. [BOC International: “AI+” applications and platforms](https://pdf.dfcfw.com/pdf/H3_AP202510201765533690_1.pdf)
+67. [AIGC industry report: integrating compute, models, and application innovation](https://pdf.dfcfw.com/pdf/H3_AP202411151640914780_1.pdf)
 
 </details>
 

@@ -385,30 +385,12 @@ Si vous voulez commencer rapidement, voici un ensemble de questions suffisamment
 
 Notez que cette question de clôture peut être posée, mais il vaut mieux la garder pour la fin. Parce que vous avez d'abord besoin de recueillir des faits, pas des souhaits.
 
-## 11. Résumé
-
-La contribution la plus importante de The Mom Test n'est pas de vous donner une technique pour « mieux discuter », mais de vous aider à construire un mode de jugement plus lucide :
-
-- Ne croyez pas trop vite aux compliments des autres sur vos idées
-- Ne prenez pas « si ça existait, je l'utiliserais » pour un besoin réel
-- Ne transformez pas vos entretiens en quête de validation
-
-Un entretien véritablement précieux devrait revenir autant que possible à ces éléments :
-
-- La dernière expérience réelle de l'utilisateur
-- Comment il gère le problème actuellement
-- Ce qu'il a déjà payé
-- Où il est visiblement mal à l'aise
-
-Quand vous commencez à poser les questions de cette façon, les informations que vous obtiendrez seront parfois moins flatteuses, mais généralement plus utiles.
-Et quand on crée un produit, **une vérité utile est toujours plus importante qu'un encouragement flatteur.**
-
 <a id="mom-ai"></a>
-## [12. Comment utiliser l'IA pour vos entretiens utilisateurs](#top-mom)
+## [11. Comment utiliser l'IA pour vos entretiens utilisateurs](#top-mom)
 
 The Mom Test est fondamentalement une méthode pour « discuter avec de vraies personnes », l'IA ne peut donc pas remplacer les entretiens réels. Mais l'IA est très utile comme assistante avant, pendant et après les entretiens, surtout pour réduire la barrière d'entrée des débutants.
 
-### 12.1 Laissez l'IA réécrire vos questions « faciles à rater »
+### 11.1 Laissez l'IA réécrire vos questions « faciles à rater »
 
 Beaucoup de gens savent qu'ils ne devraient pas demander « tu penses quoi de mon idée », mais à la première occasion, ils reviennent à ce type de phrase. Vous pouvez d'abord confier vos questions préparées à l'IA pour qu'elle les réécrive :
 
@@ -449,7 +431,7 @@ Questions réécrites :
 
 Ce type de résultat est très utile parce qu'il transforme directement vos questions « demandant des opinions » en questions « demandant des comportements réels ».
 
-### 12.2 Laissez l'IA générer des guides d'entretien pour différents profils
+### 11.2 Laissez l'IA générer des guides d'entretien pour différents profils
 
 Pour un même domaine, face à différents publics, l'accent de l'entretien sera différent. Par exemple, les étudiants, les RH, les travailleurs indépendants ont des préoccupations complètement différentes. Vous pouvez demander à l'IA de générer une version de guide pour chaque type d'interlocuteur :
 
@@ -487,7 +469,7 @@ Pour les étudiants avancés :
 
 Ainsi, vous n'avez pas besoin d'inventer les questions à partir de zéro, la préparation de l'entretien sera beaucoup plus facile.
 
-### 12.3 Laissez l'IA organiser vos notes d'entretien
+### 11.3 Laissez l'IA organiser vos notes d'entretien
 
 Après les entretiens, le problème le plus fréquent n'est pas « manquer d'informations », mais « les informations sont trop dispersées ». L'IA est très adaptée pour vous aider à organiser des conversations fragmentées en notes structurées :
 
@@ -538,7 +520,7 @@ Points clés pour évaluer le besoin :
 
 Ce résultat montre très intuitivement aux débutants : quelles phrases peuvent servir à prendre des décisions, et lesquelles ne sont que des commentaires.
 
-### 12.4 Laissez l'IA faire une première recherche en ligne légère
+### 11.4 Laissez l'IA faire une première recherche en ligne légère
 
 Si vous n'avez pas encore commencé vos entretiens, vous pouvez d'abord demander à l'IA de faire une recherche externe très légère, comme :
 
@@ -571,7 +553,7 @@ Plaintes fréquentes :
 
 La valeur de ce type de résultat est qu'il vous permet de trouver plus facilement un angle d'attaque pour vos entretiens.
 
-### 12.5 Laissez l'IA jouer le rôle de « coach de débriefing d'entretien »
+### 11.5 Laissez l'IA jouer le rôle de « coach de débriefing d'entretien »
 
 Vous pouvez aussi confier les notes d'un entretien que vous venez de terminer à l'IA, et lui demander de vous faire des critiques :
 
@@ -586,7 +568,25 @@ Merci de m'aider à débriefé depuis la perspective de The Mom Test :
 
 C'est particulièrement utile pour les débutants, car vous développerez plus rapidement une sensibilité à « est-ce que je collecte des preuves ou des encouragements ».
 
-## 📚 Exercices
+## 12. Résumé
+
+La contribution la plus importante de The Mom Test n'est pas de vous donner une technique pour « mieux discuter », mais de vous aider à construire un mode de jugement plus lucide :
+
+- Ne croyez pas trop vite aux compliments des autres sur vos idées
+- Ne prenez pas « si ça existait, je l'utiliserais » pour un besoin réel
+- Ne transformez pas vos entretiens en quête de validation
+
+Un entretien véritablement précieux devrait revenir autant que possible à ces éléments :
+
+- La dernière expérience réelle de l'utilisateur
+- Comment il gère le problème actuellement
+- Ce qu'il a déjà payé
+- Où il est visiblement mal à l'aise
+
+Quand vous commencez à poser les questions de cette façon, les informations que vous obtiendrez seront parfois moins flatteuses, mais généralement plus utiles.
+Et quand on crée un produit, **une vérité utile est toujours plus importante qu'un encouragement flatteur.**
+
+## 13. Exercices
 
 <StageAssignmentCard title="Mener un entretien sans chercher à vendre votre idée">
 

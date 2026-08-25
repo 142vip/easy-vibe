@@ -101,7 +101,11 @@ Cette page a été compilée le **9 août 2026**. Les dates des offres Ashby vie
 Ces exemples sont des observations de postes réels, pas une statistique de tout le marché du travail. Ils montrent une direction dans les entreprises natives de l’IA et les petites équipes, et non la disparition de toutes les spécialisations en produit, design, ingénierie et vente.
 :::
 
-### Comment ces postes évoluent-ils ?
+### Que signifient ces changements ?
+
+Il ne s’agit pas seulement d’exiger davantage des ingénieurs. Le rôle de ceux qui codent déjà évolue, tandis qu’une nouvelle voie s’ouvre à ceux qui ne codent pas encore.
+
+#### Pour ceux qui codent déjà : le rôle de l’ingénieur est redéfini
 
 - **Le point de départ change :** ne plus attendre un cahier des charges, mais entrer dans le contexte utilisateur et métier pour découvrir le problème.
 - **Le rôle du prototype change :** non plus seulement montrer la technique, mais le livrer rapidement et tester une décision.
@@ -110,6 +114,16 @@ Ces exemples sont des observations de postes réels, pas une statistique de tout
 - **La relation avec la vente change :** certains ingénieurs rejoignent démonstrations, PoC et lancements pour prouver la valeur.
 
 « Savoir vendre » ne signifie pas que chacun doit devenir commercial. Pour l’ingénieur produit, cela veut d’abord dire trouver les personnes qui pourraient avoir besoin du produit, comprendre leur problème, montrer la solution, les inviter à l’utiliser et vérifier si elles continueront ou paieront.
+
+#### Pour les débutants qui ne codent pas : une nouvelle porte s’ouvre
+
+L’IA a aussi fortement abaissé la barrière de création d’un produit.
+
+- **Il n’est plus nécessaire d’étudier la programmation pendant des années avant de commencer.** On peut demander à l’IA de produire du code et des interfaces, puis résoudre les erreurs en construisant un résultat fonctionnel.
+- **La connaissance d’un métier peut être plus rare que la capacité à coder.** Enseignants, médecins, juristes, commerciaux et opérateurs comprennent les utilisateurs et les processus réels, une base essentielle pour un bon produit.
+- **La distance entre l’idée et le produit peut se réduire à quelques semaines, voire quelques jours.** Un problème familier peut devenir un petit outil testé auprès de vrais utilisateurs.
+
+Le cours s’adresse donc aux ingénieurs qui veulent élargir leur champ d’action comme aux débutants qui possèdent une idée ou une expertise métier.
 
 ### Quel lien entre Product Engineer, FDE et OPC ?
 

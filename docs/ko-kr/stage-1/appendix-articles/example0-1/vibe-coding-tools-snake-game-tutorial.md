@@ -1,3 +1,7 @@
+---
+title: 'Comparison Of 7 AI Coding Tools'
+description: 'A hands-on benchmark of popular Web Vibe Coding platforms using one unified task, covering beginner-friendliness, code control, and deployment.'
+---
 # 7가지 AI 코딩 도구 비교
 
 ## 이 장의 가이드
@@ -353,7 +357,3 @@ AI Agent는 환경을 인식하고, 의사결정을 내리며, 특정 목표를 
 | **[Minimax](https://agent.minimaxi.com/)** | AI가 자동으로 오류를 찾고 수정하는 전체 과정을 보고 학습하고자 하는 분들에게 적합하지만, 전체적으로 느리고 Token 소모가 큽니다. | Web-based    | 전체 과정이 길고, AI가 여러 번 자동으로 테스트를 실행하고 오류를 수정합니다.                                |
 | **[Trae](https://www.trae.ai/)**           | 프로그래밍 경험이 있고, 데스크톱 IDE + AI Agent 조합을 사용하고자 하는 사용자에게 효율성을 높이는 강력한 도구입니다. | PC           | 로컬 설치 및 환경 설정이 필요하지만, 성능이 더 좋고 장기 Vibe Coding 프로젝트에 적합합니다.              |
 | **[V0](https://v0.app/)**                  | React UI 시각 효과를 빠르게 만들고 싶은 비개발자에게 최적화되어, 프론트엔드/디자인 지향 학생에게 적합합니다.  | Web-based    | React UI 생성에 특화되어 있으며, 백엔드와 완전한 애플리케이션 구축은 다른 플랫폼과의 협업이 필요합니다.                  |
----
-title: 'Comparison Of 7 AI Coding Tools'
-description: 'A hands-on benchmark of popular Web Vibe Coding platforms using one unified task, covering beginner-friendliness, code control, and deployment.'
----

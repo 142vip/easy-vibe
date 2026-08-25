@@ -1,3 +1,7 @@
+---
+title: 'Anfaenger 1: Im KI-Zeitalter reicht Reden zum Programmieren'
+description: 'Baue eine AI-native Snake-Variante per Dialog und uebertrage den Workflow auf dein eigenes Mini-Spiel oder Demo.'
+---
 # Anfänger I: Im AI-Zeitalter reicht es zu sprechen, um programmieren zu können
 
 Dies ist ein **auf Projekt-Based Learning basierendes** Lern-Tutorial. Wir ermutigen dich, den Schritten zu folgen und die Ergebnisse zu reproduzieren.
@@ -299,7 +303,7 @@ Wenn das zu anspruchsvoll klingt, kannst du das Sprachmoduell direkt um Hilfe bi
 
 Darüber hinaus können wir das LLM bitten, projektweite Prompts für uns zu generieren. Im vorherigen Abschnitt haben wir nur selbst den Prompt für das Snake-Spiel geschrieben. Lass uns jetzt versuchen, das Modell einen Prompt mit einem Gesamtframework und Implementierungspfad generieren zu lassen (du kannst das direkt mit z.ai machen).
 
-Wenn du lernen möchtest, bessere Prompts zu schreiben, siehe das [Prompt-Engineering-Appendix](/zh-cn/appendix/8-artificial-intelligence/prompt-engineering).
+Wenn du lernen möchtest, bessere Prompts zu schreiben, siehe das [Prompt-Engineering-Appendix](/de-de/appendix/8-artificial-intelligence/prompt-engineering).
 
 > Ich möchte, dass AI ein Web-Snake-Spiel generiert. Ich brauche einen umfassenderen Prompt, damit das Ergebnis beeindruckender und interessanter wird. Bitte generiere einen entsprechenden Prompt. Das aktuelle Ziel ist: ein Snake-Spiel zu generieren, das die Funktion des Fressens verschiedener Wörter zur Gedichtgenerierung implementieren soll und ein Bildgenerierungsmodul enthalten sollte.
 
@@ -568,7 +572,7 @@ Sie sind **„Fertigbau-Werkzeuge" für komplexe Seiten** — schneller und zuve
 
 > „Erstelle mit React eine Bestenliste-Seite: rechts die Punkteliste, bei Klick auf eine Zeile werden unten die Spielerdetails angezeigt, im minimalistischen modernen Stil."
 
-Mehr dazu: [Web-Basics-Appendix](/zh-cn/appendix/3-browser-and-frontend/javascript-deep-dive) und [Frontend-Evolutionsgeschichte-Appendix](/zh-cn/appendix/3-browser-and-frontend/frontend-frameworks).
+Mehr dazu: [Web-Basics-Appendix](/de-de/appendix/3-browser-and-frontend/javascript-deep-dive) und [Frontend-Evolutionsgeschichte-Appendix](/de-de/appendix/3-browser-and-frontend/frontend-frameworks).
 
 ## <span id="appendix-2">[Anhang 2: Was genau ist Vibe Coding](#appendix-nav)</span>
 
@@ -686,7 +690,3 @@ Daher sollte man bei der Auswahl und Bewertung eines großen Sprachmodells neben
   description="Von der spielerischen Erfahrung ausgehend, empfehlen wir dir, zur lokalen Entwicklung und Produktpraxis überzugehen."
   :items="relatedArticles"
 />
----
-title: 'Anfaenger 1: Im KI-Zeitalter reicht Reden zum Programmieren'
-description: 'Baue eine AI-native Snake-Variante per Dialog und uebertrage den Workflow auf dein eigenes Mini-Spiel oder Demo.'
----

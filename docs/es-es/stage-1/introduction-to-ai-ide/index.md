@@ -1,3 +1,7 @@
+---
+title: 'Principiante 2: Herramientas de programacion con IA'
+description: 'Pasar de programar con IA en la web a un flujo local: entender IDE vs AI IDE, construir un juego de serpiente con Trae y mejorar la colaboracion con IA.'
+---
 
 # Nivel basico 2: aprende herramientas de programacion con IA
 
@@ -1294,7 +1298,3 @@ Si mas adelante encuentras terminos nuevos durante el aprendizaje, tambien puede
 - luego una frase sobre como imaginarlo;
 - al final, un ejemplo muy simple.  
   Asi tu glosario personal sera cada vez mas util y podras comunicarte mejor con la computadora.
----
-title: 'Principiante 2: Herramientas de programacion con IA'
-description: 'Pasar de programar con IA en la web a un flujo local: entender IDE vs AI IDE, construir un juego de serpiente con Trae y mejorar la colaboracion con IA.'
----

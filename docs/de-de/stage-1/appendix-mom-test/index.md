@@ -360,30 +360,12 @@ Wenn Sie schnell starten m&ouml;chten, hier eine ausreichend universelle Frageli
 
 Beachten Sie: Diese Abschlussfrage k&ouml;nnte gestellt werden, aber am besten sp&auml;ter im Interview. Denn vorher ben&ouml;tigen Sie eher Fakten als W&uuml;nsche.
 
-## 11. Zusammenfassung
-
-Der wichtigste Beitrag von The Mom Test ist nicht, Ihnen eine "bessere Gespr&auml;chsf&uuml;hrung" beizubringen, sondern Ihnen eine klarere Urteilsmethode zu geben:
-
-- Nicht zu schnell das Lob anderer f&uuml;r Ihre Idee glauben
-- "Ich w&uuml;rde es nutzen, wenn es g&auml;be" nicht als echten Bedarf betrachten
-- Das Interview nicht zu einer Suche nach Best&auml;tigung machen
-
-Echt wertvolle Interviews sollten sich auf Folgendes konzentrieren:
-
-- Das letzte echte Erlebnis des Nutzers
-- Wie er aktuell damit umgeht
-- Welche Kosten er bereits auf sich genommen hat
-- Wo er offensichtlich Unbehagen versp&uuml;rt
-
-Wenn Sie anfangen, so zu fragen, sind die Informationen zwar manchmal weniger schmeichelhaft, aber meist n&uuml;tzlicher.
-Bei der Produktentwicklung gilt: **N&uuml;tzliche Wahrheiten sind immer wichtiger als sch&ouml;ne Ermutigungen.**
-
 <a id="mom-ai"></a>
-## [12. Wie Sie AI bei Nutzerinterviews unterst&uuml;tzen lassen](#top-mom)
+## [11. Wie Sie AI bei Nutzerinterviews unterst&uuml;tzen lassen](#top-mom)
 
 The Mom Test ist im Kern eine Methode zum "Sprechen mit echten Menschen", daher kann AI reale Interviews nicht ersetzen. Aber AI eignet sich hervorragend als Unterst&uuml;tzung vor, w&auml;hrend und nach Interviews, besonders um die Einstiegsh&uuml;rde f&uuml;r Einsteiger zu senken.
 
-### 12.1 AI helfen lassen, "leicht nutzlose" Fragen umzuschreiben
+### 11.1 AI helfen lassen, "leicht nutzlose" Fragen umzuschreiben
 
 Viele wissen, dass sie nicht fragen sollten: "Was h&auml;ltst du von meiner Idee?" Aber wenn sie anfangen zu sprechen, kehren sie automatisch zu solchen S&auml;tzen zur&uuml;ck. Sie k&ouml;nnen zun&auml;chst Ihre geplanten Interview-Fragen an AI &uuml;bergeben und sie umschreiben lassen:
 
@@ -424,7 +406,7 @@ Umgeschriebene Fragen:
 
 Diese Ausgabe ist sehr hilfreich, denn sie &auml;ndert Ihre urspr&uuml;nglichen "nach Meinungen fragenden" Fragen direkt in "nach echtem Verhalten fragende" Fragen.
 
-### 12.2 AI helfen lassen, verschiedene Interview-Leitf&auml;den f&uuml;r verschiedene Zielgruppen zu erstellen
+### 11.2 AI helfen lassen, verschiedene Interview-Leitf&auml;den f&uuml;r verschiedene Zielgruppen zu erstellen
 
 Bei derselben Richtung sind die Interview-Schwerpunkte f&uuml;r verschiedene Zielgruppen unterschiedlich. Studierende, HR-Profis, Freiberufler haben v&ouml;llig unterschiedliche Anliegen. Sie k&ouml;nnen AI bitten, f&uuml;r jede Zielgruppe einen eigenen Leitfaden zu erstellen:
 
@@ -462,7 +444,7 @@ F&uuml;r &auml;ltere Kommilitonen:
 
 So m&uuml;ssen Sie nicht von null anfangen und die Interview-Vorbereitung wird deutlich entspannter.
 
-### 12.3 AI beim Ordnen von Interview-Aufzeichnungen helfen lassen
+### 11.3 AI beim Ordnen von Interview-Aufzeichnungen helfen lassen
 
 Nach dem Interview ist das h&auml;ufigste Problem nicht "keine Informationen", sondern "Informationen sind zu verstreut". AI eignet sich hervorragend, um fragmentierte Gespr&auml;che in strukturierte Notizen zu ordnen:
 
@@ -518,7 +500,7 @@ F&uuml;r die Bedarfserkenntnis relevante Punkte:
 
 Diese Ausgabe zeigt Einsteigern sehr deutlich: Welche Aussagen f&uuml;r Urteile verwendet werden k&ouml;nnen und welche nur zur Kenntnis genommen werden sollten.
 
-### 12.4 AI zun&auml;chst eine leichte Webrecherche durchf&uuml;hren lassen
+### 11.4 AI zun&auml;chst eine leichte Webrecherche durchf&uuml;hren lassen
 
 Wenn Sie noch nicht mit Interviews begonnen haben, k&ouml;nnen Sie AI zun&auml;chst eine sehr leichte externe Recherche durchf&uuml;hren lassen:
 
@@ -551,7 +533,7 @@ H&auml;ufige Beschwerden:
 
 Der Wert solcher Ergebnisse liegt darin, dass sie Ihnen den Einstiegspunkt f&uuml;r Interviews erleichtern.
 
-### 12.5 AI als "Interview-Nachbereitungs-Coach" nutzen
+### 11.5 AI als "Interview-Nachbereitungs-Coach" nutzen
 
 Sie k&ouml;nnen auch eine gerade abgeschlossene Interview-Aufzeichnung an AI &uuml;bergeben und sie bitten, Sie zu kritisieren:
 
@@ -566,7 +548,25 @@ Bitte hilf mir aus der Perspektive von The Mom Test bei der Nachbereitung:
 
 Das ist besonders hilfreich f&uuml;r Einsteiger, denn Sie entwickeln schneller ein Gesp&uuml;r daf&uuml;r, ob Sie "Beweise sammeln" oder "Ermutigung sammeln".
 
-## Assignments
+## 12. Zusammenfassung
+
+Der wichtigste Beitrag von The Mom Test ist nicht, Ihnen eine "bessere Gespr&auml;chsf&uuml;hrung" beizubringen, sondern Ihnen eine klarere Urteilsmethode zu geben:
+
+- Nicht zu schnell das Lob anderer f&uuml;r Ihre Idee glauben
+- "Ich w&uuml;rde es nutzen, wenn es g&auml;be" nicht als echten Bedarf betrachten
+- Das Interview nicht zu einer Suche nach Best&auml;tigung machen
+
+Echt wertvolle Interviews sollten sich auf Folgendes konzentrieren:
+
+- Das letzte echte Erlebnis des Nutzers
+- Wie er aktuell damit umgeht
+- Welche Kosten er bereits auf sich genommen hat
+- Wo er offensichtlich Unbehagen versp&uuml;rt
+
+Wenn Sie anfangen, so zu fragen, sind die Informationen zwar manchmal weniger schmeichelhaft, aber meist n&uuml;tzlicher.
+Bei der Produktentwicklung gilt: **N&uuml;tzliche Wahrheiten sind immer wichtiger als sch&ouml;ne Ermutigungen.**
+
+## 13. Aufgaben
 
 <StageAssignmentCard title="Ein Nutzerinterview führen, ohne die Idee zu verkaufen">
 

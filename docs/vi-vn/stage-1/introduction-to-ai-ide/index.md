@@ -1,3 +1,7 @@
+---
+title: 'So cap 2: Cong cu lap trinh voi AI'
+description: 'Chuyen tu AI tren web sang lam viec local: hieu IDE vs AI IDE, lam game ran san moi voi Trae va nang ky nang noi chuyen voi AI.'
+---
 
 # Sơ cấp 2: Học dùng công cụ lập trình AI
 
@@ -1293,7 +1297,3 @@ Nếu sau này trong quá trình học bạn lại gặp từ mới, cũng có t
 - Sau đó viết một câu "có thể tưởng tượng nó là gì";
 - Cuối cùng đưa một ví dụ thật đơn giản.  
   Như vậy, "bảng thuật ngữ cá nhân" của bạn sẽ ngày càng dài và hữu dụng, dần giúp bạn giao tiếp với máy tính tốt hơn.
----
-title: 'So cap 2: Cong cu lap trinh voi AI'
-description: 'Chuyen tu AI tren web sang lam viec local: hieu IDE vs AI IDE, lam game ran san moi voi Trae va nang ky nang noi chuyen voi AI.'
----

@@ -101,7 +101,11 @@ Trang được tổng hợp ngày **9 tháng 8 năm 2026**. Ngày của vị tr�
 Đây là quan sát từ một nhóm vị trí thật, không phải thống kê toàn thị trường. Nó cho thấy hướng năng lực trong công ty AI-native và đội sản phẩm nhỏ, không có nghĩa mọi công ty sẽ bỏ chuyên môn sản phẩm, thiết kế, kỹ thuật và bán hàng.
 :::
 
-### Các vị trí này đang thay đổi thế nào?
+### Những thay đổi này có ý nghĩa gì?
+
+Đây không chỉ là việc doanh nghiệp đòi hỏi nhiều hơn ở kỹ sư. Vai trò của người đã biết code đang thay đổi, đồng thời một lối vào mới mở ra cho người chưa biết code.
+
+#### Với người đã biết code: vai trò kỹ sư đang được định nghĩa lại
 
 - **Điểm bắt đầu đổi:** không chờ yêu cầu viết sẵn, mà đi vào bối cảnh người dùng và doanh nghiệp để tìm vấn đề.
 - **Vai trò nguyên mẫu đổi:** không chỉ trình bày kỹ thuật, mà nhanh chóng giao cho người dùng để kiểm chứng nhận định.
@@ -110,6 +114,16 @@ Trang được tổng hợp ngày **9 tháng 8 năm 2026**. Ngày của vị tr�
 - **Quan hệ với bán hàng đổi:** một số kỹ sư tham gia demo, PoC và ra mắt khách hàng để chứng minh giá trị bằng kỹ thuật.
 
 “Biết bán” không có nghĩa ai cũng phải thành nhân viên bán hàng truyền thống. Với kỹ sư sản phẩm, trước hết là tìm người có thể cần, hiểu vấn đề, trình bày giải pháp, mời dùng và kiểm tra họ có tiếp tục hoặc trả tiền không.
+
+#### Với người mới chưa biết code: một cánh cửa mới đã mở
+
+AI cũng hạ thấp đáng kể rào cản xây sản phẩm.
+
+- **Không cần học lập trình nhiều năm rồi mới bắt đầu.** Có thể mô tả bằng ngôn ngữ tự nhiên, nhờ AI tạo code và giao diện, rồi xử lý lỗi trong khi xây một kết quả chạy được.
+- **Kiến thức ngành có thể hiếm hơn kỹ năng lập trình.** Giáo viên, bác sĩ, luật sư, nhân viên bán hàng và vận hành hiểu người dùng cùng quy trình thực tế; đó là nền tảng của sản phẩm tốt.
+- **Khoảng cách từ ý tưởng đến sản phẩm có thể rút xuống vài tuần, thậm chí vài ngày.** Một vấn đề quen thuộc có thể trở thành công cụ nhỏ để kiểm chứng với người dùng thật.
+
+Vì vậy, khóa học dành cho cả kỹ sư muốn mở rộng phạm vi năng lực và người mới có ý tưởng hoặc kinh nghiệm ngành.
 
 ### Product Engineer, FDE và OPC liên hệ ra sao?
 

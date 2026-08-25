@@ -1,3 +1,7 @@
+---
+title: 'Build A Website With Design + Coding Agents'
+description: 'From idea to launch: coordinate a design agent to produce visuals, then use a coding agent to turn it into a working website with a reusable workflow.'
+---
 # 디자인 Agent와 코딩 Agent로 웹사이트 설계하기
 
 ## 이 장의 가이드
@@ -342,7 +346,3 @@ Agent가 생성한 초안 웹사이트에는 보통 자동으로 생성된 임�
 - **결과:**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
----
-title: 'Build A Website With Design + Coding Agents'
-description: 'From idea to launch: coordinate a design agent to produce visuals, then use a coding agent to turn it into a working website with a reusable workflow.'
----

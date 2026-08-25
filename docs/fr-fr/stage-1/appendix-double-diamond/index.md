@@ -336,29 +336,12 @@ Vous constaterez que, une fois le premier diamant bien fait, le deuxième devien
 
 <figure class="field-figure field-figure--artifact"><a href="https://commons.wikimedia.org/wiki/File:Design_Thinking_Workshop_Prototyp_Mitmach-O-Mat.png" target="_blank" rel="noreferrer"><img src="/images/product-discovery/double-diamond/wmde-workshop-prototype.png" alt="Interface dessinée à la main du prototype Mitmach-O-Mat produit lors d'un atelier Wikimedia Deutschland" loading="lazy" /></a><figcaption><strong>Un prototype doit seulement permettre de répondre à une question.</strong> Celui-ci peut déjà servir à observer si les participants comprennent l'étape suivante. Prototype : Corinna Schuster / WMDE, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>.</figcaption></figure>
 
-## 10. Résumé
-
-La force du modèle Double Diamond réside dans le fait qu'il vous aide à décomposer un ensemble chaotique en quatre actions plus claires :
-
-- D'abord, diverger pour comprendre le problème
-- Puis, converger pour définir le problème
-- Ensuite, diverger pour explorer les solutions
-- Enfin, converger pour livrer la solution
-
-Il ne vous ralentit pas, il vous fait **gagner les détours qui donnent l'impression d'être occupé mais vont dans la mauvaise direction.**
-
-Surtout à l'ère de l'IA, où créer des choses devient de plus en plus rapide, le modèle Double Diamond devient encore plus important. Parce que quand « produire » devient de plus en plus facile, la capacité vraiment rare sera : **êtes-vous en train de résoudre un problème qui mérite d'être résolu, et le faites-vous de la bonne manière.**
-
-Retenez juste cette phrase :
-
-**Faites d'abord les bonnes choses, puis faites les choses correctement.**
-
 <a id="dd-ai"></a>
-## [11. Comment utiliser l'IA pour piloter votre processus Double Diamond](#top-dd)
+## [10. Comment utiliser l'IA pour piloter votre processus Double Diamond](#top-dd)
 
 Le modèle Double Diamond n'est pas un outil AI en soi, mais l'IA est très bien adaptée pour servir d'« accélérateur » dans les quatre phases. L'essentiel n'est pas de laisser l'IA décider à votre place, mais de l'utiliser pour élargir votre vision, organiser les informations, comparer les solutions et générer du matériel de validation.
 
-### 11.1 En phase Discover, utilisez l'IA pour préparer le terrain
+### 10.1 En phase Discover, utilisez l'IA pour préparer le terrain
 
 Avant les entretiens et la recherche formels, vous pouvez demander à l'IA de faire un balayage léger des problèmes, comme :
 
@@ -390,7 +373,7 @@ Carte préliminaire des problèmes :
 
 Ce type de résultat ne remplace pas vos conclusions, mais vous permet d'entrer plus vite dans le Discover.
 
-### 11.2 En phase Define, laissez l'IA vous aider à converger vers une définition du problème
+### 10.2 En phase Define, laissez l'IA vous aider à converger vers une définition du problème
 
 Beaucoup de gens, après avoir collecté beaucoup de matériel, trouvent la partie la plus difficile de condenser le problème en une phrase vraiment claire. Vous pouvez confier vos notes de recherche à l'IA et lui demander de les compresser en plusieurs définitions candidates :
 
@@ -430,7 +413,7 @@ Raisons :
 
 Ce type de résultat est utile parce qu'il vous aide à passer d'un ensemble de problèmes flous à une définition plus proche d'un point de départ MVP.
 
-### 11.3 En phase Develop, utilisez l'IA pour diverger sur plusieurs solutions
+### 10.3 En phase Develop, utilisez l'IA pour diverger sur plusieurs solutions
 
 Beaucoup de gens, une fois le problème défini, ne se concentrent que sur la première solution qui leur vient à l'esprit. L'IA est idéale ici pour vous forcer à diverger :
 
@@ -467,7 +450,7 @@ Solution 4 : Comparaison avec des exemples de qualité pour aider à évaluer l'
 
 Vous êtes alors plus en mesure d'entrer dans la « comparaison de solutions » au lieu de ne vous concentrer que sur la réécriture AI.
 
-### 11.4 En phase Deliver, utilisez l'IA pour générer des textes de prototype et du matériel de test
+### 10.4 En phase Deliver, utilisez l'IA pour générer des textes de prototype et du matériel de test
 
 Quand vous entrez en phase Deliver, l'IA est très adaptée pour accélérer ces tâches :
 
@@ -501,7 +484,7 @@ Script de test de 15 minutes :
 
 Ce type de résultat est pratique parce qu'il vous fait passer de « j'ai fini mon prototype » à « comment je le teste ensuite ».
 
-### 11.5 Laissez l'IA jouer le rôle de « gardien des phases »
+### 10.5 Laissez l'IA jouer le rôle de « gardien des phases »
 
 Le problème le plus courant du modèle Double Diamond est que les gens sautent les étapes. Vous pouvez demander à l'IA de jouer un gardien, pour vous rappeler où vous êtes vraiment :
 
@@ -517,7 +500,24 @@ Et dites-moi :
 
 C'est particulièrement utile pour les débutants, car il est facile de « commencer à dessiner des prototypes avant d'avoir clarifié le problème ».
 
-## 📚 Exercices
+## 11. Résumé
+
+La force du modèle Double Diamond réside dans le fait qu'il vous aide à décomposer un ensemble chaotique en quatre actions plus claires :
+
+- D'abord, diverger pour comprendre le problème
+- Puis, converger pour définir le problème
+- Ensuite, diverger pour explorer les solutions
+- Enfin, converger pour livrer la solution
+
+Il ne vous ralentit pas, il vous fait **gagner les détours qui donnent l'impression d'être occupé mais vont dans la mauvaise direction.**
+
+Surtout à l'ère de l'IA, où créer des choses devient de plus en plus rapide, le modèle Double Diamond devient encore plus important. Parce que quand « produire » devient de plus en plus facile, la capacité vraiment rare sera : **êtes-vous en train de résoudre un problème qui mérite d'être résolu, et le faites-vous de la bonne manière.**
+
+Retenez juste cette phrase :
+
+**Faites d'abord les bonnes choses, puis faites les choses correctement.**
+
+## 12. Exercices
 
 <StageAssignmentCard title="Organiser votre idée avec le Double Diamant">
 

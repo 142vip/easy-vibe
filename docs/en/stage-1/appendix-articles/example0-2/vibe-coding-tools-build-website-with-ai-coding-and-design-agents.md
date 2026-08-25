@@ -1,32 +1,32 @@
 ---
-title: 'Build A Website With Design + Coding Agents'
-description: 'From idea to launch: coordinate a design agent to produce visuals, then use a coding agent to turn it into a working website with a reusable workflow.'
+title: 'Build a Website with Design and Coding Agents'
+description: 'Coordinate a design Agent and a coding Agent to move from logo and page design to a working website.'
 ---
 
-# Designing Websites with Design and Programming Agents
+# Design a Website with Design and Coding Agents
 
 ## Chapter Introduction
 
-This chapter demonstrates how design and development can work together perfectly through AI. You will play the role of a product manager, directing the "Design Agent" to complete logo design, color schemes, and page layouts, then collaborate with the "Programming Agent" to transform visual mockups into runnable code. Experience full-chain AI-powered development from creative conception to website launch, making one person equivalent to an entire team.
+This chapter shows how AI can connect design and development. We will direct a **design Agent** to create a logo, color palette, and page layout, then ask a **coding Agent** to turn the design into a working website. The result is a reusable workflow from an initial idea to a running page.
 
 ---
 
-# 1. Getting Started Guide
+# 1. Getting Started
 
 ## 1. Tutorial Introduction
 
-Let's use AI Design Agents and Coding Agents to build a complete website from scratch.
+We will use AI design Agents and coding Agents to build a complete website from scratch.
 
-- **Design Agent**: Responsible for creating logos, web page layouts, color schemes, and other visual elements
-- **Coding Agent**: Writes actual code (HTML/CSS/JS, etc.) based on the requirements and layouts you provide in prompts to build a runnable website
+- **Design Agent:** creates logos, page layouts, color schemes, and other visual elements.
+- **Coding Agent:** writes HTML, CSS, JavaScript, and other code from the requirements and design supplied in a prompt.
 
-## 2. Design Agents vs. Coding Agents
+## 2. Design Agents and Coding Agents
 
-- **Design Agent**: AI that generates images, page mockups, or design styles based on the prompts you provide.
-  - Mastergo
+- **Design Agent:** generates images, page mockups, or visual styles from prompts.
+  - MasterGo
   - Lovart
   - Figma MCP
-- **Coding Agent**: AI that writes actual code (HTML/CSS/JS, etc.) based on the functionality and layout you request in prompts.
+- **Coding Agent:** writes runnable code from the requested features and layout.
   - Z.AI
   - Trae
   - Cursor
@@ -34,309 +34,313 @@ Let's use AI Design Agents and Coding Agents to build a complete website from sc
 
 ---
 
-# 2. Using Design Agent to Create Logo
+# 2. Create a Logo with a Design Agent
 
-## 1. Key Elements to Consider When Designing a Logo
+## 1. Key Elements of Logo Design
 
-The logo is one of the key elements that determine your website's first impression. To get satisfactory results from AI Design Agents, you need to clearly describe the type of logo you want in your prompt.
+A logo strongly affects a website’s first impression. A design Agent needs a clear description of the desired result.
 
-1. **Brand Name / Text**
+1. **Brand name or text**
 
-- Text that must appear in the logo (e.g., website title, brand name, etc.).
+- Text that must appear in the logo, such as the website title or brand name.
 
-2. **Style (Mood / Atmosphere)**
+2. **Style or mood**
 
-- The overall feeling or atmosphere the logo wants to convey.
-- _Examples: minimalist, cute, simple, modern, vintage, futuristic, etc._
+- The overall feeling the logo should convey.
+- _Examples: minimalist, cute, simple, modern, vintage, or futuristic._
 
-3. **Color Scheme** (Optional)
+3. **Color scheme** (optional)
 
-- It's best if the logo's colors match the overall tone of the entire website.
-- You can specify specific hex color codes, or general color tones (cool, warm, etc.).
-- _Examples: **`#171721`** (black), **`#FF7130`** (orange)._
+- The logo colors should fit the website’s overall tone.
+- Specify exact hex values or a general palette such as warm or cool colors.
+- _Examples: **`#171721`** (black) and **`#FF7130`** (orange)._
 
-4. **Form (Shape / Structure)**
+4. **Form or composition**
 
-- Clearly state if the logo needs a specific shape or composition.
-- _Examples: text inside a circle, icon + text combination, icon-focused logo, etc._
+- State whether the logo needs a particular shape or arrangement.
+- _Examples: text inside a circle, an icon with text, or an icon-led logo._
 
-5. **Icon / Symbol Elements** (Optional)
+5. **Icon or symbol** (optional)
 
-- Graphics or symbols you want to appear in the logo.
-- _Examples: book icon, lightning symbol, AI-related graphics, abstract geometric shapes, etc._
+- Describe any graphic or symbol that should appear.
+- _Examples: a book, lightning bolt, AI motif, or abstract geometric form._
 
-## 2. Writing Logo Design Prompts
+## 2. Write a Logo Design Prompt
 
-**Example Prompts**
+**Example prompts**
 
 ```
-"Please design a minimalist-style logo for me, with the brand name 'My First Website'.
+"Design a minimalist logo for the brand 'My First Website'.
 Use black (#171721) and orange (#FF7130), and place the text inside a circle."
 ```
 
 ```
-"Design a logo with the brand name 'AIID'.
-The overall style should be futuristic, clean, and simple, with blue and white as the main colors.
-Combine abstract graphics symbolizing AI with the text, and export as a PNG with a transparent background."
+"Design a logo for the brand 'AIID'.
+Use a futuristic, clean, and simple style with blue and white as the main colors.
+Combine an abstract symbol of AI with the text, and export a transparent PNG."
 ```
 
-## 3. Requesting Design from Agent
+## 3. Ask the Agent for Designs
 
-- Input the above prompts → Compare multiple designs generated by the Agent.
+- Enter the prompts above and compare several drafts from the Agent.
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image1.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image2.webp)
 
-## 4. Finalizing the Logo
+## 4. Choose the Final Logo
 
-- Choose your favorite version from the drafts and download it.
-
----
-
-# 3. Planning Your Website Structure
-
-## 1. Understanding Basic Sections
-
-Before actually starting to build the website, it's very important to plan which menus (sections) to include. The menu design depends on what you want visitors to see and what actions you want them to take.
-Generally, websites are usually composed of basic sections like **Home / About / Contact**.
-
-## 2. Draw Your Own Structural Sketch (Optional)
-
-You can first write out a simple menu structure based on the website's goals.
+- Select the preferred draft and download it.
 
 ---
 
-# 4. Using Design Agent to Create Page Layout
+# 3. Plan the Website Structure
 
-## 1. Page Layout Design Prompts
+## 1. Understand the Basic Sections
 
-**Example Prompts**
+Before building the website, decide which menu items or sections it needs. The structure depends on what visitors should see and what actions they should take. Most websites begin with sections such as **Home, About, and Contact**.
 
-```
-"Please create a website layout with the following requirements:
-- Color scheme: black (#171721) background, white text, orange (#FF7130) accents
-- Sections: Home, About, Services, Contact
-- Home: Hero section with large headline, CTA button, and service highlights
-- About: Company introduction with team member photos
-- Services: Grid layout showing services offered
-- Contact: Simple contact form with email and social media links
-- Style: Modern, minimalist, with smooth scroll animations"
-```
+## 2. Sketch a Structure First (Optional)
 
-```
-"Design a landing page for an AI tools collection website.
-- Primary colors: purple (#7C3AED) and dark gray (#1F2937)
-- Hero: Centered title 'AI Tools Hub', subtitle, and 'Explore Now' button
-- Features: 3-column grid showing tool categories
-- Each card should have an icon, title, and brief description
-- Footer: Copyright and social links
-- Include responsive design considerations"
-```
+Write a simple menu structure based on the website’s purpose.
 
-## 2. Requesting Layout Design from Agent
+### Basic Menu
 
-- Input your requirements → Agent generates layout mockups → Refine based on feedback
+1. **Home**
+   1. The first page visitors see.
+   2. Usually includes the logo, a hero area, and a short statement or introduction.
+2. **About**
+   1. Explains who we are or the purpose of the project or service.
+   2. Portfolio: a short introduction and résumé.
+   3. Service website: its vision, goals, and main capabilities.
+3. **Contact**
+   1. Email, telephone number, social links, or other contact details.
+   2. May also include a simple contact form.
+
+### Optional Menu
+
+4. **Services / Projects**
+   1. Presents services, projects, or portfolio work.
+   2. Often displayed as a list or a set of cards.
+
+5. **Gallery**
+   1. Displays images, photographs, or design work.
+
+6. **Blog / News**
+   1. Publishes articles, updates, or logs.
+
+7. **FAQ**
+   1. Collects common visitor questions and answers.
+
+## 3. Choose a Color Scheme (Optional)
+
+If a logo already exists, or the website should use a particular palette, include the desired color codes in the prompt.
+
+**Example:** `#171721, #872B97, #FF7130, #FF3C68`
+
+When no palette comes to mind, use a color website or search by keyword.
+
+- **Color references**
+  - https://colorhunt.co/
+  - https://coolors.co/
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image3.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image4.webp)
 
-## 3. Creating Color Palette
-
-**Example Prompt**
-
-```
-"Create a color palette for a tech blog website.
-- Primary: Deep blue
-- Accent: Vibrant orange
-- Background: Light gray for readability
-- Text: Dark gray for contrast
-Please provide hex codes for each color and explain their usage."
-```
+- **Search for palettes by keyword on Google**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image5.webp)
 
-## 4. Selecting Typography
+## 4. Write the Website Design Prompt
 
-**Example Prompt**
+**Example prompt**
 
 ```
-"Recommend font pairings for a modern tech website.
-- Heading font: Something bold and distinctive
-- Body font: Clean and readable
-Please suggest specific Google Fonts."
+"Design a single-page website with Home, About, and Contact sections.
+Use #171721, #FF7130, and #FF3C68.
+Keep the overall style modern and clean."
 ```
 
 ---
 
-# 5. Integrating Design with Coding Agent
+# 4. Design the Website with a Design Agent
 
-## 1. Preparing Design Specs
+## 1. Enter the Prompt and Generate a Design
 
-Before handing off to the Coding Agent, prepare:
+- Include the planned structure and chosen color scheme in the prompt.
 
-1. **Logo file** (PNG with transparent background)
-2. **Color codes** (Hex values for primary, secondary, accent colors)
-3. **Typography** (Font names, sizes, weights)
-4. **Layout description** (Section structure, spacing, responsive behavior)
-
-## 2. Writing Coding Prompts
-
-**Example Prompt**
-
-```
-"Build a responsive website based on the following specifications:
-
-**Brand**
-- Logo: [attach logo file]
-- Name: My First Website
-
-**Colors**
-- Primary Background: #171721 (dark)
-- Text: #FFFFFF (white)
-- Accent: #FF7130 (orange)
-
-**Sections**
-1. Home - Hero with headline 'Welcome to My First Website', subtitle, and 'Get Started' button
-2. About - Brief company introduction (2-3 sentences)
-3. Services - 3 service cards in a row
-4. Contact - Simple form with name, email, message fields
-
-**Requirements**
-- Use semantic HTML5
-- Include CSS animations for smooth transitions
-- Mobile responsive (stack sections on mobile)
-- Use CSS flexbox/grid for layout
-- Add subtle hover effects on buttons and cards
-
-Please create index.html with embedded CSS and basic JavaScript for mobile menu."
-```
-
-## 3. Iterating with Coding Agent
-
-- Initial code → Test and review → Provide feedback → Refine until satisfied
+**MasterGo prompt example**
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image6.webp)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image7.webp)
 
----
+## 2. Review the Design and Request Changes
 
-# 6. Practical Example: Building a Personal Portfolio
+Give the Agent concrete feedback, for example:
 
-## 1. Project Overview
-
-Let's build a personal portfolio website with:
-- Clean, modern design
-- About section with photo
-- Skills showcase
-- Project portfolio grid
-- Contact form
-
-## 2. Step-by-Step Implementation
-
-### Step 1: Design Phase
-
-**Logo Design Prompt**
-```
-"Design a minimalist logo for a personal portfolio.
-Brand name: 'John Doe'
-Style: Clean, professional, modern
-Colors: Dark blue (#1E3A8A) and white
-Format: PNG with transparent background"
-```
-
-**Layout Design Prompt**
-```
-"Create a personal portfolio website layout:
-- Single page with smooth scroll
-- Dark theme with blue accents
-- Sections: Hero (with photo placeholder), About, Skills, Projects, Contact
-- Modern, professional aesthetic
-- Include responsive mobile view"
-```
-
-### Step 2: Development Phase
-
-**Coding Prompt**
-```
-"Create a personal portfolio website with these specs:
-
-**Visual Design**
-- Dark theme: #0F172A background, #F8FAFC text
-- Accent color: #3B82F6 (blue)
-- Font: Inter from Google Fonts
-
-**Sections**
-1. Hero: Name, title, brief tagline, 'View Work' CTA button
-2. About: Photo placeholder (200x200 circle), 2-paragraph bio
-3. Skills: Grid of skill tags (HTML, CSS, JavaScript, React, Node.js)
-4. Projects: 3-column grid with project cards (image, title, description, link)
-5. Contact: Form with name, email, message fields and submit button
-
-**Technical**
-- Responsive: Single column on mobile, 3 columns for projects
-- Smooth scroll between sections
-- Hover effects on buttons and project cards
-- Form validation with JavaScript
-
-Output as a single index.html file with embedded CSS and JS."
-```
-
-### Step 3: Refinement
-
-Based on test results, iterate:
-- "Add more projects to the portfolio"
-- "Change accent color to green (#10B981)"
-- "Add a navigation bar that stays fixed at top"
-
----
-
-# 7. Best Practices
-
-## 1. Design-Coding Handoff Tips
-
-1. **Be Specific**: Provide exact colors, dimensions, and spacing
-2. **Use References**: Share example websites you like
-3. **Iterate Incrementally**: Start simple, add complexity later
-4. **Test Responsiveness**: Check how it looks on different screen sizes
-
-## 2. Prompt Optimization
-
-| Tip | Do | Don't |
-|-----|-----|-------|
-| **Clarity** | "Use #FF5733 for buttons" | "Make it pop" |
-| **Context** | "For a SaaS landing page..." | Just "make a website" |
-| **Constraints** | "Max 3 colors, no animations" | "Make it beautiful" |
-| **Feedback** | "The hero section is too tall, reduce padding" | "Fix it" |
-
-## 3. Common Workflow Patterns
-
-1. **Design-First**: Design complete → Code implementation
-2. **Parallel**: Design and code simultaneously with iteration
-3. **Iterative**: Quick prototype → Refine design → Enhance code
-
----
-
-# 8. Summary
-
-This chapter covered:
-
-1. **Design Agents**: How to use AI for logo and layout design
-2. **Coding Agents**: How to convert designs into functional code
-3. **Integration Workflow**: Complete process from design to deployment
-4. **Practical Examples**: Step-by-step portfolio website creation
-5. **Best Practices**: Tips for effective AI collaboration
-
-The combination of Design Agents and Coding Agents represents a powerful workflow that can significantly accelerate website development. By clearly communicating your vision and iterating based on feedback, you can create professional websites efficiently.
-
-**Key Takeaways:**
-- Start with clear requirements and design specs
-- Use specific, actionable prompts
-- Iterate based on testing and feedback
-- Leverage both design and coding AI tools together
-
-**Next Steps:**
-- Try creating your own website using this workflow
-- Experiment with different Design Agents (Mastergo, Figma)
-- Explore advanced Coding Agent features (Cursor, Lovable)
-- Build a complete project portfolio using AI assistance
-
-Happy building! 🚀
+- “This is too ornate. Make the overall style simpler.”
+- “Use a different typeface.”
+- “Adjust the color scheme.”
+- “Remove this section.”
 
 ![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image8.webp)
+
+## 3. Finalize the Design
+
+After several revisions, convert the approved design into a form that a coding Agent can understand. The exact method depends on the design platform and usually involves a plugin.
+
+**MasterGo example**
+
+1. Open the [MasterGo plugin site](https://mastergo.com/community/plugin) and search for **seal**.
+
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image9.webp)
+
+2. Return to the design page and click the **block icon (Plugins)**.
+
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image10.png)
+
+3. Select the area to convert and click **Generate** to produce code.
+
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image11.webp)
+
+---
+
+# 5. Build the Website with a Coding Agent
+
+## 1. Understand the Basics of HTML, CSS, and JavaScript
+
+A website is built from three main languages:
+
+- **HTML (HyperText Markup Language)** → structure
+- **CSS (Cascading Style Sheets)** → appearance
+- **JavaScript (JS)** → behavior
+
+Together, they form the web pages we use.
+
+1. **🏗️ HTML (structure)**
+
+- Defines what appears on the page.
+- Places text, images, buttons, links, and other elements.
+- Acts like the walls and frame of a building.
+
+**Example**
+
+```html
+<h1>Hello!</h1>
+<p>This is my first website.</p>
+<a href="contact.html">Contact</a>
+```
+
+2. **🎨 CSS (appearance)**
+
+- Defines how the content is displayed.
+- Controls text size, color, spacing, backgrounds, and button shape.
+- Gives the HTML its visual clothing and style.
+
+**Example**
+
+```css
+h1 {
+  color: #FF7130;   /* Text color */
+  font-size: 36px;  /* Font size */
+  text-align: center; /* Center alignment */
+}
+
+body {
+  background-color: #171721; /* Background color */
+  color: white; /* Default text color */
+}
+```
+
+3. **⚙️ JavaScript (behavior)**
+
+- Lets the page respond to the user.
+- Supports button clicks, menus, carousels, form submission, and other interactions.
+- If HTML and CSS provide the body and appearance, JavaScript is the brain that makes the page act.
+
+**Example**
+
+```javascript
+function showAlert() {
+  alert("The button has been clicked!");
+}
+```
+
+```html
+<button onclick="showAlert()">Click me</button>
+```
+
+## 2. Ask the Coding Agent to Generate Code
+
+**Example prompt**
+
+```
+"Write the HTML and CSS for a single-page website with Home, About, and Contact sections.
+Use #171721, #FF7130, and #FF3C68.
+Use a black background and white text."
+```
+
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image12.webp)
+
+## 3. Run the Website
+
+After generating the draft, the Agent usually starts the project and displays the website automatically.
+
+If the Agent has restarted or the preview is missing, enter a prompt such as:
+
+```
+"Please activate the project"
+```
+
+The Agent will restart the project and open the preview.
+
+## 4. Make Simple Changes
+
+Continue refining the draft in natural language:
+
+- “Make the button larger.”
+- “Use a heavier font weight.”
+
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image13.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image14.png)
+
+## 5. Replace the Website Copy
+
+The initial website often contains generated placeholder text. Prepare the real content and ask the Agent to replace it.
+
+**Example:** update the About page of the AIID website.
+
+1. Write the desired About content. Markdown makes the structure easier for the Agent to understand.
+
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image15.webp)
+
+2. Ask the Agent to apply that file to the target page.
+
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image16.png)
+
+3. Review the updated page.
+
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image17.webp)
+
+## 6. Insert Images
+
+To add a logo, background, or other specific image, upload it to the project folder and tell the Agent where it should appear.
+
+- **Example:**
+
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image18.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image19.png)![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image20.png)
+
+- **Result:**
+
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image21.webp)
+
+---
+
+# 6. Integrate Design and Code
+
+## 1. Integrate Design Files with the Website Code (Optional)
+
+After downloading code from the design Agent, move it into the current project and ask the coding Agent to merge it with the existing implementation.
+
+- **Example:**
+
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image22.webp)
+
+- **Result:**
+
+![](../../../../zh-cn/stage-1/appendix-articles/example0-2/images/image23.webp)
